@@ -321,7 +321,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASquare());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
               .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -356,7 +356,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.drawASnowman());
       this.appendValueInput('VALUE')
           .setAlign(blockly.ALIGN_RIGHT)
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -464,7 +464,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_move.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -494,7 +494,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.jump.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -708,7 +708,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('VALUE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
@@ -740,7 +740,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('WIDTH')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setWidth());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -808,7 +808,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(196, 1.0, 0.79);
       this.appendValueInput('COLOUR')
-          .setCheck('Colour')
+          .setCheck(blockly.BlockValueType.COLOUR)
           .appendTitle(msg.setColour());
       this.setPreviousStatement(true);
       this.setNextStatement(true);

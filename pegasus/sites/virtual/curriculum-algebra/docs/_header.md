@@ -10,11 +10,11 @@
 <%= lesson[:overview_t] %>
 <% end %>
 
-<% if !lesson[:objectives_s].nil? %>
+<% if !lesson[:objectives_t].nil? %>
 ## Lesson Objectives 
 ### Students will:
 
-<% lesson[:objectives_s].split(";").each do |objective| %>
+<% lesson[:objectives_t].split(";").each do |objective| %>
 - <%= objective %>
 <% end %>
 
@@ -32,12 +32,12 @@ _Additional standards alignment can be found at the end of this lesson_
 </details>
 <% end %>
 
-<% if !lesson[:prereqs_s].nil? %>
+<% if !lesson[:prereqs_t].nil? %>
 <details>
 <summary>Prerequisite Knowledge</summary>
 ### This lesson assumes that students can:
 
-<% lesson[:prereqs_s].split(";").each do |prereq| %>
+<% lesson[:prereqs_t].split(";").each do |prereq| %>
 - <%= prereq %>
 <% end %>
 

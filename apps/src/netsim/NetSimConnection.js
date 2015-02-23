@@ -1,24 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Handles client connection status with netsim data services
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -32,96 +11,113 @@
  */
 'use strict';
 
-var netsimStorage = require('./netsimStorage');
 var NetSimLogger = require('./NetSimLogger');
-var LogLevel = NetSimLogger.LogLevel;
-var ObservableEvent = require('./ObservableEvent');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimLocalClientNode = require('./NetSimLocalClientNode');
+var ObservableEvent = require('../ObservableEvent');
+var NetSimShard = require('./NetSimShard');
+var NetSimShardCleaner = require('./NetSimShardCleaner');
+
+var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
 
 /**
- * How often a keep-alive message should be sent to the instance lobby
- * @type {number}
- * @const
- */
-var KEEP_ALIVE_INTERVAL_MS = 2000;
-
-/**
- * Milliseconds before a client is considered 'disconnected' and
- * can be cleaned up by another client.
- * @type {number}
- * @const
- */
-var CONNECTION_TIMEOUT_MS = 30000;
-
-/**
- * A connection to a NetSim instance
- * @param {string} displayName - Name for person on local end
- * @param {NetSimLogger} logger - A log control interface, default nullimpl
+ * A connection to a NetSim shard
+ * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
+ * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = function (displayName, logger /*=new NetSimLogger(NONE)*/) {
+var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
    * @private
    */
-  this.displayName_ = displayName;
+  this.displayName_ = '';
 
   /**
-   * Instance of logging API, gives us choke-point control over log output
-   * @type {NetSimLogger}
+   * @type {NetSimLogWidget}
    * @private
    */
-  this.logger_ = logger;
-  if (undefined === this.logger_) {
-    this.logger_ = new NetSimLogger(console, LogLevel.NONE);
-  }
+  this.sentLog_ = sentLog;
 
   /**
-   * Access object for instance lobby
-   * @type {netsimStorage.SharedStorageTable}
+   * @type {NetSimLogWidget}
    * @private
    */
-  this.lobbyTable_ = null;
+  this.receivedLog_ = receivedLog;
 
   /**
-   * This connection's unique Row ID within the lobby table.
-   * If undefined, we aren't connected to an instance.
-   * @type {number}
+   * Accessor object for select simulation shard's tables, where an shard
+   * is a group of tables shared by a group of users, allowing them to observe
+   * a common network state.
+   *
+   * See en.wikipedia.org/wiki/Instance_dungeon for a popular example of this
+   * concept.
+   *
+   * @type {NetSimShard}
+   * @private
    */
-  this.myLobbyRowID_ = undefined;
+  this.shard_ = null;
+
+  /**
+   *
+   * @type {NetSimShardCleaner}
+   * @private
+   */
+  this.shardCleaner_ = null;
+
+  /**
+   * The local client's node representation within the shard.
+   * @type {NetSimClientNode}
+   */
+  this.myNode = null;
+
+  /**
+   * Event: Connected to, or disconnected from, a shard.
+   * Specifically, added or removed our client node from the shard's node table.
+   * @type {ObservableEvent}
+   */
+  this.shardChange = new ObservableEvent();
 
   /**
    * Allows others to subscribe to connection status changes.
    * args: none
    * Notifies on:
-   * - Connect to instance
-   * - Disconnect from instance
+   * - Connect to shard
+   * - Disconnect from shard
+   * - Connect to router
+   * - Got address from router
+   * - Disconnect from router
    * @type {ObservableEvent}
    */
   this.statusChanges = new ObservableEvent();
 
-  /**
-   * When the next keepAlive update should be sent to the lobby
-   * @type {Number}
-   * @private
-   */
-  this.nextKeepAliveTime_ = Infinity;
-
   // Bind to onBeforeUnload event to attempt graceful disconnect
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
-module.exports = NetSimConnection;
 
 /**
- * Instance Connection Status enum
- * @readonly
- * @enum {number}
+ * Attach own handlers to run loop events.
+ * @param {RunLoop} runLoop
  */
-var ConnectionStatus = {
-  DISCONNECTED: 0,
-  CONNECTED: 1
+NetSimConnection.prototype.attachToRunLoop = function (runLoop) {
+  runLoop.tick.register(this.tick.bind(this));
 };
-NetSimConnection.ConnectionStatus = ConnectionStatus;
+
+/** @param {!RunLoop.Clock} clock */
+NetSimConnection.prototype.tick = function (clock) {
+  if (this.myNode) {
+    this.myNode.tick(clock);
+    this.shard_.tick(clock);
+    this.shardCleaner_.tick(clock);
+  }
+};
+
+/** @returns {NetSimLogger} */
+NetSimConnection.prototype.getLogger = function () {
+  return logger;
+};
 
 /**
  * Before-unload handler, used to try and disconnect gracefully when
@@ -129,205 +125,180 @@ NetSimConnection.ConnectionStatus = ConnectionStatus;
  * @private
  */
 NetSimConnection.prototype.onBeforeUnload_ = function () {
-  if (this.isConnectedToInstance()) {
-    this.disconnectFromInstance();
+  if (this.isConnectedToShard()) {
+    this.disconnectFromShard();
   }
 };
 
 /**
- * Helper that builds a lobby-table row in a consistent
- * format, based on the current connection state.
- * @private
- */
-NetSimConnection.prototype.buildLobbyRow_ = function () {
-  return {
-    lastPing: Date.now(),
-    name: this.displayName_,
-    type: 'user',
-    status: 'In Lobby'
-  };
-};
-
-/**
- * Establishes a new connection to a netsim instance, closing the old one
+ * Establishes a new connection to a netsim shard, closing the old one
  * if present.
- * @param {string} instanceID
+ * @param {!string} shardID
+ * @param {!string} displayName
  */
-NetSimConnection.prototype.connectToInstance = function (instanceID) {
-  if (this.isConnectedToInstance()) {
-    this.logger_.log("Auto-closing previous connection...", LogLevel.WARN);
-    this.disconnectFromInstance();
+NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
+  if (this.isConnectedToShard()) {
+    logger.warn("Auto-closing previous connection...");
+    this.disconnectFromShard();
   }
 
-  // Create and cache a lobby table connection
-  var tableName = instanceID + '_lobby';
-  this.lobbyTable_ = new netsimStorage.SharedStorageTable(
-     netsimStorage.APP_PUBLIC_KEY, tableName);
-
-  // Connect to the lobby table we just set
-  this.connect_();
+  this.shard_ = new NetSimShard(shardID);
+  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  this.createMyClientNode_(displayName);
 };
 
-/**
- * Ends the connection to the netsim instance.
- */
-NetSimConnection.prototype.disconnectFromInstance = function () {
-  if (!this.isConnectedToInstance()) {
-    this.logger_.log("Redundant disconnect call.", LogLevel.WARN);
+/** Ends the connection to the netsim shard. */
+NetSimConnection.prototype.disconnectFromShard = function () {
+  if (!this.isConnectedToShard()) {
+    logger.warn("Redundant disconnect call.");
     return;
   }
 
-  // TODO (bbuchanan) : Check for other resources we need to clean up
-  //                    before we disconnect from the instance.
+  if (this.isConnectedToRouter()) {
+    this.disconnectFromRouter();
+  }
 
-  this.disconnectByRowID_(this.myLobbyRowID_);
-  this.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
+  this.myNode.destroy(function () {
+    this.myNode.stopSimulation();
+    this.myNode = null;
+    this.shardChange.notifyObservers(null, null);
+    this.statusChanges.notifyObservers();
+  }.bind(this));
 };
 
 /**
  * Given a lobby table has already been configured, connects to that table
  * by inserting a row for ourselves into that table and saving the row ID.
+ * @param {!string} displayName
  * @private
  */
-NetSimConnection.prototype.connect_ = function () {
-  var self = this;
-  this.lobbyTable_.insert(this.buildLobbyRow_(), function (returnedData) {
-    if (returnedData) {
-      self.setConnectionStatus_(ConnectionStatus.CONNECTED, returnedData.id);
+NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
+  NetSimLocalClientNode.create(this.shard_, function (node) {
+    if (node) {
+      this.myNode = node;
+      this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
+      this.myNode.setDisplayName(displayName);
+      this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
+      this.myNode.update(function () {
+        this.shardChange.notifyObservers(this.shard_, this.myNode);
+        this.statusChanges.notifyObservers();
+      }.bind(this));
     } else {
-      // TODO (bbuchanan) : Connect retry?
-      self.logger_.log("Failed to connect to instance", LogLevel.ERROR);
+      logger.error("Failed to create client node.");
     }
-  });
+  }.bind(this));
 };
 
 /**
- * Helper method that can remove/disconnect any row from the lobby.
- * @param lobbyRowID
+ * Detects when local client node is unable to reconnect, and kicks user
+ * out of the shard.
  * @private
  */
-NetSimConnection.prototype.disconnectByRowID_ = function (lobbyRowID) {
-  if (!this.isConnectedToInstance()) {
-    this.logger_.log("Can't disconnect when not connected to an instance.",
-        LogLevel.ERROR);
-    return;
+NetSimConnection.prototype.onMyNodeChange_= function () {
+  if (this.myNode.getStatus() === 'Offline') {
+    this.disconnectFromShard();
   }
-
-  var self = this;
-  this.lobbyTable_.delete(lobbyRowID, function (succeeded) {
-    if (succeeded) {
-      self.logger_.log("Disconnected client " + lobbyRowID + " from instance.",
-          LogLevel.INFO);
-    } else {
-      // TODO (bbuchanan) : Disconnect retry?
-      self.logger_.log("Failed to disconnect client " + lobbyRowID + ".",
-          LogLevel.WARN);
-    }
-  });
 };
 
 /**
- * Whether we are currently connected to a netsim instance
+ * Whether we are currently connected to a netsim shard
  * @returns {boolean}
  */
-NetSimConnection.prototype.isConnectedToInstance = function () {
-  return (undefined !== this.myLobbyRowID_);
+NetSimConnection.prototype.isConnectedToShard = function () {
+  return (null !== this.myNode);
 };
 
 /**
- *
- * @param {ConnectionStatus} newStatus
- * @param {number} lobbyRowID - Can be omitted for status DISCONNECTED
- * @private
+ * Gets all rows in the lobby and passes them to callback.  Callback will
+ * get an empty array if we were unable to get lobby data.
+ * TODO: Remove this, get rows from the table and use the netsimUtils methods
+ * instead.
+ * @param callback
  */
-NetSimConnection.prototype.setConnectionStatus_ = function (newStatus, lobbyRowID) {
-  switch (newStatus) {
-    case ConnectionStatus.CONNECTED:
-        this.myLobbyRowID_ = lobbyRowID;
-        this.nextKeepAliveTime_ = 0;
-        this.logger_.log("Connected to instance, assigned ID " +
-            this.myLobbyRowID_, LogLevel.INFO);
-        break;
-
-    case ConnectionStatus.DISCONNECTED:
-        this.myLobbyRowID_ = undefined;
-        this.nextKeepAliveTime_ = Infinity;
-        this.logger_.log("Disconnected from instance", LogLevel.INFO);
-      break;
-  }
-  this.statusChanges.notifyObservers();
-};
-
-NetSimConnection.prototype.keepAlive = function () {
-  if (!this.isConnectedToInstance()) {
-    this.logger_.log("Can't send keepAlive, not connected to instance.", LogLevel.WARN);
-    return;
-  }
-
-  var self = this;
-  this.lobbyTable_.update(this.myLobbyRowID_, this.buildLobbyRow_(),
-      function (succeeded) {
-        if (!succeeded) {
-          self.setConnectionStatus_(ConnectionStatus.DISCONNECTED);
-          self.logger_.log("Reconnecting...", LogLevel.INFO);
-          self.connect_();
-        }
-  });
-};
-
-NetSimConnection.prototype.getLobbyListing = function (callback) {
-  if (!this.isConnectedToInstance()) {
-    this.logger_.log("Can't get lobby rows, not connected to instance.", LogLevel.WARN);
+NetSimConnection.prototype.getAllNodes = function (callback) {
+  if (!this.isConnectedToShard()) {
+    logger.warn("Can't get lobby rows, not connected to shard.");
     callback([]);
     return;
   }
 
-  var logger = this.logger_;
-  this.lobbyTable_.all(function (data) {
-    if (null !== data) {
-      callback(data);
-    } else {
-      logger.log("Lobby data request failed, using empty list.", LogLevel.WARN);
+  var self = this;
+  this.shard_.nodeTable.readAll(function (rows) {
+    if (!rows) {
+      logger.warn("Lobby data request failed, using empty list.");
       callback([]);
+      return;
     }
+
+    var nodes = rows.map(function (row) {
+      if (row.type === NetSimClientNode.getNodeType()) {
+        return new NetSimClientNode(self.shard_, row);
+      } else if (row.type === NetSimRouterNode.getNodeType()) {
+        return new NetSimRouterNode(self.shard_, row);
+      }
+    }).filter(function (node) {
+      return node !== undefined;
+    });
+
+    callback(nodes);
+  });
+};
+
+/** Adds a row to the lobby for a new router node. */
+NetSimConnection.prototype.addRouterToLobby = function () {
+  var self = this;
+  NetSimRouterNode.create(this.shard_, function () {
+    self.statusChanges.notifyObservers();
   });
 };
 
 /**
- *
- * @param {RunLoop.Clock} clock
+ * Whether our client node is connected to a router node.
+ * @returns {boolean}
  */
-NetSimConnection.prototype.tick = function (clock) {
-  if (clock.time >= this.nextKeepAliveTime_) {
-    this.keepAlive();
-
-    // TODO (bbuchanan): Need a better policy for when to do this.  Or, we
-    //                   might not need to once we have auto-expiring rows.
-    this.cleanLobby_();
-
-    if (this.nextKeepAliveTime_ === 0) {
-      this.nextKeepAliveTime_ = clock.time + KEEP_ALIVE_INTERVAL_MS;
-    } else {
-      // Stable increment
-      while (this.nextKeepAliveTime_ < clock.time) {
-        this.nextKeepAliveTime_ += KEEP_ALIVE_INTERVAL_MS;
-      }
-    }
-  }
+NetSimConnection.prototype.isConnectedToRouter = function () {
+  return this.myNode && this.myNode.myRouter;
 };
 
 /**
- * Triggers a sweep of the lobby table that removes timed-out client rows.
- * @private
+ * Establish a connection between the local client and the given
+ * simulated router.
+ * @param {number} routerID
  */
-NetSimConnection.prototype.cleanLobby_ = function () {
+NetSimConnection.prototype.connectToRouter = function (routerID) {
+  if (this.isConnectedToRouter()) {
+    logger.warn("Auto-disconnecting from previous router.");
+    this.disconnectFromRouter();
+  }
+
   var self = this;
-  var now = Date.now();
-  this.getLobbyListing(function (lobbyData) {
-    lobbyData.forEach(function (lobbyRow) {
-      if (now - lobbyRow.lastPing >= CONNECTION_TIMEOUT_MS) {
-        self.disconnectByRowID_(lobbyRow.id);
+  NetSimRouterNode.get(routerID, this.shard_, function (router) {
+    if (!router) {
+      logger.warn('Failed to find router with ID ' + routerID);
+      return;
+    }
+
+    self.myNode.connectToRouter(router, function (success) {
+      if (!success) {
+        logger.warn('Failed to connect to ' + router.getDisplayName());
       }
+      self.statusChanges.notifyObservers();
     });
+  });
+};
+
+/**
+ * Disconnects our client node from the currently connected router node.
+ * Destroys the shared wire.
+ */
+NetSimConnection.prototype.disconnectFromRouter = function () {
+  if (!this.isConnectedToRouter()) {
+    logger.warn("Cannot disconnect: Not connected.");
+    return;
+  }
+
+  var self = this;
+  this.myNode.disconnectRemote(function () {
+    self.statusChanges.notifyObservers();
   });
 };

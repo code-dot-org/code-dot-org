@@ -19,7 +19,7 @@
     "step_mode": "0",
     "nectar_goal": "30",
     "flower_type": "redWithNectar",
-    "instructions": "Are you getting the hang of using the counter Loop? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. You’re given the starter code except for the numbers in the counter loops. Let's collect some nectar!",
+    "instructions": "Are you getting the hang of for Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. You’re given the starter code except for the numbers in the counter loops. Let's collect some nectar!",
     "maze_data": null
   }
 }]]></config>

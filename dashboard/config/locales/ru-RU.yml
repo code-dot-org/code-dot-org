@@ -334,6 +334,8 @@
     student_teacher_disassociated: Учитель %{teacher_name} удалён у ученика %{student_name}
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({81:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({84:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],38:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,15 +3025,13 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],125:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
 var utils = require('./utils');
 var _ = utils.getLodash();
 var msg = require('../locale/current/common');
-var functionalBlockUtils = require('./functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
@@ -3058,9 +3056,9 @@ function installPlus(blockly, generator, gensym) {
 
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '+', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3076,9 +3074,9 @@ function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '-', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3094,9 +3092,9 @@ function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '*', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3112,9 +3110,9 @@ function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '/', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3132,9 +3130,9 @@ function installGreaterThan(blockly, generator, gensym) {
   blockly.Blocks.functional_greater_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '>', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3150,9 +3148,9 @@ function installLessThan(blockly, generator, gensym) {
   blockly.Blocks.functional_less_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '<', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3168,9 +3166,9 @@ function installNumberEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_number_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '=', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3186,9 +3184,9 @@ function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.stringEquals(), 'boolean', [
-        { name: 'ARG1', type: 'string' },
-        { name: 'ARG2', type: 'string' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.STRING },
+        { name: 'ARG2', type: blockly.BlockValueType.STRING }
       ]);
     }
   };
@@ -3206,9 +3204,9 @@ function installLogicalAnd(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_and = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'and', 'boolean', [
-        { name: 'ARG1', type: 'boolean' },
-        { name: 'ARG2', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
+        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3224,9 +3222,9 @@ function installLogicalOr(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_or = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'or', 'boolean', [
-        { name: 'ARG1', type: 'boolean' },
-        { name: 'ARG2', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
+        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3242,8 +3240,8 @@ function installLogicalNot(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_not = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'not', 'boolean', [
-        { name: 'ARG1', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3262,12 +3260,12 @@ function installBoolean(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.boolean);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(values), 'VAL')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'boolean');
+      this.setFunctionalOutput(true, blockly.BlockValueType.BOOLEAN);
     }
   };
 
@@ -3288,12 +3286,12 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
             Blockly.FieldTextInput.numberValidator), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
+      this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
 
@@ -3308,11 +3306,11 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldDropdown(), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
+      this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
 
@@ -3326,13 +3324,13 @@ function installString(blockly, generator) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]);
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('"'))
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
         .appendTitle(new Blockly.FieldLabel('"'))
         .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
+      this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
     }
   };
 
@@ -3390,8 +3388,8 @@ function installCond(blockly, generator) {
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, functionalBlockUtils.colors.boolean);
-      cond.setCheck('boolean');
+      cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
+      cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'DEFAULT');
 
       this.appendFunctionalInput('VALUE' + id)
@@ -3514,151 +3512,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":171,"./functionalBlockUtils":73,"./utils":166}],73:[function(require,module,exports){
-var utils = require('./utils');
-var _ = utils.getLodash();
-
-var colors = {
-  'Number': [192, 1.00, 0.99], // 00ccff
-  'string': [180, 1.00, 0.60], // 0099999
-  'image': [285, 1.00, 0.80], // 9900cc
-  'boolean': [90, 1.00, 0.4], // 336600
-  'none': [0, 0, 0.6]
-};
-module.exports.colors = colors;
-
-/**
- * Helper function to create the init section for a functional block.
- * @param {Blockly.block} block The block to initialize.
- * @param {string} title Localized block title to display.
- * @param {string} type Block type which appears in xml.
- * @param {Array} args Arguments to this block.
- * @param {number=} wrapWidth Optional number of arguments after which
- *     to wrap the next argument onto a new line when rendering the
- *     block.
- */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
-  block.setFunctional(true, {
-    headerHeight: 30
-  });
-  block.setHSV.apply(block, colors[type]);
-
-  var options = {
-    fixedSize: { height: 35 }
-  };
-
-  block.appendDummyInput()
-    .appendTitle(new Blockly.FieldLabel(title, options))
-    .setAlign(Blockly.ALIGN_CENTRE);
-
-  for (var i = 0; i < args.length; i++) {
-    var arg = args[i];
-    var input = block.appendFunctionalInput(arg.name);
-    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
-    input.setInline(i > 0 && !wrapNextArg);
-    if (arg.type === 'none') {
-      input.setHSV(0, 0, 0.99);
-    } else {
-      input.setHSV.apply(input, colors[arg.type]);
-      input.setCheck(arg.type);
-    }
-    input.setAlign(Blockly.ALIGN_CENTRE);
-  }
-
-  if (type === 'none') {
-    block.setFunctionalOutput(false);
-  } else {
-    block.setFunctionalOutput(true, type);
-  }
-};
-
-/**
- * Installs a block which generates code that makes an API call, which
- * looks roughly like:
- *
- *     apiName(block_id, arg1 [,arg2 ...])
- *
- * where args with "constantValue" defined are pre-specified arguments,
- * and other args are read from functional inputs. For example:
- *
- *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed',
- *       blockTitle: 'set sprite zero speed',
- *       apiName: 'Studio.setSpriteSpeed',
- *       args: [{constantValue: '0'}, // spriteIndex
- *              {name: 'SPEED', type: 'Number', default:'7'}]
- *     }
- *
- * creates a block which, with an id of '43' and an input of '12', would
- * generate the following code:
- *
- *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
- *
- * if no apiName is specified, a "dummy" block is generated which
- * accepts arguments but generates no code.
- */
-module.exports.installFunctionalApiCallBlock = function(blockly, generator,
-    options) {
-  var blockName = options.blockName;
-  var blockTitle = options.blockTitle;
-  var apiName = options.apiName;
-  var args = options.args;
-
-  var blockArgs = args.filter(function(arg) {
-    return arg.constantValue === undefined;
-  });
-  var blockType = 'none';
-  blockly.Blocks[blockName] = {
-    init: function () {
-      module.exports.initTitledFunctionalBlock(this, blockTitle, blockType,
-          blockArgs);
-    }
-  };
-
-  // The generator function depends on "this" being the block object.
-  generator[blockName] = function() {
-    if (!apiName) {
-      return '';
-    }
-    var apiArgs = [];
-    apiArgs.push('\'block_id_' + this.id + '\'');
-    for (var i = 0; i < args.length; i++) {
-      var arg = args[i];
-      var value = arg.constantValue !== undefined ?
-            arg.constantValue :
-            Blockly.JavaScript.statementToCode(this, arg.name, false) ||
-                arg.default;
-      apiArgs.push(value);
-    }
-    return apiName + '(' + apiArgs.join(',') + ');\n';
-  };
-};
-
-module.exports.installStringPicker = function(blockly, generator, options) {
-  var values = options.values;
-  var blockName = options.blockName;
-  blockly.Blocks[blockName] = {
-    init: function () {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-    }
-  };
-
-  generator[blockName] = function() {
-    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
-  };
-};
-
-},{"./utils":166}],152:[function(require,module,exports){
+},{"../locale/current/common":194,"./utils":189}],175:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3676,7 +3530,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],146:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3692,7 +3546,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n        <span> ', escape((81,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n    ');85; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="blockly-header"><span>', escape((86,  msg.clearPuzzle() )), '</span></div>\n    ');87; } ; buf.push('\n  </div>\n  ');89; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');91; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3700,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],127:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],148:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +3819,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":43}],126:[function(require,module,exports){
+},{"./dom":47}],147:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4039,7 +3893,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -4116,7 +3970,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":17,"./dom":43,"./required_block_utils":124,"./utils":166}],124:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":145,"./utils":189}],145:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4394,7 +4248,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":171,"./block_utils":16,"./utils":166,"./xml":167}],17:[function(require,module,exports){
+},{"../locale/current/common":194,"./block_utils":18,"./utils":189,"./xml":190}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4487,7 +4341,7 @@ function installNumberDropdown(blockly) {
       this.setHSV(258, 0.35, 0.62);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(), 'NUM');
-      this.setOutput(true, 'Number');
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
     }
   };
@@ -4559,7 +4413,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":171}],2:[function(require,module,exports){
+},{"../locale/current/common":194}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4610,6 +4464,10 @@ var StudioApp = function () {
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
+
+  /**
+   * @type {AudioPlayer}
+   */
   this.cdoSounds = null;
   this.Dialog = null;
   this.editor = null;
@@ -4739,7 +4597,7 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
- * Common startup tasks for all apps.
+ * Common startup tasks for all apps. Happens after configure.
  */
 StudioApp.prototype.init = function(config) {
   if (!config) {
@@ -4838,7 +4696,7 @@ StudioApp.prototype.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -4939,8 +4797,25 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+      Blockly.functionEditor.openWithLevelConfiguration(config.level);
     }
+  }
+
+  // Bind listener to 'Clear Puzzle' button
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  if (clearPuzzleHeader) {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+        if (Blockly.functionEditor) {
+          Blockly.functionEditor.hideIfOpen();
+        }
+        Blockly.mainBlockSpace.clear();
+        if (config.level.originalStartBlocks) {
+          config.level.startBlocks = config.level.originalStartBlocks;
+        }
+        this.setStartBlocks_(config);
+      }).bind(this));
+    }).bind(this));
   }
 };
 
@@ -5064,48 +4939,47 @@ StudioApp.prototype.toggleRunReset = function(button) {
 };
 
 /**
- *
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Array.<string>} filenames file paths for sounds
+ * @param {string} name ID to associate sound effect with
  */
 StudioApp.prototype.loadAudio = function(filenames, name) {
-  if (this.isUsingBlockly()) {
-    Blockly.loadAudio_(filenames, name);
-  } else if (this.cdoSounds) {
-    var regOpts = { id: name };
-    for (var i = 0; i < filenames.length; i++) {
-      var filename = filenames[i];
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if (ext) {
-        // Extend regOpts so regOpts.mp3 = 'file.mp3'
-        regOpts[ext[1]] = filename;
-      }
-    }
-    this.cdoSounds.register(regOpts);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.registerByFilenamesAndID(filenames, name);
 };
 
 /**
- *
+ * Attempts to play a sound effect
+ * @param {string} name sound ID
+ * @param {Object} options for sound playback
+ * @param {number} options.volume value between 0.0 and 1.0 specifying volume
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (this.isUsingBlockly()) {
-    Blockly.playAudio(name, newOptions);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.play(name, newOptions);
-  }
+  this.cdoSounds.play(name, newOptions);
 };
 
 /**
- *
+ * Stops looping a given sound
+ * @param {string} name ID of sound
  */
 StudioApp.prototype.stopLoopingAudio = function(name) {
-  if (this.isUsingBlockly()) {
-    Blockly.stopLoopingAudio(name);
-  } else if (this.cdoSounds) {
-    this.cdoSounds.stopLoopingAudio(name);
+  if (!this.cdoSounds) {
+    return;
   }
+
+  this.cdoSounds.stopLoopingAudio(name);
 };
 
 /**
@@ -5127,7 +5001,7 @@ StudioApp.prototype.inject = function(div, options) {
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
-  Blockly.inject(div, utils.extend(defaults, options));
+  Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
 
 /**
@@ -5151,7 +5025,7 @@ StudioApp.prototype.localeDirection = function() {
 };
 
 /**
-* Initialize Blockly for a readonly iframe.  Called on page load.
+* Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
 * XML argument may be generated from the console with:
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
@@ -5342,6 +5216,10 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var toolboxWidth = 0;
   var showCodeWidth = 0;
 
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  var clearPuzzleWidth = clearPuzzleHeader ?
+      clearPuzzleHeader.getBoundingClientRect().width : 0;
+
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
     headersDiv.style.width = fullWorkspaceWidth + 'px';
@@ -5354,7 +5232,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
       if (this.editor && this.editor.currentlyUsingBlocks) {
         // Set toolboxWidth based on the block palette width:
         var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+        toolboxWidth = categories.getBoundingClientRect().width;
       }
     } else if (this.isUsingBlockly()) {
       toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
@@ -5367,7 +5245,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
     var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
     if (this.enableShowCode &&
         (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
       showCodeHeader.style.display = "";
     } else {
       showCodeHeader.style.display = "none";
@@ -5377,7 +5255,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var workspaceHeader = document.getElementById('workspace-header');
   if (workspaceHeader) {
     workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
   }
 };
 
@@ -5730,7 +5608,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
     ace = window.ace;
-    
+
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
@@ -5773,6 +5651,19 @@ StudioApp.prototype.handleEditCode_ = function (options) {
  */
 StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
   this.checkForEmptyBlocks_ = checkBlocks;
+};
+
+/**
+ * Add the starting block(s).
+ */
+StudioApp.prototype.setStartBlocks_ = function (config) {
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
+        config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
 };
 
 /**
@@ -5829,14 +5720,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  this.setStartBlocks_(config);
 };
 
 /**
@@ -5871,7 +5755,31 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
   return this.feedback_.hasExtraTopBlocks();
 };
 
-},{"../locale/current/common":171,"./ResizeSensor":1,"./block_utils":16,"./constants.js":42,"./dom":43,"./feedback":62,"./templates/builder.html":140,"./templates/buttons.html":141,"./templates/instructions.html":143,"./templates/learn.html":144,"./templates/makeYourOwn.html":145,"./utils":166,"./xml":167,"url":186}],186:[function(require,module,exports){
+/**
+ *
+ */
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
+};
+
+/**
+ * @param {Blockly.Block} block Block to check
+ * @returns true if the block has a connection without a block attached
+ */
+function isUnfilledBlock(block) {
+  return block.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+}
+
+/**
+ * @returns true if any block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+};
+
+},{"../locale/current/common":194,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./feedback":66,"./templates/builder.html":163,"./templates/buttons.html":164,"./templates/instructions.html":166,"./templates/learn.html":167,"./templates/makeYourOwn.html":168,"./utils":189,"./xml":190,"url":209}],209:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6580,13 +6488,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":182,"querystring":185}],185:[function(require,module,exports){
+},{"punycode":205,"querystring":208}],208:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":183,"./encode":184}],184:[function(require,module,exports){
+},{"./decode":206,"./encode":207}],207:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6673,7 +6581,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],183:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6759,7 +6667,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],182:[function(require,module,exports){
+},{}],205:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7270,7 +7178,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],145:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7290,7 +7198,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],144:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7312,7 +7220,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],143:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7332,7 +7240,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],140:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7352,7 +7260,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],62:[function(require,module,exports){
+},{"ejs":210}],66:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8067,7 +7975,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- *
+ * Display the 'Show Code' modal dialog.
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
@@ -8090,6 +7998,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+/**
+ * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
+ * confirms they want to clear the puzzle.
+ */
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+  var codeDiv = document.createElement('div');
+  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
+      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      clearPuzzle: true,
+      cancel: true
+    }
+  });
+  codeDiv.appendChild(buttons);
+
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#again-button'
+  });
+
+  var cancelButton = buttons.querySelector('#again-button');
+  if (cancelButton) {
+    dom.addClickTouchEvent(cancelButton, function() {
+      dialog.hide();
+    });
+  }
+
+  var clearPuzzleButton = buttons.querySelector('#continue-button');
+  if (clearPuzzleButton) {
+    dom.addClickTouchEvent(clearPuzzleButton, function() {
+      callback();
       dialog.hide();
     });
   }
@@ -8345,7 +8296,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -8410,10 +8361,10 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
-      return title.value_ === '???';
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };
@@ -8509,7 +8460,1572 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":171,"./codegen":41,"./constants":42,"./dom":43,"./feedbackBlocks":63,"./templates/buttons.html":141,"./templates/code.html":142,"./templates/shareFailure.html":148,"./templates/sharing.html":149,"./templates/showCode.html":150,"./templates/trophy.html":151,"./utils":166,"./xml":167}],166:[function(require,module,exports){
+},{"../locale/current/common":194,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":67,"./templates/buttons.html":164,"./templates/code.html":165,"./templates/shareFailure.html":171,"./templates/sharing.html":172,"./templates/showCode.html":173,"./templates/trophy.html":174,"./utils":189,"./xml":190}],174:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class=\'trophy\'><img class=\'trophyimg\' src=\'', escape((1,  img_url )), '\'><br>', escape((1,  concept_name )), '</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":210}],173:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/common":194,"ejs":210}],172:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/common":194,"ejs":210}],171:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":210}],165:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="generated-code-container">\n  <p class="generatedCodeMessage">', (2,  message ), '</p>\n  <pre class="generatedCode">', escape((3,  code )), '</pre>\n</div>\n\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":210}],164:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  msg.tryAgain() )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  msg.tryAgain() )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  msg.tryAgain() )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/common":194,"ejs":210}],194:[function(require,module,exports){
+/*common*/ module.exports = window.blockly.locale;
+},{}],67:[function(require,module,exports){
+var constants = require('./constants');
+var readonly = require('./templates/readonly.html');
+
+var TestResults = constants.TestResults;
+
+// TODO (br-pair): can we not pass in the studioApp
+var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
+  // Check whether blocks are embedded in the hint returned from dashboard.
+  // See below comment for format.
+  var embeddedBlocks = options.response && options.response.hint &&
+      options.response.hint.indexOf("[{") !== 0;
+  if (!embeddedBlocks &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+    return;
+  }
+
+  var blocksToDisplay = [];
+  if (embeddedBlocks) {
+    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
+    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
+    // Note that double quotes are required by the JSON parser.
+    var parts = options.response.hint.match(/(.*)(\[.*\])/);
+    if (!parts) {
+      return;
+    }
+    options.response.hint = parts[1].trim();  // Remove blocks from hint.
+    try {
+      blocksToDisplay = JSON.parse(parts[2]);
+    } catch(err) {
+      // The blocks could not be parsed.  Ignore them.
+      return;
+    }
+  } else {
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
+  }
+
+  if (blocksToDisplay.length === 0) {
+    return;
+  }
+
+  this.div = document.createElement('div');
+  this.html = readonly({
+    app: options.app,
+    assetUrl: studioApp.assetUrl,
+    options: {
+      readonly: true,
+      locale: studioApp.LOCALE,
+      localeDirection: studioApp.localeDirection(),
+      baseUrl: studioApp.BASE_URL,
+      cacheBust: studioApp.CACHE_BUST,
+      skinId: options.skin,
+      level: options.level,
+      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+    }
+  });
+  this.iframe = document.createElement('iframe');
+  this.iframe.setAttribute('id', 'feedbackBlocks');
+  this.iframe.setAttribute('allowtransparency', 'true');
+  this.div.appendChild(this.iframe);
+};
+
+module.exports = FeedbackBlocks;
+
+FeedbackBlocks.prototype.show = function() {
+  var iframe = document.getElementById('feedbackBlocks');
+  if (iframe) {
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(this.html);
+    doc.close();
+  }
+};
+
+/**
+ * Creates the XML for blocks to be displayed in a read-only frame.
+ * @param {Array} blocks An array of blocks to display (with optional args).
+ * @return {string} The generated string of XML.
+ */
+FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
+  var blockXMLStrings = [];
+  var blockX = 10;  // Prevent left output plugs from being cut off.
+  var blockY = 0;
+  var blockXPadding = 200;
+  var blockYPadding = 120;
+  var blocksPerLine = 2;
+  var k, name;
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (block.blockDisplayXML) {
+      blockXMLStrings.push(block.blockDisplayXML);
+      continue;
+    }
+    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
+                        blockX.toString(), '" y="', blockY, '">');
+    if (block.titles) {
+      var titleNames = Object.keys(block.titles);
+      for (k = 0; k < titleNames.length; k++) {
+        name = titleNames[k];
+        blockXMLStrings.push('<title name="', name, '">',
+                            block.titles[name], '</title>');
+      }
+    }
+    if (block.values) {
+      var valueNames = Object.keys(block.values);
+      for (k = 0; k < valueNames.length; k++) {
+        name = valueNames[k];
+        blockXMLStrings.push('<value name="', name, '">',
+                            block.values[name], '</value>');
+      }
+    }
+    if (block.extra) {
+      blockXMLStrings.push(block.extra);
+    }
+    blockXMLStrings.push('</block>');
+    if ((i + 1) % blocksPerLine === 0) {
+      blockY += blockYPadding;
+      blockX = 0;
+    } else {
+      blockX += blockXPadding;
+    }
+  }
+  return blockXMLStrings.join('');
+};
+
+},{"./constants":46,"./templates/readonly.html":170}],170:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":210}],210:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
+var utils = require('./utils')
+  , path = require('path')
+  , basename = path.basename
+  , dirname = path.dirname
+  , extname = path.extname
+  , join = path.join
+  , fs = require('fs')
+  , read = fs.readFileSync;
+
+/**
+ * Filters.
+ *
+ * @type Object
+ */
+
+var filters = exports.filters = require('./filters');
+
+/**
+ * Intermediate js cache.
+ *
+ * @type Object
+ */
+
+var cache = {};
+
+/**
+ * Clear intermediate js cache.
+ *
+ * @api public
+ */
+
+exports.clearCache = function(){
+  cache = {};
+};
+
+/**
+ * Translate filtered code into function calls.
+ *
+ * @param {String} js
+ * @return {String}
+ * @api private
+ */
+
+function filtered(js) {
+  return js.substr(1).split('|').reduce(function(js, filter){
+    var parts = filter.split(':')
+      , name = parts.shift()
+      , args = parts.join(':') || '';
+    if (args) args = ', ' + args;
+    return 'filters.' + name + '(' + js + args + ')';
+  });
+};
+
+/**
+ * Re-throw the given `err` in context to the
+ * `str` of ejs, `filename`, and `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} str
+ * @param {String} filename
+ * @param {String} lineno
+ * @api private
+ */
+
+function rethrow(err, str, filename, lineno){
+  var lines = str.split('\n')
+    , start = Math.max(lineno - 3, 0)
+    , end = Math.min(lines.length, lineno + 3);
+
+  // Error context
+  var context = lines.slice(start, end).map(function(line, i){
+    var curr = i + start + 1;
+    return (curr == lineno ? ' >> ' : '    ')
+      + curr
+      + '| '
+      + line;
+  }).join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  err.message = (filename || 'ejs') + ':'
+    + lineno + '\n'
+    + context + '\n\n'
+    + err.message;
+  
+  throw err;
+}
+
+/**
+ * Parse the given `str` of ejs, returning the function body.
+ *
+ * @param {String} str
+ * @return {String}
+ * @api public
+ */
+
+var parse = exports.parse = function(str, options){
+  var options = options || {}
+    , open = options.open || exports.open || '<%'
+    , close = options.close || exports.close || '%>'
+    , filename = options.filename
+    , compileDebug = options.compileDebug !== false
+    , buf = [];
+
+  buf.push('var buf = [];');
+  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
+  buf.push('\n buf.push(\'');
+
+  var lineno = 1;
+
+  var consumeEOL = false;
+  for (var i = 0, len = str.length; i < len; ++i) {
+    if (str.slice(i, open.length + i) == open) {
+      i += open.length
+  
+      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
+      switch (str.substr(i, 1)) {
+        case '=':
+          prefix = "', escape((" + line + ', ';
+          postfix = ")), '";
+          ++i;
+          break;
+        case '-':
+          prefix = "', (" + line + ', ';
+          postfix = "), '";
+          ++i;
+          break;
+        default:
+          prefix = "');" + line + ';';
+          postfix = "; buf.push('";
+      }
+
+      var end = str.indexOf(close, i)
+        , js = str.substring(i, end)
+        , start = i
+        , include = null
+        , n = 0;
+
+      if ('-' == js[js.length-1]){
+        js = js.substring(0, js.length - 2);
+        consumeEOL = true;
+      }
+
+      if (0 == js.trim().indexOf('include')) {
+        var name = js.trim().slice(7).trim();
+        if (!filename) throw new Error('filename option is required for includes');
+        var path = resolveInclude(name, filename);
+        include = read(path, 'utf8');
+        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
+        buf.push("' + (function(){" + include + "})() + '");
+        js = '';
+      }
+
+      while (~(n = js.indexOf("\n", n))) n++, lineno++;
+      if (js.substr(0, 1) == ':') js = filtered(js);
+      if (js) {
+        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
+        buf.push(prefix, js, postfix);
+      }
+      i += end - start + close.length - 1;
+
+    } else if (str.substr(i, 1) == "\\") {
+      buf.push("\\\\");
+    } else if (str.substr(i, 1) == "'") {
+      buf.push("\\'");
+    } else if (str.substr(i, 1) == "\r") {
+      // ignore
+    } else if (str.substr(i, 1) == "\n") {
+      if (consumeEOL) {
+        consumeEOL = false;
+      } else {
+        buf.push("\\n");
+        lineno++;
+      }
+    } else {
+      buf.push(str.substr(i, 1));
+    }
+  }
+
+  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
+  else buf.push("');\nreturn buf.join('');");
+
+  return buf.join('');
+};
+
+/**
+ * Compile the given `str` of ejs into a `Function`.
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {Function}
+ * @api public
+ */
+
+var compile = exports.compile = function(str, options){
+  options = options || {};
+  var escape = options.escape || utils.escape;
+  
+  var input = JSON.stringify(str)
+    , compileDebug = options.compileDebug !== false
+    , client = options.client
+    , filename = options.filename
+        ? JSON.stringify(options.filename)
+        : 'undefined';
+  
+  if (compileDebug) {
+    // Adds the fancy stack trace meta info
+    str = [
+      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
+      rethrow.toString(),
+      'try {',
+      exports.parse(str, options),
+      '} catch (err) {',
+      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
+      '}'
+    ].join("\n");
+  } else {
+    str = exports.parse(str, options);
+  }
+  
+  if (options.debug) console.log(str);
+  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
+
+  try {
+    var fn = new Function('locals, filters, escape', str);
+  } catch (err) {
+    if ('SyntaxError' == err.name) {
+      err.message += options.filename
+        ? ' in ' + filename
+        : ' while compiling ejs';
+    }
+    throw err;
+  }
+
+  if (client) return fn;
+
+  return function(locals){
+    return fn.call(this, locals, filters, escape);
+  }
+};
+
+/**
+ * Render the given `str` of ejs.
+ *
+ * Options:
+ *
+ *   - `locals`          Local variables object
+ *   - `cache`           Compiled functions are cached, requires `filename`
+ *   - `filename`        Used by `cache` to key caches
+ *   - `scope`           Function execution context
+ *   - `debug`           Output generated function body
+ *   - `open`            Open tag, defaulting to "<%"
+ *   - `close`           Closing tag, defaulting to "%>"
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {String}
+ * @api public
+ */
+
+exports.render = function(str, options){
+  var fn
+    , options = options || {};
+
+  if (options.cache) {
+    if (options.filename) {
+      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
+    } else {
+      throw new Error('"cache" option requires "filename".');
+    }
+  } else {
+    fn = compile(str, options);
+  }
+
+  options.__proto__ = options.locals;
+  return fn.call(options.scope, options);
+};
+
+/**
+ * Render an EJS file at the given `path` and callback `fn(err, str)`.
+ *
+ * @param {String} path
+ * @param {Object|Function} options or callback
+ * @param {Function} fn
+ * @api public
+ */
+
+exports.renderFile = function(path, options, fn){
+  var key = path + ':string';
+
+  if ('function' == typeof options) {
+    fn = options, options = {};
+  }
+
+  options.filename = path;
+
+  var str;
+  try {
+    str = options.cache
+      ? cache[key] || (cache[key] = read(path, 'utf8'))
+      : read(path, 'utf8');
+  } catch (err) {
+    fn(err);
+    return;
+  }
+  fn(null, exports.render(str, options));
+};
+
+/**
+ * Resolve include `name` relative to `filename`.
+ *
+ * @param {String} name
+ * @param {String} filename
+ * @return {String}
+ * @api private
+ */
+
+function resolveInclude(name, filename) {
+  var path = join(dirname(filename), name);
+  var ext = extname(name);
+  if (!ext) path += '.ejs';
+  return path;
+}
+
+// express support
+
+exports.__express = exports.renderFile;
+
+/**
+ * Expose to require().
+ */
+
+if (require.extensions) {
+  require.extensions['.ejs'] = function(module, filename) {
+    source = require('fs').readFileSync(filename, 'utf-8');
+    module._compile(compile(source, {}), filename);
+  };
+} else if (require.registerExtension) {
+  require.registerExtension('.ejs', function(src) {
+    return compile(src, {});
+  });
+}
+
+},{"./filters":211,"./utils":212,"fs":202,"path":203}],212:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+exports.escape = function(html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+ 
+},{}],211:[function(require,module,exports){
+
+/*!
+ * EJS - Filters
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * First element of the target `obj`.
+ */
+
+exports.first = function(obj) {
+  return obj[0];
+};
+
+/**
+ * Last element of the target `obj`.
+ */
+
+exports.last = function(obj) {
+  return obj[obj.length - 1];
+};
+
+/**
+ * Capitalize the first letter of the target `str`.
+ */
+
+exports.capitalize = function(str){
+  str = String(str);
+  return str[0].toUpperCase() + str.substr(1, str.length);
+};
+
+/**
+ * Downcase the target `str`.
+ */
+
+exports.downcase = function(str){
+  return String(str).toLowerCase();
+};
+
+/**
+ * Uppercase the target `str`.
+ */
+
+exports.upcase = function(str){
+  return String(str).toUpperCase();
+};
+
+/**
+ * Sort the target `obj`.
+ */
+
+exports.sort = function(obj){
+  return Object.create(obj).sort();
+};
+
+/**
+ * Sort the target `obj` by the given `prop` ascending.
+ */
+
+exports.sort_by = function(obj, prop){
+  return Object.create(obj).sort(function(a, b){
+    a = a[prop], b = b[prop];
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+};
+
+/**
+ * Size or length of the target `obj`.
+ */
+
+exports.size = exports.length = function(obj) {
+  return obj.length;
+};
+
+/**
+ * Add `a` and `b`.
+ */
+
+exports.plus = function(a, b){
+  return Number(a) + Number(b);
+};
+
+/**
+ * Subtract `b` from `a`.
+ */
+
+exports.minus = function(a, b){
+  return Number(a) - Number(b);
+};
+
+/**
+ * Multiply `a` by `b`.
+ */
+
+exports.times = function(a, b){
+  return Number(a) * Number(b);
+};
+
+/**
+ * Divide `a` by `b`.
+ */
+
+exports.divided_by = function(a, b){
+  return Number(a) / Number(b);
+};
+
+/**
+ * Join `obj` with the given `str`.
+ */
+
+exports.join = function(obj, str){
+  return obj.join(str || ', ');
+};
+
+/**
+ * Truncate `str` to `len`.
+ */
+
+exports.truncate = function(str, len){
+  str = String(str);
+  return str.substr(0, len);
+};
+
+/**
+ * Truncate `str` to `n` words.
+ */
+
+exports.truncate_words = function(str, n){
+  var str = String(str)
+    , words = str.split(/ +/);
+  return words.slice(0, n).join(' ');
+};
+
+/**
+ * Replace `pattern` with `substitution` in `str`.
+ */
+
+exports.replace = function(str, pattern, substitution){
+  return String(str).replace(pattern, substitution || '');
+};
+
+/**
+ * Prepend `val` to `obj`.
+ */
+
+exports.prepend = function(obj, val){
+  return Array.isArray(obj)
+    ? [val].concat(obj)
+    : val + obj;
+};
+
+/**
+ * Append `val` to `obj`.
+ */
+
+exports.append = function(obj, val){
+  return Array.isArray(obj)
+    ? obj.concat(val)
+    : obj + val;
+};
+
+/**
+ * Map the given `prop`.
+ */
+
+exports.map = function(arr, prop){
+  return arr.map(function(obj){
+    return obj[prop];
+  });
+};
+
+/**
+ * Reverse the given `obj`.
+ */
+
+exports.reverse = function(obj){
+  return Array.isArray(obj)
+    ? obj.reverse()
+    : String(obj).split('').reverse().join('');
+};
+
+/**
+ * Get `prop` of the given `obj`.
+ */
+
+exports.get = function(obj, prop){
+  return obj[prop];
+};
+
+/**
+ * Packs the given `obj` into json string
+ */
+exports.json = function(obj){
+  return JSON.stringify(obj);
+};
+},{}],203:[function(require,module,exports){
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+}).call(this,require('_process'))
+},{"_process":204}],204:[function(require,module,exports){
+// shim for using process in browser
+
+var process = module.exports = {};
+var queue = [];
+var draining = false;
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    draining = true;
+    var currentQueue;
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        var i = -1;
+        while (++i < len) {
+            currentQueue[i]();
+        }
+        len = queue.length;
+    }
+    draining = false;
+}
+process.nextTick = function (fun) {
+    queue.push(fun);
+    if (!draining) {
+        setTimeout(drainQueue, 0);
+    }
+};
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],202:[function(require,module,exports){
+
+},{}],44:[function(require,module,exports){
+var utils = require('./utils');
+
+var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+
+var LOOP_HIGHLIGHT = 'loopHighlight();\n';
+var LOOP_HIGHLIGHT_RE =
+    new RegExp(LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)'), 'g');
+
+/**
+ * Returns javascript code to call a timeout check
+ */
+exports.loopTrap = function() {
+  return INFINITE_LOOP_TRAP;
+};
+
+exports.loopHighlight = function (apiName, blockId) {
+  var args = "'block_id_" + blockId + "'";
+  if (blockId === undefined) {
+    args = "%1";
+  }
+  return apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
+};
+
+/**
+ * Extract the user's code as raw JavaScript.
+ * @param {string} code Generated code.
+ * @return {string} The code without serial numbers and timeout checks.
+ */
+exports.strip = function(code) {
+  return (code
+    // Strip out serial numbers.
+    .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
+    // Remove timeouts.
+    .replace(INFINITE_LOOP_TRAP, '')
+    // Strip out loop highlight
+    .replace(LOOP_HIGHLIGHT_RE, '')
+    // Strip out class namespaces.
+    .replace(/(StudioApp|Maze|Turtle)\./g, '')
+    // Strip out particular helper functions.
+    .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
+    // Collapse consecutive blank lines.
+    .replace(/\n\n+/gm, '\n\n')
+    // Trim.
+    .replace(/^\s+|\s+$/g, '')
+  );
+};
+
+/**
+ * Extract the user's code as raw JavaScript.
+ */
+exports.workspaceCode = function(blockly) {
+  var code = blockly.Generator.blockSpaceToCode('JavaScript');
+  return exports.strip(code);
+};
+
+exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  var i, retVal;
+  if (typeof maxDepth === "undefined") {
+    maxDepth = Infinity; // default to inifinite levels of depth
+  }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
+  }
+  if (nativeVar instanceof Array) {
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
+                                                                nativeVar[i],
+                                                                null,
+                                                                maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Uint8ClampedArray) {
+    // Special case for canvas image data - could expand to support TypedArray
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = interpreter.createPrimitive(nativeVar[i]);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Function) {
+    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    retVal = interpreter.createNativeFunction(wrapper);
+  } else if (nativeVar instanceof Object) {
+    // note Object must be checked after Function and Array (since they are also Objects)
+    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
+      // Special case to see if we are trying to marshal an interpreter object
+      // (this currently happens when we store interpreter function objects in native
+      //  and return them back in nativeGetCallback)
+
+      // NOTE: this check could be expanded to check for other interpreter object types
+      // if we have reason to believe that we may be passing those back
+
+      retVal = nativeVar;
+    } else {
+      retVal = interpreter.createObject(interpreter.OBJECT);
+      for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
+        interpreter.setProperty(retVal,
+                                prop,
+                                exports.marshalNativeToInterpreter(interpreter,
+                                                                   value,
+                                                                   nativeVar,
+                                                                   maxDepth - 1));
+      }
+    }
+  } else {
+    retVal = interpreter.createPrimitive(nativeVar);
+  }
+  return retVal;
+};
+
+exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
+                                                          interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
+                                                              interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
+/**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
+  return function() {
+    // Call the native function:
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
+  };
+};
+
+function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
+  for (var prop in funcsObj) {
+    var func = funcsObj[prop];
+    if (func instanceof Function) {
+      // Populate the scope with native functions
+      // NOTE: other properties are not currently passed to the interpreter
+      var parent = parentObj ? parentObj : funcsObj;
+      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      interpreter.setProperty(scope,
+                              prop,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
+
+function populateGlobalFunctions(interpreter, scope) {
+  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = utils.dropletGlobalConfigBlocks[i];
+    var func = gf.parent[gf.func];
+    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    interpreter.setProperty(scope,
+                            gf.func,
+                            interpreter.createNativeFunction(wrapper));
+  }
+}
+
+function populateJSFunctions(interpreter) {
+  // The interpreter is missing some basic JS functions. Add them as needed:
+
+  // Add static methods from String:
+  var functions = ['fromCharCode'];
+  for (var i = 0; i < functions.length; i++) {
+    var wrapper = exports.makeNativeMemberFunction(interpreter,
+                                                   String[functions[i]],
+                                                   String);
+    interpreter.setProperty(interpreter.STRING,
+                            functions[i],
+                            interpreter.createNativeFunction(wrapper),
+                            false,
+                            true);
+  }
+}
+
+/**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  for (var optsObj in options) {
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
+  }
+  populateGlobalFunctions(interpreter, scope);
+  populateJSFunctions(interpreter);
+};
+
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+    case "Program":
+      return true;
+  }
+  return false;
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+exports.isAceBreakpointRow = function (session, userCodeRow) {
+  var bps = session.getBreakpoints();
+  return Boolean(bps[userCodeRow]);
+};
+
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
+exports.selectCurrentCode = function (interpreter,
+                                      cumulativeLength,
+                                      userCodeStartOffset,
+                                      userCodeLength,
+                                      editor) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        editor.clearLineMarks();
+        // NOTE: replace markLine with this new mark() call once we have a new
+        // version of droplet
+        
+        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
+        editor.markLine(userCodeRow, style);
+      } else {
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
+      }
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Finds the current line of code in droplet/ace editor.
+ *
+ * Returns the line of code where the interpreter is at. If it is outside
+ * of the userCode area, the return value is -1
+ *
+ * NOTE: first 4 params match the selectCurrentCode function by design.
+ */
+exports.getUserCodeLine = function (interpreter, cumulativeLength,
+                                    userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+    }
+  }
+  return userCodeRow;
+};
+
+/**
+ * Evaluates a string of code parameterized with a dictionary.
+ */
+exports.evalWith = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
+  }
+};
+
+/**
+ * Returns a function based on a string of code parameterized with a dictionary.
+ */
+exports.functionFromCode = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
+  }
+};
+
+},{"./utils":189}],189:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -8622,7 +10138,9 @@ exports.stripQuotes = function(inputString) {
  * Defines an inheritance relationship between parent class and this class.
  */
 Function.prototype.inherits = function (parent) {
-  this.prototype = _.create(parent.prototype, { constructor: parent });
+  this.prototype = Object.create(parent.prototype);
+  this.prototype.constructor = this;
+  this.superPrototype = parent.prototype;
 };
 
 /**
@@ -8647,6 +10165,25 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
     return numVal(text);
   };
 };
+
+exports.randomNumber = function (min, max) {
+  if (typeof max === 'undefined') {
+    // If only one parameter is specified, use it as the max with zero as min:
+    max = min;
+    min = 0;
+  }
+  // Use double-tilde to ensure we are dealing with integers:
+  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+};
+
+exports.dropletGlobalConfigBlocks = [
+  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
+  {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'min', 'parent': Math, 'category': 'Math', 'type': 'value' },
+  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+];
 
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
@@ -8673,20 +10210,23 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   return merged;
 }
 
+function selectFunctionsOrFullConfig(codeFunctions, dropletConfig) {
+  if (codeFunctions instanceof Array) {
+    // codeFunctions is in an array, use those exactly:
+    return codeFunctions;
+  } else if (dropletConfig && dropletConfig.blocks) {
+    // use dropletConfig.blocks in its entirety (including all functions, even
+    // those not in this level's palette)
+    return dropletConfig.blocks;
+  }
+}
+
 /**
  * Generate code aliases in Javascript based on some level data.
  */
 exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
   var code = '';
-  var aliasFunctions;
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    aliasFunctions = codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (creating aliases for all
-    // functions available in this app, even those not in this level's palette)
-    aliasFunctions = dropletConfig.blocks;
-  }
+  var aliasFunctions = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
 
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
@@ -8746,8 +10286,11 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: '__ / __',
           title: 'Divide two numbers'
         }, {
-          block: '__ === __',
-          title: 'Compare two numbers'
+          block: '__ == __',
+          title: 'Test for equality'
+        }, {
+          block: '__ != __',
+          title: 'Test for inequality'
         }, {
           block: '__ > __',
           title: 'Compare two numbers'
@@ -8755,8 +10298,17 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random()',
-          title: 'Get a random number between 0 and 1'
+          block: '__ && __',
+          title: 'Logical AND of two booleans'
+        }, {
+          block: '__ || __',
+          title: 'Logical OR of two booleans'
+        }, {
+          block: 'randomNumber(__)',
+          title: 'Get a random number between 0 and the specified maximum value'
+        }, {
+          block: 'randomNumber(__, __)',
+          title: 'Get a random number between the specified minimum and maximum values'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -8784,6 +10336,9 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
         }, {
           block: 'var x = [1, 2, 3, 4];',
           title: 'Create a variable and initialize it as an array'
+        }, {
+          block: 'var x = prompt("Enter a value");',
+          title: 'Create a variable and assign it a value by displaying a prompt'
         }
       ]
     }, {
@@ -8862,21 +10417,27 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
+function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    var cf = configBlocks[i];
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: cf.category || 'Actions'
+    });
+  }
+}
+
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  */
 exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category
-    });
-  }
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+
+  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
+  populateCompleterApisFromConfigBlocks(apis, configBlocks);
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -8889,13 +10450,27 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   };
 };
 
+function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    if (configBlocks[i].type === 'value') {
+      modeOptions.valueFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type === 'either') {
+      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type !== 'hidden') {
+      modeOptions.blockFunctions.push(configBlocks[i].func);
+    }
+  }
+}
+
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
 exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
+    valueFunctions: [],
     eitherFunctions: [],
   };
 
@@ -8908,28 +10483,37 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
 */
 
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    if (mergedFunctions[i].type === 'value') {
-      modeOptions.valueFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type === 'either') {
-      modeOptions.eitherFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(mergedFunctions[i].func);
-    }
-  }
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
+
+  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
+  populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
 
   return modeOptions;
 };
 
-},{"./hammer":74,"./lodash":82,"./xml":167}],82:[function(require,module,exports){
+/**
+ * Generate a random identifier in a format matching the RFC-4122 specification.
+ *
+ * Taken from
+ * {@link http://byronsalau.com/blog/how-to-create-a-guid-uuid-in-javascript/}
+ *
+ * @see RFC-4122 standard {@link http://www.ietf.org/rfc/rfc4122.txt}
+ *
+ * @returns {string} RFC4122-compliant UUID
+ */
+exports.createUuid = function () {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
+};
+
+},{"./hammer":77,"./lodash":85,"./xml":190}],85:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10749,6 +12333,48 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   }
 
   /**
+   * Performs a deep comparison between two values to determine if they are
+   * equivalent to each other. If a callback is provided it will be executed
+   * to compare values. If the callback returns `undefined` comparisons will
+   * be handled by the method instead. The callback is bound to `thisArg` and
+   * invoked with two arguments; (a, b).
+   *
+   * @static
+   * @memberOf _
+   * @category Objects
+   * @param {*} a The value to compare.
+   * @param {*} b The other value to compare.
+   * @param {Function} [callback] The function to customize comparing values.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'name': 'fred' };
+   * var copy = { 'name': 'fred' };
+   *
+   * object == copy;
+   * // => false
+   *
+   * _.isEqual(object, copy);
+   * // => true
+   *
+   * var words = ['hello', 'goodbye'];
+   * var otherWords = ['hi', 'goodbye'];
+   *
+   * _.isEqual(words, otherWords, function(a, b) {
+   *   var reGreet = /^(?:hello|hi)$/i,
+   *       aGreet = _.isString(a) && reGreet.test(a),
+   *       bGreet = _.isString(b) && reGreet.test(b);
+   *
+   *   return (aGreet || bGreet) ? (aGreet == bGreet) : undefined;
+   * });
+   * // => true
+   */
+  function isEqual(a, b, callback, thisArg) {
+    return baseIsEqual(a, b, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 2));
+  }
+
+  /**
    * Checks if `value` is a function.
    *
    * @static
@@ -10954,6 +12580,74 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
       });
     }
     return result;
+  }
+
+  /**
+   * Iterates over elements of a collection, returning the first element that
+   * the callback returns truey for. The callback is bound to `thisArg` and
+   * invoked with three arguments; (value, index|key, collection).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @alias detect, findWhere
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to iterate over.
+   * @param {Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the found element, else `undefined`.
+   * @example
+   *
+   * var characters = [
+   *   { 'name': 'barney',  'age': 36, 'blocked': false },
+   *   { 'name': 'fred',    'age': 40, 'blocked': true },
+   *   { 'name': 'pebbles', 'age': 1,  'blocked': false }
+   * ];
+   *
+   * _.find(characters, function(chr) {
+   *   return chr.age < 40;
+   * });
+   * // => { 'name': 'barney', 'age': 36, 'blocked': false }
+   *
+   * // using "_.where" callback shorthand
+   * _.find(characters, { 'age': 1 });
+   * // =>  { 'name': 'pebbles', 'age': 1, 'blocked': false }
+   *
+   * // using "_.pluck" callback shorthand
+   * _.find(characters, 'blocked');
+   * // => { 'name': 'fred', 'age': 40, 'blocked': true }
+   */
+  function find(collection, callback, thisArg) {
+    callback = lodash.createCallback(callback, thisArg, 3);
+
+    if (isArray(collection)) {
+      var index = -1,
+          length = collection.length;
+
+      while (++index < length) {
+        var value = collection[index];
+        if (callback(value, index, collection)) {
+          return value;
+        }
+      }
+    } else {
+      var result;
+      baseEach(collection, function(value, index, collection) {
+        if (callback(value, index, collection)) {
+          result = value;
+          return false;
+        }
+      });
+      return result;
+    }
   }
 
   /**
@@ -12032,11 +13726,13 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   // add functions that return unwrapped values when chaining
   lodash.clone = clone;
   lodash.contains = contains;
+  lodash.find = find;
   lodash.identity = identity;
   lodash.indexOf = indexOf;
   lodash.isArguments = isArguments;
   lodash.isArray = isArray;
   lodash.isEmpty = isEmpty;
+  lodash.isEqual = isEqual;
   lodash.isFunction = isFunction;
   lodash.isObject = isObject;
   lodash.isString = isString;
@@ -12046,6 +13742,8 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
   lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
+  lodash.detect = find;
+  lodash.findWhere = find;
   lodash.include = contains;
 
   mixin(function() {
@@ -12179,7 +13877,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],74:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -14343,1536 +16041,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],151:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div class=\'trophy\'><img class=\'trophyimg\' src=\'', escape((1,  img_url )), '\'><br>', escape((1,  concept_name )), '</div>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":187}],150:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/common":171,"ejs":187}],149:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/common":171,"ejs":187}],148:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":187}],142:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div class="generated-code-container">\n  <p class="generatedCodeMessage">', (2,  message ), '</p>\n  <pre class="generatedCode">', escape((3,  code )), '</pre>\n</div>\n\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":187}],141:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/common":171,"ejs":187}],171:[function(require,module,exports){
-/*common*/ module.exports = window.blockly.locale;
-},{}],63:[function(require,module,exports){
-var constants = require('./constants');
-var readonly = require('./templates/readonly.html');
-
-var TestResults = constants.TestResults;
-
-// TODO (br-pair): can we not pass in the studioApp
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
-  // Check whether blocks are embedded in the hint returned from dashboard.
-  // See below comment for format.
-  var embeddedBlocks = options.response && options.response.hint &&
-      options.response.hint.indexOf("[{") !== 0;
-  if (!embeddedBlocks &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
-    return;
-  }
-
-  var blocksToDisplay = [];
-  if (embeddedBlocks) {
-    // Hint should be of the form: SOME TEXT [{..}, {..}, ..] IGNORED.
-    // Example: 'Try the following block: [{"type": "maze_moveForward"}]'
-    // Note that double quotes are required by the JSON parser.
-    var parts = options.response.hint.match(/(.*)(\[.*\])/);
-    if (!parts) {
-      return;
-    }
-    options.response.hint = parts[1].trim();  // Remove blocks from hint.
-    try {
-      blocksToDisplay = JSON.parse(parts[2]);
-    } catch(err) {
-      // The blocks could not be parsed.  Ignore them.
-      return;
-    }
-  } else {
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
-  }
-
-  if (blocksToDisplay.length === 0) {
-    return;
-  }
-
-  this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioApp.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioApp.LOCALE,
-      localeDirection: studioApp.localeDirection(),
-      baseUrl: studioApp.BASE_URL,
-      cacheBust: studioApp.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: this.generateXMLForBlocks_(blocksToDisplay)
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
-};
-
-module.exports = FeedbackBlocks;
-
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
-  }
-};
-
-/**
- * Creates the XML for blocks to be displayed in a read-only frame.
- * @param {Array} blocks An array of blocks to display (with optional args).
- * @return {string} The generated string of XML.
- */
-FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
-  var blockXMLStrings = [];
-  var blockX = 10;  // Prevent left output plugs from being cut off.
-  var blockY = 0;
-  var blockXPadding = 200;
-  var blockYPadding = 120;
-  var blocksPerLine = 2;
-  var k, name;
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (block.blockDisplayXML) {
-      blockXMLStrings.push(block.blockDisplayXML);
-      continue;
-    }
-    blockXMLStrings.push('<block', ' type="', block.type, '" x="',
-                        blockX.toString(), '" y="', blockY, '">');
-    if (block.titles) {
-      var titleNames = Object.keys(block.titles);
-      for (k = 0; k < titleNames.length; k++) {
-        name = titleNames[k];
-        blockXMLStrings.push('<title name="', name, '">',
-                            block.titles[name], '</title>');
-      }
-    }
-    if (block.values) {
-      var valueNames = Object.keys(block.values);
-      for (k = 0; k < valueNames.length; k++) {
-        name = valueNames[k];
-        blockXMLStrings.push('<value name="', name, '">',
-                            block.values[name], '</value>');
-      }
-    }
-    if (block.extra) {
-      blockXMLStrings.push(block.extra);
-    }
-    blockXMLStrings.push('</block>');
-    if ((i + 1) % blocksPerLine === 0) {
-      blockY += blockYPadding;
-      blockX = 0;
-    } else {
-      blockX += blockXPadding;
-    }
-  }
-  return blockXMLStrings.join('');
-};
-
-},{"./constants":42,"./templates/readonly.html":147}],147:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":187}],187:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * Module dependencies.
- */
-
-var utils = require('./utils')
-  , path = require('path')
-  , basename = path.basename
-  , dirname = path.dirname
-  , extname = path.extname
-  , join = path.join
-  , fs = require('fs')
-  , read = fs.readFileSync;
-
-/**
- * Filters.
- *
- * @type Object
- */
-
-var filters = exports.filters = require('./filters');
-
-/**
- * Intermediate js cache.
- *
- * @type Object
- */
-
-var cache = {};
-
-/**
- * Clear intermediate js cache.
- *
- * @api public
- */
-
-exports.clearCache = function(){
-  cache = {};
-};
-
-/**
- * Translate filtered code into function calls.
- *
- * @param {String} js
- * @return {String}
- * @api private
- */
-
-function filtered(js) {
-  return js.substr(1).split('|').reduce(function(js, filter){
-    var parts = filter.split(':')
-      , name = parts.shift()
-      , args = parts.join(':') || '';
-    if (args) args = ', ' + args;
-    return 'filters.' + name + '(' + js + args + ')';
-  });
-};
-
-/**
- * Re-throw the given `err` in context to the
- * `str` of ejs, `filename`, and `lineno`.
- *
- * @param {Error} err
- * @param {String} str
- * @param {String} filename
- * @param {String} lineno
- * @api private
- */
-
-function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function(line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-  
-  throw err;
-}
-
-/**
- * Parse the given `str` of ejs, returning the function body.
- *
- * @param {String} str
- * @return {String}
- * @api public
- */
-
-var parse = exports.parse = function(str, options){
-  var options = options || {}
-    , open = options.open || exports.open || '<%'
-    , close = options.close || exports.close || '%>'
-    , filename = options.filename
-    , compileDebug = options.compileDebug !== false
-    , buf = [];
-
-  buf.push('var buf = [];');
-  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
-  buf.push('\n buf.push(\'');
-
-  var lineno = 1;
-
-  var consumeEOL = false;
-  for (var i = 0, len = str.length; i < len; ++i) {
-    if (str.slice(i, open.length + i) == open) {
-      i += open.length
-  
-      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
-      switch (str.substr(i, 1)) {
-        case '=':
-          prefix = "', escape((" + line + ', ';
-          postfix = ")), '";
-          ++i;
-          break;
-        case '-':
-          prefix = "', (" + line + ', ';
-          postfix = "), '";
-          ++i;
-          break;
-        default:
-          prefix = "');" + line + ';';
-          postfix = "; buf.push('";
-      }
-
-      var end = str.indexOf(close, i)
-        , js = str.substring(i, end)
-        , start = i
-        , include = null
-        , n = 0;
-
-      if ('-' == js[js.length-1]){
-        js = js.substring(0, js.length - 2);
-        consumeEOL = true;
-      }
-
-      if (0 == js.trim().indexOf('include')) {
-        var name = js.trim().slice(7).trim();
-        if (!filename) throw new Error('filename option is required for includes');
-        var path = resolveInclude(name, filename);
-        include = read(path, 'utf8');
-        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
-        buf.push("' + (function(){" + include + "})() + '");
-        js = '';
-      }
-
-      while (~(n = js.indexOf("\n", n))) n++, lineno++;
-      if (js.substr(0, 1) == ':') js = filtered(js);
-      if (js) {
-        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
-        buf.push(prefix, js, postfix);
-      }
-      i += end - start + close.length - 1;
-
-    } else if (str.substr(i, 1) == "\\") {
-      buf.push("\\\\");
-    } else if (str.substr(i, 1) == "'") {
-      buf.push("\\'");
-    } else if (str.substr(i, 1) == "\r") {
-      // ignore
-    } else if (str.substr(i, 1) == "\n") {
-      if (consumeEOL) {
-        consumeEOL = false;
-      } else {
-        buf.push("\\n");
-        lineno++;
-      }
-    } else {
-      buf.push(str.substr(i, 1));
-    }
-  }
-
-  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
-  else buf.push("');\nreturn buf.join('');");
-
-  return buf.join('');
-};
-
-/**
- * Compile the given `str` of ejs into a `Function`.
- *
- * @param {String} str
- * @param {Object} options
- * @return {Function}
- * @api public
- */
-
-var compile = exports.compile = function(str, options){
-  options = options || {};
-  var escape = options.escape || utils.escape;
-  
-  var input = JSON.stringify(str)
-    , compileDebug = options.compileDebug !== false
-    , client = options.client
-    , filename = options.filename
-        ? JSON.stringify(options.filename)
-        : 'undefined';
-  
-  if (compileDebug) {
-    // Adds the fancy stack trace meta info
-    str = [
-      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
-      rethrow.toString(),
-      'try {',
-      exports.parse(str, options),
-      '} catch (err) {',
-      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
-      '}'
-    ].join("\n");
-  } else {
-    str = exports.parse(str, options);
-  }
-  
-  if (options.debug) console.log(str);
-  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
-
-  try {
-    var fn = new Function('locals, filters, escape', str);
-  } catch (err) {
-    if ('SyntaxError' == err.name) {
-      err.message += options.filename
-        ? ' in ' + filename
-        : ' while compiling ejs';
-    }
-    throw err;
-  }
-
-  if (client) return fn;
-
-  return function(locals){
-    return fn.call(this, locals, filters, escape);
-  }
-};
-
-/**
- * Render the given `str` of ejs.
- *
- * Options:
- *
- *   - `locals`          Local variables object
- *   - `cache`           Compiled functions are cached, requires `filename`
- *   - `filename`        Used by `cache` to key caches
- *   - `scope`           Function execution context
- *   - `debug`           Output generated function body
- *   - `open`            Open tag, defaulting to "<%"
- *   - `close`           Closing tag, defaulting to "%>"
- *
- * @param {String} str
- * @param {Object} options
- * @return {String}
- * @api public
- */
-
-exports.render = function(str, options){
-  var fn
-    , options = options || {};
-
-  if (options.cache) {
-    if (options.filename) {
-      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
-    } else {
-      throw new Error('"cache" option requires "filename".');
-    }
-  } else {
-    fn = compile(str, options);
-  }
-
-  options.__proto__ = options.locals;
-  return fn.call(options.scope, options);
-};
-
-/**
- * Render an EJS file at the given `path` and callback `fn(err, str)`.
- *
- * @param {String} path
- * @param {Object|Function} options or callback
- * @param {Function} fn
- * @api public
- */
-
-exports.renderFile = function(path, options, fn){
-  var key = path + ':string';
-
-  if ('function' == typeof options) {
-    fn = options, options = {};
-  }
-
-  options.filename = path;
-
-  var str;
-  try {
-    str = options.cache
-      ? cache[key] || (cache[key] = read(path, 'utf8'))
-      : read(path, 'utf8');
-  } catch (err) {
-    fn(err);
-    return;
-  }
-  fn(null, exports.render(str, options));
-};
-
-/**
- * Resolve include `name` relative to `filename`.
- *
- * @param {String} name
- * @param {String} filename
- * @return {String}
- * @api private
- */
-
-function resolveInclude(name, filename) {
-  var path = join(dirname(filename), name);
-  var ext = extname(name);
-  if (!ext) path += '.ejs';
-  return path;
-}
-
-// express support
-
-exports.__express = exports.renderFile;
-
-/**
- * Expose to require().
- */
-
-if (require.extensions) {
-  require.extensions['.ejs'] = function(module, filename) {
-    source = require('fs').readFileSync(filename, 'utf-8');
-    module._compile(compile(source, {}), filename);
-  };
-} else if (require.registerExtension) {
-  require.registerExtension('.ejs', function(src) {
-    return compile(src, {});
-  });
-}
-
-},{"./filters":188,"./utils":189,"fs":179,"path":180}],189:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * Escape the given string of `html`.
- *
- * @param {String} html
- * @return {String}
- * @api private
- */
-
-exports.escape = function(html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
- 
-},{}],188:[function(require,module,exports){
-
-/*!
- * EJS - Filters
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * First element of the target `obj`.
- */
-
-exports.first = function(obj) {
-  return obj[0];
-};
-
-/**
- * Last element of the target `obj`.
- */
-
-exports.last = function(obj) {
-  return obj[obj.length - 1];
-};
-
-/**
- * Capitalize the first letter of the target `str`.
- */
-
-exports.capitalize = function(str){
-  str = String(str);
-  return str[0].toUpperCase() + str.substr(1, str.length);
-};
-
-/**
- * Downcase the target `str`.
- */
-
-exports.downcase = function(str){
-  return String(str).toLowerCase();
-};
-
-/**
- * Uppercase the target `str`.
- */
-
-exports.upcase = function(str){
-  return String(str).toUpperCase();
-};
-
-/**
- * Sort the target `obj`.
- */
-
-exports.sort = function(obj){
-  return Object.create(obj).sort();
-};
-
-/**
- * Sort the target `obj` by the given `prop` ascending.
- */
-
-exports.sort_by = function(obj, prop){
-  return Object.create(obj).sort(function(a, b){
-    a = a[prop], b = b[prop];
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
-  });
-};
-
-/**
- * Size or length of the target `obj`.
- */
-
-exports.size = exports.length = function(obj) {
-  return obj.length;
-};
-
-/**
- * Add `a` and `b`.
- */
-
-exports.plus = function(a, b){
-  return Number(a) + Number(b);
-};
-
-/**
- * Subtract `b` from `a`.
- */
-
-exports.minus = function(a, b){
-  return Number(a) - Number(b);
-};
-
-/**
- * Multiply `a` by `b`.
- */
-
-exports.times = function(a, b){
-  return Number(a) * Number(b);
-};
-
-/**
- * Divide `a` by `b`.
- */
-
-exports.divided_by = function(a, b){
-  return Number(a) / Number(b);
-};
-
-/**
- * Join `obj` with the given `str`.
- */
-
-exports.join = function(obj, str){
-  return obj.join(str || ', ');
-};
-
-/**
- * Truncate `str` to `len`.
- */
-
-exports.truncate = function(str, len){
-  str = String(str);
-  return str.substr(0, len);
-};
-
-/**
- * Truncate `str` to `n` words.
- */
-
-exports.truncate_words = function(str, n){
-  var str = String(str)
-    , words = str.split(/ +/);
-  return words.slice(0, n).join(' ');
-};
-
-/**
- * Replace `pattern` with `substitution` in `str`.
- */
-
-exports.replace = function(str, pattern, substitution){
-  return String(str).replace(pattern, substitution || '');
-};
-
-/**
- * Prepend `val` to `obj`.
- */
-
-exports.prepend = function(obj, val){
-  return Array.isArray(obj)
-    ? [val].concat(obj)
-    : val + obj;
-};
-
-/**
- * Append `val` to `obj`.
- */
-
-exports.append = function(obj, val){
-  return Array.isArray(obj)
-    ? obj.concat(val)
-    : obj + val;
-};
-
-/**
- * Map the given `prop`.
- */
-
-exports.map = function(arr, prop){
-  return arr.map(function(obj){
-    return obj[prop];
-  });
-};
-
-/**
- * Reverse the given `obj`.
- */
-
-exports.reverse = function(obj){
-  return Array.isArray(obj)
-    ? obj.reverse()
-    : String(obj).split('').reverse().join('');
-};
-
-/**
- * Get `prop` of the given `obj`.
- */
-
-exports.get = function(obj, prop){
-  return obj[prop];
-};
-
-/**
- * Packs the given `obj` into json string
- */
-exports.json = function(obj){
-  return JSON.stringify(obj);
-};
-},{}],180:[function(require,module,exports){
-(function (process){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-// resolves . and .. elements in a path array with directory names there
-// must be no slashes, empty elements, or device names (c:\) in the array
-// (so also no leading and trailing slashes - it does not distinguish
-// relative and absolute paths)
-function normalizeArray(parts, allowAboveRoot) {
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = parts.length - 1; i >= 0; i--) {
-    var last = parts[i];
-    if (last === '.') {
-      parts.splice(i, 1);
-    } else if (last === '..') {
-      parts.splice(i, 1);
-      up++;
-    } else if (up) {
-      parts.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (allowAboveRoot) {
-    for (; up--; up) {
-      parts.unshift('..');
-    }
-  }
-
-  return parts;
-}
-
-// Split a filename into [root, dir, basename, ext], unix version
-// 'root' is just a slash, or nothing.
-var splitPathRe =
-    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
-var splitPath = function(filename) {
-  return splitPathRe.exec(filename).slice(1);
-};
-
-// path.resolve([from ...], to)
-// posix version
-exports.resolve = function() {
-  var resolvedPath = '',
-      resolvedAbsolute = false;
-
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-    var path = (i >= 0) ? arguments[i] : process.cwd();
-
-    // Skip empty and invalid entries
-    if (typeof path !== 'string') {
-      throw new TypeError('Arguments to path.resolve must be strings');
-    } else if (!path) {
-      continue;
-    }
-
-    resolvedPath = path + '/' + resolvedPath;
-    resolvedAbsolute = path.charAt(0) === '/';
-  }
-
-  // At this point the path should be resolved to a full absolute path, but
-  // handle relative paths to be safe (might happen when process.cwd() fails)
-
-  // Normalize the path
-  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
-    return !!p;
-  }), !resolvedAbsolute).join('/');
-
-  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
-};
-
-// path.normalize(path)
-// posix version
-exports.normalize = function(path) {
-  var isAbsolute = exports.isAbsolute(path),
-      trailingSlash = substr(path, -1) === '/';
-
-  // Normalize the path
-  path = normalizeArray(filter(path.split('/'), function(p) {
-    return !!p;
-  }), !isAbsolute).join('/');
-
-  if (!path && !isAbsolute) {
-    path = '.';
-  }
-  if (path && trailingSlash) {
-    path += '/';
-  }
-
-  return (isAbsolute ? '/' : '') + path;
-};
-
-// posix version
-exports.isAbsolute = function(path) {
-  return path.charAt(0) === '/';
-};
-
-// posix version
-exports.join = function() {
-  var paths = Array.prototype.slice.call(arguments, 0);
-  return exports.normalize(filter(paths, function(p, index) {
-    if (typeof p !== 'string') {
-      throw new TypeError('Arguments to path.join must be strings');
-    }
-    return p;
-  }).join('/'));
-};
-
-
-// path.relative(from, to)
-// posix version
-exports.relative = function(from, to) {
-  from = exports.resolve(from).substr(1);
-  to = exports.resolve(to).substr(1);
-
-  function trim(arr) {
-    var start = 0;
-    for (; start < arr.length; start++) {
-      if (arr[start] !== '') break;
-    }
-
-    var end = arr.length - 1;
-    for (; end >= 0; end--) {
-      if (arr[end] !== '') break;
-    }
-
-    if (start > end) return [];
-    return arr.slice(start, end - start + 1);
-  }
-
-  var fromParts = trim(from.split('/'));
-  var toParts = trim(to.split('/'));
-
-  var length = Math.min(fromParts.length, toParts.length);
-  var samePartsLength = length;
-  for (var i = 0; i < length; i++) {
-    if (fromParts[i] !== toParts[i]) {
-      samePartsLength = i;
-      break;
-    }
-  }
-
-  var outputParts = [];
-  for (var i = samePartsLength; i < fromParts.length; i++) {
-    outputParts.push('..');
-  }
-
-  outputParts = outputParts.concat(toParts.slice(samePartsLength));
-
-  return outputParts.join('/');
-};
-
-exports.sep = '/';
-exports.delimiter = ':';
-
-exports.dirname = function(path) {
-  var result = splitPath(path),
-      root = result[0],
-      dir = result[1];
-
-  if (!root && !dir) {
-    // No dirname whatsoever
-    return '.';
-  }
-
-  if (dir) {
-    // It has a dirname, strip trailing slash
-    dir = dir.substr(0, dir.length - 1);
-  }
-
-  return root + dir;
-};
-
-
-exports.basename = function(path, ext) {
-  var f = splitPath(path)[2];
-  // TODO: make this comparison case-insensitive on windows?
-  if (ext && f.substr(-1 * ext.length) === ext) {
-    f = f.substr(0, f.length - ext.length);
-  }
-  return f;
-};
-
-
-exports.extname = function(path) {
-  return splitPath(path)[3];
-};
-
-function filter (xs, f) {
-    if (xs.filter) return xs.filter(f);
-    var res = [];
-    for (var i = 0; i < xs.length; i++) {
-        if (f(xs[i], i, xs)) res.push(xs[i]);
-    }
-    return res;
-}
-
-// String.prototype.substr - negative index don't work in IE8
-var substr = 'ab'.substr(-1) === 'b'
-    ? function (str, start, len) { return str.substr(start, len) }
-    : function (str, start, len) {
-        if (start < 0) start = str.length + start;
-        return str.substr(start, len);
-    }
-;
-
-}).call(this,require('_process'))
-},{"_process":181}],181:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    draining = true;
-    var currentQueue;
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        var i = -1;
-        while (++i < len) {
-            currentQueue[i]();
-        }
-        len = queue.length;
-    }
-    draining = false;
-}
-process.nextTick = function (fun) {
-    queue.push(fun);
-    if (!draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
-
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-// TODO(shtylman)
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],179:[function(require,module,exports){
-
-},{}],41:[function(require,module,exports){
-var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
-
-var LOOP_HIGHLIGHT = 'loopHighlight();\n';
-var LOOP_HIGHLIGHT_RE =
-    new RegExp(LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)'), 'g');
-
-/**
- * Returns javascript code to call a timeout check
- */
-exports.loopTrap = function() {
-  return INFINITE_LOOP_TRAP;
-};
-
-exports.loopHighlight = function (apiName, blockId) {
-  var args = "'block_id_" + blockId + "'";
-  if (blockId === undefined) {
-    args = "%1";
-  }
-  return apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
-};
-
-/**
- * Extract the user's code as raw JavaScript.
- * @param {string} code Generated code.
- * @return {string} The code without serial numbers and timeout checks.
- */
-exports.strip = function(code) {
-  return (code
-    // Strip out serial numbers.
-    .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
-    // Remove timeouts.
-    .replace(INFINITE_LOOP_TRAP, '')
-    // Strip out loop highlight
-    .replace(LOOP_HIGHLIGHT_RE, '')
-    // Strip out class namespaces.
-    .replace(/(StudioApp|Maze|Turtle)\./g, '')
-    // Strip out particular helper functions.
-    .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
-    // Collapse consecutive blank lines.
-    .replace(/\n\n+/gm, '\n\n')
-    // Trim.
-    .replace(/^\s+|\s+$/g, '')
-  );
-};
-
-/**
- * Extract the user's code as raw JavaScript.
- */
-exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.blockSpaceToCode('JavaScript');
-  return exports.strip(code);
-};
-
-exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
-  var i, retVal;
-  if (typeof maxDepth === "undefined") {
-    maxDepth = Infinity; // default to inifinite levels of depth
-  }
-  if (maxDepth === 0) {
-    return interpreter.createPrimitive(undefined);
-  }
-  if (nativeVar instanceof Array) {
-    retVal = interpreter.createObject(interpreter.ARRAY);
-    for (i = 0; i < nativeVar.length; i++) {
-      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
-    }
-    retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
-    // Special case for canvas image data - could expand to support TypedArray
-    retVal = interpreter.createObject(interpreter.ARRAY);
-    for (i = 0; i < nativeVar.length; i++) {
-      retVal.properties[i] = interpreter.createPrimitive(nativeVar[i]);
-    }
-    retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
-    retVal = interpreter.createNativeFunction(wrapper);
-  } else if (nativeVar instanceof Object) {
-    // note Object must be checked after Function and Array (since they are also Objects)
-    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
-      // Special case to see if we are trying to marshal an interpreter object
-      // (this currently happens when we store interpreter function objects in native
-      //  and return them back in nativeGetCallback)
-
-      // NOTE: this check could be expanded to check for other interpreter object types
-      // if we have reason to believe that we may be passing those back
-
-      retVal = nativeVar;
-    } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
-    }
-  } else {
-    retVal = interpreter.createPrimitive(nativeVar);
-  }
-  return retVal;
-};
-
-exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive) {
-    return interpreterVar.data;
-  } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
-    var nativeArray = [];
-    nativeArray.length = interpreterVar.length;
-    for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = exports.marshalInterpreterToNative(interpreter,
-                                                          interpreterVar.properties[i]);
-    }
-    return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
-    var nativeObject = {};
-    for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
-                                                              interpreterVar.properties[prop]);
-    }
-    return nativeObject;
-  } else {
-    // Just return the interpreter object if we can't convert it. This is needed
-    // for passing interpreter callback functions into native.
-    return interpreterVar;
-  }
-};
-
-/**
- * Generate a native function wrapper for use with the JS interpreter.
- */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
-};
-
-/**
- * Initialize a JS interpreter.
- */
-exports.initJSInterpreter = function (interpreter, scope, options) {
-  for (var optsObj in options) {
-    var func, wrapper;
-    // The options object contains objects that will be referenced
-    // by the code we plan to execute. Since these objects exist in the native
-    // world, we need to create associated objects in the interpreter's world
-    // so the interpreted code can call out to these native objects
-
-    // Create global objects in the interpreter for everything in options
-    var obj = interpreter.createObject(interpreter.OBJECT);
-    interpreter.setProperty(scope, optsObj.toString(), obj);
-    for (var prop in options[optsObj]) {
-      func = options[optsObj][prop];
-      if (func instanceof Function) {
-        // Populate each of the global objects with native functions
-        // NOTE: other properties are not currently passed to the interpreter
-        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
-        interpreter.setProperty(obj,
-                                prop,
-                                interpreter.createNativeFunction(wrapper));
-      }
-    }
-  }
-};
-
-/**
- * Check to see if it is safe to step the interpreter while we are unwinding.
- * (Called repeatedly after completing a step where the node was marked 'done')
- */
-exports.isNextStepSafeWhileUnwinding = function (interpreter) {
-  var state = interpreter.stateStack[0];
-  if (state.done) {
-    return true;
-  }
-  switch (state.node.type) {
-    case "VariableDeclaration":
-    case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
-    case "BinaryExpression":
-    case "CallExpression":
-    case "Identifier":
-    case "Literal":
-    case "Program":
-      return true;
-  }
-  return false;
-};
-
-// session is an instance of Ace editSession
-// Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
-// Need to call this only if the document is updated after the last call.
-exports.aceCalculateCumulativeLength = function (session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
-};
-
-// Fast binary search implementation
-// Pass the cumulative length array here.
-// Usage
-// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
-// tries to find 2512th character lies in which row.
-function aceFindRow(cumulativeLength, rows, rowe, pos) {
-  if (rows > rowe) {
-    return null;
-  }
-  if (rows + 1 === rowe) {
-    return rows;
-  }
-
-  var mid = Math.floor((rows + rowe) / 2);
-  
-  if (pos < cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, rows, mid, pos);
-  } else if(pos > cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, mid, rowe, pos);
-  }
-  return mid;
-}
-
-exports.isAceBreakpointRow = function (session, userCodeRow) {
-  var bps = session.getBreakpoints();
-  return Boolean(bps[userCodeRow]);
-};
-
-function createSelection (selection, cumulativeLength, start, end) {
-  var range = selection.getRange();
-
-  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-  range.start.col = start - cumulativeLength[range.start.row];
-  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
-  range.end.col = end - cumulativeLength[range.end.row];
-
-  selection.setSelectionRange(range);
-}
-
-/**
- * Selects code in droplet/ace editor.
- *
- * Returns the row (line) of code highlighted. If nothing is highlighted
- * because it is outside of the userCode area, the return value is -1
- */
-exports.selectCurrentCode = function (interpreter,
-                                      cumulativeLength,
-                                      userCodeStartOffset,
-                                      userCodeLength,
-                                      editor) {
-  var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
-
-    // Only show selection if the node being executed is inside the user's
-    // code (not inside code we inserted before or after their code that is
-    // not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-      // Highlight the code being executed in each step:
-      if (editor.currentlyUsingBlocks) {
-        var style = {color: '#FFFF22'};
-        editor.clearLineMarks();
-        // NOTE: replace markLine with this new mark() call once we have a new
-        // version of droplet
-        
-        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
-        editor.markLine(userCodeRow, style);
-      } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
-      }
-    }
-  } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
-  }
-  return userCodeRow;
-};
-
-/**
- * Finds the current line of code in droplet/ace editor.
- *
- * Returns the line of code where the interpreter is at. If it is outside
- * of the userCode area, the return value is -1
- *
- * NOTE: first 4 params match the selectCurrentCode function by design.
- */
-exports.getUserCodeLine = function (interpreter, cumulativeLength,
-                                    userCodeStartOffset, userCodeLength) {
-  var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
-    var node = interpreter.stateStack[0].node;
-    // Adjust start/end by userCodeStartOffset since the code running
-    // has been expanded vs. what the user sees in the editor window:
-    var start = node.start - userCodeStartOffset;
-    var end = node.end - userCodeStartOffset;
-
-    // Only return a valid userCodeRow if the node being executed is inside the
-    // user's code (not inside code we inserted before or after their code that
-    // is not visible in the editor):
-    if (start >= 0 && start < userCodeLength) {
-      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
-    }
-  }
-  return userCodeRow;
-};
-
-/**
- * Evaluates a string of code parameterized with a dictionary.
- */
-exports.evalWith = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
-    };
-    var myInterpreter = new Interpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else {
-    // execute JS code "natively"
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor().apply(null, args);
-  }
-};
-
-/**
- * Returns a function based on a string of code parameterized with a dictionary.
- */
-exports.functionFromCode = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
-  }
-};
-
-},{}],43:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -15979,7 +16148,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],42:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16019,6 +16188,7 @@ exports.TestResults = {
   PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
+  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -16052,10 +16222,11 @@ exports.KeyCodes = {
   LEFT: 37,
   UP: 38,
   RIGHT: 39,
-  DOWN: 40
+  DOWN: 40,
+  DELETE: 127
 };
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16305,7 +16476,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":167}],167:[function(require,module,exports){
+},{"./xml":190}],190:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -16333,7 +16504,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],1:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 /**
  * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
  * directory of this distribution and at

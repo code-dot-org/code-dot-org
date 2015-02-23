@@ -3,10 +3,10 @@ uk-UA:
   select_language: Будь ласка, виберіть мову
   computer_science: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>спробували</h3><h2>Годину коду</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
@@ -242,7 +242,7 @@ uk-UA:
   dashboard_students_new_section: 'Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>.'
   dashboard_students_placeholder_name: "Ім'я учня"
   dashboard_students_name: Ім’я
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Прогрес
   dashboard_students_age: Вік
   dashboard_students_gender: Стать
   dashboard_students_male: Чоловік
@@ -328,7 +328,7 @@ uk-UA:
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: 'Як викладати "Годину коду"'
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя

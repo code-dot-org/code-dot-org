@@ -18,7 +18,7 @@
   "incrementPlayerScoreTooltip":"เพิ่มคะแนนผู้เล่น 1 คะแนน",
   "nextLevel":"ขอแสดงความยินดีคุณสำเร็จปริศนานี้.",
   "no":"ไม่ใช่",
-  "numBlocksNeeded":"This puzzle can be solved with %1 blocks.",
+  "numBlocksNeeded":"ปริศนานี้สามารถแก้ได้เพียงแค่ %1 บล็อกเท่านั้นเอง",
   "playSoundRandom":"เล่นเพลงไม่ตามลำดับ",
   "playSoundBounce":"play bounce sound",
   "playSoundCrunch":"play crunch sound",

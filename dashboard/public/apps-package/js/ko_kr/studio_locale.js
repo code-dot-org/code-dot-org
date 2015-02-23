@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "나무 소리"},
 "speed":function(d){return "스피드"},
 "startSetValue":function(d){return "start (rocket-height function)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "멈춤"},
 "stopSpriteN":function(d){return "캐릭터 "+appLocale.v(d,"spriteIndex")+" 멈춤"},
 "stopTooltip":function(d){return "케릭터의 움직임을 멈춤니다."},

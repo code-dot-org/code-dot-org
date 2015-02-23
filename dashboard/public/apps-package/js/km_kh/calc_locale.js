@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "គិត​លេខ"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។"},
 "extraTopBlocks":function(d){return "អ្នកមានប្លុក មិនជាប់គ្នា មួយ។ តើអ្នកចង់មានន័យថាការភ្ជាប់ទាំងនេះទៅប្លុក \"គណនា\"មែនទេ?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "គោលដៅ៖"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "រឿងរបស់អ្នកនៅទីនេះគឺ! បន្តធ្វើការលើវាឬប្តូទៅផ្ដុំរូបបន្ទាប់!"},
-"yourExpression":function(d){return "កន្សោម​របស់​អ្នក៖"}};
+"yourExpression":function(d){return "កន្សោម​របស់​អ្នក៖"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

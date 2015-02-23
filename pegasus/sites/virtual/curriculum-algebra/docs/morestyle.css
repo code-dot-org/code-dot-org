@@ -207,6 +207,34 @@ li p {
   margin: 0;
 }
 
+.fill-in { width: 100% }
+
+.fill-in tbody tr.empty { height: 50px; }
+
+.fill-in .sub {
+  vertical-align: bottom;
+  font-size: .8em;
+  font-style: italic;
+  color: #999;
+  padding-bottom: 5px;
+  height: 20px;
+}
+
+.worksheet .printbackground {
+  clear: none !important;
+  padding-top: 20px;
+}
+
+.design-recipe tbody tr {
+  padding: 0 15px;
+  font-size: 18pt;
+  font-family: monospace;
+}
+
+.design-recipe thead tr {
+  background-color: #ddd;
+}
+
 @page  
 { 
     size: auto;    

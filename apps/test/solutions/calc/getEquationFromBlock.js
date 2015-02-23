@@ -3,7 +3,7 @@ var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var EquationSet = require(testUtils.buildPath('calc/equationSet'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode'));
 
 /**
@@ -69,8 +69,8 @@ module.exports = {
     {
       description: "getEquationFromBlock",
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes

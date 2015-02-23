@@ -102,6 +102,12 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
@@ -222,25 +228,32 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  var userObject = getDrawableFromBlockspace();
-  if (userObject && userObject.draw) {
-    userObject.draw(document.getElementById("user"));
-  }
-
-  // If we got a CustomEvalError, set error message appropriately.
-  if (userObject instanceof CustomEvalError) {
+  if (studioApp.hasUnfilledBlock()) {
     Eval.result = false;
-    Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
-    Eval.message = userObject.feedbackMessage;
+    Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Eval.message = evalMsg.emptyFunctionalBlock();
   } else {
-    // We got an EvalImage back, compare it to our target
-    Eval.result = evaluateAnswer();
-    Eval.testResults = studioApp.getTestResults(Eval.result);
-  }
+    var userObject = getDrawableFromBlockspace();
+    if (userObject && userObject.draw) {
+      userObject.draw(document.getElementById("user"));
+    }
 
-  if (level.freePlay) {
-    Eval.testResults = TestResults.FREE_PLAY;
+    // If we got a CustomEvalError, set error message appropriately.
+    if (userObject instanceof CustomEvalError) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+
+      Eval.message = userObject.feedbackMessage;
+    } else {
+      // We got an EvalImage back, compare it to our target
+      Eval.result = evaluateAnswer();
+      Eval.testResults = studioApp.getTestResults(Eval.result);
+    }
+
+    if (level.freePlay) {
+      Eval.result = true;
+      Eval.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -255,6 +268,8 @@ Eval.execute = function() {
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 
   studioApp.report(reportData);
 };
@@ -315,7 +330,7 @@ var displayFeedback = function(response) {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
   };
-  if (Eval.message) {
+  if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
   studioApp.displayFeedback(options);
