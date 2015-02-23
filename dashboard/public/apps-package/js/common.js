@@ -10178,11 +10178,14 @@ exports.randomNumber = function (min, max) {
 
 exports.dropletGlobalConfigBlocks = [
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'min', 'parent': Math, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+];
+
+exports.dropletBuiltinConfigBlocks = [
+  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
 ];
 
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
@@ -10231,6 +10234,9 @@ exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjN
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
     var cf = aliasFunctions[i];
+    if (cf.dontAlias) {
+      continue;
+    }
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +
@@ -10310,16 +10316,16 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
           block: 'randomNumber(__, __)',
           title: 'Get a random number between the specified minimum and maximum values'
         }, {
-          block: 'round(__)',
+          block: 'Math.round(__)',
           title: 'Round to the nearest integer'
         }, {
-          block: 'abs(__)',
+          block: 'Math.abs(__)',
           title: 'Absolute value'
         }, {
-          block: 'max(__, __)',
+          block: 'Math.max(__, __)',
           title: 'Maximum value'
         }, {
-          block: 'min(__, __)',
+          block: 'Math.min(__, __)',
           title: 'Minimum value'
         }
       ]
@@ -10435,6 +10441,7 @@ exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
   var apis = [];
 
   populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
 
   var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
   populateCompleterApisFromConfigBlocks(apis, configBlocks);
@@ -10484,6 +10491,7 @@ exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
 */
 
   populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
 
   var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
   populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
