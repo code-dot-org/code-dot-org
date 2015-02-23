@@ -18,8 +18,8 @@ class Level < ActiveRecord::Base
 
   serialized_attrs %w(video_key embed)
 
-  STANDALONE_ARTIST_PROJECT_ID = Level.find_by_name('New Artist Project').id
-  STANDALONE_PLAY_LAB_PROJECT_ID = Level.find_by_name('New Play Lab Project').id
+  STANDALONE_ARTIST_PROJECT = Level.find_by_name 'New Artist Project'
+  STANDALONE_PLAY_LAB_PROJECT = Level.find_by_name 'New Play Lab Project'
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
