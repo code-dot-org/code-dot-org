@@ -35,6 +35,20 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 Let's get back into that Big Game that we started in stage 7.
 
+The primary goal here is to get the target in the upper left to travel from left to right and the danger in the lower right to travel from right to left.  This is accomplished in the update-target and update-danger blocks by changing the output of the function from its current default value of an unchanging x to some value relative to x.
+
+The scenario that is a little different here is that the update-target and update-danger are executed MORE THAN ONCE.  These update functions excute on a regular interval based on an unseen game clock (about every tenth of a second).  Each time these updates are executed, they evaluate the CURRENT x value and then return a new x value such that the image's position changes.  For each new execution of the update, the x value set by the previous execution becomes the starting pointing.
+
+The program re-draws the same image, each time in a new location slightly to the left (or right), and gives the appearance of a relatively smooth movement across the screen.  Some students might notice that the characters also turn.  This feature is handled automatically based on the direction of the update.
+
+[tip]
+
+# Lesson Tip
+
+The contract can be quite long and often scrolls off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.
+
+[/tip]
+
 [/together]
 
 [together]
@@ -42,7 +56,7 @@ Let's get back into that Big Game that we started in stage 7.
 ## Activity: Eval Design Recpie
 ### <a name="Activity1"></a> 2) Online Puzzles
 
- Using what you've learned about the Design Recipe and, you'll be writing functions that add animation to your game. Head to [MSM stage 12](http://studio.code.org/s/algebra/stage/12/puzzle/1) in Code Studio to get started programming.
+ Using what you've learned about the Design Recipe and, you'll be writing functions that add animation to your game. Head to [MSM stage 12](http://studio.code.org/s/algebra/stage/12/puzzle/1) in Code Studio to get started programming.  Note that when you click run, the title and sub-title will display for about 5 seconds before the other functions start.
 
 [/together]
 

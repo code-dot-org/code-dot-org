@@ -99,6 +99,7 @@ levels.ec_simple = {
     'penColor': null,
     'show': null,
     'hide': null,
+    'console.log': null,
   },
 };
 

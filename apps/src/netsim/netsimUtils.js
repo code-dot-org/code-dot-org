@@ -22,7 +22,7 @@ var NetSimRouterNode = require('./NetSimRouterNode');
  * @throws when a row doesn't have a mappable node type.
  * @return {Array.<NetSimNode>} nodes for the rows
  */
-module.exports.nodesFromRows = function (shard, rows) {
+exports.nodesFromRows = function (shard, rows) {
   return rows
       .map(function (row) {
         if (row.type === NetSimClientNode.getNodeType()) {
