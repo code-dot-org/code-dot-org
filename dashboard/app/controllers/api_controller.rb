@@ -29,7 +29,8 @@ class ApiController < ApplicationController
           student_levels << {class: activity_css_class(user_level.try(:best_result)),
                              title: script_level.stage_or_game_position}
         else
-          student_levels << nil
+          student_levels << {class: activity_css_class(nil),
+                             title: script_level.stage_or_game_position}
         end
       end   
       {id: student.id, levels: student_levels}

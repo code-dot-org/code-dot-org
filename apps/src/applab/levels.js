@@ -132,6 +132,7 @@ levels.ec_simple = {
     "mathMin": null,
 
     // Variables
+    "console.log": null,
     "declareAssign_x": null,
     "assign_x": null,
     "declareAssign_x_array_1_4": null,
