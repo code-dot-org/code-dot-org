@@ -282,7 +282,7 @@ class Script < ActiveRecord::Base
           )
         script_level_attributes.merge!(
           stage_id: stage.id,
-          position: (script_level_position[stage] += 1)
+          position: (script_level_position[stage.id] += 1)
         )
         (script_levels_by_stage[stage] ||= []) << script_level
         unless script_stages.include?(stage)
