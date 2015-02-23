@@ -107,13 +107,14 @@ Eval.init = function(config) {
       background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         skin.assetUrl('background_grid.png'));
 
-      for (var i = 50; i <= 400; i += 50) {
+      var origin = -200;
+      for (var i = origin; i <= 200; i += 100) {
         var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         // Position text just inside the bottom right corner.
         text.appendChild(document.createTextNode(i));
         svg.appendChild(text);
         var bbox = text.getBBox()
-        text.setAttribute('x', i - bbox.width - 3);
+        text.setAttribute('x', i - origin - bbox.width - 3);
         text.setAttribute('y', CANVAS_HEIGHT - bbox.height);
         text.setAttribute('dominant-baseline', 'hanging');
 
@@ -123,7 +124,7 @@ Eval.init = function(config) {
         svg.appendChild(text);
         var bbox = text.getBBox()
         text.setAttribute('x', 0);
-        text.setAttribute('y', CANVAS_WIDTH - i + bbox.height);
+        text.setAttribute('y', CANVAS_WIDTH - (i - origin) + bbox.height);
       }
     }
 
