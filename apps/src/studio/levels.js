@@ -1451,17 +1451,54 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'codeFunctions': {
-    'setSprite': null,
-    'setBackground': null,
-    'move': null,
-    'playSound': null,
-    'changeScore': null,
-    'setSpritePosition': null,
-    'setSpriteSpeed': null,
-    'setSpriteEmotion': null,
-    'throwProjectile': null,
-    'vanish': null,
-    'onEvent': null,
+    // Play Lab
+    "setSprite": null,
+    "setBackground": null,
+    "move": null,
+    "playSound": null,
+    "changeScore": null,
+    "setSpritePosition": null,
+    "setSpriteSpeed": null,
+    "setSpriteEmotion": null,
+    "throwProjectile": null,
+    "vanish": null,
+    "onEvent": null,
+
+    // Control
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
   },
   'startBlocks': "",
 });

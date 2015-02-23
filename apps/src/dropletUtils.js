@@ -12,29 +12,118 @@ exports.randomNumber = function (min, max) {
 
 exports.dropletGlobalConfigBlocks = [
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'min', 'parent': Math, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
 ];
+
+exports.dropletBuiltinConfigBlocks = [
+  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+];
+
+var standardConfig = {};
+
+standardConfig.blocks = [
+  // Control
+  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'title': 'Do something multiple times', 'category': 'Control' },
+  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'title': 'Do something only if a condition is true', 'category': 'Control' },
+  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'title': 'Do something if a condition is true, otherwise do something else', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'title': 'Repeat something while a condition is true', 'category': 'Control' },
+
+  // Math
+  {'func': 'addOperator', 'block': '__ + __', 'title': 'Add two numbers', 'category': 'Math' },
+  {'func': 'subtractOperator', 'block': '__ - __', 'title': 'Subtract two numbers', 'category': 'Math' },
+  {'func': 'multiplyOperator', 'block': '__ * __', 'title': 'Multiply two numbers', 'category': 'Math' },
+  {'func': 'divideOperator', 'block': '__ / __', 'title': 'Divide two numbers', 'category': 'Math' },
+  {'func': 'equalityOperator', 'block': '__ == __', 'title': 'Test for equality', 'category': 'Math' },
+  {'func': 'inequalityOperator', 'block': '__ != __', 'title': 'Test for inequality', 'category': 'Math' },
+  {'func': 'greaterThanOperator', 'block': '__ > __', 'title': 'Compare two numbers', 'category': 'Math' },
+  {'func': 'lessThanOperator', 'block': '__ < __', 'title': 'Compare two numbers', 'category': 'Math' },
+  {'func': 'andOperator', 'block': '__ && __', 'title': 'Logical AND of two booleans', 'category': 'Math' },
+  {'func': 'orOperator', 'block': '__ || __', 'title': 'Logical OR of two booleans', 'category': 'Math' },
+  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'title': 'Get a random number between 0 and the specified maximum value', 'category': 'Math' },
+  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'title': 'Get a random number between the specified minimum and maximum values', 'category': 'Math' },
+  {'func': 'mathRound', 'block': 'Math.round(__)', 'title': 'Round to the nearest integer', 'category': 'Math' },
+  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'title': 'Absolute value', 'category': 'Math' },
+  {'func': 'mathMax', 'block': 'Math.max(__)', 'title': 'Maximum value', 'category': 'Math' },
+  {'func': 'mathMin', 'block': 'Math.min(__)', 'title': 'Minimum value', 'category': 'Math' },
+
+  // Variables
+  {'func': 'declareAssign_x', 'block': 'var x = __;', 'title': 'Create a variable for the first time', 'category': 'Variables' },
+  {'func': 'assign_x', 'block': 'x = __;', 'title': 'Reassign a variable', 'category': 'Variables' },
+  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'title': 'Create a variable and initialize it as an array', 'category': 'Variables' },
+  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'title': 'Create a variable and assign it a value by displaying a prompt', 'category': 'Variables' },
+
+  // Functions
+  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
+  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
+  {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Use a function with argument', 'category': 'Functions' },
+];
+
+standardConfig.categories = {
+  'Control': {
+    'color': 'orange',
+    'blocks': []
+  },
+  'Math': {
+    'color': 'green',
+    'blocks': []
+  },
+  'Variables': {
+    'color': 'blue',
+    'blocks': []
+  },
+  'Functions': {
+    'color': 'violet',
+    'blocks': []
+  },
+};
+
 
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var dropletBlocks = dropletConfig.blocks;
+    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
     // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks
+    //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
-    for (var i = 0; i < dropletBlocks.length; i++) {
-      var block = dropletBlocks[i];
-      if (dropletBlocks[i].func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push(utils.extend(dropletBlocks[i],
-                    codeFunctions[dropletBlocks[i].func]));
+    for (var s = 0; s < blockSets.length; s++) {
+      var blocks = blockSets[s];
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        if (blocks[i].func in codeFunctions) {
+          // We found this particular block, now override the defaults with extend
+          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
+        }
       }
     }
+  }
+  return merged;
+}
+
+//
+// Return a new categories object with the categories from dropletConfig
+// merged with the ones in standardConfig
+//
+
+function mergeCategoriesWithConfig(dropletConfig) {
+  var merged = {};
+
+  if (dropletConfig && dropletConfig.categories) {
+    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
+    for (var s = 0; s < categorySets.length; s++) {
+      var categories = categorySets[s];
+      for (var catName in categories) {
+        if (!(catName in merged)) {
+          merged[catName] = utils.shallowCopy(categories[catName]);
+        }
+      }
+    }
+  } else {
+    merged = standardConfig.categories;
   }
   return merged;
 }
@@ -49,6 +138,9 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
     var cf = aliasFunctions[i];
+    if (cf.dontAlias) {
+      continue;
+    }
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +
@@ -67,171 +159,41 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
  * Generate a palette for the droplet editor based on some level data.
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
-  // TODO: figure out localization for droplet scenario
-  var stdPalette = [
-    {
-      name: 'Control',
-      color: 'orange',
-      blocks: [
-        {
-          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
-          title: 'Do something multiple times'
-        }, {
-          block: 'if (__) {\n  __;\n}',
-          title: 'Do something only if a condition is true'
-        }, {
-          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
-          title: 'Do something if a condition is true, otherwise do something else'
-        }, {
-          block: 'while (__) {\n  __;\n}',
-          title: 'Repeat something while a condition is true'
-        }
-      ]
-    }, {
-      name: 'Math',
-      color: 'green',
-      blocks: [
-        {
-          block: '__ + __',
-          title: 'Add two numbers'
-        }, {
-          block: '__ - __',
-          title: 'Subtract two numbers'
-        }, {
-          block: '__ * __',
-          title: 'Multiply two numbers'
-        }, {
-          block: '__ / __',
-          title: 'Divide two numbers'
-        }, {
-          block: '__ == __',
-          title: 'Test for equality'
-        }, {
-          block: '__ != __',
-          title: 'Test for inequality'
-        }, {
-          block: '__ > __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ < __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ && __',
-          title: 'Logical AND of two booleans'
-        }, {
-          block: '__ || __',
-          title: 'Logical OR of two booleans'
-        }, {
-          block: 'randomNumber(__)',
-          title: 'Get a random number between 0 and the specified maximum value'
-        }, {
-          block: 'randomNumber(__, __)',
-          title: 'Get a random number between the specified minimum and maximum values'
-        }, {
-          block: 'round(__)',
-          title: 'Round to the nearest integer'
-        }, {
-          block: 'abs(__)',
-          title: 'Absolute value'
-        }, {
-          block: 'max(__, __)',
-          title: 'Maximum value'
-        }, {
-          block: 'min(__, __)',
-          title: 'Minimum value'
-        }
-      ]
-    }, {
-      name: 'Variables',
-      color: 'blue',
-      blocks: [
-        {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
-          block: 'var x = [1, 2, 3, 4];',
-          title: 'Create a variable and initialize it as an array'
-        }, {
-          block: 'var x = prompt("Enter a value");',
-          title: 'Create a variable and assign it a value by displaying a prompt'
-        }
-      ]
-    }, {
-      name: 'Functions',
-      color: 'violet',
-      blocks: [
-        {
-          block: 'function myFunction() {\n  __;\n}',
-          title: 'Create a function without an argument'
-        }, {
-          block: 'function myFunction(n) {\n  __;\n}',
-          title: 'Create a function with an argument'
-        }, {
-          block: 'myFunction()',
-          title: 'Use a function without an argument'
-        }, {
-          block: 'myFunction(n)',
-          title: 'Use a function with argument'
-        }
-      ]
-    }
-  ];
-
-  var defCategoryInfo = {
-    'Actions': {
-      'color': 'blue',
-      'blocks': []
-    }
-  };
-  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
-
+  var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
   var i, j;
 
   for (i = 0; i < mergedFunctions.length; i++) {
     var cf = mergedFunctions[i];
-    var block = cf.func + "(";
-    if (cf.params) {
-      for (j = 0; j < cf.params.length; j++) {
-        if (j !== 0) {
-          block += ", ";
+    var block = cf.block;
+    if (!block) {
+      block = cf.func + "(";
+      if (cf.params) {
+        for (j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
         }
-        block += cf.params[j];
       }
+      block += ")";
     }
-    block += ")";
     var blockPair = {
       block: block,
       title: cf.title || cf.func
     };
-    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
+    mergedCategories[cf.category].blocks.push(blockPair);
   }
 
+  // Convert to droplet's expected palette format:
   var addedPalette = [];
-  for (var category in categoryInfo) {
-    categoryInfo[category].name = category;
-    for (j = 0; j < stdPalette.length; j++) {
-      if (stdPalette[j].name === category) {
-        // This category is in the stdPalette, merge in its blocks:
-        categoryInfo[category].blocks =
-            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
-        break;
-      }
-    }
-    if (categoryInfo[category].blocks.length > 0) {
-      addedPalette.push(categoryInfo[category]);
+  for (var category in mergedCategories) {
+    if (mergedCategories[category].blocks.length > 0) {
+      mergedCategories[category].name = category;
+      addedPalette.push(mergedCategories[category]);
     }
   }
 
-  for (j = 0; j < stdPalette.length; j++) {
-    if (!(stdPalette[j].name in categoryInfo)) {
-      // This category from the stdPalette hasn't been referenced yet, add it:
-      addedPalette.push(stdPalette[j]);
-    }
-  }
   return addedPalette;
 };
 
@@ -241,7 +203,7 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
     apis.push({
       name: 'api',
       value: cf.func,
-      meta: cf.category || 'Actions'
+      meta: cf.category
     });
   }
 }
@@ -253,6 +215,7 @@ exports.generateAceApiCompleter = function (dropletConfig) {
   var apis = [];
 
   populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
   populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
 
   return {
@@ -300,6 +263,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 */
 
   populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
   populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
 
   return modeOptions;
