@@ -17,7 +17,8 @@
     "free_play": "false",
     "open_function_definition": "rect-wide",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "callout_json": "[\r\n  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"[block-id='38']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom center\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -28,7 +29,7 @@
             <block type="functional_call" inline="false" movable="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" movable="false" editable="false">
@@ -72,7 +73,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -95,7 +96,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -113,9 +114,9 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="height" type="Number"/>
-            <arg name="color" type="string"/>
+            <arg name="color" type="String"/>
             <description>Produce a rectangle of given color that is twice as wide as it is high.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">wide-rect</title>
         </block>

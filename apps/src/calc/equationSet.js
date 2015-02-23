@@ -1,34 +1,6 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
-
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- *   params: ['x']
- * In many cases, this will just be an expression with no name.
- * @param {string} name Function or variable name. Null if compute expression
- * @param {string[]} params List of parameter names if a function.
- * @param {ExpressionNode} expression
- */
-var Equation = function (name, params, expression) {
-  this.name = name;
-  this.params = params || [];
-  this.expression = expression;
-
-  this.signature = this.name;
-  if (this.params.length > 0) {
-    this.signature += '(' + this.params.join(',') + ')';
-  }
-};
-
-/**
- * @returns True if a function
- */
-Equation.prototype.isFunction = function () {
-  return this.params.length > 0;
-};
+var Equation = require('./equation');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -48,8 +20,19 @@ var EquationSet = function (blocks) {
     }, this);
   }
 };
-EquationSet.Equation = Equation;
 module.exports = EquationSet;
+
+EquationSet.prototype.clone = function () {
+  var clone = new EquationSet();
+  clone.compute_ = null;
+  if (this.compute_) {
+    clone.compute_ = this.compute_.clone();
+  }
+  clone.equations_ = this.equations_.map(function (item) {
+    return item.clone();
+  });
+  return clone;
+};
 
 /**
  * Adds an equation to our set. If equation's name is null, sets it as the
@@ -105,13 +88,35 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * variables. If we have multiple functions or one function and some variables,
  * returns false.
  */
- EquationSet.prototype.hasSingleFunction = function () {
+EquationSet.prototype.hasSingleFunction = function () {
    if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
      return true;
    }
 
    return false;
- };
+};
+
+/**
+ * @returns {boolean} True if our compute expression is just a variable, which
+ * we take to mean we can treat similarly to our single function scenario
+ */
+EquationSet.prototype.computesSingleVariable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isVariable();
+};
+
+/**
+ * Returns a list of equations that consist of setting a variable to a constant
+ * value, without doing any additional math. i.e. foo = 1
+ */
+EquationSet.prototype.getConstants = function () {
+  return this.equations_.filter(function (item) {
+    return item.params.length === 0 && item.expression.isNumber();
+  });
+};
 
 /**
  * Are two EquationSets identical? This is considered to be true if their

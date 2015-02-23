@@ -70,6 +70,10 @@ class Level < ActiveRecord::Base
     user_id.present?
   end
 
+  def level_num_custom?
+    level_num.eql? 'custom'
+  end
+
   def self.load_custom_levels
     Dir.glob(Rails.root.join('config/scripts/**/*.level')).sort.map do |path|
       load_custom_level(File.basename(path, File.extname(path)))
@@ -171,6 +175,37 @@ class Level < ActiveRecord::Base
       max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     self.update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
+  end
+
+  def self.find_by_key(key)
+    # this is the key used in the script files, as a way to uniquely
+    # identify a level that can be defined by the .level file or in a
+    # blockly levels.js. for example, from hourofcode.script:
+    # level 'blockly:Maze:2_14'
+    # level 'scrat 16'
+    self.find_by(key_to_params(key))
+  end
+
+  def self.key_to_params(key)
+    if key.start_with?('blockly:')
+      _, game_name, level_num = key.split(':')
+      {game_id: Game.by_name(game_name), level_num: level_num}
+    else
+      {name: key}
+    end
+  end
+
+  def key
+    if level_num == 'custom'
+      name
+    else
+      ["blockly", game.name, level_num].join(':')
+    end
+  end
+
+  def project_template_level
+    return nil if project_template_level_name.nil?
+    Level.find_by_key(project_template_level_name)
   end
 
   private

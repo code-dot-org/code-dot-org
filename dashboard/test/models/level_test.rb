@@ -263,4 +263,35 @@ EOS
     assert_nil level.embed
   end
 
+  test 'project template level' do
+    template_level = Blockly.create(name: 'project_template')
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
+
+    assert_nil template_level.project_template_level
+    assert_equal '<xml/>', template_level.start_blocks
+
+    real_level1 = Blockly.create(name: 'level 1')
+    real_level1.project_template_level_name = 'project_template'
+    real_level1.save!
+
+    assert_equal template_level, real_level1.project_template_level
+  end
+
+  test 'key_to_params' do
+    assert_equal({name: "Course 4 Level 1"}, Level.key_to_params('Course 4 Level 1'))
+    assert_equal({game_id: Game.find_by_name('studio').id, level_num: 'playlab_1'}, Level.key_to_params('blockly:Studio:playlab_1'))
+    assert_equal({game_id: Game.find_by_name('maze').id, level_num: '2_11'}, Level.key_to_params('blockly:Maze:2_11'))
+  end
+
+  test 'find_by_key' do
+    level = Level.find_by_key 'blockly:Unplug1:u_1_1'
+    assert_equal 'u_1_1', level.level_num
+
+    level = Level.find_by_key 'blockly:Maze:2_7'
+    assert_equal '2_7', level.level_num
+
+    level = Level.find_by_key 'PlantASeed'
+    assert_equal 'PlantASeed', level.name
+  end
 end

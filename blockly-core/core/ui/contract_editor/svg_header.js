@@ -56,6 +56,10 @@ Blockly.SvgHeader.prototype.setText = function (text) {
   this.textElement_.textContent = text;
 };
 
+Blockly.SvgHeader.prototype.setVisible = function (visible) {
+  goog.style.showElement(this.svgGroup_, visible);
+};
+
 Blockly.SvgHeader.prototype.removeSelf = function () {
   goog.dom.removeNode(this.svgGroup_);
 };

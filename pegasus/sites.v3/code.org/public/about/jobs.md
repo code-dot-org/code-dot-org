@@ -4,7 +4,22 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org
-## HR Generalist (Seattle, WA preferred)
+
+- [Head of Product/Marketing](#head-product)
+- [Head of Engineering](#head-engineering)
+- [Operations Intern](#operations-intern)
+- [HR Generalist](#hr-generalist)
+- [Grant Writer and Relationships Manager](#grant-writer)
+- [K-8 Program Manager](#K8-PM)
+- [High School Program Manager](#HS-PM)
+- [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Policy Research Analyst](#advocacy-researcher)
+- [Data Scientist / Quantitative Data Analyst](#data-scientist)
+- [Operations/Developer](#ops-dev)
+- [Software Engineer](#engineer)
+
+
+## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
 
 The HR Generalist plays a critical role in supporting Code.org staff in areas such as recruiting and hiring, benefits, performance reviews, and workforce compliance. The candidate selected for this should have experience supporting a multi-state employer and hiring technical employees in a fast-paced start-up environment. Full-time, salaried. Responsibilities of the position include:
@@ -37,36 +52,10 @@ A high level of computer literacy is required; proficiency in working with Micro
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Videographer (Seattle, WA preferred)
+## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
 **Job Summary:**
 
-Code.org is recruiting for a videographer who can collaborate with our education and development team to create educational and inspirational videos that teach computer science to students of all ages and diverse backgrounds. **Full-time, long-term contract (approximately 9 months).**
-Responsibilities of the position include:
-
-- Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
-- Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
-- Shooting footage for videos in interview format as well as in-class activities
-- Editing footage to create video ensembles 
-- Adding animations, sounds and graphics to create high production value videos
-- Working on several different videos in parallel  
-
-**Qualifications**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in film, digital media, graphic design or related field
-- 4+ years work experience in producing videos either as a generalist or as an animator/graphics expert
-- Experience in all stages of video production i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube, however our most urgent need is for an animator/graphics expert
-- Extensive experience with Adobe products (we use these exclusively for our video production)
-- A strong sense of design and story is key, as is a can-do / self-starter attitude
-- Excellent professional references
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## Advocacy Researcher (Seattle, WA preferred)
-**Job Summary:**
-
-Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
+Code.org is recruiting for an Policy Research Analyst who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
 Responsibilities of the position include:
 
 - Research and analysis of state policy issues, including:
@@ -89,8 +78,9 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## K-8 Program Manager (Seattle, WA preferred)##
+## <a name="K8-PM" href="#K8-PM">K-8 Program Manager (Seattle, WA preferred)</a>
 **Job Summary:**
+
 Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
 
 - Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.
@@ -105,7 +95,7 @@ Code.org is looking for a K-8 Program Manager specializing in Middle School CS t
 
 **Qualifications:**
 
-The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
+The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
 
 Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
@@ -113,7 +103,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## High School Program Manager (Seattle, WA preferred)##
+## <a name="HS-PM" href="#HS-PM">High School Program Manager (Seattle, WA preferred)</a> 
 **Job Summary:**
 
 Code.org is looking for a High School Program Manager to work with and support the goals of Code.org’s Education team through the development of high school computer science curriculum and related professional development.
@@ -131,14 +121,78 @@ Responsibilities of the position include:
 
 The ideal candidate has related experience working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. 
 
-The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
 
 **Location:** Seattle is preferred, but remote work is possible.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-## Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)##
+
+## <a name="head-product" href="#head-product">Head of Product/Marketing (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Head of Product/Marketing who can lead the Product and Marketing teams. Full-time, salaried. Responsibilities of the position include:
+
+- Acting as central point of leadership for Code.org curriculum + technology products and services
+- Providing end-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms
+- High level ownership of Code.org marketing - celebrities, videos, social media, testimonials, and the international Hour of Code grassroots movement
+- Managing a team comprising product management, user experience, video production and marketing
+- Managing high visibility partnerships such as the one with Disney for the 2014 Hour of Code with Anna and Elsa (from Frozen)
+- Jack of all trades given the disparate types of activities Code.org engages in, and supporting all of them with marketing programs and helping identify how engineering can improve our work
+
+**Qualifications:**
+
+- Bachelor’s degree with a background in Computer Science (as a major or a minor)
+- 3+ years experience as a technical product manager, i.e. defining product, writing specs, closely managing engineering projects, hands on design
+- 3+ years experience as a manager of other PMs
+- Experience with building / managing / marketing of a Web site and/or web services
+- Experience in consumer marketing (PR, social media, advertising) desired, but not required
+
+Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Head of Engineering. Full-time, salaried. Responsibilities of the position include:
+
+- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
+- Manage the Code.org engineering team (team of 10+ software engineers)
+- Set architectural direction for how Code.org's web site, services, and tutorial platform is built
+- Hiring, career development, and mentorship of new engineers
+
+**Qualifications:**
+
+- Bachelor’s degree with a major in Computer Science
+- 10+ years as a software engineer or manager of software engineers
+- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
+- Full stack Web engineering experience, i.e. databases, application, front-end
+- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
+- Mobile development experience (iOS, Android) desired, but not required
+- Experience in a fast growth start-up environment desired
+
+Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="operations-intern" href="operations-intern">Operations Intern (Seattle,Wa)</a>
+**Job Summary:**
+
+Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
+
+- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
+- Update and manage attendee lists
+- Utilize our customer service system to respond to professional development questions from teachers in a timely manner
+- Attend and participate in meetings and record notes/follow-up items, as appropriate
+- Respond to requests for information, distribute materials externally
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Qualifications:**
+
+- Minimum 2 years of undergraduate studies completed
+- Experience with Google suite of products
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
+
+## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
 **Job Summary:**
 
@@ -175,7 +229,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Grant Writer and Relationships Manager##
+## <a name="grant-writer" href="#grant-writer">Grant Writer and Relationships Manager</a>
 
 **Job Summary:**
 
@@ -210,7 +264,7 @@ Please DO NOT apply for this position if you do not have experience in writing s
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 
@@ -236,7 +290,7 @@ Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Operations/Developer (Seattle)
+## <a name="ops-dev" href="#ops-dev">Operations/Developer (Seattle)</a>
 
 **Job Summary:** 
 
@@ -250,7 +304,7 @@ Code.org is recruiting for an operations-focused Ruby developer to run and enhan
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Software Engineer (Seattle)
+## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
 
 **Job Summary:**
 
@@ -264,35 +318,6 @@ Code.org is building interactive tutorials for computer science courses starting
 - Ideally: has experienced startup culture
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## K-5 Computer Science Professional Development Facilitator (Part-time, contract; Seattle, WA only) 
-
-**Job Summary**
-
-Code.org is looking for a part-time facilitator to host professional development workshops in Seattle, WA for K-5 educators. (For more information about our curriculum, visit http://code.org/k5.) This role is not only about leading the professional development, but also handling the logistics of each workshop. 
-
-Responsibilities of this position include:
-
-- Logistics of workshop, including posting the workshop on the Code.org website, arranging food for the workshop, and following up with participants as necessary
-- Facilitating a 7-hour workshop on a weekend (at least) once a month, including content about computer science and equity within the field 
-- Set-up/clean-up of venue the day of the workshop
-- Adapting the template agenda of the workshop as the candidate sees fit
-- Navigating Code.org system of tracking participant attendance and payment system for facilitators
-- Communicating with Code.org as needed to refill supplies we provide you for the workshops
-
-Marketing, materials, and training for workshops are provided by Code.org. 
-
-**Qualifications**
-
-The ideal candidate is an excellent communicator, exceptionally well-spoken, and an engaging educator. Must also be tech-savvy, possess the ability to multi-task, and work well independently. 
-
-The candidate should have experience leading professional development for teachers and be very comfortable with computer science at an elementary school level. Prior experience with education at the elementary school level preferred. Proficiency in working with Google Docs a must.
-
-No benefits are offered for this position.
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 
 ## Benefits 

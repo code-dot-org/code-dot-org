@@ -1,11 +1,12 @@
 var testUtils = require('../../util/testUtils');
-testUtils.setupLocales();
+testUtils.setupLocale('calc');
+
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var Calc = require(testUtils.buildPath('calc/calc.js'));
 var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
 
 /**
@@ -28,8 +29,8 @@ module.exports = {
     {
       description: "displayGoal",
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
@@ -72,9 +73,9 @@ function displayGoalCustomValidator(assert) {
       new ExpressionNode('g', [2]),
     ])));
 
-    // this should actually throw (or we should at least throw somewhere in
-    // this scenario) pivotal #87578464
-    displayGoal(targetSet);
+    assert.throws(function () {
+      displayGoal(targetSet);
+    });
 
   });
 
@@ -90,10 +91,63 @@ function displayGoalCustomValidator(assert) {
       new ExpressionNode('myvar'),
     ])));
 
-    // this should actually throw (or we should at least throw somewhere in
-    // this scenario) pivotal #87578464
+    assert.throws(function () {
+      displayGoal(targetSet);
+    });
+
+  });
+
+  displayGoalTest(assert, 'single variable in compute', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = age * 12
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    targetSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    targetSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 12])));
+
     displayGoal(targetSet);
 
+    assert.equal(answerExpression.children.length, 1);
+
+    var g = answerExpression.children[0];
+    assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "age_in_months");
+    assert.equal(g.children[0].getAttribute('class'), null);
+  });
+
+  displayGoalTest(assert, 'variables without single variable in compute', function () {
+    // compute: age * 12
+    // age = 17
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [],
+      new ExpressionNode('*', ['age', 12])));
+    targetSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+
+    displayGoal(targetSet);
+
+    assert.equal(answerExpression.children.length, 2);
+
+    var g = answerExpression.children[0];
+    assert.equal(g.children.length, 2);
+    assert.equal(g.children[0].textContent, "age = ");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "17");
+    assert.equal(g.children[1].getAttribute('class'), null);
+
+    g = answerExpression.children[1];
+    assert.equal(g.children.length, 5);
+    assert.equal(g.children[0].textContent, "(");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "age");
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, " * ");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children[3].textContent, "12");
+    assert.equal(g.children[3].getAttribute('class'), null);
+    assert.equal(g.children[4].textContent, ")");
+    assert.equal(g.children[4].getAttribute('class'), null);
   });
 
   return true;

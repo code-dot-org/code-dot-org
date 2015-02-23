@@ -36,6 +36,7 @@ var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
+var Equation = require('./equation');
 var Token = ExpressionNode.Token;
 var InputIterator = require('./inputIterator');
 
@@ -60,9 +61,9 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  currentAnimationDepth: 0,
   failedInput: null
 };
+Calc.appState_ = appState;
 
 var stepSpeed = 2000;
 
@@ -73,10 +74,10 @@ var stepSpeed = 2000;
  * If one input is given, we return the tokenlist for that input.
  */
 function getTokenList(one, two) {
-  if (one instanceof EquationSet.Equation) {
+  if (one instanceof Equation) {
     one = one.expression;
   }
-  if (two instanceof EquationSet.Equation) {
+  if (two instanceof Equation) {
     two = two.expression;
   }
   if (typeof(one) === 'string') {
@@ -175,9 +176,13 @@ Calc.init = function(config) {
  * (1) We don't have a target compute expression (i.e. freeplay). Show nothing.
  * (2) We have a target compute expression, one function, and no variables.
  *     Show the compute expression + evaluation, and nothing else
- * (3) We have a target compute expression, and possibly some number of
- *     variables, but no functions. Display compute expression and variables
- * (4) We have a target compute expression, and either multiple functions or
+ * (3) We have a target compute expression that is just a single variable, and
+ *     some number of additional variables, but no functions. Display only
+ *     the name of the single variable
+ * (4) We have a target compute expression that is not a single variable, and
+ *     possible some number of additional variables, but no functions. Display
+ *     compute expression and variables.
+ * (5) We have a target compute expression, and either multiple functions or
  *     one function and variable(s). Currently not supported.
  * @param {EquationSet} targetSet The target equation set.
  */
@@ -192,9 +197,14 @@ function displayGoal(targetSet) {
   var tokenList;
   var nextRow = 0;
   var hasSingleFunction = targetSet.hasSingleFunction();
-  if (!hasSingleFunction) {
+  if (!hasSingleFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
+      if (equation.isFunction() && sortedEquations.length > 1) {
+        throw new Error("Calc doesn't support goal with multiple functions or " +
+          "mixed functions/vars");
+      }
+
       tokenList = equation.expression.getTokenList(false);
       displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
@@ -224,11 +234,14 @@ studioApp.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  appState.message = null;
-  appState.currentAnimationDepth = 0;
-  timeoutList.clearTimeouts();
-
   appState.animating = false;
+  appState.response = null;
+  appState.message = null;
+  appState.result = null;
+  appState.testResults = null;
+  appState.failedInput = null;
+
+  timeoutList.clearTimeouts();
 
   clearSvgUserExpression();
 };
@@ -316,6 +329,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
     outcome.message = calcMsg.failedInput();
+  } else if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    // we have the right function, but are calling with the wrong inputs
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+    outcome.message = calcMsg.wrongInput();
   } else {
     outcome.result = ResultType.SUCCESS;
     outcome.testResults = TestResults.ALL_PASS;
@@ -323,6 +342,128 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   return outcome;
 };
 
+function appSpecificFailureOutcome(message, failedInput) {
+  return {
+    result: ResultType.FAILURE,
+    testResults: TestResults.APP_SPECIFIC_FAIL,
+    message: message,
+    failedInput: failedInput
+  };
+}
+
+/**
+ * Evaluates a target set against a user set when our compute expression is
+ * just a naked variable. It does this by looking for a constant in the
+ * equation set, and then validating that (a) we have a variable of the same
+ * name in the user set and (b) that changing that value in both sets still
+ * results in the same evaluation
+ */
+Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
+  var outcome = {
+    result: ResultType.UNSET,
+    testResults: TestResults.NO_TESTS_RUN,
+    message: undefined,
+    failedInput: null
+  };
+
+  if (!targetSet.computeEquation().expression.isIdenticalTo(
+      userSet.computeEquation().expression)) {
+    return appSpecificFailureOutcome(calcMsg.levelIncompleteError());
+  }
+
+  // Make sure our target set has a constant variable we can use as our
+  // pseudo input
+  var targetConstants = targetSet.getConstants();
+  if (targetConstants.length === 0) {
+    throw new Error('Unexpected: single variable with no constants');
+  }
+
+  // The code is in place to theoretically support varying multiple constants,
+  // but we decided we don't need to support that, so I'm going to explicitly
+  // disallow it to reduce the test matrix.
+  if (targetConstants.length !== 1) {
+    throw new Error('No support for multiple constants');
+  }
+
+  // Make sure each of our pseudo inputs has a corresponding variable in the
+  // user set.
+  var userConstants = userSet.getConstants();
+  var userConstantNames = userConstants.map(function (item) {
+    return item.name;
+  });
+
+  for (var i = 0; i < targetConstants.length; i++) {
+    if (userConstantNames.indexOf(targetConstants[i].name) === -1) {
+      return appSpecificFailureOutcome(calcMsg.missingVariableX(
+        {var: targetConstants[i].name}));
+    }
+  }
+
+  // Check to see that evaluating target set with the user value of the constant(s)
+  // gives the same result as evaluating the user set.
+  var userResult = userSet.evaluate();
+
+  var targetClone = targetSet.clone();
+  var userClone = userSet.clone();
+  var setConstantsToValue = function (val, index) {
+    var name = targetConstants[index].name;
+    targetClone.getEquation(name).expression.setValue(val);
+    userClone.getEquation(name).expression.setValue(val);
+  };
+
+  // // overwrite our inputs with user's values
+  // targetConstants.forEach(function (item) {
+  //   var userValue = userSet.getEquation(item.name).expression.getValue();
+  //   targetClone.getEquation(item.name).expression.setValue(userValue);
+  // });
+  //
+  if (userResult !== targetSet.evaluate()) {
+    // Our result can different from the target result for two reasons
+    // (1) We have the right equation, but our "constant" has a different value.
+    // (2) We have the wrong equation
+    // Check to see if we evaluate to the same as target if we give it the
+    // values from our userSet.
+    targetConstants.forEach(function (item, index) {
+      var name = item.name;
+      var val = userClone.getEquation(name).expression.getValue();
+      setConstantsToValue(val, index);
+    });
+
+    var targetResult = targetClone.evaluate();
+    if (userResult !== targetResult) {
+      return appSpecificFailureOutcome(calcMsg.wrongResult());
+    }
+  }
+
+  // The user got the right value for their input. Let's try changing it and
+  // see if they still get the right value
+  var possibleValues = _.range(1, 101).concat(_.range(-0, -101, -1));
+  var numParams = targetConstants.length;
+  var iterator = new InputIterator(possibleValues, numParams);
+
+  while (iterator.remaining() > 0 && !outcome.failedInput) {
+    var values = iterator.next();
+    values.forEach(setConstantsToValue);
+
+    if (targetClone.evaluate() !== userClone.evaluate()) {
+      outcome.failedInput = _.clone(values);
+    }
+  }
+
+  if (outcome.failedInput) {
+    var message = calcMsg.wrongOtherValuesX({var: targetConstants[0].name});
+    return appSpecificFailureOutcome(message);
+  }
+
+  outcome.result = ResultType.SUCCESS;
+  outcome.testResults = TestResults.ALL_PASS;
+  return outcome;
+};
+
+/**
+ * @static
+ * @returns outcome object
+ */
 Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
@@ -335,6 +476,8 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
   if (targetSet.hasSingleFunction()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
+  } else if (targetSet.computesSingleVariable()) {
+    return Calc.evaluateSingleVariable_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions() ||
       targetSet.hasVariablesOrFunctions()) {
     // We have multiple expressions. Either our set of expressions are equal,
@@ -376,20 +519,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
-  appState.failedInput = null;
-
-  if (level.freePlay || level.edit_blocks) {
-    appState.result = ResultType.SUCCESS;
-    appState.testResults = TestResults.FREE_PLAY;
-    appState.message = undefined;
-  } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
-  }
+  Calc.generateResults_();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -406,16 +536,86 @@ Calc.execute = function() {
 
   studioApp.report(reportData);
 
+  studioApp.playAudio(appState.result === ResultType.SUCCESS ? 'win' : 'failure');
+
+  // Display feedback immediately
+  if (isPreAnimationFailure(appState.testResults)) {
+    return displayFeedback();
+  }
+
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
       !appState.userSet.hasVariablesOrFunctions() &&
       !level.edit_blocks) {
-    Calc.step();
+    Calc.step(0);
   } else {
     displayComplexUserExpressions();
     timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
     }, stepSpeed);
+  }
+};
+
+function isPreAnimationFailure(testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+}
+
+/**
+ * Fill appState with the results of program execution.
+ * @static
+ */
+Calc.generateResults_ = function () {
+  appState.message = undefined;
+
+  // Check for pre-execution errors
+  if (studioApp.hasExtraTopBlocks()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    return;
+  }
+
+  if (studioApp.hasUnfilledBlock()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+
+    // Gate message on whether or not it's the compute block that's empty
+    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
+      return item.type === 'functional_compute';
+    });
+    if (compute && !compute.getInputTargetBlock('ARG1')) {
+      appState.message = calcMsg.emptyComputeBlock();
+    } else {
+      appState.message = calcMsg.emptyFunctionalBlock();
+    }
+    return;
+  }
+
+  if (studioApp.hasQuestionMarksInNumberField()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+    return;
+  }
+
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  appState.failedInput = null;
+
+  if (level.freePlay || level.edit_blocks) {
+    appState.result = ResultType.SUCCESS;
+    appState.testResults = TestResults.FREE_PLAY;
+  } else {
+    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
+    appState.result = outcome.result;
+    appState.testResults = outcome.testResults;
+    appState.message = outcome.message;
+    appState.failedInput = outcome.failedInput;
+  }
+
+  // Override default message for LEVEL_INCOMPLETE_FAIL
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
+      !appState.message) {
+    appState.message = calcMsg.levelIncompleteError();
   }
 };
 
@@ -432,15 +632,16 @@ function displayComplexUserExpressions () {
     return;
   }
 
-  // in single function mode, we're only going to highlight the differences
-  // in evaluation
-  var hasSingleFunction = appState.targetSet.hasSingleFunction();
+  // in single function/variable mode, we're only going to highlight the differences
+  // in the evaluated result
+  var highlightErrors = !appState.targetSet.hasSingleFunction() &&
+    !appState.targetSet.computesSingleVariable();
 
   var nextRow = 0;
   var tokenList;
   appState.userSet.sortedEquations().forEach(function (userEquation) {
-    var expectedEquation = hasSingleFunction ? null :
-      appState.targetSet.getEquation(userEquation.name);
+    var expectedEquation = highlightErrors ?
+      appState.targetSet.getEquation(userEquation.name) : null;
 
     tokenList = getTokenList(userEquation, expectedEquation);
 
@@ -449,24 +650,25 @@ function displayComplexUserExpressions () {
   });
 
   // Now display our compute equation and the result of evaluating it
-  var computeType = computeEquation && computeEquation.expression.getType();
-  if (computeType === ExpressionNode.ValueType.FUNCTION_CALL ||
-      computeType === ExpressionNode.ValueType.VARIABLE) {
-    var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet.computeEquation();
 
-    // We're either a variable or a function call. Generate a tokenList (since
-    // we could actually be different than the goal)
-    tokenList = getTokenList(computeEquation, targetEquation);
+  // We're either a variable or a function call. Generate a tokenList (since
+  // we could actually be different than the goal)
+  tokenList = getTokenList(computeEquation, targetEquation);
 
-    result = appState.userSet.evaluate().toString();
-    var expectedResult = appState.targetSet.computeEquation() === null ?
-      result : appState.targetSet.evaluate().toString();
+  result = appState.userSet.evaluate().toString();
 
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
-  } else {
-    tokenList = getTokenList(computeEquation, appState.targetSet.computeEquation);
+  var expectedResult = result;
+  // Note: we could make singleVariable case smarter and evaluate target using
+  // user constant value
+  if (appState.targetSet.computeEquation() !== null &&
+      !appState.targetSet.computesSingleVariable()) {
+    expectedResult = appState.targetSet.evaluate().toString();
   }
+
+  // add a tokenList diffing our results
+  tokenList = tokenList.concat(getTokenList(' = '),
+    getTokenList(result, expectedResult));
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -494,15 +696,16 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function () {
-  if (animateUserExpression(appState.currentAnimationDepth)) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  }
-  appState.currentAnimationDepth++;
-
+Calc.step = function (animationDepth) {
+  var isFinal = animateUserExpression(animationDepth);
   timeoutList.setTimeout(function () {
-    Calc.step();
+    if (isFinal) {
+      // one deeper to remove highlighting
+      animateUserExpression(animationDepth + 1);
+      stopAnimatingAndDisplayFeedback();
+    } else {
+      Calc.step(animationDepth + 1);
+    }
   }, stepSpeed);
 };
 
@@ -540,27 +743,33 @@ function animateUserExpression (maxNumSteps) {
 
   var current = userExpression.clone();
   var previousExpression = current;
-  var currentDepth = 0;
+  var numCollapses = 0;
+  // Each step draws a single line
   for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === maxNumSteps) {
+    if (numCollapses === maxNumSteps) {
+      // This is the last line in the current animation, highlight what has
+      // changed since the last line
       tokenList = current.getTokenListDiff(previousExpression);
-    } else if (currentDepth + 1 === maxNumSteps) {
+    } else if (numCollapses + 1 === maxNumSteps) {
+      // This is the second to last line. Highlight the block being collapsed,
+      // and the deepest operation (that will be collapsed on the next line)
       var deepest = current.getDeepestOperation();
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
+      // Don't highlight anything
       tokenList = current.getTokenList(false);
     }
-    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
     if (current.collapse()) {
-      currentDepth++;
-    } else if (currentStep - currentDepth > 2) {
-      // we want to go one more step after the last collapse so that we show
-      // our last line without highlighting it
+      numCollapses++;
+    } else if (currentStep === numCollapses + 1) {
+      // go one past our num collapses so that the last line gets highlighted
+      // on its own
       finished = true;
     }
   }
@@ -650,7 +859,9 @@ function displayFeedback() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  appDiv = cloneNodeWithoutIds('svgCalc');
+  if (!isPreAnimationFailure(appState.testResults)) {
+    appDiv = cloneNodeWithoutIds('svgCalc');
+  }
   var options = {
     app: 'Calc',
     skin: skin.id,
@@ -662,7 +873,7 @@ function displayFeedback() {
     },
     appDiv: appDiv
   };
-  if (appState.message) {
+  if (appState.message && !level.edit_blocks) {
     options.message = appState.message;
   }
 
@@ -684,6 +895,8 @@ function onReportComplete(response) {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 Calc.__testonly__ = {
-  displayGoal: displayGoal
+  displayGoal: displayGoal,
+  displayComplexUserExpressions: displayComplexUserExpressions,
+  appState: appState
 };
 /* end-test-block */
