@@ -7,7 +7,8 @@
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 
-
+  var $storeEvents = $('head');
+  var watchEvents = 0;
 
   // class UIStore: this is a lightweight inheritable *ABSTRACT* class modeled after Flux
   // UIStore is "offline-aware", meaning that it will load assets in a different way when
@@ -18,8 +19,9 @@
       this.save = __bind(this.save, this);
 
       this.value = null; // Empty store
-      this.subscribers = [];
       this.offline = false;
+
+      this.changeEvent = "changed:" + (++watchEvents);
     }
 
     // Get the value of this store
@@ -27,9 +29,18 @@
 
     // When this store changes, notify via callback(data)
     UIStore.prototype.subscribe = function(callback) {
-      this.subscribers.push(callback);
+      var _this = this;
+      callback.fn = callback.fn || function(ev) {
+        callback(_this.value);
+      };
+      $storeEvents.on(this.changeEvent, callback.fn);
+
       if (this.value)
         callback(this.value);
+    }
+
+    UIStore.prototype.unsubscribe = function(callback) {
+      $storeEvents.off(this.changeEvent, callback.fn);
     }
 
     // Internal call to process any data that's being saved
@@ -38,10 +49,7 @@
     // Set the value of this store and notify the dependent
     UIStore.prototype.save = function(data) {
       this.value = this.process(data);
-
-      // Note: Flux uses emitters...
-      for (var i = 0; i < this.subscribers.length; i++)
-        this.subscribers[i](this.value);
+      $storeEvents.trigger(this.changeEvent);
     }
 
     // Resolve a dynamic asset by combining the base asset filename + a serialized version of the args
