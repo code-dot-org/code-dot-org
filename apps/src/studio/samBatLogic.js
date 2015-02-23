@@ -1,22 +1,9 @@
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
+var KeyCodes = require('../constants').KeyCodes;
 var codegen = require('../codegen');
 var api = require('./api');
-
-/**
- * Interface for a set of custom game logic for playlab
- * @param {Studio} studio Reference to global studio object
- * @interface CustomGameLogic
- */
-function CustomGameLogic(studio) {}
-
-/**
- * Logic to be run once per playlab tick
- *
- * @function
- * @name CustomGameLogic#onTick
- */
 
 /**
  * Custom logic for the Sam the Bat levels
@@ -27,25 +14,27 @@ var SamBatLogic = function (studio) {
   this.studio_ = studio;
   this.cached_ = {};
   this.samIndex = 0;
+  this.sam = null;
 };
 
 SamBatLogic.prototype.onTick = function () {
   this.sam = this.studio_.sprite[this.samIndex];
   
   // Move Sam with arrow keys
-  for (var key in this.studio_.keyState) {
-    if (this.studio_.keyState[key] === 'keydown') { 
-      switch (key) {
-        case '37':
+  for (var key in KeyCodes) {
+    if (this.studio_.keyState[KeyCodes[key]] &&
+        this.studio_.keyState[KeyCodes[key]] === "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
           this.updateSam_(Direction.WEST);
           break;
-        case '38':
+        case KeyCodes.UP:
           this.updateSam_(Direction.NORTH);
           break;
-        case '39':
+        case KeyCodes.RIGHT:
           this.updateSam_(Direction.EAST);
           break;
-        case '40':
+        case KeyCodes.DOWN:
           this.updateSam_(Direction.SOUTH);
           break;
       }
@@ -65,7 +54,7 @@ SamBatLogic.prototype.onTick = function () {
         case 'rightButton':
           this.updateSam_(Direction.EAST);
           break;
-        case 'downutton':
+        case 'downButton':
           this.updateSam_(Direction.SOUTH);
           break;
       }
@@ -90,19 +79,27 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   
   switch (dir) {
     case Direction.WEST:
-      if (!this.onscreen(centerX - this.sam.speed, centerY)) { dir = Direction.NONE; }
+      if (!this.onscreen(centerX - this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+      }
       break;
     case Direction.NORTH:
-      if (!this.onscreen(centerX, centerY + this.sam.speed)) { dir = Direction.NONE; }
+      if (!this.onscreen(centerX, centerY + this.sam.speed)) {
+        dir = Direction.NONE;
+      }
       break;
     case Direction.EAST:
-      if (!this.onscreen(centerX + this.sam.speed, centerY)) { dir = Direction.NONE; }
+      if (!this.onscreen(centerX + this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+      }
       break;
     case Direction.SOUTH:
-      if (!this.onscreen(centerX, centerY - this.sam.speed)) { dir = Direction.NONE; }
+      if (!this.onscreen(centerX, centerY - this.sam.speed)) {
+        dir = Direction.NONE;
+      }
       break;
   }
-  this.studio_.moveSingle({spriteIndex:this.samIndex, dir:dir});
+  this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
 };
 
 SamBatLogic.prototype.cacheBlock = function (key, block) {
