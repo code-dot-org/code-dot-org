@@ -31,6 +31,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
@@ -972,7 +973,7 @@ Maze.execute = function(stepMode) {
   if (studioApp.isUsingBlockly()) {
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
-    code = utils.generateCodeAliases(dropletConfig, 'Maze');
+    code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
   }
 

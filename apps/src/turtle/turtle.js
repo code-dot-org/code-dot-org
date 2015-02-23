@@ -34,6 +34,7 @@ var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
@@ -690,7 +691,7 @@ Artist.prototype.evalCode = function(code) {
  * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
 Artist.prototype.generateTurtleCodeFromJS_ = function () {
-  this.code = utils.generateCodeAliases(dropletConfig, 'Turtle');
+  this.code = dropletUtils.generateCodeAliases(dropletConfig, 'Turtle');
   this.userCodeStartOffset = this.code.length;
   this.code += this.studioApp_.editor.getValue();
   this.userCodeLength = this.code.length - this.userCodeStartOffset;
