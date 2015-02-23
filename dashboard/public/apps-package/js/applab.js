@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":145}],13:[function(require,module,exports){
+},{"../skins":147}],13:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -137,6 +137,7 @@ levels.ec_simple = {
     'penColor': null,
     'show': null,
     'hide': null,
+    'console.log': null,
   },
 };
 
@@ -233,7 +234,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":188,"../block_utils":18,"../utils":186}],8:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../block_utils":18,"../utils":189}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2646,7 +2647,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../StudioApp":4,"../codegen":43,"../constants":45,"../dom":46,"../skins":145,"../slider":146,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../slider":148,"../templates/page.html":169,"../utils":189,"../xml":190,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2666,7 +2667,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],12:[function(require,module,exports){
+},{"ejs":210}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2686,7 +2687,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"ejs":207}],11:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"ejs":210}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2755,6 +2756,8 @@ module.exports.blocks = [
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
+  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ["'Message'"], 'dontAlias': true },
+
   {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
   {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
@@ -2789,6 +2792,10 @@ module.exports.categories = {
     'color': 'blue',
     'blocks': []
   },
+  'Variables': {
+    'color': 'blue',
+    'blocks': []
+  },
 };
 
 },{}],10:[function(require,module,exports){
@@ -2811,7 +2818,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":191,"ejs":207}],9:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2884,7 +2891,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../codegen":43,"../utils":186}],188:[function(require,module,exports){
+},{"../../locale/current/applab":191,"../../locale/current/common":194,"../codegen":44,"../utils":189}],191:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';

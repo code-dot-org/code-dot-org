@@ -6,6 +6,7 @@
 .idea/
 /.bundle
 /.gdrive_session
+/aws/secrets
 /crontab
 /dashboard/public/blockly
 /.dropbox.cache
@@ -18,3 +19,4 @@
 /i18n/curriculum/crowdin.yaml
 /dashboard/config/newrelic.yml
 /pegasus/config/newrelic.yml
+/pegasus/.sass-cache
