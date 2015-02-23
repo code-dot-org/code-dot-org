@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({156:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({157:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":150,"./levels":155,"./skins":158,"./studio":159}],159:[function(require,module,exports){
+},{"../appMain":5,"./blocks":151,"./levels":156,"./skins":160,"./studio":161}],161:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -40,6 +40,7 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -177,9 +178,8 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
-    case 'SamTheButterfly':
-      // Going forward, we may also want to move Sam the Butterfly logic
-      // into code
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
 
@@ -1565,6 +1565,7 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -2933,7 +2934,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":192,"../../locale/current/studio":198,"../StudioApp":4,"../canvg/StackBlur.js":39,"../canvg/canvg.js":40,"../canvg/rgbcolor.js":41,"../canvg/svg_todataurl":42,"../codegen":43,"../constants":45,"../dom":46,"../skins":146,"../templates/page.html":167,"../utils":187,"../xml":188,"./api":148,"./bigGameLogic":149,"./blocks":150,"./collidable":151,"./constants":152,"./controls.html":153,"./extraControlRows.html":154,"./projectile":157,"./visualization.html":160}],160:[function(require,module,exports){
+},{"../../locale/current/common":194,"../../locale/current/studio":200,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../templates/page.html":169,"../utils":189,"../xml":190,"./api":149,"./bigGameLogic":150,"./blocks":151,"./collidable":152,"./constants":153,"./controls.html":154,"./extraControlRows.html":155,"./projectile":158,"./samBatLogic":159,"./visualization.html":162}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2953,7 +2954,143 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":208}],157:[function(require,module,exports){
+},{"ejs":210}],159:[function(require,module,exports){
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var KeyCodes = require('../constants').KeyCodes;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Sam the Bat levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var SamBatLogic = function (studio) {
+  this.studio_ = studio;
+  this.cached_ = {};
+  this.samIndex = 0;
+  this.sam = null;
+};
+
+SamBatLogic.prototype.onTick = function () {
+  this.sam = this.studio_.sprite[this.samIndex];
+  
+  // Move Sam with arrow keys
+  for (var key in KeyCodes) {
+    if (this.studio_.keyState[KeyCodes[key]] &&
+        this.studio_.keyState[KeyCodes[key]] === "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
+          this.updateSam_(Direction.WEST);
+          break;
+        case KeyCodes.UP:
+          this.updateSam_(Direction.NORTH);
+          break;
+        case KeyCodes.RIGHT:
+          this.updateSam_(Direction.EAST);
+          break;
+        case KeyCodes.DOWN:
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+
+  // Move Sam with arrow buttons
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
+      switch (btn) {
+        case 'leftButton':
+          this.updateSam_(Direction.WEST);
+          break;
+        case 'upButton':
+          this.updateSam_(Direction.NORTH);
+          break;
+        case 'rightButton':
+          this.updateSam_(Direction.EAST);
+          break;
+        case 'downButton':
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+  
+  // Display Sam's coordinates, with y inverted
+  var centerX = this.sam.x + this.sam.width / 2;
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  this.studio_.scoreText = '(' + centerX + ', ' + centerY + ')';
+  this.studio_.displayScore();
+};
+
+/**
+ * Before moving, check if Sam would still be onscreen?
+ * If move would take Sam offscreen, set dir to None
+ */
+SamBatLogic.prototype.updateSam_ = function (dir) {
+  var centerX = this.sam.x + this.sam.width / 2;
+  //invert Y
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  
+  switch (dir) {
+    case Direction.WEST:
+      if (!this.onscreen(centerX - this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+      }
+      break;
+    case Direction.NORTH:
+      if (!this.onscreen(centerX, centerY + this.sam.speed)) {
+        dir = Direction.NONE;
+      }
+      break;
+    case Direction.EAST:
+      if (!this.onscreen(centerX + this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+      }
+      break;
+    case Direction.SOUTH:
+      if (!this.onscreen(centerX, centerY - this.sam.speed)) {
+        dir = Direction.NONE;
+      }
+      break;
+  }
+  this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
+};
+
+SamBatLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+SamBatLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * Calls the user provided onscreen? function, or no-op if none was provided.
+ * @param {number} x Current x location of Sam
+ * @param {number} y Current y location of Sam (optional)
+ * @returns {boolean} True if coordinate is onscreen?
+ */
+SamBatLogic.prototype.onscreen = function (x, y) {
+  return this.resolveCachedBlock_('VALUE')(x, y);
+};
+
+module.exports = SamBatLogic;
+
+},{"../codegen":44,"../constants":46,"./api":149,"./constants":153}],158:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3127,7 +3264,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":151,"./constants":152}],158:[function(require,module,exports){
+},{"./collidable":152,"./constants":153}],160:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3469,7 +3606,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":198,"../skins":146,"./constants":152}],155:[function(require,module,exports){
+},{"../../locale/current/studio":200,"../skins":147,"./constants":153}],156:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4938,7 +5075,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":198,"../block_utils":18,"../utils":187,"./constants":152}],154:[function(require,module,exports){
+},{"../../locale/current/studio":200,"../block_utils":18,"../utils":189,"./constants":153}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4958,7 +5095,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":192,"ejs":208}],153:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4978,7 +5115,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":192,"ejs":208}],151:[function(require,module,exports){
+},{"../../locale/current/common":194,"ejs":210}],152:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5084,7 +5221,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":152}],150:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":153}],151:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6790,10 +6927,10 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setValue = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
   };
 
   blockly.Blocks.functional_start_setVars = {
@@ -6831,8 +6968,8 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'title', type: blockly.BlockValueType.STRING},
         {name: 'subtitle', type: blockly.BlockValueType.STRING},
         {name: 'background', type: blockly.BlockValueType.IMAGE},
-        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'player', type: blockly.BlockValueType.IMAGE},
         {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
@@ -6856,11 +6993,11 @@ exports.install = function(blockly, blockInstallOptions) {
       var rows = [
         'title, subtitle, background',
         [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
-        'danger, target, player',
+        'target, danger, player',
         [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
         'update-target, update-danger, update-player',
         [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
-        'collide?, on-screen?',
+        'collide?, onscreen?',
         [this.blockArgs[9], this.blockArgs[10]]
       ];
 
@@ -7114,9 +7251,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":192,"../../locale/current/studio":198,"../StudioApp":4,"../codegen":43,"../sharedFunctionalBlocks":145,"../utils":187,"./constants":152}],198:[function(require,module,exports){
+},{"../../locale/current/common":194,"../../locale/current/studio":200,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":146,"../utils":189,"./constants":153}],200:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],149:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7154,6 +7291,7 @@ var BigGameLogic = function (studio) {
 BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     this.onFirstTick_();
+    this.studio_.playerScore = 100;
     return;
   }
 
@@ -7162,6 +7300,10 @@ BigGameLogic.prototype.onTick = function () {
   if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
+      
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
+  var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
 
   // Update target, using onscreen and update_target
   this.updateSpriteX_(this.targetSpriteIndex, this.update_target.bind(this));
@@ -7187,6 +7329,42 @@ BigGameLogic.prototype.onTick = function () {
         this.handleUpdatePlayer_(40);
       }
     }
+  }
+  
+  if (playerSprite.visible && dangerSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   dangerSprite.x, dangerSprite.y)) {
+    this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
+    setTimeout((function ()  {
+      this.studio_.setSprite({
+        spriteIndex: this.playerSpriteIndex,
+        value:"visible"
+      });
+    }).bind(this), 500);
+    this.studio_.playerScore -= 20;
+
+    // send sprite back offscreen
+    this.resetSprite_(dangerSprite);
+  }
+
+  if (playerSprite.visible && targetSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   targetSprite.x, targetSprite.y)) {
+    this.studio_.playerScore += 10;
+
+    // send sprite back offscreen
+    this.resetSprite_(targetSprite);
+}
+  
+  if (this.studio_.playerScore <= 0) {
+    var score = document.getElementById('score');
+    score.setAttribute('visibility', 'hidden');
+    this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
+    for (var i = 0; i < this.studio_.spriteCount; i++) {
+      this.studio_.vanishActor({spriteIndex:i});
+    }
+  } else {
+    this.studio_.displayScore();
   }
 };
 
@@ -7223,12 +7401,7 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
     // reset to other side
-    if (sprite.dir === Direction.EAST) {
-      sprite.x = 0 - sprite.width;
-    } else {
-      sprite.x = this.studio_.MAZE_WIDTH;
-    }
-    sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+    this.resetSprite_(sprite);
   }
 };
 
@@ -7249,6 +7422,18 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
 
 BigGameLogic.prototype.cacheBlock = function (key, block) {
   this.cached_[key] = block;
+};
+
+/**
+ * Reset sprite to the opposite side of the screen
+ */
+BigGameLogic.prototype.resetSprite_ = function (sprite) {
+  if (sprite.dir === Direction.EAST) {
+    sprite.x = 0 - sprite.width;
+  } else {
+    sprite.x = this.studio_.MAZE_WIDTH;
+  }
+  sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
 };
 
 /**
@@ -7335,7 +7520,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":43,"./api":148,"./constants":152}],148:[function(require,module,exports){
+},{"../codegen":44,"./api":149,"./constants":153}],149:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7499,7 +7684,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":152}],152:[function(require,module,exports){
+},{"./constants":153}],153:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7676,7 +7861,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7899,7 +8084,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8189,7 +8374,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8801,4 +8986,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[156]);
+},{}]},{},[157]);
