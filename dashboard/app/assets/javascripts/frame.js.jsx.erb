@@ -321,7 +321,7 @@
     },
 
     componentDidUpdate: function() {
-      if (this.state && this.state.jumpToTrophies) {
+      if (this.state.jumpToTrophies) {
         var el = $('#trophies');
         if (el.length) {
           var off = el.offset();
@@ -330,6 +330,13 @@
           this.setState({ jumpToTrophies: false });
         }
       }
+    },
+
+    getInitialState: function() {
+      return {
+        popped: false,
+        jumpToTrophies: false
+      };
     },
 
     // Three possible arguments: true, false, or "trophies" (the last one autoscrolls the page to the bottom of the popup)
