@@ -68,12 +68,12 @@ social:
         - display = entry[:active_s] == "hide" ? "none" : "block"
         - unless entry[:text1_s].nil_or_empty?
           - lines = entry[:text1_s].lines 
-          %div{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee"}
-            .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0"}
+          %div{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; font-size:18px; color:#eee"}
+            .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
               =lines[0]
-            .caption2{style: "left: 30px; top: 107px; position: absolute; opacity: 0"}
+            .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
               =lines[1]
-            .caption3{style: "left: 140px; top: 156px; position: absolute; opacity: 0; font-size: 18px"}
+            .caption3{style: "left: 60px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0.5); padding:8px"}
               =lines[2]
 
       #leftvideo{style: "width: 100%"}
@@ -190,8 +190,9 @@ social:
     var lastImage = currentImage;
     var nextImage = (currentImage + 1) % numWideHeroes;
     $("#fullwidth" + currentImage).fadeTo(4000, 0);
-    $("#fullwidth" + nextImage ).fadeTo(4000, videoStarted ? 0.3 : 1);
+    $("#fullwidth" + nextImage).fadeTo(4000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
+
 
     showQuote(lastImage, currentImage);
   }
