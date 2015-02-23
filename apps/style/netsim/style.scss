@@ -95,7 +95,16 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .netsim_log_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 10px;
+
+  h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+  }
 
   #scroll_area {
     border: inset darkgray 2px;
@@ -109,5 +118,154 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .netsim_send_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em;
+  padding: 10px;
+
+  h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+  }
+
+  div.netsim_packet {
+    border: solid darkgray thin;
+    background-color: lightgray;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    th {
+      font-size: 10pt;
+      font-variant: small-caps;
+    }
+
+    /* All input fields */
+    input, textarea {
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      font-family: monospace;
+    }
+
+    .watermark {
+      color: #d3d3d3;
+    }
+
+    .bit_counter {
+      text-align: right;
+      color: darkgray;
+    }
+
+    /* All columns but "message" */
+    th.rowType, td.rowType,
+    th.toAddress, td.toAddress,
+    th.fromAddress, td.fromAddress,
+    th.packetInfo, td.packetInfo {
+      width: 1%; /* depend on nowrap */
+      text-align: center;
+
+      input {
+        width: 3em;
+        text-align: center;
+      }
+    }
+
+    th.rowType, td.rowType {
+      text-align: right;
+      vertical-align: top;
+    }
+
+    /* toAddress column */
+    th.toAddress, td.toAddress {
+      input {
+        background-color: rgba(255, 233, 238, 0.85);
+      }
+    }
+
+    /* fromAddress column */
+    th.fromAddress, td.fromAddress {
+
+      input {
+        background-color: lightcyan;
+      }
+    }
+
+    /* packetInfo column */
+    th.packetInfo, td.packetInfo {
+
+      input {
+        background-color: rgba(212, 238, 212, 0.90);
+      }
+    }
+
+    /* message column */
+    th.message, td.message {
+      /* Wrapper div keeps textarea bound within column, but still
+         able to set padding. */
+      div {
+        margin-right: 0.4em;
+        textarea {
+          width: 100%;
+          padding: 0.2em;
+        }
+      }
+
+    }
+
+    /* All rows but headers */
+    tbody {
+      td {
+        vertical-align: top;
+      }
+    }
+
+    /* hexadecimal row */
+    tr.hexadecimal {
+      input, textarea {
+      }
+    }
+
+    /* binary row */
+    tr.binary {
+      input, textarea {
+      }
+    }
+  }
+
+  .send_widget_footer {
+    text-align: right;
+    margin-top: 0.5em;
+  }
+}
+
+#netsim_router_panel {
+  #dns_mode_control {
+    input[type="radio"] {
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    label {
+      display: inline;
+      margin-left: 1em;
+    }
+  }
+
+  #netsim_router_network_table {
+    .localNode {
+      font-weight: bold;
+      background-color: lightcyan;
+    }
+
+    .dnsNode {
+      color: white;
+      background-color: darkorange;
+    }
+  }
+
+  #netsim_router_log_table {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
 }

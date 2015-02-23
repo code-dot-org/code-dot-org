@@ -289,6 +289,8 @@ en-US:
   dashboard_login_picture: "Picture"
   dashboard_login_none: "Email"
   dashboard_new_password: "new password"
+  dashboard_progress_not_started: "not started"
+  dashboard_progress_attempted: "attempted"
   dashboard_progress_not_completed: "not completed"
   dashboard_progress_completed_too_many_blocks: "completed, too many blocks"
   dashboard_progress_completed_perfect: "completed, perfect"
