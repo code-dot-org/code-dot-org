@@ -1,7 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Bring computer science to your school"
-litmus_tracking_id: "y8czo8o9"
 ---
 
 I’m writing to let you know that Code.org has partnered with NYC Department of Edcuation to bring computer science to your school, at all levels — kindergarten through high school. 

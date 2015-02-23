@@ -1,14 +1,13 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Bring computer science to your child's school"
-litmus_tracking_id: "y8czo8o9"
 ---
 
-Dear NYC parents,
+Dear NYC parent,
 
 Computer science can open up more doors for our children than any other discipline in today’s world. But a lot of schools still don’t even offer it.
 
-Help Code.org bring computer science courses to your school — at no cost to teachers or schools. Code.org has partnered with NYC schools to prepare teachers to offer computer science, for all levels — kindergarten through high school.
+Code.org has partnered with NYC schools to prepare teachers to offer computer science, for all levels — kindergarten through high school. Help us bring computer science courses to your school — at no cost to teachers or schools.
 
 ### What can your children learn?
 
@@ -26,7 +25,7 @@ This is a chance to give your children access to foundational 21st-century skill
 
 [Bring computer science to your child's school](http://code.org/educate/nyc)
 
-Hadi Partovi
+Hadi Partovi<br />
 founder, Code.org
 
 
