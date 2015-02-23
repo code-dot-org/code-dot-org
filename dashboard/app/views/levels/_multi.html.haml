@@ -1,15 +1,9 @@
 .multi
 
   - data = @level.properties
+  - app = 'multi'
 
-  %h2!= multi_t(data['title'])
-
-  - if ! data['content1'].blank? || ! data['content2'].blank? || ! data['content3'].blank?
-    .question
-
-      %p!= multi_t(data['content1']) unless data['content1'].blank?
-      %p!= multi_t(data['content2']) unless data['content2'].blank?
-      %p!= multi_t(data['content3']) unless data['content3'].blank?
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: 'question'}
 
   .answers
 
