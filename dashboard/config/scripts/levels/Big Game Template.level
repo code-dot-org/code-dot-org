@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n}",
+    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n    var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n    function resetSprite(sprite){\r\n      if (sprite.dir === 2) {\r\n        sprite.x = 0 - sprite.width;\r\n      } else {\r\n        sprite.x = Studio.MAZE_WIDTH;\r\n      }\r\n      sprite.y = Math.floor(Math.random() * (Studio.MAZE_HEIGHT - sprite.height));\r\n    } \r\n    \r\n    // This wraps the existing onTick function (in bigGameLogic.js) in order to allow you to also\r\n    // add some of your own code. The idea is that code added here is done to be able to iterate quickly,\r\n    // and eventually will also end up in bigGameLogic.js\r\n    \r\n    Studio.customLogic.constructor.prototype.onTick = function () {\r\n      // run existing logic\r\n      originalOnTick();\r\n      \r\n      // run custom logic\r\n      //if (this.studio_.tickCount === 1) {\r\n      if (!this.studio_.playerScore) {\r\n      \tthis.studio_.playerScore = 100;\r\n      }\r\n      \r\n      var titleScreenTitle = document.getElementById('titleScreenTitle');\r\n      if (titleScreenTitle.getAttribute('visibility') === \"visible\") {\r\n        return;\r\n      }\r\n      \r\n      var playerSprite = this.studio_.sprite[this.playerSpriteIndex];\r\n      var targetSprite = this.studio_.sprite[this.targetSpriteIndex];\r\n      var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];\r\n\r\n      if (this.collide(playerSprite.x, playerSprite.y, dangerSprite.x, dangerSprite.y) && playerSprite.visible && dangerSprite.visible) {\r\n        this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});\r\n        setTimeout((function() {this.studio_.setSprite({spriteIndex:this.playerSpriteIndex,value:\"visible\"});}).bind(this), 500);\r\n        this.studio_.playerScore -= 20;\r\n        \r\n        // send sprite back offscreen\r\n        resetSprite(dangerSprite);\r\n      }\r\n\r\n      if (this.collide(playerSprite.x, playerSprite.y, targetSprite.x, targetSprite.y) && playerSprite.visible && targetSprite.visible) {\r\n        \r\n        this.studio_.playerScore += 10;\r\n        \r\n        // send sprite back offscreen\r\n        resetSprite(targetSprite);\r\n      }\r\n      if (this.studio_.playerScore <= 0) {\r\n        this.studio_.setScoreText({text:\"Game Over\"})\r\n        this.studio_.showTitleScreen({text:'click reset to play again'})\r\n        for (var i = 0; i < this.studio_.spriteCount; i++) {\r\n          this.studio_.vanishActor({spriteIndex:i});\r\n        }\r\n      }\r\n\r\n      this.studio_.displayScore();\r\n      \r\n    }\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -97,6 +97,40 @@
           <functional_input name="on-screen?">
             <block type="functional_pass" id="game_onscreen">
               <mutation name="onscreen?"/>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-target">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-target">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Given the target's x coordinate, return the next x</description>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">update-target</title>
+          <functional_input name="STACK">
+            <block type="functional_parameters_get" uservisible="false">
+              <mutation>
+                <outputtype>Number</outputtype>
+              </mutation>
+              <title name="VAR">x</title>
             </block>
           </functional_input>
         </block>
@@ -221,6 +255,103 @@
             </block>
           </functional_input>
         </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="safe-left?">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-player">
+                <arg name="key" type="Number"/>
+                <arg name="y" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="safe-left?">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="update-player">
+                <arg name="key" type="Number"/>
+                <arg name="y" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Is the character visible on the left side of the screen?</description>
+            <outputtype>Boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-left?</title>
+          <functional_input name="STACK">
+            <block type="functional_boolean" uservisible="false">
+              <title name="VAL">true</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="onscreen?">
+                <arg name="x" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="collide?">
+                <arg name="px" type="Number"/>
+                <arg name="py" type="Number"/>
+                <arg name="cx" type="Number"/>
+                <arg name="cy" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="collide?">
+                <arg name="px" type="Number"/>
+                <arg name="py" type="Number"/>
+                <arg name="cx" type="Number"/>
+                <arg name="cy" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Given an sprite's x coordinate, determine if the sprite is visible on screen</description>
+            <outputtype>Boolean</outputtype>
+          </mutation>
+          <title name="NAME">onscreen?</title>
+          <functional_input name="STACK">
+            <block type="functional_boolean" uservisible="false">
+              <title name="VAL">true</title>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="a" type="Number"/>
@@ -294,99 +425,20 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="safe-left?">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="safe-left?">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="x" type="Number"/>
-            <description>Is the character visible on the left side of the screen?</description>
-            <outputtype>Boolean</outputtype>
+            <arg name="key" type="Number"/>
+            <arg name="y" type="Number"/>
+            <description>Given the player's y coordinate and a keycode for direction, return the new y</description>
+            <outputtype>Number</outputtype>
           </mutation>
-          <title name="NAME">safe-left?</title>
+          <title name="NAME">update-player</title>
           <functional_input name="STACK">
-            <block type="functional_boolean" uservisible="false">
-              <title name="VAL">true</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-player">
-                <arg name="key" type="String"/>
-                <arg name="y" type="Number"/>
+            <block type="functional_parameters_get" uservisible="false" id="define_update_player">
+              <mutation>
+                <outputtype>Number</outputtype>
               </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-target">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="onscreen?">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="collide?">
-                <arg name="px" type="Number"/>
-                <arg name="py" type="Number"/>
-                <arg name="cx" type="Number"/>
-                <arg name="cy" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="collide?">
-                <arg name="px" type="Number"/>
-                <arg name="py" type="Number"/>
-                <arg name="cx" type="Number"/>
-                <arg name="cy" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <description>Given an sprite's x coordinate, determine if the sprite is visible on screen</description>
-            <outputtype>Boolean</outputtype>
-          </mutation>
-          <title name="NAME">onscreen?</title>
-          <functional_input name="STACK">
-            <block type="functional_boolean" uservisible="false">
-              <title name="VAL">true</title>
+              <title name="VAR">y</title>
             </block>
           </functional_input>
         </block>
@@ -418,33 +470,6 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-player">
-                <arg name="key" type="String"/>
-                <arg name="y" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="key" type="String"/>
-            <arg name="y" type="Number"/>
-            <description>Given the player's y coordinate and a keycode for direction, return the new y</description>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">update-player</title>
-          <functional_input name="STACK">
-            <block type="functional_parameters_get" uservisible="false">
-              <mutation>
-                <outputtype>Number</outputtype>
-              </mutation>
-              <title name="VAR">y</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-danger">
                 <arg name="x" type="Number"/>
               </mutation>
@@ -455,15 +480,6 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-danger">
-                <arg name="x" type="Number"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="update-target">
                 <arg name="x" type="Number"/>
               </mutation>
             </block>
@@ -476,22 +492,6 @@
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">update-danger</title>
-          <functional_input name="STACK">
-            <block type="functional_parameters_get" uservisible="false">
-              <mutation>
-                <outputtype>Number</outputtype>
-              </mutation>
-              <title name="VAR">x</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <description>Given the target's x coordinate, return the next x</description>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">update-target</title>
           <functional_input name="STACK">
             <block type="functional_parameters_get" uservisible="false">
               <mutation>

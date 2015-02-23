@@ -9,7 +9,7 @@ The College Board, Code.org, CSTA, and a coalition of partners spent the last ye
 
 Passing the Washington State Legislature in 2013, <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a> allows Advanced Placement computer science courses to count as a mathematics or science graduation requirement. 
 
-This law indicates that districts can and should count AP Computer Science A towards the required mathematics or science graduation standards. To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
+This law indicates that districts can and should count AP Computer Science towards the required mathematics or science graduation standards. To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
 
 
 ## Resources with more information
