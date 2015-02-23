@@ -478,14 +478,24 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
+  test 'can show level when not signed in' do
+    unset_levelbuilder_env
+
+    level = create :artist
+    sign_out @user
+
+    get :edit, id: level
+    assert_response :redirect
+
+    get :show, id: level
+    assert_response :success
+  end
+
   test 'can show embed level when not signed in' do
     unset_levelbuilder_env
 
-    level = create(:artist)
-    sign_out(@user)
-
-    get :show, id: level
-    assert_response :redirect
+    level = create :artist
+    sign_out @user
 
     get :embed_level, level_id: level
     assert_response :success
@@ -494,11 +504,8 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show embed blocks when not signed in' do
     unset_levelbuilder_env
 
-    level = create(:artist)
-    sign_out(@user)
-
-    get :show, id: level
-    assert_response :redirect
+    level = create :artist
+    sign_out @user
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success

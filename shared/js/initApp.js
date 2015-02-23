@@ -150,19 +150,29 @@ $(window).on('function_editor_closed', function() {
   }
 })(appOptions.level);
 
-dashboard.saveProject = function(callback) {
+/**
+ * Only execute the given argument if it is a function.
+ * @param callback
+ */
+function callbackSafe(callback, data) {
+  if (typeof callback === 'function') {
+    callback(data);
+  }
+}
+
+dashboard.saveProject = function(callback) { console.log('saving')
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
-      callback(data);
+      callbackSafe(callback, data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       if (history) {
         history.pushState({}, '', '?id=' + data.id);
       }
-      callback(data);
+      callbackSafe(callback, data);
     });
   }
 };
