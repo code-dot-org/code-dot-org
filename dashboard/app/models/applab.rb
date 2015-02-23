@@ -41,17 +41,8 @@ class Applab < Blockly
   def self.palette
     <<-JSON.strip_heredoc.chomp
       {
+        // UI Controls
         "onEvent": null,
-        "startWebRequest": null,
-        "setTimeout": null,
-        "clearTimeout": null,
-        "playSound": null,
-        "deleteElement": null,
-        "showElement": null,
-        "hideElement": null,
-        "setPosition": null,
-        "getXPosition": null,
-        "getYPosition": null,
         "button": null,
         "textInput": null,
         "textLabel": null,
@@ -65,6 +56,15 @@ class Applab < Blockly
         "image": null,
         "getImageURL": null,
         "setImageURL": null,
+        "playSound": null,
+        "showElement": null,
+        "hideElement": null,
+        "deleteElement": null,
+        "setPosition": null,
+        "getXPosition": null,
+        "getYPosition": null,
+
+        // Canvas
         "createCanvas": null,
         "setActiveCanvas": null,
         "line": null,
@@ -77,22 +77,28 @@ class Applab < Blockly
         "getImageData": null,
         "putImageData": null,
         "clearCanvas": null,
-        "getKeyValue": null,
+
+        // Data
+        "startWebRequest": null,
         "setKeyValue": null,
+        "getKeyValue": null,
         "createRecord": null,
         "readRecords": null,
         "updateRecord": null,
         "deleteRecord": null,
+        "getUserId": null,
+
+        // Turtle
         "moveForward": null,
         "moveBackward": null,
         "move": null,
         "moveTo": null,
+        "dot": null,
         "turnRight": null,
         "turnLeft": null,
         "turnTo": null,
         "arcRight": null,
         "arcLeft": null,
-        "dot": null,
         "getX": null,
         "getY": null,
         "getDirection": null,
@@ -101,7 +107,46 @@ class Applab < Blockly
         "penWidth": null,
         "penColor": null,
         "show": null,
-        "hide": null
+        "hide": null,
+
+        // Control
+        "setTimeout": null,
+        "clearTimeout": null,
+        "forLoop_i_0_4": null,
+        "ifBlock": null,
+        "ifElseBlock": null,
+        "whileBlock": null,
+
+        // Math
+        "addOperator": null,
+        "subtractOperator": null,
+        "multiplyOperator": null,
+        "divideOperator": null,
+        "equalityOperator": null,
+        "inequalityOperator": null,
+        "greaterThanOperator": null,
+        "lessThanOperator": null,
+        "andOperator": null,
+        "orOperator": null,
+        "randomNumber_max": null,
+        "randomNumber_min_max": null,
+        "mathRound": null,
+        "mathAbs": null,
+        "mathMax": null,
+        "mathMin": null,
+
+        // Variables
+        "console.log": null,
+        "declareAssign_x": null,
+        "assign_x": null,
+        "declareAssign_x_array_1_4": null,
+        "declareAssign_x_prompt": null,
+
+        // Functions
+        "functionParams_none": null,
+        "functionParams_n": null,
+        "callMyFunction": null,
+        "callMyFunction_n": null
       }
     JSON
   end
