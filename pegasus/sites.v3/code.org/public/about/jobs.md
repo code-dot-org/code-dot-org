@@ -7,15 +7,17 @@ nav: about_nav
 
 - [Head of Product/Marketing](#head-product)
 - [Head of Engineering](#head-engineering)
+- [Operations Intern](#operations-intern)
 - [HR Generalist](#hr-generalist)
 - [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
-- [Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)](#reg-PM)
-- [Advocacy Researcher](#advocacy-researcher)
+- [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Policy Research Analyst](#advocacy-researcher)
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
+
 
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
@@ -50,10 +52,10 @@ A high level of computer literacy is required; proficiency in working with Micro
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="advocacy-researcher" href="#advocacy-researcher">Advocacy Researcher (Seattle, WA preferred)</a>    
+## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
 **Job Summary:**
 
-Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
+Code.org is recruiting for an Policy Research Analyst who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
 Responsibilities of the position include:
 
 - Research and analysis of state policy issues, including:
@@ -165,9 +167,30 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
 - Full stack Web engineering experience, i.e. databases, application, front-end
 - Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
-- Mobile development experience (iOS, Android) desired but not required
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
+- Mobile development experience (iOS, Android) desired, but not required
+- Experience in a fast growth start-up environment desired
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="operations-intern" href="operations-intern">Operations Intern (Seattle,Wa)</a>
+**Job Summary:**
+
+Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
+
+- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
+- Update and manage attendee lists
+- Utilize our customer service system to respond to professional development questions from teachers in a timely manner
+- Attend and participate in meetings and record notes/follow-up items, as appropriate
+- Respond to requests for information, distribute materials externally
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Qualifications:**
+
+- Minimum 2 years of undergraduate studies completed
+- Experience with Google suite of products
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
@@ -241,7 +264,7 @@ Please DO NOT apply for this position if you do not have experience in writing s
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)</a>
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 

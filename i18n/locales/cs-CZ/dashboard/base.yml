@@ -296,6 +296,8 @@ cs:
     student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro %{student_name}'
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
     new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
     current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změny)
@@ -478,7 +480,7 @@ cs:
           title: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
           description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8), ale jistě bude bavit studenty jakéhokoliv věku.
         Hour of Code:
-          title: Hodina kódu
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Upravit kód

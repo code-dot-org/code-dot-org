@@ -1,28 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model of simulated network entity, which lives
- * in a shard table.
- *
- * Wraps the entity row with helper methods for examining and maintaining
- * the entity state in shared storage.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -34,24 +9,27 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var superClass = require('./NetSimEntity');
+require('../utils');
+var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');
 
 /**
+ * Client model of simulated network entity, which lives
+ * in a shard table.
+ *
+ * Wraps the entity row with helper methods for examining and maintaining
+ * the entity state in shared storage.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [nodeRow] JSON row from table.
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimNode = function (shard, nodeRow) {
-  superClass.call(this, shard, nodeRow);
-
-  if (nodeRow === undefined) {
-    nodeRow = {};
-  }
+var NetSimNode = module.exports = function (shard, nodeRow) {
+  nodeRow = nodeRow !== undefined ? nodeRow : {};
+  NetSimEntity.call(this, shard, nodeRow);
 
   /**
    * @type {string}
@@ -71,9 +49,7 @@ var NetSimNode = function (shard, nodeRow) {
    */
   this.statusDetail_ = nodeRow.statusDetail;
 };
-NetSimNode.prototype = Object.create(superClass.prototype);
-NetSimNode.prototype.constructor = NetSimNode;
-module.exports = NetSimNode;
+NetSimNode.inherits(NetSimEntity);
 
 /**
  * Get shared table for nodes
@@ -86,12 +62,12 @@ NetSimNode.prototype.getTable_= function () {
 
 /** Build table row for this node */
 NetSimNode.prototype.buildRow_ = function () {
-  return $.extend(superClass.prototype.buildRow_.call(this), {
-    name: this.getDisplayName(),
+  return {
     type: this.getNodeType(),
+    name: this.getDisplayName(),
     status: this.getStatus(),
     statusDetail: this.getStatusDetail()
-  });
+  };
 };
 
 /**
@@ -145,20 +121,16 @@ NetSimNode.prototype.getStatusDetail = function () {
  * @param {function} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = (onComplete !== undefined) ? onComplete : function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, function (wire) {
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
     if (wire === null) {
       onComplete(null);
       return;
     }
 
-    wire.localNodeID = self.entityID;
-    wire.remoteNodeID = otherNode.entityID;
-    wire.update(function (success) {
+    otherNode.acceptConnection(self, function (success) {
       if (!success) {
         wire.destroy(function () {
           onComplete(null);
@@ -166,16 +138,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
         return;
       }
 
-      otherNode.acceptConnection(self, function (success) {
-        if (!success) {
-          wire.destroy(function () {
-            onComplete(null);
-          });
-          return;
-        }
-
-        onComplete(wire);
-      });
+      onComplete(wire);
     });
   });
 };

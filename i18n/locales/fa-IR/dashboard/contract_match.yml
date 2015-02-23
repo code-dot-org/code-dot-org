@@ -73,12 +73,14 @@ fa:
         Write a contract for a big orange red that is 100 pixels in size: یک قرارداد برای یک قرمز نارنجی بزرگ که اندازه اش 100 پیکسل است بنویس
         Write a contract for a big red that is 100 pixels in size: یک قرارداد برای یک قرمز بزرگ که اندازه اش 100 پیکسل است بنویس
         "Big Triangle|image|color:string|size:Number": مثلث بزرگ|تصویر|رنگ:رشته|اندازه:عدد
+        Big Triangle: Big Triangle
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: ایجاد قراردادها از مثالهای 2
         Write a contract for a purple square that is 15 pixels in size.: یک قرارداد برای یک مربع بنفش که اندازه اش 15 پیکسل است بنویس.
         EXAMPLE 2.solution_blocks, 300: مثال 2.بلوکهای_راه حل، 300
         "Square|image|color:string|size:Number": مربع|تصویر|رنگ:رشته|اندازه:عدد
         Example 2.solution_blocks, 300: مثال 2.بلوکهای_راه حل، 300
+        Square Contract: Square Contract
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: ایجاد قراردادها از مثالهای 3
         Try using the "text" function to write this red text at size 40.: 'سعی کنید از تابع "متن" برای نوشتن این متن قرمز رنگ در اندازه 40 استفاده کنید.'
@@ -104,9 +106,27 @@ fa:
         "banner|text:string": پرچم|متن:رشته
         "banner:image|text:string": 'پرچم: تصویر|متن:رشته'
         "banner|image|text:string": پرچم|تصویر|متن:رشته
+        Banner Contract: Banner Contract
       Creating Contracts From Examples 4:
         Creating Contracts From Examples 4: ایجاد قراردادها از مثالهای 4
         Try using the "text" function to write this red text at size 40.: 'سعی کنید از تابع "متن" برای نوشتن این متن قرمز رنگ در اندازه 40 استفاده کنید.'
         Examples 4.solution_blocks, 300: مثالهای 4.بلوکهای_راه حل، 300
         "shrink|image|circle:image": کوچک شدن|تصویر|دایره:تصویر
         "shrink|image|image:image": کوچک شدن|تصویر|تصویر:تصویر
+        Try using the "shrink" function.: 'Try using the "shrink" function.'
+        Shrink Contract: Shrink Contract
+      Eval Contracts B:
+        Star Contract: قرارداد ستاره
+        Write a contract for the star function: یک قرارداد برای تابع ستاره بنویس
+        Eval Contracts 1 A.solution_blocks, 300: قراردادهای ایوال 1 آ. بلوکهای راه حل، 300
+        "star|image|color:string|radius:Number|style:string": ستاره|تصویر|رنگ:رشته|شعاع:عدد|سبک:رشته
+      Eval Contracts D:
+        Rotate Contract: قرارداد چرخش
+        Write a contract for the rotate function: یک قرارداد برای تابع چرخش بنویس
+        Eval Contracts 2 A.solution_blocks, 300: قراردادهای ایوال 2 آ. بلوکهای راه حل، 300
+        "rotate|image|degrees:Number|image:image": چرخش|تصویر|درجه:شماره|تصویر:تصویر
+      Eval Contracts F:
+        Text Contract: قرارداد متن
+        Write a contract for the text function: یک قرارداد برای تابع متن بنویس
+        Eval Contracts 3 A.solution_blocks, 300: قراردادهای ایوال 3 آ. بلوکهای راه حل، 300
+        "text|image|color:string|size:Number|string:string": متن|تصویر|رنگ:رشته|اندازه:عدد|رشته:رشته

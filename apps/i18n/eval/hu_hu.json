@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "kör (sugár, stílus, szín)",
   "displayBlockTitle": "megjelenítés",
   "ellipseBlockTitle": "ellipszis (szélesség, magasság, stílus, szín)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!",
   "overlayBlockTitle": "borítás (felső, alsó)",
   "placeImageBlockTitle": "kép elhelyezése (x, y, kép)",

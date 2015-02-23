@@ -150,8 +150,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "text"},
 "catVariables":function(d){return "variabler"},
 "continue":function(d){return "Fortsätt"},
-"createHtmlBlock":function(d){return "skapa HTML-block"},
-"createHtmlBlockTooltip":function(d){return "Skapar ett HTML-block i appen."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "Grattis! Du har löst det sista pusslet."},
 "nextLevel":function(d){return "Grattis! Du har slutfört detta pusslet."},
 "no":function(d){return "Nej"},
@@ -166,5 +166,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Stig in"},
 "stepOver":function(d){return "Stig över"},
 "stepOut":function(d){return "Stig ut"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Visa data"},
 "yes":function(d){return "Ja"}};

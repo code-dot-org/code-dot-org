@@ -890,7 +890,7 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
  * @private
  */
 Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge,
-  connectionsXY) {
+    connectionsXY) {
   // Position the cursor at the top-left starting point.
   if (this.squareTopLeftCorner_) {
     renderInfo.core.push('m 0,0');
@@ -1124,12 +1124,16 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
 
+  // Align everything according to the align of the first input. Right now only
+  // left and center work
+  var align = row[0].align;
+
   // If the first input is functional, assume all inputs are functional. Figure
   // out how much space they will take up, so that we can center the set of them.
   if (row[0].type === Blockly.FUNCTIONAL_INPUT) {
     var widths = BS.SEP_SPACE_X * (row.length - 1);
     row.forEach(function (input) { widths += input.renderWidth; } );
-    if (inputRows.rightEdge > widths) {
+    if (inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2;
     }
   }
@@ -1141,7 +1145,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
       // Lower the title slightly.
       titleY += BS.INLINE_PADDING_Y;
     }
-    // TODO: Align inline title rows (left/right/centre).
+
     renderInfo.curX += this.renderTitles_(input.titleRow, titleX, titleY);
 
     if (input.type === Blockly.INPUT_VALUE) {

@@ -541,7 +541,7 @@ Blockly.Blocks.procedures_ifreturn = {
     this.setHelpUrl('http://c2.com/cgi/wiki?GuardClause');
     this.setHSV(94, 0.84, 0.60);
     this.appendValueInput('CONDITION')
-        .setCheck('Boolean')
+        .setCheck(Blockly.BlockValueType.BOOLEAN)
         .appendTitle(Blockly.Msg.CONTROLS_IF_MSG_IF);
     this.appendValueInput('VALUE')
         .appendTitle(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
