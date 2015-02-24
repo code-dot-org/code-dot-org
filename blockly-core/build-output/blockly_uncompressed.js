@@ -19297,16 +19297,16 @@ typesToColors[Blockly.BlockValueType.STRING] = [180, 1, 0.6];
 typesToColors[Blockly.BlockValueType.IMAGE] = [285, 1, 0.8];
 typesToColors[Blockly.BlockValueType.BOOLEAN] = [90, 1, 0.4];
 Blockly.FunctionalTypeColors = typesToColors;
-Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, type, args, wrapWidth) {
+Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, type, args, config_opt) {
+  config_opt = config_opt || {};
   block.setFunctional(true, {headerHeight:30});
   block.setHSV.apply(block, Blockly.FunctionalTypeColors[type]);
-  var options = {fixedSize:{height:35}};
+  var options = {fixedSize:{height:35}, fontSize:config_opt.titleFontSize};
   block.appendDummyInput().appendTitle(new Blockly.FieldLabel(title, options)).setAlign(Blockly.ALIGN_CENTRE);
   for(var i = 0;i < args.length;i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    var wrapNextArg = wrapWidth && i % wrapWidth === 0;
-    input.setInline(i > 0 && !wrapNextArg);
+    input.setInline(i > 0);
     if(arg.type === Blockly.BlockValueType.NONE) {
       input.setHSV(0, 0, 0.99)
     }else {
