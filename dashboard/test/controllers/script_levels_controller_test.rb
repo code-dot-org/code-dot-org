@@ -139,17 +139,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for 20 hour" do
-    sl = ScriptLevel.find_by script_id: Script::TWENTY_HOUR_NAME, chapter: 3
+    sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     get :show, script_id: sl.script, chapter: sl.chapter
 
     assert_redirected_to build_script_level_path(sl)
   end
 
   test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by(script_id: Script::TWENTY_HOUR_NAME, chapter: 3)
-    assert_routing({method: "get", path: "/s/1/level/#{sl.id}"},
-                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, id: sl.id.to_s})
+    sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
+    assert_routing({method: "get", path: build_script_level_path(sl)},
+        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.id.to_s, id: sl.position.to_s})
   end
 
   test "chapter based routing" do
