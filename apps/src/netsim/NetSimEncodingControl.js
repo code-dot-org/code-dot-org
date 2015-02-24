@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimEncodingSelector.html');
+var markup = require('./NetSimEncodingControl.html');
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
@@ -22,7 +22,7 @@ var markup = require('./NetSimEncodingSelector.html');
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingSelector = module.exports = function (rootDiv,
+var NetSimEncodingControl = module.exports = function (rootDiv,
     changeEncodingCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -50,7 +50,7 @@ var NetSimEncodingSelector = module.exports = function (rootDiv,
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimEncodingSelector.prototype.render = function () {
+NetSimEncodingControl.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
   this.select_ = this.rootDiv_.find('select');
@@ -62,7 +62,7 @@ NetSimEncodingSelector.prototype.render = function () {
  * Send new value to registered callback on change.
  * @private
  */
-NetSimEncodingSelector.prototype.onSelectChange_ = function () {
+NetSimEncodingControl.prototype.onSelectChange_ = function () {
   this.changeEncodingCallback_(this.select_.val());
 };
 
@@ -70,7 +70,7 @@ NetSimEncodingSelector.prototype.onSelectChange_ = function () {
  * Change selector value to the new provided value.
  * @param newEncoding
  */
-NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
+NetSimEncodingControl.prototype.setEncoding = function (newEncoding) {
   this.select_.val(newEncoding);
 };
 
@@ -80,7 +80,7 @@ NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
  * @param {jQuery} rootElement - root of elements to show/hide
  * @param {string} encoding - a message encoding setting
  */
-NetSimEncodingSelector.hideRowsByEncoding = function (rootElement, encoding) {
+NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encoding) {
   if (encoding === 'all') {
     rootElement.find('tr.binary, tr.hexadecimal, tr.decimal, tr.ascii').show();
   } else if (encoding === 'binary') {
