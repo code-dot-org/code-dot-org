@@ -61,6 +61,13 @@ var NetSimSendWidget = module.exports = function (connection) {
    * @type {string}
    */
   this.message = '';
+
+  /**
+   * Bits per chunk/byte for parsing and formatting purposes.
+   * @type {number}
+   * @private
+   */
+  this.currentChunkSize_ = 8;
 };
 
 /**
@@ -186,8 +193,8 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
       messageConversion: function (decimalString) {
-        return decimalToBinary(decimalString, 8);
-      }
+        return decimalToBinary(decimalString, this.currentChunkSize_);
+      }.bind(this)
     },
     {
       typeName: 'ascii',
@@ -195,8 +202,8 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
       messageConversion: function (asciiString) {
-        return asciiToBinary(asciiString, 8);
-      }
+        return asciiToBinary(asciiString, this.currentChunkSize_);
+      }.bind(this)
     }
   ];
 
@@ -252,6 +259,7 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
  * @param {HTMLElement} [skipElement]
  */
 NetSimSendWidget.prototype.render = function (skipElement) {
+  var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
   [
@@ -283,25 +291,25 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.binaryUI.message,
-    newValue: formatBinary(this.message, 8),
+    newValue: formatBinary(this.message, chunkSize),
     watermark: 'Binary'
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), 2),
+    newValue: formatHex(binaryToHex(this.message), Math.ceil(chunkSize / 4)),
     watermark: 'Hexadecimal'
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: alignDecimal(binaryToDecimal(this.message, 8)),
+    newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
     watermark: 'Decimal'
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message, 8),
+    newValue: binaryToAscii(this.message, chunkSize),
     watermark: 'ASCII'
   });
 
@@ -362,4 +370,9 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
  */
 NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
   NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+};
+
+NetSimSendWidget.prototype.setChunkSize = function (newChunkSize) {
+  this.currentChunkSize_ = newChunkSize;
+  this.render();
 };
