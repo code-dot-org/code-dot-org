@@ -167,8 +167,8 @@ title: Register for a workshop
   -if File.file?(sites_v3_dir("code.org/views/workshop_affiliates/#{affiliate[:id]}_bio.md"))
     .col-sm-5.col-sm-offset-1
       %h2{style: "font-size: 18px;"} Facilitated by:
-      -if File.file?(pegasus_dir("sites.v3/code.org/public/images/workshop-affiliates/#{affiliate[:id]}.jpg"))
-        %img{src: "/images/workshop-affiliates/fit-180/#{affiliate[:id]}.jpg", style: "margin-bottom: .5em;"}
+      -if File.file?(pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{affiliate[:id]}.jpg"))
+        %img{src: "/images/affiliate-images/fit-180/#{affiliate[:id]}.jpg", style: "margin-bottom: .5em;"}
       %div
         =view "workshop_affiliates/#{affiliate[:id]}_bio"
 

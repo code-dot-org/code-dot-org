@@ -672,12 +672,19 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
 *     visible blocks preceding all hidden blocks.
 */
 StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
+  var userVisible;
+  var currentlyHidden = false;
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute &&
-        xmlBlock.getAttribute('uservisible') === 'false') {
+    if (xmlBlock.getAttribute) {
+      userVisible = xmlBlock.getAttribute('uservisible');
+      var type = xmlBlock.getAttribute('type');
+      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;  
+    }
+
+    if (currentlyHidden || userVisible === 'false') {
       hiddenXmlBlocks.push(xmlBlock);
     } else {
       visibleXmlBlocks.push(xmlBlock);
@@ -1067,6 +1074,12 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.sendToPhone = config.sendToPhone;
   this.noPadding = config.noPadding;
 
+  // contract editor requires more vertical space. set height to 1250 unless
+  // explicitly specified
+  if (config.level.useContractEditor) {
+    config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
+  }
+
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -1099,7 +1112,10 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+  var throttledRunClick = _.debounce(function () {
+    Blockly.fireUiEvent(window, 'run_button_pressed');
+    this.runButtonClick();
+  }, 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1362,3 +1378,54 @@ function isUnfilledBlock(block) {
 StudioApp.prototype.hasUnfilledBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
 };
+
+StudioApp.prototype.createCoordinateGridBackground = function (options) {
+  var svgName = options.svg;
+  var origin = options.origin;
+  var firstLabel = options.firstLabel;
+  var lastLabel = options.lastLabel;
+  var increment = options.increment;
+
+  var CANVAS_HEIGHT = 400;
+  var CANVAS_WIDTH = 400;
+
+  var svg = document.getElementById(svgName);
+
+  var bbox, text, rect;
+  for (var label = firstLabel; label <= lastLabel; label += increment) {
+    // create x axis labels
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', label - origin - bbox.width / 2);
+    text.setAttribute('y', CANVAS_HEIGHT);
+    text.setAttribute('font-weight', 'bold');
+    rect = rectFromElementBoundingBox(text);
+    rect.setAttribute('fill', 'white');
+    svg.insertBefore(rect, text);
+
+    // create y axis labels
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', 0);
+    text.setAttribute('y', CANVAS_HEIGHT - (label - origin));
+    text.setAttribute('dominant-baseline', 'central');
+    text.setAttribute('font-weight', 'bold');
+    rect = rectFromElementBoundingBox(text);
+    rect.setAttribute('fill', 'white');
+    svg.insertBefore(rect, text);
+  }
+};
+
+function rectFromElementBoundingBox(element) {
+  var bbox = element.getBBox();
+  var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', bbox.x);
+  rect.setAttribute('y', bbox.y);
+  rect.setAttribute('width', bbox.width);
+  rect.setAttribute('height', bbox.height);
+  return rect;
+}

@@ -24,10 +24,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 2)
   end
 
-  test "should show script level for twenty hour" do
+  test 'should show script level for twenty hour' do
     @controller.expects :slog
 
-    get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
+    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
     assert_response :success
 
     assert_equal @script_level, assigns(:script_level)
@@ -44,7 +44,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, :with_stage, level: real_level
-    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
     # start blocks comes from project_level not real_level
@@ -62,7 +62,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, :with_stage, level: real_level
-    get :show, script_id: sl.script.to_param, stage_id: '1', id: '1'
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
@@ -70,7 +70,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show video in twenty hour script level' do
-    get :show, script_id: Script::TWENTY_HOUR_ID, id: @script_level.id
+    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
     assert_response :success
     assert_not_empty assigns(:level).related_videos
   end
@@ -80,7 +80,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     concept_with_video = Concept.find_by_name('sequence')
     non_legacy_script_level.level.concepts = [concept_with_video]
 
-    get :show, script_id: non_legacy_script_level.script.to_param, stage_id: "1", id: "1"
+    get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
 
     assert_response :success
     assert_empty assigns(:level).related_videos
@@ -89,7 +89,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show specified video for script level with video' do
     non_legacy_script_level = create(:script_level, :with_stage, :with_autoplay_video)
     assert_empty(non_legacy_script_level.level.concepts)
-    get :show, script_id: non_legacy_script_level.script.to_param, stage_id: '1', id: '1'
+    get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
     assert_not_nil assigns(:autoplay_video_info)
@@ -97,7 +97,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not have autoplay video when noautoplay param is set' do
     level_with_autoplay_video = create(:script_level, :with_stage, :with_autoplay_video)
-    get :show, script_id: level_with_autoplay_video.script.to_param, stage_id: '1', id: '1', noautoplay: 'true'
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1', noautoplay: 'true'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
     assert_nil assigns(:autoplay_video_info)
@@ -111,10 +111,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
     assert_nil session[:videos_seen]
-    get :show, script_id: level_with_autoplay_video.script.to_param, stage_id: stage.position, id: '1', noautoplay: 'true'
+    get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
     assert_nil assigns(:autoplay_video_info)
     assert_not_empty session[:videos_seen]
-    get :show, script_id: level_with_autoplay_video.script.to_param, stage_id: stage.position, id: '1'
+    get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
     assert_nil assigns(:autoplay_video_info)
   end
 
@@ -123,7 +123,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     seen = Set.new
     seen.add(non_legacy_script_level.level.video_key)
     session[:videos_seen] = seen
-    get :show, script_id: non_legacy_script_level.script.to_param, stage_id: '1', id: '1'
+    get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
     assert_nil assigns(:autoplay_video_info)
@@ -132,7 +132,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'non-legacy script level with concepts should have related but not autoplay video' do
     non_legacy_script_level = create(:script_level, :with_stage)
     non_legacy_script_level.level.concepts = [create(:concept, :with_video)]
-    get :show, script_id: non_legacy_script_level.script.to_param, stage_id: '1', id: '1'
+    get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
     assert_nil assigns(:autoplay_video_info)
@@ -140,17 +140,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for 20 hour" do
     sl = ScriptLevel.find_by script_id: Script::TWENTY_HOUR_ID, chapter: 3
-    get :show, script_id: sl.script_id, chapter: sl.chapter
+    get :show, script_id: sl.script, chapter: sl.chapter
 
-    assert_redirected_to "/s/1/level/#{sl.id}"
+    assert_redirected_to build_script_level_path(sl)
   end
 
-  test "script level id based routing for 20 hour script" do
-    # 'normal' script level routing
+  test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by(script_id: Script::TWENTY_HOUR_ID, chapter: 3)
     assert_routing({method: "get", path: "/s/1/level/#{sl.id}"},
                    {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_ID.to_s, id: sl.id.to_s})
-    assert_equal "/s/1/level/#{sl.id}", build_script_level_path(sl)
+    assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
   end
 
   test "chapter based routing" do
@@ -375,7 +374,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage = create(:stage, script: script)
     script_level = create(:script_level, script: script, level: level, stage: stage)
 
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
+    get :show, script_id: script, stage_id: stage.position, id: script_level.position
 
     assert_equal script_level, assigns(:script_level)
 
@@ -392,13 +391,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     create(:callout, script_level: script_level)
 
-    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
+    get :show, script_id: script, stage_id: stage.position, id: script_level.position
 
     assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
   end
 
   test 'should render title for puzzle in default script' do
-    get :show, script_id: @script.id, id: @script_level.id
+    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
     assert_equal 'Code.org - The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end

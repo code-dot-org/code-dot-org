@@ -24,6 +24,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -56,6 +57,13 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.runLoop_ = new RunLoop();
+
+  /**
+   * Current encoding mode; 'all' or 'binary' or 'ascii', etc.
+   * @type {string}
+   * @private
+   */
+  this.encodingMode_ = 'binary';
 };
 
 
@@ -149,6 +157,10 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
+  this.encodingSelector_ = NetSimEncodingSelector.createWithin(
+      document.getElementById('encoding_selector'),
+      this.changeEncoding.bind(this));
+
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
@@ -171,6 +183,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
 
+  this.changeEncoding(this.encodingMode_);
   this.refresh_();
 };
 
@@ -184,6 +197,18 @@ NetSim.prototype.refresh_ = function () {
   } else {
     this.mainContainer_.hide();
   }
+};
+
+/**
+ *
+ * @param {string} newEncoding
+ */
+NetSim.prototype.changeEncoding = function (newEncoding) {
+  this.encodingMode_ = newEncoding;
+  this.encodingSelector_.setEncoding(newEncoding);
+  this.receivedMessageLog_.setEncoding(newEncoding);
+  this.sentMessageLog_.setEncoding(newEncoding);
+  this.sendWidget_.setEncoding(newEncoding);
 };
 
 /**

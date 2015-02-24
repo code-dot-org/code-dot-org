@@ -95,7 +95,7 @@ class ReportsControllerTest < ActionController::TestCase
     get :header_stats, script_id: Script.find_by_name('course3').id, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.twenty_hour_script, user_id: teacher.id
+    get :header_stats, script_id: Script.twenty_hour_script.id, user_id: teacher.id
     assert_select '.stage-lesson-plan-link', 0
   end
 

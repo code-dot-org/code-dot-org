@@ -109,3 +109,28 @@ dashboard.buildHeader = function (scriptData) {
     window.scrollTo(0, +$('#trophies').offset().top);
   }
 };
+
+dashboard.showProjectHeader = function () {
+  function projectNameShow() {
+    $('.project_info').empty().append($('<div>').addClass('header_text').text(dashboard.currentApp.name))
+        .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
+  }
+
+  function projectNameEdit() {
+    $('.project_info').empty().append($('<input id="projectName">', {type: 'text'})
+        .addClass('header_input').val(dashboard.currentApp.name))
+        .append($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
+  }
+
+  projectNameShow();
+
+  $(document).on('click', '.project_edit', projectNameEdit);
+
+  $(document).on('click', '.project_save', function () {
+    $(this).attr('disabled', true);
+    dashboard.currentApp.name = $('#projectName').val();
+    dashboard.saveProject(function () {
+      projectNameShow();
+    });
+  });
+};

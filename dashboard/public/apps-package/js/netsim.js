@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({140:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({142:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":139,"./netsim":141,"./skins":144}],144:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":141,"./netsim":143,"./skins":146}],146:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":147}],141:[function(require,module,exports){
+},{"../skins":149}],143:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -50,6 +50,7 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -82,6 +83,13 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.runLoop_ = new RunLoop();
+
+  /**
+   * Current encoding mode; 'all' or 'binary' or 'ascii', etc.
+   * @type {string}
+   * @private
+   */
+  this.encodingMode_ = 'binary';
 };
 
 
@@ -175,6 +183,10 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
+  this.encodingSelector_ = NetSimEncodingSelector.createWithin(
+      document.getElementById('encoding_selector'),
+      this.changeEncoding.bind(this));
+
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
@@ -197,6 +209,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
 
+  this.changeEncoding(this.encodingMode_);
   this.refresh_();
 };
 
@@ -210,6 +223,18 @@ NetSim.prototype.refresh_ = function () {
   } else {
     this.mainContainer_.hide();
   }
+};
+
+/**
+ *
+ * @param {string} newEncoding
+ */
+NetSim.prototype.changeEncoding = function (newEncoding) {
+  this.encodingMode_ = newEncoding;
+  this.encodingSelector_.setEncoding(newEncoding);
+  this.receivedMessageLog_.setEncoding(newEncoding);
+  this.sentMessageLog_.setEncoding(newEncoding);
+  this.sendWidget_.setEncoding(newEncoding);
 };
 
 /**
@@ -247,7 +272,7 @@ NetSim.prototype.onResizeOverride_ = function() {
   div.style.width = parentWidth + 'px';
 };
 
-},{"../RunLoop":3,"./DashboardUser":113,"./NetSimConnection":115,"./NetSimLobby":119,"./NetSimLogWidget":123,"./NetSimRouterPanel":129,"./NetSimSendWidget":131,"./controls.html":137,"./page.html":143}],143:[function(require,module,exports){
+},{"../RunLoop":3,"./DashboardUser":113,"./NetSimConnection":115,"./NetSimEncodingSelector":117,"./NetSimLobby":121,"./NetSimLogWidget":125,"./NetSimRouterPanel":131,"./NetSimSendWidget":133,"./controls.html":139,"./page.html":145}],145:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -263,7 +288,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim_lobby_container"></div>\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_vizualization">\n        <img src="', escape((41,  assetUrl('media/netsim/netsim_viz_mock.png') )), '" />\n      </div>\n      <div id="netsim_tabpanel"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div id="netsim_received"></div>\n      <div id="netsim_sent"></div>\n      <div id="netsim_send"></div>\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((52,  data.localeDirection )), '">\n    ');53; instructions() ; buf.push('\n    ');54; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim_lobby_container"></div>\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_vizualization">\n        <img src="', escape((41,  assetUrl('media/netsim/netsim_viz_mock.png') )), '" />\n      </div>\n      <div id="encoding_selector"></div>\n      <div id="netsim_tabpanel"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div id="netsim_received"></div>\n      <div id="netsim_sent"></div>\n      <div id="netsim_send"></div>\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((53,  data.localeDirection )), '">\n    ');54; instructions() ; buf.push('\n    ');55; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -271,7 +296,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":194,"../../locale/current/netsim":199,"ejs":210}],139:[function(require,module,exports){
+},{"../../locale/current/common":198,"../../locale/current/netsim":203,"ejs":214}],141:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -285,9 +310,9 @@ levels.netsim_demo = {
   'freePlay': true
 };
 
-},{"../../locale/current/netsim":199}],199:[function(require,module,exports){
+},{"../../locale/current/netsim":203}],203:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],137:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -307,7 +332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],131:[function(require,module,exports){
+},{"ejs":214}],133:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -324,6 +349,7 @@ return buf.join('');
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -664,7 +690,16 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
   });
 };
 
-},{"../constants":46,"./NetSimSendWidget.html":130,"./PacketEncoder":136,"./dataConverters":138}],130:[function(require,module,exports){
+/**
+ * Show or hide parts of the send UI based on the currently selected encoding
+ * mode.
+ * @param {string} newEncoding
+ */
+NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
+  NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+};
+
+},{"../constants":46,"./NetSimEncodingSelector":117,"./NetSimSendWidget.html":132,"./PacketEncoder":138,"./dataConverters":140}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -684,7 +719,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],129:[function(require,module,exports){
+},{"ejs":214}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -940,7 +975,7 @@ NetSimRouterPanel.prototype.getDnsMode_ = function () {
   }
   return DnsMode.NONE;
 };
-},{"./NetSimLogger":124,"./NetSimRouterNode":127,"./NetSimRouterPanel.html":128}],128:[function(require,module,exports){
+},{"./NetSimLogger":126,"./NetSimRouterNode":129,"./NetSimRouterPanel.html":130}],130:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -960,7 +995,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],123:[function(require,module,exports){
+},{"ejs":214}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -969,7 +1004,6 @@ return buf.join('');
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 /* global $ */
@@ -977,13 +1011,28 @@ return buf.join('');
 
 var markup = require('./NetSimLogWidget.html');
 var dom = require('../dom');
-
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var PacketEncoder = require('./PacketEncoder');
+var dataConverters = require('./dataConverters');
+var formatBinary = dataConverters.formatBinary;
+var formatHex = dataConverters.formatHex;
+var alignDecimal = dataConverters.alignDecimal;
+var binaryToInt = dataConverters.binaryToInt;
+var binaryToHex = dataConverters.binaryToHex;
+var binaryToDecimal = dataConverters.binaryToDecimal;
+var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * Generator and controller for message log.
  * @constructor
  */
 var NetSimLogWidget = module.exports = function () {
+  /**
+   * A message encoding (display) setting.
+   * @type {string}
+   * @private
+   */
+  this.currentEncoding_ = 'all';
 };
 
 /**
@@ -1018,8 +1067,8 @@ NetSimLogWidget.createWithin = function (element, title) {
  */
 NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
-  this.scrollArea_ = this.rootDiv_.find('#scroll_area');
-  this.clearButton_ = this.rootDiv_.find('#clear_button');
+  this.scrollArea_ = this.rootDiv_.find('.scroll_area');
+  this.clearButton_ = this.rootDiv_.find('.clear_button');
 
   dom.addClickTouchEvent(this.clearButton_[0], this.onClearButtonPress_.bind(this));
 };
@@ -1029,25 +1078,124 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
 };
 
 /**
+ * Format router uses to decode packet.
+ * TODO (bbuchanan): Pull this from a common location; should be fixed across
+ *                   simulation.
+ * @type {PacketEncoder}
+ */
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'packetIndex', bits: 4 },
+  { key: 'packetCount', bits: 4 },
+  { key: 'message', bits: Infinity }
+]);
+
+/**
+ * @param {string} toAddress
+ * @param {string} fromAddress
+ * @param {string} packetInfo
+ * @param {string} message
+ * @returns {jQuery} wrapper on new table-row element
+ */
+var makeLogRow = function (toAddress, fromAddress, packetInfo, message) {
+  var row = $('<tr>');
+  $('<td nowrap>')
+      .addClass('toAddress')
+      .html(toAddress)
+      .appendTo(row);
+  $('<td nowrap>')
+      .addClass('fromAddress')
+      .html(fromAddress)
+      .appendTo(row);
+  $('<td nowrap>')
+      .addClass('packetInfo')
+      .html(packetInfo)
+      .appendTo(row);
+  $('<td>')
+      .addClass('message')
+      .html(message)
+      .appendTo(row);
+  return row;
+};
+
+/**
  * Put a message into the log.
  */
-NetSimLogWidget.prototype.log = function (message) {
+NetSimLogWidget.prototype.log = function (packet) {
   var scrollArea = this.scrollArea_;
   var wasScrolledToEnd =
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
       scrollArea.outerHeight();
 
-  scrollArea.val(this.scrollArea_.val() + message + '\n');
+  var toAddress = packetEncoder.getField('toAddress', packet);
+  var fromAddress = packetEncoder.getField('fromAddress', packet);
+  var packetIndex = packetEncoder.getField('packetIndex', packet);
+  var packetCount = packetEncoder.getField('packetCount', packet);
+  var message = packetEncoder.getField('message', packet);
+
+  // Create log rows
+  var packetDiv = $('<div>').addClass('packet');
+  var packetTable = $('<table>').appendTo(packetDiv);
+  var packetHead = $('<thead>').appendTo(packetTable);
+  var packetBody = $('<tbody>').appendTo(packetTable);
+
+  var headerRow = $('<tr>').appendTo(packetHead);
+  $('<th nowrap>').addClass('toAddress').html('To').appendTo(headerRow);
+  $('<th nowrap>').addClass('fromAddress').html('From').appendTo(headerRow);
+  $('<th nowrap>').addClass('packetInfo').html('Packet').appendTo(headerRow);
+  $('<th>').addClass('message').html('Message').appendTo(headerRow);
+
+  makeLogRow(
+      binaryToInt(toAddress),
+      binaryToInt(fromAddress),
+      binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+      binaryToAscii(message, 8)
+  ).addClass('ascii').appendTo(packetBody);
+
+  // TODO (bbuchanan): Parse at selected bytesize
+  makeLogRow(
+      binaryToInt(toAddress),
+      binaryToInt(fromAddress),
+      binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+      alignDecimal(binaryToDecimal(message, 8))
+  ).addClass('decimal').appendTo(packetBody);
+
+  makeLogRow(
+      binaryToHex(toAddress),
+      binaryToHex(fromAddress),
+      binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+      formatHex(binaryToHex(message), 2)
+  ).addClass('hexadecimal').appendTo(packetBody);
+
+  // TODO (bbuchanan): Format to selected bytesize
+  makeLogRow(
+      formatBinary(toAddress, 4),
+      formatBinary(fromAddress, 4),
+      formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+      formatBinary(message, 8)
+  ).addClass('binary').appendTo(packetBody);
+
+  NetSimEncodingSelector.hideRowsByEncoding(packetDiv, this.currentEncoding_);
+  packetDiv.appendTo(this.scrollArea_);
 
   // Auto-scroll
   if (wasScrolledToEnd) {
-    var scrollTimeMs = 250;
-    scrollArea.animate({ scrollTop: scrollArea[0].scrollHeight},
-        scrollTimeMs);
+    scrollArea.scrollTop(scrollArea[0].scrollHeight);
   }
 };
 
-},{"../dom":47,"./NetSimLogWidget.html":122}],122:[function(require,module,exports){
+/**
+ * Show or hide parts of the send UI based on the currently selected encoding
+ * mode.
+ * @param {string} newEncoding
+ */
+NetSimLogWidget.prototype.setEncoding = function (newEncoding) {
+  NetSimEncodingSelector.hideRowsByEncoding(this.rootDiv_, newEncoding);
+  this.currentEncoding_ = newEncoding;
+};
+
+},{"../dom":47,"./NetSimEncodingSelector":117,"./NetSimLogWidget.html":124,"./PacketEncoder":138,"./dataConverters":140}],124:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1059,7 +1207,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_log_widget_', escape((1,  logInstanceID )), '" class="netsim_log_widget">\n  <h1>', escape((2,  logTitle )), '</h1>\n  <textarea id="scroll_area"></textarea>\n  <input type="button" id="clear_button" value="Clear" />\n</div>'); })();
+ buf.push('<div id="netsim_log_widget_', escape((1,  logInstanceID )), '" class="netsim_log_widget">\n  <h1>', escape((2,  logTitle )), '\n    <div class="log_header_controls">\n      <input type="button" class="clear_button" value="Clear" />\n    </div>\n  </h1>\n  <div class="log_body">\n    <div class="scroll_area">\n    </div>\n  </div>\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -1067,7 +1215,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],119:[function(require,module,exports){
+},{"ejs":214}],121:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1540,7 +1688,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":47,"../utils":189,"./NetSimClientNode":114,"./NetSimLobby.html":118,"./NetSimLogger":124,"./NetSimRouterNode":127,"./netsimUtils":142}],142:[function(require,module,exports){
+},{"../dom":47,"../utils":193,"./NetSimClientNode":114,"./NetSimLobby.html":120,"./NetSimLogger":126,"./NetSimRouterNode":129,"./netsimUtils":144}],144:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1578,7 +1726,7 @@ exports.nodesFromRows = function (shard, rows) {
       });
 };
 
-},{"./NetSimClientNode":114,"./NetSimRouterNode":127}],118:[function(require,module,exports){
+},{"./NetSimClientNode":114,"./NetSimRouterNode":129}],120:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1598,7 +1746,127 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],115:[function(require,module,exports){
+},{"ejs":214}],117:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+var markup = require('./NetSimEncodingSelector.html');
+
+/**
+ * Generator and controller for message encoding selector: A dropdown that
+ * controls whether messages are displayed in some combination of binary, hex,
+ * decimal, ascii, etc.
+ * @param {function} changeEncodingCallback
+ * @constructor
+ */
+var NetSimEncodingSelector = module.exports = function (changeEncodingCallback) {
+  this.changeEncodingCallback_ = changeEncodingCallback;
+};
+
+/**
+ * Static counter used to generate/uniquely identify different instances
+ * of this log widget on the page.
+ * @type {number}
+ */
+NetSimEncodingSelector.uniqueIDCounter = 0;
+
+/**
+ * Generate a new NetSimEncodingSelector, putting it on the page.
+ * @param {HTMLElement} element
+ * @param {function} changeEncodingCallback
+ */
+NetSimEncodingSelector.createWithin = function (element, changeEncodingCallback) {
+  var controller = new NetSimEncodingSelector(changeEncodingCallback);
+
+  var instanceID = NetSimEncodingSelector.uniqueIDCounter;
+  NetSimEncodingSelector.uniqueIDCounter++;
+
+  element.innerHTML = markup({
+    instanceID: instanceID
+  });
+  controller.bindElements_(instanceID);
+  return controller;
+};
+
+/**
+ * Get relevant elements from the page and bind them to local variables.
+ * @private
+ */
+NetSimEncodingSelector.prototype.bindElements_ = function (instanceID) {
+  this.rootDiv_ = $('#netsim_encoding_selector_' + instanceID);
+  this.select_ = this.rootDiv_.find('select');
+  this.select_.change(this.onSelectChange_.bind(this));
+};
+
+/**
+ * Send new value to registered callback on change.
+ * @private
+ */
+NetSimEncodingSelector.prototype.onSelectChange_ = function () {
+  this.changeEncodingCallback_(this.select_.val());
+};
+
+NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
+  this.select_.val(newEncoding);
+};
+
+/**
+ * Static helper, shows/hides rows under provided element according to the given
+ * encoding setting.
+ * @param {jQuery} rootElement - root of elements to show/hide
+ * @param {string} encoding - a message encoding setting
+ */
+NetSimEncodingSelector.hideRowsByEncoding = function (rootElement, encoding) {
+  if (encoding === 'all') {
+    rootElement.find('tr.binary, tr.hexadecimal, tr.decimal, tr.ascii').show();
+  } else if (encoding === 'binary') {
+    rootElement.find('tr.binary').show();
+    rootElement.find('tr.hexadecimal, tr.decimal, tr.ascii').hide();
+  } else if (encoding === 'hexadecimal') {
+    rootElement.find('tr.binary, tr.hexadecimal').show();
+    rootElement.find('tr.decimal, tr.ascii').hide();
+  } else if (encoding === 'decimal') {
+    rootElement.find('tr.binary, tr.decimal').show();
+    rootElement.find('tr.hexadecimal, tr.ascii').hide();
+  } else if (encoding === 'ascii') {
+    rootElement.find('tr.binary, tr.ascii').show();
+    rootElement.find('tr.hexadecimal, tr.decimal').hide();
+  }
+};
+
+
+},{"./NetSimEncodingSelector.html":116}],116:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="netsim_encoding_selector_', escape((1,  instanceID )), '" class="netsim_encoding_selector">\n  <label for="encoding_selector_', escape((2,  instanceID )), '">Encoding:</label>\n  <select id="encoding_selector_', escape((3,  instanceID )), '">\n    <option value="all" selected>All</option>\n    <option value="binary">Binary</option>\n    <option value="hexadecimal">Hexadecimal</option>\n    <option value="decimal">Decimal</option>\n    <option value="ascii">ASCII</option>\n  </select>\n</div>'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":214}],115:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1903,7 +2171,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"../ObservableEvent":1,"./NetSimClientNode":114,"./NetSimLocalClientNode":120,"./NetSimLogger":124,"./NetSimRouterNode":127,"./NetSimShard":132,"./NetSimShardCleaner":133}],133:[function(require,module,exports){
+},{"../ObservableEvent":1,"./NetSimClientNode":114,"./NetSimLocalClientNode":122,"./NetSimLogger":126,"./NetSimRouterNode":129,"./NetSimShard":134,"./NetSimShardCleaner":135}],135:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2487,7 +2755,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":45,"../utils":189,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135}],132:[function(require,module,exports){
+},{"../commands":45,"../utils":193,"./NetSimEntity":118,"./NetSimHeartbeat":119,"./NetSimLogEntry":123,"./NetSimLogger":126,"./NetSimMessage":127,"./NetSimNode":128,"./NetSimWire":137}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2559,7 +2827,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.messageTable.tick(clock);
   this.logTable.tick(clock);
 };
-},{"../appsApi":17,"./NetSimTable":134}],134:[function(require,module,exports){
+},{"../appsApi":17,"./NetSimTable":136}],136:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2725,7 +2993,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":189}],127:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":193}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3398,7 +3666,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       }.bind(this)
   );
 };
-},{"../ObservableEvent":1,"../utils":189,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogEntry":121,"./NetSimLogger":124,"./NetSimMessage":125,"./NetSimNode":126,"./NetSimWire":135,"./PacketEncoder":136,"./dataConverters":138}],136:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":193,"./NetSimEntity":118,"./NetSimHeartbeat":119,"./NetSimLogEntry":123,"./NetSimLogger":126,"./NetSimMessage":127,"./NetSimNode":128,"./NetSimWire":137,"./PacketEncoder":138,"./dataConverters":140}],138:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3522,7 +3790,7 @@ PacketEncoder.prototype.createBinary = function (data) {
   }
   return result;
 };
-},{"./dataConverters":138}],138:[function(require,module,exports){
+},{"./dataConverters":140}],140:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3806,7 +4074,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
-},{}],121:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3894,7 +4162,7 @@ NetSimLogEntry.create = function (shard, nodeID, logText, onComplete) {
     onComplete(row !== undefined);
   });
 };
-},{"../utils":189,"./NetSimEntity":116}],120:[function(require,module,exports){
+},{"../utils":193,"./NetSimEntity":118}],122:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4271,7 +4539,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":189,"./NetSimClientNode":114,"./NetSimEntity":116,"./NetSimHeartbeat":117,"./NetSimLogger":124,"./NetSimMessage":125}],125:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":193,"./NetSimClientNode":114,"./NetSimEntity":118,"./NetSimHeartbeat":119,"./NetSimLogger":126,"./NetSimMessage":127}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4365,7 +4633,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":189,"./NetSimEntity":116}],124:[function(require,module,exports){
+},{"../utils":193,"./NetSimEntity":118}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4517,7 +4785,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],117:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4641,7 +4909,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":189,"./NetSimEntity":116}],114:[function(require,module,exports){
+},{"../utils":193,"./NetSimEntity":118}],114:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4691,7 +4959,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":189,"./NetSimNode":126}],126:[function(require,module,exports){
+},{"../utils":193,"./NetSimNode":128}],128:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4847,7 +5115,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(true);
 };
-},{"../utils":189,"./NetSimEntity":116,"./NetSimWire":135}],135:[function(require,module,exports){
+},{"../utils":193,"./NetSimEntity":118,"./NetSimWire":137}],137:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4946,7 +5214,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":189,"./NetSimEntity":116}],116:[function(require,module,exports){
+},{"../utils":193,"./NetSimEntity":118}],118:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5406,7 +5674,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":189}],17:[function(require,module,exports){
+},{"./utils":193}],17:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -5627,7 +5895,7 @@ appsApi.UserPropertyBag = function (app_publickey) {
   '/user-properties');
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
-},{"./utils":189}],3:[function(require,module,exports){
+},{"./utils":193}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5835,4 +6103,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[140]);
+},{}]},{},[142]);
