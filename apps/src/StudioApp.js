@@ -676,8 +676,13 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute &&
-        xmlBlock.getAttribute('uservisible') === 'false') {
+    var type, userVisible;
+    if (xmlBlock.getAttribute) {
+      userVisible = xmlBlock.getAttribute('uservisible');
+      type = xmlBlock.getAttribute('type');
+    }
+
+    if (Blockly.Blocks[type].hideInMainBlockspace || userVisible === 'false') {
       hiddenXmlBlocks.push(xmlBlock);
     } else {
       visibleXmlBlocks.push(xmlBlock);
