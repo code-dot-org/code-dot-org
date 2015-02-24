@@ -19,7 +19,15 @@
     "disable_sharing": "false",
     "start_direction": "90",
     "x": "100",
-    "y": "200"
+    "y": "200",
+    "callout_json": "[]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "ideal": "2"
   }
 }]]></config>
   <blocks>
