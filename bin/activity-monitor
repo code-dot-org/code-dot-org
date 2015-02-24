@@ -10,10 +10,13 @@
 #   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
 #   LogEntries.
 #
-require File.expand_path('../../deployment', __FILE__)
+# including dashboard environment doesn't work if not in the dashboard dir
+Dir.chdir(File.expand_path('../../dashboard', __FILE__))
+require_relative '../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
+
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000

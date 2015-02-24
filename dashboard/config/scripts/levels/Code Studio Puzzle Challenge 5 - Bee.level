@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Move the Bee to the flower and get the nectar.",
+    "instructions": "Flowers contain a specific amount of nectar. Move the Bee to the flower and collect nectar with the get nectar block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,7 +20,14 @@
     "step_mode": "0",
     "nectar_goal": "1",
     "honey_goal": "0",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

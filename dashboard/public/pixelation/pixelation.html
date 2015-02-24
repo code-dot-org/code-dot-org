@@ -79,6 +79,7 @@
   if (options.instructions) {
     $('#below_viz_instructions').text(options.instructions).show();
   }
+  pixelationInit();
   pixel_data.value = options.data;
   drawGraph();
   formatBitDisplay();

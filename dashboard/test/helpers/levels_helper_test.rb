@@ -18,11 +18,12 @@ class LevelsHelperTest < ActionView::TestCase
     assert (options[:level]["map"].is_a? Array), "Maze is not an array"
   end
 
-  test "change default level localization after locale switch" do
+  test "non-custom level displays localized instruction after locale switch" do
     DEFAULT_LOCALE = 'en-us'
-    NEW_LOCALE = 'de-de'
+    NEW_LOCALE = 'es-es'
     @level.instructions = nil
     @level.level_num = '2_2'
+
     I18n.locale = DEFAULT_LOCALE
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: DEFAULT_LOCALE), options[:level]['instructions']
@@ -33,11 +34,28 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = DEFAULT_LOCALE
   end
 
-  test "display custom level instructions instead of localized string" do
-    @level.instructions = 'custom instructions'
-    @level.level_num = '2_2'
+  test "custom level displays english instruction" do
+    DEFAULT_LOCALE = 'en-us'
+    @level.name = 'frozen line'
+
+    I18n.locale = DEFAULT_LOCALE
+    options = blockly_options    
+    assert_equal @level.instructions, options[:level]['instructions']
+  end
+
+  test "custom level displays localized instruction if exists" do
+    DEFAULT_LOCALE = 'en-us'
+    NEW_LOCALE = 'es-es'
+    
+    I18n.locale = NEW_LOCALE
+    @level.name = 'frozen line'
+    options = blockly_options    
+    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: NEW_LOCALE), options[:level]['instructions']
+
+    @level.name = 'this_level_doesnt_exist'
     options = blockly_options
-    assert_equal 'custom instructions', options[:level]['instructions']
+    assert_equal @level.instructions, options[:level]['instructions']
+    I18n.locale = DEFAULT_LOCALE
   end
 
   test "leave non-coercible strings alone" do

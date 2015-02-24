@@ -29,13 +29,13 @@ describe("ExpressionNode", function () {
       assert.equal(node.value_, 0);
       assert(Array.isArray(node.children_));
       assert.equal(node.children_.length, 0);
-      assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
+      assert(node.isNumber());
 
       node = new ExpressionNode(1);
       assert.equal(node.value_, 1);
       assert(Array.isArray(node.children_));
       assert.equal(node.children_.length, 0);
-      assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
+      assert(node.isNumber());
 
       // provide a blockId
       node = new ExpressionNode(1, [], 2);
@@ -43,7 +43,7 @@ describe("ExpressionNode", function () {
       assert(Array.isArray(node.children_));
       assert.equal(node.children_.length, 0);
       assert.equal(node.blockId_, 2);
-      assert.equal(node.getType(), ExpressionNode.ValueType.NUMBER);
+      assert(node.isNumber());
 
       // make sure we throw correctly
       assert.throws(function () {
@@ -57,14 +57,14 @@ describe("ExpressionNode", function () {
       assert.equal(node.value_, 'x');
       assert(Array.isArray(node.children_));
       assert.equal(node.children_.length, 0);
-      assert.equal(node.getType(), ExpressionNode.ValueType.VARIABLE);
+      assert(node.isVariable());
 
       // provide a blockId
       node = new ExpressionNode('y', [], 4);
       assert.equal(node.value_, 'y');
       assert(Array.isArray(node.children_));
       assert.equal(node.children_.length, 0);
-      assert.equal(node.getType(), ExpressionNode.ValueType.VARIABLE);
+      assert(node.isVariable());
       assert.equal(node.blockId_, 4);
     });
 
@@ -77,7 +77,7 @@ describe("ExpressionNode", function () {
       assert.equal(node.children_[0].value_, 1);
       assert(node.children_[1] instanceof ExpressionNode);
       assert.equal(node.children_[1].value_, 2);
-      assert.equal(node.getType(), ExpressionNode.ValueType.ARITHMETIC);
+      assert(node.isArithmetic());
       assert.equal(node.blockId_, 5);
 
       // throw if we have the wrong number of operands
@@ -104,7 +104,7 @@ describe("ExpressionNode", function () {
       assert.equal(node.children_[1].value_, 2);
       assert(node.children_[2] instanceof ExpressionNode);
       assert.equal(node.children_[2].value_, 3);
-      assert.equal(node.getType(), ExpressionNode.ValueType.FUNCTION_CALL);
+      assert(node.isFunctionCall());
       assert.equal(node.blockId_, 4);
     });
 
@@ -114,7 +114,7 @@ describe("ExpressionNode", function () {
         new ExpressionNode('/', [3, 4])
       ]);
       assert.equal(node.value_, '*');
-      assert.equal(node.getType(), ExpressionNode.ValueType.ARITHMETIC);
+      assert(node.isArithmetic());
     });
   });
 

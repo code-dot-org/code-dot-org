@@ -106,6 +106,13 @@ Eval.init = function(config) {
       var background = document.getElementById('background');
       background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         skin.assetUrl('background_grid.png'));
+        studioApp.createCoordinateGridBackground({
+          svg: 'svgEval',
+          origin: -200,
+          firstLabel: -100,
+          lastLabel: 100,
+          increment: 100
+        });
     }
 
     if (level.solutionBlocks) {

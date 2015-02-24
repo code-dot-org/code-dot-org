@@ -21,6 +21,8 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -70,15 +72,6 @@ var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
-
-var ProjectileClassNames = [
-  'blue_fireball',
-  'purple_fireball',
-  'red_fireball',
-  'purple_hearts',
-  'red_hearts',
-  'yellow_hearts',
-];
 
 var EdgeClassNames = [
   'top',
@@ -158,9 +151,11 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
-    case 'SamTheButterfly':
-      // Going forward, we may also want to move Sam the Butterfly logic
-      // into code
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
+      break;
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
 
@@ -232,6 +227,16 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     svg.appendChild(tile);
+  }
+
+  if (level.coordinateGridBackground) {
+    studioApp.createCoordinateGridBackground({
+      svg: 'svgStudio',
+      origin: 0,
+      firstLabel: 100,
+      lastLabel: 300,
+      increment: 100
+    });
   }
 
   if (Studio.spriteStart_) {
@@ -859,8 +864,8 @@ function checkForCollisions() {
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
-    for (j = 0; j < ProjectileClassNames.length; j++) {
-      executeCollision(i, ProjectileClassNames[j]);
+    for (j = 0; j < skin.ProjectileClassNames.length; j++) {
+      executeCollision(i, skin.ProjectileClassNames[j]);
     }
   }
 }
@@ -1169,8 +1174,8 @@ var preloadBackgroundImages = function() {
 };
 
 var preloadProjectileImages = function() {
-  for (var i = 0; i < ProjectileClassNames.length; i++) {
-    preloadImage(skin[ProjectileClassNames[i]]);
+  for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
+    preloadImage(skin[skin.ProjectileClassNames[i]]);
   }
 };
 
@@ -1224,6 +1229,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1312,8 +1318,6 @@ studioApp.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
-
-  var svg = document.getElementById('svgStudio');
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1484,7 +1488,7 @@ var registerHandlersWithMultipleSpriteParams =
                        blockParam2,
                        String(j));
     }
-    ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1546,6 +1550,7 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -2633,7 +2638,7 @@ function isEdgeClass(className) {
 }
 
 function isProjectileClass(className) {
-  return ProjectileClassNames.indexOf(className) !== -1;
+  return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
 /**
