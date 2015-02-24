@@ -72,9 +72,6 @@ NetSimRouterTab.prototype.render = function () {
  * @private
  */
 NetSimRouterTab.prototype.bindElements_ = function () {
-  this.dnsModeRadios_ = this.rootDiv_.find('input[type="radio"][name="dns_mode"]');
-  this.dnsModeRadios_.change(this.onDnsModeChange_.bind(this));
-
   this.dnsModeManualControls_ = this.rootDiv_.find('#dns_mode_manual_controls');
   this.becomeDnsButton_ = this.dnsModeManualControls_.find('#become_dns_button');
   this.becomeDnsButton_.click(this.onBecomeDnsButtonClick_.bind(this));
@@ -161,12 +158,6 @@ NetSimRouterTab.prototype.onRouterLogChange_ = function () {
   this.refreshLogTable_(this.myConnectedRouter.getLog());
 };
 
-NetSimRouterTab.prototype.onDnsModeChange_ = function () {
-  var router = this.myConnectedRouter;
-  router.dnsMode = this.dnsModeRadios_.siblings(':checked').val();
-  router.update();
-};
-
 NetSimRouterTab.prototype.onBecomeDnsButtonClick_ = function () {
   var router = this.myConnectedRouter;
   router.dnsNodeID = this.myLocalNode.entityID;
@@ -189,10 +180,6 @@ NetSimRouterTab.prototype.refresh = function () {
 
 NetSimRouterTab.prototype.refreshDnsModeSelector_ = function () {
   var dnsMode = this.getDnsMode_();
-
-  this.dnsModeRadios_
-      .siblings('[value="' + dnsMode + '"]')
-      .prop('checked', true);
 
   if (dnsMode === DnsMode.MANUAL) {
     this.dnsModeManualControls_.show();
@@ -254,4 +241,8 @@ NetSimRouterTab.prototype.getDnsMode_ = function () {
     return this.myConnectedRouter.dnsMode;
   }
   return DnsMode.NONE;
+};
+
+NetSimRouterTab.prototype.setDnsMode = function () {
+  this.refreshDnsModeSelector_();
 };
