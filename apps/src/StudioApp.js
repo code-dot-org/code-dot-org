@@ -1100,7 +1100,7 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    $(window).trigger('run_button_pressed');
+    Blockly.fireUiEvent(window, 'run_button_pressed');
     this.runButtonClick();
   }, 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
