@@ -15,6 +15,8 @@ var SamBatLogic = function (studio) {
   CustomGameLogic.apply(this, arguments);
   this.samIndex = 0;
   this.sam = null;
+  // Has the onscreen? stopped Sam on a given side?
+  this.stopped = {left: false, up: false, right: false, down: false};
 };
 SamBatLogic.inherits(CustomGameLogic);
 
@@ -77,26 +79,30 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   var centerX = this.sam.x + this.sam.width / 2;
   //invert Y
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
-
+  
   switch (dir) {
     case Direction.WEST:
       if (!this.onscreen(centerX - this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.left = true;
       }
       break;
     case Direction.NORTH:
       if (!this.onscreen(centerX, centerY + this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.up = true;
       }
       break;
     case Direction.EAST:
       if (!this.onscreen(centerX + this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.right = true;
       }
       break;
     case Direction.SOUTH:
       if (!this.onscreen(centerX, centerY - this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.down = true;
       }
       break;
   }

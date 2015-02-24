@@ -21,6 +21,7 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -149,6 +150,9 @@ function loadLevel() {
   switch (level.customGameType) {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
+      break;
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
       break;
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
