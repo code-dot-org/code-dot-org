@@ -342,6 +342,12 @@ tr:
           The Design Recipe: Tasarım Tarifi
         K5PD:
           Introduction to PD: Kişisel Geliştirme Giriş
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: İnternet Simülatörü
           description_short: ""
@@ -352,3 +358,30 @@ tr:
           description_short: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!!
           description: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!
           Infinity: Sonsuz
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
+          description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
+          The Maze: Labirent
+          Computational Thinking: Sayısal Düşünme
+          Graph Paper Programming: Grafikli Kağıdıyla Programlama
+          The Artist: Sanatçı
+          Algorithms: Algoritmalar
+          The Artist 2: Sanatçı 2
+          Functions: Fonksiyonlar
+          The Farmer: Çiftçi
+          Conditionals: Koşullar
+          The Artist 3: Sanatçı 3
+          Song Writing: Şarkı Yazma
+          The Farmer 2: Çiftçi 2
+          Abstraction: Soyutlama
+          The Artist 4: Sanatçı 4
+          Relay Programming: Röle Programlama
+          The Farmer 3: Çiftçi 3
+          The Internet: İnternet
+          The Artist 5: Sanatçı 5
+          Wrap-up: Özet

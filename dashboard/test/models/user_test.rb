@@ -337,6 +337,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     assert user.secret_picture
     assert user.secret_words
+    assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'reset_secret_picture' do

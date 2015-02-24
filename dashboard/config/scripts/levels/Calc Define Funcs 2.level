@@ -49,16 +49,16 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false" movable="false">
           <mutation>
             <arg name="x" type="Number"/>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">f</title>
           <functional_input name="STACK">
-            <block type="functional_minus" inline="false" uservisible="false">
+            <block type="functional_minus" inline="false">
               <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
+                <block type="functional_parameters_get">
                   <mutation>
                     <outputtype>Number</outputtype>
                   </mutation>
@@ -66,7 +66,7 @@
                 </block>
               </functional_input>
               <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
+                <block type="functional_math_number">
                   <title name="NUM">10</title>
                 </block>
               </functional_input>

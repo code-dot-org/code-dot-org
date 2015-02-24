@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "kırmızı";
 Blockly.Msg.COLOUR_RGB_TITLE = "renkle birlikte";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Kırmızı, yeşil ve mavi belirtilen miktarda bir renk oluşturun.\nTüm değerler, 0 ile 100 arasında olmalıdır.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Tasarım Tarifi";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "döngüden çık";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "Döngünün sonraki adımından devam et";

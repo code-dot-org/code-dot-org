@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"ympyrä (säde, tyyli, väri)",
   "displayBlockTitle":"näytä",
   "ellipseBlockTitle":"ellipsi (leveys, korkeus, tyyli, väri)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näytä\" lohkoon?",
   "overlayBlockTitle":"peitto (ylhäältä, alhaalta)",
   "placeImageBlockTitle":"aseta kuva (x, y, kuva)",

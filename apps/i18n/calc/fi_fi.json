@@ -1,9 +1,13 @@
 {
   "compute": "laskea",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
   "extraTopBlocks": "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla.",
   "goal": "Tavoite:",
-  "reinfFeedbackMsg": "Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan tehtävään!",
-  "yourExpression": "Lausekkeesi:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "reinfFeedbackMsg": "Tässä on laskelmasi! Jatka sen työstämistä tai siirry tehtävään!",
+  "yourExpression": "Lausekkeesi:",
+  "wrongInput": "You are calling your function with the wrong value."
 }

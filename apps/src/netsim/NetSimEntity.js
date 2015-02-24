@@ -1,28 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Client model of simulated network entity, which lives
- * in a shard table.
- *
- * Wraps the entity row with helper methods for examining and maintaining
- * the entity state in shared storage.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -33,17 +8,21 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global Date */
 'use strict';
 
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
+ * Client model of simulated network entity, which lives in a shard table.
+ *
+ * Wraps the entity row with helper methods for examining and maintaining
+ * the entity state in shared storage.
+ *
  * @param {!NetSimShard} shard
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = function (shard, entityRow) {
+var NetSimEntity = module.exports = function (shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
@@ -55,31 +34,10 @@ var NetSimEntity = function (shard, entityRow) {
   this.shard_ = shard;
 
   /**
-   * Cached last ping time for this entity
-   * @type {number}
-   * @private
-   */
-  this.lastPing_ = entityRow.lastPing;
-
-  /**
    * Node's row ID within the _lobby table.  Unique within instance.
    * @type {number}
    */
   this.entityID = entityRow.id;
-
-  /**
-   * How long (in milliseconds) this entity is allowed to remain in
-   * storage without being cleaned up.
-   * @type {number}
-   */
-  this.ENTITY_TIMEOUT_MS = 300000;
-
-  /**
-   * How often (in milliseconds) this entity's status should be pushed
-   * to the server to keep the row active.
-   * @type {number}
-   */
-  this.ENTITY_KEEPALIVE_MS = 30000;
 
   /**
    * Change event fired when entity's state changes in a way that
@@ -88,7 +46,6 @@ var NetSimEntity = function (shard, entityRow) {
    */
   this.onChange = new ObservableEvent();
 };
-module.exports = NetSimEntity;
 
 /**
  * Static async creation method.  Creates a new entity on the given shard,
@@ -139,7 +96,6 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.lastPing_ = Date.now();
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
@@ -152,34 +108,11 @@ NetSimEntity.prototype.destroy = function (onComplete) {
 
 /** Get storage table for this entity type. */
 NetSimEntity.prototype.getTable_ = function () {
-  // This method should be implemented by an inheriting class.
+  // This method should be implemented by a child class.
   throw new Error('Method getTable_ is not implemented.');
 };
 
 /** Construct table row for this entity. */
 NetSimEntity.prototype.buildRow_ = function () {
-  return {
-    lastPing: Date.now()
-  };
-};
-
-/**
- * Whether this entity's row has been touched within its timeout.
- * @returns {boolean}
- */
-NetSimEntity.prototype.isExpired = function () {
-  // TODO: Subclasses should reimplement this method to include
-  // validation checks; e.g. a NetSimWire is expired if one of its
-  // endpoints no longer exists.
-  return Date.now() - this.lastPing_ >= this.ENTITY_TIMEOUT_MS;
-};
-
-/**
- * Default Entity tick ensures keepAlive messages get sent for this entity.
- * @param {!RunLoop.Clock} clock
- */
-NetSimEntity.prototype.tick = function () {
-  if (Date.now() - this.lastPing_ >= this.ENTITY_KEEPALIVE_MS){
-    this.update();
-  }
+  return {};
 };

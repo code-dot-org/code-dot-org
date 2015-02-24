@@ -99,12 +99,12 @@ fr:
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: App Lab
+        Webapp: Labo des applis
         ArtistEC: "L'Artiste"
         TextMatch: Correspondance de texte
         StudioEC: Labo
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Labo des applis
+        NetSim: "Simulateur d'Internet"
     trophy:
       name:
         Bronze: Bronze
@@ -244,7 +244,7 @@ fr:
         flappy_6: "Regardez si vous pouvez toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes."
         flappy_7: "Ensuite, essayez de changer l'arrière-plan en attachant un autre bloc à bloc « lors du lancement »."
         flappy_8: "Vous pouvez changer l'apparence à tout moment, pas seulement au lancement du jeu. Essayez donc de choisir un arrière-plan aléatoire lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle."
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: "Pour améliorer les choses, quand tu touches un obstacle, plutôt qu'arrêter le jeu, essaye de remettre le score à 0."
         flappy_11: "Créez votre propre jeu Flappy Bird. Vous pouvez changer tous les éléments visuels et tous les paramètres, même la pesanteur. Une fois que vous avez terminé, cliquez sur Terminer pour permettre à vos amis d'essayer votre jeu sur leur téléphone."
         flappy_k1_1: Jouer à Flappy Bird
         flappy_k1_2: "Attaches un bloc au bloc « lors d'un clic », puis cliques sur « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers la cible."
@@ -328,82 +328,10 @@ fr:
         maze_wordsearch_k_15: Déplace-moi dans une direction, puis une autre, pour épeler le terme AU-DESSUS
         maze_wordsearch_k_16: Déplace-moi dans une direction, puis une autre, pour épeler le terme EN DESSOUS
         maze_wordsearch_k_20: "C'est un test ! Déplace-moi dans une direction, puis une autre, pour épeler le mot HISTOIRE"
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Crées ton applu en utilisant les blocs de la boite à outils.
         turtle_ec_1_2: 'Maintenant, dessinez un carré. NOTE: utilisez votre couleur préferrée en la choisissant dans le nouveau block "penColor".'
         turtle_ec_1_10: 'Bien joué ! Maintenant, dessinez ce que vous voulez. Quelques idées plaisantes: un bonhomme allumette, flocon de neige ou une spirale. Essayez également le nouveau "penWidth" block. Amusez-vous bien !'
         studio_ec_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer pour laisser tes amis essayer ton jeu sur leur téléphone.
-    levelbuilder:
-      frozen line:
-        instructions: Salut ! Je suis Elsa de Arendelle. Aide moi à créer une ligne.
-      frozen perpendicular:
-        instructions: "Maintenant, voyons si nous pouvons créer deux lignes qui sont à un angle de 90 degrés entre elles. Tu auras besoin d'utiliser le bloc « Tourner » ainsi que le bloc « Avancer/Reculer »."
-      frozen square iterative:
-        instructions: Il semble que nous soyons à mi-chemin pour faire un carré. Nous allons mettre 4 lignes ensemble pour créer un carré.
-      frozen square loop:
-        instructions: "Salut, je suis Anna de Arendelle ! Faisons un carré avec le bloc « Répéter », qui utilise moins de blocs. Combien de fois (???) le bloc « Répéter » devrait répéter les blocs qu'il a à l'intérieur pour faire un carré ?"
-      frozen square loop 3x:
-        instructions: Créons trois carrés, en tournant après chaque carré. Fais en sorte de tourner de 120 degrés avant chaque nouveau carré.
-      frozen square snowflake:
-        instructions: Peux-tu créer un flocon de neige en utilisant le bloc « Répéter » pour faire 10 fois un carré et le bloc « Tourner » pour tourner de 36 degrés entre chaque carré ?
-      frozen cross:
-        instructions: "Utilise le bloc « Répéter » pour créer un signe plus. As-tu remarqué qu'Elsa peut avancer et reculer ?"
-      frozen cross rotate:
-        instructions: Maintenant, essaye de le répéter 10 fois. De combien de degrés dois-tu tourner entre chaque ligne ?
-      frozen cross rotate dense:
-        instructions: "Nous allons le répéter 90 fois ! Combien de fois 90 va-t-il dans 360 ? Indice : C'est un très petit nombre."
-      frozen diamond:
-        instructions: "Nous allons créer un parallélogramme. C'est comme un carré mais avec des anges différents : les angles sont de 60 et 120 degrés au lieu de 90 degrés."
-      frozen diamond mini snowflake:
-        instructions: Savais-tu que chaque flocon de neige a une forme différente ? Créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 4 fois, en tournant à droite de 90 degrés entre chaque parallélogramme.
-      frozen diamond snowflake:
-        instructions: Maintenant, créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à droite de 36 degrés entre chaque.
-      frozen circle:
-        instructions: "Un cercle est une forme spéciale. Sauras-tu deviner quel nombre devrait remplacer les points d'interrogation pour pouvoir dessiner un cercle ?"
-      frozen circle function:
-        instructions: "Utilise le nouveau bloc « Créer un cercle » pour créer 10 cercles superposés. N'oublie pas de sauter en avant entre les cercles."
-      frozen circle function in circle:
-        instructions: Maintenant nous allons créer 20 cercles superposés, en tournant de 18 degrés entre chaque cercle.
-      frozen circle function with parameter:
-        instructions: "Voici un bloc « Créer un cercle » qui peut faire des cercles de différentes tailles. Peux-tu l'utiliser pour créer un petit cercle de taille 5 et un plus grand cercle de taille 10 ?"
-      frozen snowflower:
-        instructions: À partir de formes simples, on peut créer des motifs complexes dans la neige. Peux-tu faire un motif en répétant 5 cercles de taille 5 et 5 cercles de taille 10 ?
-      frozen snowflake branch:
-        instructions: "Essaye d'utiliser le bloc « créer une branche de flocon » pour créer trois branches. Cela commence à ressembler à un flocon de neige."
-      frozen snowflake full:
-        instructions: Maintenant nous allons le répéter 8 fois pour faire un beau flocon de neige !
-      frozen freeplay:
-        instructions: "Tu es devenu officiellement un maître dans l'art ! Crée un pays des merveilles hivernal."
-      scrat 16:
-        instructions: "Un gland ! Un gland ! Un gland ! Utilise un bloc « Si » pour m'y conduire avec le plus petit nombre de blocs."
-      scrat 17:
-        instructions: "Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais attention à ne pas tomber dans l'eau !"
-      scrat 18:
-        instructions: "Le bloc « Si-Sinon » teste une condition, puis fait une chose OU une autre. Pour me conduire au gland, essaye d'utiliser ce nouveau bloc."
-      scrat 19:
-        instructions: Encore un exercice avec le bloc « si-sinon ». Peux-tu y arriver dès le premier essai ?
-      scrat 20:
-        instructions: "Peux-tu m'aider à résoudre un labyrinthe plus complexe en ajoutant seulement 3 blocs ? Si tu le fais bien, je peux suivre n'importe quel chemin sinueux, quel que soit sa longueur. Vite ! La glace est en train de fondre !"
-      Standalone_Artist_1:
-        instructions: |-
-          Bienvenue à l'artiste ! Tout d'abord, nous allons essayer de faire un simple carré en utilisant le bloc "tourner à droite" et le bloc "avancer". Chaque côté devra être de 100 pixels de long.
-      Standalone_Artist_2:
-        instructions: Dessine ce diamand avec des angles de 120 et 60 degrés ainsi que des côtés de 150 pixels de long.
-      Standalone_Artist_3:
-        instructions: Pouvez-vous dessiner cet hexagone avec des côtés de 100 pixels et des tournants de 60 degrés?
-      Standalone_Artist_4:
-        instructions: 'Maintenant vous avez un nouveau bloc avec lequel jouer: la boucle. Ceci répétera un ensemble de commandes. Que se passe-t-il si vous répétez en boucle ces commandes 6 fois ?'
-      Standalone_Artist_5:
-        instructions: Combien de fois vous faut-il boucler ce diamant pour dessiner la fleur ?
-      Standalone_Artist_5.5:
-        instructions: 'Remarquez comment nous avons simplifié le code du diamant en le transformant en un boucle. Vous pouvez répéter en boucle la séquence totale 12 fois pour dessiner la fleur. Astuce: Vous devrez tourner de 30 degrés après votre boucle diamant afin de ne pas continuer à dessiner sur le même diamant.'
-      Standalone_Artist_6:
-        instructions: 'Répetez en boucle ce code hexagon 6 fois pour créer le design. De combien de degrés vous faudra-t-il tourner à chaque fois ? Astuce: divisez le nombre de degrés dans un cercle par le nombre de fois que vous bouclez.'
-      Standalone_Artist_7:
-        instructions: "Une fonction est un autre outil de programmation qui vous permet d'éviter de vous répéter. Cette fonction dessine une fleur, vous pouvez ainsi l'utiliser quand vous le souhaitez pour dessiner une fleur. Utilisez-là ainsi que le nouveau bloc saut pour dessiner cette fleur. Astuce: Les fleurs sont séparées de 150 pixels"
-      Standalone_Artist_8:
-        instructions: "Voici une fonction appelée « Dessiner une forme » que nous avons programmée pour dessiner des hexagones. Exécutez le code pour voir ce qu'il fait et puis essayez avec la fonction pour voir ce qui se passe. Pouvez-vous le faire dessiner un motif de carrés, triangles ou octogones ?"
-      Standalone_Artist_9:
-        instructions: Maintenant, continuez et faites toutes les images dont vous avez envie ! Vous avez même une fonction vide dont vous pouvez faire faire ce que vous voulez !
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -431,7 +359,7 @@ fr:
         Unplug9: Les relais
         Unplug10: Internet
         Unplug11: Résumé et ouverture
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Cartes joyeuses
         C1_moveitmoveit_unplugged: Déplacez le, déplacez le
         C1_bigevent_unplugged: Le Grand Evénement
         C1_getting_loopy: Tourner en rond
@@ -463,6 +391,7 @@ fr:
         C2_relay_programming: Les relais
         C2_paper_airplanes: Avions en papier
         C2_digital_footprint: Votre empreinte numérique
+        C2_digital_footprint_v2: Votre empreinte numérique
         C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: "Introduction à l'Artiste"
         C3_artist_functions: 'Artiste : les fonctions'
@@ -479,7 +408,7 @@ fr:
         C3_dice_race: Course de Dés
         C3_internet: Internet
         C3_crowdsourcing: Financement participatif
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Vitraux fonctionnels
         C3_songwriting_with_parameters: Composition de chansons avec réglages
         C4_intro: Introduction
         C4_bee_conditional: Abeilles et instructions conditionnelles

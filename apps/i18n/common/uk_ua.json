@@ -2,6 +2,7 @@
   "and": "та",
   "booleanTrue": "Істина",
   "booleanFalse": "Хибність",
+  "blocks": "blocks",
   "blocklyMessage": "Блоклі",
   "catActions": "Дії",
   "catColour": "Колір",
@@ -12,6 +13,9 @@
   "catProcedures": "Функції",
   "catText": "текст",
   "catVariables": "Змінні",
+  "clearPuzzle": "Clear Puzzle",
+  "clearPuzzleConfirm": "This will delete all blocks and reset the puzzle to its start state.",
+  "clearPuzzleConfirmHeader": "Are you sure you want to clear the puzzle?",
   "codeTooltip": "Див. згенерований код JavaScript.",
   "continue": "Далі",
   "dialogCancel": "Скасувати",
@@ -77,6 +81,7 @@
   "shareFailure": "На жаль, цією програмою не можна поділитись.",
   "workspaceHeader": "Збирайте свої блоки тут: ",
   "workspaceHeaderJavaScript": "Введіть свій код JavaScript тут",
+  "workspaceHeaderShort": "Workspace: ",
   "infinity": "Нескінченність",
   "rotateText": "Повертайте свій пристрій.",
   "orientationLock": "Увімкніть блокування повороту у налаштування пристрою.",
@@ -88,6 +93,6 @@
   "signup": "Підпишіться на вступний курс",
   "hintHeader": "Підказка:",
   "genericFeedback": "Подивіться, на чому ви зупинились і спробуйте виправити свою програму.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "Вам потрібно виправити помилки у вашій програмі перед тим, як вона може бути показана як блоки.",
   "defaultTwitterText": "Подивіться, що у мене вийшло"
 }

@@ -126,6 +126,7 @@
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
+    var errorType = results['errorType'];
 
     if (buttonEnabled)
     {
@@ -133,7 +134,7 @@
 
       if (!result)
       {
-        showDialog("error");
+        showDialog(errorType || "error");
         CDOSounds.play('failure');
       } else {
         CDOSounds.play('success');

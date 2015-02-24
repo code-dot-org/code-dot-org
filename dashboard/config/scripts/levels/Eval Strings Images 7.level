@@ -14,7 +14,15 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Eval Strings Images 7 callout1\",\r\n  \"callout_text\": \"This is the \\\"offset\\\" block, it's function is to program the images position on the screen. To do this enter in the X and Y axis using numbers. The number block on the left is the X axis and the number block on the right is the Y axis.\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": -6,\r\n     \"y\": 40\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"top left\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "true"
   }
 }]]></config>
   <blocks>
@@ -31,7 +39,7 @@
                     </block>
                   </functional_input>
                   <functional_input name="Y">
-                    <block type="functional_math_number_dropdown">
+                    <block type="functional_math_number_dropdown" id="callout_here">
                       <title name="NUM" config="0,20,40,60,80,100">0</title>
                     </block>
                   </functional_input>

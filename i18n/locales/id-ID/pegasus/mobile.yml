@@ -6,7 +6,7 @@ id-ID:
   csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> akan datang. Memanggil semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek lain</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>telah mencoba</h3><h2>Jam Kode</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan untuk mempelajari ilmu komputer
@@ -497,7 +497,7 @@ id-ID:
   projguts_shortdescription: Coba pemodelan dan simulasi menggunakan batu/kertas/gunting
   hourofcode_shortdescription: Pengganti untuk code.org/hoc yang baru
   frozen_shortdescription: Mari kita gunakan kode untuk bergabung bersama Anna dan Elsa saat mereka menjelajahi keajaiban dan keindahan es.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  playlab_shortdescription: Buat cerita atau buat permainan dengan Play Lab!
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   codeintl_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'

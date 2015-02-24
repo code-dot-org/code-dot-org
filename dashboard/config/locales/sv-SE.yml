@@ -338,6 +338,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
     new_password_hint: (lämna tomt om du inte vill ändra det)
     current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)

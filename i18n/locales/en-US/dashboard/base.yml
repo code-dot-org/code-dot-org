@@ -289,6 +289,8 @@ en:
     student_teacher_disassociated: 'crwdns4366:0%{teacher_name}crwdnd4366:0%{student_name}crwdne4366:0'
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
+    email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
+    email_confirm_wrong_email: crwdns33867:0crwdne33867:0
     email_resend_confirm: crwdns4343:0crwdne4343:0
     new_password_hint: crwdns2610:0crwdne2610:0
     current_password_hint: crwdns2611:0crwdne2611:0
@@ -471,7 +473,7 @@ en:
           title: crwdns6553:0crwdne6553:0
           description: crwdns6554:0crwdne6554:0
         Hour of Code:
-          title: crwdns6555:0crwdne6555:0
+          title: crwdns33868:0crwdne33868:0
           description: crwdns6556:0crwdne6556:0
         edit-code:
           title: crwdns6557:0crwdne6557:0

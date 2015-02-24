@@ -608,13 +608,18 @@ $aniGifPreviewHeight: 60px;
   #toolbox-header {
     border-right: 1px solid gray;
   }
-  #show-code-header {
+  #clear-puzzle-header, #show-code-header {
     cursor: pointer;
-    width: 150px;
     border-left: 1px solid gray;
     &:hover {
       background-color: $cyan;
     }
+    span {
+      padding: 0 20px;
+    }
+  }
+  #clear-puzzle-header:hover {
+    background-color: #c00;
   }
   .block-counter-default {
     color: white;
@@ -633,7 +638,7 @@ $aniGifPreviewHeight: 60px;
     border-right: 0;
     border-left: 1px solid gray;
   }
-  #show-code-header {
+  #clear-puzzle-header, #show-code-header {
     border-left: 0;
     border-right: 1px solid gray;
   }

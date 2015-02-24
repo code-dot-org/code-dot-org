@@ -1,6 +1,6 @@
 class ScriptLevelsController < ApplicationController
   check_authorization
-  before_filter :authenticate_user!, :only => [:solution]
+  before_filter :authenticate_user!, only: [:solution]
   include LevelsHelper
 
   def solution
@@ -28,7 +28,7 @@ class ScriptLevelsController < ApplicationController
       # reset is a special mode which will delete the session if the user is not signed in
       # and start them at the beginning of the script.
       # If the user is signed in, continue normally
-      reset_session if !current_user
+      reset_session unless current_user
       redirect_to(build_script_level_path(@script.starting_level)) and return
     end
 
@@ -45,11 +45,11 @@ class ScriptLevelsController < ApplicationController
 
     present_level
 
-    slog(:tag => 'activity_start',
-         :script_level_id => @script_level.id,
-         :level_id => @script_level.level.id,
-         :user_agent => request.user_agent,
-         :locale => locale) unless @script_level.level.unplugged?
+    slog(tag: 'activity_start',
+         script_level_id: @script_level.id,
+         level_id: @script_level.level.id,
+         user_agent: request.user_agent,
+         locale: locale) unless @script_level.level.unplugged?
   end
 
 private
@@ -93,32 +93,39 @@ private
   def load_level_source
     # Set start blocks to the user's previous attempt at this puzzle
     # or the user's project's level_source if necessary. Must be
-    # called after set_videos_and_blocks_and_callouts_and_instructions
+    # called after set_videos_and_blocks_and_callouts
     # because we override @start_blocks set there.
     # TODO this whole thing should be done on the client side
 
     return unless current_user
 
-    if params[:load_previous]
-      @start_blocks = current_user.last_attempt(@level).try(:level_source).try(:data)
-    elsif params[:level_source_id]
+    if params[:level_source_id]
       level_source = LevelSource.find(params[:level_source_id])
       # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
       @start_blocks = level_source.data
+    elsif false # current_user.try(:admin?)
+      last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+      if last_attempt
+        @original_start_blocks = @start_blocks.presence || '<xml/>'
+        @start_blocks = last_attempt
+      end
     end
   end
 
   def present_level
+    # All database look-ups should have already been cached by Script::script_cache_from_db
     @level = @script_level.level
     @game = @level.game
-    @stage = @script_level.stage # this should be included
+    @stage = @script_level.stage
 
-    set_videos_and_blocks_and_callouts_and_instructions
+    set_videos_and_blocks_and_callouts
 
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
+
+    @applab_user_id = applab_user_id
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

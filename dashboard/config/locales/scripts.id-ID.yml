@@ -149,8 +149,9 @@
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Matematika Sekolah Menengah Pertama
+          description: Pekerjaan pribadi dalam proses untuk Matematika Sekolah Menengah
+            Pertama.
           Graph Paper Programming: Pemrograman grafis diatas kertas
           Assessments: Penilaian
           Unit 1: Unit 1
@@ -158,7 +159,7 @@
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
           'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
+          Contracts: Kontrak
           'Artist: Writing Contracts': 'Artist: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
@@ -206,14 +207,15 @@
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Buat cerita atau buat permainan dengan Play Lab!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Buat cerita atau buat permainan dengan Play Lab!
         artist:
           title: Artis
-          description: Draw cool pictures and designs with the Artist!
+          description: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
           Artist: Artis
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Gambarlah gambar dan desain-desain yang keren dengan
+            the Artist!
         scrat:
           title: Scrat
           description_short: Scrat short description.
@@ -341,9 +343,9 @@
           Design Recipe: Design Recipe
           Booleans: Boolean
           Conditionals: Kondisi
-          Free Play: Free Play
+          Free Play: Permainan Gratis
         algebra:
-          title: Computer Science in Algebra
+          title: Ilmu Komputer dalam Aljabar
           description: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
@@ -372,8 +374,8 @@
             (Big Game)'
         infinity:
           title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
+          description_short: Buat cerita atau buat permainan dengan Play Lab!
+          description: Buat cerita atau buat permainan dengan Play Lab!
           Play Lab: Play Lab
         algebrademo:
           description: A handful of puzzles to demonstrate the environment and programming
@@ -386,6 +388,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Simulator Internet
           description_short: ''
@@ -396,3 +405,33 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: ∞
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
+          description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat
+            dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan
+            di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
+            dipelajari untuk semua usia.
+          Introduction to Computer Science: Pengantar Ilmu Komputer
+          The Maze: Labirin
+          Computational Thinking: Berpikir secara komputasi
+          Graph Paper Programming: Pemrograman grafis diatas kertas
+          The Artist: Artis
+          Algorithms: Algoritma
+          The Artist 2: Artis 2
+          Functions: Fungsi
+          The Farmer: Petani
+          Conditionals: Kondisi
+          The Artist 3: Artis 3
+          Song Writing: Menulis lagu
+          The Farmer 2: Petani 2
+          Abstraction: Abstraksi
+          The Artist 4: Artis 4
+          Relay Programming: Pemrograman relay
+          The Farmer 3: Petani 3
+          The Internet: Internet
+          The Artist 5: Artis 5
+          Wrap-up: Penutupan

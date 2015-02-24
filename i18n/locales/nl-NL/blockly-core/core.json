@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"rood",
   "COLOUR_RGB_TITLE":"kleur met",
   "COLOUR_RGB_TOOLTIP":"Maak een kleur met de opgegeven hoeveelheid rood, groen en blauw.  Alle waarden moeten tussen 0 en 100.",
+  "CONTRACT_EDITOR_HEADER":"Ontwerp recept",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"uit lus springen",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"doorgaan met de volgende herhaling van de lus",

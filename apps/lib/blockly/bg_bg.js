@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "червено";
 Blockly.Msg.COLOUR_RGB_TITLE = "цвят с";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Създаване на цвят с определено съотношение на червено, зелено и синьо.  Всички стойности трябва да бъдат между 0 и 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Рецепта за дизайн";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "излизане от цикъл";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "премини към следващата стъпка в цикъла";

@@ -42,59 +42,66 @@
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks, 200: Kubbastærðfræði 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
+        (4+5): (4+5)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 2:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Kubbastærðfræði 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
+        (7 * 6): (7 * 6)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 3:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Kubbastærðfræði 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 4:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks: Kubbastærðfræði 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
+        ((5 + 8) - 12): ((5 + 8) - 12)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 5:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Kubbastærðfræði 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
+        ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
         -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Kubbastærðfræði 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 7:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Kubbastærðfræði 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       text match test:
         Mathematical Expression Assessment: Mat á reikningsdæmi
@@ -110,35 +117,34 @@
         9-3+4*7: 9-3+4*7
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
-        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle: Big Triangle
+        Write a contract for a big red triangle that is 100 pixels in size: Skrifa
+          samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
+        EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
+        Big Triangle|image|color:string|size:Number: Stór þríhyrningur|mynd|litur:strengur|stærð:tala
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
-        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Square Contract: Square Contract
+        Write a contract for a purple square that is 15 pixels in size.: Skrifa samning
+          fyrir fjólubláan ferning sem er 15 dílar á stærð.
+        Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
+        Square|image|color:string|size:Number: Ferningur|mynd|litur:strengur|stærð:tala
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
-        Banner Function block: Banner Function block
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|image|text:string: banner|image|text:string
+        Banner Contract: Banner Contract
+        Banner Function block: Kubbur fallsins "Borði"
+        Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
+        banner|image|text:string: borði:mynd|texti:strengur
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|image:image: shrink|image|image:image
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: Try using the "shrink" function.
+        Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
+        shrink|image|image:image: minnka|mynd|mynd:mynd
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Skrifaðu samning fyrir kvarðafallið
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning
+          með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning
+          með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        wide-rect|Image|height:Number|color:string: breiður-rétth|mynd|hæð:tala|litur:strengur
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
@@ -146,52 +152,86 @@
       Enter name here:
         Enter title here: Skráðu titil hér
         Enter prompt here: Skráðu kvaðningu hér
-        Contract Name|Number|Domain1:Number|Domain2:string: Samningur Name|Number|Domain1:Number|Domain2:string
+        Contract Name|Number|Domain1:Number|Domain2:string: Samningur heiti|tala|gildismengi1:tala|gildismengi2:strengur
       Eval Contracts 1 B:
-        Star Contract: Star Contract
-        Write a contract for the star function: Skrifaðu samning fyrir stjörnufallið
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Star Contract: Samningur fyrir "stjarna"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "stjarna"
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|image|color:string|radius:Number|style:string: stjarna|mynd|litur:strengur|radíus:tala|snið:strengur
       Eval Contracts 2 B:
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Skrifaðu samning fyrir snúningsfallið
-        Eval Contracts 2 A.solution_blocks, 300: Mat samningar 2 A.solution_blocks,
+        Rotate Contract: Samningur fyrir "snúa"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "snúa"
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: snúa|image|degrees:Number|image:image
+        rotate|image|degrees:Number|image:image: snúa|mynd|gráður:tala|mynd:mynd
       Eval Contracts 3 B:
-        Text Contract: Text Contract
-        Write a contract for the text function: Skrifaðu samning fyrir textafallið
-        Eval Contracts 3 A.solution_blocks, 300: Mat samningar 3 A.solution_blocks,
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "texti"
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|image|color:string|size:Number|string:string: texti|mynd|litur:strengur|stærð:tala|strengur:strengur
       Eval Contracts 4 B:
-        Scale Contract: Scale Contract
-        Write a contract for the scale function: Skrifaðu samning fyrir kvarðafallið
-        Eval Contracts 4 A.solution_blocks, 300: Mat samningar 4 A.solution_blocks,
+        Scale Contract: Samningur fyrir "kvarði"
+        Write a contract for the scale function: Skrifaðu samning fyrir fallið "kvarði"
+        Eval Contracts 4 A.solution_blocks, 300: Mat Samningar 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: kvarði|image|factor:Number|image:image
+        scale|image|factor:Number|image:image: kvarði|mynd|stuðull:tali|mynd:mynd
+      Eval Contracts B:
+        Star Contract: Samningur fyrir "stjarna"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "stjarna"
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
+          300
+        star|image|color:string|radius:Number|style:string: stjarna|mynd|litur:strengur|radíus:tala|snið:strengur
+      Eval Contracts D:
+        Rotate Contract: Samningur fyrir "snúa"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "snúa"
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
+          300
+        rotate|image|degrees:Number|image:image: snúa|mynd|gráður:tala|mynd:mynd
+      Eval Contracts F:
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "texti"
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
+          300
+        text|image|color:string|size:Number|string:string: texti|mynd|litur:strengur|stærð:tala|strengur:strengur
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Skrifaðu samning fyrir kvarðafallið
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning
+          með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning
+          með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        wide-rect|Image|height:Number|color:string: breiður-rétth|mynd|hæð:tala|litur:strengur
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
       Rocket Contract 1:
-        Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
+        Contract for rocket-height: Samningur fyrir "flaugarhæð"
+        'Write a contract for the following question:': 'Skrifaðu samning fyrir eftirfarandi
+          spurningu:'
+        0: '? Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu fallið
+          "flaugarhæð" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum
+          og skilar hæð eldflaugarinnar á þeim tíma.'
+        1: ': Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu fallið
+          "flaugarhæð" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum
+          og skilar hæð eldflaugarinnar á þeim tíma.'
+        rocket-height|Number|seconds:Number: flaugarhæð|tala|sekúndur:tala
+        ? A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
+          that time.
+        : A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+          that time.
+    external:
+      Pixelation 1:
+        Pixelation 1: Pixelation 1
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 2:
+        Pixelation 2: Pixelation 2
+        Create images with bits and bytes.: Create images with bits and bytes.
+      Pixelation 3:
+        Pixelation 3: Pixelation 3
+        Create images with bits and bytes.: Create images with bits and bytes.

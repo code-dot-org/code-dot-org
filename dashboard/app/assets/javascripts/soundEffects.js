@@ -219,13 +219,14 @@ function isMobile() {
 }
 
 function isIE9() {
+  /** @type {number} */
   var version = -1;
 
   if (/MSIE\s([\d.]+)/.test(navigator.userAgent)) {
-    version = new Number(RegExp.$1);
+    version = parseInt(RegExp.$1);
   }
 
-  return version === 9
+  return version === 9;
 }
 
 Sound.prototype.getPlayableFile = function () {

@@ -3,149 +3,182 @@
     contract_match:
       Enter name here:
         Enter title here: Kirjoita otsikko tähän
-        Enter prompt here: Enter prompt here
+        Enter prompt here: Anna kehote tähän
         Contract Name|Number|Domain1:Number|Domain2:string: Sopimuksen Nimi|Numero|Palvelin1:Numero|Palvelin2:merkkijono
       Eval Contracts 1 B:
-        Eval Contracts 1 B: Eval Contracts 1 B
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1.solution_blocks, 200: Eval Contracts 1.solution_blocks, 200
-        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contract
-          star|image|Domain1:Number|Domain2:string|Domain3:string
-        Eval Contracts 1.solution_blocks: Eval Contracts 1.solution_blocks
-        Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
-        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        Eval Contracts 1 B: Arvioi sopimukset 1 B
+        Write a contract for the star function: Kirjoita sopimus tähti-funktiolle
+        Eval Contracts 1.solution_blocks, 200: Arvioi sopimukset 1.ratkaisu_lohkoja,
+          200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: tähti_sopimus|kuva|Alue1:Numero|Alue2:merkkijono|Alue3:merkkijono
+        Eval Contracts 1.solution_blocks: Arvioi sopimukset 1.ratkaisu_lohkoja
+        Contract star|image|radius:Number|style:string|color:string: Tähti_sopimus|säde:Numero|tyyli:merkkijono|väri:merkkijono
+        star|image|radius:Number|style:string|color:string: tähti|kuva|säde:Numero|tyyli:merkkijono|väri:merkkijono
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
-        Eval Contracts 1 B.solution_blocks, 300: Eval Contracts 1 B.solution_blocks,
+        star|image|color:string|radius:Number|style:string: tähti|kuva|väri:merkkijono|säde:Numero|tyyli:merkkijono
+        Eval Contracts 1 B.solution_blocks, 300: Arvioi sopimukset 1 B.ratkaisu_lohkoja,
           300
-        Eval Contracts 1 BX: Eval Contracts 1 BX
-        Eval Contracts 1 B!: Eval Contracts 1 B!
-        Eval Contracts 1 B!!: Eval Contracts 1 B!!
-        Star Contract: Star Contract
+        Eval Contracts 1 BX: Arvioi sopimukset 1 BX
+        Eval Contracts 1 B!: Arvioi sopimukset 1 B!
+        Eval Contracts 1 B!!: Arvioi sopimukset 1 B!!
+        Star Contract: Tähti-sopimus
       Eval Contracts 2 B:
-        Eval Contracts 2 B: Eval Contracts 2 B
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+        Eval Contracts 2 B: Arvioi sopimukset 2 B
+        Write a contract for the rotate function: Kirjoita sopimus kierto-funktiolle
+        Eval Contracts 2 A.solution_blocks, 300: Arvioi sopimukset 2 A.ratkaisu_lohkoja,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
-        rotate|image|image:image|degrees:Number: rotate|image|image:image|degrees:Number
-        Rotate Contract: Rotate Contract
+        rotate|image|degrees:Number|image:image: kierto|kuva|asteet:Numero|kuva:kuva
+        rotate|image|image:image|degrees:Number: kierto|kuva|kuva:kuva|asteet:Numero
+        Rotate Contract: Kierto_sopimus
       Eval Contracts 3 B:
-        Eval Contracts 3 B: Eval Contracts 3 B
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+        Eval Contracts 3 B: Arvioi sopimukset 3 B
+        Write a contract for the text function: Kirjoita sopimus teksti-funktiolle
+        Eval Contracts 3 A.solution_blocks, 300: Arvioi sopimukset 3 A.ratkaisu_lohkoja,
           300
-        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
-        Text Contract: Text Contract
+        text|image|string:string|size:Number|color:string: teksti|kuva|merkkijono:merkkijono|koko:Numero|väri:merkkijono
+        text|image|color:string|size:Number|string:string: teksti|kuva|väri:merkkijono|koko:Numero|merkkijono:merkkijono
+        Text Contract: Teksti_sopimus
       Eval Contracts 4 B:
-        Eval Contracts 4 B: Eval Contracts 4 B
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+        Eval Contracts 4 B: Arvioi sopimukset 4 B
+        Write a contract for the scale function: Kirjoita sopimus mittakaava-funktiolle
+        Eval Contracts 4 A.solution_blocks, 300: Arvioi sopimukset 4 A.ratkaisu_lohkoja,
           300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
-        Scale Contract: Scale Contract
+        scale|image|factor:Number|image:image: mittakaava|kuva|kerroin:Numero|kuva:kuva
+        Scale Contract: Mittakaava_sopimus
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Suunnittele resepti 1 sopimus
+        0: '? Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
+          annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
+          korkea.'
+        1: ': Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
+          annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
+          korkea.'
+        wide-rect|Image|height:Number|color:string: leveä_suorakulmio|Kuva|korkeus:Numero|väri:merkkijono
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+        Design Recipe 1 Contract: Suunnittele resepti 1 sopimus
+        0: '? Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
+          annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
+          korkea.'
+        1: ': Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
+          annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
+          korkea.'
+        wide-rect|Image|height:Number|color:string: leveä_suorakulmio|Kuva|korkeus:Numero|väri:merkkijono
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
       Creating Contracts From Examples 1:
-        Creating Contracts From Examples 1: Creating Contracts From Examples 1
-        Write a contract for a big red triangle that is 100 pixels.: Write a contract
-          for a big red triangle that is 100 pixels.
-        Eval contracts 1 A.solution_blocks, 300: Eval contracts 1 A.solution_blocks,
+        Creating Contracts From Examples 1: Luomassa sopimuksia esimerkeistä 1
+        Write a contract for a big red triangle that is 100 pixels.: Kirjoita sopimus
+          isosta punaisesta kolmiosta, joka on 100 kuvapistettä (pikseliä).
+        Eval contracts 1 A.solution_blocks, 300: Arvioi sopimukset 1 A.ratkaisu_lohkoja,
           300
-        big triangle|image|radius:Number|style:string|color:string: big triangle|image|radius:Number|style:string|color:string
-        Creating Contracts From Examples 1 A.solution_blocks, 300: Creating Contracts
-          From Examples 1 A.solution_blocks, 300
-        Write a contract for a red triangle that is 100 pixels.: Write a contract
-          for a red triangle that is 100 pixels.
-        triangle|image|radius:Number|style:string|color:string: triangle|image|radius:Number|style:string|color:string
+        big triangle|image|radius:Number|style:string|color:string: suuri kolmio|kuva|säde:Numero|tyyli:merkkijono|väri:merkkijono
+        Creating Contracts From Examples 1 A.solution_blocks, 300: Luomassa sopimuksia
+          esimerkeistä 1 A.ratkaisu_lohkoja, 300
+        Write a contract for a red triangle that is 100 pixels.: Kirjoita sopimus
+          punaisesta kolmiosta, joka on 100 kuvapistettä (pikseliä).
+        triangle|image|radius:Number|style:string|color:string: kolmio|kuva|säde:Numero|tyyli:merkkijono|väri:merkkijono
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
-        Write a contract for a big red triangle: Write a contract for a big red triangle
-        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300: CREATING CONTRACTS
-          FROM EXAMPLES 1 A.solution_block,300
-        big triangle|image|color:string|radius:number|style:string: big triangle|image|color:string|radius:number|style:string
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
-        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300: CREATING CONTRACTS
-          FROM EXAMPLES 1 A.solution_block, 300
-        EXAMPLE 1.solution_block, 300: EXAMPLE 1.solution_block, 300
-        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        big triangle|image|color:string|size:number: big triangle|image|color:string|size:number
-        Big Triangle|image|color:string|size:number: Big Triangle|image|color:string|size:number
-        Write a contract for a big orange triangle that is 100 pixels in size: Write
-          a contract for a big orange triangle that is 100 pixels in size
-        Write a contract for a big orange red that is 100 pixels in size: Write a
-          contract for a big orange red that is 100 pixels in size
-        Write a contract for a big red that is 100 pixels in size: Write a contract
-          for a big red that is 100 pixels in size
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        CREATING CONTRACTS FROM EXAMPLES 1: LUOMASSA SOPIMUKSIA ESIMERKEISTÄ 1
+        Write a contract for a big red triangle: Kirjoita sopimus isosta punaisesta
+          kolmiosta
+        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block,300: LUOMASSA SOPIMUKSIA
+          ESIMERKEISTÄ 1 A.ratkaisu_lohko, 300
+        big triangle|image|color:string|radius:number|style:string: suuri kolmio|kuva|väri:merkkijono|säde:numero|tyyli:merkkijono
+        Write a contract for a big red triangle that is 100 pixels in size: Kirjoita
+          sopimus isosta punaisesta kolmiosta, joka on 100 pikseliä kooltaan
+        CREATING CONTRACTS FROM EXAMPLES 1 A.solution_block, 300: LUOMASSA SOPIMUKSIA
+          ESIMERKEISTÄ 1 A.ratkaisu_lohko, 300
+        EXAMPLE 1.solution_block, 300: ESIMERKKI 1.ratkaisu_lohko, 300
+        EXAMPLE 1.solution_blocks, 300: ESIMERKKI 1.ratkaisu_lohkoja, 300
+        big triangle|image|color:string|size:number: suuri kolmio|kuva|väri:merkkijono|koko:numero
+        Big Triangle|image|color:string|size:number: Suuri kolmio|kuva|väri:merkkijono|koko:numero
+        Write a contract for a big orange triangle that is 100 pixels in size: Kirjoita
+          sopimus isosta oranssista kolmiosta, joka on 100 pikseliä kooltaan
+        Write a contract for a big orange red that is 100 pixels in size: Kirjoita
+          sopimus isosta oranssinpunaisesta, joka on 100 pikseliä kooltaan
+        Write a contract for a big red that is 100 pixels in size: Kirjoita sopimus
+          isosta oranssinpunaisesta, joka on 100 pikseliä kooltaan
+        Big Triangle|image|color:string|size:Number: Suuri kolmio|kuva|väri:merkkijono|koko:Numero
+        Big Triangle: Big Triangle
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
-        EXAMPLE 2.solution_blocks, 300: EXAMPLE 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
-        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        Creating Contracts From Examples 2: Luomassa sopimuksia esimerkeistä 2
+        Write a contract for a purple square that is 15 pixels in size.: Kirjoita
+          sopimus violetista neliöstä, joka on kooltaan 15 kuvapistettä.
+        EXAMPLE 2.solution_blocks, 300: ESIMERKKI 2.ratkaisu_lohkoja, 300
+        Square|image|color:string|size:Number: Neliö|kuva|väri:merkkijono|koko:Numero
+        Example 2.solution_blocks, 300: Esimerkki 2.ratkaisu_lohkoja, 300
+        Square Contract: Square Contract
       Creating Contracts From Examples 3:
-        Creating Contracts From Examples 3: Creating Contracts From Examples 3
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
-        Example 3.solution_blocks, 300: Example 3.solution_blocks, 300
-        Text|image|color:string|text:string|size:number: Text|image|color:string|text:string|size:number
-        text|image|color:string|text:string|size:number: text|image|color:string|text:string|size:number
-        Example 3.solution_block,300: Example 3.solution_block,300
-        Example 3.solution_block, 300: Example 3.solution_block, 300
+        Creating Contracts From Examples 3: Luomassa sopimuksia esimerkeistä 3
+        Try using the "text" function to write this red text at size 40.: Yritä käyttää  "teksti"-funktiota
+          kirjoittaaksesi tämän punaisen tekstin ja koko on 40.
+        Example 3.solution_blocks, 300: Esimerkki 3.ratkaisu_lohkoja, 300
+        Text|image|color:string|text:string|size:number: Teksti|kuva|väri:merkkijono|teksti:merkkijono|koko:numero
+        text|image|color:string|text:string|size:number: teksti|kuva|väri:merkkijono|teksti:merkkijono|koko:numero
+        Example 3.solution_block,300: Esimerkki 3.ratkaisu_lohko, 300
+        Example 3.solution_block, 300: Esimerkki 3.ratkaisu_lohko, 300
       Rocket Contract 1:
-        Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
+        Contract for rocket-height: Sopimus raketti-korkeudelle
+        'Write a contract for the following question:': 'Kirjoita sopimus seuraavalle
+          kysymykselle:'
+        0: '? Raketti lähtee nousuun lentäen 15 metriä sekunnissa. Kirjoita funktio
+          nimeltään raketti_korkeus, joka ottaa tiedokseen ajan, mikä on kulunut raketin
+          lähdöstä ja joka tuottaa raketin sen hetkisen  korkeuden.'
+        1: ': Raketti lähtee nousuun lentäen 15 metriä sekunnissa. Kirjoita funktio
+          nimeltään raketti_korkeus, joka ottaa tiedokseen ajan, mikä on kulunut raketin
+          lähdöstä ja joka tuottaa raketin sen hetkisen  korkeuden.'
+        rocket-height|Number|seconds:Number: raketti_korkeus|Numero|Sekunnit:Numero
+        ? A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
+          that time.
+        : A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+          that time.
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3: Creating Contracts From Examples 3
-        Banner Function block: Banner Function block
-        Example 3.solution_blocks, 300: Example 3.solution_blocks, 300
-        text|image|color:string|text:string|size:number: text|image|color:string|text:string|size:number
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        text|image|text:string: text|image|text:string
-        banner|text:string: banner|text:string
-        banner:image|text:string: banner:image|text:string
-        banner|image|text:string: banner|image|text:string
+        Creating Contracts From Examples 3: Luomassa sopimuksia esimerkeistä 3
+        Banner Function block: Palkki funktion lohko
+        Example 3.solution_blocks, 300: Esimerkki 3.ratkaisu_lohkoja, 300
+        text|image|color:string|text:string|size:number: teksti|kuva|väri:merkkijono|teksti:merkkijono|koko:numero
+        Creating Contracts From Examples 3A: Luomassa sopimuksia esimerkeistä 3A
+        Examples 3.solution_blocks, 300: Esimerkkejä 3.ratkaisu_lohkoja, 300
+        text|image|text:string: teksi|kuva|teksti:teksti
+        banner|text:string: palkki|teksti:merkkijono
+        banner:image|text:string: palkki:kuva|teksti:merkkijono
+        banner|image|text:string: palkki|kuva|teksti:merkkijono
+        Banner Contract: Banner Contract
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|circle:image: shrink|image|circle:image
-        shrink|image|image:image: shrink|image|image:image
+        Creating Contracts From Examples 4: Luomassa sopimuksia esimerkeistä 4
+        Try using the "text" function to write this red text at size 40.: Yritä käyttää  "teksti"-funktiota
+          kirjoittaaksesi tämän punaisen tekstin ja koko on 40.
+        Examples 4.solution_blocks, 300: Esimerkkejä 4.ratkaisu_lohkoja, 300
+        shrink|image|circle:image: kutista|kuva|ympyrä:kuva
+        shrink|image|image:image: kutista|kuva|kuva:kuva
+        Try using the "shrink" function.: Try using the "shrink" function.
+        Shrink Contract: Shrink Contract
+      Eval Contracts B:
+        Star Contract: Tähti-sopimus
+        Write a contract for the star function: Kirjoita sopimus tähti-funktiolle
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        star|image|color:string|radius:Number|style:string: tähti|kuva|väri:merkkijono|säde:Numero|tyyli:merkkijono
+      Eval Contracts D:
+        Rotate Contract: Kierto_sopimus
+        Write a contract for the rotate function: Kirjoita sopimus kierto-funktiolle
+        Eval Contracts 2 A.solution_blocks, 300: Arvioi sopimukset 2 A.ratkaisu_lohkoja,
+          300
+        rotate|image|degrees:Number|image:image: kierto|kuva|asteet:Numero|kuva:kuva
+      Eval Contracts F:
+        Text Contract: Teksti_sopimus
+        Write a contract for the text function: Kirjoita sopimus teksti-funktiolle
+        Eval Contracts 3 A.solution_blocks, 300: Arvioi sopimukset 3 A.ratkaisu_lohkoja,
+          300
+        text|image|color:string|size:Number|string:string: teksti|kuva|väri:merkkijono|koko:Numero|merkkijono:merkkijono

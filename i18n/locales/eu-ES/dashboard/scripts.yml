@@ -342,6 +342,12 @@ eu:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ eu:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinito
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
+          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          Introduction to Computer Science: Konputazio zientzetarako sarrera
+          The Maze: labirintoa
+          Computational Thinking: Pentsamendu konputazionala
+          Graph Paper Programming: Paper grafiko programazioa
+          The Artist: Artista
+          Algorithms: Algoritmoak
+          The Artist 2: Artista 2
+          Functions: Funtzioak
+          The Farmer: Baserritarra
+          Conditionals: Baldintzak
+          The Artist 3: Artista 3
+          Song Writing: Abestiak idazten
+          The Farmer 2: Baserritarra 2
+          Abstraction: Abstrakzioa
+          The Artist 4: Artista 4
+          Relay Programming: Rele programazioa
+          The Farmer 3: Baserritarra 3
+          The Internet: Internet
+          The Artist 5: Artista 5
+          Wrap-up: Ixtea

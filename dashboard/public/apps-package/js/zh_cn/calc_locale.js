@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "计算"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "试着重新排列你的参数来得到完全相同的表达式。"},
 "extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接到“compute”语句块吗？"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "你的函数没有返回所有的正确值。"},
 "goal":function(d){return "目标："},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "这是你的故事！继续为其努力，或转向下一个谜题。"},
-"yourExpression":function(d){return "你的表达式："}};
+"yourExpression":function(d){return "你的表达式："},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

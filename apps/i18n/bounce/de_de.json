@@ -110,7 +110,7 @@
   "whenRightTooltip": "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-rechts-Taste gedrückt wird.",
   "whenUp": "wenn Pfeil-nach-oben",
   "whenUpTooltip": "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-oben-Taste gedrückt wird.",
-  "whenWallCollided": "Wenn Ball und Wand sich berühren",
+  "whenWallCollided": "Wenn der Ball eine Wand berührt",
   "whenWallCollidedTooltip": "Führe untere Aktion aus wenn ein Ball eine Wand berührt.",
   "whileMsg": "solange",
   "whileTooltip": "Wiederhole diese Aktionen bis das Ziel erreicht ist.",

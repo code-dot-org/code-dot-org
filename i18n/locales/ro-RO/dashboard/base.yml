@@ -1,7 +1,7 @@
 ro:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Te rog să corectezi următoarele greșeli:'
   activerecord:
     errors:
       messages:
@@ -296,13 +296,15 @@ ro:
     student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor pentru %{student_name}'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Retrimite instrucțiunile de confirmare
     new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
     current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Șterge-ți contul
+    delete_text: Apasă butonul de dedesubt pentru a-ți șterge contul.
+    delete_text_teacher_note: 'Atenție: ștergerea contului implică ștergerea conturilor elevilor tăi.'
+    delete_confirm: Ești sigur ca vrei să-ți ștergi contul?
   user_level:
     completed: Finalizat
     tried: Încercat
@@ -478,7 +480,7 @@ ro:
           title: Cursul Introducere K-8 in Programare (15-25 ore)
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: '[șir gol]'
         edit-code:
           title: Editează Codul

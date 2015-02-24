@@ -256,6 +256,11 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
+    react-rails (0.12.2.0)
+      execjs
+      rails (>= 3.1)
+      react-source (= 0.12.2)
+    react-source (0.12.2)
     redcarpet (3.1.1)
     redis (3.1.0)
     ref (1.0.5)
@@ -411,6 +416,7 @@ DEPENDENCIES
   quiet_assets
   rack-contrib (~> 1.1)
   rails (= 4.0.3)
+  react-rails
   redcarpet (~> 3.1.1)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)

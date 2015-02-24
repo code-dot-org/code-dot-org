@@ -6,7 +6,7 @@ sr-SP:
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази.Позивајући све учитеље и организаторе,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирате ваш Сат програмирања</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Да ли сте ви учитељ компјутерских наука?Видите друге на недељи едукације о компјутерској науци.</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>Покушао</h3><h2>сат кодирања</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Сви могу научити.
   learn_now: Учите сада
   petition_message: Сваки ученик у свакој школи треба да има прилику да учи компјутерску науку

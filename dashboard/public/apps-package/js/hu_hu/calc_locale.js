@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "számítás"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd."},
 "extraTopBlocks":function(d){return "Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Cél:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Itt a történeted! Dolgozz rajta tovább, vagy menj a következő feladványra!"},
-"yourExpression":function(d){return "A kifejezésed:"}};
+"yourExpression":function(d){return "A kifejezésed:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"круг (радиус, стиль, цвет)",
   "displayBlockTitle":"отобразить",
   "ellipseBlockTitle":"эллипс (ширина, высота, стиль, цвет)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Показать\"?",
   "overlayBlockTitle":"наложение (сверху, снизу)",
   "placeImageBlockTitle":"поместить изображение (x, y, изображение)",

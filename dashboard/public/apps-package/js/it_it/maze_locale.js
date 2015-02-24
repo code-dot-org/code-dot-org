@@ -223,7 +223,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "ripeti fino a che"},
 "repeatUntilBlocked":function(d){return "mentre c'è strada in avanti"},
 "repeatUntilFinish":function(d){return "ripeti fino alla fine"},
-"step":function(d){return "Passo"},
+"step":function(d){return "Fai un passo"},
 "totalHoney":function(d){return "miele totale"},
 "totalNectar":function(d){return "nettare totale"},
 "turnLeft":function(d){return "gira a sinistra"},

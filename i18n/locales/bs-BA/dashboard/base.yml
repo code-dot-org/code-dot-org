@@ -188,7 +188,7 @@ bs:
       teacher:
         earned: '15 ili više učenika sakupilo je svih %{num_trophies} trofeja. Osvojili ste nagradu za učitelja! (Samo za američke učitelje)'
         not_earned_title: 'Podučavajte razred, zaradite do $1,000 u <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> valuti (samo za američke učitelje)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+        not_earned: 'Kao nagrada učiteljima informatičkih početnika, možete zaraditi do $1,000 u <a href="http://DonorsChoose.org">DonorsChoose.org</a> kreditima za vođenje razreda kroz K-8 uvodni tečaj. Da biste se kvalificirali, potrebno je da budete domaćin razredu od barem 15 učenika kroz cijeli K-8 uvodni kurs, tako da svih 15 učenika (ili više) završe sve tutorijale i prikupe svih %{num_trophies} trofeja. Ako su 7 ili više učenika koji su osvojili trofeje djevojke, vaša nagrada je $1,000 u <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditima. U suprotnom, vaša nagrada je $750 u <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditima.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite mogu koristiti samo učitelji u američkim javnim školama.'
         bonus:
           not_earned_title: 'Još uvijek možete zaraditi dodatnih 250 $ u <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditima (samo za američke učitelje)'
           earned: '7 ili više učenika koji su sakupili svih %{num_trophies} trofeja su djevojke. Dobili ste bonus nagradu! (Samo američki učitelji)'
@@ -214,7 +214,7 @@ bs:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
     user:
-      classroom: Početna stranica za nastavnike
+      classroom: Početna Stranica za Učitelje
       label: 'Zdravo, %{username}'
       stats: Moj napredak
       settings: Moj račun
@@ -293,6 +293,8 @@ bs:
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavi prazno ako ne želiš promijeniti)
     current_password_hint: (za potvrdu promjene treba nam tvoja trenutna lozinka)
@@ -344,47 +346,47 @@ bs:
     your_gallery: Galerija
   gender:
     male: Muško
-    female: Female
-    none: Prefer not to answer
+    female: Žensko
+    none: Radije ne bih odgovorio/la
   user_type:
     student: Učenik
     teacher: Učitelj
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
-    feedback: Provide feedback
-    translate: Help us translate to your language
-    support: Support
+    help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli napraviti ovaj tutorijal.
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Sva prava pridržana.'
+    powered_by_aws: Potpomognuto sa Amazon Web Services
+    feedback: Pošalji povratne informacije
+    translate: Pomozi nam prevesti na vaš jezik
+    support: Podrška
     support_url: http://support.code.org
-    tos: Terms
-    privacy: Privacy Policy
-    secure: Secure Version
+    tos: Uvjeti
+    privacy: Pravila Privatnosti
+    secure: Sigurna Verzija
   reference_area:
-    title: Need help?
-    subtitle: See these videos and hints
-    teacher: See the solution
-    auth_error: You are not authorized to see the solution.
-    submit: Update Artist Location
-    direction: Start Direction (in degrees)
+    title: Trebaš li pomoć?
+    subtitle: Pogledaj ove videozapise i savjete
+    teacher: Pogledaj rješenje
+    auth_error: Niste ovlašteni vidjeti rješenje.
+    submit: Ažuriranje Lokacije Umjetnika
+    direction: Početni Smjer (u stepenima)
   video:
     tab: Video.
-    notes: No video? Show notes.
-    notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: Autoplay videos
-    download: Download Video
+    notes: Nema videa? Pokaži bilješke.
+    notes_coming_soon: Bilješke za ovaj video stižu uskoro.
+    autoplay_option: Automatska reprodukcija videozapisa
+    download: Preuzimanje Videa
   compatability:
     working:
-      header: We are working on support for your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      header: Radimo na podršci za tvoj web preglednik.
+      message: "Code.org koristi moderne web tehnologije. To čini ovu web stranicu bržom. Tvoj preglednik ne podržava sva potrebna svojstva i mogu se pojaviti problemi dok koristiš ovaj dio web stranice. Pomozi nam <a href='%{report_issue_url}'> sa izvještavanjem o problemima na koje si naišao</a>. Također, možeš <a href='%{supported_browsers_url}'>nadograditi svoj preglednik na podržanu verziju</a>."
+      hide_this_warning: Sakrij ovo upozorenje
     upgrade:
-      header: Please upgrade your browser.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
-  slow_loading: This is taking longer than usual...
-  try_reloading: Try reloading the page
-  next_stage: Finished! Continue to next stage
+      header: Molimo vas da nadogradite vaš preglednik.
+      message: "Code.org koristi moderne web tehnologije. To čini ovu web stranicu bržom. Nažalost, vaš preglednik ne podržava sve značajke potrebne za korištenje ovog dijela web stranice.<br/><br/>Za nastavak instalirajte preglednik s naše liste podržanih preglednika. Možete <a href='#'>pokušati pregledati stranicu</a>, ali očekujte nepotpunu funkcionalnost."
+      button: Odvedi me na popis podržanih preglednika
+  slow_loading: Ovo traje duže nego inače...
+  try_reloading: Pokušaj ponovo učitati stranicu
+  next_stage: Završeno! Nastavi na sljedeću fazu
   download_pdf: Otvoreni Nastavni Plan
   lesson_plan: Nastavni Plan
   view_lesson_plan: Prikaz Nastavnog Plana
@@ -475,7 +477,7 @@ bs:
           title: Uvod u informatiku za osnovnu školu (15-25 sati)
           description: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
-          title: Sat Kodiranja
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Uredi kôd
@@ -490,7 +492,7 @@ bs:
           title: Flappy kôd
           description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
         jigsaw:
-          title: Jigsaw
+          title: Slagalica
           description: ""
         step:
           title: Korak
@@ -510,6 +512,6 @@ bs:
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kursevi na kojima radite
+    completed_courses: Kompletirani kursevi
+    all_courses: Svi kursevi

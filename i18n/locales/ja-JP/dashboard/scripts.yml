@@ -342,6 +342,12 @@ ja:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -354,3 +360,30 @@ ja:
           Infinity: |
             無限
             
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: コンピュータサイエンスコース （15-25 時間）の入門編
+          description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+          Introduction to Computer Science: コンピューター・サイエンス入門
+          The Maze: 迷路
+          Computational Thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
+          Graph Paper Programming: プログラミングのグラフ用紙
+          The Artist: アーティスト
+          Algorithms: アルゴリズム
+          The Artist 2: アーティスト 2
+          Functions: 機能
+          The Farmer: 農家
+          Conditionals: 条件
+          The Artist 3: アーティスト 3
+          Song Writing: 作曲
+          The Farmer 2: 農家 2
+          Abstraction: 抽象化
+          The Artist 4: アーティスト 4
+          Relay Programming: プログラミングをリレーする
+          The Farmer 3: 農家 3
+          The Internet: インターネット
+          The Artist 5: アーティスト 5
+          Wrap-up: まとめ

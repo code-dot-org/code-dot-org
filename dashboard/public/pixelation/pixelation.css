@@ -1,10 +1,14 @@
 #visualization {
-  width: 400px;
   overflow: hidden;
 }
 
 #visualizationColumn {
+  width: 400px;
   float: left;
+}
+
+#below_viz_instructions {
+  margin: 15px 0;
 }
 
 .right {

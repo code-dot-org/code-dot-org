@@ -6,7 +6,7 @@ et-EE:
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planeeri oma Koodi Tund</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oled sa informaatika õpetaja? Vaata teisi Informaatika Hariduse Nädala materjale</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>on proovinud</h3><h2>Koodi Tundi</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Igaüks saab õppida.
   learn_now: Õpi nüüd
   petition_message: Igal õpilasel igas koolis peaks olema võimalus õppida informaatikat

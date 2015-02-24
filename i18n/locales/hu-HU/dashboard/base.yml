@@ -291,6 +291,8 @@ hu:
     student_teacher_disassociated: '%{teacher_name}, mint a %{student_name} tanáraként el lett bocsátva'
   user:
     email_confirm_needed: 'Az e-mail címét nem erősítette meg:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Újra elküldtük a megerősítés módját
     new_password_hint: (hagyja üresen, ha nem akarja megváltoztatni)
     current_password_hint: '(szükségünk van a jelszavára  módosításainak jóváhagyásához)'
@@ -473,7 +475,7 @@ hu:
           title: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'
           description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
         Hour of Code:
-          title: Kódolás Órája
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Kód szerkesztése

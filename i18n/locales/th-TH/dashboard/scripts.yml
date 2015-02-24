@@ -342,6 +342,12 @@ th:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ th:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: ไม่จำกัด
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
+          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          Introduction to Computer Science: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+          The Maze: เขาวงกต
+          Computational Thinking: คิดคำนวณ
+          Graph Paper Programming: การเขียนกระดาษกราฟ
+          The Artist: ศิลปิน
+          Algorithms: อัลกอริทึม
+          The Artist 2: ศิลปิน 2
+          Functions: ฟังก์ชัน
+          The Farmer: ชาวนา
+          Conditionals: 'เงื่อนไข '
+          The Artist 3: ศิลปิน 3
+          Song Writing: การแต่งเพลง
+          The Farmer 2: ชาวนา 2
+          Abstraction: Abstraction
+          The Artist 4: ศิลปิน 4
+          Relay Programming: โปรแกรมการถ่ายทอดข้อมูล
+          The Farmer 3: ชาวนา 3
+          The Internet: อินเทอร์เน็ต
+          The Artist 5: ศิลปิน 5
+          Wrap-up: Wrap-up

@@ -143,7 +143,7 @@
   studiobar_flappy_body: Napravi i podijeli svoju vlastitu Flappy igricu
   studiobar_teacher_title: Za nastavnike
   studiobar_teacher_body: Predstavite Studio Kodiranja u učionici
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: Sat Kodiranja
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Sa svakim dolarom koji donirate, jedno dijete nauči
@@ -294,7 +294,7 @@
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: Female
+  dashboard_students_female: Žensko
   dashboard_students_secret: Tajna
   dashboard_students_password: Šifra
   dashboard_students_username: 'Korisničko ime: %{student_username}'
@@ -332,7 +332,7 @@
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_sequence: Sequence
+  dashboard_sequence: Niz
   dashboard_framework: Okvir
   dashboard_standards: Standardi
   dashboard_implementation_guide: Vodič za Implementaciju
@@ -1035,3 +1035,25 @@
   sphero_beyond_longdescription: Bilo da ste učitelj ili roditelj, SPRK lekcije daju
     djeci zabavan brzinski kurs programiranja robota dok usput poboljšavaju matematičke
     i naučne vještine.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress

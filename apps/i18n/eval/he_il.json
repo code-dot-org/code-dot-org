@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "מעגל (רדיוס, סגנון, צבע)",
   "displayBlockTitle": "תצוגה",
   "ellipseBlockTitle": "אליפסה (רוחב, גובה, סגנון, צבע)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?",
   "overlayBlockTitle": "שכבת-על (למעלה, למטה)",
   "placeImageBlockTitle": "מקם-תמונה (y, x, תמונה)",

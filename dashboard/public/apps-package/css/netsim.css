@@ -67,7 +67,14 @@
 .netsim_log_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em; }
+  padding: 10px; }
+  .netsim_log_widget h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke; }
   .netsim_log_widget #scroll_area {
     border: inset darkgray 2px;
     background-color: white;
@@ -78,4 +85,83 @@
 .netsim_send_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 0.5em; }
+  padding: 10px; }
+  .netsim_send_widget h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke; }
+  .netsim_send_widget div.netsim_packet {
+    border: solid darkgray thin;
+    background-color: lightgray;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    /* All input fields */
+    /* All columns but "message" */
+    /* toAddress column */
+    /* fromAddress column */
+    /* packetInfo column */
+    /* message column */
+    /* All rows but headers */
+    /* hexadecimal row */
+    /* binary row */ }
+    .netsim_send_widget div.netsim_packet th {
+      font-size: 10pt;
+      font-variant: small-caps; }
+    .netsim_send_widget div.netsim_packet input, .netsim_send_widget div.netsim_packet textarea {
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      font-family: monospace; }
+    .netsim_send_widget div.netsim_packet .watermark {
+      color: #d3d3d3; }
+    .netsim_send_widget div.netsim_packet .bit_counter {
+      text-align: right;
+      color: darkgray; }
+    .netsim_send_widget div.netsim_packet th.rowType, .netsim_send_widget div.netsim_packet td.rowType, .netsim_send_widget div.netsim_packet th.toAddress, .netsim_send_widget div.netsim_packet td.toAddress, .netsim_send_widget div.netsim_packet th.fromAddress, .netsim_send_widget div.netsim_packet td.fromAddress, .netsim_send_widget div.netsim_packet th.packetInfo, .netsim_send_widget div.netsim_packet td.packetInfo {
+      width: 1%;
+      /* depend on nowrap */
+      text-align: center; }
+      .netsim_send_widget div.netsim_packet th.rowType input, .netsim_send_widget div.netsim_packet td.rowType input, .netsim_send_widget div.netsim_packet th.toAddress input, .netsim_send_widget div.netsim_packet td.toAddress input, .netsim_send_widget div.netsim_packet th.fromAddress input, .netsim_send_widget div.netsim_packet td.fromAddress input, .netsim_send_widget div.netsim_packet th.packetInfo input, .netsim_send_widget div.netsim_packet td.packetInfo input {
+        width: 3em;
+        text-align: center; }
+    .netsim_send_widget div.netsim_packet th.rowType, .netsim_send_widget div.netsim_packet td.rowType {
+      text-align: right;
+      vertical-align: top; }
+    .netsim_send_widget div.netsim_packet th.toAddress input, .netsim_send_widget div.netsim_packet td.toAddress input {
+      background-color: rgba(255, 233, 238, 0.85); }
+    .netsim_send_widget div.netsim_packet th.fromAddress input, .netsim_send_widget div.netsim_packet td.fromAddress input {
+      background-color: lightcyan; }
+    .netsim_send_widget div.netsim_packet th.packetInfo input, .netsim_send_widget div.netsim_packet td.packetInfo input {
+      background-color: rgba(212, 238, 212, 0.9); }
+    .netsim_send_widget div.netsim_packet th.message, .netsim_send_widget div.netsim_packet td.message {
+      /* Wrapper div keeps textarea bound within column, but still
+         able to set padding. */ }
+      .netsim_send_widget div.netsim_packet th.message div, .netsim_send_widget div.netsim_packet td.message div {
+        margin-right: 0.4em; }
+        .netsim_send_widget div.netsim_packet th.message div textarea, .netsim_send_widget div.netsim_packet td.message div textarea {
+          width: 100%;
+          padding: 0.2em; }
+    .netsim_send_widget div.netsim_packet tbody td {
+      vertical-align: top; }
+  .netsim_send_widget .send_widget_footer {
+    text-align: right;
+    margin-top: 0.5em; }
+
+#netsim_router_panel #dns_mode_control input[type="radio"] {
+  vertical-align: middle;
+  margin: 0; }
+#netsim_router_panel #dns_mode_control label {
+  display: inline;
+  margin-left: 1em; }
+#netsim_router_panel #netsim_router_network_table .localNode {
+  font-weight: bold;
+  background-color: lightcyan; }
+#netsim_router_panel #netsim_router_network_table .dnsNode {
+  color: white;
+  background-color: darkorange; }
+#netsim_router_panel #netsim_router_log_table {
+  display: block;
+  max-height: 200px;
+  overflow-y: scroll; }

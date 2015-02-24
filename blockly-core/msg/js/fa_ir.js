@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه خارج شو";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ادامه به حلقه  تکرار بعدی";

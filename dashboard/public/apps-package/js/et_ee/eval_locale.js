@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "ring (raadius, stiil, värv)"},
 "displayBlockTitle":function(d){return "näita"},
 "ellipseBlockTitle":function(d){return "ellips (laius, kõrgus, stiil, värv)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"kuva\" klotsi külge?"},
 "overlayBlockTitle":function(d){return "pealiskiht (ülaosa, põhi)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},

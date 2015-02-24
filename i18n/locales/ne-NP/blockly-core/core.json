@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"रातो",
   "COLOUR_RGB_TITLE":"color with",
   "COLOUR_RGB_TOOLTIP":"Create a color with the specified amount of red, green, and blue.  All values must be between 0 and 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"लुपलाई भत्काउनुहोस्",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"continue with next iteration of loop",

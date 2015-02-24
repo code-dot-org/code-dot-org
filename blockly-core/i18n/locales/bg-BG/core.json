@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "червено",
   "COLOUR_RGB_TITLE": "цвят с",
   "COLOUR_RGB_TOOLTIP": "Създаване на цвят с определено съотношение на червено, зелено и синьо.  Всички стойности трябва да бъдат между 0 и 100.",
+  "CONTRACT_EDITOR_HEADER": "Рецепта за дизайн",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "излизане от цикъл",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "премини към следващата стъпка в цикъла",

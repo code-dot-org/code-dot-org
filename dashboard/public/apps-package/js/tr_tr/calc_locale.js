@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "hesapla"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız."},
 "extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Amaç:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!"},
-"yourExpression":function(d){return "İfadeniz:"}};
+"yourExpression":function(d){return "İfadeniz:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

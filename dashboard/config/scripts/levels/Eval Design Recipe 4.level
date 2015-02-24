@@ -27,7 +27,7 @@
             <arg name="points" type="Number"/>
             <arg name="radius" type="Number"/>
             <description>Given a number of points an a radius, return a yellow star of given points where the inner radius is half the outer radius.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">starburst</title>
         </block>
@@ -190,7 +190,7 @@
           <mutation>
             <arg name="points" type="Number"/>
             <arg name="radius" type="Number"/>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">starburst</title>
           <functional_input name="STACK">
