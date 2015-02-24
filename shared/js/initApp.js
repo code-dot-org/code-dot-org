@@ -176,7 +176,7 @@ dashboard.saveProject = function(callback) {
 };
 
 function initApp() {
-  if (appOptions.level.isProject) {
+  if (appOptions.level.isProjectLevel) {
     if (dashboard.currentApp) {
       appOptions.level.startBlocks = dashboard.currentApp.levelSource;
     } else {
@@ -184,8 +184,12 @@ function initApp() {
         name: 'Untitled'
       };
     }
-    $(document).on('mousedown', '#runButton', dashboard.saveProject);
     dashboard.showProjectHeader();
+    $(document).on('click', '#gameButtons', function () {
+      if ($(this).attr('id') === 'runButton') {
+        dashboard.saveProject();
+      }
+    });
   }
   window[appOptions.app + 'Main'](appOptions);
 }
@@ -226,7 +230,7 @@ if (appOptions.droplet) {
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
-  if (appOptions.level.isProject) {
+  if (appOptions.level.isProjectLevel) {
     var app_id = location.hash.slice(1);
     if (app_id) {
       // Load the project ID, if one exists
