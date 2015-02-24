@@ -17,54 +17,57 @@ var markup = require('./NetSimMyDeviceTab.html');
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
+ * @param {jQuery} rootDiv
  * @param {function} chunkSizeChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (chunkSizeChangeCallback) {
+var NetSimMyDeviceTab = module.exports = function (rootDiv, chunkSizeChangeCallback) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {function}
+   * @private
+   */
   this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+
+  /**
+   *
+   * @type {number}
+   * @private
+   */
+  this.currentChunkSize_ = 8;
+
+  this.render();
 };
 
 /**
- * Static counter used to generate/uniquely identify different instances
- * of this log widget on the page.
- * @type {number}
+ * Fill the root div with new elements reflecting the current state
  */
-NetSimMyDeviceTab.uniqueIDCounter = 0;
-
-/**
- * Generate a new NetSimMyDeviceTab, putting it on the page.
- * @param {HTMLElement} element
- * @param {function} changeEncodingCallback
- */
-NetSimMyDeviceTab.createWithin = function (element, changeEncodingCallback) {
-  var controller = new NetSimMyDeviceTab(changeEncodingCallback);
-
-  var instanceID = NetSimMyDeviceTab.uniqueIDCounter;
-  NetSimMyDeviceTab.uniqueIDCounter++;
-
-  element.innerHTML = markup({
-    instanceID: instanceID
-  });
-  controller.bindElements_(instanceID);
-  return controller;
+NetSimMyDeviceTab.prototype.render = function () {
+  var renderedMarkup = $(markup({}));
+  this.rootDiv_.html(renderedMarkup);
+  this.bindElements_();
 };
 
 /**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
-NetSimMyDeviceTab.prototype.bindElements_ = function (instanceID) {
-  var rootDiv = $('#netsim_my_device_panel_' + instanceID);
-  this.rootDiv_ = rootDiv;
-  var initialChunkSize = 8;
+NetSimMyDeviceTab.prototype.bindElements_ = function () {
+  var rootDiv = this.rootDiv_;
   rootDiv.find('.chunk_size_slider').slider({
-    value: initialChunkSize,
+    value: this.currentChunkSize_,
     min: 1,
     max: 32,
     step: 1,
     slide: this.onChunkSizeChange_.bind(this)
   });
-  this.setChunkSize(initialChunkSize);
+  this.setChunkSize(this.currentChunkSize_);
 };
 
 /**
@@ -88,6 +91,7 @@ NetSimMyDeviceTab.prototype.onChunkSizeChange_ = function (event, ui) {
  */
 NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
   var rootDiv = this.rootDiv_;
+  this.currentChunkSize_ = newChunkSize;
   rootDiv.find('.chunk_size_slider').slider('option', 'value', newChunkSize);
   rootDiv.find('.chunk_size_value').html(newChunkSize + ' bits');
 };

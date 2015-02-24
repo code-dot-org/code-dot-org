@@ -22,7 +22,6 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
-var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
 var NetSimEncodingSelector = require('./NetSimEncodingSelector');
@@ -184,10 +183,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_, user, this.getOverrideShardID());
 
   // Tab panel - contains instructions, my device, router, dns
-  this.tabs_ = new NetSimTabsComponent($('#netsim_tabs'), this.connection_);
-
-  this.myDevicePanel_ = NetSimMyDeviceTab.createWithin(
-      document.getElementById('netsim_my_device_container'),
+  this.tabs_ = new NetSimTabsComponent($('#netsim_tabs'),
+      this.connection_,
       this.changeChunkSize.bind(this));
 
   var sendWidgetContainer = document.getElementById('netsim_send');
@@ -237,7 +234,7 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  */
 NetSim.prototype.changeChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
-  this.myDevicePanel_.setChunkSize(newChunkSize);
+  this.tabs_.setChunkSize(newChunkSize);
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
