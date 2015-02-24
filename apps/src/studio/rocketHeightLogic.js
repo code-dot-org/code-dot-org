@@ -12,9 +12,10 @@ var api = require('./api');
 var RocketHeightLogic = function (studio) {
   CustomGameLogic.apply(this, arguments);
   this.rocketIndex = 0;
-  this.rocket = null;
   this.last = Date.now();
   this.seconds = 0;
+  // rocket and height for use in success/failure checking
+  this.rocket = null;
   this.height = 0;
 };
 RocketHeightLogic.inherits(CustomGameLogic);
@@ -24,10 +25,9 @@ RocketHeightLogic.prototype.onTick = function () {
   // Update the rocket once a second
   if (Date.now() - this.last < 1000) {
     return;
-  } else {
-    this.last = Date.now();
-    this.seconds++;
   }
+  this.last = Date.now();
+  this.seconds++;
   
   this.rocket = this.studio_.sprite[this.rocketIndex];
   
