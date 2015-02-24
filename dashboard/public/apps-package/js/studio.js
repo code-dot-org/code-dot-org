@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({158:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({160:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":151,"./levels":157,"./skins":161,"./studio":162}],162:[function(require,module,exports){
+},{"../appMain":5,"./blocks":153,"./levels":159,"./skins":164,"./studio":165}],165:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -40,6 +40,7 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -168,6 +169,9 @@ function loadLevel() {
   switch (level.customGameType) {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
+      break;
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
       break;
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
@@ -2934,7 +2938,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":195,"../../locale/current/studio":201,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../templates/page.html":170,"../utils":190,"../xml":191,"./api":149,"./bigGameLogic":150,"./blocks":151,"./collidable":152,"./constants":153,"./controls.html":154,"./extraControlRows.html":156,"./projectile":159,"./samBatLogic":160,"./visualization.html":163}],163:[function(require,module,exports){
+},{"../../locale/current/common":198,"../../locale/current/studio":204,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":149,"../templates/page.html":173,"../utils":193,"../xml":194,"./api":151,"./bigGameLogic":152,"./blocks":153,"./collidable":154,"./constants":155,"./controls.html":156,"./extraControlRows.html":158,"./projectile":161,"./rocketHeightLogic":162,"./samBatLogic":163,"./visualization.html":166}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2954,7 +2958,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":211}],160:[function(require,module,exports){
+},{"ejs":214}],163:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -2972,6 +2976,8 @@ var SamBatLogic = function (studio) {
   CustomGameLogic.apply(this, arguments);
   this.samIndex = 0;
   this.sam = null;
+  // Has the onscreen? stopped Sam on a given side?
+  this.stopped = {left: false, up: false, right: false, down: false};
 };
 SamBatLogic.inherits(CustomGameLogic);
 
@@ -3034,26 +3040,30 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   var centerX = this.sam.x + this.sam.width / 2;
   //invert Y
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
-
+  
   switch (dir) {
     case Direction.WEST:
       if (!this.onscreen(centerX - this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.left = true;
       }
       break;
     case Direction.NORTH:
       if (!this.onscreen(centerX, centerY + this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.up = true;
       }
       break;
     case Direction.EAST:
       if (!this.onscreen(centerX + this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.right = true;
       }
       break;
     case Direction.SOUTH:
       if (!this.onscreen(centerX, centerY - this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.down = true;
       }
       break;
   }
@@ -3072,7 +3082,60 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":44,"../constants":46,"./api":149,"./constants":153,"./customGameLogic":155}],159:[function(require,module,exports){
+},{"../codegen":44,"../constants":46,"./api":151,"./constants":155,"./customGameLogic":157}],162:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Rocket Height levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var RocketHeightLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+  this.rocketIndex = 0;
+  this.last = Date.now();
+  this.seconds = 0;
+  // rocket and height for use in success/failure checking
+  this.rocket = null;
+  this.height = 0;
+};
+RocketHeightLogic.inherits(CustomGameLogic);
+
+RocketHeightLogic.prototype.onTick = function () {
+  
+  // Update the rocket once a second
+  if (Date.now() - this.last < 1000) {
+    return;
+  }
+  this.last = Date.now();
+  this.seconds++;
+  
+  this.rocket = this.studio_.sprite[this.rocketIndex];
+  
+  // Display the rocket height and time elapsed
+  this.height = this.rocket_height(this.seconds);
+  this.rocket.y = this.studio_.MAZE_HEIGHT - (this.height + this.rocket.height);
+  this.rocket.dir = Direction.NONE;
+  this.studio_.scoreText = 'Time: ' + this.seconds + ' | Height: ' + this.height;
+  this.studio_.displayScore();
+};
+
+/**
+ * Calls the user provided rocket-height function, or no-op if none was provided.
+ * @param {number} seconds Time elapsed since rocket launch
+ * @returns {number} Height of rocket after seconds
+ */
+RocketHeightLogic.prototype.rocket_height = function (seconds) {
+  return this.resolveCachedBlock_('VALUE')(seconds);
+};
+
+module.exports = RocketHeightLogic;
+
+},{"../codegen":44,"./api":151,"./constants":155,"./customGameLogic":157}],161:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3246,7 +3309,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":152,"./constants":153}],161:[function(require,module,exports){
+},{"./collidable":154,"./constants":155}],164:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3615,7 +3678,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":201,"../skins":147,"./constants":153}],157:[function(require,module,exports){
+},{"../../locale/current/studio":204,"../skins":149,"./constants":155}],159:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5084,7 +5147,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":201,"../block_utils":18,"../utils":190,"./constants":153}],156:[function(require,module,exports){
+},{"../../locale/current/studio":204,"../block_utils":18,"../utils":193,"./constants":155}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5104,7 +5167,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":195,"ejs":211}],154:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5124,7 +5187,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":195,"ejs":211}],152:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],154:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5230,7 +5293,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":153}],151:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":155}],153:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7260,9 +7323,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":195,"../../locale/current/studio":201,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":146,"../utils":190,"./constants":153}],201:[function(require,module,exports){
+},{"../../locale/current/common":198,"../../locale/current/studio":204,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":148,"../utils":193,"./constants":155}],204:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],150:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7481,7 +7544,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":44,"./api":149,"./constants":153,"./customGameLogic":155}],155:[function(require,module,exports){
+},{"../codegen":44,"./api":151,"./constants":155,"./customGameLogic":157}],157:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7550,7 +7613,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":44,"./api":149,"./constants":153}],149:[function(require,module,exports){
+},{"../codegen":44,"./api":151,"./constants":155}],151:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7714,7 +7777,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":153}],153:[function(require,module,exports){
+},{"./constants":155}],155:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -9016,4 +9079,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[158]);
+},{}]},{},[160]);
