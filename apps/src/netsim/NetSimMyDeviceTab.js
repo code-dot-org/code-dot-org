@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimMyDevicePanel.html');
+var markup = require('./NetSimMyDeviceTab.html');
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
@@ -20,7 +20,7 @@ var markup = require('./NetSimMyDevicePanel.html');
  * @param {function} chunkSizeChangeCallback
  * @constructor
  */
-var NetSimMyDevicePanel = module.exports = function (chunkSizeChangeCallback) {
+var NetSimMyDeviceTab = module.exports = function (chunkSizeChangeCallback) {
   this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
 };
 
@@ -29,18 +29,18 @@ var NetSimMyDevicePanel = module.exports = function (chunkSizeChangeCallback) {
  * of this log widget on the page.
  * @type {number}
  */
-NetSimMyDevicePanel.uniqueIDCounter = 0;
+NetSimMyDeviceTab.uniqueIDCounter = 0;
 
 /**
- * Generate a new NetSimMyDevicePanel, putting it on the page.
+ * Generate a new NetSimMyDeviceTab, putting it on the page.
  * @param {HTMLElement} element
  * @param {function} changeEncodingCallback
  */
-NetSimMyDevicePanel.createWithin = function (element, changeEncodingCallback) {
-  var controller = new NetSimMyDevicePanel(changeEncodingCallback);
+NetSimMyDeviceTab.createWithin = function (element, changeEncodingCallback) {
+  var controller = new NetSimMyDeviceTab(changeEncodingCallback);
 
-  var instanceID = NetSimMyDevicePanel.uniqueIDCounter;
-  NetSimMyDevicePanel.uniqueIDCounter++;
+  var instanceID = NetSimMyDeviceTab.uniqueIDCounter;
+  NetSimMyDeviceTab.uniqueIDCounter++;
 
   element.innerHTML = markup({
     instanceID: instanceID
@@ -53,7 +53,7 @@ NetSimMyDevicePanel.createWithin = function (element, changeEncodingCallback) {
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
-NetSimMyDevicePanel.prototype.bindElements_ = function (instanceID) {
+NetSimMyDeviceTab.prototype.bindElements_ = function (instanceID) {
   var rootDiv = $('#netsim_my_device_panel_' + instanceID);
   this.rootDiv_ = rootDiv;
   var initialChunkSize = 8;
@@ -76,7 +76,7 @@ NetSimMyDevicePanel.prototype.bindElements_ = function (instanceID) {
  * @param {number} ui.value - The current value of the slider.
  * @private
  */
-NetSimMyDevicePanel.prototype.onChunkSizeChange_ = function (event, ui) {
+NetSimMyDeviceTab.prototype.onChunkSizeChange_ = function (event, ui) {
   var newChunkSize = ui.value;
   this.setChunkSize(newChunkSize);
   this.chunkSizeChangeCallback_(newChunkSize);
@@ -86,7 +86,7 @@ NetSimMyDevicePanel.prototype.onChunkSizeChange_ = function (event, ui) {
  * Update the slider and its label to display the provided value.
  * @param {number} newChunkSize
  */
-NetSimMyDevicePanel.prototype.setChunkSize = function (newChunkSize) {
+NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
   var rootDiv = this.rootDiv_;
   rootDiv.find('.chunk_size_slider').slider('option', 'value', newChunkSize);
   rootDiv.find('.chunk_size_value').html(newChunkSize + ' bits');

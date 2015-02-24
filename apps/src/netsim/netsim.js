@@ -22,7 +22,7 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
-var NetSimMyDevicePanel = require('./NetSimMyDevicePanel');
+var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
 var NetSimEncodingSelector = require('./NetSimEncodingSelector');
@@ -186,7 +186,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Tab panel - contains instructions, my device, router, dns
   this.tabs_ = new NetSimTabsComponent($('#netsim_tabs'), this.connection_);
 
-  this.myDevicePanel_ = NetSimMyDevicePanel.createWithin(
+  this.myDevicePanel_ = NetSimMyDeviceTab.createWithin(
       document.getElementById('netsim_my_device_container'),
       this.changeChunkSize.bind(this));
 
