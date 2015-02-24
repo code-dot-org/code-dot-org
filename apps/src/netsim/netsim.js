@@ -229,7 +229,7 @@ NetSim.prototype.changeChunkSize = function (newChunkSize) {
   this.myDevicePanel_.setChunkSize(newChunkSize);
   //this.receivedMessageLog_.setChunkSize(newChunkSize);
   //this.sentMessageLog_.setChunkSize(newChunkSize);
-  //this.sendWidget_.setChunkSize(newChunkSize);
+  this.sendWidget_.setChunkSize(newChunkSize);
 };
 
 /**
