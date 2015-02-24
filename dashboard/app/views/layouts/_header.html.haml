@@ -17,9 +17,10 @@
     .container{style: (@full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
-          .header_logo
-            = link_to(image_tag('codeorg-studio-logo.png'), '/')
-
+          .header_left
+            .header_logo
+              = link_to(image_tag('codeorg-studio-logo.png'), '/')
+            %span.project_info
           .header_middle
             - if @script_level
               = render partial: 'shared/header_progress'
@@ -32,7 +33,7 @@
               %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
                 %i.fa.fa-pencil
             - if params[:controller] !~ /^sessions/
-              .header_user
+              .header_button.header_user
                 = render partial: 'shared/user_header'
 
 - if @script_level
