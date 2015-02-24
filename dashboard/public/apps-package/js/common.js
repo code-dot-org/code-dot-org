@@ -5483,6 +5483,12 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.sendToPhone = config.sendToPhone;
   this.noPadding = config.noPadding;
 
+  // contract editor requires more vertical space. set height to 1250 unless
+  // explicitly specified
+  if (config.level.useContractEditor) {
+    config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
+  }
+
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
