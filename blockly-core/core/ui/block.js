@@ -121,6 +121,10 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   if (goog.isFunction(this.init)) {
     this.init();
   }
+
+  if (this.hideInMainBlockspace && this.blockSpace === Blockly.mainBlockSpace) {
+    this.setCurrentlyHidden(true);
+  }
 };
 
 /**
@@ -204,6 +208,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
+  this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfBlockSpace_();
 };
 
@@ -1329,11 +1334,10 @@ Blockly.Block.prototype.isCurrentlyHidden = function () {
 };
 
 Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
-  if (!this.svg_) {
-    throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
-  }
   this.currentlyHidden_ = hidden;
-  this.svg_.setVisible(!hidden);
+  if (this.svg_) {
+    this.svg_.setVisible(!hidden);
+  }
 };
 
 /**
