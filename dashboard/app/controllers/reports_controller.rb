@@ -156,7 +156,7 @@ SQL
       @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
       @level_source_id = level.ideal_level_source_id
       # TODO: @phone_share_url
-      set_videos_and_blocks_and_callouts_and_instructions  # @callouts, @autoplay_video_info
+      set_videos_and_blocks_and_callouts  # @callouts, @autoplay_video_info
 
       level_data = blockly_options()
       if (level.embed == 'true' && !@edit_blocks)
