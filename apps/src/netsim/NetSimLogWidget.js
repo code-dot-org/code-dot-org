@@ -13,7 +13,6 @@
 
 var markup = require('./NetSimLogWidget.html');
 var packetMarkup = require('./NetSimLogPacket.html');
-var dom = require('../dom');
 var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 
 /**
@@ -77,8 +76,7 @@ NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
   this.clearButton_ = this.rootDiv_.find('.clear_button');
-
-  dom.addClickTouchEvent(this.clearButton_[0], this.onClearButtonPress_.bind(this));
+  this.clearButton_.click(this.onClearButtonPress_.bind(this));
 };
 
 /**
@@ -135,40 +133,78 @@ NetSimLogWidget.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- *
- * @param {string} packetBinary
- * @param {string} encoding
- * @param {number} chunkSize
+ * A component/controller for display of an individual packet in the log.
+ * @param {string} packetBinary - raw packet data
+ * @param {string} encoding - which display style to use initially
+ * @param {number} chunkSize - (or bytesize) to use when interpreting and
+ *        formatting the data.
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, encoding, chunkSize) {
+  /**
+   * @type {string}
+   * @private
+   */
   this.packetBinary_ = packetBinary;
+
+  /**
+   * @type {string}
+   * @private
+   */
   this.encoding_ = encoding;
+
+  /**
+   * @type {number}
+   * @private
+   */
   this.chunkSize_ = chunkSize;
 
-  // Create wrapper markup
+  /**
+   * Wrapper div that we create once, and fill repeatedly with render()
+   * @type {jQuery}
+   * @private
+   */
   this.rootDiv_ = $('<div>').addClass('packet');
+
+  // Initial content population
   this.render();
 };
 
+/**
+ * Re-render div contents to represent the packet in a different way.
+ */
 NetSimLogPacket.prototype.render = function () {
-  var internalMarkup = $(packetMarkup({
+  var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     chunkSize: this.chunkSize_
-  }));
-  NetSimEncodingSelector.hideRowsByEncoding(internalMarkup, this.encoding_);
-  this.rootDiv_.html(internalMarkup);
+  });
+  var jQueryWrap = $(rawMarkup);
+  NetSimEncodingSelector.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  this.rootDiv_.html(jQueryWrap);
 };
 
+/**
+ * Return root div, for hooking up to a parent element.
+ * @returns {jQuery}
+ */
 NetSimLogPacket.prototype.getRoot = function () {
   return this.rootDiv_;
 };
 
+/**
+ * Change encoding-display setting and re-render packet contents accordingly.
+ * @param {string} newEncoding
+ */
 NetSimLogPacket.prototype.setEncoding = function (newEncoding) {
   this.encoding_ = newEncoding;
   this.render();
 };
 
+/**
+ * Change chunk size for interpreting data and re-render packet contents
+ * accordingly.
+ * @param {number} newChunkSize
+ */
 NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.render();
