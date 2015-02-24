@@ -205,6 +205,7 @@ NetSim.prototype.refresh_ = function () {
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
   this.encodingMode_ = newEncoding;
+  this.encodingSelector_.setEncoding(newEncoding);
   this.receivedMessageLog_.setEncoding(newEncoding);
   this.sentMessageLog_.setEncoding(newEncoding);
   this.sendWidget_.setEncoding(newEncoding);

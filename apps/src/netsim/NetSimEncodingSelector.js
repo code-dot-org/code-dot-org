@@ -68,6 +68,10 @@ NetSimEncodingSelector.prototype.onSelectChange_ = function () {
   this.changeEncodingCallback_(this.select_.val());
 };
 
+NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
+  this.select_.val(newEncoding);
+};
+
 /**
  * Static helper, shows/hides rows under provided element according to the given
  * encoding setting.
