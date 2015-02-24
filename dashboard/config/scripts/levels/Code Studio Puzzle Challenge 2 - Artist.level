@@ -25,7 +25,8 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "ideal": "4"
   }
 }]]></config>
   <blocks>
