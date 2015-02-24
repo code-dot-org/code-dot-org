@@ -30,7 +30,6 @@ class Ability
         Cohort,
         WorkshopAttendance
       ]
-      can :manage, :all
     end
 
     if user.id
