@@ -14,16 +14,19 @@
 var buildMarkup = require('./NetSimTabsComponent.html');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
+var NetSimDnsTab = require('./NetSimDnsTab');
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
  * @param {NetSimConnection} connection
  * @param {function} chunkSizeChangeCallback
+ * @param {function} encodingChangeCallback
+ * @param {function} dnsModeChangeCallback
  * @constructor
  */
 var NetSimTabsComponent = module.exports = function (rootDiv, connection,
-    chunkSizeChangeCallback, encodingChangeCallback) {
+    chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -51,6 +54,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, connection,
   this.encodingChangeCallback_ = encodingChangeCallback;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.dnsModeChangeCallback_ = dnsModeChangeCallback;
+
+  /**
    * @type {NetSimRouterTab}
    * @private
    */
@@ -61,6 +70,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, connection,
    * @private
    */
   this.myDeviceTab_ = null;
+
+  /**
+   * @type {NetSimDnsTab}
+   * @private
+   */
+  this.dnsTab_ = null;
 
   // Initial render
   this.render();
@@ -84,6 +99,10 @@ NetSimTabsComponent.prototype.render = function () {
       this.rootDiv_.find('#tab_my_device'),
       this.chunkSizeChangeCallback_,
       this.encodingChangeCallback_);
+
+  this.dnsTab_ = new NetSimDnsTab(
+      this.rootDiv_.find('#tab_dns'),
+      this.dnsModeChangeCallback_);
 };
 
 /**
@@ -98,4 +117,12 @@ NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
  */
 NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
   this.myDeviceTab_.setEncoding(newEncoding);
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsTab_.setDnsMode(newDnsMode);
+  this.routerTab_.setDnsMode(newDnsMode);
 };

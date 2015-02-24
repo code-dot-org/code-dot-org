@@ -70,6 +70,15 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.chunkSize_ = 8;
+
+  /**
+   * Current dns mode.
+   * Valid values 'none', 'manual', 'automatic'
+   * TODO: Move these to an enum
+   * @type {string}
+   * @private
+   */
+  this.dnsMode_ = 'none';
 };
 
 
@@ -172,6 +181,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
@@ -182,7 +192,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       $('#netsim_tabs'),
       this.connection_,
       this.changeChunkSize.bind(this),
-      this.changeEncoding.bind(this));
+      this.changeEncoding.bind(this),
+      this.changeRemoteDnsMode.bind(this));
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
@@ -190,6 +201,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.changeEncoding(this.encodingMode_);
   this.changeChunkSize(this.chunkSize_);
+  this.changeDnsMode(this.dnsMode_);
   this.refresh_();
 };
 
@@ -211,6 +223,7 @@ NetSim.prototype.refresh_ = function () {
  * Propogates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
+ *
  * @param {string} newEncoding
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
@@ -227,6 +240,7 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  * Propogates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
+ *
  * @param {number} newChunkSize
  */
 NetSim.prototype.changeChunkSize = function (newChunkSize) {
@@ -235,6 +249,37 @@ NetSim.prototype.changeChunkSize = function (newChunkSize) {
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
+};
+
+/**
+ * Update DNS mode across the whole app.
+ *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
+ *
+ * @param {"none"|"manual"|"automatic"} newDnsMode
+ */
+NetSim.prototype.changeDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.tabs_.setDnsMode(newDnsMode);
+};
+
+/**
+ * Sets DNS mode across the whole simulation, propagating the change
+ * to other clients.
+ * @param {string} newDnsMode
+ */
+NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
+  this.changeDnsMode(newDnsMode);
+  if (this.connection_&&
+      this.connection_.myNode &&
+      this.connection_.myNode.myRouter) {
+    // STATE IS THE ROOT OF ALL EVIL
+    var router = this.connection_.myNode.myRouter;
+    router.dnsMode = newDnsMode;
+    router.update();
+  }
 };
 
 /**
@@ -270,4 +315,68 @@ NetSim.prototype.onResizeOverride_ = function() {
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
+};
+
+/**
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {NetSimShard} newShard - null if disconnected.
+ * @param {NetSimLocalClientNode} localNode - null if disconnected
+ * @private
+ */
+NetSim.prototype.onShardChange_= function (newShard, localNode) {
+  if (localNode) {
+    localNode.routerChange.register(this.onRouterChange_.bind(this));
+  }
+};
+
+/**
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @param {NetSimWire} wire - null if disconnected.
+ * @param {NetSimRouterNode} router - null if disconnected
+ * @private
+ */
+NetSim.prototype.onRouterChange_ = function (wire, router) {
+
+  // Unhook old handlers
+  if (this.routerStateChangeKey !== undefined) {
+    this.myConnectedRouter.stateChange.unregister(this.routerStateChangeKey);
+    this.routerStateChangeKey = undefined;
+  }
+
+  if (this.routerWireChangeKey !== undefined) {
+    this.myConnectedRouter.wiresChange.unregister(this.routerWireChangeKey);
+    this.routerWireChangeKey = undefined;
+  }
+
+  if (this.routerLogChangeKey !== undefined) {
+    this.myConnectedRouter.logChange.unregister(this.routerLogChangeKey);
+    this.routerLogChangeKey = undefined;
+  }
+
+  // Propagate change?
+  this.changeDnsMode(router.dnsMode);
+
+  // Hook up new handlers
+  if (router) {
+    this.routerStateChangeKey = router.stateChange.register(
+        this.onRouterStateChange_.bind(this));
+
+    this.routerWireChangeKey = router.wiresChange.register(
+        this.onRouterWiresChange_.bind(this));
+
+    this.routerLogChangeKey = router.logChange.register(
+        this.onRouterLogChange_.bind(this));
+  }
+};
+
+NetSim.prototype.onRouterStateChange_ = function (router) {
+  this.changeDnsMode(router.dnsMode);
+};
+
+NetSim.prototype.onRouterWiresChange_ = function () {
+};
+
+NetSim.prototype.onRouterLogChange_ = function () {
 };
