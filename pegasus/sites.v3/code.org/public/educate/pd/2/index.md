@@ -1,44 +1,36 @@
 ---
-title: Cohort 2 Locations
+title: Code.org Phase 1
 nav: pd3_nav
 ---
-<a id="top"></a>
 
-# Cohort 2 Locations #
 
-## Click on your location for more information. ##
+# Welome to Code.org Professional Development
 
-[Boston](/educate/pd/2/boston)
-<br />
-[Chicago](/educate/pd/2/chicago)
-<br />
-[Greater D.C.](/educate/pd/2/greater-dc)
-<br />
-[Hawaii](/educate/pd/2/hawaii)
-<br />
-[Houston](/educate/pd/2/houston)
-<br />
-[Las Vegas](/educate/pd/2/las-vegas)
-<br />
-[Los Angeles](/educate/pd/2/los-angeles)
-<br />
-[Northern California](/educate/pd/2/northern-california)
-<br />
-[New York City](/educate/pd/2/nyc)
-<br />
-[Ohio](/educate/pd/2/ohio)
-<br />
-[Seattle](/educate/pd/2/seattle)
-<br />
-[South Florida](/educate/pd/2/south-florida)
-<br />
-[Spokane](/educate/pd/2/spokane)
-<br />
-[Utah](/educate/pd/2/utah)
-<br />
 
-----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+## Phase 1: Online Introduction ##
 
-<br />
-<br />
+### High School Teachers ###
+**Overview**
+<br/>
+Phase 1: Online Introduction is a 2 hour online course introducing the professional development content and preparing for the summer workshop. Phase 1 starts on Monday, May 4th, 2015. The online course is offered through [studio.code.org](studio.code.org). Pre-registration with your district is required to access professional development courses.
+
+
+**What to Expect** 
+<br/>
+On Monday, May 4th, 2015 you will receive an e-mail from registration@code.org asking you to activate your [studio.code.org](studio.code.org) account. When you receive this message, please follow the instructions in order to access the Phase 1: Online Introduction course.
+
+
+**Agendas**
+
+Coming Soon! 
+
+**Hangout dates and links**
+
+
+
+## Administrators and Counselors
+
+
+
+
+

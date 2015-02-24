@@ -370,7 +370,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":194,"../../locale/current/eval":195,"../StudioApp":4,"../block_utils":18,"../canvg/canvg.js":41,"../codegen":44,"../dom":47,"../skins":147,"../templates/page.html":169,"./api":48,"./controls.html":50,"./evalError":54,"./levels":63,"./visualization.html":65}],65:[function(require,module,exports){
+},{"../../locale/current/common":195,"../../locale/current/eval":196,"../StudioApp":4,"../block_utils":18,"../canvg/canvg.js":41,"../codegen":44,"../dom":47,"../skins":147,"../templates/page.html":170,"./api":48,"./controls.html":50,"./evalError":54,"./levels":63,"./visualization.html":65}],65:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -390,7 +390,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],63:[function(require,module,exports){
+},{"ejs":211}],63:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -458,7 +458,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":195,"../block_utils":18}],50:[function(require,module,exports){
+},{"../../locale/current/eval":196,"../block_utils":18}],50:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -481,7 +481,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":194,"../../locale/current/eval":195,"ejs":210}],49:[function(require,module,exports){
+},{"../../locale/current/common":195,"../../locale/current/eval":196,"ejs":211}],49:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -776,7 +776,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":194,"../../locale/current/eval":195,"../sharedFunctionalBlocks":146,"./evalUtils":62}],48:[function(require,module,exports){
+},{"../../locale/current/common":195,"../../locale/current/eval":196,"../sharedFunctionalBlocks":146,"./evalUtils":62}],48:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1374,7 +1374,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":189,"./evalError":54}],54:[function(require,module,exports){
+},{"../utils":190,"./evalError":54}],54:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1404,6 +1404,6 @@ CustomEvalError.Type = {
   BadColor: 1
 };
 
-},{"../../locale/current/eval":195}],195:[function(require,module,exports){
+},{"../../locale/current/eval":196}],196:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
 },{}]},{},[64]);
