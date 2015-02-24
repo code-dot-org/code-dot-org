@@ -7,7 +7,10 @@
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Goal:",
   "levelIncompleteError": "Your expression does not match the goal.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Here is your calculation! Continue working on it, or move on to the next puzzle!",
   "yourExpression"  : "Your expression:",
-  "wrongInput": "You are calling your function with the wrong value."
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

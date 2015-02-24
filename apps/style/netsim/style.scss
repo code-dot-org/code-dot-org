@@ -129,50 +129,105 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     color: whitesmoke;
   }
 
-  .netsim_packet {
+  div.netsim_packet {
     border: solid darkgray thin;
     background-color: lightgray;
     padding: 0.5em;
     border-radius: 0.5em;
 
-    .packet_header {
-      label {
-        display: inline;
-      }
+    th {
+      font-size: 10pt;
+      font-variant: small-caps;
+    }
 
-      label[for="from_address"] {
-        margin-left: 1em;
-      }
+    /* All input fields */
+    input, textarea {
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      font-family: monospace;
+    }
 
-      label[for="packet_index"] {
-        margin-left: 1em;
-      }
+    .watermark {
+      color: #d3d3d3;
+    }
 
-      input[type="text"] {
-        width: 2em;
+    .bit_counter {
+      text-align: right;
+      color: darkgray;
+    }
+
+    /* All columns but "message" */
+    th.rowType, td.rowType,
+    th.toAddress, td.toAddress,
+    th.fromAddress, td.fromAddress,
+    th.packetInfo, td.packetInfo {
+      width: 1%; /* depend on nowrap */
+      text-align: center;
+
+      input {
+        width: 3em;
         text-align: center;
       }
     }
 
-    .packet_body {
+    th.rowType, td.rowType {
+      text-align: right;
+      vertical-align: top;
+    }
+
+    /* toAddress column */
+    th.toAddress, td.toAddress {
+      input {
+        background-color: rgba(255, 233, 238, 0.85);
+      }
+    }
+
+    /* fromAddress column */
+    th.fromAddress, td.fromAddress {
+
+      input {
+        background-color: lightcyan;
+      }
+    }
+
+    /* packetInfo column */
+    th.packetInfo, td.packetInfo {
+
+      input {
+        background-color: rgba(212, 238, 212, 0.90);
+      }
+    }
+
+    /* message column */
+    th.message, td.message {
+      /* Wrapper div keeps textarea bound within column, but still
+         able to set padding. */
       div {
-        display: inline-block;
-
-        h2 {
-          line-height: 11pt;
-          font-size: 11pt;
-        }
-
-        #bit_counter {
-          float: right;
-          line-height: 11pt;
-          font-size: 9pt;
-          color: darkgray;
-        }
-
+        margin-right: 0.4em;
         textarea {
-          font-family: monospace;
+          width: 100%;
+          padding: 0.2em;
         }
+      }
+
+    }
+
+    /* All rows but headers */
+    tbody {
+      td {
+        vertical-align: top;
+      }
+    }
+
+    /* hexadecimal row */
+    tr.hexadecimal {
+      input, textarea {
+      }
+    }
+
+    /* binary row */
+    tr.binary {
+      input, textarea {
       }
     }
   }

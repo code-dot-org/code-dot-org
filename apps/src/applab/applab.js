@@ -21,7 +21,6 @@ var utils = require('../utils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
-var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
