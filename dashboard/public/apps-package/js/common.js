@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],146:[function(require,module,exports){
+},{}],148:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3512,7 +3512,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":196,"./utils":191}],177:[function(require,module,exports){
+},{"../locale/current/common":198,"./utils":193}],179:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3530,7 +3530,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],171:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3554,7 +3554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],148:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],150:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3819,7 +3819,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],147:[function(require,module,exports){
+},{"./dom":47}],149:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -3970,7 +3970,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":145,"./utils":191}],145:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":147,"./utils":193}],147:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4248,7 +4248,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":196,"./block_utils":18,"./utils":191,"./xml":192}],19:[function(require,module,exports){
+},{"../locale/current/common":198,"./block_utils":18,"./utils":193,"./xml":194}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4413,7 +4413,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":196}],4:[function(require,module,exports){
+},{"../locale/current/common":198}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5830,7 +5830,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":196,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./feedback":66,"./templates/builder.html":165,"./templates/buttons.html":166,"./templates/instructions.html":168,"./templates/learn.html":169,"./templates/makeYourOwn.html":170,"./utils":191,"./xml":192,"url":211}],211:[function(require,module,exports){
+},{"../locale/current/common":198,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./feedback":66,"./templates/builder.html":167,"./templates/buttons.html":168,"./templates/instructions.html":170,"./templates/learn.html":171,"./templates/makeYourOwn.html":172,"./utils":193,"./xml":194,"url":213}],213:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6539,13 +6539,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":207,"querystring":210}],210:[function(require,module,exports){
+},{"punycode":209,"querystring":212}],212:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":208,"./encode":209}],209:[function(require,module,exports){
+},{"./decode":210,"./encode":211}],211:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6632,7 +6632,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],208:[function(require,module,exports){
+},{}],210:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6718,7 +6718,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],207:[function(require,module,exports){
+},{}],209:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7229,7 +7229,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],170:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7249,7 +7249,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],169:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],171:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7271,7 +7271,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],168:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],170:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7291,7 +7291,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],165:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7311,7 +7311,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":212}],66:[function(require,module,exports){
+},{"ejs":214}],66:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8511,7 +8511,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":196,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":67,"./templates/buttons.html":166,"./templates/code.html":167,"./templates/shareFailure.html":173,"./templates/sharing.html":174,"./templates/showCode.html":175,"./templates/trophy.html":176,"./utils":191,"./xml":192}],176:[function(require,module,exports){
+},{"../locale/current/common":198,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":67,"./templates/buttons.html":168,"./templates/code.html":169,"./templates/shareFailure.html":175,"./templates/sharing.html":176,"./templates/showCode.html":177,"./templates/trophy.html":178,"./utils":193,"./xml":194}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8531,7 +8531,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":212}],175:[function(require,module,exports){
+},{"ejs":214}],177:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8551,7 +8551,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],174:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8571,7 +8571,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],173:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8591,7 +8591,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":212}],167:[function(require,module,exports){
+},{"ejs":214}],169:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8611,7 +8611,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":212}],166:[function(require,module,exports){
+},{"ejs":214}],168:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8631,7 +8631,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":196,"ejs":212}],196:[function(require,module,exports){
+},{"../../locale/current/common":198,"ejs":214}],198:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],67:[function(require,module,exports){
 var constants = require('./constants');
@@ -8762,7 +8762,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":172}],172:[function(require,module,exports){
+},{"./constants":46,"./templates/readonly.html":174}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8783,7 +8783,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":212}],212:[function(require,module,exports){
+},{"ejs":214}],214:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9138,7 +9138,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":213,"./utils":214,"fs":204,"path":205}],214:[function(require,module,exports){
+},{"./filters":215,"./utils":216,"fs":206,"path":207}],216:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9162,7 +9162,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],213:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9361,7 +9361,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],205:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9589,7 +9589,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":206}],206:[function(require,module,exports){
+},{"_process":208}],208:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9648,7 +9648,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],204:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 
 },{}],44:[function(require,module,exports){
 var utils = require('./utils');
@@ -10076,7 +10076,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{"./utils":191}],191:[function(require,module,exports){
+},{"./utils":193}],193:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10567,7 +10567,7 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":77,"./lodash":85,"./xml":192}],85:[function(require,module,exports){
+},{"./hammer":77,"./lodash":85,"./xml":194}],85:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -16535,7 +16535,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":192}],192:[function(require,module,exports){
+},{"./xml":194}],194:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
