@@ -233,7 +233,7 @@ module LevelsHelper
       project_template_level_name
       scrollbars
       original_start_blocks
-      is_project
+      is_project_level
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
