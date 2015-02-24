@@ -1,10 +1,12 @@
 ---
-title: Translate Code.org Tutorials
+title: Help Translate
 nav: translate_nav
 ---
 
-## For more languages, please choose from the [full list](https://crowdin.com/project/codeorg) here. 
-Please review our [translation process](/crowdin) for frequently asked questions about how to contribute.
+# Help Translate
+1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
+2. Translate [our tutorials](/crowdin) by selecting your language below.
+3. Translate [video subtitles](/amara).
 
 ---
 

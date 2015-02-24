@@ -6,7 +6,7 @@ var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {
@@ -317,6 +317,41 @@ describe('EquationSet', function () {
       assert.throws(function () {
         set.evaluate();
       });
+    });
+  });
+
+  describe('computesSingleVariable', function () {
+    it ('returns true when our compute expression is a variable', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+      set.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+      set.addEquation_(new Equation('age_in_months', [],
+        new ExpressionNode('*', ['age', 12])));
+      assert.equal(set.computesSingleVariable(), true);
+    });
+
+    it('returns false when our compute expression is not just a variable', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, [],
+        new ExpressionNode('*', ['age', 12])));
+      set.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+      assert.equal(set.computesSingleVariable(), false);
+    });
+  });
+
+  describe('getConstants', function () {
+    it('returns constants', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, [], new ExpressionNode('mult')));
+      set.addEquation_(new Equation('x', [], new ExpressionNode(17)));
+      set.addEquation_(new Equation('y', [], new ExpressionNode(7)));
+      set.addEquation_(new Equation('mult', [],
+        new ExpressionNode('*', ['x', 'y'])));
+
+      var constants = set.getConstants();
+      assert.equal(constants.length, 2);
+      assert.equal(constants[0].name, 'x');
+      assert.equal(constants[1].name, 'y');
     });
   });
 });

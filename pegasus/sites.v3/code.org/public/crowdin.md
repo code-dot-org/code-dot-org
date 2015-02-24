@@ -1,16 +1,9 @@
 ---
-title: About Translation Process
+title: Translate Tutorials
 nav: translate_nav
 ---
 
-# Help us translate Code.org
-
-We want help translating the Code.org site, tutorials, and videos. 
-
-1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
-2. Join the [Code.org project](https://crowdin.com/project/codeorg/invite), and start immediately!
-
-## Translating the site and tutorials
+# Translating the site and tutorials
 The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. 
 
 There are currently three projects, the [Code.org Project](https://crowdin.com/project/codeorg), [Hour of Code Project](https://crowdin.com/project/hour-of-code), and [Curriculum Project](https://crowdin.com/project/lesson-plans). Please complete translations for these projects in that order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
@@ -32,19 +25,6 @@ The final translation that appears on our site is selected as follows:
 <embed src="/files/crowdin.swf" width=800 height=550 />
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
-
-## Translating video captions
-Translations for video captions is done through Google Translate Toolkit. To get started, send a request for an invite to translations@code.org, including a gmail email address (or one hosted on Gmail) and the language you'd like to translate. You will be sent invitations for the videos that are still missing translations in your language.
-
-The process for translating video captions is as follows:
-
-1. I send you an invite for a video translation with an English caption track.
-2. As you work on the translations, you can click File/Save or wait for it to save automatically every few minutes. 
-3. When you're sure the translations are complete, click the "Publish to YouTube" button. This sends me an email telling me you're done.
-4. After receiving this email, I will manually publish them. I will then send you a confirmation e-mail that it's been published.
-5. Verify that you can see captions in your language and that they appear with your translations.
-
-Note, that when you click "Publish to YouTube" it will give you an error message because you don't have access to do so. This is OK. It will not actually publish it to YouTube, but it will still send me the e-mail notifying me that you're done. Since it sends me an e-mail, you do not need to send me another one telling me that you finished. 
 
 ## Tips and Guidelines for Consistent Translations
 The Code.org drag-drop tutorials are based on the Blockly language. Many of the tips below are loosely based on the wiki article [Translating:Blockly](http://translatewiki.net/wiki/Translating:Blockly)
@@ -77,4 +57,3 @@ As a translator, please do not submit a translation that is identical to another
 
 ### Translate KhanAcademy coding tutorials to Spanish and Portuguese
 Click [here](http://cs-blog.khanacademy.org/2013/10/ayuda-traducir-nuestro-curriculo-en.html) to also help KhanAcademy translate their tutorials to Spanish and Portuguese.
-
