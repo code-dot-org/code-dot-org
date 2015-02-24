@@ -172,7 +172,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
-          
+
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
@@ -234,7 +234,7 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
  * @returns array newly hidden blocks if any are hidden
  */
 Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
-  var newlyHidden = [];
+  var nowHidden = [];
   if (isVisible) {
     hiddenBlockArray.forEach(function (block) {
       block.setCurrentlyHidden(false);
@@ -243,11 +243,11 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
     this.modalBlockSpace.getTopBlocks()
       .filter(blockFilter)
       .forEach(function (block) {
-        newlyHidden.push(block);
+        nowHidden.push(block);
         block.setCurrentlyHidden(true);
       }, this);
   }
-  return newlyHidden;
+  return nowHidden;
 };
 
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
