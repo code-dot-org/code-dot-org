@@ -1,6 +1,13 @@
 ---
 theme: angular
 ---
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/angular-selectize.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
 %div{'ng-app' => 'opsApp', 'ng-view' => ''}
 
 :javascript
@@ -11,7 +18,8 @@ theme: angular
     'ngRoute',
     'ngResource',
     'opsApp.controllers',
-    'opsApp.services'
+    'opsApp.services',
+    'selectize'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
                         {templateUrl: '/ops-dashboard/landing'});
@@ -253,13 +261,28 @@ theme: angular
     }
   ]);
 
-  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService) {
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});
       } else {
         $scope.cohort = {};
       }
+
+      $scope.newDistrict = function() {
+        $scope.cohort.districts.push({
+          id: '',
+          name: '',
+          max_teachers: ''
+        });
+      };
+
+      if (!$scope.cohort.districts) {
+        $scope.cohort.districts = [];
+        $scope.newDistrict();
+      }
+
+      $scope.districts = districtsService.query();
 
       $scope.save = function() {
         if ($scope.cohort.id) { // existing
