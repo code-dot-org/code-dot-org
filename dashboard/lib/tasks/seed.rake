@@ -45,7 +45,7 @@ namespace :seed do
     touch SEEDED # touch seeded "early" to reduce race conditions
     begin
       custom_scripts = SCRIPTS_GLOB.select { |script| File.mtime(script) > scripts_seeded_mtime }
-      Level.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
+      LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts)
       Script.update_i18n(custom_i18n)
     rescue
@@ -136,13 +136,13 @@ namespace :seed do
   end
 
   task import_custom_levels: :environment do
-    Level.load_custom_levels
+    LevelLoader.load_custom_levels
   end
 
   # Generate the database entry from the custom levels json file
   task custom_levels: :environment do
     if !Rails.env.levelbuilder? || ENV["FORCE_CUSTOM_LEVELS"]
-      Level.load_custom_levels
+      LevelLoader.load_custom_levels
     end
   end
 
