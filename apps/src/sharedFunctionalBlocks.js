@@ -5,6 +5,8 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 var msg = require('../locale/current/common');
 
+var ARITHMETIC_TITLE_FONT_SIZE = 25;
+
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
@@ -31,7 +33,9 @@ function installPlus(blockly, generator, gensym) {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
+
+
     }
   };
 
@@ -49,7 +53,7 @@ function installMinus(blockly, generator, gensym) {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
@@ -67,7 +71,7 @@ function installTimes(blockly, generator, gensym) {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
@@ -85,7 +89,7 @@ function installDividedBy(blockly, generator, gensym) {
       blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
         { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
         { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
-      ]);
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
