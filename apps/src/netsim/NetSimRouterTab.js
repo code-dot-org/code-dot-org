@@ -21,10 +21,18 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
  * Generator and controller for router information view.
+ * @param {jQuery} rootDiv - Parent element for this component.
  * @param {NetSimConnection} connection
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (connection) {
+var NetSimRouterTab = module.exports = function (rootDiv, connection) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -35,7 +43,6 @@ var NetSimRouterTab = module.exports = function (connection) {
   logger.info("RouterPanel registered to connection shardChange");
 
   /**
-   *
    * @type {NetSimLocalClientNode}
    */
   this.myLocalNode = null;
@@ -46,21 +53,18 @@ var NetSimRouterTab = module.exports = function (connection) {
    * @private
    */
   this.myConnectedRouter = null;
+
+  // Initial render
+  this.render();
 };
 
 /**
- * Generate a new NetSimRouterTab, puttig it on the page and hooking
- * it up to the given connection where it will update to reflect the
- * state of the connected router, if there is one.
- * @param element
- * @param connection
+ * Fill the root div with new elements reflecting the current state.
  */
-NetSimRouterTab.createWithin = function (element, connection) {
-  var controller = new NetSimRouterTab(connection);
-  element.innerHTML = markup({});
-  controller.bindElements_();
-  controller.refresh();
-  return controller;
+NetSimRouterTab.prototype.render = function () {
+  var renderedMarkup = $(markup({}));
+  this.rootDiv_.html(renderedMarkup);
+  this.bindElements_();
 };
 
 /**
@@ -68,8 +72,6 @@ NetSimRouterTab.createWithin = function (element, connection) {
  * @private
  */
 NetSimRouterTab.prototype.bindElements_ = function () {
-  this.rootDiv_ = $('#netsim_router_panel');
-
   this.dnsModeRadios_ = this.rootDiv_.find('input[type="radio"][name="dns_mode"]');
   this.dnsModeRadios_.change(this.onDnsModeChange_.bind(this));
 
@@ -77,8 +79,8 @@ NetSimRouterTab.prototype.bindElements_ = function () {
   this.becomeDnsButton_ = this.dnsModeManualControls_.find('#become_dns_button');
   this.becomeDnsButton_.click(this.onBecomeDnsButtonClick_.bind(this));
 
-  this.connectedSpan_ = this.rootDiv_.find('#connected');
-  this.notConnectedSpan_ = this.rootDiv_.find('#not_connected');
+  this.connectedDiv_ = this.rootDiv_.find('div.connected');
+  this.notConnectedDiv_ = this.rootDiv_.find('div.not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
 
   this.routerLogDiv_ = this.rootDiv_.find('#router_log');
@@ -174,14 +176,14 @@ NetSimRouterTab.prototype.onBecomeDnsButtonClick_ = function () {
 /** Update the address table to show the list of nodes in the local network. */
 NetSimRouterTab.prototype.refresh = function () {
   if (this.myConnectedRouter) {
-    this.connectedSpan_.show();
-    this.notConnectedSpan_.hide();
+    this.connectedDiv_.show();
+    this.notConnectedDiv_.hide();
     this.refreshDnsModeSelector_();
     this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
     this.refreshLogTable_(this.myConnectedRouter.getLog());
   } else {
-    this.notConnectedSpan_.show();
-    this.connectedSpan_.hide();
+    this.notConnectedDiv_.show();
+    this.connectedDiv_.hide();
   }
 };
 

@@ -324,7 +324,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   padding: 0 1em;
 }
 
-#netsim_router_panel {
+.netsim_router_tab {
   #dns_mode_control {
     input[type="radio"] {
       vertical-align: middle;
