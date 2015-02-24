@@ -13,15 +13,17 @@
 
 var markup = require('./NetSimDnsTab.html');
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
+var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
  * @param {function} dnsModeChangeCallback
+ * @param {function} becomeDnsCallback
  * @constructor
  */
 var NetSimDnsTab = module.exports = function (rootDiv,
-    dnsModeChangeCallback) {
+    dnsModeChangeCallback, becomeDnsCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -36,10 +38,22 @@ var NetSimDnsTab = module.exports = function (rootDiv,
   this.dnsModeChangeCallback_ = dnsModeChangeCallback;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.becomeDnsCallback_ = becomeDnsCallback;
+
+  /**
    * @type {NetSimDnsModeControl}
    * @private
    */
   this.dnsModeControl_ = null;
+
+  /**
+   * @type {NetSimDnsManualControl}
+   * @private
+   */
+  this.dnsManualControl_ = null;
 
   this.render();
 };
@@ -53,6 +67,9 @@ NetSimDnsTab.prototype.render = function () {
   this.dnsModeControl_ = new NetSimDnsModeControl(
       this.rootDiv_.find('.dns_mode'),
       this.dnsModeChangeCallback_);
+  this.dnsManualControl_ = new NetSimDnsManualControl(
+      this.rootDiv_.find('.dns_manual_control'),
+      this.becomeDnsCallback_);
 };
 
 /**
@@ -60,4 +77,16 @@ NetSimDnsTab.prototype.render = function () {
  */
 NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   this.dnsModeControl_.setDnsMode(newDnsMode);
+  if (newDnsMode === 'manual') {
+    this.rootDiv_.find('.dns_manual_control').show();
+  } else {
+    this.rootDiv_.find('.dns_manual_control').hide();
+  }
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimDnsTab.prototype.setIsDnsNode = function (isDnsNode) {
+  this.dnsManualControl_.setIsDnsNode(isDnsNode);
 };

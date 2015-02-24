@@ -23,10 +23,12 @@ var NetSimDnsTab = require('./NetSimDnsTab');
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
+ * @param {function} becomeDnsCallback
  * @constructor
  */
 var NetSimTabsComponent = module.exports = function (rootDiv, connection,
-    chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback) {
+    chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
+    becomeDnsCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -58,6 +60,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, connection,
    * @private
    */
   this.dnsModeChangeCallback_ = dnsModeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.becomeDnsCallback_ = becomeDnsCallback;
 
   /**
    * @type {NetSimRouterTab}
@@ -102,7 +110,8 @@ NetSimTabsComponent.prototype.render = function () {
 
   this.dnsTab_ = new NetSimDnsTab(
       this.rootDiv_.find('#tab_dns'),
-      this.dnsModeChangeCallback_);
+      this.dnsModeChangeCallback_,
+      this.becomeDnsCallback_);
 };
 
 /**
@@ -124,5 +133,11 @@ NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
  */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
   this.dnsTab_.setDnsMode(newDnsMode);
-  this.routerTab_.setDnsMode(newDnsMode);
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
+  this.dnsTab_.setIsDnsNode(isDnsNode);
 };
