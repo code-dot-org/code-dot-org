@@ -45,6 +45,17 @@ social:
 
 ---
 
+:css
+  @media screen and (max-width: 600px)
+  {
+    .captions {font-size: 12px}
+  }
+  @media screen and (min-width: 601px)
+  {
+    .captions {font-size:18px}
+  }
+
+
 #top{style: "position:relative; width:100%; overflow:hidden"}
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"]).all
   - heroes.shuffle!
@@ -70,7 +81,7 @@ social:
           - text = I18n.t(entry[:text1_s])
           - unless text.nil_or_empty?
             - lines = text.lines 
-            %div{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; font-size:18px; color:#eee"}
+            .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee; line-height:22px"}
               .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
                 = lines[0]
               .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
