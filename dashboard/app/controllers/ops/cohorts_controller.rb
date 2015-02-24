@@ -8,33 +8,41 @@ module Ops
       render text: e.to_s, status: :unprocessable_entity
     end
 
-    # POST /ops/cohorts/1/teacher/1 (todo: set up this custom route manually)
+    # POST /ops/cohorts/1/teachers/:teacher_id
     def add_teacher
-      @cohort.add_teacher(params[:teacher_id])
+      @cohort.teachers << User.find(params[:teacher_id])
       @cohort.save!
+      render json: @cohort
+    end
+
+    # DELETE /ops/cohorts/1/teachers/:teacher_id
+    def drop_teacher
+      @cohort.teachers.delete User.find(params[:teacher_id])
+      @cohort.save!
+      render json: @cohort
     end
 
     # POST /ops/cohorts
     def create
       @cohort.update!(params[:cohort])
-      render json: @cohort.as_json
+      render json: @cohort
     end
 
     # GET /ops/cohorts
     def index
-      render json: @cohorts.as_json
+      render json: @cohorts
     end
 
     # GET /ops/cohorts/1
     def show
-      render json: @cohort.as_json
+      render json: @cohort
     end
 
     # PATCH/PUT /ops/cohorts/1
     # todo: Use this route to batch-update the teacher list in a cohort?
     def update
       @cohort.update!(params[:cohort])
-      render json: @cohort.as_json
+      render json: @cohort
     end
 
     # DELETE /ops/cohorts/1
@@ -64,7 +72,7 @@ module Ops
       district_names_list = params[:cohort].delete :district_names
       if district_names_list
         params[:cohort][:districts] = district_names_list.map do |district_name|
-          district = District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
+          District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
         end
       end
     end

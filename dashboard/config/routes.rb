@@ -180,7 +180,10 @@ Dashboard::Application.routes.draw do
         get 'teachers'
       end
     end
-    resources :cohorts
+    resources :cohorts do
+      post 'teachers/:teacher_id', action: 'add_teacher', on: :member
+      delete 'teachers/:teacher_id', action: 'drop_teacher', on: :member
+    end
     resources :workshops do
       resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
         resources :workshop_attendance, path: '/attendance', shallow: true do

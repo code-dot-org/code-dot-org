@@ -16,7 +16,7 @@ class Cohort < ActiveRecord::Base
     _teacher_ids = teacher_ids
     _teachers = User.where(id: _teacher_ids) # .joins(:district) doesn't work on the habtm collection directly for some reason
     teacher_districts = _teachers.joins(:district)
-    errors.add(:teachers, "do not have a district specified: #{_teachers.map(&:email)}") unless
+    errors.add(:teachers, "do not have a district specified: #{_teachers.joins(:district).where('districts_users.district_id', nil).map(&:email)}") unless
         teacher_districts.count == _teacher_ids.count
 
     # All teachers in this cohort must be in eligible districts
