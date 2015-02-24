@@ -327,6 +327,21 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     border-bottom: solid darkgrey thin;
   }
 
+  table {
+    width: 100%;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
+
+    th {
+      font-size: 10pt;
+      font-variant: small-caps;
+    }
+  }
+
   /* Modify actual tabs at top of tab area */
   .ui-tabs-nav li a {
     font-size: 8pt;
@@ -334,18 +349,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 
   .netsim_router_tab {
-    #netsim_router_network_table {
-      .localNode {
-        font-weight: bold;
-        background-color: lightcyan;
-      }
-
-      .dnsNode {
-        color: white;
-        background-color: darkorange;
-      }
-    }
-
     #netsim_router_log_table {
       display: block;
       max-height: 200px;
@@ -363,6 +366,18 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
       label {
         display: inline;
         margin-left: 1em;
+      }
+    }
+
+    .netsim_dns_table {
+      tr.localNode {
+        font-weight: bold;
+        background-color: lightcyan;
+      }
+
+      tr.dnsNode {
+        color: white;
+        background-color: darkorange;
       }
     }
   }

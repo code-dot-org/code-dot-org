@@ -13,8 +13,6 @@
 'use strict';
 
 var markup = require('./NetSimRouterTab.html');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = NetSimRouterNode.DnsMode;
 var NetSimLogger = require('./NetSimLogger');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
@@ -43,11 +41,6 @@ var NetSimRouterTab = module.exports = function (rootDiv, connection) {
   logger.info("RouterPanel registered to connection shardChange");
 
   /**
-   * @type {NetSimLocalClientNode}
-   */
-  this.myLocalNode = null;
-
-  /**
    * Cached reference to router
    * @type {NetSimRouterNode}
    * @private
@@ -74,7 +67,6 @@ NetSimRouterTab.prototype.render = function () {
 NetSimRouterTab.prototype.bindElements_ = function () {
   this.connectedDiv_ = this.rootDiv_.find('div.connected');
   this.notConnectedDiv_ = this.rootDiv_.find('div.not_connected');
-  this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
 
   this.routerLogDiv_ = this.rootDiv_.find('#router_log');
   this.routerLogTable_ = this.routerLogDiv_.find('#netsim_router_log_table');
@@ -111,12 +103,6 @@ NetSimRouterTab.prototype.onRouterChange_ = function (wire, router) {
     logger.info("RouterPanel unregistered from router stateChange");
   }
 
-  if (this.routerWireChangeKey !== undefined) {
-    this.myConnectedRouter.wiresChange.unregister(this.routerWireChangeKey);
-    this.routerWireChangeKey = undefined;
-    logger.info("RouterPanel unregistered from router wiresChange");
-  }
-
   if (this.routerLogChangeKey !== undefined) {
     this.myConnectedRouter.logChange.unregister(this.routerLogChangeKey);
     this.routerLogChangeKey = undefined;
@@ -133,10 +119,6 @@ NetSimRouterTab.prototype.onRouterChange_ = function (wire, router) {
         this.onRouterStateChange_.bind(this));
     logger.info("RouterPanel registered to router stateChange");
 
-    this.routerWireChangeKey = router.wiresChange.register(
-        this.onRouterWiresChange_.bind(this));
-    logger.info("RouterPanel registered to router wiresChange");
-
     this.routerLogChangeKey = router.logChange.register(
         this.onRouterLogChange_.bind(this));
   }
@@ -144,10 +126,6 @@ NetSimRouterTab.prototype.onRouterChange_ = function (wire, router) {
 
 NetSimRouterTab.prototype.onRouterStateChange_ = function () {
   this.refresh();
-};
-
-NetSimRouterTab.prototype.onRouterWiresChange_ = function () {
-  this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
 };
 
 NetSimRouterTab.prototype.onRouterLogChange_ = function () {
@@ -159,43 +137,11 @@ NetSimRouterTab.prototype.refresh = function () {
   if (this.myConnectedRouter) {
     this.connectedDiv_.show();
     this.notConnectedDiv_.hide();
-    this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
     this.refreshLogTable_(this.myConnectedRouter.getLog());
   } else {
     this.notConnectedDiv_.show();
     this.connectedDiv_.hide();
   }
-};
-
-NetSimRouterTab.prototype.refreshAddressTable_ = function (addressTableData) {
-  var dnsMode = this.getDnsMode_();
-  var tableBody = this.networkTable_.find('tbody');
-  tableBody.empty();
-
-  addressTableData.forEach(function (row) {
-    var displayHostname = row.hostname;
-    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
-      displayHostname += " (DNS)";
-    }
-    var displayAddress = '';
-    if (dnsMode === DnsMode.NONE || row.isDnsNode || row.isLocal) {
-      displayAddress = row.address;
-    }
-
-    var tableRow = $('<tr>');
-    $('<td>').html(displayHostname).appendTo(tableRow);
-    $('<td>').html(displayAddress).appendTo(tableRow);
-
-    if (row.isLocal) {
-      tableRow.addClass('localNode');
-    }
-
-    if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
-      tableRow.addClass('dnsNode');
-    }
-
-    tableRow.appendTo(tableBody);
-  });
 };
 
 NetSimRouterTab.prototype.refreshLogTable_ = function (logTableData) {
@@ -213,11 +159,4 @@ NetSimRouterTab.prototype.refreshLogTable_ = function (logTableData) {
 
     tableRow.appendTo(tableBody);
   }.bind(this));
-};
-
-NetSimRouterTab.prototype.getDnsMode_ = function () {
-  if (this.myConnectedRouter) {
-    return this.myConnectedRouter.dnsMode;
-  }
-  return DnsMode.NONE;
 };
