@@ -108,3 +108,20 @@ en:
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
         Type the arithmetic expression here: Type the arithmetic expression here
+      Open text response example:
+        ! '': 
+        I loved it because...: I loved it because...
+      Test Markdown level:
+        Enter title here: Enter title here
+        Enter prompt here: Enter prompt here
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio are...
+      PDK5 Course Descriptions:
+        Overview of Courses 1, 2, and 3: Overview of Courses 1, 2, and 3
+        I am going to start with Course...: I am going to start with Course...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
+        ? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?
+        : Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?
+        In my classroom, I want to...: In my classroom, I want to...
