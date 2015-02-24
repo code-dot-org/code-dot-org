@@ -29,7 +29,7 @@ class Blockly < Level
     definition_highlight
     definition_collapse
     project_template_level_name
-    is_project
+    is_project_level
     edit_code
     code_functions
   )

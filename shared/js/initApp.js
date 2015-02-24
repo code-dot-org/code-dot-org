@@ -160,7 +160,7 @@ function callbackSafe(callback, data) {
   }
 }
 
-dashboard.saveProject = function(callback) { console.log('saving')
+dashboard.saveProject = function(callback) {
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
