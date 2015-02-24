@@ -5092,12 +5092,19 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
 *     visible blocks preceding all hidden blocks.
 */
 StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
+  var userVisible;
+  var currentlyHidden = false;
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute &&
-        xmlBlock.getAttribute('uservisible') === 'false') {
+    if (xmlBlock.getAttribute) {
+      userVisible = xmlBlock.getAttribute('uservisible');
+      var type = xmlBlock.getAttribute('type');
+      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;  
+    }
+
+    if (currentlyHidden || userVisible === 'false') {
       hiddenXmlBlocks.push(xmlBlock);
     } else {
       visibleXmlBlocks.push(xmlBlock);
