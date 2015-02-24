@@ -1347,6 +1347,20 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
 };
 
 /**
+ * Account for the fact that we have two different visibilty states.
+ * UserVisible is a persisent property used to create blocks that can be seen
+ * by level builders, but not by the user.
+ * CurrentlyHidden is a non-persistent property used to hide certain blocks
+ * (like function definitions/examples) that should only be visible when using
+ * the modal function editor.
+ * @returns true if both visibility conditions are met.
+ */
+Blockly.Block.prototype.isVisible = function () {
+  return targetSourceBlock.isUserVisible() &&
+    !targetSourceBlock.isCurrentlyHidden();
+};
+
+/**
  * Set the URL of this block's help page.
  * @param {string|Function} url URL string for block help, or function that
  *     returns a URL.  Null for no help.

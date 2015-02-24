@@ -155,9 +155,10 @@ Blockly.ContractEditor.prototype.create_ = function() {
       }, this),
       highlightBox: sharedHighlightBox,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
-        this.setBlockSubsetVisibility(!isNowCollapsed,
-          goog.bind(this.isBlockInExampleArea, this),
+        this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(
+          !isNowCollapsed, goog.bind(this.isBlockInExampleArea, this),
           this.hiddenExampleBlocks_);
+
         this.position_();
       }, this)
     });
@@ -168,9 +169,10 @@ Blockly.ContractEditor.prototype.create_ = function() {
       headerText: "3. Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
-        this.setBlockSubsetVisibility(!isNowCollapsed,
-          goog.bind(this.isBlockInFunctionArea, this),
+        this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
+          !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
+          
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
@@ -228,23 +230,24 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
  * Hides a set of blocks
  * @param isVisible whether to set blocks in area visible (true) or invisible (false)
  * @param blockFilter subset of blocks to look at
- * @param hiddenBlockArray array containing currently hidden blocks, gets filled with
- *                        newly hidden blocks if any are hidden
+ * @param hiddenBlockArray array containing currently hidden blocks
+ * @returns array newly hidden blocks if any are hidden
  */
 Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
+  var newlyHidden = [];
   if (isVisible) {
     hiddenBlockArray.forEach(function (block) {
-      block.setUserVisible(true);
+      block.setCurrentlyHidden(false);
     }, this);
-    goog.array.clear(hiddenBlockArray);
   } else {
     this.modalBlockSpace.getTopBlocks()
       .filter(blockFilter)
       .forEach(function (block) {
-        hiddenBlockArray.push(block);
-        block.setUserVisible(false);
+        newlyHidden.push(block);
+        block.setCurrentlyHidden(true);
       }, this);
   }
+  return newlyHidden;
 };
 
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
