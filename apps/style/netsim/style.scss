@@ -95,23 +95,96 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .netsim_log_widget {
   border: solid darkgray thin;
   margin: 0.5em;
-  padding: 10px;
+  padding: 0;
 
   h1 {
-    margin: -10px -10px 10px -10px;
+    margin: 0;
     padding: 0.5em;
     font-size: 120%;
     line-height: 20px;
     background-color: #7665A0;
     color: whitesmoke;
+
+    .log_header_controls {
+      float: right;
+    }
   }
 
-  #scroll_area {
-    border: inset darkgray 2px;
+  .packet {
+    margin: 10px;
+    padding: 5px;
+    border: solid darkgray thin;
+    border-radius: 3px;
+    background-color: lightgray;
+
+    td {
+      border-color: lightgray;
+    }
+  }
+
+  .scroll_area {
     background-color: white;
-    height: 100px;
-    width: 400px;
+    height: 160px;
+    width: 100%;
     overflow-y: scroll;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 1px 5px;
+    border: solid lightgray 1px;
+    border-collapse: collapse;
+  }
+
+  th {
+    font-size: 10pt;
+    font-variant: small-caps;
+  }
+
+  td {
+    font-family: monospace;
+    vertical-align: top;
+
+    /* Make sure table text can be selected and copied */
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -khtml-user-select: text;
+    user-select: text;
+  }
+
+  th.toAddress, td.toAddress,
+  th.fromAddress, td.fromAddress,
+  th.packetInfo, td.packetInfo {
+    text-align: center;
+  }
+
+  th.toAddress, td.toAddress,
+  th.fromAddress, td.fromAddress {
+    width: 50px;
+  }
+
+  th.packetInfo, td.packetInfo {
+    width: 100px;
+  }
+
+  td.message {
+    background-color: white;
+  }
+
+  td.toAddress {
+    background-color: rgba(255, 233, 238, 0.85);
+  }
+
+  td.fromAddress {
+    background-color: lightcyan;
+  }
+
+  td.packetInfo {
+    background-color: rgba(212, 238, 212, 0.90);
   }
 }
 
@@ -134,6 +207,12 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     background-color: lightgray;
     padding: 0.5em;
     border-radius: 0.5em;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
 
     th {
       font-size: 10pt;

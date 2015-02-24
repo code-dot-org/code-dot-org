@@ -37,9 +37,11 @@ Let's get back into that Big Game that we started in stage 7.
 
 The primary goal here is to get the target in the upper left to travel from left to right and the danger in the lower right to travel from right to left.  This is accomplished in the update-target and update-danger blocks by changing the output of the function from its current default value of an unchanging x to some value relative to x.
 
-The scenario that is a little different here is that the update-target and update-danger are executed MORE THAN ONCE.  These update functions excute on a regular interval based on an unseen game clock (about every tenth of a second).  Each time these updates are executed, they evaluate the CURRENT x value and then return a new x value such that the image's position changes.  For each new execution of the update, the x value set by the previous execution becomes the starting pointing.
+Similar to the rocket-height puzzle, the update-target and update-danger are executed about every 10th of a second such to create the flip-book effect of movement.  Each time these updates are executed, they evaluate the CURRENT x value and then return a new x value such that the image's position changes.  For each new execution of the update, the x value set by the previous execution becomes the starting pointing.
 
-The program re-draws the same image, each time in a new location slightly to the left (or right), and gives the appearance of a relatively smooth movement across the screen.  Some students might notice that the characters also turn.  This feature is handled automatically based on the direction of the update.
+One new thing the students should notice is that their modifications from stage 7 should still be in place.  The Big Game is essentially a saved file for each student and as they make changes each level they work on will benefit from the the previous changes.  This makes it very important that each student has a correctly working Big Game before moving on to the next stage.
+
+It should also be noted that if a student backs up to a previous level or even a previous stage that the MOST RECENT changes which they made will be the ones that they will see.  Backing up to a previous level does NOT restore the previous state of the student's big game. Students are always looking at their most recent changes no matter which puzzle they are in. 
 
 [tip]
 

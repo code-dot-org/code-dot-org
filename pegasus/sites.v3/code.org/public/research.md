@@ -30,9 +30,11 @@ In the meantime, we've done one experiment with researchers at Stanford Universi
 
 ## Data from 2 puzzles from Hour of Code 2013 
 
-[![image](/images/fit-400/research.png)](http://stanford.edu/~cpiech/demos/research/blossoms.html)
-
 Our first foray in this space has been a partnership with a Stanford University research team led by [Mehran Sahami](http://robotics.stanford.edu/users/sahami/bio.html). Stanford researcher [Chris Piech](http://stanford.edu/~cpiech/bio/index.html) evaluated the various computer programs that students submitted to two computer programming puzzles from our popular Hour of Code tutorial. The dataset below was generated for the paper [Autonomously Generating Hints by Inferring Problem Solving Policies](http://stanford.edu/~cpiech/bio/papers/inferringProblemSolvingPolicies.pdf) by Piech, C. Mehran S. Huang J and Guibas L. 
+
+[![image](/images/fit-600/research.png)](http://stanford.edu/~cpiech/demos/research/blossoms.html)
+
+[<button>See the visualization</button>](http://stanford.edu/~cpiech/demos/research/blossoms.html)
 
 The link below is a dataset of anonymized, aggregated data of student attempts to solve these two puzzles, as explained in the readme.txt file and below. Please contact <piech@cs.stanford.edu> if you have questions.
 

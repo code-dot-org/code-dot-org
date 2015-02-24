@@ -43,8 +43,13 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of k-8" do
-    get :show, id: Script::TWENTY_HOUR_ID
+    get :show, id: Script::TWENTY_HOUR_NAME
     assert_response :success
+  end
+
+  test "should redirect old k-8" do
+    get :show, id: Script::TWENTY_HOUR_ID
+    assert_redirected_to script_path(Script.twenty_hour_script)
   end
 
   test "should get show of custom script" do
