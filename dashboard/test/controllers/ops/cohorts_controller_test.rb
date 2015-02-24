@@ -76,8 +76,31 @@ module Ops
         end
       end
       assert_response :success
-      teachers = Cohort.last.teachers
+      # Ensure that the newly-created Cohort includes the provided District and teacher info
+      cohort_id = JSON.parse(@response.body)['id']
+      cohort = Cohort.find(cohort_id)
+      assert_not_equal cohort, @cohort
+      assert_equal cohort.districts.first, @cohort.districts.first
+      teachers = cohort.teachers
       assert_equal teachers.map{|x|x.name}, teacher_info.map{|x|x[:name]}
+    end
+
+    test 'Create Cohort using district_ids instead of district_names' do
+      teacher_info = (1..5).map{|x| {name: "Teacher #{x}", email: "teacher_#{x}@school.edu", district: @cohort.districts.first.name}}
+      post :create, cohort: {name: 'Cohort name', district_ids: [@cohort.districts.first.id], teacher_info: teacher_info}
+      assert_response :success
+      cohort_id = JSON.parse(@response.body)['id']
+      cohort = Cohort.find(cohort_id)
+      assert_not_equal cohort, @cohort
+      assert_equal cohort.districts.first, @cohort.districts.first
+      teachers = cohort.teachers
+      assert_equal teachers.map{|x|x.name}, teacher_info.map{|x|x[:name]}
+    end
+
+    test 'Cannot create Cohort without providing list of acceptable districts' do
+      teacher_info = (1..5).map{|x| {name: "Teacher #{x}", email: "teacher_#{x}@school.edu", district: @cohort.districts.first.name}}
+      post :create, cohort: {name: 'Cohort name', teacher_info: teacher_info}
+      assert_response :unprocessable_entity
     end
 
     test 'Create Cohort from a list, including existing teacher account' do

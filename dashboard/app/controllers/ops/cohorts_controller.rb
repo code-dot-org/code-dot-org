@@ -4,6 +4,10 @@ module Ops
     before_filter :convert_teacher_info, :convert_district_names, only: [:create, :update]
     load_and_authorize_resource
 
+    rescue_from ActiveRecord::RecordInvalid do |e|
+      render text: e.to_s, status: :unprocessable_entity
+    end
+
     # POST /ops/cohorts/1/teacher/1 (todo: set up this custom route manually)
     def add_teacher
       @cohort.add_teacher(params[:teacher_id])
