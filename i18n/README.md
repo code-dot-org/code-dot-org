@@ -60,7 +60,7 @@ git push
 cd i18n/code.org
 ./sync-pegasus.sh
 ```
-5. Commit and push all locale files
+5. Commit and push i18n/locales/source/pegasus/mobile.yml + all locale files in pegasus/i18n/cache/xx-YY.yml **except** for en-US.yml
 ```bash
 git commit -m "new pegasus string XYZ"
 git push

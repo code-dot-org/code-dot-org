@@ -1,5 +1,5 @@
 ---
-title: Professional Development
+title: Code.org Professional Development
 nav: pd_nav
 ---
 

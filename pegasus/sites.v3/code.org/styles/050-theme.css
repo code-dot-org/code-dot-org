@@ -217,7 +217,7 @@ body {
 }
 
 .mobile-headers #pageheader #left {
-  margin: -8px 0 0 10px;
+  margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;
