@@ -289,7 +289,7 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
         HipChat.log message
         HipChat.developers message, color:'green'
       else
-        message = '⊙ ⊙ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
         HipChat.log message, color:'red'
         HipChat.developers message, color:'red', notify:1
       end
