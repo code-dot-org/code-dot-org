@@ -13,7 +13,7 @@
 
 var markup = require('./NetSimMyDeviceTab.html');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
  * Generator and controller for "My Device" tab.
@@ -50,7 +50,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv,
   this.chunkSizeControl_ = null;
 
   /**
-   * @type {NetSimEncodingSelector}
+   * @type {NetSimEncodingControl}
    * @private
    */
   this.encodingControl_ = null;
@@ -67,7 +67,7 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
       this.chunkSizeChangeCallback_);
-  this.encodingControl_ = new NetSimEncodingSelector(
+  this.encodingControl_ = new NetSimEncodingControl(
       this.rootDiv_.find('.encoding'),
       this.encodingChangeCallback_);
 };
