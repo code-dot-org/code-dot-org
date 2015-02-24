@@ -17,7 +17,7 @@ var markup = require('./NetSimMyDevicePanel.html');
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
- * @param {function} changeEncodingCallback
+ * @param {function} chunkSizeChangeCallback
  * @constructor
  */
 var NetSimMyDevicePanel = module.exports = function (chunkSizeChangeCallback) {
@@ -67,12 +67,25 @@ NetSimMyDevicePanel.prototype.bindElements_ = function (instanceID) {
   this.setChunkSize(initialChunkSize);
 };
 
+/**
+ * Change handler for jQueryUI slider control.
+ * @param {Event} event
+ * @param {Object} ui
+ * @param {jQuery} ui.handle - The jQuery object representing the handle that
+ *        was changed.
+ * @param {number} ui.value - The current value of the slider.
+ * @private
+ */
 NetSimMyDevicePanel.prototype.onChunkSizeChange_ = function (event, ui) {
   var newChunkSize = ui.value;
   this.setChunkSize(newChunkSize);
   this.chunkSizeChangeCallback_(newChunkSize);
 };
 
+/**
+ * Update the slider and its label to display the provided value.
+ * @param {number} newChunkSize
+ */
 NetSimMyDevicePanel.prototype.setChunkSize = function (newChunkSize) {
   var rootDiv = this.rootDiv_;
   rootDiv.find('.chunk_size_slider').slider('option', 'value', newChunkSize);

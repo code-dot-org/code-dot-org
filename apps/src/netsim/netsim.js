@@ -213,7 +213,11 @@ NetSim.prototype.refresh_ = function () {
 };
 
 /**
+ * Update encoding-view setting across the whole app.
  *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
  * @param {string} newEncoding
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
@@ -224,6 +228,14 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
   this.sendWidget_.setEncoding(newEncoding);
 };
 
+/**
+ * Update chunk-size/bytesize setting across the whole app.
+ *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
+ * @param {number} newChunkSize
+ */
 NetSim.prototype.changeChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.myDevicePanel_.setChunkSize(newChunkSize);
