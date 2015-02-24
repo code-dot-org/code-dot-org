@@ -62,7 +62,7 @@ social:
   - heroes.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     - opacity = index == 0 ? 1 : 0
-    .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
+    .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 50%"}
 
   #fullwidth{style: "width: 100%;"}
     .thegap{style: "height: 1px"}
