@@ -227,8 +227,8 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
 NetSim.prototype.changeChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.myDevicePanel_.setChunkSize(newChunkSize);
-  //this.receivedMessageLog_.setChunkSize(newChunkSize);
-  //this.sentMessageLog_.setChunkSize(newChunkSize);
+  this.receivedMessageLog_.setChunkSize(newChunkSize);
+  this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
 };
 

@@ -1,0 +1,81 @@
+<%
+
+var PacketEncoder = require('./PacketEncoder');
+var dataConverters = require('./dataConverters');
+var formatBinary = dataConverters.formatBinary;
+var formatHex = dataConverters.formatHex;
+var alignDecimal = dataConverters.alignDecimal;
+var binaryToInt = dataConverters.binaryToInt;
+var binaryToHex = dataConverters.binaryToHex;
+var binaryToDecimal = dataConverters.binaryToDecimal;
+var binaryToAscii = dataConverters.binaryToAscii;
+
+/**
+ * Format router uses to decode packet.
+ * TODO (bbuchanan): Pull this from a common location; should be fixed across
+ *                   simulation.
+ * @type {PacketEncoder}
+ */
+var packetEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: 4 },
+  { key: 'fromAddress', bits: 4 },
+  { key: 'packetIndex', bits: 4 },
+  { key: 'packetCount', bits: 4 },
+  { key: 'message', bits: Infinity }
+]);
+
+function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
+  %>
+    <tr class="<%= rowClass %>">
+      <td nowrap class="toAddress"><%= toAddress %></td>
+      <td nowrap class="fromAddress"><%= fromAddress %></td>
+      <td nowrap class="packetInfo"><%= packetInfo %></td>
+      <td class="message"><%= message %></td>
+    </tr>
+<%
+}
+
+ %>
+<table>
+  <thead>
+    <tr>
+      <th nowrap class="toAddress">To</th>
+      <th nowrap class="fromAddress">From</th>
+      <th nowrap class="packetInfo">Packet</th>
+      <th nowrap class="message">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%
+    var toAddress = packetEncoder.getField('toAddress', packetBinary);
+    var fromAddress = packetEncoder.getField('fromAddress', packetBinary);
+    var packetIndex = packetEncoder.getField('packetIndex', packetBinary);
+    var packetCount = packetEncoder.getField('packetCount', packetBinary);
+    var message = packetEncoder.getField('message', packetBinary);
+
+    logRow('ascii',
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        binaryToAscii(message, chunkSize));
+
+    logRow('decimal',
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        alignDecimal(binaryToDecimal(message, chunkSize)));
+
+    logRow('hexadecimal',
+        binaryToHex(toAddress),
+        binaryToHex(fromAddress),
+        binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+        formatHex(binaryToHex(message), Math.ceil(chunkSize / 4)));
+
+    logRow('binary',
+        formatBinary(toAddress, 4),
+        formatBinary(fromAddress, 4),
+        formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+        formatBinary(message, chunkSize));
+   %>
+  </tbody>
+</table>
