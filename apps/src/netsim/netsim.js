@@ -22,6 +22,7 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
+var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimMyDevicePanel = require('./NetSimMyDevicePanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
@@ -182,6 +183,9 @@ NetSim.prototype.initWithUserName_ = function (user) {
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
       this.connection_, user, this.getOverrideShardID());
+
+  // Tab panel - contains instructions, my device, router, dns
+  this.tabs_ = new NetSimTabsComponent($('#netsim_tabs'));
 
   var routerPanelContainer = document.getElementById('netsim_tabpanel');
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
