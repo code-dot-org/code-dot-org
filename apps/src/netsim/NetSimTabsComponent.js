@@ -141,3 +141,10 @@ NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
 NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
   this.dnsTab_.setIsDnsNode(isDnsNode);
 };
+
+/**
+ * @param {Array} tableContents
+ */
+NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
+  this.dnsTab_.setDnsTableContents(tableContents);
+};

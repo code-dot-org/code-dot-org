@@ -51,6 +51,13 @@ var NetSim = module.exports = function () {
   this.connection_ = null;
 
   /**
+   * Reference to currently connected simulation router.
+   * @type {NetSimRouterNode}
+   * @private
+   */
+  this.myConnectedRouter_ = null;
+
+  /**
    * Tick and Render loop manager for the simulator
    * @type {RunLoop}
    * @private
@@ -191,7 +198,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.tabs_ = new NetSimTabsComponent(
       $('#netsim_tabs'),
       this.connection_,
-      this.changeChunkSize.bind(this),
+      this.setChunkSize.bind(this),
       this.changeEncoding.bind(this),
       this.changeRemoteDnsMode.bind(this),
       this.becomeDnsNode.bind(this));
@@ -201,8 +208,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_);
 
   this.changeEncoding(this.encodingMode_);
-  this.changeChunkSize(this.chunkSize_);
-  this.changeDnsMode(this.dnsMode_);
+  this.setChunkSize(this.chunkSize_);
+  this.setDnsMode(this.dnsMode_);
   this.refresh_();
 };
 
@@ -244,7 +251,7 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  *
  * @param {number} newChunkSize
  */
-NetSim.prototype.changeChunkSize = function (newChunkSize) {
+NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.tabs_.setChunkSize(newChunkSize);
   this.receivedMessageLog_.setChunkSize(newChunkSize);
@@ -261,7 +268,7 @@ NetSim.prototype.changeChunkSize = function (newChunkSize) {
  *
  * @param {"none"|"manual"|"automatic"} newDnsMode
  */
-NetSim.prototype.changeDnsMode = function (newDnsMode) {
+NetSim.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
   this.tabs_.setDnsMode(newDnsMode);
 };
@@ -272,7 +279,7 @@ NetSim.prototype.changeDnsMode = function (newDnsMode) {
  * @param {string} newDnsMode
  */
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
-  this.changeDnsMode(newDnsMode);
+  this.setDnsMode(newDnsMode);
   if (this.connection_&&
       this.connection_.myNode &&
       this.connection_.myNode.myRouter) {
@@ -288,6 +295,12 @@ NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
  */
 NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   this.tabs_.setIsDnsNode(isDnsNode);
+  if (this.connection_&&
+      this.connection_.myNode &&
+      this.connection_.myNode.myRouter) {
+    var router = this.connection_.myNode.myRouter;
+    this.setDnsTableContents(router.getAddressTable());
+  }
 };
 
 /**
@@ -305,6 +318,13 @@ NetSim.prototype.becomeDnsNode = function () {
     router.dnsNodeID = myNode.entityID;
     router.update();
   }
+};
+
+/**
+ * @param {Array} tableContents
+ */
+NetSim.prototype.setDnsTableContents = function (tableContents) {
+  this.tabs_.setDnsTableContents(tableContents);
 };
 
 /**
@@ -366,25 +386,28 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
 
   // Unhook old handlers
   if (this.routerStateChangeKey !== undefined) {
-    this.myConnectedRouter.stateChange.unregister(this.routerStateChangeKey);
+    this.myConnectedRouter_.stateChange.unregister(this.routerStateChangeKey);
     this.routerStateChangeKey = undefined;
   }
 
   if (this.routerWireChangeKey !== undefined) {
-    this.myConnectedRouter.wiresChange.unregister(this.routerWireChangeKey);
+    this.myConnectedRouter_.wiresChange.unregister(this.routerWireChangeKey);
     this.routerWireChangeKey = undefined;
   }
 
   if (this.routerLogChangeKey !== undefined) {
-    this.myConnectedRouter.logChange.unregister(this.routerLogChangeKey);
+    this.myConnectedRouter_.logChange.unregister(this.routerLogChangeKey);
     this.routerLogChangeKey = undefined;
   }
 
-  // Propagate change?
-  this.changeDnsMode(router.dnsMode);
+  this.myConnectedRouter_ = router;
 
   // Hook up new handlers
   if (router) {
+    // Propagate change
+    this.setDnsMode(router.dnsMode);
+
+    // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
         this.onRouterStateChange_.bind(this));
 
@@ -406,12 +429,18 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
     myNode = this.connection_.myNode;
   }
 
-  this.changeDnsMode(router.dnsMode);
+  this.setDnsMode(router.dnsMode);
   this.setIsDnsNode(router.dnsMode === 'manual' &&
       router.dnsNodeID === myNode.entityID);
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {
+  if (this.connection_&&
+      this.connection_.myNode &&
+      this.connection_.myNode.myRouter) {
+    var router = this.connection_.myNode.myRouter;
+    this.setDnsTableContents(router.getAddressTable());
+  }
 };
 
 NetSim.prototype.onRouterLogChange_ = function () {
