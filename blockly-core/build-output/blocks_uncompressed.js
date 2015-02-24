@@ -1252,7 +1252,7 @@ Blockly.Blocks.parameters_get = {init:function() {
   Blockly.functionEditor && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
 }, removeVar:Blockly.Blocks.variables_get.removeVar};
 Blockly.Blocks.functionalProcedures = {};
-Blockly.Blocks.functional_definition = {init:function() {
+Blockly.Blocks.functional_definition = {hideInMainBlockSpace:!0, init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
@@ -1449,7 +1449,7 @@ Blockly.Blocks.functional_pass = {init:function() {
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
 Blockly.Blocks.functionalExamples = {};
-Blockly.Blocks.functional_example = {init:function() {
+Blockly.Blocks.functional_example = {hideInMainBlockSpace:!0, init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
   this.setFunctionalOutput(!1);
