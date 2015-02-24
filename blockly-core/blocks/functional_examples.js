@@ -31,7 +31,7 @@ goog.require('Blockly.Blocks');
  * Definition block for a custom functional block
  */
 Blockly.Blocks.functional_example = {
-  hideInMainBlockspace: true,
+  hideInMainBlockSpace: true,
   init: function() {
     this.setHSV(94, 0.84, 0.60);
     this.setFunctional(true, { headerHeight: 0, rowBuffer: 3 });

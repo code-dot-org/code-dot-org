@@ -122,7 +122,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.init();
   }
 
-  if (this.hideInMainBlockspace && this.blockSpace === Blockly.mainBlockSpace) {
+  if (this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
     this.setCurrentlyHidden(true);
   }
 };
@@ -1329,10 +1329,16 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   });
 };
 
+/**
+ * Check whether this block is currently hidden (a non-persistent property)
+ */
 Blockly.Block.prototype.isCurrentlyHidden = function () {
   return this.currentlyHidden_;
 };
 
+/**
+ * Set whether this block is currently hidden (a non-persistent property)
+ */
 Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
   this.currentlyHidden_ = hidden;
   if (this.svg_) {
