@@ -264,14 +264,11 @@ angular: teacherDashboard
 
           // find the last level attempted
           for (var l = student.levels.length - 1; l >= 0; l--) {
-            var delayedSetHighestLevel = function(student, l) {
-              return function() {
+            if (student.levels[l] && student.levels[l].class != 'not_tried') {
+              var delayedSetHighestLevel = function(student, l) {
                 student.highest_level = l;
                 student.highest_level_in_stage = getLevelNumberInStage(l);
-              };
-            };
-
-            if (student.levels[l]) {
+              }
               $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
               break;
             }

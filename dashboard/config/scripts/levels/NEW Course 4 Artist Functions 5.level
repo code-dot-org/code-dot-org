@@ -22,7 +22,7 @@
     "slider_speed": ".5",
     "disable_sharing": "false",
     "video_key": "C4_function_edit",
-    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"#edit_function_qtip > .blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"#function_editor_draw_square_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"#edit_function_qtip > .blocklyIconGroup\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"#function_editor_draw_square_qtip\",\"on\":\"function_editor_opened\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "9"
   }
 }]]></config>

@@ -4,7 +4,11 @@ view: page_curriculum
 theme: none
 ---
 
+[worksheet]
+
 <%= partial('doc_header', :title => 'Reverse Engineering', :disclaimer=>'Code.org CS in Algebra') %>
+
+[/worksheet]
 
 [content]
 

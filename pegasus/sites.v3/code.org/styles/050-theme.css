@@ -78,7 +78,7 @@ body {
 .headerlink:hover,
 .headerlink:active {
   color: white;
-  border-bottom: solid 2px rgb(255, 138, 0);
+  border-bottom: solid 2px rgb(255, 128, 0);
 }
 
 #pagefooter {
@@ -217,7 +217,7 @@ body {
 }
 
 .mobile-headers #pageheader #left {
-  margin: -8px 0 0 10px;
+  margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;

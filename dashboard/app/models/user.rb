@@ -459,7 +459,7 @@ SQL
   end
 
   def generate_secret_words
-    self.secret_words = [SecretWord.random, SecretWord.random].join(" ")
+    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
   def reset_secret_words

@@ -51,7 +51,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">my-image</title>
@@ -79,7 +79,7 @@
           <mutation>
             <arg name="rows" type="Number"/>
             <description>Repeats my-image in a spiral to fill the screen.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">fill-screen</title>
           <functional_input name="STACK">
@@ -173,7 +173,7 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="columns" type="Number"/>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">fill-row</title>
           <functional_input name="STACK">

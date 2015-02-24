@@ -159,6 +159,27 @@ Possible “tricks” to throw in as you randomly call out commands:  “Raise R
 
 Continue playing using both the commands in the clauses as well as the suggested “tricks” that will result in the default else of Left Hand Down.  Note that if Left Hand is already Down, this command still works but appears to do nothing.  Be sure to make students sit when then do things incorrectly.  Play until the students stop making errors and then add more clauses OR let one of the students be the controller and you join the ranks of the computers.
 
+The next suggestion is a little tricky but will help them both process ands as well as realize that once a condition has been met that no additional else statements are evaluated.
+
+> elseif(“hands ”+# and #>1) -> TwoThumbsUp  
+> elseif(anything+# and #&lt;5) -> BothHandsDown 
+
+Remind students that this is really pseudocode.  To evaluate the conditionals properly, there would need to be some extra work to parse out the parts of the input string.
+
+The two new conditionals work like this.  
+If the command contains “hands” plus a number and that number is greater than 2 then they do two thumbs up (elbows bent).
+If the command contains ANY text (which includes none at all) and a number and that number is less than 5 then they put both hands back down in the relaxed position
+Example:
+
+> SimonSez(“hands 2”) -> TwoThumbsUp  (only!! Will not evaluate the #&lt;5)   
+> SimonSez(“whatever 2”) -> BothHandsDown  
+> SimonSez(“blah blah blah -1”) -> BothHandsDown  
+> SimonSez(“hands 1”) ->  BothHandsDown  
+> SimonSez(“hands 7”) ->  TwoThumbsUp  
+> SimonSez(“whatever 7”) -> LeftHandDown (falls all the way through)  
+> SimonSez(“4”)->BothHandsDown  
+
+
 Other suggestions to add (all at once or two at a time):
 > elseif(“Right Leg Forward”) -> RightLegForward  
 > elseif(“Right Leg Normal”) -> RightLegNormal  
@@ -173,6 +194,7 @@ Note that if you want to add movement like step forward that you might want to a
 
 There are piecewise functions in Mathematics as well.  The absolute value function y = |x| can be re-written as   
 y = { -x : x<0 , x : x>0, 0 }  
+<img src="Abs_value.png" style="max-width: 100%"/><br/>
 Note that in mathematical terms, that the clause for the domain is usually listed second instead of first.  
 
 A data plan on a phone bill might be structured as:
@@ -183,6 +205,17 @@ A data plan on a phone bill might be structured as:
 
 This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5 =< x =< 10, 12x: x>10 }
 
+<img src="GB_per_month.png" style="max-width: 100%"/><br/>
+
+Another very common piecewise functions is for taxi cabs.
+
+* $3 for 0 to 2 miles
+* $1 for each part mile after that
+
+
+<img src="Telephone_Cab_3_for_first_2.png" style="max-width: 100%"/><br/>
+
+This could be graphed with the following piecewise function y = { 3: x<2, [[x]]+2: x>=2 } where [[x]] is the greatest integer function or what is often called a floor function in computer languages.  The greatest integer function returns the greatest INTEGER less that the current value.  For instance [[2.9]] is 2 and [[3.1]] is 3.
 [/together]
 
 [together]

@@ -379,5 +379,6 @@
   "VARIABLES_SET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Set",
   "VARIABLES_SET_TAIL": "to",
   "VARIABLES_SET_TITLE": "set",
-  "VARIABLES_SET_TOOLTIP": "Sets this variable to be equal to the input."
+  "VARIABLES_SET_TOOLTIP": "Sets this variable to be equal to the input.",
+  "CONTRACT_EDITOR_HEADER": "Design Recipe"
 }

@@ -114,12 +114,12 @@
         </block>
         <block type="functional_call" inline="false" deletable="false" movable="false" editable="false">
           <mutation name="game-variables">
-            <arg name="title" type="string"/>
-            <arg name="subtitle" type="string"/>
-            <arg name="background" type="image"/>
-            <arg name="danger" type="image"/>
-            <arg name="target" type="image"/>
-            <arg name="player" type="image"/>
+            <arg name="title" type="String"/>
+            <arg name="subtitle" type="String"/>
+            <arg name="background" type="Image"/>
+            <arg name="danger" type="Image"/>
+            <arg name="target" type="Image"/>
+            <arg name="player" type="Image"/>
           </mutation>
           <functional_input name="ARG0">
             <block type="functional_call" deletable="false" movable="false">
@@ -298,7 +298,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">bg</title>
@@ -310,7 +310,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">danger</title>
@@ -322,7 +322,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">title</title>
@@ -334,7 +334,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">player</title>
@@ -346,7 +346,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">target</title>
@@ -530,7 +530,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">subtitle</title>
@@ -542,13 +542,13 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="title" type="string"/>
-            <arg name="subtitle" type="string"/>
-            <arg name="background" type="image"/>
-            <arg name="danger" type="image"/>
-            <arg name="target" type="image"/>
-            <arg name="player" type="image"/>
-            <outputtype>none</outputtype>
+            <arg name="title" type="String"/>
+            <arg name="subtitle" type="String"/>
+            <arg name="background" type="Image"/>
+            <arg name="danger" type="Image"/>
+            <arg name="target" type="Image"/>
+            <arg name="player" type="Image"/>
+            <outputtype>None</outputtype>
           </mutation>
           <title name="NAME">game-variables</title>
         </block>

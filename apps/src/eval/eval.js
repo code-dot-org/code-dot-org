@@ -102,6 +102,19 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+        studioApp.createCoordinateGridBackground({
+          svg: 'svgEval',
+          origin: -200,
+          firstLabel: -100,
+          lastLabel: 100,
+          increment: 100
+        });
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
@@ -245,6 +258,7 @@ Eval.execute = function() {
     }
 
     if (level.freePlay) {
+      Eval.result = true;
       Eval.testResults = TestResults.FREE_PLAY;
     }
   }
@@ -261,6 +275,8 @@ Eval.execute = function() {
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 
   studioApp.report(reportData);
 };
@@ -321,7 +337,7 @@ var displayFeedback = function(response) {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
   };
-  if (Eval.message) {
+  if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
   studioApp.displayFeedback(options);

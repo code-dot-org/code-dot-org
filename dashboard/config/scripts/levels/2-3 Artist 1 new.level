@@ -12,11 +12,18 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "images": "[{\"filename\":\"lion.svg\",\"position\":[100,100]}]",
+    "images": "[{\"filename\":\"lion.svg\",\"position\":[95,100]}]",
     "free_play": "false",
     "ideal": "4",
     "slider_speed": "0.4",
-    "video_key": "C2_artist_intro"
+    "video_key": "C2_artist_intro",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

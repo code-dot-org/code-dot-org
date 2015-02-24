@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles.ii",
+    "instructions": "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles.",
     "x": "120",
     "y": "150",
     "start_direction": "90",

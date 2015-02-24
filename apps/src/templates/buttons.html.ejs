@@ -8,6 +8,18 @@
   </div>
 <% } -%>
 
+<% if (data.cancel) { -%>
+<button id="again-button">
+    <%= msg.dialogCancel() %>
+</button>
+<% } -%>
+
+<% if (data.clearPuzzle) { -%>
+<button id="continue-button" class="launch" style="float: right">
+    <%= msg.clearPuzzle() %>
+</button>
+<% } -%>
+
 <% if (data.previousLevel) { -%>
   <button id="back-button" class="launch">
     <%= msg.backToPreviousLevel() %>

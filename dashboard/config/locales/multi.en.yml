@@ -141,6 +141,35 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 2:
+        ' text block <br> scale block <br> offset block <br> circle block <br> triangle block <br> rotate block': ' text block <br> scale block <br> offset block <br> circle block <br> triangle block <br> rotate block'
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        ' text block <br> color block <br> style block': ' text block <br> color block <br> style block'
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        ? ' true block <br> false block <br> < block <br> > block <br> = block <br> not block <br> and block <br> or block <br> string=? block'
+        : ' true block <br> false block <br> < block <br> > block <br> = block <br> not block <br> and block <br> or block <br> string=? block'
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Multiple Choice
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
@@ -525,13 +554,13 @@ en:
         '15': '15'
         x: x
       msm variables multi 10:
-        f(x) = x * 17: f(x) = x * 17
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         What is the name of the function?: What is the name of the function?
         f: f
         x: x
         '17': '17'
       msm variables multi 11:
-        f(x) = x * 17: f(x) = x * 17
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         What is the name of the parameter?: What is the name of the parameter?
         f: f
         x: x
@@ -543,7 +572,7 @@ en:
         x: x
         '17': '17'
       msm variables multi 13:
-        f(x) = x * 17: f(x) = x * 17
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         What is f(1)?: What is f(1)?
         x: x
         '117': '117'
@@ -561,19 +590,19 @@ en:
         '5': '5'
         x: x
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of x?: What is the value of x?
         '3': '3'
         '15': '15'
         do not know: do not know
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of (p - x)?: What is the value of (p - x)?
         q: q
         '3': '3'
         '5': '5'
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define q hello
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of string-length(q)?: What is the value of string-length(q)?
         '1': '1'
         hello: hello

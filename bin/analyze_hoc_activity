@@ -173,6 +173,18 @@ def main()
     petition_signatures:      DB[:forms].where(kind:'Petition').count,
     lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
+  
+  total_females = DASHBOARD_DB[:users].where(gender:'f').count;
+  total_males = DASHBOARD_DB[:users].where(gender:'m').count;
+  total_with_gender = total_females + total_males
+  total_with_gender = 1 if total_with_gender == 0
+
+  PROPERTIES.set :about_stats, {
+    number_served: total_started,
+    number_students: DASHBOARD_DB[:users].where(user_type:'student').count,
+    number_teachers: DASHBOARD_DB[:users].where(user_type:'teacher').count,
+    percent_female: ((100 * total_females) / total_with_gender).to_i,
+  }
 end
 
 main()

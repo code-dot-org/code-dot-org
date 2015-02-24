@@ -29,7 +29,6 @@
     "coordinate_grid_background": "false",
     "free_play": "false",
     "disable_sharing": "false",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false"
   }
@@ -76,7 +75,7 @@
                                       <next>
                                         <block type="studio_setSpriteSpeed">
                                           <title name="SPRITE">1</title>
-                                          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
                                           <next>
                                             <block type="studio_setSpritePosition">
                                               <title name="SPRITE">2</title>
@@ -88,7 +87,7 @@
                                                   <next>
                                                     <block type="studio_setSpriteSpeed">
                                                       <title name="SPRITE">2</title>
-                                                      <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                                                      <title name="VALUE">Studio.SpriteSpeed.VERY_SLOW</title>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -138,24 +137,6 @@
           </statement>
         </block>
         <block type="studio_whenArrow">
-          <title name="VALUE">right</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">left</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">8</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow">
           <title name="VALUE">up</title>
           <next>
             <block type="studio_moveDistanceParams" inline="true">
@@ -177,6 +158,24 @@
                   </value>
                 </block>
               </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
             </block>
           </next>
         </block>

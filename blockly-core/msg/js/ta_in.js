@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "சிவப்பு";
 Blockly.Msg.COLOUR_RGB_TITLE = "color with";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Create a color with the specified amount of red, green, and blue.  All values must be between 0 and 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "கட்டளைத்தொடரில் இருந்து வெளியேறு";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "லூப்பின் அடுத்த சுழற்சிக்கு தொடர்க.";

@@ -81,6 +81,17 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
  */
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
 
+/**
+ * Opens the function editor with configuration parameters for a specific level
+ * @param levelConfig {Object}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConfig) {
+  if (levelConfig.openFunctionDefinition) {
+    this.openAndEditFunction(levelConfig.openFunctionDefinition);
+  }
+};
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -416,7 +427,7 @@ Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
   var metrics = Blockly.mainBlockSpace.getMetrics();
   metrics.absoluteLeft +=
     FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += this.getBlockSpaceEditorTopOffset();
+  metrics.absoluteTop += this.getBlockSpaceEditorToScreenTop_();
   metrics.viewWidth -=
     (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
   metrics.viewHeight -=
@@ -428,7 +439,7 @@ Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
  * @returns {Number} in pixels
  * @protected
  */
-Blockly.FunctionEditor.prototype.getBlockSpaceEditorTopOffset = function () {
+Blockly.FunctionEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {
   return this.getWindowBorderChromeHeight() + this.getContractDivHeight();
 };
 
@@ -552,7 +563,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
 
   // Resize contract div width
-  this.contractDiv_.style.width = width + 'px';
+  this.positionSizeContractDom_();
 
   // Move the close button
   this.closeButton_.setAttribute('transform', 'translate(' +
@@ -564,6 +575,22 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.modalBlockSpaceEditor.svgResize();
 
   this.layOutBlockSpaceItems_();
+};
+
+Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function () {
+  var metrics = this.modalBlockSpace.getMetrics();
+  var left = metrics.absoluteLeft;
+  this.contractDiv_.style.left = left + 'px';
+  this.contractDiv_.style.top = this.getContractDomTopY_() + 'px';
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+};
+
+/**
+ * @returns {number} Y position for contract DOM
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.getContractDomTopY_ = function() {
+  return this.getWindowBorderChromeHeight();
 };
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
@@ -584,11 +611,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER
       + '</button>';
   }
-  var metrics = this.modalBlockSpace.getMetrics();
-  var left = metrics.absoluteLeft;
-  this.contractDiv_.style.left = left + 'px';
-  this.contractDiv_.style.top = metrics.absoluteTop + 'px';
-  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+  this.positionSizeContractDom_();
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 };

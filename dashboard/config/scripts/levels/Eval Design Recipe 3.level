@@ -29,7 +29,7 @@
             <block type="functional_call" inline="false" movable="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" movable="false" editable="false">
@@ -73,7 +73,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -96,7 +96,7 @@
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="wide-rect">
                 <arg name="height" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -114,9 +114,9 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="height" type="Number"/>
-            <arg name="color" type="string"/>
+            <arg name="color" type="String"/>
             <description>Produce a rectangle of given color that is twice as wide as it is high.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">wide-rect</title>
         </block>

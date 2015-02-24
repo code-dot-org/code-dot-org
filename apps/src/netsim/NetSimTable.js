@@ -1,20 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -29,7 +12,7 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -59,7 +42,7 @@ var NetSimTable = module.exports = function (storageTable) {
    * when rows are added, or when rows are removed, or when rows change.
    * @type {ObservableEvent}
    */
-  this.tableChangeEvent = new ObservableEvent();
+  this.tableChange = new ObservableEvent();
 
   /**
    * Store table contents locally, so we can detect when changes occur.
@@ -132,7 +115,7 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
   this.lastFullUpdateTime_ = Date.now();
@@ -140,13 +123,13 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
 
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
-  this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+  this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -159,7 +142,7 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
-    this.tableChangeEvent.notifyObservers(this.arrayFromCache_());
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 

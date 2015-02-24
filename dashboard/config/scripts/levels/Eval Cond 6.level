@@ -24,7 +24,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -38,7 +38,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string" uservisible="false">
@@ -57,15 +57,15 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
             </block>
           </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="food" type="string"/>
-            <outputtype>string</outputtype>
+            <arg name="food" type="String"/>
+            <outputtype>String</outputtype>
           </mutation>
           <title name="NAME">food-critic</title>
         </block>
@@ -129,7 +129,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -143,7 +143,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -162,15 +162,15 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
               <mutation name="food-critic">
-                <arg name="food" type="string"/>
+                <arg name="food" type="String"/>
               </mutation>
             </block>
           </functional_input>
         </block>
         <block type="functional_definition" inline="false" movable="false">
           <mutation>
-            <arg name="food" type="string"/>
-            <outputtype>string</outputtype>
+            <arg name="food" type="String"/>
+            <outputtype>String</outputtype>
           </mutation>
           <title name="NAME">food-critic</title>
           <functional_input name="STACK">
@@ -181,7 +181,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">food</title>
                     </block>
@@ -203,7 +203,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">food</title>
                     </block>
@@ -225,7 +225,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">food</title>
                     </block>

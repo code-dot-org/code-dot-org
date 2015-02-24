@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 module LevelsHelper
 
   def build_script_level_path(script_level)
@@ -35,24 +37,19 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts_and_instructions
-    select_and_track_autoplay_video
+  def set_videos_and_blocks_and_callouts
+    @autoplay_video_info = select_and_track_autoplay_video
+    @callouts = select_and_remember_callouts(@script_level.nil?)
 
     if @level.is_a? Blockly
-      @toolbox_blocks =
-        @toolbox_blocks ||
+      @toolbox_blocks ||=
         @level.try(:project_template_level).try(:toolbox_blocks) ||
         @level.toolbox_blocks
 
-      @start_blocks =
-        initial_blocks(current_user, @level) || # check if this level inherits solution from previous level
-        @start_blocks ||
+      @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
     end
-
-    select_and_remember_callouts(@script_level.nil?)
-    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -73,11 +70,11 @@ module LevelsHelper
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
+    video_info(autoplay_video) unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new()
+    session[:callouts_seen] ||= Set.new
     available_callouts = []
     if @level.custom?
       unless @level.try(:callout_json).blank?
@@ -92,14 +89,12 @@ module LevelsHelper
     else
       available_callouts = @script_level.callouts if @script_level
     end
-    @callouts_to_show = available_callouts
+    # Filter if already seen (unless always_show)
+    callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
-    @callouts = make_localized_hash_of_callouts(@callouts_to_show)
-  end
-
-  def make_localized_hash_of_callouts(callouts)
-    callouts.map do |callout|
+    # Localize
+    callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
@@ -110,25 +105,6 @@ module LevelsHelper
       end
       callout_hash
     end
-  end
-
-  # this defines which levels should be seeded with th last result from a different level
-  def initial_blocks(user, level)
-    return nil unless user
-
-    # initial blocks from previous level
-    if level.game.app == Game::TURTLE
-      from_level_num = case level.level_num
-                       when '3_8' then '3_7'
-                       when '3_9' then '3_8'
-                       end
-
-      if from_level_num
-        from_level = Level.find_by_game_id_and_level_num(level.game_id, from_level_num)
-        return user.last_attempt(from_level).try(:level_source).try(:data)
-      end
-    end
-    nil
   end
 
   # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
@@ -175,13 +151,6 @@ module LevelsHelper
     "false"
   end
 
-  def localize_levelbuilder_instructions
-    if I18n.locale != 'en-us'
-      loc_val = data_t("instructions", "#{@level.name}_instruction")
-      @level.properties['instructions'] = loc_val unless loc_val.nil?
-    end
-  end
-
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
@@ -226,7 +195,6 @@ module LevelsHelper
       images
       free_play
       min_workspace_height
-      slider_speed
       permitted_errors
       disable_param_editing
       disable_variable_editing
@@ -247,17 +215,22 @@ module LevelsHelper
       default_num_example_blocks
       impressive
       open_function_definition
-      callout_json
       disable_sharing
       hide_source
       share
       no_padding
       show_finish
+      edit_code
+      code_functions
+      app_width
+      app_height
       embed
       generate_function_pass_blocks
       timeout_after_when_run
       custom_game_type
       project_template_level_name
+      scrollbars
+      original_start_blocks
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -289,12 +262,19 @@ module LevelsHelper
       level.delete('fn_failureCondition')
     end
 
-    # Fetch localized strings
-    %w(instructions).each do |label|
-      val = [@level.game.app, @level.game.name].map { |name|
-        data_t("level.#{label}", "#{name}_#{@level.level_num}")
-      }.compact.first
-      level[label] ||= val unless val.nil?
+    #Fetch localized strings
+    if @level.level_num_custom?    
+      loc_val = data_t("instructions", "#{@level.name}_instruction")
+      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+        level['instructions'] = loc_val
+      end
+    else
+      %w(instructions).each do |label|
+        val = [@level.game.app, @level.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{@level.level_num}")
+        }.compact.first
+        level[label] ||= val unless val.nil?
+      end
     end
 
     # Set some values that Blockly expects on the root of its options string
@@ -312,19 +292,19 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
+      applabUserId: @applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
-    app_options[:scrollbars] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
     app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
-    app_options[:level_source_id] = @level_source_id if @level_source_id
+    app_options[:level_source_id] = @level_source.id if @level_source
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
 
     # Move these values up to the root
-    %w(hideSource share noPadding showFinish embed).each do |key|
+    %w(hideSource share noPadding embed).each do |key|
       app_options[key.to_sym] = level[key]
       level.delete key
     end
@@ -338,7 +318,7 @@ module LevelsHelper
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
     elsif File.extname(path).ends_with? '_blocks'
-      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      # '.start_blocks' takes the XML from the start_bslocks of the specified level.
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
@@ -356,7 +336,7 @@ module LevelsHelper
       level = Level.find_by(name: base_level)
       content_tag(:div,
         content_tag(:iframe, '', {
-          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',
@@ -414,5 +394,12 @@ module LevelsHelper
         SoftButton.new('Down', 'downButton'),
         SoftButton.new('Up', 'upButton'),
     ]
+  end
+
+  # Unique, consistent ID for a user of an applab app.
+  def applab_user_id
+    app_id = "1337" # Stub value, until storage for app_id's is available.
+    user_id = current_user ? current_user.id.to_s : session.id
+    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
   end
 end

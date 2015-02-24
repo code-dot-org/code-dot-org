@@ -15,14 +15,14 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "open_function_definition": "months",
-    "callout_json": "[\r\n  {\"localization_key\":\"Calc Vars 2.1_edit\",\"callout_text\":\"how now\",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\":\"Calc Vars 2.1 \",\"callout_text\":\"drop the number of months here\",\"element_id\":\"#callout_here\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-29,\"y\":-32},\"my\":\"top left\",\"at\":\"bottom right\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "open_function_definition": "age in months"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false" uservisible="false" id="callout_here">
           <mutation>
             <outputtype>Number</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
@@ -40,7 +40,7 @@
         </block>
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_call" id="callout_here">
+            <block type="functional_call">
               <mutation name="age in months"/>
             </block>
           </functional_input>
