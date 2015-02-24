@@ -23,7 +23,7 @@ var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
  * @constructor
  */
 var NetSimTabsComponent = module.exports = function (rootDiv, connection,
-    chunkSizeChangeCallback) {
+    chunkSizeChangeCallback, encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -43,6 +43,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, connection,
    * @private
    */
   this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.encodingChangeCallback_ = encodingChangeCallback;
 
   /**
    * @type {NetSimRouterTab}
@@ -76,7 +82,8 @@ NetSimTabsComponent.prototype.render = function () {
 
   this.myDeviceTab_ = new NetSimMyDeviceTab(
       this.rootDiv_.find('#tab_my_device'),
-      this.chunkSizeChangeCallback_);
+      this.chunkSizeChangeCallback_,
+      this.encodingChangeCallback_);
 };
 
 /**
@@ -84,4 +91,11 @@ NetSimTabsComponent.prototype.render = function () {
  */
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
   this.myDeviceTab_.setChunkSize(newChunkSize);
+};
+
+/**
+ * @param {string} newEncoding
+ */
+NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
+  this.myDeviceTab_.setEncoding(newEncoding);
 };

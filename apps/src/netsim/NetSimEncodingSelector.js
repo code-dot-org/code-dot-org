@@ -18,46 +18,44 @@ var markup = require('./NetSimEncodingSelector.html');
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
+ * @param {jQuery} rootDiv
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingSelector = module.exports = function (changeEncodingCallback) {
+var NetSimEncodingSelector = module.exports = function (rootDiv,
+    changeEncodingCallback) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {function}
+   * @private
+   */
   this.changeEncodingCallback_ = changeEncodingCallback;
+
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.select_ = null;
+
+  // Initial render
+  this.render();
 };
 
 /**
- * Static counter used to generate/uniquely identify different instances
- * of this log widget on the page.
- * @type {number}
+ * Fill the root div with new elements reflecting the current state
  */
-NetSimEncodingSelector.uniqueIDCounter = 0;
-
-/**
- * Generate a new NetSimEncodingSelector, putting it on the page.
- * @param {HTMLElement} element
- * @param {function} changeEncodingCallback
- */
-NetSimEncodingSelector.createWithin = function (element, changeEncodingCallback) {
-  var controller = new NetSimEncodingSelector(changeEncodingCallback);
-
-  var instanceID = NetSimEncodingSelector.uniqueIDCounter;
-  NetSimEncodingSelector.uniqueIDCounter++;
-
-  element.innerHTML = markup({
-    instanceID: instanceID
-  });
-  controller.bindElements_(instanceID);
-  return controller;
-};
-
-/**
- * Get relevant elements from the page and bind them to local variables.
- * @private
- */
-NetSimEncodingSelector.prototype.bindElements_ = function (instanceID) {
-  this.rootDiv_ = $('#netsim_encoding_selector_' + instanceID);
+NetSimEncodingSelector.prototype.render = function () {
+  var renderedMarkup = $(markup({}));
+  this.rootDiv_.html(renderedMarkup);
   this.select_ = this.rootDiv_.find('select');
   this.select_.change(this.onSelectChange_.bind(this));
+
 };
 
 /**
@@ -68,6 +66,10 @@ NetSimEncodingSelector.prototype.onSelectChange_ = function () {
   this.changeEncodingCallback_(this.select_.val());
 };
 
+/**
+ * Change selector value to the new provided value.
+ * @param newEncoding
+ */
 NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
   this.select_.val(newEncoding);
 };

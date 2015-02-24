@@ -13,14 +13,17 @@
 
 var markup = require('./NetSimMyDeviceTab.html');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
+var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
  * @param {function} chunkSizeChangeCallback
+ * @param {function} encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (rootDiv, chunkSizeChangeCallback) {
+var NetSimMyDeviceTab = module.exports = function (rootDiv,
+    chunkSizeChangeCallback, encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -35,10 +38,22 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, chunkSizeChangeCallb
   this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.encodingChangeCallback_ = encodingChangeCallback;
+
+  /**
    * @type {NetSimChunkSizeControl}
    * @private
    */
   this.chunkSizeControl_ = null;
+
+  /**
+   * @type {NetSimEncodingSelector}
+   * @private
+   */
+  this.encodingControl_ = null;
 
   this.render();
 };
@@ -52,6 +67,9 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
       this.chunkSizeChangeCallback_);
+  this.encodingControl_ = new NetSimEncodingSelector(
+      this.rootDiv_.find('.encoding'),
+      this.encodingChangeCallback_);
 };
 
 /**
@@ -60,4 +78,11 @@ NetSimMyDeviceTab.prototype.render = function () {
  */
 NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSizeControl_.setChunkSize(newChunkSize);
+};
+
+/**
+ * @param {string} newEncoding
+ */
+NetSimMyDeviceTab.prototype.setEncoding = function (newEncoding) {
+  this.encodingControl_.setEncoding(newEncoding);
 };

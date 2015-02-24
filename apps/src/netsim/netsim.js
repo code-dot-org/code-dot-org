@@ -24,7 +24,6 @@ var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -164,10 +163,6 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.encodingSelector_ = NetSimEncodingSelector.createWithin(
-      document.getElementById('encoding_selector'),
-      this.changeEncoding.bind(this));
-
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
@@ -183,9 +178,11 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_, user, this.getOverrideShardID());
 
   // Tab panel - contains instructions, my device, router, dns
-  this.tabs_ = new NetSimTabsComponent($('#netsim_tabs'),
+  this.tabs_ = new NetSimTabsComponent(
+      $('#netsim_tabs'),
       this.connection_,
-      this.changeChunkSize.bind(this));
+      this.changeChunkSize.bind(this),
+      this.changeEncoding.bind(this));
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
@@ -218,7 +215,7 @@ NetSim.prototype.refresh_ = function () {
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
   this.encodingMode_ = newEncoding;
-  this.encodingSelector_.setEncoding(newEncoding);
+  this.tabs_.setEncoding(newEncoding);
   this.receivedMessageLog_.setEncoding(newEncoding);
   this.sentMessageLog_.setEncoding(newEncoding);
   this.sendWidget_.setEncoding(newEncoding);
