@@ -1141,18 +1141,6 @@ Studio.init = function(config) {
 
   studioApp.init(config);
 
-  // TODO (brent) needed for other apps?
-  if (config.level.edit_blocks) {
-    // completely hide a bunch of functional blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
-      if (block.type === 'functional_example' ||
-          block.type === 'functional_definition') {
-        block.setCurrentlyHidden(true);
-      }
-    }, this);
-
-  }
-
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
 
