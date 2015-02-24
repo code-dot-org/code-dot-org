@@ -72,10 +72,6 @@ NetSimRouterTab.prototype.render = function () {
  * @private
  */
 NetSimRouterTab.prototype.bindElements_ = function () {
-  this.dnsModeManualControls_ = this.rootDiv_.find('#dns_mode_manual_controls');
-  this.becomeDnsButton_ = this.dnsModeManualControls_.find('#become_dns_button');
-  this.becomeDnsButton_.click(this.onBecomeDnsButtonClick_.bind(this));
-
   this.connectedDiv_ = this.rootDiv_.find('div.connected');
   this.notConnectedDiv_ = this.rootDiv_.find('div.not_connected');
   this.networkTable_ = this.rootDiv_.find('#netsim_router_network_table');
@@ -158,33 +154,16 @@ NetSimRouterTab.prototype.onRouterLogChange_ = function () {
   this.refreshLogTable_(this.myConnectedRouter.getLog());
 };
 
-NetSimRouterTab.prototype.onBecomeDnsButtonClick_ = function () {
-  var router = this.myConnectedRouter;
-  router.dnsNodeID = this.myLocalNode.entityID;
-  router.update();
-};
-
 /** Update the address table to show the list of nodes in the local network. */
 NetSimRouterTab.prototype.refresh = function () {
   if (this.myConnectedRouter) {
     this.connectedDiv_.show();
     this.notConnectedDiv_.hide();
-    this.refreshDnsModeSelector_();
     this.refreshAddressTable_(this.myConnectedRouter.getAddressTable());
     this.refreshLogTable_(this.myConnectedRouter.getLog());
   } else {
     this.notConnectedDiv_.show();
     this.connectedDiv_.hide();
-  }
-};
-
-NetSimRouterTab.prototype.refreshDnsModeSelector_ = function () {
-  var dnsMode = this.getDnsMode_();
-
-  if (dnsMode === DnsMode.MANUAL) {
-    this.dnsModeManualControls_.show();
-  } else {
-    this.dnsModeManualControls_.hide();
   }
 };
 
@@ -241,8 +220,4 @@ NetSimRouterTab.prototype.getDnsMode_ = function () {
     return this.myConnectedRouter.dnsMode;
   }
   return DnsMode.NONE;
-};
-
-NetSimRouterTab.prototype.setDnsMode = function () {
-  this.refreshDnsModeSelector_();
 };

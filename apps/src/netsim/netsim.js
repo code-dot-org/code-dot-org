@@ -193,7 +193,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_,
       this.changeChunkSize.bind(this),
       this.changeEncoding.bind(this),
-      this.changeRemoteDnsMode.bind(this));
+      this.changeRemoteDnsMode.bind(this),
+      this.becomeDnsNode.bind(this));
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
@@ -278,6 +279,30 @@ NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
     // STATE IS THE ROOT OF ALL EVIL
     var router = this.connection_.myNode.myRouter;
     router.dnsMode = newDnsMode;
+    router.update();
+  }
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSim.prototype.setIsDnsNode = function (isDnsNode) {
+  this.tabs_.setIsDnsNode(isDnsNode);
+};
+
+/**
+ * Tells simulation that we want to become the DNS node for our
+ * connected router.
+ */
+NetSim.prototype.becomeDnsNode = function () {
+  this.setIsDnsNode(true);
+  if (this.connection_&&
+      this.connection_.myNode &&
+      this.connection_.myNode.myRouter) {
+    // STATE IS THE ROOT OF ALL EVIL
+    var myNode = this.connection_.myNode;
+    var router = myNode.myRouter;
+    router.dnsNodeID = myNode.entityID;
     router.update();
   }
 };
@@ -371,8 +396,19 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
   }
 };
 
+/**
+ * @param {NetSimRouterNode} router
+ * @private
+ */
 NetSim.prototype.onRouterStateChange_ = function (router) {
+  var myNode = {};
+  if (this.connection_ && this.connection_.myNode) {
+    myNode = this.connection_.myNode;
+  }
+
   this.changeDnsMode(router.dnsMode);
+  this.setIsDnsNode(router.dnsMode === 'manual' &&
+      router.dnsNodeID === myNode.entityID);
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {
