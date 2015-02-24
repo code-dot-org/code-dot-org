@@ -319,6 +319,11 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 }
 
+.netsim_tabs .ui-tabs-nav li a {
+  font-size: 8pt;
+  padding: 0 1em;
+}
+
 #netsim_router_panel {
   #dns_mode_control {
     input[type="radio"] {
