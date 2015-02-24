@@ -1,30 +1,38 @@
 ---
-title: Translate Tutorials
+title: Translate Video Subtitles
 nav: translate_nav
 ---
 
-# Translating the site and tutorials
-The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. 
+# Translate Video Subtitles
+Translations for video captions are done through Amara. To get started, choose any of the videos below. After completing translations, click "Publish" to save your work and mark as complete. Then e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
 
-There are currently three projects, the [Code.org Project](https://crowdin.com/project/codeorg), [Hour of Code Project](https://crowdin.com/project/hour-of-code), and [Curriculum Project](https://crowdin.com/project/lesson-plans). Please complete translations for these projects in that order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
-
-
-## How translations are selected
-
-Members of the project are either a translator or proofreader. A translator can provide translations, while a proofreader can both provide translations as well as select the best translation to be used on the site.
-
-The final translation that appears on our site is selected as follows:
-
-1. A proofreader selects the best translation.
-2. If there is no translation selected by a proofreader, translators vote on the best translation and the translation with the most votes is selected.
-3. if votes are tied, the most recent translation will be selected.
+## Course 1
+* [The Big Event](https://www.amara.org/en/videos/tvzFUWGBWfW8/info/unplugged-the-big-event/)
+* [Getting Loopy](https://www.amara.org/en/videos/8dwb0VbRQLw1/info/unplugged-getting-loopy/)
+* [Pair Programming](https://www.amara.org/en/videos/yeaCmHtOwKYu/info/pair-programming/)
+* [Maze Intro](https://www.amara.org/en/videos/w8eaxwpeOM1W/info/maze-intro-hd/)
+* [Bee Intro](https://www.amara.org/en/videos/klc17f7H8umN/info/course-1-bee-level-intro/)
+* [Spelling Bee Intro](https://www.amara.org/en/videos/tFzHrKgg62OD/info/course-1-spelling-bee-intro/)
+* [Real Life Algorithms: Planting a Seed](https://www.amara.org/en/videos/Z0KUDgBuZz9J/info/real-life-algorithms-unplugged-activity-planting-a-seed/)
+* [Building a Foundation](https://www.amara.org/en/videos/iXRXFh7e4936/info/unplugged-building-a-foundation/)
 
 
-## How to Use CrowdIn
+## Course 2
+* [Graph Paper Programming](https://www.amara.org/en/videos/lIYrHyyg3Spi/info/unplugged-graph-paper-programming/)
+* [Real Life Algorithms, Paper Airplanes](https://www.amara.org/en/videos/IokizxjOLao0/info/unplugged-real-life-algorithms-paper-airplanes/)
+* [Relay Programming](https://www.amara.org/en/videos/PvACgvxSlXQ5/info/unplugged-relay-programming/)
 
-<embed src="/files/crowdin.swf" width=800 height=550 />
+## Course 3
+* [Crowdsourcing](https://www.amara.org/en/videos/vYAtklKB56Cd/info/uplugged-crowdsourcing/)
 
-Watch the [demo video](/files/crowdin.swf) in full screen.
+## Social
+* [100M Hours of Code](https://www.amara.org/en/videos/xQpx2un1e9zN/info/100m-hours-of-code/)
+
+## How to Use Amara
+
+<embed src="/files/amara.swf" width=800 height=550 />
+
+Watch the [demo video](/files/amara.swf) in full screen.
 
 ## Tips and Guidelines for Consistent Translations
 The Code.org drag-drop tutorials are based on the Blockly language. Many of the tips below are loosely based on the wiki article [Translating:Blockly](http://translatewiki.net/wiki/Translating:Blockly)
@@ -52,8 +60,3 @@ The tone is informal and conversational, and we prefer short phrases to long one
 
 ### CrowdIn Etiquette
 As a translator, please do not submit a translation that is identical to another user's submission. If you think a proofreader has made a mistake, please leave a comment in the comment section to bring it to their attention. As a proofreader, please do not delete translations.
-
----
-
-### Translate KhanAcademy coding tutorials to Spanish and Portuguese
-Click [here](http://cs-blog.khanacademy.org/2013/10/ayuda-traducir-nuestro-curriculo-en.html) to also help KhanAcademy translate their tutorials to Spanish and Portuguese.
