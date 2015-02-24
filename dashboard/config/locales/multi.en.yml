@@ -714,3 +714,76 @@ en:
         Question: Question
         wrong answer: wrong answer
         right answer: right answer
+      PDK5 Intro:
+        Welcome!: Welcome!
+        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        'Yes': 'Yes'
+        'No': 'No'
+      PDK5 What is CS:
+        What is Computer Science?: What is Computer Science?
+        'A computer program, or code, is:': 'A computer program, or code, is:'
+        a part inside of a computer: a part inside of a computer
+        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
+        a week-long course to learn about computers: a week-long course to learn about computers
+        a secret password: a secret password
+      PDK5 Test1:
+        title: title
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer
+      PDK5 Visual Languages:
+        title: title
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer
+        Visual Programming Languages: Visual Programming Languages
+        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
+        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
+        Because you: Because you
+        Because you dont: Because you dont
+        Because you dont have to worry about syntax as much like where to put a semi colon or closed parenthesis: Because you dont have to worry about syntax as much like where to put a semi colon or closed parenthesis
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
+        All of the above: All of the above
+        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
+        Because you can focus on the logic of programming: Because you can focus on the logic of programming
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Overview of K-5 Courses
+        Watch this video to understand our offerings of computer science courses for elementary school students.: Watch this video to understand our offerings of computer science courses for elementary school students.
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 Glossary:
+        Glossary: Glossary
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Writing your first computer program!
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 Sequence2:
+        More Sequencing: More Sequencing
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
+        toolbox: toolbox
+        shelf: shelf
+        bin: bin
+        dropdown: dropdown
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: What is an unplugged activity?
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Teacher Guides to all our unplugged activities
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
+      PDK5 Classroom Culture:
+        Classroom Culture: Classroom Culture
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
