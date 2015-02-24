@@ -1,4 +1,4 @@
-en-US:
+"en-US":
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
@@ -127,7 +127,7 @@ en-US:
     &ldquo;It's never too late
     to learn&rdquo;
     Susan, CEO of YouTube
-  homepage_hero_text_cheryl: |-
+  homepage_hero_text_sheryl: |-
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
     Sheryl, COO of Facebook
@@ -138,6 +138,9 @@ en-US:
   homepage_slot_text_course4: "Course 4"
   homepage_slot_text_shop: "Shop"
   homepage_slot_text_flappy: "Flappy Code"
+  homepage_watchvideo: "Watch the video"
+  homepage_signpetition: "Sign the petition"
+  homepage_signpetition_dropdown: "Sign our petition &#x25BE;"
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
