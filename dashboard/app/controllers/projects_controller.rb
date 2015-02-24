@@ -1,12 +1,14 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
   check_authorization
+  include LevelsHelper
+
+  TEMPLATES = %w(projects)
 
   def index
     authorize! :read, :reports
   end
 
-  TEMPLATES = %w(projects)
   def template
     authorize! :read, :reports
 
