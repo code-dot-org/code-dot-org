@@ -172,6 +172,7 @@ dashboard.saveProject = function(callback) {
       location.hash = data.id;
       callbackSafe(callback, data);
     });
+    dashboard.showProjectHeader();
   }
 };
 
@@ -179,17 +180,13 @@ function initApp() {
   if (appOptions.level.isProjectLevel) {
     if (dashboard.currentApp) {
       appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      dashboard.showProjectHeader();
     } else {
       dashboard.currentApp = {
         name: 'Untitled'
       };
     }
-    dashboard.showProjectHeader();
-    $(document).on('click', '#gameButtons', function () {
-      if ($(this).attr('id') === 'runButton') {
-        dashboard.saveProject();
-      }
-    });
+    $(window).on('run_button_pressed', dashboard.saveProject);
   }
   window[appOptions.app + 'Main'](appOptions);
 }
