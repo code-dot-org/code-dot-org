@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({157:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({158:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":151,"./levels":156,"./skins":160,"./studio":161}],161:[function(require,module,exports){
+},{"../appMain":5,"./blocks":151,"./levels":157,"./skins":161,"./studio":162}],162:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -2934,7 +2934,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":194,"../../locale/current/studio":200,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../templates/page.html":169,"../utils":189,"../xml":190,"./api":149,"./bigGameLogic":150,"./blocks":151,"./collidable":152,"./constants":153,"./controls.html":154,"./extraControlRows.html":155,"./projectile":158,"./samBatLogic":159,"./visualization.html":162}],162:[function(require,module,exports){
+},{"../../locale/current/common":195,"../../locale/current/studio":201,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../skins":147,"../templates/page.html":170,"../utils":190,"../xml":191,"./api":149,"./bigGameLogic":150,"./blocks":151,"./collidable":152,"./constants":153,"./controls.html":154,"./extraControlRows.html":156,"./projectile":159,"./samBatLogic":160,"./visualization.html":163}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2954,7 +2954,8 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":210}],159:[function(require,module,exports){
+},{"ejs":211}],160:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -2968,15 +2969,15 @@ var api = require('./api');
  * @implements CustomGameLogic
  */
 var SamBatLogic = function (studio) {
-  this.studio_ = studio;
-  this.cached_ = {};
+  CustomGameLogic.apply(this, arguments);
   this.samIndex = 0;
   this.sam = null;
 };
+SamBatLogic.inherits(CustomGameLogic);
 
 SamBatLogic.prototype.onTick = function () {
   this.sam = this.studio_.sprite[this.samIndex];
-  
+
   // Move Sam with arrow keys
   for (var key in KeyCodes) {
     if (this.studio_.keyState[KeyCodes[key]] &&
@@ -3017,7 +3018,7 @@ SamBatLogic.prototype.onTick = function () {
       }
     }
   }
-  
+
   // Display Sam's coordinates, with y inverted
   var centerX = this.sam.x + this.sam.width / 2;
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
@@ -3033,7 +3034,7 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   var centerX = this.sam.x + this.sam.width / 2;
   //invert Y
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
-  
+
   switch (dir) {
     case Direction.WEST:
       if (!this.onscreen(centerX - this.sam.speed, centerY)) {
@@ -3059,25 +3060,6 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
   this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
 };
 
-SamBatLogic.prototype.cacheBlock = function (key, block) {
-  this.cached_[key] = block;
-};
-
-SamBatLogic.prototype.resolveCachedBlock_ = function (key) {
-  var result = '';
-  var block = this.cached_[key];
-  if (!block) {
-    return result;
-  }
-
-  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
-  result = codegen.evalWith(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  return result;
-};
-
 /**
  * Calls the user provided onscreen? function, or no-op if none was provided.
  * @param {number} x Current x location of Sam
@@ -3090,7 +3072,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":44,"../constants":46,"./api":149,"./constants":153}],158:[function(require,module,exports){
+},{"../codegen":44,"../constants":46,"./api":149,"./constants":153,"./customGameLogic":155}],159:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3264,7 +3246,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":152,"./constants":153}],160:[function(require,module,exports){
+},{"./collidable":152,"./constants":153}],161:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3633,7 +3615,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":200,"../skins":147,"./constants":153}],156:[function(require,module,exports){
+},{"../../locale/current/studio":201,"../skins":147,"./constants":153}],157:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5102,7 +5084,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":200,"../block_utils":18,"../utils":189,"./constants":153}],155:[function(require,module,exports){
+},{"../../locale/current/studio":201,"../block_utils":18,"../utils":190,"./constants":153}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5122,7 +5104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":194,"ejs":210}],154:[function(require,module,exports){
+},{"../../locale/current/common":195,"ejs":211}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5142,7 +5124,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":194,"ejs":210}],152:[function(require,module,exports){
+},{"../../locale/current/common":195,"ejs":211}],152:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7278,28 +7260,16 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":194,"../../locale/current/studio":200,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":146,"../utils":189,"./constants":153}],200:[function(require,module,exports){
+},{"../../locale/current/common":195,"../../locale/current/studio":201,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":146,"../utils":190,"./constants":153}],201:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
 },{}],150:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
 var codegen = require('../codegen');
 var api = require('./api');
 
-/**
- * Interface for a set of custom game logic for playlab
- * @param {Studio} studio Reference to global studio object
- * @interface CustomGameLogic
- */
-function CustomGameLogic(studio) {}
-
-/**
- * Logic to be run once per playlab tick
- *
- * @function
- * @name CustomGameLogic#onTick
- */
 
 /**
  * Custom logic for the MSM BigGame
@@ -7307,13 +7277,13 @@ function CustomGameLogic(studio) {}
  * @implements CustomGameLogic
  */
 var BigGameLogic = function (studio) {
-  this.studio_ = studio;
-  this.cached_ = {};
+  CustomGameLogic.apply(this, arguments);
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
   this.dangerSpriteIndex = 2;
 };
+BigGameLogic.inherits(CustomGameLogic);
 
 BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
@@ -7327,7 +7297,7 @@ BigGameLogic.prototype.onTick = function () {
   if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
-      
+
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
   var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
   var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
@@ -7357,7 +7327,7 @@ BigGameLogic.prototype.onTick = function () {
       }
     }
   }
-  
+
   if (playerSprite.visible && dangerSprite.visible &&
       this.collide(playerSprite.x, playerSprite.y,
                    dangerSprite.x, dangerSprite.y)) {
@@ -7382,7 +7352,7 @@ BigGameLogic.prototype.onTick = function () {
     // send sprite back offscreen
     this.resetSprite_(targetSprite);
 }
-  
+
   if (this.studio_.playerScore <= 0) {
     var score = document.getElementById('score');
     score.setAttribute('visibility', 'hidden');
@@ -7447,10 +7417,6 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
 };
 
-BigGameLogic.prototype.cacheBlock = function (key, block) {
-  this.cached_[key] = block;
-};
-
 /**
  * Reset sprite to the opposite side of the screen
  */
@@ -7461,38 +7427,6 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
-};
-
-/**
- * Takes a cached block for a function of variable, and calculates the value
- * @returns The result of calling the code for the cached block. If the cached
- *   block was a function_pass, this means we get back a function that can
- *   now be called.
- */
-BigGameLogic.prototype.resolveCachedBlock_ = function (key) {
-  var result = '';
-  var block = this.cached_[key];
-  if (!block) {
-    return result;
-  }
-
-  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
-  result = codegen.evalWith(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  return result;
-};
-
-/**
- * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
- */
-BigGameLogic.prototype.getVar_ = function (key) {
-  return this.resolveCachedBlock_(key);
-};
-
-BigGameLogic.prototype.getFunc_ = function (key) {
-  return this.resolveCachedBlock_(key);
 };
 
 /**
@@ -7546,6 +7480,75 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 
 module.exports = BigGameLogic;
+
+},{"../codegen":44,"./api":149,"./constants":153,"./customGameLogic":155}],155:[function(require,module,exports){
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Interface for a set of custom game logic for playlab
+ * @param {Studio} studio Reference to global studio object
+ * @interface CustomGameLogic
+ */
+var CustomGameLogic = function (studio) {
+  this.studio_ = studio;
+  this.cached_ = {};
+};
+
+/**
+ * Logic to be run once per playlab tick
+ *
+ * @function
+ * @name CustomGameLogic#onTick
+ */
+
+CustomGameLogic.prototype.onTick = function () {
+  throw new Error('should be overridden by child');
+};
+
+/**
+ * Store a block in our cache, so that it can be called elsewhere
+ */
+CustomGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+/**
+ * Takes a cached block for a function of variable, and calculates the value
+ * @returns The result of calling the code for the cached block. If the cached
+ *   block was a function_pass, this means we get back a function that can
+ *   now be called.
+ */
+CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
+ */
+CustomGameLogic.prototype.getVar_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+CustomGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+module.exports = CustomGameLogic;
 
 },{"../codegen":44,"./api":149,"./constants":153}],149:[function(require,module,exports){
 var constants = require('./constants');
@@ -9013,4 +9016,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[157]);
+},{}]},{},[158]);
