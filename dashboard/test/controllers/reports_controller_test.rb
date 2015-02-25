@@ -86,36 +86,39 @@ class ReportsControllerTest < ActionController::TestCase
     teacher = create(:teacher)
     sign_in(teacher)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.find_by_name('course2').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE2_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.find_by_name('course3').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE3_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.twenty_hour_script.id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE4_NAME, user_id: teacher.id
+    assert_select '.stage-lesson-plan-link'
+
+    get :header_stats, script_id: Script::TWENTY_HOUR_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
   test 'should show lesson plan link only if teacher' do
     sign_out(@not_admin)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id
+    get :header_stats, script_id: Script::COURSE1_NAME
     assert_select '.stage-lesson-plan-link', 0
 
     teacher = create(:teacher)
     sign_in(teacher)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
     sign_out(teacher)
     student = create(:student)
     sign_in(student)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: student.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: student.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
@@ -124,7 +127,7 @@ class ReportsControllerTest < ActionController::TestCase
     student = create(:student)
     sign_in(student)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: student.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: student.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
@@ -133,7 +136,7 @@ class ReportsControllerTest < ActionController::TestCase
     teacher = create(:teacher)
     sign_in(teacher)
 
-    course1 = Script.find_by_name('course1')
+    course1 = Script.get_from_cache(Script::COURSE1_NAME)
 
     get :header_stats, script_id: course1.id, user_id: teacher.id
 

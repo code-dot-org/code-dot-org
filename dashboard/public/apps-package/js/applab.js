@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":154}],13:[function(require,module,exports){
+},{"../skins":166}],13:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -279,7 +279,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":202,"../block_utils":18,"../utils":200}],8:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../block_utils":18,"../utils":212}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2693,7 +2693,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":202,"../../locale/current/common":205,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":154,"../slider":155,"../templates/page.html":179,"../utils":200,"../xml":201,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":166,"../slider":167,"../templates/page.html":191,"../utils":212,"../xml":213,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2713,7 +2713,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":221}],12:[function(require,module,exports){
+},{"ejs":233}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2733,7 +2733,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":202,"../../locale/current/common":205,"ejs":221}],11:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"ejs":233}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2856,7 +2856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":205,"ejs":221}],9:[function(require,module,exports){
+},{"../../locale/current/common":217,"ejs":233}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2929,7 +2929,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":202,"../../locale/current/common":205,"../codegen":44,"../utils":200}],202:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"../codegen":44,"../utils":212}],214:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
