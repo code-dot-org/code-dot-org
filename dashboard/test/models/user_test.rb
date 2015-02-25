@@ -314,7 +314,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next unfinished level if not completed any unplugged levels' do
     user = create :user
-    twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
+    twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
@@ -325,7 +325,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next unfinished level, not tainted by other user progress' do
     user = create :user
-    twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
+    twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(user: create(:user), level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
