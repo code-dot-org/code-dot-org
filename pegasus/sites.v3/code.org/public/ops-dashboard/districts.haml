@@ -44,10 +44,8 @@ template: none
     %td
       %input{'ng-model' => 'district.contact_id', type:'select'}
     %td
-      %button.btn.btn-primary{'ng-click' => 'save(district)'}
-        Save
-      %button.btn.btn-white{'ng-click' => 'district.creation = false'}
-        Cancel
+      %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
+        Create new district
 
 :css
   .btn {
