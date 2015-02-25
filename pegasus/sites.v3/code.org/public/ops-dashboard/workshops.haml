@@ -4,7 +4,8 @@ template: none
 ---
 
 %h1 Workshops
-
+%a.btn.btn-white{href:'#/workshops/new'}
+  Create New Workshop
 %table{'ng-controller' => 'WorkshopsController', style:'width:100%; margin-top:20px;'}
   %tr
     %th.manage-th
@@ -14,68 +15,24 @@ template: none
     %th.manage-th
       Cohort
     %th.manage-th
-      Segments
-    %th.manage-th
-      Add Segment
+      Start Date
     %th.manage-th
       Manage
-  %tr{"ng-repeat" => "workshop in workshops", 'ng-controller' => 'WorkshopController'}
+  %tr{"ng-repeat" => "workshop in workshops"}
     %td
-      %p{'ng-hide' => 'workshop.editing', }
+      %p
         {{workshop.name}}
       %a{href:'#/workshops/{{workshop.id}}/attendance'}
         View attendance
-      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.name', type:'text', value:'{{workshop.name}}'}
     %td
-      %span{'ng-hide' => 'workshop.editing', }
+      %span
         {{workshop.program_type}}
-      %select{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.program_type'}
-        %option{'ng-repeat' => 'program in programs', 'value' => '{{program.name}}'}{{program.name}}
     %td
-      %span{'ng-hide' => 'workshop.editing'}
+      %span
         {{cohortName(workshop.cohort_id)}}
-      %input{'ng-show' => 'workshop.editing', 'ng-model' => 'workshop.cohort_id', type:'text', value:'{{workshop.cohort_id}}'}
     %td
       %div{'ng-repeat' => 'segment in workshopSegments'}
-        %p
-          Date: {{segment.start | date:'shortDate'}}
-        %p
-          Start: {{segment.start | date:'shortTime'}}
-        %p
-          End: {{segment.end | date:'shortTime'}}
-        %button{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
-          Delete
+        {{segment.start | date:'longDate'}}
     %td
-      Segment Start
-      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-      Segment End
-      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
-      %br
-      %br
-      %button{'ng-click' => 'saveSegment(segment)'}
-        Save
-    %td
-      %button.btn.btn-white{'ng-click' => 'workshop.editing = true', 'ng-hide' => 'workshop.editing'} Edit
-      %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);', 'ng-hide' => 'workshop.editing'} Delete
-      %button.btn.btn-primary{'ng-click' => 'save(workshop)', 'ng-show' => 'workshop.editing'} Save
-      %button.btn.btn-white{'ng-click' => 'workshop.editing = false', 'ng-show' => 'workshop.editing'} Cancel
-    %tr
-    %td
-      %input{'ng-model' => 'workshop.name', type:'text'}
-    %td
-      %select{'ng-model' => 'workshop.program_type'}
-        %option{'ng-repeat' => 'program in programs', 'value' => '{{program.name}}'}
-          {{program.name}}
-    %td
-      %select{'ng-model' => 'workshop.cohort_id'}
-        %option{'ng-repeat' => 'cohort in cohorts', 'value' => '{{cohort.id}}'}
-          {{cohort.name}}
-    %td
-      %p
-        Hello!
-    %td
-      %p
-        Hello!
-    %td
-      %button.btn.btn-primary{'ng-click' => 'save(workshop)', style:'width:100%'}
-        Create new workshop
+      %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit'} Edit
+      %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);'} Delete

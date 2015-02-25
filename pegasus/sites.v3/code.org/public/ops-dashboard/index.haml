@@ -5,11 +5,6 @@ theme: angular
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
-%script{type: "text/javascript", src: "/js/angular-selectize.js"}
-%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
-
-%div{'ng-app' => 'opsApp', 'ng-view' => ''}
-
 :javascript
   'use strict';
 
@@ -23,12 +18,14 @@ theme: angular
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
                         {templateUrl: '/ops-dashboard/landing'});
-    $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',   controller: 'DistrictsController'});
-    $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',   controller: 'WorkshopsController'});
-    $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',  controller: 'AttendanceController'});
-    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',     controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit', controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit', controller: 'CohortController'});
+    $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',       controller: 'DistrictsController'});
+    $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',       controller: 'WorkshopsController'});
+    $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:workshopid/attendance',                  {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
+    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -178,6 +175,8 @@ theme: angular
       $scope.workshops = workshopsService.query();
       $scope.cohorts = cohortsService.query();
 
+      //$scope.workshop = workshopsService.get({id: $routeParams.id});
+
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
           var name = "";
@@ -193,29 +192,29 @@ theme: angular
         return "N/A";
       }
 
-      $scope.save = function (workshop) {
-        if (workshop.id) {
-          var newWorkshop = new workshopsService($scope.workshop);
-          workshopsService.update({id: workshop.id}, workshop).$promise.then(
-            function(result_workshop) {
-              $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
-                workshopsService.query().$promise.then(function (workshops) {
-                $scope.workshops = workshops;
-              });
-            }
-          ).catch($scope.genericError);
-        } else {
-          var newWorkshop = new workshopsService($scope.workshop);
-          newWorkshop.$save().then(
-            function(saved) {
-              $scope.workshop = saved; /* just in case it has been modified on server */
-              workshopsService.query().$promise.then(function (workshops) {
-                $scope.workshops = workshops;
-              });
-            }
-          );
-        }
-      }
+      //$scope.save = function (workshop) {
+      //  if (workshop.id) {
+      //    var newWorkshop = new workshopsService($scope.workshop);
+      //    workshopsService.update({id: workshop.id}, workshop).$promise.then(
+      //      function(result_workshop) {
+      //        $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
+      //          workshopsService.query().$promise.then(function (workshops) {
+      //          $scope.workshops = workshops;
+      //        });
+      //      }
+      //    ).catch($scope.genericError);
+      //  } else {
+      //    var newWorkshop = new workshopsService($scope.workshop);
+      //    newWorkshop.$save().then(
+      //      function(saved) {
+      //        $scope.workshop = saved; /* just in case it has been modified on server */
+      //        workshopsService.query().$promise.then(function (workshops) {
+      //          $scope.workshops = workshops;
+      //        });
+      //      }
+      //    );
+      //  }
+      //}
     }
   ]);
 
@@ -227,7 +226,7 @@ theme: angular
       $scope.segments = segmentsService.query({id: $routeParams.workshopid});
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
-      //$scope.workshopTeacherSegmentAttendance = teachersService.query({workshopid: $routeParams.workshopid});
+      $scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
@@ -306,14 +305,61 @@ theme: angular
     }
   ]);
 
-  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService',
-    function($scope, $route, $routeParams, $location, $window, segmentsService) {
-      $scope.workshopSegments = segmentsService.query({id: $scope.workshop.id});
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService) {
+      $scope.workshop = workshopsService.get({id: $routeParams.id});
+      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      $scope.programs = [{name:"MSS"}, {name:"MSM"}, {name:"ECS"}, {name:"CSP"}];
+      $scope.cohorts = cohortsService.query();
+      $scope.cohortName = function (cohortId) {
+        if ($scope.cohorts) {
+          var name = "";
+          $scope.cohorts.forEach(function (e) {
+            if (e.id == cohortId) {
+              name = e.name;
+            }
+          });
+          if (name != "") {
+            return name;
+          }
+        }
+        return "N/A";
+      }
+
+      $scope.save = function (workshop) {
+         if (workshop.id) {
+           var newWorkshop = new workshopsService($scope.workshop);
+           workshopsService.update({id: workshop.id}, workshop);
+         } else {
+           var newWorkshop = new workshopsService($scope.workshop);
+           newWorkshop.$save().then(
+             function(saved) {
+               $scope.workshop = saved; /* just in case it has been modified on server */
+               workshopsService.query().$promise.then(function (workshops) {
+                 $scope.workshops = workshops;
+               });
+             }
+           );
+         }
+         $location.path('/workshops');
+      }
 
       $scope.saveSegment = function (segment) {
         var newSegment = new segmentsService($scope.segment);
-        newSegment.$save({id: $scope.workshop.id});
+        newSegment.$save({id: $scope.workshop.id}).then(
+          function(saved) {
+            $scope.segment = saved;
+            segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
+              $scope.workshopSegments = segments;
+            });
+          }
+        );
       }
 
     }
   ]);
+
+
+%script{type: "text/javascript", src: "/js/angular-selectize.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%div{'ng-app' => 'opsApp', 'ng-view' => ''}
