@@ -209,7 +209,7 @@ exports.assertThrows = function (exceptionType, fn) {
   assert(x.constructor === exceptionType,
       "Threw " + x.constructor.name +
       ", expected " + exceptionType.name +
-      "; exception: " + JSON.stringify(x));
+      "; exception: " + x.message);
 };
 
 /**
