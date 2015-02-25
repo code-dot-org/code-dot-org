@@ -12,12 +12,16 @@ var DnsMode = NetSimRouterNode.DnsMode;
       <th>Packet</th>
       <th>Message</th>
       <th>Bytes</th>
-      <th>Time</th>
-      <th>Status</th>
     </tr>
     </thead>
     <tbody>
     <%
+    // Sort: Most recent first
+    tableData.sort(function (a, b) {
+      return a.timestamp > b.timestamp ? -1 : 1;
+    });
+
+    // Create rows
     tableData.forEach(function (row) {
       var rowClasses = [];
     %>
@@ -25,9 +29,7 @@ var DnsMode = NetSimRouterNode.DnsMode;
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= row.logText %></td>
       <td></td>
     </tr>
     <%

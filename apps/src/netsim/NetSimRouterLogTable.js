@@ -31,12 +31,6 @@ var NetSimRouterLogTable = module.exports = function (rootDiv) {
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {DnsMode}
-   * @private
-   */
-  this.dnsMode_ = DnsMode.NONE;
-
-  /**
    * @type {Array}
    * @private
    */
@@ -50,24 +44,15 @@ var NetSimRouterLogTable = module.exports = function (rootDiv) {
  */
 NetSimRouterLogTable.prototype.render = function () {
   var renderedMarkup = $(markup({
-    dnsMode: this.dnsMode_,
     tableData: this.routerLogData_
   }));
   this.rootDiv_.html(renderedMarkup);
 };
 
 /**
- * @param {DnsMode} newDnsMode
+ * @param {Array} logData
  */
-NetSimRouterLogTable.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsMode_ = newDnsMode;
-  this.render();
-};
-
-/**
- * @param {Array} tableContents
- */
-NetSimRouterLogTable.prototype.setDnsTableContents = function (tableContents) {
-  this.routerLogData_ = tableContents;
+NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
+  this.routerLogData_ = logData;
   this.render();
 };
