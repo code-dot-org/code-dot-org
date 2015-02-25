@@ -26,8 +26,6 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "soft_buttons": [
-      "leftButton",
-      "rightButton",
       "downButton",
       "upButton"
     ],
