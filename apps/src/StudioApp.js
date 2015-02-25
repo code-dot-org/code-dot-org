@@ -368,6 +368,9 @@ StudioApp.prototype.init = function(config) {
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
+    if (this.isUsingBlockly()) {
+      Blockly.mainBlockSpace.fireChangeEvent();
+    }
   }, this), 10);
 
   this.reset(true);

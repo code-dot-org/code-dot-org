@@ -31,7 +31,7 @@ Incorporate computer science into elementary and middle school, or offer a year-
 - Open to all NYC DOE high school teachers & no cost to apply<br />
 [Sign up your school](https://code.org/educate/nyc/)
 
-Please, share these opportunity with teachers in your district. 
+Please, share this opportunity with teachers in your district. 
 
 ### Why computer science?
 
