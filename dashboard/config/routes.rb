@@ -73,7 +73,7 @@ Dashboard::Application.routes.draw do
   get '/home/:action', controller: 'home'
 
   resources :projects, path: '/p/', only: [:index] do
-    collection do 
+    collection do
       get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
       get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
       get '/:template', to: 'projects#template'
