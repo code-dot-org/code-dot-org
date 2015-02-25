@@ -7,7 +7,7 @@ testUtils.setupLocales('calc');
 
 var Calc = require(testUtils.buildPath('/calc/calc.js'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet.js'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode.js'));
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
@@ -168,6 +168,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.failedInput, null);
   });
 
+  // TODO (brent) - reenable these once variables are fixed
   it('succeeds when user/target both have multiple variables and are identical', function () {
     // x = 1
     // y = x + 1
@@ -192,7 +193,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('succeeds when user/target both have multiple variables and are different', function () {
+  it('fails when user/target both have multiple variables and are different', function () {
     // x = 1
     // y = x + 1
     // compute: y
@@ -211,8 +212,170 @@ describe('evaluateResults_/evaluateFunction_', function () {
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
-    assert.equal(outcome.testResults, TestResults.LEVEL_INCOMPLETE_FAIL);
-    assert.equal(outcome.message, undefined);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    // assert.equal(outcome.message, undefined);
     assert.equal(outcome.failedInput, null);
   });
+});
+
+describe('evaluateResults_/evaluateSingleVariable_', function () {
+  var targetSet;
+
+  before(function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = age * 12
+    targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    targetSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    targetSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 12])));
+  });
+
+  it('when user doesnt have age variable', function () {
+    // compute: age_in_months
+    // age_in_months = 17 * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', [17, 12])));
+
+    assert.equal(targetSet.evaluate(), userSet.evaluate());
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.equal(outcome.message, calcMsg.missingVariableX({var: 'age'}));
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when user has age variable, but hard codes age instead of using variable', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = 17 * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', [17, 12])));
+
+    assert.equal(targetSet.evaluate(), userSet.evaluate());
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when user has age variable, but wrong expression', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = age * 10
+    userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 10])));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.equal(outcome.message, calcMsg.wrongResult());
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when user has different age variable, and hard codes age instead of using ' +
+      'variable', function () {
+    // compute: age_in_months
+    // age = 12
+    // age_in_months = 17 * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(12)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', [17, 12])));
+
+    assert.equal(targetSet.evaluate(), userSet.evaluate());
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when user has the wrong compute expression', function () {
+    // compute: 194
+    // age = 17
+    // age_in_months = age * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode(194)));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 12])));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.FAILURE);
+    assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
+    assert.equal(outcome.message, calcMsg.levelIncompleteError());
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when users age variable is the same, and their answer is right', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = age * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 12])));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.SUCCESS);
+    assert.equal(outcome.testResults, TestResults.ALL_PASS);
+    assert.equal(outcome.message, null);
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when users age variable is different, and their answer is right', function () {
+    // compute: age_in_months
+    // age = 12
+    // age_in_months = age * 12
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(12)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', ['age', 12])));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.SUCCESS);
+    assert.equal(outcome.testResults, TestResults.ALL_PASS);
+    assert.equal(outcome.message, null);
+    assert.equal(outcome.failedInput, null);
+  });
+
+  it('when user gets the right answer using a slightlly different equation', function () {
+    // compute: age_in_months
+    // age = 17
+    // age_in_months = (age * 6) * 2
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
+    userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
+    userSet.addEquation_(new Equation('age_in_months', [],
+      new ExpressionNode('*', [
+        new ExpressionNode('*', ['age', 6]),
+        2
+      ])
+    ));
+
+    var outcome = Calc.evaluateResults_(targetSet, userSet);
+    assert.equal(outcome.result, ResultType.SUCCESS);
+    assert.equal(outcome.testResults, TestResults.ALL_PASS);
+    assert.equal(outcome.message, null);
+    assert.equal(outcome.failedInput, null);
+
+  });
+
 });

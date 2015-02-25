@@ -39,6 +39,7 @@ class ScriptLevelsController < ApplicationController
     load_script_level
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
+      canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
     end
@@ -93,7 +94,7 @@ private
   def load_level_source
     # Set start blocks to the user's previous attempt at this puzzle
     # or the user's project's level_source if necessary. Must be
-    # called after set_videos_and_blocks_and_callouts_and_instructions
+    # called after set_videos_and_blocks_and_callouts
     # because we override @start_blocks set there.
     # TODO this whole thing should be done on the client side
 
@@ -118,7 +119,7 @@ private
     @game = @level.game
     @stage = @script_level.stage
 
-    set_videos_and_blocks_and_callouts_and_instructions
+    set_videos_and_blocks_and_callouts
 
     load_level_source
 

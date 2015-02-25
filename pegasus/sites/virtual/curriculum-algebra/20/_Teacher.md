@@ -33,6 +33,16 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### <a name="GetStarted"></a> 1) Introduction
 
+Let's get back into that Big Game from stages 7, 12, and 16.
+
+Previous work with the game has created movement for the danger and target characters.  Conditional statements have been added to ensure the these characters reappear once the have moved off the screen.  
+
+The students will now get their main character into the action.  They need to connect the main character's activity to keyboard events.  The students can customize their movements to any keys (see key codes in the student workbook) but the suggested keys are the right, up, left, and down arrow keys (with key codes 37-40).  If the main character is not responding, two scenarios are good to trouble shoot: 1) What key is designated compared to what the student is pressing and 2) what action results from this key press (is the character location changing or still just x?)?
+
+The Pythagorean Theorem studied in the last lesson will be used to determine when the characters have made contact.  Students are not required to use the line-length function but it is set up for them.  They will need the sqrt function which has been added to the number functions.  They should be encouraged to create a square function although the can implement this part of the puzzle using just the times function.  After the students implement the distance formula, they will need to put the appropriate boolean tests in the collide function.
+
+Once these last functions are put into place, scoring will automatically update based on target and danger collisions.
+
 
 
 [/together]

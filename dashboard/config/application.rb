@@ -66,7 +66,14 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
-    config.assets.precompile += ['**/blockly_editor*', 'react.js']
+    config.assets.precompile += %w(
+      epiceditor/*.css
+      editor/markdown_editor.css
+      editor/markdown_editor.js
+      editor/blockly_editor.css
+      editor/blockly_editor.js
+      react.js
+    )
     config.react.variant = :development
     config.react.addons = true
   end

@@ -6,8 +6,8 @@
   "user_id": 45,
   "properties": {
     "skin": "bee",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,2,0,0],[0,0,0,0,0,1,0,0],[0,0,0,\"FC\",1,\"FC\",0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,-1,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,1,\"FC\",0,0,0],[0,0,0,\"FC\",0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,-1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "The cloud could be hiding a flower or a honeycomb. Only get nectar from flowers. Only make honey at honeycombs.",
     "is_k1": "false",
@@ -20,7 +20,15 @@
     "step_mode": "0",
     "nectar_goal": "1",
     "honey_goal": "1",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "ideal": "12",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -32,8 +40,8 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
         </block>
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>

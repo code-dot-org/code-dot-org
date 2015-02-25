@@ -226,6 +226,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "!!-Congratulations! You have completed this puzzle.-!!"},
 "no":function(d){return "!!-No-!!"},
 "numBlocksNeeded":function(d){return "!!-This puzzle can be solved with %1 blocks.-!!"},
+"onEventTooltip":function(d){return "!!-Execute code in response to the specified event.-!!"},
 "ouchExclamation":function(d){return "!!-Ouch!-!!"},
 "playSoundCrunch":function(d){return "!!-play crunch sound-!!"},
 "playSoundGoal1":function(d){return "!!-play goal 1 sound-!!"},

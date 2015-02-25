@@ -1,18 +1,13 @@
-id_s!,type_s,text1_s,url_s,watermark_s,image_t,active_s
-hero_malala,widehero,"&ldquo;I challenge girls in every single country
-to learn one Hour of Code&rdquo; 
-Malala",,,/images/homepage/malala.jpg,show
-hero_susan,widehero,"&ldquo;It's never too late
-to learn&rdquo;
-Susan, CEO of YouTube",,,/images/homepage/susan.jpg,show
-hero_girl,widehero,,,,/images/homepage/girl.jpg,show
-hero_sheryl,widehero,"&ldquo;An understanding of computer science
-is becoming increasingly essential...&rdquo;
-Sheryl, COO of Facebook",,,/images/homepage/sheryl.jpg,show
-slot_elementary,slot,The Hour of Code,http://code.org/learn,,/shared/images/courses/logo_tall_elementary.jpg,show
-slot_frozen,slot,Frozen with Anna and Elsa,http://studio.code.org/s/frozen/reset,codestudio,/shared/images/courses/logo_tall_frozen.jpg,show
-slot_teacher,slot,Teacher Dashboard,http://code.org/educate/k5,,/shared/images/courses/logo_tall_teacher.jpg,show
-slot_studio,slot,All of our tutorials,http://studio.code.org,codestudio,/shared/images/courses/logo_tall_elementary.jpg,nah
-slot_course4,slot,Course 4,http://studio.code.org/s/course4/reset,codestudio,/shared/images/courses/logo_tall_course4.jpg,nah
-slot_shop,slot,Shop,http://code.org/shop,,/shared/images/courses/logo_tall_shop_borderless.jpg,show
-petition,petition,,,,,show
+id_s!,type_s,text1_s,url_s,watermark_s,image_t,site_s,active_s
+hero_malala,widehero,homepage_hero_text_malala,,,/images/homepage/malala.jpg,both,show
+hero_susan,widehero,homepage_hero_text_susan,,,/images/homepage/susan.jpg,code.org,show
+hero_girl,widehero,,,,/images/homepage/girl.jpg,csedweek.org,show
+hero_sheryl,widehero,homepage_hero_text_sheryl,,,/images/homepage/sheryl.jpg,both,show
+slot_hoc,slot,homepage_slot_text_hoc,http://code.org/learn,,/shared/images/courses/logo_tall_elementary.jpg,both,show
+slot_frozen,slot,homepage_slot_text_frozen,http://studio.code.org/s/frozen/reset,codestudio,/shared/images/courses/logo_tall_frozen.jpg,both,show
+slot_teacher,slot,homepage_slot_text_teacher,http://code.org/educate/k5,,/shared/images/courses/logo_tall_teacher.jpg,both,show
+slot_studio,slot,homepage_slot_text_studio,http://studio.code.org,codestudio,/shared/images/courses/logo_tall_elementary.jpg,both,nah
+slot_course4,slot,homepage_slot_text_course4,http://studio.code.org/s/course4/reset,codestudio,/shared/images/courses/logo_tall_course4.jpg,both,nah
+slot_shop,slot,homepage_slot_text_shop,http://code.org/shop,,/shared/images/courses/logo_tall_shop_borderless.jpg,code.org,show
+slot_flappy,slot,homepage_slot_text_flappy,http://studio.code.org/s/flappy,codestudio,/shared/images/courses/logo_tall_flappy.jpg,csedweek.org,show
+,,,,,,both,show

@@ -1,7 +1,7 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2015-02-16T16:46:56.000Z",
+  "created_at": "2015-02-22T16:20:55.000Z",
   "level_num": "custom",
   "user_id": 45,
   "properties": {
@@ -10,7 +10,7 @@
     "instructions": "The code provided draws one triangle. Add to it to draw triangles in a hexagon pattern.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".5",
+    "slider_speed": ".8",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -26,7 +26,9 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "ideal": "6",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Code Studio Puzzle Challenge 12 - Artist_callout1\",\r\n  \"callout_text\": \"Click \\\"Clear Puzzle\\\" to return to the original code.\",\r\n  \"element_id\": \"#clear-puzzle-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]"
   }
 }]]></config>
   <blocks>
