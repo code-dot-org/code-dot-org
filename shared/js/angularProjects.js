@@ -8,7 +8,7 @@
     'projectsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/projects/projects',
+                        {templateUrl: '/p/projects',
                          controller: 'ProjectsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
