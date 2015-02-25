@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Control Elsa (Actor 2) to catch Anna (Actor 1) who is moving back and forth.",
+    "instructions": "Can you make Elsa (actor 2) catch up with Anna by using the arrow keys?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -40,8 +40,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
-    "maze_data": null,
-    "timeout_failure_tick": "250"
+    "timeout_failure_tick": "250",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
