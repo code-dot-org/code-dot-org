@@ -24,9 +24,23 @@ var packetEncoder = new PacketEncoder([
   { key: 'message', bits: Infinity }
 ]);
 
+function getEncodingLabel(rowClass) {
+  if (rowClass === 'ascii') {
+    return 'ASCII';
+  } else if (rowClass === 'decimal') {
+    return 'Decimal';
+  } else if (rowClass === 'hexadecimal') {
+    return 'Hexadecimal';
+  } else if (rowClass === 'binary') {
+    return 'Binary';
+  }
+  return '';
+}
+
 function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
   %>
     <tr class="<%= rowClass %>">
+      <th nowrap class="encodingLabel"><%= getEncodingLabel(rowClass) %></th>
       <td nowrap class="toAddress"><%= toAddress %></td>
       <td nowrap class="fromAddress"><%= fromAddress %></td>
       <td nowrap class="packetInfo"><%= packetInfo %></td>
@@ -39,6 +53,7 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
 <table>
   <thead>
     <tr>
+      <th nowrap class="encodingLabel"></th>
       <th nowrap class="toAddress">To</th>
       <th nowrap class="fromAddress">From</th>
       <th nowrap class="packetInfo">Packet</th>
