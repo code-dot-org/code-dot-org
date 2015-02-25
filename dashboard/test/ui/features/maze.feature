@@ -46,6 +46,6 @@ Scenario: Submit a valid solution
   # todo (brent) : could test show code
   And I press "continue-button"
   And I wait for 2 seconds
-  Then check that I am on "http://learn.code.org/s/1/level/17"
+  Then check that I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16"
   Then check that level 16 on this stage is done
   Then check that level 15 on this stage is not done

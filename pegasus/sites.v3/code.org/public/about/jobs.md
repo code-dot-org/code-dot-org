@@ -5,6 +5,7 @@ nav: about_nav
 
 # Job Openings at Code.org
 
+- [Accountant (PT)](#accountant)
 - [Head of Product/Marketing](#head-product)
 - [Head of Engineering](#head-engineering)
 - [Operations Intern](#operations-intern)
@@ -18,7 +19,36 @@ nav: about_nav
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
 
+## <a name="accountant "href="accountant">Accountant (PT) (Seattle, WA)</a>
+**Job Summary:**
 
+The Accountant plays a critical role in ensuring accurate financial recordkeeping in accordance with IRS regulations and non-profit best practices. Responsibilities of the position include:
+
+- Journal entry processing
+- Bank and general ledger account reconciliations and analysis
+- Inventory reconciliation
+- Month-end and year-end closing processes
+- Prepare monthly, quarterly, and annual financial statements and Board of Directors financial presentations
+- Prepare audit schedules and interface with external auditors
+- Assist with developing annual budgets
+
+**Qualifications**
+
+The ideal candidate has the following qualifications:
+
+- A Bachelor’s degree in Accounting and a minimum of 3 years of progressive non-profit accounting experience (REQUIRED)
+- Strong knowledge of general accounting and financial reporting requirements as well as financial audits
+- Expertise in Quickbooks Online is required
+- Strong analytical and problem solving ability
+- Professional demeanor, possessing excellent communication skills
+- Must be extremely organized and detail oriented
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment 
+
+A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, must be an Expert user of spreadsheets.
+Must be a U.S. Citizen or Permanent Resident
+Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
 **Job Summary:**
 

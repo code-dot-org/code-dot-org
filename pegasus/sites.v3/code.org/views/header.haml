@@ -9,15 +9,18 @@
       #right
         #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}
 
-        %a.headerlink{:href=>"/learn"}LEARN
-        %a.headerlink{:href=>"/educate"}TEACH
-        %a.headerlink{:href=>"/promote"}STATS
-        - if request.path_info == "/index2"
-          %a.headerlink{:href=>"/help"}HELP US
-          %a.headerlink{:href=>"/about"}ABOUT
-        - else
-          %a.headerlink{:href=>"/help"}HOW TO HELP
-          %a.headerlink{:href=>"/about"}ABOUT
+        -if page_translated? && !partner_site?
+        -else
+          .desktop-feature
+            %a.headerlink{:href=>"/learn"}LEARN
+            %a.headerlink{:href=>"/educate"}TEACH
+            %a.headerlink{:href=>"/promote"}STATS
+            - if request.path_info == "/index2"
+              %a.headerlink{:href=>"/help"}HELP US
+              %a.headerlink{:href=>"/about"}ABOUT
+            - else
+              %a.headerlink{:href=>"/help"}HOW TO HELP
+              %a.headerlink{:href=>"/about"}ABOUT
 
     #clear{:style=>'clear:both'}
 

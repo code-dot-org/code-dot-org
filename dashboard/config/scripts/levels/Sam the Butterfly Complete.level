@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () { \r\n  this.studio_ = Studio;\r\n  this.onscreen = this.studio_.Globals.onscreen_;\r\n  this.sam = this.studio_.sprite[0];\r\n  this.updateSam_ = function (dir) {\r\n    this.studio_.moveSingle({spriteIndex:0, dir:dir});\r\n    if ((this.onscreen.length === 1 && !this.onscreen(this.sam.x)) || (this.onscreen.length === 2 && !this.onscreen(this.sam.x, sam.y))) {\r\n     this.bounce();\r\n    }\r\n  }\r\n  this.bounce = function () {\r\n    var dir;\r\n    if (this.sam.dir === 1) {\r\n      dir = 4;\r\n    } else if (this.sam.dir === 4) {\r\n      dir = 1;\r\n    } else if (this.sam.dir === 2) {\r\n      dir = 8;\r\n    } else if (this.sam.dir === 8) {\r\n      dir = 2;\r\n    }\r\n    this.studio_.moveSingle({spriteIndex:0, dir:dir});\r\n  }\r\n      \r\n  \r\n  for (var key in this.studio_.keyState) {\r\n    if (this.studio_.keyState[key] === 'keydown') {\r\n      if (key === 37) {\r\n        this.updateSam_(8);\r\n        console.log('left');\r\n      } else if (key === 38) {\r\n        this.updateSam_(1);\r\n        console.log('up');\r\n      } else if (key === 39) {\r\n        this.updateSam_(2);\r\n        console.log('right');\r\n      } else if (key === 40) {\r\n        this.updateSam_(4);\r\n        console.log('down');\r\n      }\r\n    }\r\n  }\r\n\r\n  for (var btn in this.studio_.btnState) {\r\n    if (this.studio_.btnState[btn]) {\r\n      if (btn === 'leftButton') {\r\n        this.updateSam_(8);\r\n      } else if (btn === 'upButton') {\r\n        this.updateSam_(1);\r\n      } else if (btn === 'rightButton') {\r\n        this.updateSam_(2);\r\n      } else if (btn === 'downButton') {\r\n        this.updateSam_(4);\r\n      }\r\n    }\r\n  }\r\n  if (this.onscreen.length === 1) {};\r\n}",
+    "success_condition": "function () { \r\n  this.studio_ = Studio;\r\n  this.onscreen = this.studio_.Globals.onscreen_;\r\n  this.sam = this.studio_.sprite[0];\r\n  this.updateSam_ = function (xDelta, yDelta) {\r\n    console.log('update sam');\r\n    var newCenterX = xDelta + this.sam.x + this.sam.width / 2;\r\n    var newCenterY = yDelta + this.sam.y + this.sam.height / 2;\r\n    console.log('(' + newCenterX + ', ' + newCenterY + ')');\r\n    if (this.onscreen.length === 1 && !this.onscreen(newCenterX)) {\r\n      console.log('onscreen? = ' + this.onscreen(newCenterX));\r\n      return;\r\n    } else if (this.onscreen.length === 2 && !this.onscreen(newCenterX, newCenterY)) {\r\n      return;\r\n    } else {\r\n      this.sam.x = newCenterX - this.sam.width / 2;\r\n      this.sam.y = newCenterY - this.sam.height / 2;\r\n    }\r\n  }\r\n  \r\n  for (var key in this.studio_.keyState) {\r\n    if (this.studio_.keyState[key] === 'keydown') {\r\n      if (key == 37) {\r\n        this.updateSam_(-5,0);\r\n      } else if (key == 38) {\r\n        this.updateSam_(0,-5);\r\n      } else if (key == 39) {\r\n        this.updateSam_(5,0);\r\n      } else if (key == 40) {\r\n        this.updateSam_(0,5);\r\n      }\r\n    }\r\n  }\r\n\r\n  for (var btn in this.studio_.btnState) {\r\n    if (this.studio_.btnState[btn]) {\r\n      if (btn === 'leftButton') {\r\n        this.updateSam_(-5,0);\r\n      } else if (btn === 'upButton') {\r\n        this.updateSam_(0,-5);\r\n      } else if (btn === 'rightButton') {\r\n        this.updateSam_(5,0);\r\n      } else if (btn === 'downButton') {\r\n        this.updateSam_(0,5);\r\n      }\r\n    }\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -49,6 +49,13 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
+          <functional_input name="VALUE">
+            <block type="functional_pass">
+              <mutation name="onscreen?"/>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="x" type="Number"/>
@@ -89,13 +96,6 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
-          <functional_input name="VALUE">
-            <block type="functional_pass">
-              <mutation name="safe-right?"/>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="x" type="Number"/>
@@ -103,6 +103,11 @@
             <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-right?</title>
+          <functional_input name="STACK">
+            <block type="functional_boolean">
+              <title name="VAL">true</title>
+            </block>
+          </functional_input>
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">

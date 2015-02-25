@@ -493,11 +493,11 @@ module.exports = {
     'toolbox': toolbox(3, 1),
     'ideal': 3,
     'editCode': true,
-    'codeFunctions': [
-      {'func': 'moveForward' },
-      {'func': 'turnLeft' },
-      {'func': 'turnRight' }
-    ],
+    'codeFunctions': {
+      'moveForward': null,
+      'turnLeft': null,
+      'turnRight': null,
+    },
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
      ],
@@ -517,11 +517,11 @@ module.exports = {
     'toolbox': toolbox(3, 2),
     'ideal': 4,
     'editCode': true,
-    'codeFunctions': [
-      {'func': 'moveForward' },
-      {'func': 'turnLeft' },
-      {'func': 'turnRight' }
-    ],
+    'codeFunctions': {
+      'moveForward': null,
+      'turnLeft': null,
+      'turnRight': null,
+    },
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
      ],
@@ -541,11 +541,11 @@ module.exports = {
     'toolbox': toolbox(3, 3),
     'ideal': 6,
     'editCode': true,
-    'codeFunctions': [
-      {'func': 'moveForward' },
-      {'func': 'turnLeft' },
-      {'func': 'turnRight' }
-    ],
+    'codeFunctions': {
+      'moveForward': null,
+      'turnLeft': null,
+      'turnRight': null,
+    },
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
@@ -567,11 +567,11 @@ module.exports = {
     'toolbox': toolbox(3, 4),
     'ideal': 8,
     'editCode': true,
-    'codeFunctions': [
-      {'func': 'moveForward' },
-      {'func': 'turnLeft' },
-      {'func': 'turnRight' }
-    ],
+    'codeFunctions': {
+      'moveForward': null,
+      'turnLeft': null,
+      'turnRight': null,
+    },
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT]
@@ -590,11 +590,6 @@ module.exports = {
   },
   'custom': {
     'toolbox': toolbox(3, 4),
-    'codeFunctions': [
-      {'func': 'moveForward' },
-      {'func': 'turnLeft' },
-      {'func': 'turnRight' }
-    ],
     'requiredBlocks': [],
     'startDirection': Direction.EAST,
     'map': [
