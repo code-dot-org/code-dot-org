@@ -1,8 +1,9 @@
 /**
  * Component Structure:
  *
- * - DomainsList
- *   - TypeChooser
+ * - ContractForm
+ *   - DomainsList
+ *     - TypeChooser
  */
 $(window).load(function () {
 
@@ -38,6 +39,15 @@ $(window).load(function () {
   typesToColors[blockValueType.BOOLEAN] = "#336600";
 
   var ContractForm = React.createClass({
+    getName: function () {
+      return this.state.name;
+    },
+    getRangeType: function () {
+      return this.state.rangeType;
+    },
+    getDomainTypes: function () {
+      return this.state.domainTypes;
+    },
     maxDomainID: 0,
     getInitialState: function () {
       /**
@@ -162,64 +172,43 @@ $(window).load(function () {
     }
   });
 
-  React.render(
-    React.createElement(ContractForm, null),
-    document.getElementById('contractForm')
-  );
+  var contractForm = React.render(<ContractForm />, document.getElementById('contractForm'));
 
   /**
-   * Pre-react stuff below
+   * @param {ContractForm} contractForm
+   * @param {Object} levelData
    */
+  window.getResult = function (contractForm, levelData) {
+    return function () {
+      /** @type {ContractForm} */
+      var functionName = contractForm.getName();
+      var rangeType = contractForm.getRangeType();
+      var domains = contractForm.getDomainTypes();
 
-  $('#addButton').click(function () {
-    var domainItemText = $('#domainItemText').val();
-    var domainInput = $('#domainInput').val();
-    var domainOptionSelected = $("#domainInput option:selected");
-    $('#domainItemText').val('');
-    var $div = $('<div/>').addClass('domainItem')
-    $div.css("background-color", $(domainOptionSelected).data("color"));
-    var $button = $('<button class="domain-x-button">x</button>');
-    $div.append($button);
-    $div.append($('<div/>').text(domainItemText + ':' + domainInput).addClass('domainItemText'));
-    $button.click(function (event) {
-      $(event.target.parentElement).remove();
-    });
-    $('#domainItems').append($div);
-  });
+      var answers = levelData.answers;
 
-  function getResult() {
-    if (!window.levelData) {
-      return;
-    }
+      var formattedDomains = domains.map(function (domain) {
+        return domain.type;
+      }).join('|');
 
-    var functionName = $('#functionNameText').val();
-    var rangeInput = $('#rangeInput').val();
-    var items = $('#domainItems').children().map(function (item, element) {
-      return $(element).find('.domainItemText')[0].textContent;
-    });
+      var formattedResponse = functionName + '|' + rangeType + '|' + formattedDomains;
 
-    var answers = window.levelData.answers.to_json;
+      var checkUserAnswer = checkAnswer.bind(null, functionName, rangeType, formattedDomains);
+      var answerErrors = answers.map(checkUserAnswer);
 
-    // Order domain inputs alphabetically sorted
-    var domainInput = $.makeArray(items).slice().join('|');
-    var response = functionName + '|' + rangeInput + '|' + domainInput;
-    console.log('input="' + response + '"');
+      // If any succeeded, we succeed. Otherwise, grab the first error.
+      var result = answerErrors.some(function (answerResult) {
+        return answerResult === '';
+      });
+      var errorType = result ? null : answerErrors[0];
 
-    var checkUserAnswer = checkAnswer.bind(null, functionName, rangeInput, domainInput);
-    var resultPerAnswer = answers.map(checkUserAnswer);
-
-    // If any succeeded, we succeed. Otherwise, grab the first error.
-    var result = resultPerAnswer.some(function (answerResult) {
-      return answerResult === '';
-    });
-    errorType = result ? null : resultPerAnswer[0];
-
-    return {
-      response: response,
-      result: result,
-      errorType: errorType
+      return {
+        response: formattedResponse,
+        result: result,
+        errorType: errorType
+      };
     };
-  }
+  }(contractForm, window.levelData);
 
   /**
    * Given the user's submission and a correct answer, returns the error type,
