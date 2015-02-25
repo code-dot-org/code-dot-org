@@ -31,7 +31,7 @@ Incorporate computer science into elementary and middle school, or offer a year-
 - Open to all Houston ISD high school teachers & no cost to apply<br />
 [Sign up your school](https://code.org/educate/houston/)
 
-Please, share these opportunity with teachers in your district. 
+Please, share this opportunity with teachers in your district. 
 
 ### Why computer science?
 
