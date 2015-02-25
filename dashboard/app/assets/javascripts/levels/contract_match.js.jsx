@@ -1,10 +1,3 @@
-/**
- * Component Structure:
- *
- * - ContractForm
- *   - DomainsList
- *     - TypeChooser
- */
 $(window).load(function () {
 
   var curry = function(fn) {
@@ -38,6 +31,13 @@ $(window).load(function () {
   typesToColors[blockValueType.IMAGE] = "#9900cc";
   typesToColors[blockValueType.BOOLEAN] = "#336600";
 
+  /**
+   * Component Structure:
+   *
+   * - ContractForm
+   *   - DomainsList
+   *     - TypeChooser
+   */
   var ContractForm = React.createClass({
     getName: function () {
       return this.state.name;
