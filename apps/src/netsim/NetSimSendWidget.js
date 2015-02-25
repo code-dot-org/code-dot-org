@@ -384,14 +384,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
  */
 NetSimSendWidget.prototype.getPacketBinary_ = function () {
   var shortNumberFieldWidth = 4;
-  var encoder = new PacketEncoder([
-    { key: 'toAddress', bits: shortNumberFieldWidth },
-    { key: 'fromAddress', bits: shortNumberFieldWidth },
-    { key: 'packetIndex', bits: shortNumberFieldWidth },
-    { key: 'packetCount', bits: shortNumberFieldWidth },
-    { key: 'message', bits: Infinity }
-  ]);
-  return encoder.createBinary({
+  return PacketEncoder.defaultPacketEncoder.createBinary({
     toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
     fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
     packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),

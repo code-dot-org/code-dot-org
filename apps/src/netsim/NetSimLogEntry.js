@@ -97,45 +97,35 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
 };
 
 /**
- * Format router uses to decode packet.
- * TODO (bbuchanan): Pull this from a common location; should be fixed across
- *                   simulation.
- * @type {PacketEncoder}
- */
-var packetEncoder = new PacketEncoder([
-  { key: 'toAddress', bits: 4 },
-  { key: 'fromAddress', bits: 4 },
-  { key: 'packetIndex', bits: 4 },
-  { key: 'packetCount', bits: 4 },
-  { key: 'message', bits: Infinity }
-]);
-
-/**
  * Get packet toAddress as integer.
  */
 NetSimLogEntry.prototype.getToAddress = function () {
-  return binaryToInt(packetEncoder.getField('toAddress', this.packet));
+  return binaryToInt(
+      PacketEncoder.defaultPacketEncoder.getField('toAddress', this.packet));
 };
 
 /**
  * Get packet fromAddress as integer.
  */
 NetSimLogEntry.prototype.getFromAddress = function () {
-  return binaryToInt(packetEncoder.getField('fromAddress', this.packet));
+  return binaryToInt(
+      PacketEncoder.defaultPacketEncoder.getField('fromAddress', this.packet));
 };
 
 /**
  * Get packetIndex as integer.
  */
 NetSimLogEntry.prototype.getPacketIndex = function () {
-  return binaryToInt(packetEncoder.getField('packetIndex', this.packet));
+  return binaryToInt(
+      PacketEncoder.defaultPacketEncoder.getField('packetIndex', this.packet));
 };
 
 /**
  * Get packetCount as integer.
  */
 NetSimLogEntry.prototype.getPacketCount = function () {
-  return binaryToInt(packetEncoder.getField('packetCount', this.packet));
+  return binaryToInt(
+      PacketEncoder.defaultPacketEncoder.getField('packetCount', this.packet));
 };
 
 /**
@@ -143,6 +133,6 @@ NetSimLogEntry.prototype.getPacketCount = function () {
  */
 NetSimLogEntry.prototype.getMessageBinary = function () {
   return formatBinary(
-      packetEncoder.getField('message', this.packet),
+      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
       BITS_PER_BYTE);
 };
