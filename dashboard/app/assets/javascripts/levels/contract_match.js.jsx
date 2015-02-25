@@ -116,14 +116,14 @@ $(window).load(function () {
           <div>
             <input id='functionNameText' onChange={this.onNameChangeEvent} placeholder='Name' type='text' value={this.state.name}/>
           </div>
-          <div id='sectionTitle'>Range</div>
-          <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
           <div id='sectionTitle'>Domain</div>
           <DomainsList
             domainTypes={this.state.domainTypes}
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}/>
+          <div id='sectionTitle'>Range</div>
+          <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       )
     }
