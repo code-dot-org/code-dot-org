@@ -12,63 +12,65 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimEncodingSelector.html');
+var markup = require('./NetSimEncodingControl.html');
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
+ * @param {jQuery} rootDiv
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingSelector = module.exports = function (changeEncodingCallback) {
+var NetSimEncodingControl = module.exports = function (rootDiv,
+    changeEncodingCallback) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {function}
+   * @private
+   */
   this.changeEncodingCallback_ = changeEncodingCallback;
+
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.select_ = null;
+
+  // Initial render
+  this.render();
 };
 
 /**
- * Static counter used to generate/uniquely identify different instances
- * of this log widget on the page.
- * @type {number}
+ * Fill the root div with new elements reflecting the current state
  */
-NetSimEncodingSelector.uniqueIDCounter = 0;
-
-/**
- * Generate a new NetSimEncodingSelector, putting it on the page.
- * @param {HTMLElement} element
- * @param {function} changeEncodingCallback
- */
-NetSimEncodingSelector.createWithin = function (element, changeEncodingCallback) {
-  var controller = new NetSimEncodingSelector(changeEncodingCallback);
-
-  var instanceID = NetSimEncodingSelector.uniqueIDCounter;
-  NetSimEncodingSelector.uniqueIDCounter++;
-
-  element.innerHTML = markup({
-    instanceID: instanceID
-  });
-  controller.bindElements_(instanceID);
-  return controller;
-};
-
-/**
- * Get relevant elements from the page and bind them to local variables.
- * @private
- */
-NetSimEncodingSelector.prototype.bindElements_ = function (instanceID) {
-  this.rootDiv_ = $('#netsim_encoding_selector_' + instanceID);
+NetSimEncodingControl.prototype.render = function () {
+  var renderedMarkup = $(markup({}));
+  this.rootDiv_.html(renderedMarkup);
   this.select_ = this.rootDiv_.find('select');
   this.select_.change(this.onSelectChange_.bind(this));
+
 };
 
 /**
  * Send new value to registered callback on change.
  * @private
  */
-NetSimEncodingSelector.prototype.onSelectChange_ = function () {
+NetSimEncodingControl.prototype.onSelectChange_ = function () {
   this.changeEncodingCallback_(this.select_.val());
 };
 
-NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
+/**
+ * Change selector value to the new provided value.
+ * @param newEncoding
+ */
+NetSimEncodingControl.prototype.setEncoding = function (newEncoding) {
   this.select_.val(newEncoding);
 };
 
@@ -78,7 +80,7 @@ NetSimEncodingSelector.prototype.setEncoding = function (newEncoding) {
  * @param {jQuery} rootElement - root of elements to show/hide
  * @param {string} encoding - a message encoding setting
  */
-NetSimEncodingSelector.hideRowsByEncoding = function (rootElement, encoding) {
+NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encoding) {
   if (encoding === 'all') {
     rootElement.find('tr.binary, tr.hexadecimal, tr.decimal, tr.ascii').show();
   } else if (encoding === 'binary') {
