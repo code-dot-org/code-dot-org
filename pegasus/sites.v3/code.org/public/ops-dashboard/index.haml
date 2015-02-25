@@ -220,6 +220,8 @@ theme: angular
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
       //$scope.workshopTeacherSegmentAttendance = teachersService.query({workshopid: $routeParams.workshopid});
+
+
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
         attendancesForSingleSegment.forEach(function (e) {
@@ -237,7 +239,7 @@ theme: angular
       $scope.hasCohorts = false;
       $scope.cohorts = cohortsService.query();
 
-      $scope.cohorts.$promise.then(function(cohorts){
+      $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
       });
 
