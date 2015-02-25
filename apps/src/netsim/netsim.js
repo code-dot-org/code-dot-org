@@ -280,11 +280,8 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
  */
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
-  if (this.connection_&&
-      this.connection_.myNode &&
-      this.connection_.myNode.myRouter) {
-    // STATE IS THE ROOT OF ALL EVIL
-    var router = this.connection_.myNode.myRouter;
+  if (this.myConnectedRouter_) {
+    var router = this.myConnectedRouter_;
     router.dnsMode = newDnsMode;
     router.update();
   }
@@ -295,11 +292,8 @@ NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
  */
 NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   this.tabs_.setIsDnsNode(isDnsNode);
-  if (this.connection_&&
-      this.connection_.myNode &&
-      this.connection_.myNode.myRouter) {
-    var router = this.connection_.myNode.myRouter;
-    this.setDnsTableContents(router.getAddressTable());
+  if (this.myConnectedRouter_) {
+    this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
 };
 
@@ -435,13 +429,13 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {
-  if (this.connection_&&
-      this.connection_.myNode &&
-      this.connection_.myNode.myRouter) {
-    var router = this.connection_.myNode.myRouter;
-    this.setDnsTableContents(router.getAddressTable());
+  if (this.myConnectedRouter_) {
+    this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
 };
 
 NetSim.prototype.onRouterLogChange_ = function () {
+  if (this.myConnectedRouter_) {
+    this.setRouterLogData(this.myConnectedRouter_.getLog());
+  }
 };
