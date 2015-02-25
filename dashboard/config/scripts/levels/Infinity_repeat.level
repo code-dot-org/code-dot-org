@@ -54,6 +54,9 @@
           <title name="DIR">4</title>
           <title name="DISTANCE">400</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

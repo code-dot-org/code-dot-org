@@ -50,6 +50,9 @@
         <block type="studio_saySpriteChoices">
           <title name="VALUE">Hi there!</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>        
       </xml>
     </toolbox_blocks>
     <required_blocks>
