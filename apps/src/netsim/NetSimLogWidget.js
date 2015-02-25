@@ -13,7 +13,7 @@
 
 var markup = require('./NetSimLogWidget.html');
 var packetMarkup = require('./NetSimLogPacket.html');
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
  * Generator and controller for message log.
@@ -179,7 +179,7 @@ NetSimLogPacket.prototype.render = function () {
     chunkSize: this.chunkSize_
   });
   var jQueryWrap = $(rawMarkup);
-  NetSimEncodingSelector.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encoding_);
   this.rootDiv_.html(jQueryWrap);
 };
 
