@@ -51,6 +51,10 @@
 
     $scope.projects = projectsService.query();
 
+    //default sort order
+    $scope.order = 'updatedAt';
+    $scope.reverse = true;
+
     $scope.projects.$promise.then(function(projects) {
       $scope.projectsLoaded = true;
     }).catch($scope.genericError);
