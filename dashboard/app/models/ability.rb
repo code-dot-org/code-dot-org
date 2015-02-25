@@ -59,6 +59,12 @@ class Ability
     if user.permission? 'facilitator'
       can :read, Workshop
       can :teachers, Workshop
+      can :manage, WorkshopAttendance do |attendance|
+        attendance.segment.workshop.facilitators.include? user
+      end
+      can :manage, Workshop do |workshop|
+        workshop.facilitators.include? user
+      end
     end
 
     if user.permission? 'district_contact'

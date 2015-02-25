@@ -16,7 +16,7 @@ module Ops
 
     # GET /ops/workshops/1/segments
     def index
-      render json: @segments.as_json
+      render json: @segments.to_json
     end
 
     # GET /ops/segments/1

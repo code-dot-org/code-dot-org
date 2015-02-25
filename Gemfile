@@ -134,4 +134,6 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'active_model_serializers' #JSON model serializer for REST APIs
+# JSON model serializer for REST APIs
+# Patch details: https://github.com/rails-api/active_model_serializers/pull/821
+gem 'active_model_serializers', github: 'wjordan/active_model_serializers', branch: 'patch-1'

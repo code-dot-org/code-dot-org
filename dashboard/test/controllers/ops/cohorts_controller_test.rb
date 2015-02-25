@@ -155,8 +155,8 @@ module Ops
       assert_response :success
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
-      # Ensure extra association info is provided
-      assert_equal response['district_ids'], @cohort.district_ids
+      # Ensure extra association info is provided in the right format
+      assert_equal response['districts'].keys, @cohort.district_ids.map(&:to_s)
     end
 
     test 'update cohort info' do

@@ -33,6 +33,11 @@ module Ops
       p JSON.parse(@response.body)
     end
 
+    test "Facilitators can add teachers the day of a workshop" do
+      #87055064
+      # todo
+    end
+
     test 'District contacts can view all workshops in all cohorts in their district' do
       #87054994 (part 1)
       sign_out @admin

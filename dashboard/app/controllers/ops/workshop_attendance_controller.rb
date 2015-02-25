@@ -24,7 +24,7 @@ module Ops
       attendances = segment_group.map do |workshop, segments|
         {workshop: workshop, segments: segments}
       end
-      respond_with attendances
+      render json: attendances.to_json
     end
 
     # GET /ops/attendance/cohort/1
@@ -40,6 +40,7 @@ module Ops
     # View attendance for all segments in a single workshop
     def workshop
       workshop = Workshop.includes(segments: :attendances).find(params.require(:workshop_id))
+      authorize! :workshop, workshop
       if params[:by_teacher]
         # ?by_teacher=1 to index the results by teacher_id
         by_teacher = workshop.segments.inject({}) do |hash, s|

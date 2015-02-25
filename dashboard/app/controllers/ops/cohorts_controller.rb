@@ -35,7 +35,7 @@ module Ops
 
     # GET /ops/cohorts/1
     def show
-      render json: @cohort
+      render json: @cohort, root: false
     end
 
     # PATCH/PUT /ops/cohorts/1

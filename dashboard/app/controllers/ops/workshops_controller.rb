@@ -12,7 +12,7 @@ module Ops
       # first name, last name, email, district, gender and any workshop details that are available for teachers
       teachers = @workshop.teachers.includes(:district).select('users.id, users.name, users.email, users.username, users.gender')
       respond_with teachers do |format|
-        format.json { render json: teachers.as_json(include: :district) }
+        format.json { render json: teachers.to_json(include: :district) }
       end
     end
 
@@ -27,18 +27,18 @@ module Ops
       my_workshops =
         if current_user.admin?
           # For admins, list all workshops.
-          @workshops
+          Workshop.all
         elsif current_user.permission?('district_contact')
           # For district contacts, list all workshops in all cohorts in their district.
-          @workshops.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
+          Workshop.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
         elsif current_user.permission?('facilitator')
           # For facilitators, list all workshops they're facilitating.
-          @workshops.joins(:facilitators).where(facilitators_workshops: {facilitator_id: current_user.try(:id)})
+          Workshop.joins(:facilitators).where(facilitators_workshops: {facilitator_id: current_user.try(:id)})
         else
           # For other teachers, list all workshops they're attending.
-          @workshops.includes(:teachers).where(users: {id: current_user.try(:id)})
+          Workshop.includes(:teachers).where(users: {id: current_user.try(:id)})
         end
-      render json: my_workshops.try(:as_json)
+      render json: my_workshops.try(:to_json)
     end
 
     # GET /ops/workshops/1

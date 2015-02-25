@@ -184,6 +184,7 @@ FactoryGirl.define do
   end
 
   factory :cohort do
+    name 'Test Cohort'
     districts {[create(:district)]}
     teachers {[create(:teacher, district: districts.first)]}
   end

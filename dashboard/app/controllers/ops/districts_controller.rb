@@ -8,7 +8,7 @@ module Ops
 
     # get /ops/districts/1/teachers
     def teachers
-      respond_with @district.users
+      respond_with @district.users, each_serializer: TeacherSerializer
     end
 
     # POST /ops/districts
