@@ -112,7 +112,7 @@ dashboard.buildHeader = function (scriptData) {
 
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
-    $('.project_info').empty().append($('<div>').addClass('header_text').text(dashboard.currentApp.name))
+    $('.project_info').empty().append($('<div>').addClass('header_text').addClass('project_name').text(dashboard.currentApp.name))
         .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
         .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
         .append($('<div class="project_more header_button">').html('<%= I18n.t('project.more') %> &#x25BC;'));
