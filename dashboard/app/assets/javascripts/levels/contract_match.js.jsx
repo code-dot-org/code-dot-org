@@ -14,6 +14,7 @@ $(window).load(function () {
    * @enum {string}
    */
   var blockValueType = {
+    NONE: 'None',
     NUMBER: 'Number',
     STRING: 'String',
     IMAGE: 'Image',
@@ -21,6 +22,7 @@ $(window).load(function () {
   };
 
   var typesToColors = {};
+  typesToColors[blockValueType.NONE] = "#999999";
   typesToColors[blockValueType.NUMBER] = "#00ccff";
   typesToColors[blockValueType.STRING] = "#009999";
   typesToColors[blockValueType.IMAGE] = "#9900cc";
@@ -57,11 +59,11 @@ $(window).load(function () {
        */
       return {
         name: "",
-        rangeType: blockValueType.NUMBER,
+        rangeType: blockValueType.NONE,
         domainTypes: [
           {
             key: 'domain' + (this.maxDomainID++),
-            type: blockValueType.NUMBER,
+            type: blockValueType.NONE,
             order: 0
           }
         ]
@@ -94,7 +96,7 @@ $(window).load(function () {
         domainTypes:
           this.state.domainTypes.concat({
             key: 'domain' + nextDomainID,
-            type: blockValueType.NUMBER,
+            type: blockValueType.NONE,
             order: nextDomainID
           })
       });
@@ -163,7 +165,7 @@ $(window).load(function () {
       };
       return (
         <select value={this.props.type} onChange={this.handleChange} style={divStyle}>
-          <option value={blockValueType.NONE}>{blockValueType.NONE}</option>
+          <option value={blockValueType.NONE} disabled style={{display: 'none'}}>Choose a Type</option>
           <option value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
           <option value={blockValueType.STRING}he>{blockValueType.STRING}</option>
           <option value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
