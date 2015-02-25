@@ -45,20 +45,19 @@ Blockly.FunctionalTypeColors = typesToColors;
  * @param {string} title Localized block title to display.
  * @param {string} type Block type which appears in xml.
  * @param {Array} args Arguments to this block.
- * @param {number=} wrapWidth Optional number of arguments after which
- *     to wrap the next argument onto a new line when rendering the
- *     block.
+ * @param {number=} config_opt.titleFontSize Optional title font size
  */
-Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
+Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title, type, args, config_opt) {
+  config_opt = config_opt || {};
   block.setFunctional(true, {
     headerHeight: 30
   });
   block.setHSV.apply(block, Blockly.FunctionalTypeColors[type]);
 
   var options = {
-    fixedSize: { height: 35 }
+    fixedSize: { height: 35 },
+    fontSize: config_opt.titleFontSize
   };
-
   block.appendDummyInput()
     .appendTitle(new Blockly.FieldLabel(title, options))
     .setAlign(Blockly.ALIGN_CENTRE);
@@ -66,8 +65,7 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title,
   for (var i = 0; i < args.length; i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
-    input.setInline(i > 0 && !wrapNextArg);
+    input.setInline(i > 0);
     if (arg.type === Blockly.BlockValueType.NONE) {
       input.setHSV(0, 0, 0.99);
     } else {

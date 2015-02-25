@@ -11,6 +11,8 @@
  */
 'use strict';
 
+var minifyBinary = require('./dataConverters').minifyBinary;
+
 /**
  * Verify that a given format specification describes a valid format that
  * can be used by the PacketEncoder object.
@@ -65,7 +67,7 @@ PacketEncoder.prototype.getField = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
-  binary = binary.replace(/\s/g,'');
+  binary = minifyBinary(binary);
 
   while (this.formatSpec_[ruleIndex].key !== key) {
     binaryIndex += this.formatSpec_[ruleIndex].bits;
@@ -88,24 +90,6 @@ PacketEncoder.prototype.getField = function (key, binary) {
   }
 
   return bits;
-};
-
-PacketEncoder.prototype.getFieldAsInt = function (key, binary) {
-  var fieldBinary = this.getField(key, binary);
-  return parseInt(fieldBinary, 2);
-};
-
-PacketEncoder.prototype.getFieldAsAscii = function (key, binary) {
-  var fieldBinary = this.getField(key, binary);
-  var result = '';
-  for (var i = 0; i < fieldBinary.length; i += 8) {
-    var chunk = fieldBinary.slice(i, i+8);
-    while (chunk.length < 8) {
-      chunk += '0';
-    }
-    result += String.fromCharCode(parseInt(chunk, 2));
-  }
-  return result;
 };
 
 PacketEncoder.prototype.createBinary = function (data) {

@@ -162,6 +162,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Goal:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Here is your calculation! Continue working on it, or move on to the next puzzle!"},
 "yourExpression":function(d){return "Your expression:"},
-"wrongInput":function(d){return "You are calling your function with the wrong value."}};
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

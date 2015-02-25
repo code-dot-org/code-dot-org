@@ -17,6 +17,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -731,7 +732,7 @@ Flappy.execute = function() {
   Flappy.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Flappy');
+    code = dropletUtils.generateCodeAliases(null, 'Flappy');
     code += studioApp.editor.getValue();
   }
 
