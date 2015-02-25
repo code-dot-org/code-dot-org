@@ -233,8 +233,8 @@ function getDrawableFromBlockXml(blockXml) {
 }
 
 /**
- * Parse an EvalObject looking for EvalText objects. For each one, extract the
- * text content.
+ * Recursively parse an EvalObject looking for EvalText objects. For each one,
+ * extract the text content.
  */
 Eval.getTextStringsFromObject_ = function (evalObject) {
   if (!evalObject) {
@@ -267,23 +267,20 @@ Eval.haveCaseMismatch_ = function (object1, object2) {
   strs1.sort();
   strs2.sort();
 
-  var mismatch = false;
+  var caseMismatch = false;
 
   for (var i = 0; i < strs1.length; i++) {
     var str1 = strs1[i];
     var str2 = strs2[i];
-    if (str1.toLowerCase() !== str2.toLowerCase()) {
-      // strings differ by more than case
-      return false;
-    }
-
     if (str1 !== str2) {
-      // lowercase isn't different, but strings are. we have a case mismatch
-      mismatch = true;
+      if (str1.toLowerCase() === str2.toLowerCase()) {
+        caseMismatch  = true;
+      } else {
+        return false; // strings differ by more than case
+      }
     }
   }
-
-  return mismatch;
+  return caseMismatch;
 };
 
 /**
