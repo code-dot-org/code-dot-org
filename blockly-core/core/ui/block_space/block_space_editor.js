@@ -271,9 +271,10 @@ Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
   }
 
   var metrics = this.blockSpace.getMetrics();
-  if (!metrics || metrics.contentWidth > metrics.viewWidth) {
-    // Don't try to bump if there are no metrics, or if the viewWidth is so
-    // small that the content overflows on both sides.
+  if (!metrics || metrics.contentWidth > metrics.viewWidth ||
+      metrics.contentHeight > metrics.viewHeight) {
+    // Don't try to bump if there are no metrics, or if the viewWidth/Height is
+    // so small that the content overflows on both sides.
     return;
   }
 
