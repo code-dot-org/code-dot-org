@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":151,"./blocks":30,"./calc":31,"./levels":37}],31:[function(require,module,exports){
+},{"../appMain":5,"../skins":154,"./blocks":30,"./calc":31,"./levels":37}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -919,7 +919,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":201,"../../locale/current/common":202,"../StudioApp":4,"../block_utils":18,"../dom":47,"../skins":151,"../templates/page.html":176,"../timeoutList":182,"../utils":197,"./api":29,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
+},{"../../locale/current/calc":204,"../../locale/current/common":205,"../StudioApp":4,"../block_utils":18,"../dom":47,"../skins":154,"../templates/page.html":179,"../timeoutList":185,"../utils":200,"./api":29,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -939,7 +939,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":201,"ejs":218}],37:[function(require,module,exports){
+},{"../../locale/current/calc":204,"ejs":221}],37:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -978,7 +978,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":201,"../block_utils":18}],36:[function(require,module,exports){
+},{"../../locale/current/calc":204,"../block_utils":18}],36:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1343,7 +1343,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":197,"./equation":33,"./expressionNode":35}],33:[function(require,module,exports){
+},{"../utils":200,"./equation":33,"./expressionNode":35}],33:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -1406,7 +1406,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":201,"../../locale/current/common":202,"ejs":218}],30:[function(require,module,exports){
+},{"../../locale/current/calc":204,"../../locale/current/common":205,"ejs":221}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1471,7 +1471,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":201,"../../locale/current/common":202,"../sharedFunctionalBlocks":150}],201:[function(require,module,exports){
+},{"../../locale/current/calc":204,"../../locale/current/common":205,"../sharedFunctionalBlocks":153}],204:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],29:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1920,4 +1920,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":197}]},{},[38]);
+},{"../utils":200}]},{},[38]);
