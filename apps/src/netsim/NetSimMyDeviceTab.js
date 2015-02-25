@@ -85,4 +85,5 @@ NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
  */
 NetSimMyDeviceTab.prototype.setEncoding = function (newEncoding) {
   this.encodingControl_.setEncoding(newEncoding);
+  this.chunkSizeControl_.setEncoding(newEncoding);
 };
