@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],150:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3516,7 +3516,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":202,"./utils":197}],182:[function(require,module,exports){
+},{"../locale/current/common":205,"./utils":200}],185:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3534,7 +3534,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],176:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3558,7 +3558,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],152:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],155:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3823,7 +3823,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],151:[function(require,module,exports){
+},{"./dom":47}],154:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -3974,7 +3974,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":149,"./utils":197}],149:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":152,"./utils":200}],152:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4252,7 +4252,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":202,"./block_utils":18,"./utils":197,"./xml":198}],19:[function(require,module,exports){
+},{"../locale/current/common":205,"./block_utils":18,"./utils":200,"./xml":201}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4417,7 +4417,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":202}],4:[function(require,module,exports){
+},{"../locale/current/common":205}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5102,7 +5102,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;  
+      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -5726,7 +5726,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useContractEditor: config.level.useContractEditor === undefined ?
         false : config.level.useContractEditor,
     defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        0 : config.level.defaultNumExampleBlocks,
+        2 : config.level.defaultNumExampleBlocks,
     scrollbars: config.level.scrollbars,
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
@@ -5853,7 +5853,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":202,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":170,"./templates/buttons.html":171,"./templates/instructions.html":173,"./templates/learn.html":174,"./templates/makeYourOwn.html":175,"./utils":197,"./xml":198,"url":217}],217:[function(require,module,exports){
+},{"../locale/current/common":205,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":173,"./templates/buttons.html":174,"./templates/instructions.html":176,"./templates/learn.html":177,"./templates/makeYourOwn.html":178,"./utils":200,"./xml":201,"url":220}],220:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6562,13 +6562,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":213,"querystring":216}],216:[function(require,module,exports){
+},{"punycode":216,"querystring":219}],219:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":214,"./encode":215}],215:[function(require,module,exports){
+},{"./decode":217,"./encode":218}],218:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6655,7 +6655,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],214:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6741,7 +6741,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],213:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7252,7 +7252,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],175:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7272,7 +7272,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],174:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],177:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7294,7 +7294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],173:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7314,7 +7314,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],170:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],173:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7334,7 +7334,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":218}],67:[function(require,module,exports){
+},{"ejs":221}],67:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8534,7 +8534,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":202,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":171,"./templates/code.html":172,"./templates/shareFailure.html":178,"./templates/sharing.html":179,"./templates/showCode.html":180,"./templates/trophy.html":181,"./utils":197,"./xml":198}],181:[function(require,module,exports){
+},{"../locale/current/common":205,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":174,"./templates/code.html":175,"./templates/shareFailure.html":181,"./templates/sharing.html":182,"./templates/showCode.html":183,"./templates/trophy.html":184,"./utils":200,"./xml":201}],184:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8554,7 +8554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":218}],180:[function(require,module,exports){
+},{"ejs":221}],183:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8574,7 +8574,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],179:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],182:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8594,7 +8594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],178:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],181:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8614,7 +8614,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":218}],172:[function(require,module,exports){
+},{"ejs":221}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8634,7 +8634,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":218}],171:[function(require,module,exports){
+},{"ejs":221}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8654,7 +8654,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":202,"ejs":218}],202:[function(require,module,exports){
+},{"../../locale/current/common":205,"ejs":221}],205:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],68:[function(require,module,exports){
 var constants = require('./constants');
@@ -8785,7 +8785,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":177}],177:[function(require,module,exports){
+},{"./constants":46,"./templates/readonly.html":180}],180:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8806,7 +8806,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":218}],218:[function(require,module,exports){
+},{"ejs":221}],221:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9161,7 +9161,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":219,"./utils":220,"fs":210,"path":211}],220:[function(require,module,exports){
+},{"./filters":222,"./utils":223,"fs":213,"path":214}],223:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9185,7 +9185,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],219:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9384,7 +9384,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],211:[function(require,module,exports){
+},{}],214:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9612,7 +9612,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":212}],212:[function(require,module,exports){
+},{"_process":215}],215:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9671,7 +9671,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],210:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 
 },{}],44:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
@@ -10152,6 +10152,7 @@ standardConfig.blocks = [
   {'func': 'lessThanOperator', 'block': '__ < __', 'title': 'Compare two numbers', 'category': 'Math' },
   {'func': 'andOperator', 'block': '__ && __', 'title': 'Logical AND of two booleans', 'category': 'Math' },
   {'func': 'orOperator', 'block': '__ || __', 'title': 'Logical OR of two booleans', 'category': 'Math' },
+  {'func': 'notOperator', 'block': '!__', 'title': 'Logical NOT of a boolean', 'category': 'Math' },
   {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'title': 'Get a random number between 0 and the specified maximum value', 'category': 'Math' },
   {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'title': 'Get a random number between the specified minimum and maximum values', 'category': 'Math' },
   {'func': 'mathRound', 'block': 'Math.round(__)', 'title': 'Round to the nearest integer', 'category': 'Math' },
@@ -10380,7 +10381,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 };
 
 
-},{"./utils":197}],197:[function(require,module,exports){
+},{"./utils":200}],200:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10538,7 +10539,59 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":78,"./lodash":86,"./xml":198}],86:[function(require,module,exports){
+// ECMAScript 6 polyfill for String.prototype.repeat
+// Polyfill adapted from
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+//        /Global_Objects/String/repeat
+if (!String.prototype.repeat) {
+  /**
+   * The repeat() method constructs and returns a new string which contains
+   * the specified number of copies of the string on which it was called,
+   * concatenated together?
+   * @param {number} count
+   * @returns {string}
+   */
+  String.prototype.repeat = function(count) {
+    'use strict';
+    if (this === null) {
+      throw new TypeError('can\'t convert ' + this + ' to object');
+    }
+    var str = '' + this;
+    count = +count;
+    if (count != count) {
+      count = 0;
+    }
+    if (count < 0) {
+      throw new RangeError('repeat count must be non-negative');
+    }
+    if (count == Infinity) {
+      throw new RangeError('repeat count must be less than infinity');
+    }
+    count = Math.floor(count);
+    if (str.length === 0 || count === 0) {
+      return '';
+    }
+    // Ensuring count is a 31-bit integer allows us to heavily optimize the
+    // main part. But anyway, most current (august 2014) browsers can't handle
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
+      throw new RangeError('repeat count must not overflow maximum string size');
+    }
+    var rpt = '';
+    for (;;) {
+      if ((count & 1) === 1) {
+        rpt += str;
+      }
+      count >>>= 1;
+      if (count === 0) {
+        break;
+      }
+      str += str;
+    }
+    return rpt;
+  };
+}
+},{"./hammer":78,"./lodash":86,"./xml":201}],86:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -16506,7 +16559,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":198}],198:[function(require,module,exports){
+},{"./xml":201}],201:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

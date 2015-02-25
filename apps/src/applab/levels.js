@@ -124,6 +124,7 @@ levels.ec_simple = {
     "lessThanOperator": null,
     "andOperator": null,
     "orOperator": null,
+    "notOperator": null,
     "randomNumber_max": null,
     "randomNumber_min_max": null,
     "mathRound": null,

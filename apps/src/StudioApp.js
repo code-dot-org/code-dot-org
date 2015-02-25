@@ -682,7 +682,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;  
+      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -1306,7 +1306,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useContractEditor: config.level.useContractEditor === undefined ?
         false : config.level.useContractEditor,
     defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        0 : config.level.defaultNumExampleBlocks,
+        2 : config.level.defaultNumExampleBlocks,
     scrollbars: config.level.scrollbars,
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks

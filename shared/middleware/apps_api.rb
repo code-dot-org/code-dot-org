@@ -52,7 +52,8 @@ class AppsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read), request.ip)
+    timestamp = Time.now
+    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge(createdAt: timestamp, updatedAt: timestamp), request.ip)
 
     redirect "/v3/apps/#{id}", 301
   end
@@ -93,7 +94,7 @@ class AppsApi < Sinatra::Base
 
     value = JSON.load(request.body.read)
 
-    StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    StorageApps.new(storage_id('user')).update(id, value.merge(updatedAt: Time.now), request.ip)
 
     dont_cache
     content_type :json
