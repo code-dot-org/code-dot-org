@@ -1,6 +1,7 @@
 $(window).load(function () {
 
   /**
+   * TODO(bjordan): Change usages to lodash _.curry once available in this context
    * @param fn function to be curried with arguments
    * @params [...] rest of args
    * @returns {Function} new function with the given arguments pre-set as the
@@ -88,8 +89,8 @@ $(window).load(function () {
     onDomainChange: function (domainKey, newType) {
       this.setState({
         domainTypes:
-          $.map(this.state.domainTypes, function (object) {
-            if (object.key == domainKey) {
+          this.state.domainTypes.map(function (object) {
+            if (object.key === domainKey) {
               object.type = newType;
             }
             return object;
@@ -142,11 +143,14 @@ $(window).load(function () {
         return a.order > b.order;
       });
       var lastNode = this.props.domainTypes[this.props.domainTypes.length - 1];
-      var typeChoiceNodes = $.map(sortedDomains, function (object) {
+      var typeChoiceNodes = sortedDomains.map(function (object) {
         var isLastNode = (object === lastNode);
         return (
           <div style={isLastNode ? {float: 'left'} : {}}>
-            <TypeChooser order={object.order} type={object.type} key={object.key}
+            <TypeChooser
+              order={object.order}
+              type={object.type}
+              key={object.key}
               onTypeChange={curry(self.props.onDomainChange, object.key)}/>
             <button onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
           </div>
