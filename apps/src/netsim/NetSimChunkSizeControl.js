@@ -41,6 +41,13 @@ var NetSimChunkSizeControl = module.exports = function (rootDiv,
    */
   this.currentChunkSize_ = 8;
 
+  /**
+   * Fill in the blank: "8 bits per _"
+   * @type {Array.<String>}
+   * @private
+   */
+  this.currentUnits_ = ['byte'];
+
   this.render();
 };
 
@@ -86,4 +93,18 @@ NetSimChunkSizeControl.prototype.setChunkSize = function (newChunkSize) {
   rootDiv.find('.chunk_size_value').html(newChunkSize);
 };
 
-
+/**
+ * @param {string} newEncoding
+ */
+NetSimChunkSizeControl.prototype.setEncoding = function (newEncoding) {
+  if (newEncoding === 'all') {
+    this.currentUnits_ = ['character', 'number'];
+  } else if (newEncoding === 'ascii') {
+    this.currentUnits_ = ['character'];
+  } else if (newEncoding === 'decimal') {
+    this.currentUnits_ = ['number'];
+  } else {
+    this.currentUnits_ = ['byte'];
+  }
+  this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
+};
