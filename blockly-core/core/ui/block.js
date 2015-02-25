@@ -1356,8 +1356,7 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
-  return targetSourceBlock.isUserVisible() &&
-    !targetSourceBlock.isCurrentlyHidden();
+  return this.isUserVisible() && !this.isCurrentlyHidden();
 };
 
 /**

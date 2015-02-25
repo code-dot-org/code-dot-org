@@ -329,6 +329,10 @@ en:
         'small-star: string -> image': 'small-star: string -> image'
         'bigger-string: string string -> string': 'bigger-string: string string -> string'
         'find-price: string -> number': 'find-price: string -> number'
+      PDK5 What is unplugged:
+        What is an unplugged activity?: What is an unplugged activity?
+        Question: Question
+        Answer 1: Answer 1
       test matching image:
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!
@@ -354,7 +358,3 @@ en:
         salt: salt
         Van Minnen: Van Minnen
         Sydney: Sydney
-      PDK5 What is unplugged:
-        What is an unplugged activity?: What is an unplugged activity?
-        Question: Question
-        Answer 1: Answer 1

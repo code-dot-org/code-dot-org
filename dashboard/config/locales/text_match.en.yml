@@ -109,7 +109,6 @@ en:
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
         Type the arithmetic expression here: Type the arithmetic expression here
       Open text response example:
-        ! '': 
         I loved it because...: I loved it because...
       Test Markdown level:
         Enter title here: Enter title here
