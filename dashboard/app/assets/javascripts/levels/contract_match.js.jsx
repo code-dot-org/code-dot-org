@@ -1,9 +1,15 @@
 $(window).load(function () {
 
+  /**
+   * @param fn function to be curried with arguments
+   * @params [...] rest of args
+   * @returns {Function} new function with the given arguments pre-set as the
+   *                     defaults (curried)
+   */
   var curry = function(fn) {
     var args = Array.prototype.slice.call(arguments, 1);
 
-    return function() {
+    return function () {
       return fn.apply(this, args.concat(
         Array.prototype.slice.call(arguments, 0)));
     };
@@ -130,7 +136,7 @@ $(window).load(function () {
   });
 
   var DomainsList = React.createClass({
-    render: function() {
+    render: function () {
       var self = this;
       var sortedDomains = this.props.domainTypes.sort(function (a,b) {
         return a.order > b.order;
