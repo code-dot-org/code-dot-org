@@ -320,6 +320,8 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 }
 
 .netsim_tabs {
+  margin-top: 1em;
+
   h1 {
     font-size: 10pt;
     line-height: 10pt;
@@ -346,6 +348,16 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   .ui-tabs-nav li a {
     font-size: 8pt;
     padding: 0 1em;
+  }
+
+  /* Less padding around tab content divs */
+  .ui-tabs-panel {
+    padding: 0.8em 0.5em;
+
+    /* But extra margin around paragraphs of text (instructions) */
+    p {
+      margin: 0 1em 10px 1em;
+    }
   }
 
   .netsim_router_tab {
