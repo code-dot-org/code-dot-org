@@ -3,6 +3,7 @@
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
@@ -1113,7 +1114,10 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.Blockly) {
+      // TODO: (Josh L.) use $.trigger once we add jQuery
+      Blockly.fireUiEvent(window, 'run_button_pressed');
+    }
     this.runButtonClick();
   }, 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
@@ -1211,19 +1215,18 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
-        options.dropletConfig),
-      palette: utils.generateDropletPalette(options.codeFunctions,
+      modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+      palette: dropletUtils.generateDropletPalette(options.codeFunctions,
         options.dropletConfig)
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions || options.dropletConfig) {
+    if (options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
