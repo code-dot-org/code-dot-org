@@ -1703,10 +1703,10 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setValue = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
   };
 
   blockly.Blocks.functional_start_setVars = {
@@ -1744,8 +1744,8 @@ exports.install = function(blockly, blockInstallOptions) {
         {name: 'title', type: blockly.BlockValueType.STRING},
         {name: 'subtitle', type: blockly.BlockValueType.STRING},
         {name: 'background', type: blockly.BlockValueType.IMAGE},
-        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
         {name: 'player', type: blockly.BlockValueType.IMAGE},
         {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
         {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
@@ -1769,11 +1769,11 @@ exports.install = function(blockly, blockInstallOptions) {
       var rows = [
         'title, subtitle, background',
         [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
-        'danger, target, player',
+        'target, danger, player',
         [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
         'update-target, update-danger, update-player',
         [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
-        'collide?, on-screen?',
+        'collide?, onscreen?',
         [this.blockArgs[9], this.blockArgs[10]]
       ];
 

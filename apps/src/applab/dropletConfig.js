@@ -66,6 +66,8 @@ module.exports.blocks = [
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
+  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ["'Message'"], 'dontAlias': true },
+
   {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
   {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
@@ -93,10 +95,6 @@ module.exports.categories = {
     'blocks': []
   },
   'Advanced': {
-    'color': 'blue',
-    'blocks': []
-  },
-  'Control': {
     'color': 'blue',
     'blocks': []
   },

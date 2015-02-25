@@ -42,8 +42,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" x="80" y="20"/>
-        <block type="studio_whenSpriteCollided" x="80" y="200" id="eventBlock">
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="studio_whenSpriteCollided" deletable="false" movable="false" id="eventBlock">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
