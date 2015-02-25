@@ -121,23 +121,18 @@ describe("dataConverters", function () {
   describe("alignDecimal", function () {
     var alignDecimal = dataConverters.alignDecimal;
 
-    // Note: \xA0 is a non-breaking space, which is what this method
-    // pads numbers with so that they'll wrap and still align properly.
-    // Regular spaces are used between numbers, non-breaking spaces are
-    // used to pad numbers.
-
     it ("is identity for empty string", function () {
       assertEqual('', alignDecimal(''));
     });
 
     it ("puts final digits of all numbers at equal distances apart", function () {
       assertEqual("1 1 1", alignDecimal('1  1    1'));
-      assertEqual("10 \xA01 10", alignDecimal('10 1 10'));
-      assertEqual("100 \xA010 \xA0\xA01", alignDecimal('100 10 1'));
+      assertEqual("10 01 10", alignDecimal('10 1 10'));
+      assertEqual("100 010 001", alignDecimal('100 10 1'));
     });
 
     it ("pads leading numbers", function () {
-      assertEqual('\xA0\xA01 \xA010 100', alignDecimal('1 10 100'));
+      assertEqual('001 010 100', alignDecimal('1 10 100'));
     });
   });
 

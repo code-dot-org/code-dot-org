@@ -110,12 +110,11 @@ exports.alignDecimal = function (decimalString) {
     return prev;
   }, 0);
 
-  var nbspChar = "\xA0";
-  var nbspPadding = new Array(mostDigits + 1).join(nbspChar);
+  var zeroPadding = new Array(mostDigits + 1).join('0');
 
   return numbers.map(function (numString) {
     // Left-pad each number with non-breaking spaces up to max width.
-    return (nbspPadding + numString).slice(-mostDigits);
+    return (zeroPadding + numString).slice(-mostDigits);
   }).join(' ');
 };
 
