@@ -81,4 +81,9 @@ class ApiControllerTest < ActionController::TestCase
     assert_routing({method: "get", path: "/api/whatevvv"},
                    {controller: "api", action: "whatevvv"})
   end
+
+  test 'courses' do
+    get :courses
+    assert_response :success
+  end
 end
