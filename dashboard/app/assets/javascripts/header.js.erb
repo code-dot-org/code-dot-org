@@ -138,4 +138,8 @@ dashboard.showProjectHeader = function () {
       projectNameShow();
     });
   });
+
+  $(document).on('click', '.project_list', function () {
+    location.href = '/p'; <%# TODO: Can't call project_list_path because it's not in scope %>
+  });
 };

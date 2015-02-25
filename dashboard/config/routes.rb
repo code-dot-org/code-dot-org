@@ -72,6 +72,7 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
+  get '/p', to: 'projects#index', as: 'project_list'
   get '/projects', to: 'projects#index'
   get '/projects/:template', to: 'projects#template'
 
