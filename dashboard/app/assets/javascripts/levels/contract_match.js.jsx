@@ -94,12 +94,13 @@ $(window).load(function () {
       });
     },
     onDomainAdd: function () {
+      var nextDomainID = this.maxDomainID++;
       this.setState({
         domainTypes:
           this.state.domainTypes.concat({
-            key: 'domain' + (this.maxDomainID++),
+            key: 'domain' + nextDomainID,
             type: blockValueType.NUMBER,
-            order: Object.keys(this.state.domainTypes).length
+            order: nextDomainID
           })
       });
     },
@@ -134,10 +135,15 @@ $(window).load(function () {
   var DomainsList = React.createClass({
     render: function() {
       var self = this;
-      var typeChoiceNodes = $.map(this.props.domainTypes, function (object) {
+      var sortedDomains = this.props.domainTypes.sort(function (a,b) {
+        return a.order > b.order;
+      });
+      var lastNode = this.props.domainTypes[this.props.domainTypes.length - 1];
+      var typeChoiceNodes = $.map(sortedDomains, function (object) {
+        var isLastNode = (object === lastNode);
         return (
-          <div style={object.order == self.props.domainTypes.length - 1 ? {float: 'left'} : {}}>
-            <TypeChooser type={object.type} key={object.key}
+          <div style={isLastNode ? {float: 'left'} : {}}>
+            <TypeChooser order={object.order} type={object.type} key={object.key}
               onTypeChange={curry(self.props.onDomainChange, object.key)}/>
             <button onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
           </div>
