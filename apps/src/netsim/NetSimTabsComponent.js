@@ -19,14 +19,13 @@ var NetSimDnsTab = require('./NetSimDnsTab');
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
- * @param {NetSimConnection} connection
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv, connection,
+var NetSimTabsComponent = module.exports = function (rootDiv,
     chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
     becomeDnsCallback) {
   /**
@@ -35,13 +34,6 @@ var NetSimTabsComponent = module.exports = function (rootDiv, connection,
    * @private
    */
   this.rootDiv_ = rootDiv;
-
-  /**
-   * Connection to simulation
-   * @type {NetSimConnection}
-   * @private
-   */
-  this.connection_ = connection;
 
   /**
    * @type {function}
@@ -98,10 +90,8 @@ NetSimTabsComponent.prototype.render = function () {
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.netsim_tabs').tabs();
 
-  // TODO: Remove the old one?  What cleanup needs to happen?
   this.routerTab_ = new NetSimRouterTab(
-      this.rootDiv_.find('#tab_router'),
-      this.connection_);
+      this.rootDiv_.find('#tab_router'));
 
   this.myDeviceTab_ = new NetSimMyDeviceTab(
       this.rootDiv_.find('#tab_my_device'),
@@ -147,4 +137,11 @@ NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
  */
 NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTab_.setDnsTableContents(tableContents);
+};
+
+/**
+ * @param {Array} logData
+ */
+NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
+  this.routerTab_.setRouterLogData(logData);
 };
