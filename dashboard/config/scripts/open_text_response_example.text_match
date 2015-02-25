@@ -1,4 +1,5 @@
 name 'Open text response example'
+title 'Open text response example'
 placeholder 'I loved it because...'
 
 markdown <<MARKDOWN

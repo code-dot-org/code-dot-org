@@ -98,12 +98,4 @@ module.exports.categories = {
     'color': 'blue',
     'blocks': []
   },
-  'Control': {
-    'color': 'blue',
-    'blocks': []
-  },
-  'Variables': {
-    'color': 'blue',
-    'blocks': []
-  },
 };
