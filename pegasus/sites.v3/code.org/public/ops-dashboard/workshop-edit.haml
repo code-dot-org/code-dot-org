@@ -2,6 +2,15 @@
 layout: none
 template: none
 ---
+%a{href:'/ops-dashboard'}
+  Ops Dashboard
+>
+%a{href:'/ops-dashboard#/workshops'}
+  Workshops
+>
+%span
+  Workshop Management
+
 %h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
 %h1{'ng-show' => '!workshop.id'} Add a workshop
 

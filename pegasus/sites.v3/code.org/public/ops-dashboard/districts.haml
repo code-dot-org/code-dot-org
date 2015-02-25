@@ -18,9 +18,9 @@ template: none
       District Contact
     %th.manage-th
       Manage
-  %tr{"ng-repeat" => "district in districts"}
+  %tr{'ng-repeat' => 'district in districts'}
     %td
-      %span{'ng-hide' => 'district.editing', }
+      %span{'ng-hide' => 'district.editing'}
         {{district.name}}
       %input{'ng-show' => 'district.editing', 'ng-model' => 'district.name', type:'text', value:'{{district.name}}'}
     %td

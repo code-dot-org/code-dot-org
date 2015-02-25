@@ -2,6 +2,15 @@
 layout: none
 theme: none
 ---
+%a{href:'/ops-dashboard'}
+  Ops Dashboard
+>
+%a{href:'/ops-dashboard#/cohorts'}
+  Cohorts
+>
+%span
+  Cohort Management
+
 %h1{"ng-show" => "cohort.id"} Edit {{cohort.name}}
 %h1{"ng-show" => "!cohort.id"} Add cohort
 

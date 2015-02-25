@@ -2,6 +2,11 @@
 layout: none
 template: none
 ---
+%a{href:'/ops-dashboard'}
+  Ops Dashboard
+>
+%span{href:'/ops-dashboard/workshops'}
+  Workshops
 
 %h1 Workshops
 %a.btn.btn-white{href:'#/workshops/new'}
@@ -18,7 +23,7 @@ template: none
       Start Date
     %th.manage-th
       Manage
-  %tr{"ng-repeat" => "workshop in workshops"}
+  %tr{'ng-repeat' => 'workshop in workshops'}
     %td
       %p
         {{workshop.name}}
