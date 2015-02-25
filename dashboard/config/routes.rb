@@ -75,8 +75,8 @@ Dashboard::Application.routes.draw do
   get '/projects', to: 'projects#index'
   get '/projects/:template', to: 'projects#template'
 
-  get '/p/artist', to: 'levels#show', key: 'New Artist Project'
-  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project'
+  get '/p/artist', to: 'levels#show', key: 'New Artist Project', as: 'standalone_artist'
+  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'standalone_playlab'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
   
