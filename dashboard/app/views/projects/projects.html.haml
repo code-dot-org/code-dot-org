@@ -71,10 +71,10 @@
   %br
   .row
     .span12
-      %a.level_link{href: standalone_playlab_path}
+      %a.level_link{href: playlab_projects_path}
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')  
-      %a.level_link{href: standalone_artist_path}
+      %a.level_link{href: artist_projects_path}
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
 
@@ -115,9 +115,15 @@
           %td
             TODO
           %td
-            %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing'}= t('project.rename')
+            %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
             %button.btn.btn-primary{'ng-click' => 'project.$save(project); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
-            %button.btn.btn-danger{'ng-click' => 'project.$remove({id: project.id}) && projects.splice($index,1)'}= t('project.delete')
+
+            %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
+            %span{'ng-show' => 'project.deleting'}
+              = t('project.really_delete')
+              %button.btn.btn-danger{'ng-click' => 'project.$remove({id: project.id}) && projects.splice( $.inArray(project, projects), 1)'}= t('project.delete_yes')
+              %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
+
 
   .row
     .span12
