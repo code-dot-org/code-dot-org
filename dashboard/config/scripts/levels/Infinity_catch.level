@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "infinity",
-    "background": "leafy",
+    "background": "flower",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -78,7 +78,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
+      <xml>      
         <block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
@@ -95,6 +95,9 @@
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>        
       </xml>
     </toolbox_blocks>
     <required_blocks>
