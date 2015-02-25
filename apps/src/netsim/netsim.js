@@ -22,6 +22,7 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimRouterPanel = require('./NetSimRouterPanel');
+var NetSimMyDevicePanel = require('./NetSimMyDevicePanel');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
 var NetSimEncodingSelector = require('./NetSimEncodingSelector');
@@ -64,6 +65,13 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.encodingMode_ = 'binary';
+
+  /**
+   * Current chunk size (bytesize)
+   * @type {number}
+   * @private
+   */
+  this.chunkSize_ = 8;
 };
 
 
@@ -179,11 +187,16 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
       this.connection_);
 
+  this.myDevicePanel_ = NetSimMyDevicePanel.createWithin(
+      document.getElementById('netsim_my_device_container'),
+      this.changeChunkSize.bind(this));
+
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
 
   this.changeEncoding(this.encodingMode_);
+  this.changeChunkSize(this.chunkSize_);
   this.refresh_();
 };
 
@@ -200,7 +213,11 @@ NetSim.prototype.refresh_ = function () {
 };
 
 /**
+ * Update encoding-view setting across the whole app.
  *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
  * @param {string} newEncoding
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
@@ -209,6 +226,22 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
   this.receivedMessageLog_.setEncoding(newEncoding);
   this.sentMessageLog_.setEncoding(newEncoding);
   this.sendWidget_.setEncoding(newEncoding);
+};
+
+/**
+ * Update chunk-size/bytesize setting across the whole app.
+ *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
+ * @param {number} newChunkSize
+ */
+NetSim.prototype.changeChunkSize = function (newChunkSize) {
+  this.chunkSize_ = newChunkSize;
+  this.myDevicePanel_.setChunkSize(newChunkSize);
+  this.receivedMessageLog_.setChunkSize(newChunkSize);
+  this.sentMessageLog_.setChunkSize(newChunkSize);
+  this.sendWidget_.setChunkSize(newChunkSize);
 };
 
 /**

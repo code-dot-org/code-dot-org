@@ -139,6 +139,12 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     border-collapse: collapse;
   }
 
+  tbody {
+    th, td {
+      vertical-align: top;
+    }
+  }
+
   th {
     font-size: 10pt;
     font-variant: small-caps;
@@ -146,7 +152,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   td {
     font-family: monospace;
-    vertical-align: top;
 
     /* Make sure table text can be selected and copied */
     -moz-user-select: text;
@@ -156,6 +161,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     user-select: text;
   }
 
+  th.encodingLabel, td.encodingLabel,
   th.toAddress, td.toAddress,
   th.fromAddress, td.fromAddress,
   th.packetInfo, td.packetInfo {
@@ -167,6 +173,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     width: 50px;
   }
 
+  th.encodingLabel, td.encodingLabel,
   th.packetInfo, td.packetInfo {
     width: 100px;
   }
@@ -236,7 +243,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     }
 
     /* All columns but "message" */
-    th.rowType, td.rowType,
+    th.encodingLabel, td.encodingLabel,
     th.toAddress, td.toAddress,
     th.fromAddress, td.fromAddress,
     th.packetInfo, td.packetInfo {
@@ -247,11 +254,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
         width: 3em;
         text-align: center;
       }
-    }
-
-    th.rowType, td.rowType {
-      text-align: right;
-      vertical-align: top;
     }
 
     /* toAddress column */
@@ -293,7 +295,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
     /* All rows but headers */
     tbody {
-      td {
+      th, td {
         vertical-align: top;
       }
     }
