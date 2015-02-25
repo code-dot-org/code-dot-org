@@ -7,11 +7,10 @@ var DnsMode = NetSimRouterNode.DnsMode;
   <table>
     <thead>
     <tr>
-      <th>To</th>
-      <th>From</th>
-      <th>Packet</th>
-      <th>Message</th>
-      <th>Bytes</th>
+      <th nowrap>To</th>
+      <th nowrap>From</th>
+      <th nowrap>Message</th>
+      <th nowrap>Bits</th>
     </tr>
     </thead>
     <tbody>
@@ -22,15 +21,14 @@ var DnsMode = NetSimRouterNode.DnsMode;
     });
 
     // Create rows
-    tableData.forEach(function (row) {
+    tableData.forEach(function (logEntry) {
       var rowClasses = [];
     %>
     <tr class="<%= rowClasses.join(' ') %>">
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><%= row.logText %></td>
-      <td></td>
+      <td nowrap><%= logEntry.getToAddress() %></td>
+      <td nowrap><%= logEntry.getFromAddress() %></td>
+      <td><%= logEntry.getMessageBinary() %></td>
+      <td nowrap><%= logEntry.packet.length %></td>
     </tr>
     <%
     });

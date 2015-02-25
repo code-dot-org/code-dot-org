@@ -180,7 +180,6 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.log("Router initialized");
       router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
@@ -384,11 +383,11 @@ NetSimRouterNode.prototype.countConnections = function (onComplete) {
   });
 };
 
-NetSimRouterNode.prototype.log = function (logText) {
+NetSimRouterNode.prototype.log = function (packet) {
   NetSimLogEntry.create(
       this.shard_,
       this.entityID,
-      logText,
+      packet,
       function () {});
 };
 
@@ -418,13 +417,9 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
-      self.log('Rejected connection from host "' + otherNode.getHostname() +
-          '"; connection limit reached.');
       onComplete(false);
       return;
     }
-
-    self.log('Accepted connection from host "' + otherNode.getHostname() + '"');
 
     // Trigger an update, which will correct our connection count
     self.update(onComplete);
@@ -464,7 +459,6 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
     wire.update(function (success) {
-      self.log('Address ' + newAddress + ' assigned to host "' + hostname + '"');
       onComplete(success);
     });
     // TODO: Fix possibility of two routers getting addresses by verifying
@@ -637,8 +631,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     toAddress = dataConverters.binaryToInt(
         packetEncoder.getField('toAddress', message.payload));
   } catch (error) {
-    // Malformed packet?
-    this.log("Blocked malformed packet: " + message.payload);
+    this.log(message.payload);
     return;
   }
 
@@ -647,7 +640,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   });
   if (destWires.length === 0) {
     // Destination address not in local network.
-    this.log("Packet routed out of network: " + message.payload);
+    this.log(message.payload);
     return;
   }
 
@@ -661,12 +654,8 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       destWire.remoteNodeID,
       destWire.localNodeID,
       message.payload,
-      function (success) {
-        if (success) {
-          this.log("Packet routed to " + destWire.localHostname);
-        } else {
-          this.log("Dropped packet: " + JSON.stringify(message.payload));
-        }
+      function () {
+        this.log(message.payload);
       }.bind(this)
   );
 };
