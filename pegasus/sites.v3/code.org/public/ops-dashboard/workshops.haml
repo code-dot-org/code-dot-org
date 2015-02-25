@@ -38,9 +38,11 @@ template: none
     %td
       %div{'ng-repeat' => 'segment in workshopSegments'}
         %p
-          Start: {{segment.start}}
+          Date: {{segment.start | date:'shortDate'}}
         %p
-          End: {{segment.end}}
+          Start: {{segment.start | date:'shortTime'}}
+        %p
+          End: {{segment.end | date:'shortTime'}}
         %button{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
           Delete
     %td
