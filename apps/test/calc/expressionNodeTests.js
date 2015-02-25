@@ -249,26 +249,52 @@ describe("ExpressionNode", function () {
     // pivotal # 87579850 - this is broken right now, because it ends up
     // evaluating y + x with the x value from f's context, instead of the global
     // context
-    // it("can handle transitioning back to global var", function () {
-    //   var mapping = {};
-    //   // x = 1
-    //   mapping['x'] = 1;
-    //   // g(y) = y + x; // should use global x here
-    //   mapping['g'] = {
-    //     variables: ['y'],
-    //     expression: new ExpressionNode('+', ['x', 'y'])
-    //   };
-    //   // f(x) = g(x); // should use local x here
-    //   mapping['f'] = {
-    //     variables: ['x'],
-    //     expression: new ExpressionNode('g', ['x'])
-    //   };
-    //
-    //   // compute f(2)
-    //   node = new ExpressionNode('f', [2]);
-    //   assert.equal(node.canEvaluate(mapping), true);
-    //   assert.equal(node.evaluate(mapping), 3);
-    // });
+    it("can handle transitioning back to global var", function () {
+      var mapping = {};
+      // x = 1
+      // g(y) = y + x; // should use global x here
+      // f(x) = g(x); // should use local x here
+      mapping.x = 1;
+      mapping.g = {
+        variables: ['y'],
+        expression: new ExpressionNode('+', ['x', 'y'])
+      };
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('g', ['x'])
+      };
+
+      // compute f(2)
+      node = new ExpressionNode('f', [2]);
+      assert.equal(node.canEvaluate(mapping), true);
+      assert.equal(node.evaluate(mapping), 3);
+    });
+
+    it("can handle transitioning back to global var with more complexity", function () {
+      var mapping = {};
+      // x = 1
+      // g(y) = y + x; // should use global x here
+      // f(x) = g(x) + x; // should use local x here
+      mapping.x = 1;
+      mapping.g = {
+        variables: ['y'],
+        expression: new ExpressionNode('+', ['x', 'y'])
+      };
+      mapping.f = {
+        variables: ['x'],
+        expression: new ExpressionNode('+', [
+          new ExpressionNode('g', ['x']),
+          new ExpressionNode('x')
+        ])
+      };
+
+      // compute f(2)
+      // f(2) = g(2) + 2
+      // f(2) = 3 + 2 = 5
+      node = new ExpressionNode('f', [2]);
+      assert.equal(node.canEvaluate(mapping), true);
+      assert.equal(node.evaluate(mapping), 5);
+    });
 
     it('can handle functions having the same param name', function () {
       // f(x) = x + 1
