@@ -29,8 +29,8 @@ module.exports = {
       description: "getText and setText on text labels.",
       editCode: true,
       xml:
-          "createTextLabel('idTxt1', '');" +
-          "createTextLabel('idTxt2', '');" +
+          "textLabel('idTxt1', '');" +
+          "textLabel('idTxt2', '');" +
           "setText('idTxt1', 'test-value');" +
           "setText('idTxt2', getText('idTxt1'));",
       runBeforeClick: function (assert) {

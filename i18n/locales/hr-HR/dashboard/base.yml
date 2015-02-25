@@ -293,6 +293,8 @@ hr:
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavite prazno ako ne želite promijeniti)
     current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
@@ -475,7 +477,7 @@ hr:
           title: Uvod u informatiku za osnovnu školu (15-25 sati)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
-          title: Sat Kodiranja
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Uredi kôd

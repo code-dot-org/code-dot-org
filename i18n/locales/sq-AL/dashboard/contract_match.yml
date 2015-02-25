@@ -73,12 +73,14 @@ sq:
         Write a contract for a big orange red that is 100 pixels in size: Shkruaj një specifikim për një portokall të madh të kuq që është 100 piksela në madhësi
         Write a contract for a big red that is 100 pixels in size: Shkruaj një specifikim për një të madh të kuq që është 100 piksela në madhësi
         "Big Triangle|image|color:string|size:Number": Trekëndor i Madh|imazhi|ngjyra:string|madhësia:Numër
+        Big Triangle: Big Triangle
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: Krijimi i Specifikimeve nga Shembujt 2
         Write a contract for a purple square that is 15 pixels in size.: Shkruaj një funksion për një katror lejla që është 15 piksela në madhësi.
         EXAMPLE 2.solution_blocks, 300: SHEMBULLI 2.blloqet e zgjidhjes, 300
         "Square|image|color:string|size:Number": Katror|imazh|ngjyra:string|madhësia:Numër
         Example 2.solution_blocks, 300: Shembulli 2.blloqet e zgjidhjes, 300
+        Square Contract: Square Contract
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: Krijimi i Specifikimeve nga Shembujt 3
         Try using the "text" function to write this red text at size 40.: 'Përpiqu të përdorësh funksionin "tekst" për të shkruar këtë tekst të kuq në madhësinë 40.'
@@ -104,9 +106,27 @@ sq:
         "banner|text:string": reklama|teksti:string
         "banner:image|text:string": reklama:imazh|teksti:string
         "banner|image|text:string": reklama|imazhi|teksti:string
+        Banner Contract: Banner Contract
       Creating Contracts From Examples 4:
         Creating Contracts From Examples 4: Krijimi i Specifikimeve nga Shembujt 4
         Try using the "text" function to write this red text at size 40.: 'Përpiqu të përdorësh funksionin "tekst" për të shkruar këtë tekst të kuq në madhësinë 40.'
         Examples 4.solution_blocks, 300: Shembujt 4.blloqet e zgjidhjes, 300
         "shrink|image|circle:image": shrink|image|circle:image
         "shrink|image|image:image": shrink|image|image:image
+        Try using the "shrink" function.: 'Try using the "shrink" function.'
+        Shrink Contract: Shrink Contract
+      Eval Contracts B:
+        Star Contract: Specifikimet Yll
+        Write a contract for the star function: Shkruaj një specifikim për funksionin star
+        Eval Contracts 1 A.solution_blocks, 300: Specifikimet e funksionit Eval 1 A.blloqet e zgjidhjes, 300
+        "star|image|color:string|radius:Number|style:string": 'yll|imazh|ngjyra:string|rrezja: Numër|stili:string'
+      Eval Contracts D:
+        Rotate Contract: Specifikimi i Rrotullimit
+        Write a contract for the rotate function: Shkruaj një specifikim për funksionin e rrotullimit
+        Eval Contracts 2 A.solution_blocks, 300: Specifikimet e funksionit EVal 2 A.blloqt e zgjidhjes, 300
+        "rotate|image|degrees:Number|image:image": rrotullo|imazh|gradët:Numër|imazh:imazh
+      Eval Contracts F:
+        Text Contract: Specifikimi Tekst
+        Write a contract for the text function: Shkruaj një specifikim për funksionin e tekstit
+        Eval Contracts 3 A.solution_blocks, 300: Specifikimet e funksionit Eval 3 A.blloqet e zgjidhjes, 300
+        "text|image|color:string|size:Number|string:string": teksti|imazh|ngjyra:string|madhësia:Numër|string:string

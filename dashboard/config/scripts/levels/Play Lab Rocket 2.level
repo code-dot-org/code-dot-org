@@ -25,12 +25,13 @@
     "embed": "false",
     "first_sprite_index": "23",
     "protaganist_sprite_index": "0",
-    "open_function_definition": "rocket-height",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
     "min_workspace_height": "1000",
     "generate_function_pass_blocks": "true",
-    "maze_data": null
+    "callout_json": "[\r\n  {\"localization_key\":\"pass_function\",\"callout_text\":\"This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!\",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "maze_data": null,
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
@@ -38,7 +39,7 @@
       <xml>
         <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
           <functional_input name="VALUE">
-            <block type="functional_pass">
+            <block type="functional_pass" id="callout_here">
               <mutation name="rocket-height"/>
             </block>
           </functional_input>
@@ -246,20 +247,7 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="functional_call" inline="false">
-            <mutation name="rocket-height">
-              <arg name="seconds" type="Number"/>
-            </mutation>
-          </block>
-          <block type="functional_definition" inline="false" uservisible="false">
-            <mutation>
-              <arg name="seconds" type="Number"/>
-              <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
-              <outputtype>Number</outputtype>
-            </mutation>
-            <title name="NAME">rocket-height</title>
-          </block>
-        </category>
+  </category>
       </xml>
     </toolbox_blocks>
   </blocks>

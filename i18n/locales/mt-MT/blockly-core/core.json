@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"aħmar",
   "COLOUR_RGB_TITLE":"color with",
   "COLOUR_RGB_TOOLTIP":"Oħloq kulur bl-ammont speċifikat ta ' aħmar, aħdar u blu.  Il-valuri kollha iridu jkunu bejn 0 u 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"Aqbeż barra mil-ħolqa",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"kompli bl'iterazzjoni li jmiss fil-ħolqa (loop)",

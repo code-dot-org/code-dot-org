@@ -247,5 +247,37 @@ class RegistrationsControllerTest < ActionController::TestCase
     user = user.reload
     assert user.deleted_at
   end
-  
+
+  test 'edit shows alert for unconfirmed email for teachers' do
+    user = create :teacher, email: 'my_email@test.xx'
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
+    assert_select '.alert input[value=my_email@test.xx]'
+    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+  end
+
+
+  test 'edit does not show alert for unconfirmed email for students' do
+    user = create :student, email: 'my_email@test.xx'
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
+
+  test 'edit does not show alert for unconfirmed email for teachers if already confirmed' do
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
 end

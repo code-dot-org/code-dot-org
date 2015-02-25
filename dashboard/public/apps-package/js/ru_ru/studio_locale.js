@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "дерево"},
 "speed":function(d){return "скорость"},
 "startSetValue":function(d){return "Старт (функция высоты ракеты)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "остановка"},
 "stopSpriteN":function(d){return "остановить персонаж "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Останавливает движение персонажа."},

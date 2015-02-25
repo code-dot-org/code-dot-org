@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "圆 （半径、 样式、 颜色）"},
 "displayBlockTitle":function(d){return "显示"},
 "ellipseBlockTitle":function(d){return "椭圆 （宽度、 高度、 样式、 颜色）"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接至“显示”语句块吗？"},
 "overlayBlockTitle":function(d){return "覆盖 （顶部、 底部）"},
 "placeImageBlockTitle":function(d){return "放置图像（X轴坐标，Y轴坐标，图像）"},

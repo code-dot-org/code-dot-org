@@ -15,11 +15,40 @@ litmus_tracking_id: "4o1xaamz"
 attachments:
   certificate.jpg: '<%= Base64::encode64(image.to_blob) %>'
 ---
+<%
+facebook = {:u=>"http://code.org/k5"}
+facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
+twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
+twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
+%>
 <% unless recipient.name.nil_or_empty? %>
 Dear <%= recipient.name %>,
 <% end %>
 
 Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %> at <%= location_name %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners!
+
+<div><!--[if mso]>
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<%= facebook_link %>" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+      <a href="<%= facebook_link %>"
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:170px;-webkit-text-size-adjust:none;">Share on Facebook</a>
+  <!--[if mso]>
+    </center>
+  </v:roundrect>
+<![endif]--><!--[if mso]>
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<%= twitter_link %>" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+      <a href="<%= twitter_link %>"
+style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:170px;-webkit-text-size-adjust:none;">Share on Twitter</a>
+  <!--[if mso]>
+    </center>
+  </v:roundrect>
+<![endif]-->
+</div>
 
 Attached to this email, you will find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
 

@@ -6,7 +6,7 @@ fi-FI:
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>on kokeillut</h3><h2>Koodaustuntia</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus oppia tietojenkäsittelytiedettä
@@ -500,7 +500,7 @@ fi-FI:
   playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   codeintl_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  thinkersmithspanish_longdescription: 'Käyttämällä ennakkoon "Robotti kieltä" , opiskelijat oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton kyky virheenkorjauksessa.'
   khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!

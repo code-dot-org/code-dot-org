@@ -36,7 +36,8 @@ Materials
 
 - Language Table (see below)
 - Cutouts of Pythagorean Theorem packets ( [1](pythag1.png), [2](pythag2.png) ) - 1 per cluster of students working together
- 
+- [Activity Handouts and Instructions](https://docs.google.com/a/code.org/document/d/1gSfajadUhQ-R4M6h6JehtBibk6AuCV503_nja-pBtfI)
+
 
 
 [/together]
@@ -98,8 +99,16 @@ In a right triangle, the side opposite the 90-degree angle is called the hypoten
 ## Activities:
 ### <a name="Activity1"></a> 3) Collision Detection
 
-**Todo** adapt activity
+The following activity will have the student teams:
 
+- Creating right triangles on a graph
+- Calculating the hypotenuse by direct measurement and by the Pythgorean Theorem
+- Determining if circles have collided by examining visually
+- Determining if circles have collided by comparing distance and radii
+
+Activity Handouts and more detailed instructions [here](https://docs.google.com/a/code.org/document/d/1gSfajadUhQ-R4M6h6JehtBibk6AuCV503_nja-pBtfI)
+
+ 
 [/together]
 
 [together]

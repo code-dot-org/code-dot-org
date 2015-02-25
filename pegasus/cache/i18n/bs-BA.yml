@@ -143,7 +143,7 @@
   studiobar_flappy_body: Napravi i podijeli svoju vlastitu Flappy igricu
   studiobar_teacher_title: Za nastavnike
   studiobar_teacher_body: Predstavite Studio Kodiranja u učionici
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: Sat Kodiranja
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Sa svakim dolarom koji donirate, jedno dijete nauči
@@ -294,7 +294,7 @@
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: Female
+  dashboard_students_female: Žensko
   dashboard_students_secret: Tajna
   dashboard_students_password: Šifra
   dashboard_students_username: 'Korisničko ime: %{student_username}'
@@ -332,7 +332,7 @@
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_sequence: Sequence
+  dashboard_sequence: Niz
   dashboard_framework: Okvir
   dashboard_standards: Standardi
   dashboard_implementation_guide: Vodič za Implementaciju

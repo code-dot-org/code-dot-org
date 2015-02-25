@@ -2,7 +2,9 @@ module Ops
   class CohortsController < ::ApplicationController
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     before_filter :convert_teacher_info, :convert_district_names, only: [:create, :update]
+    check_authorization
     load_and_authorize_resource
+    skip_before_filter :verify_authenticity_token
 
     rescue_from ActiveRecord::RecordInvalid do |e|
       render text: e.to_s, status: :unprocessable_entity

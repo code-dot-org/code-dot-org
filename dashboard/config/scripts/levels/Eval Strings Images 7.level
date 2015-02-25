@@ -14,7 +14,8 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Eval Strings Images 7 callout1\",\"callout_text\":\"This is the \\\"offset\\\" block, it's function is to program the images position on the screen. To do this enter in the X and Y axis using numbers. The number block on the left is the X axis and the number block on the right is the Y axis.\",\"element_id\":\"#callout_here\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-6,\"y\":40},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -31,7 +32,7 @@
                     </block>
                   </functional_input>
                   <functional_input name="Y">
-                    <block type="functional_math_number_dropdown">
+                    <block type="functional_math_number_dropdown" id="callout_here">
                       <title name="NUM" config="0,20,40,60,80,100">0</title>
                     </block>
                   </functional_input>

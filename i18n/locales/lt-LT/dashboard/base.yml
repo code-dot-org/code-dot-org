@@ -298,6 +298,8 @@ lt:
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
     new_password_hint: (palikite tuščią, jei nenorite pakeisti)
     current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
@@ -480,7 +482,7 @@ lt:
           title: Programavimo įvado kursas (15-25 valandos)
           description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: Programavimo valanda
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Redaguoti kodą

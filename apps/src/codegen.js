@@ -1,3 +1,5 @@
+var utils = require('./utils');
+
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -150,12 +152,54 @@ exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativePare
   };
 };
 
+function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
+  for (var prop in funcsObj) {
+    var func = funcsObj[prop];
+    if (func instanceof Function) {
+      // Populate the scope with native functions
+      // NOTE: other properties are not currently passed to the interpreter
+      var parent = parentObj ? parentObj : funcsObj;
+      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      interpreter.setProperty(scope,
+                              prop,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
+
+function populateGlobalFunctions(interpreter, scope) {
+  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = utils.dropletGlobalConfigBlocks[i];
+    var func = gf.parent[gf.func];
+    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    interpreter.setProperty(scope,
+                            gf.func,
+                            interpreter.createNativeFunction(wrapper));
+  }
+}
+
+function populateJSFunctions(interpreter) {
+  // The interpreter is missing some basic JS functions. Add them as needed:
+
+  // Add static methods from String:
+  var functions = ['fromCharCode'];
+  for (var i = 0; i < functions.length; i++) {
+    var wrapper = exports.makeNativeMemberFunction(interpreter,
+                                                   String[functions[i]],
+                                                   String);
+    interpreter.setProperty(interpreter.STRING,
+                            functions[i],
+                            interpreter.createNativeFunction(wrapper),
+                            false,
+                            true);
+  }
+}
+
 /**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
   for (var optsObj in options) {
-    var func, wrapper;
     // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
     // world, we need to create associated objects in the interpreter's world
@@ -164,18 +208,10 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
     // Create global objects in the interpreter for everything in options
     var obj = interpreter.createObject(interpreter.OBJECT);
     interpreter.setProperty(scope, optsObj.toString(), obj);
-    for (var prop in options[optsObj]) {
-      func = options[optsObj][prop];
-      if (func instanceof Function) {
-        // Populate each of the global objects with native functions
-        // NOTE: other properties are not currently passed to the interpreter
-        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
-        interpreter.setProperty(obj,
-                                prop,
-                                interpreter.createNativeFunction(wrapper));
-      }
-    }
+    populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
+  populateGlobalFunctions(interpreter, scope);
+  populateJSFunctions(interpreter);
 };
 
 /**

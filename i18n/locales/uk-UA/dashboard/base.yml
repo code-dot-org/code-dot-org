@@ -1,7 +1,7 @@
 uk:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Будь-ласка виправте ці помилки:'
   activerecord:
     errors:
       messages:
@@ -296,6 +296,8 @@ uk:
     student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Надіслати повідомлення з підтвердженням повторно
     new_password_hint: (залишіть порожнім, якщо ви не хочете змінювати)
     current_password_hint: (нам потрібний ваш поточний пароль, щоб підтвердити зміни)
@@ -478,7 +480,7 @@ uk:
           title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
         Hour of Code:
-          title: Година Коду
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Редагування коду

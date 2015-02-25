@@ -342,6 +342,12 @@ vi:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ vi:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Vô cùng
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
+          description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
+          Introduction to Computer Science: Giới thiệu về khoa học máy tính
+          The Maze: mê cung
+          Computational Thinking: suy nghĩ máy móc
+          Graph Paper Programming: lập trình đồ thị trên giấy
+          The Artist: nghệ sĩ
+          Algorithms: các bước lập trình
+          The Artist 2: Nghệ sĩ 2
+          Functions: Các hàm
+          The Farmer: người nông dân
+          Conditionals: Điều kiện
+          The Artist 3: nghệ sĩ 3
+          Song Writing: Viết nhạc
+          The Farmer 2: Người nông dân 2
+          Abstraction: Trừu tượng
+          The Artist 4: nghệ sĩ 4
+          Relay Programming: Chương trình chuyển tiếp
+          The Farmer 3: người nông dân 3
+          The Internet: Internet
+          The Artist 5: Nghệ sĩ 5
+          Wrap-up: Gói gọn

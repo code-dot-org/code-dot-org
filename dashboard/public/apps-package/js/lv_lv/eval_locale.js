@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "aplis (rādiuss, stils, krāsa)"},
 "displayBlockTitle":function(d){return "rādīt"},
 "ellipseBlockTitle":function(d){return "elipse (platums, augstums, stils, krāsa)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?"},
 "overlayBlockTitle":function(d){return "pārklājums (augša, apakša)"},
 "placeImageBlockTitle":function(d){return "novietot-attēls (x, y, attēls)"},

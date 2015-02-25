@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "hitung"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis."},
 "extraTopBlocks":function(d){return "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Fungsi and tidak memberikan hasil yang tepat bagi semua nilai."},
 "goal":function(d){return "Tujuan:"},
-"reinfFeedbackMsg":function(d){return "Inilah ceritamu! Lanjutkanlah, atau beralih ke teka-teki berikutnya!"},
-"yourExpression":function(d){return "Ekspresimu:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!"},
+"yourExpression":function(d){return "Ekspresimu:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

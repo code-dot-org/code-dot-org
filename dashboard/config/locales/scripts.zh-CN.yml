@@ -373,6 +373,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -383,3 +390,30 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: 无限
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8计算机科学入门课程（15-25小时）
+          description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
+          Introduction to Computer Science: 计算机科学导论
+          The Maze: 迷宫
+          Computational Thinking: 计算性思维
+          Graph Paper Programming: 方格纸编程
+          The Artist: 艺术家
+          Algorithms: 算法
+          The Artist 2: 艺术家 2
+          Functions: 函数
+          The Farmer: 农夫
+          Conditionals: 条件语句
+          The Artist 3: 艺术家 3
+          Song Writing: 歌曲写作
+          The Farmer 2: 农民 2
+          Abstraction: 抽象化
+          The Artist 4: 艺术家 4
+          Relay Programming: 编程接力
+          The Farmer 3: ' 农夫3'
+          The Internet: 互联网
+          The Artist 5: 艺术家 5
+          Wrap-up: 总结

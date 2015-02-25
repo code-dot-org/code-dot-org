@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "skaičiuoti"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį."},
 "extraTopBlocks":function(d){return "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Tikslas:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!"},
-"yourExpression":function(d){return "Tavo reiškinys:"}};
+"yourExpression":function(d){return "Tavo reiškinys:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

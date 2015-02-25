@@ -12,15 +12,38 @@
 
 :javascript
   var apps = storageApps();
-  var currentApp = {};
+  var currentApp = null;
 
   var displayCurrentApp = function() {
+    $('.project-ui').show();
     console.log(currentApp);
     $('#create-project').hide();
     $('#project-name').text(currentApp.name);
     $('#project-form input#name').val(currentApp.name);
     $('#project-form').show();
     $('#save-project').show();
+  }
+
+  var createApp = function(options) {
+    var defaultOptions = {
+      name: "Untitled",
+      createdAt: new Date,
+      updatedAt: new Date,
+      levelId: appOptions.levelId, // TODO this is not actually a unique identifier for the level
+      levelUrl: window.location.origin + window.location.pathname, // TODO this is hacky.. we should just have a /project url
+    };
+
+    $.extend(defaultOptions, options);
+
+    apps.create(defaultOptions, function(app) {
+      if (app) {
+        currentApp = app;
+        console.log("Created " + currentApp.createdAt);
+        displayCurrentApp();
+      } else {
+        console.log("Failed to create.");
+      }
+    });
   }
 
   $(document).ready( function() {
@@ -41,7 +64,31 @@
 
   $(document).bind('appInitialized', function() {
     if (appOptions && appOptions.level && appOptions.level.freePlay) {
+      // TODO we only actually want this for standalone levels, not freeplay
       $('.project-ui').show();
+    }
+
+    if (!currentApp && // no project yet
+        appOptions && appOptions.level && appOptions.level.projectTemplateLevelName) { // level wants us to find or create a project
+      apps.all(function(data) {
+        if (data) {
+          var projects = $.grep(data,
+              function(app) { return (app.projectTemplateLevelName && app.projectTemplateLevelName === appOptions.level.projectTemplateLevelName)});
+          if (projects.length == 0) {
+            createApp({projectTemplateLevelName: appOptions.level.projectTemplateLevelName,
+                       name: appOptions.level.projectTemplateLevelName});
+          } else {
+            var app = projects[0];
+            // TODO this should just load the code in the workspace, not refresh
+            if (app.levelUrl && app.levelSourceId && app.id) {
+              // load code by navigating to the current level with the project's level source (hack, see above TODO)
+              window.location = window.location.origin + window.location.pathname + '?level_source_id=' + app.levelSourceId + '#' + app.id;
+            }
+          }
+        } else {
+          console.log('failed to fetch project for ' + appOptions.level.projectTemplateLevelName)
+        }
+      });
     }
   });
 
@@ -77,22 +124,7 @@
   });
 
    $('body').on('click', '#create-project', function() {
-    apps.create({
-      name: "Untitled",
-      createdAt: new Date,
-      updatedAt: new Date,
-      levelId: appOptions.levelId, // TODO this is not actually a unique identifier for the level
-      levelUrl: window.location.origin + window.location.pathname, // TODO this is hacky.. we should just have a /project url
-    }, function(app) {
-      if (app) {
-        currentApp = app;
-        console.log("Created " + currentApp.createdAt);
-        displayCurrentApp();
-      } else {
-        console.log("Failed to create.");
-      }
-    });
-
+     createApp({});
     return false;
   });
 

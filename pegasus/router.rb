@@ -437,34 +437,19 @@ class Documents < Sinatra::Base
     def social_metadata()
       if request.site == 'csedweek.org'
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is here",
-          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1705',
-          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'CSEd Week',
-          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-          # 'og:video:width'    => '720',
-          # 'og:video:height'   => '404',
         }
       else
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is here",
-          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1705',
-          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'Code.org',
-          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-          # 'og:video:width'    => '720',
-          # 'og:video:height'   => '404',
         }
       end
 
       # Metatags common to all sites.
+      metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?
+      metadata['og:description'] = @header['description'] unless @header['description'].nil_or_empty?
       metadata['fb:app_id'] = '500177453358606'
       metadata['og:type'] = 'article'
-      # metadata['og:video:type'] = 'application/x-shockwave-flash'
       metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
       metadata['og:url'] = request.url
 

@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"rreth (rreze, stil, ngjyrë)",
   "displayBlockTitle":"shfaq",
   "ellipseBlockTitle":"elips (gjerësi, gjatësi, stil, ngjyrë)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?",
   "overlayBlockTitle":"mbivendosje (lart, poshtë)",
   "placeImageBlockTitle":"vendos-imazh (x, y, imazh)",

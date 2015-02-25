@@ -4,6 +4,7 @@
   "circleBlockTitle": "circle (radius, style, color)",
   "displayBlockTitle": "display",
   "ellipseBlockTitle": "ellipse (width, height, style, color)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"display\" block?",
   "overlayBlockTitle": "overlay (top, bottom)",
   "placeImageBlockTitle": "place-image (x, y, image)",

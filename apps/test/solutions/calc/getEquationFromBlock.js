@@ -69,8 +69,8 @@ module.exports = {
     {
       description: "getEquationFromBlock",
       expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes

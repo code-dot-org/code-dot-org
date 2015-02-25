@@ -86,7 +86,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Return true if x is greater than 0.</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left?</title>
         </block>
@@ -356,7 +356,7 @@
           <block type="functional_definition" inline="false" uservisible="false">
             <mutation>
               <arg name="x-coordinate"/>
-              <outputtype>boolean</outputtype>
+              <outputtype>Boolean</outputtype>
             </mutation>
             <title name="NAME">safe-left?</title>
             <functional_input name="STACK">

@@ -15,8 +15,6 @@ Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.
 
 Thursday, December 4, 2014 • 5 p.m. *PT* / 1 hr [View Recording](https://www.youtube.com/watch?v=Lmr5Sfhk8rM&feature=youtu.be)
 
-Wednesday, February 4, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/130366939/browser)
-
 Wednesday, March 11, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/831078338/browser)
 
 Wednesday, April 8, 2015 • 5 p.m. *PT* / 1 hr [Click here to join](https://bluejeans.com/211642174/browser)

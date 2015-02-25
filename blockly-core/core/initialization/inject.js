@@ -29,13 +29,14 @@ goog.require('Blockly.Css');
 goog.require('Blockly.BlockSpaceEditor');
 goog.require('goog.dom');
 
-
 /**
  * Initialize the SVG document with various handlers.
  * @param {!Element} container Containing element.
- * @param {Object} opt_options Optional dictionary of options.
+ * @param {Object} [opt_options] Optional dictionary of options.
+ * @param {AudioPlayer} [opt_audioPlayer]
+ *
  */
-Blockly.inject = function(container, opt_options) {
+Blockly.inject = function(container, opt_options, opt_audioPlayer) {
   // Verify that the container is in document.
   if (!goog.dom.contains(document, container)) {
     throw 'Error: container is not in current document.';
@@ -52,7 +53,10 @@ Blockly.inject = function(container, opt_options) {
   Blockly.Css.inject();
 
   // Load sounds
-  Blockly.initUISounds_();
+  if (opt_audioPlayer) {
+    Blockly.audioPlayer = opt_audioPlayer;
+    Blockly.registerUISounds_(Blockly.audioPlayer);
+  }
 
   /**
    * @type {Blockly.BlockSpaceEditor}
@@ -163,18 +167,21 @@ Blockly.parseOptions_ = function(options) {
 
 /**
  * Initialize some core blockly sounds
+ * @param {AudioPlayer} audioPlayer
  * @private
  */
-Blockly.initUISounds_ = function() {
+Blockly.registerUISounds_ = function(audioPlayer) {
   // Load the sounds.
-  Blockly.loadAudio_(
-      [Blockly.assetUrl('media/click.mp3'),
-       Blockly.assetUrl('media/click.wav'),
-       Blockly.assetUrl('media/click.ogg')],
-       'click');
-  Blockly.loadAudio_(
-      [Blockly.assetUrl('media/delete.mp3'),
-       Blockly.assetUrl('media/delete.ogg'),
-       Blockly.assetUrl('media/delete.wav')],
-       'delete');
+  audioPlayer.register({
+    id: 'click',
+    mp3: Blockly.assetUrl('media/click.mp3'),
+    wav: Blockly.assetUrl('media/click.wav'),
+    ogg: Blockly.assetUrl('media/click.ogg')
+  });
+  audioPlayer.register({
+    id: 'delete',
+    mp3: Blockly.assetUrl('media/delete.mp3'),
+    wav: Blockly.assetUrl('media/delete.wav'),
+    ogg: Blockly.assetUrl('media/delete.ogg')
+  });
 };

@@ -296,6 +296,8 @@ az:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
     new_password_hint: (dəyişmək istəmirsinizsə, boş buraxın)
     current_password_hint: (dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)
@@ -478,7 +480,7 @@ az:
           title: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
         Hour of Code:
-          title: Kod Saatı
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Koda düzəliş et

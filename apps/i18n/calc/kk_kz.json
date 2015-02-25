@@ -5,5 +5,9 @@
   "goal": "Goal:",
   "reinfFeedbackMsg": "Here is your story! Continue working on it, or move on to the next puzzle!",
   "yourExpression": "Your expression:",
-  "failedInput": "Your function does not return the right result for all values."
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "failedInput": "Your function does not return the right result for all values.",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "wrongInput": "You are calling your function with the wrong value."
 }

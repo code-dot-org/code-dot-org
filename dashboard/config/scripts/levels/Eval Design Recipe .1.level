@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a Design Recipe for a function called \"square circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
+    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Look at the two examples we've provided and write the function definition.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -16,7 +16,9 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1500"
+    "min_workspace_height": "1500",
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"[block-id='18'] > .blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"[block-id='50']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "step_speed": "5"
   }
 }]]></config>
   <blocks>
@@ -25,9 +27,9 @@
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false" movable="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" movable="false" editable="false">
@@ -45,11 +47,11 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="size" type="Number"/>
-            <arg name="color" type="string"/>
+            <arg name="color" type="String"/>
             <description>Output a white circle bounded by a square of given size and color</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
-          <title name="NAME">square circle</title>
+          <title name="NAME">square-circle</title>
         </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="EXPECTED">
@@ -96,9 +98,9 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -158,9 +160,9 @@
           </functional_input>
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="square circle">
+              <mutation name="square-circle">
                 <arg name="size" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number" uservisible="false">
@@ -211,7 +213,7 @@
             <block type="functional_call" inline="false">
               <mutation name="square-circle">
                 <arg name="length" type="Number"/>
-                <arg name="color" type="string"/>
+                <arg name="color" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_math_number">
@@ -229,9 +231,9 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="length" type="Number"/>
-            <arg name="color" type="string"/>
+            <arg name="color" type="String"/>
             <description>Produce a white circle on top of a square of given length and color.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">square-circle</title>
           <functional_input name="STACK">
@@ -285,7 +287,7 @@
                   <functional_input name="COLOR">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">color</title>
                     </block>

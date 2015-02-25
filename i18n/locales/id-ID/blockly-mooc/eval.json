@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"lingkaran(jari-jari, gaya, warna)",
   "displayBlockTitle":"tampilan",
   "ellipseBlockTitle":"lonjong (lebar, panjang, gaya, warna)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?",
   "overlayBlockTitle":"lapisan-atas (atas, bawah)",
   "placeImageBlockTitle":"tempat-gambar (x, y, gambar)",

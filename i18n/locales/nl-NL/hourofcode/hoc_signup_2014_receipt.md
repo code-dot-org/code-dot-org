@@ -8,7 +8,7 @@ van: "Hadi Partove (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% if @country == 'ro' %>
 
-Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+Va multumim pentru inregistrare. Daca Aveţi hulp de ajutor sau Aveţi orice intrebare contactati Echipa uur van Code Roemenië la adresa: hoc@adfaber.org.
 
 <% end %>
 
@@ -38,7 +38,7 @@ Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of or
 
 ## Vraag een politicus het Uur Code te ondersteunen
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+<0resources#politicians">Stuur deze mail</a> naar je burgemeester, stadsbestuur of schoolbestuur. Of [geef hen deze hand-out](http://<%= hostname %>/resources/hoc-one-pager.pdf) en nodig ze uit voor een bezoek aan uw school.
 
 * * *
 

@@ -1,24 +1,3 @@
-/**
- * Copyright 2015 Code.org
- * http://code.org/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Simple run-loop manager
- */
-
 /* jshint
  funcscope: true,
  newcap: true,
@@ -61,10 +40,10 @@ var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
 
 
 /**
- *
+ * Simple run-loop manager
  * @constructor
  */
-var RunLoop = function () {
+var RunLoop = module.exports = function () {
 
   /**
    * Whether the run-loop will continue running.
@@ -86,19 +65,12 @@ var RunLoop = function () {
    */
   this.tick_ = this.buildTickMethod_();
 
-  /**
-   *
-   * @type {ObservableEvent}
-   */
+  /**  @type {ObservableEvent} */
   this.tick = new ObservableEvent();
 
-  /**
-   *
-   * @type {ObservableEvent}
-   */
+  /** @type {ObservableEvent} */
   this.render = new ObservableEvent();
 };
-module.exports = RunLoop;
 
 /**
  * Simple tracking for time values
@@ -109,8 +81,6 @@ RunLoop.Clock = function () {
    * Time the current/most recent tick started, in ms.
    * Depending on browser this might be epoch time or time since load -
    *  therefore, don't use for absolute time!
-   * TODO (bbuchanan) : Could wrap this to absolutely be time-since-begin
-   *                    independent of implementation.
    * @type {number}
    */
   this.time = windowNow();
@@ -151,9 +121,7 @@ RunLoop.prototype.buildTickMethod_ = function () {
   return tickMethod;
 };
 
-/**
- * Start the run loop (runs immediately)
- */
+/** Start the run loop (runs immediately) */
 RunLoop.prototype.begin = function () {
   this.enabled = true;
   this.clock.time = windowNow();

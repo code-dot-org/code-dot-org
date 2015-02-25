@@ -14,7 +14,7 @@ Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice int
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**FIECARE<0> Organizator a Hour Of Code va primi 10 GB spațiu de stocare pe Dropbox sau 10 $ credit Skype în semn de mulțumire . Detalii<1></p> 
 
 ## 1. Răspândește vestea
 

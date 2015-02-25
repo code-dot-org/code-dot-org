@@ -105,13 +105,13 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
  * variables. If we have multiple functions or one function and some variables,
  * returns false.
  */
- EquationSet.prototype.hasSingleFunction = function () {
+EquationSet.prototype.hasSingleFunction = function () {
    if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
      return true;
    }
 
    return false;
- };
+};
 
 /**
  * Are two EquationSets identical? This is considered to be true if their

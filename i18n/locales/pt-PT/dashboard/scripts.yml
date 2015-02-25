@@ -8,14 +8,14 @@ pt:
           Multi: Multi
           Match: Match
           Math Image: Math Image
-          title: Test Course
+          title: Curso Teste
           description: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
           "Maze: Sequence": 'Maze: Sequence'
           "Maze: Debugging": 'Maze: Debugging'
           "Artist 1: Intro": 'Artist 1: Intro'
-          Artists 2: Artists 2
+          Artists 2: Artistas 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Bee 1: Intro'
@@ -342,6 +342,12 @@ pt:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ pt:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinito
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico
+          description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
+          Introduction to Computer Science: Introdução à Ciência Computacional
+          The Maze: O Labirinto
+          Computational Thinking: Pensamento computacional
+          Graph Paper Programming: Programação de papel milimetrico
+          The Artist: O Artista
+          Algorithms: Algoritmos
+          The Artist 2: O Artista 2
+          Functions: Funções
+          The Farmer: O Agricultor
+          Conditionals: Condicionais
+          The Artist 3: O Artista 3
+          Song Writing: escrita de canção
+          The Farmer 2: O Agricultor 2
+          Abstraction: Abstração
+          The Artist 4: O Artista 4
+          Relay Programming: Programação do relé
+          The Farmer 3: O Agricultor 3
+          The Internet: A Internet
+          The Artist 5: O Artista 5
+          Wrap-up: Resumo

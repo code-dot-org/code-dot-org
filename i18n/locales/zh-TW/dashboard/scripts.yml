@@ -130,7 +130,7 @@ zh:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: 寫歌
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
@@ -342,6 +342,12 @@ zh:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ zh:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: 無窮
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 'K 8 簡介電腦科學課程 （15-25 小時） '
+          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+          Introduction to Computer Science: 電腦科學導論
+          The Maze: 迷宮
+          Computational Thinking: 電腦計算式思維
+          Graph Paper Programming: 圖畫紙程式設計
+          The Artist: 藝術家
+          Algorithms: 演算法
+          The Artist 2: '藝術家 2 '
+          Functions: 函數類別
+          The Farmer: 農夫
+          Conditionals: 流程類別
+          The Artist 3: '藝術家 3 '
+          Song Writing: 歌曲創作
+          The Farmer 2: '農夫 2 '
+          Abstraction: 抽象
+          The Artist 4: '藝術家 4 '
+          Relay Programming: 接力式程式設計
+          The Farmer 3: '農夫 3 '
+          The Internet: 網際網路
+          The Artist 5: '藝術家 5 '
+          Wrap-up: 總結

@@ -3,7 +3,7 @@
   select_language: Будь ласка, виберіть мову
   computer_science: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
     усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
@@ -291,7 +291,7 @@
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
   dashboard_students_placeholder_name: Ім'я учня
   dashboard_students_name: Ім’я
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Прогрес
   dashboard_students_age: Вік
   dashboard_students_gender: Стать
   dashboard_students_male: Чоловік
@@ -391,7 +391,7 @@
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Як викладати "Годину коду"
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя

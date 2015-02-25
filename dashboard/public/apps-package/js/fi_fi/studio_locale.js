@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "puu"},
 "speed":function(d){return "nopeus"},
 "startSetValue":function(d){return "Käynnistä (raketti-korkeus -toiminto)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "pysähdy"},
 "stopSpriteN":function(d){return "pysäytä hahmo "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Pysäyttää hahmon liikkeen."},

@@ -9,7 +9,6 @@ nav: pd_nav
 - [I'm attending High School PD...](#hs)
 - [I'm attending Middle School Science PD...](#mss)
 - [I'm attending Middle School Math PD...](#msm)
-- [I'm attending Administrator / Counselor PD...](#admin)
 
 <a id="hs"></a>
 
@@ -22,8 +21,6 @@ Milestone Complete!
 ### Phase 2: Teaching and Learning Studio
 
 Milestone Complete!
-
-For information about the stipend payment process please go [here](http://code.org/educate/pd/faq#pay).
 
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
@@ -153,20 +150,6 @@ Bootstrap Workbook
 Laptop
 
 [**Back to the top**](#top)
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

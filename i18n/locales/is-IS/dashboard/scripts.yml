@@ -294,19 +294,19 @@ is:
           Special: Sérstakt
           Binary: Tvíundir
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          Usability testing for MSM: Nothæfnisprófun fyrir MSM
+          Evaluation Blocks: Matskubbar
           Blocks to Math: Kubbar og stærðfræði
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Strengir og myndir
+          Defining Variables: Skilgreining breytna
+          Defining Functions: Skilgreining falla
+          Design Recipe: Hönnunaruppskrift
           Booleans: Boolean gildi
           Conditionals: Skilyrði
-          Free Play: Free Play
+          Free Play: Frjáls æfing
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Tölvunarfræði í algebru
+          description: Læra fallmiðaða forritun í gegnum algebru
           "Unplugged: Video Games and Coordinate Planes": 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
           "Calc: Evaluation Blocks": 'Reiknir: Greiningarkubbar'
           "Eval: Strings and Images": 'Greining: Strengir og myndir'
@@ -314,10 +314,10 @@ is:
           "Eval: Writing Contracts": 'Greining: Ritun samninga'
           "Calc: Defining Variables": 'Reiknir: Skilgreining breytna'
           "Play Lab: Defining Variables (Big Game)": 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Mat: Skilgreining falla'
           "Unplugged: The Design Recipe": 'Verkefni án tölvu: Hönnunaruppskriftin'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Leikjasmiðja: Skilgreining falla'
+          "Eval: Functions": 'Mat: Föll'
           "Play Lab: Animation (Big Game)": 'Leikjasmiðjan: Hreyfing (Stórleikur)'
           "Unplugged: Booleans": 'Verkefni án tölvu: Boolean gildi'
           "Eval: Boolean Operators": 'Greining: Boolean virkjar'
@@ -333,22 +333,55 @@ is:
           description: Búðu til sögu eða leik með Leikjasmiðju!
           Play Lab: Leikjasmiðja
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          description: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem Code.org notar í Tölvunarfræði í Algebru
+          Algebra Demo: Dæmi með Algebru
+          Evaluation Blocks: Matskubbar
+          Making Pictures: Gerð mynda
+          Defining Variables: Skilgreining breytna
+          Defining Simple Functions: Skilgreining einfaldra falla
           The Design Recipe: Hönnunaruppskriftin
         K5PD:
-          Introduction to PD: Introduction to PD
+          Introduction to PD: Kynning á PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
-          title: Internet Simulator
+          title: Internet hermir
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Internet hermir
         Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
+          title: Infinity leikjasmiðja
+          description_short: Semja sögu eða búa til leik með Infinity leikjasmiðju!!
+          description: Semja sögu eða búa til leik með Infinity leikjasmiðju!
           Infinity: Óendanleiki
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
+          description: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
+          Introduction to Computer Science: Kynning á tölvunarfræði
+          The Maze: Völundarhúsið
+          Computational Thinking: Tölvunarmiðuð hugsun
+          Graph Paper Programming: Forritun rúðublaða
+          The Artist: Listamaðurinn
+          Algorithms: Algrím
+          The Artist 2: Listamaðurinn 2
+          Functions: Föll
+          The Farmer: Bóndinn
+          Conditionals: Skilyrði
+          The Artist 3: Listamaðurinn 3
+          Song Writing: Lagasmíð
+          The Farmer 2: Bóndinn 2
+          Abstraction: Greining kjarna
+          The Artist 4: Listamaðurinn 4
+          Relay Programming: Boðhlaupsforritun
+          The Farmer 3: Bóndinn 3
+          The Internet: Internetið
+          The Artist 5: Listamaðurinn 5
+          Wrap-up: Samantekt

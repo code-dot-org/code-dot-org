@@ -1,6 +1,7 @@
 class ScriptDSL < BaseDSL
   def initialize
     super
+    @id = nil
     @title = nil
     @description_short = nil
     @description = nil
@@ -13,6 +14,11 @@ class ScriptDSL < BaseDSL
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @hidden = true
+    @trophies = false
+  end
+
+  def id(id)
+    @id = ActiveRecord::ConnectionAdapters::Column::value_to_integer(id)
   end
 
   def title(title)
@@ -35,6 +41,10 @@ class ScriptDSL < BaseDSL
     @hidden = ActiveRecord::ConnectionAdapters::Column::value_to_boolean(hidden_string)
   end
 
+  def trophies(trophies_string)
+    @trophies = ActiveRecord::ConnectionAdapters::Column::value_to_boolean(trophies_string)
+  end
+
   def stage(name)
     @stages << {stage: @stage, levels: @levels} if @stage
     @stage = name
@@ -45,7 +55,7 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {stages: @stages, hidden: @hidden}
+    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies}
   end
 
   def concepts(*items)

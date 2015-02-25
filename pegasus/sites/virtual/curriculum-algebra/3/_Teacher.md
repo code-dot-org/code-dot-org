@@ -37,7 +37,6 @@ This lesson has four new and important words:<br/>
 
 - **String** - any sequence of characters between quotation marks (examples: "hello", "42", "this is a string!")
 - **Image** - a type of data for pictures
-- **Produce** - to compute a value from an expression
 - **Type** - refers to a general kind of data, like Number, String, Image, or Boolean
 
 ### <a name="GetStarted"></a> 2) Introduction

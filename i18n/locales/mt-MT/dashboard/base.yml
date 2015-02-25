@@ -296,6 +296,8 @@ mt:
     student_teacher_disassociated: "%{teacher_name} tneħħa bħala għalliem ta' %{student_name}"
   user:
     email_confirm_needed: 'Indirizz elettroniku ma giex ikkonfermat:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: "Erga ibghat l'istruzzjonijiet tal-konferma"
     new_password_hint: (ħalli vojt jekk ma tixtieqx tibdel)
     current_password_hint: (neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet tiegħek)
@@ -478,7 +480,7 @@ mt:
           title: Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja (15-25 siegha)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Edit Code

@@ -296,6 +296,8 @@ pl:
     student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel %{student_name}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
     new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
     current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)
@@ -478,7 +480,7 @@ pl:
           title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
           description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
         Hour of Code:
-          title: Godzina kodowania
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Edytuj kod

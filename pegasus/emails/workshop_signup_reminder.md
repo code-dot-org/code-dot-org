@@ -7,6 +7,9 @@ litmus_tracking_id: "e5cj1of6"
 <%
   workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
+  
+  affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
+
   cancel_link = "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/cancel/#{form.secret}"
 %>
 
@@ -22,7 +25,7 @@ Workshop details:
 
 - Date(s): <%= workshop['dates'].map{|i| "#{i['date_s']} (#{i['start_time_s']} - #{i['end_time_s']})"}.join(', ') %>
 - Location: <%= workshop['location_name_s'] %>
-- Workshop facilitator: <%= workshop['name_s'] %> - <%= workshop['email_s'] %>
+- Workshop facilitator: <%= affiliate[:name] %> - <%= affiliate[:email] %>
 
 > <%= workshop['notes_s'] %>
 

@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "ក្រហម";
 Blockly.Msg.COLOUR_RGB_TITLE = "ពណ៌​ជាមួយ";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "បង្កើត​ពណ៌​មួយ​ដោយ​លាយ​ជាមួយ​បរិមាណ​នៃ​ពណ៌​ក្រហម ពណ៌​បៃតង និង​ពណ៌​ខៀវ។ រាល់​តម្លៃ​ទាំងអស់​ត្រូវ​តែ​នៅ​ចន្លោះ 1 និង 100។";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "បញ្ចប់​រង្វិល​ជុំ";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "បន្ត​ជាមួយ​វដ្ដ​រង្វិលជុំ​បន្ទាប់";

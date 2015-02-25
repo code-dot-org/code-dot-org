@@ -75,6 +75,14 @@ Blockly.JavaScript.functional_call = function() {
   return code;
 };
 
+Blockly.JavaScript.functional_pass = function() {
+  // Pass a functional procedure
+  var funcName = Blockly.JavaScript.variableDB_.getName(
+      this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
+  var code = (Blockly.varsInGlobals ? 'Globals.' : '') + funcName;
+  return code;
+};
+
 Blockly.JavaScript.procedural_to_functional_call = function() {
   // Call a functional procedure with a return value.
   var funcName = Blockly.JavaScript.variableDB_.getName(

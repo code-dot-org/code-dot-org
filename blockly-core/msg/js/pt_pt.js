@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.pt_pt');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "atual";
+Blockly.Msg.ACTUAL = "chamada";
 Blockly.Msg.ADD = "Adicionar";
 Blockly.Msg.ADD_COMMENT = "Adicionar Comentário";
 Blockly.Msg.ADD_PARAMETER = "Adicionar Parâmetro";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "vermelho";
 Blockly.Msg.COLOUR_RGB_TITLE = "pintar com";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crie uma cor com uma quantidade específica de vermelho, verde e azul. Todos os valores devem estar entre 0 e 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "sair do ciclo";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "continuar com a próxima iteração do ciclo";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Exemplo";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Define um exemplo com um comportamento esperado e real";
 Blockly.Msg.EXPAND_ALL = "Expandir Blocos";
 Blockly.Msg.EXPAND_BLOCK = "Expandir Bloco";
-Blockly.Msg.EXPECTED = "esperado";
+Blockly.Msg.EXPECTED = "resultado";
 Blockly.Msg.EXTERNAL_INPUTS = "Entradas externas";
 Blockly.Msg.FUNCTION_CREATE = "Crie uma Função";
 Blockly.Msg.FUNCTION_EDIT = "edit";

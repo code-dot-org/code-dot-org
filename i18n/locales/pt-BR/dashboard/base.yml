@@ -296,6 +296,8 @@ pt-BR:
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de %{student_name}'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixe em branco se não quiser fazer alteração)
     current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
@@ -478,7 +480,7 @@ pt-BR:
           title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
           description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
         Hour of Code:
-          title: Hora do Código
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Editar o código

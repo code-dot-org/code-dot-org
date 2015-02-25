@@ -392,6 +392,13 @@
           The Design Recipe: La receta de diseño
         K5PD:
           Introduction to PD: Introducción al DP
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -402,3 +409,34 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinito
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Curso de Introducción a las Ciencias de la Computación K-8 (15-25
+            horas)
+          description: 'Este curso de 20 horas introduce el núcleo de la informática
+            y conceptos de programación. El curso está diseñado para su uso en aulas
+            para los grados K-8, pero es divertido aprender en todas las edades.  '
+          Introduction to Computer Science: Introducción al Arte de las Ciencias de
+            la Computación
+          The Maze: El laberinto
+          Computational Thinking: Pensamiento computacional
+          Graph Paper Programming: Programación de hoja cuadriculada
+          The Artist: El artista
+          Algorithms: Algoritmos
+          The Artist 2: El artista 2
+          Functions: Funciones
+          The Farmer: El granjero
+          Conditionals: Condicionales
+          The Artist 3: El artista 3
+          Song Writing: Escribir canciones
+          The Farmer 2: El granjero 2
+          Abstraction: Liberación abstracta
+          The Artist 4: El artista 4
+          Relay Programming: Programación bajo presión
+          The Farmer 3: El granjero 3
+          The Internet: Internet
+          The Artist 5: El artista 5
+          Wrap-up: Cierre

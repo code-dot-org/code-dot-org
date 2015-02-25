@@ -28,12 +28,22 @@
     "open_function_definition": "rocket-height",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
-    "min_workspace_height": "1000"
+    "min_workspace_height": "1000",
+    "generate_function_pass_blocks": "true",
+    "timeout_after_when_run": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
+          <functional_input name="VALUE">
+            <block type="functional_pass">
+              <mutation name="rocket-height"/>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="seconds" type="Number"/>
@@ -59,27 +69,6 @@
               </mutation>
             </block>
           </functional_input>
-        </block>
-        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
-          <functional_input name="VALUE">
-            <block type="functional_call" inline="false" deletable="false" movable="false">
-              <mutation name="rocket-height">
-                <arg name="seconds" type="Number"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_call" deletable="false" movable="false" editable="false">
-                  <mutation name="time-elapsed"/>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">time-elapsed</title>
         </block>
         <block type="when_run" uservisible="false">
           <next>
@@ -112,25 +101,25 @@
           <statement name="DO">
             <block type="studio_setScoreText" inline="true" uservisible="false">
               <value name="TEXT">
-                <block type="text_join" inline="false" uservisible="false">
+                <block type="text_join" inline="false">
                   <mutation items="4"/>
                   <value name="ADD0">
-                    <block type="text" uservisible="false">
+                    <block type="text">
                       <title name="TEXT">Time: </title>
                     </block>
                   </value>
                   <value name="ADD1">
-                    <block type="variables_get" uservisible="false">
+                    <block type="variables_get">
                       <title name="VAR">time</title>
                     </block>
                   </value>
                   <value name="ADD2">
-                    <block type="text" uservisible="false">
+                    <block type="text">
                       <title name="TEXT"> | Height: </title>
                     </block>
                   </value>
                   <value name="ADD3">
-                    <block type="variables_get" uservisible="false">
+                    <block type="variables_get">
                       <title name="VAR">height</title>
                     </block>
                   </value>

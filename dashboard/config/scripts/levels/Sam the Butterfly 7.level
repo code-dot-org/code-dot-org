@@ -74,7 +74,7 @@
             <arg name="x" type="Number"/>
             <arg name="y" type="Number"/>
             <description>Check x against safe-left? and safe-right?, check y against safe-up? and safe-down?</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">on-screen?</title>
           <functional_input name="STACK">
@@ -144,7 +144,7 @@
           <mutation>
             <arg name="y" type="Number"/>
             <description>Return true if y is less than 400</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-up?</title>
           <functional_input name="STACK">
@@ -176,7 +176,7 @@
           <mutation>
             <arg name="y" type="Number"/>
             <description>Write a description for this function</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-down?</title>
         </block>
@@ -184,7 +184,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Return true if x is greater than 0</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left?</title>
           <functional_input name="STACK">
@@ -216,7 +216,7 @@
           <mutation>
             <arg name="x" type="Number"/>
             <description>Return true if x is less than 400.</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-right?</title>
           <functional_input name="STACK">
@@ -740,7 +740,7 @@
           <block type="functional_definition" inline="false" uservisible="false">
             <mutation>
               <arg name="x-coordinate"/>
-              <outputtype>boolean</outputtype>
+              <outputtype>Boolean</outputtype>
             </mutation>
             <title name="NAME">safe-left?</title>
             <functional_input name="STACK">

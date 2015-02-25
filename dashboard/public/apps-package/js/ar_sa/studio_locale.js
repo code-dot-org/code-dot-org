@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "الخشب"},
 "speed":function(d){return "السرعة"},
 "startSetValue":function(d){return "start (rocket-height function)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "وقف"},
 "stopSpriteN":function(d){return "إيقاف الصورة "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "توقف حركة عنصر فاعل."},

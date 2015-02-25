@@ -26,8 +26,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false",
-    "maze_data": null
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

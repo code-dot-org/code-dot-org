@@ -12,17 +12,17 @@ Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice int
 
 <% end %>
 
-# Thanks for signing up to host an Hour of Code!
+# مننه، چې د کوډ ساعت د کوربونې لپاره مو ځان ثبت کړ!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
-## 1. Spread the word
+## ۱. خبره خپره کړئ
 
-Tell your friends about the #HourOfCode.
+ټول ملګري مو له #HourOfCode خبر کړئ.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## ۲. له ټول ښوونځي مو وغواړئ، چې د کوډ ساعت ترتيب کړي
 
 [Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 

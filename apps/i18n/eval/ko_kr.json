@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "원(반지름, 형태, 색)",
   "displayBlockTitle": "보이기",
   "ellipseBlockTitle": "타원(가로길이, 세로높이, 형태, 색)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"그리기\"블럭에 붙이려고 했나요?",
   "overlayBlockTitle": "위에그리기(맨위, 아래)",
   "placeImageBlockTitle": "이미지배치(x, y, 이미지)",

@@ -300,7 +300,7 @@ module.exports = {
       description: "User function has an extra input",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       xml: '<xml>' +
         '<block type="functional_compute" inline="false" deletable="false" movable="false">' +

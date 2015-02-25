@@ -1,0 +1,7 @@
+name '2-3 multi match 4'
+title ' true block <br> false block <br> < block <br> > block <br> = block <br> not block <br> and block <br> or block <br> string=? block'
+question 'Green colored blocks are associated with __________ ?'
+wrong 'a image'
+right 'a number'
+wrong 'a string'
+right 'boolean'

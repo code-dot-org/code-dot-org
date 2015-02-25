@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "skaitļot"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi."},
 "extraTopBlocks":function(d){return "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Mērķis:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Šeit ir tavs stāsts! Turpini pie tā strādāt vai pārej pie nākamā uzdevuma!"},
-"yourExpression":function(d){return "Jūsu izteiksme:"}};
+"yourExpression":function(d){return "Jūsu izteiksme:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

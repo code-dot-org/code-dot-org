@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "κόκκινο";
 Blockly.Msg.COLOUR_RGB_TITLE = "χρωμάτισε με";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Δημιουργήστε ένα χρώμα με το συγκεκριμένο ποσό του κόκκινου, πράσινου και μπλε.  Όλες οι τιμές πρέπει να είναι μεταξύ 0 και 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Συνταγή σχεδιασμού";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Μπλοκ_Τερματισμού_Βρόγχων";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "σταμάτα την επανάληψη";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "συνέχισε με την επόμενη επανάληψη";

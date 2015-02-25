@@ -105,8 +105,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Variabile"},
 "continue":function(d){return "Continuă"},
-"createHtmlBlock":function(d){return "creare bloc html"},
-"createHtmlBlockTooltip":function(d){return "Creează un bloc HTML în aplicație."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "Felicitări! Ai rezolvat puzzle-ul final."},
 "nextLevel":function(d){return "Felicitări! Ai finalizat acest puzzle."},
 "no":function(d){return "Nu"},
@@ -121,5 +121,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Pas înăuntru"},
 "stepOver":function(d){return "Pas peste"},
 "stepOut":function(d){return "Pas afară"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Vizualizare date"},
 "yes":function(d){return "Da"}};

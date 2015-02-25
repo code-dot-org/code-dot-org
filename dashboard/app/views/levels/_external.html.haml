@@ -1,0 +1,9 @@
+%link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
+
+#external
+  :javascript
+    var options = #{@level.properties['options'].to_json}
+
+    $.ajax("#{asset_path @level.properties['href']}").done(function (data) {
+      $('#external').html(data);
+    });

@@ -9,8 +9,8 @@
         123: '123'
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
           1/Exercise_5_question_2.png
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type
-          out the arithmetic expression that this circle of evaluation evaluates to
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Запишите
+          арифметическое выражение, которому равен этот круг оценивания
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4: 
         9-3+4: 
@@ -26,9 +26,10 @@
         Enter answer here: Введите ответ здесь
         4 + 5: 4 + 5
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 1.blocks.start_blocks: Blocks to Math 1.blocks.start_blocks
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks: Блоки для математики 1.blocks.start_blocks
+        Blocks to Math 1.blocks.start_blocks, 200: Блоки для математики 1.blocks.start_blocks,
           200
+        (4+5): (4+5)
       Blocks to Math 2:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое
@@ -36,8 +37,9 @@
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: 7 * 6
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Блоки для математики 2.blocks.start_blocks,
           200
+        (7 * 6): (7 * 6)
       Blocks to Math 3:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое
@@ -46,7 +48,8 @@
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Блоки для математики 3.blocks.start_blocks
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
       Blocks to Math 4:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое
@@ -55,9 +58,10 @@
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8-12
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
-        Blocks to Math 4.blocks.start_blocks, 200: Blocks to Math 4.blocks.start_blocks,
+        Blocks to Math 4.blocks.start_blocks: Блоки для математики 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks, 200: Блоки для математики 4.blocks.start_blocks,
           200
+        ((5 + 8) - 12): ((5 + 8) - 12)
       Blocks to Math 5:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое
@@ -66,7 +70,8 @@
         (-2) * (-6):
         - 2 * -6: -2 * ( -6 )
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Блоки для математики 5.blocks.start_blocks
+        ((-2) * (-6)): ((-2) * (-6))
         -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Преобразование блоков в математические выражения
@@ -78,7 +83,8 @@
         (4 - 1) * (-2) + 12: ((4-1) * (-2)) + 12
         (4 - 1) * -2 + 12: (4 - 1) * ( -2 ) + 12
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Блоки для математики 6.blocks.start_blocks
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
       Blocks to Math 7:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое
@@ -86,7 +92,8 @@
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Type the arithmetic expression here: Введите арифметическое выражение
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Блоки для математики 7.blocks.start_blocks
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
       Blocks to Bools 1:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое

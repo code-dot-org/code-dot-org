@@ -173,6 +173,29 @@ class Level < ActiveRecord::Base
     self.update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
 
+  def self.find_by_key(key)
+    # this is the key used in the script files, as a way to uniquely
+    # identify a level that can be defined by the .level file or in a
+    # blockly levels.js. for example, from hourofcode.script:
+    # level 'blockly:Maze:2_14'
+    # level 'scrat 16'
+    self.find_by(key_to_params(key))
+  end
+
+  def self.key_to_params(key)
+    if key.start_with?('blockly:')
+      _, game_name, level_num = key.split(':')
+      {game_id: Game.by_name(game_name).id, level_num: level_num}
+    else
+      {name: key}
+    end
+  end
+
+  def project_template_level
+    return nil if project_template_level_name.nil?
+    Level.find_by_key(project_template_level_name)
+  end
+
   private
 
   def write_to_file?

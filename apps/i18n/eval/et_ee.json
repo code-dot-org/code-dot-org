@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "ring (raadius, stiil, värv)",
   "displayBlockTitle": "näita",
   "ellipseBlockTitle": "ellips (laius, kõrgus, stiil, värv)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"kuva\" klotsi külge?",
   "overlayBlockTitle": "pealiskiht (ülaosa, põhi)",
   "placeImageBlockTitle": "place-image (x, y, image)",

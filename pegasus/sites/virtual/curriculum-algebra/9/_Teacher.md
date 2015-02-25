@@ -34,6 +34,9 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 
+### For the Student
+- [Blank Design Recipe Form](design_recipe.pdf)
+
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4)
 
@@ -49,6 +52,9 @@ This lesson has two new and important words:<br/>
 
 - **Design Recipe** - a sequence of steps to document, test, and write functions
 - **Purpose Statement** - a brief description of what the function does
+- **Independent Variable** - The value that the experimenter controls.  The input.
+- **Dependent Variable** - The value that changes based on the independent variable. The output.
+- **Constant** - A fixed number in a relationship.
 
 ### <a name="GetStarted"></a> 2) What is the Design Recipe
 

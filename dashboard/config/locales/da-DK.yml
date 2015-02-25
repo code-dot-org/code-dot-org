@@ -1,7 +1,7 @@
 "da":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Ret venligst følgende fejl:'
   activerecord:
     errors:
       messages:
@@ -346,6 +346,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Gensend bekræftelses instruktioner
     new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
     current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte

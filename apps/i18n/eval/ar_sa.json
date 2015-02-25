@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "دائرة (نصف القطر ، النمط ، اللون)",
   "displayBlockTitle": "عرض",
   "ellipseBlockTitle": "القطع الناقص (العرض ، الارتفاع ، النمط واللون )",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟",
   "overlayBlockTitle": "تداخل (الأعلى، الأسفل)",
   "placeImageBlockTitle": "وضع الصورة (س، ص، صورة)",

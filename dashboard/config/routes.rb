@@ -84,6 +84,7 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'

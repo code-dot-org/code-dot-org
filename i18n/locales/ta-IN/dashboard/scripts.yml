@@ -342,6 +342,12 @@ ta:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ ta:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: முடிவிலி
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 Intro to Computer Science Course (15-25 hours)
+          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          Introduction to Computer Science: கணினி அறிவியலின் அறிமுகம்
+          The Maze: The Maze
+          Computational Thinking: Computational Thinking
+          Graph Paper Programming: வரைதாள் செய்நிரல்
+          The Artist: கலைஞர்
+          Algorithms: வழிமுறைகள்
+          The Artist 2: கலைஞர் 2
+          Functions: செயல்பாடுகள்
+          The Farmer: விவசாயி
+          Conditionals: Conditionals
+          The Artist 3: கலைஞர் 3
+          Song Writing: பாடல் எழுதுதல்
+          The Farmer 2: விவசாயி 2
+          Abstraction: Abstraction
+          The Artist 4: கலைஞர் 4
+          Relay Programming: Relay Programming
+          The Farmer 3: விவசாயி 3
+          The Internet: இணையம்
+          The Artist 5: கலைஞர் 5
+          Wrap-up: Wrap-up

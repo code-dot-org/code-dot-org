@@ -27,6 +27,10 @@ body {
   margin: 0 0 30px 0;
 }
 
+.pageheader_translucent {
+  background-color: rgba(0, 178, 192, 0.5) ! important;
+}
+
 #pageheader .content {
   width: 970px;
   margin: 0 auto; 
@@ -74,7 +78,7 @@ body {
 .headerlink:hover,
 .headerlink:active {
   color: white;
-  border-bottom: solid 4px rgb(255, 138, 0);
+  border-bottom: solid 2px rgb(255, 138, 0);
 }
 
 #pagefooter {

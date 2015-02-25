@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "կարմիր";
 Blockly.Msg.COLOUR_RGB_TITLE = "գույնի հետ";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Ստեղծեք գույն կարմիրի, կանաչի և կապույտի , տրված քանակների միջոցով. Բոլոր արժեքները պետք է լինեն 0-ից 100-ի միջակայքում.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "դուրս գալ ցիկլից";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "շարունակել ցիկլի հաջորդ կրկնվող քայլերը";

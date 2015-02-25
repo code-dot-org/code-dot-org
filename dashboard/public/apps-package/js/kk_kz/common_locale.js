@@ -244,4 +244,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Here's a tip:"},
 "genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
 "toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Check out what I made"},
+"blocks":function(d){return "blocks"},
+"clearPuzzle":function(d){return "Clear Puzzle"},
+"clearPuzzleConfirm":function(d){return "This will delete all blocks and reset the puzzle to its start state."},
+"clearPuzzleConfirmHeader":function(d){return "Are you sure you want to clear the puzzle?"},
+"workspaceHeaderShort":function(d){return "Workspace: "}};

@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "빨강";
 Blockly.Msg.COLOUR_RGB_TITLE = "색 : ";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "지정한 빨강, 녹색, 파랑 색의 양으로 색을 만들어냅니다. 빨강/녹색/파랑색의 양은 0 - 100 이어야 합니다.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "반복 중단";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "다음 반복";

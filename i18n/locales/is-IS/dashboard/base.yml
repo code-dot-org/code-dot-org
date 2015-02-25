@@ -296,6 +296,8 @@ is:
     student_teacher_disassociated: '%{teacher_name} hefur verið fjarlægð(ur) sem kennari %{student_name}'
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
     new_password_hint: (hafðu autt ef þú vilt ekki breyta því)
     current_password_hint: (við þurfum að fá núverandi lykilorð þitt til að staðfesta breytingarnar)
@@ -478,7 +480,7 @@ is:
           title: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
           description: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
         Hour of Code:
-          title: Klukkustund kóðunar
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Breyta kóða

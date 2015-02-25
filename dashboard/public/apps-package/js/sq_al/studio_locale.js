@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "druri"},
 "speed":function(d){return "shpejtësia"},
 "startSetValue":function(d){return "fillo (funksioni gjatësia-raketë)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "ndalo"},
 "stopSpriteN":function(d){return "ndalo pjesmarrësin "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Ndalon lëvizjen e një pjemsarrësi."},

@@ -52,7 +52,7 @@ class LevelsControllerTest < ActionController::TestCase
     level_4 = create(:level, user: @user, name: "Z10")
     level_5 = create(:level, user: @user, name: "Z2")
 
-    get :new, game_id: @level.game, type: "Maze"
+    get :new, game_id: @level.game
 
     assert_equal [level_2, level_1, level_3, level_5, level_4], assigns(:levels)
   end
@@ -479,10 +479,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level
     assert_response :redirect
 
-    get :edit, id: level, embed:true
-    assert_response :redirect
-
-    get :show, id: level, embed:true
+    get :embed_level, level_id: level
     assert_response :success
   end
 
@@ -496,5 +493,4 @@ class LevelsControllerTest < ActionController::TestCase
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
   end
-
 end
