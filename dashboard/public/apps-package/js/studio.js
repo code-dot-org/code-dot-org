@@ -5158,6 +5158,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     "lessThanOperator": null,
     "andOperator": null,
     "orOperator": null,
+    "notOperator": null,
     "randomNumber_max": null,
     "randomNumber_min_max": null,
     "mathRound": null,
