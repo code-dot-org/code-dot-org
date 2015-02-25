@@ -169,7 +169,7 @@ dashboard.saveProject = function(callback) {
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
-      location.hash = data.id;
+      location.hash = dashboard.currentApp.id = data.id;
       callbackSafe(callback, data);
     });
     dashboard.showProjectHeader();
@@ -180,13 +180,13 @@ function initApp() {
   if (appOptions.level.isProjectLevel) {
     if (dashboard.currentApp) {
       appOptions.level.startBlocks = dashboard.currentApp.levelSource;
-      dashboard.showProjectHeader();
     } else {
       dashboard.currentApp = {
         name: 'Untitled'
       };
     }
     $(window).on('run_button_pressed', dashboard.saveProject);
+    dashboard.showProjectHeader();
   }
   window[appOptions.app + 'Main'](appOptions);
 }
