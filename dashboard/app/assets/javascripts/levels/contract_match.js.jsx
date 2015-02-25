@@ -14,18 +14,13 @@ $(window).load(function () {
    * @enum {string}
    */
   var blockValueType = {
-    NONE: 'None', // Typically as a connection/input check means "accepts any type"
-    STRING: 'String',
     NUMBER: 'Number',
+    STRING: 'String',
     IMAGE: 'Image',
-    BOOLEAN: 'Boolean',
-    FUNCTION: 'Function',
-    COLOUR: 'Colour',
-    ARRAY: 'Array'
+    BOOLEAN: 'Boolean'
   };
 
   var typesToColors = {};
-  typesToColors[blockValueType.NONE] = "#999999";
   typesToColors[blockValueType.NUMBER] = "#00ccff";
   typesToColors[blockValueType.STRING] = "#009999";
   typesToColors[blockValueType.IMAGE] = "#9900cc";
@@ -62,7 +57,7 @@ $(window).load(function () {
        */
       return {
         name: "",
-        rangeType: blockValueType.NONE,
+        rangeType: blockValueType.NUMBER,
         domainTypes: [
           {
             key: 'domain' + (this.maxDomainID++),
