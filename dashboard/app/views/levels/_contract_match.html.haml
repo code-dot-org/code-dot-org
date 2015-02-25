@@ -14,15 +14,7 @@
 
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data}
-    #sectionTitle Name
-    %div
-      %input#functionNameText{type: 'text', placeholder: 'Name'}
-    #sectionTitle Range
-    %select#rangeInput
-      - options_to_colors.each do |type_name, color|
-        %option{"data-color" => "#{color}"}= type_name
-    #sectionTitle Domain
-    #domains
+    #contractForm
     #domainItems
     .clear
     = render partial: 'levels/dialog', locals: {app: app, data: data}

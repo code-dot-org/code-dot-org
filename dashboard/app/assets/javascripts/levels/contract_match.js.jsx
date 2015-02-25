@@ -4,10 +4,16 @@
  * - DomainsList
  *   - TypeChooser
  */
-
-// What is className="" vs class=""?
-
 $(window).load(function () {
+
+  var curry = function(fn) {
+    var args = Array.prototype.slice.call(arguments, 1);
+
+    return function() {
+      return fn.apply(this, args.concat(
+        Array.prototype.slice.call(arguments, 0)));
+    };
+  };
 
   /**
    * Enum of block types. Used for block and domain/range coloring
@@ -45,49 +51,72 @@ $(window).load(function () {
        * }}
        */
       return {
-        contract: {
-          name: "",
-          rangeType: blockValueType.NONE,
-          domainTypes: [
-            {
-              key: 'domain' + (this.maxDomainID++),
-              type: blockValueType.NUMBER,
-              order: 0
-            }
-          ]
-        },
-        maxDomainID: 1
+        name: "",
+        rangeType: blockValueType.NONE,
+        domainTypes: [
+          {
+            key: 'domain' + (this.maxDomainID++),
+            type: blockValueType.NUMBER,
+            order: 0
+          }
+        ]
       }
+    },
+    onNameChangeEvent: function (event) {
+      this.setState({
+        name: event.target.value
+      });
+    },
+    onRangeChange: function (newType) {
+      this.setState({
+        rangeType: newType
+      })
     },
     onDomainChange: function (domainKey, newType) {
       this.setState({
-        contract: {
-          domainTypes:
-            $.map(this.state.contract.domainTypes, function (object) {
-              if (object.key == domainKey) {
-                object.type = newType;
-              }
-              return object;
-            })
-        }
+        domainTypes:
+          $.map(this.state.domainTypes, function (object) {
+            if (object.key == domainKey) {
+              object.type = newType;
+            }
+            return object;
+          })
       });
     },
     onDomainAdd: function () {
       this.setState({
-        contract: {
-          domainTypes:
-            this.state.contract.domainTypes.concat({
-              key: 'domain' + (this.maxDomainID++),
-              type: blockValueType.NUMBER,
-              order: Object.keys(this.state.contract.domainTypes).length
-            })
-        }
+        domainTypes:
+          this.state.domainTypes.concat({
+            key: 'domain' + (this.maxDomainID++),
+            type: blockValueType.NUMBER,
+            order: Object.keys(this.state.domainTypes).length
+          })
+      });
+    },
+    onDomainRemove: function (domainKey) {
+      this.setState({
+        domainTypes:
+          $.grep(this.state.domainTypes, function (object) {
+            return object.key !== domainKey;
+          })
       });
     },
     render: function () {
       return (
-        <DomainsList domainTypes={this.state.contract.domainTypes} onDomainChange={this.onDomainChange} onDomainAdd={this.onDomainAdd}/>
-        /** other stuff */
+        <div>
+          <div id='sectionTitle'>Name</div>
+          <div>
+            <input id='functionNameText' onChange={this.onNameChangeEvent} placeholder='Name' type='text' value={this.state.name}/>
+          </div>
+          <div id='sectionTitle'>Range</div>
+          <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
+          <div id='sectionTitle'>Domain</div>
+          <DomainsList
+            domainTypes={this.state.domainTypes}
+            onDomainChange={this.onDomainChange}
+            onDomainAdd={this.onDomainAdd}
+            onDomainRemove={this.onDomainRemove}/>
+        </div>
       )
     }
   });
@@ -96,10 +125,11 @@ $(window).load(function () {
     render: function() {
       var self = this;
       var typeChoiceNodes = $.map(this.props.domainTypes, function (object) {
-        console.log(object);
         return (
           <div style={object.order == self.props.domainTypes.length - 1 ? {float: 'left'} : {}}>
-            <TypeChooser uniqueKey={object.key} type={object.type} key={object.key} onDomainChange={self.props.onDomainChange}/>
+            <TypeChooser type={object.type} key={object.key}
+              onTypeChange={curry(self.props.onDomainChange, object.key)}/>
+            <button onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
           </div>
         );
       });
@@ -114,7 +144,7 @@ $(window).load(function () {
 
   var TypeChooser = React.createClass({
     handleChange: function(event) {
-      this.props.onDomainChange(this.props.uniqueKey, event.target.value);
+      this.props.onTypeChange(event.target.value);
     },
     render: function () {
       var divStyle = {
@@ -134,7 +164,7 @@ $(window).load(function () {
 
   React.render(
     React.createElement(ContractForm, null),
-    document.getElementById('domains')
+    document.getElementById('contractForm')
   );
 
   /**
@@ -155,11 +185,6 @@ $(window).load(function () {
       $(event.target.parentElement).remove();
     });
     $('#domainItems').append($div);
-  });
-
-  $('.contract select').on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    $(this).css("background-color", $(optionSelected).data("color"));
   });
 
   function getResult() {
