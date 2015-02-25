@@ -64,7 +64,7 @@ exports.minifyDecimal = function (decimalString) {
  * Converts a hex string to a formatted representation, with chunks of
  * a set size separated by a space.
  * @param {string} hexString
- * @param {number} chunkSize
+ * @param {number} chunkSize - in bits!
  * @returns {string} formatted hex
  */
 exports.formatHex = function (hexString, chunkSize) {
@@ -72,11 +72,17 @@ exports.formatHex = function (hexString, chunkSize) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
 
+  // Don't format hex when the chunkSize doesn't align with hex characters.
+  if (chunkSize % 4 !== 0) {
+    return hexString;
+  }
+
+  var hexChunkSize = chunkSize / 4;
   var hex = exports.minifyHex(hexString);
 
   var chunks = [];
-  for (var i = 0; i < hex.length; i += chunkSize) {
-    chunks.push(hex.substr(i, chunkSize));
+  for (var i = 0; i < hex.length; i += hexChunkSize) {
+    chunks.push(hex.substr(i, hexChunkSize));
   }
 
   return chunks.join(' ');

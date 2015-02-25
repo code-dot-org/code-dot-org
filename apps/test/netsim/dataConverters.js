@@ -87,20 +87,29 @@ describe("dataConverters", function () {
       assertEqual('', formatHex(''));
     });
 
-    it ("splits the binary string at given chunk size", function () {
+    it ("splits the hex string at given binary chunk size", function () {
       var rawHex = "ABCDEF";
-      assertEqual('AB CD EF', formatHex(rawHex, 2));
-      assertEqual('ABC DEF', formatHex(rawHex, 3));
+      assertEqual('AB CD EF', formatHex(rawHex, 8));
+      assertEqual('ABC DEF', formatHex(rawHex, 12));
+    });
+
+    it ("does not split the hex string when the chunk size is " +
+        "not divisble by 4", function () {
+      var rawHex = "ABCDEF";
+      assertEqual('ABCDEF', formatHex(rawHex, 7));
+      assertEqual('ABCDEF', formatHex(rawHex, 9));
+      assertEqual('ABCDEF', formatHex(rawHex, 10));
+      assertEqual('ABCDEF', formatHex(rawHex, 11));
     });
 
     it ("does not pad when a chunk comes out uneven", function () {
       var rawHex = "ABCDEF";
-      assertEqual('ABCD EF', formatHex(rawHex, 4));
+      assertEqual('ABCD EF', formatHex(rawHex, 16));
     });
 
     it ("minifies and cleans input before formatting", function () {
       var rawInput = "ABG cde 12xyz\x18";
-      assertEqual('AB CD E1 2', formatHex(rawInput, 2));
+      assertEqual('AB CD E1 2', formatHex(rawInput, 8));
     });
 
     it ("throws an exception when chunk size is zero or less", function () {

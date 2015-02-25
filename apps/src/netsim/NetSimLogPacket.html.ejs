@@ -69,7 +69,7 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
         binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
-        formatHex(binaryToHex(message), Math.ceil(chunkSize / 4)));
+        formatHex(binaryToHex(message), chunkSize));
 
     logRow('binary',
         formatBinary(toAddress, 4),

@@ -334,7 +334,7 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), Math.ceil(chunkSize / 4)),
+    newValue: formatHex(binaryToHex(this.message), chunkSize),
     watermark: 'Hexadecimal'
   });
 
