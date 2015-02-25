@@ -111,6 +111,7 @@ $(window).load(function () {
     onDomainRemove: function (domainKey) {
       this.setState({
         domainTypes:
+          // TODO(bjordan): change to _.find once lodash available
           $.grep(this.state.domainTypes, function (object) {
             return object.key !== domainKey;
           })
