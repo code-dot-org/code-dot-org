@@ -12,8 +12,6 @@
 'use strict';
 
 var markup = require('./NetSimRouterLogTable.html');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = NetSimRouterNode.DnsMode;
 
 /**
  * Generator and controller for DNS network lookup table component.
