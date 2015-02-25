@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({84:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({85:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],148:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3516,7 +3516,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":198,"./utils":193}],179:[function(require,module,exports){
+},{"../locale/current/common":202,"./utils":197}],182:[function(require,module,exports){
 var list = [];
 
 /**
@@ -3534,7 +3534,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],173:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3558,7 +3558,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],150:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],152:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3823,7 +3823,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],149:[function(require,module,exports){
+},{"./dom":47}],151:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -3974,7 +3974,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":147,"./utils":193}],147:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":149,"./utils":197}],149:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4252,7 +4252,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":198,"./block_utils":18,"./utils":193,"./xml":194}],19:[function(require,module,exports){
+},{"../locale/current/common":202,"./block_utils":18,"./utils":197,"./xml":198}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4417,12 +4417,13 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":198}],4:[function(require,module,exports){
+},{"../locale/current/common":202}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
@@ -5533,7 +5534,10 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.Blockly) {
+      // TODO: (Josh L.) use $.trigger once we add jQuery
+      Blockly.fireUiEvent(window, 'run_button_pressed');
+    }
     this.runButtonClick();
   }, 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
@@ -5631,19 +5635,18 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
-        options.dropletConfig),
-      palette: utils.generateDropletPalette(options.codeFunctions,
+      modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+      palette: dropletUtils.generateDropletPalette(options.codeFunctions,
         options.dropletConfig)
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions || options.dropletConfig) {
+    if (options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -5850,7 +5853,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":198,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./feedback":66,"./templates/builder.html":167,"./templates/buttons.html":168,"./templates/instructions.html":170,"./templates/learn.html":171,"./templates/makeYourOwn.html":172,"./utils":193,"./xml":194,"url":213}],213:[function(require,module,exports){
+},{"../locale/current/common":202,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":170,"./templates/buttons.html":171,"./templates/instructions.html":173,"./templates/learn.html":174,"./templates/makeYourOwn.html":175,"./utils":197,"./xml":198,"url":217}],217:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6559,13 +6562,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":209,"querystring":212}],212:[function(require,module,exports){
+},{"punycode":213,"querystring":216}],216:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":210,"./encode":211}],211:[function(require,module,exports){
+},{"./decode":214,"./encode":215}],215:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6652,7 +6655,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],210:[function(require,module,exports){
+},{}],214:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6738,7 +6741,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],209:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7249,7 +7252,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],172:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7269,7 +7272,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],171:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7291,7 +7294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],170:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],173:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7311,7 +7314,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],167:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],170:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7331,7 +7334,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":214}],66:[function(require,module,exports){
+},{"ejs":218}],67:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8531,7 +8534,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":198,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":67,"./templates/buttons.html":168,"./templates/code.html":169,"./templates/shareFailure.html":175,"./templates/sharing.html":176,"./templates/showCode.html":177,"./templates/trophy.html":178,"./utils":193,"./xml":194}],178:[function(require,module,exports){
+},{"../locale/current/common":202,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":171,"./templates/code.html":172,"./templates/shareFailure.html":178,"./templates/sharing.html":179,"./templates/showCode.html":180,"./templates/trophy.html":181,"./utils":197,"./xml":198}],181:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8551,7 +8554,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":214}],177:[function(require,module,exports){
+},{"ejs":218}],180:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8571,7 +8574,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],176:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],179:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8591,7 +8594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],175:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8611,7 +8614,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":214}],169:[function(require,module,exports){
+},{"ejs":218}],172:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8631,7 +8634,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":214}],168:[function(require,module,exports){
+},{"ejs":218}],171:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8651,9 +8654,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":198,"ejs":214}],198:[function(require,module,exports){
+},{"../../locale/current/common":202,"ejs":218}],202:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],67:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8782,7 +8785,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":174}],174:[function(require,module,exports){
+},{"./constants":46,"./templates/readonly.html":177}],177:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8803,7 +8806,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":214}],214:[function(require,module,exports){
+},{"ejs":218}],218:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9158,7 +9161,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":215,"./utils":216,"fs":206,"path":207}],216:[function(require,module,exports){
+},{"./filters":219,"./utils":220,"fs":210,"path":211}],220:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9182,7 +9185,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],215:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9381,7 +9384,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],207:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9609,7 +9612,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":208}],208:[function(require,module,exports){
+},{"_process":212}],212:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9668,10 +9671,67 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],206:[function(require,module,exports){
+},{}],210:[function(require,module,exports){
 
 },{}],44:[function(require,module,exports){
-var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
+
+/**
+ * Evaluates a string of code parameterized with a dictionary.
+ */
+exports.evalWith = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
+  }
+};
+
+/**
+ * Returns a function based on a string of code parameterized with a dictionary.
+ */
+exports.functionFromCode = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
+  }
+};
+
+//
+// Blockly specific codegen functions:
+//
 
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -9725,6 +9785,10 @@ exports.workspaceCode = function(blockly) {
   var code = blockly.Generator.blockSpaceToCode('JavaScript');
   return exports.strip(code);
 };
+
+//
+// Droplet/JavaScript/Interpreter codegen functions:
+//
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   var i, retVal;
@@ -9841,8 +9905,8 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 }
 
 function populateGlobalFunctions(interpreter, scope) {
-  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
-    var gf = utils.dropletGlobalConfigBlocks[i];
+  for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
     var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
     interpreter.setProperty(scope,
@@ -10043,60 +10107,280 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-/**
- * Evaluates a string of code parameterized with a dictionary.
- */
-exports.evalWith = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
-    };
-    var myInterpreter = new Interpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else {
-    // execute JS code "natively"
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor().apply(null, args);
+},{"./dropletUtils":48}],48:[function(require,module,exports){
+var utils = require('./utils');
+
+exports.randomNumber = function (min, max) {
+  if (typeof max === 'undefined') {
+    // If only one parameter is specified, use it as the max with zero as min:
+    max = min;
+    min = 0;
   }
+  // Use double-tilde to ensure we are dealing with integers:
+  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+};
+
+exports.dropletGlobalConfigBlocks = [
+  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
+  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+];
+
+exports.dropletBuiltinConfigBlocks = [
+  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+];
+
+var standardConfig = {};
+
+standardConfig.blocks = [
+  // Control
+  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'title': 'Do something multiple times', 'category': 'Control' },
+  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'title': 'Do something only if a condition is true', 'category': 'Control' },
+  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'title': 'Do something if a condition is true, otherwise do something else', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'title': 'Repeat something while a condition is true', 'category': 'Control' },
+
+  // Math
+  {'func': 'addOperator', 'block': '__ + __', 'title': 'Add two numbers', 'category': 'Math' },
+  {'func': 'subtractOperator', 'block': '__ - __', 'title': 'Subtract two numbers', 'category': 'Math' },
+  {'func': 'multiplyOperator', 'block': '__ * __', 'title': 'Multiply two numbers', 'category': 'Math' },
+  {'func': 'divideOperator', 'block': '__ / __', 'title': 'Divide two numbers', 'category': 'Math' },
+  {'func': 'equalityOperator', 'block': '__ == __', 'title': 'Test for equality', 'category': 'Math' },
+  {'func': 'inequalityOperator', 'block': '__ != __', 'title': 'Test for inequality', 'category': 'Math' },
+  {'func': 'greaterThanOperator', 'block': '__ > __', 'title': 'Compare two numbers', 'category': 'Math' },
+  {'func': 'lessThanOperator', 'block': '__ < __', 'title': 'Compare two numbers', 'category': 'Math' },
+  {'func': 'andOperator', 'block': '__ && __', 'title': 'Logical AND of two booleans', 'category': 'Math' },
+  {'func': 'orOperator', 'block': '__ || __', 'title': 'Logical OR of two booleans', 'category': 'Math' },
+  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'title': 'Get a random number between 0 and the specified maximum value', 'category': 'Math' },
+  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'title': 'Get a random number between the specified minimum and maximum values', 'category': 'Math' },
+  {'func': 'mathRound', 'block': 'Math.round(__)', 'title': 'Round to the nearest integer', 'category': 'Math' },
+  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'title': 'Absolute value', 'category': 'Math' },
+  {'func': 'mathMax', 'block': 'Math.max(__)', 'title': 'Maximum value', 'category': 'Math' },
+  {'func': 'mathMin', 'block': 'Math.min(__)', 'title': 'Minimum value', 'category': 'Math' },
+
+  // Variables
+  {'func': 'declareAssign_x', 'block': 'var x = __;', 'title': 'Create a variable for the first time', 'category': 'Variables' },
+  {'func': 'assign_x', 'block': 'x = __;', 'title': 'Reassign a variable', 'category': 'Variables' },
+  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'title': 'Create a variable and initialize it as an array', 'category': 'Variables' },
+  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'title': 'Create a variable and assign it a value by displaying a prompt', 'category': 'Variables' },
+
+  // Functions
+  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
+  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
+  {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Use a function with argument', 'category': 'Functions' },
+];
+
+standardConfig.categories = {
+  'Control': {
+    'color': 'orange',
+    'blocks': []
+  },
+  'Math': {
+    'color': 'green',
+    'blocks': []
+  },
+  'Variables': {
+    'color': 'blue',
+    'blocks': []
+  },
+  'Functions': {
+    'color': 'violet',
+    'blocks': []
+  },
+};
+
+
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+  var merged = [];
+
+  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
+    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
+    // codeFunctions is an object with named key/value pairs
+    //  key is a block name from dropletBlocks or standardBlocks
+    //  value is an object that can be used to override block defaults
+    for (var s = 0; s < blockSets.length; s++) {
+      var blocks = blockSets[s];
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        if (blocks[i].func in codeFunctions) {
+          // We found this particular block, now override the defaults with extend
+          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
+        }
+      }
+    }
+  }
+  return merged;
+}
+
+//
+// Return a new categories object with the categories from dropletConfig
+// merged with the ones in standardConfig
+//
+
+function mergeCategoriesWithConfig(dropletConfig) {
+  var merged = {};
+
+  if (dropletConfig && dropletConfig.categories) {
+    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
+    for (var s = 0; s < categorySets.length; s++) {
+      var categories = categorySets[s];
+      for (var catName in categories) {
+        if (!(catName in merged)) {
+          merged[catName] = utils.shallowCopy(categories[catName]);
+        }
+      }
+    }
+  } else {
+    merged = standardConfig.categories;
+  }
+  return merged;
+}
+
+/**
+ * Generate code aliases in Javascript based on some level data.
+ */
+exports.generateCodeAliases = function (dropletConfig, parentObjName) {
+  var code = '';
+  var aliasFunctions = dropletConfig.blocks;
+
+  // Insert aliases from aliasFunctions into code
+  for (var i = 0; i < aliasFunctions.length; i++) {
+    var cf = aliasFunctions[i];
+    if (cf.dontAlias) {
+      continue;
+    }
+    code += "var " + cf.func + " = function() { ";
+    if (cf.idArgNone) {
+      code += "return " + parentObjName + "." + cf.func + ".apply(" +
+              parentObjName + ", arguments); };\n";
+    } else {
+      code += "var newArgs = " +
+        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+        " return " + parentObjName + "." + cf.func +
+        ".apply(" + parentObjName + ", newArgs); };\n";
+    }
+  }
+  return code;
 };
 
 /**
- * Returns a function based on a string of code parameterized with a dictionary.
+ * Generate a palette for the droplet editor based on some level data.
  */
-exports.functionFromCode = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
+exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
+  var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
+
+  for (i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
+    var block = cf.block;
+    if (!block) {
+      block = cf.func + "(";
+      if (cf.params) {
+        for (j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
     }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
+    var blockPair = {
+      block: block,
+      title: cf.title || cf.func
     };
-    ctor.prototype = Function.prototype;
-    return new ctor();
+    mergedCategories[cf.category].blocks.push(blockPair);
   }
+
+  // Convert to droplet's expected palette format:
+  var addedPalette = [];
+  for (var category in mergedCategories) {
+    if (mergedCategories[category].blocks.length > 0) {
+      mergedCategories[category].name = category;
+      addedPalette.push(mergedCategories[category]);
+    }
+  }
+
+  return addedPalette;
 };
 
-},{"./utils":193}],193:[function(require,module,exports){
+function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    var cf = configBlocks[i];
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: cf.category
+    });
+  }
+}
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (dropletConfig) {
+  var apis = [];
+
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
+};
+
+function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    if (configBlocks[i].type === 'value') {
+      modeOptions.valueFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type === 'either') {
+      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    }
+    else if (configBlocks[i].type !== 'hidden') {
+      modeOptions.blockFunctions.push(configBlocks[i].func);
+    }
+  }
+}
+
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (dropletConfig) {
+  var modeOptions = {
+    blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
+
+  return modeOptions;
+};
+
+
+},{"./utils":197}],197:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10237,339 +10521,6 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
-exports.randomNumber = function (min, max) {
-  if (typeof max === 'undefined') {
-    // If only one parameter is specified, use it as the max with zero as min:
-    max = min;
-    min = 0;
-  }
-  // Use double-tilde to ensure we are dealing with integers:
-  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
-};
-
-exports.dropletGlobalConfigBlocks = [
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
-];
-
-exports.dropletBuiltinConfigBlocks = [
-  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
-];
-
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
-  var merged = [];
-
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    merged = codeFunctions;
-  } else if (codeFunctions instanceof Object &&
-             dropletConfig &&
-             dropletConfig.blocks) {
-    var dropletBlocks = dropletConfig.blocks;
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks
-    //  value is an object that can be used to override block defaults
-    for (var i = 0; i < dropletBlocks.length; i++) {
-      var block = dropletBlocks[i];
-      if (dropletBlocks[i].func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push(exports.extend(dropletBlocks[i],
-                    codeFunctions[dropletBlocks[i].func]));
-      }
-    }
-  }
-  return merged;
-}
-
-function selectFunctionsOrFullConfig(codeFunctions, dropletConfig) {
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    return codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (including all functions, even
-    // those not in this level's palette)
-    return dropletConfig.blocks;
-  }
-}
-
-/**
- * Generate code aliases in Javascript based on some level data.
- */
-exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
-  var code = '';
-  var aliasFunctions = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-
-  // Insert aliases from aliasFunctions into code
-  for (var i = 0; i < aliasFunctions.length; i++) {
-    var cf = aliasFunctions[i];
-    if (cf.dontAlias) {
-      continue;
-    }
-    code += "var " + cf.func + " = function() { ";
-    if (cf.idArgNone) {
-      code += "return " + parentObjName + "." + cf.func + ".apply(" +
-              parentObjName + ", arguments); };\n";
-    } else {
-      code += "var newArgs = " +
-        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-        " return " + parentObjName + "." + cf.func +
-        ".apply(" + parentObjName + ", newArgs); };\n";
-    }
-  }
-  return code;
-};
-
-/**
- * Generate a palette for the droplet editor based on some level data.
- */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
-  // TODO: figure out localization for droplet scenario
-  var stdPalette = [
-    {
-      name: 'Control',
-      color: 'orange',
-      blocks: [
-        {
-          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
-          title: 'Do something multiple times'
-        }, {
-          block: 'if (__) {\n  __;\n}',
-          title: 'Do something only if a condition is true'
-        }, {
-          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
-          title: 'Do something if a condition is true, otherwise do something else'
-        }, {
-          block: 'while (__) {\n  __;\n}',
-          title: 'Repeat something while a condition is true'
-        }
-      ]
-    }, {
-      name: 'Math',
-      color: 'green',
-      blocks: [
-        {
-          block: '__ + __',
-          title: 'Add two numbers'
-        }, {
-          block: '__ - __',
-          title: 'Subtract two numbers'
-        }, {
-          block: '__ * __',
-          title: 'Multiply two numbers'
-        }, {
-          block: '__ / __',
-          title: 'Divide two numbers'
-        }, {
-          block: '__ == __',
-          title: 'Test for equality'
-        }, {
-          block: '__ != __',
-          title: 'Test for inequality'
-        }, {
-          block: '__ > __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ < __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ && __',
-          title: 'Logical AND of two booleans'
-        }, {
-          block: '__ || __',
-          title: 'Logical OR of two booleans'
-        }, {
-          block: 'randomNumber(__)',
-          title: 'Get a random number between 0 and the specified maximum value'
-        }, {
-          block: 'randomNumber(__, __)',
-          title: 'Get a random number between the specified minimum and maximum values'
-        }, {
-          block: 'Math.round(__)',
-          title: 'Round to the nearest integer'
-        }, {
-          block: 'Math.abs(__)',
-          title: 'Absolute value'
-        }, {
-          block: 'Math.max(__, __)',
-          title: 'Maximum value'
-        }, {
-          block: 'Math.min(__, __)',
-          title: 'Minimum value'
-        }
-      ]
-    }, {
-      name: 'Variables',
-      color: 'blue',
-      blocks: [
-        {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
-          block: 'var x = [1, 2, 3, 4];',
-          title: 'Create a variable and initialize it as an array'
-        }, {
-          block: 'var x = prompt("Enter a value");',
-          title: 'Create a variable and assign it a value by displaying a prompt'
-        }
-      ]
-    }, {
-      name: 'Functions',
-      color: 'violet',
-      blocks: [
-        {
-          block: 'function myFunction() {\n  __;\n}',
-          title: 'Create a function without an argument'
-        }, {
-          block: 'function myFunction(n) {\n  __;\n}',
-          title: 'Create a function with an argument'
-        }, {
-          block: 'myFunction()',
-          title: 'Use a function without an argument'
-        }, {
-          block: 'myFunction(n)',
-          title: 'Use a function with argument'
-        }
-      ]
-    }
-  ];
-
-  var defCategoryInfo = {
-    'Actions': {
-      'color': 'blue',
-      'blocks': []
-    }
-  };
-  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
-
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  var i, j;
-
-  for (i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.func + "(";
-    if (cf.params) {
-      for (j = 0; j < cf.params.length; j++) {
-        if (j !== 0) {
-          block += ", ";
-        }
-        block += cf.params[j];
-      }
-    }
-    block += ")";
-    var blockPair = {
-      block: block,
-      title: cf.title || cf.func
-    };
-    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
-  }
-
-  var addedPalette = [];
-  for (var category in categoryInfo) {
-    categoryInfo[category].name = category;
-    for (j = 0; j < stdPalette.length; j++) {
-      if (stdPalette[j].name === category) {
-        // This category is in the stdPalette, merge in its blocks:
-        categoryInfo[category].blocks =
-            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
-        break;
-      }
-    }
-    if (categoryInfo[category].blocks.length > 0) {
-      addedPalette.push(categoryInfo[category]);
-    }
-  }
-
-  for (j = 0; j < stdPalette.length; j++) {
-    if (!(stdPalette[j].name in categoryInfo)) {
-      // This category from the stdPalette hasn't been referenced yet, add it:
-      addedPalette.push(stdPalette[j]);
-    }
-  }
-  return addedPalette;
-};
-
-function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    var cf = configBlocks[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category || 'Actions'
-    });
-  }
-}
-
-/**
- * Generate an Ace editor completer for a set of APIs based on some level data.
- */
-exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
-  var apis = [];
-
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateCompleterApisFromConfigBlocks(apis, configBlocks);
-
-  return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
-        callback(null, []);
-        return;
-      }
-      callback(null, apis);
-    }
-  };
-};
-
-function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    if (configBlocks[i].type === 'value') {
-      modeOptions.valueFunctions.push(configBlocks[i].func);
-    }
-    else if (configBlocks[i].type === 'either') {
-      modeOptions.eitherFunctions.push(configBlocks[i].func);
-    }
-    else if (configBlocks[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(configBlocks[i].func);
-    }
-  }
-}
-
-/**
- * Generate modeOptions for the droplet editor based on some level data.
- */
-exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
-  var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: [],
-    eitherFunctions: [],
-  };
-
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
-
-  return modeOptions;
-};
-
 /**
  * Generate a random identifier in a format matching the RFC-4122 specification.
  *
@@ -10587,7 +10538,7 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":77,"./lodash":85,"./xml":194}],85:[function(require,module,exports){
+},{"./hammer":78,"./lodash":86,"./xml":198}],86:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -13956,7 +13907,7 @@ exports.createUuid = function () {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],77:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16555,7 +16506,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":194}],194:[function(require,module,exports){
+},{"./xml":198}],198:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
