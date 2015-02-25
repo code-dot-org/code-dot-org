@@ -14,7 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -406,7 +406,7 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
  * @param {string} newEncoding
  */
 NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+  NetSimEncodingControl.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
 };
 
 /**
