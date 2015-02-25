@@ -11,6 +11,8 @@
  */
 'use strict';
 
+require('../utils'); // For String.prototype.repeat polyfill
+
 /**
  * Converts a binary string into its most compact string representation.
  * @param {string} binaryString that may contain whitespace
@@ -110,7 +112,7 @@ exports.alignDecimal = function (decimalString) {
     return prev;
   }, 0);
 
-  var zeroPadding = new Array(mostDigits + 1).join('0');
+  var zeroPadding = '0'.repeat(mostDigits);
 
   return numbers.map(function (numString) {
     // Left-pad each number with non-breaking spaces up to max width.
@@ -128,12 +130,12 @@ exports.binaryToInt = function (binaryString) {
 };
 
 var zeroPadLeft = function (string, desiredWidth) {
-  var padding = new Array(desiredWidth + 1).join('0');
+  var padding = '0'.repeat(desiredWidth);
   return (padding + string).slice(-desiredWidth);
 };
 
 var zeroPadRight = function (string, desiredWidth) {
-  var padding = new Array(desiredWidth + 1).join('0');
+  var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
 
