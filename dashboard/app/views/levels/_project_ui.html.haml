@@ -27,8 +27,6 @@
   var createApp = function(options) {
     var defaultOptions = {
       name: "Untitled",
-      createdAt: new Date,
-      updatedAt: new Date,
       levelId: appOptions.levelId, // TODO this is not actually a unique identifier for the level
       levelUrl: window.location.origin + window.location.pathname, // TODO this is hacky.. we should just have a /project url
     };
@@ -113,8 +111,6 @@
       currentApp.levelSourceId = response.responseJSON.level_source_id;
       currentApp.levelId = appOptions.levelId; // TODO this is not actually a unique identifier for the level
       currentApp.levelUrl = window.location.origin + window.location.pathname; // TODO this is hacky.. we should just have a /project url
-      currentApp.updatedAt = new Date;
-
       apps.update(
         currentApp.id,
         currentApp,
