@@ -175,21 +175,63 @@ dashboard.saveProject = function(callback) {
       location.hash = dashboard.currentApp.id = data.id;
       callbackSafe(callback, data);
     });
-    dashboard.showProjectHeader();
   }
 };
 
+dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
+  var deferred = new $.Deferred();
+  // get all projects (TODO: filter on server side?)
+  storageApps().all(function(data) {
+    if (data) {
+      // find the one that matches this level
+      var projects = $.grep(data, function(app) {
+        return (app.projectTemplateLevelName &&
+                app.projectTemplateLevelName === projectTemplateLevelName);
+      });
+      if (projects.length == 0) {
+        // create a new project
+        var options = {
+          projectTemplateLevelName: projectTemplateLevelName,
+          name: projectTemplateLevelName,
+          hidden: true
+        };
+        storageApps().create(options, function(app) {
+          if (app) {
+            dashboard.currentApp = app;
+            deferred.resolve();
+          } else {
+            deferred.reject(); // failed to create project
+          }
+        });
+      } else {
+        // use the existing project
+        dashboard.currentApp = projects[0];
+        deferred.resolve();
+      }
+    } else {
+      deferred.reject(); // failed to list projects
+    }
+  });
+  return deferred;
+}
+
 function initApp() {
-  if (appOptions.level.isProjectLevel) {
+  if (appOptions.level.isProjectLevel || dashboard.currentApp) {
     if (dashboard.currentApp) {
-      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      if (dashboard.currentApp.levelSource) {
+        appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      }
     } else {
       dashboard.currentApp = {
         name: 'My Project'
       };
     }
+
     $(window).on('run_button_pressed', dashboard.saveProject);
-    dashboard.showProjectHeader();
+
+    if (!dashboard.currentApp.hidden) {
+      dashboard.showProjectHeader();
+    }
   }
   window[appOptions.app + 'Main'](appOptions);
 }
@@ -243,6 +285,9 @@ if (appOptions.droplet) {
         return deferred;
       });
     }
+  } else if (appOptions.level.projectTemplateLevelName) {
+    // this is an embedded project
+    promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
 }
 promise.then(loadSource('common' + appOptions.pretty))
