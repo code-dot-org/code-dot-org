@@ -27,8 +27,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ### **Wrap-up**
 5) [Keep Up Your Contracts](#WrapUp)  
 
+<!--
 ### **Assessment**
 6) [Contracts Assessment](#Assessment)
+-->
 
 [/summary]
 
@@ -45,7 +47,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Contract Log](needacontractlog.pdf)
+- [Contract Log](../docs/worksheets/contract_log.pdf)
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1SAu2YgSAE9g5NrhJ_c7eWBOAc_EGtXIDQqihvjyHV98)
@@ -93,7 +95,9 @@ Contracts have three disctinct parts:
 3. Rainge
 
 **The Name of a function briefly describes what the function does.**
+
 **The Domain of a function is the data that the function expects.**
+
 **The Range of a function is the data that the function produces.**
 
 
@@ -122,7 +126,7 @@ Let's look at a few example contracts - for each contract we'll identify the Nam
 
 ### <a name="Activity2"></a> 4) Writing Contracts
 
-Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contract reference](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contract log](../docs/worksheets/contract_log.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
 
 - We'll start with contracts for simple arithmetic functions
 - +, -, *, /
@@ -169,10 +173,12 @@ In the next unit, you’ll learn how to create your own functions to save work i
 
 [together]
 
+<!--
 ## Assessment
 ### <a name="Assessment"></a>6) Contract Writing Assessment
 
 Visit [MSM Stage 4](http://studio.code.org/s/algebra/stage/4/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
