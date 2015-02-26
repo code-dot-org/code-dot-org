@@ -1,7 +1,7 @@
 Feature: Navigating with the header
 
 Background:
-  Given I am on "http://studio.code.org/s/course1/stage/3/puzzle/2"
+  Given I am on "http://studio.code.org/s/course1/stage/4/puzzle/2"
   And I rotate to landscape
   And I press "x-close"
   And I wait to see ".progress_container"
@@ -13,7 +13,7 @@ Scenario: Header progress appears
 
 Scenario: Choose a level using the progress widget
   When I press ".progress_container .puzzle_outer_level:eq(4) a" DOM using jQuery
-  Then check that I am on "http://studio.code.org/s/course1/stage/3/puzzle/5"
+  Then check that I am on "http://studio.code.org/s/course1/stage/4/puzzle/5"
 
 Scenario: Open the navigation popup, stats block appears, click a level
   When I press ".header_popup_link" using jQuery

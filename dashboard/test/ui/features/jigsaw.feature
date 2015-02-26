@@ -3,9 +3,9 @@ Feature: Visiting a jigsaw page
 Background:
   Given I am on "http://learn.code.org/s/course1/stage/3/puzzle/1?noautoplay=1"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 1 of 12"
+  Then I wait for a popup titled "Puzzle 1 of 12"
   Then there's an image "instruction_gifs/drag-drop.gif"
-  And I press "x-close"
+  And I close the popup
 
 @new_courses
 Scenario: Loading the first jigsaw level
@@ -21,5 +21,5 @@ Scenario: Can't delete blocks
 
 Scenario: Solving puzzle
   And I drag "[block-id=1]" to "rect[fill-opacity='0.2']"
-  Then I wait to see ".modal"
+  Then I wait for a popup
   And element ".modal .congrats" contains text "You completed Puzzle 1"

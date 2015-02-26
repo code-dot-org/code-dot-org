@@ -15,7 +15,7 @@ Scenario: Clicking an option enables submit and submitting the correct answer wi
   And element ".submitButton:first" is not disabled
   And element ".submitButton:last" is not disabled
   And I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
+  And I wait for a popup
 
 Scenario: Submitting an incorrect option
   And element ".submitButton:first" is disabled
@@ -24,7 +24,6 @@ Scenario: Submitting an incorrect option
   And element ".submitButton:first" is not disabled
   And element ".submitButton:last" is not disabled
   And I press ".submitButton:last" using jQuery
-  And I wait to see ".modal"
-  And element ".modal .dialog-title" contains text "Incorrect answer"
+  And I wait for a popup titled "Incorrect answer"
   And I press ".modal #ok-button" using jQuery
   And I wait until element ".item-cross" is visible

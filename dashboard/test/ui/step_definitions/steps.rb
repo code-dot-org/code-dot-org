@@ -15,6 +15,24 @@ Given /^I am on "([^"]*)"$/ do |url|
   @browser.navigate.to "#{url}"
 end
 
+When /^I wait for a popup$/ do
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait.until { @browser.find_element({ :class => 'modal' }) }
+end
+
+When /^I wait for a popup titled "((?:[^\"\\]|\\.)*)"$/ do |expectedText|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait.until { @browser.find_element({ :class => 'modal' }) }
+
+  element_has_text(".dialog-title", expectedText)
+end
+
+When /^I close the popup$/ do
+  modal = @browser.find_element({ :class => 'modal' })
+  button = @browser.find_element({ :id => 'x-close' })
+  modal && button && button.click
+end
+
 When /^I wait to see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
@@ -78,6 +96,7 @@ end
 
 When /^I press "([^"]*)" DOM using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').get(0).click()");
+end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
   @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")

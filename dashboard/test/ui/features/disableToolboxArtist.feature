@@ -3,7 +3,7 @@ Feature: Disabling/Reenabling the Toolbox While Running
 Background:
   Given I am on "http://learn.code.org/s/1/level/103?noautoplay=true"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 1 of 6"
+  Then I wait for a popup titled "Puzzle 1 of 6"
   And I press "x-close"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden

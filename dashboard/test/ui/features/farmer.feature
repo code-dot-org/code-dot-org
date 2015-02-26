@@ -3,10 +3,9 @@ Feature: Playing the Farmer Game
 Background:
   Given I am on "http://learn.code.org/s/1/level/47?noautoplay=true"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 1 of 11"
+  Then I wait for a popup titled "Puzzle 1 of 11"
   And element ".modal-content p:nth-child(2)" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
-  And I see "#x-close"
-  And I press "x-close"
+  And I close the popup
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
@@ -30,8 +29,8 @@ Scenario: Winning the first level
   And there's 0 dirt at (4, 4)
   And I press "continue-button"
   Then I see "#x-close"
-  And element ".dialog-title" has text "Puzzle 2 of 11"
-  Then check that I am on "http://learn.code.org/s/20-hour/stage/9/puzzle/2"
+  Then I wait for a popup titled "Puzzle 2 of 11"
+  And check that I am on "http://learn.code.org/s/20-hour/stage/9/puzzle/2"
 
 @no_mobile
 Scenario: Losing the first level

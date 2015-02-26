@@ -210,6 +210,9 @@
     // http://stackoverflow.com/a/21152762/7104
     // Decode query parameters
     UIFrame.prototype.queryParams = function (url) {
+      if (this._qp)
+        return this._qp;
+
       url = url || location.search;
       if (!url)
         return null;
@@ -218,8 +221,10 @@
       url.substr(1).split("&").forEach(function(item) {
         var k = item.split("=")[0],
           v = decodeURIComponent(item.split("=")[1]); 
-        (k in qd) ? qd[k].push(v) : qd[k] = [v,]
+        (k in qd) ? qd[k].push(v) : qd[k] = [v]
       });
+
+      this._qp = qd;
       return qd;
     }
 
@@ -713,7 +718,7 @@
           return;
         }
 
-        if (this.autoplayVideo) {
+        if (this.autoplayVideo && !Frame.queryParams()['noautoplay']) {
           showVideoDialog(this.autoplayVideo);
           $('.video-modal').on('hidden.bs.modal', function () {
             showInstructions();
