@@ -10,20 +10,6 @@ var binaryToHex = dataConverters.binaryToHex;
 var binaryToDecimal = dataConverters.binaryToDecimal;
 var binaryToAscii = dataConverters.binaryToAscii;
 
-/**
- * Format router uses to decode packet.
- * TODO (bbuchanan): Pull this from a common location; should be fixed across
- *                   simulation.
- * @type {PacketEncoder}
- */
-var packetEncoder = new PacketEncoder([
-  { key: 'toAddress', bits: 4 },
-  { key: 'fromAddress', bits: 4 },
-  { key: 'packetIndex', bits: 4 },
-  { key: 'packetCount', bits: 4 },
-  { key: 'message', bits: Infinity }
-]);
-
 function getEncodingLabel(rowClass) {
   if (rowClass === 'ascii') {
     return 'ASCII';
@@ -62,11 +48,11 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
   </thead>
   <tbody>
   <%
-    var toAddress = packetEncoder.getField('toAddress', packetBinary);
-    var fromAddress = packetEncoder.getField('fromAddress', packetBinary);
-    var packetIndex = packetEncoder.getField('packetIndex', packetBinary);
-    var packetCount = packetEncoder.getField('packetCount', packetBinary);
-    var message = packetEncoder.getField('message', packetBinary);
+    var toAddress = PacketEncoder.defaultPacketEncoder.getField('toAddress', packetBinary);
+    var fromAddress = PacketEncoder.defaultPacketEncoder.getField('fromAddress', packetBinary);
+    var packetIndex = PacketEncoder.defaultPacketEncoder.getField('packetIndex', packetBinary);
+    var packetCount = PacketEncoder.defaultPacketEncoder.getField('packetCount', packetBinary);
+    var message = PacketEncoder.defaultPacketEncoder.getField('message', packetBinary);
 
     logRow('ascii',
         binaryToInt(toAddress),
