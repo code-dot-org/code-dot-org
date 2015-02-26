@@ -197,7 +197,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Tab panel - contains instructions, my device, router, dns
   this.tabs_ = new NetSimTabsComponent(
       $('#netsim_tabs'),
-      this.connection_,
       this.setChunkSize.bind(this),
       this.changeEncoding.bind(this),
       this.changeRemoteDnsMode.bind(this),
@@ -319,6 +318,13 @@ NetSim.prototype.becomeDnsNode = function () {
  */
 NetSim.prototype.setDnsTableContents = function (tableContents) {
   this.tabs_.setDnsTableContents(tableContents);
+};
+
+/**
+ * @param {Array} logData
+ */
+NetSim.prototype.setRouterLogData = function (logData) {
+  this.tabs_.setRouterLogData(logData);
 };
 
 /**
