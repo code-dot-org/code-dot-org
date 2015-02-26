@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":166,"./blocks":30,"./calc":31,"./levels":37}],31:[function(require,module,exports){
+},{"../appMain":5,"../skins":168,"./blocks":30,"./calc":31,"./levels":37}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -919,7 +919,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":216,"../../locale/current/common":217,"../StudioApp":4,"../block_utils":18,"../dom":47,"../skins":166,"../templates/page.html":191,"../timeoutList":197,"../utils":212,"./api":29,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
+},{"../../locale/current/calc":218,"../../locale/current/common":219,"../StudioApp":4,"../block_utils":18,"../dom":47,"../skins":168,"../templates/page.html":193,"../timeoutList":199,"../utils":214,"./api":29,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -939,7 +939,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":216,"ejs":233}],37:[function(require,module,exports){
+},{"../../locale/current/calc":218,"ejs":235}],37:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -978,7 +978,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":216,"../block_utils":18}],36:[function(require,module,exports){
+},{"../../locale/current/calc":218,"../block_utils":18}],36:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1343,7 +1343,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":212,"./equation":33,"./expressionNode":35}],33:[function(require,module,exports){
+},{"../utils":214,"./equation":33,"./expressionNode":35}],33:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -1406,7 +1406,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":216,"../../locale/current/common":217,"ejs":233}],30:[function(require,module,exports){
+},{"../../locale/current/calc":218,"../../locale/current/common":219,"ejs":235}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1471,7 +1471,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":216,"../../locale/current/common":217,"../sharedFunctionalBlocks":165}],216:[function(require,module,exports){
+},{"../../locale/current/calc":218,"../../locale/current/common":219,"../sharedFunctionalBlocks":167}],218:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}],29:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
@@ -1578,9 +1578,9 @@ ExpressionNode.prototype.clone = function () {
  * See if we can evaluate this node by trying to do so and catching exceptions.
  * @returns Whether we can evaluate.
  */
-ExpressionNode.prototype.canEvaluate = function (mapping) {
+ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
   try {
-    this.evaluate(mapping);
+    this.evaluate(mapping, localMapping);
   } catch (err) {
     return false;
   }
@@ -1589,40 +1589,52 @@ ExpressionNode.prototype.canEvaluate = function (mapping) {
 
 /**
  * Evaluate the expression, returning the result.
+ * @param {Object<string, number|object>} globalMapping Global mapping of
+ *   variables and functions
+ * @param {Object<string, number|object>} localMapping Mapping of
+ *   variables/functions local to scope of this function.
  */
-ExpressionNode.prototype.evaluate = function (mapping) {
-  mapping = mapping || {};
+ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
+  gloablMapping = gloablMapping || {};
+  localMapping = localMapping || {};
+
   var type = this.getType_();
 
-  if (type === ValueType.VARIABLE && mapping[this.value_] !== undefined) {
+  if (type === ValueType.VARIABLE) {
+    var mappedVal = utils.undefOr(localMapping[this.value_],
+      gloablMapping[this.value_]);
+    if (mappedVal === undefined) {
+      throw new Error('No mapping for variable during evaluation');
+    }
+
     var clone = this.clone();
-    clone.setValue(mapping[this.value_]);
-    return clone.evaluate(mapping);
+    clone.setValue(mappedVal);
+    return clone.evaluate(gloablMapping);
   }
 
-  if (type === ValueType.FUNCTION_CALL && mapping[this.value_] !== undefined) {
-    var functionDef = mapping[this.value_];
+  if (type === ValueType.FUNCTION_CALL) {
+    var functionDef = utils.undefOr(localMapping[this.value_],
+      gloablMapping[this.value_]);
+    if (functionDef === undefined) {
+      throw new Error('No mapping for function during evaluation');
+    }
+
     if (!functionDef.variables || !functionDef.expression) {
       throw new Error('Bad mapping for: ' + this.value_);
     }
     if (functionDef.variables.length !== this.children_.length) {
       throw new Error('Bad mapping for: ' + this.value_);
     }
-    // Generate a new mapping so that if we have collisions between global
-    // variables and function variables, the function vars take precedence
-    var newMapping = {};
-    _.keys(mapping).forEach(function (key) {
-      newMapping[key] = mapping[key];
-    });
+
+    // We're calling a new function, so it gets a new local scope.
+    var newLocalMapping = {};
     functionDef.variables.forEach(function (variable, index) {
-      newMapping[variable] = this.getChildValue(index);
+      var childVal = this.getChildValue(index);
+      newLocalMapping[variable] = utils.undefOr(localMapping[childVal], childVal);
     }, this);
-    return functionDef.expression.evaluate(newMapping);
+    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
   }
 
-  if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
-    throw new Error('Must resolve variables/functions before evaluation');
-  }
   if (type === ValueType.NUMBER) {
     return this.value_;
   }
@@ -1631,8 +1643,8 @@ ExpressionNode.prototype.evaluate = function (mapping) {
     throw new Error('Unexpected error');
   }
 
-  var left = this.children_[0].evaluate(mapping);
-  var right = this.children_[1].evaluate(mapping);
+  var left = this.children_[0].evaluate(gloablMapping, localMapping);
+  var right = this.children_[1].evaluate(gloablMapping, localMapping);
 
   switch (this.value_) {
     case '+':
@@ -1920,4 +1932,4 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":212}]},{},[38]);
+},{"../utils":214}]},{},[38]);

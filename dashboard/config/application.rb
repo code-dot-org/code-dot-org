@@ -22,7 +22,7 @@ module Dashboard
     config.middleware.use SharedResources
 
     if CDO.dashboard_enable_pegasus
-      require 'pegasus_sites' 
+      require 'pegasus_sites'
       config.middleware.use PegasusSites
     end
 
@@ -74,6 +74,7 @@ module Dashboard
       editor/markdown_editor.js
       editor/blockly_editor.css
       editor/blockly_editor.js
+      levels/*
       react.js
     )
     config.react.variant = :development

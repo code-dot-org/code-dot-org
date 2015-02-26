@@ -26,8 +26,6 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "soft_buttons": [
-      "leftButton",
-      "rightButton",
       "downButton",
       "upButton"
     ],
@@ -36,7 +34,7 @@
     "predraw_blocks": "<xml></xml>",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_move_directions_callout\",\r\n  \"callout_text\": \"Which block will make Baymax move up when the up arrow is pressed?\",\r\n  \"element_id\": \"#whenUp\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Infinity_move_directions_callout_arrow\",\r\n  \"callout_text\": \"Use these arrows to steer\",\r\n  \"element_id\": \"#rightButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_move_directions_callout\",\r\n  \"callout_text\": \"Which block will make Baymax move up when the up arrow is pressed?\",\r\n  \"element_id\": \"#whenUp\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Infinity_move_directions_callout_arrow\",\r\n  \"callout_text\": \"Use these arrows to steer\",\r\n  \"element_id\": \"#upButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
