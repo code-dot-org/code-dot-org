@@ -48,7 +48,6 @@
           =t('dialog.ok')
 
 :javascript
-  var buttonEnabled = true;  // avoid multiple simultaneous submissions
   var dialogType = null;
   var adjustedScroll = false;
 
@@ -61,16 +60,6 @@
         }, 1000);
     }
   });
-
-  function enableButton(enable)
-  {
-    buttonEnabled = enable;
-
-    if (enable)
-      $('.submitButton').removeClass("disabled");
-    else
-      $('.submitButton').addClass("disabled");
-  }
 
   function dialogHidden()
   {
@@ -129,44 +118,42 @@
     var result = results['result'];
     var errorType = results['errorType'];
 
-    if (buttonEnabled)
+    // Avoid multiple simultaneous submissions.
+    $('.submitButton').attr('disabled', true);
+
+    if (!result)
     {
-      enableButton(false);
+      showDialog(errorType || "error");
+      CDOSounds.play('failure');
+    } else {
+      CDOSounds.play('success');
+    }
 
-      if (!result)
-      {
-        showDialog(errorType || "error");
-        CDOSounds.play('failure');
-      } else {
-        CDOSounds.play('success');
-      }
-
-      sendReport({
-        program: response,
-        fallbackResponse: '#{@fallback_response.to_json}',
-        callback: '#{@callback}',
-        app: '#{app}',
-        level: '#{@level.level_num}',
-        result: result,
-        testResult: result ? 100 : 0,
-        onComplete: function() {
-          if (!lastServerResponse.nextRedirect)
+    sendReport({
+      program: response,
+      fallbackResponse: '#{@fallback_response.to_json}',
+      callback: '#{@callback}',
+      app: '#{app}',
+      level: '#{@level.level_num}',
+      result: result,
+      testResult: result ? 100 : 0,
+      onComplete: function() {
+        if (!lastServerResponse.nextRedirect)
+        {
+          $('.submitButton').attr('disabled', false);
+        }
+        if (lastServerResponse.videoInfo)
+        {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect)
+        {
+          if(#{data['options'].try(:[], 'skip_dialog').blank?})
           {
-            enableButton(true);
-          }
-          if (lastServerResponse.videoInfo)
-          {
-            showVideoDialog(lastServerResponse.videoInfo);
-          } else if (lastServerResponse.nextRedirect)
-          {
-            if(#{data['options'].try(:[], 'skip_dialog').blank?})
-            {
-              showDialog("success");
-            } else {
-              window.location.href = lastServerResponse.nextRedirect;
-            }
+            showDialog("success");
+          } else {
+            window.location.href = lastServerResponse.nextRedirect;
           }
         }
-      });
-    }
+      }
+    });
   });
