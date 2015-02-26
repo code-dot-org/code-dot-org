@@ -546,6 +546,7 @@ en:
   project:
     projects: "Projects"
     create: "Create Project"
+    new: "Create New"
     rename: "Rename"
     save: "Save"
     delete: "Delete"
@@ -561,3 +562,4 @@ en:
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
+    delete: "Delete"

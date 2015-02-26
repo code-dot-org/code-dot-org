@@ -435,8 +435,8 @@ html, body {
   display: inline-block;
 }
 
-.user_options {
-  display: inline-block;
+.user_options, .project_more_popup {
+  display: none;
   background-color: white;
   a:link {color:black;}
   a:visited {color:black;}

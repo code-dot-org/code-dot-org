@@ -14,7 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -384,14 +384,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
  */
 NetSimSendWidget.prototype.getPacketBinary_ = function () {
   var shortNumberFieldWidth = 4;
-  var encoder = new PacketEncoder([
-    { key: 'toAddress', bits: shortNumberFieldWidth },
-    { key: 'fromAddress', bits: shortNumberFieldWidth },
-    { key: 'packetIndex', bits: shortNumberFieldWidth },
-    { key: 'packetCount', bits: shortNumberFieldWidth },
-    { key: 'message', bits: Infinity }
-  ]);
-  return encoder.createBinary({
+  return PacketEncoder.defaultPacketEncoder.createBinary({
     toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
     fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
     packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
@@ -406,7 +399,7 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
  * @param {string} newEncoding
  */
 NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+  NetSimEncodingControl.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
 };
 
 /**

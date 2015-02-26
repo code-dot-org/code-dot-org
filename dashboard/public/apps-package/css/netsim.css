@@ -192,19 +192,48 @@
     text-align: right;
     margin-top: 0.5em; }
 
-#netsim_router_panel #dns_mode_control input[type="radio"] {
-  vertical-align: middle;
-  margin: 0; }
-#netsim_router_panel #dns_mode_control label {
-  display: inline;
-  margin-left: 1em; }
-#netsim_router_panel #netsim_router_network_table .localNode {
-  font-weight: bold;
-  background-color: lightcyan; }
-#netsim_router_panel #netsim_router_network_table .dnsNode {
-  color: white;
-  background-color: darkorange; }
-#netsim_router_panel #netsim_router_log_table {
-  display: block;
-  max-height: 200px;
-  overflow-y: scroll; }
+.netsim_tabs {
+  margin-top: 1em;
+  /* Modify actual tabs at top of tab area */
+  /* Less padding around tab content divs */ }
+  .netsim_tabs h1 {
+    font-size: 10pt;
+    line-height: 10pt;
+    margin: 10px 0 3px 0;
+    border-bottom: solid darkgrey thin; }
+  .netsim_tabs table {
+    width: 100%; }
+    .netsim_tabs table th, .netsim_tabs table td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse; }
+    .netsim_tabs table th {
+      font-size: 10pt;
+      font-variant: small-caps; }
+  .netsim_tabs .ui-tabs-nav li a {
+    font-size: 8pt;
+    padding: 0 1em; }
+  .netsim_tabs .ui-tabs-panel {
+    padding: 0.8em 0.5em;
+    /* But extra margin around paragraphs of text (instructions) */ }
+    .netsim_tabs .ui-tabs-panel p {
+      margin: 0 1em 10px 1em; }
+  .netsim_tabs .netsim_router_tab .netsim_router_log {
+    max-height: 200px;
+    overflow-y: scroll; }
+    .netsim_tabs .netsim_router_tab .netsim_router_log table th, .netsim_tabs .netsim_router_tab .netsim_router_log table td {
+      font-size: 8pt; }
+    .netsim_tabs .netsim_router_tab .netsim_router_log table td {
+      vertical-align: top; }
+  .netsim_tabs .netsim_dns_tab .dns_mode_control input[type="radio"] {
+    vertical-align: middle;
+    margin: 0; }
+  .netsim_tabs .netsim_dns_tab .dns_mode_control label {
+    display: inline;
+    margin-left: 1em; }
+  .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.localNode {
+    font-weight: bold;
+    background-color: lightcyan; }
+  .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.dnsNode {
+    color: white;
+    background-color: darkorange; }

@@ -144,11 +144,11 @@ class HomeControllerTest < ActionController::TestCase
       assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
-    
+
   test 'finishing whole 20hr curriculum does not show resume info' do
     user = create(:user)
     sign_in(user)
-    Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
+    Script.twenty_hour_script.script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
