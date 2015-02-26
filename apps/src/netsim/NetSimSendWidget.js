@@ -366,6 +366,9 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   var packetBinary = this.getPacketBinary_();
   this.bitCounter.html(packetBinary.length + '/Infinity bits');
+
+  // TODO: Hide columns by configuration
+  $('#netsim_send_widget').find('th.packetInfo, td.packetInfo').hide();
 };
 
 /** Send message to connected remote */
