@@ -666,6 +666,12 @@ function displayComplexUserExpressions () {
       'errorToken');
   });
 
+  if (appState.userSet.computesSingleConstant()) {
+    // In this case the compute equation + evaluation will be exactly the same
+    // as what we've already shown, so don't show it.
+    return;
+  }
+
   // Now display our compute equation and the result of evaluating it
   var targetEquation = appState.targetSet.computeEquation();
 
@@ -1141,6 +1147,24 @@ EquationSet.prototype.computesSingleVariable = function () {
   }
   var computeExpression = this.compute_.expression;
   return computeExpression.isVariable();
+};
+
+/**
+ * Example set that returns true:
+ * Age = 12
+ * compute: Age
+ * @returns {boolean} True if our EquationSet consists of a variable set to
+ *   a number, and the computation of that variable.
+ */
+EquationSet.prototype.computesSingleConstant = function () {
+  if (!this.compute_ || this.equations_.length !== 1) {
+    return false;
+  }
+  var equation = this.equations_[0];
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isVariable() && equation.expression.isNumber() &&
+    computeExpression.getValue() === equation.name;
+
 };
 
 /**
