@@ -90,21 +90,13 @@ private
     raise ActiveRecord::RecordNotFound unless @script_level
   end
 
-
   def load_level_source
-    # Set start blocks to the user's previous attempt at this puzzle
-    # or the user's project's level_source if necessary. Must be
-    # called after set_videos_and_blocks_and_callouts
-    # because we override @start_blocks set there.
-    # TODO this whole thing should be done on the client side
+    # Set start blocks to the user's previous attempt at this puzzle. Must be called after
+    # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
 
     return unless current_user
 
-    if params[:level_source_id]
-      level_source = LevelSource.find(params[:level_source_id])
-      # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
-      @last_attempt = level_source.data
-    elsif current_user.try(:admin?)
+    if current_user.try(:admin?)
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
   end
