@@ -27,7 +27,7 @@ var DnsMode = NetSimRouterNode.DnsMode;
     <tr class="<%= rowClasses.join(' ') %>">
       <td nowrap><%= logEntry.getToAddress() %></td>
       <td nowrap><%= logEntry.getFromAddress() %></td>
-      <td><%= logEntry.getMessageBinary() %></td>
+      <td><%= logEntry.getMessageAscii() %></td>
       <td nowrap><%= logEntry.packet.length %></td>
     </tr>
     <%
