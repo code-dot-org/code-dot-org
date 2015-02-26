@@ -31,8 +31,10 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 
 var Bee = require('./bee');
 var WordSearch = require('./wordsearch');
@@ -512,6 +514,7 @@ Maze.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
+  config.dropletConfig = dropletConfig;
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
@@ -970,7 +973,7 @@ Maze.execute = function(stepMode) {
   if (studioApp.isUsingBlockly()) {
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Maze');
+    code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
   }
 

@@ -1039,3 +1039,27 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress

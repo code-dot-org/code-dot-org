@@ -6,17 +6,21 @@
 
 var MAX_SIZE = 400;
 
-var pixel_format = document.querySelector('#pixel_format');
-var pixel_data = document.querySelector("#pixel_data");
-var canvas = document.querySelector("#canvas");
-var ctx = canvas.getContext("2d");
+var pixel_format, pixel_data, canvas, ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange;
 
-var widthText = document.getElementById("width");
-var widthRange = document.getElementById("widthRange");
-var heightText = document.getElementById("height");
-var heightRange = document.getElementById("heightRange");
-var bitsPerPixelText = document.getElementById("bitsPerPixel");
-var bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
+function pixelationInit() {
+  pixel_format = document.querySelector('#pixel_format');
+  pixel_data = document.querySelector("#pixel_data");
+  canvas = document.querySelector("#canvas");
+  ctx = canvas.getContext("2d");
+
+  widthText = document.getElementById("width");
+  widthRange = document.getElementById("widthRange");
+  heightText = document.getElementById("height");
+  heightRange = document.getElementById("heightRange");
+  bitsPerPixelText = document.getElementById("bitsPerPixel");
+  bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
+}
 
 function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;

@@ -5986,8 +5986,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return 0;
       };
 
+      CoffeeScriptParser.prototype.addCode = function(node, depth, indentDepth) {
+        var param, _i, _len, _ref;
+        _ref = node.params;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          param = _ref[_i];
+          this.csSocketAndMark(param, depth, 0, indentDepth, FORBID_ALL);
+        }
+        return this.mark(node.body, depth, 0, null, indentDepth);
+      };
+
       CoffeeScriptParser.prototype.mark = function(node, depth, precedence, wrappingParen, indentDepth) {
-        var arg, bounds, childName, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, line, lines, namenodes, object, param, parts, property, secondBounds, shouldBeOneLine, switchCase, textLine, trueIndentDepth, _i, _j, _k, _l, _len, _len1, _len10, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results2, _results3, _results4, _s, _t;
+        var arg, bounds, childName, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, last, line, lines, namenodes, object, parts, property, secondBounds, shouldBeOneLine, switchCase, textLine, trueIndentDepth, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results2, _results3, _results4, _s;
         switch (node.nodeType()) {
           case 'Block':
             if (node.expressions.length === 0) {
@@ -6144,39 +6154,41 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               _results2 = [];
               for (index = _m = 0, _len3 = _ref10.length; _m < _len3; index = ++_m) {
                 arg = _ref10[index];
-                precedence = 0;
-                if (index === node.args.length - 1) {
-                  precedence = -1;
+                last = index === node.args.length - 1;
+                precedence = last ? -1 : 0;
+                if (last && arg.nodeType() === 'Code') {
+                  _results2.push(this.addCode(arg, depth + 1, indentDepth));
+                } else {
+                  _results2.push(this.csSocketAndMark(arg, depth + 1, precedence, indentDepth));
                 }
-                _results2.push(this.csSocketAndMark(arg, depth + 1, precedence, indentDepth));
               }
               return _results2;
             }
             break;
           case 'Code':
             this.csBlock(node, depth, 0, 'value', wrappingParen, VALUE_ONLY);
-            _ref11 = node.params;
-            for (_n = 0, _len4 = _ref11.length; _n < _len4; _n++) {
-              param = _ref11[_n];
-              this.csSocketAndMark(param, depth + 1, 0, indentDepth, FORBID_ALL);
-            }
-            return this.mark(node.body, depth + 1, 0, null, indentDepth);
+            return this.addCode(node, depth + 1, indentDepth);
           case 'Assign':
             this.csBlock(node, depth, 0, 'command', wrappingParen, MOSTLY_BLOCK);
             this.csSocketAndMark(node.variable, depth + 1, 0, indentDepth, LVALUE);
-            return this.csSocketAndMark(node.value, depth + 1, 0, indentDepth);
+            if (node.value.nodeType() === 'Code') {
+              return this.addCode(node.value, depth + 1, indentDepth);
+            } else {
+              return this.csSocketAndMark(node.value, depth + 1, 0, indentDepth);
+            }
+            break;
           case 'For':
             this.csBlock(node, depth, -3, 'control', wrappingParen, MOSTLY_BLOCK);
-            _ref12 = ['source', 'from', 'guard', 'step'];
-            for (_o = 0, _len5 = _ref12.length; _o < _len5; _o++) {
-              childName = _ref12[_o];
+            _ref11 = ['source', 'from', 'guard', 'step'];
+            for (_n = 0, _len4 = _ref11.length; _n < _len4; _n++) {
+              childName = _ref11[_n];
               if (node[childName] != null) {
                 this.csSocketAndMark(node[childName], depth + 1, 0, indentDepth);
               }
             }
-            _ref13 = ['index', 'name'];
-            for (_p = 0, _len6 = _ref13.length; _p < _len6; _p++) {
-              childName = _ref13[_p];
+            _ref12 = ['index', 'name'];
+            for (_o = 0, _len5 = _ref12.length; _o < _len5; _o++) {
+              childName = _ref12[_o];
               if (node[childName] != null) {
                 this.csSocketAndMark(node[childName], depth + 1, 0, indentDepth, FORBID_ALL);
               }
@@ -6210,11 +6222,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (node.objects.length > 0) {
               this.csIndentAndMark(indentDepth, node.objects, depth + 1);
             }
-            _ref14 = node.objects;
+            _ref13 = node.objects;
             _results3 = [];
-            for (_q = 0, _len7 = _ref14.length; _q < _len7; _q++) {
-              object = _ref14[_q];
-              if (object.nodeType() === 'Value' && object.base.nodeType() === 'Literal' && ((_ref15 = (_ref16 = object.properties) != null ? _ref16.length : void 0) === 0 || _ref15 === (void 0))) {
+            for (_p = 0, _len6 = _ref13.length; _p < _len6; _p++) {
+              object = _ref13[_p];
+              if (object.nodeType() === 'Value' && object.base.nodeType() === 'Literal' && ((_ref14 = (_ref15 = object.properties) != null ? _ref15.length : void 0) === 0 || _ref14 === (void 0))) {
                 _results3.push(this.csBlock(object, depth + 2, 100, 'return', null, VALUE_ONLY));
               } else {
                 _results3.push(void 0);
@@ -6240,13 +6252,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (node.subject != null) {
               this.csSocketAndMark(node.subject, depth + 1, 0, indentDepth);
             }
-            _ref17 = node.cases;
-            for (_r = 0, _len8 = _ref17.length; _r < _len8; _r++) {
-              switchCase = _ref17[_r];
+            _ref16 = node.cases;
+            for (_q = 0, _len7 = _ref16.length; _q < _len7; _q++) {
+              switchCase = _ref16[_q];
               if (switchCase[0].constructor === Array) {
-                _ref18 = switchCase[0];
-                for (_s = 0, _len9 = _ref18.length; _s < _len9; _s++) {
-                  condition = _ref18[_s];
+                _ref17 = switchCase[0];
+                for (_r = 0, _len8 = _ref17.length; _r < _len8; _r++) {
+                  condition = _ref17[_r];
                   this.csSocketAndMark(condition, depth + 1, 0, indentDepth);
                 }
               } else {
@@ -6272,10 +6284,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'Obj':
             this.csBlock(node, depth, 0, 'violet', wrappingParen, VALUE_ONLY);
-            _ref19 = node.properties;
+            _ref18 = node.properties;
             _results4 = [];
-            for (_t = 0, _len10 = _ref19.length; _t < _len10; _t++) {
-              property = _ref19[_t];
+            for (_s = 0, _len9 = _ref18.length; _s < _len9; _s++) {
+              property = _ref18[_s];
               if (property.nodeType() === 'Assign') {
                 this.csSocketAndMark(property.variable, depth + 1, 0, indentDepth, FORBID_ALL);
                 _results4.push(this.csSocketAndMark(property.value, depth + 1, 0, indentDepth));
@@ -9163,6 +9175,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
     COLORS = {
       'BinaryExpression': 'value',
+      'UnaryExpression': 'value',
       'FunctionExpression': 'value',
       'FunctionDeclaration': 'violet',
       'AssignmentExpression': 'command',
@@ -9206,10 +9219,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       '===': 9,
       '!==': 9,
       '&': 10,
-      '^': 10,
-      '|': 10,
-      '&&': 10,
-      '||': 10
+      '^': 11,
+      '|': 12,
+      '&&': 13,
+      '||': 14
     };
     CLASS_EXCEPTIONS = {
       'ForStatement': ['ends-with-brace', 'block-only'],
@@ -9310,9 +9323,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           case 'BinaryExpression':
             return OPERATOR_PRECEDENCES[node.operator];
           case 'AssignStatement':
-            return 17;
+            return 16;
+          case 'UnaryExpression':
+            if (node.prefix) {
+              return 4;
+            } else {
+              return 3;
+            }
+            break;
           case 'CallExpression':
             return 2;
+          case 'NewExpression':
+            return 2;
+          case 'MemberExpression':
+            return 1;
           case 'ExpressionStatement':
             return this.getPrecedence(node.expression);
           default:
@@ -9325,14 +9349,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           case 'ExpressionStatement':
             return this.getColor(node.expression);
           case 'CallExpression':
-            if (node.callee.type === 'Identifier') {
-              if (this.functionMatchesList(node, this.opts.blockFunctions)) {
-                return 'command';
-              } else if (this.functionMatchesList(node, this.opts.valueFunctions)) {
-                return 'value';
-              } else {
-                return 'violet';
-              }
+            if (this.functionMatchesList(node, this.opts.blockFunctions)) {
+              return 'command';
+            } else if (this.functionMatchesList(node, this.opts.valueFunctions)) {
+              return 'value';
+            } else {
+              return 'violet';
             }
             break;
           default:
@@ -9543,6 +9565,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             this.jsBlock(node, depth, bounds);
             this.jsSocketAndMark(indentDepth, node.left, depth + 1, OPERATOR_PRECEDENCES[node.operator]);
             return this.jsSocketAndMark(indentDepth, node.right, depth + 1, OPERATOR_PRECEDENCES[node.operator]);
+          case 'UnaryExpression':
+            this.jsBlock(node, depth, bounds);
+            return this.jsSocketAndMark(indentDepth, node.argument, depth + 1, this.getPrecedence(node));
           case 'ExpressionStatement':
             return this.mark(indentDepth, node.expression, depth + 1, this.getBounds(node));
           case 'Identifier':

@@ -1,22 +1,10 @@
+var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
 var codegen = require('../codegen');
 var api = require('./api');
 
-/**
- * Interface for a set of custom game logic for playlab
- * @param {Studio} studio Reference to global studio object
- * @interface CustomGameLogic
- */
-function CustomGameLogic(studio) {}
-
-/**
- * Logic to be run once per playlab tick
- *
- * @function
- * @name CustomGameLogic#onTick
- */
 
 /**
  * Custom logic for the MSM BigGame
@@ -24,13 +12,13 @@ function CustomGameLogic(studio) {}
  * @implements CustomGameLogic
  */
 var BigGameLogic = function (studio) {
-  this.studio_ = studio;
-  this.cached_ = {};
+  CustomGameLogic.apply(this, arguments);
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
   this.dangerSpriteIndex = 2;
 };
+BigGameLogic.inherits(CustomGameLogic);
 
 BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
@@ -44,7 +32,7 @@ BigGameLogic.prototype.onTick = function () {
   if (titleScreenTitle.getAttribute('visibility') === "visible") {
     return;
   }
-      
+
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
   var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
   var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
@@ -74,7 +62,7 @@ BigGameLogic.prototype.onTick = function () {
       }
     }
   }
-  
+
   if (playerSprite.visible && dangerSprite.visible &&
       this.collide(playerSprite.x, playerSprite.y,
                    dangerSprite.x, dangerSprite.y)) {
@@ -99,7 +87,7 @@ BigGameLogic.prototype.onTick = function () {
     // send sprite back offscreen
     this.resetSprite_(targetSprite);
 }
-  
+
   if (this.studio_.playerScore <= 0) {
     var score = document.getElementById('score');
     score.setAttribute('visibility', 'hidden');
@@ -164,10 +152,6 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
 };
 
-BigGameLogic.prototype.cacheBlock = function (key, block) {
-  this.cached_[key] = block;
-};
-
 /**
  * Reset sprite to the opposite side of the screen
  */
@@ -178,38 +162,6 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
-};
-
-/**
- * Takes a cached block for a function of variable, and calculates the value
- * @returns The result of calling the code for the cached block. If the cached
- *   block was a function_pass, this means we get back a function that can
- *   now be called.
- */
-BigGameLogic.prototype.resolveCachedBlock_ = function (key) {
-  var result = '';
-  var block = this.cached_[key];
-  if (!block) {
-    return result;
-  }
-
-  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
-  result = codegen.evalWith(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  return result;
-};
-
-/**
- * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
- */
-BigGameLogic.prototype.getVar_ = function (key) {
-  return this.resolveCachedBlock_(key);
-};
-
-BigGameLogic.prototype.getFunc_ = function (key) {
-  return this.resolveCachedBlock_(key);
 };
 
 /**

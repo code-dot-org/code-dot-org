@@ -10,8 +10,6 @@ module LevelsHelper
     case script_level.script_id
     when Script::HOC_ID
       script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::TWENTY_HOUR_ID
-      script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID
       editcode_chapter_path(script_level.chapter)
     when Script::TWENTY_FOURTEEN_LEVELS_ID
@@ -232,7 +230,8 @@ module LevelsHelper
       custom_game_type
       project_template_level_name
       scrollbars
-      original_start_blocks
+      last_attempt
+      is_project_level
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json

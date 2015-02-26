@@ -9,7 +9,6 @@ class Script < ActiveRecord::Base
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   # Hardcoded scriptID constants used throughout the code
-  TWENTY_HOUR_ID = 1
   HOC_ID = 2 # this is the old (2013) hour of code
   EDIT_CODE_ID = 3
   TWENTY_FOURTEEN_LEVELS_ID = 4
@@ -35,7 +34,7 @@ class Script < ActiveRecord::Base
   COURSE4_NAME = 'course4'
 
   def Script.twenty_hour_script
-    Script.get_from_cache(Script::TWENTY_HOUR_ID)
+    Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
 
@@ -94,7 +93,7 @@ class Script < ActiveRecord::Base
   end
 
   def to_param
-    if self.twenty_hour? || self.id == HOC_ID
+    if self.id == HOC_ID
       super
     else
       name
@@ -112,7 +111,7 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.id == TWENTY_HOUR_ID
+    self.name == TWENTY_HOUR_NAME
   end
 
   def hoc?
