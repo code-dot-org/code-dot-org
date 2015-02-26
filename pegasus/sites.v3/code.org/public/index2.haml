@@ -62,7 +62,7 @@ social:
   - heroes.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     - opacity = index == 0 ? 1 : 0
-    .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 50%"}
+    .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
 
 
   -facebook = {:u=>"http://#{request.site}/"}
@@ -75,7 +75,7 @@ social:
 
   -twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
 
-  -video_code = 'FC5FbmsH4fw'
+  -video_code = 'nKIu9yen5nc'
   -download_filename = 'HoC-video-15mb.mp4'
 
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
@@ -90,7 +90,7 @@ social:
     #mobile-header.mobile-feature
       = view :header
 
-  .container_responsive{style: "color: white; font-size: 24px"}
+  .container_responsive{style: "color: white; font-size: 20px"}
     .col-66{style: "position:relative;"}
       - heroes.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
@@ -103,7 +103,7 @@ social:
                 = lines[0]
               .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
                 = lines[1]
-              .caption3{style: "left: 60px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0.5); padding:8px"}
+              .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0.5); padding:8px"}
                 = lines[2]
 
       &nbsp;
@@ -170,9 +170,9 @@ social:
     {
       var nextImageId = "#captionarea" + nextImage;
       //console.log("showing", nextImageId);
-      $(nextImageId + " .caption1").delay(500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
-      $(nextImageId + " .caption2").delay(1000).animate({ left: "80px", opacity: 0.8 }, { duration: 2000 });
-      $(nextImageId + " .caption3").delay(3500).animate({ opacity: 0.6 }, { duration: 2000 });
+      $(nextImageId + " .caption1").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
 
     $("#playvideo").delay(4000).animate({ opacity: 1 }, { duration: 2000 });

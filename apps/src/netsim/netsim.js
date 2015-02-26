@@ -21,11 +21,9 @@ var page = require('./page.html');
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
-var NetSimRouterPanel = require('./NetSimRouterPanel');
-var NetSimMyDevicePanel = require('./NetSimMyDevicePanel');
+var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendWidget = require('./NetSimSendWidget');
 var NetSimLogWidget = require('./NetSimLogWidget');
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -53,6 +51,13 @@ var NetSim = module.exports = function () {
   this.connection_ = null;
 
   /**
+   * Reference to currently connected simulation router.
+   * @type {NetSimRouterNode}
+   * @private
+   */
+  this.myConnectedRouter_ = null;
+
+  /**
    * Tick and Render loop manager for the simulator
    * @type {RunLoop}
    * @private
@@ -72,6 +77,15 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.chunkSize_ = 8;
+
+  /**
+   * Current dns mode.
+   * Valid values 'none', 'manual', 'automatic'
+   * TODO: Move these to an enum
+   * @type {string}
+   * @private
+   */
+  this.dnsMode_ = 'none';
 };
 
 
@@ -165,10 +179,6 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.encodingSelector_ = NetSimEncodingSelector.createWithin(
-      document.getElementById('encoding_selector'),
-      this.changeEncoding.bind(this));
-
   this.receivedMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_received'), 'Received Messages');
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
@@ -178,25 +188,27 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
       this.connection_, user, this.getOverrideShardID());
 
-  var routerPanelContainer = document.getElementById('netsim_tabpanel');
-  this.routerPanel_ = NetSimRouterPanel.createWithin(routerPanelContainer,
-      this.connection_);
-
-  this.myDevicePanel_ = NetSimMyDevicePanel.createWithin(
-      document.getElementById('netsim_my_device_container'),
-      this.changeChunkSize.bind(this));
+  // Tab panel - contains instructions, my device, router, dns
+  this.tabs_ = new NetSimTabsComponent(
+      $('#netsim_tabs'),
+      this.setChunkSize.bind(this),
+      this.changeEncoding.bind(this),
+      this.changeRemoteDnsMode.bind(this),
+      this.becomeDnsNode.bind(this));
 
   var sendWidgetContainer = document.getElementById('netsim_send');
   this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
       this.connection_);
 
   this.changeEncoding(this.encodingMode_);
-  this.changeChunkSize(this.chunkSize_);
+  this.setChunkSize(this.chunkSize_);
+  this.setDnsMode(this.dnsMode_);
   this.refresh_();
 };
 
@@ -218,11 +230,12 @@ NetSim.prototype.refresh_ = function () {
  * Propogates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
+ *
  * @param {string} newEncoding
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
   this.encodingMode_ = newEncoding;
-  this.encodingSelector_.setEncoding(newEncoding);
+  this.tabs_.setEncoding(newEncoding);
   this.receivedMessageLog_.setEncoding(newEncoding);
   this.sentMessageLog_.setEncoding(newEncoding);
   this.sendWidget_.setEncoding(newEncoding);
@@ -234,14 +247,84 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  * Propogates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
+ *
  * @param {number} newChunkSize
  */
-NetSim.prototype.changeChunkSize = function (newChunkSize) {
+NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
-  this.myDevicePanel_.setChunkSize(newChunkSize);
+  this.tabs_.setChunkSize(newChunkSize);
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
+};
+
+/**
+ * Update DNS mode across the whole app.
+ *
+ * Propogates the change down into relevant child components, possibly
+ * including the control that initiated the change; in that case, re-setting
+ * the value should be a no-op and safe to do.
+ *
+ * @param {"none"|"manual"|"automatic"} newDnsMode
+ */
+NetSim.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.tabs_.setDnsMode(newDnsMode);
+};
+
+/**
+ * Sets DNS mode across the whole simulation, propagating the change
+ * to other clients.
+ * @param {string} newDnsMode
+ */
+NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
+  this.setDnsMode(newDnsMode);
+  if (this.myConnectedRouter_) {
+    var router = this.myConnectedRouter_;
+    router.dnsMode = newDnsMode;
+    router.update();
+  }
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSim.prototype.setIsDnsNode = function (isDnsNode) {
+  this.tabs_.setIsDnsNode(isDnsNode);
+  if (this.myConnectedRouter_) {
+    this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
+  }
+};
+
+/**
+ * Tells simulation that we want to become the DNS node for our
+ * connected router.
+ */
+NetSim.prototype.becomeDnsNode = function () {
+  this.setIsDnsNode(true);
+  if (this.connection_&&
+      this.connection_.myNode &&
+      this.connection_.myNode.myRouter) {
+    // STATE IS THE ROOT OF ALL EVIL
+    var myNode = this.connection_.myNode;
+    var router = myNode.myRouter;
+    router.dnsNodeID = myNode.entityID;
+    router.update();
+  }
+};
+
+/**
+ * @param {Array} tableContents
+ */
+NetSim.prototype.setDnsTableContents = function (tableContents) {
+  this.tabs_.setDnsTableContents(tableContents);
+};
+
+/**
+ * @param {Array} logData
+ */
+NetSim.prototype.setRouterLogData = function (logData) {
+  this.tabs_.setRouterLogData(logData);
 };
 
 /**
@@ -277,4 +360,88 @@ NetSim.prototype.onResizeOverride_ = function() {
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
+};
+
+/**
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {NetSimShard} newShard - null if disconnected.
+ * @param {NetSimLocalClientNode} localNode - null if disconnected
+ * @private
+ */
+NetSim.prototype.onShardChange_= function (newShard, localNode) {
+  if (localNode) {
+    localNode.routerChange.register(this.onRouterChange_.bind(this));
+  }
+};
+
+/**
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @param {NetSimWire} wire - null if disconnected.
+ * @param {NetSimRouterNode} router - null if disconnected
+ * @private
+ */
+NetSim.prototype.onRouterChange_ = function (wire, router) {
+
+  // Unhook old handlers
+  if (this.routerStateChangeKey !== undefined) {
+    this.myConnectedRouter_.stateChange.unregister(this.routerStateChangeKey);
+    this.routerStateChangeKey = undefined;
+  }
+
+  if (this.routerWireChangeKey !== undefined) {
+    this.myConnectedRouter_.wiresChange.unregister(this.routerWireChangeKey);
+    this.routerWireChangeKey = undefined;
+  }
+
+  if (this.routerLogChangeKey !== undefined) {
+    this.myConnectedRouter_.logChange.unregister(this.routerLogChangeKey);
+    this.routerLogChangeKey = undefined;
+  }
+
+  this.myConnectedRouter_ = router;
+
+  // Hook up new handlers
+  if (router) {
+    // Propagate change
+    this.setDnsMode(router.dnsMode);
+
+    // Hook up new handlers
+    this.routerStateChangeKey = router.stateChange.register(
+        this.onRouterStateChange_.bind(this));
+
+    this.routerWireChangeKey = router.wiresChange.register(
+        this.onRouterWiresChange_.bind(this));
+
+    this.routerLogChangeKey = router.logChange.register(
+        this.onRouterLogChange_.bind(this));
+  }
+};
+
+/**
+ * @param {NetSimRouterNode} router
+ * @private
+ */
+NetSim.prototype.onRouterStateChange_ = function (router) {
+  var myNode = {};
+  if (this.connection_ && this.connection_.myNode) {
+    myNode = this.connection_.myNode;
+  }
+
+  this.setDnsMode(router.dnsMode);
+  this.setIsDnsNode(router.dnsMode === 'manual' &&
+      router.dnsNodeID === myNode.entityID);
+};
+
+NetSim.prototype.onRouterWiresChange_ = function () {
+  if (this.myConnectedRouter_) {
+    this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
+  }
+};
+
+NetSim.prototype.onRouterLogChange_ = function () {
+  if (this.myConnectedRouter_) {
+    this.setRouterLogData(this.myConnectedRouter_.getLog());
+  }
 };

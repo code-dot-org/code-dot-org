@@ -34,9 +34,9 @@ describe("NetSimLogEntry", function () {
       assertEqual(row.nodeID, undefined);
     });
   
-    it ("logText (default empty string)", function () {
-      assertOwnProperty(row, 'logText');
-      assertEqual(row.logText, '');
+    it ("packet (default empty string)", function () {
+      assertOwnProperty(row, 'packet');
+      assertEqual(row.packet, '');
     });
 
     it ("timestamp (default Date.now())", function () {
@@ -49,14 +49,14 @@ describe("NetSimLogEntry", function () {
     var row = {
       id: 1,
       nodeID: 42,
-      logText: 'Non-default log text',
+      packet: 'Non-default log text',
       timestamp: 52000
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
     assertEqual(logEntry.entityID, 1);
     assertEqual(logEntry.nodeID, 42);
-    assertEqual(logEntry.logText, 'Non-default log text');
+    assertEqual(logEntry.packet, 'Non-default log text');
     assertEqual(logEntry.timestamp, 52000);
   });
 
@@ -71,14 +71,14 @@ describe("NetSimLogEntry", function () {
 
     it ("Puts row values in remote table", function () {
       var nodeID = 1;
-      var logText = 'xyzzy';
+      var packet = 'xyzzy';
 
-      NetSimLogEntry.create(testShard, nodeID, logText, function () {});
+      NetSimLogEntry.create(testShard, nodeID, packet, function () {});
 
       testShard.logTable.readAll(function (rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
-        assertEqual(row.logText, logText);
+        assertEqual(row.packet, packet);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
@@ -106,6 +106,17 @@ describe("NetSimLogEntry", function () {
 
     // Verify that logEntry is gone from the remote table.
     assertTableSize(testShard, 'logTable', 0);
+  });
+
+  it ("can extract packet data based on standard format", function () {
+    var logEntry = new NetSimLogEntry(null, {
+      packet: '000100100011010001010110'
+    });
+    assertEqual(1, logEntry.getToAddress());
+    assertEqual(2, logEntry.getFromAddress());
+    assertEqual(3, logEntry.getPacketIndex());
+    assertEqual(4, logEntry.getPacketCount());
+    assertEqual('01010110', logEntry.getMessageBinary());
   });
 
 });
