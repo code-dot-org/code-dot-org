@@ -398,7 +398,7 @@ StudioApp.prototype.init = function(config) {
           Blockly.functionEditor.hideIfOpen();
         }
         Blockly.mainBlockSpace.clear();
-        this.setStartBlocks_(config);
+        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
