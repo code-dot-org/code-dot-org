@@ -1,20 +1,12 @@
--dont_cache
+---
+title: "View Applab Table"
+theme: angular
+angular: recordsApp
+---
 
--encrypted_app_id = request.splat_path_info[1..-1].split('/').first
--app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
+-app_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
--api_base_url = "/v3/apps/#{encrypted_app_id}/shared-tables/#{table_name}"
-
-- @page_title = "View Applab Table"
-
--if rack_env == :development
-  %script{src: "/shared/js/angular/angular.js"}
-  %script{src: "/shared/js/angular-route/angular-route.js"}
-  %script{src: "/shared/js/angular-resource/angular-resource.js"}
--else
-  %script{src: "/shared/js/angular/angular.min.js"}
-  %script{src: "/shared/js/angular-route/angular-route.min.js"}
-  %script{src: "/shared/js/angular-resource/angular-resource.min.js"}
+-api_base_url = "/v3/apps/#{app_id}/shared-tables/#{table_name}"
 
 %div{"ng-app" => "recordsApp", "ng-view" => ""}
 

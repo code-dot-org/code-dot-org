@@ -5,6 +5,10 @@ theme: none
 
 :scss
   .properties {
+    table {
+      width: 850px; 
+      table-layout: auto;
+    }
     th {
       padding: 10px;
       background-color: #ccc;
@@ -13,6 +17,9 @@ theme: none
     td {
       padding: 10px;
       border: 1px solid #ccc;
+    }
+    input {
+      width: 100%;
     }
     .name {
       font-size: 1.5em;
@@ -27,7 +34,7 @@ theme: none
   %h2
     Key/Value pairs
 
-  %table.properties{style: "width:850px; table-layout:auto;"}
+  %table.properties
     %colgroup
       %col{width: "200"}
       %col{width: "200"}
@@ -38,7 +45,7 @@ theme: none
       %th
         value
       %th
-    %tr{"ng-repeat" => "key in keys", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "key in keys"}
       %td
         %span
           {{ key }}
@@ -46,7 +53,7 @@ theme: none
         %span{"ng-hide" => "editing[key]"}
           {{ properties[key] }}
         %span{"ng-show" => "editing[key]"}
-          %input{"ng-model" => "properties[key]", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "properties[key]", type: "text"}/
       %td
         %button.btn.btn-default{"ng-click" => "editing[key] = true", "ng-hide" => "editing[key]"} Edit
         %button.btn.btn-primary{"ng-click" => "saveProperty(key)", "ng-show" => "editing[key]"} Save
@@ -54,10 +61,10 @@ theme: none
     %tr
       %td
         %span{"ng-show" => "editingNewProperty"}
-          %input{"ng-model" => "newKey", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "newKey", type: "text"}/
       %td
         %span{"ng-show" => "editingNewProperty"}
-          %input{"ng-model" => "newValue", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "newValue", type: "text"}/
       %td
         %button.btn.btn-primary{"ng-click" => "editingNewProperty = true", "ng-hide" => "editingNewProperty"} Add
         %button.btn.btn-primary{"ng-click" => "saveNewProperty()", "ng-show" => "editingNewProperty"} Save

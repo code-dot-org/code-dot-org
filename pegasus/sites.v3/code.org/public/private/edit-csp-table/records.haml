@@ -5,6 +5,10 @@ theme: none
 
 :scss
   .records {
+    table {
+      width: 850px; 
+      table-layout: auto;
+    }
     th {
       padding: 10px;
       background-color: #ccc;
@@ -13,6 +17,9 @@ theme: none
     td {
       padding: 10px;
       border: 1px solid #ccc;
+    }
+    input {
+      width: 100%;
     }
     .name {
       font-size: 1.5em;
@@ -27,7 +34,7 @@ theme: none
   %h2
     Viewing table: {{tableName}}
 
-  %table.records{style: "width:850px; table-layout:auto;"}
+  %table.records
     %colgroup
       %col{width: "200"}
       %col{"ng-repeat" => "column in columns", width: "200"}
@@ -44,7 +51,7 @@ theme: none
         %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
         %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
       %th
-    %tr{"ng-repeat" => "record in records | orderBy:order:reverse", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "record in records | orderBy:order:reverse"}
       %td
         %span
           {{ record.id }}
@@ -52,7 +59,7 @@ theme: none
         %span{"ng-hide" => "record.editing"}
           {{ record[column] }}
         %span{"ng-show" => "record.editing"}
-          %input{"ng-model" => "record[column]", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "record[column]", type: "text"}/
       %td
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save
@@ -61,7 +68,7 @@ theme: none
       %td
       %td{"ng-repeat" => "column in columns"}
         %span{"ng-show" => "newRecord.editing"}
-          %input{"ng-model" => "newRecord[column]", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "newRecord[column]", type: "text"}/
       %td
         %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add
         %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save

@@ -1,17 +1,11 @@
--dont_cache
+---
+title: "Applab Key/Value pairs"
+theme: angular
+angular: propertiesApp
+---
 
--encrypted_app_id = request.splat_path_info[1..-1]
--app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
--api_base_url = "/v3/apps/#{encrypted_app_id}/shared-properties"
-
--if rack_env == :development
-  %script{src: "/shared/js/angular/angular.js"}
-  %script{src: "/shared/js/angular-route/angular-route.js"}
-  %script{src: "/shared/js/angular-resource/angular-resource.js"}
--else
-  %script{src: "/shared/js/angular/angular.min.js"}
-  %script{src: "/shared/js/angular-route/angular-route.min.js"}
-  %script{src: "/shared/js/angular-resource/angular-resource.min.js"}
+-app_id = request.splat_path_info[1..-1]
+-api_base_url = "/v3/apps/#{app_id}/shared-properties"
 
 %div{"ng-app" => "propertiesApp", "ng-view" => ""}
 
