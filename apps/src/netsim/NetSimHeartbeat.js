@@ -16,10 +16,12 @@ var NetSimEntity = require('./NetSimEntity');
 
 /**
  * How often a heartbeat is sent, in milliseconds
+ * Six seconds, against the one-minute timeout over in NetSimShardCleaner,
+ * gives a heartbeat at least nine chances to update before it gets cleaned up.
  * @type {number}
  * @const
  */
-var HEARTBEAT_INTERVAL_MS = 5000;
+var DEFAULT_HEARTBEAT_INTERVAL_MS = 6000;
 
 /**
  * Sends regular heartbeat messages to the heartbeat table on the given
@@ -41,8 +43,17 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   /** @type {number} Row ID in node table */
   this.nodeID = row.nodeID;
 
-  /** @type {number} unix timestamp (ms) */
+  /**
+   * @type {number} unix timestamp (ms)
+   * @private
+   */
   this.time_ = row.time !== undefined ? row.time : Date.now();
+
+  /**
+   * @type {number} How often heartbeat is sent, in milliseconds
+   * @private
+   */
+  this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -111,11 +122,22 @@ NetSimHeartbeat.prototype.buildRow_ = function () {
 };
 
 /**
+ * Change how often this heartbeat attempts to update its remote storage
+ * self.  Default value is 6 seconds.  Warning! If set too high, this
+ * heartbeat may be seen as expired by another client and get cleaned up!
+ *
+ * @param {number} intervalMs - time between udpates, in milliseconds
+ */
+NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
+  this.intervalMs_ = intervalMs;
+};
+
+/**
  * Updates own row on regular interval, as long as something's making
  * it tick.
  */
 NetSimHeartbeat.prototype.tick = function () {
-  if (Date.now() - this.time_ > HEARTBEAT_INTERVAL_MS) {
+  if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
     this.update();
   }
