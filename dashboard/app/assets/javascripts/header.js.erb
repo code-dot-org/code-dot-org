@@ -165,9 +165,9 @@ dashboard.showProjectHeader = function () {
   $('.project_delete').click(function (e) {
     e.preventDefault(); // Don't change the hash.
     var dialog = new Dialog({body: '<div id="confirm-delete" class="modal-content">'
-        + '<p class="dialog-title">Are you sure you want to delete this project?</p>'
-        + '<p>Deleting your project will remove it from your gallery. Anyone you\'ve shared your project with will no longer be able to access the link. This is not reversible!</p>'
-        + '<button id="again-button">Cancel</button><button id="continue-button" style="float: right">Delete</button></div>'
+        + '<p class="dialog-title"><%= I18n.t('project.delete_confirm_title') %></p>'
+        + '<p><%= I18n.t('project.delete_confirm_text') %></p>'
+        + '<button id="again-button"><%= I18n.t('project.cancel') %></button><button id="continue-button" style="float: right"><%= I18n.t('project.delete') %></button></div>'
     });
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
