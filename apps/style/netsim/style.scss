@@ -115,10 +115,10 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     padding: 5px;
     border: solid darkgray thin;
     border-radius: 3px;
-    background-color: lightgray;
+    background-color: #ddd;
 
     td {
-      border-color: lightgray;
+      border-color: #ddd;
     }
   }
 
@@ -147,7 +147,8 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   th {
     font-size: 10pt;
-    font-variant: small-caps;
+    color: black;
+    background-color: transparent;
   }
 
   td {
@@ -211,7 +212,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   div.netsim_packet {
     border: solid darkgray thin;
-    background-color: lightgray;
+    background-color: #ddd;
     padding: 0.5em;
     border-radius: 0.5em;
 
@@ -223,7 +224,8 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
     th {
       font-size: 10pt;
-      font-variant: small-caps;
+      color: black;
+      background-color: transparent;
     }
 
     /* All input fields */
@@ -340,7 +342,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
     th {
       font-size: 10pt;
-      font-variant: small-caps;
     }
   }
 
