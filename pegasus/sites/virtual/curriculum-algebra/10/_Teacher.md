@@ -31,7 +31,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ## Getting Started
 
 
-### <a name="GetStarted"></a> 1) Introduction
+### <a name="GetStarted"></a> 1) Introduction`
 
 Functions are a key part of animation in computer programs. A function that draws a static picture of a bat, for example, can place the bat at a different location based on the input. When that input changes slightly based on time or user-interaction, the bat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
 
@@ -40,6 +40,15 @@ Functions are a key part of animation in computer programs. A function that draw
 Putting these images together, we arrive at an animation of the bat turning around.
 
 <img src="bat_animated_fast.gif" style="display: block; margin: 0 auto;"/>
+
+In the online puzzles, the students will find a blue function box and a black function box. The blue rocket-height function box represents the function needed to calculate the rocket-height for a given second.  The black function box, when editted, appears to be identical to the blue box.  The difference is the black function box has some unseen code that allows the function to be plugged into the start program.
+
+Another curiousity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
+
+[tip]
+# Lesson Tip
+
+The contract can be quite long and often scrolls off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.
 
 [/together]
 

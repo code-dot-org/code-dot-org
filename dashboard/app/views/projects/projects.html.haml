@@ -27,11 +27,11 @@
   %div
     %span New project:
     .btn-group.level-buttons{role: "group"}
-      %a.btn{href: ''}
-        (TODO) Standalone
+      %a.btn{href: standalone_artist_path}
+        Standalone
         %i.fa.fa-pencil
-      %a.btn{href: ''}
-        (TODO) Standalone
+      %a.btn{href: standalone_artist_path}
+        Standalone
         %i.fa.fa-rocket
       %a.btn{href: artist_freeplay_path}
         Freeplay
@@ -63,7 +63,7 @@
           %i.fa.fa-caret-down{'ng-show' => "order == 'createdAt' && reverse == true"}
             %i.fa.fa-caret-up{'ng-show' => "order == 'createdAt' && reverse == false"}
       %th
-    %tr{"ng-repeat" => "project in projects | orderBy:order:reverse", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse", style: "vertical-align:top"}
       %td
         %span{'ng-hide' => 'project.editing'}
           %span.name{'ng-if' => 'project.url()'}

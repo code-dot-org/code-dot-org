@@ -113,7 +113,7 @@ var baseOptions = {
     } else {
       showInstructions();
     }
-  },
+  }
 };
 $.extend(appOptions, baseOptions);
 
@@ -150,7 +150,44 @@ $(window).on('function_editor_closed', function() {
   }
 })(appOptions.level);
 
+/**
+ * Only execute the given argument if it is a function.
+ * @param callback
+ */
+function callbackSafe(callback, data) {
+  if (typeof callback === 'function') {
+    callback(data);
+  }
+}
+
+dashboard.saveProject = function(callback) {
+  var app_id = dashboard.currentApp.id;
+  dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  if (app_id) {
+    storageApps().update(app_id, dashboard.currentApp, function(data) {
+      callbackSafe(callback, data);
+    });
+  } else {
+    storageApps().create(dashboard.currentApp, function(data) {
+      location.hash = dashboard.currentApp.id = data.id;
+      callbackSafe(callback, data);
+    });
+    dashboard.showProjectHeader();
+  }
+};
+
 function initApp() {
+  if (appOptions.level.isProjectLevel) {
+    if (dashboard.currentApp) {
+      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+    } else {
+      dashboard.currentApp = {
+        name: 'My Project'
+      };
+    }
+    $(window).on('run_button_pressed', dashboard.saveProject);
+    dashboard.showProjectHeader();
+  }
   window[appOptions.app + 'Main'](appOptions);
 }
 
@@ -190,6 +227,20 @@ if (appOptions.droplet) {
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
+  if (appOptions.level.isProjectLevel) {
+    var app_id = location.hash.slice(1);
+    if (app_id) {
+      // Load the project ID, if one exists
+      promise.then(function () {
+        var deferred = new $.Deferred();
+        storageApps().fetch(app_id, function (data) {
+          dashboard.currentApp = data;
+          deferred.resolve();
+        });
+        return deferred;
+      });
+    }
+  }
 }
 promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))

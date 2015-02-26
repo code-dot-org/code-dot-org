@@ -35,18 +35,18 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 ### Middle School
 
-Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss](Code.org/curriculum/mss).
+Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss](/curriculum/mss).
 
 - There is no cost for schools to apply
 - Per-session stipends to teachers are paid by Code.org
 - This program is open to all Houston Independent School District middle schools<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](bit.ly/ApplyToCode)
+[<button>Sign up</button>](https://bit.ly/ApplyToCode)
 
 ### High School
 
-Schools and teachers can [sign up now](http://izonenyc.org/initiatives/blended-learning-institute/#computer-science-track) to offer [Exploring Computer Science](exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
+Schools and teachers can [sign up now](https://bit.ly/ApplyToCode) to offer [Exploring Computer Science](exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
 
 - No prior computer science experience is required!
 - Per-session stipends to teachers are paid by Code.org
@@ -54,7 +54,7 @@ Schools and teachers can [sign up now](http://izonenyc.org/initiatives/blended-l
 - This program is open to all Houston Independent School District high schools.<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](bit.ly/ApplyToCode)
+[<button>Sign up</button>](https://bit.ly/ApplyToCode)
 
 ## Houston Parents
 

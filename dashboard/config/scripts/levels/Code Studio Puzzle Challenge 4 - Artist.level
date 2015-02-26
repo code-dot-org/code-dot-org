@@ -19,8 +19,15 @@
     "disable_sharing": "false",
     "start_direction": "90",
     "x": "150",
-    "y": "300",
-    "slider_speed": ".5"
+    "y": "100",
+    "slider_speed": ".5",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "ideal": "4"
   }
 }]]></config>
   <blocks>
@@ -51,7 +58,7 @@
                   <title name="VALUE">100</title>
                   <next>
                     <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
+                      <title name="DIR">turnRight</title>
                       <title name="VALUE">45</title>
                     </block>
                   </next>
