@@ -158,7 +158,9 @@ NetSimTable.prototype.arrayFromCache_ = function () {
 
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
-  if (Date.now() - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+  var now = Date.now();
+  if (now - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+    this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
 };
