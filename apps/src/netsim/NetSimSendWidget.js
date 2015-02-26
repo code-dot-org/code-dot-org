@@ -372,8 +372,24 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
   if (myNode) {
-    myNode.sendMessage(this.getPacketBinary_());
+    this.disableEverything();
+    myNode.sendMessage(this.getPacketBinary_(), function () {
+      var binaryTextarea = $('#netsim_send_widget')
+          .find('tr.binary')
+          .find('textarea');
+      binaryTextarea.val('');
+      binaryTextarea.blur();
+      this.enableEverything();
+    }.bind(this));
   }
+};
+
+NetSimSendWidget.prototype.disableEverything = function () {
+  $('#netsim_send_widget').find('input, textarea').prop('disabled', true);
+};
+
+NetSimSendWidget.prototype.enableEverything = function () {
+  $('#netsim_send_widget').find('input, textarea').prop('disabled', false);
 };
 
 /**
