@@ -124,7 +124,7 @@ dashboard.showProjectHeader = function () {
   var moreButton = '<%= I18n.t('project.more') %> '
       + '<span class="project_more_glyph">&#x25BC;</span>'
       + '<div class="project_more_popup" style="position: absolute;">'
-      + '<a href="#"><%= I18n.t('project.delete') %></a><br>'
+      + '<a href="#" class="project_delete"><%= I18n.t('project.delete') %></a><br>'
       + '<a href="#"><%= I18n.t('project.new') %></a></div>';
   $('.project_info').append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
       .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
@@ -159,7 +159,25 @@ dashboard.showProjectHeader = function () {
     }
   });
   $projectMorePopup.click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
+    e.stopPropagation(); // Clicks inside the popup shouldn't close it.
+  });
+
+  $('.project_delete').click(function (e) {
+    e.preventDefault(); // Don't change the hash.
+    var dialog = new Dialog({body: '<div id="confirm-delete" class="modal-content">'
+        + '<p class="dialog-title">Are you sure you want to delete this project?</p>'
+        + '<p>Deleting your project will remove it from your gallery. Anyone you\'ve shared your project with will no longer be able to access the link. This is not reversible!</p>'
+        + '<button id="again-button">Cancel</button><button id="continue-button" style="float: right">Delete</button></div>'
+    });
+    dialog.show();
+    $('#confirm-delete #continue-button').click(function () {
+      dashboard.deleteProject(function () {
+        location.href = location.pathname;
+      });
+    });
+    $('#confirm-delete #again-button').click(function () {
+      dialog.hide();
+    });
   });
 
   $(document).on('click', '.project_list', function () {
