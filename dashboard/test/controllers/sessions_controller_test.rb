@@ -146,4 +146,20 @@ class SessionsControllerTest < ActionController::TestCase
     assert_signed_in_as nil
   end
 
+  test "session cookie set if remember me not checked" do
+    teacher = create(:teacher)
+
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
+
+    assert_nil @response.cookies["remember_user_token"]
+  end
+
+
+  test "persistent cookie set if remember me is checked" do
+    teacher = create(:teacher)
+
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password, remember_me: '1'}
+
+    assert @response.cookies["remember_user_token"]
+  end
 end

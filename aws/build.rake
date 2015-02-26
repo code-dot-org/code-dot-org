@@ -285,11 +285,11 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
       if failed_browser_count == 0
-        message = 'Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
         HipChat.developers message, color:'green'
       else
-        message = 'Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
         HipChat.log message, color:'red'
         HipChat.developers message, color:'red', notify:1
       end

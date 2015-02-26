@@ -7,6 +7,8 @@ require 'chef/user'
 require 'chef/client'
 
 apt_package 'awscli' # AWS command-line tools
+apt_package 'emacs'
+apt_package 'zsh'
 
 #
 # For each user defined in cdo-users, ensure there is a basic home folder.
@@ -26,7 +28,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   group user_name do
     members user_name
   end
-
+  
   # Create the user's home directory
   directory home_directory do
     owner user_name
@@ -142,4 +144,14 @@ node['cdo-users'].each_pair do |user_name, user_data|
     mode '0600'
   end
 
+end
+
+# Create the user's group
+group 'chef' do
+  members node['cdo-users'].keys
+end
+
+file '/etc/chef/validation.pem' do
+  group 'chef'
+  mode '0660'
 end

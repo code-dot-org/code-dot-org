@@ -1,9 +1,0 @@
-%table
-  %tr
-    %td
-      -@image = user['image'] || '/images/user_default_image.jpg'
-      %img{src:@image}
-    %td
-      %h2= user['name']
-      %p
-        %a{href:"mailto:#{user['email']}"}= user['email']

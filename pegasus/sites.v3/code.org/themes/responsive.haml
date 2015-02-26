@@ -7,7 +7,7 @@
     =view :theme_common_head_before
 
     %meta{name:'viewport', content:'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'}
-    -if page_translated? && not_partner_site?
+    -if page_translated? && !partner_site?
       %link{rel:'stylesheet', type:'text/css', href:'/css/brstrap-international.css'}
       %link{rel:'stylesheet', type:'text/css', href:'/css/common-international.css'}
     -else

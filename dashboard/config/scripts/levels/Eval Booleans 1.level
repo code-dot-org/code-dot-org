@@ -8,13 +8,20 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either \"true\" or \"false.\" What do you think this code will evaluate to?",
+    "instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either \"true\" or \"false.\" Click \"Run\" to see how this expression evaluates.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -47,5 +54,34 @@
         </block>
       </xml>
     </start_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="functional_display" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_greater_than" inline="false" movable="false">
+              <functional_input name="ARG1">
+                <block type="functional_plus" inline="false" movable="false">
+                  <functional_input name="ARG1">
+                    <block type="functional_math_number" movable="false" editable="false">
+                      <title name="NUM">4</title>
+                    </block>
+                  </functional_input>
+                  <functional_input name="ARG2">
+                    <block type="functional_math_number" movable="false" editable="false">
+                      <title name="NUM">5</title>
+                    </block>
+                  </functional_input>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" movable="false" editable="false">
+                  <title name="NUM">9</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Eval>

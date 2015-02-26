@@ -315,11 +315,11 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
-  blockToMove.setUserVisible(false);
   blockToMove.setMovable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
-  Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
+  var newBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
+  newBlock.setCurrentlyHidden(true);
 };
 
 /**
@@ -329,14 +329,14 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
  * @returns {Blockly.Block} copy of block in modal BlockSpace
  */
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
-  blockToMove.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL
     ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
-  newCopyOfBlock.setMovable(false);
+  newCopyOfBlock.setCurrentlyHidden(false);
+  newCopyOfBlock.setUserVisible(true);
   return newCopyOfBlock;
 };
 

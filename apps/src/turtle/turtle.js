@@ -34,8 +34,10 @@ var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var page = require('../templates/page.html');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -175,6 +177,7 @@ Artist.prototype.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
+  config.dropletConfig = dropletConfig;
 
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
@@ -688,7 +691,7 @@ Artist.prototype.evalCode = function(code) {
  * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
 Artist.prototype.generateTurtleCodeFromJS_ = function () {
-  this.code = utils.generateCodeAliases(this.level.codeFunctions, null, 'Turtle');
+  this.code = dropletUtils.generateCodeAliases(dropletConfig, 'Turtle');
   this.userCodeStartOffset = this.code.length;
   this.code += this.studioApp_.editor.getValue();
   this.userCodeLength = this.code.length - this.userCodeStartOffset;
