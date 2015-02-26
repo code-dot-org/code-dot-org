@@ -1,0 +1,44 @@
+<%
+var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = NetSimRouterNode.DnsMode;
+%>
+<div class="netsim_dns_table">
+  <h1>My Network</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Hostname</th>
+      <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+    tableData.forEach(function (row) {
+      var displayHostname = row.hostname;
+      var displayAddress = '';
+      var rowClasses = [];
+
+      if (dnsMode === DnsMode.NONE || row.isDnsNode || row.isLocal) {
+        displayAddress = row.address;
+      }
+
+      if (row.isLocal) {
+        displayHostname += " (Me)";
+        rowClasses.push('localNode');
+      }
+
+      if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
+        displayHostname += " (DNS)";
+        rowClasses.push('dnsNode');
+      }
+      %>
+        <tr class="<%= rowClasses.join(' ') %>">
+          <td><%= displayHostname %></td>
+          <td><%= displayAddress %></td>
+        </tr>
+      <%
+    });
+    %>
+    </tbody>
+  </table>
+</div>

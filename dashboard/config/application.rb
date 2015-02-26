@@ -8,8 +8,6 @@ require 'varnish_environment'
 require 'apps_api'
 require 'shared_resources'
 
-require 'pegasus_sites' if CDO.dashboard_enable_pegasus
-
 require 'bootstrap-sass'
 
 # Require the gems listed in Gemfile, including any gems
@@ -22,7 +20,11 @@ module Dashboard
     config.middleware.use VarnishEnvironment
     config.middleware.use AppsApi
     config.middleware.use SharedResources
-    config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
+
+    if CDO.dashboard_enable_pegasus
+      require 'pegasus_sites'
+      config.middleware.use PegasusSites
+    end
 
     config.encoding = 'utf-8'
 
@@ -72,6 +74,7 @@ module Dashboard
       editor/markdown_editor.js
       editor/blockly_editor.css
       editor/blockly_editor.js
+      levels/*
       react.js
     )
     config.react.variant = :development

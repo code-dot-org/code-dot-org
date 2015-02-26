@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Add to the previous level's solution: score a point each time a snowflake is touched.",
+    "instructions": "Score a point each time a snowflake is touched.  Then steer Anna to touch each snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,18 +39,18 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "250",
+    "timeout_failure_tick": "300",
     "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenSpriteCollided" deletable="false" movable="false" y="0">
+        <block type="studio_whenSpriteCollided" deletable="false" movable="false" y="14">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">anything</title>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" y="100">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="114">
           <title name="VALUE">up</title>
           <next>
             <block type="studio_move" deletable="false" movable="false">
@@ -58,7 +58,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" y="200">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="214">
           <title name="VALUE">down</title>
           <next>
             <block type="studio_move" deletable="false" movable="false">
@@ -66,7 +66,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" y="300">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="314">
           <title name="VALUE">left</title>
           <next>
             <block type="studio_move" deletable="false" movable="false">
@@ -74,7 +74,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" y="400">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="414">
           <title name="VALUE">right</title>
           <next>
             <block type="studio_move" deletable="false" movable="false">
@@ -88,6 +88,9 @@
       <xml>
         <block type="studio_changeScore">
           <title name="VALUE">1</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
         </block>
       </xml>
     </toolbox_blocks>

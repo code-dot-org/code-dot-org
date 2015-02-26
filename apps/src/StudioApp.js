@@ -368,6 +368,9 @@ StudioApp.prototype.init = function(config) {
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
+    if (this.isUsingBlockly()) {
+      Blockly.mainBlockSpace.fireChangeEvent();
+    }
   }, this), 10);
 
   this.reset(true);
@@ -682,7 +685,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;  
+      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -1306,7 +1309,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useContractEditor: config.level.useContractEditor === undefined ?
         false : config.level.useContractEditor,
     defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        0 : config.level.defaultNumExampleBlocks,
+        2 : config.level.defaultNumExampleBlocks,
     scrollbars: config.level.scrollbars,
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks

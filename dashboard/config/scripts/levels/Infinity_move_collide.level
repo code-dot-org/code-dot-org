@@ -35,15 +35,15 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "timeout_failure_tick": "100"
+    "timeout_failure_tick": "100",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="studio_whenSpriteCollided" deletable="false" movable="false" id="eventBlock">
+        <block type="when_run" deletable="false" movable="false" y="14"/>
+        <block type="studio_whenSpriteCollided" deletable="false" movable="false" id="eventBlock" y="114">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
@@ -59,6 +59,9 @@
         <block type="studio_playSound">
           <title name="SOUND">winpoint2</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>        
       </xml>
     </toolbox_blocks>
     <required_blocks>

@@ -613,7 +613,7 @@ SQL
   # used by any user-facing features.
   def hack_progress(options = {})
     options[:script_id] ||= Script.twenty_hour_script.id
-    script = Script.find(options[:script_id])
+    script = Script.get_from_cache(options[:script_id])
 
     options[:levels] ||= script.script_levels.count / 2
 

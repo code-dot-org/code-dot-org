@@ -182,7 +182,7 @@ function initApp() {
       appOptions.level.startBlocks = dashboard.currentApp.levelSource;
     } else {
       dashboard.currentApp = {
-        name: 'Untitled'
+        name: 'My Project'
       };
     }
     $(window).on('run_button_pressed', dashboard.saveProject);

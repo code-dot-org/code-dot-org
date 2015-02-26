@@ -14,7 +14,7 @@
 
 var markup = require('./NetSimSendWidget.html');
 var KeyCodes = require('../constants').KeyCodes;
-var NetSimEncodingSelector = require('./NetSimEncodingSelector');
+var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -61,6 +61,13 @@ var NetSimSendWidget = module.exports = function (connection) {
    * @type {string}
    */
   this.message = '';
+
+  /**
+   * Bits per chunk/byte for parsing and formatting purposes.
+   * @type {number}
+   * @private
+   */
+  this.currentChunkSize_ = 8;
 };
 
 /**
@@ -130,6 +137,21 @@ var whitelistCharacters = function (whitelistRegex) {
   };
 };
 
+/**
+ * Generate a jQuery-appropriate keyup handler for a text field.
+ * Grabs the new value of the text field, runs it through the provided
+ * converter function, sets the result on the SendWidget's internal state
+ * and triggers a re-render of the widget that skips the field being edited.
+ *
+ * Similar to makeBlurHandler, but does not re-render the field currently
+ * being edited.
+ *
+ * @param {string} fieldName - name of internal state field that the text
+ *        field should update.
+ * @param {function} converterFunction - Takes the text field's value and
+ *        converts it to a format appropriate to the internal state field.
+ * @returns {function} that can be passed to $.keyup()
+ */
 NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
@@ -140,6 +162,22 @@ NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunc
   }.bind(this);
 };
 
+/**
+ * Generate a jQuery-appropriate blur handler for a text field.
+ * Grabs the new value of the text field, runs it through the provided
+ * converter function, sets the result on the SendWidget's internal state
+ * and triggers a full re-render of the widget (including the field that was
+ * just edited).
+ *
+ * Similar to makeKeyupHandler, but also re-renders the field that was
+ * just edited.
+ *
+ * @param {string} fieldName - name of internal state field that the text
+ *        field should update.
+ * @param {function} converterFunction - Takes the text field's value and
+ *        converts it to a format appropriate to the internal state field.
+ * @returns {function} that can be passed to $.blur()
+ */
 NetSimSendWidget.prototype.makeBlurHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
@@ -186,8 +224,8 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
       messageConversion: function (decimalString) {
-        return decimalToBinary(decimalString, 8);
-      }
+        return decimalToBinary(decimalString, this.currentChunkSize_);
+      }.bind(this)
     },
     {
       typeName: 'ascii',
@@ -195,8 +233,8 @@ NetSimSendWidget.prototype.bindElements_ = function () {
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
       messageConversion: function (asciiString) {
-        return asciiToBinary(asciiString, 8);
-      }
+        return asciiToBinary(asciiString, this.currentChunkSize_);
+      }.bind(this)
     }
   ];
 
@@ -205,6 +243,12 @@ NetSimSendWidget.prototype.bindElements_ = function () {
     var rowUIKey = rowType.typeName + 'UI';
     this[rowUIKey] = {};
     var rowFields = this[rowUIKey];
+
+    // We attach focus (sometimes) to clear the field watermark, if present
+    // We attach keypress to block certain characters
+    // We attach keyup to live-update the widget as the user types
+    // We attach blur to reformat the edited field when the user leaves it,
+    //    and to catch non-keyup cases like copy/paste.
 
     shortNumberFields.forEach(function (fieldName) {
       rowFields[fieldName] = tr.find('input.' + fieldName);
@@ -252,6 +296,7 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
  * @param {HTMLElement} [skipElement]
  */
 NetSimSendWidget.prototype.render = function (skipElement) {
+  var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
   [
@@ -283,25 +328,25 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   liveFields.push({
     inputElement: this.binaryUI.message,
-    newValue: formatBinary(this.message, 8),
+    newValue: formatBinary(this.message, chunkSize),
     watermark: 'Binary'
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), 2),
+    newValue: formatHex(binaryToHex(this.message), chunkSize),
     watermark: 'Hexadecimal'
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
-    newValue: alignDecimal(binaryToDecimal(this.message, 8)),
+    newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
     watermark: 'Decimal'
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message, 8),
+    newValue: binaryToAscii(this.message, chunkSize),
     watermark: 'ASCII'
   });
 
@@ -339,14 +384,7 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
  */
 NetSimSendWidget.prototype.getPacketBinary_ = function () {
   var shortNumberFieldWidth = 4;
-  var encoder = new PacketEncoder([
-    { key: 'toAddress', bits: shortNumberFieldWidth },
-    { key: 'fromAddress', bits: shortNumberFieldWidth },
-    { key: 'packetIndex', bits: shortNumberFieldWidth },
-    { key: 'packetCount', bits: shortNumberFieldWidth },
-    { key: 'message', bits: Infinity }
-  ]);
-  return encoder.createBinary({
+  return PacketEncoder.defaultPacketEncoder.createBinary({
     toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
     fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
     packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
@@ -361,5 +399,15 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
  * @param {string} newEncoding
  */
 NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingSelector.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+  NetSimEncodingControl.hideRowsByEncoding($('#netsim_send_widget'), newEncoding);
+};
+
+/**
+ * Change how data is interpreted and formatted by this component, triggering
+ * a re-render.
+ * @param {number} newChunkSize
+ */
+NetSimSendWidget.prototype.setChunkSize = function (newChunkSize) {
+  this.currentChunkSize_ = newChunkSize;
+  this.render();
 };

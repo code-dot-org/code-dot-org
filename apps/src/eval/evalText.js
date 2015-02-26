@@ -31,3 +31,7 @@ EvalText.prototype.draw = function (parent) {
 
   EvalImage.prototype.draw.apply(this, arguments);
 };
+
+EvalText.prototype.getText = function () {
+  return this.text_;
+};

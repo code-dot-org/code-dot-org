@@ -546,6 +546,14 @@ html, body {
   }
 }
 
+.project_name {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
 .header_middle {
   position: absolute;
   left: 0;
