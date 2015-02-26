@@ -659,6 +659,10 @@ en:
         a week-long course to learn about computers: a week-long course to learn about computers
         a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
         a secret password: a secret password
+      PDK5 Beyond:
+        What do I do now?: What do I do now?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!
+        Im finished: Im finished
       PDK5 Blockly Intro:
         Writing your first computer program!: Writing your first computer program!
         Are you ready to move on?: Are you ready to move on?
@@ -691,6 +695,10 @@ en:
         shelf: shelf
         bin: bin
         dropdown: dropdown
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Teacher Dashboard
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': 'Yes'
       PDK5 Test1:
         title: title
         description here: description here

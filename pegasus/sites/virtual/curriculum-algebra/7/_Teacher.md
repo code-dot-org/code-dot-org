@@ -41,7 +41,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Teaching Notes on the Big Game
 
-The students will create a mod of an existing game.   As they make changes to the game, it is possible that they will add code that will either “break” the code (cause nothing to happen) or to act in an un-expected way.  If either of these conditions exist, they will need to troubleshoot or debug the code to determine how to get it working in the proper way.  **If things go terribly awry and finding a problem is too frustrating, the Clear Puzzle button in the upper right can come to the rescue.**  This button will reset the current level back to its initial state.
+The students will create a mod of an existing game.   As they make changes to the game, it is possible that they will add code that will either “break” the code (cause nothing to happen) or to act in an un-expected way.  If either of these conditions exist, they will need to troubleshoot or debug the code to determine how to get it working in the proper way.  **If things go terribly awry and finding a problem is too frustrating, the Clear Puzzle button in the upper right can come to the rescue.**  This button will clear your game back to its initial state, so it should only be used as a last resort.
 
 This exercise is a simplified version of a very common real world programming task.  Programmers often create mods of programs about which they know very little.  They slowly unravel which pieces require further understanding in order to make the mod work the way they want and leave other parts of the program completely unexplored.
 

@@ -1069,14 +1069,33 @@ NetSimSendWidget.prototype.render = function (skipElement) {
 
   var packetBinary = this.getPacketBinary_();
   this.bitCounter.html(packetBinary.length + '/Infinity bits');
+
+  // TODO: Hide columns by configuration
+  $('#netsim_send_widget').find('th.packetInfo, td.packetInfo').hide();
 };
 
 /** Send message to connected remote */
 NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
   if (myNode) {
-    myNode.sendMessage(this.getPacketBinary_());
+    this.disableEverything();
+    myNode.sendMessage(this.getPacketBinary_(), function () {
+      var binaryTextarea = $('#netsim_send_widget')
+          .find('tr.binary')
+          .find('textarea');
+      binaryTextarea.val('');
+      binaryTextarea.blur();
+      this.enableEverything();
+    }.bind(this));
   }
+};
+
+NetSimSendWidget.prototype.disableEverything = function () {
+  $('#netsim_send_widget').find('input, textarea').prop('disabled', true);
+};
+
+NetSimSendWidget.prototype.enableEverything = function () {
+  $('#netsim_send_widget').find('input, textarea').prop('disabled', false);
 };
 
 /**
@@ -1127,7 +1146,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_send_widget" class="netsim_send_widget">\n  <h1>Send a Message</h1>\n  <div class="netsim_packet">\n    <table>\n      <thead>\n        <tr>\n          <th nowrap class="encodingLabel"></th>\n          <th nowrap class="toAddress">To</th>\n          <th nowrap class="fromAddress">From</th>\n          <th nowrap class="packetInfo">Packet</th>\n          <th class="message">Message</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr class="ascii">\n          <th nowrap class="encodingLabel">ASCII</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="decimal">\n          <th nowrap class="encodingLabel">Decimal</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="hexadecimal">\n          <th nowrap class="encodingLabel">Hexadecimal</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="binary">\n          <th nowrap class="encodingLabel">Binary</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" class="packetIndex" /> of <input type="text" class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n      </tbody>\n    </table>\n    <div class="bit_counter"></div>\n  </div>\n  <div class="send_widget_footer">\n    <!-- Packet size slider -->\n    <!-- Add packet button -->\n    <input type="button" id="send_button" value="Send" />\n  </div>\n</div>\n'); })();
+ buf.push('<div id="netsim_send_widget" class="netsim_send_widget">\n  <h1>Send a Message</h1>\n  <div class="netsim_packet">\n    <table>\n      <thead>\n        <tr>\n          <th nowrap class="encodingLabel"></th>\n          <th nowrap class="toAddress">To</th>\n          <th nowrap class="fromAddress">From</th>\n          <th nowrap class="packetInfo">Packet</th>\n          <th class="message">Message</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr class="ascii">\n          <th nowrap class="encodingLabel">ASCII</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="decimal">\n          <th nowrap class="encodingLabel">Decimal</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="hexadecimal">\n          <th nowrap class="encodingLabel">Hexadecimal</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n        <tr class="binary">\n          <th nowrap class="encodingLabel">Binary</th>\n          <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n          <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n          <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n          <td class="message"><div><textarea class="message"></textarea></div></td>\n        </tr>\n      </tbody>\n    </table>\n    <div class="bit_counter"></div>\n  </div>\n  <div class="send_widget_footer">\n    <!-- Packet size slider -->\n    <!-- Add packet button -->\n    <input type="button" id="send_button" value="Send" />\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1295,7 +1314,7 @@ var DnsMode = NetSimRouterNode.DnsMode;
     // Create rows
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
-    ; buf.push('\n    <tr class="', escape((27,  rowClasses.join(' ') )), '">\n      <td nowrap>', escape((28,  logEntry.getToAddress() )), '</td>\n      <td nowrap>', escape((29,  logEntry.getFromAddress() )), '</td>\n      <td>', escape((30,  logEntry.getMessageBinary() )), '</td>\n      <td nowrap>', escape((31,  logEntry.packet.length )), '</td>\n    </tr>\n    ');33;
+    ; buf.push('\n    <tr class="', escape((27,  rowClasses.join(' ') )), '">\n      <td nowrap>', escape((28,  logEntry.getToAddress() )), '</td>\n      <td nowrap>', escape((29,  logEntry.getFromAddress() )), '</td>\n      <td>', escape((30,  logEntry.getMessageAscii() )), '</td>\n      <td nowrap>', escape((31,  logEntry.packet.length )), '</td>\n    </tr>\n    ');33;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -1495,6 +1514,8 @@ NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
   this.clearButton_ = this.rootDiv_.find('.clear_button');
   this.clearButton_.click(this.onClearButtonPress_.bind(this));
+  // TODO: Hide columns by configuration
+  this.rootDiv_.find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
@@ -1598,6 +1619,8 @@ NetSimLogPacket.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  // TODO: Hide columns by configuration
+  jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
 };
 
@@ -2110,7 +2133,12 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
 NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
   this.lobbyList_.empty();
 
-  lobbyData.sort(function (a, b) {
+  // TODO: Filter based on level configuration
+  var filteredLobbyData = lobbyData.filter(function (simNode) {
+    return simNode.getNodeType() === NetSimRouterNode.getNodeType();
+  });
+
+  filteredLobbyData.sort(function (a, b) {
     // TODO (bbuchanan): Make this sort localization-friendly.
     if (a.getDisplayName() > b.getDisplayName()) {
       return 1;
@@ -2119,7 +2147,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
   });
 
   this.selectedListItem_ = undefined;
-  lobbyData.forEach(function (simNode) {
+  filteredLobbyData.forEach(function (simNode) {
     var item = $('<li>').html(
         simNode.getDisplayName() + ' : ' +
         simNode.getStatus() + ' ' +
@@ -3153,18 +3181,24 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
- * How often a cleaning job should be kicked off.
+ * Minimum delay between attempts to start a cleaning job.
  * @type {number}
  */
-var CLEANING_RETRY_INTERVAL_MS = 60000;
-var CLEANING_SUCCESS_INTERVAL_MS = 300000;
+var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
 /**
- * How long a cleaning lock (heartbeat) must be untouched before can be
- * ignored and cleaned up by another client.
+ * Minimum delay before the next cleaning job is started after
+ * a cleaning job has finished successfully.
  * @type {number}
  */
-var CLEANING_HEARTBEAT_TIMEOUT = 15000;
+var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
+
+/**
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 60000; // 1 minute
 
 /**
  * Special heartbeat type that acts as a cleaning lock across the shard
@@ -3209,7 +3243,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
-              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
+              Date.now() - row.time < HEARTBEAT_TIMEOUT_MS;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
@@ -3543,13 +3577,6 @@ var CleanHeartbeats = function (cleaner) {
 CleanHeartbeats.inherits(CommandSequence);
 
 /**
- * How old a heartbeat can be without being cleaned up.
- * @type {number}
- * @const
- */
-var HEARTBEAT_TIMEOUT_MS = 30000;
-
-/**
  * @private
  * @override
  */
@@ -3758,10 +3785,12 @@ var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+  this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_l'));
+  this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
@@ -3802,7 +3831,7 @@ var ObservableEvent = require('../ObservableEvent');
  * updates from the server.
  * @type {number}
  */
-var POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 5000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -3841,6 +3870,14 @@ var NetSimTable = module.exports = function (storageTable) {
    * @private
    */
   this.lastFullUpdateTime_ = 0;
+
+  /**
+   * Minimum time (in milliseconds) to wait between pulling full table contents
+   * from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
 NetSimTable.prototype.readAll = function (callback) {
@@ -3939,9 +3976,20 @@ NetSimTable.prototype.arrayFromCache_ = function () {
   return result;
 };
 
+/**
+ * Changes how often this table fetches a full table update from the
+ * server.
+ * @param {number} intervalMs - milliseconds of delay between updates.
+ */
+NetSimTable.prototype.setPollingInterval = function (intervalMs) {
+  this.pollingInterval_ = intervalMs;
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
-  if (Date.now() - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+  var now = Date.now();
+  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
+    this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
 };
@@ -4127,9 +4175,13 @@ NetSimRouterNode.create = function (shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
+      router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
       });
@@ -4157,7 +4209,11 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
       router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       onComplete(router);
     });
   });
@@ -4617,6 +4673,7 @@ var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var binaryToInt = dataConverters.binaryToInt;
 var formatBinary = dataConverters.formatBinary;
+var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * @type {number}
@@ -4737,6 +4794,11 @@ NetSimLogEntry.prototype.getMessageBinary = function () {
       BITS_PER_BYTE);
 };
 
+NetSimLogEntry.prototype.getMessageAscii = function () {
+  return binaryToAscii(
+      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
+      BITS_PER_BYTE);
+};
 },{"../utils":214,"./NetSimEntity":130,"./PacketEncoder":157,"./dataConverters":159}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -5473,10 +5535,12 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
 /**
  * Put a message on our outgoing wire, to whatever we are connected to
  * at the moment.
- * @param payload
+ * @param {string} payload
+ * @param {function} onComplete
  */
-NetSimLocalClientNode.prototype.sendMessage = function (payload) {
+NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   if (!this.myWire) {
+    onComplete();
     return;
   }
 
@@ -5493,6 +5557,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload) {
         } else {
           logger.error('Failed to send message: ' + JSON.stringify(payload));
         }
+        onComplete();
       }
   );
 };
@@ -5813,10 +5878,12 @@ var NetSimEntity = require('./NetSimEntity');
 
 /**
  * How often a heartbeat is sent, in milliseconds
+ * Six seconds, against the one-minute timeout over in NetSimShardCleaner,
+ * gives a heartbeat at least nine chances to update before it gets cleaned up.
  * @type {number}
  * @const
  */
-var HEARTBEAT_INTERVAL_MS = 5000;
+var DEFAULT_HEARTBEAT_INTERVAL_MS = 6000;
 
 /**
  * Sends regular heartbeat messages to the heartbeat table on the given
@@ -5838,8 +5905,17 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   /** @type {number} Row ID in node table */
   this.nodeID = row.nodeID;
 
-  /** @type {number} unix timestamp (ms) */
+  /**
+   * @type {number} unix timestamp (ms)
+   * @private
+   */
   this.time_ = row.time !== undefined ? row.time : Date.now();
+
+  /**
+   * @type {number} How often heartbeat is sent, in milliseconds
+   * @private
+   */
+  this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -5908,11 +5984,22 @@ NetSimHeartbeat.prototype.buildRow_ = function () {
 };
 
 /**
+ * Change how often this heartbeat attempts to update its remote storage
+ * self.  Default value is 6 seconds.  Warning! If set too high, this
+ * heartbeat may be seen as expired by another client and get cleaned up!
+ *
+ * @param {number} intervalMs - time between udpates, in milliseconds
+ */
+NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
+  this.intervalMs_ = intervalMs;
+};
+
+/**
  * Updates own row on regular interval, as long as something's making
  * it tick.
  */
 NetSimHeartbeat.prototype.tick = function () {
-  if (Date.now() - this.time_ > HEARTBEAT_INTERVAL_MS) {
+  if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
     this.update();
   }
@@ -6054,7 +6141,7 @@ NetSimNode.prototype.getDisplayName = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getHostname = function () {
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
+  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase() + this.entityID;
 };
 
 /**
