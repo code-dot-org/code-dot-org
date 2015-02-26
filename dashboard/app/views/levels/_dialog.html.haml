@@ -1,9 +1,10 @@
 / This partial contains general logic+view for displaying modal dialogs and handling submit button interactions.
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
-.buttons
-  %a.btn.btn-large.btn-primary.next-stage.submitButton
-    Submit
+- unless app == 'external'
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      Submit
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
@@ -158,7 +159,12 @@
             showVideoDialog(lastServerResponse.videoInfo);
           } else if (lastServerResponse.nextRedirect)
           {
-            showDialog("success");
+            if(#{data['options'].try(:[], 'skip_dialog').blank?})
+            {
+              showDialog("success");
+            } else {
+              window.location.href = lastServerResponse.nextRedirect;
+            }
           }
         }
       });
