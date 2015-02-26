@@ -73,6 +73,9 @@ var baseOptions = {
     });
   },
   onAttempt: function(report) {
+    if (appOptions.level.isProjectLevel) {
+      return;
+    }
     report.fallbackResponse = appOptions.report.fallback_response;
     report.callback = appOptions.report.callback;
     // Track puzzle attempt event
