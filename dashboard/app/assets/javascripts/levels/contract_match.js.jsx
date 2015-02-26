@@ -53,7 +53,10 @@ $(window).load(function () {
     getDomainTypes: function () {
       return this.state.domainTypes;
     },
-    maxDomainID: 0,
+    nextUniqueID_: 0,
+    grabUniqueID: function() {
+      return (this.nextUniqueID_++);
+    },
     getInitialState: function () {
       /**
        * @param data {{
@@ -70,7 +73,7 @@ $(window).load(function () {
         rangeType: blockValueType.NONE,
         domainTypes: [
           {
-            key: 'domain' + (this.maxDomainID++),
+            key: 'domain' + this.grabUniqueID(),
             type: blockValueType.NONE,
             order: 0
           }
@@ -99,7 +102,7 @@ $(window).load(function () {
       });
     },
     onDomainAdd: function () {
-      var nextDomainID = this.maxDomainID++;
+      var nextDomainID = this.grabUniqueID();
       this.setState({
         domainTypes:
           this.state.domainTypes.concat({
