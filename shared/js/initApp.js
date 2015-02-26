@@ -168,11 +168,13 @@ dashboard.saveProject = function(callback) {
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
+      dashboard.currentApp = data;
       callbackSafe(callback, data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
-      location.hash = dashboard.currentApp.id = data.id;
+      dashboard.currentApp = data;
+      location.hash = dashboard.currentApp.id;
       callbackSafe(callback, data);
     });
   }
