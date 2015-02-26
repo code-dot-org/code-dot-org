@@ -28,6 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "ideal": "12",
+    "failure_message_override": "Nice attempt! Try again to get it right.",
     "maze_data": null
   }
 }]]></config>

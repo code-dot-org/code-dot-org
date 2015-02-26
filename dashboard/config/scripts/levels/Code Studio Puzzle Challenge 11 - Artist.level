@@ -27,7 +27,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "ideal": "11"
+    "ideal": "11",
+    "failure_message_override": "Nice attempt! Try again to get it right."
   }
 }]]></config>
   <blocks>
