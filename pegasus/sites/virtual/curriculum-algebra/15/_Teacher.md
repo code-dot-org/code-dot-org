@@ -32,8 +32,9 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 
 ### <a name="GetStarted"></a> 1) Introduction
+The functions being built for Sam the Bat are tied to his positioning.  When these functions evaluate as true, he can fly.  When these function evaluate as false, he is repositioned back to the last spot that had a “true” position. 
 
-
+The students will incrementally check Sam's right, left, up, and down positions.  The final puzzle is the culmination of all of these Boolean functions in one grand complex evaluation.
 
 [/together]
 

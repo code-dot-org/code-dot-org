@@ -118,7 +118,7 @@ Play this several times.  Be creative with using or’s and and’s.  Remind stu
 
 Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
 
-And how does this all connect with our game?  Is the player too far left or too far right?
+And how does this all connect with our game?  Is the target too far left or too far right?  If so, then perhaps some action should occur.
 
 [/together]
 

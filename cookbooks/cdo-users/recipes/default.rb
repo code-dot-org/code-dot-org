@@ -7,6 +7,8 @@ require 'chef/user'
 require 'chef/client'
 
 apt_package 'awscli' # AWS command-line tools
+apt_package 'emacs'
+apt_package 'zsh'
 
 #
 # For each user defined in cdo-users, ensure there is a basic home folder.
