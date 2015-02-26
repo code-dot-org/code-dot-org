@@ -67,6 +67,8 @@ body {
   font-size: 18px;
   margin: 0.9375em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
+  color: white;
+  text-decoration: none;
 }
 
 .headerlink:link,
@@ -79,6 +81,10 @@ body {
 .headerlink:active {
   color: white;
   border-bottom: solid 2px rgb(255, 128, 0);
+}
+
+.learnoption:hover {
+  text-decoration: underline;
 }
 
 #pagefooter {

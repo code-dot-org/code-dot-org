@@ -38,7 +38,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'show stage position in header for default script' do
     self.stubs(:current_user).returns(nil)
-    script_level = Script.find(Script::TWENTY_HOUR_ID).script_levels.fifth
+    script_level = Script.twenty_hour_script.script_levels.fifth
     assert_equal 'Stage 2: The Maze', header_progress(script_level)[:title]
   end
 
