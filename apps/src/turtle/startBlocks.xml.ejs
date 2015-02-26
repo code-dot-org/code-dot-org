@@ -355,7 +355,9 @@ var spiral = function(i) {
           </mutation>
           <value name="ARG0">
             <% if (level == 8) { -%>
-              <block type="variables_get_<%= msg.lengthParameter() %>"></block>
+              <block type="variables_get">
+                <title name="VAR"><%= msg.lengthParameter() %></title>
+              </block>
             <% } else { -%>
               <block type="math_number">
                 <title name="NUM">100</title>
@@ -367,7 +369,9 @@ var spiral = function(i) {
               <title name="DIR">moveForward</title>
               <value name="VALUE">
                 <% if (level == 8) { -%>
-                  <block type="variables_get_<%= msg.lengthParameter() %>"></block>
+                  <block type="variables_get">
+                    <title name="VAR"><%= msg.lengthParameter() %></title>
+                  </block>
                 <% } else { -%>
                   <block type="math_number">
                     <title name="NUM">100</title>
@@ -389,7 +393,9 @@ var spiral = function(i) {
                       </mutation>
                       <value name="ARG0">
                         <% if (level == 8) { -%>
-                          <block type="variables_get_<%= msg.lengthParameter() %>"></block>
+                          <block type="variables_get">
+                            <title name="VAR"><%= msg.lengthParameter() %></title>
+                          </block>
                         <% } else { -%>
                           <block type="math_number">
                             <title name="NUM">100</title>

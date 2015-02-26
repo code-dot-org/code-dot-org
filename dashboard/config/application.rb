@@ -8,8 +8,6 @@ require 'varnish_environment'
 require 'apps_api'
 require 'shared_resources'
 
-require 'pegasus_sites' if CDO.dashboard_enable_pegasus
-
 require 'bootstrap-sass'
 
 # Require the gems listed in Gemfile, including any gems
@@ -23,6 +21,11 @@ module Dashboard
     config.middleware.use AppsApi
     config.middleware.use SharedResources
     config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
+
+    if CDO.dashboard_enable_pegasus
+      require 'pegasus_sites'
+      config.middleware.use PegasusSites
+    end
 
     config.encoding = 'utf-8'
 
@@ -66,7 +69,15 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
-    config.assets.precompile += ['**/blockly_editor*', 'react.js', 'levels/*']
+    config.assets.precompile += %w(
+      epiceditor/*.css
+      editor/markdown_editor.css
+      editor/markdown_editor.js
+      editor/blockly_editor.css
+      editor/blockly_editor.js
+      levels/*
+      react.js
+    )
     config.react.variant = :development
     config.react.addons = true
   end

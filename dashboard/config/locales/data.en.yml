@@ -445,6 +445,7 @@ en:
         'playlab_intro' : 'Introduction to Play Lab'
         'playlab_events' : 'Play Lab Events'
         'playlab_repeat_forever' : 'Play Lab Repeat Forever'
+        'tutorial_puzzle_challenge': 'Tutorial Puzzle Challenge'
     callout:
       text:
         # Keyed by #{callout.localization_key}

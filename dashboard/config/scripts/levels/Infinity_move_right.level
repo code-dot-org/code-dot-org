@@ -42,7 +42,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" x="100" id="whenRun"/>
+        <block type="when_run" deletable="false" movable="false" id="whenRun"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -67,6 +67,9 @@
           <title name="DIR">4</title>
           <title name="DISTANCE">200</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>        
       </xml>
     </toolbox_blocks>
     <required_blocks>

@@ -90,6 +90,7 @@ en-US:
   learn_classes: "Find local classes"
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: "Learn an Hour of Code"
   beyond_hoc: "Beyond One Hour"
   what_gender: "What gender are you?"
@@ -122,6 +123,25 @@ en-US:
   studiobar_donate_body: "One child learns for each dollar you donate"
   studiobar_shop_title: "Shop"
   studiobar_shop_body: "Break stereotypes. Wear our logo with pride."
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: "The Hour of Code"
+  homepage_slot_text_frozen: "Frozen with Anna and Elsa"
+  homepage_slot_text_teacher: "Teacher Dashboard"
+  homepage_slot_text_studio: "All of our tutorials"
+  homepage_slot_text_course4: "Course 4"
+  homepage_slot_text_shop: "Shop"
+  homepage_slot_text_flappy: "Flappy Code"
+  homepage_watchvideo: "Watch the video"
+  homepage_signpetition: "Sign the petition"
+  homepage_signpetition_dropdown: "Sign our petition &#x25BE;"
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -289,6 +309,8 @@ en-US:
   dashboard_login_picture: "Picture"
   dashboard_login_none: "Email"
   dashboard_new_password: "new password"
+  dashboard_progress_not_started: "not started"
+  dashboard_progress_in_progress: "in progress"
   dashboard_progress_not_completed: "not completed"
   dashboard_progress_completed_too_many_blocks: "completed, too many blocks"
   dashboard_progress_completed_perfect: "completed, perfect"

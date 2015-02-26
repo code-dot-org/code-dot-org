@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":145}],13:[function(require,module,exports){
+},{"../skins":166}],13:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -75,79 +75,125 @@ levels.ec_simple = {
   'appWidth': 320,
   'appHeight': 480,
   'codeFunctions': {
-    'onEvent': null,
-    'startWebRequest': null,
-    'setTimeout': null,
-    'clearTimeout': null,
-    'playSound': null,
-    'deleteElement': null,
-    'showElement': null,
-    'hideElement': null,
-    'setPosition': null,
-    'getXPosition': null,
-    'getYPosition': null,
-    'button': null,
-    'textInput': null,
-    'textLabel': null,
-    'dropdown': null,
-    'getText': null,
-    'setText': null,
-    'checkbox': null,
-    'radioButton': null,
-    'getChecked': null,
-    'setChecked': null,
-    'image': null,
-    'getImageURL': null,
-    'setImageURL': null,
-    'createCanvas': null,
-    'setActiveCanvas': null,
-    'line': null,
-    'circle': null,
-    'rect': null,
-    'setStrokeWidth': null,
-    'setStrokeColor': null,
-    'setFillColor': null,
-    'drawImage': null,
-    'getImageData': null,
-    'putImageData': null,
-    'clearCanvas': null,
-    'getKeyValue': null,
-    'setKeyValue': null,
-    'createRecord': null,
-    'readRecords': null,
-    'updateRecord': null,
-    'deleteRecord': null,
-    'getUserId': null,
-    'moveForward': null,
-    'moveBackward': null,
-    'move': null,
-    'moveTo': null,
-    'turnRight': null,
-    'turnLeft': null,
-    'turnTo': null,
-    'arcRight': null,
-    'arcLeft': null,
-    'dot': null,
-    'getX': null,
-    'getY': null,
-    'getDirection': null,
-    'penUp': null,
-    'penDown': null,
-    'penWidth': null,
-    'penColor': null,
-    'show': null,
-    'hide': null,
+    // UI Controls
+    "onEvent": null,
+    "button": null,
+    "textInput": null,
+    "textLabel": null,
+    "dropdown": null,
+    "getText": null,
+    "setText": null,
+    "checkbox": null,
+    "radioButton": null,
+    "getChecked": null,
+    "setChecked": null,
+    "image": null,
+    "getImageURL": null,
+    "setImageURL": null,
+    "playSound": null,
+    "showElement": null,
+    "hideElement": null,
+    "deleteElement": null,
+    "setPosition": null,
+    "getXPosition": null,
+    "getYPosition": null,
+
+    // Canvas
+    "createCanvas": null,
+    "setActiveCanvas": null,
+    "line": null,
+    "circle": null,
+    "rect": null,
+    "setStrokeWidth": null,
+    "setStrokeColor": null,
+    "setFillColor": null,
+    "drawImage": null,
+    "getImageData": null,
+    "putImageData": null,
+    "clearCanvas": null,
+
+    // Data
+    "startWebRequest": null,
+    "setKeyValue": null,
+    "getKeyValue": null,
+    "createRecord": null,
+    "readRecords": null,
+    "updateRecord": null,
+    "deleteRecord": null,
+    "getUserId": null,
+
+    // Turtle
+    "moveForward": null,
+    "moveBackward": null,
+    "move": null,
+    "moveTo": null,
+    "dot": null,
+    "turnRight": null,
+    "turnLeft": null,
+    "turnTo": null,
+    "arcRight": null,
+    "arcLeft": null,
+    "getX": null,
+    "getY": null,
+    "getDirection": null,
+    "penUp": null,
+    "penDown": null,
+    "penWidth": null,
+    "penColor": null,
+    "show": null,
+    "hide": null,
+
+    // Control
+    "setTimeout": null,
+    "clearTimeout": null,
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "notOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "console.log": null,
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
   },
 };
 
 // Functions in Advanced category currently disabled in all levels:
 /*
- 'container': null,
- 'innerHTML': null,
- 'setStyle': null,
- 'getAttribute': null,
- 'setAttribute': null,
- 'setParent': null,
+ "imageUploadButton": null,
+ "container": null,
+ "innerHTML": null,
+ "setStyle": null,
+ "getAttribute": null,
+ "setAttribute": null,
+ "setParent": null,
 */
 
 levels.full_sandbox =  {
@@ -233,7 +279,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":188,"../block_utils":18,"../utils":186}],8:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../block_utils":18,"../utils":212}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -254,6 +300,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
@@ -1191,7 +1238,7 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -2646,7 +2693,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../StudioApp":4,"../codegen":43,"../constants":45,"../dom":46,"../skins":145,"../slider":146,"../templates/page.html":166,"../utils":186,"../xml":187,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":166,"../slider":167,"../templates/page.html":191,"../utils":212,"../xml":213,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2666,7 +2713,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":207}],12:[function(require,module,exports){
+},{"ejs":233}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2686,7 +2733,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"ejs":207}],11:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"ejs":233}],11:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
@@ -2755,6 +2802,8 @@ module.exports.blocks = [
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
 
+  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ["'Message'"], 'dontAlias': true },
+
   {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
   {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
   {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
@@ -2785,10 +2834,6 @@ module.exports.categories = {
     'color': 'blue',
     'blocks': []
   },
-  'Control': {
-    'color': 'blue',
-    'blocks': []
-  },
 };
 
 },{}],10:[function(require,module,exports){
@@ -2811,7 +2856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":191,"ejs":207}],9:[function(require,module,exports){
+},{"../../locale/current/common":217,"ejs":233}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2884,7 +2929,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":188,"../../locale/current/common":191,"../codegen":43,"../utils":186}],188:[function(require,module,exports){
+},{"../../locale/current/applab":214,"../../locale/current/common":217,"../codegen":44,"../utils":212}],214:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';

@@ -10,8 +10,6 @@ module LevelsHelper
     case script_level.script_id
     when Script::HOC_ID
       script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::TWENTY_HOUR_ID
-      script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID
       editcode_chapter_path(script_level.chapter)
     when Script::TWENTY_FOURTEEN_LEVELS_ID
@@ -39,7 +37,7 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts_and_instructions
+  def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
     @callouts = select_and_remember_callouts(@script_level.nil?)
 
@@ -52,8 +50,6 @@ module LevelsHelper
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
     end
-
-    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -155,13 +151,6 @@ module LevelsHelper
     "false"
   end
 
-  def localize_levelbuilder_instructions
-    if I18n.locale != 'en-us'
-      loc_val = data_t("instructions", "#{@level.name}_instruction")
-      @level.properties['instructions'] = loc_val unless loc_val.nil?
-    end
-  end
-
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
@@ -242,6 +231,7 @@ module LevelsHelper
       project_template_level_name
       scrollbars
       original_start_blocks
+      is_project_level
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -273,12 +263,19 @@ module LevelsHelper
       level.delete('fn_failureCondition')
     end
 
-    # Fetch localized strings
-    %w(instructions).each do |label|
-      val = [@level.game.app, @level.game.name].map { |name|
-        data_t("level.#{label}", "#{name}_#{@level.level_num}")
-      }.compact.first
-      level[label] ||= val unless val.nil?
+    #Fetch localized strings
+    if @level.level_num_custom?    
+      loc_val = data_t("instructions", "#{@level.name}_instruction")
+      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+        level['instructions'] = loc_val
+      end
+    else
+      %w(instructions).each do |label|
+        val = [@level.game.app, @level.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{@level.level_num}")
+        }.compact.first
+        level[label] ||= val unless val.nil?
+      end
     end
 
     # Set some values that Blockly expects on the root of its options string
@@ -301,7 +298,7 @@ module LevelsHelper
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
     app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
-    app_options[:level_source_id] = @level_source_id if @level_source_id
+    app_options[:level_source_id] = @level_source.id if @level_source
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
@@ -322,7 +319,7 @@ module LevelsHelper
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
     elsif File.extname(path).ends_with? '_blocks'
-      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      # '.start_blocks' takes the XML from the start_bslocks of the specified level.
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)

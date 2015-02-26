@@ -1,5 +1,11 @@
 <div id="netsim_log_widget_<%= logInstanceID %>" class="netsim_log_widget">
-  <h1><%= logTitle %></h1>
-  <textarea id="scroll_area"></textarea>
-  <input type="button" id="clear_button" value="Clear" />
+  <h1><%= logTitle %>
+    <div class="log_header_controls">
+      <input type="button" class="clear_button" value="Clear" />
+    </div>
+  </h1>
+  <div class="log_body">
+    <div class="scroll_area">
+    </div>
+  </div>
 </div>

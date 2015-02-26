@@ -20,7 +20,15 @@
     "step_mode": "0",
     "nectar_goal": "1",
     "honey_goal": "0",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "ideal": "4",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

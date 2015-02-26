@@ -28,7 +28,14 @@
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
     "callout_json": "[\r\n]",
-    "maze_data": null
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null,
+    "custom_game_type": "Big Game"
   }
 }]]></config>
   <blocks/>
