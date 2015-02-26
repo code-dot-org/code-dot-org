@@ -1,0 +1,55 @@
+---
+layout: none
+template: none
+---
+%a{href:'/ops-dashboard'}
+  Ops Dashboard
+>
+%a{href:'/ops-dashboard#/workshops'}
+  Workshops
+>
+%span
+  Workshop Management
+
+%h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
+%h1{'ng-show' => '!workshop.id'} Add a workshop
+
+%h3
+  Workshop Name
+%input.form-control{type: 'text', 'ng-model' => 'workshop.name'}
+%h3
+  Program Type
+%select.form-control{'ng-model' => 'workshop.program_type'}
+  %option{'ng-repeat' => 'program in programs', 'value' => '{{program.name}}'}
+    {{program.name}}
+%h3
+  Assigned Cohort
+%select.form-control{'ng-model' => 'workshop.cohort_id'}
+  %option{'ng-repeat' => 'cohort in cohorts', 'value' => '{{cohort.id}}'}
+    {{cohort.name}}
+%br
+%button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
+%hr
+%h2{'ng-hide' => 'workshopSegments.length <= 0'}
+  Workshop segments
+%div{'ng-repeat' => 'segment in workshopSegments'}
+  %p
+    {{segment.start | date:'longDate'}}
+  %span
+    {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+  %br
+  %br
+  %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
+    Delete Segment
+  %hr
+%h2
+  Add a new segment
+%div
+  Segment Start
+  %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+  Segment End
+  %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+  %br
+  %br
+  %button{'ng-click' => 'saveSegment(segment)'}
+    Save Segment
