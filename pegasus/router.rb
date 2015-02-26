@@ -80,6 +80,7 @@ class Documents < Sinatra::Base
       Honeybadger.configure do |config|
         config.api_key = CDO.pegasus_honeybadger_api_key
         config.ignore << 'Sinatra::NotFound'
+        config.ignore << 'Table::NotFound'
       end
     end
 

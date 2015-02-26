@@ -1,10 +1,10 @@
 :css
-  textarea { 
-    width: 100% 
+  textarea {
+    width: 100%
   }
-  
+
   button {
-    font-size: 100%; 
+    font-size: 100%;
   }
 
 - content_for(:head) do
@@ -113,7 +113,7 @@
           %td Callout text
         %tr
           %td
-            %input{class: "element_id", type: 'text', placeholder: '#runButton'}          
+            %input{class: "element_id", type: 'text', placeholder: '#runButton'}
           %td
             %input{class: "localization_key", type: 'text', placeholder: 'level_name_callout1'}
           %td{colspan: 4}
@@ -125,7 +125,7 @@
           %td X distance
           %td Y distance
           %td Hide qtip?
-        %tr   
+        %tr
           %td
             %select{class: "qtip_position_my"}
               %option{value: 'top left'} Top left
@@ -155,7 +155,7 @@
               %option{value: 'left center'} Left center
               %option{value: 'left top'} Left top
           %td
-            %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}     
+            %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}
           %td
             %input{class: "qtip_position_adjust_x" , type: 'number', style: 'width: 80px;'}
           %td
@@ -163,10 +163,10 @@
           %td
             %input{class: "qtip_hide", type: 'checkbox'}
       %button{id: "remove_callout", type: 'button'} X Remove callout
-      %hr      
+      %hr
   %div{id: "all_callouts_editor"}
   %button{id: "add_callout", type: 'button'} + Add a callout
-    
+
 .field
   = f.label :callout_json
   = f.text_area :callout_json, rows: 4
@@ -198,6 +198,10 @@
     %li autocreate a project that is shared with all levels with the same project template level
   %p (Leave blank if you do not want all of this)
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+.field
+  = f.label :failure_message_override, 'Failure Message Override'
+  %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+  = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
 -if @level.respond_to? :solution_blocks
   .field
     - if @level.game.uses_droplet?
@@ -280,7 +284,7 @@
       updated_callouts[i].qtip_config.position.at = calloutSpace.find('.qtip_position_at').val();
       updated_callouts[i].qtip_config.position.adjust.x = parseInt(calloutSpace.find('.qtip_position_adjust_x').val());
       updated_callouts[i].qtip_config.position.adjust.y = parseInt(calloutSpace.find('.qtip_position_adjust_y').val());
-      
+
       if ($('.callout_' + id + ' .qtip_hide').prop("checked") == true) {
         updated_callouts[i].qtip_config.style.classes = "no-tip";
       }

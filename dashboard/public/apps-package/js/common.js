@@ -7685,6 +7685,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
 
 // This returns a document element with the appropriate feedback message.
 // The message will be one of the following, from highest to lowest precedence:
+// 0. Failure override message specified on level (options.level.failureMessageOverride)
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
 // 3. Header message due to dashboard text check fail (options.response.share_failure).
@@ -7698,7 +7699,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.message) {
+  if (options.feedbackType !== TestResults.ALL_PASS &&
+      options.level.failureMessageOverride) {
+    message = options.level.failureMessageOverride;
+  } else  if (options.message) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
