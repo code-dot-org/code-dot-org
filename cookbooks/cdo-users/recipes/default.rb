@@ -28,7 +28,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   group user_name do
     members user_name
   end
-
+  
   # Create the user's home directory
   directory home_directory do
     owner user_name
@@ -144,4 +144,14 @@ node['cdo-users'].each_pair do |user_name, user_data|
     mode '0600'
   end
 
+end
+
+# Create the user's group
+group 'chef' do
+  members node['cdo-users'].keys
+end
+
+file '/etc/chef/validation.pem' do
+  group 'chef'
+  mode '0660'
 end
