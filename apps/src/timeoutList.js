@@ -1,29 +1,29 @@
-var list = [];
+var timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  list.push(window.setTimeout.apply(window, arguments));
+  timeoutList.push(window.setTimeout.apply(window, arguments));
 };
 
 /**
- * Clears all timeouts in our list and resets the list
+ * Clears all timeouts in our timeoutList and resets the timeoutList
  */
 exports.clearTimeouts = function () {
-  list.forEach(window.clearTimeout, window);
-  list = [];
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
 };
 
 /**
- * Clears a timeout and removes the item from the list
+ * Clears a timeout and removes the item from the timeoutList
  */
 exports.clearTimeout = function (id) {
   window.clearTimeout(id);
   // List removal requires IE9+
-  var index = list.indexOf(id);
+  var index = timeoutList.indexOf(id);
   if (index > -1) {
-    list.splice(index, 1);
+    timeoutList.splice(index, 1);
   }
 };
 
@@ -37,7 +37,7 @@ exports.setInterval = function (fn, time) {
 };
 
 /**
- * Clears all interval timeouts in our list and resets the list
+ * Clears all interval timeouts in our intervalList and resets the intervalList
  */
 exports.clearIntervals = function () {
   intervalList.forEach(window.clearInterval, window);
@@ -45,7 +45,7 @@ exports.clearIntervals = function () {
 };
 
 /**
- * Clears a timeout and removes the item from the list
+ * Clears a timeout and removes the item from the intervalList
  */
 exports.clearInterval = function (id) {
   window.clearInterval(id);
