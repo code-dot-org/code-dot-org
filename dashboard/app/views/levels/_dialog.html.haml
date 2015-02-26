@@ -51,58 +51,51 @@
   var dialogType = null;
   var adjustedScroll = false;
 
-  $(function()
-  {
-    if ("#{data['pre_title']}" != "")
-    {
-      setTimeout(function() {
+  $(function () {
+    if ("#{data['pre_title']}" != "") {
+      setTimeout(function () {
         showDialog("pre");
-        }, 1000);
+      }, 1000);
     }
   });
 
-  function dialogHidden()
-  {
-    if (dialogType == "success" && lastServerResponse.nextRedirect)
-    {
+  function dialogHidden() {
+    if (dialogType == "success" && lastServerResponse.nextRedirect) {
       window.location.href = lastServerResponse.nextRedirect;
     }
 
-    if (dialogType == "error")
-    {
+    if (dialogType == "error") {
       adjustScroll();
     }
   }
 
-  function showDialog(type)
-  {
+  function showDialog(type) {
     dialogType = type;
 
     var dialog = new Dialog({ body: "", onHidden: dialogHidden });
 
-    // use our prefabricated dialog content
+    // Use our prefabricated dialog content.
     $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
 
-    // clicking the okay button in the dialog box dismisses it
-    $(".modal-body #ok-button").click(function() {
+    // Clicking the okay button in the dialog box dismisses it.
+    $(".modal-body #ok-button").click(function () {
       dialog.hide();
     });
 
     dialog.show();
   }
 
-  function adjustScroll()
-  {
-    if (adjustedScroll)
+  function adjustScroll() {
+    if (adjustedScroll) {
       return;
+    }
 
     var win = $(window);
     var el = $('.mainblock');
     var winPos = win.scrollTop() + win.height();
     var elPos = el.offset().top + el.height() - 10;
 
-    if (winPos < elPos)
-    {
+    if (winPos < elPos) {
       $('html, body').animate({
         scrollTop: $(".submitButton:first").offset().top - 10
       }, 1000);
@@ -111,8 +104,7 @@
     adjustedScroll = true;
   }
 
-  $('.submitButton').click(function()
-  {
+  $('.submitButton').click(function () {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
@@ -121,8 +113,7 @@
     // Avoid multiple simultaneous submissions.
     $('.submitButton').attr('disabled', true);
 
-    if (!result)
-    {
+    if (!result) {
       showDialog(errorType || "error");
       CDOSounds.play('failure');
     } else {
@@ -137,18 +128,15 @@
       level: '#{@level.level_num}',
       result: result,
       testResult: result ? 100 : 0,
-      onComplete: function() {
-        if (!lastServerResponse.nextRedirect)
-        {
+      onComplete: function () {
+        if (!lastServerResponse.nextRedirect) {
           $('.submitButton').attr('disabled', false);
         }
         if (lastServerResponse.videoInfo)
         {
           showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.nextRedirect)
-        {
-          if(#{data['options'].try(:[], 'skip_dialog').blank?})
-          {
+        } else if (lastServerResponse.nextRedirect) {
+          if(#{data['options'].try(:[], 'skip_dialog').blank?}) {
             showDialog("success");
           } else {
             window.location.href = lastServerResponse.nextRedirect;
