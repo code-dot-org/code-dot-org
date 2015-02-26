@@ -125,7 +125,7 @@ dashboard.showProjectHeader = function () {
       + '<span class="project_more_glyph">&#x25BC;</span>'
       + '<div class="project_more_popup" style="position: absolute;">'
       + '<a href="#" class="project_delete"><%= I18n.t('project.delete') %></a><br>'
-      + '<a href="#"><%= I18n.t('project.new') %></a></div>';
+      + '<a href="#" class="project_new"><%= I18n.t('project.new') %></a></div>';
   $('.project_info').append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
       .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
       .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
@@ -178,6 +178,18 @@ dashboard.showProjectHeader = function () {
     $('#confirm-delete #again-button').click(function () {
       dialog.hide();
     });
+  });
+
+  $('.project_new').click(function (e) {
+    e.preventDefault(); // Don't change the hash.
+    // Save the project if one exists (i.e. isn't just the default one) then navigate.
+    if (dashboard.currentApp.id) {
+      dashboard.saveProject(function () {
+        location.href = location.pathname;
+      });
+    } else {
+      location.href = location.pathname;
+    }
   });
 
   $(document).on('click', '.project_list', function () {
