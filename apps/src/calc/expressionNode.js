@@ -101,9 +101,10 @@ ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
 
 /**
  * Evaluate the expression, returning the result.
- * @param {object} globalMapping Global mapping of variables and functions
- * @param {object} localMapping Mapping of variables/functions local to scope
- *   of this function.
+ * @param {Object<string, number|object>} globalMapping Global mapping of
+ *   variables and functions
+ * @param {Object<string, number|object>} localMapping Mapping of
+ *   variables/functions local to scope of this function.
  */
 ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
   gloablMapping = gloablMapping || {};
@@ -138,12 +139,12 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
     }
 
     // We're calling a new function, so it gets a new local scope.
-    var newLocal = {};
+    var newLocalMapping = {};
     functionDef.variables.forEach(function (variable, index) {
       var childVal = this.getChildValue(index);
-      newLocal[variable] = utils.undefOr(localMapping[childVal], childVal);
+      newLocalMapping[variable] = utils.undefOr(localMapping[childVal], childVal);
     }, this);
-    return functionDef.expression.evaluate(gloablMapping, newLocal);
+    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
   }
 
   if (type === ValueType.NUMBER) {
