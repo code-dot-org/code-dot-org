@@ -175,9 +175,6 @@ dashboard.saveProject = function(callback) {
       location.hash = dashboard.currentApp.id = data.id;
       callbackSafe(callback, data);
     });
-    if (!dashboard.currentApp.hidden) {
-      dashboard.showProjectHeader();
-    }
   }
 };
 
@@ -229,7 +226,9 @@ function initApp() {
         name: 'My Project'
       };
     }
+
     $(window).on('run_button_pressed', dashboard.saveProject);
+
     if (!dashboard.currentApp.hidden) {
       dashboard.showProjectHeader();
     }
