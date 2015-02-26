@@ -545,7 +545,11 @@ en:
     all_courses: "All courses"
   project:
     create: "Create Project"
+    new: "Create New"
     rename: "Rename"
     save: "Save"
     exit: "Return to Course"
     my_projects: "My Projects"
+    share: "Share"
+    more: "More"
+    delete: "Delete"

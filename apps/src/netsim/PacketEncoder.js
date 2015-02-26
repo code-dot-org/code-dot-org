@@ -63,6 +63,25 @@ var PacketEncoder = module.exports = function (formatSpec) {
   this.formatSpec_ = formatSpec;
 };
 
+/**
+ * @type {number}
+ * @const
+ */
+var BITS_PER_PACKET_HEADER_FIELD = 4;
+
+/**
+ * Static, globally available packet encoder for final packet layout.
+ * TODO (bbuchanan): Replace this with a changeable format we can pass around!
+ * @type {PacketEncoder}
+ */
+PacketEncoder.defaultPacketEncoder = new PacketEncoder([
+  { key: 'toAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: 'fromAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: 'packetIndex', bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: 'packetCount', bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: 'message', bits: Infinity }
+]);
+
 PacketEncoder.prototype.getField = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 

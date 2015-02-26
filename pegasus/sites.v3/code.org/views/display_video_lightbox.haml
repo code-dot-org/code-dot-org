@@ -1,0 +1,25 @@
+#showVideo.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header{style: "border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px"}
+        %button.close{:type=>"button", :"data-dismiss"=>"modal", style: "height: 48px"}
+          %span{:"aria-hidden"=>"true", style: "font-size:48px"} &times;
+          %span{:class=>"sr-only"} Close
+        %div{style: "clear:both"}
+      .modal-body{style: "padding-top: 0px"}
+        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename
+
+:css
+  .modal{
+    text-align: center;
+  }
+
+:javascript
+  function showVideo()
+  {
+    $('#showVideo').modal('show')
+  }
+
+  $('#showVideo').on('hidden.bs.modal', function () {
+      toggleVideo(false);
+  })
