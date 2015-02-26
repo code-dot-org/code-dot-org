@@ -1,0 +1,9 @@
+name 'Test Text Match (Will)'
+
+markdown <<MARKDOWN
+<div class="unplugged">
+<h1>Test</h1>
+<p>Test submit button link after test:</p>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue!</a>
+</div>
+MARKDOWN

@@ -544,12 +544,24 @@ en:
     completed_courses: "Completed courses"
     all_courses: "All courses"
   project:
+    projects: "Projects"
     create: "Create Project"
     new: "Create New"
     rename: "Rename"
     save: "Save"
+    delete: "Delete"
     exit: "Return to Course"
     my_projects: "My Projects"
     share: "Share"
     more: "More"
-    delete: "Delete"
+    name: "Name"
+    updated: "Updated"
+    project_type: "Project Type"
+    help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time."
+    need_help: "Need help getting started?"
+    really_delete: 'Delete?'
+    delete_yes: 'Yes'
+    delete_no: 'No'
+    cancel: 'Cancel'
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will remove it from your gallery. Anyone you\'ve shared your project with will no longer be able to access the link. This is not reversible!
