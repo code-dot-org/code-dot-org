@@ -10594,6 +10594,16 @@ if (!String.prototype.repeat) {
     return rpt;
   };
 }
+
+/**
+ * Similar to val || defaultVal, except it's gated on whether or not val is
+ * undefined instead of whether val is falsey.
+ * @returns val if not undefined, otherwise defaultVal
+ */
+exports.undefOr = function (val, defaultVal) {
+  return val === undefined ? defaultVal : val;
+};
+
 },{"./hammer":78,"./lodash":86,"./xml":213}],86:[function(require,module,exports){
 (function (global){
 /**
