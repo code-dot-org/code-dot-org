@@ -1,0 +1,82 @@
+<%
+
+var PacketEncoder = require('./PacketEncoder');
+var dataConverters = require('./dataConverters');
+var formatBinary = dataConverters.formatBinary;
+var formatHex = dataConverters.formatHex;
+var alignDecimal = dataConverters.alignDecimal;
+var binaryToInt = dataConverters.binaryToInt;
+var binaryToHex = dataConverters.binaryToHex;
+var binaryToDecimal = dataConverters.binaryToDecimal;
+var binaryToAscii = dataConverters.binaryToAscii;
+
+function getEncodingLabel(rowClass) {
+  if (rowClass === 'ascii') {
+    return 'ASCII';
+  } else if (rowClass === 'decimal') {
+    return 'Decimal';
+  } else if (rowClass === 'hexadecimal') {
+    return 'Hexadecimal';
+  } else if (rowClass === 'binary') {
+    return 'Binary';
+  }
+  return '';
+}
+
+function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
+  %>
+    <tr class="<%= rowClass %>">
+      <th nowrap class="encodingLabel"><%= getEncodingLabel(rowClass) %></th>
+      <td nowrap class="toAddress"><%= toAddress %></td>
+      <td nowrap class="fromAddress"><%= fromAddress %></td>
+      <td nowrap class="packetInfo"><%= packetInfo %></td>
+      <td class="message"><%= message %></td>
+    </tr>
+<%
+}
+
+ %>
+<table>
+  <thead>
+    <tr>
+      <th nowrap class="encodingLabel"></th>
+      <th nowrap class="toAddress">To</th>
+      <th nowrap class="fromAddress">From</th>
+      <th nowrap class="packetInfo">Packet</th>
+      <th nowrap class="message">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%
+    var toAddress = PacketEncoder.defaultPacketEncoder.getField('toAddress', packetBinary);
+    var fromAddress = PacketEncoder.defaultPacketEncoder.getField('fromAddress', packetBinary);
+    var packetIndex = PacketEncoder.defaultPacketEncoder.getField('packetIndex', packetBinary);
+    var packetCount = PacketEncoder.defaultPacketEncoder.getField('packetCount', packetBinary);
+    var message = PacketEncoder.defaultPacketEncoder.getField('message', packetBinary);
+
+    logRow('ascii',
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        binaryToAscii(message, chunkSize));
+
+    logRow('decimal',
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        alignDecimal(binaryToDecimal(message, chunkSize)));
+
+    logRow('hexadecimal',
+        binaryToHex(toAddress),
+        binaryToHex(fromAddress),
+        binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+        formatHex(binaryToHex(message), chunkSize));
+
+    logRow('binary',
+        formatBinary(toAddress, 4),
+        formatBinary(fromAddress, 4),
+        formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+        formatBinary(message, chunkSize));
+   %>
+  </tbody>
+</table>

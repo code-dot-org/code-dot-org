@@ -31,3 +31,6 @@
 - # TODO OFFLINE: client-side callback to pop up admin tools
 - if current_user.try(:admin?)
   = render partial: 'levels/admin'
+
+// TODO OFFLINE: How should we package this
+%script{src: '/shared/js/apps_api.js'}

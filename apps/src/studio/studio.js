@@ -21,10 +21,13 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
 if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
@@ -150,6 +153,9 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
+      break;
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
       break;
@@ -226,7 +232,13 @@ var drawMap = function () {
   }
 
   if (level.coordinateGridBackground) {
-    Studio.createCoordinateGridBackground_();
+    studioApp.createCoordinateGridBackground({
+      svg: 'svgStudio',
+      origin: 0,
+      firstLabel: 100,
+      lastLabel: 300,
+      increment: 100
+    });
   }
 
   if (Studio.spriteStart_) {
@@ -1130,6 +1142,7 @@ Studio.init = function(config) {
   config.enableShowCode = false;
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
+  config.dropletConfig = dropletConfig;
 
   Studio.initSprites();
 
@@ -1362,32 +1375,6 @@ studioApp.runButtonClick = function() {
   }
 };
 
-Studio.createCoordinateGridBackground_ = function () {
-  var svg = document.getElementById('svgStudio');
-  var backgroundElement = document.getElementById('background');
-
-  var origin = 0;
-  var text, bbox;
-  for (var label = 0; label <= 400; label += 100) {
-    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    // Position text just inside the bottom right corner.
-    text.appendChild(document.createTextNode(label));
-    svg.insertBefore(text, backgroundElement.nextSibling);
-    bbox = text.getBBox();
-    text.setAttribute('x', label - origin - bbox.width - 3);
-    text.setAttribute('y', Studio.MAZE_HEIGHT - bbox.height);
-    text.setAttribute('dominant-baseline', 'hanging');
-
-    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    // Position text just inside the bottom right corner.
-    text.appendChild(document.createTextNode(label));
-    svg.insertBefore(text, backgroundElement.nextSibling);
-    bbox = text.getBBox();
-    text.setAttribute('x', 0);
-    text.setAttribute('y', Studio.MAZE_WIDTH - (label - origin) + bbox.height);
-  }
-};
-
 /**
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
@@ -1546,17 +1533,10 @@ var nativeGetCallback = function () {
  * Execute the story
  */
 Studio.execute = function() {
-  var code;
   Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
-  var i;
-
-  if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
-    code += studioApp.editor.getValue();
-  }
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
@@ -1593,7 +1573,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
+    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;

@@ -1,0 +1,13 @@
+name 'PDK5 Blockly Intro'
+title 'Writing your first computer program!'
+
+question 'Are you ready to move on?'
+right 'Yes'
+
+markdown <<MARKDOWN
+The basics of computer science are about sequence. We want to find the right sequence of instructions to tell the computer what to do. Watch this video below which explains the very first program that students write in Course 1. Then, on the next page, you'll get to write your own program that's very similar. 
+
+<iframe width="426" height="260" src="https://www.youtube.com/embed/7gvqTj4V9o0" frameborder="0" allowfullscreen></iframe>
+
+
+MARKDOWN

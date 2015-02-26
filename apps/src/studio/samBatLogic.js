@@ -1,3 +1,4 @@
+var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -11,15 +12,17 @@ var api = require('./api');
  * @implements CustomGameLogic
  */
 var SamBatLogic = function (studio) {
-  this.studio_ = studio;
-  this.cached_ = {};
+  CustomGameLogic.apply(this, arguments);
   this.samIndex = 0;
   this.sam = null;
+  // Has the onscreen? stopped Sam on a given side?
+  this.stopped = {left: false, up: false, right: false, down: false};
 };
+SamBatLogic.inherits(CustomGameLogic);
 
 SamBatLogic.prototype.onTick = function () {
   this.sam = this.studio_.sprite[this.samIndex];
-  
+
   // Move Sam with arrow keys
   for (var key in KeyCodes) {
     if (this.studio_.keyState[KeyCodes[key]] &&
@@ -60,7 +63,7 @@ SamBatLogic.prototype.onTick = function () {
       }
     }
   }
-  
+
   // Display Sam's coordinates, with y inverted
   var centerX = this.sam.x + this.sam.width / 2;
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
@@ -81,44 +84,29 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
     case Direction.WEST:
       if (!this.onscreen(centerX - this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.left = true;
       }
       break;
     case Direction.NORTH:
       if (!this.onscreen(centerX, centerY + this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.up = true;
       }
       break;
     case Direction.EAST:
       if (!this.onscreen(centerX + this.sam.speed, centerY)) {
         dir = Direction.NONE;
+        this.stopped.right = true;
       }
       break;
     case Direction.SOUTH:
       if (!this.onscreen(centerX, centerY - this.sam.speed)) {
         dir = Direction.NONE;
+        this.stopped.down = true;
       }
       break;
   }
   this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
-};
-
-SamBatLogic.prototype.cacheBlock = function (key, block) {
-  this.cached_[key] = block;
-};
-
-SamBatLogic.prototype.resolveCachedBlock_ = function (key) {
-  var result = '';
-  var block = this.cached_[key];
-  if (!block) {
-    return result;
-  }
-
-  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
-  result = codegen.evalWith(code, {
-    Studio: api,
-    Globals: Studio.Globals
-  });
-  return result;
 };
 
 /**

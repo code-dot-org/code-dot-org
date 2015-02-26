@@ -61,7 +61,7 @@ For detailed partnership information, check out these resources:
 
 ### Interested in partnering?
 
-We are currently in our pilot year for the 2014-2015 school year and evaluating expansion for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact for ***potential*** partnerships in the 2015-2016 school year. Completion does not mean guaranteed acceptance into our program **as we have limited capacity**. Our expansion for the 2015-2016 school year is focused on districts in regions where we have [existing partnerships](http://code.org/educate/partner-districts) and new regions that can support at least 30 teachers in our high school program.
+We are currently at capacity for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact in April 2015 for ***potential*** partnerships in the 2016-2017 school year. Completion does not mean guaranteed acceptance into our program **as we have limited capacity**. Our expansion for the 2016-2017 school year is focused on districts in regions where we have [existing partnerships](http://code.org/educate/partner-districts) and new regions that can support at least 30 teachers in our high school program.
 
 [<button>Sign up district</button>](/district-partner)
 
@@ -71,7 +71,7 @@ The Code.org Program consists of teacher professional development and three cour
 
 ## Instructions for district representatives
 
-If you are a district representative, [register](/district-partner) your district. Please contact <district@code.org> for more information.
+If you are a district representative, complete this [form](/district-partner) and we will update you in April 2015 when our 2016-2017 school year application is ready. Please contact <district@code.org> for more information.
 
 [<button>Sign up district</button>](/district-partner)
 
