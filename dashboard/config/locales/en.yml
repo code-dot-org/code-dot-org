@@ -562,3 +562,5 @@ en:
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
+    saved: "Saved"
+    not_saved: "Not saved"
