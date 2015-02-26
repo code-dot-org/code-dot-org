@@ -178,6 +178,32 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  namespace :ops do
+    # /ops/district/:id
+    resources :districts do
+      member do
+        get 'teachers'
+      end
+    end
+    resources :cohorts do
+      post 'teachers/:teacher_id', action: 'add_teacher', on: :member
+      delete 'teachers/:teacher_id', action: 'drop_teacher', on: :member
+    end
+    resources :workshops do
+      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+        resources :workshop_attendance, path: '/attendance', shallow: true do
+        end
+      end
+      member do
+        get 'teachers'
+      end
+    end
+    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
+    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
+    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
+    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

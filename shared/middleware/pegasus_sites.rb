@@ -17,7 +17,7 @@ class PegasusSites
     request = Rack::Request.new(env)
 
     # /dashboardapi at either host goes to dashboard
-    if request.path =~ /^\/dashboardapi\//
+    if request.path =~ /^\/dashboardapi\// || request.path =~ /^\/ops\//
       env['HTTP_HOST'] = canonical_hostname('studio.code.org') + ":#{CDO.dashboard_port}"
     end
 

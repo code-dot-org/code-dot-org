@@ -15,6 +15,12 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
+      factory :facilitator do
+        name 'Facilitator Person'
+      end
+      factory :district_contact do
+        name 'District Contact Person'
+      end
     end
 
     factory :student do
@@ -176,5 +182,40 @@ FactoryGirl.define do
   factory :user_script do
     user {create :student}
     script
+  end
+
+  factory :cohort do
+    name 'Test Cohort'
+    districts {[create(:district)]}
+    teachers {[create(:teacher, district: districts.first)]}
+  end
+
+  factory :district do
+    name 'District 13'
+    location 'Panem'
+    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
+  end
+
+  factory :workshop do
+    name 'My Workshop'
+    program_type 'CSP'
+    location 'Somewhere, USA'
+    instructions 'Test workshop instructions.'
+    cohort {create :cohort}
+    facilitators {[
+      create(:facilitator).tap{|f| f.permission = 'facilitator'}
+    ]}
+  end
+
+  factory :segment do
+    workshop {create :workshop}
+    start DateTime.now
+    self.send(:end, DateTime.now + 1.day)
+  end
+
+  factory :attendance, class: WorkshopAttendance do
+    segment {create :segment}
+    teacher {create(:teacher, district: segment.workshop.cohort.districts.first)}
+    status 'present'
   end
 end

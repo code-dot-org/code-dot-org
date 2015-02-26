@@ -77,7 +77,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'cancan'
+gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
@@ -135,3 +135,6 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
 gem 'react-rails'
+# JSON model serializer for REST APIs
+# Patch details: https://github.com/rails-api/active_model_serializers/pull/821
+gem 'active_model_serializers', github: 'wjordan/active_model_serializers', branch: 'patch-1'

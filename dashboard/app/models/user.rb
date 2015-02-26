@@ -14,11 +14,47 @@ class User < ActiveRecord::Base
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
-  
+
+  # :user_type is locked/deprecated. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
+
+  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
+
+  has_one :districts_users
+  has_one :district, through: :districts_users
+
+  # Teachers can be in multiple cohorts
+  has_and_belongs_to_many :cohorts
+  # all Teachers in a Cohort (are supposed to) attend all Workshops associated with a Cohort
+  has_many :workshops, through: :cohorts
+  has_many :segments, through: :workshops
+
+  def delete_permission(permission)
+    permission = permissions.find_by(permission: permission)
+    permissions.delete permission if permission
+  end
+
+  def permission=(permission)
+    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
+  end
+
+  def permission?(permission)
+    permissions.exists?(permission: permission)
+  end
+
+  def district_contact?
+    permission?('district_contact') || district.try(:contact) == self
+  end
+
+  # a district contact can see the teachers from their district that are part of a cohort
+  def district_teachers(cohort = nil)
+    return nil unless district_contact?
+    teachers = district.users
+    (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
+  end
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 

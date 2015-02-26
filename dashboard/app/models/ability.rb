@@ -14,7 +14,22 @@ class Ability
       end
     else
       can :read, :all
-      cannot :read, [PrizeProvider, Prize, TeacherPrize, TeacherBonusPrize, LevelSourceHint, FrequentUnsuccessfulLevelSource, :reports, User, Follower]
+      cannot :read, [
+        PrizeProvider,
+        Prize,
+        TeacherPrize,
+        TeacherBonusPrize,
+        LevelSourceHint,
+        FrequentUnsuccessfulLevelSource,
+        :reports,
+        User,
+        Follower,
+        # Ops models
+        District,
+        Workshop,
+        Cohort,
+        WorkshopAttendance
+      ]
     end
 
     if user.id
@@ -38,7 +53,27 @@ class Ability
       can :manage, :teacher
       can :manage, user.students
       can :manage, Follower
+      can :read, Workshop
     end
+
+    if user.permission? 'facilitator'
+      can :read, Workshop
+      can :teachers, Workshop
+      # Allow facilitator to manage Workshop/Attendance for
+      # workshops in which they are a facilitator.
+      can :manage, WorkshopAttendance do |attendance|
+        attendance.segment.workshop.facilitators.include? user
+      end
+      can :manage, Workshop do |workshop|
+        workshop.facilitators.include? user
+      end
+    end
+
+    if user.permission? 'district_contact'
+      can :teachers, District
+      can [:cohort, :teacher], WorkshopAttendance
+    end
+
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
