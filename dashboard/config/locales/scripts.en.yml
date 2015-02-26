@@ -239,31 +239,9 @@ en:
           Artist Binary: Artist Binary
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
+          title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
@@ -296,6 +274,9 @@ en:
           Special: Special
           Binary: Binary
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blocks to Math
@@ -335,6 +316,8 @@ en:
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Play Lab
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra 
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
@@ -343,6 +326,9 @@ en:
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
           Blockly Basics: Blockly Basics
           Writing computer programs: Writing computer programs
