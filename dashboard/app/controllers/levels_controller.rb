@@ -181,6 +181,7 @@ class LevelsController < ApplicationController
 
   def embed_level
     authorize! :read, :level
+    @full_width = true
     @level = Level.find(params[:level_id])
     @game = @level.game
     @hide_source = true
