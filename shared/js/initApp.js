@@ -180,6 +180,17 @@ dashboard.saveProject = function(callback) {
   }
 };
 
+dashboard.deleteProject = function(callback) {
+  var app_id = dashboard.currentApp.id;
+  if (app_id) {
+    storageApps().delete(app_id, function(data) {
+      callbackSafe(callback, data);
+    });
+  } else {
+    callbackSafe(callback, false);
+  }
+};
+
 dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
   var deferred = new $.Deferred();
   // get all projects (TODO: filter on server side?)
@@ -215,7 +226,7 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
     }
   });
   return deferred;
-}
+};
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
