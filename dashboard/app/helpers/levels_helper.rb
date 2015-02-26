@@ -232,6 +232,7 @@ module LevelsHelper
       scrollbars
       original_start_blocks
       is_project_level
+      failure_message_override
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -264,7 +265,7 @@ module LevelsHelper
     end
 
     #Fetch localized strings
-    if @level.level_num_custom?    
+    if @level.level_num_custom?
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       unless I18n.locale.to_s == 'en-us' || loc_val.nil?
         level['instructions'] = loc_val
