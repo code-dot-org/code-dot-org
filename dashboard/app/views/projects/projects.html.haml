@@ -58,7 +58,7 @@
             TODO
           %td
             %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
-            %button.btn.btn-primary{'ng-click' => 'project.$save(project); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
+            %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
 
             %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
             %span{'ng-show' => 'project.deleting'}
