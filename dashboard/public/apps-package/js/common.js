@@ -4818,10 +4818,7 @@ StudioApp.prototype.init = function(config) {
           Blockly.functionEditor.hideIfOpen();
         }
         Blockly.mainBlockSpace.clear();
-        if (config.level.originalStartBlocks) {
-          config.level.startBlocks = config.level.originalStartBlocks;
-        }
-        this.setStartBlocks_(config);
+        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
@@ -5681,9 +5678,13 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 
 /**
  * Add the starting block(s).
+ * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
-StudioApp.prototype.setStartBlocks_ = function (config) {
+StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   var startBlocks = config.level.startBlocks || '';
+  if (loadLastAttempt) {
+    startBlocks = config.level.lastAttempt || startBlocks;
+  }
   if (config.forceInsertTopBlock) {
     startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
         config.forceInsertTopBlock);
@@ -5746,7 +5747,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-  this.setStartBlocks_(config);
+  this.setStartBlocks_(config, true);
 };
 
 /**
