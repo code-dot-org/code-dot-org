@@ -103,13 +103,9 @@ private
     if params[:level_source_id]
       level_source = LevelSource.find(params[:level_source_id])
       # we do multiple level projects, so we don't check that the level_source.level_id matches the loaded level
-      @start_blocks = level_source.data
-    elsif false # current_user.try(:admin?)
-      last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
-      if last_attempt
-        @original_start_blocks = @start_blocks.presence || '<xml/>'
-        @start_blocks = last_attempt
-      end
+      @last_attempt = level_source.data
+    elsif current_user.try(:admin?)
+      @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
   end
 
