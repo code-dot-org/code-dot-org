@@ -8,8 +8,46 @@ var utils = require(buildDir + '/js/utils');
 var requiredBlockUtils = require(buildDir + '/js/required_block_utils');
 var blockUtils = require(buildDir + '/js/block_utils');
 var assert = testUtils.assert;
+var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 var _ = require(buildDir + '/js/lodash');
 var mazeUtils = require(buildDir + '/js/maze/mazeUtils');
+
+describe("String.prototype.repeat", function () {
+  it ("returns a string that is n copies of the original string", function () {
+    assertEqual('aaa', 'a'.repeat(3));
+    assertEqual('abcabc', 'abc'.repeat(2));
+  });
+
+  it ("uses floor of count for non-integer counts", function () {
+    assertEqual('aaa', 'a'.repeat(3.1));
+    assertEqual('aaa', 'a'.repeat(3.9));
+  });
+
+  it ("returns empty string when given a zero count", function () {
+    assertEqual('', 'a'.repeat(0));
+  });
+
+  it ("returns empty string when repeating an empty string", function () {
+    assertEqual('', ''.repeat(20));
+  });
+
+  it ("throws RangeError when given a negative count", function () {
+    assertThrows(RangeError, function () {
+      'a'.repeat(-1);
+    });
+  });
+
+  it ("throws RangeError when given an infinity count", function () {
+    assertThrows(RangeError, function () {
+      'a'.repeat(Infinity);
+    });
+  });
+
+  // Note: Was going to text maximum output string length, but implementation
+  //       does not appear to be consistent across browsers.  Our polyfill
+  //       limits output of this method to 1 << 28 characters.
+});
 
 describe("Function.prototype.inherits", function () {
   var A, B, C;

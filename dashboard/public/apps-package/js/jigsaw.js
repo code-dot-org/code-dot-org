@@ -58,7 +58,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":151}],81:[function(require,module,exports){
+},{"../skins":168}],81:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -312,7 +312,7 @@ Jigsaw.onPuzzleComplete = function() {
   });
 };
 
-},{"../StudioApp":4,"../dom":47,"../skins":151,"../templates/page.html":176,"./controls.html":80}],80:[function(require,module,exports){
+},{"../StudioApp":4,"../dom":47,"../skins":168,"../templates/page.html":193,"./controls.html":80}],80:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -332,7 +332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/jigsaw":205,"ejs":218}],79:[function(require,module,exports){
+},{"../../locale/current/jigsaw":222,"ejs":235}],79:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -593,7 +593,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
   }
 }
 
-},{"../../locale/current/jigsaw":205,"../dom":47,"./levels":82}],205:[function(require,module,exports){
+},{"../../locale/current/jigsaw":222,"../dom":47,"./levels":82}],222:[function(require,module,exports){
 /*jigsaw*/ module.exports = window.blockly.appLocale;
 },{}],82:[function(require,module,exports){
 /*jshint multistr: true */

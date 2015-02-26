@@ -93,6 +93,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 }
 
 .netsim_log_widget {
+  background-color: white;
   border: solid darkgray thin;
   margin: 0.5em;
   padding: 0;
@@ -115,16 +116,16 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     padding: 5px;
     border: solid darkgray thin;
     border-radius: 3px;
-    background-color: lightgray;
+    background-color: #ddd;
 
     td {
-      border-color: lightgray;
+      border-color: #ddd;
     }
   }
 
   .scroll_area {
-    background-color: white;
-    height: 160px;
+    margin: 0.5em 0 0.5em 0;
+    height: 180px;
     width: 100%;
     overflow-y: scroll;
   }
@@ -139,14 +140,20 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     border-collapse: collapse;
   }
 
+  tbody {
+    th, td {
+      vertical-align: top;
+    }
+  }
+
   th {
     font-size: 10pt;
-    font-variant: small-caps;
+    color: black;
+    background-color: transparent;
   }
 
   td {
     font-family: monospace;
-    vertical-align: top;
 
     /* Make sure table text can be selected and copied */
     -moz-user-select: text;
@@ -156,6 +163,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     user-select: text;
   }
 
+  th.encodingLabel, td.encodingLabel,
   th.toAddress, td.toAddress,
   th.fromAddress, td.fromAddress,
   th.packetInfo, td.packetInfo {
@@ -167,6 +175,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     width: 50px;
   }
 
+  th.encodingLabel, td.encodingLabel,
   th.packetInfo, td.packetInfo {
     width: 100px;
   }
@@ -204,7 +213,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
   div.netsim_packet {
     border: solid darkgray thin;
-    background-color: lightgray;
+    background-color: #ddd;
     padding: 0.5em;
     border-radius: 0.5em;
 
@@ -216,7 +225,8 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
     th {
       font-size: 10pt;
-      font-variant: small-caps;
+      color: black;
+      background-color: transparent;
     }
 
     /* All input fields */
@@ -236,7 +246,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
     }
 
     /* All columns but "message" */
-    th.rowType, td.rowType,
+    th.encodingLabel, td.encodingLabel,
     th.toAddress, td.toAddress,
     th.fromAddress, td.fromAddress,
     th.packetInfo, td.packetInfo {
@@ -247,11 +257,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
         width: 3em;
         text-align: center;
       }
-    }
-
-    th.rowType, td.rowType {
-      text-align: right;
-      vertical-align: top;
     }
 
     /* toAddress column */
@@ -293,7 +298,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
     /* All rows but headers */
     tbody {
-      td {
+      th, td {
         vertical-align: top;
       }
     }
@@ -317,34 +322,85 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 }
 
-#netsim_router_panel {
-  #dns_mode_control {
-    input[type="radio"] {
-      vertical-align: middle;
-      margin: 0;
+.netsim_tabs {
+  margin-top: 1em;
+
+  h1 {
+    font-size: 10pt;
+    line-height: 10pt;
+    margin: 10px 0 3px 0;
+    border-bottom: solid darkgrey thin;
+  }
+
+  table {
+    width: 100%;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
     }
 
-    label {
-      display: inline;
-      margin-left: 1em;
+    th {
+      font-size: 10pt;
     }
   }
 
-  #netsim_router_network_table {
-    .localNode {
-      font-weight: bold;
-      background-color: lightcyan;
-    }
+  /* Modify actual tabs at top of tab area */
+  .ui-tabs-nav li a {
+    font-size: 8pt;
+    padding: 0 1em;
+  }
 
-    .dnsNode {
-      color: white;
-      background-color: darkorange;
+  /* Less padding around tab content divs */
+  .ui-tabs-panel {
+    padding: 0.8em 0.5em;
+
+    /* But extra margin around paragraphs of text (instructions) */
+    p {
+      margin: 0 1em 10px 1em;
     }
   }
 
-  #netsim_router_log_table {
-    display: block;
-    max-height: 200px;
-    overflow-y: scroll;
+  .netsim_router_tab {
+    .netsim_router_log {
+      max-height: 200px;
+      overflow-y: scroll;
+
+      table {
+        th, td {
+          font-size: 8pt;
+        }
+        td {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
+  .netsim_dns_tab {
+    .dns_mode_control {
+      input[type="radio"] {
+        vertical-align: middle;
+        margin: 0;
+      }
+
+      label {
+        display: inline;
+        margin-left: 1em;
+      }
+    }
+
+    .netsim_dns_table {
+      tr.localNode {
+        font-weight: bold;
+        background-color: lightcyan;
+      }
+
+      tr.dnsNode {
+        color: white;
+        background-color: darkorange;
+      }
+    }
   }
 }
