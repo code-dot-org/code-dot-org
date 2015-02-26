@@ -218,10 +218,13 @@
     /* But extra margin around paragraphs of text (instructions) */ }
     .netsim_tabs .ui-tabs-panel p {
       margin: 0 1em 10px 1em; }
-  .netsim_tabs .netsim_router_tab #netsim_router_log_table {
-    display: block;
+  .netsim_tabs .netsim_router_tab .netsim_router_log {
     max-height: 200px;
     overflow-y: scroll; }
+    .netsim_tabs .netsim_router_tab .netsim_router_log table th, .netsim_tabs .netsim_router_tab .netsim_router_log table td {
+      font-size: 8pt; }
+    .netsim_tabs .netsim_router_tab .netsim_router_log table td {
+      vertical-align: top; }
   .netsim_tabs .netsim_dns_tab .dns_mode_control input[type="radio"] {
     vertical-align: middle;
     margin: 0; }
