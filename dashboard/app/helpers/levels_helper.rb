@@ -230,7 +230,7 @@ module LevelsHelper
       custom_game_type
       project_template_level_name
       scrollbars
-      original_start_blocks
+      last_attempt
       is_project_level
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|

@@ -72,11 +72,12 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
+  get '/p', to: 'projects#index', as: 'project_list'
   get '/projects', to: 'projects#index'
   get '/projects/:template', to: 'projects#template'
 
-  get '/p/artist', to: 'levels#show', key: 'New Artist Project'
-  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project'
+  get '/p/artist', to: 'levels#show', key: 'New Artist Project', as: 'standalone_artist'
+  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'standalone_playlab'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
   
@@ -120,8 +121,8 @@ Dashboard::Application.routes.draw do
   get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME.to_s, format: false
   get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID, as: 'editcode_chapter', format: false
   get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID.to_s, format: false
   get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID, as: 'twenty_fourteen_chapter', format: false

@@ -179,4 +179,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "!!-underlay (bottom, top)-!!"},
 "outline":function(d){return "!!-outline-!!"},
 "solid":function(d){return "!!-solid-!!"},
-"string":function(d){return "!!-string-!!"}};
+"string":function(d){return "!!-string-!!"},
+"stringMismatchError":function(d){return "!!-You have a string with the wrong capitalization.-!!"}};

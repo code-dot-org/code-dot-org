@@ -23241,7 +23241,7 @@ Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
     return
   }
   var metrics = this.blockSpace.getMetrics();
-  if(!metrics) {
+  if(!metrics || (metrics.contentWidth > metrics.viewWidth || metrics.contentHeight > metrics.viewHeight)) {
     return
   }
   var oneOrMoreBlocksOutOfBounds = metrics.contentTop < 0 || (metrics.contentTop + metrics.contentHeight > metrics.viewHeight + metrics.viewTop || (metrics.contentLeft < (Blockly.RTL ? metrics.viewLeft : 0) || metrics.contentLeft + metrics.contentWidth > metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft));
@@ -23910,7 +23910,7 @@ Blockly.parseOptions_ = function(options) {
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
   }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
-  2, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+  0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
 Blockly.registerUISounds_ = function(audioPlayer) {
   audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});
