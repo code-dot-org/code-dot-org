@@ -354,4 +354,20 @@ describe('EquationSet', function () {
       assert.equal(constants[1].name, 'y');
     });
   });
+
+  describe('computesSingleConstant', function () {
+    it ('returns true when we have a single constant', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, [], new ExpressionNode('x')));
+      set.addEquation_(new Equation('x', [], new ExpressionNode(5)));
+      assert.equal(set.computesSingleConstant(), true);
+    });
+
+    it ('returns false when we have a single variable thats not a number', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation(null, [], new ExpressionNode('x')));
+      set.addEquation_(new Equation('x', [], new ExpressionNode('+', [1, 2])));
+      assert.equal(set.computesSingleConstant(), false);
+    });
+  });
 });
