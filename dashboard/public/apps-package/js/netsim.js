@@ -3181,18 +3181,24 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
- * How often a cleaning job should be kicked off.
+ * Minimum delay between attempts to start a cleaning job.
  * @type {number}
  */
-var CLEANING_RETRY_INTERVAL_MS = 60000;
-var CLEANING_SUCCESS_INTERVAL_MS = 300000;
+var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
 /**
- * How long a cleaning lock (heartbeat) must be untouched before can be
- * ignored and cleaned up by another client.
+ * Minimum delay before the next cleaning job is started after
+ * a cleaning job has finished successfully.
  * @type {number}
  */
-var CLEANING_HEARTBEAT_TIMEOUT = 15000;
+var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
+
+/**
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 60000; // 1 minute
 
 /**
  * Special heartbeat type that acts as a cleaning lock across the shard
@@ -3237,7 +3243,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
-              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
+              Date.now() - row.time < HEARTBEAT_TIMEOUT_MS;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
@@ -3571,13 +3577,6 @@ var CleanHeartbeats = function (cleaner) {
 CleanHeartbeats.inherits(CommandSequence);
 
 /**
- * How old a heartbeat can be without being cleaned up.
- * @type {number}
- * @const
- */
-var HEARTBEAT_TIMEOUT_MS = 30000;
-
-/**
  * @private
  * @override
  */
@@ -3786,10 +3785,12 @@ var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+  this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
       new SharedTable(APP_PUBLIC_KEY, shardID + '_l'));
+  this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
@@ -3830,7 +3831,7 @@ var ObservableEvent = require('../ObservableEvent');
  * updates from the server.
  * @type {number}
  */
-var POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 5000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -3869,6 +3870,14 @@ var NetSimTable = module.exports = function (storageTable) {
    * @private
    */
   this.lastFullUpdateTime_ = 0;
+
+  /**
+   * Minimum time (in milliseconds) to wait between pulling full table contents
+   * from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
 NetSimTable.prototype.readAll = function (callback) {
@@ -3967,10 +3976,19 @@ NetSimTable.prototype.arrayFromCache_ = function () {
   return result;
 };
 
+/**
+ * Changes how often this table fetches a full table update from the
+ * server.
+ * @param {number} intervalMs - milliseconds of delay between updates.
+ */
+NetSimTable.prototype.setPollingInterval = function (intervalMs) {
+  this.pollingInterval_ = intervalMs;
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
-  if (now - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
     this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
@@ -4157,9 +4175,13 @@ NetSimRouterNode.create = function (shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
+      router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
       });
@@ -4187,7 +4209,11 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
       router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       onComplete(router);
     });
   });
@@ -5852,10 +5878,12 @@ var NetSimEntity = require('./NetSimEntity');
 
 /**
  * How often a heartbeat is sent, in milliseconds
+ * Six seconds, against the one-minute timeout over in NetSimShardCleaner,
+ * gives a heartbeat at least nine chances to update before it gets cleaned up.
  * @type {number}
  * @const
  */
-var HEARTBEAT_INTERVAL_MS = 5000;
+var DEFAULT_HEARTBEAT_INTERVAL_MS = 6000;
 
 /**
  * Sends regular heartbeat messages to the heartbeat table on the given
@@ -5877,8 +5905,17 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
   /** @type {number} Row ID in node table */
   this.nodeID = row.nodeID;
 
-  /** @type {number} unix timestamp (ms) */
+  /**
+   * @type {number} unix timestamp (ms)
+   * @private
+   */
   this.time_ = row.time !== undefined ? row.time : Date.now();
+
+  /**
+   * @type {number} How often heartbeat is sent, in milliseconds
+   * @private
+   */
+  this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -5947,11 +5984,22 @@ NetSimHeartbeat.prototype.buildRow_ = function () {
 };
 
 /**
+ * Change how often this heartbeat attempts to update its remote storage
+ * self.  Default value is 6 seconds.  Warning! If set too high, this
+ * heartbeat may be seen as expired by another client and get cleaned up!
+ *
+ * @param {number} intervalMs - time between udpates, in milliseconds
+ */
+NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
+  this.intervalMs_ = intervalMs;
+};
+
+/**
  * Updates own row on regular interval, as long as something's making
  * it tick.
  */
 NetSimHeartbeat.prototype.tick = function () {
-  if (Date.now() - this.time_ > HEARTBEAT_INTERVAL_MS) {
+  if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
     this.update();
   }
