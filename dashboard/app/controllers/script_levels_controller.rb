@@ -90,6 +90,17 @@ private
     raise ActiveRecord::RecordNotFound unless @script_level
   end
 
+  def load_level_source
+    # Set start blocks to the user's previous attempt at this puzzle. Must be called after
+    # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
+
+    return unless current_user
+
+    if current_user.try(:admin?)
+      @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+    end
+  end
+
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @level = @script_level.level
@@ -97,6 +108,8 @@ private
     @stage = @script_level.stage
 
     set_videos_and_blocks_and_callouts
+
+    load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true

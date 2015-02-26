@@ -11,6 +11,8 @@
  */
 'use strict';
 
+require('../utils'); // For String.prototype.repeat polyfill
+
 /**
  * Converts a binary string into its most compact string representation.
  * @param {string} binaryString that may contain whitespace
@@ -64,7 +66,7 @@ exports.minifyDecimal = function (decimalString) {
  * Converts a hex string to a formatted representation, with chunks of
  * a set size separated by a space.
  * @param {string} hexString
- * @param {number} chunkSize
+ * @param {number} chunkSize - in bits!
  * @returns {string} formatted hex
  */
 exports.formatHex = function (hexString, chunkSize) {
@@ -72,11 +74,17 @@ exports.formatHex = function (hexString, chunkSize) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
 
+  // Don't format hex when the chunkSize doesn't align with hex characters.
+  if (chunkSize % 4 !== 0) {
+    return hexString;
+  }
+
+  var hexChunkSize = chunkSize / 4;
   var hex = exports.minifyHex(hexString);
 
   var chunks = [];
-  for (var i = 0; i < hex.length; i += chunkSize) {
-    chunks.push(hex.substr(i, chunkSize));
+  for (var i = 0; i < hex.length; i += hexChunkSize) {
+    chunks.push(hex.substr(i, hexChunkSize));
   }
 
   return chunks.join(' ');
@@ -104,12 +112,11 @@ exports.alignDecimal = function (decimalString) {
     return prev;
   }, 0);
 
-  var nbspChar = "\xA0";
-  var nbspPadding = new Array(mostDigits + 1).join(nbspChar);
+  var zeroPadding = '0'.repeat(mostDigits);
 
   return numbers.map(function (numString) {
     // Left-pad each number with non-breaking spaces up to max width.
-    return (nbspPadding + numString).slice(-mostDigits);
+    return (zeroPadding + numString).slice(-mostDigits);
   }).join(' ');
 };
 
@@ -123,12 +130,12 @@ exports.binaryToInt = function (binaryString) {
 };
 
 var zeroPadLeft = function (string, desiredWidth) {
-  var padding = new Array(desiredWidth + 1).join('0');
+  var padding = '0'.repeat(desiredWidth);
   return (padding + string).slice(-desiredWidth);
 };
 
 var zeroPadRight = function (string, desiredWidth) {
-  var padding = new Array(desiredWidth + 1).join('0');
+  var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
 
