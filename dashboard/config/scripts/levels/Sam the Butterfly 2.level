@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && (Studio.Globals.sam_x <= 10));\r\n}",
-    "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -75);\r\n}",
+    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = this.stopped.left && this.sam.x < 0;\r\n  }\r\n  console.log(Studio.Globals.succeeded);\r\n  return Studio.Globals.succeeded;\r\n}",
+    "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -100);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -41,10 +41,9 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "true",
+    "definition_collapse": "false",
     "timeout_after_when_run": "false",
-    "custom_game_type": "Sam the Bat",
-    "maze_data": null
+    "custom_game_type": "Sam the Bat"
   }
 }]]></config>
   <blocks>
