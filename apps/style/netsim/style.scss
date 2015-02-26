@@ -361,10 +361,18 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   }
 
   .netsim_router_tab {
-    #netsim_router_log_table {
-      display: block;
+    .netsim_router_log {
       max-height: 200px;
       overflow-y: scroll;
+
+      table {
+        th, td {
+          font-size: 8pt;
+        }
+        td {
+          vertical-align: top;
+        }
+      }
     }
   }
 
