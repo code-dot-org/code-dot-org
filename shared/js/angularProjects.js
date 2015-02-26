@@ -8,8 +8,7 @@
     'projectsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/projects/projects',
-                         controller: 'ProjectsController'});
+        {templateUrl: '/p/projects', controller: 'ProjectsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
@@ -50,6 +49,10 @@
     $scope.projectsLoaded = false;
 
     $scope.projects = projectsService.query();
+
+    // set initial sort order
+    $scope.order = 'updatedAt';
+    $scope.reverse = true;
 
     $scope.projects.$promise.then(function(projects) {
       $scope.projectsLoaded = true;
