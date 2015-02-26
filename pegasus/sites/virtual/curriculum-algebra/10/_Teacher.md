@@ -41,10 +41,11 @@ Putting these images together, we arrive at an animation of the bat turning arou
 
 <img src="bat_animated_fast.gif" style="display: block; margin: 0 auto;"/>
 
-In the online puzzles, the students will find a blue function box and a black function box. The blue rocket-height function box represents the function needed to calculate the rocket-height for a given second.  The black function box, when editted, appears to be identical to the blue box.  The difference is this one has some unseen code that allows the function to be plugged into our start program.
+In the online puzzles, the students will find a blue function box and a black function box. The blue rocket-height function box represents the function needed to calculate the rocket-height for a given second.  The black function box, when editted, appears to be identical to the blue box.  The difference is the black function box has some unseen code that allows the function to be plugged into the start program.
 
-Another curiousity with this program is that the rocket-height function will be executed more than once to create the flip-book described above.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
+Another curiousity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
 
+[tip]
 # Lesson Tip
 
 The contract can be quite long and often scrolls off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.

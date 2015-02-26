@@ -7,7 +7,7 @@
   "properties": {
     "skin": "infinity",
     "background": "icy",
-    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait half a second before indicating the success.\r\n  if (window.successTime && successTime + 500 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -67,6 +67,9 @@
           <title name="DIR">4</title>
           <title name="DISTANCE">200</title>
         </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>        
       </xml>
     </toolbox_blocks>
     <required_blocks>
