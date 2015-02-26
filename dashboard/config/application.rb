@@ -20,7 +20,6 @@ module Dashboard
     config.middleware.use VarnishEnvironment
     config.middleware.use AppsApi
     config.middleware.use SharedResources
-    config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
 
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
