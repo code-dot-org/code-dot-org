@@ -26,6 +26,7 @@ var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
+var apiTimeoutList = require('../timeoutList');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -173,10 +174,14 @@ var drawDiv = function () {
   visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
+function stepSpeedFromSliderSpeed(sliderSpeed) {
+  return 300 * Math.pow(1 - sliderSpeed, 2);
+}
+
 function getCurrentTickLength() {
   var stepSpeed = Applab.scale.stepSpeed;
   if (Applab.speedSlider) {
-    stepSpeed = 300 * Math.pow(1 - Applab.speedSlider.getValue(), 2);
+    stepSpeed = stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
   }
   return stepSpeed;
 }
@@ -568,7 +573,6 @@ Applab.init = function(config) {
 
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -725,6 +729,8 @@ studioApp.reset = function(first) {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
 
@@ -947,8 +953,6 @@ Applab.execute = function() {
   Applab.waitingForReport = false;
   Applab.response = null;
   var i;
-
-  studioApp.playAudio('start');
 
   studioApp.reset(false);
 
@@ -1202,10 +1206,16 @@ Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
-  newDiv.id = opts.elementId;
+  if (typeof opts.elementId !== "undefined") {
+    newDiv.id = opts.elementId;
+  }
   newDiv.innerHTML = opts.html;
 
   return Boolean(divApplab.appendChild(newDiv));
+};
+
+Applab.write = function (opts) {
+  return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
@@ -1477,6 +1487,16 @@ Applab.penColor = function (opts) {
       ctx.strokeStyle = opts.color;
     }
     ctx.fillStyle = opts.color;
+  }
+};
+
+Applab.speed = function (opts) {
+  if (opts.percent >= 0 && opts.percent <= 100) {
+    var sliderSpeed = opts.percent / 100;
+    if (Applab.speedSlider) {
+      Applab.speedSlider.setValue(sliderSpeed);
+    }
+    Applab.scale.stepSpeed = stepSpeedFromSliderSpeed(sliderSpeed);
   }
 };
 
@@ -1994,44 +2014,58 @@ Applab.onEvent = function (opts) {
 };
 
 Applab.onHttpRequestEvent = function (opts) {
-  if (this.readyState === 4) {
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [
-        Number(this.status),
-        String(this.getResponseHeader('content-type')),
-        String(this.responseText)]
-    });
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.interpreter === Applab.interpreter) {
+    if (this.readyState === 4) {
+      Applab.eventQueue.push({
+        'fn': opts.func,
+        'arguments': [
+          Number(this.status),
+          String(this.getResponseHeader('content-type')),
+          String(this.responseText)]
+      });
+    }
   }
 };
 
 Applab.startWebRequest = function (opts) {
+  opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
   req.open('GET', String(opts.url), true);
   req.send();
 };
 
-Applab.onTimeoutFired = function (opts) {
+Applab.onTimerFired = function (opts) {
+  // ensure that this event came from the active interpreter instance:
   Applab.eventQueue.push({
     'fn': opts.func
   });
-  if (Applab.interpreter) {
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the rest of the
-    // user's code will execute in the next onTick()
-    Applab.executeInterpreter(true);
-  }
+  // NOTE: the interpreter will not execute forever, if the event handler
+  // takes too long, executeInterpreter() will return and the rest of the
+  // user's code will execute in the next onTick()
+  Applab.executeInterpreter(true);
 };
 
 Applab.setTimeout = function (opts) {
-  return window.setTimeout(Applab.onTimeoutFired.bind(this, opts), opts.milliseconds);
+  return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
-  window.clearTimeout(opts.timeoutId);
+  apiTimeoutList.clearTimeout(opts.timeoutId);
+};
+
+Applab.setInterval = function (opts) {
+  return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+Applab.clearInterval = function (opts) {
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Applab.setInterval() function
+  apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {

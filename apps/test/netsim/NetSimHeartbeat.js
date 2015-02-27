@@ -109,7 +109,7 @@ describe("NetSimHeartbeat", function () {
 
   });
 
-  it ("updates every 5 seconds if ticked, setting local and remote " +
+  it ("updates every 6 seconds if ticked, setting local and remote " +
       "time to Date.now()", function () {
     var myNodeID, originalHeartbeat;
     myNodeID = 1;
@@ -127,9 +127,9 @@ describe("NetSimHeartbeat", function () {
     originalHeartbeat.tick();
     assertEqual("", testShard.heartbeatTable.log().slice(0, 13));
 
-    // Tick after 5 seconds updates retrieved time
-    var fiveSecondsAgo = Date.now() - 5001;
-    originalHeartbeat.time_ = fiveSecondsAgo;
+    // Tick after 6 seconds updates retrieved time
+    var sixSecondsAgo = Date.now() - 6001;
+    originalHeartbeat.time_ = sixSecondsAgo;
     testShard.heartbeatTable.log('');
     originalHeartbeat.tick();
     assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));

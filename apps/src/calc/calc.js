@@ -652,6 +652,12 @@ function displayComplexUserExpressions () {
       'errorToken');
   });
 
+  if (appState.userSet.computesSingleConstant()) {
+    // In this case the compute equation + evaluation will be exactly the same
+    // as what we've already shown, so don't show it.
+    return;
+  }
+
   // Now display our compute equation and the result of evaluating it
   var targetEquation = appState.targetSet.computeEquation();
 

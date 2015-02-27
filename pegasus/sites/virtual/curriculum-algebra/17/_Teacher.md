@@ -23,8 +23,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 3) [Conditionals](#Activity1)   
 
+<!--
 ### **Assessment**
 4) [Conditionals Assessment](#Assessment)
+-->
 
 [/summary]
 
@@ -95,9 +97,9 @@ Conditionals let our programs run differently based on the outcome of a conditio
 
 Let's look at a conditional piece by piece:
 
-(x > 10)  ->  "That's pretty big"
-(x < 10)  ->  "That's pretty small"
-else      ->  "That's exactly ten"
+          (x > 10)  ->  "That's pretty big"
+    (x < 10)  ->  "That's pretty small"
+    else      ->  "That's exactly ten"
 
 If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition we don't need to keep looking.
 
@@ -130,23 +132,25 @@ Review the contract parts:  name, domain, range, parameters(input types), return
 
 Say to the class: “Here is what the initial code looks like.  We will add several clauses but the clauses that are there will always be there and the final else action (often called the default result) will always be Left Hand Down.”
 
->  if (“Right Hand Up”) -> RaiseRightHand  
->  elseif (“Right Hand Down”) -> LowerRightHand  
->  elseif(“Left Hand Up”) -> LeftHandUp  
->  else LeftHandDown  
+<pre><code>
+if (“Right Hand Up”) -> RaiseRightHand  
+elseif (“Right Hand Down”) -> LowerRightHand  
+elseif(“Left Hand Up”) -> LeftHandUp  
+else LeftHandDown  
+</code></pre>
 
 Example Play: (before beginning, you may want to review right and left with them, perhaps even writing it on the board for the slightly dyslexic) 
 
 - startAll
-- SimonSez(“Right Hand Up”)
-- SimonSez(“Right Hand Down”)
-- SimonSez(“Left Hand Up”)
-- SimonSez(“Right Hand Up”)
-- SimonSez(“Hokey Pokey”)   // should put left hand down.
-- SimonSez(“Left Hand Up”)
-- SimonSez(“Right Down”)      // “trick”.  No matches. Goes to default
+- `SimonSez(“Right Hand Up”)`
+- `SimonSez(“Right Hand Down”)`
+- `SimonSez(“Left Hand Up”)`
+- `SimonSez(“Right Hand Up”)`
+- `SimonSez(“Hokey Pokey”)`   // should put left hand down.
+- `SimonSez(“Left Hand Up”)`
+- `SimonSez(“Right Down”)`      // “trick”.  No matches. Goes to default
 
-If anyone makes a mistake above make sure to say shutDown([“Sam”,”Pat”,Francis”...])
+If anyone makes a mistake above make sure to say `shutDown([“Sam”,”Pat”,Francis”...])`
 
 You will likely want to go one more round before doing a restartAll.
 
@@ -220,10 +224,12 @@ This could be graphed with the following piecewise function y = { 3: x<2, [[x]]+
 
 [together]
 
+<!--
 ## Assessment 
 ### <a name="Assessment"></a>4) Conditionals Assessment
 
 Visit [MSM Stage 17](http://studio.code.org/s/algebra/stage/17/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
