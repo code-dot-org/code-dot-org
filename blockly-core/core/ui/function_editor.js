@@ -216,11 +216,14 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
   });
 };
 
-Blockly.FunctionEditor.prototype.changeParameterType = function(name, newType) {
+Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {
   this.orderedParamIDsToBlocks_.forEach(function(blockXML, paramID, linkedMap) {
     if (blockXML.firstElementChild &&
         blockXML.firstElementChild.textContent === name) {
-      blockXML.childNodes[1].firstElementChild.textContent = newType;
+      // e.g. <block type="functional_parameters_get"><title name="VAR">seconds</title><mutation><outputtype>Number</outputtype></mutation></block>
+      var mutationNode = blockXML.childNodes[1];
+      var outputTypeNode = mutationNode.firstElementChild;
+      outputTypeNode.textContent = newType;
     }
   });
 };

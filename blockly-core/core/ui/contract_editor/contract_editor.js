@@ -568,7 +568,7 @@ Blockly.ContractEditor.prototype.initializeAddButton_ = function() {
 Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newType) {
   var paramName = this.getParamNameType(paramID).name;
   this.functionDefinitionBlock.changeParamType(paramName, newType);
-  this.changeParameterType(paramName, newType);
+  this.changeParameterTypeInFlyoutXML(paramName, newType);
   this.refreshParamsEverywhere()
 };
 
