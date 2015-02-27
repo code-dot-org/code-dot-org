@@ -24,7 +24,7 @@ module Ops
       attendances = segment_group.map do |workshop, segments|
         {workshop: workshop, segments: segments}
       end
-      render json: attendances.to_json
+      respond_with attendances
     end
 
     # GET /ops/attendance/cohort/1
@@ -78,7 +78,7 @@ module Ops
 
     # GET /ops/segments/1/attendance
     def index
-      respond_with @workshop_attendance
+      respond_with @workshop_attendances
     end
 
     # GET /ops/attendance/1

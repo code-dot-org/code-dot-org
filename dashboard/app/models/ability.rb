@@ -43,35 +43,36 @@ class Ability
       can :create, UserLevel
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
-    end
-    if user.hint_access? || user.teacher?
-      can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
-    end
 
-    if user.teacher?
-      can :manage, Section, user_id: user.id
-      can :manage, :teacher
-      can :manage, user.students
-      can :manage, Follower
-      can :read, Workshop
-    end
-
-    if user.permission? 'facilitator'
-      can :read, Workshop
-      can :teachers, Workshop
-      # Allow facilitator to manage Workshop/Attendance for
-      # workshops in which they are a facilitator.
-      can :manage, WorkshopAttendance do |attendance|
-        attendance.segment.workshop.facilitators.include? user
+      if user.hint_access? || user.teacher?
+        can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
       end
-      can :manage, Workshop do |workshop|
-        workshop.facilitators.include? user
-      end
-    end
 
-    if user.permission? 'district_contact'
-      can :teachers, District
-      can [:cohort, :teacher], WorkshopAttendance
+      if user.teacher?
+        can :manage, Section, user_id: user.id
+        can :manage, :teacher
+        can :manage, user.students
+        can :manage, Follower
+        can :read, Workshop
+      end
+
+      if user.permission? 'facilitator'
+        can :read, Workshop
+        can :teachers, Workshop
+        # Allow facilitator to manage Workshop/Attendance for
+        # workshops in which they are a facilitator.
+        can :manage, WorkshopAttendance do |attendance|
+          attendance.segment.workshop.facilitators.include? user
+        end
+        can :manage, Workshop do |workshop|
+          workshop.facilitators.include? user
+        end
+      end
+
+      if user.permission? 'district_contact'
+        can :teachers, District
+        can [:cohort, :teacher], WorkshopAttendance
+      end
     end
 
     #

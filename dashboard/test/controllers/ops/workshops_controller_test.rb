@@ -8,8 +8,8 @@ module Ops
       @request.headers['Accept'] = 'application/json'
       @admin = create(:admin)
       sign_in @admin
-      @workshop = create(:workshop)
       @cohort = create(:cohort)
+      @workshop = @cohort.workshops.first
       @facilitator = create(:facilitator)
     end
 

@@ -7,8 +7,8 @@ module Ops
     setup do
       @admin = create(:admin)
       sign_in @admin
-      @segment = create(:segment)
-      @workshop = @segment.workshop
+      @workshop = create(:cohort).workshops.first
+      @segment = @workshop.segments.first
     end
 
     # Test index + CRUD controller actions
