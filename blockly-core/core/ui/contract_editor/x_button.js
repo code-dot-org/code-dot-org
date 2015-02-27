@@ -3,7 +3,10 @@
 goog.provide('Blockly.XButton');
 
 /**
- * A DOM-based input which sends events on changes
+ * A simple button with an "x" on it which sends an event on press
+ *
+ * Note: styling depends on bootstrap 'btn' class
+ *
  * @param {!Object} options
  * @param options.onNameChanged takes {string} newName
  * @param options.onEnterPressed
@@ -21,7 +24,7 @@ Blockly.XButton.prototype.render = function (parent) {
   var buttonElement = goog.dom.createDom('button');
   buttonElement.className = "btn";
   buttonElement.innerHTML = "x";
-  buttonElement.style.marginRight = "-10px";
+  buttonElement.style.marginRight = "-10px"; // specific to contract editor
 
   parent.appendChild(buttonElement);
 
