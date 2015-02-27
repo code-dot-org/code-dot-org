@@ -10,12 +10,12 @@ goog.require('Blockly.XButton');
 /**
  * A DOM-based parameter editor
  * @param {!Object} options
- *          name: String
- *          type: Blockly.BlockValueType
- *          onRemovePress
- *          onTypeChanged (newType: String)
- *          onNameChanged (newName: String)
- *          typeChoices {name(String): type(Blockly.BlockValueType)}
+ * @param {string} options.name
+ * @param {Blockly.BlockValueType} options.type
+ * @param {Function} options.onRemovePress
+ * @param {Function} options.onTypeChanged takes {Blockly.BlockValueType} newType
+ * @param {Function} options.onNameChanged takes {string} newName
+ * @param {Object.<String, Blockly.BlockValueType>} options.typeChoices
  * @constructor
  */
 Blockly.DomainEditor = function (options) {
