@@ -26,9 +26,20 @@ Blockly.DomainEditor = function (options) {
   this.type = options.type;
   this.name = options.name;
 
-  // For cleanup
+  /**
+   * @type {Element}
+   * @private
+   */
   this.editorDom_ = null;
+  /**
+   * @type {Blockly.TypeDropdown}
+   * @private
+   */
   this.typeDropdown_ = null;
+  /**
+   * @type {Blockly.DomainNameInput}
+   * @private
+   */
   this.nameInput_ = null;
 };
 
