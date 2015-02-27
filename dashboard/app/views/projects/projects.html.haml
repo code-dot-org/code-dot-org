@@ -12,7 +12,7 @@
   %br
   %br
   .row
-    .span12
+    .projects-table-wrapper
       %a.level_link{href: playlab_projects_path}
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')  
@@ -20,8 +20,6 @@
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
 
-  .row
-    .span12
       %table.projects{'ng-show' => 'projects.length > 0'}
         %colgroup
           %col{width: "250"}
@@ -48,7 +46,7 @@
         %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
           %td.name
             %span{'ng-hide' => 'project.editing'}
-              %a{href: '', "ng-href" => '{{ project.url() }}'}
+              %a{href: '', "ng-href" => '{{ project.editUrl() }}'}
                 {{ project.name }}
             %span{'ng-show' => 'project.editing'}
               %input{"ng-model" => "project.name", type: 'text'}/
@@ -63,7 +61,7 @@
             %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
             %span{'ng-show' => 'project.deleting'}
               = t('project.really_delete')
-              %button.btn.btn-danger{'ng-click' => 'project.$remove({id: project.id}) && projects.splice( $.inArray(project, projects), 1)'}= t('project.delete_yes')
+              %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
               %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
 
