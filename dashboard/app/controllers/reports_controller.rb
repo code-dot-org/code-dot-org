@@ -108,6 +108,17 @@ SQL
       name: script.name,
       stages: []
     }
+    if (script.trophies)
+      s[:trophies] = Concept.cached.map do |concept|
+        {
+          id: concept.name,
+          name: data_t('concept.description', concept.name),
+          bronze: Trophy::BRONZE_THRESHOLD,
+          silver: Trophy::SILVER_THRESHOLD,
+          gold: Trophy::GOLD_THRESHOLD
+        }
+      end
+    end
 
     position = 0
 
@@ -222,7 +233,8 @@ SQL
         user_data[:trophies] = {
           current: progress['current_trophies'],
           of: t(:of),
-          max: progress['max_trophies']
+          max: progress['max_trophies'],
+          progress: user.concept_progress
         }
       end
 
@@ -230,6 +242,8 @@ SQL
         expires_in 10000, public: true  # TODO: Real static asset caching
       end
       reply[:progress] = user_data
+    else
+      # TODO OFFLINE:  Session-based progress
     end
 
     if params['jsonp']

@@ -85,7 +85,7 @@
         body = <div className="loading" />;
       } else {
 
-        var stages = $.map(script.stages, function(stage) {
+        var stages = $.map(script.stages || [], function(stage) {
           var lessonPlan;
 
           if (stage.lesson_plan_html_url) {
@@ -109,7 +109,7 @@
             if (level.kind == 'unplugged') {
               contents = <span className="puzzle-named">{level.title}</span>;
             } else if (status.status == 'perfect' || status.status == 'perfect') {
-              contents = <img src="/assets/white-checkmark.png" />;
+              contents = <img src={Frame.assetUrl('white-checkmark.png')} />;
             } else {
               contents = <span className="puzzle-number">{level.title}</span>;
             }
@@ -150,10 +150,63 @@
           );
         });
 
+        var stages_key;
+        if (stages.length)
+          stages_key = <HeaderPopupKey />
+
+        var trophies;
+        if (script.trophies) {
+          completion = 0.4;  // TODO
+
+          var centered = { 'text-align': 'center' };
+          trophy_progress = $.map(script.trophies, function(trophy) {
+
+            var bronze = Math.max(0, Math.min(100, Math.floor( completion * 10.0 / trophy.bronze) * 10));
+            var silver = Math.max(0, Math.min(100, Math.floor( (completion - trophy.bronze) * 10.0 / (trophy.silver - trophy.bronze)) * 10));
+            var gold = Math.max(0, Math.min(100, Math.floor( (completion - trophy.silver) * 10.0 / (trophy.gold - trophy.silver)) * 10));
+
+            return (
+              <tr height="55px">
+                <td width="100px">
+                  { trophy.name }
+                </td>
+                <td style={centered} width="55px">
+                  <img class="trophy_image" src={Frame.assetUrl('bronze_', bronze, '.png')} />
+                </td>
+                <td style={centered} width="55px">
+                  <img class="trophy_image" src={Frame.assetUrl('silver_', silver, '.png')} />
+                </td>
+                <td style={centered} width="55px">
+                  <img class="trophy_image" src={Frame.assetUrl('gold_', gold, '.png')} />
+                </td>
+              </tr>
+            );
+          });
+
+          var blocked = {
+            display: 'inline-block',
+            width: 290,
+            position: 'relative',
+            overflow: 'hidden',
+            padding: 10
+          };
+          trophies = (
+            <div id="trophies">
+              <div style={blocked}>
+                <h4><%= I18n.t("nav.popup.mastery") %></h4>
+                <table style={{ 'max-width': 290 }}>
+                  {trophy_progress}
+                </table>
+              </div>
+            </div>
+          );
+        }
+
         body = (
           <div className="user-stats-block">
             { stages }
-            <HeaderPopupKey />
+            { stages_key }
+            { trophies }
           </div>
         );
 
@@ -190,14 +243,32 @@
   HeaderPopupKey = React.createClass({
     render: function() {
       return (
-        <div className="key">
+        <div className="key" style={{ clear: 'both' }}>
           <dl>
-            <dt><span className="puzzle_outer_level"><a className="level_link not_tried"><span className="puzzle-number">1</span></a></span></dt>
-            <dd><%= I18n.t("progress.not_completed") %></dd>
-            <dt><span className="puzzle_outer_level"><a className="level_link passed"><span className="puzzle-number">2</span></a></span></dt>
+            <dt><span className="puzzle_outer_level">
+              <a className="level_link not_tried"><span className="puzzle-number">1</span></a>
+            </span></dt>
+            <dd><%= I18n.t("progress.not_started") %></dd>
+          </dl><dl>
+            <dt><span className="puzzle_outer_level">
+              <a className="level_link attempted"><span className="puzzle-number">1</span></a>
+            </span></dt>
+            <dd><%= I18n.t("progress.in_progress") %></dd>
+          </dl><dl>
+            <dt><span className="puzzle_outer_level">
+              <a className="level_link passed"><img src={Frame.assetUrl('white-checkmark.png')} /></a>
+            </span></dt>
             <dd><%= I18n.t("progress.completed_too_many_blocks") %></dd>
-            <dt><span className="puzzle_outer_level"><a className="level_link perfect"><span className="puzzle-number">3</span></a></span></dt>
+          </dl><dl>
+            <dt><span className="puzzle_outer_level">
+              <a className="level_link perfect"><img src={Frame.assetUrl('white-checkmark.png')} /></a>
+            </span></dt>
             <dd><%= I18n.t("progress.completed_perfect") %></dd>
+          </dl><dl>
+            <dt><span className="puzzle_outer_level puzzle_outer_assessment">
+              <a className="level_link not_tried"><span className="puzzle-number">1</span></a>
+            </span></dt>
+            <dd><%= I18n.t("progress.assessment") %></dd>
           </dl>
         </div>
       );

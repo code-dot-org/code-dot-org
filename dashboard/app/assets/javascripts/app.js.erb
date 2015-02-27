@@ -409,6 +409,13 @@
       return true;
     }
 
+    // Pass one or more arguments, they'll be string-concat'd
+    UIFrame.prototype.assetUrl = function() {
+      var url = Array.prototype.join.call(arguments, '');
+
+      return "/assets/" + url;  // TODO: static/offline sites
+    }
+
     return UIFrame;
   })();
 

@@ -275,7 +275,7 @@ em strong {
     box-sizing: border-box;
     padding-right: 10px;
     .level {
-      margin: 1px;
+      margin: 1px 5px 3px 1px;
       display: inline-block;
       .puzzle-number {
         position: relative;
@@ -696,6 +696,29 @@ input.header_input {
   z-index: 1050;
   background-color: white;
   overflow: hidden;
+
+  .key {
+    width: 100%;
+    margin: 10px 0;
+    float: left;
+    padding: 10px;
+    background-color: #eee;
+    dl {
+      margin: 0;
+      float: left;
+      white-space: nowrap;
+    }
+    dd, dt {
+      float: left;
+      height: 36px;
+    }
+    dt { margin-right: 5px; }
+    dd {
+      line-height: 36px;
+      margin-left: 0;
+     margin-right: 25px;
+    }
+  }
 }
 
 .header_popup_header {
