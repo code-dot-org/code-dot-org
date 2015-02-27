@@ -90,7 +90,7 @@ class ProfessionalDevelopmentWorkshopSignup
     data['school_levels_ss'] = data['school_levels_ss'] - ['Other']
     data['school_levels_ss'].concat(data['school_levels_other_ss'] || []).sort.uniq
 
-    data['workshop_id_i'] = data[:parent_form_i]
+    data['workshop_id_i'] = data['parent_form_i']
 
     data.delete('teacher_role_ss')
     data.delete('school_type_other_ss')
