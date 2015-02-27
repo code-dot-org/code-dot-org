@@ -381,7 +381,12 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
 NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
   this.lobbyList_.empty();
 
-  lobbyData.sort(function (a, b) {
+  // TODO: Filter based on level configuration
+  var filteredLobbyData = lobbyData.filter(function (simNode) {
+    return simNode.getNodeType() === NetSimRouterNode.getNodeType();
+  });
+
+  filteredLobbyData.sort(function (a, b) {
     // TODO (bbuchanan): Make this sort localization-friendly.
     if (a.getDisplayName() > b.getDisplayName()) {
       return 1;
@@ -390,7 +395,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
   });
 
   this.selectedListItem_ = undefined;
-  lobbyData.forEach(function (simNode) {
+  filteredLobbyData.forEach(function (simNode) {
     var item = $('<li>').html(
         simNode.getDisplayName() + ' : ' +
         simNode.getStatus() + ' ' +

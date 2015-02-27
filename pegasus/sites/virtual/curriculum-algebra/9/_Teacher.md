@@ -23,8 +23,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 3) [Collaborative Design](#Activity1)   
 
+<!--
 ### **Assessment**
 4) [Design Recipe Assessment](#Assessment)
+-->
 
 [/summary]
 
@@ -35,7 +37,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ## Materials, Resources and Prep
 
 ### For the Student
-- [Blank Design Recipe Form](design_recipe.pdf)
+- [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf)
+- [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf)
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4)
@@ -116,7 +119,7 @@ Put students into groups of 3 - each member of the group will represent one step
 2. Examples
 3. Function
 
-Each group will work through the word problems on the [Design Recipe Worksheet](needadesignrecipeworksheet.pdf). Each group member should stay true to their role and make sure to complete the steps in the right order.
+Each group will work through the word problems on the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). Make sure that group member should stay true to their role and make sure to complete the steps in the right order.
 
 [tip]
 
@@ -128,14 +131,18 @@ Make sure students have chosen good variable names for their function definition
 
 [/tip]
 
+Once students have worked through the Fast Functions, you can have them use the full [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf) to work through word problems from your own math curriculum.
+
 [/together]
 
 [together]
 
+<!--
 ## Assessment 
 ### <a name="Assessment"></a>4) The Design Recipe Assessment
 
 Visit [MSM Stage 9](http://studio.code.org/s/algebra/stage/9/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 

@@ -83,7 +83,7 @@ NetSimNode.prototype.getDisplayName = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getHostname = function () {
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
+  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase() + this.entityID;
 };
 
 /**

@@ -32,6 +32,7 @@ class Blockly < Level
     is_project_level
     edit_code
     code_functions
+    failure_message_override
   )
 
   before_validation {

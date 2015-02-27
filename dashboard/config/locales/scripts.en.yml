@@ -315,9 +315,10 @@ en:
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Play Lab
+          Infinity: Infinity
         algebrademo:
           title: Algebra Demo
-          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra 
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
@@ -338,6 +339,9 @@ en:
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
         netsim:
           title: Internet Simulator
           description_short: ''

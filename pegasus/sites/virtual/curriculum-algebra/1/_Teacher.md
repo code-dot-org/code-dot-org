@@ -27,8 +27,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ### **Wrap-up**
 5) [Brainstorming a Game](#WrapUp)  
 
+<!--
 ### **Assessment**
 6) [Coordinate Plane Assessment](#Assessment)
+-->
 
 [/summary]
 
@@ -38,8 +40,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Reverse Engineering Table](reverse_engineering.pdf) or blank sheet of paper
-- [Videogame Design Template](game_template.pdf) or blank sheet of paper
+- [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) or blank sheet of paper
+- [Videogame Design Template](../docs/worksheets/game_planning.pdf) or blank sheet of paper
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
@@ -155,10 +157,12 @@ The structure of your students' games will very closely resemble the demo they'v
 
 [together]
 
+<!--
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
 Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 

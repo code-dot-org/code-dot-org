@@ -17,6 +17,7 @@ var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var binaryToInt = dataConverters.binaryToInt;
 var formatBinary = dataConverters.formatBinary;
+var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * @type {number}
@@ -133,6 +134,12 @@ NetSimLogEntry.prototype.getPacketCount = function () {
  */
 NetSimLogEntry.prototype.getMessageBinary = function () {
   return formatBinary(
+      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
+      BITS_PER_BYTE);
+};
+
+NetSimLogEntry.prototype.getMessageAscii = function () {
+  return binaryToAscii(
       PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
       BITS_PER_BYTE);
 };
