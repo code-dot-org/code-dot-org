@@ -161,6 +161,24 @@ dashboard.showProjectHeader = function () {
     });
   });
 
+  $('.project_share').click(function () {
+    dashboard.saveProject(function () {
+      var dialog = new Dialog({body: '<div id="project-share" class="modal-content">'
+          + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
+          + '<p><%= I18n.t('project.share_copy_link') %></p>'
+          + '<div><input type="text" id="sharing-input" value="' + location.href + '" style="cursor: copy; width: 400px;" readonly></div>'
+          + '<button id="continue-button"><%= I18n.t('project.ok') %></button></div>'
+      });
+      $('#sharing-input').click(function () {
+        this.select();
+      })
+      dialog.show();
+      $('#project-share #continue-button').click(function() {
+        dialog.hide();
+      });
+    });
+  });
+
   var $projectMorePopup = $('.project_more_popup');
   function hideProjectMore() {
     $projectMorePopup.hide();
@@ -183,7 +201,7 @@ dashboard.showProjectHeader = function () {
     e.preventDefault(); // Don't change the hash.
     var dialog = new Dialog({body: '<div id="confirm-delete" class="modal-content">'
         + '<p class="dialog-title"><%= I18n.t('project.delete_confirm_title') %></p>'
-        + '<p><%= I18n.t('project.delete_confirm_text') %></p>'
+        + "<p><%= I18n.t('project.delete_confirm_text') %></p>"
         + '<button id="again-button"><%= I18n.t('project.cancel') %></button><button id="continue-button" style="float: right"><%= I18n.t('project.delete') %></button></div>'
     });
     dialog.show();
