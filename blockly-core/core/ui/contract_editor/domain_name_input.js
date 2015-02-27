@@ -14,8 +14,17 @@ Blockly.DomainNameInput = function (options) {
   this.onEnterPressed = options.onEnterPressed;
   this.name = options.name;
 
-  // For disposal
+  /**
+   * Array of event keys usable by Blockly.unbindEvent_ to remove listeners
+   * @type {Array.<Array>}
+   * @private
+   */
   this.eventsToUnbind_ = [];
+  /**
+   * Reference to created <input> element for later disposal
+   * @type {Element}
+   * @private
+   */
   this.inputElement_ = null;
 };
 
@@ -39,7 +48,10 @@ Blockly.DomainNameInput.prototype.render = function (parent) {
   this.inputElement_ = inputElement;
 };
 
-
+/**
+ * @param {Event} DOM event from <input> tag 'input' or 'keydown' changes
+ * @private
+ */
 Blockly.DomainNameInput.prototype.onInputChange_ = function (event) {
   if (this.onNameChanged) {
     this.onNameChanged(event.target.value);
