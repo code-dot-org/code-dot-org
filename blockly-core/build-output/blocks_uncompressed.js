@@ -1281,7 +1281,7 @@ Blockly.Blocks.functional_definition = {hideInMainBlockSpace:!0, init:function()
   this.parameterNames_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d ? this.updateOutputType(c.innerHTML) : "isfunctionalvariable" === d && (this.isFunctionalVariable_ = !0)
+    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.textContent : "outputtype" === d ? this.updateOutputType(c.textContent) : "isfunctionalvariable" === d && (this.isFunctionalVariable_ = !0)
   }
   this.updateParams_()
 }, isVariable:function() {
