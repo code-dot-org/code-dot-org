@@ -96,9 +96,9 @@ Blockly.Blocks.functional_definition = {
         this.parameterNames_.push(childNode.getAttribute('name'));
         this.parameterTypes_.push(childNode.getAttribute('type'));
       } else if (nodeName === 'description') {
-        this.description_ = childNode.innerHTML;
+        this.description_ = childNode.textContent;
       } else if (nodeName === 'outputtype') {
-        this.updateOutputType(childNode.innerHTML);
+        this.updateOutputType(childNode.textContent);
       } else if (nodeName === 'isfunctionalvariable') {
         this.isFunctionalVariable_ = true;
       }
@@ -222,6 +222,19 @@ Blockly.Blocks.functional_definition = {
     if (index > -1) {
       this.parameterNames_.splice(index, 1);
       this.updateParams_();
+    }
+  },
+  changeParamType: function (name, newType) {
+    var changed = false;
+    for (var x = 0; x < this.parameterNames_.length; x++) {
+      if (Blockly.Names.equals(name, this.parameterNames_[x])) {
+        this.parameterTypes_[x] = newType;
+        changed = true;
+      }
+    }
+    if (changed) {
+      this.updateParams_();
+      this.updateCallerParams_();
     }
   },
   callType_: 'functional_call'
@@ -372,14 +385,17 @@ Blockly.Blocks.functional_call = {
         }
       }
     }
-    var parameterListString = this.currentParameterNames_.length > 0 ?
-      ' (' + this.currentParameterNames_.join(', ') + ')' : '';
-    this.setTitleValue(parameterListString, 'PARAM_TEXT');
+    this.refreshParameterTitleString_();
     // Restore rendering and show the changes.
     this.rendered = savedRendered;
     if (this.rendered) {
       this.render();
     }
+  },
+  refreshParameterTitleString_: function() {
+    var parameterListString = this.currentParameterNames_.length > 0 ?
+    ' (' + this.currentParameterNames_.join(', ') + ')' : '';
+    this.setTitleValue(parameterListString, 'PARAM_TEXT');
   },
   mutationToDom: function() {
     // Save the name and arguments (none of which are editable).
@@ -421,7 +437,7 @@ Blockly.Blocks.functional_call = {
     for (var x = 0; x < this.currentParameterNames_.length; x++) {
       if (Blockly.Names.equals(oldName, this.currentParameterNames_[x])) {
         this.currentParameterNames_[x] = newName;
-        this.getInput('ARG' + x).titleRow[0].setText(newName);
+        this.refreshParameterTitleString_();
       }
     }
   }
