@@ -546,6 +546,7 @@ en:
   project:
     projects: "Projects"
     create: "Create Project"
+    create_a_project: 'Create a new project:'
     new: "Create New"
     rename: "Rename"
     save: "Save"
@@ -570,3 +571,4 @@ en:
     cancel: 'Cancel'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
+    view_all: 'View all'
