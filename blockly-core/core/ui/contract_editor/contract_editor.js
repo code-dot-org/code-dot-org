@@ -493,6 +493,20 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   this.domainEditors_.push(domainEditor);
 };
 
+Blockly.ContractEditor.prototype.removeParameter = function(name) {
+  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+
+  goog.array.removeIf(this.domainEditors_, function (editor) {
+    if (editor.name == name) {
+      editor.dispose();
+      return true;
+    }
+    return false;
+  }, this);
+
+  this.position_();
+};
+
 Blockly.ContractEditor.prototype.newParameterBlock = function(newParameterName, opt_newParameterType) {
   opt_newParameterType = opt_newParameterType || Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE;
   var newParamBlockDOM = Blockly.createSvgElement('block', {type: this.parameterBlockType});
