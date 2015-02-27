@@ -12,7 +12,7 @@
   %br
   %br
   .row
-    .span12
+    .projects-table-wrapper
       %a.level_link{href: playlab_projects_path}
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')  
@@ -20,8 +20,6 @@
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
 
-  .row
-    .span12
       %table.projects{'ng-show' => 'projects.length > 0'}
         %colgroup
           %col{width: "250"}
