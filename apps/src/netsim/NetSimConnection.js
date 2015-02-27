@@ -127,7 +127,7 @@ NetSimConnection.prototype.getLogger = function () {
  */
 NetSimConnection.prototype.onBeforeUnload_ = function () {
   if (this.isConnectedToShard()) {
-    this.disconnectFromShard();
+    this.disconnectFromShard(function () {});
   }
 };
 
@@ -140,7 +140,8 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
 NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
-    this.disconnectFromShard();
+    this.disconnectFromShard(this.connectToShard.bind(this));
+    return;
   }
 
   this.shard_ = new NetSimShard(shardID);
@@ -148,10 +149,14 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   this.createMyClientNode_(displayName);
 };
 
-/** Ends the connection to the netsim shard. */
-NetSimConnection.prototype.disconnectFromShard = function () {
+/**
+ * Ends the connection to the netsim shard.
+ * @param {function} onComplete - no arguments
+ */
+NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
   if (!this.isConnectedToShard()) {
     logger.warn("Redundant disconnect call.");
+    onComplete();
     return;
   }
 
@@ -159,11 +164,12 @@ NetSimConnection.prototype.disconnectFromShard = function () {
     this.disconnectFromRouter();
   }
 
+  this.myNode.stopSimulation();
   this.myNode.destroy(function () {
-    this.myNode.stopSimulation();
     this.myNode = null;
     this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
+    onComplete();
   }.bind(this));
 };
 
@@ -189,6 +195,17 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       this.statusChanges.notifyObservers();
     }.bind(this));
   }.bind(this));
+};
+
+/**
+ * Detects when local client node is unable to reconnect, and kicks user
+ * out of the shard.
+ * @private
+ */
+NetSimConnection.prototype.onMyNodeChange_= function () {
+  if (this.myNode.getStatus() === 'Offline') {
+    this.disconnectFromShard(function () {});
+  }
 };
 
 /**
