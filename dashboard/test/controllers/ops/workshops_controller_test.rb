@@ -2,6 +2,7 @@ require 'test_helper'
 module Ops
   class WorkshopsControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
+    API = 'dashboardapi'
 
     setup do
       @request.headers['Accept'] = 'application/json'
@@ -25,7 +26,7 @@ module Ops
     test "Facilitators can list all teachers in their workshop's cohort" do
       #87055150 (part 2)
       # first name, last name, email, district, gender and any workshop details that are available for teachers
-      assert_routing({ path: 'ops/workshops/1/teachers', method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
+      assert_routing({ path: "#{API}/workshops/1/teachers", method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
 
       sign_in @workshop.facilitators.first
       get :teachers, id: @workshop.id
@@ -50,7 +51,7 @@ module Ops
     # Test index + CRUD controller actions
 
     test 'list all workshops' do
-      assert_routing({ path: 'ops/workshops', method: :get }, { controller: 'ops/workshops', action: 'index' })
+      assert_routing({ path: "#{API}/workshops", method: :get }, { controller: 'ops/workshops', action: 'index' })
 
       get :index
       assert_response :success
@@ -58,7 +59,7 @@ module Ops
 
     test 'Ops team can create workshops' do
       #87054134
-      assert_routing({ path: 'ops/workshops', method: :post }, { controller: 'ops/workshops', action: 'create' })
+      assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       assert_difference 'Workshop.count' do
         post :create, workshop: {name: 'test workshop', program_type: 'CSP', cohort_id: @cohort, facilitator_ids: [@facilitator]}
@@ -67,14 +68,14 @@ module Ops
     end
 
     test 'read workshop info' do
-      assert_routing({ path: 'ops/workshops/1', method: :get }, { controller: 'ops/workshops', action: 'show', id: '1' })
+      assert_routing({ path: "#{API}/workshops/1", method: :get }, { controller: 'ops/workshops', action: 'show', id: '1' })
 
       get :show, id: @workshop.id
       assert_response :success
     end
 
     test 'update workshop info' do
-      assert_routing({ path: 'ops/workshops/1', method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
+      assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
 
       new_name = 'New workshop name'
       patch :update, id: @workshop.id, workshop: {name: new_name}
@@ -85,7 +86,7 @@ module Ops
     end
 
     test 'delete workshop' do
-      assert_routing({ path: 'ops/workshops/1', method: :delete }, { controller: 'ops/workshops', action: 'destroy', id: '1' })
+      assert_routing({ path: "#{API}/workshops/1", method: :delete }, { controller: 'ops/workshops', action: 'destroy', id: '1' })
 
       assert_difference 'Workshop.count', -1 do
         get :destroy, id: @workshop.id

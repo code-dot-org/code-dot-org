@@ -40,14 +40,14 @@ theme: angular
 
   services.factory('districtsService', ['$resource',
     function($resource) {
-      var District = $resource('/ops/districts/:id', {}, {
+      var District = $resource('/dashboardapi/districts/:id', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method: 'GET'},
         //  'save':   {method: 'POST'},
         //  'query':  {method: 'GET', isArray:true},
         //  'remove': {method: 'DELETE'},
         //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
-        update: {method:'PUT', url: '/ops/districts/:id'}
+        update: {method:'PUT', url: '/dashboardapi/districts/:id'}
       });
 
       return District;
@@ -55,14 +55,14 @@ theme: angular
 
   services.factory('workshopsService', ['$resource',
     function($resource){
-      var Workshop = $resource('/ops/workshops/:id', {}, {
+      var Workshop = $resource('/dashboardapi/workshops/:id', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
-        update: {method:'PUT', url: '/ops/workshops/:id'}
+        update: {method:'PUT', url: '/dashboardapi/workshops/:id'}
       });
 
       return Workshop;
@@ -70,12 +70,12 @@ theme: angular
 
   services.factory('segmentsService', ['$resource',
     function($resource){
-      var Segment = $resource('/ops/workshops/:id/segments', {}, {
+      var Segment = $resource('/dashboardapi/workshops/:id/segments', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
-          'remove': {method:'DELETE', url:'/ops/segments/:id'},
+          'remove': {method:'DELETE', url:'/dashboardapi/segments/:id'},
         //  'delete': {method:'DELETE'}
       });
 
@@ -84,14 +84,14 @@ theme: angular
 
   services.factory('cohortsService', ['$resource',
     function($resource){
-      var Cohort = $resource('/ops/cohorts/:id', {}, {
+      var Cohort = $resource('/dashboardapi/cohorts/:id', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
-        update: {method:'PUT', url: '/ops/cohorts/:id'}
+        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'}
       });
 
       return Cohort;
@@ -99,7 +99,7 @@ theme: angular
 
   services.factory('teachersService', ['$resource',
     function($resource){
-      var Teacher = $resource('/ops/workshops/:workshopid/teachers', {}, {
+      var Teacher = $resource('/dashboardapi/workshops/:workshopid/teachers', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
@@ -113,7 +113,7 @@ theme: angular
 
   services.factory('attendancesService', ['$resource',
     function($resource){
-      var Attendance = $resource('/ops/attendance/workshop/:workshopid', {}, {
+      var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
