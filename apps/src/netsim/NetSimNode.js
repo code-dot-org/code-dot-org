@@ -121,7 +121,7 @@ NetSimNode.prototype.getStatusDetail = function () {
  * @param {function} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  onComplete = (onComplete !== undefined) ? onComplete : function () {};
+  onComplete = onComplete || function () {};
 
   var self = this;
   NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
