@@ -145,8 +145,12 @@ NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
  * storage representation.  Can be used to go into a recovery mode,
  * acknowledge disconnect, and/or attempt an auto-reconnect.
  * @param {function} onFailedHeartbeat
+ * @throws if set would clobber a previously-set callback
  */
 NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
+  if (this.onFailedHeartbeat_ !== undefined && onFailedHeartbeat !== undefined) {
+    throw new Error("Heartbeat already has a failure callback.");
+  }
   this.onFailedHeartbeat_ = onFailedHeartbeat;
 };
 
