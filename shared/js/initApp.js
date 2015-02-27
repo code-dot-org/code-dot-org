@@ -166,6 +166,7 @@ function callbackSafe(callback, data) {
 dashboard.saveProject = function(callback) {
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  dashboard.currentApp.level = window.location.pathname;
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
@@ -174,7 +175,7 @@ dashboard.saveProject = function(callback) {
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
-      location.hash = dashboard.currentApp.id;
+      location.hash = dashboard.currentApp.id + '/edit';
       callbackSafe(callback, data);
     });
   }
@@ -286,8 +287,18 @@ if (appOptions.droplet) {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
   if (appOptions.level.isProjectLevel) {
+    // example paths:
+    // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+    // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
     var app_id = location.hash.slice(1);
     if (app_id) {
+      // TODO ugh, we should use a router. maybe we should use angular :p
+      var params = app_id.split("/")
+      if (params.length > 1 && params[1] == "edit") {
+        app_id = params[0];
+        // TODO set some 'editing' flag, check the owner of the project
+      }
+
       // Load the project ID, if one exists
       promise.then(function () {
         var deferred = new $.Deferred();
