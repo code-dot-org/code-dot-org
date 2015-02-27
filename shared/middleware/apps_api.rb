@@ -279,7 +279,8 @@ class AppsApi < Sinatra::Base
   # Imports a csv form post into a table, erasing previous contents.
   #
   post %r{/v3/apps/([^/]+)/import-(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
-    unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
+    # this check fails on Win 8.1 Chrome 40
+    #unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
     rows = CSV.parse(params[:import_file][:tempfile])
     table = Table.new(app_id, storage_id(endpoint), table_name)
     columns = rows[0]
