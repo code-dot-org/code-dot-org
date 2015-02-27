@@ -531,8 +531,16 @@
         opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
         opts.level.stage_name = data.stage.name;
 
+        // TODO OFFLINE: Convert these different application types and set up appropriately
         switch (opts.app) {
           case 'maze':
+          case 'jigsaw':
+          case 'turtle':
+          case 'flappy':
+          case 'unplug':
+          case 'studio':
+          case 'multi':
+          case 'match':
             this.app = new BlocklyApp(opts);
             this.app.init();
             break;
