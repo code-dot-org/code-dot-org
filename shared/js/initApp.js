@@ -322,6 +322,7 @@ if (appOptions.droplet) {
     }
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
+    dashboard.isEditingProject = true;
     promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
 }
