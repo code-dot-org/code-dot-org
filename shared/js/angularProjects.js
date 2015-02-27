@@ -8,8 +8,7 @@
     'projectsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/projects/projects',
-                         controller: 'ProjectsController'});
+        {templateUrl: '/p/projects', controller: 'ProjectsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
@@ -30,8 +29,16 @@
       });
 
       Project.prototype.url = function() {
-        if (this.levelUrl && this.levelSourceId && this.id) {
-          return this.levelUrl + '?level_source_id=' + this.levelSourceId + '#' + this.id;
+        if (this.level && this.id) {
+          return this.level + '#' + this.id;
+        } else {
+          return null;
+        }
+      };
+
+      Project.prototype.editUrl = function() {
+        if (this.url()) {
+          return this.url() + "/edit";
         } else {
           return null;
         }
@@ -51,6 +58,10 @@
 
     $scope.projects = projectsService.query();
 
+    // set initial sort order
+    $scope.order = 'updatedAt';
+    $scope.reverse = true;
+
     $scope.projects.$promise.then(function(projects) {
       $scope.projectsLoaded = true;
     }).catch($scope.genericError);
@@ -62,4 +73,10 @@
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
+
+    $scope.removeProject = function (project) {
+      project.$remove({id: project.id}, function() {
+        $scope.projects.splice($.inArray(project, $scope.projects), 1);
+      });
+    }
   }]);

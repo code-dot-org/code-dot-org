@@ -65,6 +65,7 @@
     background-color: darkorange; }
 
 .netsim_log_widget {
+  background-color: white;
   border: solid darkgray thin;
   margin: 0.5em;
   padding: 0; }
@@ -82,12 +83,12 @@
     padding: 5px;
     border: solid darkgray thin;
     border-radius: 3px;
-    background-color: lightgray; }
+    background-color: #ddd; }
     .netsim_log_widget .packet td {
-      border-color: lightgray; }
+      border-color: #ddd; }
   .netsim_log_widget .scroll_area {
-    background-color: white;
-    height: 160px;
+    margin: 0.5em 0 0.5em 0;
+    height: 180px;
     width: 100%;
     overflow-y: scroll; }
   .netsim_log_widget table {
@@ -100,7 +101,8 @@
     vertical-align: top; }
   .netsim_log_widget th {
     font-size: 10pt;
-    font-variant: small-caps; }
+    color: black;
+    background-color: transparent; }
   .netsim_log_widget td {
     font-family: monospace;
     /* Make sure table text can be selected and copied */
@@ -137,7 +139,7 @@
     color: whitesmoke; }
   .netsim_send_widget div.netsim_packet {
     border: solid darkgray thin;
-    background-color: lightgray;
+    background-color: #ddd;
     padding: 0.5em;
     border-radius: 0.5em;
     /* All input fields */
@@ -155,7 +157,8 @@
       border-collapse: collapse; }
     .netsim_send_widget div.netsim_packet th {
       font-size: 10pt;
-      font-variant: small-caps; }
+      color: black;
+      background-color: transparent; }
     .netsim_send_widget div.netsim_packet input, .netsim_send_widget div.netsim_packet textarea {
       padding: 0.2em;
       margin-bottom: 0.2em;
@@ -208,8 +211,7 @@
       border: solid lightgray 1px;
       border-collapse: collapse; }
     .netsim_tabs table th {
-      font-size: 10pt;
-      font-variant: small-caps; }
+      font-size: 10pt; }
   .netsim_tabs .ui-tabs-nav li a {
     font-size: 8pt;
     padding: 0 1em; }

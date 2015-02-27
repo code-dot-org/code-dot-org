@@ -13,6 +13,12 @@ exports.container = function (blockId, elementId, html) {
                            'html': html });
 };
 
+exports.write = function (blockId, html) {
+  return Applab.executeCmd(blockId,
+                          'write',
+                          {'html': html });
+};
+
 exports.innerHTML = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
                           'innerHTML',
@@ -306,6 +312,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.setInterval = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
+                          'setInterval',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearInterval = function (blockId, intervalId) {
+  return Applab.executeCmd(blockId,
+                           'clearInterval',
+                           {'intervalId': intervalId });
+};
+
 exports.playSound = function (blockId, url) {
   return Applab.executeCmd(blockId,
                           'playSound',
@@ -461,6 +480,12 @@ exports.show = function (blockId) {
 
 exports.hide = function (blockId) {
   return Applab.executeCmd(blockId, 'hide');
+};
+
+exports.speed = function (blockId, percent) {
+  return Applab.executeCmd(blockId,
+                           'speed',
+                           {'percent': percent});
 };
 
 exports.penWidth = function (blockId, width) {

@@ -1,0 +1,14 @@
+name 'External level test (will)'
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+
+# Test
+
+## Test markdown
+
+test [link](http://google.com)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue!</a>
+MARKDOWN

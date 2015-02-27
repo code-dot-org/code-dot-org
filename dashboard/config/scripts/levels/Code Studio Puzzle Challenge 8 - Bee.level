@@ -27,8 +27,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "ideal": "6"
+    "ideal": "6",
+    "failure_message_override": "Nice attempt! Try again to get it right.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
