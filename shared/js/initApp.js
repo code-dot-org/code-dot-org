@@ -231,20 +231,25 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
-    if (dashboard.currentApp) {
-      if (dashboard.currentApp.levelSource) {
-        appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+    if (dashboard.isEditingProject) {
+      if (dashboard.currentApp) {
+        if (dashboard.currentApp.levelSource) {
+          appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+        }
+      } else {
+        dashboard.currentApp = {
+          name: 'My Project'
+        };
+      }
+
+      $(window).on('run_button_pressed', dashboard.saveProject);
+
+      if (!dashboard.currentApp.hidden) {
+        dashboard.showProjectHeader();
       }
     } else {
-      dashboard.currentApp = {
-        name: 'My Project'
-      };
-    }
-
-    $(window).on('run_button_pressed', dashboard.saveProject);
-
-    if (!dashboard.currentApp.hidden) {
-      dashboard.showProjectHeader();
+      appOptions.hideSource = true;
+      appOptions.callouts = [];
     }
   }
   window[appOptions.app + 'Main'](appOptions);
@@ -293,10 +298,10 @@ if (appOptions.droplet) {
     var app_id = location.hash.slice(1);
     if (app_id) {
       // TODO ugh, we should use a router. maybe we should use angular :p
-      var params = app_id.split("/")
+      var params = app_id.split("/");
       if (params.length > 1 && params[1] == "edit") {
         app_id = params[0];
-        // TODO set some 'editing' flag, check the owner of the project
+        dashboard.isEditingProject = true;
       }
 
       // Load the project ID, if one exists
