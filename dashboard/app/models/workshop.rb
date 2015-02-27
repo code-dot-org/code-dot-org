@@ -1,5 +1,5 @@
 class Workshop < ActiveRecord::Base
-  PROGRAM_TYPES = %w(MSS, MSM, ECS, CSP)
+  PROGRAM_TYPES = %w(MSS MSM ECS CSP)
 
   validates_inclusion_of :program_type, in: PROGRAM_TYPES, on: :create
   # A Workshop has multiple well defined Time Segments (eg. each morning/afternoon of a workshop is a separate time segment)
