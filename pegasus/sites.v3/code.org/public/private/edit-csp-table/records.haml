@@ -11,7 +11,6 @@ theme: none
     }
     th {
       padding: 10px;
-      background-color: #ccc;
       text-align: left;
     }
     td {
@@ -56,13 +55,13 @@ theme: none
       %th
         %a{href: "", "ng-click" => "order = 'id'; reverse=!reverse"}
           id
-        %i.fa.fa-caret-down{"ng-show" => "order == 'id' && reverse == true"}
-        %i.fa.fa-caret-up{"ng-show" => "order == 'id' && reverse == false"}
+          %i.fa.fa-caret-down{"ng-show" => "order == 'id' && reverse == true"}
+          %i.fa.fa-caret-up{"ng-show" => "order == 'id' && reverse == false"}
       %th{"ng-repeat" => "column in columns"}
         %a{href: "", "ng-click" => "$parent.order = column; $parent.reverse = !$parent.reverse"}
           {{column}}
-        %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
-        %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
+          %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
+          %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
       %th
     %tr
       %td
