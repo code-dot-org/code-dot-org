@@ -283,15 +283,15 @@ theme: angular
 
       $scope.districts = districtsService.query();
 
-      $scope.save = function() {
-        if ($scope.cohort.id) { // existing
-          $scope.cohort =
-            cohortsService.update({id: $scope.cohort.id}, $scope.cohort, function() {
+      $scope.save = function(cohort) {
+        if (cohort.id) { // existing
+          cohort =
+            cohortsService.update({id: cohort.id}, cohort, function() {
               $location.path("/cohorts");
             });
         } else { // new
-          $scope.cohort =
-            cohortsService.save($scope.cohort, function() {
+          cohort =
+            cohortsService.save(cohort, function() {
               $location.path("/cohorts");
             });
         }
