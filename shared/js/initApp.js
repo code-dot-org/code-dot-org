@@ -309,7 +309,7 @@ if (appOptions.droplet) {
       }
 
       // Load the project ID, if one exists
-      promise.then(function () {
+      promise = promise.then(function () {
         var deferred = new $.Deferred();
         storageApps().fetch(app_id, function (data) {
           dashboard.currentApp = data;
@@ -322,10 +322,10 @@ if (appOptions.droplet) {
     }
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
-    promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
 }
-promise.then(loadSource('common' + appOptions.pretty))
+promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))
