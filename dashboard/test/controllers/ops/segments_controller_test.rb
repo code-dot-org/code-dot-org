@@ -2,6 +2,7 @@ require 'test_helper'
 module Ops
   class SegmentsControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
+    API = 'dashboardapi'
 
     setup do
       @admin = create(:admin)
@@ -13,7 +14,7 @@ module Ops
     # Test index + CRUD controller actions
 
     test 'list all segments' do
-      assert_routing({ path: 'ops/workshops/1/segments', method: :get }, { controller: 'ops/segments', action: 'index', workshop_id: '1'})
+      assert_routing({ path: "#{API}/workshops/1/segments", method: :get }, { controller: 'ops/segments', action: 'index', workshop_id: '1'})
 
       get :index, workshop_id: @workshop.id
       assert_response :success
@@ -21,7 +22,7 @@ module Ops
 
     test 'Ops team can create segments' do
       #87054134
-      assert_routing({ path: 'ops/workshops/1/segments', method: :post }, { controller: 'ops/segments', action: 'create', workshop_id: '1' })
+      assert_routing({ path: "#{API}/workshops/1/segments", method: :post }, { controller: 'ops/segments', action: 'create', workshop_id: '1' })
 
       assert_difference 'Segment.count' do
         post :create, workshop_id: @workshop.id, segment: {start: DateTime.now, end: DateTime.now + 1.day}
@@ -30,14 +31,14 @@ module Ops
     end
 
     test 'read segment info' do
-      assert_routing({ path: 'ops/segments/1', method: :get }, { controller: 'ops/segments', action: 'show', id: '1' })
+      assert_routing({ path: "#{API}/segments/1", method: :get }, { controller: 'ops/segments', action: 'show', id: '1' })
 
       get :show, id: @segment.id
       assert_response :success
     end
 
     test 'update segment info' do
-      assert_routing({ path: 'ops/segments/1', method: :patch }, { controller: 'ops/segments', action: 'update', id: '1' })
+      assert_routing({ path: "#{API}/segments/1", method: :patch }, { controller: 'ops/segments', action: 'update', id: '1' })
 
       start_time = DateTime.now
       patch :update, id: @segment.id, segment: {start: start_time}
@@ -50,7 +51,7 @@ module Ops
     end
 
     test 'delete segment' do
-      assert_routing({ path: 'ops/segments/1', method: :delete }, { controller: 'ops/segments', action: 'destroy', id: '1' })
+      assert_routing({ path: "#{API}/segments/1", method: :delete }, { controller: 'ops/segments', action: 'destroy', id: '1' })
 
       assert_difference 'Segment.count', -1 do
         get :destroy, id: @segment.id

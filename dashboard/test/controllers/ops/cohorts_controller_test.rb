@@ -2,6 +2,7 @@ require 'test_helper'
 module Ops
   class CohortsControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
+    API = 'dashboardapi'
 
     setup do
       @admin = create :admin
@@ -12,7 +13,7 @@ module Ops
     test 'District Contact can add teachers in their district from a cohort' do
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
-      assert_routing({ path: 'ops/cohorts/1/teachers/2', method: :post }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'add_teacher' })
+      assert_routing({ path: "#{API}/cohorts/1/teachers/2", method: :post }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'add_teacher' })
 
       district = @cohort.districts.first
       teacher = create(:teacher, district: district)
@@ -26,7 +27,7 @@ module Ops
     test 'District Contact can drop teachers in their district from a cohort' do
       #87054720 (part 2)
       #Can search by teacher’s name or email to drop a teacher
-      assert_routing({ path: 'ops/cohorts/1/teachers/2', method: :delete }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'drop_teacher' })
+      assert_routing({ path: "#{API}/cohorts/1/teachers/2", method: :delete }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'drop_teacher' })
 
       assert_difference ->{@cohort.teachers.count}, -1 do
         delete :drop_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
@@ -42,7 +43,7 @@ module Ops
       # Test index + CRUD controller actions
 
     test 'Ops team can list all cohorts' do
-      assert_routing({ path: 'ops/cohorts', method: :get }, { controller: 'ops/cohorts', action: 'index' })
+      assert_routing({ path: "#{API}/cohorts", method: :get }, { controller: 'ops/cohorts', action: 'index' })
 
       get :index
       assert_response :success
@@ -74,7 +75,7 @@ module Ops
 
     test 'Ops team can create Cohorts' do
       #87054348
-      assert_routing({ path: 'ops/cohorts', method: :post }, { controller: 'ops/cohorts', action: 'create' })
+      assert_routing({ path: "#{API}/cohorts", method: :post }, { controller: 'ops/cohorts', action: 'create' })
 
       assert_difference 'Cohort.count' do
         post :create, cohort: {name: 'Cohort name'}
@@ -149,7 +150,7 @@ module Ops
     end
 
     test 'read cohort info' do
-      assert_routing({ path: 'ops/cohorts/1', method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
+      assert_routing({ path: "#{API}/cohorts/1", method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
 
       get :show, id: @cohort.id
       assert_response :success
@@ -160,7 +161,7 @@ module Ops
     end
 
     test 'update cohort info' do
-      assert_routing({ path: 'ops/cohorts/1', method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
+      assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       new_name = 'New cohort name'
       patch :update, id: @cohort.id, cohort: {name: new_name}
@@ -171,7 +172,7 @@ module Ops
     end
 
     test 'delete cohort' do
-      assert_routing({ path: 'ops/cohorts/1', method: :delete }, { controller: 'ops/cohorts', action: 'destroy', id: '1' })
+      assert_routing({ path: "#{API}/cohorts/1", method: :delete }, { controller: 'ops/cohorts', action: 'destroy', id: '1' })
 
       assert_difference 'Cohort.count', -1 do
         delete :destroy, id: @cohort.id
