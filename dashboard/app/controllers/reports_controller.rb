@@ -45,7 +45,7 @@ SQL
     stage_id = params[:stage_id]
     level_id = params[:level_id]
 
-    if script.default_script? && !stage_id
+    if script.default_script? && script.id != 1
       script_level = script.get_script_level_by_chapter(level_id)
     else
       script_level = script.get_script_level_by_stage_and_position(stage_id, level_id)
