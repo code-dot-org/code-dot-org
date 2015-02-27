@@ -175,7 +175,7 @@ dashboard.saveProject = function(callback) {
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
-      location.hash = dashboard.currentApp.id;
+      location.hash = dashboard.currentApp.id + '/edit';
       callbackSafe(callback, data);
     });
   }
