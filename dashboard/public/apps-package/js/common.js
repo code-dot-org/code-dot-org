@@ -3517,22 +3517,64 @@ function installCond(blockly, generator) {
 }
 
 },{"../locale/current/common":219,"./utils":214}],199:[function(require,module,exports){
-var list = [];
+var timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  list.push(window.setTimeout.apply(window, arguments));
+  timeoutList.push(window.setTimeout.apply(window, arguments));
 };
 
 /**
- * Clears all timeouts in our list and resets the list
+ * Clears all timeouts in our timeoutList and resets the timeoutList
  */
 exports.clearTimeouts = function () {
-  list.forEach(window.clearTimeout, window);
-  list = [];
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
 };
+
+/**
+ * Clears a timeout and removes the item from the timeoutList
+ */
+exports.clearTimeout = function (id) {
+  window.clearTimeout(id);
+  // List removal requires IE9+
+  var index = timeoutList.indexOf(id);
+  if (index > -1) {
+    timeoutList.splice(index, 1);
+  }
+};
+
+var intervalList = [];
+
+/**
+ * call setInterval and track the returned id
+ */
+exports.setInterval = function (fn, time) {
+  intervalList.push(window.setInterval.apply(window, arguments));
+};
+
+/**
+ * Clears all interval timeouts in our intervalList and resets the intervalList
+ */
+exports.clearIntervals = function () {
+  intervalList.forEach(window.clearInterval, window);
+  intervalList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the intervalList
+ */
+exports.clearInterval = function (id) {
+  window.clearInterval(id);
+  // List removal requires IE9+
+  var index = intervalList.indexOf(id);
+  if (index > -1) {
+    intervalList.splice(index, 1);
+  }
+};
+
 
 },{}],193:[function(require,module,exports){
 module.exports= (function() {
@@ -5593,7 +5635,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.display = 'none';
+  workspaceDiv.style.visibility = 'hidden';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -5615,10 +5657,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      // Redirect user to /edit version of this page. It would be better
-      // to just turn on the workspace but there are rendering issues
-      // with that.
-      window.location.href = window.location.href + '/edit';
+      workspaceDiv.style.visibility = 'visible';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -10205,7 +10244,7 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
+    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults

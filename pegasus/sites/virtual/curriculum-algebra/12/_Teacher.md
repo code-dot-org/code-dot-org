@@ -28,6 +28,11 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
+## Materials, Resources and Prep
+### For the Student
+- [Update-target Design Recipe](../docs/worksheets/update_target.pdf) (in the student workbook)
+- [Update-danger Design Recipe](../docs/worksheets/update_danger.pdf) (in the student workbook)
+
 ## Getting Started
 
 

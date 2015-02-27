@@ -28,6 +28,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
+## Materials, Resources and Prep
+### For the Student
+- [Rocket-Height Design Recipe](../docs/worksheets/rocket_height.pdf) (in the student workbook)
+
 ## Getting Started
 
 
@@ -46,6 +50,7 @@ In the online puzzles, the students will find a blue function box and a black fu
 Another curiousity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
 
 [tip]
+
 # Lesson Tip
 
 The contract can be quite long and often scrolls off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.

@@ -23,8 +23,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 3) [Boolean 20 Questions](#Activity1)   
 
+<!--
 ### **Assessment**
 4) [Boolean Assessment](#Assessment)
+-->
 
 [/summary]
 
@@ -124,10 +126,12 @@ And how does this all connect with our game?  Is the target too far left or too 
 
 [together]
 
+<!--
 ## Assessment 
 ### <a name="Assessment"></a>4) Booleans Assessment
 
 Visit [MSM Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 

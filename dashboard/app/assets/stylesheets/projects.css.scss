@@ -14,7 +14,16 @@
       text-decoration: none;
     }
   }
+  [class*="span"] {
+    margin: 0;
+  }
 }
+
+.projects-table-wrapper {
+  width: 650px;
+  margin: 0 auto;
+}
+
 .projects {
   width: 850px;
   table-layout: auto;
