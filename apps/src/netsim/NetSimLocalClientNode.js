@@ -190,9 +190,14 @@ NetSimLocalClientNode.prototype.onFailedHeartbeat_ = function () {
  * Give this node an action to take if it detects that it is no longer part
  * of the shard.
  * @param {function} onNodeLostConnection
+ * @throws if set would clobber a previously-set callback.
  */
 NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
     onNodeLostConnection) {
+  if (this.onNodeLostConnection_ !== undefined &&
+      onNodeLostConnection !== undefined) {
+    throw new Error('Node already has a lost connection callback.');
+  }
   this.onNodeLostConnection_ = onNodeLostConnection;
 };
 
