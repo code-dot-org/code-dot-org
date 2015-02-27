@@ -313,6 +313,8 @@ if (appOptions.droplet) {
         });
         return deferred;
       });
+    } else {
+      dashboard.isEditingProject = true;
     }
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
