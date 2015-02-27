@@ -224,15 +224,15 @@ Blockly.Blocks.functional_definition = {
       this.updateParams_();
     }
   },
-  changeParamType: function(name, newType) {
-    var change = false;
+  changeParamType: function (name, newType) {
+    var changed = false;
     for (var x = 0; x < this.parameterNames_.length; x++) {
       if (Blockly.Names.equals(name, this.parameterNames_[x])) {
         this.parameterTypes_[x] = newType;
-        change = true;
+        changed = true;
       }
     }
-    if (change) {
+    if (changed) {
       this.updateParams_();
       this.updateCallerParams_();
     }
@@ -438,8 +438,6 @@ Blockly.Blocks.functional_call = {
       if (Blockly.Names.equals(oldName, this.currentParameterNames_[x])) {
         this.currentParameterNames_[x] = newName;
         this.refreshParameterTitleString_();
-        //block.setTitleValue(newName, 'ARG' + x);
-        //this.getInput().titleRow[0].setText(newName);
       }
     }
   }
