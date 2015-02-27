@@ -54,6 +54,14 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @private
    */
   this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
+
+  /**
+   * A heartbeat can be given a recovery action to take if it fails to
+   * update its remote row.
+   * @type {function}
+   * @private
+   */
+  this.onFailedHeartbeat_ = undefined;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -133,12 +141,30 @@ NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
 };
 
 /**
+ * Set a handler to call if this heartbeat is unable to update its remote
+ * storage representation.  Can be used to go into a recovery mode,
+ * acknowledge disconnect, and/or attempt an auto-reconnect.
+ * @param {function} onFailedHeartbeat
+ */
+NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
+  this.onFailedHeartbeat_ = onFailedHeartbeat;
+};
+
+/**
  * Updates own row on regular interval, as long as something's making
  * it tick.
  */
 NetSimHeartbeat.prototype.tick = function () {
   if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
-    this.update();
+    this.update(function (success) {
+      if (!success) {
+        // A failed heartbeat update may indicate that we've been disconnected
+        // or kicked from the shard.  We may want to take action.
+        if (this.onFailedHeartbeat_ !== undefined) {
+          this.onFailedHeartbeat_();
+        }
+      }
+    }.bind(this));
   }
 };

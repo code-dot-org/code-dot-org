@@ -28,6 +28,7 @@ var logger = NetSimLogger.getSingleton();
 /**
  * Minimum delay between attempts to start a cleaning job.
  * @type {number}
+ * @const
  */
 var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
@@ -35,6 +36,7 @@ var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
  * Minimum delay before the next cleaning job is started after
  * a cleaning job has finished successfully.
  * @type {number}
+ * @const
  */
 var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
 

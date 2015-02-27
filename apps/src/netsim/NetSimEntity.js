@@ -10,8 +10,6 @@
  */
 'use strict';
 
-var ObservableEvent = require('../ObservableEvent');
-
 /**
  * Client model of simulated network entity, which lives in a shard table.
  *
@@ -38,13 +36,6 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
-
-  /**
-   * Change event fired when entity's state changes in a way that
-   * should be reported.
-   * @type {ObservableEvent}
-   */
-  this.onChange = new ObservableEvent();
 };
 
 /**
