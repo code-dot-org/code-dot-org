@@ -249,7 +249,8 @@ function initApp() {
       if (!dashboard.currentApp.hidden) {
         dashboard.showProjectHeader();
       }
-    } else {
+    } else if (dashboard && dashboard.currentApp.levelSource) {
+      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
