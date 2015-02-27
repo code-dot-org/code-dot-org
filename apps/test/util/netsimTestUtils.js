@@ -1,6 +1,8 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
+var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
+
 /**
  * Checks whether the given table has the specified number of rows.
  *
@@ -34,7 +36,7 @@ exports.fauxStorageTable = function () {
     readAll: function (callback) {
       log_ += 'readAll';
 
-      callback(tableData_);
+      callback(null, tableData_);
     },
 
     read: function (id, callback) {
@@ -42,11 +44,11 @@ exports.fauxStorageTable = function () {
 
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
-          callback(tableData_[i]);
+          callback(null, tableData_[i]);
           return;
         }
       }
-      callback(undefined);
+      callback(new Error('Not Found'), undefined);
     },
 
     create: function (value, callback) {
@@ -56,7 +58,7 @@ exports.fauxStorageTable = function () {
       rowIndex_++;
       tableData_.push(value);
 
-      callback(value);
+      callback(null, value);
     },
 
     update: function (id, value, callback) {
@@ -66,12 +68,12 @@ exports.fauxStorageTable = function () {
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
           tableData_[i] = value;
-          callback(true);
+          callback(null, true);
           return;
         }
       }
 
-      callback(false);
+      callback(new Error('Not Found'), false);
     },
 
     delete: function (id, callback) {
@@ -80,12 +82,12 @@ exports.fauxStorageTable = function () {
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
           tableData_.splice(i, 1);
-          callback(true);
+          callback(null, true);
           return;
         }
       }
 
-      callback(false);
+      callback(new Error('Not Found'), false);
     },
 
     log: function () {
@@ -99,11 +101,25 @@ exports.fauxStorageTable = function () {
 };
 
 exports.fakeShard = function () {
+  var nodeTable_ = exports.fauxStorageTable();
+  var wireTable_ = exports.fauxStorageTable();
+  var messageTable_ = exports.fauxStorageTable();
+  var logTable_ = exports.fauxStorageTable();
+  var heartbeatTable_ = exports.fauxStorageTable();
   return {
-    nodeTable: exports.fauxStorageTable(),
-    wireTable: exports.fauxStorageTable(),
-    messageTable: exports.fauxStorageTable(),
-    logTable: exports.fauxStorageTable(),
-    heartbeatTable: exports.fauxStorageTable()
+    remoteNodeTable: nodeTable_,
+    nodeTable: new NetSimTable(nodeTable_),
+
+    remoteWireTable: wireTable_,
+    wireTable: new NetSimTable(wireTable_),
+
+    remoteMessageTable: messageTable_,
+    messageTable: new NetSimTable(messageTable_),
+
+    remoteLogTable: logTable_,
+    logTable: new NetSimTable(logTable_),
+
+    remoteHeartbeatTable: heartbeatTable_,
+    heartbeatTable: new NetSimTable(heartbeatTable_)
   };
 };

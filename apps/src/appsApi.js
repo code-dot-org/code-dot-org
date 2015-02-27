@@ -38,6 +38,17 @@
 
 require('./utils');
 
+/**
+ * A node-style callback method, that accepts two parameters: err and result.
+ * See article on Node error conventions here:
+ * https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions
+ *
+ * @callback NodeStyleCallback
+ * @param {?Error} err - An error object, or null if no error occurred.
+ * @param {*} result - Callback result, of any type depending on the
+ *        method being invoked.
+ */
+
 /** Namespace for app storage. */
 var appsApi = module.exports;
 
@@ -45,31 +56,53 @@ var ApiRequestHelper = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ * @param {*} failureValue - what to pass as the callback result if an error
+ *        occurs.
+ */
 ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
     dataType: 'json'
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        failureValue);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, true);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        false);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ * @param {*} failureValue - What to pass as the callback result if an error
+ *        occurs
+ */
 ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
     failureValue) {
   $.ajax({
@@ -77,21 +110,29 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        failureValue);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'delete'
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, true);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        false);
   });
 };
 
@@ -104,7 +145,7 @@ appsApi.AppsTable = function () {
 };
 
 /**
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.readAll = function (callback) {
   this.requestHelper_.get('', callback, null);
@@ -112,7 +153,7 @@ appsApi.AppsTable.prototype.readAll = function (callback) {
 
 /**
  * @param {!string} id - unique app GUID
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.read = function (id, callback) {
   this.requestHelper_.get('/' + id, callback, undefined);
@@ -120,7 +161,7 @@ appsApi.AppsTable.prototype.read = function (id, callback) {
 
 /**
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.create = function (value, callback) {
   this.requestHelper_.postToGet('', value, callback, undefined);
@@ -129,7 +170,7 @@ appsApi.AppsTable.prototype.create = function (value, callback) {
 /**
  * @param {!string} id
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.update = function (id, value, callback) {
   this.requestHelper_.post('/' + id, value, callback);
@@ -137,7 +178,7 @@ appsApi.AppsTable.prototype.update = function (id, value, callback) {
 
 /**
  * @param {!string} id
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
@@ -188,18 +229,34 @@ appsApi.PropertyBag = function (app_publickey) {
       '/shared-properties');
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.readAll = function (callback) {
   this.requestHelper_.get('', callback, null);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.read = function (key, callback) {
   this.requestHelper_.get('/' + key, callback, undefined);
 };
 
+/**
+ * @param {string} key
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.set = function (key, value, callback) {
   this.requestHelper_.post('/' + key, value, callback);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.delete = function (key, callback) {
   this.requestHelper_.delete('/' + key, callback);
 };

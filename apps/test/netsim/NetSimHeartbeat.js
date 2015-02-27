@@ -85,7 +85,7 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make original heartbeat (remotely)
-    testShard.heartbeatTable.create({
+    testShard.remoteHeartbeatTable.create({
       nodeID: myNodeID,
       time: 42
     }, function () {});
@@ -97,9 +97,9 @@ describe("NetSimHeartbeat", function () {
     assertEqual(originalHeartbeat.time_, 42);
 
     originalHeartbeat.time_ = 84;
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.update();
-    assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
+    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
 
     var remoteRow;
     testShard.heartbeatTable.readAll(function (rows) {
@@ -119,20 +119,20 @@ describe("NetSimHeartbeat", function () {
       originalHeartbeat = h;
     });
     assert(originalHeartbeat, "Created a heartbeat");
-    assertEqual("readAllcreate", testShard.heartbeatTable.log().slice(0, 13));
+    assertEqual("readAllcreate", testShard.remoteHeartbeatTable.log().slice(0, 13));
 
     // Tick immediately does nothing
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.time_ = Date.now() - 1000; // Not enough!
     originalHeartbeat.tick();
-    assertEqual("", testShard.heartbeatTable.log().slice(0, 13));
+    assertEqual("", testShard.remoteHeartbeatTable.log().slice(0, 13));
 
     // Tick after 6 seconds updates retrieved time
     var sixSecondsAgo = Date.now() - 6001;
     originalHeartbeat.time_ = sixSecondsAgo;
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.tick();
-    assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
+    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
     assertWithinRange(Date.now(), originalHeartbeat.time_, 10);
   });
 
@@ -150,9 +150,9 @@ describe("NetSimHeartbeat", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
 
     // Destory heartbeat
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     heartbeat.destroy();
-    assert("destroy", testShard.heartbeatTable.log().slice(0, 7));
+    assert("destroy", testShard.remoteHeartbeatTable.log().slice(0, 7));
 
     // Check that table is empty
     assertTableSize(testShard, 'heartbeatTable', 0);
