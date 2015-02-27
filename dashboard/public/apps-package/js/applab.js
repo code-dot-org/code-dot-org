@@ -95,6 +95,7 @@ levels.ec_simple = {
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
+    "write": null,
     "getXPosition": null,
     "getYPosition": null,
 
@@ -142,14 +143,17 @@ levels.ec_simple = {
     "penColor": null,
     "show": null,
     "hide": null,
+    "speed" : null,
 
     // Control
-    "setTimeout": null,
-    "clearTimeout": null,
     "forLoop_i_0_4": null,
     "ifBlock": null,
     "ifElseBlock": null,
     "whileBlock": null,
+    "setTimeout": null,
+    "clearTimeout": null,
+    "setInterval": null,
+    "clearInterval": null,
 
     // Math
     "addOperator": null,
@@ -171,11 +175,11 @@ levels.ec_simple = {
     "mathMin": null,
 
     // Variables
-    "console.log": null,
     "declareAssign_x": null,
     "assign_x": null,
     "declareAssign_x_array_1_4": null,
     "declareAssign_x_prompt": null,
+    "console.log": null,
 
     // Functions
     "functionParams_none": null,
@@ -308,6 +312,7 @@ var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
+var apiTimeoutList = require('../timeoutList');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -455,10 +460,14 @@ var drawDiv = function () {
   visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
+function stepSpeedFromSliderSpeed(sliderSpeed) {
+  return 300 * Math.pow(1 - sliderSpeed, 2);
+}
+
 function getCurrentTickLength() {
   var stepSpeed = Applab.scale.stepSpeed;
   if (Applab.speedSlider) {
-    stepSpeed = 300 * Math.pow(1 - Applab.speedSlider.getValue(), 2);
+    stepSpeed = stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
   }
   return stepSpeed;
 }
@@ -850,7 +859,6 @@ Applab.init = function(config) {
 
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -1007,6 +1015,8 @@ studioApp.reset = function(first) {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
 
@@ -1229,8 +1239,6 @@ Applab.execute = function() {
   Applab.waitingForReport = false;
   Applab.response = null;
   var i;
-
-  studioApp.playAudio('start');
 
   studioApp.reset(false);
 
@@ -1484,10 +1492,16 @@ Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
-  newDiv.id = opts.elementId;
+  if (typeof opts.elementId !== "undefined") {
+    newDiv.id = opts.elementId;
+  }
   newDiv.innerHTML = opts.html;
 
   return Boolean(divApplab.appendChild(newDiv));
+};
+
+Applab.write = function (opts) {
+  return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
@@ -1759,6 +1773,16 @@ Applab.penColor = function (opts) {
       ctx.strokeStyle = opts.color;
     }
     ctx.fillStyle = opts.color;
+  }
+};
+
+Applab.speed = function (opts) {
+  if (opts.percent >= 0 && opts.percent <= 100) {
+    var sliderSpeed = opts.percent / 100;
+    if (Applab.speedSlider) {
+      Applab.speedSlider.setValue(sliderSpeed);
+    }
+    Applab.scale.stepSpeed = stepSpeedFromSliderSpeed(sliderSpeed);
   }
 };
 
@@ -2276,44 +2300,58 @@ Applab.onEvent = function (opts) {
 };
 
 Applab.onHttpRequestEvent = function (opts) {
-  if (this.readyState === 4) {
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [
-        Number(this.status),
-        String(this.getResponseHeader('content-type')),
-        String(this.responseText)]
-    });
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.interpreter === Applab.interpreter) {
+    if (this.readyState === 4) {
+      Applab.eventQueue.push({
+        'fn': opts.func,
+        'arguments': [
+          Number(this.status),
+          String(this.getResponseHeader('content-type')),
+          String(this.responseText)]
+      });
+    }
   }
 };
 
 Applab.startWebRequest = function (opts) {
+  opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
   req.open('GET', String(opts.url), true);
   req.send();
 };
 
-Applab.onTimeoutFired = function (opts) {
+Applab.onTimerFired = function (opts) {
+  // ensure that this event came from the active interpreter instance:
   Applab.eventQueue.push({
     'fn': opts.func
   });
-  if (Applab.interpreter) {
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the rest of the
-    // user's code will execute in the next onTick()
-    Applab.executeInterpreter(true);
-  }
+  // NOTE: the interpreter will not execute forever, if the event handler
+  // takes too long, executeInterpreter() will return and the rest of the
+  // user's code will execute in the next onTick()
+  Applab.executeInterpreter(true);
 };
 
 Applab.setTimeout = function (opts) {
-  return window.setTimeout(Applab.onTimeoutFired.bind(this, opts), opts.milliseconds);
+  return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
-  window.clearTimeout(opts.timeoutId);
+  apiTimeoutList.clearTimeout(opts.timeoutId);
+};
+
+Applab.setInterval = function (opts) {
+  return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+Applab.clearInterval = function (opts) {
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Applab.setInterval() function
+  apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {
@@ -2693,7 +2731,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":216,"../../locale/current/common":219,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":168,"../slider":169,"../templates/page.html":193,"../utils":214,"../xml":215,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
+},{"../../locale/current/applab":216,"../../locale/current/common":219,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":168,"../slider":169,"../templates/page.html":193,"../timeoutList":199,"../utils":214,"../xml":215,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2735,48 +2773,49 @@ return buf.join('');
 }());
 },{"../../locale/current/applab":216,"../../locale/current/common":219,"ejs":235}],11:[function(require,module,exports){
 module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
-  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
-  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
-  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
-  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
-  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'", "true"] },
-  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
-  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
-  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
+  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
+  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false"] },
+  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
+  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"', "true"] },
+  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'title': 'Create a block of text', 'category': 'UI controls', 'params': ['"html"'] },
+  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
 
-  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
-  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
+  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ['"id"'] },
   {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
   {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
   {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
   {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ["'red'"] },
-  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ["'yellow'"] },
-  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'imageId'", "0", "0"] },
+  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ['"red"'] },
+  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ['"yellow"'] },
+  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
   {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
   {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
   {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
 
-  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ["'mytable'", "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
-  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
+  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
 
   {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
@@ -2795,22 +2834,25 @@ module.exports.blocks = [
   {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
   {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
   {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
-  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
+  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ['"red"'] },
   {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
   {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
+  {'func': 'speed', 'title': "Change the execution speed of the program to the specified percentage value", 'category': 'Turtle', 'params': ["50"] },
 
   {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
+  {'func': 'setInterval', 'title': 'Continue to execute code each time the specified number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'title': 'Clear an existing interval timer by passing in the value returned from setInterval()', 'category': 'Control', 'params': ["0"] },
 
-  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ["'Message'"], 'dontAlias': true },
+  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
 
-  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
-  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
-  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
-  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
-  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ["'id'", "'color:red;'"] },
-  {'func': 'getAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
-  {'func': 'setAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'", "200"]},
+  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
+  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
+  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
+  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
 ];
 
 module.exports.categories = {
@@ -3187,6 +3229,12 @@ exports.container = function (blockId, elementId, html) {
                            'html': html });
 };
 
+exports.write = function (blockId, html) {
+  return Applab.executeCmd(blockId,
+                          'write',
+                          {'html': html });
+};
+
 exports.innerHTML = function (blockId, elementId, html) {
   return Applab.executeCmd(blockId,
                           'innerHTML',
@@ -3480,6 +3528,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.setInterval = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
+                          'setInterval',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearInterval = function (blockId, intervalId) {
+  return Applab.executeCmd(blockId,
+                           'clearInterval',
+                           {'intervalId': intervalId });
+};
+
 exports.playSound = function (blockId, url) {
   return Applab.executeCmd(blockId,
                           'playSound',
@@ -3635,6 +3696,12 @@ exports.show = function (blockId) {
 
 exports.hide = function (blockId) {
   return Applab.executeCmd(blockId, 'hide');
+};
+
+exports.speed = function (blockId, percent) {
+  return Applab.executeCmd(blockId,
+                           'speed',
+                           {'percent': percent});
 };
 
 exports.penWidth = function (blockId, width) {

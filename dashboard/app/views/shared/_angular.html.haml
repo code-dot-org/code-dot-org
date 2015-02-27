@@ -1,0 +1,8 @@
+-if rack_env == :development
+  %script{src: "/shared/js/angular/angular.js"}
+  %script{src: "/shared/js/angular-route/angular-route.js"}
+  %script{src: "/shared/js/angular-resource/angular-resource.js"}
+-else
+  %script{src: "/shared/js/angular/angular.min.js"}
+  %script{src: "/shared/js/angular-route/angular-route.min.js"}
+  %script{src: "/shared/js/angular-resource/angular-resource.min.js"}

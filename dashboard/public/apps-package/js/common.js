@@ -3517,22 +3517,64 @@ function installCond(blockly, generator) {
 }
 
 },{"../locale/current/common":219,"./utils":214}],199:[function(require,module,exports){
-var list = [];
+var timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  list.push(window.setTimeout.apply(window, arguments));
+  timeoutList.push(window.setTimeout.apply(window, arguments));
 };
 
 /**
- * Clears all timeouts in our list and resets the list
+ * Clears all timeouts in our timeoutList and resets the timeoutList
  */
 exports.clearTimeouts = function () {
-  list.forEach(window.clearTimeout, window);
-  list = [];
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
 };
+
+/**
+ * Clears a timeout and removes the item from the timeoutList
+ */
+exports.clearTimeout = function (id) {
+  window.clearTimeout(id);
+  // List removal requires IE9+
+  var index = timeoutList.indexOf(id);
+  if (index > -1) {
+    timeoutList.splice(index, 1);
+  }
+};
+
+var intervalList = [];
+
+/**
+ * call setInterval and track the returned id
+ */
+exports.setInterval = function (fn, time) {
+  intervalList.push(window.setInterval.apply(window, arguments));
+};
+
+/**
+ * Clears all interval timeouts in our intervalList and resets the intervalList
+ */
+exports.clearIntervals = function () {
+  intervalList.forEach(window.clearInterval, window);
+  intervalList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the intervalList
+ */
+exports.clearInterval = function (id) {
+  window.clearInterval(id);
+  // List removal requires IE9+
+  var index = intervalList.indexOf(id);
+  if (index > -1) {
+    intervalList.splice(index, 1);
+  }
+};
+
 
 },{}],193:[function(require,module,exports){
 module.exports= (function() {
@@ -7685,6 +7727,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
 
 // This returns a document element with the appropriate feedback message.
 // The message will be one of the following, from highest to lowest precedence:
+// 0. Failure override message specified on level (options.level.failureMessageOverride)
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
 // 3. Header message due to dashboard text check fail (options.response.share_failure).
@@ -7698,7 +7741,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.message) {
+  if (options.feedbackType !== TestResults.ALL_PASS &&
+      options.level.failureMessageOverride) {
+    message = options.level.failureMessageOverride;
+  } else  if (options.message) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
@@ -10201,7 +10247,7 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
+    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
