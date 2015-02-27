@@ -5,6 +5,7 @@ goog.provide('Blockly.DomainEditor');
 goog.require('goog.dom');
 goog.require('Blockly.TypeDropdown');
 goog.require('Blockly.DomainNameInput');
+goog.require('Blockly.XButton');
 
 /**
  * A DOM-based parameter editor
@@ -49,8 +50,13 @@ Blockly.DomainEditor.prototype.render = function (parent) {
     name: this.name
   });
 
+  var xButton = new Blockly.XButton({
+    onButtonPressed: this.onRemovePress
+  });
+
   nameInput.render(editorDOM);
   typeDropdown.render(editorDOM);
+  xButton.render(editorDOM);
 
   parent.appendChild(editorDOM);
 

@@ -240,7 +240,7 @@ Blockly.Css.CONTENT = [
   '.contractEditor #paramAddButton {',
   '  float: left;',
   '  margin-top: 8px;',
-  '  margin-left: -13px;',
+  '  margin-left: 13px;',
   '}',
   '.contractEditorHeaderText {',
   '  cursor: default;',
