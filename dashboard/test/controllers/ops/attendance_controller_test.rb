@@ -9,7 +9,8 @@ module Ops
       @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
-      @attendance = create(:attendance)
+      @cohort = create(:cohort)
+      @attendance = @cohort.workshops.first.segments.first.attendances.first
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
@@ -17,7 +18,7 @@ module Ops
       assert_routing({ path: "#{API}/attendance/cohort/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'cohort', cohort_id: '1'})
 
       sign_out @admin
-      cohort = @attendance.segment.workshop.cohort
+      cohort = @cohort
       district = cohort.districts.first
       sign_in district.contact
 
@@ -33,7 +34,7 @@ module Ops
       assert_routing({ path: "#{API}/attendance/teacher/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
 
       sign_out @admin
-      cohort = @attendance.segment.workshop.cohort
+      cohort = @cohort
       district = cohort.districts.first
       sign_in district.contact
 
@@ -55,7 +56,6 @@ module Ops
       sign_in facilitator
       get :workshop, workshop_id: workshop.id
       assert_response :success
-      # puts JSON.parse(@response.body)
     end
 
     test 'Facilitators can view attendance by teacher for all segments in their workshop' do
@@ -66,7 +66,6 @@ module Ops
       sign_in facilitator
       get :workshop, workshop_id: workshop.id, by_teacher: true
       assert_response :success
-      # puts JSON.parse(@response.body)
     end
 
     test 'Facilitators can mark attendance for each segment' do

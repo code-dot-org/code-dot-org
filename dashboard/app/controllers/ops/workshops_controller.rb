@@ -11,10 +11,8 @@ module Ops
     # Get the full cohort list of teachers in a specific workshop (for facilitators)
     def teachers
       # first name, last name, email, district, gender and any workshop details that are available for teachers
-      teachers = @workshop.teachers.includes(:district).select('users.id, users.name, users.email, users.username, users.gender')
-      respond_with teachers do |format|
-        format.json { render json: teachers.to_json(include: :district) }
-      end
+      teachers = @workshop.teachers.includes(:district)
+      respond_with teachers
     end
 
     # POST /ops/workshops
@@ -39,18 +37,18 @@ module Ops
           # For other teachers, list all workshops they're attending.
           Workshop.includes(:teachers).where(users: {id: current_user.try(:id)})
         end
-      render json: my_workshops.try(:to_json)
+      respond_with my_workshops
     end
 
     # GET /ops/workshops/1
     def show
-      render json: @workshop.as_json
+      respond_with @workshop
     end
 
     # PATCH/PUT /ops/workshops/1
     def update
       @workshop.update!(params[:workshop])
-      render json: @workshop.as_json
+      respond_with @workshop
     end
 
     # DELETE /ops/workshops/1

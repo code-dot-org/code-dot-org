@@ -17,18 +17,18 @@ module Ops
 
     # GET /ops/workshops/1/segments
     def index
-      render json: @segments.to_json
+      render json: @segments
     end
 
     # GET /ops/segments/1
     def show
-      render json: @segment.as_json
+      render json: @segment
     end
 
     # PATCH/PUT /ops/segments/1
     def update
       @segment.update!(params[:segment])
-      render json: @segment.as_json
+      render json: @segment
     end
 
     # DELETE /ops/segments/1
