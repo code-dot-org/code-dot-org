@@ -201,7 +201,7 @@ NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
  * @param {function} [onComplete]
  */
 NetSimLocalClientNode.prototype.update = function (onComplete) {
-  onComplete = (onComplete !== undefined) ? onComplete : function () {};
+  onComplete = onComplete || function () {};
 
   var self = this;
   NetSimLocalClientNode.superPrototype.update.call(this, function (success) {
@@ -220,9 +220,7 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
  * @param {function} onComplete (success)
  */
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = onComplete || function () {};
 
   var self = this;
   this.connectToNode(router, function (wire) {
