@@ -177,7 +177,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
     if (node) {
       this.myNode = node;
       this.myNode.setDisplayName(displayName);
-      this.myNode.setLostConnectionCallback(this.onMyNodeLostConnection_.bind(this));
+      this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
       this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
       this.myNode.update(function () {
         this.shardChange.notifyObservers(this.shard_, this.myNode);
@@ -187,27 +187,6 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       logger.error("Failed to create client node.");
     }
   }.bind(this));
-};
-
-/**
- * Detects when local client node is unable to reconnect, and kicks user
- * out of the shard.
- * @private
- */
-NetSimConnection.prototype.onMyNodeChange_= function () {
-  if (this.myNode.getStatus() === 'Offline') {
-    this.disconnectFromShard();
-  }
-};
-
-/**
- * Detects when local client node is offline.  Responds by kicking the user
- * out of the shard, which should update the interface and provide an
- * opportunity to reconnect.
- * @private
- */
-NetSimConnection.prototype.onMyNodeLostConnection_ = function () {
-  this.disconnectFromShard();
 };
 
 /**
