@@ -2,7 +2,7 @@ require 'test_helper'
 module Ops
   class CohortsControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
-    API = 'dashboardapi'
+    API = ::OPS::API
 
     setup do
       @admin = create :admin

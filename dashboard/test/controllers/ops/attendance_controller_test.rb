@@ -3,7 +3,7 @@ module Ops
   class AttendancesControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
     tests WorkshopAttendanceController
-    API = 'dashboardapi'
+    API = ::OPS::API
 
     setup do
       @request.headers['Accept'] = 'application/json'
