@@ -21,14 +21,5 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   And ensure Flappy gameState is ACTIVE
 
   When I press "open-workspace"
-  And I wait for 5 seconds
-  And ensure Flappy gameState is WAITING
-  When I press "runButton"
-  Then ensure Flappy gameState is WAITING
-  And I wait for 1 seconds
-  And ensure Flappy tickCount is positive
-  When I simulate a mousedown on the svg
-  Then ensure Flappy gameState is ACTIVE
-
   Then block "14" is child of block "13"
   And block "15" is child of block "14"
