@@ -87,7 +87,7 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
+    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults

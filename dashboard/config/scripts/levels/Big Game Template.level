@@ -65,13 +65,13 @@
             </block>
           </functional_input>
           <functional_input name="danger">
-            <block type="functional_call" id="game_player">
-              <mutation name="player"/>
+            <block type="functional_call" id="game_danger">
+              <mutation name="danger"/>
             </block>
           </functional_input>
           <functional_input name="player">
-            <block type="functional_call" id="game_danger">
-              <mutation name="danger"/>
+            <block type="functional_call" id="game_player">
+              <mutation name="player"/>
             </block>
           </functional_input>
           <functional_input name="update-target">
@@ -112,6 +112,18 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="distance">
+                <arg name="px" type="Number"/>
+                <arg name="py" type="Number"/>
+                <arg name="cx" type="Number"/>
+                <arg name="cy" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-target">
                 <arg name="x" type="Number"/>
               </mutation>
@@ -121,11 +133,8 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="distance">
-                <arg name="px" type="Number"/>
-                <arg name="py" type="Number"/>
-                <arg name="cx" type="Number"/>
-                <arg name="cy" type="Number"/>
+              <mutation name="safe-right?">
+                <arg name="x" type="Number"/>
               </mutation>
             </block>
           </functional_input>
@@ -143,15 +152,6 @@
                 <outputtype>Number</outputtype>
               </mutation>
               <title name="VAR">x</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="safe-right?">
-                <arg name="x" type="Number"/>
-              </mutation>
             </block>
           </functional_input>
         </block>

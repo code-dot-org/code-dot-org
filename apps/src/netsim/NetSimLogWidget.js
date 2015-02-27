@@ -77,6 +77,8 @@ NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
   this.clearButton_ = this.rootDiv_.find('.clear_button');
   this.clearButton_.click(this.onClearButtonPress_.bind(this));
+  // TODO: Hide columns by configuration
+  this.rootDiv_.find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
@@ -180,6 +182,8 @@ NetSimLogPacket.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  // TODO: Hide columns by configuration
+  jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
 };
 

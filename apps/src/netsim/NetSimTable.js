@@ -19,7 +19,7 @@ var ObservableEvent = require('../ObservableEvent');
  * updates from the server.
  * @type {number}
  */
-var POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 5000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -58,6 +58,14 @@ var NetSimTable = module.exports = function (storageTable) {
    * @private
    */
   this.lastFullUpdateTime_ = 0;
+
+  /**
+   * Minimum time (in milliseconds) to wait between pulling full table contents
+   * from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
 NetSimTable.prototype.readAll = function (callback) {
@@ -156,9 +164,20 @@ NetSimTable.prototype.arrayFromCache_ = function () {
   return result;
 };
 
+/**
+ * Changes how often this table fetches a full table update from the
+ * server.
+ * @param {number} intervalMs - milliseconds of delay between updates.
+ */
+NetSimTable.prototype.setPollingInterval = function (intervalMs) {
+  this.pollingInterval_ = intervalMs;
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
-  if (Date.now() - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+  var now = Date.now();
+  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
+    this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
 };

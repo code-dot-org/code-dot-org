@@ -26,18 +26,24 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
- * How often a cleaning job should be kicked off.
+ * Minimum delay between attempts to start a cleaning job.
  * @type {number}
  */
-var CLEANING_RETRY_INTERVAL_MS = 60000;
-var CLEANING_SUCCESS_INTERVAL_MS = 300000;
+var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
 /**
- * How long a cleaning lock (heartbeat) must be untouched before can be
- * ignored and cleaned up by another client.
+ * Minimum delay before the next cleaning job is started after
+ * a cleaning job has finished successfully.
  * @type {number}
  */
-var CLEANING_HEARTBEAT_TIMEOUT = 15000;
+var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
+
+/**
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 60000; // 1 minute
 
 /**
  * Special heartbeat type that acts as a cleaning lock across the shard
@@ -82,7 +88,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
-              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
+              Date.now() - row.time < HEARTBEAT_TIMEOUT_MS;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
@@ -414,13 +420,6 @@ var CleanHeartbeats = function (cleaner) {
   this.cleaner_ = cleaner;
 };
 CleanHeartbeats.inherits(CommandSequence);
-
-/**
- * How old a heartbeat can be without being cleaned up.
- * @type {number}
- * @const
- */
-var HEARTBEAT_TIMEOUT_MS = 30000;
 
 /**
  * @private

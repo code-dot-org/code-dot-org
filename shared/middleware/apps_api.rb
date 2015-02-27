@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'csv'
 
 class AppsApi < Sinatra::Base
 
@@ -53,7 +54,7 @@ class AppsApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     timestamp = Time.now
-    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge(createdAt: timestamp, updatedAt: timestamp), request.ip)
+    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
     redirect "/v3/apps/#{id}", 301
   end
@@ -93,8 +94,9 @@ class AppsApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     value = JSON.load(request.body.read)
+    value = value.merge('updatedAt' => Time.now)
 
-    StorageApps.new(storage_id('user')).update(id, value.merge(updatedAt: Time.now), request.ip)
+    StorageApps.new(storage_id('user')).update(id, value, request.ip)
 
     dont_cache
     content_type :json
@@ -269,6 +271,41 @@ class AppsApi < Sinatra::Base
   end
   put %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+
+  #
+  # POST /v3/apps/<app-id>/import-(shared|user)-tables/<table-name>
+  #
+  # Imports a csv form post into a table, erasing previous contents.
+  #
+  post %r{/v3/apps/([^/]+)/import-(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+    unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
+    rows = CSV.parse(params[:import_file][:tempfile])
+    table = Table.new(app_id, storage_id(endpoint), table_name)
+    columns = rows[0]
+    columns.each_with_index do |column, i|
+          halt 400, {}, "The first row of the csv must contain the field names for your data. One of your field names is empty: " + columns.join(',') unless column
+    end
+    records = []
+    rows = rows[1..-1]
+    rows.each do |row|
+      record = {}
+      row.each_with_index do |value, i|
+        record[columns[i]] = value if value
+      end
+      records.push(record)
+    end
+
+    # wait for all records to be parsed before deleting the old records.
+    table.to_a.each do |row|
+      table.delete(row[:id])
+    end
+    
+    records.each do |record|
+      table.insert(record, request.ip)
+    end
+
+    redirect "/private/edit-csp-table/#{app_id}/#{table_name}"
   end
 
 end

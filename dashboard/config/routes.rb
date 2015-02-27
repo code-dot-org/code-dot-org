@@ -72,12 +72,13 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  get '/p', to: 'projects#index', as: 'project_list'
-  get '/projects', to: 'projects#index'
-  get '/projects/:template', to: 'projects#template'
-
-  get '/p/artist', to: 'levels#show', key: 'New Artist Project', as: 'standalone_artist'
-  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'standalone_playlab'
+  resources :projects, path: '/p/', only: [:index] do
+    collection do
+      get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
+      get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/:template', to: 'projects#template'
+    end
+  end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
   
