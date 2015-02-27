@@ -32,7 +32,7 @@ theme: none
         .panel-body
           .row{"ng-repeat" => "cohort_district in cohort.districts"}
             .form-group.col-sm-8{style: "margin-bottom: 0;"}
-              %select.district-name.form-control{name: "name", "ng-model" => "cohort_district.name", "ng-options"=>"district.name for district in districts", selectize: true}
+              %select.district-name.form-control{name: "name", "ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts", selectize: true}
             .col-sm-2
               %input.district-max-teachers.form-control{name: "max_teachers", type: "text", "ng-model" => "cohort_district.max_teachers"}
             .col-sm-2

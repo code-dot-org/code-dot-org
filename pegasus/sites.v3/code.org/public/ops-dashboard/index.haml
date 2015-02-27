@@ -273,12 +273,10 @@ theme: angular
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',
-          name: '',
-          max_teachers: ''
         });
       };
 
-      if (!$scope.cohort.districts) {
+      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
         $scope.cohort.districts = [];
         $scope.newDistrict();
       }
