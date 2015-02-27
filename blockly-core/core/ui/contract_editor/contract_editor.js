@@ -386,7 +386,7 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.innerHTML =
           '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
-        + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
+        + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
         + '<div id="domain-area" style="margin: 0;">'
         + '</div>'
         + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
@@ -438,6 +438,8 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
     isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
   goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
   if (isEditingVariable) {
     this.contractSectionView_.setHeaderVisible(false);
