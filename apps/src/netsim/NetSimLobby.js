@@ -197,15 +197,28 @@ NetSimLobby.prototype.setNameButtonClick_ = function () {
 
 /** Handler for picking a new shard from the dropdown. */
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
+  var newShardID = this.shardSelector_.val();
+
+  // Might need to disconnect (async) first.
   if (this.connection_.isConnectedToShard()) {
-    this.connection_.disconnectFromShard();
-    this.nameInput_.disabled = false;
+    this.connection_.disconnectFromShard(
+        this.selectShard_.bind(this, newShardID));
+    return;
   }
 
-  if (this.shardSelector_.val() !== SELECTOR_NONE_VALUE) {
+  // We were already disconnected, we're fine.
+  this.selectShard_(newShardID);
+};
+
+/**
+ * Change the shard selector's selected shard and connect to it.
+ */
+NetSimLobby.prototype.selectShard_ = function (shardID) {
+  this.shardSelector_.val(shardID);
+  this.nameInput_.disabled = false;
+  if (shardID !== SELECTOR_NONE_VALUE) {
     this.nameInput_.disabled = true;
-    this.connection_.connectToShard(this.shardSelector_.val(),
-        this.nameInput_.val());
+    this.connection_.connectToShard(shardID, this.nameInput_.val());
   }
 };
 
@@ -472,11 +485,19 @@ NetSimLobby.prototype.onSelectionChange = function () {
  * @private
  */
 NetSimLobby.prototype.getUserSections_ = function (callback) {
-  // TODO (bbuchanan) : Get owned sections as well, to support teachers.
-  // TODO (bbuchanan): Wrap this away into a shared library for the v2/sections api
-  $.ajax({
+  var memberSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/v2/sections/membership',
-    success: callback
+    url: '/v2/sections/membership'
+  });
+
+  var ownedSectionsRequest = $.ajax({
+    dataType: 'json',
+    url: '/v2/sections'
+  });
+
+  $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {
+    var memberSectionData = result1[0];
+    var ownedSectionData = result2[0];
+    callback(memberSectionData.concat(ownedSectionData));
   });
 };
