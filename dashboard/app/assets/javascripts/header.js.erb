@@ -166,7 +166,7 @@ dashboard.showProjectHeader = function () {
       var dialog = new Dialog({body: '<div id="project-share" class="modal-content">'
           + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
           + '<p><%= I18n.t('project.share_copy_link') %></p>'
-          + '<div><input type="text" id="sharing-input" value="' + location.href + '" style="cursor: copy; width: 400px;" readonly></div>'
+          + '<div><input type="text" id="sharing-input" value="' + location.href.split(/\/edit$/)[0] + '" style="cursor: copy; width: 400px;" readonly></div>'
           + '<button id="continue-button"><%= I18n.t('project.ok') %></button></div>'
       });
       $('#sharing-input').click(function () {
