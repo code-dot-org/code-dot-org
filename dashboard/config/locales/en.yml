@@ -553,6 +553,9 @@ en:
     exit: "Return to Course"
     my_projects: "My Projects"
     share: "Share"
+    share_title: Share your project
+    share_copy_link: "Copy the link:"
+    ok: "Ok"
     more: "More"
     name: "Name"
     updated: "Updated"
