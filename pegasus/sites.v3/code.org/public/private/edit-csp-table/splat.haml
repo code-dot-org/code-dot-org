@@ -55,6 +55,8 @@ angular: recordsApp
     $scope.newColumnName = '';
     $scope.newRecord = new recordsService();
     $scope.tableName = "#{table_name}";
+    $scope.appId = "#{app_id}";
+    $scope.importing = false;
 
     $scope.records.$promise.then(function(records) {
       $scope.columns = getColumns(records);
