@@ -446,6 +446,11 @@ en:
         'playlab_events' : 'Play Lab Events'
         'playlab_repeat_forever' : 'Play Lab Repeat Forever'
         'tutorial_puzzle_challenge': 'Tutorial Puzzle Challenge'
+        'msm_1_intro': 'CS in Algebra Chapter 1 Introduction'
+        'msm_2_eval_block': 'Evaluation Blocks'
+        'msm_3_pemdas': 'PEMDAS'
+        'msm_6_variables': 'Variables'
+        'msm_7_functions': 'Functions'
     callout:
       text:
         # Keyed by #{callout.localization_key}

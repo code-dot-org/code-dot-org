@@ -164,18 +164,21 @@ function callbackSafe(callback, data) {
 }
 
 dashboard.saveProject = function(callback) {
+  $('.project_updated_at').text('Saving...'); // TODO (Josh) i18n
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   dashboard.currentApp.level = window.location.pathname;
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
       callbackSafe(callback, data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       location.hash = dashboard.currentApp.id + '/edit';
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
       callbackSafe(callback, data);
     });
   }
@@ -231,20 +234,26 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
-    if (dashboard.currentApp) {
-      if (dashboard.currentApp.levelSource) {
-        appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+    if (dashboard.isEditingProject) {
+      if (dashboard.currentApp) {
+        if (dashboard.currentApp.levelSource) {
+          appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+        }
+      } else {
+        dashboard.currentApp = {
+          name: 'My Project'
+        };
       }
-    } else {
-      dashboard.currentApp = {
-        name: 'My Project'
-      };
-    }
 
-    $(window).on('run_button_pressed', dashboard.saveProject);
+      $(window).on('run_button_pressed', dashboard.saveProject);
 
-    if (!dashboard.currentApp.hidden) {
-      dashboard.showProjectHeader();
+      if (!dashboard.currentApp.hidden) {
+        dashboard.showProjectHeader();
+      }
+    } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
+      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      appOptions.hideSource = true;
+      appOptions.callouts = [];
     }
   }
   window[appOptions.app + 'Main'](appOptions);
@@ -293,14 +302,14 @@ if (appOptions.droplet) {
     var app_id = location.hash.slice(1);
     if (app_id) {
       // TODO ugh, we should use a router. maybe we should use angular :p
-      var params = app_id.split("/")
+      var params = app_id.split("/");
       if (params.length > 1 && params[1] == "edit") {
         app_id = params[0];
-        // TODO set some 'editing' flag, check the owner of the project
+        dashboard.isEditingProject = true;
       }
 
       // Load the project ID, if one exists
-      promise.then(function () {
+      promise = promise.then(function () {
         var deferred = new $.Deferred();
         storageApps().fetch(app_id, function (data) {
           dashboard.currentApp = data;
@@ -308,13 +317,16 @@ if (appOptions.droplet) {
         });
         return deferred;
       });
+    } else {
+      dashboard.isEditingProject = true;
     }
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
-    promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    dashboard.isEditingProject = true;
+    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
 }
-promise.then(loadSource('common' + appOptions.pretty))
+promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))
