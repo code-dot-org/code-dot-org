@@ -113,9 +113,8 @@ dashboard.buildHeader = function (scriptData) {
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
-    $('.project_updated_at').replaceWith($('<div class="project_updated_at header_text">').text(projectUpdatedAtString()));
+    $('.project_updated_at').text(dashboard.projectUpdatedAtString()).show();
     $('.project_save').replaceWith($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
-    $('.project_updated_at').show();
   }
 
   function projectNameEdit() {
@@ -124,7 +123,7 @@ dashboard.showProjectHeader = function () {
     $('.project_edit').replaceWith($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
   }
 
-  function projectUpdatedAtString() {
+  dashboard.projectUpdatedAtString = function () {
     if (dashboard.currentApp.updatedAt) {
       return '<%= I18n.t("project.saved") %> ' +
           DateHelper.time_ago_in_words_with_parsing(dashboard.currentApp.updatedAt);
@@ -141,7 +140,7 @@ dashboard.showProjectHeader = function () {
 
   var nameAndUpdated = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
-      .append($('<div class="project_updated_at header_text">').text(projectUpdatedAtString()));
+      .append($('<div class="project_updated_at header_text">').text(dashboard.projectUpdatedAtString()));
 
   $('.project_info').append(nameAndUpdated)
       .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
@@ -166,7 +165,7 @@ dashboard.showProjectHeader = function () {
       var dialog = new Dialog({body: '<div id="project-share" class="modal-content">'
           + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
           + '<p><%= I18n.t('project.share_copy_link') %></p>'
-          + '<div><input type="text" id="sharing-input" value="' + location.href + '" style="cursor: copy; width: 400px;" readonly></div>'
+          + '<div><input type="text" id="sharing-input" value="' + location.href.split(/\/edit$/)[0] + '" style="cursor: copy; width: 400px;" readonly></div>'
           + '<button id="continue-button"><%= I18n.t('project.ok') %></button></div>'
       });
       $('#sharing-input').click(function () {

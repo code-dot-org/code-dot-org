@@ -5635,7 +5635,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.display = 'none';
+  workspaceDiv.style.visibility = 'hidden';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -5657,10 +5657,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      // Redirect user to /edit version of this page. It would be better
-      // to just turn on the workspace but there are rendering issues
-      // with that.
-      window.location.href = window.location.href + '/edit';
+      workspaceDiv.style.visibility = 'visible';
     });
 
     buttonRow.appendChild(openWorkspace);
