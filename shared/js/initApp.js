@@ -170,12 +170,14 @@ dashboard.saveProject = function(callback) {
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
       callbackSafe(callback, data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       location.hash = dashboard.currentApp.id + '/edit';
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
       callbackSafe(callback, data);
     });
   }
