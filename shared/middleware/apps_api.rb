@@ -94,9 +94,6 @@ class AppsApi < Sinatra::Base
 
     value = JSON.load(request.body.read)
 
-    p value
-    p value.merge(updatedAt: Time.now)
-
     StorageApps.new(storage_id('user')).update(id, value.merge('updatedAt' => Time.now), request.ip)
 
     dont_cache
