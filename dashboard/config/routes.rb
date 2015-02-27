@@ -167,15 +167,15 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/:action', controller: 'api'
-
   resources :zendesk_session, only: [:index]
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-  namespace :ops, path: 'dashboardapi', shallow_path: 'dashboardapi' do
+
+  module OPS
+    API = 'api'
+  end
+  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
     # /ops/district/:id
     resources :districts do
       member do
@@ -204,6 +204,10 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
   get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
+
+  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
