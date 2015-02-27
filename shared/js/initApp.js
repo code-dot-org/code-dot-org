@@ -164,6 +164,7 @@ function callbackSafe(callback, data) {
 }
 
 dashboard.saveProject = function(callback) {
+  $('.project_updated_at').text('Saving...'); // TODO (Josh) i18n
   var app_id = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
   dashboard.currentApp.level = window.location.pathname;
