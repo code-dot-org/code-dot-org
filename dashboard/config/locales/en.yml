@@ -553,6 +553,9 @@ en:
     exit: "Return to Course"
     my_projects: "My Projects"
     share: "Share"
+    share_title: Share your project
+    share_copy_link: "Copy the link:"
+    ok: "Ok"
     more: "More"
     name: "Name"
     updated: "Updated"
@@ -562,3 +565,8 @@ en:
     really_delete: 'Delete?'
     delete_yes: 'Yes'
     delete_no: 'No'
+    saved: "Saved"
+    not_saved: "Not saved"
+    cancel: 'Cancel'
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."

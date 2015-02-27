@@ -178,9 +178,13 @@ NetSimRouterNode.create = function (shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
+      router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.heartbeat_ = heartbeat;
       router.update(function () {
         onComplete(router);
       });
@@ -208,7 +212,11 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
         return;
       }
 
+      // Set router heartbeat to double normal interval, since we expect
+      // at least two clients to help keep it alive.
       router.heartbeat_ = heartbeat;
+      router.heartbeat_.setBeatInterval(12000);
+
       onComplete(router);
     });
   });
