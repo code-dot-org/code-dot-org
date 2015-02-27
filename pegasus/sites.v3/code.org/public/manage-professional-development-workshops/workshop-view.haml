@@ -96,7 +96,7 @@ theme: none
           %a{href: '/professional-development-workshops/{{ workshop.id }}'}
             http:#{CDO.code_org_url('/professional-development-workshops/{{ workshop.id }}')}
 %div
-  %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
+  %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit", style: "color: #333;"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
 
 
