@@ -25,7 +25,6 @@
           %col{width: "250"}
           %col{width: "200"}
           %col{width: "200"}
-          %col{width: "200"}
         %tr
           %th
             %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
@@ -38,11 +37,6 @@
               %i.fa.fa-caret-down{'ng-show' => "order == 'updatedAt' && reverse == true"}
               %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
           %th
-            %a{href: "", "ng-click" => "order = 'projectType'; reverse=!reverse" }
-              = t('projects.project_type')
-              %i.fa.fa-caret-down{'ng-show' => "order == 'projectType' && reverse == true"}
-              %i.fa.fa-caret-up{'ng-show' => "order == 'projectType' && reverse == false"}
-          %th
         %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
           %td.name
             %span{'ng-hide' => 'project.editing'}
@@ -52,8 +46,6 @@
               %input{"ng-model" => "project.name", type: 'text'}/
           %td
             {{ project.updatedAt | date: 'short' }}
-          %td
-            TODO
           %td
             %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
             %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
