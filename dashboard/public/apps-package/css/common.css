@@ -69,6 +69,7 @@ div.droplet-palette-group-header-selected {
   background-color: #FA8A8C; }
 
 .droplet-wrapper-div {
+  overflow: hidden;
   outline-style: none; }
 
 #show-code-button {

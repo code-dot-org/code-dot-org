@@ -59,7 +59,7 @@ function storageApps()
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(value)
       }).done(function(data, text) {
-        callback(true)
+        callback(data)
       }).fail(function(request, status, error) {
         callback(false)
       });
