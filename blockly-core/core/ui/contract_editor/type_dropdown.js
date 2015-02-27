@@ -5,8 +5,8 @@ goog.provide('Blockly.TypeDropdown');
 /**
  * A DOM-based type selection dropdown
  * @param {!Object} options
- *          onTypeChanged (newType: String)
- *          typeChoices {name(String): type(Blockly.BlockValueType)}
+ * @param {Function} options.onTypeChanged takes parameter {String} newType
+ * @param {Array.<BlockValueType>} options.typeChoices
  * @constructor
  */
 Blockly.TypeDropdown = function (options) {
@@ -17,24 +17,22 @@ Blockly.TypeDropdown = function (options) {
   this.selectComponent_ = null;
 
   /**
-   * @type {Element}
+   * Called with new {Blockly.BlockValueType}
+   * @type {Function}
    * @private
    */
-  this.container_ = null;
-
-  /**
-   * @type {Element}
-   * @private
-   */
-  this.parent_ = null;
-
   this.onTypeChanged_ = options.onTypeChanged;
 
+  /**
+   * Types to make available
+   * @type {Array.<BlockValueType>}
+   * @private
+   */
   this.typeChoices_ = options.typeChoices;
 
   /**
    * Current type of select dropdown
-   * @type {String}
+   * @type {Blockly.BlockValueType}
    * @private
    */
   this.type_ = options.type;
@@ -126,5 +124,4 @@ Blockly.TypeDropdown.prototype.setBackgroundFromHSV_ = function (element, hsvCol
 Blockly.TypeDropdown.prototype.dispose = function () {
   goog.events.unlistenByKey(this.changeListenerKey_);
   this.selectComponent_.dispose();
-  goog.dom.removeNode(this.container_);
 };
