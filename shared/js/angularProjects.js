@@ -29,8 +29,16 @@
       });
 
       Project.prototype.url = function() {
-        if (this.levelUrl && this.levelSourceId && this.id) {
-          return this.levelUrl + '?level_source_id=' + this.levelSourceId + '#' + this.id;
+        if (this.level && this.id) {
+          return this.level + '#' + this.id;
+        } else {
+          return null;
+        }
+      };
+
+      Project.prototype.editUrl = function() {
+        if (this.url()) {
+          return this.url() + "/edit";
         } else {
           return null;
         }
@@ -65,4 +73,10 @@
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
+
+    $scope.removeProject = function (project) {
+      project.$remove({id: project.id}, function() {
+        $scope.projects.splice($.inArray(project, $scope.projects), 1);
+      });
+    }
   }]);
