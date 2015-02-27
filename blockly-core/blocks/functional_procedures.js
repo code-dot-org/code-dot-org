@@ -96,9 +96,9 @@ Blockly.Blocks.functional_definition = {
         this.parameterNames_.push(childNode.getAttribute('name'));
         this.parameterTypes_.push(childNode.getAttribute('type'));
       } else if (nodeName === 'description') {
-        this.description_ = childNode.innerHTML;
+        this.description_ = childNode.textContent;
       } else if (nodeName === 'outputtype') {
-        this.updateOutputType(childNode.innerHTML);
+        this.updateOutputType(childNode.textContent);
       } else if (nodeName === 'isfunctionalvariable') {
         this.isFunctionalVariable_ = true;
       }
