@@ -171,11 +171,18 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  #get '/dashboardapi/:anything', to: redirect('/api/%{anything}')
+  #post '/dashboardapi/:anything', to: redirect('/api/%{anything}')
+  #put '/dashboardapi/:anything', to: redirect('/api/%{anything}')
+  #delete '/dashboardapi/:anything', to: redirect('/api/%{anything}')
 
   module OPS
     API = 'api'
+    DASHBOARDAPI = 'dashboardapi'
   end
-  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
+
+
+  concern :ops_routes do
     # /ops/district/:id
     resources :districts do
       member do
@@ -199,6 +206,14 @@ Dashboard::Application.routes.draw do
     get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
     get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
     post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
+  end
+
+  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
+    concerns :ops_routes
+  end
+
+  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
+    concerns :ops_routes
   end
 
   get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
