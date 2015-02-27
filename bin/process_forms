@@ -69,6 +69,7 @@ def index_batch_of_forms(batch_size)
 
         address_to_search = index_data['school_address_s'].to_s.strip
         address_to_search = index_data['zip_code_s'].to_s.strip if address_to_search.empty?
+        sleep(0.03) unless address_to_search.empty?
         address_to_search = form[:created_ip].to_s.strip if address_to_search.empty?
         location = Geocoder.search(address_to_search).first
         if location
