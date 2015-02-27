@@ -5,8 +5,8 @@ goog.provide('Blockly.XButton');
 /**
  * A DOM-based input which sends events on changes
  * @param {!Object} options
- *          onNameChanged (newName: String)
- *          onEnterPressed
+ * @param options.onNameChanged takes {string} newName
+ * @param options.onEnterPressed
  * @constructor
  */
 Blockly.XButton = function (options) {
