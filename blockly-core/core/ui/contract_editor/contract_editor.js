@@ -497,7 +497,7 @@ Blockly.ContractEditor.prototype.removeParameter = function(name) {
   Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
 
   goog.array.removeIf(this.domainEditors_, function (editor) {
-    if (editor.name == name) {
+    if (editor.name === name) {
       editor.dispose();
       return true;
     }
