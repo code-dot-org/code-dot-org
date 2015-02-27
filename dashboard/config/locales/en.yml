@@ -566,4 +566,4 @@ en:
     not_saved: "Not saved"
     cancel: 'Cancel'
     delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you've shared the link to will no longer be able to view your project.
+    delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
