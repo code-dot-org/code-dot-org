@@ -409,3 +409,17 @@ en:
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
+        course4pre:
+          title: Course 4 Prerequisite
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Maze: Sequence'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'

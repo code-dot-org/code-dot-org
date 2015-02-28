@@ -1,0 +1,19 @@
+name 'PDK5 Intro C'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+## Welcome!
+
+<img align="left" src="http://staging.code.org/images/edquote1.png" height="800" width="300" hspace="20">
+
+Welcome to Code.org's K-5 Intro to Computer Science Online Professional Development Course. During the PD program and anytime afterward, Code.org and our community of engaged educators will always be around for support at http://support.code.org.
+
+Code.org's professional development program prepares you and other elementary school teachers to integrate computer science into your existing curriculum and support your growth as a teacher. This online course may be sufficient for some teachers to start using our materials in their classrooms, but if you are looking for further professional development, please see our workshops that hosted in the United States for K-5 Educators. These are high-quality workshops taught by seasoned computer science educators. Sign up for a workshop here.
+
+During this online course, you'll watch videos, read articles, do online activities, and discuss with other teachers about the basics of computer science and how to use Code.org's online learning system. We want you to get excited to teach computer science, expose you to writing computer programs like your students will write, and let you explore writing computer programs on your own.
+
+</br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
