@@ -13,7 +13,7 @@ var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTab
  */
 exports.assertTableSize = function (shard, tableName, size) {
   var rowCount;
-  shard[tableName].readAll(function (rows) {
+  shard[tableName].readAll(function (err, rows) {
     rowCount = rows.length;
   });
   assert(rowCount === size, "Expected table '" + tableName +

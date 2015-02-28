@@ -360,8 +360,8 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
 
   var shard = this.shard_;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (rows) {
-    if (rows === null) {
+  this.shard_.wireTable.readAll(function (err, rows) {
+    if (err !== null) {
       onComplete([]);
       return;
     }

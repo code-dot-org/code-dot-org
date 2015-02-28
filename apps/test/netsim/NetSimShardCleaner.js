@@ -65,7 +65,7 @@ describe("NetSimShardCleaner", function () {
       assert(success === true, "Callback takes a boolean success value");
     });
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       assertOwnProperty(rows[0], 'cleaner');
     });
   });
@@ -130,7 +130,7 @@ describe("NetSimShardCleaner", function () {
     cleaner.tick(); // Second tick runs sub-CommandSequence that removes rows
 
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       assertEqual(rows[0].nodeID, 'valid');
     });
   });
@@ -147,7 +147,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.nodeTable.readAll(function (rows) {
+    testShard.nodeTable.readAll(function (err, rows) {
       assertEqual(rows[0].id, validNodeID);
     });
   });
@@ -165,7 +165,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.nodeTable.readAll(function (rows) {
+    testShard.nodeTable.readAll(function (err, rows) {
       assertEqual(rows[0].id, validNodeID);
     });
   });
@@ -198,7 +198,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'wireTable', 1);
-    testShard.wireTable.readAll(function (rows) {
+    testShard.wireTable.readAll(function (err, rows) {
       assertEqual(rows[0].localNodeID, validNodeID);
     });
   });
@@ -227,7 +227,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'messageTable', 1);
-    testShard.messageTable.readAll(function (rows) {
+    testShard.messageTable.readAll(function (err, rows) {
       assertEqual(rows[0].toNodeID, validNodeID);
     });
   });
@@ -252,7 +252,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'logTable', 1);
-    testShard.logTable.readAll(function (rows) {
+    testShard.logTable.readAll(function (err, rows) {
       assertEqual(rows[0].nodeID, validNodeID);
     });
   });

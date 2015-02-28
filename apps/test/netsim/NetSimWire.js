@@ -72,7 +72,7 @@ describe("NetSimWire", function () {
     it ("immediately initializes entry with endpoints", function () {
       NetSimWire.create(testShard, 1, 2, function () {});
 
-      wireTable.readAll(function (rows) {
+      wireTable.readAll(function (err, rows) {
         assertEqual(rows[0].localNodeID, 1);
         assertEqual(rows[0].remoteNodeID, 2);
       });

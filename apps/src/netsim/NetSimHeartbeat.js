@@ -79,7 +79,7 @@ NetSimHeartbeat.create = function (shard, onComplete) {
 //      use that here.  Would be even better if our backend storage supported
 //      it (like mongodb).
 NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
-  shard.heartbeatTable.readAll(function (rows) {
+  shard.heartbeatTable.readAll(function (err, rows) {
     var nodeRows = rows
         .filter(function (row) {
           return row.nodeID == nodeID;

@@ -102,7 +102,7 @@ describe("NetSimHeartbeat", function () {
     assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
 
     var remoteRow;
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       remoteRow = rows[0];
     });
     assertEqual(84, remoteRow.time);

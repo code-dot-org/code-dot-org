@@ -86,7 +86,7 @@ CleaningHeartbeat.create = function (shard, onComplete) {
  *        expired cleaning locks.
  */
 CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
-  shard.heartbeatTable.readAll(function (rows) {
+  shard.heartbeatTable.readAll(function (err, rows) {
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
@@ -330,7 +330,7 @@ CacheTable.inherits(Command);
  */
 CacheTable.prototype.onBegin_ = function () {
   logger.info('Begin CacheTable[' + this.key_ + ']');
-  this.table_.readAll(function (rows) {
+  this.table_.readAll(function (err, rows) {
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
   }.bind(this));
