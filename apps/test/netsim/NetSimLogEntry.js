@@ -75,7 +75,7 @@ describe("NetSimLogEntry", function () {
 
       NetSimLogEntry.create(testShard, nodeID, packet, function () {});
 
-      testShard.logTable.readAll(function (rows) {
+      testShard.logTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
         assertEqual(row.packet, packet);

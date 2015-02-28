@@ -46,13 +46,13 @@ describe("NetSimMessage", function () {
 
   describe("static method send", function () {
     it ("adds an entry to the message table", function () {
-      messageTable.readAll(function (rows) {
+      messageTable.readAll(function (err, rows) {
         assert(rows.length === 0, "Table is empty");
       });
 
       NetSimMessage.send(testShard, null, null, null, function () {});
 
-      messageTable.readAll(function (rows) {
+      messageTable.readAll(function (err, rows) {
         assert(rows.length === 1, "Table has one row");
       });
     });
@@ -64,7 +64,7 @@ describe("NetSimMessage", function () {
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
 
-      messageTable.readAll(function (rows) {
+      messageTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
@@ -114,7 +114,7 @@ describe("NetSimMessage", function () {
 
     // Verify that message is gone from the remote table.
     var rowCount = Infinity;
-    messageTable.readAll(function (rows) {
+    messageTable.readAll(function (err, rows) {
       rowCount = rows.length;
     });
     assertEqual(rowCount, 0);

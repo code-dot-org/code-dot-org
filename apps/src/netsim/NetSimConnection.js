@@ -19,7 +19,7 @@ var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
 var NetSimShardCleaner = require('./NetSimShardCleaner');
 
-var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
@@ -94,7 +94,10 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  // Null-guard so constructing this object is test-friendly.
+  if (window && window.addEventListener) {
+    window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  }
 };
 
 /**
@@ -212,7 +215,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   }
 
   var self = this;
-  this.shard_.nodeTable.readAll(function (rows) {
+  this.shard_.nodeTable.readAll(function (err, rows) {
     if (!rows) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);

@@ -69,11 +69,11 @@ var NetSimTable = module.exports = function (storageTable) {
 };
 
 /**
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readAll = function (callback) {
   this.remoteTable_.readAll(function (err, data) {
-    callback(data);
+    callback(err, data);
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
