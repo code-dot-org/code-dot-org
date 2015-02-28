@@ -33,12 +33,19 @@ exports.fauxStorageTable = function () {
 
   return {
 
+    /**
+     * @param {!NodeStyleCallback} callback
+     */
     readAll: function (callback) {
       log_ += 'readAll';
 
       callback(null, tableData_);
     },
 
+    /**
+     * @param {!number} id
+     * @param {!NodeStyleCallback} callback
+     */
     read: function (id, callback) {
       log_ += 'read[' + id + ']';
 
@@ -51,6 +58,10 @@ exports.fauxStorageTable = function () {
       callback(new Error('Not Found'), undefined);
     },
 
+    /**
+     * @param {!Object} value
+     * @param {!NodeStyleCallback} callback
+     */
     create: function (value, callback) {
       log_ += 'create[' + JSON.stringify(value) + ']';
 
@@ -61,6 +72,11 @@ exports.fauxStorageTable = function () {
       callback(null, value);
     },
 
+    /**
+     * @param {!number} id
+     * @param {!Object} value
+     * @param {!NodeStyleCallback} callback
+     */
     update: function (id, value, callback) {
       log_ += 'update[' + id + ', ' + JSON.stringify(value) + ']';
 
@@ -76,6 +92,10 @@ exports.fauxStorageTable = function () {
       callback(new Error('Not Found'), false);
     },
 
+    /**
+     * @param {!number} id
+     * @param {!NodeStyleCallback} callback
+     */
     delete: function (id, callback) {
       log_ += 'delete[' + id + ']';
 
@@ -90,6 +110,9 @@ exports.fauxStorageTable = function () {
       callback(new Error('Not Found'), false);
     },
 
+    /**
+     * @returns {string}
+     */
     log: function () {
       if (arguments.length > 0) {
         log_ = arguments[0];
@@ -100,6 +123,9 @@ exports.fauxStorageTable = function () {
   };
 };
 
+/**
+ * Fake set of storage tables for use in tests.
+ */
 exports.fakeShard = function () {
   var nodeTable_ = exports.fauxStorageTable();
   var wireTable_ = exports.fauxStorageTable();
