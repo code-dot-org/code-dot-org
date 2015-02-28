@@ -1,18 +1,15 @@
 ---
-title: Calc Evaluation Blocks
+title: Evaluation Blocks and Arithmetic Expressions
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg2'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 2, :unplugged=>false, :title=> 'Calc: Evaluation Blocks',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-Students will use the Calc app to begin looking at math as a language, and more specifically a programming language.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,18 +19,11 @@ Students will use the Calc app to begin looking at math as a language, and more 
 1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
-### **Activity: Calc Evaluation Blocks**  
+### **Activity: Evaluation Blocks**  
 
 3) [Online Puzzles](#Activity1)
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Convert arithmatic expressions to and from code
-- Use Evaluation Blocks to reflect the proper order of operations for an expression
-
-[/together]
 
 [together]
 
@@ -84,46 +74,11 @@ One way to indicate the order of operations in an expression. All Evaluation Blo
 
 [together]
 
-## Activity: Calc Evaluation Blocks
+## Activity: Evaluation Blocks
 ### <a name="Activity1"></a> 3) Online Puzzles
 
 The programming language you are going to learn uses Evaluation Blocks to visually represent mathematical functions. Each Block of code is either a Function, or a Value - head to [MSM Stage 2](http://studio.code.org/s/algebra/stage/2/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 5.OA.1-2: Write and interpret numerical expressions.
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- N-Q: The student reasons quantitatively in using units to solve problems.
-
-### CSTA K-12 Computer Science Standards
-
-- L1:6:CPP.6: Implement problem solutions using a block-based visual programming language. 
-
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>
