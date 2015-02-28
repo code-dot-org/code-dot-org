@@ -71,7 +71,7 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().read(entityID, function (row) {
+  entity.getTable_().read(entityID, function (err, row) {
     if (row) {
       onComplete(new EntityType(shard, row));
     } else {
