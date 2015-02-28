@@ -87,7 +87,7 @@ describe("NetSimMessage", function () {
       fromNodeID: 1,
       toNodeID: 2,
       payload: 'xyzzy'
-    }, function (row) {
+    }, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");
@@ -103,7 +103,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
-    messageTable.create({}, function (row) {
+    messageTable.create({}, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");

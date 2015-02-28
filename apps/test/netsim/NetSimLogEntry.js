@@ -94,7 +94,7 @@ describe("NetSimLogEntry", function () {
     var testRow;
 
     // Create a logEntry row in remote table
-    testShard.logTable.create({}, function (row) {
+    testShard.logTable.create({}, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");

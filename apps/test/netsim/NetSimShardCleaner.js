@@ -12,7 +12,7 @@ var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLo
 
 var makeNode = function (shard) {
   var newNodeID;
-  shard.nodeTable.create({}, function (node) {
+  shard.nodeTable.create({}, function (err, node) {
     newNodeID = node.id;
   });
   return newNodeID;
