@@ -216,7 +216,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
   var self = this;
   this.shard_.nodeTable.readAll(function (err, rows) {
-    if (!rows) {
+    if (err !== null) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
       return;
