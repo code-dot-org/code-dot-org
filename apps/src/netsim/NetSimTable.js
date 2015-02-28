@@ -122,11 +122,11 @@ NetSimTable.prototype.update = function (id, value, callback) {
 
 /**
  * @param {!number} id
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
   this.remoteTable_.delete(id, function (err, success) {
-    callback(success);
+    callback(err, success);
     if (err === null) {
       this.removeRowFromCache_(id);
     }

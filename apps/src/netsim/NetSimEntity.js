@@ -96,7 +96,9 @@ NetSimEntity.prototype.update = function (onComplete) {
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().delete(this.entityID, onComplete);
+  this.getTable_().delete(this.entityID, function (err, result) {
+    onComplete(result);
+  });
 };
 
 /** Get storage table for this entity type. */
