@@ -18,7 +18,14 @@
     "open_function_definition": "green shape",
     "scrollbars": "true",
     "min_workspace_height": "1500",
-    "default_num_example_blocks": "2"
+    "default_num_example_blocks": "2",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -103,10 +110,6 @@
               </functional_input>
             </block>
           </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation/>
-          <title name="NAME">newfunc</title>
         </block>
         <block type="functional_example" inline="false" movable="false">
           <functional_input name="ACTUAL">
