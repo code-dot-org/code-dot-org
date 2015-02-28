@@ -69,7 +69,7 @@ NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete)
   entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
   entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+  entity.getTable_().create(entity.buildRow_(), function (err) {
     onComplete(err === null);
   });
 };

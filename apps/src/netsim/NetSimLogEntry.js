@@ -92,7 +92,7 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
   entity.nodeID = nodeID;
   entity.packet = packet;
   entity.timestamp = Date.now();
-  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+  entity.getTable_().create(entity.buildRow_(), function (err) {
     onComplete(err === null);
   });
 };

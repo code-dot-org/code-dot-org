@@ -109,11 +109,11 @@ NetSimTable.prototype.create = function (value, callback) {
 /**
  * @param {!number} id
  * @param {Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.update = function (id, value, callback) {
   this.remoteTable_.update(id, value, function (err, success) {
-    callback(success);
+    callback(err, success);
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
