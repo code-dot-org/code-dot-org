@@ -1281,7 +1281,7 @@ Blockly.Blocks.functional_definition = {hideInMainBlockSpace:!0, init:function()
   this.parameterNames_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d ? this.updateOutputType(c.innerHTML) : "isfunctionalvariable" === d && (this.isFunctionalVariable_ = !0)
+    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.textContent : "outputtype" === d ? this.updateOutputType(c.textContent) : "isfunctionalvariable" === d && (this.isFunctionalVariable_ = !0)
   }
   this.updateParams_()
 }, isVariable:function() {
@@ -1335,6 +1335,11 @@ Blockly.Blocks.functional_definition = {hideInMainBlockSpace:!0, init:function()
 }, removeVar:function(a) {
   a = this.parameterNames_.indexOf(a);
   -1 < a && (this.parameterNames_.splice(a, 1), this.updateParams_())
+}, changeParamType:function(a, b) {
+  for(var c = !1, d = 0;d < this.parameterNames_.length;d++) {
+    Blockly.Names.equals(a, this.parameterNames_[d]) && (this.parameterTypes_[d] = b, c = !0)
+  }
+  c && (this.updateParams_(), this.updateCallerParams_())
 }, callType_:"functional_call"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
@@ -1388,12 +1393,14 @@ Blockly.Blocks.functional_call = {init:function() {
     for(e = 0;e < this.currentParameterNames_.length;e++) {
       f = this.appendFunctionalInput("ARG" + e).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < e), g = this.currentParameterTypes_[e], f.setHSV.apply(f, Blockly.FunctionalTypeColors[g]), f.setCheck(g), this.currentParameterIDs_ && (a = this.currentParameterIDs_[e], a in this.parameterIDsToArgumentConnections_ && (g = this.parameterIDsToArgumentConnections_[a], !g || g.targetConnection || g.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections_[a] : f.connection.connect(g)))
     }
-    e = 0 < this.currentParameterNames_.length ? " (" + this.currentParameterNames_.join(", ") + ")" : "";
-    this.setTitleValue(e, "PARAM_TEXT");
+    this.refreshParameterTitleString_();
     (this.rendered = d) && this.render()
   }else {
     this.parameterIDsToArgumentConnections_ = {}, this.currentParameterIDs_ = null
   }
+}, refreshParameterTitleString_:function() {
+  var a = 0 < this.currentParameterNames_.length ? " (" + this.currentParameterNames_.join(", ") + ")" : "";
+  this.setTitleValue(a, "PARAM_TEXT")
 }, mutationToDom:function() {
   var a = document.createElement("mutation");
   a.setAttribute("name", this.getTitleValue("NAME"));
@@ -1418,7 +1425,7 @@ Blockly.Blocks.functional_call = {init:function() {
   this.updateAttributesFromDefinition_()
 }, renameVar:function(a, b) {
   for(var c = 0;c < this.currentParameterNames_.length;c++) {
-    Blockly.Names.equals(a, this.currentParameterNames_[c]) && (this.currentParameterNames_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
+    Blockly.Names.equals(a, this.currentParameterNames_[c]) && (this.currentParameterNames_[c] = b, this.refreshParameterTitleString_())
   }
 }};
 Blockly.Blocks.functional_pass = {init:function() {
