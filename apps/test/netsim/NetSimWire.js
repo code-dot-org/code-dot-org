@@ -96,7 +96,7 @@ describe("NetSimWire", function () {
       remoteAddress: 4,
       localHostname: 'me',
       remoteHostname: 'you'
-    }, function (row) {
+    }, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");
@@ -115,7 +115,7 @@ describe("NetSimWire", function () {
     var testRow;
 
     // Create a wire row in remote table
-    wireTable.create({}, function (row) {
+    wireTable.create({}, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");

@@ -9,6 +9,7 @@ var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
 var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
@@ -40,6 +41,27 @@ describe("NetSimEntity", function () {
   it ("disallows static fetch of base type", function () {
     assertThrows(Error, function () {
       NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
+    });
+  });
+
+  describe ("static create()", function () {
+    var testShard;
+
+    beforeEach(function () {
+      testShard = fakeShard();
+    });
+
+    it ("creates and returns an entity fo the correct type", function () {
+      assertTableSize(testShard, 'nodeTable', 0);
+
+      var entity;
+      NetSimEntity.create(NetSimClientNode, testShard, function (newNode) {
+        entity = newNode;
+      });
+      assert(entity !== undefined);
+      assert(entity instanceof NetSimClientNode);
+      assertTableSize(testShard, 'nodeTable', 1);
+
     });
   });
 

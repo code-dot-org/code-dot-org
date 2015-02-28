@@ -49,8 +49,8 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    if (row) {
+  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+    if (err === null) {
       onComplete(new EntityType(shard, row));
     } else {
       onComplete(null);

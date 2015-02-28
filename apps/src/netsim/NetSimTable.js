@@ -95,11 +95,11 @@ NetSimTable.prototype.read = function (id, callback) {
 
 /**
  * @param {Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.create = function (value, callback) {
   this.remoteTable_.create(value, function (err, data) {
-    callback(data);
+    callback(err, data);
     if (err === null) {
       this.addRowToCache_(data);
     }
