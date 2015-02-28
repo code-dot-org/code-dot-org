@@ -6961,7 +6961,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.saySprite(\'block_id_' + this.id +
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', \'' +
-               this.getTitles()[1].getValue() + '\');\n';
+               (this.getTitleValue('VALUE') || ' ') + '\');\n';
   };
 
   generator.studio_saySpriteParams = function() {
