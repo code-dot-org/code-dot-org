@@ -82,11 +82,11 @@ NetSimTable.prototype.readAll = function (callback) {
 
 /**
  * @param {!number} id
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.read = function (id, callback) {
   this.remoteTable_.read(id, function (err, data) {
-    callback(data);
+    callback(err, data);
     if (err === null) {
       this.updateCacheRow_(id, data);
     }

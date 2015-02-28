@@ -1,8 +1,17 @@
+'use strict';
+/* global describe */
+/* global beforeEach */
+/* global it */
+
 var testUtils = require('../util/testUtils');
+var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
+var netsimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = netsimTestUtils.fakeShard;
 
 var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
+var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
 
 describe("NetSimEntity", function () {
   it ("default entityID is undefined", function () {
@@ -31,6 +40,37 @@ describe("NetSimEntity", function () {
   it ("disallows static fetch of base type", function () {
     assertThrows(Error, function () {
       NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
+    });
+  });
+
+  describe ("static get()", function () {
+    var testShard;
+
+    beforeEach(function () {
+      testShard = fakeShard();
+    });
+
+    it ("returns null if entity is not found", function () {
+      var entity;
+      NetSimEntity.get(NetSimClientNode, 15, testShard, function (foundEntity) {
+        entity = foundEntity;
+      });
+      assert(null === entity, "Should return null when entity not found, returned " + entity);
+    });
+
+    it ("returns entity of correct type, if found", function () {
+      var clientNodeID;
+      NetSimEntity.create(NetSimClientNode, testShard, function (newNode) {
+        clientNodeID = newNode.entityID;
+      });
+      assert(clientNodeID !== undefined, "Expected a client node ID");
+
+      var entity;
+      NetSimEntity.get(NetSimClientNode, clientNodeID, testShard, function (foundEntity) {
+        entity = foundEntity;
+      });
+      assert(entity instanceof NetSimClientNode, "Expect to create correct entity type");
+      assertEqual(entity.entityID, clientNodeID);
     });
   });
 });
