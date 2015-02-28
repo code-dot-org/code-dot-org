@@ -87,7 +87,9 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
+  this.getTable_().update(this.entityID, this.buildRow_(), function (err, result) {
+    onComplete(result);
+  });
 };
 
 /** Remove entity from remote storage. */
