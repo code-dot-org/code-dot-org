@@ -21688,8 +21688,10 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   if(opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock)
   }
-  for(var i = 0;i < Blockly.defaultNumExampleBlocks;i++) {
-    this.createExampleBlock_(tempFunctionDefinitionBlock)
+  if(!tempFunctionDefinitionBlock.isVariable()) {
+    for(var i = 0;i < Blockly.defaultNumExampleBlocks;i++) {
+      this.createExampleBlock_(tempFunctionDefinitionBlock)
+    }
   }
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue("NAME"))
 };

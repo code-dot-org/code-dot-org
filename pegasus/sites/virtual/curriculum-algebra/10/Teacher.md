@@ -1,19 +1,15 @@
 ---
-title: Play Lab Design Recipe
+title: Rocket Height
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg10'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 10, :unplugged=>false, :title=> 'Play Lab: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-Moving on from the simple functions students created in Eval, students will use the Design Recipe to write functions that solve word problems.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,28 +18,24 @@ Moving on from the simple functions students created in Eval, students will use 
  
 1) [Introduction](#GetStarted)  
 
-### **Activity: Play Lab Design Recipe**  
+### **Activity: Rocket Height**  
 
 2) [Online Puzzles](#Activity1)
 
 [/summary]
 
-## Lesson Objectives 
-### Students will:
-
-- Design functions to solve word problems
-- Use the Design Recipe to write contracts, test cases, and function definitions
-
-[/together]
-
 [together]
 
 # Teaching Guide
 
+## Materials, Resources and Prep
+### For the Student
+- [Rocket-Height Design Recipe](../docs/worksheets/rocket_height.pdf) (in the student workbook)
+
 ## Getting Started
 
 
-### <a name="GetStarted"></a> 1) Introduction
+### <a name="GetStarted"></a> 1) Introduction`
 
 Functions are a key part of animation in computer programs. A function that draws a static picture of a bat, for example, can place the bat at a different location based on the input. When that input changes slightly based on time or user-interaction, the bat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
 
@@ -53,46 +45,25 @@ Putting these images together, we arrive at an animation of the bat turning arou
 
 <img src="bat_animated_fast.gif" style="display: block; margin: 0 auto;"/>
 
+In the online puzzles, the students will find a blue function box and a black function box. The blue rocket-height function box represents the function needed to calculate the rocket-height for a given second.  The black function box, when editted, appears to be identical to the blue box.  The difference is the black function box has some unseen code that allows the function to be plugged into the start program.
+
+Another curiousity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
+
+[tip]
+
+# Lesson Tip
+
+The contract can be quite long and often scrolls off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.
+
 [/together]
 
 [together]
 
-## Activity: Play Lab Design Recipe
+## Activity: Rocket Height
 ### <a name="Activity1"></a> 2) Online Puzzles
 
 In this stage you'll write functions that manipulate images to create animations. Head to [MSM stage 10](http://studio.code.org/s/algebra/stage/10/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-BF.3-4: The student builds new functions from existing functions.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>
