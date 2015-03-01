@@ -345,7 +345,7 @@
             { menu }
           </span>
         );
-      } else if (!Frame.isStatic) {
+      } else if (!Frame.isSinglePage) {
         return (
           <div className="header_button header_user">
             <a href={ Frame.linkTo({ signin: true }) } id="signin_button" className="button-signin">
