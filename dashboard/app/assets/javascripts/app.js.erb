@@ -400,11 +400,12 @@
 
       if (route.complete) {
         // For now, completion routes are always online.
+        // TODO: Are there other cases?
         switch (route.complete) {
           case 'Hour of Code':
             return "http://code.org/api/hour/finish";
           default:
-            // TODO
+            return "http://code.org/api/hour/finish/" + route.complete;
         }
       }
 
