@@ -589,6 +589,10 @@ html, body {
   display: inline-block;
 }
 
+.header_level_container > * {
+  margin-left: 5px;
+}
+
 .header_level {
   padding-top: 6px;
   padding-bottom: 0;
@@ -604,7 +608,7 @@ html, body {
     background-color: #eee;
     border: 1px solid #ccc;
     display: inline-block;
-    padding: 4px 8px;
+    padding: 5px 5px 5px 10px;
     border-radius: 5px;
 
     .puzzle_outer_level,
@@ -615,6 +619,24 @@ html, body {
     }
   }
 
+  /* most puzzles are small dot */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment {
+    line-height: 1px;
+    .level_link {
+      box-sizing: border-box;
+      min-width: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
+      padding: 3px;
+      margin: 0px;
+      /* hack to hide the number: */
+      font-size: 0px;
+      color: transparent;
+      margin-right: 5px;
+    }
+  }
 
   /* current puzzle is a large dot */
   .puzzle_outer_current {
@@ -636,24 +658,6 @@ html, body {
       padding-left: 10px;
       padding-right: 10px;
       width: auto;
-    }
-  }
-
-  /* other puzzles are small dot */
-  .puzzle_outer_level,
-  .puzzle_outer_assessment {
-    line-height: 1px;
-    .level_link {
-      box-sizing: border-box;
-      min-width: 11px;
-      width: 11px;
-      height: 11px;
-      border-radius: 11px;
-      padding: 3px;
-      margin: 0px;
-      /* hack to hide the number: */
-      font-size: 0px;
-      color: transparent;
     }
   }
 
@@ -700,7 +704,6 @@ input.header_input {
   margin-left: 5px;
 }
 .header_popup {
-  display: none;
   position: absolute;
   top: auto;
   right: 0;
@@ -761,6 +764,10 @@ input.header_input {
 
 .header_trophy_link {
   cursor: pointer;
+
+  .current_trophies {
+    margin: 0 5px;
+  }
 }
 
 .header_finished_link {
