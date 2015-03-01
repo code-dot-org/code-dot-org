@@ -306,9 +306,10 @@
           // All static resources are wrapped as .JS files
           var staticPath = resolveStatic(ajax.data) + ".js";
 
-          // When we have a static asset pipeline, use the 2nd one instead.
-          ajax.url = staticPath; //this.getAbsolutePath(staticPath, this.serverRoot);
-          // ajax.url = this.getAbsolutePath(staticPath);
+          if (this.isSinglePage) // TODO: also isStatic, when we have a static asset building pipeline
+            ajax.url = "assets/" + staticPath;
+          else
+            ajax.url = this.getAbsolutePath(staticPath, this.serverRoot);
 
           delete ajax.data; // Static resources can't do anything with params
           ajax.cache = true;  // Static resources will have long cache times

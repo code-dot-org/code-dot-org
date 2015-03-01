@@ -122,7 +122,7 @@
     }
 
     LevelStore.prototype.resolveStatic = function(args) {
-      return "assets/level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
+      return "level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
     }
 
     LevelStore.prototype.save = function(data) {
@@ -148,7 +148,7 @@
     }
 
     ScriptStore.prototype.resolveStatic = function(args) {
-      return "assets/script-" + (args.script_name || args.script_id);
+      return "script-" + (args.script_name || args.script_id);
     }
 
     return ScriptStore;
