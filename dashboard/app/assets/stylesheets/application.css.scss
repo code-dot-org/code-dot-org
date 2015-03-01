@@ -249,16 +249,6 @@ em strong {
   width:100%;
 }
 
-.stage-lesson-plan-link a,
-.stage-lesson-plan-link a:link,
-.stage-lesson-plan-link a:visited,
-{
-  font-size: 10px;
-  color: $purple;
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-}
-
 .game-group {
   border-bottom: 2px solid #ccc;
   background-color: #eee;
@@ -347,6 +337,7 @@ em strong {
   padding: 3px;
   font-size: 16px;
   display: inline-block;
+  margin-right: 5px;
 }
 
 a.header_status_bar:hover {
@@ -363,6 +354,16 @@ a.header_status_bar:hover {
   font-size: 11px;
   top: 5px;
   right: 25px;
+}
+
+.stage-lesson-plan-link a,
+.stage-lesson-plan-link a:link,
+.stage-lesson-plan-link a:visited,
+{
+  font-size: 10px;
+  color: $purple;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }
 
 .main {
@@ -436,7 +437,6 @@ html, body {
 }
 
 .user_options, .project_more_popup {
-  display: none;
   background-color: white;
   a:link {color:black;}
   a:visited {color:black;}
@@ -456,6 +456,8 @@ html, body {
 
 .user_options a {
   color: black;
+  display: block;
+  padding: 3px;
 }
 
 .full_container {

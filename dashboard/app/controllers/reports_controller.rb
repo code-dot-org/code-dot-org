@@ -143,15 +143,20 @@ SQL
 
     stage_data = summarize_stage(script, script_level.stage_or_game, nil)
 
+    # TODO OFFLINE: Convert these to client-side.  Right now the server tracks if you've seen these,
+    # and doesn't display them.  Also search for noautoplay and kill that (server side)
+    session[:videos_seen] = nil
+    session[:callouts_seen] = nil
+
     # Level-specific data
     if level.unplugged?
-      # TODO: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
+      # TODO OFFLINE: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
       level_data = {
         kind: 'unplugged',
         level: summarize_script_level(script_level)
       }
     elsif level.is_a?(DSLDefined)
-      # TODO: partial "levels/#{level.class.to_s.underscore}"
+      # TODO OFFLINE: partial "levels/#{level.class.to_s.underscore}"
       level_data = {
         kind: 'dsl',
         level: summarize_script_level(script_level),
@@ -166,7 +171,7 @@ SQL
       @script_level = script_level
       @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
       @level_source_id = level.ideal_level_source_id
-      # TODO: @phone_share_url
+      # TODO OFFLINE: @phone_share_url
       set_videos_and_blocks_and_callouts  # @callouts, @autoplay_video_info
 
       level_data = blockly_options()
@@ -199,9 +204,25 @@ SQL
       level_data[:reportBugLink] = script_level.report_bug_url(request)
     end
 
+    if script.k5_course?
+      actions = [
+        {
+          label: t('nav.header.free_play.playlab'),
+          icon: 'fa-rocket',
+          link: playlab_freeplay_level(script)
+        },
+        {
+          label: t('nav.header.free_play.artist'),
+          icon: 'fa-pencil',
+          link: artist_freeplay_level(script)
+        }
+      ]
+    end
+
     reply = {
       stage: stage_data,
       level: level_data,
+      actions: actions
     }
 
 
@@ -230,12 +251,18 @@ SQL
 
       if script.trophies
         progress = current_user.progress(script)
+        concepts = current_user.concept_progress(script)
+
         user_data[:trophies] = {
           current: progress['current_trophies'],
           of: t(:of),
-          max: progress['max_trophies'],
-          progress: user.concept_progress
+          max: progress['max_trophies']
         }
+
+        concepts.each_pair do |concept, counts|
+          user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
+        end
+
       end
 
       if params['jsonp']

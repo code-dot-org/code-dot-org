@@ -307,7 +307,7 @@
           var staticPath = resolveStatic(ajax.data) + ".js";
 
           // When we have a static asset pipeline, use the 2nd one instead.
-          ajax.url = this.getAbsolutePath(staticPath, this.serverRoot);
+          ajax.url = staticPath; //this.getAbsolutePath(staticPath, this.serverRoot);
           // ajax.url = this.getAbsolutePath(staticPath);
 
           delete ajax.data; // Static resources can't do anything with params
@@ -359,6 +359,18 @@
 
     // Return a route to a link.  This interface will be improved when we use a real router.
     UIFrame.prototype.linkTo = function(route, forceOnline) {
+      if (Array.isArray(route)) {  // IE9+
+        route = {
+          script: route[0],
+          stage: route[1],
+          level: route[2]
+        }
+      }
+
+      if (route.signin) {
+        return "/users/sign_in";
+      }
+
       // Calculate route for script levels
       if (route.script) {
         if (this.isSinglePage && !forceOnline)
@@ -726,7 +738,7 @@
           return;
         }
 
-        if (this.autoplayVideo && !Frame.queryParams()['noautoplay']) {
+        if (this.autoplayVideo && !(Frame.queryParams() || {}).noautoplay) {
           showVideoDialog(this.autoplayVideo);
           $('.video-modal').on('hidden.bs.modal', function () {
             showInstructions();

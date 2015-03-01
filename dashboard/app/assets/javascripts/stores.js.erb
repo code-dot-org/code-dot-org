@@ -122,7 +122,7 @@
     }
 
     LevelStore.prototype.resolveStatic = function(args) {
-      return "/level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
+      return "assets/level-" + (args.script_name || args.script_id) + "-" + (args.stage_id || "1") + "-" + args.level_id;
     }
 
     LevelStore.prototype.save = function(data) {
@@ -148,7 +148,7 @@
     }
 
     ScriptStore.prototype.resolveStatic = function(args) {
-      return "/script-" + (args.script_name || args.script_id);
+      return "assets/script-" + (args.script_name || args.script_id);
     }
 
     return ScriptStore;
@@ -168,10 +168,25 @@
   })(UIStore);
 
 
-  // For now, create a global.  Later, this should be in module.exports
+  // UserInfoStore: stores the current user's information
+  var UserInfoStore = (function(_super) {
+    __extends(UserInfoStore, _super);
+
+    // Must have a constructor
+    function UserInfoStore() {
+      return UserInfoStore.__super__.constructor.apply(this, arguments);
+    }
+
+    return UserInfoStore;
+  })(UIStore);
+
+
+
+  // For now, create as global.  Later, these should be in module.exports
   window.UIStore = UIStore;
   window.ScriptStore = ScriptStore;
-  window.UserProgressStore = UserProgressStore;
   window.LevelStore = LevelStore;
+  window.UserProgressStore = UserProgressStore;
+  window.UserInfoStore = UserInfoStore;
 
 }).call(this);

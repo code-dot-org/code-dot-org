@@ -9,6 +9,10 @@
   var cs = React.addons.classSet;
 
   var TEMP_UPDATE = function() {
+    // TODO: Investigate why this is sometimes called before the component has mounted.
+    if (this._lifeCycleState == "UNMOUNTED")
+      return;
+
     this.setState({
       updated: Math.random()
     });
@@ -63,8 +67,15 @@
   // HeaderPopup: script="" progress={} selected=id onShow=fn 
   // + scriptStore
   var HeaderPopup = React.createClass({
+    getInitialState: function() {
+      return {
+        jumpToTrophies: this.props.jumpToTrophies  // props is the initial state
+      };
+    },
+
     componentDidMount: function() {
       window.scriptStore.subscribe(__bind(TEMP_UPDATE, this));
+      window.userInfoStore.subscribe(__bind(TEMP_UPDATE, this));
 
       // Ask the script store to load a particular script.
       window.scriptStore.load({
@@ -79,6 +90,7 @@
       var progress = P.progress || {};
       var levelProgress = progress.levels || {};
       var script = window.scriptStore.value;
+      var user = window.userInfoStore.value || {};
 
       var body;
       if (!script) {
@@ -88,8 +100,7 @@
         var stages = $.map(script.stages || [], function(stage) {
           var lessonPlan;
 
-          if (stage.lesson_plan_html_url) {
-            // TODO: SHOW ONLY IF A TEACHER
+          if (stage.lesson_plan_html_url && user.teacher) {
             lessonPlan = (
               <div className="stage-lesson-plan-link">
                 <a href={stage.lesson_plan_html_url}><%= I18n.t("view_lesson_plan") %></a>
@@ -156,11 +167,12 @@
 
         var trophies;
         if (script.trophies) {
-          completion = 0.4;  // TODO
+          var trophy_progress = P.progress.trophies || {};
 
-          var centered = { 'text-align': 'center' };
+          var centered = { textAlign: 'center' };
           trophy_progress = $.map(script.trophies, function(trophy) {
 
+            var completion = trophy_progress[trophy.id];
             var bronze = Math.max(0, Math.min(100, Math.floor( completion * 10.0 / trophy.bronze) * 10));
             var silver = Math.max(0, Math.min(100, Math.floor( (completion - trophy.bronze) * 10.0 / (trophy.silver - trophy.bronze)) * 10));
             var gold = Math.max(0, Math.min(100, Math.floor( (completion - trophy.silver) * 10.0 / (trophy.gold - trophy.silver)) * 10));
@@ -171,13 +183,13 @@
                   { trophy.name }
                 </td>
                 <td style={centered} width="55px">
-                  <img class="trophy_image" src={Frame.assetUrl('bronze_', bronze, '.png')} />
+                  <img className="trophy_image" src={Frame.assetUrl('bronze_', bronze, '.png')} />
                 </td>
                 <td style={centered} width="55px">
-                  <img class="trophy_image" src={Frame.assetUrl('silver_', silver, '.png')} />
+                  <img className="trophy_image" src={Frame.assetUrl('silver_', silver, '.png')} />
                 </td>
                 <td style={centered} width="55px">
-                  <img class="trophy_image" src={Frame.assetUrl('gold_', gold, '.png')} />
+                  <img className="trophy_image" src={Frame.assetUrl('gold_', gold, '.png')} />
                 </td>
               </tr>
             );
@@ -194,7 +206,7 @@
             <div id="trophies">
               <div style={blocked}>
                 <h4><%= I18n.t("nav.popup.mastery") %></h4>
-                <table style={{ 'max-width': 290 }}>
+                <table style={{ maxWidth: 290 }}>
                   {trophy_progress}
                 </table>
               </div>
@@ -231,6 +243,18 @@
         </div>
       );
 
+    },
+
+    componentDidUpdate: function() {
+      if (this.state.jumpToTrophies) {
+        var el = $('#trophies');
+        if (el.length) {
+          var off = el.offset();
+          if (off)
+            window.scrollTo(0, +off.top);
+          this.setState({ jumpToTrophies: false });
+        }
+      }
     },
 
     handleClose: function(ev) {
@@ -277,19 +301,91 @@
 
 
   SignInButton = React.createClass({
+    getInitialState: function() {
+      return { popped: false };
+    },
+
     render: function() {
-      return (
-        <div className="header_button header_user">
-          <a href="/users/sign_in" id="signin_button" className="button-signin">
-            <%= I18n.t("nav.user.signin") %>
-          </a>
-        </div>
-      );
+      var P = this.props || {};
+      var S = this.state || {};
+
+      if (P.user) {
+        var greeting = "<%= I18n.t('nav.user.label', username: '***') %>".replace("***", P.user.username);
+
+        var menu;
+        if (!S.popped) {
+          arrow = <span className="user_menu_glyph">&#x25BC;</span>; // ▼
+        } else {
+          arrow = <span className="user_menu_glyph">&#x25B2;</span>; // ▲
+
+          options = [];
+          if (P.user.teacher)
+            options.push(<a key="dashboard" href={P.user.actions.dashboard}><%= I18n.t("nav.user.classroom") %></a>);
+          options.push(<a key="root" href={Frame.rootUrl}><%= I18n.t("nav.user.stats") %></a>);
+          options.push(<a key="settings" href={P.user.actions.settings}><%= I18n.t("nav.user.settings") %></a>);
+          if (P.user.teacher && (P.user.teacher_prize || P.user.bonus_prize))
+            options.push(<a key="prize" href={P.user.actions.prizes}><%= I18n.t("nav.user.prizes") %></a>);
+          options.push(<a key="signout" href={P.user.actions.signout}><%= I18n.t("nav.user.logout") %></a>);
+
+          menu = (
+            <div style={{ position: 'relative', top: 3 }}>
+              <div className="user_options">
+                { options }
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <span className="user_menu">
+            <div className="header_button header_user" onClick={this.onOpenClick}>
+              <span>{greeting} </span>
+              { arrow }
+            </div>
+            { menu }
+          </span>
+        );
+      } else if (!Frame.isStatic) {
+        return (
+          <div className="header_button header_user">
+            <a href={ Frame.linkTo({ signin: true }) } id="signin_button" className="button-signin">
+              <%= I18n.t("nav.user.signin") %>
+            </a>
+          </div>
+        );
+      }
+    },
+
+    componentDidUpdate: function() {
+      if (this.state.popped) {
+        // Catch clicks anywhere else and close the popup
+        $(document).on('click', this.onModalClick);
+      } else {
+        $(document).off('click', this.onModalClick);
+      }
+    },
+
+    onOpenClick: function(ev) {
+      this.setState({ popped: !this.state.popped });
+    },
+
+    onModalClick: function(ev) {
+      // Don't count a click on the button - that's handled in onOpenClick
+      var el = $(ev.target).closest('.header_button');
+      if (el.length)
+        return;
+
+      this.setState({ popped: false });
     }
+
   })
 
 
   var HeaderBar = React.createClass({
+    getInitialState: function() {
+      return { popped: false };
+    },
+
     render: function() {
       var P = this.props || {};
       var state = this.state || {};
@@ -363,17 +459,10 @@
         );
       }
 
-      // TODO: $('.freeplay_links').show(); or hide();
-
       // Popup stage navigation
       var headerPopup;
-      if (state.popped) {
-        headerPopup = <HeaderPopup script_id={stage.script_id} progress={progress} selected={level_id} onShow={this.showPopup} />;
-        // Catch clicks anywhere else and close the popup
-        $(document).on('click', this.onModalClick);
-      } else {
-        $(document).off('click', this.onModalClick);
-      }
+      if (state.popped)
+        headerPopup = <HeaderPopup script_id={stage.script_id} progress={progress} selected={level_id} jumpToTrophies={state.jumpToTrophies} onShow={this.showPopup} />;
 
       return (
         <div>
@@ -392,14 +481,11 @@
     },
 
     componentDidUpdate: function() {
-      if (this.state.jumpToTrophies) {
-        var el = $('#trophies');
-        if (el.length) {
-          var off = el.offset();
-          if (off)
-            window.scrollTo(0, +off.top);
-          this.setState({ jumpToTrophies: false });
-        }
+      if (this.state.popped) {
+        // Catch clicks anywhere else and close the popup
+        $(document).on('click', this.onModalClick);
+      } else {
+        $(document).off('click', this.onModalClick);
       }
     },
 
@@ -445,12 +531,12 @@
   var ReferenceArea = React.createClass({
     render: function() {
       var P = this.props || {};
+      var user = P.user || {};
       var state = P.level || {};
       var level = state.level || {}
 
-      // if (current_user.teacher? || current_user.admin?)
       var solutionLink;
-      if (level.solutionPath) {
+      if (level.solutionPath && (user.admin || user.teacher)) {
         solutionLink = (
           <div className="solution_link">
             <a href={level.solutionPath}><%= I18n.t("reference_area.teacher") %></a>
@@ -460,25 +546,30 @@
 
       var relatedVideos = [];
       if (level.relatedVideos) {
-        relatedVideos.push(<p className="help_title"><%= I18n.t("reference_area.title") %></p>);
-        relatedVideos.push(<p className="help_subtitle"><%= I18n.t("reference_area.subtitle") %></p>);
+        relatedVideos.push(<p key="title" className="help_title"><%= I18n.t("reference_area.title") %></p>);
+        relatedVideos.push(<p key="subtitle" className="help_subtitle"><%= I18n.t("reference_area.subtitle") %></p>);
 
         for (var i = 0; i < level.relatedVideos.length; i++) {
           var video = level.relatedVideos[i];
 
-          // TODO: does the data work?
+          // React may eventually offer an easier way to add multiple data- attributes...
           relatedVideos.push(
-            <a key={'video' + i} data={video.data} href="#" className="video_link" onClick={this.onVideoClick}>
+            <a key={video.data.key} href="#" className="video_link" onClick={this.onVideoClick}
+              data-download={video.data.download}
+              data-key={video.data.key}
+              data-name={video.data.name}
+              data-src={video.data.src}
+            >
               <img className="video_thumbnail" src={video.thumbnail_url} width={39*4.7} />
               <div className="video_name"><span>{video.name}</span></div>
             </a>
           );
 
           if ((i % 2) == 1)
-            relatedVideos.push(<div className="clear" />);
+            relatedVideos.push(<div key={"br" + i} className="clear" />);
         }
 
-        relatedVideos.push(<div className="clear" />);
+        relatedVideos.push(<div key="end" className="clear" />);
       }
 
       return (
@@ -490,7 +581,7 @@
     },
 
     onVideoClick: function(ev) {
-      var el = $(el.target);
+      var el = $(ev.target).closest('.video_link');
 
       showVideoDialog( $.extend({
         enable_fallback: true,
@@ -563,6 +654,47 @@
   });
 
 
+  var HeaderActions = React.createClass({
+    render: function() {
+      var P = this.props;
+      var level = P.level || {};
+
+      var actions = [];
+      if (level.actions) {
+        for (var i = 0; i < level.actions.length; i++) {
+          var action = level.actions[i];
+
+          var classes = {
+            'fa': true
+          };
+          classes[action.icon] = true;
+
+          actions.push(
+            <a key={action.icon} className="header_status_bar level_free_play" title={action.label} href={Frame.linkTo(action.link)}>
+              <i className={cs(classes)} />
+            </a>
+          );
+        }
+
+        actions = (
+          <span className="header_actions freeplay_links">
+            {actions}
+          </span>
+        );
+      }
+
+      return (
+        <div>
+          { actions }
+          <SignInButton user={P.user} />
+        </div>
+      );
+
+    }
+  });
+
+
+
   // This is a wrapper to create a NEW component that watches some Stores and renders a component
   // using the values from those stores as properties.
   // TODO: formalize its location/usage
@@ -610,42 +742,50 @@
     window.scriptStore = new ScriptStore();
     window.userProgressStore = new UserProgressStore();
 
+    // For now, the current user's info is always pre-loaded in the page if logged in
+    window.userInfoStore = new UserInfoStore();
+    window.userInfoStore.save(window.user_info);
+
     window.Frame = new UIFrame();
     Frame.init();
-
-
-    // Create component classes that are bound to the Stores
-    var AppHeaderBar = Watching(HeaderBar, {
-      level: window.levelStore,
-      progress: window.UserProgressStore
-    });
-    var AppReferenceArea = Watching(ReferenceArea, {
-      level: window.levelStore
-    });
 
     // Create components that are attached at known locations on the screen
     el = $('.header_middle');
     if (el.length) {
+      // Create a component that's bound to global stores
+      var AppHeaderBar = Watching(HeaderBar, {
+        level: window.levelStore,
+        progress: window.userProgressStore
+      });
+
       React.render(<AppHeaderBar />, el[0]);
+    }
+
+    el = $('.header_right');
+    if (el.length) {
+      // Create a component that's bound to global stores
+      var AppHeaderActions = Watching(HeaderActions, {
+        user: window.userInfoStore,
+        level: window.levelStore
+      });
+
+      React.render(<AppHeaderActions />, el[0]);
     }
 
     el = $('#reference_area');
     if (el.length) {
+      // Create a component that's bound to global stores
+      var AppReferenceArea = Watching(ReferenceArea, {
+        user: window.userInfoStore,
+        level: window.levelStore
+      });
+
       React.render(<AppReferenceArea />, el[0]);
     }
 
     el = $('#application');
     if (el.length) {
       React.render(<Application />, el[0]);
-    }
-
-    if (!Frame.isStatic) {
-      // The user signin button is rendered by client code if it wasn't sent by the server
-      // Don't show it if offline
-      var $right = $('.header_right');
-      if (!$right.find('.header_user').length) {
-        React.render(<SignInButton />, $right[0]);
-      }
     }
 
   });
