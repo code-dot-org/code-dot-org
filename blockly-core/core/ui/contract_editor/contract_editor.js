@@ -14,6 +14,8 @@ goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
 goog.require('Blockly.SvgHeader');
 goog.require('Blockly.SvgHighlightBox');
+goog.require('Blockly.DomainEditor');
+goog.require('Blockly.TypeDropdown');
 goog.require('Blockly.CustomCssClassMenuRenderer');
 goog.require('goog.ui.Component.EventType');
 goog.require('goog.ui.FlatMenuButtonRenderer');
@@ -55,9 +57,7 @@ goog.require('goog.array');
 Blockly.ContractEditor = function() {
   Blockly.ContractEditor.superClass_.constructor.call(this);
 
-  /** @type {goog.ui.Select} */
-  this.inputTypeSelector = null;
-  /** @type {goog.ui.Select} */
+  /** @type {Blockly.TypeDropdown} */
   this.outputTypeSelector = null;
 
   /**
@@ -66,6 +66,13 @@ Blockly.ContractEditor = function() {
    * @private
    */
   this.exampleBlocks = [];
+
+  /**
+   * @type {Array.<Blockly.DomainEditor>}
+   * @private
+   */
+  this.domainEditors_ = [];
+
   /**
    * @type {?Blockly.ContractEditorSectionView}
    * @private
@@ -272,15 +279,22 @@ Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
     this.moveToMainBlockSpace_(exampleBlock);
   }, this);
   goog.array.clear(this.exampleBlocks);
+  this.domainEditors_.forEach(function (editor) {
+    editor.dispose();
+  }, this);
+  goog.array.clear(this.domainEditors_);
+
+  this.outputTypeSelector.dispose();
+  this.outputTypeSelector = null;
 };
 
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
 
+  this.addRangeEditor_();
+
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
-
-  this.setTypeDropdownDefaults();
 
   if (this.levelConfigForFirstOpen_) {
     this.firstOpenLevelConfig_(this.levelConfigForFirstOpen_);
@@ -300,12 +314,6 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
-Blockly.ContractEditor.prototype.setTypeDropdownDefaults = function() {
-  this.inputTypeSelector.setValue(Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE);
-  this.outputTypeSelector.setValue(this.functionDefinitionBlock.getOutputType() ||
-    Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
-};
-
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
@@ -317,8 +325,10 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     opt_blockCreationCallback(tempFunctionDefinitionBlock);
   }
 
-  for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-    this.createExampleBlock_(tempFunctionDefinitionBlock);
+  if (!tempFunctionDefinitionBlock.isVariable()) {
+    for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
+      this.createExampleBlock_(tempFunctionDefinitionBlock);
+    }
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
@@ -371,22 +381,18 @@ Blockly.ContractEditor.prototype.positionTrashcanVerticalMiddleOfTopHeader_ = fu
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText');
+      'blocklyToolboxDiv paramToolbox blocklyText contractEditor');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
   this.contractDiv_.innerHTML =
           '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
+        + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
         + '<div id="domain-area" style="margin: 0;">'
-          + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
-          + '<div><input id="paramAddText" type="text" style="width: 200px;" '
-          + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> '
-            + '<span id="paramTypeDropdown"></span>'
-            + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD
-            + '</button>'
-          + '</div>'
         + '</div>'
+        + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
+        + '<div class="clear" style="margin: 0;"></div>'
         + '<div id="range-area" style="margin: 0;">'
           + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
           + '<span id="outputTypeDropdown"></span>'
@@ -401,9 +407,7 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
-
-  this.initializeInputTypeDropdown_();
-  this.initializeOutputTypeDropdown_();
+  this.initializeAddButton_();
 };
 
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function () {
@@ -436,6 +440,8 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
     isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
   goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
   if (isEditingVariable) {
     this.contractSectionView_.setHeaderVisible(false);
@@ -468,13 +474,45 @@ Blockly.ContractEditor.prototype.isEditingVariable = function() {
  * @override
  */
 Blockly.ContractEditor.prototype.addParameter = function(newParameterName, opt_newParameterType) {
-  this.orderedParamIDsToBlocks_.set(
-    goog.events.getUniqueId('parameter'),
+  var newParameterID = goog.events.getUniqueId('parameter');
+  this.orderedParamIDsToBlocks_.set(newParameterID,
     this.newParameterBlock(newParameterName, opt_newParameterType));
+  this.addDomainEditorForParamID_(newParameterID);
+};
+
+Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) {
+  var paramInfo = this.getParamNameType(paramID);
+  var name = paramInfo.name;
+  var type = paramInfo.type;
+
+  var domainEditor = new Blockly.DomainEditor({
+    name: name,
+    type: type,
+    onRemovePress: goog.bind(this.removeParameter, this, name),
+    onTypeChanged: goog.bind(this.changeParameterType_, this, paramID),
+    onNameChanged: goog.bind(this.changeParameterName_, this, paramID),
+    typeChoices: USER_TYPE_CHOICES
+  });
+  domainEditor.render(goog.dom.getElement('domain-area'));
+  this.domainEditors_.push(domainEditor);
+};
+
+Blockly.ContractEditor.prototype.removeParameter = function(name) {
+  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+
+  goog.array.removeIf(this.domainEditors_, function (editor) {
+    if (editor.name === name) {
+      editor.dispose();
+      return true;
+    }
+    return false;
+  }, this);
+
+  this.position_();
 };
 
 Blockly.ContractEditor.prototype.newParameterBlock = function(newParameterName, opt_newParameterType) {
-  opt_newParameterType = opt_newParameterType || this.inputTypeSelector.getValue();
+  opt_newParameterType = opt_newParameterType || Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE;
   var newParamBlockDOM = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var title = Blockly.createSvgElement('title', {name: 'VAR'}, newParamBlockDOM);
   title.textContent = newParameterName;
@@ -494,20 +532,17 @@ Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
   }
 };
 
-Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
-  this.outputTypeSelector = this.createTypeDropdown_();
+Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
+  this.outputTypeSelector = new Blockly.TypeDropdown({
+    onTypeChanged: goog.bind(this.outputTypeChanged_, this),
+    typeChoices: USER_TYPE_CHOICES,
+    type: this.functionDefinitionBlock.getOutputType() || Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE
+  });
   this.outputTypeSelector.render(this.getOutputTypeDropdownElement_());
-
-  goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE,
-    goog.bind(this.outputTypeDropdownChange_, this));
 };
 
-Blockly.ContractEditor.prototype.outputTypeDropdownChange_ = function(comboBoxEvent) {
-  var newType = comboBoxEvent.target.getContent();
-  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
-  var menuButtonElement = menuButtonRenderer.getContentElement(this.getOutputTypeDropdownElement_());
+Blockly.ContractEditor.prototype.outputTypeChanged_ = function(newType) {
   var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setBackgroundFromHSV(menuButtonElement, newColorHSV);
   this.setFrameColor_(newColorHSV);
 
   if (this.functionDefinitionBlock) {
@@ -526,61 +561,23 @@ Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function () {
   return goog.dom.getElement('outputTypeDropdown');
 };
 
-Blockly.ContractEditor.prototype.getInputTypeDropdownElement_ = function () {
-  return goog.dom.getElement('paramTypeDropdown');
+Blockly.ContractEditor.prototype.initializeAddButton_ = function() {
+  var paramAddButton = goog.dom.getElement('paramAddButton');
+  Blockly.bindEvent_(paramAddButton, 'mousedown', this, goog.bind(function () {
+    this.addParameter(Blockly.Variables.generateUniqueName());
+    this.refreshParamsEverywhere();
+  }, this));
 };
 
-Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
-  this.inputTypeSelector = this.createTypeDropdown_();
-  this.inputTypeSelector.render(goog.dom.getElement('paramTypeDropdown'));
-
-  goog.events.listen(this.inputTypeSelector, goog.ui.Component.EventType.CHANGE,
-    goog.bind(this.inputTypeDropdownChange_, this));
+Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newType) {
+  var paramName = this.getParamNameType(paramID).name;
+  this.functionDefinitionBlock.changeParamType(paramName, newType);
+  this.changeParameterTypeInFlyoutXML(paramName, newType);
+  this.refreshParamsEverywhere()
 };
 
-Blockly.ContractEditor.prototype.inputTypeDropdownChange_ = function(comboBoxEvent) {
-  var newType = comboBoxEvent.target.getContent();
-  this.colorInputButtonForType_(newType);
-};
-
-Blockly.ContractEditor.prototype.colorInputButtonForType_ = function(newType) {
-  var menuButtonRenderer = goog.ui.FlatMenuButtonRenderer.getInstance();
-  var menuButtonElement = menuButtonRenderer.getContentElement(this.getInputTypeDropdownElement_());
-  this.setBackgroundFromHSV(menuButtonElement, Blockly.FunctionalTypeColors[newType]);
-};
-
-/**
- * @returns {goog.ui.Select} new dropdown
- * @private
- */
-Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
-  var newTypeDropdown = new goog.ui.Select(null, null,
-    goog.ui.FlatMenuButtonRenderer.getInstance(),
-    null,
-    new Blockly.CustomCssClassMenuRenderer('colored-type-dropdown'));
-  USER_TYPE_CHOICES.forEach(function (choiceKey) {
-    var menuItem = new goog.ui.MenuItem(choiceKey);
-    newTypeDropdown.addItem(menuItem);
-    this.setMenuItemColor_(menuItem, Blockly.FunctionalTypeColors[choiceKey]);
-  }, this);
-  return newTypeDropdown;
-};
-
-/**
- * @param {!goog.ui.MenuItem} menuItem
- * @param {!Array.<Number>} hsvColor
- * @private
- */
-Blockly.ContractEditor.prototype.setMenuItemColor_ = function(menuItem, hsvColor) {
-  var menuItemElement = menuItem.getElement();
-  this.setBackgroundFromHSV(menuItemElement, hsvColor);
-};
-
-/**
- * @param {!Element} element
- * @param {!Array.<Number>} hsvColor
- */
-Blockly.ContractEditor.prototype.setBackgroundFromHSV = function (element, hsvColor) {
-  element.style.background =
-    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
+Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
+  var paramInfo = this.getParamNameType(paramID);
+  var oldName = paramInfo.name;
+  Blockly.Variables.renameVariable(oldName, newName, Blockly.mainBlockSpace)
 };

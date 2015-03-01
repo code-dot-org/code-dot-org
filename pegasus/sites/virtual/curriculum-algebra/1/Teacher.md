@@ -4,15 +4,12 @@ view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg1'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Video Games and Coordinate Planes',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -24,23 +21,18 @@ Students discuss the components of their favorite video games, and discover that
 
 ### **Activity: Video Games and the Coordinate Plane**
 
-3) [Dissecting a Demo](#Activity1)<br/>
+3) [Reverse Engineer a Demo](#Activity1)<br/>
 4) [Coordinate Planes](#Activity2)  
 
 ### **Wrap-up**
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Brainstorming a Game](#WrapUp)  
 
+<!--
 ### **Assessment**
 6) [Coordinate Plane Assessment](#Assessment)
+-->
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Create a data model that describes a simple videogame
-- Describe the movements of videogame characters by their change in coordinates
-
-[/together]
 
 [together]
 
@@ -48,7 +40,8 @@ Students discuss the components of their favorite video games, and discover that
 
 ## Materials, Resources and Prep
 ### For the Student
-- Blank sheet of paper
+- [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) or blank sheet of paper
+- [Videogame Design Template](../docs/worksheets/game_planning.pdf) or blank sheet of paper
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
@@ -66,8 +59,8 @@ Students discuss the components of their favorite video games, and discover that
 This lesson has three new and important words:<br/>
 
 - **Apply** - use a given function on some inputs
-- **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
-- **Programming Language** - a set of rules for writing code that a computer can evaluate
+- **Reverse Engineer** - to extract knowledge or design information from an existing product
+- **Sprite** - a graphic character on the screen.  Sometimes called a bitmap or an image.
 
 ### <a name="GetStarted"></a> 2) Learning a Language
 Welcome to Code.org CS in Algebra! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
@@ -90,7 +83,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 [together]
 
 ## Activities:
-### <a name="Activity1"></a> 3) Dissecting a Demo
+### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
 Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
 
@@ -132,8 +125,10 @@ A coordinate represents a single point, and an image is (by definition) many poi
 When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, you’ll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.
 
 Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look back to the table you made. Can the Ninja move up and down in the game? Can he move left and right? So what’s changing: his x-coordinate, his y-coordinate, or both? What about the clouds? Do they move up and down? Left and right? Both?
+
+OPTIONAL ACTIVITY:  Depending on timing and the background of your students, having one student place a character on a large graph and another student stating the coordinates is excellent practice.  Students often need extra practice remembering which coordinate comes first.  Coordinates do not have to be exact but it should be in the correct order.  Extending this to all four quadrants to include negative numbers is also excellent practice.
  
-Fill in the rest of the table, identifying what is changing for each of your characters.
+Fill in the rest of the reverse-engineering table, identifying what is changing for each of your characters.
 
 [/together]
 
@@ -162,45 +157,13 @@ The structure of your students' games will very closely resemble the demo they'v
 
 [together]
 
+<!--
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
 Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems.
-- 5.OA.1-2: Write and interpret numerical expressions.
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- N-Q: The student reasons quantitatively in using units to solve problems.
-
-### CSTA K-12 Computer Science Standards
-
-- L2:CT:6: Describe and analyze a sequence of instructions being followed 
-
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>
