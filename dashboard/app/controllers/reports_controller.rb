@@ -143,10 +143,13 @@ SQL
 
     stage_data = summarize_stage(script, script_level.stage_or_game, nil)
 
-    # TODO OFFLINE: Convert these to client-side.  Right now the server tracks if you've seen these,
-    # and doesn't display them.  Also search for noautoplay and kill that (server side)
-    session[:videos_seen] = nil
-    session[:callouts_seen] = nil
+    # Copy these now because they will be modified during this routine, but the API caller needs the previous value
+    if session[:callouts_seen]
+      callouts_seen = session[:callouts_seen].map { |x| x }
+    end
+    if session[:videos_seen]
+      videos_seen = session[:videos_seen].map { |x| x }
+    end
 
     # Level-specific data
     if level.unplugged?
@@ -172,7 +175,7 @@ SQL
       @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
       @level_source_id = level.ideal_level_source_id
       # TODO OFFLINE: @phone_share_url
-      set_videos_and_blocks_and_callouts  # @callouts, @autoplay_video_info
+      set_videos_and_blocks_and_callouts  # sets @callouts, @autoplay_video_info for use in blockly_options()
 
       level_data = blockly_options()
       if (level.embed == 'true' && !@edit_blocks)
@@ -231,7 +234,9 @@ SQL
       user_data = {
         linesOfCode: current_user.total_lines,
         linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
-        levels: {}
+        levels: {},
+        videos_seen: videos_seen,
+        callouts_seen: callouts_seen
       }
 
       # Get all user_levels

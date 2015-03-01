@@ -59,18 +59,16 @@ module LevelsHelper
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
+      autoplay_video = @level.related_videos.find { |video| true }
     elsif @level.is_a?(Blockly) && @level.specified_autoplay_video
-      unless seen_videos.include?(@level.specified_autoplay_video.key)
-        autoplay_video = @level.specified_autoplay_video
-      end
+      autoplay_video = @level.specified_autoplay_video
     end
 
     return unless autoplay_video
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    video_info(autoplay_video) unless params[:noautoplay]
+    video_info(autoplay_video)
   end
 
   def select_and_remember_callouts(always_show = false)
@@ -91,7 +89,6 @@ module LevelsHelper
     end
     # Filter if already seen (unless always_show)
     callouts_to_show = available_callouts
-      .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     # Localize
     callouts_to_show.map do |callout|
