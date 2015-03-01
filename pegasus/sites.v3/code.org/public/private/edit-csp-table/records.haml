@@ -69,7 +69,7 @@ theme: none
         %span{"ng-show" => "newRecord.editing"}
           %input{"ng-model" => "newRecord[column]", type: "text"}/
       %td
-        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add
+        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
         %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
     %tr{"ng-repeat" => "record in records | orderBy:order:reverse"}
