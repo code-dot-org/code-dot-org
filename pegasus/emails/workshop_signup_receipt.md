@@ -31,4 +31,3 @@ Workshop details:
 **If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link %>), in advance so other teachers may take your spot.**
 
 ![](<%= tracking_pixel %>)
-
