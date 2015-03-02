@@ -442,11 +442,11 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 };
 
 /**
- * Assign a new address for hostname on wire, calling onComplete(success)
+ * Assign a new address for hostname on wire, calling onComplete
  * when done.
  * @param {!NetSimWire} wire that lacks addresses or hostnames
  * @param {string} hostname of requesting node
- * @param {function} [onComplete] reports success or failure.
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
@@ -456,6 +456,11 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
   // new one, and assign it to the provided wire.
   var self = this;
   this.getConnections(function (err, wires) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
     var addressList = wires.filter(function (wire) {
       return wire.localAddress !== undefined;
     }).map(function (wire) {
@@ -473,9 +478,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(function (err) {
-      onComplete(err === null);
-    });
+    wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
   });
