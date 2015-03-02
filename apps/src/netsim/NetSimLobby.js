@@ -133,6 +133,8 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
   this.shardSelector_.change(this.onShardSelectorChange_.bind(this));
+  this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
+  this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
   dom.addClickTouchEvent(this.addRouterButton_[0],
       this.addRouterButtonClick_.bind(this));
@@ -323,6 +325,8 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
   this.closedRoot_.show();
   this.openRoot_.hide();
 
+  this.notConnectedNote_.hide();
+
   // Update connection status
   this.connectionStatusSpan_.html(
       this.connection_.myNode.getStatus() + ' ' +
@@ -358,6 +362,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   // Do we have a shard yet?
   if (!this.connection_.isConnectedToShard()) {
     this.shardSelector_.val(SELECTOR_NONE_VALUE);
+    this.notConnectedNote_.show();
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
@@ -365,6 +370,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   }
 
   // We have a shard
+  this.notConnectedNote_.hide();
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
