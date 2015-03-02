@@ -283,11 +283,11 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * Put a message on our outgoing wire, to whatever we are connected to
  * at the moment.
  * @param {string} payload
- * @param {function} onComplete
+ * @param {!NodeStyleCallback} onComplete
  */
 NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   if (!this.myWire) {
-    onComplete();
+    onComplete(new Error('Cannot send message; not connected.'));
     return;
   }
 
@@ -299,13 +299,15 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         if (err) {
           logger.error('Failed to send message; ' + err.message + ': ' +
               JSON.stringify(payload));
+          onComplete(err);
           return;
         }
+
         logger.info('Local node sent message: ' + JSON.stringify(payload));
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
-        onComplete();
+        onComplete(null);
       }
   );
 };
