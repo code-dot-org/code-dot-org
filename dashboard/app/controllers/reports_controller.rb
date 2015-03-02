@@ -168,7 +168,7 @@ SQL
         level_data[:pdfs] = pdfs.map.with_index do |pdf, i|
           {
             name: t('download_pdf', :pdf => i + 1),
-            url: 'unplugged/' + pdf + '.pdf'
+            url: '/unplugged/' + pdf + '.pdf'
           }
         end
       end

@@ -708,7 +708,7 @@
 
         if (level.pdfs)
           lesson_plans = $.map(level.pdfs, function(pdf) {
-            return <a key={pdf.name} className="btn pull-right pdf-button" href={ Frame.assetUrl(pdf.url) } target="_blank">{ pdf.name }</a>;
+            return <a key={pdf.name} className="btn pull-right pdf-button" href={ Frame.getAbsolutePath(pdf.url) } target="_blank">{ pdf.name }</a>;
           });
         else if (!pegasus_lessons)
           lesson_plans = <a className="btn pull-right pdf-button disabled"><%= I18n.t('download_coming_soon') %></a>;
