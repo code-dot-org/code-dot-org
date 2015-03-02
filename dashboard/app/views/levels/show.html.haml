@@ -6,9 +6,7 @@
   - if @game.app == 'flappy'
     = tag 'meta', name: 'description', content: 'Code your own Flappy game'
 
-- # TODO OFFLINE
 - if @game.unplugged?
-  = render partial: 'levels/unplug', locals: {app: @game.app}
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
   #reference_area{style: 'width: 400px'}
@@ -18,12 +16,11 @@
   - # Pass special parameters to Blockly partial for embedded level type.
   - # TODO OFFLINE: {embed: true, hide_source: true, no_padding: true, show_finish: true}
   #reference_area
-  #application
 - else
   #reference_area
-  #application
+#application
 
-- # TODO OFFLINE: attach the cookie via the script callback URL?
+- # TODO OFFLINE: hide this, or attach the cookie via the script callback URL?
 - if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))

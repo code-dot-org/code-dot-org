@@ -593,8 +593,29 @@
   });
 
 
+  // LevelContainer user={}
+  var LevelContainer = React.createClass({
+    getInitialState: function() {
+      return { component: null };
+    },
 
-  var Application = React.createClass({
+    render: function() {
+      // If the level has loaded, display it
+      if (this.state.component)
+        return this.state.component;
+
+      // Otherwise display the loader-progress
+      return (
+        <div id="appcontainer">
+          <div className="loading" />
+          <div className="slow_load">
+            <div><%= I18n.t(:slow_loading) %></div>
+            <a href="javascript: location.reload();"><%= I18n.t(:try_reloading) %></a>
+          </div>
+        </div>
+      );
+    },
+
     componentDidMount: function() {
       var dom = this.getDOMNode();
 
@@ -604,56 +625,146 @@
       }, 10000);
 
       // When the levelStore gets data, update blockly
-      window.levelStore.subscribe( function(data) {
+      window.levelStore.subscribe( __bind(this.onNewLevel, this) );
+    },
 
-        data.level.level_id = data.level.level.id; // because level.id gets overwritten by the DIV id inside blockly somewhere
+    onNewLevel: function(data) {
+      var opts = data.level;
 
-        // Set up the blockly options, starting from some default values
-        var opts = $.extend({
-          baseUrl: '/blockly/',
-          containerId: dom.id,
-          script_name: data.stage.script_name,
-          scriptPath: Frame.linkTo({
-              script: data.stage.script_name,
-              stage: data.stage.position,
-              level: data.level.position
-            }, true) // Normalize for a live URL because these are just tracking metrics
-        }, data.level);
+      // Create .scriptPath that's used for tracking metrics on a live URL
+      opts.scriptPath = Frame.linkTo({
+        script: data.stage.script_name,
+        stage: data.stage.position,
+        level: data.level.position
+      }, true);
+      opts.script_name = data.stage.script_name;
+      opts.level.stage = data.stage.position;
+      opts.level.stage_name = data.stage.name;
 
-        // Blockly baseUrl must be an absolute path.
-        opts.baseUrl = Frame.getAbsolutePath(opts.baseUrl);
-        opts.level.stage_name = data.stage.name;
+      // Determine which level component to render
+      switch (opts.app) {
+        case 'unplugged':
+          this.setState({
+            component: <UnpluggedLevel user={this.props.user} stage={data.stage} level={data.level} app={new UnpluggedApp(opts)} />
+          });
+          break;
 
-        // TODO OFFLINE: Convert these different application types and set up appropriately
-        switch (opts.app) {
-          case 'maze':
-          case 'jigsaw':
-          case 'bounce':
-          case 'turtle':
-          case 'flappy':
-          case 'unplug':
-          case 'studio':
-          case 'multi':
-          case 'match':
-            this.app = new BlocklyApp(opts);
-            this.app.init();
-            break;
-        }
-      });
+        // TODO OFFLINE: Convert these level types
+        case 'multi':
+        case 'match':
+          break;
+
+        // BlocklyApp is not implemented as a React component so we have to do something a bit tricky
+        case 'maze':
+        case 'jigsaw':
+        case 'bounce':
+        case 'turtle':
+        case 'flappy':
+        case 'unplug':
+        case 'studio':
+        default:
+          // Store this because level.id gets overwritten by the DIV id inside blockly somewhere
+          opts.level_id = opts.level.id;
+
+          // Set up some blockly options.  baseUrl must be an absolute path.
+          opts.baseUrl = Frame.getAbsolutePath('/blockly/');
+
+          // Render a blockly app on top of our DOM
+          opts.containerId = this.getDOMNode().id;
+          var app = new BlocklyApp(opts);
+          app.startBlockly();
+          break;
+      }
+    }
+
+  });
+
+
+  // UnpluggedLevel user={} level={} stage={} app={}
+  var UnpluggedLevel = React.createClass({
+    render: function() {
+      var P = this.props || {};
+      var level = P.level;
+      var stage = P.stage || {};
+
+      if (!level)
+        return false;
+
+      var video_download;
+      if (level.video && level.video.download)
+        video_download = <a className="video-download btn pull-right" href={level.video.download}><%= I18n.t('video.download') %></a>;
+
+      var lesson_plans, pegasus_lessons;
+      var is_student = P.user && P.user.student;
+      if (!is_student) {
+        if (stage.lesson_plan_html_url)
+          pegasus_lessons = (
+            <div className="lesson-plan">
+              <h2><%= I18n.t(:lesson_plan) %></h2>
+              <a className="btn pdf-button" href={stage.lesson_plan_html_url} target="_blank"><%= I18n.t(:view_lesson_plan) %></a>
+              <a className="btn pdf-button" href={stage.lesson_plan_pdf_url} target="_blank"><%= I18n.t(:pdf_download) %></a>
+            </div>
+          );
+
+        if (level.pdfs)
+          lesson_plans = $.map(level.pdfs, function(pdf) {
+            return <a key={pdf.name} className="btn pull-right pdf-button" href={ Frame.assetUrl(pdf.url) } target="_blank">{ pdf.name }</a>;
+          });
+        else if (!pegasus_lessons)
+          lesson_plans = <a className="btn pull-right pdf-button disabled"><%= I18n.t('download_coming_soon') %></a>;
+      }
+
+      var video;
+      if (level.video)
+        video = (
+          <div className="video-container" />
+        );
+      else
+        video = (
+          <p className="coming-soon"><%= I18n.t(:video_coming_soon) %></p>
+        );
+
+      return (
+        <div className="unplugged">
+          <h2>{level.title}</h2>
+          <p>{level.desc}</p>
+          <div className="video-section">
+            <a className="btn btn-primary next-stage" onClick={this.onNextClick}><%= I18n.t(:next_stage) %></a>
+            { video_download }
+            { lesson_plans }
+            <div className="clear" />
+            { video }
+          </div>
+          <div className="clear" />
+          { pegasus_lessons }
+        </div>
+      );
 
     },
 
-    render: function() {
-      return (
-        <div id="gogogo">
-          <div className="loading" />
-          <div className="slow_load">
-            <div><%= I18n.t(:slow_loading) %></div>
-            <a href="javascript: location.reload();"><%= I18n.t(:try_reloading) %></a>
-          </div>
-        </div>
-      );
+    componentDidMount: function() {
+      var el = $('.video-container');
+      if (el.length) {
+        // TODO: Is the video ever anything but 800px?  (page_width was coming from server)
+        el.html('');
+        el.append(createVideoWithFallback(this.props.level.video, 800, 800 / (16 / 9)))
+      }
+    },
+
+    onNextClick: function() {
+      var app = this.props.app;
+
+      // Some of these parameters may not be necessary.
+      app.onAttempt({
+        app: 'unplug',
+        level: this.props.level.level_num,
+        pass: true,
+        result: true,
+        testResult: 100,
+        onComplete: app.onContinue // It's already bound to app
+      });
     }
+
   });
 
 
@@ -693,6 +804,19 @@
         </div>
       );
 
+    },
+
+    componentDidUpdate: function() {
+      // Register the QTIP for any header actions we created
+      $('.header_actions > a').qtip({
+        content: {
+          attr: 'title'
+        },
+        position: {
+          my: 'top center',
+          at: 'bottom center'
+        }
+      });
     }
   });
 
@@ -788,13 +912,20 @@
 
     el = $('#application');
     if (el.length) {
-      React.render(<Application />, el[0]);
+      var AppLevelContainer = Watching(LevelContainer, {
+        user: window.userInfoStore
+      });
+
+      React.render(<AppLevelContainer />, el[0]);
     }
 
   });
 
 
+
 }).call(this);
+
+
 
 
 

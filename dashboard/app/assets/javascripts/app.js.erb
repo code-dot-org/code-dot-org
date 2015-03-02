@@ -436,7 +436,8 @@
 
 
 
-  // class App, the base class for all level apps
+  // class App, the base class for all level apps - provides some useful functions that all
+  // level types will probably want to use, including milestone reporting, callouts, etc.
   var App = (function() {
 
     // Must have a constructor
@@ -471,162 +472,23 @@
       return this;
     }
 
-    App.prototype.init = function() {
-      var _this = this;
-      this.loadAssets().then(function() {
-        window[_this.app + 'Main'](_this);
-      });
-    }
+    $.extend(App.prototype, {
+      loadSource: function(filename, locale) {
+        var _this = this;
 
-    App.prototype.loadAssets = function(name) {
-    }
+        return function () {
+          if (locale)
+            filename = locale + "/" + filename;
+          return Frame.loadSource(_this.baseUrl + "js/" + filename + ".js");
+        };
+      },
 
-    App.prototype.loadSource = function(filename, locale) {
-      var _this = this;
-
-      return function () {
-        if (locale)
-          filename = locale + "/" + filename;
-        return Frame.loadSource(_this.baseUrl + "js/" + filename + ".js");
-      };
-    }
-
-    App.prototype.loadStyle = function(name) {
-      return Frame.loadStyle(this.baseUrl + 'css/' + name + '.css');
-    }
-
-    return App;
-  })();
-
-
-  // class BlocklyApp extends App
-  var BlocklyApp = (function(_super) {
-    __extends(BlocklyApp, _super);
-
-    // Must have a constructor
-    function BlocklyApp(opts) {
-      BlocklyApp.__super__.constructor.apply(this, arguments);
-
-      return this;
-    }
-
-    $.extend(BlocklyApp.prototype, {
-      loadAssets: function() {
-        this.loadStyle('common');
-        this.loadStyle(this.app);
-
-        var promise;
-        if (this.droplet) {
-          this.loadStyle('droplet/droplet.min');
-          promise = this.loadSource('jsinterpreter/acorn_interpreter')()
-            .then(this.loadSource('requirejs/require'))
-            .then(this.loadSource('ace/ace'))
-            .then(this.loadSource('ace/ext-language_tools'))
-            .then(this.loadSource('droplet/droplet-full.min'));
-        } else {
-          promise = this.loadSource('blockly')()
-            .then(this.loadSource('blockly_locale', this.locale));
-        }
-        return promise
-          .then(this.loadSource('common' + this.pretty))
-          .then(this.loadSource('common_locale', this.locale))
-          .then(this.loadSource(this.app + '_locale', this.locale))
-          .then(this.loadSource(this.app + this.pretty));
+      loadStyle: function(name) {
+        return Frame.loadStyle(this.baseUrl + 'css/' + name + '.css');
       },
 
       onInitialize: function() {
-        // TODO: Confirm that moving this to onInitialize is ok - no timing effects?
-        window.startTiming('Puzzle', this.scriptPath, '');
-
-        // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-        $(window).on('function_editor_closed', function() {
-          $('.cdo-qtips').qtip('hide');
-        });
-
-        this.createCallouts();
-        if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
-          wrapExistingClipPaths();
-          handleClipPathChanges();
-        }
-
         $(document).trigger('appInitialized', this);
-        $('.reference_area').show();
-      },
-
-      createCallouts: function() {
-        $.fn.qtip.zindex = 500;
-        this.callouts && this.callouts.every(function(callout) {
-          var selector = callout.element_id; // jquery selector.
-          if ($(selector).length === 0 && !callout.on) {
-            return true;
-          }
-
-          var defaultConfig = {
-            content: {
-              text: callout.localized_text,
-              title: {
-                button: $('<div class="tooltip-x-close"/>')
-              }
-            },
-            style: {
-              classes: "",
-              tip: {
-                width: 20,
-                height: 20
-              }
-            },
-            position: {
-              my: "bottom left",
-              at: "top right"
-            },
-            hide: {
-              event: 'click mousedown touchstart'
-            },
-            show: false // don't show on mouseover
-          };
-
-          var customConfig = $.parseJSON(callout.qtip_config);
-          var config = $.extend(true, {}, defaultConfig, customConfig);
-          config.style.classes = config.style.classes.concat(" cdo-qtips");
-
-          function reverseDirection(token) {
-            if (/left/i.test(token)) {
-              token = 'right';
-            } else if (/right/i.test(token)) {
-              token = 'left';
-            }
-            return token;
-          }
-
-          function reverseCallout(position) {
-            position = position.split(/\s+/);
-            var a = position[0];
-            var b = position[1];
-            return reverseDirection(a) + reverseDirection(b);
-          }
-
-          // Reverse callouts in RTL mode
-          if (Blockly.RTL) {
-            config.position.my = reverseCallout(config.position.my);
-            config.position.at = reverseCallout(config.position.at);
-            if (config.position.adjust) {
-              config.position.adjust.x *= -1;
-            }
-          }
-
-          if (callout.on) {
-            window.addEventListener(callout.on, function() {
-              if (!callout.seen && $(selector).length > 0) {
-                callout.seen = true;
-                $(selector).qtip(config).qtip('show');
-              }
-            });
-          } else {
-            $(selector).qtip(config).qtip('show');
-          }
-
-          return true;
-        });
       },
 
       onAttempt: function(report) {
@@ -662,11 +524,14 @@
         var data = $.extend({}, report);
         delete data.onComplete;
 
+        var user = window.userInfoStore.value || { id: 0 };
+        var milestone_url = Frame.getAbsolutePath('/milestone/' + user.id + '/' + this.level.sl_id);
+
         // Make a POST request to the milestone API
         if (this.report)
           this.report.abort();
         this.report = Frame.save({
-          url: this.milestone,
+          url: milestone_url,
           data: data,
           success: onMilestone,
           error: function (xhr, textStatus, thrownError) {
@@ -749,6 +614,149 @@
           showInstructions();
         }
       }
+    });
+
+    return App;
+  })();
+
+
+  // class BlocklyApp extends App
+  var BlocklyApp = (function(_super) {
+    __extends(BlocklyApp, _super);
+
+    // Must have a constructor
+    function BlocklyApp(opts) {
+      BlocklyApp.__super__.constructor.apply(this, arguments);
+
+      return this;
+    }
+
+    $.extend(BlocklyApp.prototype, {
+      startBlockly: function() {
+        var _this = this;
+        this.loadAssets().then(function() {
+          window[_this.app + 'Main'](_this);
+        });
+      },
+
+      loadAssets: function() {
+        this.loadStyle('common');
+        this.loadStyle(this.app);
+
+        var promise;
+        if (this.droplet) {
+          this.loadStyle('droplet/droplet.min');
+          promise = this.loadSource('jsinterpreter/acorn_interpreter')()
+            .then(this.loadSource('requirejs/require'))
+            .then(this.loadSource('ace/ace'))
+            .then(this.loadSource('ace/ext-language_tools'))
+            .then(this.loadSource('droplet/droplet-full.min'));
+        } else {
+          promise = this.loadSource('blockly')()
+            .then(this.loadSource('blockly_locale', this.locale));
+        }
+        return promise
+          .then(this.loadSource('common' + this.pretty))
+          .then(this.loadSource('common_locale', this.locale))
+          .then(this.loadSource(this.app + '_locale', this.locale))
+          .then(this.loadSource(this.app + this.pretty));
+      },
+
+      onInitialize: function() {
+        window.startTiming('Puzzle', this.scriptPath, '');
+
+        // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+        $(window).on('function_editor_closed', function() {
+          $('.cdo-qtips').qtip('hide');
+        });
+
+        this.createCallouts();
+        if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
+          wrapExistingClipPaths();
+          handleClipPathChanges();
+        }
+
+        $('#reference_area').show();
+
+        BlocklyApp.__super__.onInitialize.apply(this, arguments);
+      },
+
+      createCallouts: function() {
+        $.fn.qtip.zindex = 500;
+
+        this.callouts && this.callouts.every(function(callout) {
+          var selector = callout.element_id; // jquery selector.
+          if ($(selector).length === 0 && !callout.on) {
+            return true;
+          }
+
+          var defaultConfig = {
+            content: {
+              text: callout.localized_text,
+              title: {
+                button: $('<div class="tooltip-x-close"/>')
+              }
+            },
+            style: {
+              classes: "",
+              tip: {
+                width: 20,
+                height: 20
+              }
+            },
+            position: {
+              my: "bottom left",
+              at: "top right"
+            },
+            hide: {
+              event: 'click mousedown touchstart'
+            },
+            show: false // don't show on mouseover
+          };
+
+          var customConfig = $.parseJSON(callout.qtip_config);
+          var config = $.extend(true, {}, defaultConfig, customConfig);
+          config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+          function reverseDirection(token) {
+            if (/left/i.test(token)) {
+              token = 'right';
+            } else if (/right/i.test(token)) {
+              token = 'left';
+            }
+            return token;
+          }
+
+          function reverseCallout(position) {
+            position = position.split(/\s+/);
+            var a = position[0];
+            var b = position[1];
+            return reverseDirection(a) + reverseDirection(b);
+          }
+
+          // Reverse callouts in RTL mode
+          if (Blockly.RTL) {
+            config.position.my = reverseCallout(config.position.my);
+            config.position.at = reverseCallout(config.position.at);
+            if (config.position.adjust) {
+              config.position.adjust.x *= -1;
+            }
+          }
+
+          if (callout.on) {
+            window.addEventListener(callout.on, function() {
+              if (!callout.seen && $(selector).length > 0) {
+                callout.seen = true;
+                $(selector).qtip(config).qtip('show');
+              }
+            });
+          } else {
+            $(selector).qtip(config).qtip('show');
+          }
+
+          return true;
+        });
+      }
 
     });
 
@@ -756,9 +764,30 @@
   })(App);
 
 
+
+  // class UnpluggedApp extends App
+  var UnpluggedApp = (function(_super) {
+    __extends(UnpluggedApp, _super);
+
+    // Must have a constructor
+    function UnpluggedApp(opts) {
+      UnpluggedApp.__super__.constructor.apply(this, arguments);
+
+      return this;
+    }
+
+    $.extend(UnpluggedApp.prototype, {
+      // No custom overrides yet
+    });
+
+    return UnpluggedApp;
+  })(App);
+
+
   // Exports:
   window.UIRouter = UIRouter;
   window.UIFrame = UIFrame;
   window.BlocklyApp = BlocklyApp;
+  window.UnpluggedApp = UnpluggedApp;
 
 }).call(this);

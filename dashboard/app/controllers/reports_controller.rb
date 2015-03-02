@@ -79,6 +79,7 @@ SQL
 
     if script.has_lesson_plan?
       stage_data[:lesson_plan_html_url] = lesson_plan_html_url(stage_or_game)
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(stage_or_game)
     end
 
     if script.hoc?
@@ -153,11 +154,30 @@ SQL
 
     # Level-specific data
     if level.unplugged?
-      # TODO OFFLINE: what does an unplugged level need?  'levels/unplug', locals: {app: @game.app}
+      unplug_id = (level.type == 'Unplugged' ? level.name : game.name)
       level_data = {
         kind: 'unplugged',
-        level: summarize_script_level(script_level)
+        level: summarize_script_level(script_level),
+        app: 'unplugged',
+        title: try_t("data.unplugged.#{unplug_id}.title"),
+        desc: try_t("data.unplugged.#{unplug_id}.desc")
       }
+
+      pdfs = try_t("data.unplugged.#{unplug_id}.pdfs")
+      if pdfs
+        level_data[:pdfs] = level_data[:pdfs].each_with_index do |pdf, i|
+          return {
+            name: t('download_pdf', :pdf => i + 1),
+            url: 'unplugged/' + pdf + '.pdf'
+          }
+        end
+      end
+
+      video = Video.find_by_key(try_t("data.unplugged.#{unplug_id}.video"))
+      if video
+        level_data[:video] = video_info(video, false)
+      end
+
     elsif level.is_a?(DSLDefined)
       # TODO OFFLINE: partial "levels/#{level.class.to_s.underscore}"
       level_data = {
@@ -168,11 +188,11 @@ SQL
     else
       # Prepare some globals for blockly_options()
       # Intentionally does not set @current_user since this is a static callback
+      # No longer sets @callback because milestone URL is calculated on the client.
       @script = script
       @level = level
       @game = game
       @script_level = script_level
-      @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: script_level)
       @level_source_id = level.ideal_level_source_id
       # TODO OFFLINE: @phone_share_url
       set_videos_and_blocks_and_callouts  # sets @callouts, @autoplay_video_info for use in blockly_options()

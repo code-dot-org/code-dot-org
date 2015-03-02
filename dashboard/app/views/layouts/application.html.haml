@@ -23,10 +23,12 @@
         = render partial: 'layouts/age_interstitial'
       :javascript
         window.user_info = {
+          id: #{current_user.id},
           username: "#{h(current_user.short_name)}",
           age: "#{current_user.age}",
           admin: #{current_user.admin?},
           teacher: #{current_user.teacher?},
+          student: #{current_user.student?},
           teacher_prize: "#{current_user.teacher_prize}",
           bonus_prize: "#{current_user.teacher_bonus_prize}",
           actions: {
