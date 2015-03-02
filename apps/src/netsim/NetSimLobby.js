@@ -203,11 +203,10 @@ NetSimLobby.prototype.onShardSelectorChange_ = function () {
   if (this.connection_.isConnectedToShard()) {
     this.connection_.disconnectFromShard(
         this.selectShard_.bind(this, newShardID));
-    return;
+  } else {
+    // We were already disconnected, we're fine.
+    this.selectShard_(newShardID);
   }
-
-  // We were already disconnected, we're fine.
-  this.selectShard_(newShardID);
 };
 
 /**

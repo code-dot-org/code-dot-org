@@ -127,7 +127,7 @@ NetSimConnection.prototype.getLogger = function () {
  */
 NetSimConnection.prototype.onBeforeUnload_ = function () {
   if (this.isConnectedToShard()) {
-    this.disconnectFromShard(function () {});
+    this.disconnectFromShard();
   }
 };
 
@@ -140,7 +140,7 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
 NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
-    this.disconnectFromShard(this.connectToShard.bind(this));
+    this.disconnectFromShard(this.connectToShard.bind(this, shardID, displayName));
     return;
   }
 
@@ -151,12 +151,14 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
 
 /**
  * Ends the connection to the netsim shard.
- * @param {function} onComplete - no arguments
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   if (!this.isConnectedToShard()) {
     logger.warn("Redundant disconnect call.");
-    onComplete();
+    onComplete(null, null);
     return;
   }
 
@@ -165,11 +167,16 @@ NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
   }
 
   this.myNode.stopSimulation();
-  this.myNode.destroy(function () {
+  this.myNode.destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
     this.myNode = null;
     this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
-    onComplete();
+    onComplete(err, result);
   }.bind(this));
 };
 
@@ -195,17 +202,6 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       this.statusChanges.notifyObservers();
     }.bind(this));
   }.bind(this));
-};
-
-/**
- * Detects when local client node is unable to reconnect, and kicks user
- * out of the shard.
- * @private
- */
-NetSimConnection.prototype.onMyNodeChange_= function () {
-  if (this.myNode.getStatus() === 'Offline') {
-    this.disconnectFromShard(function () {});
-  }
 };
 
 /**
