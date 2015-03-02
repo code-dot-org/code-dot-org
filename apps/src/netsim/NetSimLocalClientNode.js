@@ -298,14 +298,15 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   var remoteNodeID = this.myWire.remoteNodeID;
   var self = this;
   NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
-      function (success) {
-        if (success) {
-          logger.info('Local node sent message: ' + JSON.stringify(payload));
-          if (self.sentLog_) {
-            self.sentLog_.log(payload);
-          }
-        } else {
-          logger.error('Failed to send message: ' + JSON.stringify(payload));
+      function (err) {
+        if (err) {
+          logger.error('Failed to send message; ' + err.message + ': ' +
+              JSON.stringify(payload));
+          return;
+        }
+        logger.info('Local node sent message: ' + JSON.stringify(payload));
+        if (self.sentLog_) {
+          self.sentLog_.log(payload);
         }
         onComplete();
       }

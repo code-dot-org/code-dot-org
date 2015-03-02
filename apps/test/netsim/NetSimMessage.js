@@ -72,9 +72,9 @@ describe("NetSimMessage", function () {
       });
     });
 
-    it ("Returns a success boolean to its callback", function () {
-      NetSimMessage.send(testShard, null, null, null, function (result) {
-        assert(result === true, "Result is boolean true");
+    it ("Returns no error to its callback when successful", function () {
+      NetSimMessage.send(testShard, null, null, null, function (err) {
+        assert(err === null, "Error is null on success");
       });
     });
   });

@@ -62,16 +62,14 @@ NetSimMessage.inherits(NetSimEntity);
  * @param {!number} fromNodeID - sender node ID
  * @param {!number} toNodeID - destination node ID
  * @param {*} payload - message content
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
   var entity = new NetSimMessage(shard);
   entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
   entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), function (err) {
-    onComplete(err === null);
-  });
+  entity.getTable_().create(entity.buildRow_(), onComplete);
 };
 
 /**
