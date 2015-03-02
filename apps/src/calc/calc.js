@@ -774,6 +774,9 @@ function animateUserExpression (maxNumSteps) {
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
+    if (current.isDivZero()) {
+      finished = true;
+    }
     if (current.collapse()) {
       numCollapses++;
     } else if (currentStep === numCollapses + 1) {

@@ -823,4 +823,16 @@ describe("ExpressionNode", function () {
     });
   });
 
+  describe('isDivZero', function () {
+    it('returns false when not a div zero', function () {
+      var node = new ExpressionNode('/', [3,3]);
+      assert(node.isDivZero() === false);
+    });
+
+    it('returns true when node is a div zero', function () {
+      var node = new ExpressionNode('/', [3, 0]);
+      assert(node.isDivZero() === true);
+    });
+  });
+
 });
