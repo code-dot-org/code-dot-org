@@ -2,7 +2,7 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
-var fauxStorageTable = netsimTestUtils.fauxStorageTable;
+var fakeStorageTable = netsimTestUtils.fakeStorageTable;
 
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
 
@@ -10,7 +10,7 @@ describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;
 
   beforeEach(function () {
-    apiTable = fauxStorageTable();
+    apiTable = fakeStorageTable();
     netsimTable = new NetSimTable(apiTable);
     callback = function () {};
     notified = false;
