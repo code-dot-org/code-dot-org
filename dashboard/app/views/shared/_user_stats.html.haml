@@ -39,8 +39,3 @@
                   %span.puzzle-number
                     =sl.level_display_text
   = render partial: 'shared/user_stats_key'
-
-- if script.trophies?
-  %div{style: 'clear: both;'}
-  #trophies
-    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: concept_progress, added_style: 'padding: 10px;'}
