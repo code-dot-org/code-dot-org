@@ -257,23 +257,22 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
   });
 };
 
+/**
+ * @param {NodeStyleCallback} [onComplete]
+ */
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = onComplete || function () {};
 
   var self = this;
   this.myWire.destroy(function (err) {
     if (err) {
-      onComplete(false);
+      onComplete(err);
       return;
     }
 
     self.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
-    self.myRouter.update(function (err) {
-      onComplete(err === null);
-    });
+    self.myRouter.update(onComplete);
     self.myRouter.stopSimulation();
     self.myRouter = null;
     self.routerChange.notifyObservers(null, null);
