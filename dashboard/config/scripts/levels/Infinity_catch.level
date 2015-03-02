@@ -40,7 +40,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
-    "timeout_failure_tick": "250",
+    "timeout_failure_tick": "300",
     "maze_data": null
   }
 }]]></config>
