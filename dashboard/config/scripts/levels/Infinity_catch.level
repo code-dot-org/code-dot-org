@@ -47,7 +47,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_repeatForever" deletable="false" movable="false">
+        <block type="studio_repeatForever" deletable="false" movable="false" y="10">
           <statement name="DO">
             <block type="studio_moveDistance" deletable="false" movable="false">
               <title name="SPRITE">0</title>
@@ -63,22 +63,22 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="130">
           <title name="VALUE">up</title>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="230">
           <title name="VALUE">down</title>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="330">
           <title name="VALUE">left</title>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false" movable="false" y="430">
           <title name="VALUE">right</title>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>      
+      <xml>
         <block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">1</title>
@@ -97,7 +97,7 @@
         </block>
         <block type="studio_setBackground">
           <title name="VALUE">"leafy"</title>
-        </block>        
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
