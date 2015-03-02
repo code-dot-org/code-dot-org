@@ -112,8 +112,8 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
-    cleaner.releaseCleaningLock(function (success) {
-      assert(success === true, "Cleaner releases lock.");
+    cleaner.releaseCleaningLock(function (err) {
+      assert(err === null, "Cleaner releases lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 0);

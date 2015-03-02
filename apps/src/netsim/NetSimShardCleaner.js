@@ -254,7 +254,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 /**
  * Remove and destroy this cleaner's CleaningHeartbeat, giving another
  * client the chance to acquire a lock.
- * @param {!function} onComplete - called when operation completes, with
+ * @param {!NodeStyleCallback} onComplete - called when operation completes, with
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
@@ -262,7 +262,7 @@ NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
     this.heartbeat_ = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
-    onComplete(err === null);
+    onComplete(err, null);
   }.bind(this));
 };
 
