@@ -228,8 +228,8 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
   onComplete = onComplete || function () {};
 
   var self = this;
-  this.connectToNode(router, function (wire) {
-    if (!wire) {
+  this.connectToNode(router, function (err, wire) {
+    if (err) {
       onComplete(false);
       return;
     }
