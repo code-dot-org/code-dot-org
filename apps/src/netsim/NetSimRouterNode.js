@@ -162,19 +162,19 @@ NetSimRouterNode.DnsMode = DnsMode;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
     if (err !== null) {
-      onComplete(null);
+      onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
       if (heartbeat === null) {
-        onComplete(null);
+        onComplete(new Error("Unable to create heartbeat for router."), null);
         return;
       }
 
@@ -185,8 +185,8 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.update(function (/*err, result*/) {
-        onComplete(router);
+      router.update(function (err/*, result*/) {
+        onComplete(err, router);
       });
     });
   });
