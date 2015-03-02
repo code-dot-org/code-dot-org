@@ -53,7 +53,7 @@ describe("NetSimHeartbeat", function () {
     "given node ID", function () {
       var myNodeID, heartbeat;
       myNodeID = 1;
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (newHeartbeat) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (err, newHeartbeat) {
         heartbeat = newHeartbeat;
       });
       assert(heartbeat, "Created a heartbeat");
@@ -65,13 +65,13 @@ describe("NetSimHeartbeat", function () {
       myNodeID = 1;
 
       // Make the heartbeat in the first place.
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
         originalHeartbeat = h;
       });
       assert(originalHeartbeat, "Created a heartbeat");
 
       // Same operation with same Node ID, should get existing row.
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
         retrievedHeartbeat = h;
       });
       assertEqual(originalHeartbeat, retrievedHeartbeat);
@@ -91,7 +91,7 @@ describe("NetSimHeartbeat", function () {
     }, function () {});
 
     // Retrieve heartbeat from table
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       originalHeartbeat = h;
     });
     assertEqual(originalHeartbeat.time_, 42);
@@ -115,7 +115,7 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make original heartbeat
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       originalHeartbeat = h;
     });
     assert(originalHeartbeat, "Created a heartbeat");
@@ -141,7 +141,7 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make heartbeat
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       heartbeat = h;
     });
     assert(heartbeat, "Created a heartbeat");

@@ -172,9 +172,9 @@ NetSimRouterNode.create = function (shard, onComplete) {
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(new Error("Unable to create heartbeat for router."), null);
+    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
@@ -206,9 +206,9 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(new Error('Unable to create heartbeat for router.'), null);
+    NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 

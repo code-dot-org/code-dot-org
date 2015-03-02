@@ -75,10 +75,16 @@ NetSimHeartbeat.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
 };
 
-// TODO (bbuchanan): Extend storage API to support an upsert operation, and
-//      use that here.  Would be even better if our backend storage supported
-//      it (like mongodb).
+/**
+ * Static "upsert" of heartbeat
+ * @param {!NetSimShard} shard
+ * @param {!number} nodeID
+ * @param {!NodeStyleCallback} onComplete
+ */
 NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
+  // TODO (bbuchanan): Extend storage API to support an upsert operation, and
+  //      use that here.  Would be even better if our backend storage supported
+  //      it (like mongodb).
   shard.heartbeatTable.readAll(function (err, rows) {
     var nodeRows = rows
         .filter(function (row) {
@@ -89,11 +95,11 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
         });
 
     if (nodeRows.length > 0) {
-      onComplete(new NetSimHeartbeat(shard, nodeRows[0]));
+      onComplete(null, new NetSimHeartbeat(shard, nodeRows[0]));
     } else {
       NetSimHeartbeat.create(shard, function (err, newHeartbeat) {
         if (err !== null) {
-          onComplete(null);
+          onComplete(err, null);
           return;
         }
 
@@ -102,10 +108,10 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
           if (err !== null) {
             // Failed to fully create heartbeat
             newHeartbeat.destroy();
-            onComplete(null);
+            onComplete(err, null);
             return;
           }
-          onComplete(newHeartbeat);
+          onComplete(null, newHeartbeat);
         });
       });
     }
