@@ -110,7 +110,9 @@ exports.stripQuotes = function(inputString) {
  * Defines an inheritance relationship between parent class and this class.
  */
 Function.prototype.inherits = function (parent) {
-  this.prototype = _.create(parent.prototype, { constructor: parent });
+  this.prototype = Object.create(parent.prototype);
+  this.prototype.constructor = this;
+  this.superPrototype = parent.prototype;
 };
 
 /**
@@ -136,278 +138,81 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
-  var merged = [];
+/**
+ * Generate a random identifier in a format matching the RFC-4122 specification.
+ *
+ * Taken from
+ * {@link http://byronsalau.com/blog/how-to-create-a-guid-uuid-in-javascript/}
+ *
+ * @see RFC-4122 standard {@link http://www.ietf.org/rfc/rfc4122.txt}
+ *
+ * @returns {string} RFC4122-compliant UUID
+ */
+exports.createUuid = function () {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
+};
 
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    merged = codeFunctions;
-  } else if (codeFunctions instanceof Object &&
-             dropletConfig &&
-             dropletConfig.blocks) {
-    var dropletBlocks = dropletConfig.blocks;
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks
-    //  value is an object that can be used to override block defaults
-    for (var i = 0; i < dropletBlocks.length; i++) {
-      var block = dropletBlocks[i];
-      if (dropletBlocks[i].func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push(exports.extend(dropletBlocks[i],
-                    codeFunctions[dropletBlocks[i].func]));
-      }
+// ECMAScript 6 polyfill for String.prototype.repeat
+// Polyfill adapted from
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+//        /Global_Objects/String/repeat
+if (!String.prototype.repeat) {
+  /**
+   * The repeat() method constructs and returns a new string which contains
+   * the specified number of copies of the string on which it was called,
+   * concatenated together?
+   * @param {number} count
+   * @returns {string}
+   */
+  String.prototype.repeat = function(count) {
+    'use strict';
+    if (this === null) {
+      throw new TypeError('can\'t convert ' + this + ' to object');
     }
-  }
-  return merged;
+    var str = '' + this;
+    count = +count;
+    if (count != count) {
+      count = 0;
+    }
+    if (count < 0) {
+      throw new RangeError('repeat count must be non-negative');
+    }
+    if (count == Infinity) {
+      throw new RangeError('repeat count must be less than infinity');
+    }
+    count = Math.floor(count);
+    if (str.length === 0 || count === 0) {
+      return '';
+    }
+    // Ensuring count is a 31-bit integer allows us to heavily optimize the
+    // main part. But anyway, most current (august 2014) browsers can't handle
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
+      throw new RangeError('repeat count must not overflow maximum string size');
+    }
+    var rpt = '';
+    for (;;) {
+      if ((count & 1) === 1) {
+        rpt += str;
+      }
+      count >>>= 1;
+      if (count === 0) {
+        break;
+      }
+      str += str;
+    }
+    return rpt;
+  };
 }
 
 /**
- * Generate code aliases in Javascript based on some level data.
+ * Similar to val || defaultVal, except it's gated on whether or not val is
+ * undefined instead of whether val is falsey.
+ * @returns val if not undefined, otherwise defaultVal
  */
-exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
-  var code = '';
-  var aliasFunctions;
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    aliasFunctions = codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (creating aliases for all
-    // functions available in this app, even those not in this level's palette)
-    aliasFunctions = dropletConfig.blocks;
-  }
-
-  // Insert aliases from aliasFunctions into code
-  for (var i = 0; i < aliasFunctions.length; i++) {
-    var cf = aliasFunctions[i];
-    code += "var " + cf.func + " = function() { ";
-    if (cf.idArgNone) {
-      code += "return " + parentObjName + "." + cf.func + ".apply(" +
-              parentObjName + ", arguments); };\n";
-    } else {
-      code += "var newArgs = " +
-        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-        " return " + parentObjName + "." + cf.func +
-        ".apply(" + parentObjName + ", newArgs); };\n";
-    }
-  }
-  return code;
-};
-
-/**
- * Generate a palette for the droplet editor based on some level data.
- */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
-  // TODO: figure out localization for droplet scenario
-  var stdPalette = [
-    {
-      name: 'Control',
-      color: 'orange',
-      blocks: [
-        {
-          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
-          title: 'Do something multiple times'
-        }, {
-          block: 'if (__) {\n  __;\n}',
-          title: 'Do something only if a condition is true'
-        }, {
-          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
-          title: 'Do something if a condition is true, otherwise do something else'
-        }, {
-          block: 'while (__) {\n  __;\n}',
-          title: 'Repeat something while a condition is true'
-        }
-      ]
-    }, {
-      name: 'Math',
-      color: 'green',
-      blocks: [
-        {
-          block: '__ + __',
-          title: 'Add two numbers'
-        }, {
-          block: '__ - __',
-          title: 'Subtract two numbers'
-        }, {
-          block: '__ * __',
-          title: 'Multiply two numbers'
-        }, {
-          block: '__ / __',
-          title: 'Divide two numbers'
-        }, {
-          block: '__ === __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ > __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ < __',
-          title: 'Compare two numbers'
-        }, {
-          block: 'random()',
-          title: 'Get a random number between 0 and 1'
-        }, {
-          block: 'round(__)',
-          title: 'Round to the nearest integer'
-        }, {
-          block: 'abs(__)',
-          title: 'Absolute value'
-        }, {
-          block: 'max(__, __)',
-          title: 'Maximum value'
-        }, {
-          block: 'min(__, __)',
-          title: 'Minimum value'
-        }
-      ]
-    }, {
-      name: 'Variables',
-      color: 'blue',
-      blocks: [
-        {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
-          block: 'var x = [1, 2, 3, 4];',
-          title: 'Create a variable and initialize it as an array'
-        }
-      ]
-    }, {
-      name: 'Functions',
-      color: 'violet',
-      blocks: [
-        {
-          block: 'function myFunction() {\n  __;\n}',
-          title: 'Create a function without an argument'
-        }, {
-          block: 'function myFunction(n) {\n  __;\n}',
-          title: 'Create a function with an argument'
-        }, {
-          block: 'myFunction()',
-          title: 'Use a function without an argument'
-        }, {
-          block: 'myFunction(n)',
-          title: 'Use a function with argument'
-        }
-      ]
-    }
-  ];
-
-  var defCategoryInfo = {
-    'Actions': {
-      'color': 'blue',
-      'blocks': []
-    }
-  };
-  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
-
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  var i, j;
-
-  for (i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.func + "(";
-    if (cf.params) {
-      for (j = 0; j < cf.params.length; j++) {
-        if (j !== 0) {
-          block += ", ";
-        }
-        block += cf.params[j];
-      }
-    }
-    block += ")";
-    var blockPair = {
-      block: block,
-      title: cf.title || cf.func
-    };
-    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
-  }
-
-  var addedPalette = [];
-  for (var category in categoryInfo) {
-    categoryInfo[category].name = category;
-    for (j = 0; j < stdPalette.length; j++) {
-      if (stdPalette[j].name === category) {
-        // This category is in the stdPalette, merge in its blocks:
-        categoryInfo[category].blocks =
-            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
-        break;
-      }
-    }
-    if (categoryInfo[category].blocks.length > 0) {
-      addedPalette.push(categoryInfo[category]);
-    }
-  }
-
-  for (j = 0; j < stdPalette.length; j++) {
-    if (!(stdPalette[j].name in categoryInfo)) {
-      // This category from the stdPalette hasn't been referenced yet, add it:
-      addedPalette.push(stdPalette[j]);
-    }
-  }
-  return addedPalette;
-};
-
-/**
- * Generate an Ace editor completer for a set of APIs based on some level data.
- */
-exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
-  var apis = [];
-
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category
-    });
-  }
-
-  return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
-        callback(null, []);
-        return;
-      }
-      callback(null, apis);
-    }
-  };
-};
-
-/**
- * Generate modeOptions for the droplet editor based on some level data.
- */
-exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
-  var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
-    eitherFunctions: [],
-  };
-
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  for (var i = 0; i < mergedFunctions.length; i++) {
-    if (mergedFunctions[i].type === 'value') {
-      modeOptions.valueFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type === 'either') {
-      modeOptions.eitherFunctions.push(mergedFunctions[i].func);
-    }
-    else if (mergedFunctions[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(mergedFunctions[i].func);
-    }
-  }
-
-  return modeOptions;
+exports.undefOr = function (val, defaultVal) {
+  return val === undefined ? defaultVal : val;
 };

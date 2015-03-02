@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "actual",
+  "ACTUAL": "sună",
   "ADD": "Adaugă",
   "ADD_COMMENT": "Adaugă un comentariu",
   "ADD_PARAMETER": "Adaugă parametrul",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "roşu",
   "COLOUR_RGB_TITLE": "colorează cu",
   "COLOUR_RGB_TOOLTIP": "Creează o culoare cu cantitatea specificată de roşu, verde şi albastru.  Toate valorile trebuie să fie între 0 şi 100.",
+  "CONTRACT_EDITOR_HEADER": "Rețetă de proiectare",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "ieşi din buclă",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "continuă cu următoarea iterație a buclei",
@@ -73,7 +74,7 @@
   "EXAMPLE_DESCRIPTION": "Definește un exemplu cu comportamentul așteptat și cel real",
   "EXPAND_ALL": "Extinde blocuri",
   "EXPAND_BLOCK": "Extinde bloc",
-  "EXPECTED": "aşteptat",
+  "EXPECTED": "rezultat",
   "EXTERNAL_INPUTS": "Intrări Externe",
   "FUNCTION_CREATE": "Creare funcţie",
   "FUNCTION_EDIT": "editează",

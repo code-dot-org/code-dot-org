@@ -106,7 +106,7 @@ theme: none
                  alt: "{{student.secret_picture_name}}",
                  title: "{{student.secret_picture_name}}",
                  height: 40}
-            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_word_1}} {{student.secret_word_2}}
+            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_words}}
             %button.btn.btn-white{"ng-click" => "resetSecrets(student)"}= I18n.t('dashboard_students_reset_secret')
         %span{"ng-if" => "section.login_type === 'email'"}
           %button.btn.btn-white{"ng-click" => "student.editing_password = true",

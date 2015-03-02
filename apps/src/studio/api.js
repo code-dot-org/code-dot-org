@@ -152,3 +152,11 @@ exports.onEvent = function (id, eventName, func) {
     'func': func
   });
 };
+
+/**
+ * @param {number} keyCode
+ * @returns {boolean} True if key is currently down
+ */
+exports.isKeyDown = function (keyCode) {
+  return Studio.keyState[keyCode] === 'keydown';
+};

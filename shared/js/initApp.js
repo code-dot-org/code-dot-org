@@ -73,6 +73,9 @@ var baseOptions = {
     });
   },
   onAttempt: function(report) {
+    if (appOptions.level.isProjectLevel) {
+      return;
+    }
     report.fallbackResponse = appOptions.report.fallback_response;
     report.callback = appOptions.report.callback;
     // Track puzzle attempt event
@@ -113,7 +116,7 @@ var baseOptions = {
     } else {
       showInstructions();
     }
-  },
+  }
 };
 $.extend(appOptions, baseOptions);
 
@@ -150,7 +153,109 @@ $(window).on('function_editor_closed', function() {
   }
 })(appOptions.level);
 
+/**
+ * Only execute the given argument if it is a function.
+ * @param callback
+ */
+function callbackSafe(callback, data) {
+  if (typeof callback === 'function') {
+    callback(data);
+  }
+}
+
+dashboard.saveProject = function(callback) {
+  $('.project_updated_at').text('Saving...'); // TODO (Josh) i18n
+  var app_id = dashboard.currentApp.id;
+  dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  dashboard.currentApp.level = window.location.pathname;
+  if (app_id) {
+    storageApps().update(app_id, dashboard.currentApp, function(data) {
+      dashboard.currentApp = data;
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
+      callbackSafe(callback, data);
+    });
+  } else {
+    storageApps().create(dashboard.currentApp, function(data) {
+      dashboard.currentApp = data;
+      location.hash = dashboard.currentApp.id + '/edit';
+      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
+      callbackSafe(callback, data);
+    });
+  }
+};
+
+dashboard.deleteProject = function(callback) {
+  var app_id = dashboard.currentApp.id;
+  if (app_id) {
+    storageApps().delete(app_id, function(data) {
+      callbackSafe(callback, data);
+    });
+  } else {
+    callbackSafe(callback, false);
+  }
+};
+
+dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
+  var deferred = new $.Deferred();
+  // get all projects (TODO: filter on server side?)
+  storageApps().all(function(data) {
+    if (data) {
+      // find the one that matches this level
+      var projects = $.grep(data, function(app) {
+        return (app.projectTemplateLevelName &&
+                app.projectTemplateLevelName === projectTemplateLevelName);
+      });
+      if (projects.length == 0) {
+        // create a new project
+        var options = {
+          projectTemplateLevelName: projectTemplateLevelName,
+          name: projectTemplateLevelName,
+          hidden: true
+        };
+        storageApps().create(options, function(app) {
+          if (app) {
+            dashboard.currentApp = app;
+            deferred.resolve();
+          } else {
+            deferred.reject(); // failed to create project
+          }
+        });
+      } else {
+        // use the existing project
+        dashboard.currentApp = projects[0];
+        deferred.resolve();
+      }
+    } else {
+      deferred.reject(); // failed to list projects
+    }
+  });
+  return deferred;
+};
+
 function initApp() {
+  if (appOptions.level.isProjectLevel || dashboard.currentApp) {
+    if (dashboard.isEditingProject) {
+      if (dashboard.currentApp) {
+        if (dashboard.currentApp.levelSource) {
+          appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+        }
+      } else {
+        dashboard.currentApp = {
+          name: 'My Project'
+        };
+      }
+
+      $(window).on('run_button_pressed', dashboard.saveProject);
+
+      if (!dashboard.currentApp.hidden) {
+        dashboard.showProjectHeader();
+      }
+    } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
+      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      appOptions.hideSource = true;
+      appOptions.callouts = [];
+    }
+  }
   window[appOptions.app + 'Main'](appOptions);
 }
 
@@ -190,8 +295,38 @@ if (appOptions.droplet) {
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
+  if (appOptions.level.isProjectLevel) {
+    // example paths:
+    // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+    // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
+    var app_id = location.hash.slice(1);
+    if (app_id) {
+      // TODO ugh, we should use a router. maybe we should use angular :p
+      var params = app_id.split("/");
+      if (params.length > 1 && params[1] == "edit") {
+        app_id = params[0];
+        dashboard.isEditingProject = true;
+      }
+
+      // Load the project ID, if one exists
+      promise = promise.then(function () {
+        var deferred = new $.Deferred();
+        storageApps().fetch(app_id, function (data) {
+          dashboard.currentApp = data;
+          deferred.resolve();
+        });
+        return deferred;
+      });
+    } else {
+      dashboard.isEditingProject = true;
+    }
+  } else if (appOptions.level.projectTemplateLevelName) {
+    // this is an embedded project
+    dashboard.isEditingProject = true;
+    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+  }
 }
-promise.then(loadSource('common' + appOptions.pretty))
+promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))

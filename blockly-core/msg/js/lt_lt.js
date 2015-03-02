@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "raudona spalva";
 Blockly.Msg.COLOUR_RGB_TITLE = "spalvinti su";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Sukurk spalvą su tam tikru raudonos, žalios ir mėlynos spalvų kiekiu. Visos vertės turi būti nuo 0 iki 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "nutraukti ciklą";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "pratęsti kitą ciklo pakartojimą";
@@ -378,6 +379,6 @@ Blockly.Msg.VARIABLES_GET_TITLE = "";
 Blockly.Msg.VARIABLES_GET_TOOLTIP = "Paima kintamojo reikšmę.";
 Blockly.Msg.VARIABLES_SET_CREATE_GET = "Sukurti kintamąjį '%1'";
 Blockly.Msg.VARIABLES_SET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Set";
-Blockly.Msg.VARIABLES_SET_TAIL = "komanda:";
-Blockly.Msg.VARIABLES_SET_TITLE = "nustatyk";
+Blockly.Msg.VARIABLES_SET_TAIL = "=";
+Blockly.Msg.VARIABLES_SET_TITLE = " ";
 Blockly.Msg.VARIABLES_SET_TOOLTIP = "Priskiria kintamajam nurodytą reikšmę.";

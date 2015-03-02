@@ -68,6 +68,8 @@ def load_configuration()
     'localize_apps'               => false,
     'name'                        => hostname,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'pdf_port_collate'            => 8084,
+    'pdf_port_markdown'           => 8085,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 3000,
@@ -80,8 +82,6 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'sendy_db_reader'             => 'mysql://root@localhost/',
-    'sendy_db_writer'             => 'mysql://root@localhost/',
     'varnish_instances'           => [],
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)

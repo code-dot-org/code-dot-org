@@ -33,22 +33,20 @@ var ExpressionNode = function (val, args, blockId) {
     return item;
   });
 
-  if (this.getType() === ValueType.NUMBER && args.length > 0) {
+  if (this.isNumber() && args.length > 0) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.getType() === ValueType.ARITHMETIC && args.length !== 2) {
+  if (this.isArithmetic() && args.length !== 2) {
     throw new Error("Arithmetic ExpressionNode needs 2 args");
   }
 };
 module.exports = ExpressionNode;
 
-ExpressionNode.ValueType = ValueType;
-
 /**
  * What type of expression node is this?
  */
-ExpressionNode.prototype.getType = function () {
+ExpressionNode.prototype.getType_ = function () {
   if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
@@ -65,6 +63,19 @@ ExpressionNode.prototype.getType = function () {
   }
 };
 
+ExpressionNode.prototype.isArithmetic = function () {
+  return this.getType_() === ValueType.ARITHMETIC;
+};
+ExpressionNode.prototype.isFunctionCall = function () {
+  return this.getType_() === ValueType.FUNCTION_CALL;
+};
+ExpressionNode.prototype.isVariable = function () {
+  return this.getType_() === ValueType.VARIABLE;
+};
+ExpressionNode.prototype.isNumber = function () {
+  return this.getType_() === ValueType.NUMBER;
+};
+
 /**
  * Create a deep clone of this node
  */
@@ -79,9 +90,9 @@ ExpressionNode.prototype.clone = function () {
  * See if we can evaluate this node by trying to do so and catching exceptions.
  * @returns Whether we can evaluate.
  */
-ExpressionNode.prototype.canEvaluate = function (mapping) {
+ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
   try {
-    this.evaluate(mapping);
+    this.evaluate(mapping, localMapping);
   } catch (err) {
     return false;
   }
@@ -90,40 +101,52 @@ ExpressionNode.prototype.canEvaluate = function (mapping) {
 
 /**
  * Evaluate the expression, returning the result.
+ * @param {Object<string, number|object>} globalMapping Global mapping of
+ *   variables and functions
+ * @param {Object<string, number|object>} localMapping Mapping of
+ *   variables/functions local to scope of this function.
  */
-ExpressionNode.prototype.evaluate = function (mapping) {
-  mapping = mapping || {};
-  var type = this.getType();
+ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
+  gloablMapping = gloablMapping || {};
+  localMapping = localMapping || {};
 
-  if (type === ValueType.VARIABLE && mapping[this.value_] !== undefined) {
+  var type = this.getType_();
+
+  if (type === ValueType.VARIABLE) {
+    var mappedVal = utils.undefOr(localMapping[this.value_],
+      gloablMapping[this.value_]);
+    if (mappedVal === undefined) {
+      throw new Error('No mapping for variable during evaluation');
+    }
+
     var clone = this.clone();
-    clone.setValue(mapping[this.value_]);
-    return clone.evaluate(mapping);
+    clone.setValue(mappedVal);
+    return clone.evaluate(gloablMapping);
   }
 
-  if (type === ValueType.FUNCTION_CALL && mapping[this.value_] !== undefined) {
-    var functionDef = mapping[this.value_];
+  if (type === ValueType.FUNCTION_CALL) {
+    var functionDef = utils.undefOr(localMapping[this.value_],
+      gloablMapping[this.value_]);
+    if (functionDef === undefined) {
+      throw new Error('No mapping for function during evaluation');
+    }
+
     if (!functionDef.variables || !functionDef.expression) {
       throw new Error('Bad mapping for: ' + this.value_);
     }
     if (functionDef.variables.length !== this.children_.length) {
       throw new Error('Bad mapping for: ' + this.value_);
     }
-    // Generate a new mapping so that if we have collisions between global
-    // variables and function variables, the function vars take precedence
-    var newMapping = {};
-    _.keys(mapping).forEach(function (key) {
-      newMapping[key] = mapping[key];
-    });
+
+    // We're calling a new function, so it gets a new local scope.
+    var newLocalMapping = {};
     functionDef.variables.forEach(function (variable, index) {
-      newMapping[variable] = this.getChildValue(index);
+      var childVal = this.getChildValue(index);
+      newLocalMapping[variable] = utils.undefOr(localMapping[childVal], childVal);
     }, this);
-    return functionDef.expression.evaluate(newMapping);
+    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
   }
 
-  if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
-    throw new Error('Must resolve variables/functions before evaluation');
-  }
   if (type === ValueType.NUMBER) {
     return this.value_;
   }
@@ -132,8 +155,8 @@ ExpressionNode.prototype.evaluate = function (mapping) {
     throw new Error('Unexpected error');
   }
 
-  var left = this.children_[0].evaluate(mapping);
-  var right = this.children_[1].evaluate(mapping);
+  var left = this.children_[0].evaluate(gloablMapping, localMapping);
+  var right = this.children_[1].evaluate(gloablMapping, localMapping);
 
   switch (this.value_) {
     case '+':
@@ -216,7 +239,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
   var nodesMatch = other && (this.value_ === other.value_) &&
     (this.children_.length === other.children_.length);
-  var type = this.getType();
+  var type = this.getType_();
 
   // Empty function calls look slightly different, i.e. foo() instead of foo
   if (this.children_.length === 0) {
@@ -250,7 +273,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     }
 
     tokens.push(new Token(")", !nodesMatch));
-  } else if (this.getType() === ValueType.VARIABLE) {
+  } else if (this.getType_() === ValueType.VARIABLE) {
 
   }
   return _.flatten(tokens);
@@ -268,7 +291,7 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(markDeepest ? null : this);
   }
 
-  if (this.getType() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
@@ -310,8 +333,8 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
     return false;
   }
 
-  if (this.getType() !== ValueType.FUNCTION_CALL ||
-      other.getType() !== ValueType.FUNCTION_CALL) {
+  if (this.getType_() !== ValueType.FUNCTION_CALL ||
+      other.getType_() !== ValueType.FUNCTION_CALL) {
     return false;
   }
 
@@ -331,7 +354,7 @@ ExpressionNode.prototype.hasSameSignature = function (other) {
  */
 ExpressionNode.prototype.isEquivalentTo = function (other) {
   // only ignore argument order for ARITHMETIC
-  if (this.getType() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC) {
     return this.isIdenticalTo(other);
   }
 
@@ -362,10 +385,18 @@ ExpressionNode.prototype.numChildren = function () {
 };
 
 /**
+ * Get the value
+ */
+ExpressionNode.prototype.getValue = function () {
+  return this.value_;
+};
+
+
+/**
  * Modify this ExpressionNode's value
  */
 ExpressionNode.prototype.setValue = function (value) {
-  var type = this.getType();
+  var type = this.getType_();
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
   }

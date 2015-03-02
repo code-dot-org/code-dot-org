@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "rdeča",
   "COLOUR_RGB_TITLE": "barva z",
   "COLOUR_RGB_TOOLTIP": "Ustvarite barvo z določenimi količinami rdeče, zelene in modre.  Vse vrednosti morajo biti med 0 in 100.",
+  "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "izstopi iz zanke",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "nadaljuj z naslednjo ponovitvijo zanke",

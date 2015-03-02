@@ -2,6 +2,7 @@ id '3'
 title 'Edit Code'
 description ""
 wrapup_video 'hoc_wrapup'
+hidden 'true'
 
 stage 'The Maze'
 skin 'birds'

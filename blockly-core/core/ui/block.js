@@ -78,6 +78,9 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  // Used to hide function blocks when not in modal workspace. This property
+  // is not serialized/deserialized.
+  this.currentlyHidden_ = false;
   /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
@@ -117,6 +120,10 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   // Call an initialization function, if it exists.
   if (goog.isFunction(this.init)) {
     this.init();
+  }
+
+  if (this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
+    this.setCurrentlyHidden(true);
   }
 };
 
@@ -201,6 +208,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
+  this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfBlockSpace_();
 };
 
@@ -1322,6 +1330,36 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
 };
 
 /**
+ * Check whether this block is currently hidden (a non-persistent property)
+ */
+Blockly.Block.prototype.isCurrentlyHidden = function () {
+  return this.currentlyHidden_;
+};
+
+/**
+ * Set whether this block is currently hidden (a non-persistent property)
+ */
+Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
+  this.currentlyHidden_ = hidden;
+  if (this.svg_) {
+    this.svg_.setVisible(!hidden);
+  }
+};
+
+/**
+ * Account for the fact that we have two different visibilty states.
+ * UserVisible is a persisent property used to create blocks that can be seen
+ * by level builders, but not by the user.
+ * CurrentlyHidden is a non-persistent property used to hide certain blocks
+ * (like function definitions/examples) that should only be visible when using
+ * the modal function editor.
+ * @returns true if both visibility conditions are met.
+ */
+Blockly.Block.prototype.isVisible = function () {
+  return this.isUserVisible() && !this.isCurrentlyHidden();
+};
+
+/**
  * Set the URL of this block's help page.
  * @param {string|Function} url URL string for block help, or function that
  *     returns a URL.  Null for no help.
@@ -1663,8 +1701,12 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 
+/**
+ * Sets this block to have a new functional output type
+ * @param {Blockly.BlockValueType} newType
+ */
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
+  this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
 
@@ -2122,21 +2164,9 @@ Blockly.Block.prototype.render = function() {
   this.svg_.render();
 };
 
-
-/**
- * Set the blocks visibility.
- * @param {string} visible Whether or not the block should be visible
- */
-Blockly.Block.prototype.setVisible = function (visible) {
-  if (!this.svg_) {
-    throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
-  }
-  this.svg_.setVisible(visible);
-};
-
 /**
  * Exposes this block's BlockSvg
  */
 Blockly.Block.prototype.getSvgRenderer = function () {
   return this.svg_;
-}
+};

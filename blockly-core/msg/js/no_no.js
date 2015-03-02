@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "rød";
 Blockly.Msg.COLOUR_RGB_TITLE = "farg med";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Lag en farge med gitt mengde raud, grønt og blått.  Alle verdiar må vere mellom 0 og 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "bryt ut av løkken";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "fortsett med neste gjentakelse av løkken";

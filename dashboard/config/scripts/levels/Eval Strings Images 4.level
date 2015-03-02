@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"rectangle\" block to draw this blue rectangle - it is 175 pixels wide and 100 pixels tall.",
+    "instructions": "Try using the \"rectangle\" block to draw this red rectangle - it is 175 pixels wide and 100 pixels tall.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -54,7 +54,7 @@
               </functional_input>
               <functional_input name="COLOR">
                 <block type="functional_string">
-                  <title name="VAL">blue</title>
+                  <title name="VAL">red</title>
                 </block>
               </functional_input>
             </block>

@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "pula";
 Blockly.Msg.COLOUR_RGB_TITLE = "kulayan ng";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Gumawa ng kulay na may tinukoy na dami ng pula, berde, at asul. Lahat ng value ay dapat nasa 0 at 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "putulin ang paulit ulit";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "Magpatuloy sa susunod na pag-ulit ng loop";

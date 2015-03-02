@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "faktiki",
+  "ACTUAL": "çağırış",
   "ADD": "Əlavə et",
   "ADD_COMMENT": "Şərh əlavə et",
   "ADD_PARAMETER": "Parametr əlavə edin",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "qırmızı",
   "COLOUR_RGB_TITLE": "rəngin komponentləri",
   "COLOUR_RGB_TOOLTIP": "Göstərilən miqdarda qırmızı, yaşıl və göy komponenti olan bir rəng düzəlt. Bütün qiymətlər 0 və 100 arasında olmalıdır.",
+  "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "dövrdən çıx",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "dövrün növbəti addımından davam et",
@@ -73,7 +74,7 @@
   "EXAMPLE_DESCRIPTION": "Gözlənilən və faktiki davranışa malik bir nüminə təyin edir",
   "EXPAND_ALL": "Blokları aç",
   "EXPAND_BLOCK": "Bloku aç",
-  "EXPECTED": "gözlənilən",
+  "EXPECTED": "nəticə",
   "EXTERNAL_INPUTS": "Xarici girişlər",
   "FUNCTION_CREATE": "Funksiya yarat",
   "FUNCTION_EDIT": "redaktə et",

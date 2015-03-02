@@ -130,7 +130,7 @@
   studiobar_donate_title: 寄付する
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: ショップ
-  studiobar_shop_body: いままでの考え方を変えよう。私たちのロゴに誇りを持とう。
+  studiobar_shop_body: いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
   contact_form_topic_teacher: 私は、教師/教育者です
@@ -251,7 +251,7 @@
   dashboard_students_new_section: 新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。
   dashboard_students_placeholder_name: 生徒の名前
   dashboard_students_name: 名前
-  dashboard_students_progress: Progress
+  dashboard_students_progress: 進行状況
   dashboard_students_age: 年齢
   dashboard_students_gender: 性別
   dashboard_students_male: 男性
@@ -505,7 +505,7 @@
   tynkerapp_shortdescription: 楽しいコーディングのパズルでプログラミングを学ぶ
   robomindnl_shortdescription: バーチャルロボットのためのコードを書く
   flappy_shortdescription: 自分のゲームを作る - フラッピーバード、サメまたは、潜水艦
-  bitsbox_shortdescription: JavaScriptを使って、遊んで共有するアプリを作成します
+  bitsbox_shortdescription: JavaScriptを使って、遊んだり共有できるアプリを作成します
   makegameswithus_shortdescription: iPhoneのゲームを作りましょう！コードの書き方を学び、モンスターに新しい動きを教えましょう！
   touchdevelop_shortdescription: 携帯電話でパズルを解いたり、ゲームを作って、コーディングについて学ぶ
   appinventor_shortdescription: あなたのアプリケーションを作りましょう！(Android限定)
@@ -761,3 +761,27 @@
     年に生まれてから、ビジュアルアートの分野でのプログラミングを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
   alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
   sphero_beyond_longdescription: あなたが教育者であろうと保護者であろうと、SPRKのレッスンではロボットのプログラミングについて楽しく学ぶことができます。算数と科学のスキルも鍛えられます。
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress

@@ -9,7 +9,6 @@ class Script < ActiveRecord::Base
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   # Hardcoded scriptID constants used throughout the code
-  TWENTY_HOUR_ID = 1
   HOC_ID = 2 # this is the old (2013) hour of code
   EDIT_CODE_ID = 3
   TWENTY_FOURTEEN_LEVELS_ID = 4
@@ -35,7 +34,7 @@ class Script < ActiveRecord::Base
   COURSE4_NAME = 'course4'
 
   def Script.twenty_hour_script
-    Script.get_from_cache(Script::TWENTY_HOUR_ID)
+    Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
 
@@ -108,7 +107,7 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.id == TWENTY_HOUR_ID
+    self.name == TWENTY_HOUR_NAME
   end
 
   def hoc?
@@ -222,47 +221,42 @@ class Script < ActiveRecord::Base
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
     script_levels_by_stage = {}
-    levels_by_name = script.levels.index_by(&:name)
-    levels_by_num = script.levels.index_by do |level|
-      "#{level.game_id} #{level.level_num}"
-    end
+    levels_by_key = script.levels.index_by(&:key)
 
     # Overwrites current script levels
     script.script_levels = data.map do |row|
       row.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
-#      if row[:concepts]
-        row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-        end
-#      end
-
-      if row[:name].try(:start_with?, 'blockly:')
-        row[:name], row[:game], row[:level_num] = row.delete(:name).split(':')
+      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
       end
+
       row_data = row.dup
       stage_name = row.delete(:stage)
       assessment = row.delete(:assessment)
-      begin
-        # if :level_num is present, find/create the reference to the Blockly level.
-        if row[:level_num]
-          key = {game_id: Game.by_name(row.delete(:game)), level_num: row.delete(:level_num)}
-          level = levels_by_num["#{key[:game_id]} #{key[:level_num]}"] ||
-          Level.includes(:concepts).create_with(name: row.delete(:name)).find_or_create_by!(key)
-          row[:type] ||= 'Blockly'
-        else
-          name = row.delete(:name)
-          level = levels_by_name[name] ||
-            Level.find_by(name: name) ||
-            raise(ActiveRecord::RecordNotFound)
-        end
-      rescue ActiveRecord::RecordNotFound => e
-        raise e, "#{$!}, Level: #{row_data.to_json}, Script: #{script.name}", e.backtrace
+
+      key = row.delete(:name)
+
+      if row[:level_num] && !key.starts_with?('blockly')
+        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+        key = ['blockly', row.delete(:game), row.delete(:level_num)].join(':')
       end
 
-      level = level.with_type(row.delete(:type)) if level.type.nil?
-      level.update(row) if row_data[:level_num]
+      level = levels_by_key[key] || Level.find_by_key(key)
+
+      if key.starts_with?('blockly')
+        # this level is defined in levels.js. find/create the reference to this level
+        level = Level.
+          create_with(name: 'blockly').
+          find_or_create_by!(Level.key_to_params(key))
+        level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
+        level.update(row)
+      end
+
+      unless level
+        raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
+      end
 
       script_level_attributes = {
         script_id: script.id,
@@ -283,9 +277,12 @@ class Script < ActiveRecord::Base
           )
         script_level_attributes.merge!(
           stage_id: stage.id,
-          position: (script_level_position[stage] += 1)
+          position: (script_level_position[stage.id] += 1)
         )
-        (script_levels_by_stage[stage] ||= []) << script_level
+        script_level.reload
+        script_level.assign_attributes(script_level_attributes)
+        script_level.save! if script_level.changed?
+        (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
           stage.assign_attributes(position: (stage_position += 1))
           stage.save! if stage.changed?
@@ -297,7 +294,7 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
-      stage.script_levels = script_levels_by_stage[stage]
+      stage.script_levels = script_levels_by_stage[stage.id]
     end
     script.stages = script_stages
     script.reload.stages
@@ -354,7 +351,7 @@ class Script < ActiveRecord::Base
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exists?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
     i18n.deep_merge!(custom_i18n) { |i, old, new| old } # deep reverse merge
-    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml)
+    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
   private

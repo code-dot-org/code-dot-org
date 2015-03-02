@@ -1,7 +1,15 @@
 #! /usr/bin/env ruby
+require 'fileutils'
 
 `crowdin-cli upload sources`
 `crowdin-cli download`
+
+# copy xx.yml files to hourofcode.com/i18n
+my_dir = Dir["../locales/**/hourofcode/*.yml"]
+my_dir.each do |file|
+  dest = "../../pegasus/sites.v3/hourofcode.com/i18n"
+  FileUtils.cp(file, dest)
+end
 
 # remove all metadata
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/*.md").each do |file|

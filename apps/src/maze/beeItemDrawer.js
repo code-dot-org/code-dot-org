@@ -17,7 +17,7 @@ var SVG_NS = "http://www.w3.org/2000/svg";
  * @param bee The maze's Bee object.
  */
 function BeeItemDrawer(dirtMap, skin, initialDirtMap, bee) {
-  this.__base = this.constructor.prototype;
+  this.__base = BeeItemDrawer.superPrototype;
 
   DirtDrawer.call(this, dirtMap, '');
 

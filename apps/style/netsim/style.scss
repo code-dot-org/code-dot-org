@@ -40,11 +40,367 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   font-size: 20px;
 }
 
-.netsim_lobby_user_row {
-  background-color: white;
+#netsim_rightcol {
+  float: right;
+  width: 300px;
+
+  #netsim_visualization {
+    img {
+      width: 100%;
+    }
+  }
 }
 
-.netsim_lobby_own_row {
-  font-weight: bold;
-  background-color: paleturquoise;
+#netsim_leftcol {
+  margin-right: 320px;
+}
+
+#netsim_lobby_list {
+  background-color: white;
+  padding: 0.5em;
+  border: inset darkslategray thin;
+  list-style: none;
+
+  li {
+    background-color: white;
+    padding: 0.3em;
+  }
+
+  .own_row {
+    font-weight: bold;
+    background-color: lightcyan;
+  }
+
+  .user_row {
+
+  }
+
+  .router_row {
+    cursor: pointer;
+  }
+  .router_row:hover {
+    color: black;
+    background-color: rgba(255, 140, 0, 0.21);
+  }
+
+  .selected_row {
+    color: white;
+    background-color: darkorange;
+  }
+  .selected_row:hover {
+    background-color: darkorange;
+  }
+}
+
+.netsim_log_widget {
+  background-color: white;
+  border: solid darkgray thin;
+  margin: 0.5em;
+  padding: 0;
+
+  h1 {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+
+    .log_header_controls {
+      float: right;
+    }
+  }
+
+  .packet {
+    margin: 10px;
+    padding: 5px;
+    border: solid darkgray thin;
+    border-radius: 3px;
+    background-color: #ddd;
+
+    td {
+      border-color: #ddd;
+    }
+  }
+
+  .scroll_area {
+    margin: 0.5em 0 0.5em 0;
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 1px 5px;
+    border: solid lightgray 1px;
+    border-collapse: collapse;
+  }
+
+  tbody {
+    th, td {
+      vertical-align: top;
+    }
+  }
+
+  th {
+    font-size: 10pt;
+    color: black;
+    background-color: transparent;
+  }
+
+  td {
+    font-family: monospace;
+
+    /* Make sure table text can be selected and copied */
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -khtml-user-select: text;
+    user-select: text;
+  }
+
+  th.encodingLabel, td.encodingLabel,
+  th.toAddress, td.toAddress,
+  th.fromAddress, td.fromAddress,
+  th.packetInfo, td.packetInfo {
+    text-align: center;
+  }
+
+  th.toAddress, td.toAddress,
+  th.fromAddress, td.fromAddress {
+    width: 50px;
+  }
+
+  th.encodingLabel, td.encodingLabel,
+  th.packetInfo, td.packetInfo {
+    width: 100px;
+  }
+
+  td.message {
+    background-color: white;
+  }
+
+  td.toAddress {
+    background-color: rgba(255, 233, 238, 0.85);
+  }
+
+  td.fromAddress {
+    background-color: lightcyan;
+  }
+
+  td.packetInfo {
+    background-color: rgba(212, 238, 212, 0.90);
+  }
+}
+
+.netsim_send_widget {
+  border: solid darkgray thin;
+  margin: 0.5em;
+  padding: 10px;
+
+  h1 {
+    margin: -10px -10px 10px -10px;
+    padding: 0.5em;
+    font-size: 120%;
+    line-height: 20px;
+    background-color: #7665A0;
+    color: whitesmoke;
+  }
+
+  div.netsim_packet {
+    border: solid darkgray thin;
+    background-color: #ddd;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
+
+    th {
+      font-size: 10pt;
+      color: black;
+      background-color: transparent;
+    }
+
+    /* All input fields */
+    input, textarea {
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      font-family: monospace;
+    }
+
+    .watermark {
+      color: #d3d3d3;
+    }
+
+    .bit_counter {
+      text-align: right;
+      color: darkgray;
+    }
+
+    /* All columns but "message" */
+    th.encodingLabel, td.encodingLabel,
+    th.toAddress, td.toAddress,
+    th.fromAddress, td.fromAddress,
+    th.packetInfo, td.packetInfo {
+      width: 1%; /* depend on nowrap */
+      text-align: center;
+
+      input {
+        width: 3em;
+        text-align: center;
+      }
+    }
+
+    /* toAddress column */
+    th.toAddress, td.toAddress {
+      input {
+        background-color: rgba(255, 233, 238, 0.85);
+      }
+    }
+
+    /* fromAddress column */
+    th.fromAddress, td.fromAddress {
+
+      input {
+        background-color: lightcyan;
+      }
+    }
+
+    /* packetInfo column */
+    th.packetInfo, td.packetInfo {
+
+      input {
+        background-color: rgba(212, 238, 212, 0.90);
+      }
+    }
+
+    /* message column */
+    th.message, td.message {
+      /* Wrapper div keeps textarea bound within column, but still
+         able to set padding. */
+      div {
+        margin-right: 0.4em;
+        textarea {
+          width: 100%;
+          padding: 0.2em;
+        }
+      }
+
+    }
+
+    /* All rows but headers */
+    tbody {
+      th, td {
+        vertical-align: top;
+      }
+    }
+
+    /* hexadecimal row */
+    tr.hexadecimal {
+      input, textarea {
+      }
+    }
+
+    /* binary row */
+    tr.binary {
+      input, textarea {
+      }
+    }
+  }
+
+  .send_widget_footer {
+    text-align: right;
+    margin-top: 0.5em;
+  }
+}
+
+.netsim_tabs {
+  margin-top: 1em;
+
+  h1 {
+    font-size: 10pt;
+    line-height: 10pt;
+    margin: 10px 0 3px 0;
+    border-bottom: solid darkgrey thin;
+  }
+
+  table {
+    width: 100%;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
+
+    th {
+      font-size: 10pt;
+    }
+  }
+
+  /* Modify actual tabs at top of tab area */
+  .ui-tabs-nav li a {
+    font-size: 8pt;
+    padding: 0 1em;
+  }
+
+  /* Less padding around tab content divs */
+  .ui-tabs-panel {
+    padding: 0.8em 0.5em;
+
+    /* But extra margin around paragraphs of text (instructions) */
+    p {
+      margin: 0 1em 10px 1em;
+    }
+  }
+
+  .netsim_router_tab {
+    .netsim_router_log {
+      max-height: 200px;
+      overflow-y: scroll;
+
+      table {
+        th, td {
+          font-size: 8pt;
+        }
+        td {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
+  .netsim_dns_tab {
+    .dns_mode_control {
+      input[type="radio"] {
+        vertical-align: middle;
+        margin: 0;
+      }
+
+      label {
+        display: inline;
+        margin-left: 1em;
+      }
+    }
+
+    .netsim_dns_table {
+      tr.localNode {
+        font-weight: bold;
+        background-color: lightcyan;
+      }
+
+      tr.dnsNode {
+        color: white;
+        background-color: darkorange;
+      }
+    }
+  }
 }

@@ -137,18 +137,18 @@ class HomeControllerTest < ActionController::TestCase
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
-        url = "http://test.host/s/#{script.to_param}"
+        url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
       assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
       assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
-    
+
   test 'finishing whole 20hr curriculum does not show resume info' do
     user = create(:user)
     sign_in(user)
-    Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
+    Script.twenty_hour_script.script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     Script.find_by(name: 'hourofcode').script_levels.each do |script_level|

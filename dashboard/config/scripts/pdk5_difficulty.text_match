@@ -1,0 +1,8 @@
+name 'PDK5 Difficulty'
+title 'Degree of Difficulty'
+content1 'Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?'
+placeholder 'Your thoughts here'
+
+markdown <<MARKDOWN
+
+MARKDOWN

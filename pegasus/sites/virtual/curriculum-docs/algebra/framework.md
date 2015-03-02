@@ -34,7 +34,7 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 <td>Objectives</td>
 <td>
 <ul>
-<% lesson[:objectives_s].split(";").each do |objective| %>
+<% lesson[:objectives_t].split(";").each do |objective| %>
 <li><%= objective %></li>
 <% end %>
 </ul>
@@ -43,7 +43,7 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 <tr>
 <td>Standards</td>
 <td>
-<% standards = lesson[:standards_s].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?).group_by{|s| s[:family_s]} %>
+<% standards = lesson[:standards_t].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?).group_by{|s| s[:family_s]} %>
 <% standards.each do |family| %>
 <strong><%= family[0] %></strong>: 
 <% family[1].each_with_index do |standard, index| %>

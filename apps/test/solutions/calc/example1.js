@@ -1,6 +1,8 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
+testUtils.setupLocale('calc');
+var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
 
 module.exports = {
   app: "calc",
@@ -51,9 +53,41 @@ module.exports = {
       description: "empty answer",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyComputeBlock());
+        return true;
       },
       xml: '<xml></xml>'
+    },
+    {
+      description: 'empty input',
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyFunctionalBlock());
+        return true;
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [1, 2]),
+          blockUtils.calcBlockXml('functional_plus', [3]) // missing second input
+        ]) +
+      '</xml>'
+    },
+    {
+      description: 'extra top block',
+      expected: {
+        result: false,
+        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_plus', [1, 2]) +
+        blockUtils.calcBlockXml('functional_plus', [3, 2]) +
+      '</xml>'
     }
   ]
 };

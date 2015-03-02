@@ -22,7 +22,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[{\"localization_key\": \"set_length\", \r\n   \"element_id\": \"#variable_set_qtip > .blocklyPath\", \r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"#variable_set_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "video_key": "C4_variables_artist"
   }
 }]]></config>

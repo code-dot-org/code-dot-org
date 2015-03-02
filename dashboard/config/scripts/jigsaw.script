@@ -1,6 +1,7 @@
 id '7'
 title 'Jigsaw'
 description ""
+hidden 'true'
 
 stage 'Jigsaw'
 skin 'jigsaw'

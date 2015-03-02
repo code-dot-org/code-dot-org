@@ -56,9 +56,11 @@ function setGlobals () {
     };
   };
 
-  // contains needed in applab
+  // contains and focus are needed in applab
   jsdomRoot.dom.level3.html.HTMLElement.prototype.contains = function () {
     return true;
+  };
+  jsdomRoot.dom.level3.html.HTMLElement.prototype.focus = function () {
   };
 }
 

@@ -3,7 +3,7 @@
   select_language: Por favor seleccione o seu idioma
   computer_science: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: dezembro 8-14, 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hora de Código está a chegar</a>. Relembramos todos os professores
     e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -90,7 +90,7 @@
   get_started: Início
   i_agree: Concordo
   participant_select: -Selecione-
-  participant_student: estudante
+  participant_student: Aluno
   participant_parent: Pais
   participant_educator: Educador
   participant_engineer: Engenheiro de software
@@ -127,8 +127,8 @@
     %{lines} linhas de código.'
   start_hoc: Começa agora a Hora de Código
   contact_form_topic_press: Imprensa (entrevista ou palestra)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: Eu <b>nunca</b> vi os meus estudantes tão entusiasmados para aprender."
+    - Michael Clark, Professor
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
@@ -147,7 +147,7 @@
   studiobar_donate_title: Doar
   studiobar_donate_body: Uma criança aprende por cada dólar que você doar
   studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_body: Quebre os estereótipos. Use o nosso logótipo com orgulho.
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um encarregado de educação
   contact_form_topic_teacher: Sou um professor/educador
@@ -241,8 +241,8 @@
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
   dashboard_action_confirm: Apagar?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Remover
+  dashboard_action_remove_confirm: Remover?
   dashboard_action_done: Concluido
   dashboard_action_required: necessário
   dashboard_navigation_home_page: Página inicial do professor
@@ -292,7 +292,7 @@
     usando os botões <b>Adicionar aluno</b> e <b>adicionar vários estudantes</b> acima.
   dashboard_students_placeholder_name: Nome do aluno
   dashboard_students_name: Nome
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Progresso
   dashboard_students_age: Idade
   dashboard_students_gender: Género
   dashboard_students_male: Masculino
@@ -306,15 +306,15 @@
   dashboard_students_show_secret: Mostrar Segredo
   dashboard_students_auto_generated: Gerado automaticamente
   dashboard_students_reset_secret: Redefinir o segredo
-  dashboard_students_reset_password: Redefinir palavra-passe
+  dashboard_students_reset_password: Repor palavra-passe
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture: Imagem secreta
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word: Palavra secreta
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
@@ -331,23 +331,23 @@
   dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_course3: 'Curso 3:'
   dashboard_sequence: Seqüência
   dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
+  dashboard_standards: Padrões
+  dashboard_implementation_guide: Guia de implementação
+  dashboard_glossary: Glossário
   dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
+  dashboard_debugging: 'Depuração:'
   dashboard_puzzle_solving: 'Puzzle-solving:'
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: Outro
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: Palavra
+  dashboard_login_picture: Imagem
   dashboard_login_none: Email
-  dashboard_new_password: new password
+  dashboard_new_password: palavra-passe nova
   dashboard_progress_not_completed: not completed
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
@@ -356,7 +356,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: estudante
+  dashboard_student: Aluno
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1021,3 +1021,27 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
