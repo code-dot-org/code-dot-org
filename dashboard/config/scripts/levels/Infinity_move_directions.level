@@ -48,11 +48,20 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow" deletable="false" movable="false" y="14" id="whenUp">
+        <block type="studio_whenArrow" deletable="false" movable="false" id="whenUp" y="14">
           <title name="VALUE">up</title>
         </block>
         <block type="studio_whenArrow" deletable="false" movable="false" y="114">
           <title name="VALUE">down</title>
+        </block>
+        <block type="studio_whenSpriteCollided" uservisible="false">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">any_actor</title>
+          <next>
+            <block type="studio_playSound">
+              <title name="SOUND">winpoint</title>
+            </block>
+          </next>
         </block>
       </xml>
     </start_blocks>
