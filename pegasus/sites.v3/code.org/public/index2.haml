@@ -104,11 +104,11 @@ social:
             - unless text.nil_or_empty?
               - lines = text.lines 
               .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee; line-height:22px"}
-                .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[0]
-                .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[1]
-                .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[2]
 
         &nbsp;
