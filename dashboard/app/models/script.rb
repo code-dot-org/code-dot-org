@@ -206,6 +206,7 @@ class Script < ActiveRecord::Base
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -280,9 +281,12 @@ class Script < ActiveRecord::Base
           )
         script_level_attributes.merge!(
           stage_id: stage.id,
-          position: (script_level_position[stage] += 1)
+          position: (script_level_position[stage.id] += 1)
         )
-        (script_levels_by_stage[stage] ||= []) << script_level
+        script_level.reload
+        script_level.assign_attributes(script_level_attributes)
+        script_level.save! if script_level.changed?
+        (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
           stage.assign_attributes(position: (stage_position += 1))
           stage.save! if stage.changed?
@@ -294,7 +298,7 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
-      stage.script_levels = script_levels_by_stage[stage]
+      stage.script_levels = script_levels_by_stage[stage.id]
     end
     script.stages = script_stages
     script.reload.stages
@@ -316,10 +320,12 @@ class Script < ActiveRecord::Base
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
-        Script.add_script({name: script_params[:name],
-                           trophies: script_data[:trophies],
-                           hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
-          script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        Script.add_script({
+          name: script_params[:name],
+          trophies: script_data[:trophies],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
+        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
       end
     rescue Exception => e
