@@ -66,16 +66,16 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
   entity.getTable_().read(entityID, function (err, row) {
-    if (row) {
-      onComplete(new EntityType(shard, row));
+    if (err === null) {
+      onComplete(null, new EntityType(shard, row));
     } else {
-      onComplete(null);
+      onComplete(err, null);
     }
   });
 };

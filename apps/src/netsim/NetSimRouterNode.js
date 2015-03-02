@@ -200,8 +200,9 @@ NetSimRouterNode.create = function (shard, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (router) {
-    if (router === null) {
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
+    if (err !== null) {
+      logger.error(err.message);
       onComplete(null);
       return;
     }
