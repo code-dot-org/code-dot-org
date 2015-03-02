@@ -4,7 +4,7 @@ Katie is Code.org's K-8 Program Manager and works in the main Code.org office in
 
 She has lead computer science professional development for the past 4 years. She previously worked at the Seattle-based educational nonprofit, Technically Learning. Prior to that she served in the Peace Corps as an education volunteer in a high school computer lab.
 
-**What teachers are saying…**
+**About Katie**
 
 "I loved everything about it! Thank you so much for creating such a thoughtful and engaging workshop!"
 
