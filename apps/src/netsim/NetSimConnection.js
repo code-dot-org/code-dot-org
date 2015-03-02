@@ -23,11 +23,12 @@ var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
+ * @param {Window} thisWindow
  * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
  * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = module.exports = function (sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -94,10 +95,7 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  // Null-guard so constructing this object is test-friendly.
-  if (window && window.addEventListener) {
-    window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
-  }
+  thisWindow.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 
 /**
