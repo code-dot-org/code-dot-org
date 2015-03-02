@@ -81,7 +81,7 @@ var AVATAR_Y_OFFSET = constants.AVATAR_Y_OFFSET;
 
 var loadLevel = function() {
   // Load maps.
-  infoText = (level.infoText === undefined ? true : level.infoText);
+  infoText = utils.undefOr(level.infoText, true);
   if (!infoText) {
     Flappy.gameState = Flappy.GameStates.ACTIVE;
   }
