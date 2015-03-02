@@ -14,18 +14,16 @@
       text-decoration: none;
     }
   }
-  [class*="span"] {
-    margin: 0;
-  }
 }
 
+$projects-table-width: 850px;
+
 .projects-table-wrapper {
-  width: 650px;
-  margin: 0 auto;
+  width: $projects-table-width;
 }
 
 .projects {
-  width: 850px;
+  width: $projects-table-width;
   table-layout: auto;
   margin: 10px 0;
 

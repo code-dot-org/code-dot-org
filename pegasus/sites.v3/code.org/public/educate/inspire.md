@@ -53,7 +53,7 @@ nav: educate_nav
 
 <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/5oHe0ozN7Oc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
-            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</strong></p>
+            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</a></strong></p>
             
           </div>
 

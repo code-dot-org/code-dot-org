@@ -37,7 +37,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Collision Worksheet](../docs/worksheets/collision1.pdf)
+- [Collision Worksheets](../docs/worksheets/collision.pdf)
 - [Safe-right? Design Recipe](../docs/worksheets/safe_right.pdf) (in the student workbook)
 - [Onscreen? Design Recipe](../docs/worksheets/onscreen.pdf) (in the student workbook)
 
@@ -100,7 +100,6 @@ Do you expect the same answer regardless of whether the larger or smaller input 
 
 In a right triangle, the side opposite the 90-degree angle is called the hypoteneuse. Thinking back to our collision detection, we know that the objects will collide if the hypoteneuse is less than the sum of their radii. Knowing the length of the hypoteneuse will be essential to determine when a collision occurs.
  
-
 [/together]
 
 [together]
@@ -137,7 +136,7 @@ The smaller square has an area of A<sup>2</sup>, and the larger square has an ar
 
 ## A<sup>2</sup> + B<sup>2</sup> = C<sup>2</sup>
 
-<div style="clear: both"><</div>
+<div style="clear: both"></div>
 
 ### <a name="Activity2"></a> 4) Collision Detection
 
@@ -148,8 +147,7 @@ The following activity will have the student teams:
 - Determining if circles have collided by examining visually
 - Determining if circles have collided by comparing distance and radii
 
-Activity Handouts and more detailed instructions [here](https://docs.google.com/a/code.org/document/d/1gSfajadUhQ-R4M6h6JehtBibk6AuCV503_nja-pBtfI)
-
+Detailed instructions are provided on the [Collision Worksheet](../docs/worksheets/collision.pdf).
  
 [/together]
 
