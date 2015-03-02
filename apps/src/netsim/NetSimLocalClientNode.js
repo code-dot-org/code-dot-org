@@ -98,8 +98,8 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimLocalClientNode, shard, function (node) {
-    if (node === null) {
+  NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
+    if (err !== null) {
       onComplete(null);
       return;
     }

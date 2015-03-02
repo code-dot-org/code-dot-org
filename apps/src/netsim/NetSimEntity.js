@@ -44,16 +44,16 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
   entity.getTable_().create(entity.buildRow_(), function (err, row) {
     if (err === null) {
-      onComplete(new EntityType(shard, row));
+      onComplete(null, new EntityType(shard, row));
     } else {
-      onComplete(null);
+      onComplete(err, null);
     }
   });
 };

@@ -55,7 +55,7 @@ describe("NetSimEntity", function () {
       assertTableSize(testShard, 'nodeTable', 0);
 
       var entity;
-      NetSimEntity.create(NetSimClientNode, testShard, function (newNode) {
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         entity = newNode;
       });
       assert(entity !== undefined);
@@ -82,7 +82,7 @@ describe("NetSimEntity", function () {
 
     it ("returns entity of correct type, if found", function () {
       var clientNodeID;
-      NetSimEntity.create(NetSimClientNode, testShard, function (newNode) {
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         clientNodeID = newNode.entityID;
       });
       assert(clientNodeID !== undefined, "Expected a client node ID");

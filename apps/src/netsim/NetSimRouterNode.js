@@ -166,8 +166,8 @@ NetSimRouterNode.DnsMode = DnsMode;
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, function (router) {
-    if (router === null) {
+  NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
+    if (err !== null) {
       onComplete(null);
       return;
     }

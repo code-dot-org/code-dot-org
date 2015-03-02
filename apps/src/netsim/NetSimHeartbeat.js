@@ -72,7 +72,9 @@ NetSimHeartbeat.inherits(NetSimEntity);
  *        created entity, or null if entity creation failed.
  */
 NetSimHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
+  NetSimEntity.create(NetSimHeartbeat, shard, function (err, result) {
+    onComplete(result);
+  });
 };
 
 // TODO (bbuchanan): Extend storage API to support an upsert operation, and
