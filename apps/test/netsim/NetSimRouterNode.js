@@ -28,7 +28,7 @@ describe("NetSimRouterNode", function () {
     var router;
 
     beforeEach(function () {
-      NetSimRouterNode.create(testShard, function (newRouter) {
+      NetSimRouterNode.create(testShard, function (err, newRouter) {
         router = newRouter;
       });
       assert(router !== undefined, "Made a router");
