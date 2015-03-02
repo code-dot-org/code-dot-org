@@ -4,15 +4,12 @@ view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg9'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'The Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -26,22 +23,22 @@ In the last stage students wrote some very simple functions - but more sophistic
 
 3) [Collaborative Design](#Activity1)   
 
+<!--
 ### **Assessment**
 4) [Design Recipe Assessment](#Assessment)
+-->
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Use the Design Recipe to define functions to solve word problems
-
-[/together]
 
 [together]
 
 # Teaching Guide
 
 ## Materials, Resources and Prep
+
+### For the Student
+- [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf)
+- [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf)
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4)
@@ -58,6 +55,9 @@ This lesson has two new and important words:<br/>
 
 - **Design Recipe** - a sequence of steps to document, test, and write functions
 - **Purpose Statement** - a brief description of what the function does
+- **Independent Variable** - The value that the experimenter controls.  The input.
+- **Dependent Variable** - The value that changes based on the independent variable. The output.
+- **Constant** - A fixed number in a relationship.
 
 ### <a name="GetStarted"></a> 2) What is the Design Recipe
 
@@ -119,7 +119,7 @@ Put students into groups of 3 - each member of the group will represent one step
 2. Examples
 3. Function
 
-Each group will work through the word problems on the [Design Recipe Worksheet](needadesignrecipeworksheet.pdf). Each group member should stay true to their role and make sure to complete the steps in the right order.
+Each group will work through the word problems on the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). Make sure that group member should stay true to their role and make sure to complete the steps in the right order.
 
 [tip]
 
@@ -131,45 +131,19 @@ Make sure students have chosen good variable names for their function definition
 
 [/tip]
 
+Once students have worked through the Fast Functions, you can have them use the full [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf) to work through word problems from your own math curriculum.
+
 [/together]
 
 [together]
 
+<!--
 ## Assessment 
 ### <a name="Assessment"></a>4) The Design Recipe Assessment
 
 Visit [MSM Stage 9](http://studio.code.org/s/algebra/stage/9/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-BF.3-4: The student builds new functions from existing functions.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

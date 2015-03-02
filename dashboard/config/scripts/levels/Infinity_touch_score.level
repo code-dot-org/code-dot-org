@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Score a point each time a snowflake is touched.  Then steer Anna to touch each snowflake.",
+    "instructions": "Score a point when a snowflake is touched.  Then \"Run\", and steer Anna to touch each snowflake once.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -40,7 +40,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "300",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
