@@ -12,7 +12,7 @@ var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLo
 
 var makeNode = function (shard) {
   var newNodeID;
-  shard.nodeTable.create({}, function (node) {
+  shard.nodeTable.create({}, function (err, node) {
     newNodeID = node.id;
   });
   return newNodeID;
@@ -61,26 +61,26 @@ describe("NetSimShardCleaner", function () {
 
   it ("gets Cleaning Lock by putting a special row in the heartbeat table", function () {
     assertTableSize(testShard, 'heartbeatTable', 0);
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Callback takes a boolean success value");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Callback gets null error on success");
     });
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       assertOwnProperty(rows[0], 'cleaner');
     });
   });
 
   it ("fails to get Cleaning Lock if one already exists", function () {
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "First cleaner gets lock.");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "First cleaner gets lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
     var cleaner2 = new NetSimShardCleaner(testShard);
-    cleaner2.getCleaningLock(function (success) {
-      assert(success === false, "Second cleaner fails to get lock.");
+    cleaner2.getCleaningLock(function (err, success) {
+      assert(err !== null, "Second cleaner fails to get lock.");
     });
 
     // Make sure clean-up of second lock happens
@@ -97,23 +97,23 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'heartbeatTable', 1);
 
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Cleaner gets cleaning lock");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Cleaner gets cleaning lock");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 2);
   });
 
   it ("can release cleaning lock", function () {
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Cleaner gets lock.");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Cleaner gets lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
-    cleaner.releaseCleaningLock(function (success) {
-      assert(success === true, "Cleaner releases lock.");
+    cleaner.releaseCleaningLock(function (err) {
+      assert(err === null, "Cleaner releases lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 0);
@@ -130,7 +130,7 @@ describe("NetSimShardCleaner", function () {
     cleaner.tick(); // Second tick runs sub-CommandSequence that removes rows
 
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       assertEqual(rows[0].nodeID, 'valid');
     });
   });
@@ -147,7 +147,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.nodeTable.readAll(function (rows) {
+    testShard.nodeTable.readAll(function (err, rows) {
       assertEqual(rows[0].id, validNodeID);
     });
   });
@@ -165,7 +165,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'heartbeatTable', 1);
-    testShard.nodeTable.readAll(function (rows) {
+    testShard.nodeTable.readAll(function (err, rows) {
       assertEqual(rows[0].id, validNodeID);
     });
   });
@@ -198,7 +198,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'wireTable', 1);
-    testShard.wireTable.readAll(function (rows) {
+    testShard.wireTable.readAll(function (err, rows) {
       assertEqual(rows[0].localNodeID, validNodeID);
     });
   });
@@ -227,7 +227,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'messageTable', 1);
-    testShard.messageTable.readAll(function (rows) {
+    testShard.messageTable.readAll(function (err, rows) {
       assertEqual(rows[0].toNodeID, validNodeID);
     });
   });
@@ -252,7 +252,7 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'nodeTable', 1);
     assertTableSize(testShard, 'logTable', 1);
-    testShard.logTable.readAll(function (rows) {
+    testShard.logTable.readAll(function (err, rows) {
       assertEqual(rows[0].nodeID, validNodeID);
     });
   });
