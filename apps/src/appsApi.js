@@ -59,10 +59,8 @@ var ApiRequestHelper = function (baseUrl) {
 /**
  * @param {!string} localUrl - API endpoint relative to API base URL.
  * @param {!NodeStyleCallback} callback
- * @param {*} failureValue - what to pass as the callback result if an error
- *        occurs.
  */
-ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
+ApiRequestHelper.prototype.get = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
@@ -72,7 +70,7 @@ ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
   }).fail(function (jqXHR, textStatus, errorThrown) {
     callback(
         new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        failureValue);
+        null);
   });
 };
 
@@ -88,11 +86,11 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
   }).done(function (/*data, textStatus, jqXHR*/) {
-    callback(null, true);
+    callback(null, null);
   }).fail(function (jqXHR, textStatus, errorThrown) {
     callback(
         new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        false);
+        null);
   });
 };
 
@@ -100,11 +98,8 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
  * @param {!string} localUrl - API endpoint relative to API base URL.
  * @param {Object} data
  * @param {!NodeStyleCallback} callback
- * @param {*} failureValue - What to pass as the callback result if an error
- *        occurs
  */
-ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
-    failureValue) {
+ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
@@ -115,7 +110,7 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
   }).fail(function (jqXHR, textStatus, errorThrown) {
     callback(
         new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        failureValue);
+        null);
   });
 };
 
@@ -128,11 +123,11 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
     url: this.apiBaseUrl_ + localUrl,
     type: 'delete'
   }).done(function (/*data, textStatus, jqXHR*/) {
-    callback(null, true);
+    callback(null, null);
   }).fail(function (jqXHR, textStatus, errorThrown) {
     callback(
         new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        false);
+        null);
   });
 };
 
@@ -148,7 +143,7 @@ appsApi.AppsTable = function () {
  * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
 /**
@@ -156,7 +151,7 @@ appsApi.AppsTable.prototype.readAll = function (callback) {
  * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.read = function (id, callback) {
-  this.requestHelper_.get('/' + id, callback, undefined);
+  this.requestHelper_.get('/' + id, callback);
 };
 
 /**
@@ -164,7 +159,7 @@ appsApi.AppsTable.prototype.read = function (id, callback) {
  * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.create = function (value, callback) {
-  this.requestHelper_.postToGet('', value, callback, undefined);
+  this.requestHelper_.postToGet('', value, callback);
 };
 
 /**
@@ -233,7 +228,7 @@ appsApi.PropertyBag = function (app_publickey) {
  * @param {!NodeStyleCallback} callback
  */
 appsApi.PropertyBag.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
 /**
@@ -241,7 +236,7 @@ appsApi.PropertyBag.prototype.readAll = function (callback) {
  * @param {!NodeStyleCallback} callback
  */
 appsApi.PropertyBag.prototype.read = function (key, callback) {
-  this.requestHelper_.get('/' + key, callback, undefined);
+  this.requestHelper_.get('/' + key, callback);
 };
 
 /**

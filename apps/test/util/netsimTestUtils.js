@@ -55,7 +55,7 @@ exports.fauxStorageTable = function () {
           return;
         }
       }
-      callback(new Error('Not Found'), undefined);
+      callback(new Error('Not Found'), null);
     },
 
     /**
@@ -84,12 +84,12 @@ exports.fauxStorageTable = function () {
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
           tableData_[i] = value;
-          callback(null, true);
+          callback(null, null);
           return;
         }
       }
 
-      callback(new Error('Not Found'), false);
+      callback(new Error('Not Found'), null);
     },
 
     /**
@@ -102,12 +102,12 @@ exports.fauxStorageTable = function () {
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
           tableData_.splice(i, 1);
-          callback(null, true);
+          callback(null, null);
           return;
         }
       }
 
-      callback(new Error('Not Found'), false);
+      callback(new Error('Not Found'), null);
     },
 
     /**
