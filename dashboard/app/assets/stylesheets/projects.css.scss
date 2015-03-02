@@ -19,13 +19,15 @@
   }
 }
 
+$projects-table-width: 850px;
+
 .projects-table-wrapper {
-  width: 650px;
+  width: $projects-table-width;
   margin: 0 auto;
 }
 
 .projects {
-  width: 850px;
+  width: $projects-table-width;
   table-layout: auto;
   margin: 10px 0;
 
