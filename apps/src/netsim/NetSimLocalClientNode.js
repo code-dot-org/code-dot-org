@@ -203,20 +203,20 @@ NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
 
 /**
  * If a client update fails, should attempt an automatic reconnect.
- * @param {function} [onComplete]
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimLocalClientNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimLocalClientNode.superPrototype.update.call(this, function (success) {
-    if (!success) {
+  NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
+    if (err !== null) {
       logger.error("Update failed.");
       if (self.onNodeLostConnection_ !== undefined) {
         self.onNodeLostConnection_();
       }
     }
-    onComplete(success);
+    onComplete(err, result);
   });
 };
 
@@ -252,7 +252,9 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
       self.status_ = "Connected to " + router.getDisplayName() +
       " with address " + wire.localAddress;
-      self.update(onComplete);
+      self.update(function (err, result) {
+        onComplete(result);
+      });
     });
   });
 };
@@ -271,7 +273,9 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
 
     self.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
-    self.myRouter.update(onComplete);
+    self.myRouter.update(function (err, result) {
+      onComplete(result);
+    });
     self.myRouter.stopSimulation();
     self.myRouter = null;
     self.routerChange.notifyObservers(null, null);

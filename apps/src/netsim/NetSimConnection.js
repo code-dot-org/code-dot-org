@@ -182,7 +182,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
       this.myNode.setDisplayName(displayName);
       this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
       this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
-      this.myNode.update(function () {
+      this.myNode.update(function (/*err, result*/) {
         this.shardChange.notifyObservers(this.shard_, this.myNode);
         this.statusChanges.notifyObservers();
       }.bind(this));
