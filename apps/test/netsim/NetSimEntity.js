@@ -74,7 +74,7 @@ describe("NetSimEntity", function () {
 
     it ("returns null if entity is not found", function () {
       var entity;
-      NetSimEntity.get(NetSimClientNode, 15, testShard, function (foundEntity) {
+      NetSimEntity.get(NetSimClientNode, 15, testShard, function (err, foundEntity) {
         entity = foundEntity;
       });
       assert(null === entity, "Should return null when entity not found, returned " + entity);
@@ -88,7 +88,7 @@ describe("NetSimEntity", function () {
       assert(clientNodeID !== undefined, "Expected a client node ID");
 
       var entity;
-      NetSimEntity.get(NetSimClientNode, clientNodeID, testShard, function (foundEntity) {
+      NetSimEntity.get(NetSimClientNode, clientNodeID, testShard, function (err, foundEntity) {
         entity = foundEntity;
       });
       assert(entity instanceof NetSimClientNode, "Expect to create correct entity type");
