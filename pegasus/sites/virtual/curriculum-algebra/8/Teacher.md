@@ -47,7 +47,6 @@ and so on...
 
 [/together]
 
-
 [together]
 
 ## Activity: Composite Functions

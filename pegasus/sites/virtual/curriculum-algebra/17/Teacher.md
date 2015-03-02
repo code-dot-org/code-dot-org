@@ -45,7 +45,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
-
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>
 
@@ -108,7 +107,6 @@ If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10
 Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
      
 Now let's play a game.
-
  
 [/together]
 
@@ -183,7 +181,6 @@ Example:
 > SimonSez(“whatever 7”) -> LeftHandDown (falls all the way through)  
 > SimonSez(“4”)->BothHandsDown  
 
-
 Other suggestions to add (all at once or two at a time):
 > elseif(“Right Leg Forward”) -> RightLegForward  
 > elseif(“Right Leg Normal”) -> RightLegNormal  
@@ -216,10 +213,10 @@ Another very common piecewise functions is for taxi cabs.
 * $3 for 0 to 2 miles
 * $1 for each part mile after that
 
-
 <img src="Telephone_Cab_3_for_first_2.png" style="max-width: 100%"/><br/>
 
 This could be graphed with the following piecewise function y = { 3: x<2, [[x]]+2: x>=2 } where [[x]] is the greatest integer function or what is often called a floor function in computer languages.  The greatest integer function returns the greatest INTEGER less that the current value.  For instance [[2.9]] is 2 and [[3.1]] is 3.
+
 [/together]
 
 [together]
