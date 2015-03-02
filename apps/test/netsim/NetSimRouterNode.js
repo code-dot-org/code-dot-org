@@ -113,4 +113,47 @@ describe("NetSimRouterNode", function () {
     });
   });
 
+  describe("acceptConnection", function () {
+    var connectionLimit = 6;
+    var router;
+
+    beforeEach(function () {
+      NetSimRouterNode.create(testShard, function (e, r) {
+        router = r;
+      });
+    });
+
+    it ("accepts connection if total connections are at or below limit", function () {
+      for (var wireID = router.entityID + 1;
+           wireID < router.entityID + connectionLimit + 1;
+           wireID++) {
+        NetSimWire.create(testShard, wireID, router.entityID, function () {});
+      }
+      assertTableSize(testShard, 'wireTable', connectionLimit);
+
+      var accepted;
+      router.acceptConnection(null, function (isAccepted) {
+        accepted = isAccepted;
+      });
+
+      assertEqual(true, accepted);
+    });
+
+    it ("rejects connection if total connections are beyond limit", function () {
+      for (var wireID = router.entityID + 1;
+           wireID < router.entityID + connectionLimit + 2;
+           wireID++) {
+        NetSimWire.create(testShard, wireID, router.entityID, function () {});
+      }
+      assertTableSize(testShard, 'wireTable', connectionLimit + 1);
+
+      var accepted;
+      router.acceptConnection(null, function (isAccepted) {
+        accepted = isAccepted;
+      });
+
+      assertEqual(false, accepted);
+    });
+  });
+
 });

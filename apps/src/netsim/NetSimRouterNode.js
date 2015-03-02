@@ -430,8 +430,8 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
     }
 
     // Trigger an update, which will correct our connection count
-    self.update(function (err, result) {
-      onComplete(result);
+    self.update(function (err/*, result*/) {
+      onComplete(err === null);
     });
   });
 };
