@@ -353,7 +353,7 @@ NetSimRouterNode.prototype.stopSimulation = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {function} onComplete which accepts an Array of NetSimWire.
+ * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
  */
 NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -361,8 +361,8 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
   var shard = this.shard_;
   var routerID = this.entityID;
   this.shard_.wireTable.readAll(function (err, rows) {
-    if (err !== null) {
-      onComplete([]);
+    if (err) {
+      onComplete(err, []);
       return;
     }
 
@@ -374,7 +374,7 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
           return wire.remoteNodeID === routerID;
         });
 
-    onComplete(myWires);
+    onComplete(null, myWires);
   });
 };
 
@@ -386,7 +386,7 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
 NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getConnections(function (wires) {
+  this.getConnections(function (err, wires) {
     onComplete(wires.length);
   });
 };
@@ -450,7 +450,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
-  this.getConnections(function (wires) {
+  this.getConnections(function (err, wires) {
     var addressList = wires.filter(function (wire) {
       return wire.localAddress !== undefined;
     }).map(function (wire) {
@@ -593,7 +593,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   // If any messages are for us, get our routing table and process messages.
   if (messages.length > 0) {
     this.isProcessingMessages_ = true;
-    this.getConnections(function (wires) {
+    this.getConnections(function (err, wires) {
       messages.forEach(function (message) {
 
         // Pull the message off the wire, and hold it in-memory until we route it.
