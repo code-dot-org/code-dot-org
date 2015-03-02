@@ -17,15 +17,15 @@ theme: angular
     'selectize'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/dashboard/landing'});
-    $routeProvider.when('/districts',                                 {templateUrl: '/dashboard/districts',       controller: 'DistrictsController'});
-    $routeProvider.when('/workshops',                                 {templateUrl: '/dashboard/workshops',       controller: 'WorkshopsController'});
-    $routeProvider.when('/workshops/new',                             {templateUrl: '/dashboard/workshop-edit',   controller: 'WorkshopController'});
-    $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/dashboard/workshop-edit',   controller: 'WorkshopController'});
-    $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/dashboard/attendance',      controller: 'AttendanceController'});
-    $routeProvider.when('/cohorts',                                   {templateUrl: '/dashboard/cohorts',         controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',                               {templateUrl: '/dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/dashboard/cohort-edit',     controller: 'CohortController'});
+                        {templateUrl: '/ops-dashboard/landing'});
+    $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',       controller: 'DistrictsController'});
+    $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',       controller: 'WorkshopsController'});
+    $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:workshopid/attendance',                  {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
+    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
