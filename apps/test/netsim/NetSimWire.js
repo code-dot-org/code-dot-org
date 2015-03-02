@@ -79,7 +79,7 @@ describe("NetSimWire", function () {
     });
 
     it ("Returns a NetSimWire to its callback", function () {
-      NetSimWire.create(testShard, 0, 0, function (result) {
+      NetSimWire.create(testShard, 0, 0, function (err, result) {
         assert(result instanceof NetSimWire, "Result is a NetSimWire");
       });
     });
