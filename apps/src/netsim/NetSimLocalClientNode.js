@@ -238,8 +238,8 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
     self.myRouter = router;
     self.myRouter.initializeSimulation(self.entityID);
 
-    router.requestAddress(wire, self.getHostname(), function (success) {
-      if (!success) {
+    router.requestAddress(wire, self.getHostname(), function (err) {
+      if (err) {
         wire.destroy(function () {
           onComplete(false);
         });
@@ -252,8 +252,8 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
       self.status_ = "Connected to " + router.getDisplayName() +
       " with address " + wire.localAddress;
-      self.update(function (err, result) {
-        onComplete(result);
+      self.update(function (err) {
+        onComplete(err === null);
       });
     });
   });
