@@ -85,15 +85,19 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} packet - log contents
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.packet = packet;
   entity.timestamp = Date.now();
-  entity.getTable_().create(entity.buildRow_(), function (err) {
-    onComplete(err === null);
+  entity.getTable_().create(entity.buildRow_(), function (err, result) {
+    if (err !== null) {
+      onComplete(err, null);
+      return;
+    }
+    onComplete(err, new NetSimLogEntry(shard, result));
   });
 };
 
