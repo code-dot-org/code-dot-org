@@ -1,6 +1,7 @@
 id '8'
 title 'Step'
 description ""
+hidden 'true'
 
 stage 'Step'
 skin 'birds'

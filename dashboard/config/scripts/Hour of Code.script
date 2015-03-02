@@ -2,6 +2,7 @@ id '2'
 title 'Hour of Code 2013'
 description ""
 wrapup_video 'hoc_wrapup'
+hidden 'true'
 
 stage 'Hour of Code 2013'
 skin 'birds'
