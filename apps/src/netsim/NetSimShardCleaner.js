@@ -72,13 +72,11 @@ CleaningHeartbeat.inherits(NetSimHeartbeat);
 /**
  * Static creation method for a CleaningHeartbeat.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Callback that is passed the new
+ * @param {!NodeStyleCallback} onComplete - Callback that is passed the new
  *        CleaningHeartbeat object.
  */
 CleaningHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(CleaningHeartbeat, shard, function (err, result) {
-    onComplete(result);
-  });
+  NetSimEntity.create(CleaningHeartbeat, shard, onComplete);
 };
 
 /**
@@ -223,8 +221,9 @@ NetSimShardCleaner.prototype.hasCleaningLock = function () {
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
-  CleaningHeartbeat.create(this.shard_, function (heartbeat) {
-    if (heartbeat === null) {
+  CleaningHeartbeat.create(this.shard_, function (err, heartbeat) {
+    if (err !== null) {
+      logger.error(err.message);
       onComplete(false);
       return;
     }
@@ -234,7 +233,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
     CleaningHeartbeat.getAllCurrent(this.shard_, function (heartbeats) {
       if (heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
-        logger.info("Failed to acquire cleaning lock");
+        logger.warn("Failed to acquire cleaning lock");
         heartbeat.destroy(function () {
           onComplete(false);
         });
