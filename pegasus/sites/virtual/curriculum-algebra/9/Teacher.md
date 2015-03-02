@@ -49,7 +49,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
-
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has two new and important words:<br/>
 
@@ -119,7 +118,7 @@ Put students into groups of 3 - each member of the group will represent one step
 2. Examples
 3. Function
 
-Each group will work through the word problems on the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). Make sure that group member should stay true to their role and make sure to complete the steps in the right order.
+Each group will work through a set of word problems using the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). We reccomend that you pull word problems from your own curriculum so that students can see how the Design Recipe can be used outside of programming. Make sure that group member should stay true to their role and that they work through the steps in the right order.
 
 [tip]
 
@@ -131,7 +130,7 @@ Make sure students have chosen good variable names for their function definition
 
 [/tip]
 
-Once students have worked through the Fast Functions, you can have them use the full [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf) to work through word problems from your own math curriculum.
+Once students have worked through the Fast Functions, you can have them use the full [Blank Design Recipe Form](../docs/worksheets/design_recipe.pdf) to work through an word problems that they encounter in the future.
 
 [/together]
 

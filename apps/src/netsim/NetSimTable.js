@@ -68,51 +68,75 @@ var NetSimTable = module.exports = function (storageTable) {
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(function (data) {
-    callback(data);
-    if (data !== null) {
+  this.remoteTable_.readAll(function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.fullCacheUpdate_(data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.read(id, function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.updateCacheRow_(id, data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.create(value, function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.addRowToCache_(data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.update(id, value, function (err, success) {
+    callback(err, success);
+    if (err === null) {
       this.updateCacheRow_(id, value);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.delete(id, function (err, success) {
+    callback(err, success);
+    if (err === null) {
       this.removeRowFromCache_(id);
     }
   }.bind(this));
 };
 
+/**
+ * @param {Array} allRows
+ * @private
+ */
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
   var newCache = allRows.reduce(function (prev, currentRow) {
@@ -129,11 +153,20 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   this.lastFullUpdateTime_ = Date.now();
 };
 
+/**
+ * @param {!Object} row
+ * @param {!number} row.id
+ * @private
+ */
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
   this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
+/**
+ * @param {!number} id
+ * @private
+ */
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
@@ -141,6 +174,11 @@ NetSimTable.prototype.removeRowFromCache_ = function (id) {
   }
 };
 
+/**
+ * @param {!number} id
+ * @param {!Object} row
+ * @private
+ */
 NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
@@ -154,6 +192,10 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   }
 };
 
+/**
+ * @returns {Array}
+ * @private
+ */
 NetSimTable.prototype.arrayFromCache_ = function () {
   var result = [];
   for (var k in this.cache_) {

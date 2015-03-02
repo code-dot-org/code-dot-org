@@ -40,8 +40,8 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) or blank sheet of paper
-- [Videogame Design Template](../docs/worksheets/game_planning.pdf) or blank sheet of paper
+- [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) (in the student workbook)
+- [Videogame Design Template](../docs/worksheets/game_planning.pdf) (in the student workbook)
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
@@ -53,7 +53,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 [together]
 
 ## Getting Started
-
 
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>

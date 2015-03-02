@@ -14,16 +14,12 @@
       text-decoration: none;
     }
   }
-  [class*="span"] {
-    margin: 0;
-  }
 }
 
 $projects-table-width: 850px;
 
 .projects-table-wrapper {
   width: $projects-table-width;
-  margin: 0 auto;
 }
 
 .projects {
