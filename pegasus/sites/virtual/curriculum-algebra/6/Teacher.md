@@ -51,7 +51,7 @@ We can store that red triangle Evaluation Block in a Variable, let's call it "re
 
 # Lesson Tip
  If students have used variables in other languages
-It's really imporant to note that in functional programming, variables are considered immutable - meaning the value can't be changed during the execution of a program. Think about it this way: x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
+It's essential to note that in functional programming, as in math, variables are considered immutable - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
 
 [/together]
 

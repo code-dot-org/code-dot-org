@@ -58,6 +58,7 @@ if node['cdo-apps']['daemon']
   if node.chef_environment == 'production'
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
     cronjob at:'@daily', do:deploy_dir('bin', 'send_workshop_reminder_emails'), notify:'rick@code.org'
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
   end
 
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')

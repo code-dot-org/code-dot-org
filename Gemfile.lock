@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/wjordan/i18nema.git
+  revision: 37c3a6ef8de5e364fceba6cecc2e448b08f520cb
+  specs:
+    i18nema (0.0.8)
+      i18n (>= 0.5)
+      syck (~> 1.0.0)
+
+GIT
   remote: https://github.com/code-dot-org/omniauth-clever.git
   revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
   specs:
@@ -144,9 +152,6 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
-    i18nema (0.0.8)
-      i18n (>= 0.5)
-      syck (~> 1.0.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -392,7 +397,7 @@ DEPENDENCIES
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger
-  i18nema
+  i18nema!
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails

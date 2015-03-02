@@ -1,5 +1,6 @@
 ---
 title: The Big Game - Animation
+view: page_curriculum
 theme: none
 ---
 
