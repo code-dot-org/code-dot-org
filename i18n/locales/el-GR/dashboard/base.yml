@@ -297,6 +297,8 @@ el:
     student_teacher_disassociated: 'Ο %{teacher_name} αφαιρέθηκε από τους δασκάλους του %{student_name}'
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν οι αλλαγές)
@@ -479,7 +481,7 @@ el:
           title: Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
           description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
         Hour of Code:
-          title: Ώρα του Κώδικα
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Επεξεργασία κώδικα

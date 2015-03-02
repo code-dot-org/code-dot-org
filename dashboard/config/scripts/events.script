@@ -1,6 +1,7 @@
 id '4'
 title 'Events'
 description ""
+hidden 'true'
 
 stage 'Bounce'
 skin 'bounce'

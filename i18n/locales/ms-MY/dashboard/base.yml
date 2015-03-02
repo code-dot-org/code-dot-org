@@ -289,6 +289,8 @@ ms:
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru %{student_name}'
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Hantar semula arahan pengesahan
     new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
     current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)
@@ -471,7 +473,7 @@ ms:
           title: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Edit kod

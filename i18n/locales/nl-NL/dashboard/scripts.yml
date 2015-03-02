@@ -342,6 +342,12 @@ nl:
           The Design Recipe: Het ontwerp Recept
         K5PD:
           Introduction to PD: Inleiding tot PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ nl:
           description_short: Maak een verhaal of spel met Infinity Play Lab!!
           description: Maak een verhaal of spel met Infinity Play Lab!
           Infinity: Oneindig
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
+          description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.
+          Introduction to Computer Science: Inleiding Informatica
+          The Maze: Het Doolhof
+          Computational Thinking: Rekenend Denken
+          Graph Paper Programming: Programmeren op Ruitjespapier
+          The Artist: De Artiest
+          Algorithms: Algoritmen
+          The Artist 2: De Artiest 2
+          Functions: Functies
+          The Farmer: De Boer
+          Conditionals: Voorwaardelijke instructies
+          The Artist 3: De Artiest 3
+          Song Writing: Liedjes Schrijven
+          The Farmer 2: De Boer 2
+          Abstraction: Abstractie
+          The Artist 4: De Artiest 4
+          Relay Programming: Estafette Programmeren
+          The Farmer 3: De Boer 3
+          The Internet: Het Internet
+          The Artist 5: De Artiest 5
+          Wrap-up: Einde

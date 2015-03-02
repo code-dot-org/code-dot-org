@@ -21,7 +21,8 @@
     "slider_speed": ".5",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeRow:eq(2)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[\r\n  {\"localization_key\":\"create_function\",\"callout_text\":\"Click here to open the \\\"Functions\\\" flyout, then click the \\\"Create a Function\\\" button.\",\"element_id\":\".blocklyTreeRow:eq(2)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

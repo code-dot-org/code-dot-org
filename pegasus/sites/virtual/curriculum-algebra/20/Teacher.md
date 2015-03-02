@@ -1,19 +1,15 @@
 ---
-title: Play Lab Collision Detection Big Game
+title: The Big Game - Collision Detection
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg20'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 20, :unplugged=>false, :title=> 'Play Lab: Collision Detection Big Game',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-Using the Distance Formula, students will write functions that determine when two objects are touching. Using these new functions, they will write the final pieces of logic needed for their games!
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,71 +18,53 @@ Using the Distance Formula, students will write functions that determine when tw
  
 1) [Introduction](#GetStarted)  
 
-### **Play Lab: Collision Decection Big Game**  
+### **Activity: The Big Game - Collision Detection**  
 
 2) [Online Puzzles](#Activity1)
 
 [/summary]
 
-## Lesson Objectives 
-### Students will:
-
-- Apply the Distance Formula to detect when two points on a coordinate plane are near each other
-
-[/together]
-
 [together]
 
 # Teaching Guide
+
+## Materials, Resources and Prep
+### For the Student
+- [Update-player Design Recipe](../docs/worksheets/update_player.pdf) (in the student workbook)
+- [Key Code Reference](../docs/worksheets/keycode_ref.pdf)
+- [Line-length Design Recipe](../docs/worksheets/line_length.pdf) (in the student workbook)
+- [Distance Design Recipe](../docs/worksheets/distance.pdf) (in the student workbook)
+- [Collide? Design Recipe](../docs/worksheets/collide.pdf) (in the student workbook)
 
 ## Getting Started
 
 
 ### <a name="GetStarted"></a> 1) Introduction
 
+Let's get back into that Big Game from stages 7, 12, and 16.
 
+Previous work with the game has created movement for the danger and target characters.  Conditional statements have been added to ensure the these characters reappear once the have moved off the screen.  
+
+The students will now get their main character into the action.  They need to connect the main character's activity to keyboard events.  The students can customize their movements to any keys (see the [Key Code Reference](../docs/worksheets/keycode_ref.pdf)) but the suggested keys are the right, up, left, and down arrow keys (with key codes 37-40).
+
+If the main character is not responding, two scenarios are good to trouble shoot:
+
+1. Which key is designated compared to which the student is pressing?
+2. What action results from this key press (is the character location changing or still just x?)?
+
+The Pythagorean Theorem studied in the last lesson will be used to determine when the characters have made contact.  Students are not required to use the line-length function but it is set up for them.  They will need the sqrt function which has been added to the number functions.  They should be encouraged to create a square function although the can implement this part of the puzzle using just the times function.  After the students implement the distance formula, they will need to put the appropriate boolean tests in the collide function.
+
+Once these last functions are put into place, scoring will automatically update based on target and danger collisions.
 
 [/together]
 
 [together]
 
-## Activity: Eval Design Recpie
+## Activity: The Big Game - Collision Detection
 ### <a name="Activity1"></a> 2) Online Puzzles
 
 Return to your Big Game to use collision detection logic so that you know when your player is touching the target or the danger. Head to [MSM stage 20](http://studio.code.org/s/algebra/stage/20/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- 8.G.6-8: The student uses the Pythagorean Theorem to solve real-world and mathematical problems.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

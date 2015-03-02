@@ -33,6 +33,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
+var EvalText = require('./evalText');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -51,6 +52,8 @@ var CANVAS_WIDTH = 400;
 
 // This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
+
+Eval.answerObject = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -102,12 +105,27 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+        studioApp.createCoordinateGridBackground({
+          svg: 'svgEval',
+          origin: -200,
+          firstLabel: -100,
+          lastLabel: 100,
+          increment: 100
+        });
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
 
       var answerObject = getDrawableFromBlockXml(solutionBlocks);
       if (answerObject && answerObject.draw) {
+        // store object for later analysis
+        Eval.answerObject = answerObject;
         answerObject.draw(document.getElementById('answer'));
       }
     }
@@ -215,6 +233,57 @@ function getDrawableFromBlockXml(blockXml) {
 }
 
 /**
+ * Recursively parse an EvalObject looking for EvalText objects. For each one,
+ * extract the text content.
+ */
+Eval.getTextStringsFromObject_ = function (evalObject) {
+  if (!evalObject) {
+    return [];
+  }
+
+  var strs = [];
+  if (evalObject instanceof EvalText) {
+    strs.push(evalObject.getText());
+  }
+
+  evalObject.getChildren().forEach(function (child) {
+    strs = strs.concat(Eval.getTextStringsFromObject_(child));
+  });
+  return strs;
+};
+
+/**
+ * @returns True if two eval objects have sets of text strings that differ
+ *   only in case
+ */
+Eval.haveCaseMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== strs2.length) {
+    return false;
+  }
+
+  strs1.sort();
+  strs2.sort();
+
+  var caseMismatch = false;
+
+  for (var i = 0; i < strs1.length; i++) {
+    var str1 = strs1[i];
+    var str2 = strs2[i];
+    if (str1 !== str2) {
+      if (str1.toLowerCase() === str2.toLowerCase()) {
+        caseMismatch  = true;
+      } else {
+        return false; // strings differ by more than case
+      }
+    }
+  }
+  return caseMismatch;
+};
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
@@ -222,25 +291,37 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  var userObject = getDrawableFromBlockspace();
-  if (userObject && userObject.draw) {
-    userObject.draw(document.getElementById("user"));
-  }
-
-  // If we got a CustomEvalError, set error message appropriately.
-  if (userObject instanceof CustomEvalError) {
+  if (studioApp.hasUnfilledBlock()) {
     Eval.result = false;
-    Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
-    Eval.message = userObject.feedbackMessage;
+    Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Eval.message = evalMsg.emptyFunctionalBlock();
   } else {
-    // We got an EvalImage back, compare it to our target
-    Eval.result = evaluateAnswer();
-    Eval.testResults = studioApp.getTestResults(Eval.result);
-  }
+    var userObject = getDrawableFromBlockspace();
+    if (userObject && userObject.draw) {
+      userObject.draw(document.getElementById("user"));
+    }
 
-  if (level.freePlay) {
-    Eval.testResults = TestResults.FREE_PLAY;
+    // If we got a CustomEvalError, set error message appropriately.
+    if (userObject instanceof CustomEvalError) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+
+      Eval.message = userObject.feedbackMessage;
+    } else if (Eval.haveCaseMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+
+      Eval.message = evalMsg.stringMismatchError();
+    } else {
+      // We got an EvalImage back, compare it to our target
+      Eval.result = evaluateAnswer();
+      Eval.testResults = studioApp.getTestResults(Eval.result);
+    }
+
+    if (level.freePlay) {
+      Eval.result = true;
+      Eval.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -255,6 +336,8 @@ Eval.execute = function() {
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 
   studioApp.report(reportData);
 };
@@ -315,7 +398,7 @@ var displayFeedback = function(response) {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
   };
-  if (Eval.message) {
+  if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
   studioApp.displayFeedback(options);

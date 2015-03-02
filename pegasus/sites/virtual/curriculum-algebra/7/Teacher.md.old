@@ -1,0 +1,93 @@
+---
+title: Play Lab Defining Variables
+view: page_curriculum
+theme: none
+---
+
+
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 7, :unplugged=>false, :title=> 'Play Lab: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
+
+[content]
+
+[together]
+
+## Lesson Overview
+
+In this plugged activity, students will learn to define variables that store values and expressions that can be used repeatedly throughout a program. It's important to note that in some programming languages variables are consider mutable, in that their value can be changed throughout the running of the programming. In Evaluation Blocks, as in Algebra, variables are considered immutable - the value of a variable cannot be modified during the excecution of the program.
+
+[summary]
+
+## Teaching Summary
+### **Getting Started**
+ 
+1) [Introduction](#GetStarted)  
+
+### **Activity: Play Lab Defining Variables**  
+
+2) [Online Puzzles](#Activity1)
+
+[/summary]
+
+## Lesson Objectives 
+### Students will:
+
+- Decompose existing functions
+- Write contracts that describe functions
+
+[/together]
+
+[together]
+
+# Teaching Guide
+
+## Getting Started
+
+
+### <a name="GetStarted"></a> 1) Introduction
+
+It's time to start working on your video game! In this stage you'll see some incomplete variable definitions for various aspects of your game - such as the character images, title, and background.
+
+[/together]
+
+[together]
+
+## Activity: Play Lab Defining Variables
+### <a name="Activity1"></a> 3) Online Puzzles
+
+In this stage you'll define and modify variables to changes how some games function. Head to [MSM stage 7](http://studio.code.org/s/algebra/stage/7/puzzle/1) in Code Studio to get started programming.
+
+[/together]
+
+
+[standards]
+
+<details>
+<summary>Standards Alignment</summary>
+
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
+
+### Common Core Math Standards
+
+- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
+- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+- F-BF.1-2: The student models a relationship between two quantities by building a function.
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
+
+</details>
+
+[/standards]
+
+[/content]
+
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

@@ -296,6 +296,8 @@ es:
     student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor de %{student_name}'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
@@ -478,7 +480,7 @@ es:
           title: K-8 Introducción al Curso de Ciencias de la Computación (15-25 horas)
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
         Hour of Code:
-          title: Hora del código
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Editar el código

@@ -21,6 +21,7 @@ en:
         Type the arithmetic expression here: crwdns23653:0crwdne23653:0
         Blocks to Math 1.blocks.start_blocks: crwdns27328:0crwdne27328:0
         Blocks to Math 1.blocks.start_blocks, 200: crwdns27329:0crwdne27329:0
+        (4+5): crwdns34845:0crwdne34845:0
       Blocks to Math 2:
         Convert Blocks to Math: crwdns23654:0crwdne23654:0
         Type out the arithmetic expression that matches this code: crwdns23655:0crwdne23655:0
@@ -28,6 +29,7 @@ en:
         7 * 6: crwdns23657:0crwdne23657:0
         Type the arithmetic expression here: crwdns23658:0crwdne23658:0
         Blocks to Math 2.blocks.start_blocks, 200: crwdns27330:0crwdne27330:0
+        (7 * 6): crwdns34846:0crwdne34846:0
       Blocks to Math 3:
         Convert Blocks to Math: crwdns23659:0crwdne23659:0
         Type out the arithmetic expression that matches this code: crwdns23660:0crwdne23660:0
@@ -36,6 +38,7 @@ en:
         2 * 3 - (1 + 0): crwdns23663:0crwdne23663:0
         Type the arithmetic expression here: crwdns23664:0crwdne23664:0
         Blocks to Math 3.blocks.start_blocks: crwdns27331:0crwdne27331:0
+        ((2 * 3) - (1 + 0)): crwdns34847:0crwdne34847:0
       Blocks to Math 4:
         Convert Blocks to Math: crwdns23665:0crwdne23665:0
         Type out the arithmetic expression that matches this code: crwdns23666:0crwdne23666:0
@@ -45,6 +48,7 @@ en:
         Type the arithmetic expression here: crwdns23670:0crwdne23670:0
         Blocks to Math 4.blocks.start_blocks: crwdns27332:0crwdne27332:0
         Blocks to Math 4.blocks.start_blocks, 200: crwdns27333:0crwdne27333:0
+        ((5 + 8) - 12): crwdns34848:0crwdne34848:0
       Blocks to Math 5:
         Convert Blocks to Math: crwdns23671:0crwdne23671:0
         Type out the arithmetic expression that matches this code: crwdns23672:0crwdne23672:0
@@ -54,6 +58,7 @@ en:
             2 * -6: crwdns23674:0crwdne23674:0
         Type the arithmetic expression here: crwdns23675:0crwdne23675:0
         Blocks to Math 5.blocks.start_blocks: crwdns27334:0crwdne27334:0
+        ((-2) * (-6)): crwdns34849:0crwdne34849:0
       Blocks to Math 6:
         Convert Blocks to Math: crwdns23676:0crwdne23676:0
         Type out the arithmetic expression that matches this code: crwdns23677:0crwdne23677:0
@@ -64,6 +69,7 @@ en:
         (4 - 1) * -2 + 12: crwdns23682:0crwdne23682:0
         Type the arithmetic expression here: crwdns23683:0crwdne23683:0
         Blocks to Math 6.blocks.start_blocks: crwdns27335:0crwdne27335:0
+        ((4 - 1) * (-2)) + 12): crwdns34850:0crwdne34850:0
       Blocks to Math 7:
         Convert Blocks to Math: crwdns23684:0crwdne23684:0
         Type out the arithmetic expression that matches this code: crwdns23685:0crwdne23685:0
@@ -71,6 +77,7 @@ en:
         10 / (2 * (3 + 1)): crwdns23687:0crwdne23687:0
         Type the arithmetic expression here: crwdns23688:0crwdne23688:0
         Blocks to Math 7.blocks.start_blocks: crwdns27336:0crwdne27336:0
+        (10 / (2 * (3 + 1)): crwdns34851:0crwdne34851:0
       Blocks to Bools 1:
         Convert Blocks to Math: crwdns23689:0crwdne23689:0
         Type out the arithmetic expression that matches this code: crwdns23690:0crwdne23690:0

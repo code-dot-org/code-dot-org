@@ -342,6 +342,12 @@ lt:
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -352,3 +358,30 @@ lt:
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Begalybė
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Programavimo įvado kursas (15-25 valandos)
+          description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
+          Introduction to Computer Science: Programavimo įvadas
+          The Maze: Labirintas
+          Computational Thinking: Skaičiuojamasis mąstymas
+          Graph Paper Programming: Programavimas ant languoto popieriaus
+          The Artist: Menininkas
+          Algorithms: Algoritmai
+          The Artist 2: Menininkas 2
+          Functions: Komandų kūrimas
+          The Farmer: Ūkininkas
+          Conditionals: Sąlyginiai sakiniai
+          The Artist 3: Menininkas 3
+          Song Writing: Dainos ir funkcijos
+          The Farmer 2: Ūkininkas 2
+          Abstraction: Komandos su parametrais
+          The Artist 4: Menininkas 4
+          Relay Programming: Programavimas komandoje
+          The Farmer 3: Ūkininkas 3
+          The Internet: Internetas
+          The Artist 5: Menininkas 5
+          Wrap-up: Apibendrinimas

@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "merah";
 Blockly.Msg.COLOUR_RGB_TITLE = "warna dengan";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Pilih satu warna dengan jumlah ditentukan dari merah, hijau, dan biru. Semua nilai perlu di antara 0 dan 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "Keluar daripada gelung lingkaran";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "Teruskan dengan pengulangan seterusnya gelung";

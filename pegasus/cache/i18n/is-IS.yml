@@ -149,7 +149,7 @@
   studiobar_donate_title: Styrkja
   studiobar_donate_body: Eitt barn lærir fyrir hvern dollar sem þú gefur
   studiobar_shop_title: Verslun
-  studiobar_shop_body: Brjóttu upp staðalímyndir. Klæðstu merkinu okkar með stolti.
+  studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -1035,3 +1035,27 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress

@@ -2,6 +2,7 @@ class Eval < Blockly
   serialized_attrs %w(
     solution_blocks
     free_play
+    coordinate_grid_background
   )
 
   before_save :update_ideal_level_source
@@ -88,4 +89,20 @@ class Eval < Blockly
   def toolbox(type)
     Eval.toolbox
   end
+
+  # What blocks should be embedded for the given block_xml
+  def blocks_to_embed(block_xml)
+    # Solution blocks are defined in the form
+    # <block type="functional_display" (some attributes)>
+    #   <block type="function_input" (some attributes)>
+    #     (the blocks we care about)
+    #   </block>
+    # </block>
+    embed_xml = block_xml
+    # This regex extracts the blocks we care about
+    match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(block_xml)
+    embed_xml = match[1] if match and match[1]
+    return embed_xml
+  end
+
 end

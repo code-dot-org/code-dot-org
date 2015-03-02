@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "hesablamalı"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Eyni ifadəni almaq üçün arqumentlərinizin yerini dəyişməyə çalışın."},
 "extraTopBlocks":function(d){return "Sizin qoşulmamış bloklarınız var. Bunları \"hesablamalı\" blokuna qoşmaq istərdinizmi?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Məqsəd:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Bu da sizin əhvalat! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin!"},
-"yourExpression":function(d){return "Sizin ifadəniz:"}};
+"yourExpression":function(d){return "Sizin ifadəniz:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

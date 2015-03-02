@@ -10,12 +10,18 @@ class LevelsControllerTest < ActionController::TestCase
     @program = '<hey/>'
 
     @not_admin = create(:user)
+    # Most tests in levels controller assume we're working within the 'levelbuilder' environment.
+    # Run 'unset_levelbuiler_env' for a levels controller test in the normal 'test' environment.
     Rails.env = 'levelbuilder'
     # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
     ENV['FORCE_CUSTOM_LEVELS'] = '1'
   end
 
   teardown do
+    unset_levelbuilder_env
+  end
+
+  def unset_levelbuilder_env
     Rails.env = "test"
     ENV.delete 'FORCE_CUSTOM_LEVELS'
   end
@@ -52,7 +58,7 @@ class LevelsControllerTest < ActionController::TestCase
     level_4 = create(:level, user: @user, name: "Z10")
     level_5 = create(:level, user: @user, name: "Z2")
 
-    get :new, game_id: @level.game, type: "Maze"
+    get :new, game_id: @level.game
 
     assert_equal [level_2, level_1, level_3, level_5, level_4], assigns(:levels)
   end
@@ -472,29 +478,36 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
-  test 'can show embed level when not signed in' do
-    level = create(:artist)
-    sign_out(@user)
+  test 'can show level when not signed in' do
+    unset_levelbuilder_env
+
+    level = create :artist
+    sign_out @user
+
+    get :edit, id: level
+    assert_response :redirect
 
     get :show, id: level
-    assert_response :redirect
+    assert_response :success
+  end
 
-    get :edit, id: level, embed:true
-    assert_response :redirect
+  test 'can show embed level when not signed in' do
+    unset_levelbuilder_env
 
-    get :show, id: level, embed:true
+    level = create :artist
+    sign_out @user
+
+    get :embed_level, level_id: level
     assert_response :success
   end
 
   test 'can show embed blocks when not signed in' do
-    level = create(:artist)
-    sign_out(@user)
+    unset_levelbuilder_env
 
-    get :show, id: level
-    assert_response :redirect
+    level = create :artist
+    sign_out @user
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
   end
-
 end

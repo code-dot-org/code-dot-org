@@ -74,11 +74,11 @@ Our code is segmented into four parts:
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
-## Building Blockly and Blockly-core (optional)
+## Building Apps and Blockly-core (optional)
 
-The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
+The studio.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
 
-### Enabling Blockly Builds
+### Enabling Apps Builds
 
 You'll need to do this once:
 
@@ -92,7 +92,7 @@ You'll need to do this once:
   1. Add `use_my_apps: true`
 1. `rake install`
 
-This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
+This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
 
 ### Blockly Prerequisite: Cairo
 
@@ -107,14 +107,14 @@ Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other pl
 1. `brew install cairo`
 1. In blockly, `npm install`
 
-### Building Blockly and Blockly-Core
+### Building Apps and Blockly-Core
 
 1. `cd code-dot-org`
 1. `rake build`
 
 This will build everything you have set to build in `locals.yml`.
 
-You can use `rake build:blockly` and `rake build:blockly_core` to build a specific project.
+You can use `rake build:apps` and `rake build:blockly_core` to build a specific project.
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 

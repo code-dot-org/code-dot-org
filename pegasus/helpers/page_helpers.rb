@@ -25,6 +25,7 @@ def locale_chapter_partner?()
   request.locale() == 'ro-RO' || request.locale() == 'pt-BR' || request.locale() == 'it-IT'
 end
 
-def not_partner_site?()
-  request.site != 'uk.code.org' && request.site != 'al.code.org' && request.site != 'ar.code.org' && request.site != 'br.code.org' && request.site != 'eu.code.org' && request.site != 'italia.code.org' && request.site != 'ro.code.org'
+def partner_site?()
+  partner_sites = ['al.code.org', 'ar.code.org', 'br.code.org', 'eu.code.org', 'italia.code.org', 'ro.code.org', 'uk.code.org', 'za.code.org']
+  return partner_sites.include?(request.site)
 end

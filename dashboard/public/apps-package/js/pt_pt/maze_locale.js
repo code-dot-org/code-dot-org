@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "atHoneycomb":function(d){return "at honeycomb"},
-"atFlower":function(d){return "at flower"},
+"atFlower":function(d){return "em flor"},
 "avoidCowAndRemove":function(d){return "evita a vaca e remove 1"},
 "continue":function(d){return "Continua"},
 "dig":function(d){return "Remover 1"},

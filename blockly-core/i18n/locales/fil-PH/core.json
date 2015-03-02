@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "pula",
   "COLOUR_RGB_TITLE": "kulayan ng",
   "COLOUR_RGB_TOOLTIP": "Gumawa ng kulay na may tinukoy na dami ng pula, berde, at asul. Lahat ng value ay dapat nasa 0 at 100.",
+  "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "putulin ang paulit ulit",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "Magpatuloy sa susunod na pag-ulit ng loop",

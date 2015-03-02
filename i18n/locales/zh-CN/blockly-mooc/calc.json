@@ -1,9 +1,13 @@
 {
   "compute":"计算",
+  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "equivalentExpression":"试着重新排列你的参数来得到完全相同的表达式。",
   "extraTopBlocks":"您有未连接的语句块。您要将其连接到“compute”语句块吗？",
-  "failedInput":"Your function does not return the right result for all values.",
+  "failedInput":"你的函数没有返回所有的正确值。",
   "goal":"目标：",
+  "levelIncompleteError":"Your expression does not match the goal.",
   "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"你的表达式："
+  "yourExpression":"你的表达式：",
+  "wrongInput":"You are calling your function with the wrong value."
 }

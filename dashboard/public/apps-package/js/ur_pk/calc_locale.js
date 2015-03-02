@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "کمپیوٹ"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Try reordering your arguments to get exactly the same expression."},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "مقصد:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "یہاں آپ کی داستان ہے! اس پر کام جاری رکھے یا اگلی پہیلی کی طرف بڑھیں!"},
-"yourExpression":function(d){return "آپ کا اظہار:"}};
+"yourExpression":function(d){return "آپ کا اظہار:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

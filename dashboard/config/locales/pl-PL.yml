@@ -348,6 +348,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
     new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
     current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić

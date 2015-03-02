@@ -43,8 +43,15 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of k-8" do
-    get :show, id: Script::TWENTY_HOUR_ID
+    get :show, id: Script::TWENTY_HOUR_NAME
     assert_response :success
+  end
+
+  # This is the one remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in production.
+  # On a fresh db the only guarantee that '20-hour.script' has id:1 is by manually specifying ID in the DSL.
+  test "should redirect old k-8" do
+    get :show, id: 1
+    assert_redirected_to script_path(Script.twenty_hour_script)
   end
 
   test "should get show of custom script" do

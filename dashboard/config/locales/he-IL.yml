@@ -337,6 +337,8 @@
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: שלח מחדש הוראות אישור דוא"ל
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים

@@ -21,5 +21,8 @@
   "underlayBlockTitle": "underlay (bottom, top)",
   "outline": "outline",
   "solid": "solid",
-  "string": "string"
+  "string": "string",
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
+  "emptyFunctionalBlock": "You have a block with an unfilled input."
 }

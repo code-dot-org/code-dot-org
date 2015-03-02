@@ -39,8 +39,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Texte"},
 "catVariables":function(d){return "variables"},
 "continue":function(d){return "Continuer"},
-"createHtmlBlock":function(d){return "créer le bloc html"},
-"createHtmlBlockTooltip":function(d){return "Crée un bloc de code HTML dans l'application."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "Félicitations ! Vous avez résolu l'énigme finale."},
 "nextLevel":function(d){return "Félicitations ! Vous avez terminé cette énigme."},
 "no":function(d){return "Non"},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Entrer"},
 "stepOver":function(d){return "Esquiver"},
 "stepOut":function(d){return "Abandonner"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Voir les données"},
 "yes":function(d){return "Oui"}};

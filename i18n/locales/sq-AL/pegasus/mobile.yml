@@ -6,7 +6,7 @@ sq-AL:
   csedweek_dates: Dhjetor 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>kane provuar nje </h3><h2>Ore Kodimi</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Cdokush mund te mesoj.
   learn_now: Meso tani
   petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat kompjuterike

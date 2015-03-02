@@ -299,6 +299,8 @@ fr:
     student_teacher_disassociated: "%{teacher_name} n'est plus considéré comme l'enseignant de %{student_name}"
   user:
     email_confirm_needed: "L'adresse de messagerie n'a pas été confirmée :"
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Envoyer à nouveau les instructions de confirmation
     new_password_hint: (laissez vide si vous ne voulez rien changer)
     current_password_hint: (nous avons besoin de votre mot de passe actuel pour confirmer vos modifications)
@@ -481,7 +483,7 @@ fr:
           title: "Cours d'introduction à l'informatique pour l'école primaire (15-25 heures)"
           description: "Ce cours de 20 heures introduit les notions de base de l'informatique et les concepts de la programmation. Il est conçu pour la grande section jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre."
         Hour of Code:
-          title: Heure de Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Modifier le Code

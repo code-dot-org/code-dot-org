@@ -53,10 +53,13 @@ Scenario Outline: Simple blockly level page view
   And I see no difference for "closed dialog"
   And I close my eyes
 Examples:
-  | url                                                                | test_name            |
-  | http://learn.code.org/s/1/level/2?noautoplay=true                  | first maze level     |
-  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level         |
-  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level        |
-  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level         |
-  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level |
+  | url                                                                | test_name                 |
+  | http://learn.code.org/s/1/level/2?noautoplay=true                  | first maze level          |
+  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level              |
+  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level             |
+  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level              |
+  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level      |
+  | http://learn.code.org/s/course4/stage/15/puzzle/10?noautoplay=true | auto open function editor |
+  | http://learn.code.org/s/msm/stage/10/puzzle/5?noautoplay=true      | auto open contract editor |
+  | http://learn.code.org/s/msm/stage/6/puzzle/6?noautoplay=true       | auto open variable editor |
 

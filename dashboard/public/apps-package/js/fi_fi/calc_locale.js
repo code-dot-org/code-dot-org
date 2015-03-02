@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "laskea"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen."},
 "extraTopBlocks":function(d){return "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla."},
 "goal":function(d){return "Tavoite:"},
-"reinfFeedbackMsg":function(d){return "Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan tehtävään!"},
-"yourExpression":function(d){return "Lausekkeesi:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"reinfFeedbackMsg":function(d){return "Tässä on laskelmasi! Jatka sen työstämistä tai siirry tehtävään!"},
+"yourExpression":function(d){return "Lausekkeesi:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

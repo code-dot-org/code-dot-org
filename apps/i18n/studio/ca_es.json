@@ -242,6 +242,8 @@
   "soundWood": "fusta",
   "speed": "velocitat",
   "startSetValue": "start (rocket-height function)",
+  "startSetVars": "game_vars (title, subtitle, background, target, danger, player)",
+  "startSetFuncs": "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)",
   "stopSprite": "atura",
   "stopSpriteN": "atura actor{spriteIndex}",
   "stopTooltip": "Atura el moviment d'un actor.",

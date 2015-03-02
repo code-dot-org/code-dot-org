@@ -342,6 +342,12 @@ pt-BR:
           The Design Recipe: A receita de design
         K5PD:
           Introduction to PD: Introdução a PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
         netsim:
           title: Simulador de internet
           description_short: ""
@@ -352,3 +358,30 @@ pt-BR:
           description_short: Crie uma história ou um jogo com o Laboratório Infinito!!
           description: Crie uma história ou um jogo com o Laboratório Infinito!
           Infinity: Infinito
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
+          description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
+          Introduction to Computer Science: Introdução à Ciência da Computação
+          The Maze: O Labirinto
+          Computational Thinking: Pensamento Computacional
+          Graph Paper Programming: Programação em Papel Quadriculado
+          The Artist: O Artista
+          Algorithms: Algoritmos
+          The Artist 2: O Artista 2
+          Functions: Funções
+          The Farmer: A Fazendeira
+          Conditionals: Condições
+          The Artist 3: O Artista 3
+          Song Writing: Escrevendo uma Canção
+          The Farmer 2: A Fazendeira 2
+          Abstraction: Abstração
+          The Artist 4: O Artista 4
+          Relay Programming: Programação Relay
+          The Farmer 3: A Fazendeira 3
+          The Internet: A Internet
+          The Artist 5: O Artista 5
+          Wrap-up: Resumo

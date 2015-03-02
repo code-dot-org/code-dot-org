@@ -6,7 +6,7 @@ bs-BA:
   csedweek_dates: Decembar 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Da li ste učitelj informatike? Pogledajte i ostale CSEdWeek resurse</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>je isprobao</h3><h2>Sat Kodiranja</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
@@ -116,7 +116,7 @@ bs-BA:
   studiobar_flappy_body: Napravi i podijeli svoju vlastitu Flappy igricu
   studiobar_teacher_title: Za nastavnike
   studiobar_teacher_body: Predstavite Studio Kodiranja u učionici
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: Sat Kodiranja
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
   studiobar_donate_title: Doniraj
   studiobar_donate_body: Sa svakim dolarom koji donirate, jedno dijete nauči
@@ -246,7 +246,7 @@ bs-BA:
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: Female
+  dashboard_students_female: Žensko
   dashboard_students_secret: Tajna
   dashboard_students_password: Šifra
   dashboard_students_username: 'Korisničko ime: %{student_username}'
@@ -273,7 +273,7 @@ bs-BA:
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_sequence: Sequence
+  dashboard_sequence: Niz
   dashboard_framework: Okvir
   dashboard_standards: Standardi
   dashboard_implementation_guide: Vodič za Implementaciju

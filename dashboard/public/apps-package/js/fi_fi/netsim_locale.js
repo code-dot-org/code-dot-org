@@ -154,4 +154,4 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"workspaceHeader":function(d){return "Internet Simulator"}};
+"workspaceHeader":function(d){return "Internet simulaattori"}};

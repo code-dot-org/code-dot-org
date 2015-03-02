@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "arvuta"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis."},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Eesmärk:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "See on sinu mäng! Jätka selle kallal töötamist või liigu edasi järgmise mõistatuse juurde!"},
-"yourExpression":function(d){return "Sinu avaldis:"}};
+"yourExpression":function(d){return "Sinu avaldis:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

@@ -378,6 +378,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -388,3 +395,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Infinity
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
+          description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep
+            programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred
+            K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
+          Introduction to Computer Science: Pengenalan kepada Sains komputer
+          The Maze: Simpang Siur
+          Computational Thinking: Pengiraan pemikiran
+          Graph Paper Programming: Pengaturcaraan kertas graf
+          The Artist: Pelukis
+          Algorithms: Algoritma
+          The Artist 2: Artis 2
+          Functions: Fungsi
+          The Farmer: Petani
+          Conditionals: Bersyarat
+          The Artist 3: Artis 3
+          Song Writing: Lagu
+          The Farmer 2: Petani 2
+          Abstraction: Abstraksi
+          The Artist 4: Artis 4
+          Relay Programming: Pengaturcaraan penyampai
+          The Farmer 3: Petani 3
+          The Internet: Internet
+          The Artist 5: Artis 5
+          Wrap-up: Wrap-up

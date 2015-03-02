@@ -378,6 +378,13 @@
           The Design Recipe: The Design Recipe
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -388,3 +395,31 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: אינסוף
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
+          description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
+            הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+          Introduction to Computer Science: היכרות למדעי המחשב
+          The Maze: המבוך
+          Computational Thinking: חשיבה חישובית
+          Graph Paper Programming: תכנות לנייר משבצות
+          The Artist: האמן
+          Algorithms: אלגוריתמים
+          The Artist 2: האומן 2
+          Functions: פונקציות
+          The Farmer: האיכר
+          Conditionals: תנאים
+          The Artist 3: האומן 3
+          Song Writing: כתיבת שיר
+          The Farmer 2: האיכר 2
+          Abstraction: הפשטה
+          The Artist 4: האמן 4
+          Relay Programming: הרץ פעולה בשנית
+          The Farmer 3: האיכר 3
+          The Internet: האינטרנט
+          The Artist 5: האומן 5
+          Wrap-up: סיום

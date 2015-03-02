@@ -339,6 +339,8 @@
       حذف شده است'
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
     new_password_hint: (اگر نمی خواهید تغییر بدهید خالی بگذارید)
     current_password_hint: (کلمه عبور برای ذخیره تغییرات لازم است)

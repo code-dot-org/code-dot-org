@@ -6,3 +6,9 @@
   - cols = @dsl_file ? @dsl_file.lines.max_by(&:length).length : 20
   - rows = @dsl_file ? @dsl_file.lines.count + 1 : 10
   = text_area_tag('level[dsl_text]', @dsl_file || (@level.dsl_default), rows: rows, cols: cols, style: 'width:500px')
+
+- if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
+  %p Markdown Editor
+  #epiceditor{style: 'height: 350px; border: 5px;'}
+  = stylesheet_link_tag    'editor/markdown_editor', media: 'all'
+  = javascript_include_tag 'editor/markdown_editor'

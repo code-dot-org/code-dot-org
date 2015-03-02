@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "계산"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "같은 계산결과가 나올 수 있도록 다시 배치하세요."},
 "extraTopBlocks":function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "목표값:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "여기서 직접 이야기를 만들 수 있습니다! 계속하거나 다음 퍼즐로 이동하세요!"},
-"yourExpression":function(d){return "계산식:"}};
+"yourExpression":function(d){return "계산식:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

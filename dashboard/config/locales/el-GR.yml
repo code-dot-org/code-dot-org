@@ -359,6 +359,8 @@
       του %{student_name}
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν

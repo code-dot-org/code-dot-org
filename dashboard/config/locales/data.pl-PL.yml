@@ -578,129 +578,6 @@
           pisaka". Baw się dobrze!'
         studio_ec_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-    levelbuilder:
-      frozen line:
-        instructions: Hi! jestem Elsa z Arendelle. Proszę pomóż mi utworzyć pojedynczą
-          linię.
-      frozen perpendicular:
-        instructions: Teraz zobaczmy, czy potrafimy utworzyć dwie linie leżące pod
-          kątem 90 stopni do siebie. Będziesz musiał użyć bloków Obróć (Turn) oraz
-          Przesuń (Move).
-      frozen square iterative:
-        instructions: Wygląda na to, że jesteśmy w połowie drogi do utworzenia kwadratu.
-          Umieść 4 linie tak, aby utworzyły kwadrat.
-      frozen square loop:
-        instructions: Cześć, jestem Anna z Arendelle! Zróbmy kwadrat używając bloku
-          Powtórz (Repeat), co pozwoli użyć mniej bloków. Ile razy (???) powinny wykonać
-          się bloki wewnątrz bloku pętli Powtórz (Repeat), żeby powstał kwadrat?
-      frozen square loop 3x:
-        instructions: Utwórzmy trzy kwadraty, obracając każdy z nich. Upewnij się
-          przed każdym nowym kwadratem, że obrót ma 120 stopni.
-      frozen square snowflake:
-        instructions: Czy potrafisz utworzyć śnieżynkę używając bloku Powtórz (Repeat),
-          aby narysować kwadrat 10 razy, oraz bloku Obróć (Turn), aby obrócić się
-          o 36 stopni pomiędzy każdym z kwadratów?
-      frozen cross:
-        instructions: Użyj bloku Powtórz (Repeat), aby utworzyć znak plus. Czy zauważyłeś,
-          że Elsa może poruszać się do przodu i do tyły?
-      frozen cross rotate:
-        instructions: Teraz spróbuj powtórzyć to 10 razy. O ile stopni musisz się
-          obrócić miedzy każdą z linii?
-      frozen cross rotate dense:
-        instructions: 'Powtórzmy to 90 razy! Ile razy 90 zmieści się w 360? Podpowiedź:
-          To naprawdę mała liczba.'
-      frozen diamond:
-        instructions: 'Utwórzmy równoległobok. To figura podobna do kwadratu, ale
-          ma inne kąty: 60 i 120 stopni zamiast 90 stopni.'
-      frozen diamond mini snowflake:
-        instructions: Czy wiesz, że każdy płatek śniegu ma inny kształt? Utwórzmy
-          nową śnieżynkę używając bloku Powtórz (Repeat), aby powtórzyć równoległobok
-          4 razy, obracając go za każdym razem o 90 stopni w prawo.
-      frozen diamond snowflake:
-        instructions: Teraz utwórzmy nową śnieżynkę, używając bloku powtórzenia, żeby
-          powtórzyć równoległobok 10 razy, obracając go za każdym razem o 36 stopni
-          w prawo.
-      frozen circle:
-        instructions: Okrąg jest specjalnym kształtem. Czy potrafisz znaleźć liczbę,
-          którą należy zastąpić pytajniki, aby narysować okrąg?
-      frozen circle function:
-        instructions: Użyj nowego bloku Utwórz okrąg (Create a circle), aby narysować
-          10 nakładających się na siebie okręgów. Nie zapomnij skoczyć do przodu pomiędzy
-          okręgami.
-      frozen circle function in circle:
-        instructions: Teraz utwórzmy 20 nakładających się na siebie okręgów, skręcając
-          o 18 stopni przy każdym okręgu.
-      frozen circle function with parameter:
-        instructions: Oto blok Utwórz okrąg (Create a circle), który potrafi tworzyć
-          okręgi o różnych rozmiarach. Czy potrafisz użyć go do utworzenia małego
-          okręgu o rozmiarze 5 i większego o rozmiarze 10?
-      frozen snowflower:
-        instructions: Wymyślne śnieżne wzory mogą być utworzone z bardzo prostych
-          kształtów. Czy potrafisz utworzyć wzór powtarzając 5 okręgów rozmiaru 5
-          i 5 okręgów rozmiaru 10?
-      frozen snowflake branch:
-        instructions: Spróbuj użyć bloku Utwórz ramię płatka śniegu (Create a snowflake
-          branch), aby utworzyć 3 ramiona, które zaczną wyglądać jak płatek śniegu.
-      frozen snowflake full:
-        instructions: Teraz powtórzymy to 8 razy, aby utworzyć piękny płatek śniegu!
-      frozen freeplay:
-        instructions: Oficjalnie stałeś się mistrzem artystą! Utwórz zimową krainę
-          cudów i podziel się nią z przyjaciółmi.
-      scrat 16:
-        instructions: Żołądź! Żołądź! Żołądź! Użyj bloku Jeśli (if), by sprowadzić
-          mnie tam przy użyciu jak najmniejszej liczby bloków.
-      scrat 17:
-        instructions: Ok, zróbmy to jeszcze raz dla poćwiczenia - nie różni się to
-          zbytnio, ale uważaj na ścianę!
-      scrat 18:
-        instructions: Bloki jeśli-w przeciwnym razie (if-else) sprawdzają warunek,
-          a następnie wykonują jedną rzecz LUB drugą. By sprowadzić mnie do żołędzia,
-          spróbuj użyć tego nowego bloku.
-      scrat 19:
-        instructions: Jeszcze jedno ćwiczenie z bloków jeśli-w przeciwnym razie. Czy
-          potrafisz użyć ich prawidłowo przy pierwszym podejściu?
-      scrat 20:
-        instructions: Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej
-          skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą
-          drogę bez względu na jej długość. Pospiesz się! Lód się topi!
-      Standalone_Artist_1:
-        instructions: Zapraszamy do Artysty! Najpierw, spróbujmy wykonać kwadrat używając
-          bloków "obróć w prawo" i "przesuń do przodu". Każdy bok powinien mieć długość
-          100 pikseli.
-      Standalone_Artist_2:
-        instructions: Narysuj ten diament z kontami 120 i 60 stopni i długościami
-          boków 150 pikseli.
-      Standalone_Artist_3:
-        instructions: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
-          i obrotami 60 stopni?
-      Standalone_Artist_4:
-        instructions: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
-          zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
-          6 razy?
-      Standalone_Artist_5:
-        instructions: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
-      Standalone_Artist_5.5:
-        instructions: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując pętlę.
-          Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat. Wskazówka:
-          Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować cały
-          czas tego samego diamentu.'
-      Standalone_Artist_6:
-        instructions: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór. O
-          ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
-          liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
-      Standalone_Artist_7:
-        instructions: 'Funkcja jest kolejnym narzędziem programowania, które pomaga
-          unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej za
-          każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
-          by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
-      Standalone_Artist_8:
-        instructions: Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy,
-          by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie
-          eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować,
-          by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?
-      Standalone_Artist_9:
-        instructions: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet pustą
-          funkcja, którą możesz wykorzystać, by robiła, co chcesz!
     video:
       name:
         maze_intro: Labirynt - wprowadzenie
@@ -760,6 +637,7 @@
         C2_relay_programming: Programowanie przekaźnika
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
+        C2_digital_footprint_v2: Twój cyfrowy ślad
         C3_maze_level_4: Pętle w labiryncie
         C3_artist_intro: Artysta - wprowadzenie
         C3_artist_functions: Funkcje Artysty

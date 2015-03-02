@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "kahoy"},
 "speed":function(d){return "bilis"},
 "startSetValue":function(d){return "start (rocket-height function)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "hinto"},
 "stopSpriteN":function(d){return "itigil ang aktor  "+appLocale.v(d,"spriteIndex")},
 "stopTooltip":function(d){return "Itigil ang ginagawa ng aktor."},

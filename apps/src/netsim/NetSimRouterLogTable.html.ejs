@@ -1,0 +1,38 @@
+<%
+var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = NetSimRouterNode.DnsMode;
+%>
+<div class="netsim_router_log">
+  <h1>Router Traffic</h1>
+  <table>
+    <thead>
+    <tr>
+      <th nowrap>To</th>
+      <th nowrap>From</th>
+      <th nowrap>Message</th>
+      <th nowrap>Bits</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+    // Sort: Most recent first
+    tableData.sort(function (a, b) {
+      return a.timestamp > b.timestamp ? -1 : 1;
+    });
+
+    // Create rows
+    tableData.forEach(function (logEntry) {
+      var rowClasses = [];
+    %>
+    <tr class="<%= rowClasses.join(' ') %>">
+      <td nowrap><%= logEntry.getToAddress() %></td>
+      <td nowrap><%= logEntry.getFromAddress() %></td>
+      <td><%= logEntry.getMessageAscii() %></td>
+      <td nowrap><%= logEntry.packet.length %></td>
+    </tr>
+    <%
+    });
+    %>
+    </tbody>
+  </table>
+</div>

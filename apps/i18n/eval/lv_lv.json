@@ -1,7 +1,10 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "aplis (rādiuss, stils, krāsa)",
   "displayBlockTitle": "rādīt",
   "ellipseBlockTitle": "elipse (platums, augstums, stils, krāsa)",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?",
   "overlayBlockTitle": "pārklājums (augša, apakša)",
   "placeImageBlockTitle": "novietot-attēls (x, y, attēls)",

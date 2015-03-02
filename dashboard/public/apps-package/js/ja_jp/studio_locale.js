@@ -397,6 +397,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWood":function(d){return "木"},
 "speed":function(d){return "スピード"},
 "startSetValue":function(d){return "start (rocket-height function)"},
+"startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
+"startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "ストップ"},
 "stopSpriteN":function(d){return "キャラクター "+appLocale.v(d,"spriteIndex")+" を止める"},
 "stopTooltip":function(d){return "キャラクターの動きを止めます。"},

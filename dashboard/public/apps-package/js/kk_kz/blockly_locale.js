@@ -381,3 +381,4 @@ Blockly.Msg.VARIABLES_SET_HELPURL = "http://code.google.com/p/blockly/wiki/Varia
 Blockly.Msg.VARIABLES_SET_TAIL = "to";
 Blockly.Msg.VARIABLES_SET_TITLE = "set";
 Blockly.Msg.VARIABLES_SET_TOOLTIP = "Sets this variable to be equal to the input.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";

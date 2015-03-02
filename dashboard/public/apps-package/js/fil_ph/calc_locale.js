@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "compute"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon."},
 "extraTopBlocks":function(d){return "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Goal:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Heto na ang inyong kuwento! Magpatuloy sa pagsagot dito, o lumipat sa susunod na palaisipan!"},
-"yourExpression":function(d){return "Ang iyong expression:"}};
+"yourExpression":function(d){return "Ang iyong expression:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

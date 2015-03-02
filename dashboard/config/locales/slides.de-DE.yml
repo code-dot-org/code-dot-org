@@ -425,9 +425,9 @@
           ist eine Aktion, die Elsa und Anna ausführen können.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Die weiße Fläche auf der rechten Seite ist unser Arbeitsbereich. Dort
+          werden wir unser Programm erstellen. Um die Eisfläche zu verschieben, brauchst
+          du den "Bewege vorwärts"-Baustein.
       8:
         image: notes/frozen1_8.jpg
         text: Here, the "Move Forward" block says, "move forward by 100 pixels." When

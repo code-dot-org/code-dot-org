@@ -241,6 +241,6 @@ SQL
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
-    @script = Script.find(params[:script_id]) if params[:script_id]
+    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
   end
 end

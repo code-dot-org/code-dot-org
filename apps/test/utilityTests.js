@@ -8,8 +8,158 @@ var utils = require(buildDir + '/js/utils');
 var requiredBlockUtils = require(buildDir + '/js/required_block_utils');
 var blockUtils = require(buildDir + '/js/block_utils');
 var assert = testUtils.assert;
+var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 var _ = require(buildDir + '/js/lodash');
 var mazeUtils = require(buildDir + '/js/maze/mazeUtils');
+
+describe("String.prototype.repeat", function () {
+  it ("returns a string that is n copies of the original string", function () {
+    assertEqual('aaa', 'a'.repeat(3));
+    assertEqual('abcabc', 'abc'.repeat(2));
+  });
+
+  it ("uses floor of count for non-integer counts", function () {
+    assertEqual('aaa', 'a'.repeat(3.1));
+    assertEqual('aaa', 'a'.repeat(3.9));
+  });
+
+  it ("returns empty string when given a zero count", function () {
+    assertEqual('', 'a'.repeat(0));
+  });
+
+  it ("returns empty string when repeating an empty string", function () {
+    assertEqual('', ''.repeat(20));
+  });
+
+  it ("throws RangeError when given a negative count", function () {
+    assertThrows(RangeError, function () {
+      'a'.repeat(-1);
+    });
+  });
+
+  it ("throws RangeError when given an infinity count", function () {
+    assertThrows(RangeError, function () {
+      'a'.repeat(Infinity);
+    });
+  });
+
+  // Note: Was going to text maximum output string length, but implementation
+  //       does not appear to be consistent across browsers.  Our polyfill
+  //       limits output of this method to 1 << 28 characters.
+});
+
+describe("Function.prototype.inherits", function () {
+  var A, B, C;
+
+  beforeEach(function () {
+    A = function () {
+      this.usedConstructorA = true;
+    };
+
+    B = function () {
+      this.usedConstructorB = true;
+      this.onConstructB();
+    };
+    B.inherits(A);
+    B.prototype.onConstructB = function () {};
+
+    C = function () {
+      this.usedConstructorC = true;
+      this.onConstructC();
+    };
+    C.inherits(B);
+    C.prototype.onConstructC = function () {};
+  });
+
+  it ("establishes a correct prototype chain", function () {
+    var a = new A();
+    assert(a instanceof A, "a instanceof A");
+    assert(!(a instanceof B), "!(a instanceof B)");
+    assert(!(a instanceof C), "!(a instanceof C)");
+
+    var b = new B();
+    assert(b instanceof A, "b instanceof A");
+    assert(b instanceof B, "b instanceof B");
+    assert(!(b instanceof C), "!(b instanceof C)");
+
+    var c = new C();
+    assert(c instanceof A, "c instanceof A");
+    assert(c instanceof B, "c instanceof B");
+    assert(c instanceof C, "c instanceof C");
+  });
+
+  it ("sets the object's constructor property correctly", function () {
+    // Object's constructor property should always end up set to the
+    // function that constructed it.
+    // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+    //       Reference/Global_Objects/Object/constructor
+    var a = new A();
+    assert(a.constructor === A, "a.constructor === A");
+
+    var b = new B();
+    assert(b.constructor === B, "b.constructor === B");
+
+    var c = new C();
+    assert(c.constructor === C, "c.constructor === C");
+  });
+
+  it ("calls only the current constructor by default", function () {
+    var a = new A();
+    assert(a.usedConstructorA === true, "a.usedConstructorA === true");
+
+    var b = new B();
+    assert(b.usedConstructorA !== true, "b.usedConstructorA !== true");
+    assert(b.usedConstructorB === true, "b.usedConstructorB === true");
+
+    var c = new C();
+    assert(c.usedConstructorA !== true, "c.usedConstructorA !== true");
+    assert(c.usedConstructorB !== true, "c.usedConstructorB !== true");
+    assert(c.usedConstructorC === true, "c.usedConstructorC === true");
+  });
+
+  it ("can chain constructor calls", function () {
+    B.prototype.onConstructB = function () {
+      A.call(this);
+    };
+
+    C.prototype.onConstructC = function () {
+      B.call(this);
+    };
+
+    var b = new B();
+    assert(b.usedConstructorA === true, "b.usedConstructorA === true");
+    assert(b.usedConstructorB === true, "b.usedConstructorB === true");
+
+    var c = new C();
+    assert(c.usedConstructorA === true, "c.usedConstructorA === true");
+    assert(c.usedConstructorB === true, "c.usedConstructorB === true");
+    assert(c.usedConstructorC === true, "c.usedConstructorC === true");
+  });
+
+  it ("exposes superPrototype for chaining methods", function () {
+    A.prototype.noise = function () {
+      return "fizz";
+    };
+
+    B.prototype.noise = function () {
+      return B.superPrototype.noise.call(this) + "bang";
+    };
+
+    C.prototype.noise = function () {
+      return C.superPrototype.noise.call(this) + "pop";
+    };
+
+    var a = new A();
+    assert(a.noise() === "fizz", "a.noise() === 'fizz'");
+
+    var b = new B();
+    assert(b.noise() === "fizzbang", "b.noise() === 'fizzbang'");
+
+    var c = new C();
+    assert(c.noise() === "fizzbangpop", "c.noise() === 'fizzbangpop'");
+  });
+});
 
 describe("utils", function() {
   it("can debounce a repeated function call", function() {

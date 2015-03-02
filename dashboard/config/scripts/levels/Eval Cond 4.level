@@ -28,14 +28,14 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false" movable="false" editable="false">
               <mutation name="three images">
-                <arg name="image 1" type="image"/>
-                <arg name="image 2" type="image"/>
-                <arg name="image 3" type="image"/>
+                <arg name="image 1" type="Image"/>
+                <arg name="image 2" type="Image"/>
+                <arg name="image 3" type="Image"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string" movable="false" editable="false">
@@ -47,7 +47,7 @@
               <functional_input name="ARG1">
                 <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string" movable="false" editable="false">
@@ -59,7 +59,7 @@
               <functional_input name="ARG2">
                 <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string" movable="false" editable="false">
@@ -75,7 +75,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
               <mutation name="green shape">
-                <arg name="shape" type="string"/>
+                <arg name="shape" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -112,7 +112,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
               <mutation name="green shape">
-                <arg name="shape" type="string"/>
+                <arg name="shape" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -143,9 +143,9 @@
         </block>
         <block type="functional_definition" inline="false" movable="false">
           <mutation>
-            <arg name="shape" type="string"/>
+            <arg name="shape" type="String"/>
             <description>Given a string "shape," return a matching green shape.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green shape</title>
           <functional_input name="STACK">
@@ -268,11 +268,11 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="image 1" type="image"/>
-            <arg name="image 2" type="image"/>
-            <arg name="image 3" type="image"/>
+            <arg name="image 1" type="Image"/>
+            <arg name="image 2" type="Image"/>
+            <arg name="image 3" type="Image"/>
             <description>Return three images in a row</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">three images</title>
           <functional_input name="STACK">
@@ -294,7 +294,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">image 1</title>
                         </block>
@@ -316,7 +316,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">image 2</title>
                         </block>
@@ -340,7 +340,7 @@
                   <functional_input name="IMAGE">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>image</outputtype>
+                        <outputtype>Image</outputtype>
                       </mutation>
                       <title name="VAR">image 3</title>
                     </block>
@@ -379,7 +379,7 @@
         <category name="Functions" custom="PROCEDURE">
           <block type="functional_call" inline="false">
             <mutation name="green shape">
-              <arg name="shape" type="string"/>
+              <arg name="shape" type="String"/>
             </mutation>
           </block>
         </category>
@@ -389,9 +389,9 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="shape" type="string"/>
+            <arg name="shape" type="String"/>
             <description>Given a string "shape," return a matching green shape.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green shape</title>
           <functional_input name="STACK">
@@ -402,7 +402,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">shape</title>
                     </block>
@@ -438,7 +438,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">shape</title>
                     </block>
@@ -474,7 +474,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">shape</title>
                     </block>
@@ -510,7 +510,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>string</outputtype>
+                        <outputtype>String</outputtype>
                       </mutation>
                       <title name="VAR">shape</title>
                     </block>
@@ -572,14 +572,14 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false" movable="false" editable="false">
               <mutation name="three images">
-                <arg name="image 1" type="image"/>
-                <arg name="image 2" type="image"/>
-                <arg name="image 3" type="image"/>
+                <arg name="image 1" type="Image"/>
+                <arg name="image 2" type="Image"/>
+                <arg name="image 3" type="Image"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_call" inline="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string">
@@ -591,7 +591,7 @@
               <functional_input name="ARG1">
                 <block type="functional_call" inline="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string">
@@ -603,7 +603,7 @@
               <functional_input name="ARG2">
                 <block type="functional_call" inline="false">
                   <mutation name="green shape">
-                    <arg name="shape" type="string"/>
+                    <arg name="shape" type="String"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_string">
@@ -617,11 +617,11 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="image 1" type="image"/>
-            <arg name="image 2" type="image"/>
-            <arg name="image 3" type="image"/>
+            <arg name="image 1" type="Image"/>
+            <arg name="image 2" type="Image"/>
+            <arg name="image 3" type="Image"/>
             <description>Return three images in a row</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">three images</title>
           <functional_input name="STACK">
@@ -643,7 +643,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">image 1</title>
                         </block>
@@ -665,7 +665,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">image 2</title>
                         </block>
@@ -689,7 +689,7 @@
                   <functional_input name="IMAGE">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>image</outputtype>
+                        <outputtype>Image</outputtype>
                       </mutation>
                       <title name="VAR">image 3</title>
                     </block>

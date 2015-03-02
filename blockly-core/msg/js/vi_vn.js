@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "màu đỏ";
 Blockly.Msg.COLOUR_RGB_TITLE = "tô màu với";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Tạo một màu theo lượng màu đỏ, xanh lá cây, xanh da trời được chỉ định. Tất cả các giá trị phải nằm trong khoảng từ 0 tới 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "thoát khỏi vòng lặp";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "sang lần lặp tiếp theo";

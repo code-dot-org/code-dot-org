@@ -56,7 +56,7 @@ social:
   -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
   -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
 -else
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."}
+  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:twitter_teach_cs)}
 
 -twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
 
@@ -143,7 +143,8 @@ social:
       =I18n.t :studiobar_title
     #body.mobile-pad-left64
       - studiobar_items = [ {id: "elementary", url: CDO.studio_url}, {id: "frozen", url: CDO.studio_url('/s/frozen/reset')}, {id: "teacher", url: "/educate/k5"}]
-      - if request.language == "en"
+      - # Temporarily disable shop by adding the "false &&" below
+      - if false && request.language == "en"
         - studiobar_items << {id: "shop", url: "/shop"}
       - else
         - studiobar_items << {id: "flappy", url: "/flappy"}
@@ -166,7 +167,8 @@ social:
               .body=I18n.t "studiobar_#{item[:id]}_body"
 
   -# A special shop block for English mobile phone (<= 600px width) viewers
-  - if request.language == "en"
+  -# Temporarily disable shop by adding the "false &&" below
+  - if false && request.language == "en"
     %br/
     .studiobar.feature-codeorg.phone-feature{style: "width:100%"}
       %div{style: "display: table; margin: 0 auto;"}

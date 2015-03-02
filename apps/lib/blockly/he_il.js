@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "אדום";
 Blockly.Msg.COLOUR_RGB_TITLE = "צבע עם";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "יוצר צבע עם הכמות המצוינת של אדום, ירוק וכחול.  כל הערכים חייבים להיות בין 0 ל- 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "צא מהלולאה";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "המשך עם האיטרציה הבאה של הלולאה";

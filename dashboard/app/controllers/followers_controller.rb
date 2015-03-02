@@ -88,14 +88,20 @@ class FollowersController < ApplicationController
   # join a section as a new student
   def student_register
     @section = Section.find_by_code(params[:section_code])
+
+    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+
     student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+    if user_type == User::TYPE_TEACHER
+      student_params.merge(params[:user].permit([:school, :full_address]))
+    end
 
     @user = User.new(student_params)
 
     if current_user
       @user.errors.add(:username, "Please signout before proceeding")
     else
-      @user.user_type = User::TYPE_STUDENT
+      @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
           Follower.create!(user_id: @section.user_id, student_user: @user, section: @section)

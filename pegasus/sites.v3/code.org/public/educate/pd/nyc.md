@@ -6,11 +6,6 @@ nav: pd_nav
 
 # Professional Development - New York City
 
-- [I'm attending High School PD...](#hs)
-- [I'm attending Administrator / Counselor PD...](#admin)
-
-<a id="hs"></a>
-
 ## High School Professional Development
 
 For information specific to the NYC program, please visit: [http://izonenyc.org/initiatives/blended-learning-institute](http://izonenyc.org/initiatives/blended-learning-institute "http://izonenyc.org/initiatives/blended-learning-institute")	
@@ -44,7 +39,7 @@ Microsoft
 <br/>
 Music Box 5411 & Winter Garden 5412
 <br/>
-1 Times Square
+11 Times Square
 <br/>
 New York, NY, 10036
 
@@ -62,23 +57,6 @@ Laptop
 Option 1: 7/6/2015 - 7/10/2015 (afternoons only)
 <br/>
 Option 2: 7/8/2015 - 7/10/2015 (full days)
-
-[**Back to the top**](#top)
-
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [izonenyc.org](http://izonenyc.org/initiatives/blended-learning-institute/#overview) for more information.

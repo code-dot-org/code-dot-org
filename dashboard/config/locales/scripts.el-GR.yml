@@ -400,6 +400,13 @@
           The Design Recipe: Η Συνταγή του Σχεδιασμού
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -410,3 +417,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Άπειρο
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
+          description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
+            και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
+            τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
+          Introduction to Computer Science: Εισαγωγή στην Επιστήμη των Υπολογιστών
+          The Maze: Ο Λαβύρινθος
+          Computational Thinking: Αλγοριθμική Σκέψη
+          Graph Paper Programming: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+          The Artist: Ο Καλλιτέχνης
+          Algorithms: Αλγόριθμοι
+          The Artist 2: Ο Καλλιτέχνης 2
+          Functions: Συναρτήσεις
+          The Farmer: Ο Αγρότης
+          Conditionals: Έλεγχοι
+          The Artist 3: Ο Καλλιτέχνης 3
+          Song Writing: Συγγραφή τραγουδιού
+          The Farmer 2: Ο Γεωργός 2
+          Abstraction: Αφαίρεση
+          The Artist 4: Ο Καλλιτέχνης 4
+          Relay Programming: Προγραμματισμός Ρελέ
+          The Farmer 3: Ο Γεωργός 3
+          The Internet: Το Διαδίκτυο
+          The Artist 5: Ο Καλλιτέχνης 5
+          Wrap-up: συνοψίζω

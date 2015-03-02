@@ -154,9 +154,12 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "sirkel (radius, stil, farge)"},
 "displayBlockTitle":function(d){return "vis"},
 "ellipseBlockTitle":function(d){return "ellipse (breidd, høyde, stil, farge)"},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?"},
 "overlayBlockTitle":function(d){return "overlegg (topp, botn)"},
 "placeImageBlockTitle":function(d){return "plasser-bilde(x,y,bilde)"},

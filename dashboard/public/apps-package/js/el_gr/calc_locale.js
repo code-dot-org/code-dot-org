@@ -155,9 +155,13 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "compute":function(d){return "υπολόγισε"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Στόχος:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Εδώ είναι η δική σας ιστορία! Συνεχίστε να εργάζεστε σε αυτήν, ή προχωρήστε στον επόμενο γρίφο!"},
-"yourExpression":function(d){return "Η έκφρασή σας:"}};
+"yourExpression":function(d){return "Η έκφρασή σας:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."}};

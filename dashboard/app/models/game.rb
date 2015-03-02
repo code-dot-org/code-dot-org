@@ -41,6 +41,10 @@ class Game < ActiveRecord::Base
     @@game_eval ||= find_by_name("Eval")
   end
 
+  def self.applab
+    @@game_applab ||= find_by_name("Applab")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -117,6 +121,7 @@ class Game < ActiveRecord::Base
         ContractMatch
         Applab:applab
         NetSim:netsim
+        External:external
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

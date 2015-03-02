@@ -382,6 +382,13 @@
           The Design Recipe: Das Design-Rezept
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet-Simulator
           description_short: ''
@@ -392,3 +399,33 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Unendlichkeit
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Einführung in die Informatik (15-25 Stunden)
+          description: Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der
+            Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch
+            in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß
+            zu lernen.
+          Introduction to Computer Science: Einführung in die Informatik
+          The Maze: Das Labyrinth
+          Computational Thinking: Computerorientiertes Denken
+          Graph Paper Programming: Programmieren auf Millimeterpapier
+          The Artist: Der Künstler
+          Algorithms: Algorithmen
+          The Artist 2: Der Künstler 2
+          Functions: Funktionen
+          The Farmer: Der Bauer
+          Conditionals: Bedingungen
+          The Artist 3: Der Künstler 3
+          Song Writing: Lieder schreiben
+          The Farmer 2: Der Bauer 2
+          Abstraction: Abstraktion
+          The Artist 4: Der Künstler 4
+          Relay Programming: Relais-Programmierung
+          The Farmer 3: Der Bauer 3
+          The Internet: das Internet
+          The Artist 5: Der Künstler 5
+          Wrap-up: Zusammenfassung

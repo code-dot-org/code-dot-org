@@ -316,6 +316,8 @@
     student_teacher_disassociated: '%{teacher_name} が  %{student_name}の教師として削除されています'
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 確認手順の再送信
     new_password_hint: （変更したくない場合は空白のままにしてください）
     current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)

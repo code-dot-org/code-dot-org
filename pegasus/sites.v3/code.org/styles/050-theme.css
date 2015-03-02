@@ -27,6 +27,10 @@ body {
   margin: 0 0 30px 0;
 }
 
+.pageheader_translucent {
+  background-color: rgba(0, 178, 192, 0.5) ! important;
+}
+
 #pageheader .content {
   width: 970px;
   margin: 0 auto; 
@@ -63,6 +67,8 @@ body {
   font-size: 18px;
   margin: 0.9375em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
+  color: white;
+  text-decoration: none;
 }
 
 .headerlink:link,
@@ -74,7 +80,11 @@ body {
 .headerlink:hover,
 .headerlink:active {
   color: white;
-  border-bottom: solid 4px rgb(255, 138, 0);
+  border-bottom: solid 2px rgb(255, 128, 0);
+}
+
+.learnoption:hover {
+  text-decoration: underline;
 }
 
 #pagefooter {
@@ -213,7 +223,7 @@ body {
 }
 
 .mobile-headers #pageheader #left {
-  margin: -8px 0 0 10px;
+  margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;

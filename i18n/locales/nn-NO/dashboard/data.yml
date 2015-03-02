@@ -328,77 +328,6 @@
         turtle_ec_1_2: 'Nå, tegn et kvadrat. MERK: bruk din favorittfarge ved å velge den i den nye «pennFarge» blokken.'
         turtle_ec_1_10: 'Du klarte det! Nå, tegn akkurat det du vil. Noen morsome ideer: En strekmann, et snøflak eller en spiral. Prøv også den nye «pennStørrelse» blokken. Ha det gøy!'
         studio_ec_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler.
-    levelbuilder:
-      frozen line:
-        instructions: Hei! Jeg Elsa av Arendelle. Hjelp meg å lage en enkelt linje.
-      frozen perpendicular:
-        instructions: 'La oss nå se om vi kan lage to linjer som står i en 90-graders vinkel til hverandre. Du må bruke blokken "Snu" i tillegg til "Flytt"-blokken.'
-      frozen square iterative:
-        instructions: Det virker som vi er halvveis til å lage et kvadrat. La oss sette 4 linjer sammen for å lage et kvadrat.
-      frozen square loop:
-        instructions: 'Hei, jeg Anna av Arendelle! La oss lage et kvadrat med "Gjenta"-blokken. Da blir det færre blokker. Hvor mange ganger (???) skal blokken gjenta blokkene innenfor for å lage et kvadrat?'
-      frozen square loop 3x:
-        instructions: La oss lage tre kvadrat, og snu mellom hver kvadrat. Husk å snu 120 grader før hver ny kvadrat.
-      frozen square snowflake:
-        instructions: 'Kan du lage et snøfnugg ved å bruke "Gjenta"-blokken til å lage kvadrat 10 ganger og "Snu"-blokken til å snu 36 grader mellom hver kvadrat?'
-      frozen cross:
-        instructions: 'Bruk "Gjenta"-blokken for å lage et plusstegn. La du merke til at Elsa kan gå både fremover og bakover?'
-      frozen cross rotate:
-        instructions: Prøv nå å gjenta det 10 ganger. Hvor mange grader må du snu mellom hver linje?
-      frozen cross rotate dense:
-        instructions: 'La oss gjenta det 90 ganger! Hvor mange ganger går 90 opp i 360? Hint: Det er et ganske lite tall.'
-      frozen diamond:
-        instructions: 'La oss lage et parallellogram. Det er akkurat som et kvadrat, men har forskjellige vinkler: 60 og 120 graders vinkler i stedet for 90 graders vinkler.'
-      frozen diamond mini snowflake:
-        instructions: 'Visste du at hvert snøfnugg har ulik form? La oss lage et nytt snøfnugg ved å la "Gjenta"-blokken gjenta et parallellogram 4 ganger, og snu 90 grader mellom hvert parallellogram.'
-      frozen diamond snowflake:
-        instructions: 'La oss nå lage et nytt snøfnugg ved å bruke "Gjenta"-blokken til å gjenta et parallellogram 10 ganger, og snu 36 grader mellom hver av dem.'
-      frozen circle:
-        instructions: En sirkel er en spesiell form. Kan du finne ut hvilket tall som skal erstatte spørsmålstegnet for å tegne en sirkel?
-      frozen circle function:
-        instructions: 'Bruk den nye "Lag en sirkel"-blokken for å lage 10 overlappende sirkler. Ikke glem å hoppe fremover mellom hver sirkel.'
-      frozen circle function in circle:
-        instructions: La oss nå lage 20 overlappende sirkler, og snu 18 grader mellom hver sirkel.
-      frozen circle function with parameter:
-        instructions: 'Her er en "Lag en sirkel"-blokk som kan lage sirkler med forskjellige størrelser. Kan du bruke denne til å lage en liten sirkel med størrelse 5 og en større sirkel med størrelse 10?'
-      frozen snowflower:
-        instructions: Innviklede snø-mønstre kan lages med svært enkle figurer. Kan du lage et mønster ved å gjenta 5 sirkler med størrelse 5 og 5 sirkler med størrelse 10?
-      frozen snowflake branch:
-        instructions: 'Prøv å bruke "Lag et snøfnugg grein"-blokken til å lage tre greiner, som begynner å likne et snøfnugg.'
-      frozen snowflake full:
-        instructions: La oss nå gjenta det 8 ganger for å lage et vakkert snøfnugg!
-      frozen freeplay:
-        instructions: Du er nå offisiell kunst-mester. Lag et fortryllende vinterlandskap og del det med vennene dine.
-      scrat 16:
-        instructions: 'Nøtt! Nøtt! Nøtt! Bruk en "if"-blokk for å meg dit ved bruk av færrest blokker.'
-      scrat 17:
-        instructions: 'Ok, la oss gjøre det igjen for å få øvelse - dette er ikke veldig annerledes, men se opp for veggen!'
-      scrat 18:
-        instructions: '"If-else"-blokkene sjekker en betingelse og gjør deretter en ting ELLER en annen. Prøv å bruke denne nye blokken for å få meg til nøtten.'
-      scrat 19:
-        instructions: 'En siste øvelse med "hvis-ellers"-blokken. Klarer du å gjøre det riktig på første forsøk?'
-      scrat 20:
-        instructions: Kan du legge til kun 3 blokker for å hjelpe meg med å løse en mer kompleks labyrint? Hvis du gjør det riktig kan jeg gå en svingete bane uansett lengde. Skynd deg! Isen smelter!
-      Standalone_Artist_1:
-        instructions: Velkomen til Artist! Først og fremst, la oss prøve å lage en enkel firkant ved å bruke blokken som snur til høyre og blokken som flytter framover. Hver side burde være 100 piksler lang.
-      Standalone_Artist_2:
-        instructions: Tegn denne diamanten med 120 og 60 graders vinkler og 150 piksler lange sider.
-      Standalone_Artist_3:
-        instructions: Kan du tegne denne sekskanten med 100 piksel-sider og 60 graders kanter?
-      Standalone_Artist_4:
-        instructions: Nå har du fått en ny blokk å spille med, løkken. Denne vil gjenta et sett med kommandoer. Hva skjer hvis du setter disse kommandoene i en løkke som går 6 ganger?
-      Standalone_Artist_5:
-        instructions: Hvor mange ganger trenger du å kjøre en løkke på denne diamanten for å tegne blomsten?
-      Standalone_Artist_5.5:
-        instructions: 'Legg merke til hvordan vi har forenklet diamantkoden ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
-      Standalone_Artist_6:
-        instructions: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i en sirkel på antall ganger du skal kjøre løkka.'
-      Standalone_Artist_7:
-        instructions: 'En funksjon er en annet programmeringsverktøy for å hjelpe deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du kan bruke den hver gang du vil tegne en blomst. Bruk dette og nye hoppe-blokken til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
-      Standalone_Artist_8:
-        instructions: 'Her er en funksjon kalt "Tegn en figur" som vi har programmert for å tegne sekskantene. Kjøre koden for å se hva den gjør og deretter eksperimenterer du med funksjonen for å se hva som skjer. Kan du få den til å tegne et mønster av firkanter, trekanter eller åttekanter?'
-      Standalone_Artist_9:
-        instructions: Gå videre og lag det bildet du ønsker! Du har til og med en tom funksjon som kan du få til å gjøre hva du vil!
     video:
       name:
         maze_intro: Labyrint intro
@@ -458,6 +387,7 @@
         C2_relay_programming: Relé-programmering
         C2_paper_airplanes: Papir fly
         C2_digital_footprint: Dine digitale fotavtrykk
+        C2_digital_footprint_v2: Dine digitale fotavtrykk
         C3_maze_level_4: Labyrint løkker
         C3_artist_intro: Kunstner intro
         C3_artist_functions: Kunstner funksjoner

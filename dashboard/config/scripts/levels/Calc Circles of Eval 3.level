@@ -13,7 +13,9 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Complete the Evaluation Blocks to match this statement."
+    "instructions": "Complete the Evaluation Blocks to match this statement.",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\":\"Calc Circles of Eval 3_callout1\",\"callout_text\":\"Replace the ???'s with the correct number to complete this puzzle\",\"element_id\":\"#callout_here\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":94,\"y\":18},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
   }
 }]]></config>
   <blocks>
@@ -25,7 +27,7 @@
               <functional_input name="ARG1">
                 <block type="functional_plus" inline="false">
                   <functional_input name="ARG1">
-                    <block type="functional_math_number">
+                    <block type="functional_math_number" id="callout_here">
                       <title name="NUM">???</title>
                     </block>
                   </functional_input>

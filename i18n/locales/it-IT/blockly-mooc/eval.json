@@ -1,7 +1,10 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"cerchio (raggio, stile, colore)",
   "displayBlockTitle":"visualizza",
   "ellipseBlockTitle":"ellisse (larghezza, altezza, stile, colore)",
+  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?",
   "overlayBlockTitle":"metti-sopra (superiore, inferiore)",
   "placeImageBlockTitle":"posiziona-immagine (x, y, immagine)",

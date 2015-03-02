@@ -18,17 +18,11 @@ Milestone Complete!
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice. 
 
-#### Save The Dates:
-2/7/2015
-<br />
+#### Save The Date:
 4/11/2015
 
-#### February 7th Location: ####
-IBM
-<br />
-1 Roger Street, Room TBD
-<br />
-Cambridge, MA 02142
+#### April 11th Location: ####
+TBD
 
 8:30am - 3:30pm
 <br />

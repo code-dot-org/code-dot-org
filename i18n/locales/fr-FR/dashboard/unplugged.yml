@@ -3,7 +3,7 @@ fr:
     unplugged:
       Unplug1:
         title: "Introduction à l'informatique"
-        desc: "Ici, vous allez apprendre en quoi consiste l'informatique et nous allons vous expliquer se que fait un ingénieur en informatique. Cette leçon va également donner l'opportunité aux étudiants, de se mettre à la place d'un informaticien. A la fin de cette activité, chaque étudiant devra savoir réutiliser ce qu'il ou elle a appris dans ce cours. Etant difficile, vous serez sûrement tenté de passer l'apprentissage du vocabulaire ci-contre aux enfants, mais en leurs présentant celui-ci de manière ludique et amusante, ce sera beaucoup plus productif que d'attendre des possibilités plus avancées."
+        desc: "Ici, vous allez apprendre en quoi consiste l'informatique et nous allons vous expliquer ce que fait un développeur informatique. Cette leçon va également donner l'opportunité aux étudiants, de se mettre à la place d'un informaticien. A la fin de cette activité, chaque étudiant aura un souvenir de ce qu'il ou elle a appris dans ce cours. Vous serez peut-être tenté de sauter l'apprentissage aux enfants du vocabulaire associé à la leçon qui va suivre, mais leur présenter celui-ci de manière ludique et amusante sera beaucoup plus productif que d'attendre des leçons plus avancées."
         pdfs:
           - unplug1
         video: Unplug1
@@ -72,7 +72,7 @@ fr:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Cartes joyeuses
         desc: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une commande simple."
         video: C1_happy_maps_unplugged
       MoveIt:
@@ -131,7 +131,7 @@ fr:
         desc: 'Les élèves utilisent les étapes de la "pensée informatique" (décomposition, recherche de motifs, abstraction, algorithme) pour découvrir comment jouer à un jeu livré sans instructions.'
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Vitraux fonctionnels
         desc: Les élèves créent un algorithme avec des variables et des fonctions (portions de code que vous voulez utiliser encore et encore) pour créer des attrapes-soleil en utilisant des ficelles et des perles.
         video: C3_functional_suncatchers
       SongwritingParameters:

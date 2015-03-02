@@ -9,11 +9,12 @@
         Eval Contracts 1 B: Évaluer Contrat 1 B
         Write a contract for the star function: Écrire un contrat pour la fonction
           étoile
-        Eval Contracts 1.solution_blocks, 200: Eval Contracts 1.solution_blocks, 200
-        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contract
-          star|image|Domain1:Number|Domain2:string|Domain3:string
-        Eval Contracts 1.solution_blocks: Eval Contracts 1.solution_blocks
-        Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
+        Eval Contracts 1.solution_blocks, 200: Evaluer contrats 1.Solution blocs.
+          200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contrat
+          étoile|image|Domaie1:Nombre|Domaine2:chaine|Domaine3:chaine
+        Eval Contracts 1.solution_blocks: Evaluer de contrats 1.Solution blocs
+        Contract star|image|radius:Number|style:string|color:string: Contrat étoile|image|rayon:Nombre|style:chaine|couleur:chaine
         star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
@@ -23,7 +24,7 @@
         Eval Contracts 1 BX: Eval Contracts 1 BX
         Eval Contracts 1 B!: Eval Contracts 1 B!
         Eval Contracts 1 B!!: Eval Contracts 1 B!!
-        Star Contract: Star Contract
+        Star Contract: Contrat étoile
       Eval Contracts 2 B:
         Eval Contracts 2 B: Évaluer Contrat 2 B
         Write a contract for the rotate function: Écrire un contrat pour la fonction
@@ -32,7 +33,7 @@
           300
         rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
         rotate|image|image:image|degrees:Number: rotate|image|image:image|degrees:Number
-        Rotate Contract: Rotate Contract
+        Rotate Contract: Contrat rotation
       Eval Contracts 3 B:
         Eval Contracts 3 B: Évaluer Contrat 3 B
         Write a contract for the text function: Écrire un contrat pour la fonction
@@ -41,7 +42,7 @@
           300
         text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
         text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
-        Text Contract: Text Contract
+        Text Contract: Contrat texte
       Eval Contracts 4 B:
         Eval Contracts 4 B: Évaluer Contrat 4 B
         Write a contract for the scale function: Écrire un contrat pour la fonction
@@ -49,7 +50,7 @@
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
           300
         scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
-        Scale Contract: Scale Contract
+        Scale Contract: Contrat échelle
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
         0: '? Write the contract for function called "wide-rect" which creates a rectangle
@@ -105,13 +106,15 @@
         Write a contract for a big red that is 100 pixels in size: Write a contract
           for a big red that is 100 pixels in size
         Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle: Big Triangle
       Creating Contracts From Examples 2:
         Creating Contracts From Examples 2: Creating Contracts From Examples 2
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
-        EXAMPLE 2.solution_blocks, 300: EXAMPLE 2.solution_blocks, 300
+        Write a contract for a purple square that is 15 pixels in size.: Écrire un
+          contrat pour un carré violet de 15 pixels de côté.
+        EXAMPLE 2.solution_blocks, 300: EXEMPLE 2.solution_blocs, 300
         Square|image|color:string|size:Number: Square|image|color:string|size:Number
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        Square Contract: Square Contract
       Creating Contracts From Examples 3:
         Creating Contracts From Examples 3: Creating Contracts From Examples 3
         Try using the "text" function to write this red text at size 40.: Try using
@@ -123,32 +126,62 @@
         Example 3.solution_block, 300: Example 3.solution_block, 300
       Rocket Contract 1:
         Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
+        'Write a contract for the following question:': 'Ecrire un contrat pour les
+          questions suivantes :'
+        0: '? Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction
+          appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que
+          la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
+        1: ': Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction
+          appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que
+          la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
+        rocket-height|Number|seconds:Number: hauteur-fusée|Nombre|secondes:Nombre
+        ? A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
+          that time.
+        : A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+          that time.
       Creating Contracts From Examples 3A:
         Creating Contracts From Examples 3: Creating Contracts From Examples 3
-        Banner Function block: Banner Function block
+        Banner Function block: Bloc de la fonction bannière
         Example 3.solution_blocks, 300: Example 3.solution_blocks, 300
         text|image|color:string|text:string|size:number: text|image|color:string|text:string|size:number
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        text|image|text:string: text|image|text:string
-        banner|text:string: banner|text:string
-        banner:image|text:string: banner:image|text:string
-        banner|image|text:string: banner|image|text:string
+        Creating Contracts From Examples 3A: Création des contrats de l'exemple 3A
+        Examples 3.solution_blocks, 300: Exemples 3.solution_blocs, 300
+        text|image|text:string: texte|image|texte:Chaine
+        banner|text:string: Bannière|Texte:Chaine
+        banner:image|text:string: Bannière:image|Texte:Chaine
+        banner|image|text:string: Bannière|image|Texte:Chaine
+        Banner Contract: Banner Contract
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
+        Creating Contracts From Examples 4: Création des contrats de l'exemple 4
         Try using the "text" function to write this red text at size 40.: Try using
           the "text" function to write this red text at size 40.
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|circle:image: shrink|image|circle:image
-        shrink|image|image:image: shrink|image|image:image
+        Examples 4.solution_blocks, 300: Exemples 4.solution_blocs, 300
+        shrink|image|circle:image: réduire|image|cercle:image
+        shrink|image|image:image: Shrink|image|image:image
+        Try using the "shrink" function.: Try using the "shrink" function.
+        Shrink Contract: Shrink Contract
+      Eval Contracts B:
+        Star Contract: Contrat étoile
+        Write a contract for the star function: Écrire un contrat pour la fonction
+          étoile
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+      Eval Contracts D:
+        Rotate Contract: Contrat rotation
+        Write a contract for the rotate function: Écrire un contrat pour la fonction
+          rotation
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+          300
+        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+      Eval Contracts F:
+        Text Contract: Contrat texte
+        Write a contract for the text function: Écrire un contrat pour la fonction
+          texte
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+          300
+        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string

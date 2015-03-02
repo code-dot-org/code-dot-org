@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
-require 'sequel'
-require_relative '../pegasus/src/env'
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require_relative '../pegasus/helpers/professional_development_workshop_helpers'
-
+require pegasus_dir 'helpers/professional_development_workshop_helpers'
 require 'cdo/csv'
 require 'cdo/activity_constants'
 

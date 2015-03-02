@@ -1,0 +1,11 @@
+name 'PDK5 Teacher Dashboard'
+title 'Teacher Dashboard'
+
+question 'Are you ready to move on?'
+right 'Yes'
+
+markdown <<MARKDOWN
+The teacher dashboard in Code Studio allows teachers to create accounts for their students, reset their students' passwords, and see the progress their students' are making on all of Code.org's courses. The video below gives a tour of how to use all the features in the teacher dashboard. 
+
+<iframe width="426" height="260" src="https://www.youtube.com/embed/E9Psq6wBBQA" frameborder="0" allowfullscreen></iframe>
+MARKDOWN

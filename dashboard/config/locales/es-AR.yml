@@ -352,6 +352,8 @@
       de %{student_name}'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({135:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({180:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":129,"./levels":134,"./skins":137,"./studio":138}],138:[function(require,module,exports){
+},{"../appMain":5,"./blocks":172,"./levels":179,"./skins":184,"./studio":185}],185:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -39,9 +39,14 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
+var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
 if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
@@ -88,15 +93,6 @@ var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
-
-var ProjectileClassNames = [
-  'blue_fireball',
-  'purple_fireball',
-  'red_fireball',
-  'purple_hearts',
-  'red_hearts',
-  'yellow_hearts',
-];
 
 var EdgeClassNames = [
   'top',
@@ -172,6 +168,18 @@ function loadLevel() {
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
   Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
 
+  switch (level.customGameType) {
+    case 'Big Game':
+      Studio.customLogic = new BigGameLogic(Studio);
+      break;
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
+      break;
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
+      break;
+  }
+
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
   } else {
@@ -242,6 +250,16 @@ var drawMap = function () {
     svg.appendChild(tile);
   }
 
+  if (level.coordinateGridBackground) {
+    studioApp.createCoordinateGridBackground({
+      svg: 'svgStudio',
+      origin: 0,
+      firstLabel: 100,
+      lastLabel: 300,
+      increment: 100
+    });
+  }
+
   if (Studio.spriteStart_) {
     for (i = 0; i < Studio.spriteCount; i++) {
       // Sprite clipPath element
@@ -258,6 +276,19 @@ var drawMap = function () {
       spriteIcon.setAttribute('id', 'sprite' + i);
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
       svg.appendChild(spriteIcon);
+
+      // Add support for walking spritesheet.
+      var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
+      spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
+      spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
+      svg.appendChild(spriteWalkIcon);
+
+      var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
+      spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
+      var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
+      spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
+      spriteWalkClip.appendChild(spriteWalkClipRect);
+      svg.appendChild(spriteWalkClip);
 
       dom.addMouseDownTouchEvent(spriteIcon,
         delegate(this, Studio.onSpriteClicked, i));
@@ -562,8 +593,26 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
+
+  if (Studio.customLogic) {
+    Studio.customLogic.onTick();
+  }
 
   if (Studio.interpreter) {
     var doneUserCodeStep = false;
@@ -607,7 +656,7 @@ Studio.onTick = function() {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] == "keydown") {
+        Studio.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           callHandler('when-left');
@@ -627,7 +676,7 @@ Studio.onTick = function() {
 
   for (var btn in ArrowIds) {
     if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           callHandler('when-left');
@@ -675,13 +724,24 @@ Studio.onTick = function() {
   for (i = 0; i < Studio.spriteCount; i++) {
     performQueuedMoves(i);
 
-    // After 5 ticks of no movement, turn sprite forward
+    var isWalking = true;
+
+    // After 5 ticks of no movement, turn sprite forward.
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
+    }
+
+    // Also if the character has never moved, they are also not walking.
+    // Separate to the above case because we don't want to force them to
+    // face south in this case.  They are still allowed to face a different
+    // direction even if they've never walked.
+    if (Studio.sprite[i].lastMove === Infinity) {
+      isWalking = false;
     }
 
     // Display sprite:
-    Studio.displaySprite(i);
+    Studio.displaySprite(i, isWalking);
   }
 
   for (i = 0; i < Studio.projectiles.length; i++) {
@@ -825,8 +885,8 @@ function checkForCollisions() {
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
-    for (j = 0; j < ProjectileClassNames.length; j++) {
-      executeCollision(i, ProjectileClassNames[j]);
+    for (j = 0; j < skin.ProjectileClassNames.length; j++) {
+      executeCollision(i, skin.ProjectileClassNames[j]);
     }
   }
 }
@@ -1101,6 +1161,7 @@ Studio.init = function(config) {
   config.enableShowCode = false;
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
+  config.dropletConfig = dropletConfig;
 
   Studio.initSprites();
 
@@ -1135,8 +1196,8 @@ var preloadBackgroundImages = function() {
 };
 
 var preloadProjectileImages = function() {
-  for (var i = 0; i < ProjectileClassNames.length; i++) {
-    preloadImage(skin[ProjectileClassNames[i]]);
+  for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
+    preloadImage(skin[skin.ProjectileClassNames[i]]);
   }
 };
 
@@ -1190,6 +1251,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1278,8 +1340,6 @@ studioApp.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
-
-  var svg = document.getElementById('svgStudio');
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1450,7 +1510,7 @@ var registerHandlersWithMultipleSpriteParams =
                        blockParam2,
                        String(j));
     }
-    ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1492,17 +1552,10 @@ var nativeGetCallback = function () {
  * Execute the story
  */
 Studio.execute = function() {
-  var code;
   Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
-  var i;
-
-  if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
-    code += studioApp.editor.getValue();
-  }
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
@@ -1511,6 +1564,8 @@ Studio.execute = function() {
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1537,7 +1592,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
+    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -1661,6 +1716,16 @@ frameDirTable[Direction.NORTHWEST]  = 4;
 frameDirTable[Direction.WEST]       = 5;
 frameDirTable[Direction.SOUTHWEST]  = 6;
 
+var frameDirTableWalking = {};
+frameDirTableWalking[Direction.SOUTH]      = 0;
+frameDirTableWalking[Direction.SOUTHEAST]  = 1;
+frameDirTableWalking[Direction.EAST]       = 2;
+frameDirTableWalking[Direction.NORTHEAST]  = 3;
+frameDirTableWalking[Direction.NORTH]      = 4;
+frameDirTableWalking[Direction.NORTHWEST]  = 5;
+frameDirTableWalking[Direction.WEST]       = 6;
+frameDirTableWalking[Direction.SOUTHWEST]  = 7;
+
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
@@ -1671,11 +1736,29 @@ var TICKS_BEFORE_FACE_SOUTH = 5;
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
  * display for sprite.
+ * @param {boolean} opts.walkDirection - Return walking direction (0-7)
+ * @param {boolean} opts.walkFrame - Return walking animation frame
  */
-function spriteFrameNumber (index) {
+function spriteFrameNumber (index, opts) {
   var sprite = Studio.sprite[index];
   var frameNum = 0;
-  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+
+  var currentTime = new Date();
+  var elapsed = currentTime - Studio.startTime;
+
+  if (opts && opts.walkDirection) {
+    return frameDirTableWalking[sprite.displayDir];
+  }
+  else if (opts && opts.walkFrame && sprite.timePerFrame) {
+    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
+  }
+
+  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
+      frameDirTable[sprite.displayDir];
+  }
+  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation +
       frameDirTable[sprite.displayDir];
@@ -1691,16 +1774,13 @@ function spriteFrameNumber (index) {
   }
 
   if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
-    var currentTime = new Date();
-    var ellapsed = currentTime - Studio.startTime;
-
-    // Use ellapsed time instead of tickCount
-    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
+    // Use elapsed time instead of tickCount
+    frameNum = Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
     sprite.frameCounts.emotions > 0) {
-    // emotion frames proceed normal, animation, turn frames
+    // emotion frames precede normal, animation, turn frames
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
       sprite.frameCounts.turns + (sprite.emotion - 1);
   }
@@ -1727,7 +1807,7 @@ var updateSpeechBubblePath = function (element) {
                                               onRight));
 };
 
-Studio.displaySprite = function(i) {
+Studio.displaySprite = function(i, isWalking) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
@@ -1735,10 +1815,36 @@ Studio.displaySprite = function(i) {
     return;
   }
 
-  var xOffset = sprite.width * spriteFrameNumber(i);
+  var spriteRegularIcon = document.getElementById('sprite' + i);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
-  var spriteIcon = document.getElementById('sprite' + i);
-  var spriteClipRect = document.getElementById('spriteClipRect' + i);
+  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
+  var xOffset, yOffset;
+
+  if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+    // Show walk sprite, and hide regular sprite.
+    spriteRegularIcon.setAttribute('visibility', 'hidden');
+    spriteWalkIcon.setAttribute('visibility', 'visible');
+
+    xOffset = sprite.width * spriteFrameNumber(i, {walkDirection: true});
+    yOffset = sprite.height * spriteFrameNumber(i, {walkFrame: true});
+
+    spriteIcon = spriteWalkIcon;
+    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
+
+  } else {
+    // Show regular sprite, and hide walk sprite.
+    spriteRegularIcon.setAttribute('visibility', 'visible');
+    spriteWalkIcon.setAttribute('visibility', 'hidden');
+
+    xOffset = sprite.width * spriteFrameNumber(i);
+    yOffset = 0;
+
+    spriteIcon = spriteRegularIcon;
+    spriteClipRect = document.getElementById('spriteClipRect' + i);
+    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
+  }
 
   var xCoordPrev = spriteClipRect.getAttribute('x');
   var yCoordPrev = spriteClipRect.getAttribute('y');
@@ -1771,10 +1877,16 @@ Studio.displaySprite = function(i) {
   }
 
   spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('y', sprite.y - yOffset);
 
   spriteClipRect.setAttribute('x', sprite.x);
   spriteClipRect.setAttribute('y', sprite.y);
+
+  // Update the other clip rect too, so that calculations involving
+  // inter-frame differences (just above, to calculate sprite.dir)
+  // are correct when we transition between spritesheets.
+  unusedSpriteClipRect.setAttribute('x', sprite.x);
+  unusedSpriteClipRect.setAttribute('y', sprite.y);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2080,6 +2192,19 @@ Studio.setSprite = function (opts) {
   if (!spriteIcon) {
     return;
   }
+
+  // If this skin has walking spritesheet, then load that too.
+  var spriteWalk = null;
+  if (spriteValue !== undefined && skin[spriteValue] && skin[spriteValue].walk) {
+    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
+    if (!spriteWalk) {
+      return;
+    }
+
+    // Hide the walking sprite at this stage.
+    spriteWalk.setAttribute('visibility', 'hidden');
+  }
+
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
@@ -2107,6 +2232,20 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
+
+  if (spriteWalk) {
+    // And set up the cliprect so we can show the right item from the spritesheet.
+    var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
+    spriteWalkClipRect.setAttribute('width', sprite.width);
+    spriteWalkClipRect.setAttribute('height', sprite.height);
+
+    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[spriteValue].walk);
+    var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
+    spriteWalk.setAttribute('width', sprite.width * spriteFramecounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.height * spriteFramecounts.walk); // 1200
+  }
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
@@ -2514,7 +2653,7 @@ function isEdgeClass(className) {
 }
 
 function isProjectileClass(className) {
-  return ProjectileClassNames.indexOf(className) !== -1;
+  return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
 /**
@@ -2795,7 +2934,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../canvg/StackBlur.js":37,"../canvg/canvg.js":38,"../canvg/rgbcolor.js":39,"../canvg/svg_todataurl":40,"../codegen":41,"../constants":42,"../dom":43,"../skins":126,"../templates/page.html":146,"../utils":166,"../xml":167,"./api":128,"./blocks":129,"./collidable":130,"./constants":131,"./controls.html":132,"./extraControlRows.html":133,"./projectile":136,"./visualization.html":139}],139:[function(require,module,exports){
+},{"../../locale/current/common":219,"../../locale/current/studio":225,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":168,"../templates/page.html":193,"../utils":214,"../xml":215,"./api":170,"./bigGameLogic":171,"./blocks":172,"./collidable":173,"./constants":174,"./controls.html":175,"./dropletConfig":177,"./extraControlRows.html":178,"./projectile":181,"./rocketHeightLogic":182,"./samBatLogic":183,"./visualization.html":186}],186:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2815,7 +2954,184 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":187}],136:[function(require,module,exports){
+},{"ejs":235}],183:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var KeyCodes = require('../constants').KeyCodes;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Sam the Bat levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var SamBatLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+  this.samIndex = 0;
+  this.sam = null;
+  // Has the onscreen? stopped Sam on a given side?
+  this.stopped = {left: false, up: false, right: false, down: false};
+};
+SamBatLogic.inherits(CustomGameLogic);
+
+SamBatLogic.prototype.onTick = function () {
+  this.sam = this.studio_.sprite[this.samIndex];
+
+  // Move Sam with arrow keys
+  for (var key in KeyCodes) {
+    if (this.studio_.keyState[KeyCodes[key]] &&
+        this.studio_.keyState[KeyCodes[key]] === "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
+          this.updateSam_(Direction.WEST);
+          break;
+        case KeyCodes.UP:
+          this.updateSam_(Direction.NORTH);
+          break;
+        case KeyCodes.RIGHT:
+          this.updateSam_(Direction.EAST);
+          break;
+        case KeyCodes.DOWN:
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+
+  // Move Sam with arrow buttons
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
+      switch (btn) {
+        case 'leftButton':
+          this.updateSam_(Direction.WEST);
+          break;
+        case 'upButton':
+          this.updateSam_(Direction.NORTH);
+          break;
+        case 'rightButton':
+          this.updateSam_(Direction.EAST);
+          break;
+        case 'downButton':
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+
+  // Display Sam's coordinates, with y inverted
+  var centerX = this.sam.x + this.sam.width / 2;
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  this.studio_.scoreText = '(' + centerX + ', ' + centerY + ')';
+  this.studio_.displayScore();
+};
+
+/**
+ * Before moving, check if Sam would still be onscreen?
+ * If move would take Sam offscreen, set dir to None
+ */
+SamBatLogic.prototype.updateSam_ = function (dir) {
+  var centerX = this.sam.x + this.sam.width / 2;
+  //invert Y
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  
+  switch (dir) {
+    case Direction.WEST:
+      if (!this.onscreen(centerX - this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+        this.stopped.left = true;
+      }
+      break;
+    case Direction.NORTH:
+      if (!this.onscreen(centerX, centerY + this.sam.speed)) {
+        dir = Direction.NONE;
+        this.stopped.up = true;
+      }
+      break;
+    case Direction.EAST:
+      if (!this.onscreen(centerX + this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+        this.stopped.right = true;
+      }
+      break;
+    case Direction.SOUTH:
+      if (!this.onscreen(centerX, centerY - this.sam.speed)) {
+        dir = Direction.NONE;
+        this.stopped.down = true;
+      }
+      break;
+  }
+  this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
+};
+
+/**
+ * Calls the user provided onscreen? function, or no-op if none was provided.
+ * @param {number} x Current x location of Sam
+ * @param {number} y Current y location of Sam (optional)
+ * @returns {boolean} True if coordinate is onscreen?
+ */
+SamBatLogic.prototype.onscreen = function (x, y) {
+  return this.resolveCachedBlock_('VALUE')(x, y);
+};
+
+module.exports = SamBatLogic;
+
+},{"../codegen":44,"../constants":46,"./api":170,"./constants":174,"./customGameLogic":176}],182:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Rocket Height levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var RocketHeightLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+  this.rocketIndex = 0;
+  this.last = Date.now();
+  this.seconds = 0;
+  // rocket and height for use in success/failure checking
+  this.rocket = null;
+  this.height = 0;
+};
+RocketHeightLogic.inherits(CustomGameLogic);
+
+RocketHeightLogic.prototype.onTick = function () {
+  
+  // Update the rocket once a second
+  if (Date.now() - this.last < 1000) {
+    return;
+  }
+  this.last = Date.now();
+  this.seconds++;
+  
+  this.rocket = this.studio_.sprite[this.rocketIndex];
+  
+  // Display the rocket height and time elapsed
+  this.height = this.rocket_height(this.seconds);
+  this.rocket.y = this.studio_.MAZE_HEIGHT - (this.height + this.rocket.height);
+  this.rocket.dir = Direction.NONE;
+  this.studio_.scoreText = 'Time: ' + this.seconds + ' | Height: ' + this.height;
+  this.studio_.displayScore();
+};
+
+/**
+ * Calls the user provided rocket-height function, or no-op if none was provided.
+ * @param {number} seconds Time elapsed since rocket launch
+ * @returns {number} Height of rocket after seconds
+ */
+RocketHeightLogic.prototype.rocket_height = function (seconds) {
+  return this.resolveCachedBlock_('VALUE')(seconds);
+};
+
+module.exports = RocketHeightLogic;
+
+},{"../codegen":44,"./api":170,"./constants":174,"./customGameLogic":176}],181:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -2989,7 +3305,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":130,"./constants":131}],137:[function(require,module,exports){
+},{"./collidable":173,"./constants":174}],184:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3008,10 +3324,23 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
-  skin.preloadAssets = false;
+  skin.preloadAssets = true;
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_hiro',
+    'projectile_anna',
+    'projectile_elsa',
+    'projectile_baymax',
+    'projectile_rapunzel',
+    'projectile_cherry',
+    'projectile_ice',
+    'projectile_duck'
+  ];
 
   skin.specialProjectileFrames = {
     'projectile_cherry': 13,
@@ -3029,12 +3358,14 @@ function loadInfinity(skin, assetUrl) {
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 20,
+        normal: 19,
         animation: 0,
-        turns: 7,
-        emotions: 0
+        turns: 8,
+        emotions: 0,
+        walk: 12
       },
       timePerFrame: 100
     };
@@ -3075,7 +3406,6 @@ function loadInfinity(skin, assetUrl) {
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    // todo - come up with better names and i18n
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundGrassy(), '"grassy"'],
     [msg.setBackgroundFlower(), '"flower"'],
@@ -3085,9 +3415,14 @@ function loadInfinity(skin, assetUrl) {
     ];
 
   skin.backgroundChoicesK1 = [
+    [skin.leafy.background, '"leafy"'],
+    [skin.grassy.background, '"grassy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.tile.background, '"tile"'],
+    [skin.icy.background, '"icy"'],
+    [skin.snowy.background, '"snowy"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundGrassy(), '"grassy"']];
+    ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -3098,7 +3433,6 @@ function loadInfinity(skin, assetUrl) {
     [msg.setSpriteBaymax(), '"baymax"'],
     [msg.setSpriteRapunzel(), '"rapunzel"']];
 
-  // todo - i18n
   skin.projectileChoices = [
     [msg.projectileHiro(), '"projectile_hiro"'],
     [msg.projectileAnna(), '"projectile_anna"'],
@@ -3264,6 +3598,17 @@ function loadStudio(skin, assetUrl) {
 exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'blue_fireball',
+    'purple_fireball',
+    'red_fireball',
+    'purple_hearts',
+    'red_hearts',
+    'yellow_hearts',
+  ];
+
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
   skin.purple_hearts = skin.assetUrl('purple_hearts.gif');
@@ -3329,7 +3674,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":177,"../skins":126,"./constants":131}],134:[function(require,module,exports){
+},{"../../locale/current/studio":225,"../skins":168,"./constants":174}],179:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -4782,23 +5127,61 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
-  'codeFunctions': [
-    {'func': 'setSprite', 'params': ["0", "'cat'"] },
-    {'func': 'setBackground', 'params': ["'night'"] },
-    {'func': 'move', 'params': ["0", "1"] },
-    {'func': 'playSound', 'params': ["'slap'"] },
-    {'func': 'changeScore', 'params': ["1"] },
-    {'func': 'setSpritePosition', 'params': ["0", "7"] },
-    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
-    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
-    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
-    {'func': 'vanish', 'params': ["0"] },
-    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
-  ],
+  'codeFunctions': {
+    // Play Lab
+    "setSprite": null,
+    "setBackground": null,
+    "move": null,
+    "playSound": null,
+    "changeScore": null,
+    "setSpritePosition": null,
+    "setSpriteSpeed": null,
+    "setSpriteEmotion": null,
+    "throwProjectile": null,
+    "vanish": null,
+    "onEvent": null,
+
+    // Control
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "notOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
+  },
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":177,"../block_utils":16,"../utils":166,"./constants":131}],133:[function(require,module,exports){
+},{"../../locale/current/studio":225,"../block_utils":18,"../utils":214,"./constants":174}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4818,7 +5201,31 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],132:[function(require,module,exports){
+},{"../../locale/current/common":219,"ejs":235}],177:[function(require,module,exports){
+var msg = require('../../locale/current/studio');
+
+module.exports.blocks = [
+  {'func': 'setSprite', 'title': msg.setSpriteTooltip(), 'category': 'Play Lab', 'params': ["0", "'cat'"] },
+  {'func': 'setBackground', 'title': msg.setBackgroundTooltip(), 'category': 'Play Lab', 'params': ["'night'"] },
+  {'func': 'move', 'title': msg.moveTooltip(), 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'playSound', 'title': msg.playSoundTooltip(), 'category': 'Play Lab', 'params': ["'slap'"] },
+  {'func': 'changeScore', 'title': msg.changeScoreTooltip(), 'category': 'Play Lab', 'params': ["1"] },
+  {'func': 'setSpritePosition', 'title': msg.setSpritePositionTooltip(), 'category': 'Play Lab', 'params': ["0", "7"] },
+  {'func': 'setSpriteSpeed', 'title': msg.setSpriteSpeedTooltip(), 'category': 'Play Lab', 'params': ["0", "8"] },
+  {'func': 'setSpriteEmotion', 'title': msg.setSpriteEmotionTooltip(), 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'throwProjectile', 'title': msg.throwTooltip(), 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
+  {'func': 'vanish', 'title': msg.vanishTooltip(), 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'onEvent', 'title': msg.onEventTooltip(), 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
+];
+
+module.exports.categories = {
+  'Play Lab': {
+    'color': 'red',
+    'blocks': []
+  },
+};
+
+},{"../../locale/current/studio":225}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4838,7 +5245,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":171,"ejs":187}],130:[function(require,module,exports){
+},{"../../locale/current/common":219,"ejs":235}],173:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4944,7 +5351,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":131}],129:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":174}],172:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -4952,16 +5359,13 @@ Collidable.prototype.outOfBounds = function () {
  *
  */
 'use strict';
+/* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
 var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock =
-  functionalBlockUtils.installFunctionalApiCallBlock;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -5341,7 +5745,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.stopSpriteN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -5535,7 +5939,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else {
         this.appendDummyInput()
@@ -5544,9 +5948,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.appendValueInput('YPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -5719,7 +6123,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else if (spriteCount > 1) {
         if (isK1) {
@@ -5748,7 +6152,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle('\t');
       if (options.params) {
         this.appendValueInput('DISTANCE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.moveDistancePixels());
       } else {
@@ -6043,9 +6447,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.speed());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6113,9 +6517,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.size());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6223,11 +6627,11 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(msg.showTitleScreen());
       if (options.params) {
         this.appendValueInput('TITLE')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenText());
       } else {
@@ -6341,7 +6745,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.setSpriteN({spriteIndex: ''}));
         this.appendDummyInput()
             .appendTitle(dropdown, 'VALUE');
@@ -6440,7 +6844,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to normal
@@ -6490,7 +6894,7 @@ exports.install = function(blockly, blockInstallOptions) {
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
       if (options.time) {
-        this.appendValueInput('SPRITE').setCheck('Number')
+        this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.actor());
         this.appendDummyInput()
             .appendTitle(msg.saySprite());
@@ -6527,7 +6931,7 @@ exports.install = function(blockly, blockInstallOptions) {
               Blockly.assetUrl('media/quote1.png'), 12, 12));
       }
       if (options.time) {
-        this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
+        this.appendValueInput('TIME').setCheck(blockly.BlockValueType.NUMBER).appendTitle(msg.for());
         this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
@@ -6557,7 +6961,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.saySprite(\'block_id_' + this.id +
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', \'' +
-               this.getTitles()[1].getValue() + '\');\n';
+               (this.getTitleValue('VALUE') || ' ') + '\');\n';
   };
 
   generator.studio_saySpriteParams = function() {
@@ -6591,7 +6995,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitFor());
         this.appendValueInput('VALUE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
@@ -6646,32 +7050,32 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setValue = {
     init: function() {
       var blockName = msg.startSetValue();
-      var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'function'}];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      var blockType = blockly.BlockValueType.NONE;
+      var blockArgs = [{name: 'VALUE', type: blockly.BlockValueType.FUNCTION}];
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
   generator.functional_start_setValue = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
   };
 
   blockly.Blocks.functional_start_setVars = {
     init: function() {
       var blockName = msg.startSetVars();
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'TITLE', type: 'function'},
-        {name: 'SUBTITLE', type: 'function'},
-        {name: 'BACKGROUND', type: 'function'},
-        {name: 'TARGET', type: 'function'},
-        {name: 'DANGER', type: 'function'},
-        {name: 'PLAYER', type: 'function'}
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6682,50 +7086,108 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetVars();
-      var blockType = 'none';
-      var blockArgs = [
-        {name: 'update-target', type: 'function'},
-        {name: 'update-danger', type: 'function'},
-        {name: 'update-player', type: 'function'},
-        {name: 'collide?', type: 'function'},
-        {name: 'on-screen?', type: 'function'}
+      this.blockArgs = [
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-player', type: blockly.BlockValueType.FUNCTION},
+        {name: 'collide?', type: blockly.BlockValueType.FUNCTION},
+        {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'target, danger, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, onscreen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, blockly.FunctionalTypeColors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
   generator.functional_start_setFuncs = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
+      if (!inputBlock) {
+        return;
+      }
+
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
+    }, this);
   };
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'function'}]
+    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_setBackground',
     blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
+    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
   });
 
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
       var blockName = 'start (player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6745,13 +7207,13 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setBackgroundAndSpeeds = {
     init: function() {
       var blockName = 'start (background, player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'BACKGROUND', type: 'string'},
+        {name: 'BACKGROUND', type: blockly.BlockValueType.STRING},
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6780,7 +7242,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // API instead of here.
   var functional_background_values = skin.backgroundChoices.slice(1);
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
     values: functional_background_values
   });
@@ -6789,7 +7251,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.vanishActorN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -6804,10 +7266,13 @@ exports.install = function(blockly, blockInstallOptions) {
         ');\n';
   };
 
+  /**
+   * functional_sprite_dropdown
+   */
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -6829,10 +7294,13 @@ exports.install = function(blockly, blockInstallOptions) {
     return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
   };
 
+  /**
+   * functional_background_dropdown
+   */
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
@@ -6848,6 +7316,41 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.functional_background_dropdown = function () {
     // returns the sprite index
     return this.getTitleValue('BACKGROUND');
+  };
+
+  /**
+   * functional_sqrt
+   */
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ');';
+  };
+
+  /**
+   * functional_keydown
+   */
+  blockly.Blocks.functional_keydown = {
+    helpUrl: '',
+    init: function() {
+      // todo = localize
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_keydown = function() {
+    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || - 1;
+    return 'Studio.isKeyDown(' + keyCode + ');';
   };
 };
 
@@ -6878,9 +7381,297 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":171,"../../locale/current/studio":177,"../StudioApp":2,"../codegen":41,"../functionalBlockUtils":73,"../sharedFunctionalBlocks":125,"../utils":166,"./constants":131}],177:[function(require,module,exports){
+},{"../../locale/current/common":219,"../../locale/current/studio":225,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":167,"../utils":214,"./constants":174}],225:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],128:[function(require,module,exports){
+},{}],171:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
+
+
+/**
+ * Custom logic for the MSM BigGame
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var BigGameLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+
+  this.playerSpriteIndex = 0;
+  this.targetSpriteIndex = 1;
+  this.dangerSpriteIndex = 2;
+};
+BigGameLogic.inherits(CustomGameLogic);
+
+BigGameLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    this.onFirstTick_();
+    this.studio_.playerScore = 100;
+    return;
+  }
+
+   // Don't start until the title is over
+  var titleScreenTitle = document.getElementById('titleScreenTitle');
+  if (titleScreenTitle.getAttribute('visibility') === "visible") {
+    return;
+  }
+
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
+  var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
+
+  // Update target, using onscreen and update_target
+  this.updateSpriteX_(this.targetSpriteIndex, this.update_target.bind(this));
+  // Update danger, using onscreen and update_danger
+  this.updateSpriteX_(this.dangerSpriteIndex, this.update_danger.bind(this));
+
+  // For every key and button down, call update_player
+  for (var key in this.studio_.keyState) {
+    if (this.studio_.keyState[key] === 'keydown') {
+      this.handleUpdatePlayer_(key);
+    }
+  }
+
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
+      if (btn === 'leftButton') {
+        this.handleUpdatePlayer_(37);
+      } else if (btn === 'upButton') {
+        this.handleUpdatePlayer_(38);
+      } else if (btn === 'rightButton') {
+        this.handleUpdatePlayer_(39);
+      } else if (btn === 'downButton') {
+        this.handleUpdatePlayer_(40);
+      }
+    }
+  }
+
+  if (playerSprite.visible && dangerSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   dangerSprite.x, dangerSprite.y)) {
+    this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
+    setTimeout((function ()  {
+      this.studio_.setSprite({
+        spriteIndex: this.playerSpriteIndex,
+        value:"visible"
+      });
+    }).bind(this), 500);
+    this.studio_.playerScore -= 20;
+
+    // send sprite back offscreen
+    this.resetSprite_(dangerSprite);
+  }
+
+  if (playerSprite.visible && targetSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   targetSprite.x, targetSprite.y)) {
+    this.studio_.playerScore += 10;
+
+    // send sprite back offscreen
+    this.resetSprite_(targetSprite);
+}
+
+  if (this.studio_.playerScore <= 0) {
+    var score = document.getElementById('score');
+    score.setAttribute('visibility', 'hidden');
+    this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
+    for (var i = 0; i < this.studio_.spriteCount; i++) {
+      this.studio_.vanishActor({spriteIndex:i});
+    }
+  } else {
+    this.studio_.displayScore();
+  }
+};
+
+/**
+ * When game starts logic
+ */
+BigGameLogic.prototype.onFirstTick_ = function () {
+  var func = function (StudioApp, Studio, Globals) {
+    Studio.setBackground(null, this.getVar_('background'));
+    Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
+    Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
+    Studio.setSpritePosition(null, this.targetSpriteIndex, Position.TOPLEFT);
+    Studio.setSprite(null, this.targetSpriteIndex, this.getVar_('target'));
+    Studio.setSpritePosition(null, this.dangerSpriteIndex, Position.BOTTOMRIGHT);
+    Studio.setSprite(null, this.dangerSpriteIndex, this.getVar_('danger'));
+    Studio.showTitleScreen(null, this.getVar_('title'), this.getVar_('subtitle'));
+  }.bind(this);
+  this.studio_.callApiCode('BigGame.onFirstTick', func);
+};
+
+/**
+ * Update a sprite's x coordinates using the user updateFunction. If
+ * sprite goes of screen, we reset to the other side of the screen.
+ */
+BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
+  var sprite = this.studio_.sprite[spriteIndex];
+  // sprite.x is the left. get the center
+  var centerX = sprite.x + sprite.width / 2;
+
+  var newCenterX = updateFunction(centerX);
+  sprite.x = newCenterX - sprite.width / 2;
+
+  // Current behavior is that as soon as we go offscreen, we reset to the other
+  // side. We could add a delay if we want.
+  if (!this.onscreen(newCenterX)) {
+    // reset to other side
+    this.resetSprite_(sprite);
+  }
+};
+
+/**
+ * Update the player sprite, using the user provided function.
+ */
+BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+
+  // invert Y
+  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
+
+  var newUserSpaceY = this.update_player(key, userSpaceY);
+
+  // reinvertY
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
+};
+
+/**
+ * Reset sprite to the opposite side of the screen
+ */
+BigGameLogic.prototype.resetSprite_ = function (sprite) {
+  if (sprite.dir === Direction.EAST) {
+    sprite.x = 0 - sprite.width;
+  } else {
+    sprite.x = this.studio_.MAZE_WIDTH;
+  }
+  sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+};
+
+/**
+ * Calls the user provided update_target function, or no-op if none was provided.
+ * @param {number} x Current x location of target
+ * @returns {number} New x location of target
+ */
+BigGameLogic.prototype.update_target = function (x) {
+  return this.getFunc_('update-target')(x);
+};
+
+/**
+ * Calls the user provided update_danger function, or no-op if none was provided.
+ * @param {number} x Current x location of the danger sprite
+ * @returns {number} New x location of the danger target
+ */
+BigGameLogic.prototype.update_danger = function (x) {
+  return this.getFunc_('update-danger')(x);
+};
+
+/**
+ * Calls the user provided update_player function, or no-op if none was provided.
+ * @param {number} key KeyCode of key that is down
+ * @param {number} y Current y location of player. (is this in an inverted coordinate space?)
+ * @returns {number} New y location of the player
+ */
+BigGameLogic.prototype.update_player = function (key, y) {
+  return this.getFunc_('update-player')(key, y);
+};
+
+/**
+ * Calls the user provided onscreen? function, or no-op if none was provided.
+ * @param {number} x An x location
+ * @returns {boolean} True if x location is onscreen?
+ */
+BigGameLogic.prototype.onscreen = function (x) {
+  return this.getFunc_('on-screen?')(x);
+};
+
+/**
+ * Calls the user provided collide? function, or no-op if none was provided.
+ * @param {number} px Player's x location
+ * @param {number} py Player's y location
+ * @param {number} cx Collider's x location
+ * @param {number} cy Collider's y location
+ * @returns {boolean} True if objects collide
+ */
+BigGameLogic.prototype.collide = function (px, py, cx, cy) {
+  return this.getFunc_('collide?')(px, py, cx, cy);
+};
+
+
+module.exports = BigGameLogic;
+
+},{"../codegen":44,"./api":170,"./constants":174,"./customGameLogic":176}],176:[function(require,module,exports){
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Interface for a set of custom game logic for playlab
+ * @param {Studio} studio Reference to global studio object
+ * @interface CustomGameLogic
+ */
+var CustomGameLogic = function (studio) {
+  this.studio_ = studio;
+  this.cached_ = {};
+};
+
+/**
+ * Logic to be run once per playlab tick
+ *
+ * @function
+ * @name CustomGameLogic#onTick
+ */
+
+CustomGameLogic.prototype.onTick = function () {
+  throw new Error('should be overridden by child');
+};
+
+/**
+ * Store a block in our cache, so that it can be called elsewhere
+ */
+CustomGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+/**
+ * Takes a cached block for a function of variable, and calculates the value
+ * @returns The result of calling the code for the cached block. If the cached
+ *   block was a function_pass, this means we get back a function that can
+ *   now be called.
+ */
+CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
+ */
+CustomGameLogic.prototype.getVar_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+CustomGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+module.exports = CustomGameLogic;
+
+},{"../codegen":44,"./api":170,"./constants":174}],170:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7036,7 +7827,15 @@ exports.onEvent = function (id, eventName, func) {
   });
 };
 
-},{"./constants":131}],131:[function(require,module,exports){
+/**
+ * @param {number} keyCode
+ * @returns {boolean} True if key is currently down
+ */
+exports.isKeyDown = function (keyCode) {
+  return Studio.keyState[keyCode] === 'keydown';
+};
+
+},{"./constants":174}],174:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7213,7 +8012,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],40:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -7436,7 +8235,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],39:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7726,7 +8525,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],37:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -8338,4 +9137,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[135]);
+},{}]},{},[180]);

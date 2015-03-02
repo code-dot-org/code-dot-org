@@ -296,6 +296,8 @@ sk:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
@@ -478,7 +480,7 @@ sk:
           title: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
           description: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
         Hour of Code:
-          title: Hodina kódovania
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Upraviť kód

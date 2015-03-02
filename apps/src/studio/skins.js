@@ -16,10 +16,23 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
-  skin.preloadAssets = false;
+  skin.preloadAssets = true;
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_hiro',
+    'projectile_anna',
+    'projectile_elsa',
+    'projectile_baymax',
+    'projectile_rapunzel',
+    'projectile_cherry',
+    'projectile_ice',
+    'projectile_duck'
+  ];
 
   skin.specialProjectileFrames = {
     'projectile_cherry': 13,
@@ -37,12 +50,14 @@ function loadInfinity(skin, assetUrl) {
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 20,
+        normal: 19,
         animation: 0,
-        turns: 7,
-        emotions: 0
+        turns: 8,
+        emotions: 0,
+        walk: 12
       },
       timePerFrame: 100
     };
@@ -83,7 +98,6 @@ function loadInfinity(skin, assetUrl) {
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    // todo - come up with better names and i18n
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundGrassy(), '"grassy"'],
     [msg.setBackgroundFlower(), '"flower"'],
@@ -93,9 +107,14 @@ function loadInfinity(skin, assetUrl) {
     ];
 
   skin.backgroundChoicesK1 = [
+    [skin.leafy.background, '"leafy"'],
+    [skin.grassy.background, '"grassy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.tile.background, '"tile"'],
+    [skin.icy.background, '"icy"'],
+    [skin.snowy.background, '"snowy"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundGrassy(), '"grassy"']];
+    ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -106,7 +125,6 @@ function loadInfinity(skin, assetUrl) {
     [msg.setSpriteBaymax(), '"baymax"'],
     [msg.setSpriteRapunzel(), '"rapunzel"']];
 
-  // todo - i18n
   skin.projectileChoices = [
     [msg.projectileHiro(), '"projectile_hiro"'],
     [msg.projectileAnna(), '"projectile_anna"'],
@@ -271,6 +289,17 @@ function loadStudio(skin, assetUrl) {
 
 exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'blue_fireball',
+    'purple_fireball',
+    'red_fireball',
+    'purple_hearts',
+    'red_hearts',
+    'yellow_hearts',
+  ];
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');

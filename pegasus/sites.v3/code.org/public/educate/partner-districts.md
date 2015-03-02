@@ -43,7 +43,6 @@ Clark County School District (NV) </br>
 Clover Park School District	 (WA) </br>
 Denver Public Schools (CO) </br>
 Douglas County Public Schools (CO) </br>
-East Side High School District (CA) </br>
 East Valley School District (WA) </br>
 Eatonville School District (WA) </br>
 Enumclaw School District (WA) </br>

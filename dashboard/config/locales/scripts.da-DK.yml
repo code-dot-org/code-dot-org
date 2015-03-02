@@ -381,6 +381,13 @@
           The Design Recipe: Design opskrift
         K5PD:
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -391,3 +398,32 @@
           description_short: Create a story or make a game with Infinity Play Lab!!
           description: Create a story or make a game with Infinity Play Lab!
           Infinity: Uendelig
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Grundskole introduktion til datalogi kursus (15-25 timer)
+          description: Dette 20-timers kursus introducerer centrale computer videnskabs
+            og programmering begreber. Kurset er designet til brug i folkeskolens
+            klasseværelser, men det er sjovt at lære i alle aldre.
+          Introduction to Computer Science: Introduktion til datalogi
+          The Maze: Labyrinten
+          Computational Thinking: Data-Tænkning
+          Graph Paper Programming: Programmering på millimeterpapir
+          The Artist: Kunstneren
+          Algorithms: Algoritmer
+          The Artist 2: Kunstneren 2
+          Functions: Funktioner
+          The Farmer: Landmanden
+          Conditionals: Betingelser
+          The Artist 3: Kunstneren 3
+          Song Writing: Sangskrivning
+          The Farmer 2: Landmanden 2
+          Abstraction: Abstraktion
+          The Artist 4: Kunstneren 4
+          Relay Programming: Stafet-programmering
+          The Farmer 3: Landmanden 3
+          The Internet: Internettet
+          The Artist 5: Kunstneren 5
+          Wrap-up: Afslutning

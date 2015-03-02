@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"place_variable\", \"element_id\": \"#place_variable_qtip > .blocklyPath\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\", \"adjust\": {\"x\": 60, \"y\": -10}}}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\":\"place_variable\",\"callout_text\":\"Drag your variable inside this block\",\"element_id\":\"#place_variable_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":60,\"y\":-10},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>

@@ -582,128 +582,6 @@
           az új "penWidth" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
-    levelbuilder:
-      frozen line:
-        instructions: Szia! Elsa vagyok Arendelleből. Segíts nekem egy vonalat létrehozni.
-      frozen perpendicular:
-        instructions: Most nézzük, hogy tudunk-e két vonalat rajzolni, amelyek 90
-          fokos szöget zárnak be egymással. Használnod kell majd a "Fordulj" blokkot,
-          csakúgy mint a "Menj" blokkot.
-      frozen square iterative:
-        instructions: Úgy néz ki félúton vagyunk, hogy csináljunk egy négyzetet. Rakjunk
-          össze 4 vonalat, hogy létrehozzunk egy négyzetet.
-      frozen square loop:
-        instructions: Szia, Anna vagyok Arendelleből! Csináljunk egy négyzetet az
-          "Ismételd" blokkal, amely kevesebb blokkot használ fel. Hányszor (???) kell
-          az "Ismétlés" blokknak ismételnie a benne levő blokkokat, hogy egy négyzetet
-          készítsen?
-      frozen square loop 3x:
-        instructions: Készítsünk három négyzetet, minden négyzet után elfordulva.
-          Győződj meg róla, hogy 120 fokkal elfordulsz minden új négyzet előtt.
-      frozen square snowflake:
-        instructions: Tudsz készíteni egy hópelyhet úgy, hogy az "Ismételd" blokk
-          segítségével 10-szer csinálsz egy négyzetet és minden négyzet között elfordulsz
-          36 fokot?
-      frozen cross:
-        instructions: Használd az "Ismételd" blokkot hogy készíts egy plusz jelet.
-          Észrevetted, hogy Elsa mozoghat előre és hátra is?
-      frozen cross rotate:
-        instructions: Most próbáld ismételni ugyanezt 10-szer. Hány fokot kell fordulnod
-          minden vonal között?
-      frozen cross rotate dense:
-        instructions: 'Ismételjük meg 90-szer! Hányszor van meg 360-ban a 90? Tipp:
-          ez egy nagyon kicsi szám.'
-      frozen diamond:
-        instructions: 'Készítsünk parallelogrammát. Ugyanolyan mint egy négyzet, de
-          másmilyenek a szögei: 60 és 120 fokosak a 90 helyett.'
-      frozen diamond mini snowflake:
-        instructions: Tudtad, hogy minden hópihe más alakú? Készítsünk egy új hópelyhet
-          az "Ismételd" blokkal, úgy, hogy készítsen parallerogrammát 4-szer, 90 fokkal
-          jobbra fordulva minden parallelogramma között.
-      frozen diamond snowflake:
-        instructions: Most készítsünk egy új hópelyhet az ismétlés blokk használatával,
-          úgy hogy rajzoljon egy parallelogrammát 10-szer, mindegyik között 36 fokkal
-          jobbra fordulva.
-      frozen circle:
-        instructions: A kör egy különleges alakzat. Ki tudod találni, hogy milyen
-          számot kell a kérdőjelek helyére tenni, hogy egy kört rajzolj?
-      frozen circle function:
-        instructions: Használd az új "Kör készítése" blokkot hogy készíts 10 egymást
-          átfedő kört. Ne felejts el előre ugrani a körök között.
-      frozen circle function in circle:
-        instructions: Most készítsünk 20 egymást fedő kört, 18 fokkal elfordulva minden
-          kör között.
-      frozen circle function with parameter:
-        instructions: Itt egy "Kör létrehozása" blokk, ami különböző méretű köröket
-          tud csinálni. Tudod használni ezt hogy készíts egy kis, 5-ös méretű és egy
-          nagyobb, 10-es méretű kört?
-      frozen snowflower:
-        instructions: Bonyolult hóminták hozhatóak létre nagyon egyszerű alakzatokból.
-          Tudsz csinálni egy mintát 5 darab 5-ös méretű kör és 5 darab 10-es méretű
-          kör ismétlésével?
-      frozen snowflake branch:
-        instructions: Próbáld ki a "Hópehely ág létrehozása" blokkot hogy készíts
-          három ágat, amely már kezd hópehelyként kinézni.
-      frozen snowflake full:
-        instructions: Most ismételjük 8-szor, hogy készítsünk egy gyönyörű hópelyhet!
-      frozen freeplay:
-        instructions: Hivatalosan is mesterművész lettél! Hozz létre egy téli csodaországot,
-          és oszd meg a barátaiddal.
-      scrat 16:
-        instructions: Makk! Makk! Makk! Használj "ha" blokkot hogy odavigyél a legkevesebb
-          számú blokk felhasználásával.
-      scrat 17:
-        instructions: Oké, csináljuk ismét ugyanezt gyakorlásképp - ez nem annyira
-          különbözik, de figyelj a falra!
-      scrat 18:
-        instructions: A "ha-különben" blokkok megvizsgálnak egy feltételt, aztán csinálnak
-          valamit VAGY valami mást. Hogy a makkhoz vigyél, próbáld ezt az új blokkot
-          használni.
-      scrat 19:
-        instructions: Még egy gyakorlat az „ha különben” blokkhoz. Meg tudod csinálni
-          elsőre?
-      scrat 20:
-        instructions: Tudsz segíteni nekem mindössze 3 blokk hozzáadásával, hogy megoldjak
-          egy sokkal összetettebb labirintust? Ha jól csinálod, utána bármilyen kanyargós
-          úton tudok majd haladni, a hossza nem számít. Siess! Olvad a jég!
-      Standalone_Artist_1:
-        instructions: Üdvözöljük a művészeket! Először is próbáljunk meg készíteni
-          egy egyszerű négyzetet a Fordulj jobbra és az Előrelépni blokkok használatával.
-          Minden oldalnak 100 képpont hosszúságúnak kell lennie.
-      Standalone_Artist_2:
-        instructions: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint
-          150 pixel hosszúságú oldalakkal.
-      Standalone_Artist_3:
-        instructions: Le tudod rajzolni ezt a hexagont 100 pixeles oldalakkal és 60
-          fokos fordulatokkal?
-      Standalone_Artist_4:
-        instructions: Van egy új blokkod amivel játszadozhatsz - ez a ciklus, ami
-          egy előre meghatározott parancssort fog ismételni. Mi történik, ha ezeket
-          a parancsokat 6-szor megismételteted ?
-      Standalone_Artist_5:
-        instructions: Hányszor kell megismételned a gyémántot, hogy a virágot lerajzold?
-      Standalone_Artist_5.5:
-        instructions: 'Figyeld meg, mennyire le tudtuk egyszerűsíteni a gyémánt-kódot
-          azáltal, hogy ciklusba szerveztük. Az egész sorozatot 12-szeres ciklusba
-          szervezve rajzolódik ki a virág. Tipp: A gyémánt ciklus után el kell fordulni
-          30 fokkal azért, hogy ne ugyanarra a gyémántra rajzolj.'
-      Standalone_Artist_6:
-        instructions: 'Szervezd 6-szoros ciklusba ezt a hatszög kódot az alakzat elkészítéséhez.
-          Hány fokot kell fordulni minden egyes alkalommal? Tipp: A kör központi szögének
-          fokát oszd el a ciklusok számával.'
-      Standalone_Artist_7:
-        instructions: 'A függvény egy újabb programozási eszköz, hogy elkerülhesd
-          ömagad ismétlését. Ez a függvény egy virágot rajzol, tehát bármikor használhatod
-          ha virágot szeretnél rajzolni. Használd együtt az új "ugrás" blokkal a virágok
-          rajzolásához. Tipp: A virágok 150 képpontra vannak egymástól'
-      Standalone_Artist_8:
-        instructions: Itt van a "Rajzolj egy alakzatot" függvény amit a hatszögek
-          rajzolásához programoztunk. Futtasd a kódot, hogy lásd mit csinál, és aztán
-          kísérletezz a függvénnyel, hogy lásd mi történik. Meg tudod csinálni hogy
-          négyzeteket, háromszögeket vagy nyolcszögeket rajzoljon?
-      Standalone_Artist_9:
-        instructions: Most gyerünk, készíts bármilyen képet, amilyet csak szeretnél!
-          Van még egy üres függvényed is ahhoz, hogy azt készíts, amit csak akarsz!
     video:
       name:
         maze_intro: Útvesztő ismertető
@@ -763,6 +641,7 @@
         C2_relay_programming: Váltó programozás
         C2_paper_airplanes: Papír repülőgépek
         C2_digital_footprint: A digitális lábnyomod
+        C2_digital_footprint_v2: A digitális lábnyomod
         C3_maze_level_4: 'Labirintus: ciklusok'
         C3_artist_intro: Művész Intro
         C3_artist_functions: 'Művész: függvények'

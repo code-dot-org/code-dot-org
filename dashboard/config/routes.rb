@@ -72,8 +72,13 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  get '/projects', to: 'projects#index'
-  get '/projects/:template', to: 'projects#template'
+  resources :projects, path: '/p/', only: [:index] do
+    collection do
+      get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
+      get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/:template', to: 'projects#template'
+    end
+  end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
   
@@ -84,6 +89,7 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
@@ -116,8 +122,8 @@ Dashboard::Application.routes.draw do
   get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME.to_s, format: false
   get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID, as: 'editcode_chapter', format: false
   get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID.to_s, format: false
   get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID, as: 'twenty_fourteen_chapter', format: false

@@ -293,6 +293,8 @@ zh:
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）
@@ -475,7 +477,7 @@ zh:
           title: K-8计算机科学入门课程（15-25小时）
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
         Hour of Code:
-          title: 编程一小时
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: 编辑代码

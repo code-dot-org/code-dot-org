@@ -297,12 +297,14 @@ id:
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari %{student_name}'
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
     new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
     current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi perubahan Anda)
     delete: Hapuslah akun anda
     delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus akun murid-murid Anda.'
     delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
   user_level:
     completed: Selesai
@@ -479,7 +481,7 @@ id:
           title: Kursus pengenalan ilmu komputer (15-25 jam)
           description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
         Hour of Code:
-          title: Jam kode
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Mengedit kode

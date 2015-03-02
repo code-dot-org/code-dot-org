@@ -1,9 +1,13 @@
 {
   "compute": "beräkna",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Försök ordna om dina argument för att få exakt samma uttryck.",
   "extraTopBlocks": "Du har okopplade block. Menade du att fästa dessa till \"beräkna\" blocket?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Din funktion returnerar inte rätt resultat för alla värden.",
   "goal": "Mål:",
-  "reinfFeedbackMsg": "Här är din berättelse! Fortsätta att arbeta på den eller gå vidare till nästa pussel!",
-  "yourExpression": "Ditt uttryck:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "reinfFeedbackMsg": "Här är din beräkning! Fortsätt arbete på det, eller gå vidare till nästa övning!",
+  "yourExpression": "Ditt uttryck:",
+  "wrongInput": "You are calling your function with the wrong value."
 }
