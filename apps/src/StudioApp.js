@@ -1298,19 +1298,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('blockly');
   var options = {
     toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        2 : config.level.defaultNumExampleBlocks,
+    disableParamEditing: utils.undefOr(config.level.disableParamEditing, true),
+    disableVariableEditing: utils.undefOr(config.level.disableVariableEditing, false),
+    useModalFunctionEditor: utils.undefOr(config.level.useModalFunctionEditor, false),
+    useContractEditor: utils.undefOr(config.level.useContractEditor, false),
+    defaultNumExampleBlocks: utils.undefOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
+    editBlocks: utils.undefOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
