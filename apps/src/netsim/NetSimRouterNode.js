@@ -418,20 +418,20 @@ var contains = function (haystack, needle) {
  * if its limit is now exceeded.
  *
  * @param {!NetSimNode} otherNode attempting to connect to this one
- * @param {!function} onComplete response method - should call with TRUE
+ * @param {!NodeStyleCallback} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
   this.countConnections(function (count) {
     if (count > MAX_CLIENT_CONNECTIONS) {
-      onComplete(false);
+      onComplete(new Error("Too many connections"), false);
       return;
     }
 
     // Trigger an update, which will correct our connection count
     self.update(function (err) {
-      onComplete(err === null);
+      onComplete(err, err === null);
     });
   });
 };
