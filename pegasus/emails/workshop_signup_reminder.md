@@ -1,6 +1,6 @@
 ---
 from: "Code.org <info@code.org>"
-subject: "[Code.org] Workshop reminder"
+subject: "Your [Code.org] Workshop is coming up!"
 litmus_tracking_id: "e5cj1of6"
 ---
 
@@ -15,7 +15,7 @@ litmus_tracking_id: "e5cj1of6"
 
 This is a friendly reminder that your Code.org workshop is coming up soon!
 
-If you are unable to attend, please [cancel your registration](<%= cancel_link %>).
+**If you can’t make it:** please [cancel your registration](<%= cancel_link %>) in advance so other teachers may take your spot.
 
 **To prepare for your workshop:** Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. Review the following [introductory course materials](http://code.org/educate/k5/introPD). These will give you a head start into the course materials to be covered and maximizing learning time during the in-person workshop.
 
