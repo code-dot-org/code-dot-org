@@ -132,7 +132,7 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'wireTable', connectionLimit);
 
       var accepted;
-      router.acceptConnection(null, function (isAccepted) {
+      router.acceptConnection(null, function (err, isAccepted) {
         accepted = isAccepted;
       });
 
@@ -148,7 +148,7 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'wireTable', connectionLimit + 1);
 
       var accepted;
-      router.acceptConnection(null, function (isAccepted) {
+      router.acceptConnection(null, function (err, isAccepted) {
         accepted = isAccepted;
       });
 
