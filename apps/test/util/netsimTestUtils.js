@@ -26,7 +26,7 @@ exports.assertTableSize = function (shard, tableName, size) {
  * so tests can be written imperatively.
  * @returns {Object}
  */
-exports.fauxStorageTable = function () {
+exports.fakeStorageTable = function () {
   var log_ = '';
   var rowIndex_ = 1;
   var tableData_ = [];
@@ -127,11 +127,11 @@ exports.fauxStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
-  var nodeTable_ = exports.fauxStorageTable();
-  var wireTable_ = exports.fauxStorageTable();
-  var messageTable_ = exports.fauxStorageTable();
-  var logTable_ = exports.fauxStorageTable();
-  var heartbeatTable_ = exports.fauxStorageTable();
+  var nodeTable_ = exports.fakeStorageTable();
+  var wireTable_ = exports.fakeStorageTable();
+  var messageTable_ = exports.fakeStorageTable();
+  var logTable_ = exports.fakeStorageTable();
+  var heartbeatTable_ = exports.fakeStorageTable();
   return {
     remoteNodeTable: nodeTable_,
     nodeTable: new NetSimTable(nodeTable_),
