@@ -68,13 +68,11 @@ NetSimHeartbeat.inherits(NetSimEntity);
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimHeartbeat, shard, function (err, result) {
-    onComplete(result);
-  });
+  NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
 };
 
 // TODO (bbuchanan): Extend storage API to support an upsert operation, and
@@ -93,10 +91,13 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
     if (nodeRows.length > 0) {
       onComplete(new NetSimHeartbeat(shard, nodeRows[0]));
     } else {
-      NetSimHeartbeat.create(shard, function (newHeartbeat) {
-        if (newHeartbeat) {
-          newHeartbeat.nodeID = nodeID;
+      NetSimHeartbeat.create(shard, function (err, newHeartbeat) {
+        if (err !== null) {
+          onComplete(null);
+          return;
         }
+
+        newHeartbeat.nodeID = nodeID;
         newHeartbeat.update(function (err/*, result*/) {
           if (err !== null) {
             // Failed to fully create heartbeat
