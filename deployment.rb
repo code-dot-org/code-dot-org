@@ -68,6 +68,8 @@ def load_configuration()
     'localize_apps'               => false,
     'name'                        => hostname,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'pdf_port_collate'            => 3002,
+    'pdf_port_markdown'           => 3001,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 3000,
