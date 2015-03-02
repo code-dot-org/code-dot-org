@@ -165,8 +165,8 @@ SQL
 
       pdfs = try_t("data.unplugged.#{unplug_id}.pdfs")
       if pdfs
-        level_data[:pdfs] = level_data[:pdfs].each_with_index do |pdf, i|
-          return {
+        level_data[:pdfs] = pdfs.map.with_index do |pdf, i|
+          {
             name: t('download_pdf', :pdf => i + 1),
             url: 'unplugged/' + pdf + '.pdf'
           }
