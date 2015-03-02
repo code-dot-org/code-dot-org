@@ -181,8 +181,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
  * Attempt to begin a cleaning routine.
  */
 NetSimShardCleaner.prototype.cleanShard = function () {
-  this.getCleaningLock(function (isLockAcquired) {
-    if (!isLockAcquired) {
+  this.getCleaningLock(function (err) {
+    if (err) {
+      logger.warn(err.message);
       return;
     }
 
@@ -222,14 +223,12 @@ NetSimShardCleaner.prototype.hasCleaningLock = function () {
 /**
  * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
  * of our own, that does not collide with any existing CleaningHeartbeats.
- * @param {!function} onComplete - called when operation completes, with
- *        boolean "success" argument.
+ * @param {!NodeStyleCallback} onComplete - called when operation completes.
  */
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
   CleaningHeartbeat.create(this.shard_, function (err, heartbeat) {
-    if (err !== null) {
-      logger.error(err.message);
-      onComplete(false);
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
@@ -238,9 +237,8 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
     CleaningHeartbeat.getAllCurrent(this.shard_, function (err, heartbeats) {
       if (err || heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
-        logger.warn("Failed to acquire cleaning lock");
         heartbeat.destroy(function () {
-          onComplete(false);
+          onComplete(new Error('Failed to acquire cleaning lock'), null);
         });
         return;
       }
@@ -248,7 +246,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
       // Success, we have cleaning lock.
       this.heartbeat_ = heartbeat;
       logger.info("Cleaning lock acquired");
-      onComplete(true);
+      onComplete(null, null);
     }.bind(this));
   }.bind(this));
 };

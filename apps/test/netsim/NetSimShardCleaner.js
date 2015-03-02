@@ -61,8 +61,8 @@ describe("NetSimShardCleaner", function () {
 
   it ("gets Cleaning Lock by putting a special row in the heartbeat table", function () {
     assertTableSize(testShard, 'heartbeatTable', 0);
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Callback takes a boolean success value");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Callback gets null error on success");
     });
     assertTableSize(testShard, 'heartbeatTable', 1);
     testShard.heartbeatTable.readAll(function (err, rows) {
@@ -71,16 +71,16 @@ describe("NetSimShardCleaner", function () {
   });
 
   it ("fails to get Cleaning Lock if one already exists", function () {
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "First cleaner gets lock.");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "First cleaner gets lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
     var cleaner2 = new NetSimShardCleaner(testShard);
-    cleaner2.getCleaningLock(function (success) {
-      assert(success === false, "Second cleaner fails to get lock.");
+    cleaner2.getCleaningLock(function (err, success) {
+      assert(err !== null, "Second cleaner fails to get lock.");
     });
 
     // Make sure clean-up of second lock happens
@@ -97,16 +97,16 @@ describe("NetSimShardCleaner", function () {
 
     assertTableSize(testShard, 'heartbeatTable', 1);
 
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Cleaner gets cleaning lock");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Cleaner gets cleaning lock");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 2);
   });
 
   it ("can release cleaning lock", function () {
-    cleaner.getCleaningLock(function (success) {
-      assert(success === true, "Cleaner gets lock.");
+    cleaner.getCleaningLock(function (err) {
+      assert(err === null, "Cleaner gets lock.");
     });
 
     assertTableSize(testShard, 'heartbeatTable', 1);
