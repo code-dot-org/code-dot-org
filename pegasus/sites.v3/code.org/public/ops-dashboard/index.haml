@@ -223,7 +223,6 @@ theme: angular
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
       $scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
-
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
         attendancesForSingleSegment.forEach(function (e) {
@@ -233,7 +232,6 @@ theme: angular
         });
         return attendance;
       }
-
   }]);
 
   controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
@@ -348,7 +346,6 @@ theme: angular
           }
         );
       }
-
     }
   ]);
 
