@@ -27,7 +27,7 @@ Workshop details:
 
 > <%= workshop['notes_s'] %>
 
-If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link %>), in advance so other teachers may take your spot.
+### How to cancel your registration
+**If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link %>), in advance so other teachers may take your spot.**
 
 ![](<%= tracking_pixel %>)
-

@@ -15,21 +15,32 @@ lessons = DB[:cdo_lessons].where(course_s:course)
 
 [together]
 
-## <a name="lesson_<%= index + 1 %>"></a> Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
-<% standards = lesson[:standards_t].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?).group_by{|s| s[:family_s]} %>
+<% lessons.each_with_index do |lesson, index| %>
+<table>
+<thead>
+<tr>
+<th colspan="2">
+Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
+</th>
+</tr>
+</thead>
+<% standards = lesson[:standards_t].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?).group_by{|s| s[:family_short_s]} %>
 <% standards.each do |family| %>
-### <%= family[0] %>
-<ul>
+<tr>
+<td>
+<strong><%= family[0] %></strong>
+</td>
+<td>
 <% family[1].each_with_index do |standard| %>
-<li><strong><%= standard[:id_s] %></strong> - <%= standard[:desc_t] %></li>
+<strong><%= standard[:id_s] %></strong> - <%= standard[:desc_t] %><br/>
 <% end %>
-</ul>
+</td>
 <% end %>
-<hr/>
+</tr>
+</table>
+<% end %>
 
 [/together]
-
-<% end %>
 
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
 
