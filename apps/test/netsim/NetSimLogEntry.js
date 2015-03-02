@@ -83,9 +83,10 @@ describe("NetSimLogEntry", function () {
       });
     });
 
-    it ("Returns a success boolean to its callback", function () {
-      NetSimLogEntry.create(testShard, null, null, function (result) {
-        assert(result === true, "Result is boolean true");
+    it ("Returns log and no error on success", function () {
+      NetSimLogEntry.create(testShard, null, null, function (err, result) {
+        assert(err === null, "Error is null on success");
+        assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
       });
     });
   });
