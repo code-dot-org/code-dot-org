@@ -104,7 +104,7 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
         }
 
         newHeartbeat.nodeID = nodeID;
-        newHeartbeat.update(function (err/*, result*/) {
+        newHeartbeat.update(function (err) {
           if (err !== null) {
             // Failed to fully create heartbeat
             newHeartbeat.destroy();
@@ -170,7 +170,7 @@ NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
 NetSimHeartbeat.prototype.tick = function () {
   if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
-    this.update(function (err/*, result*/) {
+    this.update(function (err) {
       if (err !== null) {
         // A failed heartbeat update may indicate that we've been disconnected
         // or kicked from the shard.  We may want to take action.
