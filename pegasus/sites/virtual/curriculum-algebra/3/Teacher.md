@@ -41,7 +41,7 @@ This lesson has four new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Introduction
 
-In the previous stage, you only worked with a single type of value - Numbers. In this next stage you'll get a chance to write programs that with new data types to output text (Strings) and pictures (Images).
+In the previous stage, you only worked with a single type of value - Numbers. In this next stage you'll get a chance to write programs that with new data types to output text (Strings) and pictures (Images). Students should see Strings as an analog to Numbers: a different type of value, but one that is still a simple program that evaluates to itself and can be passed as an argument to a function. Note that the Number 42 and the String "42" are different values! You could add the Number 42 to another number, but you cannot add the String "42" to another number.
 
 [/together]
 

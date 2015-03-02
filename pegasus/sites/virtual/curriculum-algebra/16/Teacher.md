@@ -36,7 +36,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
-
 ### <a name="GetStarted"></a> 1) Introduction
 
 Let's get back into that Big Game that we started in stage 7 and continued in stage 12.

@@ -12,7 +12,7 @@
   %br
   %br
   .row
-    .projects-table-wrapper
+    .projects-table-wrapper.center
       %a.level_link{href: playlab_projects_path}
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')  
@@ -62,10 +62,10 @@
       %h2.lesson{style: 'text-align:center'}
         = t('project.need_help')
   .row
-    .span3
-    = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-    = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
-    .span3
+    .center{style: 'width: 480px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+
 
 - if current_user.try(:admin?)
   = render partial: 'projects/admin'

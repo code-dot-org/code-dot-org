@@ -36,7 +36,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
-
 ### <a name="GetStarted"></a> 1) Introduction
 
 <img src="bat_animated.gif" style="float:right; margin: 0 10px 10px 0"/>This is Sam the Bat, and his mother tells him that it’s okay for him to step outside of the yard, but only by a short distance! Specifically, she wants to make sure that she can always see at least a little piece of him. Sam is safe as long as some piece of him is onscreen. That means he can go a little past zero on the lefthand size, or a little past 400 on the right - but how far can he go?
@@ -56,7 +55,7 @@ The final puzzle adds a parameter for Sam's y coordinate to the onscreen? functi
 
 # Lesson Tip
 
-Badly designed programs can work just fine, but they are hard to read, hard to test, and easy to screw up if things change. As students work to solve this final puzzle, encourage them to think beyond just "making the code work". It’s not good enough if it just works - as artists, we should care about whether or not code is well designed, too. This is what functions allow us to do! Everyone from programmers to mathematicians uses functions to carve up complex problems into simpler pieces, which make it possible to design elegant solutions to difficult problems. Encourage students to break up this problem into smaller functions, instead of just cramming all of the new logic into 'onscreen?'
+Poorly designed programs can work just fine, but they are hard to read, hard to test, and easy to screw up if things change. As students work to solve this final puzzle, encourage them to think beyond just "making the code work". It’s not good enough if it just works - as artists, we should care about whether or not code is well designed, too. This is what functions allow us to do! Everyone from programmers to mathematicians uses functions to carve up complex problems into simpler pieces, which make it possible to design elegant solutions to difficult problems. Encourage students to break up this problem into smaller functions, instead of just cramming all of the new logic into 'onscreen?'
 
 [/tip]
 
