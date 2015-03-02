@@ -105,9 +105,9 @@ NetSimLocalClientNode.create = function (shard, onComplete) {
     }
 
     // Give our newly-created local node a heartbeat
-    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(new Error('Unable to get/create heartbeat.'), null);
+    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
