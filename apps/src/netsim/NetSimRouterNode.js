@@ -185,7 +185,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.update(function () {
+      router.update(function (/*err, result*/) {
         onComplete(router);
       });
     });
@@ -259,7 +259,7 @@ NetSimRouterNode.prototype.tick = function (clock) {
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
- * @param {function} [onComplete] - Optional success/failure callback
+ * @param {NodeStyleCallback} [onComplete] - Optional success/failure callback
  */
 NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -430,7 +430,9 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
     }
 
     // Trigger an update, which will correct our connection count
-    self.update(onComplete);
+    self.update(function (err, result) {
+      onComplete(result);
+    });
   });
 };
 
@@ -466,8 +468,8 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(function (success) {
-      onComplete(success);
+    wire.update(function (err/*, result*/) {
+      onComplete(err === null);
     });
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
