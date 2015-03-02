@@ -265,16 +265,16 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   }
 
   var self = this;
-  this.myWire.destroy(function (success) {
-    if (!success) {
-      onComplete(success);
+  this.myWire.destroy(function (err) {
+    if (err) {
+      onComplete(false);
       return;
     }
 
     self.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
-    self.myRouter.update(function (err, result) {
-      onComplete(result);
+    self.myRouter.update(function (err) {
+      onComplete(err === null);
     });
     self.myRouter.stopSimulation();
     self.myRouter = null;
@@ -339,12 +339,12 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
 
       // Pull the message off the wire, and hold it in-memory until we route it.
       // We'll create a new one with the same payload if we have to send it on.
-      message.destroy(function (success) {
-        if (success) {
-          self.handleMessage_(message);
-        } else {
-          logger.error("Error pulling message off the wire.");
+      message.destroy(function (err) {
+        if (err) {
+          logger.error('Error pulling message off the wire: ' + err.message);
+          return;
         }
+        self.handleMessage_(message);
       });
 
     });

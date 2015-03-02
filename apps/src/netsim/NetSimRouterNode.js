@@ -598,12 +598,13 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
 
         // Pull the message off the wire, and hold it in-memory until we route it.
         // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (success) {
-          if (success) {
-            self.routeMessage_(message, wires);
-          } else {
-            logger.error("Error pulling message off the wire for routing");
+        message.destroy(function (err) {
+          if (err) {
+            logger.error("Error pulling message off the wire for routing; " +
+                err.message);
+            return;
           }
+          self.routeMessage_(message, wires);
         });
 
       });

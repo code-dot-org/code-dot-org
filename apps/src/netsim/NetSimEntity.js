@@ -82,7 +82,7 @@ NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
 
 /**
  * Push entity state into remote storage.
- * @param {NodeStyleCallback} [onComplete] - Optional success callback.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback.
  */
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -90,13 +90,14 @@ NetSimEntity.prototype.update = function (onComplete) {
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
-/** Remove entity from remote storage. */
+/**
+ * Remove entity from remote storage.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback
+ */
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().delete(this.entityID, function (err) {
-    onComplete(err === null);
-  });
+  this.getTable_().delete(this.entityID, onComplete);
 };
 
 /** Get storage table for this entity type. */
