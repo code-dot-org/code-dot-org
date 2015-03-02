@@ -167,15 +167,10 @@ theme: angular
 
   controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
-
-      //$scope.programs = [{name:"MSS"}, {name:"MSM"}, {name:"ECS"}, {name:"CSP"}];
-
       $scope.workshopsLoaded = false;
 
       $scope.workshops = workshopsService.query();
       $scope.cohorts = cohortsService.query();
-
-      //$scope.workshop = workshopsService.get({id: $routeParams.id});
 
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
