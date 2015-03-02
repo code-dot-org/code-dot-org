@@ -76,7 +76,9 @@ CleaningHeartbeat.inherits(NetSimHeartbeat);
  *        CleaningHeartbeat object.
  */
 CleaningHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(CleaningHeartbeat, shard, onComplete);
+  NetSimEntity.create(CleaningHeartbeat, shard, function (err, result) {
+    onComplete(result);
+  });
 };
 
 /**
