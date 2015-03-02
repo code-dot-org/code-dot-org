@@ -94,20 +94,20 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
     if (err !== null) {
-      onComplete(null);
+      onComplete(err, node);
       return;
     }
 
     // Give our newly-created local node a heartbeat
     NetSimHeartbeat.getOrCreate(shard, node.entityID, function (heartbeat) {
       if (heartbeat === null) {
-        onComplete(null);
+        onComplete(new Error('Unable to get/create heartbeat.'), null);
         return;
       }
 
@@ -116,7 +116,7 @@ NetSimLocalClientNode.create = function (shard, onComplete) {
       node.heartbeat_ = heartbeat;
       node.heartbeat_.setFailureCallback(node.onFailedHeartbeat_.bind(node));
 
-      onComplete(node);
+      onComplete(null, node);
     });
   });
 };

@@ -176,8 +176,8 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  NetSimLocalClientNode.create(this.shard_, function (node) {
-    if (node) {
+  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+    if (err === null) {
       this.myNode = node;
       this.myNode.setDisplayName(displayName);
       this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
@@ -187,6 +187,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
         this.statusChanges.notifyObservers();
       }.bind(this));
     } else {
+      logger.error(err.message);
       logger.error("Failed to create client node.");
     }
   }.bind(this));
