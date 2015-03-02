@@ -16,12 +16,15 @@ var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetS
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 
 describe("NetSimConnection", function () {
-  var connection, testShard;
+  var connection, testShard, testWindow;
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     testShard = fakeShard();
-    connection = new NetSimConnection(null, null);
+    testWindow = {
+      addEventListener: function () {}
+    };
+    connection = new NetSimConnection(testWindow, null, null);
   });
 
   describe("getAllNodes", function () {
