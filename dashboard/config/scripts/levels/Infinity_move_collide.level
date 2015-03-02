@@ -72,7 +72,7 @@
           <title name="DISTANCE">200</title>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">winpoint2</title>
+          <title name="SOUND">???</title>
         </block>
       </xml>
     </required_blocks>
