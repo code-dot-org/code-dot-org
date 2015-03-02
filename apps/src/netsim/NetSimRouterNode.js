@@ -265,7 +265,7 @@ NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
     self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
@@ -381,13 +381,13 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {function} onComplete which accepts a number.
+ * @param {NodeStyleCallback} onComplete which accepts a number.
  */
 NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getConnections(function (err, wires) {
-    onComplete(wires.length);
+    onComplete(err, wires.length);
   });
 };
 
@@ -423,7 +423,12 @@ var contains = function (haystack, needle) {
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
+    if (err) {
+      onComplete(err, false);
+      return;
+    }
+
     if (count > MAX_CLIENT_CONNECTIONS) {
       onComplete(new Error("Too many connections"), false);
       return;
