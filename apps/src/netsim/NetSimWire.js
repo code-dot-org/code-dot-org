@@ -60,7 +60,7 @@ NetSimWire.inherits(NetSimEntity);
  * @param {!NetSimShard} shard
  * @param {!number} localNodeID
  * @param {!number} remoteNodeID
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
@@ -69,10 +69,10 @@ NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
   entity.remoteNodeID = remoteNodeID;
   entity.getTable_().create(entity.buildRow_(), function (err, row) {
     if (err !== null) {
-      onComplete(null);
+      onComplete(err, null);
       return;
     }
-    onComplete(new NetSimWire(shard, row));
+    onComplete(null, new NetSimWire(shard, row));
   });
 };
 

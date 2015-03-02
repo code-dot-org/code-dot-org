@@ -124,8 +124,8 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
-    if (wire === null) {
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (err, wire) {
+    if (err !== null) {
       onComplete(null);
       return;
     }
