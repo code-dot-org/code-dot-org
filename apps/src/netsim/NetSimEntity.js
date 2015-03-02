@@ -72,11 +72,11 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
   entity.getTable_().read(entityID, function (err, row) {
-    if (err === null) {
-      onComplete(null, new EntityType(shard, row));
-    } else {
-      onComplete(err, null);
+    var newEntity = null;
+    if (!err) {
+      newEntity = new EntityType(shard, row);
     }
+    onComplete(err, newEntity);
   });
 };
 
@@ -94,8 +94,8 @@ NetSimEntity.prototype.update = function (onComplete) {
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getTable_().delete(this.entityID, function (err, result) {
-    onComplete(result);
+  this.getTable_().delete(this.entityID, function (err) {
+    onComplete(err === null);
   });
 };
 
