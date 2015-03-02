@@ -76,6 +76,10 @@ ExpressionNode.prototype.isNumber = function () {
   return this.getType_() === ValueType.NUMBER;
 };
 
+ExpressionNode.prototype.isDivZero = function () {
+  return this.getValue() === '/' && this.getChildValue(1) === 0;
+};
+
 /**
  * Create a deep clone of this node
  */
