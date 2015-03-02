@@ -562,7 +562,7 @@
               data-name={video.data.name}
               data-src={video.data.src}
             >
-              <img className="video_thumbnail" src={video.thumbnail_url} width={39*4.7} />
+              <img className="video_thumbnail" src={ Frame.getAbsolutePath(video.thumbnail_url) } width={39*4.7} />
               <div className="video_name"><span>{video.name}</span></div>
             </a>
           );
