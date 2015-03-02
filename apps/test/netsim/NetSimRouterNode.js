@@ -72,7 +72,7 @@ describe("NetSimRouterNode", function () {
 
     it ("returns an empty array when no wires are present", function () {
       var wires;
-      router.getConnections(function (foundWires) {
+      router.getConnections(function (err, foundWires) {
         wires = foundWires;
       });
       assert(wires !== undefined, "Set wires");
@@ -84,7 +84,7 @@ describe("NetSimRouterNode", function () {
       NetSimWire.create(testShard, 0, router.entityID, function () {});
 
       var wires;
-      router.getConnections(function (foundWires) {
+      router.getConnections(function (err, foundWires) {
         wires = foundWires;
       });
       assertEqual(wires.length, 1);
@@ -94,7 +94,7 @@ describe("NetSimRouterNode", function () {
       NetSimWire.create(testShard, 0, router.entityID, function () {});
 
       var wires;
-      router.getConnections(function (foundWires) {
+      router.getConnections(function (err, foundWires) {
         wires = foundWires;
       });
       assert(wires[0] instanceof NetSimWire, "Got a NetSimWire back");
@@ -105,7 +105,7 @@ describe("NetSimRouterNode", function () {
       NetSimWire.create(testShard, 0, router.entityID + 1, function () {});
 
       var wires;
-      router.getConnections(function (foundWires) {
+      router.getConnections(function (err, foundWires) {
         wires = foundWires;
       });
       // Only get the one wire back.
