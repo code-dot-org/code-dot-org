@@ -222,7 +222,7 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 
 /**
  * @param {!NetSimRouterNode} router
- * @param {function} onComplete (success)
+ * @param {NodeStyleCallback} onComplete
  */
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
@@ -230,7 +230,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
   var self = this;
   this.connectToNode(router, function (err, wire) {
     if (err) {
-      onComplete(false);
+      onComplete(err);
       return;
     }
 
@@ -241,7 +241,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
     router.requestAddress(wire, self.getHostname(), function (err) {
       if (err) {
         wire.destroy(function () {
-          onComplete(false);
+          onComplete(err);
         });
         return;
       }
@@ -252,9 +252,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
       self.status_ = "Connected to " + router.getDisplayName() +
       " with address " + wire.localAddress;
-      self.update(function (err) {
-        onComplete(err === null);
-      });
+      self.update(onComplete);
     });
   });
 };

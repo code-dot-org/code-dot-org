@@ -271,9 +271,10 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
       return;
     }
 
-    self.myNode.connectToRouter(router, function (success) {
-      if (!success) {
-        logger.warn('Failed to connect to ' + router.getDisplayName());
+    self.myNode.connectToRouter(router, function (err) {
+      if (err) {
+        logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
+            err.message);
       }
       self.statusChanges.notifyObservers();
     });
