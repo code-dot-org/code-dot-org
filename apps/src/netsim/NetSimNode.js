@@ -118,27 +118,27 @@ NetSimNode.prototype.getStatusDetail = function () {
  * When finished, calls onComplete({the new wire})
  * On failure, calls onComplete(null)
  * @param {!NetSimNode} otherNode
- * @param {function} [onComplete]
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
   NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (err, wire) {
-    if (err !== null) {
-      onComplete(null);
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
     otherNode.acceptConnection(self, function (success) {
       if (!success) {
         wire.destroy(function () {
-          onComplete(null);
+          onComplete(new Error('Connection rejected.'), null);
         });
         return;
       }
 
-      onComplete(wire);
+      onComplete(null, wire);
     });
   });
 };
