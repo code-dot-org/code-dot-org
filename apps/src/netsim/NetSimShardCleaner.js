@@ -255,11 +255,11 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
-  this.heartbeat_.destroy(function (success) {
+  this.heartbeat_.destroy(function (err) {
     this.heartbeat_ = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
-    onComplete(success);
+    onComplete(err === null);
   }.bind(this));
 };
 
@@ -362,13 +362,13 @@ DestroyEntity.inherits(Command);
 DestroyEntity.prototype.onBegin_ = function () {
 
   logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
-  this.entity_.destroy(function (success) {
-    if (success) {
-      logger.info("Deleted entity");
-      this.succeed();
-    } else {
+  this.entity_.destroy(function (err) {
+    if (err) {
       this.fail();
+      return;
     }
+    logger.info("Deleted entity");
+    this.succeed();
   }.bind(this));
 };
 
