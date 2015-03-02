@@ -73,12 +73,10 @@ module LevelsHelper
     video_info(autoplay_video) unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new
-    available_callouts = []
+  def available_callouts
     if @level.custom?
       unless @level.try(:callout_json).blank?
-        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
+        return JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
               callout_text: callout_definition['callout_text'],
@@ -87,8 +85,13 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = @script_level.callouts if @script_level
+      return @script_level.callouts if @script_level
     end
+    []
+  end
+
+  def select_and_remember_callouts(always_show = false)
+    session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
     callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
