@@ -82,11 +82,16 @@ CleaningHeartbeat.create = function (shard, onComplete) {
 /**
  * Static getter for all non-expired cleaning locks on the shard.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - callback that receives an array of the non-
+ * @param {!NodeStyleCallback} onComplete - callback that receives an array of the non-
  *        expired cleaning locks.
  */
 CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
   shard.heartbeatTable.readAll(function (err, rows) {
+    if (err) {
+      onComplete(err, null);
+      return;
+    }
+
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
@@ -95,7 +100,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
         });
-    onComplete(heartbeats);
+    onComplete(null, heartbeats);
   });
 };
 
@@ -230,8 +235,8 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 
     // We made a heartbeat - now check to make sure there wasn't already
     // another one.
-    CleaningHeartbeat.getAllCurrent(this.shard_, function (heartbeats) {
-      if (heartbeats.length > 1) {
+    CleaningHeartbeat.getAllCurrent(this.shard_, function (err, heartbeats) {
+      if (err || heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
         logger.warn("Failed to acquire cleaning lock");
         heartbeat.destroy(function () {
