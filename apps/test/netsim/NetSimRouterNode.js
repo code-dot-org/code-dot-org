@@ -24,6 +24,42 @@ describe("NetSimRouterNode", function () {
     testShard = fakeShard();
   });
 
+  describe("static method get", function () {
+    var err, result, routerID;
+
+    beforeEach(function () {
+      err = undefined;
+      result = undefined;
+      routerID = 0;
+    });
+
+    it ("returns an Error object when router cannot be found", function () {
+      NetSimRouterNode.get(routerID, testShard, function (_err, _result) {
+        err = _err;
+        result = _result;
+      });
+
+      assertEqual(null, result);
+      assert(err instanceof Error, "Returned an error object");
+      assertEqual('Not Found', err.message);
+    });
+
+    it ("returns null for error and a NetSimRouterNode when router is found", function () {
+      NetSimRouterNode.create(testShard, function (_err, _router) {
+        routerID = _router.entityID;
+      });
+
+      NetSimRouterNode.get(routerID, testShard, function(_err, _result) {
+        err = _err;
+        result = _result;
+      });
+
+      assertEqual(null, err);
+      assert(result instanceof NetSimRouterNode);
+      assertEqual(routerID, result.entityID);
+    });
+  });
+
   describe("getConnections", function () {
     var router;
 

@@ -265,9 +265,9 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimRouterNode.get(routerID, this.shard_, function (router) {
-    if (!router) {
-      logger.warn('Failed to find router with ID ' + routerID);
+  NetSimRouterNode.get(routerID, this.shard_, function (err, router) {
+    if (err !== null) {
+      logger.warn('Failed to find router with ID ' + routerID + '; ' + err.message);
       return;
     }
 

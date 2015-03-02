@@ -196,20 +196,19 @@ NetSimRouterNode.create = function (shard, onComplete) {
  * Static async retrieval method.  See NetSimEntity.get().
  * @param {!number} routerID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
   NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
     if (err !== null) {
-      logger.error(err.message);
-      onComplete(null);
+      onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
       if (heartbeat === null) {
-        onComplete(null);
+        onComplete(new Error('Unable to create heartbeat for router.'), null);
         return;
       }
 
@@ -218,7 +217,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
       router.heartbeat_ = heartbeat;
       router.heartbeat_.setBeatInterval(12000);
 
-      onComplete(router);
+      onComplete(null, router);
     });
   });
 };
