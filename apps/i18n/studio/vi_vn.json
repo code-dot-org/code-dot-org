@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "Khi mũi tên chỉ lên trên",
   "whenUpTooltip": "Thực hiện các thao tác dưới đây khi chìa khoá mũi tên chỉ lên bật.",
-  "yes": "Đồng ý",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Đồng ý"
 }

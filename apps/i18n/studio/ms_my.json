@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "Ya",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Ya"
 }

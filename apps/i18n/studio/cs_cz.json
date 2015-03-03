@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "dotkne horního okraje",
   "whenUp": "když šipka nahoru",
   "whenUpTooltip": "Spusť uvedené akce když je stisknutá klávesa \"nahoru\".",
-  "yes": "Ano",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Ano"
 }

@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "snertir efri brún",
   "whenUp": "þegar upp ör",
   "whenUpTooltip": "Gera aðgerðirnar fyrir neðan þegar ýtt er á örvarlykil upp.",
-  "yes": "Já",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Já"
 }

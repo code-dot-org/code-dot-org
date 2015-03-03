@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "prek cepin në majë",
   "whenUp": "kur shigjeta është lart",
   "whenUpTooltip": "Kryej veprimet më poshtë kur tasti i shigjetës lart shtypet.",
-  "yes": "Po",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Po"
 }

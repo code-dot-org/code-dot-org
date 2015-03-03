@@ -286,7 +286,6 @@
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
   "yes": "Yes",
-  "onEventTooltip": "Execute code in response to the specified event.",
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",

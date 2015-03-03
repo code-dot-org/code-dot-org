@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "touche le bord du haut",
   "whenUp": "quand flèche en haut",
   "whenUpTooltip": "Exécute les actions ci-dessous quand on presse la touche 'flèche en haut'.",
-  "yes": "Oui",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Oui"
 }

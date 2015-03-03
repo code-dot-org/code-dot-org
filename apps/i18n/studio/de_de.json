@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "berührt oberen Rand",
   "whenUp": "wenn Pfeil-nach-oben",
   "whenUpTooltip": "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-oben-Taste gedrückt wird.",
-  "yes": "Ja",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Ja"
 }

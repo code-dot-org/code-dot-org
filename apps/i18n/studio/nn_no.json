@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "berører øvre kant",
   "whenUp": "Når pil opp",
   "whenUpTooltip": "Utfør handlingene nedenfor når pil opp-tasten trykkes.",
-  "yes": "Ja",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Ja"
 }

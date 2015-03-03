@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "goiko gezia denean",
   "whenUpTooltip": "Exekutatu behekaldeko ekintzak gora gezidun tekla sakatzean.",
-  "yes": "Bai",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Bai"
 }

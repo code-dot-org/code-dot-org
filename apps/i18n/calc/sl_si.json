@@ -9,8 +9,5 @@
   "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Tukaj je tvoja zgodba! Nadaljuj z delom na tej zgodbi ali se  premakni na naslednjo uganko!",
   "yourExpression": "Tvoj izraz:",
-  "wrongInput": "You are calling your function with the wrong value.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "You are calling your function with the wrong value."
 }

@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "تماس داشتن با لبه ی بالا",
   "whenUp": "هنگام زدن جهت بالا",
   "whenUpTooltip": "اجرای عملیات زیر هنگامیکه کلید جهت بالا زده می‌شود.",
-  "yes": "بله",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "بله"
 }

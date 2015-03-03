@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "כאשר חץ למעלה",
   "whenUpTooltip": "בצע את הפעולות להלן כאשר נלחץ המקש חץ למעלה.",
-  "yes": "כן",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "כן"
 }

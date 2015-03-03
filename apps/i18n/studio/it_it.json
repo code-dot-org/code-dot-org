@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "tocca il bordo superiore",
   "whenUp": "quando la freccia in alto",
   "whenUpTooltip": "Esegue le azioni qua sotto quando viene premuto il tasto \"freccia in alto\".",
-  "yes": "Sì",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Sì"
 }
