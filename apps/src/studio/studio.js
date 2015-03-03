@@ -1137,9 +1137,9 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace.
+  // Disable "show code" button in feedback dialog and workspace if blockly.
   // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = false;
+  config.enableShowCode = studioApp.editCode;
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
@@ -1593,9 +1593,10 @@ Studio.execute = function() {
 
 
       var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                     nativeGetCallback,
-                                                     null);
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: nativeGetCallback,
+      });
       interpreter.setProperty(scope,
                               'getCallback',
                               interpreter.createNativeFunction(wrapper));

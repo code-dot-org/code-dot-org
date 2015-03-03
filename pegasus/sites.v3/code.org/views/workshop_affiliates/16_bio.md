@@ -6,8 +6,8 @@ Thinkersmith has led the charge for elementary school computer science for nearl
 
 **About Thinkersmith**
 
-"I enjoyed this workshop. It was engaging and challenging. The presenter was passionate about the topic. I felt like I was let in on what the children in the future will be challenged with and the tools to help them meet that challenge!"
+"I enjoyed this workshop. It was engaging and challenging. The presenter was passionate about the topic. I felt like I was let in on what the children in the future will be challenged with and the tools to help them meet that challenge!" - Sherry L. from Creswell, OR
 
-"This was awesome and I have been preaching the gospel of CS to other schools in the area!"
+"This was awesome and I have been preaching the gospel of CS to other schools in the area!" - Shawn H. from Wolf Creek, OR
 
-"Great training! Engaging, great pacing, scaffolded, directly related to what we can do with students."
+"Great training! Engaging, great pacing, scaffolded, directly related to what we can do with students." - Nicola S. from Springfield, OR

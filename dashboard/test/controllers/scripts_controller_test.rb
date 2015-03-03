@@ -38,7 +38,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of hoc" do
-    get :show, id: Script::HOC_ID
+    get :show, id: Script::HOC_NAME
     assert_response :success
   end
 

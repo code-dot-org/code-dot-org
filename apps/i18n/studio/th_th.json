@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "เมื่อกดลูกศรขึ้น",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "ใช่"
+  "yes": "ใช่",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

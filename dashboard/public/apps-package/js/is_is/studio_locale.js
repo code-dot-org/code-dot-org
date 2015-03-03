@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "snertir efri brún"},
 "whenUp":function(d){return "þegar upp ör"},
 "whenUpTooltip":function(d){return "Gera aðgerðirnar fyrir neðan þegar ýtt er á örvarlykil upp."},
-"yes":function(d){return "Já"}};
+"yes":function(d){return "Já"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};
