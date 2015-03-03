@@ -201,16 +201,26 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction =
+    function (interpreter, nativeFunc, nativeParentObj, marshalParams, maxDepth) {
+  marshalParams = (typeof marshalParams === 'undefined') ? true : marshalParams;
+  if (marshalParams) {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
+      }
+      var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
+    };
+  } else {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
