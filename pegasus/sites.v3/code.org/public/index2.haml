@@ -104,11 +104,11 @@ social:
             - unless text.nil_or_empty?
               - lines = text.lines 
               .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee; line-height:22px"}
-                .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[0]
-                .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[1]
-                .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0.5); padding:8px"}
+                .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; background-color: rgba(0,0,0,0); padding:8px"}
                   = lines[2]
 
         &nbsp;
@@ -121,8 +121,8 @@ social:
 
       .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}     
         #playvideo{style: "opacity: 0"}
-          %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo();", style: "cursor: pointer"}
-          %span{style: "font-size:20px", onclick: "return showVideo();", style: "cursor: pointer"}
+          %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+          %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
             = I18n.t(:homepage_watchvideo)
         %div{style: "height:40px"}
         #action{style: "opacity: 0"}
@@ -148,7 +148,7 @@ social:
 = view 'popup_window.js'
 
 #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
-  = view :display_video_lightbox, video_code: video_code, download_filename: download_filename, facebook:facebook, twitter:twitter
+  = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, facebook:facebook, twitter:twitter
 
 :javascript
   var petition;

@@ -210,7 +210,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_sent'), 'Sent Messages');
 
-  this.connection_ = new NetSimConnection(this.sentMessageLog_,
+  this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
@@ -1426,7 +1426,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_my_device_tab">\n  <div class="chunk_size"></div>\n  <div class="encoding"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim_my_device_tab">\n  <div class="encoding"></div>\n  <div class="chunk_size"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1885,6 +1885,8 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
   this.shardSelector_.change(this.onShardSelectorChange_.bind(this));
+  this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
+  this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
   dom.addClickTouchEvent(this.addRouterButton_[0],
       this.addRouterButtonClick_.bind(this));
@@ -2075,6 +2077,8 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
   this.closedRoot_.show();
   this.openRoot_.hide();
 
+  this.notConnectedNote_.hide();
+
   // Update connection status
   this.connectionStatusSpan_.html(
       this.connection_.myNode.getStatus() + ' ' +
@@ -2110,6 +2114,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   // Do we have a shard yet?
   if (!this.connection_.isConnectedToShard()) {
     this.shardSelector_.val(SELECTOR_NONE_VALUE);
+    this.notConnectedNote_.show();
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
@@ -2117,6 +2122,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   }
 
   // We have a shard
+  this.notConnectedNote_.hide();
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
@@ -2277,7 +2283,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_lobby_open">\n  <div id="display_name_view">\n    <label for="netsim_lobby_name">My Name:</label>\n    <input id="netsim_lobby_name" type="text" />\n    <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />\n  </div>\n  <div id="shard_view">\n    <label for="netsim_shard_select">My Section:</label>\n    <select id="netsim_shard_select"></select>\n    <a class="shardLink" href="#">Share this private network</a>\n    <input type="button" id="netsim_lobby_add_router" value="Add Router" />\n    <ul id="netsim_lobby_list"></ul>\n    <input type="button" id="netsim_lobby_connect" value="Connect" />\n  </div>\n</div>\n<div id="netsim_lobby_closed">\n    <span id="netsim_lobby_statusbar">...</span>\n    <a class="shardLink" href="#">Share this private network</a>\n    <input type="button" id="netsim_lobby_disconnect" value="Disconnect" />\n</div>\n'); })();
+ buf.push('<div id="netsim_lobby_open">\n  <div id="display_name_view">\n    <label for="netsim_lobby_name">My Name:</label>\n    <input id="netsim_lobby_name" type="text" />\n    <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />\n  </div>\n  <div id="shard_view">\n    <label for="netsim_shard_select">My Section:</label>\n    <select id="netsim_shard_select"></select>\n    <span id="netsim_not_connected_note">You are not connected. Select a class section from the list to connect.</span>\n    <a class="shardLink" href="#">Share this private network</a>\n    <input type="button" id="netsim_lobby_add_router" value="Add Router" />\n    <ul id="netsim_lobby_list"></ul>\n    <input type="button" id="netsim_lobby_connect" value="Connect" />\n  </div>\n</div>\n<div id="netsim_lobby_closed">\n    <span id="netsim_lobby_statusbar">...</span>\n    <a class="shardLink" href="#">Share this private network</a>\n    <input type="button" id="netsim_lobby_disconnect" value="Disconnect" />\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2869,15 +2875,16 @@ var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
 var NetSimShardCleaner = require('./NetSimShardCleaner');
 
-var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
+ * @param {Window} thisWindow
  * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
  * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
  * @constructor
  */
-var NetSimConnection = module.exports = function (sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedLog) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -2944,7 +2951,7 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  thisWindow.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 
 /**
@@ -3023,31 +3030,21 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  NetSimLocalClientNode.create(this.shard_, function (node) {
-    if (node) {
-      this.myNode = node;
-      this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
-      this.myNode.setDisplayName(displayName);
-      this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
-      this.myNode.update(function () {
-        this.shardChange.notifyObservers(this.shard_, this.myNode);
-        this.statusChanges.notifyObservers();
-      }.bind(this));
-    } else {
-      logger.error("Failed to create client node.");
+  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+    if (err !== null) {
+      logger.error("Failed to create client node; " + err.message);
+      return;
     }
-  }.bind(this));
-};
 
-/**
- * Detects when local client node is unable to reconnect, and kicks user
- * out of the shard.
- * @private
- */
-NetSimConnection.prototype.onMyNodeChange_= function () {
-  if (this.myNode.getStatus() === 'Offline') {
-    this.disconnectFromShard();
-  }
+    this.myNode = node;
+    this.myNode.setDisplayName(displayName);
+    this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
+    this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
+    this.myNode.update(function (/*err, result*/) {
+      this.shardChange.notifyObservers(this.shard_, this.myNode);
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -3073,8 +3070,8 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   }
 
   var self = this;
-  this.shard_.nodeTable.readAll(function (rows) {
-    if (!rows) {
+  this.shard_.nodeTable.readAll(function (err, rows) {
+    if (err !== null) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
       return;
@@ -3122,15 +3119,16 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimRouterNode.get(routerID, this.shard_, function (router) {
-    if (!router) {
-      logger.warn('Failed to find router with ID ' + routerID);
+  NetSimRouterNode.get(routerID, this.shard_, function (err, router) {
+    if (err !== null) {
+      logger.warn('Failed to find router with ID ' + routerID + '; ' + err.message);
       return;
     }
 
-    self.myNode.connectToRouter(router, function (success) {
-      if (!success) {
-        logger.warn('Failed to connect to ' + router.getDisplayName());
+    self.myNode.connectToRouter(router, function (err) {
+      if (err) {
+        logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
+            err.message);
       }
       self.statusChanges.notifyObservers();
     });
@@ -3183,6 +3181,7 @@ var logger = NetSimLogger.getSingleton();
 /**
  * Minimum delay between attempts to start a cleaning job.
  * @type {number}
+ * @const
  */
 var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
@@ -3190,6 +3189,7 @@ var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
  * Minimum delay before the next cleaning job is started after
  * a cleaning job has finished successfully.
  * @type {number}
+ * @const
  */
 var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
 
@@ -3225,7 +3225,7 @@ CleaningHeartbeat.inherits(NetSimHeartbeat);
 /**
  * Static creation method for a CleaningHeartbeat.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Callback that is passed the new
+ * @param {!NodeStyleCallback} onComplete - Callback that is passed the new
  *        CleaningHeartbeat object.
  */
 CleaningHeartbeat.create = function (shard, onComplete) {
@@ -3235,11 +3235,16 @@ CleaningHeartbeat.create = function (shard, onComplete) {
 /**
  * Static getter for all non-expired cleaning locks on the shard.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - callback that receives an array of the non-
+ * @param {!NodeStyleCallback} onComplete - callback that receives an array of the non-
  *        expired cleaning locks.
  */
 CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
-  shard.heartbeatTable.readAll(function (rows) {
+  shard.heartbeatTable.readAll(function (err, rows) {
+    if (err) {
+      onComplete(err, null);
+      return;
+    }
+
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
@@ -3248,7 +3253,7 @@ CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
         });
-    onComplete(heartbeats);
+    onComplete(null, heartbeats);
   });
 };
 
@@ -3329,8 +3334,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
  * Attempt to begin a cleaning routine.
  */
 NetSimShardCleaner.prototype.cleanShard = function () {
-  this.getCleaningLock(function (isLockAcquired) {
-    if (!isLockAcquired) {
+  this.getCleaningLock(function (err) {
+    if (err) {
+      logger.warn(err.message);
       return;
     }
 
@@ -3370,24 +3376,22 @@ NetSimShardCleaner.prototype.hasCleaningLock = function () {
 /**
  * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
  * of our own, that does not collide with any existing CleaningHeartbeats.
- * @param {!function} onComplete - called when operation completes, with
- *        boolean "success" argument.
+ * @param {!NodeStyleCallback} onComplete - called when operation completes.
  */
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
-  CleaningHeartbeat.create(this.shard_, function (heartbeat) {
-    if (heartbeat === null) {
-      onComplete(false);
+  CleaningHeartbeat.create(this.shard_, function (err, heartbeat) {
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
     // We made a heartbeat - now check to make sure there wasn't already
     // another one.
-    CleaningHeartbeat.getAllCurrent(this.shard_, function (heartbeats) {
-      if (heartbeats.length > 1) {
+    CleaningHeartbeat.getAllCurrent(this.shard_, function (err, heartbeats) {
+      if (err || heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
-        logger.info("Failed to acquire cleaning lock");
         heartbeat.destroy(function () {
-          onComplete(false);
+          onComplete(new Error('Failed to acquire cleaning lock'), null);
         });
         return;
       }
@@ -3395,7 +3399,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
       // Success, we have cleaning lock.
       this.heartbeat_ = heartbeat;
       logger.info("Cleaning lock acquired");
-      onComplete(true);
+      onComplete(null, null);
     }.bind(this));
   }.bind(this));
 };
@@ -3403,15 +3407,15 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 /**
  * Remove and destroy this cleaner's CleaningHeartbeat, giving another
  * client the chance to acquire a lock.
- * @param {!function} onComplete - called when operation completes, with
+ * @param {!NodeStyleCallback} onComplete - called when operation completes, with
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
-  this.heartbeat_.destroy(function (success) {
+  this.heartbeat_.destroy(function (err) {
     this.heartbeat_ = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
-    onComplete(success);
+    onComplete(err, null);
   }.bind(this));
 };
 
@@ -3483,7 +3487,7 @@ CacheTable.inherits(Command);
  */
 CacheTable.prototype.onBegin_ = function () {
   logger.info('Begin CacheTable[' + this.key_ + ']');
-  this.table_.readAll(function (rows) {
+  this.table_.readAll(function (err, rows) {
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
   }.bind(this));
@@ -3514,13 +3518,13 @@ DestroyEntity.inherits(Command);
 DestroyEntity.prototype.onBegin_ = function () {
 
   logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
-  this.entity_.destroy(function (success) {
-    if (success) {
-      logger.info("Deleted entity");
-      this.succeed();
-    } else {
+  this.entity_.destroy(function (err) {
+    if (err) {
       this.fail();
+      return;
     }
+    logger.info("Deleted entity");
+    this.succeed();
   }.bind(this));
 };
 
@@ -3759,9 +3763,14 @@ var NetSimTable = require('./NetSimTable');
  * @readonly
  */
 // TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var APP_PUBLIC_KEY =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "JGW2rHUp_UCMW_fQmRf6iQ==" : "HQJ8GCCMGP7Yh8MrtDusIA==";
+var APP_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
+// Ugly null-guards so we can load this file in tests.
+if (window &&
+    window.location &&
+    window.location.hostname &&
+    window.location.hostname.split('.')[0] === 'localhost') {
+  APP_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
+}
 
 /**
  * A shard is an isolated, complete simulation state shared by a subset of
@@ -3880,51 +3889,75 @@ var NetSimTable = module.exports = function (storageTable) {
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(function (data) {
-    callback(data);
-    if (data !== null) {
+  this.remoteTable_.readAll(function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.fullCacheUpdate_(data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.read(id, function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.updateCacheRow_(id, data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.create(value, function (err, data) {
+    callback(err, data);
+    if (err === null) {
       this.addRowToCache_(data);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.update(id, value, function (err, success) {
+    callback(err, success);
+    if (err === null) {
       this.updateCacheRow_(id, value);
     }
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.delete(id, function (err, success) {
+    callback(err, success);
+    if (err === null) {
       this.removeRowFromCache_(id);
     }
   }.bind(this));
 };
 
+/**
+ * @param {Array} allRows
+ * @private
+ */
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
   var newCache = allRows.reduce(function (prev, currentRow) {
@@ -3941,11 +3974,20 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   this.lastFullUpdateTime_ = Date.now();
 };
 
+/**
+ * @param {!Object} row
+ * @param {!number} row.id
+ * @private
+ */
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
   this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
+/**
+ * @param {!number} id
+ * @private
+ */
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
@@ -3953,6 +3995,11 @@ NetSimTable.prototype.removeRowFromCache_ = function (id) {
   }
 };
 
+/**
+ * @param {!number} id
+ * @param {!Object} row
+ * @private
+ */
 NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
@@ -3966,6 +4013,10 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   }
 };
 
+/**
+ * @returns {Array}
+ * @private
+ */
 NetSimTable.prototype.arrayFromCache_ = function () {
   var result = [];
   for (var k in this.cache_) {
@@ -4159,19 +4210,19 @@ NetSimRouterNode.DnsMode = DnsMode;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, function (router) {
-    if (router === null) {
-      onComplete(null);
+  NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
+    if (err !== null) {
+      onComplete(err, null);
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(null);
+    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
@@ -4182,8 +4233,8 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.update(function () {
-        onComplete(router);
+      router.update(function (err) {
+        onComplete(err, router);
       });
     });
   });
@@ -4193,19 +4244,19 @@ NetSimRouterNode.create = function (shard, onComplete) {
  * Static async retrieval method.  See NetSimEntity.get().
  * @param {!number} routerID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (router) {
-    if (router === null) {
-      onComplete(null);
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
+    if (err !== null) {
+      onComplete(err, null);
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(null);
+    NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
@@ -4214,7 +4265,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
       router.heartbeat_ = heartbeat;
       router.heartbeat_.setBeatInterval(12000);
 
-      onComplete(router);
+      onComplete(null, router);
     });
   });
 };
@@ -4256,13 +4307,13 @@ NetSimRouterNode.prototype.tick = function (clock) {
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
- * @param {function} [onComplete] - Optional success/failure callback
+ * @param {NodeStyleCallback} [onComplete] - Optional success/failure callback
  */
 NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
     self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
@@ -4350,16 +4401,16 @@ NetSimRouterNode.prototype.stopSimulation = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {function} onComplete which accepts an Array of NetSimWire.
+ * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
  */
 NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (rows) {
-    if (rows === null) {
-      onComplete([]);
+  this.shard_.wireTable.readAll(function (err, rows) {
+    if (err) {
+      onComplete(err, []);
       return;
     }
 
@@ -4371,20 +4422,20 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
           return wire.remoteNodeID === routerID;
         });
 
-    onComplete(myWires);
+    onComplete(null, myWires);
   });
 };
 
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {function} onComplete which accepts a number.
+ * @param {NodeStyleCallback} onComplete which accepts a number.
  */
 NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getConnections(function (wires) {
-    onComplete(wires.length);
+  this.getConnections(function (err, wires) {
+    onComplete(err, wires.length);
   });
 };
 
@@ -4415,28 +4466,35 @@ var contains = function (haystack, needle) {
  * if its limit is now exceeded.
  *
  * @param {!NetSimNode} otherNode attempting to connect to this one
- * @param {!function} onComplete response method - should call with TRUE
+ * @param {!NodeStyleCallback} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
+    if (err) {
+      onComplete(err, false);
+      return;
+    }
+
     if (count > MAX_CLIENT_CONNECTIONS) {
-      onComplete(false);
+      onComplete(new Error("Too many connections"), false);
       return;
     }
 
     // Trigger an update, which will correct our connection count
-    self.update(onComplete);
+    self.update(function (err) {
+      onComplete(err, err === null);
+    });
   });
 };
 
 /**
- * Assign a new address for hostname on wire, calling onComplete(success)
+ * Assign a new address for hostname on wire, calling onComplete
  * when done.
  * @param {!NetSimWire} wire that lacks addresses or hostnames
  * @param {string} hostname of requesting node
- * @param {function} [onComplete] reports success or failure.
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
@@ -4445,7 +4503,12 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
-  this.getConnections(function (wires) {
+  this.getConnections(function (err, wires) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
     var addressList = wires.filter(function (wire) {
       return wire.localAddress !== undefined;
     }).map(function (wire) {
@@ -4463,9 +4526,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(function (success) {
-      onComplete(success);
-    });
+    wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
   });
@@ -4588,17 +4649,18 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   // If any messages are for us, get our routing table and process messages.
   if (messages.length > 0) {
     this.isProcessingMessages_ = true;
-    this.getConnections(function (wires) {
+    this.getConnections(function (err, wires) {
       messages.forEach(function (message) {
 
         // Pull the message off the wire, and hold it in-memory until we route it.
         // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (success) {
-          if (success) {
-            self.routeMessage_(message, wires);
-          } else {
-            logger.error("Error pulling message off the wire for routing");
+        message.destroy(function (err) {
+          if (err) {
+            logger.error("Error pulling message off the wire for routing; " +
+                err.message);
+            return;
           }
+          self.routeMessage_(message, wires);
         });
 
       });
@@ -4741,15 +4803,19 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} packet - log contents
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.packet = packet;
   entity.timestamp = Date.now();
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    onComplete(row !== undefined);
+  entity.getTable_().create(entity.buildRow_(), function (err, result) {
+    if (err !== null) {
+      onComplete(err, null);
+      return;
+    }
+    onComplete(err, new NetSimLogEntry(shard, result));
   });
 };
 
@@ -5255,7 +5321,7 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
 var ObservableEvent = require('../ObservableEvent');
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * Client model of node being simulated on the local client.
@@ -5316,31 +5382,43 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {ObservableEvent}
    */
   this.routerChange = new ObservableEvent();
+
+  /**
+   * Callback for when something indicates that this node has been
+   * disconnected from the instance.
+   * @type {function}
+   * @private
+   */
+  this.onNodeLostConnection_ = undefined;
 };
 NetSimLocalClientNode.inherits(NetSimClientNode);
 
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimLocalClientNode, shard, function (node) {
-    if (node === null) {
-      onComplete(null);
+  NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
+    if (err !== null) {
+      onComplete(err, node);
       return;
     }
 
     // Give our newly-created local node a heartbeat
-    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(null);
+    NetSimHeartbeat.getOrCreate(shard, node.entityID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
+      // Attach a heartbeat failure (heart attack?) callback to
+      // detect and respond to a disconnect.
       node.heartbeat_ = heartbeat;
-      onComplete(node);
+      node.heartbeat_.setFailureCallback(node.onFailedHeartbeat_.bind(node));
+
+      onComplete(null, node);
     });
   });
 };
@@ -5399,92 +5477,62 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
 };
 
 /**
- * If a client update fails, should attempt an automatic reconnect.
- * @param {function} [onComplete]
- * @param {boolean} [autoReconnect=true]
+ * Handler for a heartbeat update failure.  Propagates the failure up through
+ * our own "lost connection" callback.
+ * @private
  */
-NetSimLocalClientNode.prototype.update = function (onComplete, autoReconnect) {
-  if (!onComplete) {
-    onComplete = function () {};
+NetSimLocalClientNode.prototype.onFailedHeartbeat_ = function () {
+  logger.error("Heartbeat failed.");
+  if (this.onNodeLostConnection_ !== undefined) {
+    this.onNodeLostConnection_();
   }
-  if (autoReconnect === undefined) {
-    autoReconnect = true;
-  }
-
-  var self = this;
-  NetSimLocalClientNode.superPrototype.update.call(this, function (success) {
-    if (!success && autoReconnect) {
-      self.reconnect_(function (success) {
-        if (!success){
-          self.status_ = 'Offline';
-          self.onChange.notifyObservers();
-        }
-        onComplete(success);
-      });
-    } else {
-      onComplete(success);
-    }
-  });
 };
 
 /**
- * Reconnection sequence for client node, in which it tries to grab a
- * new node ID and propagate it across the simulation.
- * @param {!function} onComplete (success)
- * @private
+ * Give this node an action to take if it detects that it is no longer part
+ * of the shard.
+ * @param {function} onNodeLostConnection
+ * @throws if set would clobber a previously-set callback.
  */
-NetSimLocalClientNode.prototype.reconnect_ = function (onComplete) {
+NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
+    onNodeLostConnection) {
+  if (this.onNodeLostConnection_ !== undefined &&
+      onNodeLostConnection !== undefined) {
+    throw new Error('Node already has a lost connection callback.');
+  }
+  this.onNodeLostConnection_ = onNodeLostConnection;
+};
+
+/**
+ * If a client update fails, should attempt an automatic reconnect.
+ * @param {NodeStyleCallback} [onComplete]
+ */
+NetSimLocalClientNode.prototype.update = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   var self = this;
-  NetSimLocalClientNode.create(this.shard_, function (node) {
-    if (!node) {
-      // Reconnect failed
-      onComplete(false);
-      return;
+  NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
+    if (err !== null) {
+      logger.error("Update failed.");
+      if (self.onNodeLostConnection_ !== undefined) {
+        self.onNodeLostConnection_();
+      }
     }
-
-    // Steal the new row's entity ID
-    self.entityID = node.entityID;
-    self.update(function (success) {
-      if (!success) {
-        // Reconnect failed
-        onComplete(false);
-        return;
-      }
-
-      // If we have a wire, we also have to update it to be reconnected.
-      if (self.myWire !== null) {
-        self.myWire.localNodeID = self.entityID;
-        self.myWire.update(function (success) {
-          if (!success) {
-            // Reconnect failed
-            onComplete(false);
-            return;
-          }
-
-          // Wire reconnected as well - we're good.
-          onComplete(true);
-        });
-      } else {
-        // Sufficient - we are reconnected
-        onComplete(true);
-      }
-    }, false); // No auto-reconnect this time.
+    onComplete(err, result);
   });
 };
 
 /**
  * @param {!NetSimRouterNode} router
- * @param {function} onComplete (success)
+ * @param {NodeStyleCallback} onComplete
  */
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = onComplete || function () {};
 
   var self = this;
-  this.connectToNode(router, function (wire) {
-    if (!wire) {
-      onComplete(false);
+  this.connectToNode(router, function (err, wire) {
+    if (err) {
+      onComplete(err);
       return;
     }
 
@@ -5492,10 +5540,10 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
     self.myRouter = router;
     self.myRouter.initializeSimulation(self.entityID);
 
-    router.requestAddress(wire, self.getHostname(), function (success) {
-      if (!success) {
+    router.requestAddress(wire, self.getHostname(), function (err) {
+      if (err) {
         wire.destroy(function () {
-          onComplete(false);
+          onComplete(err);
         });
         return;
       }
@@ -5511,15 +5559,16 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
   });
 };
 
+/**
+ * @param {NodeStyleCallback} [onComplete]
+ */
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
-  if (!onComplete) {
-    onComplete = function () {};
-  }
+  onComplete = onComplete || function () {};
 
   var self = this;
-  this.myWire.destroy(function (success) {
-    if (!success) {
-      onComplete(success);
+  this.myWire.destroy(function (err) {
+    if (err) {
+      onComplete(err);
       return;
     }
 
@@ -5536,11 +5585,11 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * Put a message on our outgoing wire, to whatever we are connected to
  * at the moment.
  * @param {string} payload
- * @param {function} onComplete
+ * @param {!NodeStyleCallback} onComplete
  */
 NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   if (!this.myWire) {
-    onComplete();
+    onComplete(new Error('Cannot send message; not connected.'));
     return;
   }
 
@@ -5548,16 +5597,19 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   var remoteNodeID = this.myWire.remoteNodeID;
   var self = this;
   NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
-      function (success) {
-        if (success) {
-          logger.info('Local node sent message: ' + JSON.stringify(payload));
-          if (self.sentLog_) {
-            self.sentLog_.log(payload);
-          }
-        } else {
-          logger.error('Failed to send message: ' + JSON.stringify(payload));
+      function (err) {
+        if (err) {
+          logger.error('Failed to send message; ' + err.message + ': ' +
+              JSON.stringify(payload));
+          onComplete(err);
+          return;
         }
-        onComplete();
+
+        logger.info('Local node sent message: ' + JSON.stringify(payload));
+        if (self.sentLog_) {
+          self.sentLog_.log(payload);
+        }
+        onComplete(null);
       }
   );
 };
@@ -5589,12 +5641,12 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
 
       // Pull the message off the wire, and hold it in-memory until we route it.
       // We'll create a new one with the same payload if we have to send it on.
-      message.destroy(function (success) {
-        if (success) {
-          self.handleMessage_(message);
-        } else {
-          logger.error("Error pulling message off the wire.");
+      message.destroy(function (err) {
+        if (err) {
+          logger.error('Error pulling message off the wire: ' + err.message);
+          return;
         }
+        self.handleMessage_(message);
       });
 
     });
@@ -5678,16 +5730,14 @@ NetSimMessage.inherits(NetSimEntity);
  * @param {!number} fromNodeID - sender node ID
  * @param {!number} toNodeID - destination node ID
  * @param {*} payload - message content
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
   var entity = new NetSimMessage(shard);
   entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
   entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    onComplete(row !== undefined);
-  });
+  entity.getTable_().create(entity.buildRow_(), onComplete);
 };
 
 /**
@@ -5916,24 +5966,38 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @private
    */
   this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
+
+  /**
+   * A heartbeat can be given a recovery action to take if it fails to
+   * update its remote row.
+   * @type {function}
+   * @private
+   */
+  this.onFailedHeartbeat_ = undefined;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimHeartbeat.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
 };
 
-// TODO (bbuchanan): Extend storage API to support an upsert operation, and
-//      use that here.  Would be even better if our backend storage supported
-//      it (like mongodb).
+/**
+ * Static "upsert" of heartbeat
+ * @param {!NetSimShard} shard
+ * @param {!number} nodeID
+ * @param {!NodeStyleCallback} onComplete
+ */
 NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
-  shard.heartbeatTable.readAll(function (rows) {
+  // TODO (bbuchanan): Extend storage API to support an upsert operation, and
+  //      use that here.  Would be even better if our backend storage supported
+  //      it (like mongodb).
+  shard.heartbeatTable.readAll(function (err, rows) {
     var nodeRows = rows
         .filter(function (row) {
           return row.nodeID == nodeID;
@@ -5943,20 +6007,23 @@ NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
         });
 
     if (nodeRows.length > 0) {
-      onComplete(new NetSimHeartbeat(shard, nodeRows[0]));
+      onComplete(null, new NetSimHeartbeat(shard, nodeRows[0]));
     } else {
-      NetSimHeartbeat.create(shard, function (newHeartbeat) {
-        if (newHeartbeat) {
-          newHeartbeat.nodeID = nodeID;
+      NetSimHeartbeat.create(shard, function (err, newHeartbeat) {
+        if (err !== null) {
+          onComplete(err, null);
+          return;
         }
-        newHeartbeat.update(function (success) {
-          if (!success) {
+
+        newHeartbeat.nodeID = nodeID;
+        newHeartbeat.update(function (err) {
+          if (err !== null) {
             // Failed to fully create heartbeat
             newHeartbeat.destroy();
-            onComplete(null);
+            onComplete(err, null);
             return;
           }
-          onComplete(newHeartbeat);
+          onComplete(null, newHeartbeat);
         });
       });
     }
@@ -5995,13 +6062,35 @@ NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
 };
 
 /**
+ * Set a handler to call if this heartbeat is unable to update its remote
+ * storage representation.  Can be used to go into a recovery mode,
+ * acknowledge disconnect, and/or attempt an auto-reconnect.
+ * @param {function} onFailedHeartbeat
+ * @throws if set would clobber a previously-set callback
+ */
+NetSimHeartbeat.prototype.setFailureCallback = function (onFailedHeartbeat) {
+  if (this.onFailedHeartbeat_ !== undefined && onFailedHeartbeat !== undefined) {
+    throw new Error("Heartbeat already has a failure callback.");
+  }
+  this.onFailedHeartbeat_ = onFailedHeartbeat;
+};
+
+/**
  * Updates own row on regular interval, as long as something's making
  * it tick.
  */
 NetSimHeartbeat.prototype.tick = function () {
   if (Date.now() - this.time_ > this.intervalMs_) {
     this.time_ = Date.now();
-    this.update();
+    this.update(function (err) {
+      if (err !== null) {
+        // A failed heartbeat update may indicate that we've been disconnected
+        // or kicked from the shard.  We may want to take action.
+        if (this.onFailedHeartbeat_ !== undefined) {
+          this.onFailedHeartbeat_();
+        }
+      }
+    }.bind(this));
   }
 };
 
@@ -6176,27 +6265,27 @@ NetSimNode.prototype.getStatusDetail = function () {
  * When finished, calls onComplete({the new wire})
  * On failure, calls onComplete(null)
  * @param {!NetSimNode} otherNode
- * @param {function} [onComplete]
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  onComplete = (onComplete !== undefined) ? onComplete : function () {};
+  onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
-    if (wire === null) {
-      onComplete(null);
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (err, wire) {
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
-    otherNode.acceptConnection(self, function (success) {
-      if (!success) {
+    otherNode.acceptConnection(self, function (err, isAccepted) {
+      if (err || !isAccepted) {
         wire.destroy(function () {
-          onComplete(null);
+          onComplete(new Error('Connection rejected.'), null);
         });
         return;
       }
 
-      onComplete(wire);
+      onComplete(null, wire);
     });
   });
 };
@@ -6205,11 +6294,11 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
  * Called when another node establishes a connection to this one, giving this
  * node a chance to reject the connection.
  * @param {!NetSimNode} otherNode attempting to connect to this one
- * @param {!function} onComplete response method - should call with TRUE
+ * @param {!NodeStyleCallback} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
-  onComplete(true);
+  onComplete(null, true);
 };
 },{"../utils":214,"./NetSimEntity":130,"./NetSimWire":156}],156:[function(require,module,exports){
 /* jshint
@@ -6274,19 +6363,19 @@ NetSimWire.inherits(NetSimEntity);
  * @param {!NetSimShard} shard
  * @param {!number} localNodeID
  * @param {!number} remoteNodeID
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
   var entity = new NetSimWire(shard);
   entity.localNodeID = localNodeID;
   entity.remoteNodeID = remoteNodeID;
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    if (row === undefined) {
-      onComplete(null);
+  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+    if (err !== null) {
+      onComplete(err, null);
       return;
     }
-    onComplete(new NetSimWire(shard, row));
+    onComplete(null, new NetSimWire(shard, row));
   });
 };
 
@@ -6323,8 +6412,6 @@ NetSimWire.prototype.buildRow_ = function () {
  */
 'use strict';
 
-var ObservableEvent = require('../ObservableEvent');
-
 /**
  * Client model of simulated network entity, which lives in a shard table.
  *
@@ -6351,13 +6438,6 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
-
-  /**
-   * Change event fired when entity's state changes in a way that
-   * should be reported.
-   * @type {ObservableEvent}
-   */
-  this.onChange = new ObservableEvent();
 };
 
 /**
@@ -6366,16 +6446,16 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    if (row) {
-      onComplete(new EntityType(shard, row));
+  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+    if (err === null) {
+      onComplete(null, new EntityType(shard, row));
     } else {
-      onComplete(null);
+      onComplete(err, null);
     }
   });
 };
@@ -6388,23 +6468,23 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().read(entityID, function (row) {
-    if (row) {
-      onComplete(new EntityType(shard, row));
-    } else {
-      onComplete(null);
+  entity.getTable_().read(entityID, function (err, row) {
+    var newEntity = null;
+    if (!err) {
+      newEntity = new EntityType(shard, row);
     }
+    onComplete(err, newEntity);
   });
 };
 
 /**
  * Push entity state into remote storage.
- * @param {function} [onComplete] - Optional success callback.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback.
  */
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -6412,7 +6492,10 @@ NetSimEntity.prototype.update = function (onComplete) {
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
-/** Remove entity from remote storage. */
+/**
+ * Remove entity from remote storage.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback
+ */
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
@@ -6430,7 +6513,7 @@ NetSimEntity.prototype.buildRow_ = function () {
   return {};
 };
 
-},{"../ObservableEvent":1}],117:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6943,6 +7026,17 @@ CommandSequence.prototype.tick = function (clock) {
 
 require('./utils');
 
+/**
+ * A node-style callback method, that accepts two parameters: err and result.
+ * See article on Node error conventions here:
+ * https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions
+ *
+ * @callback NodeStyleCallback
+ * @param {?Error} err - An error object, or null if no error occurred.
+ * @param {*} result - Callback result, of any type depending on the
+ *        method being invoked.
+ */
+
 /** Namespace for app storage. */
 var appsApi = module.exports;
 
@@ -6950,53 +7044,78 @@ var ApiRequestHelper = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
 };
 
-ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ */
+ApiRequestHelper.prototype.get = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
     dataType: 'json'
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, null);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
-ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
-    failureValue) {
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ */
+ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'delete'
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, null);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
@@ -7009,32 +7128,32 @@ appsApi.AppsTable = function () {
 };
 
 /**
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
 /**
  * @param {!string} id - unique app GUID
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.read = function (id, callback) {
-  this.requestHelper_.get('/' + id, callback, undefined);
+  this.requestHelper_.get('/' + id, callback);
 };
 
 /**
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.create = function (value, callback) {
-  this.requestHelper_.postToGet('', value, callback, undefined);
+  this.requestHelper_.postToGet('', value, callback);
 };
 
 /**
  * @param {!string} id
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.update = function (id, value, callback) {
   this.requestHelper_.post('/' + id, value, callback);
@@ -7042,7 +7161,7 @@ appsApi.AppsTable.prototype.update = function (id, value, callback) {
 
 /**
  * @param {!string} id
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
@@ -7093,18 +7212,34 @@ appsApi.PropertyBag = function (app_publickey) {
       '/shared-properties');
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.read = function (key, callback) {
-  this.requestHelper_.get('/' + key, callback, undefined);
+  this.requestHelper_.get('/' + key, callback);
 };
 
+/**
+ * @param {string} key
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.set = function (key, value, callback) {
   this.requestHelper_.post('/' + key, value, callback);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.delete = function (key, callback) {
   this.requestHelper_.delete('/' + key, callback);
 };
