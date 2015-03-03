@@ -19,13 +19,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, @script_level.position
   end
 
-  test "should return position when assigned to stage" do
-    @script_level.update(stage: @stage)
-    @script_level.move_to_bottom
-    @script_level.update(game_chapter: 2)
-    assert_equal 1, @script_level.position
-  end
-
   test "should destroy when related level is destroyed" do
     @script_level = create(:script_level)
     @script_level.level.destroy

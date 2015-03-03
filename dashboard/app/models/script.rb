@@ -193,7 +193,7 @@ class Script < ActiveRecord::Base
 
   def self.add_script(options, data)
     script = fetch_script(options)
-    chapter = 0; game_chapter = Hash.new(0)
+    chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
     script_levels_by_stage = {}
@@ -238,7 +238,6 @@ class Script < ActiveRecord::Base
         script_id: script.id,
         level_id: level.id,
         chapter: (chapter += 1),
-        game_chapter: (game_chapter[level.game_id] += 1),
         assessment: assessment
       }
       script_level = script.script_levels.detect{ |sl|
