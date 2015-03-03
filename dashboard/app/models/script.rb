@@ -93,11 +93,7 @@ class Script < ActiveRecord::Base
   end
 
   def to_param
-    if self.id == HOC_ID
-      super
-    else
-      name
-    end
+    name
   end
 
   def multiple_games?
