@@ -43,7 +43,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, :with_stage, level: real_level
+    sl = create :script_level, level: real_level
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -61,7 +61,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, :with_stage, level: real_level
+    sl = create :script_level, level: real_level
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -76,7 +76,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not show concept video for non-legacy script level' do
-    non_legacy_script_level = create(:script_level, :with_stage)
+    non_legacy_script_level = create(:script_level)
     concept_with_video = Concept.find_by_name('sequence')
     non_legacy_script_level.level.concepts = [concept_with_video]
 
@@ -87,7 +87,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show specified video for script level with video' do
-    non_legacy_script_level = create(:script_level, :with_stage, :with_autoplay_video)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video)
     assert_empty(non_legacy_script_level.level.concepts)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
@@ -96,7 +96,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not have autoplay video when noautoplay param is set' do
-    level_with_autoplay_video = create(:script_level, :with_stage, :with_autoplay_video)
+    level_with_autoplay_video = create(:script_level, :with_autoplay_video)
     get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1', noautoplay: 'true'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
@@ -119,7 +119,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "shouldn't show autoplay video when already seen" do
-    non_legacy_script_level = create(:script_level, :with_stage, :with_autoplay_video)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video)
     seen = Set.new
     seen.add(non_legacy_script_level.level.video_key)
     session[:videos_seen] = seen
@@ -130,7 +130,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'non-legacy script level with concepts should have related but not autoplay video' do
-    non_legacy_script_level = create(:script_level, :with_stage)
+    non_legacy_script_level = create(:script_level)
     non_legacy_script_level.level.concepts = [create(:concept, :with_video)]
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success

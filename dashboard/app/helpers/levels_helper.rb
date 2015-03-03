@@ -344,8 +344,8 @@ module LevelsHelper
   end
 
   def level_title
-    if (script = @script_level.try(:script)) && !(script.legacy_curriculum?)
-      "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
+    unless @script_level.nil? || @script_level.script.legacy_curriculum?
+      "#{data_t_suffix('script.name', @script_level.script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
     else
       level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
       "#{data_t('game.name', @game.name)} #{level_num}"

@@ -85,13 +85,9 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    script
-
-    trait :with_stage do
-      stage
-      script do |script_level|
-        script_level.stage.script
-      end
+    stage
+    script do |script_level|
+      script_level.stage.script
     end
 
     trait :with_autoplay_video do
