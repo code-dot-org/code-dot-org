@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "felső  szegély érintése",
   "whenUp": "Ha van felfelé nyíl",
   "whenUpTooltip": "Végrehajtja az alábbi parancsokat, ha a felfelé nyíl le van nyomva.",
-  "yes": "Igen"
+  "yes": "Igen",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
