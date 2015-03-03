@@ -1158,7 +1158,7 @@ Studio.init = function(config) {
 
   // Disable "show code" button in feedback dialog and workspace if blockly.
   // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = studioApp.editCode;
+  config.enableShowCode = utils.undefOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
