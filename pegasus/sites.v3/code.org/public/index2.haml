@@ -119,21 +119,32 @@ social:
             #notvideodiv{style: "position:relative;"}
               %img{style: "display:block; width:100%; height:auto", src: "/images/16x9.png"}/        
 
-      .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}     
-        #playvideo{style: "opacity: 0"}
-          %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-          %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-            = I18n.t(:homepage_watchvideo)
-        %div{style: "height:40px"}
-        #action{style: "opacity: 0"}
-          %button{style: "font-weight: 500; font-size: 20px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock');"}
-            = I18n.t(:homepage_signpetition)
+      .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}   
+        - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"]).all
+        - actions.each_with_index do |entry, index|
+          - display = entry[:active_s] == "hide" ? "none" : "block"
+          .action{style: "display: #{display}; opacity: 0"}
+            - if entry[:param1_s] == "video"
+              %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+              %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+                = I18n.t(entry[:text1_s])
+            - elsif entry[:param1_s] == "petition"
+              %button{style: "font-weight: 500; font-size: 20px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock');"}
+                = I18n.t(entry[:text1_s])
+            %div{style: "height:40px"}
+
+    #bottomhero{style:"position:absolute; bottom:0px; width:100%; background-color:rgba(0,0,0,0.2)"}
+      #petition_message{:style=>"font-size: 17px; line-height:28px; font-family: 'Gotham 5r', sans-serif; padding: 5px; color:white; text-align:center"}=I18n.t:petition_message
 
   #slots{style: "text-align:center"}
     - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
       - display = entry[:active_s] == "hide" ? "none" : "block"
       .slot{style: "display: #{display}"}
         = view :homepage_quarterslot, entry: entry
+    -# DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
+      - display = entry[:active_s] == "hide" ? "none" : "block"
+      .slot{style: "display: #{display}"}
+        = view :homepage_halfslot, entry: entry
 
   %script{:src=>"/js/jquery.placeholder.js"}
 
@@ -144,6 +155,11 @@ social:
 
   - if DB[:cdo_homepage].where(type_s: "petition")
     = view :petition_expand
+
+  -if request.site != 'csedweek.org'
+    .container_responsive{style: "margin-top:40px; margin-bottom:40px"}
+      #donor_slider.desktop-feature{:style=>'width: 100%'}
+        = view :donor_slider
 
 = view 'popup_window.js'
 
@@ -183,8 +199,7 @@ social:
       $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
 
-    $("#playvideo").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
-    $("#action").delay(5000).animate({ opacity: 1 }, { duration: 2000 });
+    $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
 - if request.site == 'code.org'
