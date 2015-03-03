@@ -47,7 +47,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 20, sl.stage_total
 
     # new script
-    sl = create(:script_level, :with_stage)
+    sl = create(:script_level)
     sl2 = create(:script_level, stage: sl.stage, script: sl.script)
 
     assert_equal 1, sl.position
