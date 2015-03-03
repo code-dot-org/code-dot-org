@@ -34,9 +34,9 @@ template: none
   Workshop segments
 %div{'ng-repeat' => 'segment in workshopSegments'}
   %p
-    {{segment.start | date:'longDate'}}
+    {{segment.start | utc | date:'longDate'}}
   %span
-    {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+    {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
   %br
   %br
   %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
