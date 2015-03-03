@@ -3,8 +3,11 @@ class HomeController < ApplicationController
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
-    params[:return_to] = "/#{params[:i18npath]}" if params[:i18npath]
-    redirect_to params[:return_to].to_s
+    if params[:i18npath]
+      redirect_to "/#{params[:i18npath]}"
+    else 
+      redirect_to params[:return_to].to_s
+    end
   end
 
   def home_insert
