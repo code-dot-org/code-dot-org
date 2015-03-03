@@ -100,10 +100,6 @@ FactoryGirl.define do
       (script_level.script.script_levels.maximum(:chapter) || 0) + 1
     end
 
-    game_chapter do |script_level|
-      (script_level.script.script_levels.maximum(:game_chapter) || 0) + 1
-    end
-
     position do |script_level|
       (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
     end
