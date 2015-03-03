@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "ακουμπά την επάνω άκρη",
   "whenUp": "όταν πατηθεί το επάνω βέλος",
   "whenUpTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος.",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
