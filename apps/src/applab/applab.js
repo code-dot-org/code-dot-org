@@ -940,7 +940,12 @@ function populateNonMarshalledFunctions(interpreter, scope, parent) {
     if (block.dontMarshal) {
       var func = parent[block.func];
       // 4th param is false to indicate: don't marshal params
-      var wrapper = codegen.makeNativeMemberFunction(interpreter, func, parent, false);
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
       interpreter.setProperty(scope,
                               block.func,
                               interpreter.createNativeFunction(wrapper));
@@ -1006,17 +1011,19 @@ Applab.execute = function() {
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       true,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
