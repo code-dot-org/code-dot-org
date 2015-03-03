@@ -177,8 +177,8 @@ Dashboard::Application.routes.draw do
   #delete '/dashboardapi/:anything', to: redirect('/api/%{anything}')
 
   module OPS
-    API = 'api'
-    DASHBOARDAPI = 'dashboardapi'
+    API = 'api' unless defined? API
+    DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
   end
 
 
