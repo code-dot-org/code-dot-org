@@ -52,6 +52,10 @@ theme: angular
 
       return District;
     }]);
+  services.factory('programsService', [
+    function() {
+      return [{name:'MSS'}, {name:'MSM'}, {name:'ECS'}, {name:'CSP'}];
+  }]);
 
   services.factory('workshopsService', ['$resource',
     function($resource){
@@ -213,15 +217,15 @@ theme: angular
     }
   ]);
 
-  controllers.controller('AttendanceController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'segmentsService', 'teachersService', 'attendancesService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, segmentsService, teachersService, attendancesService) {
+  controllers.controller('AttendanceController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'segmentsService', 'teachersService', 'attendancesService', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, segmentsService, teachersService, attendancesService, districtsService) {
       $scope.districtsLoaded = false;
 
       $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
-      $scope.segments = segmentsService.query({id: $routeParams.workshopid});
+      $scope.districts = districtsService.query();
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
-      $scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
+      //$scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -296,11 +300,11 @@ theme: angular
     }
   ]);
 
-  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService) {
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programsService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programsService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
       $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
-      $scope.programs = [{name:'MSS'}, {name:'MSM'}, {name:'ECS'}, {name:'CSP'}];
+      $scope.programs = programsService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
