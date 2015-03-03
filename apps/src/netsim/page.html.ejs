@@ -40,7 +40,6 @@ var helpArea = function(html) { -%>
 <% }; -%>
 
 <div id="appcontainer">
-  <div id="netsim_lobby_container"></div>
   <div id="netsim">
     <div id="netsim_rightcol">
       <div id="netsim_vizualization">
@@ -49,11 +48,15 @@ var helpArea = function(html) { -%>
       <div id="netsim_tabs"></div>
     </div>
     <div id="netsim_leftcol">
-      <div id="netsim_received"></div>
-      <div id="netsim_sent"></div>
-      <div id="netsim_send"></div>
+      <div class="leftcol_disconnected">
+        <div id="netsim_lobby_container"></div>
+      </div>
+      <div class="leftcol_connected">
+        <div id="netsim_received"></div>
+        <div id="netsim_sent"></div>
+        <div id="netsim_send"></div>
+      </div>
     </div>
-
   </div>
   <div id="footers" dir="<%= data.localeDirection %>">
     <% instructions() %>

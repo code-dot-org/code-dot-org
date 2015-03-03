@@ -75,6 +75,8 @@ NetSimLogWidget.createWithin = function (element, title) {
 NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
   this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
+  this.hideButton_ = this.rootDiv_.find('.hide_button');
+  this.hideButton_.click(this.onHideButtonPress_.bind(this));
   this.clearButton_ = this.rootDiv_.find('.clear_button');
   this.clearButton_.click(this.onClearButtonPress_.bind(this));
   // TODO: Hide columns by configuration
@@ -88,6 +90,20 @@ NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
 NetSimLogWidget.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_ = [];
+};
+
+/**
+ * Toggle whether this panel is minimized.
+ * @private
+ */
+NetSimLogWidget.prototype.onHideButtonPress_ = function () {
+  if (this.rootDiv_.hasClass('minimized')) {
+    this.rootDiv_.removeClass('minimized');
+    this.hideButton_.val('Hide');
+  } else {
+    this.rootDiv_.addClass('minimized');
+    this.hideButton_.val('Show');
+  }
 };
 
 /**
