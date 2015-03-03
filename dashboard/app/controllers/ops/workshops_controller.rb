@@ -1,11 +1,6 @@
 module Ops
-  class WorkshopsController < ::ApplicationController
-    respond_to :html, :xml, :json
-
-    # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    check_authorization
+  class WorkshopsController < OpsControllerBase
     load_and_authorize_resource
-    skip_before_filter :verify_authenticity_token
 
     # GET /ops/workshops/1/cohort
     # Get the full cohort list of teachers in a specific workshop (for facilitators)
