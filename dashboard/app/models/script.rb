@@ -8,20 +8,16 @@ class Script < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
-  # Hardcoded scriptID constants used throughout the code
-  HOC_ID = 2 # this is the old (2013) hour of code
-  EDIT_CODE_ID = 3
-  TWENTY_FOURTEEN_LEVELS_ID = 4
-  BUILDER_ID = 5
-  FLAPPY_ID = 6
-  JIGSAW_ID = 7
-
+  # Legacy
   MAX_DEFAULT_LEVEL_ID = 8
 
-  # name of the new (2014) hour of code script (which is a levelbuilder script, so does not have a deterministic id)
-  HOC_NAME = 'hourofcode'
+  # Names used throughout the code
+  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
+  EDIT_CODE_NAME = 'edit-code'
+  TWENTY_FOURTEEN_NAME = 'events'
+  JIGSAW_NAME = 'jigsaw'
 
-  # other scripts identified by names not ids
+  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
 
@@ -112,11 +108,11 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # note that now multiple scripts can be an 'hour of code' script
-    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
+    self.name == HOC_2013_NAME || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
   end
 
   def flappy?
-    self.id == FLAPPY_ID
+    self.name == FLAPPY_NAME
   end
 
   def default_script?
@@ -125,10 +121,6 @@ class Script < ActiveRecord::Base
 
   def find_script_level(level_id)
     self.script_levels.detect { |sl| sl.level_id == level_id }
-  end
-
-  def self.builder_script
-    Script.find(BUILDER_ID)
   end
 
   def get_script_level_by_id(script_level_id)
