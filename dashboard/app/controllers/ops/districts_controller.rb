@@ -15,7 +15,7 @@ module Ops
     # POST /ops/districts
     def create
       @district.save!
-      render text: 'OK'
+      respond_with :ops, @district
     end
 
     # GET /ops/districts

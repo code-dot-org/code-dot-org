@@ -40,7 +40,6 @@ module Ops
 
       get :teacher, teacher_id: @attendance.teacher.id
       assert_response :success
-      p JSON.parse(@response.body)
     end
 
     test 'District Contact cannot view attendance for teachers not in their district' do

@@ -73,7 +73,7 @@ module Ops
     # POST /ops/segments/1/attendance
     def create
       @workshop_attendance.save!
-      render text: 'OK'
+      respond_with :ops, @workshop_attendance
     end
 
     # GET /ops/segments/1/attendance

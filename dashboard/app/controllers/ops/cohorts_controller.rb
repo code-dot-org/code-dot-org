@@ -1,5 +1,7 @@
 module Ops
   class CohortsController < ::ApplicationController
+    respond_to :html, :xml, :json
+
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     before_filter :convert_teacher_info, :convert_district_names, only: [:create, :update]
 
@@ -15,37 +17,37 @@ module Ops
     def add_teacher
       @cohort.teachers << User.find(params[:teacher_id])
       @cohort.save!
-      render json: @cohort
+      respond_with :ops, @cohort
     end
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
     def drop_teacher
       @cohort.teachers.delete User.find(params[:teacher_id])
       @cohort.save!
-      render json: @cohort
+      respond_with @cohort
     end
 
     # POST /ops/cohorts
     def create
       @cohort.update!(params[:cohort])
-      render json: @cohort
+      respond_with :ops, @cohort
     end
 
     # GET /ops/cohorts
     def index
-      render json: @cohorts
+      respond_with @cohorts
     end
 
     # GET /ops/cohorts/1
     def show
-      render json: @cohort, root: false
+      respond_with @cohort
     end
 
     # PATCH/PUT /ops/cohorts/1
     # todo: Use this route to batch-update the teacher list in a cohort?
     def update
       @cohort.update!(params[:cohort])
-      render json: @cohort
+      respond_with @cohort
     end
 
     # DELETE /ops/cohorts/1

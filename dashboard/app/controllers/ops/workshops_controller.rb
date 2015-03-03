@@ -18,7 +18,7 @@ module Ops
     # POST /ops/workshops
     def create
       @workshop.save!
-      render text: 'OK'
+      respond_with :ops, @workshop
     end
 
     # GET /ops/workshops
