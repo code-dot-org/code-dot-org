@@ -31,7 +31,6 @@ module Ops
       sign_in @workshop.facilitators.first
       get :teachers, id: @workshop.id
       assert_response :success
-      p JSON.parse(@response.body)
     end
 
     test "Facilitators can add teachers the day of a workshop" do

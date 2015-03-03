@@ -2,6 +2,8 @@ module Ops
   # Segments are a nested resource of Workshops.
   # see: http://guides.rubyonrails.org/routing.html#nested-resources
   class SegmentsController < ::ApplicationController
+    respond_to :html, :xml, :json
+
     # CanCan provides automatic resource loading and authorization for default index + CRUD actions
     load_and_authorize_resource :workshop
     skip_before_filter :verify_authenticity_token
@@ -12,23 +14,23 @@ module Ops
     # POST /ops/workshops/1/segments
     def create
       @segment.save!
-      render text: 'OK'
+      respond_with :ops, @segment
     end
 
     # GET /ops/workshops/1/segments
     def index
-      render json: @segments
+      respond_with @segments
     end
 
     # GET /ops/segments/1
     def show
-      render json: @segment
+      respond_with @segment
     end
 
     # PATCH/PUT /ops/segments/1
     def update
       @segment.update!(params[:segment])
-      render json: @segment
+      respond_with @segment
     end
 
     # DELETE /ops/segments/1

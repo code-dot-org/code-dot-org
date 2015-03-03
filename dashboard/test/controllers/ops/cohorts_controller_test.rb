@@ -5,6 +5,7 @@ module Ops
     API = ::OPS::API
 
     setup do
+      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
       @cohort = create(:cohort)
@@ -102,13 +103,12 @@ module Ops
         end
       end
       assert_response :success
-      # Ensure that the newly-created Cohort includes the provided District and teacher info
-      cohort_id = JSON.parse(@response.body)['id']
-      cohort = Cohort.find(cohort_id)
-      assert_not_equal cohort, @cohort
-      assert_equal cohort.districts.first, @cohort.districts.first
-      teachers = cohort.teachers
-      assert_equal teachers.map{|x|x.name}, teacher_info.map{|x|x[:name]}
+      # Ensure that the returned Cohort JSON object contains the provided District and teacher info
+      cohort = JSON.parse(@response.body)
+      assert_not_equal @cohort, cohort
+      assert_equal @cohort.districts.first.id, cohort['districts'].first['id']
+      teachers = cohort['teachers']
+      assert_equal teachers.map{|x|x['name']}, teacher_info.map{|x|x[:name]}
     end
 
     test 'Create Cohort using district_ids instead of district_names' do
