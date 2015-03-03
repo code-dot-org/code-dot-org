@@ -3,9 +3,9 @@ require 'digest/sha1'
 module LevelsHelper
 
   def build_script_level_path(script_level)
-    if script_level.script.name == 'hourofcode'
+    if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter)
-    elsif script_level.script.name == 'flappy'
+    elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
