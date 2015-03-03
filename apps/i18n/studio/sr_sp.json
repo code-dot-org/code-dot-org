@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "кад је стрелица на горе",
   "whenUpTooltip": "Изврши акције испод кад се притисне стрелица на горе.",
-  "yes": "Да"
+  "yes": "Да",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

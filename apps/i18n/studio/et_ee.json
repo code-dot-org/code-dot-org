@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "kui vajutatakse ülesnoolt",
   "whenUpTooltip": "Täida allolevad käsud, kui vajutatakse ülesnoolt.",
-  "yes": "Jah"
+  "yes": "Jah",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
