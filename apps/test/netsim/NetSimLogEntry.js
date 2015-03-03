@@ -75,7 +75,7 @@ describe("NetSimLogEntry", function () {
 
       NetSimLogEntry.create(testShard, nodeID, packet, function () {});
 
-      testShard.logTable.readAll(function (rows) {
+      testShard.logTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
         assertEqual(row.packet, packet);
@@ -83,9 +83,10 @@ describe("NetSimLogEntry", function () {
       });
     });
 
-    it ("Returns a success boolean to its callback", function () {
-      NetSimLogEntry.create(testShard, null, null, function (result) {
-        assert(result === true, "Result is boolean true");
+    it ("Returns log and no error on success", function () {
+      NetSimLogEntry.create(testShard, null, null, function (err, result) {
+        assert(err === null, "Error is null on success");
+        assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
       });
     });
   });
@@ -94,7 +95,7 @@ describe("NetSimLogEntry", function () {
     var testRow;
 
     // Create a logEntry row in remote table
-    testShard.logTable.create({}, function (row) {
+    testShard.logTable.create({}, function (err, row) {
       testRow = row;
     });
     assert(testRow !== undefined, "Failed to create test row");

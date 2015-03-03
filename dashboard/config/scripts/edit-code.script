@@ -1,0 +1,33 @@
+id '3'
+title 'Edit Code'
+description ""
+wrapup_video 'hoc_wrapup'
+hidden 'true'
+
+stage 'The Maze'
+skin 'birds'
+concepts 'sequence'
+level 'blockly:MazeEC:3_1'
+skin 'birds'
+concepts 'sequence'
+level 'blockly:MazeEC:3_2'
+skin 'birds'
+concepts 'sequence'
+level 'blockly:MazeEC:3_3'
+skin 'birds'
+concepts 'sequence'
+level 'blockly:MazeEC:3_4'
+
+stage 'Applab'
+skin 'applab'
+level 'blockly:Applab:ec_simple'
+
+stage 'The Artist'
+skin 'artist'
+level 'blockly:ArtistEC:ec_1_2'
+skin 'artist'
+level 'blockly:ArtistEC:ec_1_10'
+
+stage 'Play Lab'
+skin 'studio'
+level 'blockly:StudioEC:ec_sandbox'
