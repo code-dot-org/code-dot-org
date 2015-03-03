@@ -218,9 +218,11 @@ NetSim.prototype.initWithUserName_ = function (user) {
  */
 NetSim.prototype.refresh_ = function () {
   if (this.connection_.isConnectedToRouter()) {
-    this.mainContainer_.show();
+    this.mainContainer_.find('.leftcol_disconnected').hide();
+    this.mainContainer_.find('.leftcol_connected').show();
   } else {
-    this.mainContainer_.hide();
+    this.mainContainer_.find('.leftcol_disconnected').show();
+    this.mainContainer_.find('.leftcol_connected').hide();
   }
 };
 
