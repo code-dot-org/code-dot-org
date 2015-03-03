@@ -94,8 +94,8 @@ module ScriptLevelsHelper
       end
 
     script_data = {
-      title: stage_title(script, script_level.stage_or_game),
-      currentLevelIndex: script_level.stage_or_game_position - 1,
+      title: stage_title(script, script_level.stage),
+      currentLevelIndex: script_level.position - 1,
       scriptId: script.id,
       scriptLevelId: script_level.try(:level_id),
       statsPath: header_stats_path,

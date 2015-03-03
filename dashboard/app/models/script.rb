@@ -92,12 +92,6 @@ class Script < ActiveRecord::Base
     name
   end
 
-  def multiple_games?
-    # simplified check to see if we are in a script that has only one game (stage)
-    stages.many? ||
-      (stages.empty? && script_levels.first.level.game_id != script_levels.last.level.game_id)
-  end
-
   def legacy_curriculum?
     default_script?
   end
