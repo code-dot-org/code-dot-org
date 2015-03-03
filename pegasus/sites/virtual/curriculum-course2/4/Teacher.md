@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 In this lesson students will take control of the Artist to complete simple drawings on the screen.
 
 [summary]
@@ -31,7 +31,7 @@ In this lesson students will take control of the Artist to complete simple drawi
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Create a program to complete an image using sequential steps
@@ -76,7 +76,7 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### The Copy Machine
@@ -111,7 +111,7 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
 - CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
@@ -119,15 +119,15 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
 - CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
 - CT.L2-08. Use visual representations of problem states, structures, and data.
-- CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+- CT.L2-12. Use abstraction to decompose a problem into sub problems.
 
 ### Next-Gen Science Standards
 
 - K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics.
@@ -142,7 +142,7 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
 - 1.G.A.1 - Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.
 - 1.G.A.2 - Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.
 - 2.OA.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions.
-- 2.G.A.1 - Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. 
+- 2.G.A.1 - Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.
 - 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
 - 3.G.A.2 - Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole.
 
@@ -155,6 +155,7 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
 - L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
 - SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
 - L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+
 
 [/standards]
 

@@ -3,29 +3,12 @@ require 'digest/sha1'
 module LevelsHelper
 
   def build_script_level_path(script_level)
-    if script_level.script.name == 'hourofcode'
-      return hoc_chapter_path(script_level.chapter)
-    end
-
-    case script_level.script_id
-    when Script::HOC_ID
-      script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::EDIT_CODE_ID
-      editcode_chapter_path(script_level.chapter)
-    when Script::TWENTY_FOURTEEN_LEVELS_ID
-      twenty_fourteen_chapter_path(script_level.chapter)
-    when Script::BUILDER_ID
-      builder_chapter_path(script_level.chapter)
-    when Script::FLAPPY_ID
+    if script_level.script.name == Script::HOC_NAME
+      hoc_chapter_path(script_level.chapter)
+    elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter)
-    when Script::JIGSAW_ID
-      jigsaw_chapter_path(script_level.chapter)
     else
-      if script_level.stage
-        script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
-      else
-        script_puzzle_path(script_level.script, script_level.chapter)
-      end
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
     end
   end
 
@@ -39,7 +22,7 @@ module LevelsHelper
 
   def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
-    @callouts = select_and_remember_callouts(@script_level.nil?)
+    @callouts = select_and_remember_callouts(params[:show_callouts])
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -73,12 +56,10 @@ module LevelsHelper
     video_info(autoplay_video) unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new
-    available_callouts = []
+  def available_callouts
     if @level.custom?
       unless @level.try(:callout_json).blank?
-        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
+        return JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
               callout_text: callout_definition['callout_text'],
@@ -87,8 +68,13 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = @script_level.callouts if @script_level
+      return @script_level.callouts if @script_level
     end
+    []
+  end
+
+  def select_and_remember_callouts(always_show = false)
+    session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
     callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
