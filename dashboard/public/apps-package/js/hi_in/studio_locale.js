@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touches top edge"},
 "whenUp":function(d){return "जब ऊपर तीर"},
 "whenUpTooltip":function(d){return "जब ऊपर तीर दबाया जाएे तो नीचे दिये गएे कार्यों का संचालन करे।"},
-"yes":function(d){return "Yes"}};
+"yes":function(d){return "Yes"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "うえのはしにさわる"},
 "whenUp":function(d){return "上向き矢印が押されたとき"},
 "whenUpTooltip":function(d){return "上向きの矢印キーが押されたとき以下のアクションを実行します。"},
-"yes":function(d){return "はい"}};
+"yes":function(d){return "はい"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

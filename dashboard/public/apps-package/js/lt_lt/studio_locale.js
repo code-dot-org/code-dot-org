@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "paliečia scenos viršų"},
 "whenUp":function(d){return "kai rodyklė aukštyn"},
 "whenUpTooltip":function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė aukštyn."},
-"yes":function(d){return "Taip"}};
+"yes":function(d){return "Taip"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

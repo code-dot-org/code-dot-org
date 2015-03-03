@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touche le bord du haut"},
 "whenUp":function(d){return "quand flèche en haut"},
 "whenUpTooltip":function(d){return "Exécute les actions ci-dessous quand on presse la touche 'flèche en haut'."},
-"yes":function(d){return "Oui"}};
+"yes":function(d){return "Oui"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};
