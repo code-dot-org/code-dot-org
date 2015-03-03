@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "تماس داشتن با لبه ی بالا"},
 "whenUp":function(d){return "هنگام زدن جهت بالا"},
 "whenUpTooltip":function(d){return "اجرای عملیات زیر هنگامیکه کلید جهت بالا زده می‌شود."},
-"yes":function(d){return "بله"}};
+"yes":function(d){return "بله"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

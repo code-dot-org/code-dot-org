@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "üst kenara dokunur",
   "whenUp": "yukarı oka basıldığında",
   "whenUpTooltip": "Yukarı ok tuşu basıldığında aşağıdaki eylemleri yürüt.",
-  "yes": "Evet"
+  "yes": "Evet",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

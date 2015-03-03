@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "接觸上邊邊緣"},
 "whenUp":function(d){return "當＂上方向鍵＂"},
 "whenUpTooltip":function(d){return "當按下＂上方向鍵＂，就會執行動作"},
-"yes":function(d){return "是"}};
+"yes":function(d){return "是"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

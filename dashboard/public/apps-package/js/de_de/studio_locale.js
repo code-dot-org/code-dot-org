@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "berührt oberen Rand"},
 "whenUp":function(d){return "wenn Pfeil-nach-oben"},
 "whenUpTooltip":function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-oben-Taste gedrückt wird."},
-"yes":function(d){return "Ja"}};
+"yes":function(d){return "Ja"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

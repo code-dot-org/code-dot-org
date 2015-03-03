@@ -81,7 +81,7 @@ FactoryGirl.define do
   end
 
   factory :script do
-    sequence(:name) { |n| "Bogus Script #{n}" }
+    sequence(:name) { |n| "bogus_script_#{n}" }
   end
 
   factory :script_level do
