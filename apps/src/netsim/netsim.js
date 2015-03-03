@@ -184,7 +184,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sentMessageLog_ = NetSimLogWidget.createWithin(
       document.getElementById('netsim_sent'), 'Sent Messages');
 
-  this.connection_ = new NetSimConnection(this.sentMessageLog_,
+  this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
