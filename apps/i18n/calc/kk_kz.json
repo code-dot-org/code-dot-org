@@ -9,8 +9,5 @@
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "failedInput": "Your function does not return the right result for all values.",
   "levelIncompleteError": "Your expression does not match the goal.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "wrongInput": "You are calling your function with the wrong value.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "You are calling your function with the wrong value."
 }

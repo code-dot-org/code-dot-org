@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "pieskaras augšējai malai",
   "whenUp": "kad bultiņa uz augšu",
   "whenUpTooltip": "Veikt zemāk esošās darbības, kad nospiež bultiņu uz augšu.",
-  "yes": "Jā",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Jā"
 }

@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "接觸上邊邊緣",
   "whenUp": "當＂上方向鍵＂",
   "whenUpTooltip": "當按下＂上方向鍵＂，就會執行動作",
-  "yes": "是",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "是"
 }

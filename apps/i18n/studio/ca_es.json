@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "toca la vora superior",
   "whenUp": "Quan tecla cap amunt",
   "whenUpTooltip": "Executar les accions de sota quan es premi la tecla cap amunt.",
-  "yes": "Sí",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Sí"
 }

@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "докосва горния ръб",
   "whenUp": "когато стрелка нагоре",
   "whenUpTooltip": "Изпълни действията по-долу когато е натисната стрелка нагоре.",
-  "yes": "Да",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Да"
 }

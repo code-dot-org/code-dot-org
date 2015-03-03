@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "dotýka sa horného okraja",
   "whenUp": "keď šípka nahor",
   "whenUpTooltip": "Vykonať akcie nižšie pri stlačení šípky hore.",
-  "yes": "Áno",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Áno"
 }

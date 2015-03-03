@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "atinge marginea de sus",
   "whenUp": "când săgeată în sus",
   "whenUpTooltip": "Execută acțiunile de mai jos atunci când tasta săgeată în sus este apăsată.",
-  "yes": "Da",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Da"
 }

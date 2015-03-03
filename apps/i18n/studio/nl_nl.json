@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "raakt bovenrand",
   "whenUp": "als pijltje naar boven",
   "whenUpTooltip": "Voer de acties hieronder uit als pijltje naar boven wordt ingedrukt.",
-  "yes": "Ja",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Ja"
 }

@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "화면 천장에 닿으면",
   "whenUp": "위쪽 방향키를 누르면",
   "whenUpTooltip": "위쪽 방향키를 누르면 아래의 동작을 실행합니다.",
-  "yes": "예",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "예"
 }

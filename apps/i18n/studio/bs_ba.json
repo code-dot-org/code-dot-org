@@ -300,6 +300,5 @@
   "whenSpriteCollidedWithTopEdge": "dotiče gornju ivicu",
   "whenUp": "kadase pritisne strelica prema gore",
   "whenUpTooltip": "Izvrši sljedeće akcije kad se pritisne strelica prema gore.",
-  "yes": "Da",
-  "onEventTooltip": "Execute code in response to the specified event."
+  "yes": "Da"
 }
