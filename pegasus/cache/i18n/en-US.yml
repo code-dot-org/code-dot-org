@@ -11,6 +11,7 @@ en-US:
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: "Name"
   email: "Email"
   zipcode: "ZIP code or country"
@@ -139,8 +140,9 @@ en-US:
   homepage_slot_text_course4: "Course 4"
   homepage_slot_text_shop: "Shop"
   homepage_slot_text_flappy: "Flappy Code"
-  homepage_watchvideo: "Watch the video"
-  homepage_signpetition: "Sign the petition"
+  homepage_action_text_codevideo: "Watch the video"
+  homepage_action_text_teachervideo: ""
+  homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "Sign our petition &#x25BE;"
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"

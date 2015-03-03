@@ -74,6 +74,15 @@ levels.ec_simple = {
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,
+    "getRed": null,
+    "getGreen": null,
+    "getBlue": null,
+    "getAlpha": null,
+    "setRed": null,
+    "setGreen": null,
+    "setBlue": null,
+    "setAlpha": null,
+    "setRGBA": null,
 
     // Data
     "startWebRequest": null,
