@@ -1,11 +1,6 @@
 module Ops
-  class DistrictsController < ::ApplicationController
-    respond_to :html, :xml, :json
-
-    # CanCan provides automatic resource loading and authorization for default index + CRUD actions
-    check_authorization
+  class DistrictsController < OpsControllerBase
     load_and_authorize_resource
-    skip_before_filter :verify_authenticity_token
 
     # get /ops/districts/1/teachers
     def teachers

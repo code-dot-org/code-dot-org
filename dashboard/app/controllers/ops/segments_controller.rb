@@ -1,13 +1,8 @@
 module Ops
   # Segments are a nested resource of Workshops.
   # see: http://guides.rubyonrails.org/routing.html#nested-resources
-  class SegmentsController < ::ApplicationController
-    respond_to :html, :xml, :json
-
-    # CanCan provides automatic resource loading and authorization for default index + CRUD actions
+  class SegmentsController < OpsControllerBase
     load_and_authorize_resource :workshop
-    skip_before_filter :verify_authenticity_token
-
     # Load shallow nested resource. See https://github.com/CanCanCommunity/cancancan/wiki/Nested-Resources#shallow-nesting
     load_and_authorize_resource through: :workshop, shallow: true
 
