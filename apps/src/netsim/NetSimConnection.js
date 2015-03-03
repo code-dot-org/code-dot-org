@@ -140,7 +140,8 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
 NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
-    this.disconnectFromShard();
+    this.disconnectFromShard(this.connectToShard.bind(this, shardID, displayName));
+    return;
   }
 
   this.shard_ = new NetSimShard(shardID);
@@ -148,10 +149,16 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   this.createMyClientNode_(displayName);
 };
 
-/** Ends the connection to the netsim shard. */
-NetSimConnection.prototype.disconnectFromShard = function () {
+/**
+ * Ends the connection to the netsim shard.
+ * @param {NodeStyleCallback} [onComplete]
+ */
+NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   if (!this.isConnectedToShard()) {
     logger.warn("Redundant disconnect call.");
+    onComplete(null, null);
     return;
   }
 
@@ -159,11 +166,17 @@ NetSimConnection.prototype.disconnectFromShard = function () {
     this.disconnectFromRouter();
   }
 
-  this.myNode.destroy(function () {
-    this.myNode.stopSimulation();
+  this.myNode.stopSimulation();
+  this.myNode.destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
     this.myNode = null;
     this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
+    onComplete(err, result);
   }.bind(this));
 };
 
