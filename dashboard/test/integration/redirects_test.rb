@@ -64,6 +64,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/c/1/generate_image'
   end
 
+  test 'redirects lang parameter' do
+    get '/lang/es'
+    assert_redirected_to '/'
+    
+    get '/s/frozen/lang/es'
+    assert_redirected_to '/s/frozen'
+
+    get '/s/course1/stage/1/puzzle/1/lang/es'
+    assert_redirected_to '/s/course1/stage/1/puzzle/1'
+  end
+
   test "old teacher dashboard redirects to new teacher dashboard" do
     urls = %w{/followers /followers/manage /followers/sections /stats/students /sections/new /sections/1/edit}
 

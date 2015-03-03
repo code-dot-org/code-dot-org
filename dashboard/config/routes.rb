@@ -88,7 +88,7 @@ Dashboard::Application.routes.draw do
   get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
 
   # /lang/xx shortcut for all routes
-  get '/lang/:locale', to: 'home#set_locale'
+  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :levels do
