@@ -344,11 +344,14 @@ module LevelsHelper
   end
 
   def level_title
-    unless @script_level.nil? || @script_level.script.legacy_curriculum?
-      "#{data_t_suffix('script.name', @script_level.script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
+    if @script_level
+      if @script_level.script.legacy_curriculum?
+        "#{data_t('game.name', @game.name)} #{'#' + @script_level.position.to_s unless @script_level.position == 1}"
+      else
+        "#{data_t_suffix('script.name', @script_level.script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
+      end
     else
-      level_num = "##{@script_level ? @script_level.position : @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
-      "#{data_t('game.name', @game.name)} #{level_num}"
+      "#{data_t('game.name', @game.name)} #{@level.level_num}"
     end
   end
 
