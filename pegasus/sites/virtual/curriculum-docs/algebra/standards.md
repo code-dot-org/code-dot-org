@@ -13,6 +13,8 @@ lessons = DB[:cdo_lessons].where(course_s:course)
 
 [content]
 
+<% lessons.each_with_index do |lesson, index| %>
+
 [together]
 
 ## <a name="lesson_<%= index + 1 %>"></a> Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
