@@ -51,9 +51,6 @@ In this lesson, we are creating the mod by setting the variables inside the code
 
 The blocks menu displays a few new items (Boolean, Cond(itional), and Functions) which will be examined in more detail in future lessons.  The students should be encouraged to explore each of the sub-menus.  However **the only navigation required for this level is editing the five color blocks at the top of the function:** Title, subtitle, bg (background), player, target, and danger.  The difference between the color and black blocks will also be explained in a future lesson.
 
-
-
-
 [/together]
 
 [together]
