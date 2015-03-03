@@ -163,13 +163,9 @@ class Script < ActiveRecord::Base
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
-  def self.setup(default_files, custom_files)
+  def self.setup(custom_files)
     transaction do
       scripts_to_add = []
-      # Load default scripts from yml (csv embedded)
-      default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
-      .sort_by { |options, _| options['id'] }
-      .map { |options, data| scripts_to_add << [options, data]}
 
       custom_i18n = {}
       # Load custom scripts from Script DSL format
