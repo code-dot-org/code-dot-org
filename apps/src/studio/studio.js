@@ -1593,9 +1593,10 @@ Studio.execute = function() {
 
 
       var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                     nativeGetCallback,
-                                                     null);
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: nativeGetCallback,
+      });
       interpreter.setProperty(scope,
                               'getCallback',
                               interpreter.createNativeFunction(wrapper));
