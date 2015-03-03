@@ -113,7 +113,7 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
   var type = this.getType_();
 
   if (type === ValueType.VARIABLE) {
-    var mappedVal = utils.undefOr(localMapping[this.value_],
+    var mappedVal = utils.valueOr(localMapping[this.value_],
       gloablMapping[this.value_]);
     if (mappedVal === undefined) {
       throw new Error('No mapping for variable during evaluation');
@@ -125,7 +125,7 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
   }
 
   if (type === ValueType.FUNCTION_CALL) {
-    var functionDef = utils.undefOr(localMapping[this.value_],
+    var functionDef = utils.valueOr(localMapping[this.value_],
       gloablMapping[this.value_]);
     if (functionDef === undefined) {
       throw new Error('No mapping for function during evaluation');
@@ -142,7 +142,7 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
     var newLocalMapping = {};
     functionDef.variables.forEach(function (variable, index) {
       var childVal = this.getChildValue(index);
-      newLocalMapping[variable] = utils.undefOr(localMapping[childVal], childVal);
+      newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
     }, this);
     return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
   }
