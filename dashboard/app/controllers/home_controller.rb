@@ -5,8 +5,10 @@ class HomeController < ApplicationController
     set_locale_cookie(params[:locale]) if params[:locale]
     if params[:i18npath]
       redirect_to "/#{params[:i18npath]}"
-    else 
+    elsif params[:return_to]
       redirect_to params[:return_to].to_s
+    else
+      redirect_to '/'
     end
   end
 
