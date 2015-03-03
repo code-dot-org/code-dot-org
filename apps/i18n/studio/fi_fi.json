@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "koskee yläreunaa",
   "whenUp": "kun nuoli ylös",
   "whenUpTooltip": "Suorita alla olevat toiminnot, kun ylös-nuolinäppäintä painetaan.",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
