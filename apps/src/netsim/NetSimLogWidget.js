@@ -99,10 +99,10 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
 NetSimLogWidget.prototype.onHideButtonPress_ = function () {
   if (this.rootDiv_.hasClass('minimized')) {
     this.rootDiv_.removeClass('minimized');
-    this.hideButton_.val('Hide');
+    this.hideButton_.html('Hide');
   } else {
     this.rootDiv_.addClass('minimized');
-    this.hideButton_.val('Show');
+    this.hideButton_.html('Show');
   }
 };
 
