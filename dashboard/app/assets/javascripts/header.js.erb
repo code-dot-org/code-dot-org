@@ -119,7 +119,7 @@ dashboard.showProjectHeader = function () {
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
-    $('.project_name').replaceWith($('<input type="text" class="project_name header_input">').val(dashboard.currentApp.name));
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.currentApp.name));
     $('.project_edit').replaceWith($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
   }
 
@@ -130,7 +130,7 @@ dashboard.showProjectHeader = function () {
     } else {
       return '<%= I18n.t("project.not_saved") %>';
     }
-  }
+  };
 
   var moreButton = '<%= I18n.t('project.more') %> '
       + '<span class="project_more_glyph">&#x25BC;</span>'
@@ -152,9 +152,20 @@ dashboard.showProjectHeader = function () {
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
+  $(document).on('input', '.project_name', function () {
+    if ($(this).val().trim().length === 0) {
+      $('.project_save').attr('disabled', true);
+    } else {
+      $('.project_save').removeAttr('disabled');
+    }
+  });
+
   $(document).on('click', '.project_save', function () {
+    if ($(this).attr('disabled')) {
+      return;
+    }
     $(this).attr('disabled', true);
-    dashboard.currentApp.name = $('.project_name').val();
+    dashboard.currentApp.name = $('.project_name').val().trim().substr(0, 100);
     dashboard.saveProject(function () {
       projectNameShow();
     });
