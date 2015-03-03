@@ -8,9 +8,6 @@ class Script < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
-  # Legacy
-  MAX_DEFAULT_LEVEL_ID = 8
-
   # Names used throughout the code
   HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
   EDIT_CODE_NAME = 'edit-code'
@@ -92,8 +89,9 @@ class Script < ActiveRecord::Base
     name
   end
 
+  # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    default_script?
+    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? self.name
   end
 
   def twenty_hour?
@@ -107,10 +105,6 @@ class Script < ActiveRecord::Base
 
   def flappy?
     self.name == FLAPPY_NAME
-  end
-
-  def default_script?
-    self.id <= MAX_DEFAULT_LEVEL_ID
   end
 
   def find_script_level(level_id)
