@@ -1,7 +1,7 @@
 ---
 title: Support Computer Science in Washington
 social:
-  "og:title": "Top business and education leaders ask Washington to expand computer science"
+  "og:title": "Top business and education leaders ask Washington to support computer science"
   "og:description": "Washington business leaders, superintendents and community leaders released a letter, urging Washington state to help schools catch up to 21st century demands."
   "og:image": "http://code.org/images/students.png"
   "og:image:width": 2820
@@ -14,11 +14,22 @@ social:
 
 # Letter to Representative Ross Hunter and Senator Andy Hill in support of HB 1813
 
-[<button>Add your support</button>](http://www.congressweb.com/Code/11)
+<div style="float: left; margin-right: 15px;">
+<a href="http://www.congressweb.com/Code/11"><button style="margin-top: 10px;">Add your support</button></a>
+</div>
+<div style="float: left;">
+<% facebook = {:u=>'http://code.org/washington'} %>
+<% twitter = {:url=>'http://code.org/washington', :related=>'codeorg', :text=>'CEOs, educators and community leaders call on Washington state to expand computer science'} %>
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+</div>
 
-[letter]
+<%= view "popup_window.js" %>
+
+<br style="clear: both;">
 
 <br />
+
+[letter]
 
 March 4, 2015
 
@@ -54,66 +65,72 @@ Signed,
 Steve Ballmer<br />
 Brad Smith, Executive Vice President & General Counsel, Microsoft<br />
 Jeff Wilke, Senior Vice President of Consumer Business, Amazon<br />
+Kevin Johnson, President, Starbucks<br />
+Leroy Hood, President, Institute for Systems Biology<br />
+Maud Daudon, President and CEO, Seattle Chamber of Commerce<br />
 Maggie Johnson, Director of Education and University Relations, Google<br />
 Dara Khosrowshahi, CEO, Expedia<br />
-Kevin Johnson, President, Starbucks<br />
-Maud Daudon, President and CEO, Seattle Chamber of Commerce<br />
-Elizabeth Tinkham, Senior Managing Director, Accenture<br />
 Rich Barton, Chairman, Zillow<br />
 Nick Hanauer, Partner, Second Avenue Partners<br />
-Glenn Kelman, CEO, Redfin<br />
-Ben Huh, CEO, Cheezburger<br />
-Christian Chabot, CEO, Tableau<br />
-Darrel Cavens, CEO, Zulily<br />
-Eric Anderson, CEO, Planetary Resources, Inc<br />
-John Vechey, Founder, Popcap Games<br />
-Gregg Gottesman, Managing Director, Madrona Ventures<br />
-Paul Thelan, CEO, Big Fish Games<br />
-Sarah Bird, CEO, Moz<br />
 Rob Glaser, CEO, RealNetworks<br />
-Steve Singh, CEO, Concur<br />
-Scott Keeney, CEO, nLIGHT<br />
-Steve Stevens, President and CEO, Greater Spokane Incorporated<br />
-Leroy Hood, President, Institute for Systems Biology<br />
-Susannah Malarkey, CEO, Technology Alliance<br />
-Michael Schutzler, CEO, WA Technology Industry Alliance<br />
+Christian Chabot, CEO, Tableau<br />
 Steve Mullin, CEO, Washington Roundtable<br />
+Elizabeth Tinkham, Senior Managing Director, Accenture<br />
+Paul Carduner, Seattle Site Lead, Facebook<br />
+Darrell Cavens, CEO, Zulily<br />
+Steve Singh, CEO, Concur<br />
+Gregg Gottesman, Managing Director, Madrona Ventures<br />
 Brad Silverberg, Founding Partner, Ignition Partners<br />
 Sunny Gupta, CEO, Apptio<br />
+Glenn Kelman, CEO, Redfin<br />
+Ben Huh, CEO, Cheezburger<br />
+Eric Anderson, CEO, Planetary Resources, Inc<br />
+John Vechey, Founder, Popcap Games<br />
+Paul Thelen, CEO, Big Fish Games<br />
+Sarah Bird, CEO, Moz<br />
+Scott Keeney, CEO, nLIGHT<br />
+Steve Stevens, President and CEO, Greater Spokane Incorporated<br />
+Susannah Malarkey, CEO, Technology Alliance<br />
+Michael Schutzler, CEO, WA Technology Industry Alliance<br />
 Dean Allen, CEO, McKinstry<br />
 Bill Lewis, Chairman, Lease Crutcher Lewis<br />
-Paul Carduner, Seattle Site Lead, Facebook<br />
+David McFadden, President, Yakima County Development Association<br />
+Timothy Engle, President, Saltchuk<br />
+Sandra Towne, Vancouver/Camas Innovation Partnership Zone
 
 **Education and Nonprofit Leaders**
 
-Ana Mari Cauce, Provost, Executive Vice President, and Interim <br />President, University of Washington<br />
-Elson Floyd, President, Washington State University<br />
 Kim Mead, President, Washington Education Association<br />
+Ana Mari Cauce, Provost, Executive Vice President, and Interim <br />
+President, University of Washington<br />
+Elson Floyd, President, Washington State University<br />
 Susan Enfield, Superintendent, Highline School District<br />
+Shelley Redinger, Superintendent, Spokane Public Schools<br />
 Gary Cohn, Superintendent, Everett Public Schools<br />
 Hadi Partovi, Co-founder and CEO, Code.org<br />
 Patrick D’Amelio, CEO, Washington STEM<br />
-Dave Powell, Executive Director, Stand for Children Washington<br />
 Christine Johnson, Chancellor, Spokane Community Colleges<br />
+Chris Kormo, CEO, League of Education Voters<br />
+Ed Lazowska, Bill & Melinda Gates Chair in Computer Science and Engineering, University of Washington<br />
+Dave Powell, Executive Director, Stand for Children Washington<br />
 Tayloe Washburn, CEO and Dean, Northeastern – Seattle Campus<br />
 James Dorsey, Executive Director, Washington MESA<br />
-Pam Lund, CEO, Girl Scouts, Eastern WA<br />
-Jeff Charbonneau, 2013 US National Teacher of the Year, 2015 Global Teacher Prize Finalist<br />
-Auillani de la Cruz, 2014-15 WA MESA Teacher of the Year<br /> 
+Pam Lund, CEO, Girl Scouts of Eastern WA and Northern Idaho<br />
 John Welch, Superintendent, Puget Sound Education Service District<br />
 Nasue Nishida, Executive Director, Center for Strengthening the Teaching Profession<br />
 Gene Sementi, Superintendent, West Valley School District<br />
 Michael Dunn, Superintendent, NorthEast Education Service District 101<br />
-Shelley Redinger, Superintendent, Spokane Public Schools<br />
-Ed Lazowska, Bill & Melinda Gates Chair in Computer Science and Engineering, University of Washington<br />
 Richard McBride, Superintendent, North Central Education Service District<br />
+Jeff Charbonneau, 2013 US National Teacher of the Year, 2015 Global Teacher Prize Finalist<br />
+Auillani de la Cruz, 2014-15 WA MESA Teacher of the Year<br /> 
+Steve Myers, Superintendent, Educational Service District 105
 
 [/letternames]
 
 <br />
 
 [<button>Add your support</button>](http://www.congressweb.com/Code/11) <% facebook = {:u=>'http://code.org/washington'} %>
-<% twitter = {:url=>'http://code.org/washington', :related=>'codeorg', :text=>'Top CEOs, educators and community leaders call on Washington state to expand computer science'} %>
+<% twitter = {:url=>'http://code.org/washington', :related=>'codeorg', :text=>'CEOs, educators and community leaders call on Washington state to expand computer science'} %>
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
