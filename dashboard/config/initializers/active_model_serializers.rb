@@ -1,19 +1,16 @@
-# Patch to allow serializing Fixnum (integer), String and Hash objects by default
+# Patch to allow serializing String and Hash objects by default
 class StringSerializer < ActiveModel::Serializer
   def attributes(obj)
     @object.to_s
   end
 end
-class FixnumSerializer < ActiveModel::Serializer
-  def attributes(obj)
-    @object.to_s
-  end
-end
+class FixnumSerializer < StringSerializer; end
 class HashSerializer < ActiveModel::Serializer
   def attributes(obj)
     @object.as_json
   end
 end
+class ActiveModel::ErrorsSerializer < HashSerializer; end
 
 # Patch to provide more informative missing-serializer error message
 module ActiveModel

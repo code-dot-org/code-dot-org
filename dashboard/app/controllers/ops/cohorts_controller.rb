@@ -86,7 +86,7 @@ module Ops
           teacher = User.create_with({
             user_type: 'teacher',
             age: '21+',
-            password: 'changeit' # ops team should provide unique passwords
+            password: 'changeit' # todo: send password-reset email
           }.merge(info)).find_or_create_by(
             email: email
           )
