@@ -164,4 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "여기서 직접 이야기를 만들 수 있습니다! 계속하거나 다음 퍼즐로 이동하세요!"},
 "yourExpression":function(d){return "계산식:"},
-"wrongInput":function(d){return "You are calling your function with the wrong value."}};
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

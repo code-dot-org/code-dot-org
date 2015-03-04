@@ -73,19 +73,24 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  get '/p', to: 'projects#index', as: 'project_list'
-  get '/projects', to: 'projects#index'
-  get '/projects/:template', to: 'projects#template'
-
-  get '/p/artist', to: 'levels#show', key: 'New Artist Project', as: 'standalone_artist'
-  get '/p/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'standalone_playlab'
+  resources :projects, path: '/p/', only: [:index] do
+    collection do
+      get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
+      get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/:template', to: 'projects#template'
+    end
+  end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
-  
-  get '/lang/it', to: 'home#set_locale', as: 'lang/it', locale: 'it-IT'
+
+  # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
   get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
   get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
+
+  # /lang/xx shortcut for all routes
+  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
+  get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -118,23 +123,14 @@ Dashboard::Application.routes.draw do
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
-  # duplicate routes are for testing -- ActionController::TestCase calls to_s on all params
   get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME.to_s, format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID, as: 'editcode_chapter', format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID.to_s, format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID, as: 'twenty_fourteen_chapter', format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID.to_s, format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID, as: 'builder_chapter', format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID.to_s, format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID, as: 'flappy_chapter', format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID.to_s, format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID, as: 'jigsaw_chapter', format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID.to_s, format: false
-
+  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_NAME, as: 'editcode_chapter', format: false
+  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_NAME, as: 'twenty_fourteen_chapter', format: false
+  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
+  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'

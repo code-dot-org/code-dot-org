@@ -45,9 +45,8 @@ namespace :seed do
     touch SEEDED # touch seeded "early" to reduce race conditions
     begin
       custom_scripts = SCRIPTS_GLOB.select { |script| File.mtime(script) > scripts_seeded_mtime }
-      default_scripts = Dir.glob("config/scripts/default/*.yml").sort.select { |script| File.mtime(script) > scripts_seeded_mtime }
       Level.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
-      script, custom_i18n = Script.setup(default_scripts, custom_scripts)
+      _, custom_i18n = Script.setup(custom_scripts)
       Script.update_i18n(custom_i18n)
     rescue
       rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we

@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'csv'
 
 class AppsApi < Sinatra::Base
 
@@ -53,7 +54,7 @@ class AppsApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     timestamp = Time.now
-    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge(createdAt: timestamp, updatedAt: timestamp), request.ip)
+    id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
     redirect "/v3/apps/#{id}", 301
   end
@@ -93,8 +94,9 @@ class AppsApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     value = JSON.load(request.body.read)
+    value = value.merge('updatedAt' => Time.now)
 
-    StorageApps.new(storage_id('user')).update(id, value.merge(updatedAt: Time.now), request.ip)
+    StorageApps.new(storage_id('user')).update(id, value, request.ip)
 
     dont_cache
     content_type :json
@@ -269,6 +271,57 @@ class AppsApi < Sinatra::Base
   end
   put %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+
+  #
+  # POST /v3/apps/<app-id>/import-(shared|user)-tables/<table-name>
+  #
+  # Imports a csv form post into a table, erasing previous contents.
+  #
+  post %r{/v3/apps/([^/]+)/import-(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+    # this check fails on Win 8.1 Chrome 40
+    #unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
+
+    max_records = 5000
+    table_url = "/private/edit-csp-table/#{app_id}/#{table_name}"
+    back_link = "<a href='#{table_url}'>back</a>"
+    table = Table.new(app_id, storage_id(endpoint), table_name)
+    tempfile = params[:import_file][:tempfile]
+    records = []
+
+    begin
+      columns = CSV.parse_line(tempfile)
+      columns.each do |column|
+        msg = "The CSV file could not be loaded because one of the column names is missing. "\
+              "Please go #{back_link} and make sure the first line of the CSV file "\
+              "contains a name for each column:<br><br>#{columns.join(',')}"
+        halt 400, {}, msg unless column
+      end
+      CSV.foreach(tempfile, headers:true) do |row|
+        records.push(row.to_hash)
+      end
+    rescue => e
+      msg = "The CSV file could not be loaded: #{e.message}<br><br>To make sure your CSV "\
+            "file is formatted correctly, please go #{back_link} and follow these steps:"\
+            "<li>Open your data in Microsoft Excel or Google Spreadsheets"\
+            "<li>Make sure the first line contains a name for each column"\
+            "<li>Export your data by doing a 'Save as CSV' or 'Download as Comma-separated values'"
+      halt 400, {}, msg
+    end
+    
+    msg = "The CSV file is too big. The maximum number of lines is #{max_records}, "\
+          "but the file you chose has #{records.length} lines. "\
+          "Please go #{back_link} and try uploading a smaller CSV file."
+    halt 400, {}, msg if records.length > max_records
+
+    # deleting the old records only after all validity checks have passed.
+    table.delete_all()
+    
+    records.each do |record|
+      table.insert(record, request.ip)
+    end
+
+    redirect "#{table_url}"
   end
 
 end

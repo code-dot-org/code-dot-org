@@ -11,7 +11,6 @@ theme: none
     }
     th {
       padding: 10px;
-      background-color: #ccc;
       text-align: left;
     }
     td {
@@ -34,6 +33,19 @@ theme: none
   %h2
     Viewing table: {{tableName}}
 
+  %div 
+    %span
+      %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"} 
+        Import
+      %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/apps/' + appId + '/import-shared-tables/' + tableName}}"}
+        %input{"name" => "import_file", "type" => "file"}
+        %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
+  %br        
+  %div 
+    %span
+      %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
+      %input{"ng-model" => "newColumnName"}
+  %br
   %table.records
     %colgroup
       %col{width: "200"}
@@ -43,14 +55,23 @@ theme: none
       %th
         %a{href: "", "ng-click" => "order = 'id'; reverse=!reverse"}
           id
-        %i.fa.fa-caret-down{"ng-show" => "order == 'id' && reverse == true"}
-        %i.fa.fa-caret-up{"ng-show" => "order == 'id' && reverse == false"}
+          %i.fa.fa-caret-down{"ng-show" => "order == 'id' && reverse == true"}
+          %i.fa.fa-caret-up{"ng-show" => "order == 'id' && reverse == false"}
       %th{"ng-repeat" => "column in columns"}
         %a{href: "", "ng-click" => "$parent.order = column; $parent.reverse = !$parent.reverse"}
           {{column}}
-        %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
-        %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
+          %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
+          %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
       %th
+    %tr
+      %td
+      %td{"ng-repeat" => "column in columns"}
+        %span{"ng-show" => "newRecord.editing"}
+          %input{"ng-model" => "newRecord[column]", type: "text"}/
+      %td
+        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
+        %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
+        %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
     %tr{"ng-repeat" => "record in records | orderBy:order:reverse"}
       %td
         %span
@@ -64,22 +85,7 @@ theme: none
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteRecord(record)"} Delete
-    %tr
-      %td
-      %td{"ng-repeat" => "column in columns"}
-        %span{"ng-show" => "newRecord.editing"}
-          %input{"ng-model" => "newRecord[column]", type: "text"}/
-      %td
-        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add
-        %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
-        %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
 
-  %br
-  %div 
-    %span
-      %input{"ng-model" => "newColumnName"}
-      %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
-        
   %h3 Debug view of table:
   %pre{"ng-model" => "records"}
     {{ records | json }}

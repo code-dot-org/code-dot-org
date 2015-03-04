@@ -17,6 +17,7 @@ var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var binaryToInt = dataConverters.binaryToInt;
 var formatBinary = dataConverters.formatBinary;
+var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * @type {number}
@@ -84,15 +85,19 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} packet - log contents
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.packet = packet;
   entity.timestamp = Date.now();
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    onComplete(row !== undefined);
+  entity.getTable_().create(entity.buildRow_(), function (err, result) {
+    if (err !== null) {
+      onComplete(err, null);
+      return;
+    }
+    onComplete(err, new NetSimLogEntry(shard, result));
   });
 };
 
@@ -133,6 +138,12 @@ NetSimLogEntry.prototype.getPacketCount = function () {
  */
 NetSimLogEntry.prototype.getMessageBinary = function () {
   return formatBinary(
+      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
+      BITS_PER_BYTE);
+};
+
+NetSimLogEntry.prototype.getMessageAscii = function () {
+  return binaryToAscii(
       PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
       BITS_PER_BYTE);
 };

@@ -26,18 +26,26 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
- * How often a cleaning job should be kicked off.
+ * Minimum delay between attempts to start a cleaning job.
  * @type {number}
+ * @const
  */
-var CLEANING_RETRY_INTERVAL_MS = 60000;
-var CLEANING_SUCCESS_INTERVAL_MS = 300000;
+var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
 
 /**
- * How long a cleaning lock (heartbeat) must be untouched before can be
- * ignored and cleaned up by another client.
+ * Minimum delay before the next cleaning job is started after
+ * a cleaning job has finished successfully.
  * @type {number}
+ * @const
  */
-var CLEANING_HEARTBEAT_TIMEOUT = 15000;
+var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
+
+/**
+ * How old a heartbeat can be without being cleaned up.
+ * @type {number}
+ * @const
+ */
+var HEARTBEAT_TIMEOUT_MS = 60000; // 1 minute
 
 /**
  * Special heartbeat type that acts as a cleaning lock across the shard
@@ -64,7 +72,7 @@ CleaningHeartbeat.inherits(NetSimHeartbeat);
 /**
  * Static creation method for a CleaningHeartbeat.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Callback that is passed the new
+ * @param {!NodeStyleCallback} onComplete - Callback that is passed the new
  *        CleaningHeartbeat object.
  */
 CleaningHeartbeat.create = function (shard, onComplete) {
@@ -74,20 +82,25 @@ CleaningHeartbeat.create = function (shard, onComplete) {
 /**
  * Static getter for all non-expired cleaning locks on the shard.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - callback that receives an array of the non-
+ * @param {!NodeStyleCallback} onComplete - callback that receives an array of the non-
  *        expired cleaning locks.
  */
 CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
-  shard.heartbeatTable.readAll(function (rows) {
+  shard.heartbeatTable.readAll(function (err, rows) {
+    if (err) {
+      onComplete(err, null);
+      return;
+    }
+
     var heartbeats = rows
         .filter(function (row) {
           return row.cleaner === true &&
-              Date.now() - row.time < CLEANING_HEARTBEAT_TIMEOUT;
+              Date.now() - row.time < HEARTBEAT_TIMEOUT_MS;
         })
         .map(function (row) {
           return new CleaningHeartbeat(shard, row);
         });
-    onComplete(heartbeats);
+    onComplete(null, heartbeats);
   });
 };
 
@@ -168,8 +181,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
  * Attempt to begin a cleaning routine.
  */
 NetSimShardCleaner.prototype.cleanShard = function () {
-  this.getCleaningLock(function (isLockAcquired) {
-    if (!isLockAcquired) {
+  this.getCleaningLock(function (err) {
+    if (err) {
+      logger.warn(err.message);
       return;
     }
 
@@ -209,24 +223,22 @@ NetSimShardCleaner.prototype.hasCleaningLock = function () {
 /**
  * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
  * of our own, that does not collide with any existing CleaningHeartbeats.
- * @param {!function} onComplete - called when operation completes, with
- *        boolean "success" argument.
+ * @param {!NodeStyleCallback} onComplete - called when operation completes.
  */
 NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
-  CleaningHeartbeat.create(this.shard_, function (heartbeat) {
-    if (heartbeat === null) {
-      onComplete(false);
+  CleaningHeartbeat.create(this.shard_, function (err, heartbeat) {
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
     // We made a heartbeat - now check to make sure there wasn't already
     // another one.
-    CleaningHeartbeat.getAllCurrent(this.shard_, function (heartbeats) {
-      if (heartbeats.length > 1) {
+    CleaningHeartbeat.getAllCurrent(this.shard_, function (err, heartbeats) {
+      if (err || heartbeats.length > 1) {
         // Someone else is already cleaning, back out and try again later.
-        logger.info("Failed to acquire cleaning lock");
         heartbeat.destroy(function () {
-          onComplete(false);
+          onComplete(new Error('Failed to acquire cleaning lock'), null);
         });
         return;
       }
@@ -234,7 +246,7 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
       // Success, we have cleaning lock.
       this.heartbeat_ = heartbeat;
       logger.info("Cleaning lock acquired");
-      onComplete(true);
+      onComplete(null, null);
     }.bind(this));
   }.bind(this));
 };
@@ -242,15 +254,15 @@ NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
 /**
  * Remove and destroy this cleaner's CleaningHeartbeat, giving another
  * client the chance to acquire a lock.
- * @param {!function} onComplete - called when operation completes, with
+ * @param {!NodeStyleCallback} onComplete - called when operation completes, with
  *        boolean "success" argument.
  */
 NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
-  this.heartbeat_.destroy(function (success) {
+  this.heartbeat_.destroy(function (err) {
     this.heartbeat_ = null;
     this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
     logger.info("Cleaning lock released");
-    onComplete(success);
+    onComplete(err, null);
   }.bind(this));
 };
 
@@ -322,7 +334,7 @@ CacheTable.inherits(Command);
  */
 CacheTable.prototype.onBegin_ = function () {
   logger.info('Begin CacheTable[' + this.key_ + ']');
-  this.table_.readAll(function (rows) {
+  this.table_.readAll(function (err, rows) {
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
   }.bind(this));
@@ -353,13 +365,13 @@ DestroyEntity.inherits(Command);
 DestroyEntity.prototype.onBegin_ = function () {
 
   logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
-  this.entity_.destroy(function (success) {
-    if (success) {
-      logger.info("Deleted entity");
-      this.succeed();
-    } else {
+  this.entity_.destroy(function (err) {
+    if (err) {
       this.fail();
+      return;
     }
+    logger.info("Deleted entity");
+    this.succeed();
   }.bind(this));
 };
 
@@ -414,13 +426,6 @@ var CleanHeartbeats = function (cleaner) {
   this.cleaner_ = cleaner;
 };
 CleanHeartbeats.inherits(CommandSequence);
-
-/**
- * How old a heartbeat can be without being cleaned up.
- * @type {number}
- * @const
- */
-var HEARTBEAT_TIMEOUT_MS = 30000;
 
 /**
  * @private

@@ -61,6 +61,7 @@ class Applab < Blockly
         "hideElement": null,
         "deleteElement": null,
         "setPosition": null,
+        "write": null,
         "getXPosition": null,
         "getYPosition": null,
 
@@ -77,6 +78,15 @@ class Applab < Blockly
         "getImageData": null,
         "putImageData": null,
         "clearCanvas": null,
+        "getRed": null,
+        "getGreen": null,
+        "getBlue": null,
+        "getAlpha": null,
+        "setRed": null,
+        "setGreen": null,
+        "setBlue": null,
+        "setAlpha": null,
+        "setRGBA": null,
 
         // Data
         "startWebRequest": null,
@@ -108,14 +118,17 @@ class Applab < Blockly
         "penColor": null,
         "show": null,
         "hide": null,
+        "speed": null,
 
         // Control
-        "setTimeout": null,
-        "clearTimeout": null,
         "forLoop_i_0_4": null,
         "ifBlock": null,
         "ifElseBlock": null,
         "whileBlock": null,
+        "setTimeout": null,
+        "clearTimeout": null,
+        "setInterval": null,
+        "clearInterval": null,
 
         // Math
         "addOperator": null,
@@ -137,11 +150,11 @@ class Applab < Blockly
         "mathMin": null,
 
         // Variables
-        "console.log": null,
         "declareAssign_x": null,
         "assign_x": null,
         "declareAssign_x_array_1_4": null,
         "declareAssign_x_prompt": null,
+        "console.log": null,
 
         // Functions
         "functionParams_none": null,

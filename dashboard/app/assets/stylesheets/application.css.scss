@@ -96,6 +96,11 @@ em strong {
   font-family: 'Gotham 7i', sans-serif;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .clear {
   clear: both;
 }
@@ -166,6 +171,13 @@ em strong {
   font-weight: normal;
   color: white;
   border: 2px solid #ccc;
+
+
+  $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+  transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+  -o-transition: $transition;
 }
 
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
@@ -428,8 +440,8 @@ html, body {
   display: inline-block;
 }
 
-.user_options {
-  display: inline-block;
+.user_options, .project_more_popup {
+  display: none;
   background-color: white;
   a:link {color:black;}
   a:visited {color:black;}
@@ -546,12 +558,31 @@ html, body {
   }
 }
 
+
+.project_info {
+  .header_text, .header_button {
+    float: left;
+  }
+  .project_name_wrapper .header_text {
+    float: left;
+    clear: left;
+  }
+}
+
 .project_name {
   max-width: 300px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   vertical-align: middle;
+}
+
+.project_updated_at {
+  font-size: 10px;
+}
+
+.project_save[disabled] {
+  background: #aaa;
 }
 
 .header_middle {
@@ -1550,7 +1581,6 @@ div.mini_gallery_activity {
 
 .infobox {
   background-color: rgb(88, 103, 113);
-  margin-left: 0px;
   color: white;
   font-size: 13px;
   padding-right: 10px;

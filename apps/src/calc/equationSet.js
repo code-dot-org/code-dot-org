@@ -109,6 +109,24 @@ EquationSet.prototype.computesSingleVariable = function () {
 };
 
 /**
+ * Example set that returns true:
+ * Age = 12
+ * compute: Age
+ * @returns {boolean} True if our EquationSet consists of a variable set to
+ *   a number, and the computation of that variable.
+ */
+EquationSet.prototype.computesSingleConstant = function () {
+  if (!this.compute_ || this.equations_.length !== 1) {
+    return false;
+  }
+  var equation = this.equations_[0];
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isVariable() && equation.expression.isNumber() &&
+    computeExpression.getValue() === equation.name;
+
+};
+
+/**
  * Returns a list of equations that consist of setting a variable to a constant
  * value, without doing any additional math. i.e. foo = 1
  */

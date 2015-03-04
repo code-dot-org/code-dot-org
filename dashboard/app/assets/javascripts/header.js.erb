@@ -112,31 +112,129 @@ dashboard.buildHeader = function (scriptData) {
 
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
-    $('.project_info').empty().append($('<div>').addClass('header_text').addClass('project_name').text(dashboard.currentApp.name))
-        .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
-        .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
-        .append($('<div class="project_more header_button">').html('<%= I18n.t('project.more') %> &#x25BC;'));
+    $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
+    $('.project_updated_at').text(dashboard.projectUpdatedAtString()).show();
+    $('.project_save').replaceWith($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
   }
 
   function projectNameEdit() {
-    $('.project_info').empty().append($('<input id="projectName">', {type: 'text'})
-        .addClass('header_input').val(dashboard.currentApp.name))
-        .append($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'))
-        .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
-        .append($('<div class="project_more header_button">').html('<%= I18n.t('project.more') %> &#x25BC;'));
+    $('.project_updated_at').hide();
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.currentApp.name));
+    $('.project_edit').replaceWith($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
   }
+
+  dashboard.projectUpdatedAtString = function () {
+    if (dashboard.currentApp.updatedAt) {
+      return '<%= I18n.t("project.saved") %> ' +
+          DateHelper.time_ago_in_words_with_parsing(dashboard.currentApp.updatedAt);
+    } else {
+      return '<%= I18n.t("project.not_saved") %>';
+    }
+  };
+
+  var moreButton = '<%= I18n.t('project.more') %> '
+      + '<span class="project_more_glyph">&#x25BC;</span>'
+      + '<div class="project_more_popup" style="position: absolute;">'
+      + '<a href="#" class="project_delete"><%= I18n.t('project.delete') %></a><br>'
+      + '<a href="#" class="project_new"><%= I18n.t('project.new') %></a></div>';
+
+  var nameAndUpdated = $('<div class="project_name_wrapper header_text">')
+      .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
+      .append($('<div class="project_updated_at header_text">').text(dashboard.projectUpdatedAtString()));
+
+  $('.project_info').append(nameAndUpdated)
+      .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
+      .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
+      .append($('<div class="project_more header_button" style="position: relative;">').html(moreButton));
 
   projectNameShow();
   $('.freeplay_links').empty().before($('<div class="project_list header_button">').text('<%= I18n.t('project.my_projects') %>'));
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
+  $(document).on('input', '.project_name', function () {
+    if ($(this).val().trim().length === 0) {
+      $('.project_save').attr('disabled', true);
+    } else {
+      $('.project_save').removeAttr('disabled');
+    }
+  });
+
   $(document).on('click', '.project_save', function () {
+    if ($(this).attr('disabled')) {
+      return;
+    }
     $(this).attr('disabled', true);
-    dashboard.currentApp.name = $('#projectName').val();
+    dashboard.currentApp.name = $('.project_name').val().trim().substr(0, 100);
     dashboard.saveProject(function () {
       projectNameShow();
     });
+  });
+
+  $('.project_share').click(function () {
+    dashboard.saveProject(function () {
+      var dialog = new Dialog({body: '<div id="project-share" class="modal-content">'
+          + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
+          + '<p><%= I18n.t('project.share_copy_link') %></p>'
+          + '<div><input type="text" id="sharing-input" value="' + location.href.split(/\/edit$/)[0] + '" style="cursor: copy; width: 400px;" readonly></div>'
+          + '<button id="continue-button"><%= I18n.t('project.ok') %></button></div>'
+      });
+      $('#sharing-input').click(function () {
+        this.select();
+      })
+      dialog.show();
+      $('#project-share #continue-button').click(function() {
+        dialog.hide();
+      });
+    });
+  });
+
+  var $projectMorePopup = $('.project_more_popup');
+  function hideProjectMore() {
+    $projectMorePopup.hide();
+    $('.project_more_glyph').html('&#x25BC;');
+    $(document).off('click', hideProjectMore);
+  }
+  $('.project_more').click(function (e) {
+    if ($projectMorePopup.is(':hidden')) {
+      e.stopPropagation();
+      $projectMorePopup.show();
+      $('.project_more_glyph').html('&#x25B2;');
+      $(document).on('click', hideProjectMore);
+    }
+  });
+  $projectMorePopup.click(function (e) {
+    e.stopPropagation(); // Clicks inside the popup shouldn't close it.
+  });
+
+  $('.project_delete').click(function (e) {
+    e.preventDefault(); // Don't change the hash.
+    var dialog = new Dialog({body: '<div id="confirm-delete" class="modal-content">'
+        + '<p class="dialog-title"><%= I18n.t('project.delete_confirm_title') %></p>'
+        + "<p><%= I18n.t('project.delete_confirm_text') %></p>"
+        + '<button id="again-button"><%= I18n.t('project.cancel') %></button><button id="continue-button" style="float: right"><%= I18n.t('project.delete') %></button></div>'
+    });
+    dialog.show();
+    $('#confirm-delete #continue-button').click(function () {
+      dashboard.deleteProject(function () {
+        location.href = location.pathname;
+      });
+    });
+    $('#confirm-delete #again-button').click(function () {
+      dialog.hide();
+    });
+  });
+
+  $('.project_new').click(function (e) {
+    e.preventDefault(); // Don't change the hash.
+    // Save the project if one exists (i.e. isn't just the default one) then navigate.
+    if (dashboard.currentApp.id) {
+      dashboard.saveProject(function () {
+        location.href = location.pathname;
+      });
+    } else {
+      location.href = location.pathname;
+    }
   });
 
   $(document).on('click', '.project_list', function () {

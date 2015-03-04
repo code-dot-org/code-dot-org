@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "üst kenara dokunur"},
 "whenUp":function(d){return "yukarı oka basıldığında"},
 "whenUpTooltip":function(d){return "Yukarı ok tuşu basıldığında aşağıdaki eylemleri yürüt."},
-"yes":function(d){return "Evet"}};
+"yes":function(d){return "Evet"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

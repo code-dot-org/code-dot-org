@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({85:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({86:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],167:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3516,25 +3516,67 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":219,"./utils":214}],199:[function(require,module,exports){
-var list = [];
+},{"../locale/current/common":220,"./utils":215}],200:[function(require,module,exports){
+var timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  list.push(window.setTimeout.apply(window, arguments));
+  timeoutList.push(window.setTimeout.apply(window, arguments));
 };
 
 /**
- * Clears all timeouts in our list and resets the list
+ * Clears all timeouts in our timeoutList and resets the timeoutList
  */
 exports.clearTimeouts = function () {
-  list.forEach(window.clearTimeout, window);
-  list = [];
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
 };
 
-},{}],193:[function(require,module,exports){
+/**
+ * Clears a timeout and removes the item from the timeoutList
+ */
+exports.clearTimeout = function (id) {
+  window.clearTimeout(id);
+  // List removal requires IE9+
+  var index = timeoutList.indexOf(id);
+  if (index > -1) {
+    timeoutList.splice(index, 1);
+  }
+};
+
+var intervalList = [];
+
+/**
+ * call setInterval and track the returned id
+ */
+exports.setInterval = function (fn, time) {
+  intervalList.push(window.setInterval.apply(window, arguments));
+};
+
+/**
+ * Clears all interval timeouts in our intervalList and resets the intervalList
+ */
+exports.clearIntervals = function () {
+  intervalList.forEach(window.clearInterval, window);
+  intervalList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the intervalList
+ */
+exports.clearInterval = function (id) {
+  window.clearInterval(id);
+  // List removal requires IE9+
+  var index = intervalList.indexOf(id);
+  if (index > -1) {
+    intervalList.splice(index, 1);
+  }
+};
+
+
+},{}],194:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3558,7 +3600,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],169:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],170:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3823,7 +3865,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],168:[function(require,module,exports){
+},{"./dom":48}],169:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -3974,7 +4016,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":166,"./utils":214}],166:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":20,"./dom":48,"./required_block_utils":167,"./utils":215}],167:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4252,7 +4294,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":219,"./block_utils":18,"./utils":214,"./xml":215}],19:[function(require,module,exports){
+},{"../locale/current/common":220,"./block_utils":19,"./utils":215,"./xml":216}],20:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4417,7 +4459,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":219}],4:[function(require,module,exports){
+},{"../locale/current/common":220}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4818,10 +4860,7 @@ StudioApp.prototype.init = function(config) {
           Blockly.functionEditor.hideIfOpen();
         }
         Blockly.mainBlockSpace.clear();
-        if (config.level.originalStartBlocks) {
-          config.level.startBlocks = config.level.originalStartBlocks;
-        }
-        this.setStartBlocks_(config);
+        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
@@ -5596,7 +5635,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.display = 'none';
+  workspaceDiv.style.visibility = 'hidden';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -5618,10 +5657,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      // Redirect user to /edit version of this page. It would be better
-      // to just turn on the workspace but there are rendering issues
-      // with that.
-      window.location.href = window.location.href + '/edit';
+      workspaceDiv.style.visibility = 'visible';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -5681,9 +5717,13 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 
 /**
  * Add the starting block(s).
+ * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
-StudioApp.prototype.setStartBlocks_ = function (config) {
+StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   var startBlocks = config.level.startBlocks || '';
+  if (loadLastAttempt) {
+    startBlocks = config.level.lastAttempt || startBlocks;
+  }
   if (config.forceInsertTopBlock) {
     startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
         config.forceInsertTopBlock);
@@ -5720,19 +5760,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('blockly');
   var options = {
     toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        2 : config.level.defaultNumExampleBlocks,
+    disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
+    disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
+    useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
+    editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -5746,7 +5780,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
-  this.setStartBlocks_(config);
+  this.setStartBlocks_(config, true);
 };
 
 /**
@@ -5856,7 +5890,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":219,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":187,"./templates/buttons.html":188,"./templates/instructions.html":190,"./templates/learn.html":191,"./templates/makeYourOwn.html":192,"./utils":214,"./xml":215,"url":234}],234:[function(require,module,exports){
+},{"../locale/current/common":220,"./ResizeSensor":2,"./block_utils":19,"./constants.js":47,"./dom":48,"./dropletUtils":49,"./feedback":68,"./templates/builder.html":188,"./templates/buttons.html":189,"./templates/instructions.html":191,"./templates/learn.html":192,"./templates/makeYourOwn.html":193,"./utils":215,"./xml":216,"url":235}],235:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6565,13 +6599,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":230,"querystring":233}],233:[function(require,module,exports){
+},{"punycode":231,"querystring":234}],234:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":231,"./encode":232}],232:[function(require,module,exports){
+},{"./decode":232,"./encode":233}],233:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6658,7 +6692,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],231:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6744,7 +6778,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],230:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7255,7 +7289,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],192:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7275,7 +7309,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],191:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],192:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7297,7 +7331,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],190:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],191:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7317,7 +7351,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],187:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],188:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7337,7 +7371,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],67:[function(require,module,exports){
+},{"ejs":236}],68:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -7684,6 +7718,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
 
 // This returns a document element with the appropriate feedback message.
 // The message will be one of the following, from highest to lowest precedence:
+// 0. Failure override message specified on level (options.level.failureMessageOverride)
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
 // 3. Header message due to dashboard text check fail (options.response.share_failure).
@@ -7697,7 +7732,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.message) {
+  if (options.feedbackType !== TestResults.ALL_PASS &&
+      options.level.failureMessageOverride) {
+    message = options.level.failureMessageOverride;
+  } else  if (options.message) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
@@ -8537,7 +8575,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":219,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":188,"./templates/code.html":189,"./templates/shareFailure.html":195,"./templates/sharing.html":196,"./templates/showCode.html":197,"./templates/trophy.html":198,"./utils":214,"./xml":215}],198:[function(require,module,exports){
+},{"../locale/current/common":220,"./codegen":45,"./constants":47,"./dom":48,"./feedbackBlocks":69,"./templates/buttons.html":189,"./templates/code.html":190,"./templates/shareFailure.html":196,"./templates/sharing.html":197,"./templates/showCode.html":198,"./templates/trophy.html":199,"./utils":215,"./xml":216}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8557,7 +8595,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],197:[function(require,module,exports){
+},{"ejs":236}],198:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8577,7 +8615,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],196:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],197:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8597,7 +8635,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],195:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],196:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8617,7 +8655,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],189:[function(require,module,exports){
+},{"ejs":236}],190:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8637,7 +8675,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],188:[function(require,module,exports){
+},{"ejs":236}],189:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8657,9 +8695,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],219:[function(require,module,exports){
+},{"../../locale/current/common":220,"ejs":236}],220:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],68:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8788,7 +8826,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":194}],194:[function(require,module,exports){
+},{"./constants":47,"./templates/readonly.html":195}],195:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8809,7 +8847,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],235:[function(require,module,exports){
+},{"ejs":236}],236:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9164,7 +9202,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":236,"./utils":237,"fs":227,"path":228}],237:[function(require,module,exports){
+},{"./filters":237,"./utils":238,"fs":228,"path":229}],238:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9188,7 +9226,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],236:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9387,7 +9425,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],228:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9615,7 +9653,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":229}],229:[function(require,module,exports){
+},{"_process":230}],230:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9674,9 +9712,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],227:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -9818,7 +9856,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+    });
     retVal = interpreter.createNativeFunction(wrapper);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
@@ -9880,16 +9922,30 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction = function (opts) {
+  if (opts.dontMarshal) {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  } else {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+      }
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
@@ -9899,7 +9955,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -9911,7 +9971,11 @@ function populateGlobalFunctions(interpreter, scope) {
   for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
     var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: func,
+        nativeParentObj: gf.parent,
+    });
     interpreter.setProperty(scope,
                             gf.func,
                             interpreter.createNativeFunction(wrapper));
@@ -9924,9 +9988,11 @@ function populateJSFunctions(interpreter) {
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction(interpreter,
-                                                   String[functions[i]],
-                                                   String);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: String[functions[i]],
+        nativeParentObj: String,
+    });
     interpreter.setProperty(interpreter.STRING,
                             functions[i],
                             interpreter.createNativeFunction(wrapper),
@@ -10110,7 +10176,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":48}],48:[function(require,module,exports){
+},{"./dropletUtils":49}],49:[function(require,module,exports){
 var utils = require('./utils');
 
 exports.randomNumber = function (min, max) {
@@ -10173,7 +10239,7 @@ standardConfig.blocks = [
   {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
@@ -10200,7 +10266,7 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks, standardConfig.blocks ];
+    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
@@ -10384,7 +10450,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 };
 
 
-},{"./utils":214}],214:[function(require,module,exports){
+},{"./utils":215}],215:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10600,11 +10666,11 @@ if (!String.prototype.repeat) {
  * undefined instead of whether val is falsey.
  * @returns val if not undefined, otherwise defaultVal
  */
-exports.undefOr = function (val, defaultVal) {
+exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":78,"./lodash":86,"./xml":215}],86:[function(require,module,exports){
+},{"./hammer":79,"./lodash":87,"./xml":216}],87:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -13973,7 +14039,7 @@ exports.undefOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],78:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16137,7 +16203,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16244,7 +16310,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16322,7 +16388,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16572,7 +16638,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":215}],215:[function(require,module,exports){
+},{"./xml":216}],216:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

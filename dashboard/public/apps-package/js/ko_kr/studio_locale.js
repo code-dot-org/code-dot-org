@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "화면 천장에 닿으면"},
 "whenUp":function(d){return "위쪽 방향키를 누르면"},
 "whenUpTooltip":function(d){return "위쪽 방향키를 누르면 아래의 동작을 실행합니다."},
-"yes":function(d){return "예"}};
+"yes":function(d){return "예"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

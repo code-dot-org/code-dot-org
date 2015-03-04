@@ -19,7 +19,14 @@
     "disable_sharing": "false",
     "start_direction": "90",
     "x": "150",
-    "y": "150"
+    "y": "150",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "failure_message_override": "Nice attempt! Try again to get it right."
   }
 }]]></config>
   <blocks>
