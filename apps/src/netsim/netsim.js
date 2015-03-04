@@ -70,7 +70,7 @@ var NetSim = module.exports = function () {
    * @type {string}
    * @private
    */
-  this.encodingMode_ = 'binary';
+  this.encodingMode_ = 'ascii';
 
   /**
    * Current chunk size (bytesize)
