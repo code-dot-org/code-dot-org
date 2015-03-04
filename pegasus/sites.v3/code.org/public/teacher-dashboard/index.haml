@@ -390,6 +390,7 @@ angular: teacherDashboard
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
+    $scope.tab = 'progress'
 
     // error handling
     $scope.genericError = function(result) {
