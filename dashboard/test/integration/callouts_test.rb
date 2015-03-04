@@ -7,7 +7,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
     @level.save!
 
-    @script_level = create(:script_level, :with_stage, level_id: @level.id)
+    @script_level = create(:script_level, level_id: @level.id)
 
     @level_path = "levels/#{@level.id}"
     @script_level_path = "s/#{@script_level.script.name}/stage/1/puzzle/1"
