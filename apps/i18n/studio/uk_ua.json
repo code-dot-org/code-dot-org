@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "торкається верхнього краю",
   "whenUp": "коли стрілка Вгору",
   "whenUpTooltip": "Виконати дії, подані нижче, при натисненні клавіші стрілка вгору.",
-  "yes": "Так"
+  "yes": "Так",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

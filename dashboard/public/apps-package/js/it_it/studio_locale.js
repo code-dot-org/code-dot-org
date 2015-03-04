@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "tocca il bordo superiore"},
 "whenUp":function(d){return "quando la freccia in alto"},
 "whenUpTooltip":function(d){return "Esegue le azioni qua sotto quando viene premuto il tasto \"freccia in alto\"."},
-"yes":function(d){return "Sì"}};
+"yes":function(d){return "Sì"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

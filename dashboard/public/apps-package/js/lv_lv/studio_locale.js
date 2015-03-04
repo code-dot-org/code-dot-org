@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "pieskaras augšējai malai"},
 "whenUp":function(d){return "kad bultiņa uz augšu"},
 "whenUpTooltip":function(d){return "Veikt zemāk esošās darbības, kad nospiež bultiņu uz augšu."},
-"yes":function(d){return "Jā"}};
+"yes":function(d){return "Jā"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

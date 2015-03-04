@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "toca la vora superior"},
 "whenUp":function(d){return "Quan tecla cap amunt"},
 "whenUpTooltip":function(d){return "Executar les accions de sota quan es premi la tecla cap amunt."},
-"yes":function(d){return "Sí"}};
+"yes":function(d){return "Sí"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

@@ -6,9 +6,11 @@ angular: teacherDashboard
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 
-%link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")
-%link(rel="stylesheet" type="text/css" href="/style.css")
+%link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
+%link(rel='stylesheet' type='text/css' href='/style.css')
 %link(rel='stylesheet' type='text/css' href='/css/page.css')
+%link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
+
 
 %div{'ng-view' => ''}
 
@@ -38,6 +40,9 @@ angular: teacherDashboard
                                                controller: 'StudentDetailController'});
     $routeProvider.when('/sections/:id/print_signin_cards', {templateUrl: '/teacher-dashboard/signin_cards',
                                                controller: 'SectionDetailController'});
+    $routeProvider.when('/sections/:id/progress', {templateUrl: '/teacher-dashboard/section',
+                                               controller: 'SectionProgressController',
+                                               tab: 'progress'});
     $routeProvider.when('/sections/:id/:tab', {templateUrl: '/teacher-dashboard/section',
                                                controller: 'SectionDetailController'});
     $routeProvider.otherwise({redirectTo: '/sections'});
@@ -177,13 +182,12 @@ angular: teacherDashboard
                                 $routeParams.sectionid + '/' + $routeParams.studentid;
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$location', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $location, sectionsService, studentsService) {
 
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.progress = sectionsService.progress({id: $routeParams.id});
 
     // error handling
     $scope.genericError = function(result) {
@@ -191,12 +195,15 @@ angular: teacherDashboard
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.progress.$promise.catch($scope.genericError);
 
     $scope.section.$promise.then(
       function( section ){
         if (!$scope.tab) {
-          $scope.tab = ($scope.section.students.length > 0) ? 'progress': 'manage';
+          if ($scope.section.students.length > 0) {
+            $location.path('/sections/' + $routeParams.id + '/progress');
+          } else {
+            $location.path('/sections/' + $routeParams.id + '/manage');
+          }
         }
       }
     );
@@ -220,62 +227,6 @@ angular: teacherDashboard
     $scope.edit = function(student) {
       student.editing = true;
     };
-
-    $scope.progressLoaded = false;
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
-      $scope.mergeProgress();
-      $scope.progressLoaded = true;
-    });
-
-    // merge the data returned by progress api into the data returned by the section students api
-    $scope.mergeProgress = function() {
-      // calculate width of each level in the progress bar assuming the overall width is 780 px
-      $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
-      $scope.progress.table_width = $scope.progress.bar_width * $scope.progress.script.levels_count;
-
-      // Takes the level's position in the script, and returns its level number in its stage
-      var getLevelNumberInStage = function(overallLevel) {
-        for (var i = 0; i < $scope.progress.script.stages.length; i++) {
-          var stage = $scope.progress.script.stages[i];
-          if (overallLevel < stage.length)
-            return overallLevel + 1;
-          else
-            overallLevel -= stage.length;
-        }
-
-        return 0;
-      }
-
-      // Put levels on the student object
-      for (var i = 0; i < $scope.section.students.length; i++) {
-        var student = $scope.section.students[i];
-
-        // default is no progress
-        student.levels = [];
-        student.highest_level = -1; // not started yet
-        student.highest_level_in_stage = 0;
-
-        // if we have progress
-        var progress_student = $.grep($scope.progress.students, function(e){ return e.id == student.id; })[0];
-        if (progress_student) {
-          student.levels = progress_student.levels;
-
-          // find the last level attempted
-          for (var l = student.levels.length - 1; l >= 0; l--) {
-            if (student.levels[l] && student.levels[l].class != 'not_tried') {
-              var delayedSetHighestLevel = function(student, l) {
-                student.highest_level = l;
-                student.highest_level_in_stage = getLevelNumberInStage(l);
-              }
-              $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
-              break;
-            }
-          }
-        }   
-      }
-    }
 
     $scope.resetSecrets = function(student) {
       var newStudent = studentsService.update({id: student.id}, {secrets: 'reset'});
@@ -402,4 +353,95 @@ angular: teacherDashboard
       $window.print();
     };
 
+  }]);
+
+  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
+
+
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+    $scope.progress = sectionsService.progress({id: $routeParams.id});
+
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
+    $scope.progress.$promise.catch($scope.genericError);
+
+    $scope.section.$promise.then(
+      function( section ){
+        if (!$scope.tab) {
+          $scope.tab = ($scope.section.students.length > 0) ? 'progress': 'manage';
+        }
+      }
+    );
+
+    $scope.tab = $routeParams.tab;
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    $scope.progressLoaded = false;
+
+    // wait until we have both the students and the student progress
+    $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
+      $scope.mergeProgress();
+      $scope.progressLoaded = true;
+    });
+
+    // merge the data returned by progress api into the data returned by the section students api
+    $scope.mergeProgress = function() {
+      // calculate width of each level in the progress bar assuming the overall width is 780 px
+      $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
+      $scope.progress.table_width = $scope.progress.bar_width * $scope.progress.script.levels_count;
+
+      // Takes the level's position in the script, and returns its level number in its stage
+      var getLevelNumberInStage = function(overallLevel) {
+        for (var i = 0; i < $scope.progress.script.stages.length; i++) {
+          var stage = $scope.progress.script.stages[i];
+          if (overallLevel < stage.length)
+            return overallLevel + 1;
+          else
+            overallLevel -= stage.length;
+        }
+
+        return 0;
+      }
+
+      // Put levels on the student object
+      for (var i = 0; i < $scope.section.students.length; i++) {
+        var student = $scope.section.students[i];
+
+        // default is no progress
+        student.levels = [];
+        student.highest_level = -1; // not started yet
+        student.highest_level_in_stage = 0;
+
+        // if we have progress
+        var progress_student = $.grep($scope.progress.students, function(e){ return e.id == student.id; })[0];
+        if (progress_student) {
+          student.levels = progress_student.levels;
+
+          // find the last level attempted
+          for (var l = student.levels.length - 1; l >= 0; l--) {
+            if (student.levels[l] && student.levels[l].class != 'not_tried') {
+              var delayedSetHighestLevel = function(student, l) {
+                student.highest_level = l;
+                student.highest_level_in_stage = getLevelNumberInStage(l);
+              }
+              $timeout(delayedSetHighestLevel(student, l), 500); // add a delay so we get animation
+              break;
+            }
+          }
+        }   
+      }
+    }
   }]);

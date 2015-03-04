@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "berører øverste kant"},
 "whenUp":function(d){return "Når pil op"},
 "whenUpTooltip":function(d){return "Udfører handlingen herunder når der trykkes pil op."},
-"yes":function(d){return "Ja"}};
+"yes":function(d){return "Ja"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

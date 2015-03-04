@@ -73,6 +73,29 @@ When /^I press SVG selector "([^"]*)"$/ do |selector|
   @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
 end
 
+When /^I press the last button with text "([^"]*)"$/ do |name|
+  name_selector = "button:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I press the SVG text "([^"]*)"$/ do |name|
+  name_selector = "text:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I open the topmost blockly category "([^"]*)"$/ do |name|
+  name_selector = ".blocklyTreeLabel:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').last().simulate('drag', function(){});")
+end
+
+When /^I press dropdown button with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
+end
+
+When /^I press dropdown item with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
+end
+
 When /^I press dropdown item "([^"]*)"$/ do |index|
   @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end

@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "paliečia scenos viršų",
   "whenUp": "kai rodyklė aukštyn",
   "whenUpTooltip": "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė aukštyn.",
-  "yes": "Taip"
+  "yes": "Taip",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "يلمس الحافة العليا",
   "whenUp": "عندما يكون السهم الى الاعلى",
   "whenUpTooltip": "تنفيذ الإجراءات أدناه عند الضغط على مفتاح سهم لأعلى.",
-  "yes": "نعم"
+  "yes": "نعم",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
