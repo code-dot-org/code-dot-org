@@ -99,8 +99,8 @@ class Script < ActiveRecord::Base
   end
 
   def hoc?
-    # note that now multiple scripts can be an 'hour of code' script
-    self.name == HOC_2013_NAME || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
+    # Note that now multiple scripts can be an 'hour of code' script.
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
   end
 
   def flappy?
