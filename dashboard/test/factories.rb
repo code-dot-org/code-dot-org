@@ -85,13 +85,9 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    script
-
-    trait :with_stage do
-      stage
-      script do |script_level|
-        script_level.stage.script
-      end
+    stage
+    script do |script_level|
+      script_level.stage.script
     end
 
     trait :with_autoplay_video do
@@ -102,10 +98,6 @@ FactoryGirl.define do
 
     chapter do |script_level|
       (script_level.script.script_levels.maximum(:chapter) || 0) + 1
-    end
-
-    game_chapter do |script_level|
-      (script_level.script.script_levels.maximum(:game_chapter) || 0) + 1
     end
 
     position do |script_level|

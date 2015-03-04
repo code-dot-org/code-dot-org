@@ -1,7 +1,7 @@
 ---
 title: Support Computer Science in Washington
 social:
-  "og:title": "53 business and education leaders ask Washington to expand computer science"
+  "og:title": "60 business and education leaders ask Washington to expand computer science"
   "og:description": "Washington CEOs, superintendents and nonprofit leaders unite around comprehensive legislation. In a letter, they urge Washington state to help schools catch up to 21st century demands."
   "og:image": "http://code.org/images/wa-letter.png"
   "og:image:width": 1200
@@ -68,7 +68,7 @@ Brad Smith, Executive Vice President & General Counsel, Microsoft<br />
 Jeff Wilke, Senior Vice President of Consumer Business, Amazon<br />
 Kevin Johnson, President, Starbucks<br />
 Leroy Hood, President, Institute for Systems Biology<br />
-Maud Daudon, President and CEO, Seattle Chamber of Commerce<br />
+Maud Daudon, President and CEO, Seattle Metropolitan Chamber of Commerce<br />
 Maggie Johnson, Director of Education and University Relations, Google<br />
 Dara Khosrowshahi, CEO, Expedia<br />
 Rich Barton, Chairman, Zillow<br />
@@ -85,14 +85,14 @@ Brad Silverberg, Founding Partner, Ignition Partners<br />
 Sunny Gupta, CEO, Apptio<br />
 Glenn Kelman, CEO, Redfin<br />
 Ben Huh, CEO, Cheezburger<br />
-Eric Anderson, CEO, Planetary Resources, Inc<br />
+Eric Anderson, CEO, Intentional Software<br />
 John Vechey, Founder, Popcap Games<br />
 Paul Thelen, CEO, Big Fish Games<br />
 Sarah Bird, CEO, Moz<br />
 Scott Keeney, CEO, nLIGHT<br />
 Steve Stevens, President and CEO, Greater Spokane Incorporated<br />
 Susannah Malarkey, CEO, Technology Alliance<br />
-Michael Schutzler, CEO, WA Technology Industry Alliance<br />
+Michael Schutzler, CEO, WA Technology Industry Association<br />
 Dean Allen, CEO, McKinstry<br />
 Bill Lewis, Chairman, Lease Crutcher Lewis<br />
 David McFadden, President, Yakima County Development Association<br />

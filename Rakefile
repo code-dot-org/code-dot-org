@@ -113,22 +113,6 @@ namespace :build do
       end
     end
   end
-  
-  task :jupiter do
-    Dir.chdir(jupiter_dir) do
-      HipChat.log 'Stopping JUPITER service'
-      RakeUtils.stop_service 'jupiter' unless rack_env?(:development)
-
-      HipChat.log 'Migrating JUPITER database'
-      with_retries { RakeUtils.rake 'db:migrate' }
-
-      #HipChat.log 'Seeding JUPITER database'
-      #with_retries { RakeUtils.rake 'seed:migrate' }
-
-      HipChat.log 'Starting JUPITER service'
-      RakeUtils.start_service 'jupiter' unless rack_env?(:development)
-    end
-  end
 
   task :pegasus do
     Dir.chdir(pegasus_dir) do
@@ -221,17 +205,6 @@ namespace :install do
     end
   end
 
-  task :jupiter do
-    if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(jupiter_dir) do
-        RakeUtils.bundle_install
-        create_database CDO.jupiter_database
-        RakeUtils.rake 'db:migrate'
-        #RakeUtils.rake 'seed:migrate'
-      end
-    end
-  end
-
   task :pegasus do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(pegasus_dir) do
@@ -247,7 +220,6 @@ namespace :install do
   #tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
-  tasks << :jupiter if CDO.build_jupiter
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 
