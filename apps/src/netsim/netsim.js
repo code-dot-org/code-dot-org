@@ -22,7 +22,7 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
-var NetSimSendWidget = require('./NetSimSendWidget');
+var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var RunLoop = require('../RunLoop');
@@ -207,7 +207,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.changeRemoteDnsMode.bind(this),
       this.becomeDnsNode.bind(this));
 
-  this.sendWidget_ = new NetSimSendWidget($('#netsim_send'), this.connection_);
+  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
 
   this.changeEncoding(this.encodingMode_);
   this.setChunkSize(this.chunkSize_);
