@@ -6,7 +6,6 @@
 .idea/
 /.bundle
 /.gdrive_session
-/aws/secrets
 /crontab
 /dashboard/public/blockly
 /.dropbox.cache
