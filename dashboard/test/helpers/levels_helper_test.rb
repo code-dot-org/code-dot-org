@@ -86,7 +86,8 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
     @level = create :artist
-    @script_level = create :script_level, level: @level
+    @stage = create :stage
+    @script_level = create :script_level, level: @level, stage: @stage
     @level.impressive = "false"
     @level.free_play = "false"
 

@@ -143,8 +143,8 @@ module LevelsHelper
     level = @level.properties.dup || {}
 
     # Set some specific values
-    level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
-    level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
+    level['puzzle_number'] = @script_level ? @script_level.position : 1
+    level['stage_total'] = @script_level ? @script_level.stage_total : 1
     if @level.is_a?(Maze) && @level.step_mode
       @level.step_mode = blockly_value(@level.step_mode)
       level['step'] = @level.step_mode == 1 || @level.step_mode == 2
@@ -344,11 +344,14 @@ module LevelsHelper
   end
 
   def level_title
-    if (script = @script_level.try(:script)) && !(script.default_script?)
-      "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.stage_or_game_position}"
+    if @script_level
+      if @script_level.script.legacy_curriculum?
+        "#{data_t('game.name', @game.name)} #{'#' + @script_level.position.to_s unless @script_level.position == 1}"
+      else
+        "#{data_t_suffix('script.name', @script_level.script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
+      end
     else
-      level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
-      "#{data_t('game.name', @game.name)} #{level_num}"
+      "#{data_t('game.name', @game.name)} #{@level.level_num}"
     end
   end
 
