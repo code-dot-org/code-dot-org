@@ -1,0 +1,28 @@
+<div id="netsim_status_panel_<%= instanceID %>"
+     class="netsim_panel netsim_status_panel">
+  <h1><%= statusString %>
+    <div class="panel_controls">
+      <% if (isConnected) { %>
+      <span class="netsim_button disconnect_button">Disconnect</span>
+      <% } %>
+      <span class="netsim_button hide_button">Hide</span>
+    </div>
+  </h1>
+  <div class="panel_body">
+    <% if (remoteNodeName) { %>
+    <p>Connected to <%= remoteNodeName %></p>
+    <% } %>
+
+    <% if (myHostname) { %>
+    <p>My hostname: <%= myHostname %></p>
+    <% } %>
+
+    <% if (myAddress) { %>
+    <p>My address: <%= myAddress %></p>
+    <% } %>
+
+    <% if (shareLink) { %>
+    <p><a href="<%= shareLink %>">Share this private network.</a></p>
+    <% } %>
+  </div>
+</div>
