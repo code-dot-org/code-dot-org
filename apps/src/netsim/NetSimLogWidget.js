@@ -11,8 +11,10 @@
 /* global $ */
 'use strict';
 
+require('../utils'); // For Function.prototype.inherits()
 var markup = require('./NetSimLogWidget.html');
 var packetMarkup = require('./NetSimLogPacket.html');
+var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
@@ -21,31 +23,9 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
  * @param {string} logTitle
  * @param {boolean} [isMinimized] defaults to FALSE
  * @constructor
+ * @augments NetSimPanel
  */
 var NetSimLogWidget = module.exports = function (rootDiv, logTitle, isMinimized) {
-
-  /**
-   * Unique instance ID for this panel, in case we have several
-   * of them on a page.
-   * @type {number}
-   * @private
-   */
-  this.instanceID_ = NetSimLogWidget.uniqueIDCounter;
-  NetSimLogWidget.uniqueIDCounter++;
-
-  /**
-   * Component root, which we fill whenever we call render()
-   * @type {jQuery}
-   * @private
-   */
-  this.rootDiv_ = rootDiv;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.logTitle_ = logTitle;
-
   /**
    * List of controllers for currently displayed packets.
    * @type {Array.<NetSimLogPacket>}
@@ -67,16 +47,14 @@ var NetSimLogWidget = module.exports = function (rootDiv, logTitle, isMinimized)
    */
   this.currentChunkSize_ = 8;
 
-  /**
-   * Whether this panel is currently minimized.
-   * @type {boolean}
-   * @private
-   */
-  this.isMinimized_ = isMinimized !== undefined ? isMinimized : false;
-
   // Initial render
-  this.render();
+  NetSimPanel.call(this, rootDiv, {
+    className: 'netsim_log_widget',
+    panelTitle: logTitle,
+    beginMinimized: isMinimized
+  });
 };
+NetSimLogWidget.inherits(NetSimPanel);
 
 /**
  * Static counter used to generate/uniquely identify different instances
@@ -86,22 +64,25 @@ var NetSimLogWidget = module.exports = function (rootDiv, logTitle, isMinimized)
 NetSimLogWidget.uniqueIDCounter = 0;
 
 NetSimLogWidget.prototype.render = function () {
+
+  // Create boilerplate panel markup
+  NetSimLogWidget.superPrototype.render.call(this);
+
+  // Add our own content markup
   var newMarkup = $(markup({
     logInstanceID: this.instanceID_,
     logTitle: this.logTitle_
   }));
-  this.rootDiv_.html(newMarkup);
+  this.getBody().html(newMarkup);
 
-  this.scrollArea_ = this.rootDiv_.find('.scroll_area');
-  this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
+  // Add a clear button to the panel header
+  this.addButton('Clear', this.onClearButtonPress_.bind(this));
 
-  this.clearButton_ = this.rootDiv_.find('.clear_button');
-  this.clearButton_.click(this.onClearButtonPress_.bind(this));
+  // Bind reference to scrollArea for use when logging.
+  this.scrollArea_ = this.getBody().find('.scroll_area');
 
   // TODO: Hide columns by configuration
-  this.rootDiv_.find('th.packetInfo, td.packetInfo').hide();
-
-  this.setMinimized(this.isMinimized_);
+  this.getBody().find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
@@ -111,14 +92,6 @@ NetSimLogWidget.prototype.render = function () {
 NetSimLogWidget.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_ = [];
-};
-
-/**
- * Toggle whether this panel is minimized.
- * @private
- */
-NetSimLogWidget.prototype.onMinimizerClick_ = function () {
-  this.setMinimized(!this.isMinimized_);
 };
 
 /**
@@ -163,23 +136,6 @@ NetSimLogWidget.prototype.setChunkSize = function (newChunkSize) {
   this.packets_.forEach(function (packet) {
     packet.setChunkSize(newChunkSize);
   });
-};
-
-NetSimLogWidget.prototype.setMinimized = function (becomeMinimized) {
-  var panelDiv = this.rootDiv_.find('.netsim_panel');
-  var minimizer = panelDiv.find('.minimizer');
-  if (becomeMinimized) {
-    panelDiv.addClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-plus-square')
-        .removeClass('fa-minus-square');
-  } else {
-    panelDiv.removeClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-minus-square')
-        .removeClass('fa-plus-square');
-  }
-  this.isMinimized_ = becomeMinimized;
 };
 
 /**

@@ -31,14 +31,12 @@ var NetSimStatusPanel = module.exports = function (rootDiv, disconnectCallback) 
    */
   this.disconnectCallback_ = disconnectCallback;
 
-  /**
-   * @type {string}
-   * @private
-   */
-  this.panelTitle_ = 'Status';
-
   // Superclass constructor
-  NetSimPanel.call(this, rootDiv, 'netsim_status_panel');
+  NetSimPanel.call(this, rootDiv, {
+    className: 'netsim_status_panel',
+    panelTitle: 'Status',
+    beginMinimized: true
+  });
 };
 NetSimStatusPanel.inherits(NetSimPanel);
 
@@ -56,15 +54,10 @@ NetSimStatusPanel.prototype.render = function (data) {
   data = data || {};
 
   // Capture title before we render the wrapper panel.
-  this.panelTitle_ = data.statusString;
+  this.setPanelTitle(data.statusString);
 
   // Render boilerplate panel stuff
   NetSimStatusPanel.superPrototype.render.call(this);
-
-  // Add a button to the panel header
-  if (data.isConnected) {
-    this.addButton('Disconnect', this.disconnectCallback_);
-  }
 
   // Put our own content into the panel body
   var newMarkup = $(markup({
@@ -74,12 +67,9 @@ NetSimStatusPanel.prototype.render = function (data) {
     shareLink: data.shareLink
   }));
   this.getBody().html(newMarkup);
-};
 
-/**
- * @returns {string} Localized string for connection status.
- * @override
- */
-NetSimStatusPanel.prototype.getPanelTitle = function () {
-  return this.panelTitle_;
+  // Add a button to the panel header
+  if (data.isConnected) {
+    this.addButton('Disconnect', this.disconnectCallback_);
+  }
 };
