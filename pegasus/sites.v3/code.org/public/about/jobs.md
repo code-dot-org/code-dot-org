@@ -208,8 +208,11 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="operations-intern" href="operations-intern">Operations Intern (Seattle,Wa)</a>
+## <a name="operations-intern" href="#operations-intern">Operations Intern (Seattle,Wa)</a>
 **Job Summary:**
+
+Job Status:		Part-time (April/May unpaid); 
+Full-time (June-August stipend available)
 
 Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
 
@@ -222,8 +225,11 @@ Code.org is looking for an Operations Intern to join Code.org’s Operations tea
 
 **Qualifications:**
 
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
 - Minimum 2 years of undergraduate studies completed
 - Experience with Google suite of products
+- Ability to work legally in the United States
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 

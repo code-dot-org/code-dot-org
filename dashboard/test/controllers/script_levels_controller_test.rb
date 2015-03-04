@@ -43,7 +43,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, :with_stage, level: real_level
+    sl = create :script_level, level: real_level
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -61,7 +61,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, :with_stage, level: real_level
+    sl = create :script_level, level: real_level
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -76,7 +76,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not show concept video for non-legacy script level' do
-    non_legacy_script_level = create(:script_level, :with_stage)
+    non_legacy_script_level = create(:script_level)
     concept_with_video = Concept.find_by_name('sequence')
     non_legacy_script_level.level.concepts = [concept_with_video]
 
@@ -87,7 +87,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show specified video for script level with video' do
-    non_legacy_script_level = create(:script_level, :with_stage, :with_autoplay_video)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video)
     assert_empty(non_legacy_script_level.level.concepts)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
@@ -96,7 +96,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not have autoplay video when noautoplay param is set' do
-    level_with_autoplay_video = create(:script_level, :with_stage, :with_autoplay_video)
+    level_with_autoplay_video = create(:script_level, :with_autoplay_video)
     get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1', noautoplay: 'true'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
@@ -119,7 +119,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "shouldn't show autoplay video when already seen" do
-    non_legacy_script_level = create(:script_level, :with_stage, :with_autoplay_video)
+    non_legacy_script_level = create(:script_level, :with_autoplay_video)
     seen = Set.new
     seen.add(non_legacy_script_level.level.video_key)
     session[:videos_seen] = seen
@@ -130,7 +130,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'non-legacy script level with concepts should have related but not autoplay video' do
-    non_legacy_script_level = create(:script_level, :with_stage)
+    non_legacy_script_level = create(:script_level)
     non_legacy_script_level.level.concepts = [create(:concept, :with_video)]
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
@@ -156,7 +156,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_routing({method: "get", path: '/hoc/reset'},
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, reset: true})
 
-    hoc_level = ScriptLevel.find_by(script_id: Script.find_by_name(Script::HOC_NAME).id, chapter: 1)
+    hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
@@ -165,15 +165,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_routing({method: "get", path: '/k8intro/5'},
                    {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, chapter: "5"})
 
-    flappy_level = ScriptLevel.find_by(script_id: Script::FLAPPY_ID, chapter: 5)
+    flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::FLAPPY_ID, chapter: "5"})
+                   {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
-    jigsaw_level = ScriptLevel.find_by(script_id: Script::JIGSAW_ID, chapter: 3)
+    jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
     assert_routing({method: "get", path: '/jigsaw/3'},
-                   {controller: "script_levels", action: "show", script_id: Script::JIGSAW_ID, chapter: "3"})
-    assert_equal "/jigsaw/3", build_script_level_path(jigsaw_level)
+                   {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"})
+    assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
   end
 
   test "routing for custom scripts with stage" do
@@ -261,17 +261,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @controller.expects :slog
 
     # this works for 'special' scripts like flappy, hoc
-    expected_script_level = ScriptLevel.where(script_id: Script::FLAPPY_ID, chapter: 5).first
+    expected_script_level = ScriptLevel.where(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5).first
 
-    get :show, script_id: Script::FLAPPY_ID, chapter: '5'
+    get :show, script_id: Script::FLAPPY_NAME, chapter: '5'
     assert_response :success
 
     assert_equal expected_script_level, assigns(:script_level)
   end
 
   test "show redirects to canonical url for special scripts" do
-    flappy_level = Script.find(Script::FLAPPY_ID).script_levels.second
-    get :show, script_id: Script::FLAPPY_ID, id: flappy_level.id
+    flappy_level = Script.get_from_cache(Script::FLAPPY_NAME).script_levels.second
+    get :show, script_id: Script::FLAPPY_NAME, id: flappy_level.id
 
     assert_response 301 # moved permanently
     assert_redirected_to '/flappy/2'
@@ -389,7 +389,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
-    assert_equal 'Code.org - The Maze #4',
+    assert_equal 'Code.org - 20-Hour Intro Course: The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
@@ -462,7 +462,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
-    get :show, script_id: Script::FLAPPY_ID, chapter: 1
+    get :show, script_id: Script::FLAPPY_NAME, chapter: 1
     assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
   end
 

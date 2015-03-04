@@ -64,7 +64,7 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    if script.id == Script::HOC_ID
+    if script.name == Script::HOC_2013_NAME
       CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
@@ -72,7 +72,7 @@ module ScriptLevelsHelper
   end
 
   def hoc_finish_url(script)
-    if script.id == Script::HOC_ID
+    if script.name == Script::HOC_2013_NAME
       CDO.code_org_url '/api/hour/finish'
     else
       CDO.code_org_url "/api/hour/finish/#{script.name}"
@@ -94,8 +94,8 @@ module ScriptLevelsHelper
       end
 
     script_data = {
-      title: stage_title(script, script_level.stage_or_game),
-      currentLevelIndex: script_level.stage_or_game_position - 1,
+      title: stage_title(script, script_level.stage),
+      currentLevelIndex: script_level.position - 1,
       scriptId: script.id,
       scriptLevelId: script_level.try(:level_id),
       statsPath: header_stats_path,

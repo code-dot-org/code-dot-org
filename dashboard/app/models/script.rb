@@ -8,20 +8,13 @@ class Script < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
-  # Hardcoded scriptID constants used throughout the code
-  HOC_ID = 2 # this is the old (2013) hour of code
-  EDIT_CODE_ID = 3
-  TWENTY_FOURTEEN_LEVELS_ID = 4
-  BUILDER_ID = 5
-  FLAPPY_ID = 6
-  JIGSAW_ID = 7
+  # Names used throughout the code
+  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
+  EDIT_CODE_NAME = 'edit-code'
+  TWENTY_FOURTEEN_NAME = 'events'
+  JIGSAW_NAME = 'jigsaw'
 
-  MAX_DEFAULT_LEVEL_ID = 8
-
-  # name of the new (2014) hour of code script (which is a levelbuilder script, so does not have a deterministic id)
-  HOC_NAME = 'hourofcode'
-
-  # other scripts identified by names not ids
+  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
 
@@ -93,21 +86,12 @@ class Script < ActiveRecord::Base
   end
 
   def to_param
-    if self.id == HOC_ID
-      super
-    else
-      name
-    end
+    name
   end
 
-  def multiple_games?
-    # simplified check to see if we are in a script that has only one game (stage)
-    stages.many? ||
-      (stages.empty? && script_levels.first.level.game_id != script_levels.last.level.game_id)
-  end
-
+  # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    default_script?
+    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? self.name
   end
 
   def twenty_hour?
@@ -115,24 +99,16 @@ class Script < ActiveRecord::Base
   end
 
   def hoc?
-    # note that now multiple scripts can be an 'hour of code' script
-    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
+    # Note that now multiple scripts can be an 'hour of code' script.
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
   end
 
   def flappy?
-    self.id == FLAPPY_ID
-  end
-
-  def default_script?
-    self.id <= MAX_DEFAULT_LEVEL_ID
+    self.name == FLAPPY_NAME
   end
 
   def find_script_level(level_id)
     self.script_levels.detect { |sl| sl.level_id == level_id }
-  end
-
-  def self.builder_script
-    Script.find(BUILDER_ID)
   end
 
   def get_script_level_by_id(script_level_id)
@@ -151,9 +127,13 @@ class Script < ActiveRecord::Base
   end
 
   def feedback_url
-    feedback_url_keys = { "course1"=>"RJH5D5F", "course2"=>"H8JLN38", "course3"=>"6T8NZY5" }
-    feedback_url_key = feedback_url_keys[self.name]
-    "https://www.surveymonkey.com/s/" + feedback_url_key if feedback_url_key
+    feedback_url_keys = {
+      course1: 'RJH5D5F',
+      course2: 'H8JLN38',
+      course3: '6T8NZY5',
+    }
+    feedback_url_key = feedback_url_keys[self.name.to_sym]
+    "https://www.surveymonkey.com/s/#{feedback_url_key}" if feedback_url_key
   end
 
   def beta?
@@ -161,7 +141,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == "course4" || name == "edit-code"
+    name == 'course4' || name == 'edit-code'
   end
 
   def is_k1?
@@ -173,7 +153,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    return ['course1', 'course2', 'course3', 'course4'].include? self.name
+    %w(course1 course2 course3 course4).include? self.name
   end
 
   def show_report_bug_link?
@@ -181,19 +161,15 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || ['msm', 'algebra'].include?(self.name)
+    k5_course? || %w(msm algebra).include?(self.name)
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
-  def self.setup(default_files, custom_files)
+  def self.setup(custom_files)
     transaction do
       scripts_to_add = []
-      # Load default scripts from yml (csv embedded)
-      default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
-      .sort_by { |options, _| options['id'] }
-      .map { |options, data| scripts_to_add << [options, data]}
 
       custom_i18n = {}
       # Load custom scripts from Script DSL format
@@ -221,7 +197,7 @@ class Script < ActiveRecord::Base
 
   def self.add_script(options, data)
     script = fetch_script(options)
-    chapter = 0; game_chapter = Hash.new(0)
+    chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
     script_levels_by_stage = {}
@@ -266,7 +242,6 @@ class Script < ActiveRecord::Base
         script_id: script.id,
         level_id: level.id,
         chapter: (chapter += 1),
-        game_chapter: (game_chapter[level.game_id] += 1),
         assessment: assessment
       }
       script_level = script.script_levels.detect{ |sl|

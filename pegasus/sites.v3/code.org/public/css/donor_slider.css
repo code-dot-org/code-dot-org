@@ -1,5 +1,6 @@
 h2 {
   margin-bottom: 5px;
+  font-size:18px;
 }
 
 #level_indicator {
@@ -23,11 +24,11 @@ h2 {
 }
 
 .gold {
-  width: 32.7%;
+  width: 320px;
 }
 
 .platinum {
-  width: 32.7%;
+  width: 320px;
 }
 
 .badge:hover {
