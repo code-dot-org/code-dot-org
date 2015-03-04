@@ -207,9 +207,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.changeRemoteDnsMode.bind(this),
       this.becomeDnsNode.bind(this));
 
-  var sendWidgetContainer = document.getElementById('netsim_send');
-  this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
-      this.connection_);
+  this.sendWidget_ = new NetSimSendWidget($('#netsim_send'), this.connection_);
 
   this.changeEncoding(this.encodingMode_);
   this.setChunkSize(this.chunkSize_);
