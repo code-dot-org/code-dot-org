@@ -1,11 +1,11 @@
 ---
 title: Support Computer Science in Washington
 social:
-  "og:title": "Top business and education leaders ask Washington to support computer science"
-  "og:description": "Washington business leaders, superintendents and community leaders released a letter, urging Washington state to help schools catch up to 21st century demands."
-  "og:image": "http://code.org/images/students.png"
-  "og:image:width": 2820
-  "og:image:height": 1476
+  "og:title": "Top business and education leaders ask Washington to expand computer science"
+  "og:description": "Washington CEOs, superintendents and nonprofit leaders unite around comprehensive legislation. In a letter, they urge Washington state to help schools catch up to 21st century demands."
+  "og:image": "http://code.org/images/wa-letter.png"
+  "og:image:width": 1200
+  "og:image:height": 628
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -48,7 +48,7 @@ But we’re not doing enough to prepare our students for these opportunities. Th
 
 Besides the jobs, computer science is foundational for all students. Every student learns about photosynthesis and electricity, without pursuing careers as botanists or electricians. For today’s students, it’s equally relevant to know what an algorithm is or how the Internet works.
 
-House Bill 1813 offers a comprehensive solution: it establishes education standards for computer science and matches private funding to train teachers, who are critical to expanding access to this field — and prioritizes investments to reach underrepresented students first. Nine out of ten Washington voters support these proposals. We encourage you to commit $1 million per year to support the computer science education grant program. The 1:1 private match requirement means your investment would be doubled, enabling every Washington school to teach computer science by 2025.
+House Bill 1813 offers a comprehensive solution: it establishes education standards for computer science and matches private funding to train teachers, who are critical to expanding access to this field — and prioritizes investments to reach underrepresented students first. Nine out of 10 Washington voters support these proposals. We encourage you to commit $1 million per year to support the computer science education grant program. The 1:1 private match requirement means your investment would be doubled, enabling every Washington school to teach computer science by 2025.
 
 Many of the undersigned have donated significant funds to support computer science education. Matched with your commitment, let’s give a united answer to the parent who asks, “Why doesn’t my child’s school teach computer science?”
 
@@ -58,7 +58,8 @@ Signed,
 
 [/letter]
 
-[letternames]
+[wideletternames]
+
 
 **Business Leaders**
 
@@ -96,7 +97,8 @@ Dean Allen, CEO, McKinstry<br />
 Bill Lewis, Chairman, Lease Crutcher Lewis<br />
 David McFadden, President, Yakima County Development Association<br />
 Timothy Engle, President, Saltchuk<br />
-Sandra Towne, Vancouver/Camas Innovation Partnership Zone
+Sandra Towne, Vancouver/Camas Innovation Partnership Zone<br />
+Michael Kluse
 
 **Education and Nonprofit Leaders**
 
@@ -125,17 +127,22 @@ Jeff Charbonneau, 2013 US National Teacher of the Year, 2015 Global Teacher Priz
 Auillani de la Cruz, 2014-15 WA MESA Teacher of the Year<br /> 
 Steve Myers, Superintendent, Educational Service District 105
 
-[/letternames]
+[/wideletternames]
 
 <br />
 
-[<button>Add your support</button>](http://www.congressweb.com/Code/11) <% facebook = {:u=>'http://code.org/washington'} %>
+<div style="float: left; margin-right: 15px;">
+<a href="http://www.congressweb.com/Code/11"><button style="margin-top: 10px;">Add your support</button></a>
+</div>
+<div style="float: left;">
+<% facebook = {:u=>'http://code.org/washington'} %>
 <% twitter = {:url=>'http://code.org/washington', :related=>'codeorg', :text=>'CEOs, educators and community leaders call on Washington state to expand computer science'} %>
-
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
+</div>
 
 <%= view "popup_window.js" %>
 
 <br style="clear: both;">
 
+<br />
 
