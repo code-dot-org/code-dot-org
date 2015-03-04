@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "toca el borde superior"},
 "whenUp":function(d){return "Cuando flecha arriba"},
 "whenUpTooltip":function(d){return "Realiza las instrucciones de abajo cuando se presiona la tecla de fecha hacia arriba."},
-"yes":function(d){return "Sí"}};
+"yes":function(d){return "Sí"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

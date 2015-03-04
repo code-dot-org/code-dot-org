@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "касается верхней границы",
   "whenUp": "когда клавиша вверх",
   "whenUpTooltip": "Выпонить действия, указанные ниже, когда нажата клавиша вверх.",
-  "yes": "Да"
+  "yes": "Да",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

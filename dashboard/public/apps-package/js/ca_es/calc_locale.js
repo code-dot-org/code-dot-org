@@ -164,4 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
 "reinfFeedbackMsg":function(d){return "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!"},
 "yourExpression":function(d){return "La teva expressió:"},
-"wrongInput":function(d){return "You are calling your function with the wrong value."}};
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

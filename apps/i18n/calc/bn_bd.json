@@ -9,5 +9,8 @@
   "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !",
   "yourExpression": "তোমার অভিব্যাক্তি:",
-  "wrongInput": "You are calling your function with the wrong value."
+  "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

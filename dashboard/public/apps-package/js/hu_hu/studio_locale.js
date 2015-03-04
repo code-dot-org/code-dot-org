@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "felső  szegély érintése"},
 "whenUp":function(d){return "Ha van felfelé nyíl"},
 "whenUpTooltip":function(d){return "Végrehajtja az alábbi parancsokat, ha a felfelé nyíl le van nyomva."},
-"yes":function(d){return "Igen"}};
+"yes":function(d){return "Igen"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

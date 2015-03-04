@@ -60,7 +60,7 @@ standardConfig.blocks = [
   {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {

@@ -581,6 +581,10 @@ html, body {
   font-size: 10px;
 }
 
+.project_save[disabled] {
+  background: #aaa;
+}
+
 .header_middle {
   position: absolute;
   left: 0;

@@ -147,9 +147,13 @@ class Script < ActiveRecord::Base
   end
 
   def feedback_url
-    feedback_url_keys = { "course1"=>"RJH5D5F", "course2"=>"H8JLN38", "course3"=>"6T8NZY5" }
-    feedback_url_key = feedback_url_keys[self.name]
-    "https://www.surveymonkey.com/s/" + feedback_url_key if feedback_url_key
+    feedback_url_keys = {
+      course1: 'RJH5D5F',
+      course2: 'H8JLN38',
+      course3: '6T8NZY5',
+    }
+    feedback_url_key = feedback_url_keys[self.name.to_sym]
+    "https://www.surveymonkey.com/s/#{feedback_url_key}" if feedback_url_key
   end
 
   def beta?
@@ -157,7 +161,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == "course4" || name == "edit-code"
+    name == 'course4' || name == 'edit-code'
   end
 
   def is_k1?
@@ -169,7 +173,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    return ['course1', 'course2', 'course3', 'course4'].include? self.name
+    %w(course1 course2 course3 course4).include? self.name
   end
 
   def show_report_bug_link?
@@ -177,7 +181,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || ['msm', 'algebra'].include?(self.name)
+    k5_course? || %w(msm algebra).include?(self.name)
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
