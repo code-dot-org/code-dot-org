@@ -11,7 +11,9 @@
 /* global $ */
 'use strict';
 
+require('../utils'); // For Function.prototype.inherits()
 var markup = require('./NetSimStatusPanel.html');
+var NetSimPanel = require('./NetSimPanel.js');
 
 /**
  * Generator and controller for connection status panel
@@ -20,24 +22,9 @@ var markup = require('./NetSimStatusPanel.html');
  * @param {function} disconnectCallback - method to call when disconnect button
  *        is clicked.
  * @constructor
+ * @augments NetSimPanel
  */
 var NetSimStatusPanel = module.exports = function (rootDiv, disconnectCallback) {
-  /**
-   * Unique instance ID for this panel, in case we have several
-   * of them on a page.
-   * @type {number}
-   * @private
-   */
-  this.instanceID_ = NetSimStatusPanel.uniqueIDCounter;
-  NetSimStatusPanel.uniqueIDCounter++;
-
-  /**
-   * Component root, which we fill whenever we call render()
-   * @type {jQuery}
-   * @private
-   */
-  this.rootDiv_ = rootDiv;
-
   /**
    * @type {function}
    * @private
@@ -45,71 +32,54 @@ var NetSimStatusPanel = module.exports = function (rootDiv, disconnectCallback) 
   this.disconnectCallback_ = disconnectCallback;
 
   /**
-   * Whether the component is minimized, for consistent
-   * state across re-renders.
-   * @type {boolean}
+   * @type {string}
    * @private
    */
-  this.isMinimized_ = true;
+  this.panelTitle_ = 'Status';
 
-  // Initial render
-  this.render();
+  // Superclass constructor
+  NetSimPanel.call(this, rootDiv, 'netsim_status_panel');
 };
+NetSimStatusPanel.inherits(NetSimPanel);
 
 /**
- * Static counter used to generate/uniquely identify different instances
- * of this log widget on the page.
- * @type {number}
- */
-NetSimStatusPanel.uniqueIDCounter = 0;
-
-/**
- *
  * @param {Object} [data]
+ * @param {boolean} [data.isConnected] - Whether the local client is connected
+ *        to a remote node
+ * @param {string} [data.statusString] - Used as the panel title.
+ * @param {string} [data.remoteNodeName] - Display name of remote node.
+ * @param {string} [data.myHostname] - Hostname of local node
+ * @param {number} [data.myAddress] - Local node address assigned by router
+ * @param {string} [data.shareLink] - URL for sharing private shard
  */
 NetSimStatusPanel.prototype.render = function (data) {
   data = data || {};
-  data.instanceID = this.instanceID_;
-  data.isConnected = data.isConnected || false;
-  data.statusString = data.statusString || '';
-  data.myHostname = data.myHostname || '';
-  data.myAddress = data.myAddress || '';
-  data.remoteNodeName = data.remoteNodeName || '';
-  data.shareLink = data.shareLink || '';
 
-  var newMarkup = $(markup(data));
-  this.rootDiv_.html(newMarkup);
+  // Capture title before we render the wrapper panel.
+  this.panelTitle_ = data.statusString;
 
-  this.rootDiv_.find('.disconnect_button').click(this.disconnectCallback_);
-  this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
+  // Render boilerplate panel stuff
+  NetSimStatusPanel.superPrototype.render.call(this);
 
-  this.setMinimized(this.isMinimized_);
-};
-
-/**
- * Toggle whether this panel is minimized.
- * @private
- */
-NetSimStatusPanel.prototype.onMinimizerClick_ = function () {
-  this.setMinimized(!this.isMinimized_);
-};
-
-/**
- * @param {boolean} becomeMinimized
- */
-NetSimStatusPanel.prototype.setMinimized = function (becomeMinimized) {
-  var panelDiv = this.rootDiv_.find('.netsim_panel');
-  var minimizer = panelDiv.find('.minimizer');
-  if (becomeMinimized) {
-    panelDiv.addClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-plus-square')
-        .removeClass('fa-minus-square');
-  } else {
-    panelDiv.removeClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-minus-square')
-        .removeClass('fa-plus-square');
+  // Add a button to the panel header
+  if (data.isConnected) {
+    this.addButton('Disconnect', this.disconnectCallback_);
   }
-  this.isMinimized_ = becomeMinimized;
+
+  // Put our own content into the panel body
+  var newMarkup = $(markup({
+    remoteNodeName: data.remoteNodeName,
+    myHostname: data.myHostname,
+    myAddress: data.myAddress,
+    shareLink: data.shareLink
+  }));
+  this.getBody().html(newMarkup);
+};
+
+/**
+ * @returns {string} Localized string for connection status.
+ * @override
+ */
+NetSimStatusPanel.prototype.getPanelTitle = function () {
+  return this.panelTitle_;
 };
