@@ -1,7 +1,7 @@
 ---
 title: Support Computer Science in Washington
 social:
-  "og:title": "Top business and education leaders ask Washington to expand computer science"
+  "og:title": "53 business and education leaders ask Washington to expand computer science"
   "og:description": "Washington CEOs, superintendents and nonprofit leaders unite around comprehensive legislation. In a letter, they urge Washington state to help schools catch up to 21st century demands."
   "og:image": "http://code.org/images/wa-letter.png"
   "og:image:width": 1200
@@ -145,4 +145,7 @@ Steve Myers, Superintendent, Educational Service District 105
 <br style="clear: both;">
 
 <br />
+
+## Read more
+- [Op-ed: Why every school should teach computer science](http://www.seattletimes.com/opinion/why-we-need-to-teach-all-students-computer-science-skills/)
 
