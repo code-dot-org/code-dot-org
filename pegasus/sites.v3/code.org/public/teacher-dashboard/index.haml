@@ -29,23 +29,23 @@ angular: teacherDashboard
   // ROUTES
 
   config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/',                  {templateUrl: '/teacher-dashboard/landing'});
-    $routeProvider.when('/sections',          {templateUrl: '/teacher-dashboard/sections',
-                                               controller: 'SectionsController'});
-    $routeProvider.when('/plan',              {templateUrl: '/teacher-dashboard/plan'});
-    $routeProvider.when('/sections/:id',      {templateUrl: '/teacher-dashboard/section',
-                                               controller: 'SectionDetailController'});
+    $routeProvider.when('/',
+        {templateUrl: '/teacher-dashboard/landing'});
+    $routeProvider.when('/plan',
+        {templateUrl: '/teacher-dashboard/plan'});
+    $routeProvider.when('/sections',
+        {templateUrl: '/teacher-dashboard/sections', controller: 'SectionsController'});
+    $routeProvider.when('/sections/:id',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
+    $routeProvider.when('/sections/:id/print_signin_cards',
+        {templateUrl: '/teacher-dashboard/signin_cards', controller: 'SectionSigninCardsController', tab: 'print_signin_cards'});
+    $routeProvider.when('/sections/:id/progress',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
+    $routeProvider.when('/sections/:id/:tab',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
-                                              {templateUrl: '/teacher-dashboard/student',
-                                               controller: 'StudentDetailController'});
-    $routeProvider.when('/sections/:id/print_signin_cards', {templateUrl: '/teacher-dashboard/signin_cards',
-                                               controller: 'SectionDetailController'});
-    $routeProvider.when('/sections/:id/progress', {templateUrl: '/teacher-dashboard/section',
-                                               controller: 'SectionProgressController',
-                                               tab: 'progress'});
-    $routeProvider.when('/sections/:id/:tab', {templateUrl: '/teacher-dashboard/section',
-                                               controller: 'SectionDetailController'});
-    $routeProvider.otherwise({redirectTo: '/sections'});
+        {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
   // DIRECTIVES
@@ -109,8 +109,8 @@ angular: teacherDashboard
 
   var app = angular.module('teacherDashboard.controllers', []);
 
-  app.controller('SectionsController', ['$scope', '$location', '$window', 'sectionsService',
-                                       function($scope, $location, $window, sectionsService){
+  app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
+                                       function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
@@ -182,8 +182,8 @@ angular: teacherDashboard
                                 $routeParams.sectionid + '/' + $routeParams.studentid;
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$location', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $location, sectionsService, studentsService) {
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
 
 
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -195,6 +195,8 @@ angular: teacherDashboard
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
+
+    $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
       function( section ){
@@ -208,7 +210,6 @@ angular: teacherDashboard
       }
     );
 
-    $scope.tab = $routeParams.tab;
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
@@ -355,6 +356,33 @@ angular: teacherDashboard
 
   }]);
 
+  app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
+                                             function($scope, $routeParams, $window, $q, sectionsService) {
+
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    $scope.print = function() {
+      $window.print();
+    };
+
+  }]);
+
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
 
@@ -370,16 +398,6 @@ angular: teacherDashboard
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
     $scope.progress.$promise.catch($scope.genericError);
-
-    $scope.section.$promise.then(
-      function( section ){
-        if (!$scope.tab) {
-          $scope.tab = ($scope.section.students.length > 0) ? 'progress': 'manage';
-        }
-      }
-    );
-
-    $scope.tab = $routeParams.tab;
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
