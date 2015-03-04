@@ -1,0 +1,40 @@
+name 'Pixelation - Lesson 14 - Fix bit offset'
+title 'Pixelation - Lesson 14 - Fix bit offset'
+description 'Pixelation - Lesson 14 - Fix bit offset'
+href 'pixelation/pixelation.html'
+
+version '2'
+instructions "Instructions: 
+Oh no! An extra bit was added to this image during transmission.  Find the extra bit and remove it to fix the Code.org logo. HINT: one bit early on would make it look like many bits were out of order."
+format 'raw'
+data '0001 0111
+0001 0111
+1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
+0 1 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
+0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 1 0 0 0 0 
+0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
+1 '
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,4 +1,9 @@
 name 'unique level name here'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+Insert maddie video 1 here
+MARKDOWN
