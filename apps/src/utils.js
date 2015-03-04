@@ -213,6 +213,6 @@ if (!String.prototype.repeat) {
  * undefined instead of whether val is falsey.
  * @returns val if not undefined, otherwise defaultVal
  */
-exports.undefOr = function (val, defaultVal) {
+exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };

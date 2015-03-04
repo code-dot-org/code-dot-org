@@ -3,29 +3,12 @@ require 'digest/sha1'
 module LevelsHelper
 
   def build_script_level_path(script_level)
-    if script_level.script.name == 'hourofcode'
-      return hoc_chapter_path(script_level.chapter)
-    end
-
-    case script_level.script_id
-    when Script::HOC_ID
-      script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::EDIT_CODE_ID
-      editcode_chapter_path(script_level.chapter)
-    when Script::TWENTY_FOURTEEN_LEVELS_ID
-      twenty_fourteen_chapter_path(script_level.chapter)
-    when Script::BUILDER_ID
-      builder_chapter_path(script_level.chapter)
-    when Script::FLAPPY_ID
+    if script_level.script.name == Script::HOC_NAME
+      hoc_chapter_path(script_level.chapter)
+    elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter)
-    when Script::JIGSAW_ID
-      jigsaw_chapter_path(script_level.chapter)
     else
-      if script_level.stage
-        script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
-      else
-        script_puzzle_path(script_level.script, script_level.chapter)
-      end
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
     end
   end
 
@@ -39,7 +22,7 @@ module LevelsHelper
 
   def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
-    @callouts = select_and_remember_callouts(@script_level.nil?)
+    @callouts = select_and_remember_callouts(params[:show_callouts])
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -73,12 +56,10 @@ module LevelsHelper
     video_info(autoplay_video) unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new
-    available_callouts = []
+  def available_callouts
     if @level.custom?
       unless @level.try(:callout_json).blank?
-        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
+        return JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
               callout_text: callout_definition['callout_text'],
@@ -87,8 +68,13 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = @script_level.callouts if @script_level
+      return @script_level.callouts if @script_level
     end
+    []
+  end
+
+  def select_and_remember_callouts(always_show = false)
+    session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
     callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
@@ -157,8 +143,8 @@ module LevelsHelper
     level = @level.properties.dup || {}
 
     # Set some specific values
-    level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
-    level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
+    level['puzzle_number'] = @script_level ? @script_level.position : 1
+    level['stage_total'] = @script_level ? @script_level.stage_total : 1
     if @level.is_a?(Maze) && @level.step_mode
       @level.step_mode = blockly_value(@level.step_mode)
       level['step'] = @level.step_mode == 1 || @level.step_mode == 2
@@ -230,8 +216,9 @@ module LevelsHelper
       custom_game_type
       project_template_level_name
       scrollbars
-      original_start_blocks
+      last_attempt
       is_project_level
+      failure_message_override
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -264,7 +251,7 @@ module LevelsHelper
     end
 
     #Fetch localized strings
-    if @level.level_num_custom?    
+    if @level.level_num_custom?
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       unless I18n.locale.to_s == 'en-us' || loc_val.nil?
         level['instructions'] = loc_val
@@ -357,11 +344,23 @@ module LevelsHelper
   end
 
   def level_title
-    if (script = @script_level.try(:script)) && !(script.default_script?)
-      "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.stage_or_game_position}"
+    if @script_level
+      script = if @script_level.script.flappy?
+        data_t 'game.name', @game.name
+      else
+        data_t_suffix 'script.name', @script_level.script.name, 'title'
+      end
+      stage = @script_level.name
+      position = @script_level.position
+      if @script_level.script.stages.many?
+        "#{script}: #{stage} ##{position}"
+      elsif @script_level.position != 1
+        "#{script} ##{position}"
+      else
+        script
+      end
     else
-      level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
-      "#{data_t('game.name', @game.name)} #{level_num}"
+      @level.key
     end
   end
 

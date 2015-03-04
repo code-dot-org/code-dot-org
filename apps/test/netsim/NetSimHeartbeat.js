@@ -53,7 +53,7 @@ describe("NetSimHeartbeat", function () {
     "given node ID", function () {
       var myNodeID, heartbeat;
       myNodeID = 1;
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (newHeartbeat) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (err, newHeartbeat) {
         heartbeat = newHeartbeat;
       });
       assert(heartbeat, "Created a heartbeat");
@@ -65,13 +65,13 @@ describe("NetSimHeartbeat", function () {
       myNodeID = 1;
 
       // Make the heartbeat in the first place.
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
         originalHeartbeat = h;
       });
       assert(originalHeartbeat, "Created a heartbeat");
 
       // Same operation with same Node ID, should get existing row.
-      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+      NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
         retrievedHeartbeat = h;
       });
       assertEqual(originalHeartbeat, retrievedHeartbeat);
@@ -85,54 +85,54 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make original heartbeat (remotely)
-    testShard.heartbeatTable.create({
+    testShard.remoteHeartbeatTable.create({
       nodeID: myNodeID,
       time: 42
     }, function () {});
 
     // Retrieve heartbeat from table
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       originalHeartbeat = h;
     });
     assertEqual(originalHeartbeat.time_, 42);
 
     originalHeartbeat.time_ = 84;
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.update();
-    assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
+    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
 
     var remoteRow;
-    testShard.heartbeatTable.readAll(function (rows) {
+    testShard.heartbeatTable.readAll(function (err, rows) {
       remoteRow = rows[0];
     });
     assertEqual(84, remoteRow.time);
 
   });
 
-  it ("updates every 5 seconds if ticked, setting local and remote " +
+  it ("updates every 6 seconds if ticked, setting local and remote " +
       "time to Date.now()", function () {
     var myNodeID, originalHeartbeat;
     myNodeID = 1;
 
     // Make original heartbeat
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       originalHeartbeat = h;
     });
     assert(originalHeartbeat, "Created a heartbeat");
-    assertEqual("readAllcreate", testShard.heartbeatTable.log().slice(0, 13));
+    assertEqual("readAllcreate", testShard.remoteHeartbeatTable.log().slice(0, 13));
 
     // Tick immediately does nothing
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.time_ = Date.now() - 1000; // Not enough!
     originalHeartbeat.tick();
-    assertEqual("", testShard.heartbeatTable.log().slice(0, 13));
+    assertEqual("", testShard.remoteHeartbeatTable.log().slice(0, 13));
 
-    // Tick after 5 seconds updates retrieved time
-    var fiveSecondsAgo = Date.now() - 5001;
-    originalHeartbeat.time_ = fiveSecondsAgo;
-    testShard.heartbeatTable.log('');
+    // Tick after 6 seconds updates retrieved time
+    var sixSecondsAgo = Date.now() - 6001;
+    originalHeartbeat.time_ = sixSecondsAgo;
+    testShard.remoteHeartbeatTable.log('');
     originalHeartbeat.tick();
-    assertEqual("update", testShard.heartbeatTable.log().slice(0, 6));
+    assertEqual("update", testShard.remoteHeartbeatTable.log().slice(0, 6));
     assertWithinRange(Date.now(), originalHeartbeat.time_, 10);
   });
 
@@ -141,7 +141,7 @@ describe("NetSimHeartbeat", function () {
     myNodeID = 1;
 
     // Make heartbeat
-    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (h) {
+    NetSimHeartbeat.getOrCreate(testShard, myNodeID, function (e, h) {
       heartbeat = h;
     });
     assert(heartbeat, "Created a heartbeat");
@@ -150,9 +150,9 @@ describe("NetSimHeartbeat", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
 
     // Destory heartbeat
-    testShard.heartbeatTable.log('');
+    testShard.remoteHeartbeatTable.log('');
     heartbeat.destroy();
-    assert("destroy", testShard.heartbeatTable.log().slice(0, 7));
+    assert("destroy", testShard.remoteHeartbeatTable.log().slice(0, 7));
 
     // Check that table is empty
     assertTableSize(testShard, 'heartbeatTable', 0);

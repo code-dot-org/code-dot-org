@@ -291,33 +291,34 @@ en:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Calc: Evaluation Blocks': Evaluation Blocks and Arithmetic Expressions
+          'Eval: Strings and Images': Strings and Images
+          'Unplugged: Contracts': 'Unplugged: Contracts, Domain, and Range'
+          'Eval: Writing Contracts': Writing Contracts
+          'Calc: Defining Variables': Defining Variables and Substitution
+          'Play Lab: Defining Variables (Big Game)': The Big Game - Variables
+          'Eval: Defining Functions': Composite Functions
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Defining Functions': Rocket Height
+          'Eval: Functions': Solving Word Problems with the Design Recipe
+          'Play Lab: Animation (Big Game)': The Big Game - Animation
+          'Unplugged: Booleans': 'Unplugged: Booleans and Logic'
+          'Eval: Boolean Operators': Boolean Operators
+          'Play Lab: Booleans': Sam the Bat
+          'Play Lab: Boolean (Big Game)': The Big Game - Booleans
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
+          'Eval: Conditionals': Conditionals
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
         infinity:
           title: Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Play Lab
+          Infinity: Infinity
         algebrademo:
           title: Algebra Demo
-          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra 
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
@@ -338,6 +339,9 @@ en:
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -355,7 +359,7 @@ en:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: 20-Hour Intro Course
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
           Introduction to Computer Science: Introduction to Computer Science
           The Maze: The Maze
@@ -377,6 +381,36 @@ en:
           The Internet: The Internet
           The Artist 5: The Artist 5
           Wrap-up: Wrap-up
+        edit-code:
+          title: Edit Code
+          description: ''
+          The Maze: The Maze
+          Applab: Applab
+          The Artist: The Artist
+          Play Lab: Play Lab
+        events:
+          title: Events
+          description: ''
+          Bounce: Bounce
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Jigsaw
+          description: ''
+          Jigsaw: Jigsaw
+        step:
+          title: Step
+          description: ''
+          Step: Step
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!

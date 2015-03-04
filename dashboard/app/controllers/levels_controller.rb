@@ -82,7 +82,7 @@ class LevelsController < ApplicationController
       return
     end
     if @level.update(level_params)
-      render json: { redirect: level_url(@level) }
+      render json: { redirect: level_url(@level, show_callouts: true) }
     else
       render json: @level.errors, status: :unprocessable_entity
     end

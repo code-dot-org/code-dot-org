@@ -11,7 +11,7 @@ class ApiControllerTest < ActionController::TestCase
     @student_1 = create(:follower, section: @section).student_user
     @student_2 = create(:follower, section: @section).student_user
 
-    @flappy_section = create(:section, user: @teacher, script_id: Script::FLAPPY_ID)
+    @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @student_3 = create(:follower, section: @flappy_section).student_user
     @student_3.backfill_user_scripts
   end
@@ -28,7 +28,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_progress, id: @flappy_section.id
     assert_response :success
     
-    assert_equal Script.find(Script::FLAPPY_ID), assigns(:script)
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
   end
 
   test "should get progress for student" do
@@ -49,7 +49,7 @@ class ApiControllerTest < ActionController::TestCase
     get :student_progress, id: @student_3.id, section_id: @flappy_section.id
     assert_response :success
 
-    assert_equal Script.find(Script::FLAPPY_ID), assigns(:script)
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
   end
 
   test "should get user_hero for teacher" do
