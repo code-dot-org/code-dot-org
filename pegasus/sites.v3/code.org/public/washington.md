@@ -68,7 +68,7 @@ Brad Smith, Executive Vice President & General Counsel, Microsoft<br />
 Jeff Wilke, Senior Vice President of Consumer Business, Amazon<br />
 Kevin Johnson, President, Starbucks<br />
 Leroy Hood, President, Institute for Systems Biology<br />
-Maud Daudon, President and CEO, Seattle Chamber of Commerce<br />
+Maud Daudon, President and CEO, Seattle Metropolitan Chamber of Commerce<br />
 Maggie Johnson, Director of Education and University Relations, Google<br />
 Dara Khosrowshahi, CEO, Expedia<br />
 Rich Barton, Chairman, Zillow<br />
