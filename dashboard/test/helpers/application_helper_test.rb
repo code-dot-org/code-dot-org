@@ -97,12 +97,13 @@ class ApplicationHelperTest < ActionView::TestCase
   test 'certificate images for hoc-type scripts are all hoc certificates' do
     # old hoc, new hoc, frozen, playlab, and flappy are all the same certificate
     user = create :user
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::HOC_NAME))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::FROZEN_NAME))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find(Script::FLAPPY_ID))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::PLAYLAB_NAME))
+    hoc_2013 = Script.get_from_cache(Script::HOC_2013_NAME)
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::HOC_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FROZEN_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FLAPPY_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::PLAYLAB_NAME))
 
      # but course1 is a different certificate
-    assert_not_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name('course1'))
+    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::COURSE1_NAME))
   end
 end

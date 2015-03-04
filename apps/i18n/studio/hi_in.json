@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "जब ऊपर तीर",
   "whenUpTooltip": "जब ऊपर तीर दबाया जाएे तो नीचे दिये गएे कार्यों का संचालन करे।",
-  "yes": "Yes"
+  "yes": "Yes",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

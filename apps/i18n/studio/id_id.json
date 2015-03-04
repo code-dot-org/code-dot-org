@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "menyentuh ujung atas",
   "whenUp": "ketika anak panah atas",
   "whenUpTooltip": "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah keatas ditekan.",
-  "yes": "Ya"
+  "yes": "Ya",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

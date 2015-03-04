@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "nahawakan ang tuktok"},
 "whenUp":function(d){return "kapag ang pataas na arrow"},
 "whenUpTooltip":function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."},
-"yes":function(d){return "Oo"}};
+"yes":function(d){return "Oo"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

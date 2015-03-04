@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210190212) do
+ActiveRecord::Schema.define(version: 20150303201527) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -238,12 +238,11 @@ ActiveRecord::Schema.define(version: 20150210190212) do
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
 
   create_table "script_levels", force: true do |t|
-    t.integer  "level_id",     null: false
-    t.integer  "script_id",    null: false
+    t.integer  "level_id",   null: false
+    t.integer  "script_id",  null: false
     t.integer  "chapter"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_chapter"
     t.integer  "stage_id"
     t.integer  "position"
     t.boolean  "assessment"
