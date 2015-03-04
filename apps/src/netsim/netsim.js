@@ -23,7 +23,7 @@ var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendWidget = require('./NetSimSendWidget');
-var NetSimLogWidget = require('./NetSimLogWidget');
+var NetSimLogPanel = require('./NetSimLogPanel');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var RunLoop = require('../RunLoop');
 
@@ -180,10 +180,10 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogWidget(
+  this.receivedMessageLog_ = new NetSimLogPanel(
       $('#netsim_received'), 'Received Message Log', false);
 
-  this.sentMessageLog_ = new NetSimLogWidget(
+  this.sentMessageLog_ = new NetSimLogPanel(
       $('#netsim_sent'), 'Sent Message Log', true);
 
   this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
