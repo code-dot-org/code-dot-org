@@ -38,6 +38,12 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '["blah"]'
   end
 
+  test "if return_to in set_locale is nil redirects to homepage" do
+    request.host = "learn.code.org"
+    get :set_locale, :return_to => nil, :locale => "es-ES"
+    assert_redirected_to '/'
+  end
+
   test "should get index with edmodo header" do
     @request.headers["Accept"] = "image/*"
     @request.headers["User-Agent"] = "Edmodo/14 CFNetwork/672.0.2 Darwin/14.0.0"

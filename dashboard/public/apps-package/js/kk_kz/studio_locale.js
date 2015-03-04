@@ -441,6 +441,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenUp":function(d){return "when up arrow"},
 "whenUpTooltip":function(d){return "Execute the actions below when the up arrow key is pressed."},
 "yes":function(d){return "Yes"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."},
 "projectileCherry":function(d){return "cherry"},
 "projectileIce":function(d){return "ice"},
 "projectileDuck":function(d){return "duck"},

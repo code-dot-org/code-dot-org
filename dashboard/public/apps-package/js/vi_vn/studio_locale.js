@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touches top edge"},
 "whenUp":function(d){return "Khi mũi tên chỉ lên trên"},
 "whenUpTooltip":function(d){return "Thực hiện các thao tác dưới đây khi chìa khoá mũi tên chỉ lên bật."},
-"yes":function(d){return "Đồng ý"}};
+"yes":function(d){return "Đồng ý"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

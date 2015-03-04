@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touches top edge"},
 "whenUp":function(d){return "kui vajutatakse ülesnoolt"},
 "whenUpTooltip":function(d){return "Täida allolevad käsud, kui vajutatakse ülesnoolt."},
-"yes":function(d){return "Jah"}};
+"yes":function(d){return "Jah"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

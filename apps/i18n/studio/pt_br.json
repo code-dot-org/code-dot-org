@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "toca a borda superior",
   "whenUp": "quando a seta para cima estiver pressionada",
   "whenUpTooltip": "Execute as ações abaixo quando a tecla com a seta para cima estiver pressionada.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "onEventTooltip": "Execute code in response to the specified event."
 }
