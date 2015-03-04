@@ -81,7 +81,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   this.rootDiv_.html(newMarkup);
 
   this.rootDiv_.find('.disconnect_button').click(this.disconnectCallback_);
-  this.rootDiv_.find('.hide_button').click(this.onHideButtonPress_.bind(this));
+  this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
 
   this.setMinimized(this.isMinimized_);
 };
@@ -90,7 +90,7 @@ NetSimStatusPanel.prototype.render = function (data) {
  * Toggle whether this panel is minimized.
  * @private
  */
-NetSimStatusPanel.prototype.onHideButtonPress_ = function () {
+NetSimStatusPanel.prototype.onMinimizerClick_ = function () {
   this.setMinimized(!this.isMinimized_);
 };
 
@@ -99,13 +99,17 @@ NetSimStatusPanel.prototype.onHideButtonPress_ = function () {
  */
 NetSimStatusPanel.prototype.setMinimized = function (becomeMinimized) {
   var panelDiv = this.rootDiv_.find('.netsim_panel');
-  var hideButton = panelDiv.find('.hide_button');
+  var minimizer = panelDiv.find('.minimizer');
   if (becomeMinimized) {
     panelDiv.addClass('minimized');
-    hideButton.html('Show');
+    minimizer.find('.fa')
+        .addClass('fa-plus-square')
+        .removeClass('fa-minus-square');
   } else {
     panelDiv.removeClass('minimized');
-    hideButton.html('Hide');
+    minimizer.find('.fa')
+        .addClass('fa-minus-square')
+        .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
 };
