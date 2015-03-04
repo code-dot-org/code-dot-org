@@ -351,12 +351,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -431,6 +432,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
