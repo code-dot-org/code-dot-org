@@ -4,15 +4,15 @@ subject: 'Washington’s chance to lead'
 ---
 
 
-Today over 50 [top business and education leaders](https://code.org/wahington) — from Microsoft, Amazon and Starbucks to the Chamber of Commerce and University of Washington — join forces, [calling for legislation to expand computer science](https://code.org/washington) in schools throughout the state.
+Today over 50 [top business and education leaders](https://code.org/washington) — from Microsoft, Amazon and Starbucks to the Chamber of Commerce and University of Washington — join forces, [calling for legislation to expand computer science](https://code.org/washington) in schools throughout the state.
 
-####Please, add your support — [Ask your reps to support change](http://www.congressweb.com/code/11)
+#### Please, add your support — [Ask your reps to support change](http://www.congressweb.com/code/11)
 
 Our state is considering a comprehensive policy that would establish education standards for computer science and match private funding to train teachers.
 
-Right now there are 20,000 open computing jobs across all industries in Washington. These jobs are growing at 3x the state average. But 90% of schools don’t offer computer science. This is a problem we can solve.
+Right now there are 20,000 open computing jobs *across all industries* in Washington. These jobs are growing at 3x the state average. But 90% of schools don’t offer computer science. This is a problem we can solve.
 
-Most importantly, **every** student today should have the opportunity to learn how technology works.
+Most importantly, **every** students today should have the opportunity to learn how technology works.
 
 **[Ask your reps to support HB 1813](http://www.congressweb.com/code/11)**
 
