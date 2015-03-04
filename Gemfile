@@ -136,5 +136,4 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 
 gem 'react-rails'
 # JSON model serializer for REST APIs
-# Patch details: https://github.com/rails-api/active_model_serializers/pull/821
-gem 'active_model_serializers', github: 'wjordan/active_model_serializers', branch: 'patch-1'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
