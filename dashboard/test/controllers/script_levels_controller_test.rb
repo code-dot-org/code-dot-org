@@ -515,4 +515,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       get :show, script_id: 'course1', stage_id: 1, id: 4000
     end
   end
+
+  test 'loads state from last attempt' do
+    # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
+    # Used by TextMatch view partial
+
+    last_attempt_data = 'test'
+    level = @custom_s1_l1.level
+    Activity.create!(level: level, user: @admin, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
+    assert_Equal last_attempt_data, @controller.instance_variable_get(:@last_attempt)
+  end
 end
