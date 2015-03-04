@@ -345,13 +345,18 @@ module LevelsHelper
 
   def level_title
     if @script_level
-      if @script_level.script.legacy_curriculum?
-        "#{data_t('game.name', @game.name)} #{'#' + @script_level.position.to_s unless @script_level.position == 1}"
+      script = data_t_suffix('script.name', @script_level.script.name, 'title')
+      stage = @script_level.name
+      position = @script_level.position
+      if @script_level.script.stages.many?
+        "#{script}: #{stage} ##{position}"
+      elsif @script_level.position != 1
+        "#{script} ##{position}"
       else
-        "#{data_t_suffix('script.name', @script_level.script.name, 'title')}: #{@script_level.name} ##{@script_level.position}"
+        "#{script}"
       end
     else
-      "#{data_t('game.name', @game.name)} #{@level.level_num}"
+      @level.key
     end
   end
 
