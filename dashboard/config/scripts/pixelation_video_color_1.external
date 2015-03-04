@@ -1,0 +1,11 @@
+name 'Pixelation - Video - Color 1'
+title 'Pixelation - Video - Color 1'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+Placeholder for Maddie video 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tTm0RmCqLUI" frameborder="0" allowfullscreen></iframe>
+MARKDOWN

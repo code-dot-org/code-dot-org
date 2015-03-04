@@ -1,4 +1,6 @@
 name 'test demo level'
+title 'demo title'
+description 'demo description'
 css 'unplugged'
 
 markdown <<MARKDOWN
