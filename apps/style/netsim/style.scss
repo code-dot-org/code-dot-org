@@ -146,6 +146,13 @@ $wide_column_width: 100px;
     margin-right: 320px;
   }
 
+
+  .netsim_panel.netsim_lobby {
+    div.panel_body {
+      padding: 1em;
+    }
+  }
+
   #netsim_lobby_list {
     background-color: white;
     padding: 0.5em;
