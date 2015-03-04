@@ -15,9 +15,8 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'regular')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script::FLAPPY_ID)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @flappy_user_1 = create(:follower, section: @word_section).student_user
-
   end
 
   test "do not show login screen for invalid section code" do

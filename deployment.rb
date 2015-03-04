@@ -25,17 +25,10 @@ def load_configuration()
 
   hostname = `hostname`.strip
 
-  global_config = load_yaml_file File.join(root_dir, 'aws', 'secrets', 'config.yml')
-  global_config = {'environments'=>{}, 'hosts'=>{}} unless global_config
-
-  default_config = global_config['environments']['all'] || {}
-
-  host_config = global_config['hosts'][hostname] || {}
-
+  global_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
   local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
 
-  env = local_config['env'] || host_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
-  env_config = global_config['environments'][env] || {}
+  env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
   rack_env = env.to_sym
 
@@ -44,7 +37,6 @@ def load_configuration()
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
-    'build_jupiter'               => false,
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -58,11 +50,6 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
-    'jupiter_database'            => "mysql2://root@localhost/jupiter_#{rack_env}",
-    'jupiter_database_logging'    => rack_env == :development,
-    'jupiter_database_reader'     => nil,
-    'jupiter_port'                => 3000,
-    'jupiter_workers'             => 4,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
@@ -90,13 +77,10 @@ def load_configuration()
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
-    config.merge! default_config
-    config.merge! env_config
-    config.merge! host_config
+    config.merge! global_config
     config.merge! local_config
 
     config['apps_api_secret']     ||= config['poste_secret']
-    config['jupiter_session_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
@@ -216,10 +200,6 @@ end
 
 def home_dir(*paths)
   File.join(CDO.home_dir, *paths)
-end
-
-def jupiter_dir(*paths)
-  deploy_dir('jupiter', *paths)
 end
 
 def pegasus_dir(*paths)
