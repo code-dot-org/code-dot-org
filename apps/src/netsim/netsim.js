@@ -180,10 +180,11 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = NetSimLogWidget.createWithin(
-      document.getElementById('netsim_received'), 'Received Message Log');
-  this.sentMessageLog_ = NetSimLogWidget.createWithin(
-      document.getElementById('netsim_sent'), 'Sent Message Log');
+  this.receivedMessageLog_ = new NetSimLogWidget(
+      $('#netsim_received'), 'Received Message Log', false);
+
+  this.sentMessageLog_ = new NetSimLogWidget(
+      $('#netsim_sent'), 'Sent Message Log', true);
 
   this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
       this.receivedMessageLog_);
