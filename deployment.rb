@@ -30,6 +30,8 @@ def load_configuration()
 
   default_config = global_config['environments']['all'] || {}
 
+  secret_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
+
   host_config = global_config['hosts'][hostname] || {}
 
   local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
@@ -92,6 +94,7 @@ def load_configuration()
 
     config.merge! default_config
     config.merge! env_config
+    config.merge! secret_config
     config.merge! host_config
     config.merge! local_config
 
