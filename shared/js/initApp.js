@@ -167,10 +167,11 @@ function callbackSafe(callback, data) {
 dashboard.updateTimestamp = function() {
   if (dashboard.currentApp.updatedAt) {
     // TODO i18n
-    $('.project_updated_at').empty().append("<%= I18n.t('project.saved') %> ").append($('<span class="timestamp">').attr('title', dashboard.currentApp.updatedAt)).show();
+    $('.project_updated_at').empty().append("Saved ")  // TODO i18n
+        .append($('<span class="timestamp">').attr('title', dashboard.currentApp.updatedAt)).show();
     $('.project_updated_at span.timestamp').timeago();
   } else {
-    $('.project_updated_at').text("<%= I18n.t('project.not_saved') %>"); // TODO i18n
+    $('.project_updated_at').text("click Run to save"); // TODO i18n
   } 
 }
 
