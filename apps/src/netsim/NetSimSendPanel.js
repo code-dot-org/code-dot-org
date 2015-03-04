@@ -13,7 +13,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var markup = require('./NetSimSendWidget.html');
+var markup = require('./NetSimSendPanel.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -42,7 +42,7 @@ var binaryToAscii = dataConverters.binaryToAscii;
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimSendWidget = module.exports = function (rootDiv, connection) {
+var NetSimSendPanel = module.exports = function (rootDiv, connection) {
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -74,15 +74,15 @@ var NetSimSendWidget = module.exports = function (rootDiv, connection) {
   this.currentChunkSize_ = 8;
   
   NetSimPanel.call(this, rootDiv, {
-    className: 'netsim_send_widget',
+    className: 'netsim_send_panel',
     panelTitle: 'Send a Message'
   });
 };
-NetSimSendWidget.inherits(NetSimPanel);
+NetSimSendPanel.inherits(NetSimPanel);
 
-NetSimSendWidget.prototype.render = function () {
+NetSimSendPanel.prototype.render = function () {
   // Render boilerplate panel stuff
-  NetSimSendWidget.superPrototype.render.call(this);
+  NetSimSendPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
   var newMarkup = $(markup({}));
@@ -159,7 +159,7 @@ var whitelistCharacters = function (whitelistRegex) {
  *        converts it to a format appropriate to the internal state field.
  * @returns {function} that can be passed to $.keyup()
  */
-NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
+NetSimSendPanel.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
     if (!isNaN(newValue)) {
@@ -185,7 +185,7 @@ NetSimSendWidget.prototype.makeKeyupHandler = function (fieldName, converterFunc
  *        converts it to a format appropriate to the internal state field.
  * @returns {function} that can be passed to $.blur()
  */
-NetSimSendWidget.prototype.makeBlurHandler = function (fieldName, converterFunction) {
+NetSimSendPanel.prototype.makeBlurHandler = function (fieldName, converterFunction) {
   return function (jqueryEvent) {
     var newValue = converterFunction(jqueryEvent.target.value);
     if (isNaN(newValue)) {
@@ -200,7 +200,7 @@ NetSimSendWidget.prototype.makeBlurHandler = function (fieldName, converterFunct
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
-NetSimSendWidget.prototype.bindElements_ = function () {
+NetSimSendPanel.prototype.bindElements_ = function () {
   var rootDiv = this.getBody();
 
   var shortNumberFields = [
@@ -288,7 +288,7 @@ NetSimSendWidget.prototype.bindElements_ = function () {
  * trigger a update of this view.
  * @private
  */
-NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
+NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
   if (this.connection_.myNode && this.connection_.myNode.myWire) {
     this.fromAddress = this.connection_.myNode.myWire.localAddress;
   } else {
@@ -303,7 +303,7 @@ NetSimSendWidget.prototype.onConnectionStatusChange_ = function () {
  * @param {HTMLElement} [skipElement]
  * @private
  */
-NetSimSendWidget.prototype.updateFields_ = function (skipElement) {
+NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
@@ -380,7 +380,7 @@ NetSimSendWidget.prototype.updateFields_ = function (skipElement) {
 };
 
 /** Send message to connected remote */
-NetSimSendWidget.prototype.onSendButtonPress_ = function () {
+NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
   if (myNode) {
     this.disableEverything();
@@ -395,11 +395,11 @@ NetSimSendWidget.prototype.onSendButtonPress_ = function () {
   }
 };
 
-NetSimSendWidget.prototype.disableEverything = function () {
+NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
 };
 
-NetSimSendWidget.prototype.enableEverything = function () {
+NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
 };
 
@@ -409,7 +409,7 @@ NetSimSendWidget.prototype.enableEverything = function () {
  * @returns {string} - binary representation of packet
  * @private
  */
-NetSimSendWidget.prototype.getPacketBinary_ = function () {
+NetSimSendPanel.prototype.getPacketBinary_ = function () {
   var shortNumberFieldWidth = 4;
   return PacketEncoder.defaultPacketEncoder.createBinary({
     toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
@@ -425,7 +425,7 @@ NetSimSendWidget.prototype.getPacketBinary_ = function () {
  * mode.
  * @param {string} newEncoding
  */
-NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
+NetSimSendPanel.prototype.setEncoding = function (newEncoding) {
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncoding);
 };
 
@@ -434,7 +434,7 @@ NetSimSendWidget.prototype.setEncoding = function (newEncoding) {
  * an update of all input fields.
  * @param {number} newChunkSize
  */
-NetSimSendWidget.prototype.setChunkSize = function (newChunkSize) {
+NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.updateFields_();
 };
