@@ -65,6 +65,7 @@ Dashboard::Application.routes.draw do
     confirmations: 'confirmations',
     sessions: 'sessions'
   }
+  get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
