@@ -9,7 +9,7 @@ nav: educate_nav
 
 ## Tutorials for the Classroom
 ### [CodeHS](http://www.codehs.com/)
-Online curriculum designed specifically for highschool classrooms.
+Online curriculum designed specifically for highschool classrooms. For Fall 2015, CodeHS offers a web-based AP Computer Science A course in Java.
 
 ### [Khan Academy](http://khanacademy.org/cs/programming)
 Online curriculum that teaches JavaScript programming in a visual environment.
