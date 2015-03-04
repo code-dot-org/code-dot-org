@@ -1,11 +1,14 @@
 <div id="netsim_status_panel_<%= instanceID %>"
      class="netsim_panel netsim_status_panel">
-  <h1><%= statusString %>
+  <h1>
+    <span class="minimizer">
+      <i class="fa fa-minus-square"></i>
+      <%= statusString %>
+    </span>
     <div class="panel_controls">
       <% if (isConnected) { %>
       <span class="netsim_button disconnect_button">Disconnect</span>
       <% } %>
-      <span class="netsim_button hide_button">Hide</span>
     </div>
   </h1>
   <div class="panel_body">

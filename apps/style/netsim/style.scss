@@ -111,6 +111,12 @@ $wide_column_width: 100px;
     }
   }
 
+  /* Span around clickable icons and text that show/hide panels. */
+  .minimizer {
+    cursor: pointer;
+    @include user_select(none);
+  }
+
   /* Orange SPAN button */
   .netsim_button {
     display: inline-block;

@@ -93,8 +93,7 @@ NetSimLogWidget.prototype.render = function () {
   this.rootDiv_.html(newMarkup);
 
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
-  this.hideButton_ = this.rootDiv_.find('.hide_button');
-  this.hideButton_.click(this.onHideButtonPress_.bind(this));
+  this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
 
   this.clearButton_ = this.rootDiv_.find('.clear_button');
   this.clearButton_.click(this.onClearButtonPress_.bind(this));
@@ -118,7 +117,7 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
  * Toggle whether this panel is minimized.
  * @private
  */
-NetSimLogWidget.prototype.onHideButtonPress_ = function () {
+NetSimLogWidget.prototype.onMinimizerClick_ = function () {
   this.setMinimized(!this.isMinimized_);
 };
 
@@ -168,13 +167,17 @@ NetSimLogWidget.prototype.setChunkSize = function (newChunkSize) {
 
 NetSimLogWidget.prototype.setMinimized = function (becomeMinimized) {
   var panelDiv = this.rootDiv_.find('.netsim_panel');
-  var hideButton = panelDiv.find('.hide_button');
+  var minimizer = panelDiv.find('.minimizer');
   if (becomeMinimized) {
     panelDiv.addClass('minimized');
-    hideButton.html('Show');
+    minimizer.find('.fa')
+        .addClass('fa-plus-square')
+        .removeClass('fa-minus-square');
   } else {
     panelDiv.removeClass('minimized');
-    hideButton.html('Hide');
+    minimizer.find('.fa')
+        .addClass('fa-minus-square')
+        .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
 };
