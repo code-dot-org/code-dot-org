@@ -6,9 +6,8 @@ She has lead computer science professional development for the past 4 years. She
 
 **About Katie**
 
-"I loved everything about it! Thank you so much for creating such a thoughtful and engaging workshop!"
+"I loved everything about it! Thank you so much for creating such a thoughtful and engaging workshop!" - Skye H. from Portland, OR
 
-"This was one of the best PD classes I have ever attended. It was relevant to the grade level I teach. I usually have to figure out away to bring the information down to my first graders. You [Code.org] have already done that work."
+"This was one of the best PD classes I have ever attended. It was relevant to the grade level I teach. I usually have to figure out away to bring the information down to my first graders. You [Code.org] have already done that work." - Karen O. from Kent, WA
 
-"Fabulous workshop!! Eager to apply it in my classroom."
-
+"Fabulous workshop!! Eager to apply it in my classroom." - McKenzie H. from Bellingham, WA

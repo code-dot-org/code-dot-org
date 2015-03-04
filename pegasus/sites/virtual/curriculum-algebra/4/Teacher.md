@@ -67,7 +67,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) What's in a Function
 
-You’ve already seen several functions that take in two Numbers, such as +, and -. On the other hand, the function "star" takes in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
+You’ve already seen several functions that take in two Numbers, such as +, and -. Other functions like "star", take in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
 
 - What does the '+' function do?
   - What does it take as input?
@@ -80,14 +80,14 @@ Let's look at a simple way to describe any function, it's called a "contract"
 - What is a Contract?
   - A formal agreement
   - A description of expected behavior
-- Why do Contracts tell us?
+- What do Contracts tell us?
   - What a function should do
   - What inputs a function needs
   - What a function returns
   
 Encourage students to think about contracts in the real world. What purpose do they serve? If a contract is signed, do we expect it to be followed?
 
-Contracts have three disctinct parts:
+Contracts have three distinct parts:
 
 1. Name
 2. Domain
