@@ -69,16 +69,16 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'api routing' do
-    assert_routing({method: "get", path: "/api/user_menu"},
+    assert_routing({method: "get", path: "/dashboardapi/user_menu"},
                    {controller: "api", action: "user_menu"})
 
-    assert_routing({method: "get", path: "/api/section_progress/2"},
+    assert_routing({method: "get", path: "/dashboardapi/section_progress/2"},
                    {controller: "api", action: "section_progress", id: '2'})
 
-    assert_routing({method: "get", path: "/api/student_progress/2/15"},
+    assert_routing({method: "get", path: "/dashboardapi/student_progress/2/15"},
                    {controller: "api", action: "student_progress", section_id: '2', id: '15'})
 
-    assert_routing({method: "get", path: "/api/whatevvv"},
+    assert_routing({method: "get", path: "/dashboardapi/whatevvv"},
                    {controller: "api", action: "whatevvv"})
   end
 
