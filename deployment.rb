@@ -25,17 +25,10 @@ def load_configuration()
 
   hostname = `hostname`.strip
 
-  global_config = load_yaml_file File.join(root_dir, 'aws', 'secrets', 'config.yml')
-  global_config = {'environments'=>{}, 'hosts'=>{}} unless global_config
-
-  default_config = global_config['environments']['all'] || {}
-
-  host_config = global_config['hosts'][hostname] || {}
-
+  global_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
   local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
 
-  env = local_config['env'] || host_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
-  env_config = global_config['environments'][env] || {}
+  env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
   rack_env = env.to_sym
 
@@ -90,14 +83,12 @@ def load_configuration()
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
-    config.merge! default_config
-    config.merge! env_config
-    config.merge! host_config
+    config.merge! global_config
     config.merge! local_config
 
     config['apps_api_secret']     ||= config['poste_secret']
     config['jupiter_session_secret'] ||= config['poste_secret']
-    config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
+    config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
