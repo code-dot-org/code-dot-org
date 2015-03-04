@@ -171,7 +171,7 @@ dashboard.updateTimestamp = function() {
         .append($('<span class="timestamp">').attr('title', dashboard.currentApp.updatedAt)).show();
     $('.project_updated_at span.timestamp').timeago();
   } else {
-    $('.project_updated_at').text("click Run to save"); // TODO i18n
+    $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
   } 
 }
 
