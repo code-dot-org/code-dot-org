@@ -17,9 +17,35 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
  * Generator and controller for message log.
+ * @param {jQuery} rootDiv
+ * @param {string} logTitle
+ * @param {boolean} [isMinimized] defaults to FALSE
  * @constructor
  */
-var NetSimLogWidget = module.exports = function () {
+var NetSimLogWidget = module.exports = function (rootDiv, logTitle, isMinimized) {
+
+  /**
+   * Unique instance ID for this panel, in case we have several
+   * of them on a page.
+   * @type {number}
+   * @private
+   */
+  this.instanceID_ = NetSimLogWidget.uniqueIDCounter;
+  NetSimLogWidget.uniqueIDCounter++;
+
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.logTitle_ = logTitle;
+
   /**
    * List of controllers for currently displayed packets.
    * @type {Array.<NetSimLogPacket>}
@@ -40,6 +66,16 @@ var NetSimLogWidget = module.exports = function () {
    * @private
    */
   this.currentChunkSize_ = 8;
+
+  /**
+   * Whether this panel is currently minimized.
+   * @type {boolean}
+   * @private
+   */
+  this.isMinimized_ = isMinimized !== undefined ? isMinimized : false;
+
+  // Initial render
+  this.render();
 };
 
 /**
@@ -49,38 +85,24 @@ var NetSimLogWidget = module.exports = function () {
  */
 NetSimLogWidget.uniqueIDCounter = 0;
 
-/**
- * Generate a new NetSimLogWidget, putting it on the page.
- * @param element
- * @param {!string} title - The log widget header text
- */
-NetSimLogWidget.createWithin = function (element, title) {
-  var controller = new NetSimLogWidget();
+NetSimLogWidget.prototype.render = function () {
+  var newMarkup = $(markup({
+    logInstanceID: this.instanceID_,
+    logTitle: this.logTitle_
+  }));
+  this.rootDiv_.html(newMarkup);
 
-  var instanceID = NetSimLogWidget.uniqueIDCounter;
-  NetSimLogWidget.uniqueIDCounter++;
-
-  element.innerHTML = markup({
-    logInstanceID: instanceID,
-    logTitle: title
-  });
-  controller.bindElements_(instanceID);
-  return controller;
-};
-
-/**
- * Get relevant elements from the page and bind them to local variables.
- * @private
- */
-NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
-  this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
   this.scrollArea_ = this.rootDiv_.find('.scroll_area');
   this.hideButton_ = this.rootDiv_.find('.hide_button');
   this.hideButton_.click(this.onHideButtonPress_.bind(this));
+
   this.clearButton_ = this.rootDiv_.find('.clear_button');
   this.clearButton_.click(this.onClearButtonPress_.bind(this));
+
   // TODO: Hide columns by configuration
   this.rootDiv_.find('th.packetInfo, td.packetInfo').hide();
+
+  this.setMinimized(this.isMinimized_);
 };
 
 /**
@@ -97,13 +119,7 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
  * @private
  */
 NetSimLogWidget.prototype.onHideButtonPress_ = function () {
-  if (this.rootDiv_.hasClass('minimized')) {
-    this.rootDiv_.removeClass('minimized');
-    this.hideButton_.html('Hide');
-  } else {
-    this.rootDiv_.addClass('minimized');
-    this.hideButton_.html('Show');
-  }
+  this.setMinimized(!this.isMinimized_);
 };
 
 /**
@@ -148,6 +164,19 @@ NetSimLogWidget.prototype.setChunkSize = function (newChunkSize) {
   this.packets_.forEach(function (packet) {
     packet.setChunkSize(newChunkSize);
   });
+};
+
+NetSimLogWidget.prototype.setMinimized = function (becomeMinimized) {
+  var panelDiv = this.rootDiv_.find('.netsim_panel');
+  var hideButton = panelDiv.find('.hide_button');
+  if (becomeMinimized) {
+    panelDiv.addClass('minimized');
+    hideButton.html('Show');
+  } else {
+    panelDiv.removeClass('minimized');
+    hideButton.html('Hide');
+  }
+  this.isMinimized_ = becomeMinimized;
 };
 
 /**
