@@ -65,6 +65,7 @@ Dashboard::Application.routes.draw do
     confirmations: 'confirmations',
     sessions: 'sessions'
   }
+  get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
@@ -177,8 +178,8 @@ Dashboard::Application.routes.draw do
   #delete '/dashboardapi/:anything', to: redirect('/api/%{anything}')
 
   module OPS
-    API = 'api' unless defined? API
-    DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
+    API = 'api'
+    DASHBOARDAPI = 'dashboardapi'
   end
 
 
