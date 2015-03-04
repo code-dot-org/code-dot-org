@@ -9,7 +9,7 @@ template: none
 %table
   %tr
     %th
-    %th.manage-th{'ng-repeat' => 'segment in segments'}
+    %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
       {{segment.start | date:'shortDate'}}
       %br
       {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
