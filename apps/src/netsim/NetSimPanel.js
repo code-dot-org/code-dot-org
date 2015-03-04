@@ -19,11 +19,17 @@ var markup = require('./NetSimPanel.html');
  * @param {jQuery} rootDiv - Element within which the panel is recreated
  *        every time render() is called.  Will wipe out contents of this
  *        element, but not the element itself.
- * @param {string} className - An additional className to be appended to
- *        the panel's root (one layer inside rootDiv), for style rules.
+ * @param {Object} [options]
+ * @param {string} [options.className] - an additional class to be appended to
+ *        the panel's root (one layer inside rootDiv) for style rules.
+ *        Defaults to no class, so only the 'netsim_panel' class will be used.
+ * @param {string} [options.panelTitle] - Localized initial panel title.
+ *        Defaults to empty string.
+ * @param {boolean} [options.beginMinimized] - Whether this panel should be
+ *        minimized (closed) when it is initially created.  Defaults to FALSE.
  * @constructor
  */
-var NetSimPanel = module.exports = function (rootDiv, className) {
+var NetSimPanel = module.exports = function (rootDiv, options) {
   /**
    * Unique instance ID for this panel, in case we have several
    * of them on a page.
@@ -46,7 +52,14 @@ var NetSimPanel = module.exports = function (rootDiv, className) {
    * @type {string}
    * @private
    */
-  this.className_ = className;
+  this.className_ = options.className || '';
+
+  /**
+   * Panel title, displayed in header.
+   * @type {string}
+   * @private
+   */
+  this.panelTitle_ = options.panelTitle || '';
 
   /**
    * Whether the component is minimized, for consistent
@@ -54,7 +67,8 @@ var NetSimPanel = module.exports = function (rootDiv, className) {
    * @type {boolean}
    * @private
    */
-  this.isMinimized_ = true;
+  this.isMinimized_ = options.beginMinimized !== undefined ?
+      options.beginMinimized : false;
 
   // Initial render
   this.render();
@@ -74,7 +88,7 @@ NetSimPanel.prototype.render = function () {
   var newMarkup = $(markup({
     instanceID: this.instanceID_,
     className: this.className_,
-    panelTitle: this.getPanelTitle()
+    panelTitle: this.panelTitle_
 
   }));
   this.rootDiv_.html(newMarkup);
@@ -85,11 +99,11 @@ NetSimPanel.prototype.render = function () {
 };
 
 /**
- * Override to set panel title.
- * @returns {string} Localized panel title string
+ * Set panel title.
+ * @param {string} newTitle - Localized panel title.
  */
-NetSimPanel.prototype.getPanelTitle = function () {
-  return 'Panel';
+NetSimPanel.prototype.setPanelTitle = function (newTitle) {
+  this.panelTitle_ = newTitle;
 };
 
 /**
