@@ -46,7 +46,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
   end
 
-  if node.chef_environment == 'staging'
+  if node.chef_environment == 'staging' && node.name == 'staging'
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'
