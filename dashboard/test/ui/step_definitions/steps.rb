@@ -287,14 +287,6 @@ def log_in_as(user)
   @browser.manage.add_cookie params
 end
 
-def log_out
-  @browser.manage.delete_all_cookies
-end
-
-Given(/^I am not signed in$/) do
-  log_out
-end
-
 Given(/^I am a teacher$/) do
   @teacher = User.find_or_create_by!(email: 'teacher@testing.xx') do |teacher|
     teacher.name = "Test teacher"

@@ -1,6 +1,6 @@
 When /^I load netsim$/ do
   steps %q{
-    And I am on "http://learn.code.org/s/netsim/stage/1/puzzle/1?disableCleaning"
+    And I am on "http://learn.code.org/s/netsim/stage/1/puzzle/1?disableCleaning=true"
     And I wait to see ".netsim_lobby"
   }
 end
