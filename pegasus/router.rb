@@ -84,7 +84,7 @@ class Documents < Sinatra::Base
       end
     end
 
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/about', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', 
                  '/teacher-dashboard', 
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
