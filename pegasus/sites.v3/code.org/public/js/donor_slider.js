@@ -7,16 +7,24 @@ $(document).ready(function() {
   var combinedLength = platinum.length + gold.length;
   var interval = 8000;
   var timer = setInterval(setManager, interval);
+  var showing = "platinum";
 
   function setManager () {
     // Check if you've gone through all the platinum donors
     if (masterIndex < platinum.length) {
       gold.hide();
-      $("#level_indicator").text("Platinum Supporters ($3,000,000+ contribution)");
+      if (showing !== "platinum") {
+        $("#level_indicator").hide().text("Platinum Supporters ($3,000,000+ contribution)").fadeIn();
+        showing = "platinum";
+      }
       scrollBadges(platinum, masterIndex);
     } else {
       platinum.hide();
-      $("#level_indicator").text("Gold Supporters ($1,000,000+ contribution)");
+
+      if (showing !== "gold") {
+        $("#level_indicator").hide().text("Gold Supporters ($1,000,000+ contribution)").fadeIn();
+        showing = "gold";
+      }
       scrollBadges(gold, masterIndex - platinum.length);
     }
   }

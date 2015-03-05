@@ -4,7 +4,7 @@ require 'cdo/rack/rackup'
 require 'cdo/only_one'
 
 def main()
-  Rack.with_rackup(pegasus_dir, port:CDO.pegasus_port) do |params|
+  Rack.with_rackup(pegasus_dir, port:CDO.pdf_port_markdown) do |params|
     system 'rake', '--rakefile', pegasus_dir('sites/virtual/generate_curriculum_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
     exit $?.exitstatus
   end

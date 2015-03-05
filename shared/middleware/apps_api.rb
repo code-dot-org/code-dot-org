@@ -281,32 +281,47 @@ class AppsApi < Sinatra::Base
   post %r{/v3/apps/([^/]+)/import-(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
-    rows = CSV.parse(params[:import_file][:tempfile])
-    table = Table.new(app_id, storage_id(endpoint), table_name)
-    columns = rows[0]
-    columns.each_with_index do |column, i|
-          halt 400, {}, "The first row of the csv must contain the field names for your data. One of your field names is empty: " + columns.join(',') unless column
-    end
-    records = []
-    rows = rows[1..-1]
-    rows.each do |row|
-      record = {}
-      row.each_with_index do |value, i|
-        record[columns[i]] = value if value
-      end
-      records.push(record)
-    end
 
-    # wait for all records to be parsed before deleting the old records.
-    table.to_a.each do |row|
-      table.delete(row[:id])
+    max_records = 5000
+    table_url = "/private/edit-csp-table/#{app_id}/#{table_name}"
+    back_link = "<a href='#{table_url}'>back</a>"
+    table = Table.new(app_id, storage_id(endpoint), table_name)
+    tempfile = params[:import_file][:tempfile]
+    records = []
+
+    begin
+      columns = CSV.parse_line(tempfile)
+      columns.each do |column|
+        msg = "The CSV file could not be loaded because one of the column names is missing. "\
+              "Please go #{back_link} and make sure the first line of the CSV file "\
+              "contains a name for each column:<br><br>#{columns.join(',')}"
+        halt 400, {}, msg unless column
+      end
+      CSV.foreach(tempfile, headers:true) do |row|
+        records.push(row.to_hash)
+      end
+    rescue => e
+      msg = "The CSV file could not be loaded: #{e.message}<br><br>To make sure your CSV "\
+            "file is formatted correctly, please go #{back_link} and follow these steps:"\
+            "<li>Open your data in Microsoft Excel or Google Spreadsheets"\
+            "<li>Make sure the first line contains a name for each column"\
+            "<li>Export your data by doing a 'Save as CSV' or 'Download as Comma-separated values'"
+      halt 400, {}, msg
     end
+    
+    msg = "The CSV file is too big. The maximum number of lines is #{max_records}, "\
+          "but the file you chose has #{records.length} lines. "\
+          "Please go #{back_link} and try uploading a smaller CSV file."
+    halt 400, {}, msg if records.length > max_records
+
+    # deleting the old records only after all validity checks have passed.
+    table.delete_all()
     
     records.each do |record|
       table.insert(record, request.ip)
     end
 
-    redirect "/private/edit-csp-table/#{app_id}/#{table_name}"
+    redirect "#{table_url}"
   end
 
 end

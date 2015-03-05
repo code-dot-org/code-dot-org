@@ -30,7 +30,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
-
 ### <a name="GetStarted"></a> 1) Introduction
 
 Remind students of the game they played in the last stage, what were some of the tricky elements of constructing a good conditional statement?

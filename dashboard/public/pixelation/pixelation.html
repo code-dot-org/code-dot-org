@@ -82,5 +82,6 @@
   pixelationInit();
   pixel_data.value = options.data;
   drawGraph();
-  formatBitDisplay();
+  if(options.format=='raw') unformatBits()
+  else formatBitDisplay();
 </script>

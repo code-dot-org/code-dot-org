@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "接近上边缘",
   "whenUp": "当箭头向上",
   "whenUpTooltip": "执行下面按向上箭头键时采取的行动。",
-  "yes": "是"
+  "yes": "是",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

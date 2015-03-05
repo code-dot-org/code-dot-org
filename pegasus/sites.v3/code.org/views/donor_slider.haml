@@ -3,13 +3,16 @@
 %link{:href=>"/css/donor_slider.css", :rel=>"stylesheet"}
 %script{:src=>"/js/donor_slider.js"}
 
-%div{:class=>'donor-slider'}
-  %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
-  %div.badge-container
+.donor-slider
+  %h2#level_indicator{style: "float:left"} Platinum Supporters ($3,000,000+ contribution)
+  #donorlink{style: "float:right"}
+    %a{:href=>'../about/donors'} See all donors
+  %div{style: "clear:both"}
+  .badge-container
     - supporters.each do |supporter, name_s|
       - avatar_url = avatar_image(supporter[:name_s])
-      %a{:href=>supporter[:url_s]}
-        %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; height: 90px"}
+      %a{:href=>supporter[:url_s], :target=> "_blank"}
+        %div{:class=>"badge " + supporter[:level_s], :style=>"display: none; height: 90px"}
           - if avatar_url != nil
             - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
               %img{:src=> avatar_url, :style=>"float: left"}
@@ -18,5 +21,3 @@
           - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
             %p{:class=>"label"}
               =supporter[:name_s]
-
-  %a{:href=>'../about/donors'} See all donors

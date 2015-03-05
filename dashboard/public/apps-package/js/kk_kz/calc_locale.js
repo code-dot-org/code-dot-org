@@ -164,4 +164,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
-"wrongInput":function(d){return "You are calling your function with the wrong value."}};
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

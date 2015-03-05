@@ -40,7 +40,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Introduction
 
-Recall with students the purpose of a Contract:
+Review with students the purpose of a Contract:
 
 - Describes three elements of a function
     - Name (what is the function called)
@@ -59,7 +59,7 @@ Recall with students the purpose of a Contract:
 ## Activity: Writing Contracts
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-In this stage you'll be looking at some functions, some of which you've seen before and some which are brand new. For each function you'll first get a chance to use the function, and then you will write a Contract for it. Make sure to document any new Contracts on your Contract Log. Head to [MSM stage 5](http://studio.code.org/s/algebra/stage/5/puzzle/1) in Code Studio to get started programming.
+In this stage you'll be looking at some functions, some of which you've seen before and some which are brand new. For each function you'll first get a chance to use the function, and then you'll write a Contract for it. Make sure to document any new Contracts on your Contract Log. Head to [MSM stage 5](http://studio.code.org/s/algebra/stage/5/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

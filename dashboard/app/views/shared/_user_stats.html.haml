@@ -3,19 +3,19 @@
 - concept_progress = user ? user.concept_progress : nil
 
 .user-stats-block
-  - levels = script_levels.group_by(&:stage_or_game)
-  - levels.each_pair do |stage_or_game, sl_group|
+  - levels = script_levels.group_by(&:stage)
+  - levels.each_pair do |stage, sl_group|
     - should_show_lesson_plan = script.has_lesson_plan? && user && user.teacher?
     .game-group
       .stage
         %span
-          = stage_title(script, stage_or_game)
+          = stage_title(script, stage)
         - if should_show_lesson_plan
           .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), lesson_plan_html_url(stage_or_game)
+            = link_to t('view_lesson_plan'), lesson_plan_html_url(stage)
 
       .games
-        - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}
+        - sl_group = sl_group.sort_by {|sl| sl.position}
         - sl_group.each do |sl|
           .level
             - css_class, link = level_info(user, sl)

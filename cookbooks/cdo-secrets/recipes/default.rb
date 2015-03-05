@@ -3,5 +3,5 @@
 # Recipe:: default
 #
 
-include_recipe 'cdo-secrets::config'
+include_recipe 'cdo-secrets::globals'
 include_recipe 'cdo-secrets::words'

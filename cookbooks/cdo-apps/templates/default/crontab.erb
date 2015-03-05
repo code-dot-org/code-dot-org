@@ -58,15 +58,13 @@ if node['cdo-apps']['daemon']
   if node.chef_environment == 'production'
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
     cronjob at:'@daily', do:deploy_dir('bin', 'send_workshop_reminder_emails'), notify:'rick@code.org'
+    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
   end
 
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
   cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:"#{deploy_dir('bin', 'geocode_hoc_activity')} 2>&1 > /dev/null"
-
-  build_target = node.chef_environment == 'test' ? 'test-websites' : 'websites'
-  cronjob at:'*/1 * * * *', do:"#{aws_dir('build_and_mail_log')} #{build_target}", notify:'dev+build@code.org'
 end
 
 cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"

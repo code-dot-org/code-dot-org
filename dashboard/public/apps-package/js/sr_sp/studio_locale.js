@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touches top edge"},
 "whenUp":function(d){return "кад је стрелица на горе"},
 "whenUpTooltip":function(d){return "Изврши акције испод кад се притисне стрелица на горе."},
-"yes":function(d){return "Да"}};
+"yes":function(d){return "Да"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

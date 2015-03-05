@@ -6,42 +6,6 @@ theme: none
 
 %div{style: "padding-left:20px"}
  
-  :css
-    th.manage-th {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      height: 45px;
-    }
-    td > span {
-      position: relative;
-    }
-    #bulk_import {
-      max-width: 600px;
-      padding: 10px;
-      margin: 10px;
-    }
-
-    #bulk_import textarea {
-      width: 100%;
-      height: 300px;
-      margin-bottom: 10px;
-    }
-
-    span.required {
-      display: none;
-    }
-
-    input.ng-invalid-required + span.required, 
-    select.ng-invalid-required + span.required {
-      display: inline;
-      position: absolute;
-      top: 20px;
-      left: 0px;
-      font-size: 0.6em;
-      font-weight: bold;
-      color: #900;
-    }
-
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
       = I18n.t('dashboard_students_add_multiple')

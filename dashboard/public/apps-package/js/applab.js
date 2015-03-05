@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({14:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({15:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":13,"./skins":15}],15:[function(require,module,exports){
+},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":14,"./skins":16}],16:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":168}],13:[function(require,module,exports){
+},{"../skins":173}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -112,6 +112,15 @@ levels.ec_simple = {
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,
+    "getRed": null,
+    "getGreen": null,
+    "getBlue": null,
+    "getAlpha": null,
+    "setRed": null,
+    "setGreen": null,
+    "setBlue": null,
+    "setAlpha": null,
+    "setRGBA": null,
 
     // Data
     "startWebRequest": null,
@@ -283,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":216,"../block_utils":18,"../utils":214}],8:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../block_utils":19,"../utils":219}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -299,6 +308,7 @@ var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -622,12 +632,10 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed with blocks, we
+  // NOTE: when running with no source visible or at max speed, we
   // call a simple function to just get the line number, otherwise we call a
   // function that also selects the code:
-  var selectCodeFunc =
-    (studioApp.hideSource ||
-     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
           codegen.getUserCodeLine :
           codegen.selectCurrentCode;
 
@@ -638,12 +646,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -718,6 +727,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
@@ -1221,14 +1235,24 @@ JSONApi.stringify = function(object) {
   return JSON.stringify(object);
 };
 
-// Commented out, but available in case we want to expose the droplet/pencilcode
-// style random (with a min, max value)
-/*
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-*/
+function populateNonMarshalledFunctions(interpreter, scope, parent) {
+  for (var i = 0; i < dropletConfig.blocks.length; i++) {
+    var block = dropletConfig.blocks[i];
+    if (block.dontMarshal) {
+      var func = parent[block.func];
+      // 4th param is false to indicate: don't marshal params
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
+      interpreter.setProperty(scope,
+                              block.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
 
 /**
  * Execute the app
@@ -1283,19 +1307,24 @@ Applab.execute = function() {
                                     console: consoleApi,
                                     JSON: JSONApi });
 
+        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
+
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
@@ -2731,7 +2760,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":216,"../../locale/current/common":219,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":168,"../slider":169,"../templates/page.html":193,"../timeoutList":199,"../utils":214,"../xml":215,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dropletConfig":11,"./extraControlRows.html":12,"./visualization.html":16}],16:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":173,"../slider":174,"../templates/page.html":198,"../timeoutList":204,"../utils":219,"../xml":220,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2751,7 +2780,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],12:[function(require,module,exports){
+},{"ejs":240}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2771,7 +2800,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":216,"../../locale/current/common":219,"ejs":235}],11:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"ejs":240}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -2808,6 +2837,15 @@ module.exports.blocks = [
   {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
   {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
   {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
+  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
@@ -2878,6 +2916,77 @@ module.exports.categories = {
   },
 };
 
+},{}],11:[function(require,module,exports){
+// APIs designed specifically to run on interpreter data structures without marshalling
+// (valuable for performance or to support in/out parameters)
+
+// Note: these also don't have blockId params for blockly support, so they are
+// used without aliasing (dropletConfig marked with dontMarshal and dontAlias)
+
+// ImageData RGB helper functions
+
+// TODO: more parameter validation (data array type, length), error output
+
+exports.getRed = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset].toNumber();
+  }
+};
+exports.getGreen = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 1].toNumber();
+  }
+};
+exports.getBlue = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 2].toNumber();
+  }
+};
+exports.getAlpha = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 3].toNumber();
+  }
+};
+
+exports.setRed = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset] = value;
+  }
+};
+exports.setGreen = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 1] = value;
+  }
+};
+exports.setBlue = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 2] = value;
+  }
+};
+exports.setAlpha = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 3] = value;
+  }
+};
+exports.setRGBA = function (imageData, x, y, r, g, b, a) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset] = r;
+    imageData.properties.data.properties[pixelOffset + 1] = g;
+    imageData.properties.data.properties[pixelOffset + 2] = b;
+    imageData.properties.data.properties[pixelOffset + 3] =
+        (typeof a === 'undefined') ? 255 : a;
+  }
+};
+
 },{}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -2898,7 +3007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],9:[function(require,module,exports){
+},{"../../locale/current/common":224,"ejs":240}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2971,7 +3080,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":216,"../../locale/current/common":219,"../codegen":44,"../utils":214}],216:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../codegen":45,"../utils":219}],221:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
@@ -3717,4 +3826,4 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[14]);
+},{}]},{},[15]);

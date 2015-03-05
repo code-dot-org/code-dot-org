@@ -118,7 +118,6 @@ NetSimLobby.createWithin = function (element, connection, user, shardID) {
 NetSimLobby.prototype.bindElements_ = function () {
   // Root
   this.openRoot_ = $('#netsim_lobby_open');
-  this.closedRoot_ = $('#netsim_lobby_closed');
 
   // Open
   this.displayNameView_ = this.openRoot_.find('#display_name_view');
@@ -133,6 +132,8 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
   this.shardSelector_.change(this.onShardSelectorChange_.bind(this));
+  this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
+  this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
   dom.addClickTouchEvent(this.addRouterButton_[0],
       this.addRouterButtonClick_.bind(this));
@@ -140,13 +141,6 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.connectButton_ = this.shardView_.find('#netsim_lobby_connect');
   dom.addClickTouchEvent(this.connectButton_[0],
       this.connectButtonClick_.bind(this));
-
-  // Closed
-  this.disconnectButton_ = this.closedRoot_.find('#netsim_lobby_disconnect');
-  dom.addClickTouchEvent(this.disconnectButton_[0],
-      this.disconnectButtonClick_.bind(this));
-
-  this.connectionStatusSpan_ = this.closedRoot_.find('#netsim_lobby_statusbar');
 
   // Collections
   this.shardLinks_ = $('.shardLink');
@@ -195,15 +189,27 @@ NetSimLobby.prototype.setNameButtonClick_ = function () {
 
 /** Handler for picking a new shard from the dropdown. */
 NetSimLobby.prototype.onShardSelectorChange_ = function () {
-  if (this.connection_.isConnectedToShard()) {
-    this.connection_.disconnectFromShard();
-    this.nameInput_.disabled = false;
-  }
+  var newShardID = this.shardSelector_.val();
 
-  if (this.shardSelector_.val() !== SELECTOR_NONE_VALUE) {
+  // Might need to disconnect (async) first.
+  if (this.connection_.isConnectedToShard()) {
+    this.connection_.disconnectFromShard(
+        this.selectShard_.bind(this, newShardID));
+  } else {
+    // We were already disconnected, we're fine.
+    this.selectShard_(newShardID);
+  }
+};
+
+/**
+ * Change the shard selector's selected shard and connect to it.
+ */
+NetSimLobby.prototype.selectShard_ = function (shardID) {
+  this.shardSelector_.val(shardID);
+  this.nameInput_.disabled = false;
+  if (shardID !== SELECTOR_NONE_VALUE) {
     this.nameInput_.disabled = true;
-    this.connection_.connectToShard(this.shardSelector_.val(),
-        this.nameInput_.val());
+    this.connection_.connectToShard(shardID, this.nameInput_.val());
   }
 };
 
@@ -308,29 +314,9 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
 };
 
 NetSimLobby.prototype.refresh_ = function () {
-  if (this.connection_.isConnectedToRouter()) {
-    this.refreshClosedLobby_();
-  } else {
+  if (!this.connection_.isConnectedToRouter()) {
     this.refreshOpenLobby_();
   }
-};
-
-/**
- * Just show the status line and the disconnect button.
- * @private
- */
-NetSimLobby.prototype.refreshClosedLobby_ = function () {
-  this.closedRoot_.show();
-  this.openRoot_.hide();
-
-  // Update connection status
-  this.connectionStatusSpan_.html(
-      this.connection_.myNode.getStatus() + ' ' +
-      this.connection_.myNode.getStatusDetail());
-
-  // Share link state?
-
-  // Disconnect button state?
 };
 
 /**
@@ -339,7 +325,6 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
  */
 NetSimLobby.prototype.refreshOpenLobby_ = function () {
   this.openRoot_.show();
-  this.closedRoot_.hide();
 
   // Do we have a name yet?
   if (this.nameInput_.val() === '') {
@@ -358,6 +343,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   // Do we have a shard yet?
   if (!this.connection_.isConnectedToShard()) {
     this.shardSelector_.val(SELECTOR_NONE_VALUE);
+    this.notConnectedNote_.show();
     this.addRouterButton_.hide();
     this.lobbyList_.hide();
     this.connectButton_.hide();
@@ -365,6 +351,7 @@ NetSimLobby.prototype.refreshOpenLobby_ = function () {
   }
 
   // We have a shard
+  this.notConnectedNote_.hide();
   this.addRouterButton_.show();
   this.lobbyList_.show();
   this.connectButton_.show();
@@ -466,11 +453,19 @@ NetSimLobby.prototype.onSelectionChange = function () {
  * @private
  */
 NetSimLobby.prototype.getUserSections_ = function (callback) {
-  // TODO (bbuchanan) : Get owned sections as well, to support teachers.
-  // TODO (bbuchanan): Wrap this away into a shared library for the v2/sections api
-  $.ajax({
+  var memberSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/v2/sections/membership',
-    success: callback
+    url: '/v2/sections/membership'
+  });
+
+  var ownedSectionsRequest = $.ajax({
+    dataType: 'json',
+    url: '/v2/sections'
+  });
+
+  $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {
+    var memberSectionData = result1[0];
+    var ownedSectionData = result2[0];
+    callback(memberSectionData.concat(ownedSectionData));
   });
 };

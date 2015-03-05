@@ -162,19 +162,19 @@ NetSimRouterNode.DnsMode = DnsMode;
 /**
  * Static async creation method. See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, function (router) {
-    if (router === null) {
-      onComplete(null);
+  NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
+    if (err !== null) {
+      onComplete(err, null);
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(null);
+    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
@@ -185,8 +185,8 @@ NetSimRouterNode.create = function (shard, onComplete) {
 
       // Always try and update router immediately, to set its DisplayName
       // correctly.
-      router.update(function () {
-        onComplete(router);
+      router.update(function (err) {
+        onComplete(err, router);
       });
     });
   });
@@ -196,19 +196,19 @@ NetSimRouterNode.create = function (shard, onComplete) {
  * Static async retrieval method.  See NetSimEntity.get().
  * @param {!number} routerID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (router) {
-    if (router === null) {
-      onComplete(null);
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
+    if (err !== null) {
+      onComplete(err, null);
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, routerID, function (heartbeat) {
-      if (heartbeat === null) {
-        onComplete(null);
+    NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
+      if (err !== null) {
+        onComplete(err, null);
         return;
       }
 
@@ -217,7 +217,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
       router.heartbeat_ = heartbeat;
       router.heartbeat_.setBeatInterval(12000);
 
-      onComplete(router);
+      onComplete(null, router);
     });
   });
 };
@@ -259,13 +259,13 @@ NetSimRouterNode.prototype.tick = function (clock) {
 /**
  * Updates router status and lastPing time in lobby table - both keepAlive
  * and making sure router's connection count is valid.
- * @param {function} [onComplete] - Optional success/failure callback
+ * @param {NodeStyleCallback} [onComplete] - Optional success/failure callback
  */
 NetSimRouterNode.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
     self.status_ = count >= MAX_CLIENT_CONNECTIONS ?
         RouterStatus.FULL : RouterStatus.READY;
     self.statusDetail_ = '(' + count + '/' + MAX_CLIENT_CONNECTIONS + ')';
@@ -353,16 +353,16 @@ NetSimRouterNode.prototype.stopSimulation = function () {
 /**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
- * @param {function} onComplete which accepts an Array of NetSimWire.
+ * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
  */
 NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (rows) {
-    if (rows === null) {
-      onComplete([]);
+  this.shard_.wireTable.readAll(function (err, rows) {
+    if (err) {
+      onComplete(err, []);
       return;
     }
 
@@ -374,20 +374,20 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
           return wire.remoteNodeID === routerID;
         });
 
-    onComplete(myWires);
+    onComplete(null, myWires);
   });
 };
 
 /**
  * Query the wires table and pass the callback the total number of wires
  * connected to this router.
- * @param {function} onComplete which accepts a number.
+ * @param {NodeStyleCallback} onComplete which accepts a number.
  */
 NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.getConnections(function (wires) {
-    onComplete(wires.length);
+  this.getConnections(function (err, wires) {
+    onComplete(err, wires.length);
   });
 };
 
@@ -418,28 +418,35 @@ var contains = function (haystack, needle) {
  * if its limit is now exceeded.
  *
  * @param {!NetSimNode} otherNode attempting to connect to this one
- * @param {!function} onComplete response method - should call with TRUE
+ * @param {!NodeStyleCallback} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   var self = this;
-  this.countConnections(function (count) {
+  this.countConnections(function (err, count) {
+    if (err) {
+      onComplete(err, false);
+      return;
+    }
+
     if (count > MAX_CLIENT_CONNECTIONS) {
-      onComplete(false);
+      onComplete(new Error("Too many connections"), false);
       return;
     }
 
     // Trigger an update, which will correct our connection count
-    self.update(onComplete);
+    self.update(function (err) {
+      onComplete(err, err === null);
+    });
   });
 };
 
 /**
- * Assign a new address for hostname on wire, calling onComplete(success)
+ * Assign a new address for hostname on wire, calling onComplete
  * when done.
  * @param {!NetSimWire} wire that lacks addresses or hostnames
  * @param {string} hostname of requesting node
- * @param {function} [onComplete] reports success or failure.
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
@@ -448,7 +455,12 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
-  this.getConnections(function (wires) {
+  this.getConnections(function (err, wires) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
     var addressList = wires.filter(function (wire) {
       return wire.localAddress !== undefined;
     }).map(function (wire) {
@@ -466,9 +478,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     wire.localHostname = hostname;
     wire.remoteAddress = 0; // Always 0 for routers
     wire.remoteHostname = self.getHostname();
-    wire.update(function (success) {
-      onComplete(success);
-    });
+    wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
     //       after updating the wire.
   });
@@ -591,17 +601,18 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   // If any messages are for us, get our routing table and process messages.
   if (messages.length > 0) {
     this.isProcessingMessages_ = true;
-    this.getConnections(function (wires) {
+    this.getConnections(function (err, wires) {
       messages.forEach(function (message) {
 
         // Pull the message off the wire, and hold it in-memory until we route it.
         // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (success) {
-          if (success) {
-            self.routeMessage_(message, wires);
-          } else {
-            logger.error("Error pulling message off the wire for routing");
+        message.destroy(function (err) {
+          if (err) {
+            logger.error("Error pulling message off the wire for routing; " +
+                err.message);
+            return;
           }
+          self.routeMessage_(message, wires);
         });
 
       });
