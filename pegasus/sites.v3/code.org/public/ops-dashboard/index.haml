@@ -57,12 +57,12 @@ theme: angular
     }]);
   services.factory('programTypesService', [
     function() {
-      var program_types = [
-        {short_name: 'MSS', long_name: 'Middle School Science'},
-        {short_name: 'MSM', long_name: 'Middle School Math'},
-        {short_name: 'ECS', long_name: 'Exploring Computer Science'},
-        {short_name: 'CSP', long_name: 'Computer Science Principles'}
-      ];
+      var program_types = {
+        1: {id: 1, short_name: 'CS in Science', long_name: 'Computer Science in Science'},
+        2: {id: 2, short_name: 'CS in Algebra', long_name: 'Computer Science in Algebra'},
+        3: {id: 3, short_name: 'ECS', long_name: 'Exploring Computer Science'},
+        4: {id: 4, short_name: 'CSP', long_name: 'Computer Science Principles'}
+      };
 
       return program_types;
   }]);
@@ -193,12 +193,13 @@ theme: angular
       }).catch($scope.genericError);
   }]);
 
-  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, programTypesService) {
       $scope.workshopsLoaded = false;
 
       $scope.workshops = workshopsService.query();
       $scope.cohorts = cohortsService.query();
+      $scope.program_types = programTypesService;
 
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {

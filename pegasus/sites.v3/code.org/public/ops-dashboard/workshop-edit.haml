@@ -20,7 +20,7 @@ template: none
 %h3
   Program Type
 %select.form-control{'ng-model' => 'workshop.program_type'}
-  %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.short_name}}'}
+  %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
     {{program_type.long_name}}
 %h3
   Assigned Cohort
