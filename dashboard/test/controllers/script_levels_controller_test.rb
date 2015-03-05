@@ -525,6 +525,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     Activity.create!(level: level, user: @admin, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
-    assert_Equal last_attempt_data, @controller.instance_variable_get(:@last_attempt)
+    assert_equal last_attempt_data, @controller.instance_variable_get(:@last_attempt)
   end
 end
