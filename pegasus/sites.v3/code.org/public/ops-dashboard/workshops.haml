@@ -31,7 +31,7 @@ template: none
         View attendance
     %td
       %span
-        {{workshop.program_type}}
+        {{program_types[workshop.program_type].short_name}}
     %td
       %span
         {{cohortName(workshop.cohort_id)}}
