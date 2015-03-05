@@ -38,7 +38,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !CDO.daemon
+    if CDO.chef_managed 
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
