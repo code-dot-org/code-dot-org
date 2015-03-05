@@ -11,8 +11,8 @@ def deploy_dir(*paths)
   home_dir node.chef_environment, *paths
 end
 
-def aws_dir(*paths)
-  deploy_dir 'aws', *paths
+def bin_dir(*paths)
+  deploy_dir 'bin', *paths
 end
 
 def dashboard_dir(*paths)
@@ -23,16 +23,12 @@ def pegasus_dir(*paths)
   deploy_dir 'pegasus', *paths
 end
 
-def bin_dir(*paths)
-  pegasus_dir('sites.v3', 'code.org', 'bin', *paths)
-end
-
 def cronjob(params)
   time = params[:at].to_s
   action = params[:do].to_s
 
   notify = params[:notify].to_s
-  action = "#{aws_dir('cronjob')} #{action.shellescape} #{notify}".strip
+  action = "#{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
 
   $crontab << "#{time} #{action}"
 end
@@ -46,7 +42,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
   end
 
-  if node.chef_environment == 'staging'
+  if node.chef_environment == 'staging' && node.name == 'staging'
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'

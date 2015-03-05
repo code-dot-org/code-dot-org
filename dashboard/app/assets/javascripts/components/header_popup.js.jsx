@@ -107,6 +107,9 @@ components.HeaderPopup = React.createClass({
         trophy_progress = $.map(script.trophies, function(trophy) {
 
           var completion = trophy_progress[trophy.id];
+          if (!completion)
+            completion = 0;
+
           var bronze = Math.max(0, Math.min(100, Math.floor( completion * 10.0 / trophy.bronze) * 10));
           var silver = Math.max(0, Math.min(100, Math.floor( (completion - trophy.bronze) * 10.0 / (trophy.silver - trophy.bronze)) * 10));
           var gold = Math.max(0, Math.min(100, Math.floor( (completion - trophy.silver) * 10.0 / (trophy.gold - trophy.silver)) * 10));
