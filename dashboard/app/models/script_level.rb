@@ -40,28 +40,22 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def end_of_stage?
-    stage ? stage.script_levels.to_a.last == self :
-      next_progression_level && (level.game_id != next_progression_level.level.game_id)
-  end
-
-  def stage_position_str
-    stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
+    stage.script_levels.to_a.last == self
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
+    I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
   def report_bug_url(request)
-    stage_text = stage ? "Stage #{stage.position} " : ' '
-    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   def level_display_text
     if level.unplugged?
       I18n.t('user_stats.classroom_activity')
-    elsif stage && stage.unplugged?
+    elsif stage.unplugged?
       position - 1
     else
       position
