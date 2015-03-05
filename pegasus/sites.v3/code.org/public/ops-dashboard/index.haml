@@ -39,7 +39,8 @@ theme: angular
   }]);
 
   // SERVICES
-  var services = angular.module('opsApp.services', []).value('version', '0.1');
+  var services = angular.module('opsApp.services', []).
+      value('version', '0.1');
 
   services.factory('districtsService', ['$resource',
     function($resource) {
