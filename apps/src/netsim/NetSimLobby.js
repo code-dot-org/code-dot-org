@@ -126,8 +126,7 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> display_name_view
   this.nameInput_ = this.displayNameView_.find('#netsim_lobby_name');
   this.setNameButton_ = this.displayNameView_.find('#netsim_lobby_set_name_button');
-  dom.addClickTouchEvent(this.setNameButton_[0],
-      this.setNameButtonClick_.bind(this));
+  this.setNameButton_.click(this.setNameButtonClick_.bind(this));
 
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
@@ -135,12 +134,10 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
   this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
-  dom.addClickTouchEvent(this.addRouterButton_[0],
-      this.addRouterButtonClick_.bind(this));
+  this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
   this.lobbyList_ = this.shardView_.find('#netsim_lobby_list');
   this.connectButton_ = this.shardView_.find('#netsim_lobby_connect');
-  dom.addClickTouchEvent(this.connectButton_[0],
-      this.connectButtonClick_.bind(this));
+  this.connectButton_.click(this.connectButtonClick_.bind(this));
 
   // Collections
   this.shardLinks_ = $('.shardLink');
@@ -404,7 +401,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
       this.selectedListItem_ = item;
     }
 
-    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.click(this.onRowClick_.bind(this, item, simNode));
     item.appendTo(this.lobbyList_);
   }.bind(this));
 
