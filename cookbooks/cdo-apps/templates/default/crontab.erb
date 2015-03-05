@@ -23,10 +23,6 @@ def pegasus_dir(*paths)
   deploy_dir 'pegasus', *paths
 end
 
-def bin_dir(*paths)
-  pegasus_dir('sites.v3', 'code.org', 'bin', *paths)
-end
-
 def cronjob(params)
   time = params[:at].to_s
   action = params[:do].to_s
