@@ -65,15 +65,15 @@ module ScriptLevelsHelper
     summary = {
       id: sl.level.id,
       sl_id: sl.id,   # This should probably be removed, it's currently used to calculate the milestone_url (/milestone/:user/:script_level_id)
-      position: sl.level_position,
+      position: sl.position,
       kind: kind,
       title: sl.level_display_text
     }
 
     # Add a previous pointer if it's not the obvious (level-1)
     if sl.previous_level
-      if sl.previous_level.stage_position != sl.stage_position
-        summary[:previous] = [ sl.previous_level.stage_position, sl.previous_level.level_position ]
+      if sl.previous_level.stage.position != sl.stage.position
+        summary[:previous] = [ sl.previous_level.stage.position, sl.previous_level.position ]
       end
     else
       summary[:previous] = false
@@ -82,7 +82,7 @@ module ScriptLevelsHelper
     # Add a next pointer if it's not the obvious (level+1)
     if sl.end_of_stage?
       if sl.next_level
-        summary[:next] = [ sl.next_level.stage_position, sl.next_level.level_position ]
+        summary[:next] = [ sl.next_level.stage.position, sl.next_level.position ]
       else
         # This is the final level in the script
         summary[:next] = false

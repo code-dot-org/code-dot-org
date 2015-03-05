@@ -138,7 +138,7 @@ module LevelsHelper
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
     level = summarize_script_level(@script_level).stringify_keys.merge(@level.properties)
-    level['stage'] = @script_level.stage_position
+    level['stage'] = @script_level.stage.position
 
     # Set some specific values - TODO: can we do this entirely from summarize?
     level['puzzle_number'] = @script_level ? @script_level.position : 1

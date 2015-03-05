@@ -49,17 +49,6 @@ class ScriptLevel < ActiveRecord::Base
     stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
   end
 
-  def stage_position
-    return 1 if stage.nil? || stage.position.nil?
-    return stage.position
-  end
-
-  def level_position
-    # Note (stevee): This is just acknowledging that things were different for scripts < 9 but
-    # all past that are consistent
-    script.id < 9 ? chapter : stage_or_game_position
-  end
-
   def name
     I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
   end

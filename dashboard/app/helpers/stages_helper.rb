@@ -7,15 +7,11 @@ module StagesHelper
     end
   end
 
-  def stage_name(script, stage_or_game)
-    if script.multiple_games?
-      if stage_or_game.instance_of? Game
-        return (data_t('game.name', stage_or_game.name) || stage_or_game.name)
-      else # stage
-        return data_t_suffix('script.name', script.name, stage_or_game.name)
-      end
+  def stage_name(script, stage)
+    if script.stages.many?
+      data_t_suffix('script.name', script.name, stage.name)
     else
-      return data_t_suffix('script.name', script.name, 'title')
+      data_t_suffix('script.name', script.name, 'title')
     end
   end
 
