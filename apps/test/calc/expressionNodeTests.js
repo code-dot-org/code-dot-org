@@ -246,9 +246,6 @@ describe("ExpressionNode", function () {
       assert.equal(node.evaluate(mapping), 2);
     });
 
-    // pivotal # 87579850 - this is broken right now, because it ends up
-    // evaluating y + x with the x value from f's context, instead of the global
-    // context
     it("can handle transitioning back to global var", function () {
       var mapping = {};
       // x = 1
