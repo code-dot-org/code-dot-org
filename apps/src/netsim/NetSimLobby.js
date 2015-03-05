@@ -12,7 +12,6 @@
 /* global $ */
 'use strict';
 
-var dom = require('../dom');
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
