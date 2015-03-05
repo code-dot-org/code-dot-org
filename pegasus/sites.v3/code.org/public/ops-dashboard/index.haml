@@ -55,9 +55,16 @@ theme: angular
 
       return District;
     }]);
-  services.factory('programsService', [
+  services.factory('programTypesService', [
     function() {
-      return [{name:'MSS'}, {name:'MSM'}, {name:'ECS'}, {name:'CSP'}];
+      var program_types = [
+        {short_name: 'MSS', long_name: 'Middle School Science'},
+        {short_name: 'MSM', long_name: 'Middle School Math'},
+        {short_name: 'ECS', long_name: 'Exploring Computer Science'},
+        {short_name: 'CSP', long_name: 'Computer Science Principles'}
+      ];
+
+      return program_types;
   }]);
 
   services.factory('workshopsService', ['$resource',
@@ -276,8 +283,8 @@ theme: angular
     }
   ]);
 
-  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programsService) {
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});
       } else {
@@ -296,7 +303,7 @@ theme: angular
       }
 
       $scope.districts = districtsService.query();
-      $scope.programs = programsService;
+      $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
@@ -318,11 +325,11 @@ theme: angular
     }
   ]);
 
-  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programsService',
-    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programsService) {
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
       $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
-      $scope.programs = programsService;
+      $scope.program_types = programTypesService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
