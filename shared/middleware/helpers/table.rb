@@ -24,6 +24,10 @@ class Table
     true
   end
 
+  def delete_all()
+    items.delete
+  end
+
   def fetch(id)
     row = items.where(row_id:id).first
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row

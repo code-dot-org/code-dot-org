@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "atinge marginea de sus"},
 "whenUp":function(d){return "când săgeată în sus"},
 "whenUpTooltip":function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată în sus este apăsată."},
-"yes":function(d){return "Da"}};
+"yes":function(d){return "Da"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

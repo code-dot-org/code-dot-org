@@ -17,7 +17,7 @@ class ReportsController < ApplicationController
 
     #@recent_activity = Activity.where(['user_id = ?', user.id]).order('id desc').includes({level: :game}).limit(2)
     @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
+select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
 from user_levels ul
 inner join script_levels sl on sl.level_id = ul.level_id
 inner join levels l on l.id = ul.level_id
@@ -41,17 +41,9 @@ SQL
     script
   end
 
-  def find_script_level(script, p)
-    stage_id = params[:stage_id]
-    level_id = params[:level_id]
-
-    if script.default_script? && script.id != 1
-      script_level = script.get_script_level_by_chapter(level_id)
-    else
-      script_level = script.get_script_level_by_stage_and_position(stage_id, level_id)
-    end
+  def find_script_level(script)
+    script_level = script.get_script_level_by_stage_and_position params[:stage_id], params[:level_id]
     raise ActiveRecord::RecordNotFound unless script_level
-
     script_level
   end
 
@@ -60,42 +52,32 @@ SQL
     render file: 'shared/_user_stats', layout: false, locals: { user: current_user }
   end
 
-  def summarize_stage(script, stage_or_game, levels)
-    if stage_or_game.instance_of? Game
-      game = stage_or_game
-    else
-      stage = stage_or_game
-    end
+  def summarize_stage(script, stage, levels)
 
     stage_data = {
-      id: stage_or_game.id,
-      position: game ? 1 : stage.position,
+      id: stage.id,
+      position: stage.position,
       script_name: script.name,
       script_id: script.id,
       script_stages: script.stages.to_a.count,
-      name: stage_name(script, stage_or_game),
-      title: stage_title(script, stage_or_game)
+      name: stage_name(script, stage),
+      title: stage_title(script, stage)
     }
 
     if script.has_lesson_plan?
-      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(stage_or_game)
-      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(stage_or_game)
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(stage)
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(stage)
     end
 
     if script.hoc?
       stage_data[:finishText] = t('nav.header.finished_hoc')
     end
 
-    if !levels
-      levels =
-        if game
-          script.script_levels.to_a.select{ |sl| sl.level.game_id == game.id }
-        else
-          script.script_levels.to_a.select{ |sl| sl.stage_id == stage.id }
-        end
+    unless levels
+      levels = script.script_levels.to_a.select{ |sl| sl.stage_id == stage.id }
     end
 
-    levels.sort_by { |sl| sl.stage_or_game_position }
+    levels.sort_by { |sl| sl.position }
     stage_data[:levels] = levels.map { |sl| summarize_script_level(sl) }
 
     stage_data
@@ -123,9 +105,9 @@ SQL
 
     position = 0
 
-    levels = script.script_levels.group_by(&:stage_or_game)
-    levels.each_pair do |stage_or_game, sl_group|
-      s[:stages].push summarize_stage(script, stage_or_game, sl_group)
+    levels = script.script_levels.group_by(&:stage)
+    levels.each_pair do |stage, sl_group|
+      s[:stages].push summarize_stage(script, stage, sl_group)
     end
 
     if params['jsonp']
@@ -136,13 +118,12 @@ SQL
 
   def user_progress
     script = find_script(params)
-    script_level = find_script_level(script, params)
+    script_level = find_script_level(script)
 
-    stage = script_level.stage
     level = script_level.level
     game = script_level.level.game
 
-    stage_data = summarize_stage(script, script_level.stage_or_game, nil)
+    stage_data = summarize_stage(script, script_level.stage, nil)
 
     # Copy these now because they will be modified during this routine, but the API caller needs the previous value
     if session[:callouts_seen]

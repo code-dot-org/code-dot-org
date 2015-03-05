@@ -300,5 +300,6 @@
   "whenSpriteCollidedWithTopEdge": "dotyka górnej krawędzi",
   "whenUp": "kiedy strzałka w górę",
   "whenUpTooltip": "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w górę.",
-  "yes": "Tak"
+  "yes": "Tak",
+  "onEventTooltip": "Execute code in response to the specified event."
 }

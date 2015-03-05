@@ -247,14 +247,6 @@ director dashboard round-robin {
 <% end %>
 }
 
-backend jupiter {
-  .host = "127.0.0.1";
-  .port = "<%= node['cdo-apps']['jupiter']['port'] %>";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-
 # api.change.org
 backend api_change_org_4 {
   .host = "104.16.4.13";
@@ -425,10 +417,6 @@ end
       set req.backend = dashboard;
     }
   }
-  else if (req.http.host == "<%= canonical_hostname('jupiter.code.org') %>")
-  {
-    set req.backend = jupiter;
-  }
   else if (req.url ~ "^/dashboardapi/")
   {
     # Map /dashboardapi to learn.code.org/api
@@ -459,20 +447,6 @@ end
     set req.grace = 30m;
   } else {
     set req.grace = 15s;
-  }
-
-  # [DRUPAL] Get ride of progress.js query params
-  if (req.url ~ "^/misc/progress\.js\?[0-9]+$") {
-    set req.url = "/misc/progress.js";
-  }
-
-  # [DRUPAL] Do not cache these paths.
-  if (req.url ~ "^/ooyala/ping$" ||
-      req.url ~ "^/info/.*$" ||
-      req.url ~ "^/flag/.*$" ||
-      req.url ~ "^.*/ajax/.*$" ||
-      req.url ~ "^.*/ahah/.*$") {
-    return (pass);
   }
 
   # Handle compression correctly. Different browsers send different

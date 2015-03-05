@@ -49,17 +49,6 @@ class ScriptLevel < ActiveRecord::Base
     stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
   end
 
-  def stage_position
-    return 1 if stage.nil? || stage.position.nil?
-    return stage.position
-  end
-
-  def level_position
-    # Note (stevee): This is just acknowledging that things were different for scripts < 9 but
-    # all past that are consistent
-    script.id < 9 ? chapter : stage_or_game_position
-  end
-
   def name
     I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
   end
@@ -74,26 +63,14 @@ class ScriptLevel < ActiveRecord::Base
     if level.unplugged?
       I18n.t('user_stats.classroom_activity')
     elsif stage && stage.unplugged?
-      stage_or_game_position - 1
+      position - 1
     else
-      stage_or_game_position
+      position
     end
   end
 
-  def stage_or_game
-    stage ? stage : level.game
-  end
-
-  def stage_or_game_position
-    self.stage ? self.position : self.game_chapter
-  end
-
-  def stage_or_game_total
-    if stage
-      script.script_levels.to_a.count {|sl| sl.stage_id == stage_id}
-    else
-      script.script_levels.to_a.count {|sl| sl.level.game_id == level.game_id}
-    end
+  def stage_total
+    stage.script_levels.to_a.count
   end
 
   def self.cache_find(id)

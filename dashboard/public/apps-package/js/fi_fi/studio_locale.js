@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "koskee yläreunaa"},
 "whenUp":function(d){return "kun nuoli ylös"},
 "whenUpTooltip":function(d){return "Suorita alla olevat toiminnot, kun ylös-nuolinäppäintä painetaan."},
-"yes":function(d){return "Kyllä"}};
+"yes":function(d){return "Kyllä"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

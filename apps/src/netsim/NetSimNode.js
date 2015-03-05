@@ -118,27 +118,27 @@ NetSimNode.prototype.getStatusDetail = function () {
  * When finished, calls onComplete({the new wire})
  * On failure, calls onComplete(null)
  * @param {!NetSimNode} otherNode
- * @param {function} [onComplete]
+ * @param {NodeStyleCallback} [onComplete]
  */
 NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
-  onComplete = (onComplete !== undefined) ? onComplete : function () {};
+  onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (wire) {
-    if (wire === null) {
-      onComplete(null);
+  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (err, wire) {
+    if (err) {
+      onComplete(err, null);
       return;
     }
 
-    otherNode.acceptConnection(self, function (success) {
-      if (!success) {
+    otherNode.acceptConnection(self, function (err, isAccepted) {
+      if (err || !isAccepted) {
         wire.destroy(function () {
-          onComplete(null);
+          onComplete(new Error('Connection rejected.'), null);
         });
         return;
       }
 
-      onComplete(wire);
+      onComplete(null, wire);
     });
   });
 };
@@ -147,9 +147,9 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
  * Called when another node establishes a connection to this one, giving this
  * node a chance to reject the connection.
  * @param {!NetSimNode} otherNode attempting to connect to this one
- * @param {!function} onComplete response method - should call with TRUE
+ * @param {!NodeStyleCallback} onComplete response method - should call with TRUE
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
-  onComplete(true);
+  onComplete(null, true);
 };

@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "prek cepin në majë"},
 "whenUp":function(d){return "kur shigjeta është lart"},
 "whenUpTooltip":function(d){return "Kryej veprimet më poshtë kur tasti i shigjetës lart shtypet."},
-"yes":function(d){return "Po"}};
+"yes":function(d){return "Po"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

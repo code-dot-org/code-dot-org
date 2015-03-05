@@ -348,16 +348,18 @@ en:
           description: ''
           Internet Simulator: Internet Simulator
         Infinity:
-          title: Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Infinity Playlab
+          description_short: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity
+            characters.
           Infinity: Infinity
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: 20-Hour Intro Course
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
           Introduction to Computer Science: Introduction to Computer Science
           The Maze: The Maze
@@ -379,6 +381,36 @@ en:
           The Internet: The Internet
           The Artist 5: The Artist 5
           Wrap-up: Wrap-up
+        edit-code:
+          title: Edit Code
+          description: ''
+          The Maze: The Maze
+          Applab: Applab
+          The Artist: The Artist
+          Play Lab: Play Lab
+        events:
+          title: Events
+          description: ''
+          Bounce: Bounce
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Jigsaw
+          description: ''
+          Jigsaw: Jigsaw
+        step:
+          title: Step
+          description: ''
+          Step: Step
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!

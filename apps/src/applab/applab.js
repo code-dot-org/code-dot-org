@@ -13,6 +13,7 @@ var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -336,12 +337,10 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed with blocks, we
+  // NOTE: when running with no source visible or at max speed, we
   // call a simple function to just get the line number, otherwise we call a
   // function that also selects the code:
-  var selectCodeFunc =
-    (studioApp.hideSource ||
-     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
           codegen.getUserCodeLine :
           codegen.selectCurrentCode;
 
@@ -352,12 +351,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -432,6 +432,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
@@ -935,14 +940,24 @@ JSONApi.stringify = function(object) {
   return JSON.stringify(object);
 };
 
-// Commented out, but available in case we want to expose the droplet/pencilcode
-// style random (with a min, max value)
-/*
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-*/
+function populateNonMarshalledFunctions(interpreter, scope, parent) {
+  for (var i = 0; i < dropletConfig.blocks.length; i++) {
+    var block = dropletConfig.blocks[i];
+    if (block.dontMarshal) {
+      var func = parent[block.func];
+      // 4th param is false to indicate: don't marshal params
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
+      interpreter.setProperty(scope,
+                              block.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
 
 /**
  * Execute the app
@@ -997,19 +1012,24 @@ Applab.execute = function() {
                                     console: consoleApi,
                                     JSON: JSONApi });
 
+        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
+
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
