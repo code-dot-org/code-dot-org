@@ -449,20 +449,6 @@ end
     set req.grace = 15s;
   }
 
-  # [DRUPAL] Get ride of progress.js query params
-  if (req.url ~ "^/misc/progress\.js\?[0-9]+$") {
-    set req.url = "/misc/progress.js";
-  }
-
-  # [DRUPAL] Do not cache these paths.
-  if (req.url ~ "^/ooyala/ping$" ||
-      req.url ~ "^/info/.*$" ||
-      req.url ~ "^/flag/.*$" ||
-      req.url ~ "^.*/ajax/.*$" ||
-      req.url ~ "^.*/ahah/.*$") {
-    return (pass);
-  }
-
   # Handle compression correctly. Different browsers send different
   # "Accept-Encoding" headers, even though they mostly all support the same
   # compression mechanisms. By consolidating these compression headers into
