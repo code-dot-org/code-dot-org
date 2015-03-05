@@ -11,8 +11,8 @@ def deploy_dir(*paths)
   home_dir node.chef_environment, *paths
 end
 
-def aws_dir(*paths)
-  deploy_dir 'aws', *paths
+def bin_dir(*paths)
+  deploy_dir 'bin', *paths
 end
 
 def dashboard_dir(*paths)
@@ -32,7 +32,7 @@ def cronjob(params)
   action = params[:do].to_s
 
   notify = params[:notify].to_s
-  action = "#{aws_dir('cronjob')} #{action.shellescape} #{notify}".strip
+  action = "#{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
 
   $crontab << "#{time} #{action}"
 end
