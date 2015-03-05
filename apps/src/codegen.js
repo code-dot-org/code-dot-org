@@ -312,13 +312,34 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
+  if (state.node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
+    // but not mode 1 (test) or mode 2 (body) while unwinding...
+    return mode === 0 || mode === 3;
+  }
   switch (state.node.type) {
+    // Declarations:
     case "VariableDeclaration":
+    // Statements:
     case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
+    // All Expressions:
+    case "ThisExpression":
+    case "ArrayExpression":
+    case "ObjectExpression":
+    case "ArrowExpression":
+    case "SequenceExpression":
+    case "UnaryExpression":
     case "BinaryExpression":
+    case "UpdateExpression":
+    case "LogicalExpression":
+    case "ConditionalExpression":
+    case "NewExpression":
     case "CallExpression":
+    case "MemberExpression":
+    case "FunctionExpression":
+    case "AssignmentExpression":
+    // Other:
     case "Identifier":
     case "Literal":
     case "Program":

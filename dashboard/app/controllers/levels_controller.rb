@@ -82,7 +82,7 @@ class LevelsController < ApplicationController
       return
     end
     if @level.update(level_params)
-      render json: { redirect: level_url(@level, show_callouts: true) }.to_json
+      render json: { redirect: level_url(@level, show_callouts: true) }
     else
       render json: @level.errors, status: :unprocessable_entity
     end
@@ -118,7 +118,7 @@ class LevelsController < ApplicationController
       render status: :not_acceptable, text: invalid and return
     end
 
-    render json: { redirect: edit_level_path(@level) }.to_json
+    render json: { redirect: edit_level_path(@level) }
   end
 
   # DELETE /levels/1
@@ -181,7 +181,6 @@ class LevelsController < ApplicationController
 
   def embed_level
     authorize! :read, :level
-    @full_width = true
     @level = Level.find(params[:level_id])
     @game = @level.game
     @hide_source = true

@@ -6,7 +6,6 @@ nav: about_nav
 # Job Openings at Code.org
 
 - [Accountant (PT)](#accountant)
-- [Head of Product/Marketing](#head-product)
 - [Head of Engineering](#head-engineering)
 - [Operations Intern](#operations-intern)
 - [HR Generalist](#hr-generalist)
@@ -164,27 +163,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="head-product" href="#head-product">Head of Product/Marketing (Seattle, WA)</a>
-**Job Summary:**
 
-Code.org is recruiting for an experienced Head of Product/Marketing who can lead the Product and Marketing teams. Full-time, salaried. Responsibilities of the position include:
-
-- Acting as central point of leadership for Code.org curriculum + technology products and services
-- Providing end-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms
-- High level ownership of Code.org marketing - celebrities, videos, social media, testimonials, and the international Hour of Code grassroots movement
-- Managing a team comprising product management, user experience, video production and marketing
-- Managing high visibility partnerships such as the one with Disney for the 2014 Hour of Code with Anna and Elsa (from Frozen)
-- Jack of all trades given the disparate types of activities Code.org engages in, and supporting all of them with marketing programs and helping identify how engineering can improve our work
-
-**Qualifications:**
-
-- Bachelor’s degree with a background in Computer Science (as a major or a minor)
-- 3+ years experience as a technical product manager, i.e. defining product, writing specs, closely managing engineering projects, hands on design
-- 3+ years experience as a manager of other PMs
-- Experience with building / managing / marketing of a Web site and/or web services
-- Experience in consumer marketing (PR, social media, advertising) desired, but not required
-
-Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 ## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
 **Job Summary:**
 
@@ -201,10 +180,17 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - 10+ years as a software engineer or manager of software engineers
 - 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
 - Full stack Web engineering experience, i.e. databases, application, front-end
+- DEEP knowledge and experience in either JavaScript OR Ruby
 - Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
 - Experience building and running a large scale consumer-focused Web service, with at least 1M users
-- Mobile development experience (iOS, Android) desired, but not required
+- Mobile development experience (iOS, Android) desired but not required
 - Experience in a fast growth start-up environment desired
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

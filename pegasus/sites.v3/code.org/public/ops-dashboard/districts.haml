@@ -1,0 +1,58 @@
+---
+layout: none
+template: none
+---
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%span
+  Districts
+
+%h1 Districts
+
+-#%button.btn-white{'ng-click' => 'district.creation = true'}
+-#  New District
+
+%table{style:'width:100%; margin-top:20px;'}
+  %tr
+    %th.manage-th
+      District Name
+    %th.manage-th
+      Location
+    %th.manage-th
+      District Contact
+    %th.manage-th
+      Manage
+  %tr{'ng-repeat' => 'district in districts'}
+    %td
+      %span{'ng-hide' => 'district.editing'}
+        {{district.name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.name', type:'text', value:'{{district.name}}'}
+    %td
+      %span{'ng-hide' => 'district.editing'}
+        {{district.location}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type:'text', value:'{{district.location}}'}
+    %td
+      %span{'ng-hide' => 'district.editing'}
+        {{district.contact_id}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact_id', type:'text', value:'{{district.contact_id}}'}
+    %td
+      %button.btn.btn-white{'ng-click' => 'district.editing = true', 'ng-hide' => 'district.editing'} Edit
+      %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-hide' => 'district.editing'} Delete
+      %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
+      %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing'} Save
+  %tr
+    %td
+      %input{'ng-model' => 'district.name', type:'text'}
+    %td
+      %input{'ng-model' => 'district.location', type:'text'}
+    %td
+      %input{'ng-model' => 'district.contact_id', type:'select'}
+    %td
+      %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
+        Create new district
+
+:css
+  .btn {
+    width:48%
+  }

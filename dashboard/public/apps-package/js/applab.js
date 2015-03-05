@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":169}],14:[function(require,module,exports){
+},{"../skins":173}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":217,"../block_utils":19,"../utils":215}],8:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../block_utils":19,"../utils":219}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -646,12 +646,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -726,6 +727,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
@@ -2754,7 +2760,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":169,"../slider":170,"../templates/page.html":194,"../timeoutList":200,"../utils":215,"../xml":216,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":173,"../slider":174,"../templates/page.html":198,"../timeoutList":204,"../utils":219,"../xml":220,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2774,7 +2780,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":236}],13:[function(require,module,exports){
+},{"ejs":240}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2794,7 +2800,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"ejs":236}],12:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"ejs":240}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -3001,7 +3007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":220,"ejs":236}],9:[function(require,module,exports){
+},{"../../locale/current/common":224,"ejs":240}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3074,7 +3080,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"../codegen":45,"../utils":215}],217:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../codegen":45,"../utils":219}],221:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
