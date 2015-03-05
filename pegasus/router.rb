@@ -84,7 +84,7 @@ class Documents < Sinatra::Base
       end
     end
 
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/about', 
                  '/teacher-dashboard', 
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
@@ -92,7 +92,8 @@ class Documents < Sinatra::Base
                  '/teacher-dashboard/section_progress',
                  '/teacher-dashboard/sections',
                  '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student']
+                 '/teacher-dashboard/student',
+                 '/language_test']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
