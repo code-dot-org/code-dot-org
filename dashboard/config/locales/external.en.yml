@@ -26,7 +26,6 @@ en:
         first computer program: first computer program
       PDK5 Intro C:
         Welcome!: Welcome!
-        ! '': 
       PDK5 Course Overview C: 
       PDK5 Course Maps C: 
       PDK5 Glossary C:
@@ -47,10 +46,6 @@ en:
       Pixelation Sarah Test:
         Pixelation Sarah Test: Pixelation Sarah Test
         Create images with bits and bytes.: Create images with bits and bytes.
-      Hour of Code test content:
-        ! '': 
-      test demo level:
-        ! '': 
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
       Pixelation - Lesson 14 - Fix bit offset v.2:
