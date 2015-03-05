@@ -1,11 +1,5 @@
-// New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
+// New private scope
 (function() {
-  var
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
   var cs = React.addons.classSet;
 
   var TEMP_UPDATE = function() {
@@ -74,8 +68,8 @@
     },
 
     componentDidMount: function() {
-      window.scriptStore.subscribe(__bind(TEMP_UPDATE, this));
-      window.userInfoStore.subscribe(__bind(TEMP_UPDATE, this));
+      window.scriptStore.subscribe(TEMP_UPDATE.bind(this));
+      window.userInfoStore.subscribe(TEMP_UPDATE.bind(this));
 
       // Ask the script store to load a particular script.
       window.scriptStore.load({
@@ -625,7 +619,7 @@
       }, 10000);
 
       // When the levelStore gets data, update blockly
-      window.levelStore.subscribe( __bind(this.onNewLevel, this) );
+      window.levelStore.subscribe(this.onNewLevel.bind(this));
     },
 
     onNewLevel: function(data) {
@@ -828,7 +822,7 @@
   Watching = function(component, stores) {
     return component.Watching = React.createClass({
       componentDidMount: function() {
-        var changed = __bind(TEMP_UPDATE, this);
+        var changed = TEMP_UPDATE.bind(this);
 
         for (var key in stores) {
           var store = (stores[key] || this.props[key + "Store"]);
