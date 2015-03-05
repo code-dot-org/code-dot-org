@@ -1,12 +1,6 @@
 // New private scope -- a lot of this is boilerplate for class structures, taken from coffeescript
 (function() {
-  var
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-
+  var __extends = function(child, parent) { for (var key in parent) { if ({}.hasOwnProperty.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   // class UIRouter: this is an incredibly simple router with our routes baked into it.
   // This will be completely replaced when we choose a router.
@@ -15,49 +9,22 @@
     function UIRouter() { }
 
     UIRouter.prototype.route = function() {
-      var re, parts, el,
-        url = window.location.pathname;
+      var re, parts, url = window.location.pathname;
 
-
-      // s/:script_id/level/:level_id
-      // (only applies to the default scripts ID < 8)
-      re = /\/s\/(\d+)\/(level|puzzle)\/(\d+)$/i;
+      // Route: /:script_name/:level_position
+      re = /^\/(hoc|flappy)\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         levelStore.load({
-          script_id: parts[1],
-          level_id: parts[3]
+          script_name: parts[1],
+          level_id: parts[2]
         });
 
         return;
       }
 
-      // hoc|k8intro|editcode|2014|builder|flappy|jigsaw/:level
-      re = /\/(\w+)\/(\d+)$/i;
-      parts = url.match(re);
-      if (parts) {
-        var apps = {
-          hoc: 'Hour of Code',
-          k8intro: '20-hour',
-          editcode: 'edit-code',
-          '2014': 'events',
-          flappy: 'flappy',
-          jigsaw: 'jigsaw'
-        };
-
-        var app = apps[parts[1]];
-        if (app) {
-          levelStore.load({
-            script_name: app,
-            level_id: parts[2]
-          });
-
-          return;
-        }
-      }
-
-      // s/:script_name/stage/:stage_id/level/:level_id
-      re = /\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
+      // Route: /s/:script_name/stage/:stage_position/level/:level_position
+      re = /^\/s\/(.+)\/stage\/(\d+)\/puzzle\/(\d+)$/i;
       parts = url.match(re);
       if (parts) {
         levelStore.load({
@@ -77,7 +44,7 @@
           level: 3
         };
 
-        script_name = params.script;
+        this.script_name = params.script;
         levelStore.load({
           script_name: params.script,
           stage_id: params.stage,
@@ -89,16 +56,10 @@
 
       // Unknown route
       return null;
-    }
-
+    };
 
     return UIRouter;
   })();
-
-
-
-
-
 
   // class UIFrame
   var UIFrame = (function() {
@@ -170,7 +131,7 @@
     var rootUrl = function(url) {
       var root = url.match(/^\w+:\/\/[^\/]*/);
       return root[0];
-    }
+    };
 
     function UIFrame() {
     }
@@ -205,7 +166,7 @@
 
       this.router = new UIRouter();
       this.router.route();
-    }
+    };
 
     // http://stackoverflow.com/a/21152762/7104
     // Decode query parameters
@@ -226,7 +187,7 @@
 
       this._qp = qd;
       return qd;
-    }
+    };
 
     // This is work in progress to patch the XmlHttpRequest service to prevent us from making
     // requests to a file:// URL (because that will fail and prevent other scripts from running.)
@@ -257,7 +218,7 @@
 
         return resp;
       };
-    }
+    };
 
     // Create an absolute path to a resource.  The second parameter is temporary - only used in a static
     // site that still has references to a dynamic server.
@@ -265,7 +226,7 @@
       if (path[0] == '/')
         return (rootUrl || this.rootUrl) + path;
       return (rootUrl || this.baseUrl) + "/" + path;
-    }
+    };
 
     UIFrame.prototype.baseURI = function() {
       // Check expected property.
@@ -275,7 +236,7 @@
       if (base.length > 0)
         return base[0].href;
       return document.URL;
-    }
+    };
 
     // Eventually we could support various modes of offline (disconnects, etc)
     UIFrame.prototype.detectStatic = function() {
@@ -294,7 +255,7 @@
         return true;
       */
       return false;
-    }
+    };
 
     // Load the script at a given URL and return a promise that resolves when it has executed
     UIFrame.prototype.load = function(ajax, resolveStatic) {
@@ -325,11 +286,10 @@
         // Use our static script loader instead of $.getScript, which deletes the <script>
         // element and makes it hard to debug into the script.
         ajax.dataType = "static";
-
       }
 
       return $.ajax(ajax);
-    }
+    };
 
     // Write to an API - assumes a POST that returns JSON
     UIFrame.prototype.save = function(ajax) {
@@ -338,7 +298,7 @@
       ajax.contentType = ajax.contentType || "application/x-www-form-urlencoded";
 
       return this.load(ajax);
-    }
+    };
 
     // Load the script at a given URL and return a promise that resolves when it has executed
     UIFrame.prototype.loadSource = function(url) {
@@ -347,7 +307,7 @@
         dataType: "script",
         cache: true
       });
-    }
+    };
 
     // Loads the given app stylesheet.
     UIFrame.prototype.loadStyle = function(url) {
@@ -356,7 +316,7 @@
         type: 'text/css',
         href: url
       }).appendTo(document.head);
-    }
+    };
 
     // Return a route to a link.  This interface will be improved when we use a real router.
     UIFrame.prototype.linkTo = function(route, forceOnline) {
@@ -377,26 +337,7 @@
         if (this.isSinglePage && !forceOnline)
           return window.location.pathname + "?" + $.param( route, true );
 
-        switch (route.script) {
-          case '20-hour':
-            return "/s/1/level/" + route.level;
-          case 'Hour of Code':
-            return "/hoc/" + route.level;
-          case 'edit-code':
-            return "/editcode/" + route.level;
-          case 'events':
-            return "/2014/" + route.level;
-          case 'flappy':
-            return "/flappy/" + route.level;
-          case 'jigsaw':
-            return "/jigsaw/" + route.level;
-          case 'step':
-            return "/s/step/puzzle/" + route.level;
-          case 'hourofcode':  // TODO: For some reason, URLs for #21 generate URLs that resolve to #2. Why?
-            return "/hoc/" + route.level;
-          default:
-            return "/s/" + route.script + "/stage/" + route.stage + "/puzzle/" + route.level;
-        }
+        return "/s/" + route.script + "/stage/" + route.stage + "/puzzle/" + route.level;
       }
 
       if (route.complete) {
@@ -412,7 +353,7 @@
 
       // Not a recognized route
       return null;
-    }
+    };
 
     UIFrame.prototype.goTo = function(route) {
       var url = this.linkTo(route);
@@ -421,20 +362,17 @@
 
       window.location.href = url;
       return true;
-    }
+    };
 
     // Pass one or more arguments, they'll be string-concat'd
     UIFrame.prototype.assetUrl = function() {
       var url = Array.prototype.join.call(arguments, '');
 
       return this.getAbsolutePath("/assets/" + url);
-    }
+    };
 
     return UIFrame;
   })();
-
-
-
 
   // class App, the base class for all level apps - provides some useful functions that all
   // level types will probably want to use, including milestone reporting, callouts, etc.
@@ -464,10 +402,10 @@
         }
       })(this.level);
 
-      this.onAttempt = __bind(this.onAttempt, this);
-      this.onContinue = __bind(this.onContinue, this);
-      this.backToPreviousLevel = __bind(this.backToPreviousLevel, this);
-      this.onResetPressed = __bind(this.onResetPressed, this);
+      this.onAttempt = this.onAttempt.bind(this);
+      this.onContinue = this.onContinue.bind(this);
+      this.backToPreviousLevel = this.backToPreviousLevel.bind(this);
+      this.onResetPressed = this.onResetPressed.bind(this);
 
       return this;
     }
@@ -519,7 +457,7 @@
 
           if (report.onComplete)
             report.onComplete(response);
-        }
+        };
 
         var data = $.extend({}, report);
         delete data.onComplete;
@@ -618,7 +556,6 @@
 
     return App;
   })();
-
 
   // class BlocklyApp extends App
   var BlocklyApp = (function(_super) {
@@ -757,13 +694,10 @@
           return true;
         });
       }
-
     });
 
     return BlocklyApp;
   })(App);
-
-
 
   // class UnpluggedApp extends App
   var UnpluggedApp = (function(_super) {
@@ -782,7 +716,6 @@
 
     return UnpluggedApp;
   })(App);
-
 
   // Exports:
   window.UIRouter = UIRouter;
