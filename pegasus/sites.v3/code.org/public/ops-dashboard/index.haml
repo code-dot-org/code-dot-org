@@ -179,7 +179,7 @@ theme: angular
           var newDistrict = new districtsService($scope.district);
           newDistrict.$save().then(
             function(saved) {
-              $scope.district = saved; /* just in case it has been modified on server */
+              $scope.district = null; /* just in case it has been modified on server */
               districtsService.query().$promise.then(function (districts) {
                 $scope.districts = districts;
               });
@@ -368,7 +368,7 @@ theme: angular
         var newSegment = new segmentsService($scope.segment);
         newSegment.$save({id: $scope.workshop.id}).then(
           function(saved) {
-            $scope.segment = saved;
+            $scope.segment = null;
             segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
               $scope.workshopSegments = segments;
             });
