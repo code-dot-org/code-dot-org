@@ -22,8 +22,9 @@ var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
-var NetSimSendWidget = require('./NetSimSendWidget');
-var NetSimLogWidget = require('./NetSimLogWidget');
+var NetSimSendPanel = require('./NetSimSendPanel');
+var NetSimLogPanel = require('./NetSimLogPanel');
+var NetSimStatusPanel = require('./NetSimStatusPanel');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -69,7 +70,7 @@ var NetSim = module.exports = function () {
    * @type {string}
    * @private
    */
-  this.encodingMode_ = 'binary';
+  this.encodingMode_ = 'ascii';
 
   /**
    * Current chunk size (bytesize)
@@ -179,16 +180,20 @@ NetSim.prototype.getOverrideShardID = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = NetSimLogWidget.createWithin(
-      document.getElementById('netsim_received'), 'Received Messages');
-  this.sentMessageLog_ = NetSimLogWidget.createWithin(
-      document.getElementById('netsim_sent'), 'Sent Messages');
+  this.receivedMessageLog_ = new NetSimLogPanel(
+      $('#netsim_received'), 'Received Message Log', false);
+
+  this.sentMessageLog_ = new NetSimLogPanel(
+      $('#netsim_sent'), 'Sent Message Log', true);
 
   this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
       this.receivedMessageLog_);
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
+
+  this.statusPanel_ = new NetSimStatusPanel($('#netsim_status'),
+      this.connection_.disconnectFromRouter.bind(this.connection_));
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
@@ -202,9 +207,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.changeRemoteDnsMode.bind(this),
       this.becomeDnsNode.bind(this));
 
-  var sendWidgetContainer = document.getElementById('netsim_send');
-  this.sendWidget_ = NetSimSendWidget.createWithin(sendWidgetContainer,
-      this.connection_);
+  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
 
   this.changeEncoding(this.encodingMode_);
   this.setChunkSize(this.chunkSize_);
@@ -218,10 +221,13 @@ NetSim.prototype.initWithUserName_ = function (user) {
  */
 NetSim.prototype.refresh_ = function () {
   if (this.connection_.isConnectedToRouter()) {
-    this.mainContainer_.show();
+    this.mainContainer_.find('.leftcol_disconnected').hide();
+    this.mainContainer_.find('.leftcol_connected').show();
   } else {
-    this.mainContainer_.hide();
+    this.mainContainer_.find('.leftcol_disconnected').show();
+    this.mainContainer_.find('.leftcol_connected').hide();
   }
+  this.render();
 };
 
 /**
@@ -363,6 +369,41 @@ NetSim.prototype.onResizeOverride_ = function() {
 };
 
 /**
+ * Re-render parts of the page that can be re-rendered in place.
+ */
+NetSim.prototype.render = function () {
+  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
+      shareLink;
+
+  isConnected = false;
+  clientStatus = 'Disconnected';
+  if (this.connection_ && this.connection_.myNode) {
+    clientStatus = 'In Lobby';
+    myHostname = this.connection_.myNode.getHostname();
+    if (this.connection_.myNode.myWire) {
+      myAddress = this.connection_.myNode.myWire.localAddress;
+    }
+  }
+
+  if (this.myConnectedRouter_) {
+    isConnected = true;
+    clientStatus = 'Connected';
+    remoteNodeName = this.myConnectedRouter_.getDisplayName();
+  }
+
+  if (this.statusPanel_) {
+    this.statusPanel_.render({
+      isConnected: isConnected,
+      statusString: clientStatus,
+      myHostname: myHostname,
+      myAddress: myAddress,
+      remoteNodeName: remoteNodeName,
+      shareLink: shareLink
+    });
+  }
+};
+
+/**
  * Called whenever the connection notifies us that we've connected to,
  * or disconnected from, a shard.
  * @param {NetSimShard} newShard - null if disconnected.
@@ -373,6 +414,7 @@ NetSim.prototype.onShardChange_= function (newShard, localNode) {
   if (localNode) {
     localNode.routerChange.register(this.onRouterChange_.bind(this));
   }
+  this.render();
 };
 
 /**
@@ -401,6 +443,7 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
   }
 
   this.myConnectedRouter_ = router;
+  this.render();
 
   // Hook up new handlers
   if (router) {

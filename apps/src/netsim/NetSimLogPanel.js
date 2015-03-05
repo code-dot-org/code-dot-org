@@ -11,15 +11,21 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimLogWidget.html');
+require('../utils'); // For Function.prototype.inherits()
+var markup = require('./NetSimLogPanel.html');
 var packetMarkup = require('./NetSimLogPacket.html');
+var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
  * Generator and controller for message log.
+ * @param {jQuery} rootDiv
+ * @param {string} logTitle
+ * @param {boolean} [isMinimized] defaults to FALSE
  * @constructor
+ * @augments NetSimPanel
  */
-var NetSimLogWidget = module.exports = function () {
+var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) {
   /**
    * List of controllers for currently displayed packets.
    * @type {Array.<NetSimLogPacket>}
@@ -40,52 +46,42 @@ var NetSimLogWidget = module.exports = function () {
    * @private
    */
   this.currentChunkSize_ = 8;
-};
 
-/**
- * Static counter used to generate/uniquely identify different instances
- * of this log widget on the page.
- * @type {number}
- */
-NetSimLogWidget.uniqueIDCounter = 0;
-
-/**
- * Generate a new NetSimLogWidget, putting it on the page.
- * @param element
- * @param {!string} title - The log widget header text
- */
-NetSimLogWidget.createWithin = function (element, title) {
-  var controller = new NetSimLogWidget();
-
-  var instanceID = NetSimLogWidget.uniqueIDCounter;
-  NetSimLogWidget.uniqueIDCounter++;
-
-  element.innerHTML = markup({
-    logInstanceID: instanceID,
-    logTitle: title
+  // Initial render
+  NetSimPanel.call(this, rootDiv, {
+    className: 'netsim_log_panel',
+    panelTitle: logTitle,
+    beginMinimized: isMinimized
   });
-  controller.bindElements_(instanceID);
-  return controller;
 };
+NetSimLogPanel.inherits(NetSimPanel);
 
-/**
- * Get relevant elements from the page and bind them to local variables.
- * @private
- */
-NetSimLogWidget.prototype.bindElements_ = function (instanceID) {
-  this.rootDiv_ = $('#netsim_log_widget_' + instanceID);
-  this.scrollArea_ = this.rootDiv_.find('.scroll_area');
-  this.clearButton_ = this.rootDiv_.find('.clear_button');
-  this.clearButton_.click(this.onClearButtonPress_.bind(this));
+NetSimLogPanel.prototype.render = function () {
+  // Create boilerplate panel markup
+  NetSimLogPanel.superPrototype.render.call(this);
+
+  // Add our own content markup
+  var newMarkup = $(markup({
+    logInstanceID: this.instanceID_,
+    logTitle: this.logTitle_
+  }));
+  this.getBody().html(newMarkup);
+
+  // Add a clear button to the panel header
+  this.addButton('Clear', this.onClearButtonPress_.bind(this));
+
+  // Bind reference to scrollArea for use when logging.
+  this.scrollArea_ = this.getBody().find('.scroll_area');
+
   // TODO: Hide columns by configuration
-  this.rootDiv_.find('th.packetInfo, td.packetInfo').hide();
+  this.getBody().find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
  * Remove all packets from the log, resetting its state.
  * @private
  */
-NetSimLogWidget.prototype.onClearButtonPress_ = function () {
+NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_ = [];
 };
@@ -93,7 +89,7 @@ NetSimLogWidget.prototype.onClearButtonPress_ = function () {
 /**
  * Put a message into the log.
  */
-NetSimLogWidget.prototype.log = function (packetBinary) {
+NetSimLogPanel.prototype.log = function (packetBinary) {
   var scrollArea = this.scrollArea_;
   var wasScrolledToEnd =
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
@@ -116,7 +112,7 @@ NetSimLogWidget.prototype.log = function (packetBinary) {
  * mode.
  * @param {string} newEncoding
  */
-NetSimLogWidget.prototype.setEncoding = function (newEncoding) {
+NetSimLogPanel.prototype.setEncoding = function (newEncoding) {
   this.currentEncoding_ = newEncoding;
   this.packets_.forEach(function (packet) {
     packet.setEncoding(newEncoding);
@@ -127,7 +123,7 @@ NetSimLogWidget.prototype.setEncoding = function (newEncoding) {
  * Change how binary input in interpreted and formatted in the log.
  * @param {number} newChunkSize
  */
-NetSimLogWidget.prototype.setChunkSize = function (newChunkSize) {
+NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.packets_.forEach(function (packet) {
     packet.setChunkSize(newChunkSize);
