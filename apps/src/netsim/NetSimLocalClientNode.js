@@ -55,14 +55,14 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
 
   /**
    * Widget where we will post sent messages.
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.sentLog_ = null;
 
   /**
    * Widget where we will post received messages
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.receivedLog_ = null;
@@ -134,8 +134,8 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 /**
  * Configure this node controller to actively simulate, and to post sent and
  * received messages to the given log widgets.
- * @param {!NetSimLogWidget} sentLog
- * @param {!NetSimLogWidget} receivedLog
+ * @param {!NetSimLogPanel} sentLog
+ * @param {!NetSimLogPanel} receivedLog
  */
 NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
     receivedLog) {

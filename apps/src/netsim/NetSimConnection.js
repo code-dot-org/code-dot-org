@@ -24,8 +24,8 @@ var logger = NetSimLogger.getSingleton();
 /**
  * A connection to a NetSim shard
  * @param {Window} thisWindow
- * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
- * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
+ * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
+ * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
  * @constructor
  */
 var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedLog) {
@@ -37,13 +37,13 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedL
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.sentLog_ = sentLog;
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.receivedLog_ = receivedLog;
