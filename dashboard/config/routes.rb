@@ -168,11 +168,6 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-  #get '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #post '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #put '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #delete '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-
   module OPS
     API = 'api'
     DASHBOARDAPI = 'dashboardapi'
