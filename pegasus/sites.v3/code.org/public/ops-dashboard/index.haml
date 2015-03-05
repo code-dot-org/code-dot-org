@@ -1,0 +1,375 @@
+---
+theme: angular
+---
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('opsApp', [
+    'ngRoute',
+    'ngResource',
+    'opsApp.controllers',
+    'opsApp.services',
+    'opsApp.filters',
+    'selectize'
+  ]).config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',
+                        {templateUrl: '/ops-dashboard/landing'});
+    $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',       controller: 'DistrictsController'});
+    $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',       controller: 'WorkshopsController'});
+    $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
+    $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
+    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.otherwise({redirectTo: '/'});
+  }]).config(['$httpProvider', function($httpProvider) {
+    // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
+    // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
+    // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+  }]);
+
+  // SERVICES
+  var services = angular.module('opsApp.services', []).value('version', '0.1');
+
+  services.factory('districtsService', ['$resource',
+    function($resource) {
+      var District = $resource('/dashboardapi/districts/:id', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method: 'GET'},
+        //  'save':   {method: 'POST'},
+        //  'query':  {method: 'GET', isArray:true},
+        //  'remove': {method: 'DELETE'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+        update: {method:'PUT', url: '/dashboardapi/districts/:id'}
+      });
+
+      return District;
+    }]);
+  services.factory('programsService', [
+    function() {
+      return [{name:'MSS'}, {name:'MSM'}, {name:'ECS'}, {name:'CSP'}];
+  }]);
+
+  services.factory('workshopsService', ['$resource',
+    function($resource){
+      var Workshop = $resource('/dashboardapi/workshops/:id', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+        update: {method:'PUT', url: '/dashboardapi/workshops/:id'}
+      });
+
+      return Workshop;
+    }]);
+
+  services.factory('segmentsService', ['$resource',
+    function($resource){
+      var Segment = $resource('/dashboardapi/workshops/:id/segments', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+          'remove': {method:'DELETE', url:'/dashboardapi/segments/:id'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Segment;
+    }]);
+
+  services.factory('cohortsService', ['$resource',
+    function($resource){
+      var Cohort = $resource('/dashboardapi/cohorts/:id', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'}
+      });
+
+      return Cohort;
+    }]);
+
+  services.factory('teachersService', ['$resource',
+    function($resource){
+      var Teacher = $resource('/dashboardapi/workshops/:workshopid/teachers', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Teacher;
+    }]);
+
+  services.factory('attendancesService', ['$resource',
+    function($resource){
+      var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method:'GET'},
+        //  'save':   {method:'POST'},
+        //  'query':  {method:'GET', isArray:true},
+        //  'remove': {method:'DELETE'},
+        //  'delete': {method:'DELETE'}
+      });
+
+      return Attendance;
+    }]);
+  // FILTERS
+  var filters = angular.module('opsApp.filters', []).value('version', '0.1');
+
+  filters.filter('utc', function() {
+    return function(val){
+      var date = new Date(val);
+       return new Date(date.getUTCFullYear(),
+                       date.getUTCMonth(),
+                       date.getUTCDate(),
+                       date.getUTCHours(),
+                       date.getUTCMinutes(),
+                       date.getUTCSeconds());
+    };
+  });
+
+  // CONTROLLERS
+
+  var controllers = angular.module('opsApp.controllers', []).
+      value('version', '0.1');
+
+  controllers.controller('DistrictsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, districtsService) {
+      $scope.districtsLoaded = false;
+
+      $scope.districts = districtsService.query();
+
+      $scope.save = function (district) {
+        if (district.id) {
+          var newDistrict = new districtsService($scope.district);
+          districtsService.update({id: district.id}, district).$promise.then(
+            function(result_district) {
+              $scope.districts[$scope.districts.indexOf(district)] = result_district;
+                districtsService.query().$promise.then(function (districts) {
+                $scope.districts = districts;
+              });
+            }
+          ).catch($scope.genericError);
+        } else {
+          var newDistrict = new districtsService($scope.district);
+          newDistrict.$save().then(
+            function(saved) {
+              $scope.district = saved; /* just in case it has been modified on server */
+              districtsService.query().$promise.then(function (districts) {
+                $scope.districts = districts;
+              });
+            }
+          );
+        }
+      }
+
+      $scope.districts.$promise.then(function(districts) {
+        $scope.districtsLoaded = true;
+      }).catch($scope.genericError);
+  }]);
+
+  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+      $scope.workshopsLoaded = false;
+
+      $scope.workshops = workshopsService.query();
+      $scope.cohorts = cohortsService.query();
+
+      $scope.cohortName = function (cohortId) {
+        if ($scope.cohorts) {
+          var name = "";
+          $scope.cohorts.forEach(function (e) {
+            if (e.id == cohortId) {
+              name = e.name;
+            }
+          });
+          if (name != "") {
+            return name;
+          }
+        }
+        return "N/A";
+      }
+
+      //$scope.save = function (workshop) {
+      //  if (workshop.id) {
+      //    var newWorkshop = new workshopsService($scope.workshop);
+      //    workshopsService.update({id: workshop.id}, workshop).$promise.then(
+      //      function(result_workshop) {
+      //        $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
+      //          workshopsService.query().$promise.then(function (workshops) {
+      //          $scope.workshops = workshops;
+      //        });
+      //      }
+      //    ).catch($scope.genericError);
+      //  } else {
+      //    var newWorkshop = new workshopsService($scope.workshop);
+      //    newWorkshop.$save().then(
+      //      function(saved) {
+      //        $scope.workshop = saved; /* just in case it has been modified on server */
+      //        workshopsService.query().$promise.then(function (workshops) {
+      //          $scope.workshops = workshops;
+      //        });
+      //      }
+      //    );
+      //  }
+      //}
+    }
+  ]);
+
+  controllers.controller('AttendanceController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'segmentsService', 'teachersService', 'attendancesService', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, segmentsService, teachersService, attendancesService, districtsService) {
+      $scope.districtsLoaded = false;
+
+      $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
+      $scope.districts = districtsService.query();
+      $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
+      $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
+      //$scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
+
+      $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
+        var attendance = 'unrecorded';
+        attendancesForSingleSegment.forEach(function (e) {
+          if (teacher_id == e.teacher_id) {
+            attendance = e.status;
+          }
+        });
+        return attendance;
+      }
+  }]);
+
+  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+      $scope.hasCohorts = false;
+      $scope.cohorts = cohortsService.query();
+
+      $scope.cohorts.$promise.then(function(cohorts) {
+        $scope.hasCohorts = true;
+      });
+
+      $scope.confirm_delete = function(cohort) {
+        cohort.confirmDelete = true;
+      }
+
+      $scope.del = function(cohort) {
+        $scope.cohorts.splice($scope.cohorts.indexOf(cohort), 1); // remove from array
+        cohortsService.remove({id: cohort.id}); // service call
+        cohort.confirmDelete = false;
+      };
+    }
+  ]);
+
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+      } else {
+        $scope.cohort = {};
+      }
+
+      $scope.newDistrict = function() {
+        $scope.cohort.districts.push({
+          id: '',
+        });
+      };
+
+      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+        $scope.cohort.districts = [];
+        $scope.newDistrict();
+      }
+
+      $scope.districts = districtsService.query();
+
+      $scope.save = function(cohort) {
+        if (cohort.id) { // existing
+          cohort =
+            cohortsService.update({id: cohort.id}, cohort, function() {
+              $location.path("/cohorts");
+            });
+        } else { // new
+          cohort =
+            cohortsService.save(cohort, function() {
+              $location.path("/cohorts");
+            });
+        }
+      };
+
+      $scope.cancel_edit = function() {
+        $location.path("/cohorts");
+      };
+    }
+  ]);
+
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programsService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programsService) {
+      $scope.workshop = workshopsService.get({id: $routeParams.id});
+      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      $scope.programs = programsService;
+      $scope.cohorts = cohortsService.query();
+      $scope.cohortName = function (cohortId) {
+        if ($scope.cohorts) {
+          var name = "";
+          $scope.cohorts.forEach(function (e) {
+            if (e.id == cohortId) {
+              name = e.name;
+            }
+          });
+          if (name != '') {
+            return name;
+          }
+        }
+        return 'N/A';
+      }
+
+      $scope.save = function (workshop) {
+         if (workshop.id) {
+           var newWorkshop = new workshopsService($scope.workshop);
+           workshopsService.update({id: workshop.id}, workshop);
+         } else {
+           var newWorkshop = new workshopsService($scope.workshop);
+           newWorkshop.$save().then(
+             function(saved) {
+               $scope.workshop = saved; /* just in case it has been modified on server */
+               workshopsService.query().$promise.then(function (workshops) {
+                 $scope.workshops = workshops;
+               });
+             }
+           );
+         }
+         $location.path('/workshops');
+      }
+
+      $scope.saveSegment = function (segment) {
+        var newSegment = new segmentsService($scope.segment);
+        newSegment.$save({id: $scope.workshop.id}).then(
+          function(saved) {
+            $scope.segment = saved;
+            segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
+              $scope.workshopSegments = segments;
+            });
+          }
+        );
+      }
+    }
+  ]);
+
+%script{type: "text/javascript", src: "/js/angular-selectize.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%div{'ng-app' => 'opsApp', 'ng-view' => ''}
