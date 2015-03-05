@@ -1,5 +1,5 @@
 // LevelContainer user={}
-dashboard.components.LevelContainer = React.createClass({
+components.LevelContainer = React.createClass({
   getInitialState: function() {
     return { component: null };
   },
@@ -50,7 +50,7 @@ dashboard.components.LevelContainer = React.createClass({
     switch (opts.app) {
       case 'unplugged':
         this.setState({
-          component: <dashboard.componenets.UnpluggedLevel user={this.props.user} stage={data.stage} level={data.level} app={new UnpluggedApp(opts)} />
+          component: <components.UnpluggedLevel user={this.props.user} stage={data.stage} level={data.level} app={new UnpluggedApp(opts)} />
         });
         break;
 

@@ -113,7 +113,7 @@
     el = $('.header_middle');
     if (el.length) {
       // Create a component that's bound to global stores
-      var AppHeaderBar = Watching(dashboard.components.HeaderBar, {
+      var AppHeaderBar = Watching(components.HeaderBar, {
         level: window.levelStore,
         progress: window.userProgressStore
       });
@@ -124,7 +124,7 @@
     el = $('.header_right');
     if (el.length) {
       // Create a component that's bound to global stores
-      var AppHeaderActions = Watching(dashboard.components.HeaderActions, {
+      var AppHeaderActions = Watching(components.HeaderActions, {
         user: window.userInfoStore,
         level: window.levelStore
       });
@@ -135,7 +135,7 @@
     el = $('#reference_area');
     if (el.length) {
       // Create a component that's bound to global stores
-      var AppReferenceArea = Watching(dashboard.components.ReferenceArea, {
+      var AppReferenceArea = Watching(components.ReferenceArea, {
         user: window.userInfoStore,
         level: window.levelStore
       });
@@ -145,7 +145,7 @@
 
     el = $('#application');
     if (el.length) {
-      var AppLevelContainer = Watching(dashboard.components.LevelContainer, {
+      var AppLevelContainer = Watching(components.LevelContainer, {
         user: window.userInfoStore
       });
 

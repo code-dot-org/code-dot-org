@@ -1,4 +1,4 @@
-dashboard.components.HeaderBar = React.createClass({
+components.HeaderBar = React.createClass({
   getInitialState: function() {
     return { popped: false };
   },
@@ -79,14 +79,14 @@ dashboard.components.HeaderBar = React.createClass({
     // Popup stage navigation
     var headerPopup;
     if (state.popped)
-      headerPopup = <dashboard.components.HeaderPopup script_id={stage.script_id} progress={progress} selected={level_id} jumpToTrophies={state.jumpToTrophies} onShow={this.showPopup} />;
+      headerPopup = <components.HeaderPopup script_id={stage.script_id} progress={progress} selected={level_id} jumpToTrophies={state.jumpToTrophies} onShow={this.showPopup} />;
 
     return (
         <div>
           <div className="header_level">
             <div className="header_level_container">
               { titleBox }
-              <dashboard.components.ProgressBox stage={stage} selected={level_id} progress={progress} />
+              <components.ProgressBox stage={stage} selected={level_id} progress={progress} />
               { finishLink }
               { trophyLink }
               { popupToggle }

@@ -1,5 +1,5 @@
 // UnpluggedLevel user={} level={} stage={} app={}
-dashboard.components.UnpluggedLevel = React.createClass({
+components.UnpluggedLevel = React.createClass({
   render: function() {
     var P = this.props || {};
     var level = P.level;

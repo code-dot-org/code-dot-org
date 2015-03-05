@@ -1,6 +1,6 @@
 // HeaderPopup: script="" progress={} selected=id onShow=fn
 // + scriptStore
-dashboard.components.HeaderPopup = React.createClass({
+components.HeaderPopup = React.createClass({
   getInitialState: function() {
     return {
       jumpToTrophies: this.props.jumpToTrophies  // props is the initial state
@@ -97,7 +97,7 @@ dashboard.components.HeaderPopup = React.createClass({
 
       var stages_key;
       if (stages.length)
-        stages_key = <dashboard.components.HeaderPopupKey />;
+        stages_key = <components.HeaderPopupKey />;
 
       var trophies;
       if (script.trophies) {

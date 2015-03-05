@@ -1,5 +1,5 @@
 // ProgressBox: stage={} selected=id progress={}
-dashboard.components.ProgressBox = React.createClass({
+components.ProgressBox = React.createClass({
   render: function() {
     var cs = React.addons.classSet;
     var P = this.props || {};

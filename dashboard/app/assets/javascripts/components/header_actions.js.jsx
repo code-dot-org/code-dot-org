@@ -1,4 +1,4 @@
-dashboard.components.HeaderActions = React.createClass({
+components.HeaderActions = React.createClass({
   render: function() {
     var cs = React.addons.classSet;
     var P = this.props;
@@ -31,7 +31,7 @@ dashboard.components.HeaderActions = React.createClass({
     return (
         <div>
           { actions }
-          <SignInButton user={P.user} />
+          <components.SignInButton user={P.user} />
         </div>
     );
 

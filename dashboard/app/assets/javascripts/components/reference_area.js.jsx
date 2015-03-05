@@ -1,5 +1,5 @@
 // ReferenceArea level={}
-dashboard.components.ReferenceArea = React.createClass({
+components.ReferenceArea = React.createClass({
   render: function() {
     var P = this.props || {};
     var user = P.user || {};

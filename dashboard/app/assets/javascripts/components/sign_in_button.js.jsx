@@ -1,4 +1,4 @@
-SignInButton = React.createClass({
+components.SignInButton = React.createClass({
   getInitialState: function() {
     return { popped: false };
   },

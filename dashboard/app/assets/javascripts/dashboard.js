@@ -1,10 +1,7 @@
 // Dashboard namespace
-if (!window.dashboard) {
-  window.dashboard = {
-    i18n: {},
-    components: {}
-  };
-}
+window.dashboard = {};
+
+window.components = {};
 
 var TEMP_UPDATE = function() {
   // TODO: Investigate why this is sometimes called before the component has mounted.
@@ -14,4 +11,4 @@ var TEMP_UPDATE = function() {
   this.setState({
     updated: Math.random()
   });
-}
+};

@@ -1,4 +1,4 @@
-dashboard.components.HeaderPopupKey = React.createClass({
+components.HeaderPopupKey = React.createClass({
   render: function() {
     return (
         <div className="key" style={{ clear: 'both' }}>
