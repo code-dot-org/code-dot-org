@@ -276,8 +276,8 @@ theme: angular
     }
   ]);
 
-  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService) {
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programsService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programsService) {
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});
       } else {
@@ -296,6 +296,7 @@ theme: angular
       }
 
       $scope.districts = districtsService.query();
+      $scope.programs = programsService;
 
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
