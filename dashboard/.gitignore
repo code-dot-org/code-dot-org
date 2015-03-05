@@ -2,6 +2,7 @@
 /.bundle
 /config/application.yml
 /config/locales/*en-PLOC.yml
+/config/real_secret_words.csv
 /config/scripts/.dropbox
 /config/scripts/.hints_imported
 /config/scripts/.matches_seeded

@@ -69,7 +69,6 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'varnish_instances'           => [],
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -107,6 +106,7 @@ class CDOImpl < OpenStruct
   def canonical_hostname(domain)
     return "localhost.#{domain}" if rack_env?(:development)
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "translate.#{domain}" if self.name == 'crowdin'
     return domain if rack_env?(:production)
     "#{rack_env}.#{domain}"
   end
@@ -204,10 +204,6 @@ end
 
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
-end
-
-def secrets_dir(*dirs)
-  aws_dir('secrets', *dirs)
 end
 
 def shared_dir(*dirs)
