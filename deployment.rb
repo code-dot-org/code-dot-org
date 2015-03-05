@@ -69,7 +69,6 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'varnish_instances'           => [],
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']

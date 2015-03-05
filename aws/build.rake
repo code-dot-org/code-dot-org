@@ -208,24 +208,6 @@ $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
       end
-
-      # Once you've seen this block, you can delete it. Now that we're moving toward static pages
-      # with lightweight services, a CDN/Cloudfront is a better choice than a network of Varnish
-      # instances. But, if you ever want to switch back to the varnish-instance model, this is where
-      # they're updated.
-      remote_command = [
-        'sudo chef-client',
-        'sudo service varnish stop',
-        'sudo service varnish start',
-      ].join('; ')
-      threaded_each CDO.varnish_instances, 5 do |host|
-        begin
-          HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
-          RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
-        rescue
-          HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
-        end
-      end
     end
   end
 end
