@@ -25,7 +25,7 @@ theme: none
       %label.control-label{for: "cohort-program-type"} Program Type
       %div
         %select.cohort-program-type.form-control{"ng-model" => "cohort.program_type"}
-          %option{"ng-repeat" => "program_type in program_types", value: "{{program_type.short_name}}"}
+          %option{"ng-repeat" => "program_type in program_types", value: "{{program_type.id}}"}
             {{program_type.long_name}}
     .col-sm-8
       .panel.panel-default
