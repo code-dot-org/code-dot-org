@@ -9828,10 +9828,44 @@ exports.workspaceCode = function(blockly) {
 };
 
 //
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -9874,19 +9908,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);

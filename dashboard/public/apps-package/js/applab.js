@@ -580,15 +580,27 @@ Applab.onTick = function() {
   if (Applab.interpreter) {
     Applab.executeInterpreter();
   } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
-    }
+    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleComplete();
   }
 };
+
+Applab.executeNativeJS = function () {
+  if (Applab.tickCount === 1) {
+    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+  }
+};
+
+function safeStepInterpreter() {
+  try {
+    Applab.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
@@ -615,7 +627,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // step out to - and store that in stepOutToStackDepth:
         if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
           Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
             if (Applab.callExpressionSeenAtDepth[i]) {
               Applab.stepOutToStackDepth = i;
               break;
@@ -705,26 +717,32 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
       Applab.stoppedAtBreakpointRow = userCodeRow;
       Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
     }
-    try {
-      Applab.interpreter.step();
+    var err = safeStepInterpreter();
+    if (!err) {
       doneUserLine = doneUserLine ||
         (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
+      var stackDepth = Applab.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
       // Truncate any history of call expressions seen deeper than our current stack position:
-      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+      for (var depth = stackDepth + 1;
+            depth <= Applab.maxValidCallExpressionDepth;
+            depth++) {
+        Applab.callExpressionSeenAtDepth[depth] = false;
+      }
+      Applab.maxValidCallExpressionDepth = stackDepth;
 
       if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+        Applab.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (Applab.paused) {
         // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+            Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
         // If we've arrived at a BlockStatement, set doneUserLine even though the
@@ -736,7 +754,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         if (!doneUserLine &&
             inUserCode &&
             Applab.nextStep === StepType.IN &&
-            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+            stackDepth > Applab.firstCallStackDepthThisStep) {
           reachedBreak = true;
         }
         // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -763,11 +781,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
 
         if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
           if (Applab.nextStep === StepType.OUT &&
-              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+              stackDepth > Applab.stepOutToStackDepth) {
             // trying to step out, but we didn't get out yet... continue on.
           } else if (Applab.nextStep === StepType.OVER &&
               typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+              stackDepth > Applab.firstCallStackDepthThisStep) {
             // trying to step over, and we're in deeper inside a function call... continue next onTick
           } else {
             // Our step operation is complete, reset nextStep to StepType.RUN to
@@ -776,7 +794,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+              Applab.stoppedAtBreakpointStackDepth = stackDepth;
             }
             delete Applab.stepOutToStackDepth;
             delete Applab.firstCallStackDepthThisStep;
@@ -785,8 +803,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
           }
         }
       }
-    }
-    catch(err) {
+    } else {
       handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       return;
     }
@@ -1054,6 +1071,7 @@ studioApp.reset = function(first) {
     delete Applab.firstCallStackDepthThisStep;
     delete Applab.stoppedAtBreakpointRow;
     delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.maxValidCallExpressionDepth = 0;
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
