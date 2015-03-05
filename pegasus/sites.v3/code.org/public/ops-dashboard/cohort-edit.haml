@@ -17,10 +17,16 @@ theme: none
 %form#cohort-edit-form{role: "form"}
   .row
     .form-group.col-sm-6
-      %label.control-label{for: "cohort-name"} Name
+      %label.control-label{for: "cohort-name"} Cohort Name
       %div
-        %input#cohort-name.form-control{name: "name", type: "text", "ng-model" => "cohort.name"}
+        %input#cohort-name.form-control{type: "text", "ng-model" => "cohort.name"}
   .row
+    .form-group.col-sm-6
+      %label.control-label{for: "cohort-program-type"} Program Type
+      %div
+        %select.cohort-program-type.form-control{"ng-model" => "cohort.program_type"}
+          %option{"ng-repeat" => "program_type in program_types", value: "{{program_type.id}}"}
+            {{program_type.long_name}}
     .col-sm-8
       .panel.panel-default
         .panel-heading
