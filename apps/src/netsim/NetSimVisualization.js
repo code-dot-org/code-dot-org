@@ -8,15 +8,13 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimLogger = require('./NetSimLogger');
+require('../utils');
+var NetSimWire = require('./NetSimWire');
+var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizWire = require('./NetSimVizWire');
 var netsimUtils = require('./netsimUtils');
-var tweens = require('./tweens');
-
-var logger = NetSimLogger.getSingleton();
 
 /**
  * Generator and controller for visualization
@@ -43,25 +41,29 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
   this.shard_ = null;
   connection.shardChange.register(this.onShardChange_.bind(this));
 
-  this.nodes_ = [];
+  /**
+   * @type {Array.<NetSimVizEntity>}
+   * @private
+   */
+  this.entities_ = [];
 };
 
 NetSimVisualization.prototype.tick = function (clock) {
-  for (var i = 0; i < this.nodes_.length; i++) {
-    this.nodes_[i].tick(clock);
-    if (this.nodes_[i].isDead()) {
-      this.nodes_[i] = undefined;
-      logger.log("Removed dead node from visualization");
+  this.entities_.forEach(function (entity) {
+    entity.tick(clock);
+  });
+  this.entities_ = this.entities_.filter(function (entity) {
+    if (entity.isDead()) {
+      entity.getRoot().remove();
+      return false;
     }
-  }
-  this.nodes_ = this.nodes_.filter(function (node) {
-    return node !== undefined;
+    return true;
   });
 };
 
 NetSimVisualization.prototype.render = function () {
-  this.nodes_.forEach(function (node) {
-    node.render();
+  this.entities_.forEach(function (entity) {
+    entity.render();
   });
 };
 
@@ -88,6 +90,11 @@ NetSimVisualization.prototype.setShard = function (newShard) {
     this.nodeTableChangeKey = undefined;
   }
 
+  if (this.wireTableChangeKey !== undefined) {
+    this.shard_.wireTable.tableChange.unregister(this.wireTableChangeKey);
+    this.wireTableChangeKey = undefined;
+  }
+
   this.shard_ = newShard;
   if (!this.shard_) {
     return;
@@ -95,6 +102,9 @@ NetSimVisualization.prototype.setShard = function (newShard) {
 
   this.nodeTableChangeKey = this.shard_.nodeTable.tableChange.register(
       this.onNodeTableChange_.bind(this));
+
+  this.wireTableChangeKey = this.shard_.wireTable.tableChange.register(
+      this.onWireTableChange_.bind(this));
 };
 
 NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
@@ -102,8 +112,8 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
-      this.localNode = new NetSimVisualizationNode(newLocalNode);
-      this.nodes_.push(this.localNode);
+      this.localNode = new NetSimVizNode(newLocalNode);
+      this.entities_.push(this.localNode);
       this.svgRoot_.find('#foreground_group').append(this.localNode.getRoot());
     }
   } else {
@@ -111,11 +121,11 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
   }
 };
 
-NetSimVisualization.prototype.getNodeByID = function (nodeID) {
-  return this.nodes_.reduce(function (prev, cur) {
+NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
+  return this.entities_.reduce(function (prev, cur) {
     if (prev) {
       return prev;
-    } else if (cur instanceof NetSimVisualizationNode && cur.id === nodeID) {
+    } else if (cur instanceof entityType && cur.id === entityID) {
       return cur;
     }
     return null;
@@ -126,121 +136,57 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
 
   // 1. Kill nodes from the visualization that are no longer in the table.
-  this.nodes_.filter(function (vizNode) {
+  this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizNode;
+  }).filter(function (vizNode) {
     return !tableNodes.some(function (node) {
       return node.entityID === vizNode.id;
     });
-  }).forEach(function (vizNode){
+  }).forEach(function (vizNode) {
     vizNode.kill();
   });
 
   // 2. Add new nodes from the table into the visualization
-  var node;
-  netsimUtils.nodesFromRows(this.shard_, rows).forEach(function (nsNode) {
-    node = this.getNodeByID(nsNode.entityID);
-    if (node) {
-      node.configureFrom(nsNode);
+  var vizNode;
+  tableNodes.forEach(function (node) {
+    vizNode = this.getEntityByID(NetSimVizNode, node.entityID);
+    if (vizNode) {
+      vizNode.configureFrom(node);
     } else {
-      node = new NetSimVisualizationNode(nsNode);
-      node.moveTo(Math.random() * 200 - 100, Math.random() * 200 - 100);
-      this.nodes_.push(node);
-      this.svgRoot_.find('#background_group').prepend(node.getRoot());
+      vizNode = new NetSimVizNode(node);
+      vizNode.moveTo(Math.random() * 200 - 100, Math.random() * 200 - 100);
+      this.entities_.push(vizNode);
+      this.svgRoot_.find('#background_group').prepend(vizNode.getRoot());
     }
   }, this);
 };
 
-/**
- * @param {NetSimNode} sourceNode
- * @constructor
- */
-var NetSimVisualizationNode = function (sourceNode) {
-  /**
-   * @type {number}
-   */
-  this.id = sourceNode.entityID;
+NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
+  var tableWires = rows.map(function (row) {
+    return new NetSimWire(this.shard_, row);
+  }.bind(this));
 
-  this.rootGroup_ = $(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
-  this.rootGroup_.attr('class', 'viz-node');
-
-  this.circle_ = $(document.createElementNS('http://www.w3.org/2000/svg', 'circle'))
-      .attr('cx', 0)
-      .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
-      .appendTo(this.rootGroup_);
-
-  this.displayName_ = $(document.createElementNS('http://www.w3.org/2000/svg', 'text'))
-      .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
-      .appendTo(this.rootGroup_);
-
-  this.posX_ = 0;
-  this.posY_ = 0;
-  this.scale_ = 0;
-
-  /**
-   * Set of tweens we should currently be running on this node.
-   * Processed by tick()
-   * @type {Array.<exports.TweenValueTo>}
-   * @private
-   */
-  this.tweens_ = [];
-  // Set an initial default tween for zooming in from nothing.
-  this.tweens_.push(new tweens.TweenValueTo(this, 'scale_', 1, 800,
-      tweens.easeOutElastic));
-
-  this.configureFrom(sourceNode);
-  this.render();
-};
-
-/**
- *
- * @param {NetSimNode} sourceNode
- */
-NetSimVisualizationNode.prototype.configureFrom = function (sourceNode) {
-  this.displayName_.text(sourceNode.getDisplayName());
-
-  if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
-    this.rootGroup_.attr('class', 'viz-node router-node');
-  }
-};
-
-NetSimVisualizationNode.prototype.getRoot = function () {
-  return this.rootGroup_;
-};
-
-/**
- * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
- */
-NetSimVisualizationNode.prototype.kill = function () {
-  this.id = undefined;
-  this.tweens_ = [];
-  this.tweens_.push(new tweens.TweenValueTo(this, 'scale_', 0, 200, tweens.easeInQuad));
-};
-
-NetSimVisualizationNode.prototype.isDead = function () {
-  return this.id === undefined && this.tweens_.length === 0;
-};
-
-NetSimVisualizationNode.prototype.moveTo = function (x, y) {
-  this.tweens_.push(new tweens.TweenValueTo(this, 'posX_', x, 700,
-      tweens.easeOutElastic));
-  this.tweens_.push(new tweens.TweenValueTo(this, 'posY_', y, 700,
-      tweens.easeOutElastic));
-};
-
-NetSimVisualizationNode.prototype.tick = function (clock) {
-  this.tweens_.forEach(function (animation) {
-    animation.tick(clock);
+  // 1. Kill wires that are no longer in the table
+  this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire;
+  }).filter(function (vizWire) {
+    return !tableWires.some(function (wire) {
+      return wire.entityID === vizWire.id;
+    });
+  }).forEach(function (vizWire) {
+    vizWire.kill();
   });
-  this.tweens_ = this.tweens_.filter(function (animation) {
-    return !animation.isFinished;
-  });
-};
 
-NetSimVisualizationNode.prototype.render = function () {
-  var transform = 'translate(' + this.posX_ + ', ' + this.posY_ + '),' +
-      'scale(' + this.scale_ + ')';
-  this.rootGroup_.attr('transform', transform);
+  // 2. Add new wires into the visualization
+  var vizWire;
+  tableWires.forEach(function (wire) {
+    vizWire = this.getEntityByID(NetSimVizWire, wire.entityID);
+    if (vizWire) {
+      vizWire.configureFrom(wire);
+    } else {
+      vizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
+      this.entities_.push(vizWire);
+      this.svgRoot_.find('#background_group').prepend(vizWire.getRoot());
+    }
+  }, this);
 };
