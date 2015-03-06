@@ -14,7 +14,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "embed": "false"
+    "embed": "false",
+    "video_key": "msm_7_functions",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
