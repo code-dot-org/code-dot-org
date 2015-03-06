@@ -138,7 +138,7 @@
     enableButton(false);
 
     // Pre-select previously submitted response if available
-    if(selectionIndex != -1) {
+    if (selectionIndex != -1) {
       var radioButton = $('#choice_' + selectionIndex);
       radioButton.prop('checked', true);
       var correctChoice = $(radioButton).attr('correct') === 'true';
