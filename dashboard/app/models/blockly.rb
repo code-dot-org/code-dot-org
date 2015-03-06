@@ -63,7 +63,6 @@ class Blockly < Level
     block_nodes.each do |attr_node|
       self.send("#{attr_node.name}=", attr_node.child.to_xml)
     end
-    super(xml_node.to_xml)
     self.tap(&:save!)
   end
 
