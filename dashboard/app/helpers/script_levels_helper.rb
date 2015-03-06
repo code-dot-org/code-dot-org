@@ -79,42 +79,44 @@ module ScriptLevelsHelper
     end
   end
 
-  def header_progress(script_level)
-    script = script_level.script
-    stage = script_level.stage
-
-    game_levels =
-      if current_user
-        current_user.levels_from_script(script, stage)
-      else
-        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
-      end
-
-    script_data = {
-      title: stage_title(script, script_level.stage),
-      currentLevelIndex: script_level.position - 1,
-      scriptId: script.id,
-      scriptLevelId: script_level.try(:level_id),
-      statsPath: header_stats_path,
-      showStageLinks: script.twenty_hour? || script.stages.to_a.count > 1,
-      levels: game_levels.map do |sl|
-        completion_status, link = level_info(current_user, sl)
-        {
-          displayText: sl.level_display_text,
-          status: completion_status,
-          link: link,
-          unplugged: !!sl.level.unplugged?,
-          assessment: !!sl.assessment
-        }
-      end
-    }
-    script_data[:linesOfCodeText] = t('nav.popup.lines', lines: current_user.total_lines) unless current_user.nil?
-    script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(script)} if script.hoc?
-    if script.trophies && current_user
-      progress = current_user.progress(script)
-      script_data[:trophies] = {current: progress['current_trophies'], of: t(:of), max: progress['max_trophies']}
+  def summarize_script_level(sl)
+    if sl.level.unplugged?
+      kind = 'unplugged'
+    elsif sl.assessment
+      kind = 'assessment'
+    else
+      kind = 'blockly'
     end
 
-    script_data
+    summary = {
+      id: sl.level.id,
+      position: sl.position,
+      kind: kind,
+      title: sl.level_display_text
+    }
+
+    # Add a previous pointer if it's not the obvious (level-1)
+    if sl.previous_level
+      if sl.previous_level.stage.position != sl.stage.position
+        summary[:previous] = [ sl.previous_level.stage.position, sl.previous_level.position ]
+      end
+    else
+      summary[:previous] = false
+    end
+
+    # Add a next pointer if it's not the obvious (level+1)
+    if sl.end_of_stage?
+      if sl.next_level
+        summary[:next] = [ sl.next_level.stage.position, sl.next_level.position ]
+      else
+        # This is the final level in the script
+        summary[:next] = false
+        if (sl.script.wrapup_video)
+          summary[:wrapupVideo] = video_info(sl.script.wrapup_video)
+        end
+      end
+    end
+
+    summary
   end
 end
