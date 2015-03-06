@@ -178,7 +178,9 @@ dashboard.updateTimestamp = function() {
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var app_id = dashboard.currentApp.id;
-  dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  dashboard.currentApp.levelSource = window.Blockly
+      ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
   if (app_id) {
     storageApps().update(app_id, dashboard.currentApp, function(data) {
@@ -294,19 +296,7 @@ function loadStyle(name) {
   }));
 }
 
-loadStyle('common');
-loadStyle(appOptions.app);
-var promise;
-if (appOptions.droplet) {
-  loadStyle('droplet/droplet.min');
-  promise = loadSource('jsinterpreter/acorn_interpreter')()
-      .then(loadSource('requirejs/require'))
-      .then(loadSource('ace/ace'))
-      .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full.min'));
-} else {
-  promise = loadSource('blockly')()
-    .then(loadSource(appOptions.locale + '/blockly_locale'));
+function loadProject(promise) {
   if (appOptions.level.isProjectLevel) {
     // example paths:
     // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
@@ -337,6 +327,23 @@ if (appOptions.droplet) {
     dashboard.isEditingProject = true;
     promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
+}
+
+loadStyle('common');
+loadStyle(appOptions.app);
+var promise;
+if (appOptions.droplet) {
+  loadStyle('droplet/droplet.min');
+  promise = loadSource('jsinterpreter/acorn_interpreter')()
+      .then(loadSource('requirejs/require'))
+      .then(loadSource('ace/ace'))
+      .then(loadSource('ace/ext-language_tools'))
+      .then(loadSource('droplet/droplet-full.min'));
+  loadProject(promise);
+} else {
+  promise = loadSource('blockly')()
+    .then(loadSource(appOptions.locale + '/blockly_locale'));
+  loadProject(promise);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
