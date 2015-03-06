@@ -14,6 +14,7 @@
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLogger = require('./NetSimLogger');
 var netsimUtils = require('./netsimUtils');
+var tweens = require('./tweens');
 
 var logger = NetSimLogger.getSingleton();
 
@@ -45,9 +46,9 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
   this.nodes_ = [];
 };
 
-NetSimVisualization.prototype.tick = function () {
+NetSimVisualization.prototype.tick = function (clock) {
   for (var i = 0; i < this.nodes_.length; i++) {
-    this.nodes_[i].tick();
+    this.nodes_[i].tick(clock);
     if (this.nodes_[i].isDead()) {
       this.nodes_[i] = undefined;
       logger.log("Removed dead node from visualization");
@@ -149,7 +150,6 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
 };
 
 /**
- *
  * @param {NetSimNode} sourceNode
  * @constructor
  */
@@ -174,13 +174,20 @@ var NetSimVisualizationNode = function (sourceNode) {
       .css('text-anchor', 'middle')
       .appendTo(this.rootGroup_);
 
-  this.curPosX_ = 0;
-  this.curPosY_ = 0;
-  this.targetPosX_ = 0;
-  this.targetPosY_ = 0;
+  this.posX_ = 0;
+  this.posY_ = 0;
+  this.scale_ = 0;
 
-  this.currentScale_ = 0;
-  this.targetScale_ = 1;
+  /**
+   * Set of tweens we should currently be running on this node.
+   * Processed by tick()
+   * @type {Array.<exports.TweenValueTo>}
+   * @private
+   */
+  this.tweens_ = [];
+  // Set an initial default tween for zooming in from nothing.
+  this.tweens_.push(new tweens.TweenValueTo(this, 'scale_', 1, 800,
+      tweens.easeOutElastic));
 
   this.configureFrom(sourceNode);
   this.render();
@@ -208,27 +215,32 @@ NetSimVisualizationNode.prototype.getRoot = function () {
  */
 NetSimVisualizationNode.prototype.kill = function () {
   this.id = undefined;
-  this.targetScale_ = 0;
+  this.tweens_ = [];
+  this.tweens_.push(new tweens.TweenValueTo(this, 'scale_', 0, 200, tweens.easeInQuad));
 };
 
 NetSimVisualizationNode.prototype.isDead = function () {
-  return this.id === undefined && Math.abs(this.currentScale_) < 0.001;
+  return this.id === undefined && this.tweens_.length === 0;
 };
 
 NetSimVisualizationNode.prototype.moveTo = function (x, y) {
-  this.targetPosX_ = x;
-  this.targetPosY_ = y;
+  this.tweens_.push(new tweens.TweenValueTo(this, 'posX_', x, 700,
+      tweens.easeOutElastic));
+  this.tweens_.push(new tweens.TweenValueTo(this, 'posY_', y, 700,
+      tweens.easeOutElastic));
 };
 
-NetSimVisualizationNode.prototype.tick = function () {
-  var speed = 4;
-  this.curPosX_ += (this.targetPosX_ - this.curPosX_) / speed;
-  this.curPosY_ += (this.targetPosY_ - this.curPosY_) / speed;
-  this.currentScale_ += (this.targetScale_ - this.currentScale_) / speed;
+NetSimVisualizationNode.prototype.tick = function (clock) {
+  this.tweens_.forEach(function (animation) {
+    animation.tick(clock);
+  });
+  this.tweens_ = this.tweens_.filter(function (animation) {
+    return !animation.isFinished;
+  });
 };
 
 NetSimVisualizationNode.prototype.render = function () {
-  var transform = 'translate(' + this.curPosX_ + ', ' + this.curPosY_ + '),' +
-      'scale(' + this.currentScale_ + ')';
+  var transform = 'translate(' + this.posX_ + ', ' + this.posY_ + '),' +
+      'scale(' + this.scale_ + ')';
   this.rootGroup_.attr('transform', transform);
 };
