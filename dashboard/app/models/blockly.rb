@@ -58,11 +58,10 @@ class Blockly < Level
 
   def load_level_xml(xml)
     xml_node = Nokogiri::XML(xml, &:noblanks)
-    if xml_blocks.count > 0
-      block_nodes = xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove)
-      block_nodes.each do |attr_node|
-        self.send("#{attr_node.name}=", attr_node.child.to_xml)
-      end
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
+    super(xml_node.to_xml)
+    block_nodes.each do |attr_node|
+      self.send("#{attr_node.name}=", attr_node.child.to_xml)
     end
     super(xml_node.to_xml)
     self.tap(&:save!)
