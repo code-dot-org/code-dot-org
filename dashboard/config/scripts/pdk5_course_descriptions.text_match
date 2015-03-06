@@ -2,7 +2,7 @@ name 'PDK5 Course Descriptions'
 title 'Overview of Courses 1, 2, and 3'
 
 markdown <<MARKDOWN
-## WHO IS THIS FOR?
+### Who is this for?
 
 **Kids as young as five years-old!**
 
@@ -12,18 +12,18 @@ Courses 1, 2, and 3 are designed primarily for an elementary school audience, bu
 
 This curriculum has been developed for use by all educators of young children. We assume no prior computer science knowledge and have provided clear, detailed lesson plans that can be customized to different situations. Learn with your students!
 
-## WHICH COURSE IS FOR ME?
+### Which Course is for me?
 
 Code.org’s K-5 computer science experience consists of three courses:
 
-Course 1: beginners, early-readers (ages 4-6)
-Course 2: beginners, readers (ages 6+)
-Course 3: prerequisite is Course 2 (ages 6+)
+- **Course 1**: beginners, early-readers (ages 4-6)
+- **Course 2**: beginners, readers (ages 6+)
+- **Course 3**: prerequisite is Course 2 (ages 6+)
 
 
 The courses are designed to be flexibly implemented. Rather than a rigid pathway based on grade levels, the courses are based on developmental level and prior experience. Teachers and schools can use the course structure to tailor a course sequence to their students’ needs and evolving experience.
 
-## COURSE STRUCTURE
+### Course Structure
 
 The courses use a spiraling curriculum design, in which concepts and skills are revisited in each course while delving deeper each time.
 
@@ -50,7 +50,7 @@ Across the entire K-5 curriculum, students will develop the skills of a computer
 - Persistence
 - Problem Solving
 
-### Which course is appropriate for the students you'll be working with?
+#### Which course is appropriate for the students you'll be working with?
 MARKDOWN
 
-placeholder 'I am going to start with Course...'
+placeholder 'I am going to start with Course...' 
