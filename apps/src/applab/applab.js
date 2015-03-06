@@ -6,7 +6,7 @@
  */
 
 'use strict';
-
+require('./mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
@@ -633,7 +633,7 @@ Applab.init = function(config) {
         e.stop();
       });
     }
-    
+
     if (studioApp.share) {
       // automatically run in share mode:
       window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
