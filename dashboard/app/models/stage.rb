@@ -50,7 +50,7 @@ class Stage < ActiveRecord::Base
     end
 
     if script.hoc?
-      stage_data[:finishText] = t('nav.header.finished_hoc')
+      stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
     end
 
     levels = script.script_levels.to_a.select{|sl| sl.stage_id == id}
