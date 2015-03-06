@@ -80,43 +80,6 @@ module ScriptLevelsHelper
   end
 
   def summarize_script_level(sl)
-    if sl.level.unplugged?
-      kind = 'unplugged'
-    elsif sl.assessment
-      kind = 'assessment'
-    else
-      kind = 'blockly'
-    end
-
-    summary = {
-      id: sl.level.id,
-      position: sl.position,
-      kind: kind,
-      title: sl.level_display_text
-    }
-
-    # Add a previous pointer if it's not the obvious (level-1)
-    if sl.previous_level
-      if sl.previous_level.stage.position != sl.stage.position
-        summary[:previous] = [ sl.previous_level.stage.position, sl.previous_level.position ]
-      end
-    else
-      summary[:previous] = false
-    end
-
-    # Add a next pointer if it's not the obvious (level+1)
-    if sl.end_of_stage?
-      if sl.next_level
-        summary[:next] = [ sl.next_level.stage.position, sl.next_level.position ]
-      else
-        # This is the final level in the script
-        summary[:next] = false
-        if (sl.script.wrapup_video)
-          summary[:wrapupVideo] = video_info(sl.script.wrapup_video)
-        end
-      end
-    end
-
-    summary
+    sl.summarize
   end
 end

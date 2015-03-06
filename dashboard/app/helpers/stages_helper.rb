@@ -1,18 +1,10 @@
 module StagesHelper
-  def stage_title(script, stage)
-    if script.stages.many?
-      t('stage_number', number: stage.position) + ': ' + data_t_suffix('script.name', script.name, stage.name)
-    else # script only has one stage/game, use the script name
-      data_t_suffix('script.name', script.name, 'title')
-    end
+  def stage_title(_, stage)
+    stage.localized_title
   end
 
-  def stage_name(script, stage)
-    if script.stages.many?
-      data_t_suffix('script.name', script.name, stage.name)
-    else
-      data_t_suffix('script.name', script.name, 'title')
-    end
+  def stage_name(_, stage)
+    stage.localized_name
   end
 
   def lesson_plan_html_url(stage)
