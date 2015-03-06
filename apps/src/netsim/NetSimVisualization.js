@@ -11,10 +11,11 @@
 /* global $ */
 'use strict';
 
-var NetSimNode = require('./NetSimNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimClientNode = require('./NetSimClientNode');
+var NetSimLogger = require('./NetSimLogger');
 var netsimUtils = require('./netsimUtils');
+
+var logger = NetSimLogger.getSingleton();
 
 /**
  * Generator and controller for visualization
@@ -45,8 +46,15 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
 };
 
 NetSimVisualization.prototype.tick = function () {
-  this.nodes_.forEach(function (node) {
-    node.tick();
+  for (var i = 0; i < this.nodes_.length; i++) {
+    this.nodes_[i].tick();
+    if (this.nodes_[i].isDead()) {
+      this.nodes_[i] = undefined;
+      logger.log("Removed dead node from visualization");
+    }
+  }
+  this.nodes_ = this.nodes_.filter(function (node) {
+    return node !== undefined;
   });
 };
 
@@ -98,7 +106,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.svgRoot_.find('#foreground_group').append(this.localNode.getRoot());
     }
   } else {
-    this.localNode.die();
+    this.localNode.kill();
   }
 };
 
@@ -114,6 +122,18 @@ NetSimVisualization.prototype.getNodeByID = function (nodeID) {
 };
 
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
+  var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
+
+  // 1. Kill nodes from the visualization that are no longer in the table.
+  this.nodes_.filter(function (vizNode) {
+    return !tableNodes.some(function (node) {
+      return node.entityID === vizNode.id;
+    });
+  }).forEach(function (vizNode){
+    vizNode.kill();
+  });
+
+  // 2. Add new nodes from the table into the visualization
   var node;
   netsimUtils.nodesFromRows(this.shard_, rows).forEach(function (nsNode) {
     node = this.getNodeByID(nsNode.entityID);
@@ -182,6 +202,19 @@ NetSimVisualizationNode.prototype.getRoot = function () {
   return this.rootGroup_;
 };
 
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ */
+NetSimVisualizationNode.prototype.kill = function () {
+  this.id = undefined;
+  this.targetScale_ = 0;
+};
+
+NetSimVisualizationNode.prototype.isDead = function () {
+  return this.id === undefined && Math.abs(this.currentScale_) < 0.001;
+};
+
 NetSimVisualizationNode.prototype.moveTo = function (x, y) {
   this.targetPosX_ = x;
   this.targetPosY_ = y;
@@ -189,9 +222,9 @@ NetSimVisualizationNode.prototype.moveTo = function (x, y) {
 
 NetSimVisualizationNode.prototype.tick = function () {
   var speed = 4;
-  this.curPosX_ = this.curPosX_ + (this.targetPosX_ - this.curPosX_) / speed;
-  this.curPosY_ = this.curPosY_ + (this.targetPosY_ - this.curPosY_) / speed;
-  this.currentScale_ = this.currentScale_ + (this.targetScale_ - this.currentScale_) / speed;
+  this.curPosX_ += (this.targetPosX_ - this.curPosX_) / speed;
+  this.curPosY_ += (this.targetPosY_ - this.curPosY_) / speed;
+  this.currentScale_ += (this.targetScale_ - this.currentScale_) / speed;
 };
 
 NetSimVisualizationNode.prototype.render = function () {
