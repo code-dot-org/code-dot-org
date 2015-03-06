@@ -86,7 +86,7 @@ module ScriptLevelsHelper
     game_levels =
       if current_user
         current_user.levels_from_script(script, stage)
-      else stage
+      else
         script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       end
 
