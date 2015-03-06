@@ -70,7 +70,7 @@ SQL
       end
     end
 
-    script.stages.order_by(&:position).each do |stage|
+    script.stages.sort_by(&:position).each do |stage|
       s[:stages].push stage.summarize
     end
 
