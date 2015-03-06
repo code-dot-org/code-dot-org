@@ -274,6 +274,10 @@ function handleExecutionError(err, lineNumber) {
   Applab.onPuzzleComplete();
 }
 
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
