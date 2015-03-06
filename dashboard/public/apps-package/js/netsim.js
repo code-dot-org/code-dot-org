@@ -196,6 +196,10 @@ NetSim.prototype.getOverrideShardID = function () {
   return shardID;
 };
 
+NetSim.prototype.shouldEnableCleanup = function () {
+  return !location.search.match(/disableCleaning/i);
+};
+
 /**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
@@ -213,7 +217,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       $('#netsim_sent'), 'Sent Message Log', true);
 
   this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
-      this.receivedMessageLog_);
+      this.receivedMessageLog_, this.shouldEnableCleanup());
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
@@ -2086,7 +2090,6 @@ return buf.join('');
 /* global $ */
 'use strict';
 
-var dom = require('../dom');
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
@@ -2200,8 +2203,7 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> display_name_view
   this.nameInput_ = this.displayNameView_.find('#netsim_lobby_name');
   this.setNameButton_ = this.displayNameView_.find('#netsim_lobby_set_name_button');
-  dom.addClickTouchEvent(this.setNameButton_[0],
-      this.setNameButtonClick_.bind(this));
+  this.setNameButton_.click(this.setNameButtonClick_.bind(this));
 
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
@@ -2209,12 +2211,10 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
   this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
-  dom.addClickTouchEvent(this.addRouterButton_[0],
-      this.addRouterButtonClick_.bind(this));
+  this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
   this.lobbyList_ = this.shardView_.find('#netsim_lobby_list');
   this.connectButton_ = this.shardView_.find('#netsim_lobby_connect');
-  dom.addClickTouchEvent(this.connectButton_[0],
-      this.connectButtonClick_.bind(this));
+  this.connectButton_.click(this.connectButtonClick_.bind(this));
 
   // Collections
   this.shardLinks_ = $('.shardLink');
@@ -2478,7 +2478,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
       this.selectedListItem_ = item;
     }
 
-    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.click(this.onRowClick_.bind(this, item, simNode));
     item.appendTo(this.lobbyList_);
   }.bind(this));
 
@@ -2544,7 +2544,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../dom":48,"../utils":219,"./NetSimClientNode":119,"./NetSimLobby.html":133,"./NetSimLogger":140,"./NetSimRouterNode":149,"./netsimUtils":168}],168:[function(require,module,exports){
+},{"../utils":219,"./NetSimClientNode":119,"./NetSimLobby.html":133,"./NetSimLogger":140,"./NetSimRouterNode":149,"./netsimUtils":168}],168:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3173,7 +3173,6 @@ return buf.join('');
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 'use strict';
@@ -3193,9 +3192,11 @@ var logger = NetSimLogger.getSingleton();
  * @param {Window} thisWindow
  * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
  * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
+ * @param {boolean} [enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (thisWindow, sentLog,
+    receivedLog, enableCleanup) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -3227,6 +3228,13 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedL
    * @private
    */
   this.shard_ = null;
+
+  /**
+   * Whether to instantiate a shard cleaner
+   * @type {boolean}
+   * @private
+   */
+  this.enableCleanup_ = enableCleanup !== undefined ? enableCleanup : true;
 
   /**
    *
@@ -3312,7 +3320,9 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID);
-  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  if (this.enableCleanup_) {
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  }
   this.createMyClientNode_(displayName);
 };
 
