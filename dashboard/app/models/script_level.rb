@@ -29,7 +29,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?
     return false if level.unplugged?
-    return false if stage && stage.unplugged?
+    return false if stage.unplugged?
     true
   end
 
