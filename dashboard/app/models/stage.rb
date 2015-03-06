@@ -14,6 +14,49 @@ class Stage < ActiveRecord::Base
   def unplugged?
     script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
-    return script_levels.first.level.unplugged?
+    script_levels.first.level.unplugged?
+  end
+
+  def localized_title
+    if script.stages.many?
+      I18n.t('stage_number', number: position) + ': ' + "script.name.#{script.name}.name"
+    else # script only has one stage/game, use the script name
+      I18n.t "script.name.#{script.name}.title"
+    end
+  end
+
+  def localized_name
+    if script.stages.many?
+      I18n.t "script.name.#{script.name}.name"
+    else
+      I18n.t "script.name.#{script.name}.title"
+    end
+  end
+
+  def summarize
+    stage_data = {
+        id: id,
+        position: position,
+        script_name: script.name,
+        script_id: script.id,
+        script_stages: script.stages.to_a.count,
+        name: localized_name,
+        title: localized_title
+    }
+
+    if script.has_lesson_plan?
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(self)
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(self)
+    end
+
+    if script.hoc?
+      stage_data[:finishText] = t('nav.header.finished_hoc')
+    end
+
+    levels = script.script_levels.to_a.select{|sl| sl.stage_id == id}
+    levels.sort_by {|sl| sl.position}
+    stage_data[:levels] = levels.map {|sl| sl.summarize}
+
+    stage_data
   end
 end
