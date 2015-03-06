@@ -10,6 +10,7 @@ class ReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
   include LevelsHelper
+  include UsersHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -52,29 +53,7 @@ SQL
 
   def get_script
     script = find_script(params)
-
-    s = {
-      id: script.id,
-      name: script.name,
-      stages: []
-    }
-    if script.trophies
-      s[:trophies] = Concept.cached.map do |concept|
-        {
-          id: concept.name,
-          name: data_t('concept.description', concept.name),
-          bronze: Trophy::BRONZE_THRESHOLD,
-          silver: Trophy::SILVER_THRESHOLD,
-          gold: Trophy::GOLD_THRESHOLD
-        }
-      end
-    end
-
-    script.stages.sort_by(&:position).each do |stage|
-      s[:stages].push stage.summarize
-    end
-
-    render json: s
+    render json: script.summarize
   end
 
   def user_progress
@@ -202,49 +181,6 @@ SQL
       expires_in 10000, public: true  # TODO: Real static asset caching
     end
     render :json => reply, :callback => params['jsonp']
-  end
-
-  def summarize_user_progress(script, callouts_seen = nil, videos_seen = nil)
-    user_data = {
-        linesOfCode: current_user.total_lines,
-        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
-        levels: {},
-        videos_seen: videos_seen,
-        callouts_seen: callouts_seen
-    }
-
-    # Get all user_levels
-    user_levels = current_user.levels_from_script(script)
-
-    user_levels.map do |sl|
-      completion_status, link = level_info(current_user, sl)
-      if completion_status != 'not_tried'
-        user_data[:levels][sl.level.id] = {
-            status: completion_status
-            # More info could go in here...
-        }
-      end
-    end
-
-    user_data[:disableSocialShare] = true if current_user.under_13?
-
-    if script.trophies
-      progress = current_user.progress(script)
-      concepts = current_user.concept_progress(script)
-
-      user_data[:trophies] = {
-          current: progress['current_trophies'],
-          of: t(:of),
-          max: progress['max_trophies']
-      }
-
-      concepts.each_pair do |concept, counts|
-        user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
-      end
-
-    end
-
-    user_data
   end
 
   def prizes
