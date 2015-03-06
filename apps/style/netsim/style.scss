@@ -29,8 +29,22 @@ $wide_column_width: 100px;
   clear: both;
 }
 
-#visualization {
+svg {
   background-color: #fff;
+  border: solid black thin;
+  border-radius: 25px;
+
+  .viz-node {
+    circle {
+      stroke: black;
+      fill: lightblue;
+    }
+  }
+  .router-node {
+    circle {
+      fill: yellow;
+    }
+  }
 }
 
 /* Sprited icons. */
