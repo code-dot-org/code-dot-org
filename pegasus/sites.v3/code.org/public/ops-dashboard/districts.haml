@@ -29,15 +29,16 @@ template: none
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.name}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.name', type:'text', value:'{{district.name}}'}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.name', type:'text'}
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.location}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type:'text', value:'{{district.location}}'}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type:'text'}
     %td
-      %span{'ng-hide' => 'district.editing'}
-        {{district.contact_id}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact_id', type:'text', value:'{{district.contact_id}}'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.email}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.email', type:'text', placeholder: 'Email'}
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.contact_name}}
@@ -53,9 +54,8 @@ template: none
     %td
       %input{'ng-model' => 'district.location', type:'text'}
     %td
-      %input{'ng-model' => 'district.contact_id', type:'text', placeholder:'address@example.com'}
-    %td
-      %input{'ng-model' => 'district.contact_name', type:'select'}
+      %input{'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+      %input{'ng-model' => 'district.contact.email', type:'text', placeholder: 'Email'}
     %td
       %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
         Create new district
