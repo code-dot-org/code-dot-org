@@ -200,7 +200,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.statusPanel_ = new NetSimStatusPanel($('#netsim_status'),
       this.connection_.disconnectFromRouter.bind(this.connection_));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this.connection_);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
+      this.connection_);
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
