@@ -11,4 +11,8 @@
   #external
     / Load the external file through ActionView templates.
     = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
+/ Enable dialog functionality
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
+/ Embed comments widget if div id="discourse-comments" is present
+:javascript
+  #{render partial: 'shared/discourse.js.erb'}
