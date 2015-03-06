@@ -30,15 +30,9 @@ SQL
   def find_script(p)
     name_or_id = p[:script_name]
     name_or_id = p[:script_id] if name_or_id.nil?
+    return if name_or_id.nil?
 
-    if name_or_id.match(/\A\d+\z/)
-      script = Script.find(name_or_id.to_i)
-    else
-      script = Script.find_by_name(name_or_id)
-    end
-    raise ActiveRecord::RecordNotFound unless script
-
-    script
+    Script.get_from_cache name_or_id
   end
 
   def find_script_level(script, p)
