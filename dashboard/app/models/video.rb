@@ -21,4 +21,17 @@ class Video < ActiveRecord::Base
     end
     check_i18n_names
   end
+
+  def summarize(autoplay = true)
+    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
+    {
+        src: youtube_url(youtube_code, {autoplay: autoplay ? 1 : 0}),
+        key: key,
+        name: data_t('video.name', key),
+        download: download,
+        thumbnail: video_thumbnail_path(self),
+        enable_fallback: true,
+        autoplay: autoplay
+    }
+  end
 end
