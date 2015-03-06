@@ -20,7 +20,9 @@ template: none
     %th.manage-th
       Location
     %th.manage-th
-      District Contact
+      District Contact Email
+    %th.manage-th
+      District Contact Name
     %th.manage-th
       Manage
   %tr{'ng-repeat' => 'district in districts'}
@@ -37,6 +39,10 @@ template: none
         {{district.contact_id}}
       %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact_id', type:'text', value:'{{district.contact_id}}'}
     %td
+      %span{'ng-hide' => 'district.editing'}
+        {{district.contact_name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact_id', type:'text', value:'{{district.contact_name}}'}
+    %td
       %button.btn.btn-white{'ng-click' => 'district.editing = true', 'ng-hide' => 'district.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-hide' => 'district.editing'} Delete
       %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
@@ -48,6 +54,8 @@ template: none
       %input{'ng-model' => 'district.location', type:'text'}
     %td
       %input{'ng-model' => 'district.contact_id', type:'select'}
+    %td
+      %input{'ng-model' => 'district.contact_name', type:'select'}
     %td
       %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
         Create new district
