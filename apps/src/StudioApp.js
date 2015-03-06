@@ -1211,7 +1211,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     ace = window.ace;
 
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-      mode: 'javascript',
+      mode: 'javascript_codeorg',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: dropletUtils.generateDropletPalette(options.codeFunctions,
         options.dropletConfig)

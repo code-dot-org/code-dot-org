@@ -1480,7 +1480,7 @@ QUAD.init = function (args) {
              */
             retrieve: function(item, callback, instance) {
                 for (var i = 0; i < items.length; ++i) {
-                   (instance) ? callback.call(instance, items[i]) : callback(items[i]); 
+                   (instance) ? callback.call(instance, items[i]) : callback(items[i]);
                 }
                 // check if node has subnodes
                 if (nodes.length) {
@@ -6206,7 +6206,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if @lines[bounds.start.line].indexOf('unless') >= 0 and
                 @locationsAreIdentical(bounds.start, @getBounds(node.condition).start) and
                 node.condition.nodeType() is 'Op'
-            
+
               @csSocketAndMark node.condition.first, depth + 1, 0, indentDepth
             else
              */
@@ -6655,7 +6655,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
   if (typeof define == "function" && define.amd) return define('acorn',["exports"], mod); // AMD
   mod(root.acorn || (root.acorn = {})); // Plain browser env
 })(this, function(exports) {
-  
+
 
   exports.version = "0.7.1";
 
@@ -9802,7 +9802,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     modes = {
       'coffeescript': coffee,
       'coffee': coffee,
-      'javascript': javascript
+      'javascript': javascript,
+      'javascript_codeorg': javascript
     };
     PALETTE_TOP_MARGIN = 5;
     PALETTE_MARGIN = 5;
