@@ -352,7 +352,7 @@ class Script < ActiveRecord::Base
       end
     end
 
-    stages.order_by(&:position).each do |stage|
+    stages.sort_by(&:position).each do |stage|
       summary[:stages].push stage.summarize
     end
 

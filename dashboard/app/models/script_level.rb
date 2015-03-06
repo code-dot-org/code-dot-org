@@ -99,7 +99,7 @@ class ScriptLevel < ActiveRecord::Base
         # This is the final level in the script
         summary[:next] = false
         if script.wrapup_video
-          summary[:wrapupVideo] = video_info(script.wrapup_video)
+          summary[:wrapupVideo] = script.wrapup_video.summarize
         end
       end
     end
