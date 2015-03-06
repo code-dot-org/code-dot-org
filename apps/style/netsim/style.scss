@@ -40,10 +40,16 @@ svg {
       fill: lightblue;
     }
   }
+  
   .router-node {
     circle {
       fill: yellow;
     }
+  }
+  
+  .viz-wire {
+    stroke: black;
+    stroke-width: 2;
   }
 }
 
