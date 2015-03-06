@@ -142,6 +142,7 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join/:section_code', to: 'followers#student_register', as: 'student_register'
 
+  post '/milestone/:user_id', to: 'activities#milestone', as: 'milestone_opts'
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
@@ -160,6 +161,10 @@ Dashboard::Application.routes.draw do
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
+  get '/popup/progress', to: 'reports#user_progress', as: 'user_progress'
+  get '/popup/script', to: 'reports#get_script', as: 'get_script'
+  get '/script-:script_name.js', to: 'reports#get_script', as: 'get_script_resource', defaults: {jsonp: 'RESOURCE'}
+  get '/level-:script_name-:stage_id-:level_id.js', to: 'reports#user_progress', as: 'get_level_resource', defaults: {jsonp: 'RESOURCE'}
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'

@@ -3,12 +3,13 @@
 # controllers)
 
 class ReportsController < ApplicationController
-  before_filter :authenticate_user!, except: [:header_stats]
+  before_filter :authenticate_user!, except: [:header_stats, :user_progress, :get_script]
 
-  check_authorization except: [:header_stats, :students]
+  check_authorization except: [:header_stats, :user_progress, :get_script, :students]
 
   before_action :set_script
   include LevelSourceHintsHelper
+  include LevelsHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -25,9 +26,269 @@ order by ul.updated_at desc limit 2
 SQL
   end
 
+  # Find a script by name OR id, including someone who pased an ID into name.
+  def find_script(p)
+    name_or_id = p[:script_name]
+    name_or_id = p[:script_id] if name_or_id.nil?
+
+    if name_or_id.match(/\A\d+\z/)
+      script = Script.find(name_or_id.to_i)
+    else
+      script = Script.find_by_name(name_or_id)
+    end
+    raise ActiveRecord::RecordNotFound unless script
+
+    script
+  end
+
+  def find_script_level(script, p)
+    script_level = script.get_script_level_by_stage_and_position p[:stage_id], p[:level_id]
+    raise ActiveRecord::RecordNotFound unless script_level
+    script_level
+  end
+
   def header_stats
+    @script = find_script(params)
     render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
   end
+
+  def summarize_stage(script, stage, levels)
+
+    stage_data = {
+      id: stage.id,
+      position: stage.position,
+      script_name: script.name,
+      script_id: script.id,
+      script_stages: script.stages.to_a.count,
+      name: stage_name(script, stage),
+      title: stage_title(script, stage)
+    }
+
+    if script.has_lesson_plan?
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(stage)
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(stage)
+    end
+
+    if script.hoc?
+      stage_data[:finishText] = t('nav.header.finished_hoc')
+    end
+
+    unless levels
+      levels = script.script_levels.to_a.select{ |sl| sl.stage_id == stage.id }
+    end
+
+    levels.sort_by { |sl| sl.position }
+    stage_data[:levels] = levels.map { |sl| summarize_script_level(sl) }
+
+    stage_data
+  end
+
+  def get_script
+    script = find_script(params)
+
+    s = {
+      id: script.id,
+      name: script.name,
+      stages: []
+    }
+    if (script.trophies)
+      s[:trophies] = Concept.cached.map do |concept|
+        {
+          id: concept.name,
+          name: data_t('concept.description', concept.name),
+          bronze: Trophy::BRONZE_THRESHOLD,
+          silver: Trophy::SILVER_THRESHOLD,
+          gold: Trophy::GOLD_THRESHOLD
+        }
+      end
+    end
+
+    position = 0
+
+    levels = script.script_levels.group_by(&:stage)
+    levels.each_pair do |stage, sl_group|
+      s[:stages].push summarize_stage(script, stage, sl_group)
+    end
+
+    if params['jsonp']
+      expires_in 10000, public: true  # TODO: Real static asset caching
+    end
+    render :json => s, :callback => params['jsonp']
+  end
+
+  def user_progress
+    script = find_script(params)
+    script_level = find_script_level(script, params)
+
+    level = script_level.level
+    game = script_level.level.game
+
+    stage_data = summarize_stage(script, script_level.stage, nil)
+
+    # Copy these now because they will be modified during this routine, but the API caller needs the previous value
+    if session[:callouts_seen]
+      callouts_seen = session[:callouts_seen].map { |x| x }
+    end
+    if session[:videos_seen]
+      videos_seen = session[:videos_seen].map { |x| x }
+    end
+
+    # Level-specific data
+    if level.unplugged?
+      unplug_id = (level.type == 'Unplugged' ? level.name : game.name)
+      level_data = {
+        kind: 'unplugged',
+        level: summarize_script_level(script_level),
+        app: 'unplugged',
+        title: try_t("data.unplugged.#{unplug_id}.title"),
+        desc: try_t("data.unplugged.#{unplug_id}.desc")
+      }
+
+      pdfs = try_t("data.unplugged.#{unplug_id}.pdfs")
+      if pdfs
+        level_data[:pdfs] = pdfs.map.with_index do |pdf, i|
+          {
+            name: t('download_pdf', :pdf => i + 1),
+            url: '/unplugged/' + pdf + '.pdf'
+          }
+        end
+      end
+
+      video = Video.find_by_key(try_t("data.unplugged.#{unplug_id}.video"))
+      if video
+        level_data[:video] = video_info(video, false)
+      end
+
+    elsif level.is_a?(DSLDefined)
+      # TODO OFFLINE: partial "levels/#{level.class.to_s.underscore}"
+      level_data = {
+        kind: 'dsl',
+        level: summarize_script_level(script_level),
+        app: level.class.to_s
+      }
+    else
+      # Prepare some globals for blockly_options()
+      # Intentionally does not set @current_user since this is a static callback
+      # No longer sets @callback because milestone URL is calculated on the client.
+      @script = script
+      @level = level
+      @game = game
+      @script_level = script_level
+      @level_source_id = level.ideal_level_source_id
+      # TODO OFFLINE: @phone_share_url
+      set_videos_and_blocks_and_callouts  # sets @callouts, @autoplay_video_info for use in blockly_options()
+
+      level_data = blockly_options()
+      if (level.embed == 'true' && !@edit_blocks)
+        level_data[:embed] = true
+        level_data[:hide_source] = true
+        level_data[:no_padding] = true
+        level_data[:show_finish] = true
+        level_data[:disableSocialShare] = true
+      end
+    end
+
+    if level.ideal_level_source_id
+      level_data[:solutionPath] = script_level_solution_path(script, level)  # TODO: Only for teachers?
+    end
+    level_data[:locale] = js_locale
+    if !level.related_videos.nil? && !level.related_videos.empty?
+      level_data[:relatedVideos] = level.related_videos.map do |video|
+        {
+          name: data_t('video.name', video.key),
+          youtube_code: video.youtube_code,
+          data: video_info(video),
+          thumbnail_url: video_thumbnail_path(video)
+        }
+      end
+    end
+
+    if script_level && script.show_report_bug_link?
+      level_data[:feedbackUrl] = script.feedback_url
+      level_data[:reportBugLink] = script_level.report_bug_url(request)
+    end
+
+    if script.k5_course?
+      actions = [
+        {
+          label: t('nav.header.free_play.playlab'),
+          icon: 'fa-rocket',
+          link: playlab_freeplay_level(script)
+        },
+        {
+          label: t('nav.header.free_play.artist'),
+          icon: 'fa-pencil',
+          link: artist_freeplay_level(script)
+        }
+      ]
+    end
+
+    reply = {
+      stage: stage_data,
+      level: level_data,
+      actions: actions
+    }
+
+
+    # USER-SPECIFIC DATA - should eventually move to its own callback?
+    if current_user
+      user_data = {
+        linesOfCode: current_user.total_lines,
+        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
+        levels: {},
+        videos_seen: videos_seen,
+        callouts_seen: callouts_seen
+      }
+
+      # Get all user_levels
+      user_levels = current_user.levels_from_script(script)
+
+      user_levels.map do |sl|
+        completion_status, link = level_info(current_user, sl)
+        if completion_status != 'not_tried'
+          user_data[:levels][sl.level.id] = {
+            status: completion_status
+            # More info could go in here...
+          }
+        end
+      end
+
+      user_data[:disableSocialShare] = true if current_user.under_13?
+
+      if script.trophies
+        progress = current_user.progress(script)
+        concepts = current_user.concept_progress(script)
+
+        user_data[:trophies] = {
+          current: progress['current_trophies'],
+          of: t(:of),
+          max: progress['max_trophies']
+        }
+
+        concepts.each_pair do |concept, counts|
+          user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
+        end
+
+      end
+
+      if params['jsonp']
+        expires_in 10000, public: true  # TODO: Real static asset caching
+      end
+      reply[:progress] = user_data
+    else
+      # TODO OFFLINE:  Session-based progress
+    end
+
+    if params['jsonp']
+      expires_in 10000, public: true  # TODO: Real static asset caching
+    end
+    render :json => reply, :callback => params['jsonp']
+  end
+
+
+
+
+
 
   def prizes
     authorize! :read, current_user

@@ -7,6 +7,14 @@ module StagesHelper
     end
   end
 
+  def stage_name(script, stage)
+    if script.stages.many?
+      data_t_suffix('script.name', script.name, stage.name)
+    else
+      data_t_suffix('script.name', script.name, 'title')
+    end
+  end
+
   def lesson_plan_html_url(stage)
     "#{lesson_plan_base_url(stage)}/Teacher"
   end
