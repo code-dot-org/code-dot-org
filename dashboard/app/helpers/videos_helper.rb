@@ -40,15 +40,6 @@ module VideosHelper
   end
 
   def video_info(video, autoplay = true)
-    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
-    {
-        src: youtube_url(video.youtube_code, {autoplay: autoplay ? 1 : 0}),
-        key: video.key,
-        name: data_t('video.name', video.key),
-        download: video.download,
-        thumbnail: video_thumbnail_path(video),
-        enable_fallback: true,
-        autoplay: autoplay
-    }
+    video.summarize autoplay
   end
 end
