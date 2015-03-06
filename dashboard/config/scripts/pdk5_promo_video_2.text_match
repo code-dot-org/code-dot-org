@@ -1,0 +1,9 @@
+name 'PDK5 Promo Video 2'
+title 'Code Studio: Kid tested, Teacher approved'
+placeholder 'My first impressions of Code Studio are...'
+
+markdown <<MARKDOWN
+<iframe width="640" height="390" src="https://www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+
+#### What are your first impressions of Code Studio?
+MARKDOWN
