@@ -53,7 +53,11 @@ SQL
 
   def get_script
     script = find_script(params)
-    render json: script.summarize
+
+    if params['jsonp']
+      expires_in 10000, public: true  # TODO: Real static asset caching
+    end
+    render :json => script.summarize, :callback => params['jsonp']
   end
 
   def user_progress
@@ -97,7 +101,7 @@ SQL
 
       video = Video.find_by_key(try_t("data.unplugged.#{unplug_id}.video"))
       if video
-        level_data[:video] = video.video_info(false)
+        level_data[:video] = video.summarize(false)
       end
 
     elsif level.is_a?(DSLDefined)
