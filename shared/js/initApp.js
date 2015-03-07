@@ -327,6 +327,7 @@ function loadProject(promise) {
     dashboard.isEditingProject = true;
     promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
+  return promise;
 }
 
 loadStyle('common');
@@ -339,11 +340,11 @@ if (appOptions.droplet) {
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full.min'));
-  loadProject(promise);
+  promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()
     .then(loadSource(appOptions.locale + '/blockly_locale'));
-  loadProject(promise);
+  promise = loadProject(promise);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
