@@ -97,7 +97,7 @@ SQL
 
       video = Video.find_by_key(try_t("data.unplugged.#{unplug_id}.video"))
       if video
-        level_data[:video] = video_info(video, false)
+        level_data[:video] = video.video_info(false)
       end
 
     elsif level.is_a?(DSLDefined)
