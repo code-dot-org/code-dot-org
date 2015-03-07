@@ -3,5 +3,5 @@
 
   %table{style: 'max-width: 290px;'}
     - Concept.cached.each do |concept|
-      - completion = concept_progress.try(concept.name) || 0
+      - completion = (concept_progress || {})[concept.name] || 0
       = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: completion }

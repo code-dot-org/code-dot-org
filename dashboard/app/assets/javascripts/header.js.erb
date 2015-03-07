@@ -36,10 +36,10 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
     $('.header_popup_link').show();
     $('.freeplay_links').show();
   }
-  if (stageData.trophies) {
+  if (progressData.trophies) {
     $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(stageData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(stageData.trophies.of + ' ' + stageData.trophies.max);
+    $('.header_trophy_link .current_trophies').text(progressData.trophies.current);
+    $('.header_trophy_link .max_trophies').text(progressData.trophies.of + ' ' + progressData.trophies.max);
   }
   if (stageData.linesOfCodeText) {
     $('.header_popup .header_text').text(stageData.linesOfCodeText);
