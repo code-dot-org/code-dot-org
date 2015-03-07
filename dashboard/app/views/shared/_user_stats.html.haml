@@ -1,5 +1,6 @@
-- script = (@script || (user && user.primary_script) || Script.twenty_hour_script).summarize
+- script = @script || (user && user.primary_script) || Script.twenty_hour_script
 - progress = summarize_user_progress(script)
+- script = script.summarize
 - should_show_lesson_plan = user && user.teacher?
 
 .user-stats-block
@@ -15,23 +16,20 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - level_progress = progress.try(:levels).try(level[:id])
-            - level_progress = 'not_tried' if level_progress.nil?
+            - status = progress.try(:levels).try(level[:id]) || 'not_tried'
             - link = "/s/#{script[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}"
-            - if params[:script_level_id] && params[:script_level_id] == level.level_id.to_s
+            - if params.try(:script_level_id) == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a.level_link{ href: link, class: level_progress }
+              %a.level_link{ href: link, class: status }
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]
-                - elsif level_progress == 'passed'
-                  = check_mark_html
-                - elsif level_progress == 'perfect'
+                - elsif status == 'passed' || status == 'perfect'
                   = check_mark_html
                 - else
                   %span.puzzle-number
