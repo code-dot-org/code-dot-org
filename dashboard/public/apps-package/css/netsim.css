@@ -1,3 +1,12 @@
+/* For aligning table columns across panels */
+/* Cross-browser helper for user_select property */
+/* Reduce top margin to help fit everything above the fold */
+.full_container {
+  padding-top: 2px; }
+
+.clearfix {
+  clear: both; }
+
 #visualization {
   background-color: #fff; }
 
@@ -33,77 +42,156 @@
 .expr {
   font-size: 20px; }
 
-#netsim_rightcol {
-  float: right;
-  width: 300px; }
-  #netsim_rightcol #netsim_visualization img {
+/*
+
+  NetSim-specific styles
+
+*/
+#netsim {
+  /* Span around clickable icons and text that show/hide panels. */
+  /* Orange SPAN button */
+  /*
+    General two-column layout rules
+  */
+  /*
+    NetSim Panel
+    One of the sections in the left column with a colored header
+    and user controls.
+  */
+  /* How rounded are the corners of the panel? */
+  /* Minimized panel, contents are hidden. */
+  /*
+    Log panel rules
+    Panel that shows a history of sent or received messages in a table.
+  */
+  /*
+    Send panel rules
+    Panel that lets the user enter and send messages
+    Mimics the log panel styles as much as possible.
+  */ }
+  #netsim h1 {
+    font-family: "Gotham 5r", sans-serif; }
+  #netsim p, #netsim label {
+    font-family: "Gotham 4r", sans-serif; }
+  #netsim table {
     width: 100%; }
-
-#netsim_leftcol {
-  margin-right: 320px; }
-
-#netsim_lobby_list {
-  background-color: white;
-  padding: 0.5em;
-  border: inset darkslategray thin;
-  list-style: none; }
-  #netsim_lobby_list li {
-    background-color: white;
-    padding: 0.3em; }
-  #netsim_lobby_list .own_row {
-    font-weight: bold;
-    background-color: lightcyan; }
-  #netsim_lobby_list .router_row {
-    cursor: pointer; }
-  #netsim_lobby_list .router_row:hover {
-    color: black;
-    background-color: rgba(255, 140, 0, 0.21); }
-  #netsim_lobby_list .selected_row {
+    #netsim table th, #netsim table td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse; }
+    #netsim table th {
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 10pt; }
+    #netsim table td {
+      font-family: "Gotham 4r", sans-serif;
+      /* Make sure table text can be selected and copied */
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      -khtml-user-select: text;
+      user-select: text; }
+    #netsim table tbody th, #netsim table tbody td {
+      vertical-align: top; }
+  #netsim .minimizer {
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
+  #netsim .netsim_button {
+    display: inline-block;
     color: white;
-    background-color: darkorange; }
-  #netsim_lobby_list .selected_row:hover {
-    background-color: darkorange; }
-
-.netsim_log_widget {
-  background-color: white;
-  border: solid darkgray thin;
-  margin: 0.5em;
-  padding: 0; }
-  .netsim_log_widget h1 {
-    margin: 0;
+    background-color: #FFA400;
+    border-radius: 3px;
+    font-family: "Gotham 4r", sans-serif;
+    font-size: 8pt;
+    line-height: 14pt;
+    padding: 0 10px;
+    cursor: pointer;
+    /* Button text should not be selectable */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
+  #netsim #netsim_rightcol {
+    float: right;
+    width: 300px; }
+    #netsim #netsim_rightcol #netsim_visualization img {
+      width: 100%; }
+  #netsim #netsim_leftcol {
+    margin-right: 320px; }
+  #netsim .netsim_panel.netsim_lobby div.panel_body {
+    padding: 1em; }
+  #netsim #netsim_lobby_list {
+    background-color: white;
     padding: 0.5em;
-    font-size: 120%;
-    line-height: 20px;
-    background-color: #7665A0;
-    color: whitesmoke; }
-    .netsim_log_widget h1 .log_header_controls {
-      float: right; }
-  .netsim_log_widget .packet {
+    border: inset darkslategray thin;
+    list-style: none; }
+    #netsim #netsim_lobby_list li {
+      background-color: white;
+      padding: 0.3em; }
+    #netsim #netsim_lobby_list .own_row {
+      font-weight: bold;
+      background-color: lightcyan; }
+    #netsim #netsim_lobby_list .router_row {
+      cursor: pointer; }
+    #netsim #netsim_lobby_list .router_row:hover {
+      color: black;
+      background-color: rgba(255, 140, 0, 0.21); }
+    #netsim #netsim_lobby_list .selected_row {
+      color: white;
+      background-color: darkorange; }
+    #netsim #netsim_lobby_list .selected_row:hover {
+      background-color: darkorange; }
+  #netsim div.netsim_panel {
+    background-color: white;
+    margin: 0 0 0.5em;
+    padding: 0; }
+    #netsim div.netsim_panel h1 {
+      margin: 0;
+      padding: 0.3em 0.5em;
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 110%;
+      font-weight: bold;
+      line-height: 110%;
+      color: whitesmoke;
+      background-color: #00ADBC;
+      border-radius: 0.3em 0.3em 0 0; }
+      #netsim div.netsim_panel h1 .panel_controls {
+        float: right;
+        margin-top: -0.3em;
+        padding-top: 3px; }
+    #netsim div.netsim_panel div.panel_body {
+      border-left: solid darkgray thin;
+      border-right: solid darkgray thin;
+      border-bottom: solid darkgray thin;
+      border-top: solid #00ADBC thin;
+      border-radius: 0 0 0.3em 0.3em; }
+  #netsim div.netsim_panel.minimized h1 {
+    border-radius: 0.3em; }
+    #netsim div.netsim_panel.minimized h1 .clear_button {
+      display: none; }
+  #netsim div.netsim_panel.minimized div.panel_body {
+    display: none; }
+  #netsim .netsim_log_panel .packet {
     margin: 10px;
     padding: 5px;
     border: solid darkgray thin;
     border-radius: 3px;
     background-color: #ddd; }
-    .netsim_log_widget .packet td {
+    #netsim .netsim_log_panel .packet td {
       border-color: #ddd; }
-  .netsim_log_widget .scroll_area {
+  #netsim .netsim_log_panel .scroll_area {
     margin: 0.5em 0 0.5em 0;
-    height: 180px;
+    max-height: 180px;
     width: 100%;
     overflow-y: scroll; }
-  .netsim_log_widget table {
-    width: 100%; }
-  .netsim_log_widget th, .netsim_log_widget td {
-    padding: 1px 5px;
-    border: solid lightgray 1px;
-    border-collapse: collapse; }
-  .netsim_log_widget tbody th, .netsim_log_widget tbody td {
-    vertical-align: top; }
-  .netsim_log_widget th {
-    font-size: 10pt;
+  #netsim .netsim_log_panel table th {
     color: black;
     background-color: transparent; }
-  .netsim_log_widget td {
+  #netsim .netsim_log_panel table tbody td {
     font-family: monospace;
     /* Make sure table text can be selected and copied */
     -moz-user-select: text;
@@ -111,131 +199,118 @@
     -ms-user-select: text;
     -khtml-user-select: text;
     user-select: text; }
-  .netsim_log_widget th.encodingLabel, .netsim_log_widget td.encodingLabel, .netsim_log_widget th.toAddress, .netsim_log_widget td.toAddress, .netsim_log_widget th.fromAddress, .netsim_log_widget td.fromAddress, .netsim_log_widget th.packetInfo, .netsim_log_widget td.packetInfo {
+  #netsim .netsim_log_panel th.encodingLabel, #netsim .netsim_log_panel td.encodingLabel, #netsim .netsim_log_panel th.toAddress, #netsim .netsim_log_panel td.toAddress, #netsim .netsim_log_panel th.fromAddress, #netsim .netsim_log_panel td.fromAddress, #netsim .netsim_log_panel th.packetInfo, #netsim .netsim_log_panel td.packetInfo {
     text-align: center; }
-  .netsim_log_widget th.toAddress, .netsim_log_widget td.toAddress, .netsim_log_widget th.fromAddress, .netsim_log_widget td.fromAddress {
+  #netsim .netsim_log_panel th.encodingLabel, #netsim .netsim_log_panel td.encodingLabel {
+    width: 1%;
+    /* Depend on nowrap */ }
+  #netsim .netsim_log_panel th.toAddress, #netsim .netsim_log_panel td.toAddress, #netsim .netsim_log_panel th.fromAddress, #netsim .netsim_log_panel td.fromAddress {
     width: 50px; }
-  .netsim_log_widget th.encodingLabel, .netsim_log_widget td.encodingLabel, .netsim_log_widget th.packetInfo, .netsim_log_widget td.packetInfo {
+  #netsim .netsim_log_panel th.packetInfo, #netsim .netsim_log_panel td.packetInfo {
     width: 100px; }
-  .netsim_log_widget td.message {
-    background-color: white; }
-  .netsim_log_widget td.toAddress {
+  #netsim .netsim_log_panel td.toAddress {
     background-color: rgba(255, 233, 238, 0.85); }
-  .netsim_log_widget td.fromAddress {
+  #netsim .netsim_log_panel td.fromAddress {
     background-color: lightcyan; }
-  .netsim_log_widget td.packetInfo {
+  #netsim .netsim_log_panel td.packetInfo {
     background-color: rgba(212, 238, 212, 0.9); }
-
-.netsim_send_widget {
-  border: solid darkgray thin;
-  margin: 0.5em;
-  padding: 10px; }
-  .netsim_send_widget h1 {
-    margin: -10px -10px 10px -10px;
-    padding: 0.5em;
-    font-size: 120%;
-    line-height: 20px;
-    background-color: #7665A0;
-    color: whitesmoke; }
-  .netsim_send_widget div.netsim_packet {
+  #netsim .netsim_log_panel td.message {
+    background-color: white; }
+  #netsim .netsim_send_panel .netsim_packet {
     border: solid darkgray thin;
     background-color: #ddd;
+    margin: 10px;
     padding: 0.5em;
     border-radius: 0.5em;
     /* All input fields */
-    /* All columns but "message" */
-    /* toAddress column */
-    /* fromAddress column */
-    /* packetInfo column */
-    /* message column */
-    /* All rows but headers */
-    /* hexadecimal row */
-    /* binary row */ }
-    .netsim_send_widget div.netsim_packet th, .netsim_send_widget div.netsim_packet td {
-      padding: 1px 5px;
-      border: solid lightgray 1px;
-      border-collapse: collapse; }
-    .netsim_send_widget div.netsim_packet th {
-      font-size: 10pt;
+    /* All columns but "message" */ }
+    #netsim .netsim_send_panel .netsim_packet th {
       color: black;
       background-color: transparent; }
-    .netsim_send_widget div.netsim_packet input, .netsim_send_widget div.netsim_packet textarea {
+    #netsim .netsim_send_panel .netsim_packet input, #netsim .netsim_send_panel .netsim_packet textarea {
       padding: 0.2em;
       margin-bottom: 0.2em;
-      font-family: monospace; }
-    .netsim_send_widget div.netsim_packet .watermark {
+      font-family: monospace;
+      background-color: transparent;
+      box-shadow: none; }
+    #netsim .netsim_send_panel .netsim_packet input {
+      border: solid 1px #ccc; }
+    #netsim .netsim_send_panel .netsim_packet textarea {
+      border: none; }
+    #netsim .netsim_send_panel .netsim_packet .watermark {
       color: #d3d3d3; }
-    .netsim_send_widget div.netsim_packet .bit_counter {
+    #netsim .netsim_send_panel .netsim_packet .bit_counter {
       text-align: right;
       color: darkgray; }
-    .netsim_send_widget div.netsim_packet th.encodingLabel, .netsim_send_widget div.netsim_packet td.encodingLabel, .netsim_send_widget div.netsim_packet th.toAddress, .netsim_send_widget div.netsim_packet td.toAddress, .netsim_send_widget div.netsim_packet th.fromAddress, .netsim_send_widget div.netsim_packet td.fromAddress, .netsim_send_widget div.netsim_packet th.packetInfo, .netsim_send_widget div.netsim_packet td.packetInfo {
-      width: 1%;
-      /* depend on nowrap */
+    #netsim .netsim_send_panel .netsim_packet th.encodingLabel, #netsim .netsim_send_panel .netsim_packet td.encodingLabel, #netsim .netsim_send_panel .netsim_packet th.toAddress, #netsim .netsim_send_panel .netsim_packet td.toAddress, #netsim .netsim_send_panel .netsim_packet th.fromAddress, #netsim .netsim_send_panel .netsim_packet td.fromAddress, #netsim .netsim_send_panel .netsim_packet th.packetInfo, #netsim .netsim_send_panel .netsim_packet td.packetInfo {
       text-align: center; }
-      .netsim_send_widget div.netsim_packet th.encodingLabel input, .netsim_send_widget div.netsim_packet td.encodingLabel input, .netsim_send_widget div.netsim_packet th.toAddress input, .netsim_send_widget div.netsim_packet td.toAddress input, .netsim_send_widget div.netsim_packet th.fromAddress input, .netsim_send_widget div.netsim_packet td.fromAddress input, .netsim_send_widget div.netsim_packet th.packetInfo input, .netsim_send_widget div.netsim_packet td.packetInfo input {
+      #netsim .netsim_send_panel .netsim_packet th.encodingLabel input, #netsim .netsim_send_panel .netsim_packet td.encodingLabel input, #netsim .netsim_send_panel .netsim_packet th.toAddress input, #netsim .netsim_send_panel .netsim_packet td.toAddress input, #netsim .netsim_send_panel .netsim_packet th.fromAddress input, #netsim .netsim_send_panel .netsim_packet td.fromAddress input, #netsim .netsim_send_panel .netsim_packet th.packetInfo input, #netsim .netsim_send_panel .netsim_packet td.packetInfo input {
         width: 3em;
         text-align: center; }
-    .netsim_send_widget div.netsim_packet th.toAddress input, .netsim_send_widget div.netsim_packet td.toAddress input {
+    #netsim .netsim_send_panel .netsim_packet th.encodingLabel, #netsim .netsim_send_panel .netsim_packet td.encodingLabel {
+      width: 1%;
+      /* depend on nowrap */ }
+    #netsim .netsim_send_panel .netsim_packet th.toAddress, #netsim .netsim_send_panel .netsim_packet td.toAddress, #netsim .netsim_send_panel .netsim_packet th.fromAddress, #netsim .netsim_send_panel .netsim_packet td.fromAddress {
+      width: 50px; }
+    #netsim .netsim_send_panel .netsim_packet th.packetInfo, #netsim .netsim_send_panel .netsim_packet td.packetInfo {
+      width: 100px; }
+    #netsim .netsim_send_panel .netsim_packet td.toAddress {
       background-color: rgba(255, 233, 238, 0.85); }
-    .netsim_send_widget div.netsim_packet th.fromAddress input, .netsim_send_widget div.netsim_packet td.fromAddress input {
+    #netsim .netsim_send_panel .netsim_packet td.fromAddress {
       background-color: lightcyan; }
-    .netsim_send_widget div.netsim_packet th.packetInfo input, .netsim_send_widget div.netsim_packet td.packetInfo input {
+    #netsim .netsim_send_panel .netsim_packet td.packetInfo {
       background-color: rgba(212, 238, 212, 0.9); }
-    .netsim_send_widget div.netsim_packet th.message, .netsim_send_widget div.netsim_packet td.message {
+    #netsim .netsim_send_panel .netsim_packet td.message {
+      background-color: white;
       /* Wrapper div keeps textarea bound within column, but still
-         able to set padding. */ }
-      .netsim_send_widget div.netsim_packet th.message div, .netsim_send_widget div.netsim_packet td.message div {
+           able to set padding. */ }
+      #netsim .netsim_send_panel .netsim_packet td.message div {
         margin-right: 0.4em; }
-        .netsim_send_widget div.netsim_packet th.message div textarea, .netsim_send_widget div.netsim_packet td.message div textarea {
+        #netsim .netsim_send_panel .netsim_packet td.message div textarea {
           width: 100%;
           padding: 0.2em; }
-    .netsim_send_widget div.netsim_packet tbody th, .netsim_send_widget div.netsim_packet tbody td {
-      vertical-align: top; }
-  .netsim_send_widget .send_widget_footer {
+  #netsim .netsim_send_panel .send_widget_footer {
     text-align: right;
-    margin-top: 0.5em; }
-
-.netsim_tabs {
-  margin-top: 1em;
-  /* Modify actual tabs at top of tab area */
-  /* Less padding around tab content divs */ }
-  .netsim_tabs h1 {
-    font-size: 10pt;
-    line-height: 10pt;
-    margin: 10px 0 3px 0;
-    border-bottom: solid darkgrey thin; }
-  .netsim_tabs table {
-    width: 100%; }
-    .netsim_tabs table th, .netsim_tabs table td {
-      padding: 1px 5px;
-      border: solid lightgray 1px;
-      border-collapse: collapse; }
-    .netsim_tabs table th {
-      font-size: 10pt; }
-  .netsim_tabs .ui-tabs-nav li a {
-    font-size: 8pt;
-    padding: 0 1em; }
-  .netsim_tabs .ui-tabs-panel {
-    padding: 0.8em 0.5em;
-    /* But extra margin around paragraphs of text (instructions) */ }
-    .netsim_tabs .ui-tabs-panel p {
-      margin: 0 1em 10px 1em; }
-  .netsim_tabs .netsim_router_tab .netsim_router_log {
-    max-height: 200px;
-    overflow-y: scroll; }
-    .netsim_tabs .netsim_router_tab .netsim_router_log table th, .netsim_tabs .netsim_router_tab .netsim_router_log table td {
-      font-size: 8pt; }
-    .netsim_tabs .netsim_router_tab .netsim_router_log table td {
-      vertical-align: top; }
-  .netsim_tabs .netsim_dns_tab .dns_mode_control input[type="radio"] {
-    vertical-align: middle;
-    margin: 0; }
-  .netsim_tabs .netsim_dns_tab .dns_mode_control label {
-    display: inline;
-    margin-left: 1em; }
-  .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.localNode {
-    font-weight: bold;
-    background-color: lightcyan; }
-  .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.dnsNode {
-    color: white;
-    background-color: darkorange; }
+    margin: 10px; }
+  #netsim .netsim_tabs {
+    margin-top: 1em;
+    /* Modify actual tabs at top of tab area */
+    /* Less padding around tab content divs */ }
+    #netsim .netsim_tabs h1 {
+      font-size: 10pt;
+      line-height: 10pt;
+      margin: 10px 0 3px 0;
+      border-bottom: solid darkgrey thin; }
+    #netsim .netsim_tabs .ui-tabs-nav {
+      background: #00ADBC;
+      border-left: none;
+      border-right: none;
+      border-top: none; }
+      #netsim .netsim_tabs .ui-tabs-nav li a {
+        font-family: "Gotham 5r", sans-serif;
+        font-size: 8pt;
+        padding: 0 1em; }
+    #netsim .netsim_tabs .ui-tabs-panel {
+      padding: 0.8em 0.5em;
+      /* But extra margin around paragraphs of text (instructions) */ }
+      #netsim .netsim_tabs .ui-tabs-panel p {
+        margin: 0 1em 10px 1em; }
+    #netsim .netsim_tabs .netsim_router_tab .netsim_router_log {
+      max-height: 200px;
+      overflow-y: scroll; }
+      #netsim .netsim_tabs .netsim_router_tab .netsim_router_log table th, #netsim .netsim_tabs .netsim_router_tab .netsim_router_log table td {
+        font-size: 8pt; }
+    #netsim .netsim_tabs .netsim_dns_tab .dns_mode_control input[type="radio"] {
+      vertical-align: middle;
+      margin: 0; }
+    #netsim .netsim_tabs .netsim_dns_tab .dns_mode_control label {
+      display: inline;
+      margin-left: 1em; }
+    #netsim .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.localNode {
+      font-weight: bold;
+      background-color: lightcyan; }
+    #netsim .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.dnsNode {
+      color: white;
+      background-color: darkorange; }
+  #netsim .netsim_panel.netsim_status_panel div.panel_body {
+    padding: 1em; }

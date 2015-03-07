@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303201527) do
+ActiveRecord::Schema.define(version: 20150305214953) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -53,6 +53,33 @@ ActiveRecord::Schema.define(version: 20150303201527) do
     t.string   "callout_text"
   end
 
+  create_table "cohorts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "program_type"
+  end
+
+  add_index "cohorts", ["name"], name: "index_cohorts_on_name", using: :btree
+  add_index "cohorts", ["program_type"], name: "index_cohorts_on_program_type", using: :btree
+
+  create_table "cohorts_districts", id: false, force: true do |t|
+    t.integer "cohort_id",    null: false
+    t.integer "district_id",  null: false
+    t.integer "max_teachers"
+  end
+
+  add_index "cohorts_districts", ["cohort_id", "district_id"], name: "index_cohorts_districts_on_cohort_id_and_district_id", using: :btree
+  add_index "cohorts_districts", ["district_id", "cohort_id"], name: "index_cohorts_districts_on_district_id_and_cohort_id", using: :btree
+
+  create_table "cohorts_users", id: false, force: true do |t|
+    t.integer "user_id",   null: false
+    t.integer "cohort_id", null: false
+  end
+
+  add_index "cohorts_users", ["cohort_id", "user_id"], name: "index_cohorts_users_on_cohort_id_and_user_id", using: :btree
+  add_index "cohorts_users", ["user_id", "cohort_id"], name: "index_cohorts_users_on_user_id_and_cohort_id", using: :btree
+
   create_table "concepts", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -70,11 +97,35 @@ ActiveRecord::Schema.define(version: 20150303201527) do
   add_index "concepts_levels", ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
   add_index "concepts_levels", ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
 
+  create_table "districts", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "location"
+    t.integer  "contact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "districts", ["contact_id"], name: "index_districts_on_contact_id", using: :btree
+  add_index "districts", ["name"], name: "index_districts_on_name", using: :btree
+
+  create_table "districts_users", id: false, force: true do |t|
+    t.integer "user_id",     null: false
+    t.integer "district_id", null: false
+  end
+
+  add_index "districts_users", ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
+  add_index "districts_users", ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
+
   create_table "experiment_activities", force: true do |t|
     t.integer  "activity_id",     null: false
     t.string   "feedback_design"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "facilitators_workshops", id: false, force: true do |t|
+    t.integer "workshop_id",    null: false
+    t.integer "facilitator_id", null: false
   end
 
   create_table "followers", force: true do |t|
@@ -250,6 +301,18 @@ ActiveRecord::Schema.define(version: 20150303201527) do
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
   add_index "sections", ["user_id"], name: "index_sections_on_user_id", using: :btree
 
+  create_table "segments", force: true do |t|
+    t.integer  "workshop_id", null: false
+    t.datetime "start",       null: false
+    t.datetime "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "segments", ["end"], name: "index_segments_on_end", using: :btree
+  add_index "segments", ["start"], name: "index_segments_on_start", using: :btree
+  add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+
   create_table "stages", force: true do |t|
     t.string   "name",       null: false
     t.integer  "position"
@@ -397,5 +460,30 @@ ActiveRecord::Schema.define(version: 20150303201527) do
     t.datetime "updated_at"
     t.string   "download"
   end
+
+  create_table "workshop_attendance", force: true do |t|
+    t.integer  "teacher_id", null: false
+    t.integer  "segment_id", null: false
+    t.string   "status",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workshop_attendance", ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree
+  add_index "workshop_attendance", ["teacher_id"], name: "index_workshop_attendance_on_teacher_id", using: :btree
+
+  create_table "workshops", force: true do |t|
+    t.string   "name"
+    t.string   "program_type", null: false
+    t.string   "location"
+    t.string   "instructions"
+    t.integer  "cohort_id",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workshops", ["cohort_id"], name: "index_workshops_on_cohort_id", using: :btree
+  add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
+  add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
 end

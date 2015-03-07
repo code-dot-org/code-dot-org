@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 'use strict';
@@ -24,11 +23,13 @@ var logger = NetSimLogger.getSingleton();
 /**
  * A connection to a NetSim shard
  * @param {Window} thisWindow
- * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
- * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
+ * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
+ * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
+ * @param {boolean} [enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (thisWindow, sentLog,
+    receivedLog, enableCleanup) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -37,13 +38,13 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedL
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.sentLog_ = sentLog;
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
   this.receivedLog_ = receivedLog;
@@ -60,6 +61,13 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog, receivedL
    * @private
    */
   this.shard_ = null;
+
+  /**
+   * Whether to instantiate a shard cleaner
+   * @type {boolean}
+   * @private
+   */
+  this.enableCleanup_ = enableCleanup !== undefined ? enableCleanup : true;
 
   /**
    *
@@ -145,7 +153,9 @@ NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID);
-  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  if (this.enableCleanup_) {
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  }
   this.createMyClientNode_(displayName);
 };
 

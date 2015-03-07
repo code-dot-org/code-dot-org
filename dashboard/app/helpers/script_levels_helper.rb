@@ -82,15 +82,12 @@ module ScriptLevelsHelper
   def header_progress(script_level)
     script = script_level.script
     stage = script_level.stage
-    game = script_level.level.game
 
     game_levels =
       if current_user
-        current_user.levels_from_script(script, game.id, stage)
-      elsif stage
-        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
+        current_user.levels_from_script(script, stage)
       else
-        script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
+        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       end
 
     script_data = {

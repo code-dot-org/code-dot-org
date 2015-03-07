@@ -12,7 +12,7 @@
 
 :javascript
   // Pre-fill text area with previous response content
-  $('textarea.response').val(#{@start_blocks.to_json});
+  $('textarea.response').val(#{@last_attempt.to_json});
   function getResult()
   {
     var response = $('textarea.response').val();

@@ -1,0 +1,43 @@
+---
+layout: none
+template: none
+---
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%span{href:'/ops-dashboard/workshops'}
+  Workshops
+
+%h1 Workshops
+%a.btn.btn-white{href:'#/workshops/new'}
+  Create New Workshop
+%table{'ng-controller' => 'WorkshopsController', style:'width:100%; margin-top:20px;'}
+  %tr
+    %th.manage-th
+      Workshops Name
+    %th.manage-th
+      Program Type
+    %th.manage-th
+      Cohort
+    %th.manage-th
+      Start Date
+    %th.manage-th
+      Manage
+  %tr{'ng-repeat' => 'workshop in workshops'}
+    %td
+      %p
+        {{workshop.name}}
+      %a{href:'#/workshops/{{workshop.id}}/attendance'}
+        View attendance
+    %td
+      %span
+        {{program_types[workshop.program_type].short_name}}
+    %td
+      %span
+        {{cohortName(workshop.cohort_id)}}
+    %td
+      %div{'ng-repeat' => 'segment in workshopSegments'}
+        {{segment.start | date:'longDate'}}
+    %td
+      %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit'} Edit
+      %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);'} Delete
