@@ -8,6 +8,7 @@
  maxlen: 90,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 require('../utils');
@@ -114,11 +115,12 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
       this.entities_.push(this.localNode);
-      this.svgRoot_.find('#foreground_group').append(this.localNode.getRoot());
+      this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
   } else {
     this.localNode.kill();
   }
+  this.pullElementsToForeground();
 };
 
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
@@ -130,6 +132,17 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
     }
     return null;
   }, null);
+};
+
+/**
+ *
+ * @param {NetSimVizNode} vizNode
+ */
+NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
+  return this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
+  });
 };
 
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
@@ -187,6 +200,75 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
       vizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
       this.entities_.push(vizWire);
       this.svgRoot_.find('#background_group').prepend(vizWire.getRoot());
+    }
+  }, this);
+
+  this.pullElementsToForeground();
+};
+
+var visitEntity = function (entity, stack) {
+  entity.speculativeIsForeground = true;
+
+  // Push new entities to explore based on node type and connections
+  if (entity instanceof NetSimVizNode) {
+    // Nodes look for connected wires
+    this.getWiresAttachedToNode(entity).forEach(function (wire) {
+      // Don't explore twice!
+      if (!wire.speculativeIsForeground) {
+        stack.push(wire);
+      }
+    });
+  } else if (entity instanceof NetSimVizWire) {
+    // Wires know their connected nodes
+    if (!entity.localVizNode.speculativeIsForeground) {
+      stack.push(entity.localVizNode);
+    }
+    if (!entity.remoteVizNode.speculativeIsForeground) {
+      stack.push(entity.remoteVizNode);
+    }
+  }
+};
+
+NetSimVisualization.prototype.pullElementsToForeground = function () {
+  // Assume all entities should be background.
+  this.entities_.forEach(function (entity) {
+    entity.speculativeIsForeground = false;
+  });
+
+  var exploreStack = [];
+  if (this.localNode) {
+    exploreStack.push(this.localNode);
+  }
+
+  var currentEntity;
+  while (exploreStack.length > 0) {
+    // Pop end of exploreStack, make it foreground.
+    currentEntity = exploreStack.pop();
+    visitEntity(currentEntity, exploreStack);
+  }
+
+  // Move all nodes to their new, correct layers
+  var foreground = this.svgRoot_.find('#foreground_group');
+  var background = this.svgRoot_.find('#background_group');
+  var newParent, isForeground;
+  this.entities_.forEach(function (entity) {
+    newParent = undefined;
+    isForeground = $.contains(foreground[0], entity.getRoot()[0]);
+
+    if (entity.speculativeIsForeground && !isForeground) {
+      newParent = foreground;
+    } else if (!entity.speculativeIsForeground && isForeground) {
+      newParent = background;
+    }
+
+    if (newParent) {
+      entity.getRoot().detach();
+      if (entity instanceof NetSimVizWire) {
+        entity.getRoot().prependTo(newParent);
+      } else {
+        entity.getRoot().appendTo(newParent);
+      }
+      entity.onDepthChange(newParent === foreground);
     }
   }, this);
 };

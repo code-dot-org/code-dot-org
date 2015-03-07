@@ -23,6 +23,11 @@ var NetSimVizEntity = module.exports =  function (entity) {
   this.id = entity.entityID;
 
   /**
+   * @type {boolean}
+   */
+  this.isForeground = false;
+
+  /**
    * Root SVG <g> (group) element for this object.
    * @type {jQuery}
    * @private
@@ -49,6 +54,7 @@ NetSimVizEntity.prototype.getRoot = function () {
 };
 
 NetSimVizEntity.prototype.kill = function () {
+  this.id = undefined;
   this.isDead_ = true;
 };
 
@@ -63,4 +69,11 @@ NetSimVizEntity.prototype.tick = function (clock) {
   this.tweens_ = this.tweens_.filter(function (tween) {
     return !tween.isFinished;
   });
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizEntity.prototype.onDepthChange = function (isForeground) {
+  this.isForeground = isForeground;
 };

@@ -39,8 +39,8 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
    */
   this.getEntityByID_ = getEntityByID;
 
-  this.localVizNode_ = null;
-  this.remoteVizNode_ = null;
+  this.localVizNode = null;
+  this.remoteVizNode = null;
 
   this.configureFrom(sourceWire);
   this.render();
@@ -48,15 +48,26 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
 NetSimVizWire.inherits(NetSimVizEntity);
 
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode_ = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode_ = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+  this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
 };
 
 NetSimVizWire.prototype.render = function () {
   var pathData = 'M 0 0';
-  if (this.localVizNode_ && this.remoteVizNode_) {
-    pathData = 'M ' + this.localVizNode_.posX_ + ' ' + this.localVizNode_.posY_ +
-    ' L ' + this.remoteVizNode_.posX_ + ' ' + this.remoteVizNode_.posY_;
+  if (this.localVizNode && this.remoteVizNode) {
+    pathData = 'M ' + this.localVizNode.posX_ + ' ' + this.localVizNode.posY_ +
+    ' L ' + this.remoteVizNode.posX_ + ' ' + this.remoteVizNode.posY_;
   }
   this.line_.attr('d', pathData);
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizWire.prototype.kill = function () {
+  NetSimVizWire.superPrototype.kill.call(this);
+  this.localVizNode = null;
+  this.remoteVizNode = null;
 };
