@@ -47,10 +47,6 @@ SQL
     render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
   end
 
-  def summarize_stage(stage)
-    stage.summarize
-  end
-
   def get_script
     script = find_script(params)
 
@@ -83,7 +79,7 @@ SQL
       unplug_id = (level.type == 'Unplugged' ? level.name : game.name)
       level_data = {
         kind: 'unplugged',
-        level: summarize_script_level(script_level),
+        level: script_level.summarize,
         app: 'unplugged',
         title: try_t("data.unplugged.#{unplug_id}.title"),
         desc: try_t("data.unplugged.#{unplug_id}.desc")
@@ -108,7 +104,7 @@ SQL
       # TODO OFFLINE: partial "levels/#{level.class.to_s.underscore}"
       level_data = {
         kind: 'dsl',
-        level: summarize_script_level(script_level),
+        level: script_level.summarize,
         app: level.class.to_s
       }
     else
