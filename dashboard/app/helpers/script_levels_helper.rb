@@ -42,7 +42,7 @@ module ScriptLevelsHelper
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
+    video_info_response = wrapup_video.summarize
     video_info_response[:redirect] = redirect
     video_info_response
   end
