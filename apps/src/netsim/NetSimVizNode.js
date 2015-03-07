@@ -115,8 +115,8 @@ NetSimVizNode.prototype.scaleTo = function (newScale, duration, tweenFunction) {
 
 NetSimVizNode.prototype.tick = function (clock) {
   NetSimVizNode.superPrototype.tick.call(this, clock);
-  if (this.tweens_.length === 0) {
-    if (!this.isForeground) {
+  if (!this.isForeground) {
+    if (this.tweens_.length === 0) {
       var randomX = 200 * Math.random() - 100;
       var randomY = 200 * Math.random() - 100;
       this.moveTo(randomX, randomY, 10000, tweens.easeInOutQuad);
@@ -138,9 +138,6 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   this.tweens_ = [];
   if (isForeground) {
     this.scaleTo(1);
-    if (this.isRouter) {
-      this.moveTo(0, 0);
-    }
   } else {
     this.scaleTo(0.5);
   }
