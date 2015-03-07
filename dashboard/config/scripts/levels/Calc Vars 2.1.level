@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "You can actually set a variable using the value of another variable! Here's a new variable called \"age in months\" - use the expression you came up with in the last puzzle to set \"age in months\" to the number of months in \"age\"",
+    "instructions": "You can actually set a variable using the value of another variable! Here's a new variable called \"age_in_months\" - use the expression you came up with in the last puzzle to set \"age_in_months\" to the number of months in \"age\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,8 +15,14 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"Calc Vars 2.1 \",\"callout_text\":\"drop the number of months here\",\"element_id\":\"#callout_here\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-29,\"y\":-32},\"my\":\"top left\",\"at\":\"bottom right\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "open_function_definition": "age in months"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Calc Vars 2.1 \",\r\n  \"callout_text\": \"drop the number of months in a year here\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": -29,\r\n     \"y\": -32\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "open_function_definition": "age_in_months",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
   }
 }]]></config>
   <blocks>
@@ -27,7 +33,7 @@
             <outputtype>Number</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
-          <title name="NAME">age in months</title>
+          <title name="NAME">age_in_months</title>
           <functional_input name="STACK">
             <block type="functional_times" inline="false" uservisible="false">
               <functional_input name="ARG1">
@@ -41,7 +47,7 @@
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call">
-              <mutation name="age in months"/>
+              <mutation name="age_in_months"/>
             </block>
           </functional_input>
         </block>
@@ -73,14 +79,7 @@
             <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
           </block>
         </category>
-        <category name="Variables">
-          <block type="functional_call">
-            <mutation name="age"/>
-          </block>
-          <block type="functional_call">
-            <mutation name="months"/>
-          </block>
-        </category>
+        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -90,7 +89,7 @@
             <outputtype>Number</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
-          <title name="NAME">age in months</title>
+          <title name="NAME">age_in_months</title>
           <functional_input name="STACK">
             <block type="functional_times" inline="false" uservisible="false">
               <functional_input name="ARG1">
@@ -109,7 +108,7 @@
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call">
-              <mutation name="age in months"/>
+              <mutation name="age_in_months"/>
             </block>
           </functional_input>
         </block>

@@ -3,11 +3,13 @@ title: Computer Science Principles
 nav: educate_nav
 ---
 
-# Code.org Computer Science Principles
-## CSP Monthly Status Updates
+# CSP Monthly Status Updates
 
-Sign up to receive monthly email updates on the progress of Code.org’s Computer Science Principles project. These mails are intended to be shared with members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. You'll be able to unsubscribe at any time from the emails.
+Sign up below to receive monthly email updates on the progress of Code.org’s Computer Science Principles project. These mails are intended to be shared with members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. You'll be able to unsubscribe at any time from the emails.
+## Previous updates
+- [February 2015](http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=a6f6a7e503&e=7436789f56)
 
+## Sign-up information
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -18,7 +20,6 @@ Sign up to receive monthly email updates on the progress of Code.org’s Compute
 <div id="mc_embed_signup">
 <form action="//code.us6.list-manage.com/subscribe/post?u=cabadc8d10a257f2cd70c583e&amp;id=4085f7bb4f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<h2>Sign-up information</h2>
 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 <div class="mc-field-group">
 	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>

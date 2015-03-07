@@ -96,7 +96,7 @@ def index_batch_of_forms(batch_size)
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document[:id]}: #{e}"
+          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color:'red', notify:1
           raise
         end
       end

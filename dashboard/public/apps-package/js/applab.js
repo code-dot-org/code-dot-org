@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":169}],14:[function(require,module,exports){
+},{"../skins":173}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":217,"../block_utils":19,"../utils":215}],8:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../block_utils":19,"../utils":219}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -569,6 +569,10 @@ function handleExecutionError(err, lineNumber) {
   Applab.onPuzzleComplete();
 }
 
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -580,15 +584,27 @@ Applab.onTick = function() {
   if (Applab.interpreter) {
     Applab.executeInterpreter();
   } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
-    }
+    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleComplete();
   }
 };
+
+Applab.executeNativeJS = function () {
+  if (Applab.tickCount === 1) {
+    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+  }
+};
+
+function safeStepInterpreter() {
+  try {
+    Applab.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
@@ -615,7 +631,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // step out to - and store that in stepOutToStackDepth:
         if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
           Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
             if (Applab.callExpressionSeenAtDepth[i]) {
               Applab.stepOutToStackDepth = i;
               break;
@@ -646,12 +662,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -704,33 +721,44 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
       Applab.stoppedAtBreakpointRow = userCodeRow;
       Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
     }
-    try {
-      Applab.interpreter.step();
+    var err = safeStepInterpreter();
+    if (!err) {
       doneUserLine = doneUserLine ||
         (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
+      var stackDepth = Applab.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
       // Truncate any history of call expressions seen deeper than our current stack position:
-      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+      for (var depth = stackDepth + 1;
+            depth <= Applab.maxValidCallExpressionDepth;
+            depth++) {
+        Applab.callExpressionSeenAtDepth[depth] = false;
+      }
+      Applab.maxValidCallExpressionDepth = stackDepth;
 
       if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+        Applab.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (Applab.paused) {
         // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+            Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
             Applab.nextStep === StepType.IN &&
-            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+            stackDepth > Applab.firstCallStackDepthThisStep) {
           reachedBreak = true;
         }
         // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -757,11 +785,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
 
         if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
           if (Applab.nextStep === StepType.OUT &&
-              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+              stackDepth > Applab.stepOutToStackDepth) {
             // trying to step out, but we didn't get out yet... continue on.
           } else if (Applab.nextStep === StepType.OVER &&
               typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+              stackDepth > Applab.firstCallStackDepthThisStep) {
             // trying to step over, and we're in deeper inside a function call... continue next onTick
           } else {
             // Our step operation is complete, reset nextStep to StepType.RUN to
@@ -770,7 +798,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+              Applab.stoppedAtBreakpointStackDepth = stackDepth;
             }
             delete Applab.stepOutToStackDepth;
             delete Applab.firstCallStackDepthThisStep;
@@ -779,8 +807,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
           }
         }
       }
-    }
-    catch(err) {
+    } else {
       handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       return;
     }
@@ -1048,6 +1075,7 @@ studioApp.reset = function(first) {
     delete Applab.firstCallStackDepthThisStep;
     delete Applab.stoppedAtBreakpointRow;
     delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.maxValidCallExpressionDepth = 0;
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
@@ -2754,7 +2782,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":169,"../slider":170,"../templates/page.html":194,"../timeoutList":200,"../utils":215,"../xml":216,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":173,"../slider":174,"../templates/page.html":198,"../timeoutList":204,"../utils":219,"../xml":220,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2774,7 +2802,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":236}],13:[function(require,module,exports){
+},{"ejs":240}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2794,7 +2822,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"ejs":236}],12:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"ejs":240}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -2845,7 +2873,7 @@ module.exports.blocks = [
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
   {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
   {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
@@ -3001,7 +3029,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":220,"ejs":236}],9:[function(require,module,exports){
+},{"../../locale/current/common":224,"ejs":240}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3074,7 +3102,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":217,"../../locale/current/common":220,"../codegen":45,"../utils":215}],217:[function(require,module,exports){
+},{"../../locale/current/applab":221,"../../locale/current/common":224,"../codegen":45,"../utils":219}],221:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';

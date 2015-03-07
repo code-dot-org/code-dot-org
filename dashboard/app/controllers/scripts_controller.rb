@@ -45,9 +45,6 @@ class ScriptsController < ApplicationController
   end
 
   def edit
-    if @script.default_script?
-      render :status => :forbidden, :text => 'Default scripts not editable.'
-    end
   end
 
   def update

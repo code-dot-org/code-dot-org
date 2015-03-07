@@ -12,7 +12,6 @@
 /* global $ */
 'use strict';
 
-var dom = require('../dom');
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
@@ -118,7 +117,6 @@ NetSimLobby.createWithin = function (element, connection, user, shardID) {
 NetSimLobby.prototype.bindElements_ = function () {
   // Root
   this.openRoot_ = $('#netsim_lobby_open');
-  this.closedRoot_ = $('#netsim_lobby_closed');
 
   // Open
   this.displayNameView_ = this.openRoot_.find('#display_name_view');
@@ -127,8 +125,7 @@ NetSimLobby.prototype.bindElements_ = function () {
   // Open -> display_name_view
   this.nameInput_ = this.displayNameView_.find('#netsim_lobby_name');
   this.setNameButton_ = this.displayNameView_.find('#netsim_lobby_set_name_button');
-  dom.addClickTouchEvent(this.setNameButton_[0],
-      this.setNameButtonClick_.bind(this));
+  this.setNameButton_.click(this.setNameButtonClick_.bind(this));
 
   // Open -> shard_view
   this.shardSelector_ = this.shardView_.find('#netsim_shard_select');
@@ -136,19 +133,10 @@ NetSimLobby.prototype.bindElements_ = function () {
   this.notConnectedNote_ = this.shardView_.find('#netsim_not_connected_note');
   this.notConnectedNote_.hide();
   this.addRouterButton_ = this.shardView_.find('#netsim_lobby_add_router');
-  dom.addClickTouchEvent(this.addRouterButton_[0],
-      this.addRouterButtonClick_.bind(this));
+  this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
   this.lobbyList_ = this.shardView_.find('#netsim_lobby_list');
   this.connectButton_ = this.shardView_.find('#netsim_lobby_connect');
-  dom.addClickTouchEvent(this.connectButton_[0],
-      this.connectButtonClick_.bind(this));
-
-  // Closed
-  this.disconnectButton_ = this.closedRoot_.find('#netsim_lobby_disconnect');
-  dom.addClickTouchEvent(this.disconnectButton_[0],
-      this.disconnectButtonClick_.bind(this));
-
-  this.connectionStatusSpan_ = this.closedRoot_.find('#netsim_lobby_statusbar');
+  this.connectButton_.click(this.connectButtonClick_.bind(this));
 
   // Collections
   this.shardLinks_ = $('.shardLink');
@@ -322,31 +310,9 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
 };
 
 NetSimLobby.prototype.refresh_ = function () {
-  if (this.connection_.isConnectedToRouter()) {
-    this.refreshClosedLobby_();
-  } else {
+  if (!this.connection_.isConnectedToRouter()) {
     this.refreshOpenLobby_();
   }
-};
-
-/**
- * Just show the status line and the disconnect button.
- * @private
- */
-NetSimLobby.prototype.refreshClosedLobby_ = function () {
-  this.closedRoot_.show();
-  this.openRoot_.hide();
-
-  this.notConnectedNote_.hide();
-
-  // Update connection status
-  this.connectionStatusSpan_.html(
-      this.connection_.myNode.getStatus() + ' ' +
-      this.connection_.myNode.getStatusDetail());
-
-  // Share link state?
-
-  // Disconnect button state?
 };
 
 /**
@@ -355,7 +321,6 @@ NetSimLobby.prototype.refreshClosedLobby_ = function () {
  */
 NetSimLobby.prototype.refreshOpenLobby_ = function () {
   this.openRoot_.show();
-  this.closedRoot_.hide();
 
   // Do we have a name yet?
   if (this.nameInput_.val() === '') {
@@ -435,7 +400,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
       this.selectedListItem_ = item;
     }
 
-    dom.addClickTouchEvent(item[0], this.onRowClick_.bind(this, item, simNode));
+    item.click(this.onRowClick_.bind(this, item, simNode));
     item.appendTo(this.lobbyList_);
   }.bind(this));
 
