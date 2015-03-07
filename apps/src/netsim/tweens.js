@@ -63,6 +63,13 @@ exports.easeInQuad = function (t, b, c, d) {
   return c*(t/=d)*t + b;
 };
 
+exports.easeInOutQuad = function (t, b, c, d) {
+  if ((t/=d/2) < 1) {
+    return c/2*t*t + b;
+  }
+  return -c/2 * ((--t)*(t-2) - 1) + b;
+};
+
 /**
  * Linear interpolation
  * @type {TweenFunction}

@@ -30,13 +30,14 @@ $wide_column_width: 100px;
 }
 
 svg {
-  background-color: #fff;
+  background-color: #000;
   border: solid black thin;
   border-radius: 25px;
 
   .viz-node {
     circle {
-      stroke: black;
+      stroke: white;
+      stroke-width: 2;
       fill: lightblue;
     }
   }
