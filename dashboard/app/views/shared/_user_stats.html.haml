@@ -1,5 +1,6 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
 - progress = summarize_user_progress(script)
+- levelProgress = progress[:levels] || {}
 - script = script.summarize
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:script_level_id]
@@ -17,7 +18,8 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - status = progress.try(:levels).try(level[:id]) || 'not_tried'
+            - status = levelProgress[level[:id]] || {}
+            - status = status[:status] || 'not_tried'
             - link = "/s/#{script[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}"
             - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
