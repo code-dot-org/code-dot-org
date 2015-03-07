@@ -62,3 +62,10 @@ function userProperties(app_id)
   properties.api_base_url = "/v3/apps/" + app_id + "/user-properties";
   return properties;
 }
+
+function readonlyProperties(app_id)
+{
+  properties = sharedProperties(app_id);
+  properties.api_base_url = "/v3/apps/" + app_id + "/readonly-properties";
+  return properties;
+}

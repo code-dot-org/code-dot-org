@@ -63,7 +63,12 @@ end
 
 def storage_id(endpoint)
   return nil if endpoint == 'shared'
+  return -1 if endpoint == 'readonly'
   raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
+  my_storage_id
+end
+
+def my_storage_id
   @user_storage_id ||= storage_id_for_user || storage_id_from_cookie || create_storage_id_cookie
 end
 

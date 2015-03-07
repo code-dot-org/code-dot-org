@@ -75,3 +75,10 @@ function userTable(app_id, table_name)
   table.api_base_url = "/v3/apps/" + app_id + "/user-tables/" + table_name;
   return table;
 }
+
+function readonlyTable(app_id, table_name)
+{
+  table = sharedTable(app_id, table_name);
+  table.api_base_url = "/v3/apps/" + app_id + "/readonly-tables/" + table_name;
+  return table;
+}
