@@ -175,11 +175,7 @@ SQL
     }
 
     # USER-SPECIFIC DATA - should eventually move to its own callback?
-    if current_user
-      reply[:progress] = summarize_user_progress script
-    else
-      # TODO OFFLINE:  Session-based progress
-    end
+    reply[:progress] = summarize_user_progress script
 
     if params['jsonp']
       expires_in 10000, public: true  # TODO: Real static asset caching
