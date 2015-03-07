@@ -1,49 +1,44 @@
-- script = @script || (user && user.primary_script) || Script.twenty_hour_script
+- script = (@script || (user && user.primary_script) || Script.twenty_hour_script).summarize
 - progress = summarize_user_progress(script)
-
-
-- script_levels = user ? user.levels_from_script(script) : script.script_levels
-- concept_progress = user ? user.concept_progress : nil
+- should_show_lesson_plan = user && user.teacher?
 
 .user-stats-block
-  - levels = script_levels.group_by(&:stage)
-  - levels.each_pair do |stage, sl_group|
-    - should_show_lesson_plan = script.has_lesson_plan? && user && user.teacher?
+  - script[:stages].each do |stage|
     .game-group
       .stage
         %span
-          = stage_title(script, stage)
-        - if should_show_lesson_plan
+          = stage[:title]
+        - if should_show_lesson_plan && stage[:lesson_plan_html_url]
           .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), lesson_plan_html_url(stage)
+            = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url]
 
       .games
-        - sl_group = sl_group.sort_by {|sl| sl.position}
-        - sl_group.each do |sl|
+        - stage[:levels].each do |level|
           .level
-            - css_class, link = level_info(user, sl)
-            - if params[:script_level_id] && params[:script_level_id] == sl.level_id.to_s
+            - level_progress = progress.try(:levels).try(level[:id])
+            - level_progress = 'not_tried' if level_progress.nil?
+            - link = "/s/#{script[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}"
+            - if params[:script_level_id] && params[:script_level_id] == level.level_id.to_s
               - puzzle_outer_class = 'puzzle_outer_current'
-            - elsif sl.assessment
+            - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a.level_link{ href: link, class: css_class}
-                - unplugged = sl.level.unplugged?
-                - if unplugged
+              %a.level_link{ href: link, class: level_progress }
+                - if level[:kind] == 'unplugged'
                   %span.puzzle-named
-                    =sl.level_display_text
-                - elsif css_class == 'passed'
+                    = level[:title]
+                - elsif level_progress == 'passed'
                   = check_mark_html
-                - elsif css_class == 'perfect'
+                - elsif level_progress == 'perfect'
                   = check_mark_html
-                - else 
+                - else
                   %span.puzzle-number
-                    =sl.level_display_text
+                    = level[:title]
   = render partial: 'shared/user_stats_key'
 
-- if script.trophies?
+- if script[:trophies]
   %div{style: 'clear: both;'}
   #trophies
-    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: concept_progress, added_style: 'padding: 10px;'}
+    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress.try(:trophies), added_style: 'padding: 10px;'}

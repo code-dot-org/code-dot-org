@@ -2,6 +2,8 @@ module UsersHelper
 
   # Summarize the current user's progress within a certain script.
   def summarize_user_progress(script, callouts_seen = nil, videos_seen = nil)
+    return nil if !current_user
+
     user_data = {
         linesOfCode: current_user.total_lines,
         linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
