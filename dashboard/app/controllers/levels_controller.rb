@@ -154,15 +154,23 @@ class LevelsController < ApplicationController
     end
   end
 
-  # POST /levels/1/clone
+  # POST /levels/1/clone?name=new_name
   def clone
-    # Clone existing level and open edit page
-    old_level = Level.find(params[:level_id])
-    @level = old_level.dup
-    # resolve duplicate name conflicts with 'X (copy); X (copy 2); X (copy 3)... X (copy 10)'
-    name = "#{old_level.name} (copy 0)"
-    begin result = @level.update(name: name.next!) end until result
-    redirect_to(edit_level_url(@level))
+    if params[:name]
+      # Clone existing level and open edit page
+      old_level = Level.find(params[:level_id])
+      @level = old_level.dup
+      begin
+        @level.update!(name: params[:name])
+      rescue ArgumentError => e
+        render status: :not_acceptable, text: e.message and return
+      rescue ActiveRecord::RecordInvalid => invalid
+        render status: :not_acceptable, text: invalid and return
+      end
+      render json: {redirect: edit_level_url(@level)}
+    else
+      render status: :not_acceptable, text: 'New name required to clone level'
+    end
   end
 
   def embed_blocks
