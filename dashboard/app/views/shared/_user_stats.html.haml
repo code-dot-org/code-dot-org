@@ -2,6 +2,7 @@
 - progress = summarize_user_progress(script)
 - script = script.summarize
 - should_show_lesson_plan = user && user.teacher?
+- current_level_id = params[:script_level_id]
 
 .user-stats-block
   - script[:stages].each do |stage|
@@ -9,7 +10,7 @@
       .stage
         %span
           = stage[:title]
-        - if should_show_lesson_plan && stage[:lesson_plan_html_url]
+        - if should_show_lesson_plan && stage.try(:lesson_plan_html_url)
           .stage-lesson-plan-link
             = link_to t('view_lesson_plan'), stage[:lesson_plan_html_url]
 
@@ -18,7 +19,7 @@
           .level
             - status = progress.try(:levels).try(level[:id]) || 'not_tried'
             - link = "/s/#{script[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}"
-            - if params.try(:script_level_id) == "#{level[:id]}"
+            - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
               - puzzle_outer_class = 'puzzle_outer_assessment'

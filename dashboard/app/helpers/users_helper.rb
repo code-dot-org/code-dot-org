@@ -5,11 +5,11 @@ module UsersHelper
     return nil if !current_user
 
     user_data = {
-        linesOfCode: current_user.total_lines,
-        linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
-        levels: {},
-        videos_seen: videos_seen,
-        callouts_seen: callouts_seen
+      linesOfCode: current_user.total_lines,
+      linesOfCodeText: t('nav.popup.lines', lines: current_user.total_lines),
+      levels: {},
+      videos_seen: videos_seen,
+      callouts_seen: callouts_seen
     }
 
     # Get all user_levels
@@ -19,8 +19,8 @@ module UsersHelper
       completion_status, link = level_info(current_user, sl)
       if completion_status != 'not_tried'
         user_data[:levels][sl.level.id] = {
-            status: completion_status
-            # More info could go in here...
+          status: completion_status
+          # More info could go in here...
         }
       end
     end
@@ -32,9 +32,9 @@ module UsersHelper
       concepts = current_user.concept_progress(script)
 
       user_data[:trophies] = {
-          current: progress['current_trophies'],
-          of: t(:of),
-          max: progress['max_trophies']
+        current: progress['current_trophies'],
+        of: t(:of),
+        max: progress['max_trophies']
       }
 
       concepts.each_pair do |concept, counts|
