@@ -7,48 +7,53 @@ if (!window.dashboard) {
 }
 
 /**
- * @param scriptData{{
+ * @param stageData{{
+ *   script_id: number,
+ *   script_name: number,
+ *   script_stages: id,
  *   title: string,
  *   finishLink: string,
- *   statsPath: string,
- *   showStageLinks: boolean,
+ *   finishText: string,
  *   trophies: Object,
- *   scriptId: number,
- *   scriptLevelId: number,
- *   currentLevelIndex: number,
  *   levels: Array.<{
- *     displayText: string,
- *     status: string,
- *     unplugged: boolean,
- *     assessment: boolean
+ *     id: number,
+ *     position: number,
+ *     title: string,
+ *     kind: string
  *   }>
  * }}
  */
-dashboard.buildHeader = function (scriptData) {
-  $('.header_text').first().text(scriptData.title);
-  if (scriptData.finishLink) {
-    $('.header_finished_link').show().append($('<a>').attr('href', scriptData.finishLink.href).text(scriptData.finishLink.text));
+dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
+  stageData = stageData || {};
+  progressData = progressData || {};
+  levelProgress = progressData.levels || {};
+
+  $('.header_text').first().text(stageData.title);
+  if (stageData.finishLink) {
+    $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
   }
-  if (scriptData.showStageLinks) {
+  if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
     $('.freeplay_links').show();
   }
-  if (scriptData.trophies) {
+  if (stageData.trophies) {
     $('.header_trophy_link').show();
-    $('.header_trophy_link .current_trophies').text(scriptData.trophies.current);
-    $('.header_trophy_link .max_trophies').text(scriptData.trophies.of + ' ' + scriptData.trophies.max);
+    $('.header_trophy_link .current_trophies').text(stageData.trophies.current);
+    $('.header_trophy_link .max_trophies').text(stageData.trophies.of + ' ' + stageData.trophies.max);
   }
-  if (scriptData.linesOfCodeText) {
-    $('.header_popup .header_text').text(scriptData.linesOfCodeText);
+  if (stageData.linesOfCodeText) {
+    $('.header_popup .header_text').text(stageData.linesOfCodeText);
   }
   var progressContainer = $('.progress_container');
-  scriptData.levels.forEach(function(level, index, levels) {
-    var defaultClass = level.assessment ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var link = $('<a>').attr('href', level.link).addClass('level_link').addClass(level.status).text(level.displayText);
-    if (level.unplugged) {
+  stageData.levels.forEach(function(level, index, levels) {
+    var status = levelProgress[level.id] || 'not_tried';
+    var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
+    var href = "/s/" + stageData.script_name + "/stage/" + stageData.position + "/puzzle/" + level.position;
+    var link = $('<a>').attr('href', href).addClass('level_link').addClass(status).text(level.title);
+    if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
     }
-    var div = $('<div>').addClass(index === scriptData.currentLevelIndex ? 'puzzle_outer_current' : defaultClass).append(link);
+    var div = $('<div>').addClass(level.id === currentLevelId ? 'puzzle_outer_current' : defaultClass).append(link);
     if (index === levels.length - 1) {
       div.addClass('last');
     }
@@ -90,10 +95,10 @@ dashboard.buildHeader = function (scriptData) {
     if (!popupLoaded) {
       popupLoaded = true;
       $.ajax({
-        url: scriptData.statsPath,
+        url: "/popup/stats",
         data: {
-          script_id: scriptData.scriptId,
-          script_level_id: scriptData.scriptLevelId
+          script_id: stageData.script_id,
+          script_level_id: currentLevelId
         }, success: function (result) {
           $('.header_popup_body').html(result);
           if (trophiesClicked) {

@@ -47,11 +47,11 @@ class Stage < ActiveRecord::Base
 
   def summarize
     stage_data = {
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.count,
         id: id,
         position: position,
-        script_name: script.name,
-        script_id: script.id,
-        script_stages: script.stages.to_a.count,
         name: localized_name,
         title: localized_title
     }
@@ -62,6 +62,7 @@ class Stage < ActiveRecord::Base
     end
 
     if script.hoc?
+      stage_data[:finishLink] = hoc_finish_url(script)
       stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
     end
 
