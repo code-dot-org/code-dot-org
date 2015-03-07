@@ -157,12 +157,18 @@ exports.TweenValueTo.prototype.tick = function (clock) {
 
   var timeSinceStart = clock.time - this.startTime_;
 
-  this.target_[this.propertyName_] = this.tweenFunction_(
-      clock.time - this.startTime_,
-      this.startValue_,
-      this.deltaValue_,
-      this.duration_
-  );
+  if (this.deltaValue_ !== 0) {
+    this.target_[this.propertyName_] = this.tweenFunction_(
+        timeSinceStart,
+        this.startValue_,
+        this.deltaValue_,
+        this.duration_
+    );
+
+    if (isNaN(this.target_[this.propertyName_])) {
+      console.log("NAN tween result!");
+    }
+  }
 
   if (timeSinceStart >= this.duration_) {
     this.target_[this.propertyName_] = this.startValue_ + this.deltaValue_;

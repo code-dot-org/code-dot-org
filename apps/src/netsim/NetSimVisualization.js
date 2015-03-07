@@ -204,9 +204,70 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   }, this);
 
   this.pullElementsToForeground();
+  this.distributeForegroundNodes();
 };
 
-var visitEntity = function (entity, stack) {
+NetSimVisualization.prototype.distributeForegroundNodes = function () {
+  var foregroundNodes = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizNode && entity.isForeground;
+  });
+
+  // Sometimes, there's no work to do.
+  if (foregroundNodes.length === 0) {
+    return;
+  }
+
+  // Sometimes it's just the client node, by itself.
+  if (foregroundNodes.length === 1) {
+    foregroundNodes[0].moveTo(0, 0);
+    return;
+  }
+
+  var myNode;
+
+  // Sometimes there's just one other node.  Then we can place them across
+  // from each other.
+  if (foregroundNodes.length === 2) {
+    myNode = this.localNode;
+    var otherNode = foregroundNodes.reduce(function (prev, cur) {
+      if (cur !== this.localNode) {
+        return cur;
+      }
+      return prev;
+    }.bind(this));
+    myNode.moveTo(-75, 0);
+    otherNode.moveTo(75, 0);
+    return;
+  }
+
+  // If there are several other nodes, then we put the router in the middle,
+  // ourselves on the left, and distribute the rest around the router.
+  myNode = this.localNode;
+  var routerNode = foregroundNodes.reduce(function (prev, cur) {
+    if (cur.isRouter) {
+      return cur;
+    }
+    return prev;
+  }.bind(this));
+  var otherNodes = foregroundNodes.filter(function (node) {
+    return node !== myNode && node !== routerNode;
+  });
+
+  myNode.moveTo(-100, 0);
+  routerNode.moveTo(0, 0);
+  var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
+  for (var i = 0; i < otherNodes.length; i++) {
+    // sin(rad) = o/h
+    var h = 100;
+    // Extra Math.PI here puts 0deg on the left.
+    var rad = Math.PI + (i+1) * radiansBetweenNodes;
+    var x = Math.cos(rad) * h;
+    var y = Math.sin(rad) * h;
+    otherNodes[i].moveTo(x, y);
+  }
+};
+
+NetSimVisualization.prototype.visitEntityToSetForeground = function (entity, stack) {
   entity.speculativeIsForeground = true;
 
   // Push new entities to explore based on node type and connections
@@ -244,7 +305,7 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   while (exploreStack.length > 0) {
     // Pop end of exploreStack, make it foreground.
     currentEntity = exploreStack.pop();
-    visitEntity(currentEntity, exploreStack);
+    this.visitEntityToSetForeground(currentEntity, exploreStack);
   }
 
   // Move all nodes to their new, correct layers
