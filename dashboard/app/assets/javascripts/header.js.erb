@@ -41,8 +41,8 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
     $('.header_trophy_link .current_trophies').text(progressData.trophies.current);
     $('.header_trophy_link .max_trophies').text(progressData.trophies.of + ' ' + progressData.trophies.max);
   }
-  if (stageData.linesOfCodeText) {
-    $('.header_popup .header_text').text(stageData.linesOfCodeText);
+  if (progressData.linesOfCodeText) {
+    $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
