@@ -5,4 +5,4 @@
     - Concept.cached.each do |concept|
       - completion = concept_progress.try(concept.name)
       - completion = 0 if completion.nil?
-      = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion:  completion}
+      = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: completion }
