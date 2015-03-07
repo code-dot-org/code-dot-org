@@ -348,7 +348,7 @@ en:
           description: ''
           Internet Simulator: Internet Simulator
         Infinity:
-          title: Infinity Play Lab
+          title: Infinity Playlab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Infinity: Infinity
@@ -439,3 +439,48 @@ en:
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
+        course4pre:
+          title: Course 4 Prerequisite
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Maze: Sequence'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'

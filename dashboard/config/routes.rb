@@ -65,6 +65,7 @@ Dashboard::Application.routes.draw do
     confirmations: 'confirmations',
     sessions: 'sessions'
   }
+  get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
@@ -76,6 +77,7 @@ Dashboard::Application.routes.draw do
     collection do
       get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
       get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
       get '/:template', to: 'projects#template'
     end
   end
@@ -163,16 +165,57 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/:action', controller: 'api'
+  resources :zendesk_session, only: [:index]
+
+  post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  module OPS
+    API = 'api'
+    DASHBOARDAPI = 'dashboardapi'
+  end
+
+
+  concern :ops_routes do
+    # /ops/district/:id
+    resources :districts do
+      member do
+        get 'teachers'
+      end
+    end
+    resources :cohorts do
+      post 'teachers/:teacher_id', action: 'add_teacher', on: :member
+      delete 'teachers/:teacher_id', action: 'drop_teacher', on: :member
+    end
+    resources :workshops do
+      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+        resources :workshop_attendance, path: '/attendance', shallow: true do
+        end
+      end
+      member do
+        get 'teachers'
+      end
+    end
+    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
+    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
+    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
+    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
+  end
+
+  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
+    concerns :ops_routes
+  end
+
+  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
+    concerns :ops_routes
+  end
+
   get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
   get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
-  resources :zendesk_session, only: [:index]
-
-  post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

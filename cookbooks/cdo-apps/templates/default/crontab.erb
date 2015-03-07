@@ -23,10 +23,6 @@ def pegasus_dir(*paths)
   deploy_dir 'pegasus', *paths
 end
 
-def bin_dir(*paths)
-  pegasus_dir('sites.v3', 'code.org', 'bin', *paths)
-end
-
 def cronjob(params)
   time = params[:at].to_s
   action = params[:do].to_s
@@ -46,7 +42,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
   end
 
-  if node.chef_environment == 'staging'
+  if node.chef_environment == 'staging' && node.name == 'staging'
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'
@@ -65,9 +61,6 @@ if node['cdo-apps']['daemon']
   cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:"#{deploy_dir('bin', 'geocode_hoc_activity')} 2>&1 > /dev/null"
-
-  build_target = node.chef_environment == 'test' ? 'test-websites' : 'websites'
-  cronjob at:'*/1 * * * *', do:"#{aws_dir('build_and_mail_log')} #{build_target}", notify:'dev+build@code.org'
 end
 
 cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"

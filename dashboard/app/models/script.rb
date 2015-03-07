@@ -116,6 +116,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
+    stage_position ||= 1
     self.script_levels.to_a.find do |sl|
       sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
     end
