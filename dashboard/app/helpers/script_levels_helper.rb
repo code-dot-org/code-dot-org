@@ -49,7 +49,7 @@ module ScriptLevelsHelper
 
   def script_completion_redirect(script)
     if script.hoc?
-      hoc_finish_url(script)
+      script.hoc_finish_url
     else
       root_path
     end
@@ -68,14 +68,6 @@ module ScriptLevelsHelper
       CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
-    end
-  end
-
-  def hoc_finish_url(script)
-    if script.name == Script::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
-    else
-      CDO.code_org_url "/api/hour/finish/#{script.name}"
     end
   end
 
