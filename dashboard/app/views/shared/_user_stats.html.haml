@@ -1,5 +1,5 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
-- progress = summarize_user_progress(script)
+- progress = summarize_user_progress(script) || {}
 - levelProgress = progress[:levels] || {}
 - script = script.summarize
 - should_show_lesson_plan = user && user.teacher?
@@ -40,6 +40,7 @@
   = render partial: 'shared/user_stats_key'
 
 - if script[:trophies]
+  = progress.to_json
   %div{style: 'clear: both;'}
   #trophies
-    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress.try(:trophies), added_style: 'padding: 10px;'}
+    = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress[:trophies], added_style: 'padding: 10px;'}
