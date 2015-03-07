@@ -50,9 +50,9 @@ Feature: Using the Internet Simulator Lobby
     And element ".netsim_send_panel" is visible
     And element ".netsim_log_panel" is visible
 
-  Scenario: If I am logged in, my name is filled in automatically
-    Given I am a teacher
-    And I load netsim
-    Then element "#netsim_lobby_name" is disabled
-    And element "#netsim_lobby_set_name_button" is hidden
-    And element "#netsim_shard_select" is visible
+  # Scenario: If I am logged in, my name is filled in automatically
+  #   Given I am a teacher
+  #   And I load netsim
+  #   Then element "#netsim_lobby_name" is disabled
+  #   And element "#netsim_lobby_set_name_button" is hidden
+  #   And element "#netsim_shard_select" is visible
