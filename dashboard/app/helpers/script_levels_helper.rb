@@ -70,8 +70,4 @@ module ScriptLevelsHelper
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
   end
-
-  def summarize_script_level(sl)
-    sl.summarize
-  end
 end
