@@ -1,26 +1,6 @@
 module VideosHelper
-  def youtube_url(code, args={})
-    defaults = {
-        v: code,
-        modestbranding: 1,
-        rel: 0,
-        showinfo: 1,
-        autoplay: 1,
-        wmode: 'transparent',
-        iv_load_policy: 3
-    }
-    if language != 'en'
-      defaults.merge!(
-          cc_lang_pref: language,
-          cc_load_policy: 1
-      )
-    end
-    defaults.merge!(args)
-    "#{youtube_base_url}/embed/#{code}/?#{defaults.to_query}"
-  end
-
   def youtube_base_url
-    'https://www.youtube.com'
+    Video.youtube_base_url
   end
 
   def embedded_video(video)
@@ -32,14 +12,10 @@ module VideosHelper
   end
 
   def video_thumbnail_url(video)
-    asset_url(video_thumbnail_path(video))
-  end
-
-  def video_thumbnail_path(video)
-    "/c/video_thumbnails/#{video.id}.jpg"
+    asset_url(video.thumbnail_path)
   end
 
   def video_info(video, autoplay = true)
-    video.summarize autoplay
+    video.summarize language, autoplay
   end
 end

@@ -138,8 +138,8 @@ SQL
         {
           name: data_t('video.name', video.key),
           youtube_code: video.youtube_code,
-          data: video_info(video),
-          thumbnail_url: video_thumbnail_path(video)
+          data: video.summarize(language),
+          thumbnail_url: video.thumbnail_url
         }
       end
     end
