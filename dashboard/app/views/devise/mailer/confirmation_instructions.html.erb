@@ -10,7 +10,4 @@
 
 <hr/>
 
-<p><%= UserHelpers.sponsor_message(@resource) %></p>
-
-<style>@media print{ #_t { background-image: url('https://o9uahvm5.emltrk.com/o9uahvm5?p&d=<%= @email %>');}} div.OutlookMessageHeader {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} table.moz-email-headers-table {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} blockquote #_t {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} #MailContainerBody #_t {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')}</style><div id="_t"></div>
-<img src="https://o9uahvm5.emltrk.com/o9uahvm5?d=<%= @email %>" width="1" height="1" border="0" />
+<p><%= UserHelpers.sponsor_message(@resource).html_safe %></p>

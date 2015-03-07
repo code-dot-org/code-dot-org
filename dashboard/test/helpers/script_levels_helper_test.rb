@@ -9,18 +9,18 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'tracking_pixel_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Script.find(Script::HOC_ID))
+    assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Script.get_from_cache(Script::HOC_2013_NAME))
 
-    assert_equal '//test.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Script.find_by_name('frozen'))
-    assert_equal '//test.code.org/api/hour/begin_course4.png', tracking_pixel_url(Script.find_by_name('course4'))
+    assert_equal '//test.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Script.get_from_cache(Script::FROZEN_NAME))
+    assert_equal '//test.code.org/api/hour/begin_course4.png', tracking_pixel_url(Script.get_from_cache(Script::COURSE4_NAME))
   end
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/finish', hoc_finish_url(Script.find(Script::HOC_ID))
+    assert_equal '//test.code.org/api/hour/finish', hoc_finish_url(Script.get_from_cache(Script::HOC_2013_NAME))
 
-    assert_equal '//test.code.org/api/hour/finish/frozen', hoc_finish_url(Script.find_by_name('frozen'))
-    assert_equal '//test.code.org/api/hour/finish/course4', hoc_finish_url(Script.find_by_name('course4'))
+    assert_equal '//test.code.org/api/hour/finish/frozen', hoc_finish_url(Script.get_from_cache(Script::FROZEN_NAME))
+    assert_equal '//test.code.org/api/hour/finish/course4', hoc_finish_url(Script.get_from_cache(Script::COURSE4_NAME))
   end
 
   test 'script name instead of stage name in header for HOC' do

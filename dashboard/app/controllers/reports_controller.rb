@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 
     #@recent_activity = Activity.where(['user_id = ?', user.id]).order('id desc').includes({level: :game}).limit(2)
     @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
+select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
 from user_levels ul
 inner join script_levels sl on sl.level_id = ul.level_id
 inner join levels l on l.id = ul.level_id

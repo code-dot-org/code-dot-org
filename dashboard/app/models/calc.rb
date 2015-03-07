@@ -10,10 +10,6 @@ class Calc < Blockly
     super + %w(solution_blocks)
   end
 
-  def self.builder
-    @@calc_builder ||= Level.find_by(name: 'builder')
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
     ['calc']

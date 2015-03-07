@@ -29,7 +29,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def valid_progression_level?
     return false if level.unplugged?
-    return false if stage && stage.unplugged?
+    return false if stage.unplugged?
     true
   end
 
@@ -40,48 +40,30 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def end_of_stage?
-    stage ? stage.script_levels.to_a.last == self :
-      next_progression_level && (level.game_id != next_progression_level.level.game_id)
-  end
-
-  def stage_position_str
-    stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
+    stage.script_levels.to_a.last == self
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
+    I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
   def report_bug_url(request)
-    stage_text = stage ? "Stage #{stage.position} " : ' '
-    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   def level_display_text
     if level.unplugged?
       I18n.t('user_stats.classroom_activity')
-    elsif stage && stage.unplugged?
-      stage_or_game_position - 1
+    elsif stage.unplugged?
+      position - 1
     else
-      stage_or_game_position
+      position
     end
   end
 
-  def stage_or_game
-    stage ? stage : level.game
-  end
-
-  def stage_or_game_position
-    self.stage ? self.position : self.game_chapter
-  end
-
-  def stage_or_game_total
-    if stage
-      script.script_levels.to_a.count {|sl| sl.stage_id == stage_id}
-    else
-      script.script_levels.to_a.count {|sl| sl.level.game_id == level.game_id}
-    end
+  def stage_total
+    stage.script_levels.to_a.count
   end
 
   def self.cache_find(id)

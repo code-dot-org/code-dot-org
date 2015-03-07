@@ -27,10 +27,16 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
-    "free_play": "false",
+    "free_play": "true",
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
   }
 }]]></config>
   <blocks>
