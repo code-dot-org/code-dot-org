@@ -33,6 +33,18 @@ class Stage < ActiveRecord::Base
     end
   end
 
+  def lesson_plan_html_url
+    "#{lesson_plan_base_url}/Teacher"
+  end
+
+  def lesson_plan_pdf_url
+    "#{lesson_plan_base_url}/Teacher.pdf"
+  end
+
+  def lesson_plan_base_url
+    CDO.code_org_url "/curriculum/#{script.name}/#{position}"
+  end
+
   def summarize
     stage_data = {
         id: id,
@@ -45,8 +57,8 @@ class Stage < ActiveRecord::Base
     }
 
     if script.has_lesson_plan?
-      stage_data[:lesson_plan_html_url] = lesson_plan_html_url(self)
-      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url(self)
+      stage_data[:lesson_plan_html_url] = self.lesson_plan_html_url
+      stage_data[:lesson_plan_pdf_url] = self.lesson_plan_pdf_url
     end
 
     if script.hoc?

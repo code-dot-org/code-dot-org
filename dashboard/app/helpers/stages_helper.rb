@@ -8,14 +8,14 @@ module StagesHelper
   end
 
   def lesson_plan_html_url(stage)
-    "#{lesson_plan_base_url(stage)}/Teacher"
+    stage.lesson_plan_html_url
   end
 
   def lesson_plan_pdf_url(stage)
-    "#{lesson_plan_base_url(stage)}/Teacher.pdf"
+    stage.lesson_plan_pdf_url
   end
 
   def lesson_plan_base_url(stage)
-    CDO.code_org_url "/curriculum/#{stage.script.name}/#{stage.position}"
+    stage.lesson_plan_base_url
   end
 end
