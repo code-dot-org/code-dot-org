@@ -16,6 +16,6 @@ module VideosHelper
   end
 
   def video_info(video, autoplay = true)
-    video.summarize language, autoplay
+    video.summarize autoplay
   end
 end

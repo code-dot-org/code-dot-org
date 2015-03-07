@@ -39,5 +39,5 @@
 - if @script_level
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{header_progress(@script_level).to_json});
+    dashboard.buildHeader(#{@script_level.stage.summarize.to_json}, #{summarize_user_progress(@script_level.script).to_json});
     //]]>
