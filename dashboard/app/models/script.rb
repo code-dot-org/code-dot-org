@@ -360,7 +360,7 @@ class Script < ActiveRecord::Base
       end
     end
 
-    stages.sort_by(&:position).each do |stage|
+    stages.select{|s| s.script_levels.to_a.count > 0}.sort_by(&:position).each do |stage|
       summary[:stages].push stage.summarize
     end
 
