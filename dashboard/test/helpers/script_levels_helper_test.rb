@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ScriptLevelsHelperTest < ActionView::TestCase
 
-  include StagesHelper
   include LocaleHelper
   include ApplicationHelper
   include LevelsHelper
