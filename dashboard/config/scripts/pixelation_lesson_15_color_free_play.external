@@ -1,0 +1,21 @@
+name 'Pixelation - Lesson 15 - Color Free Play'
+title 'Pixelation - Lesson 15 - Color Free Play'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '3'
+data ‘0000 0001
+0000 0001
+0000 0001’
+
+markdown <<MARKDOWN
+# Personal Favicon
+**Requirements:**
+<img src = "http://staging.code.org/images/cspunit1/code-pixel.png" align=right width=50 hspace=20>
+
+* The icon must be 16x16 pixels. 
+* You must use the Pixelation Widget to encode the bits of color information.
+* The image must be encoded with at least 3 bits per pixel.
+
+
+MARKDOWN

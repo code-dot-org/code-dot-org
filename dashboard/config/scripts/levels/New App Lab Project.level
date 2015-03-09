@@ -116,6 +116,7 @@
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
+    "is_project_level": "true",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

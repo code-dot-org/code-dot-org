@@ -14,7 +14,7 @@ $(document).ready(function() {
     if (masterIndex < platinum.length) {
       gold.hide();
       if (showing !== "platinum") {
-        $("#level_indicator").hide().text("Platinum Supporters ($3,000,000+ contribution)").fadeIn();
+        $("#level_indicator").hide().text("Platinum Supporters").fadeIn();
         showing = "platinum";
       }
       scrollBadges(platinum, masterIndex);
@@ -22,7 +22,7 @@ $(document).ready(function() {
       platinum.hide();
 
       if (showing !== "gold") {
-        $("#level_indicator").hide().text("Gold Supporters ($1,000,000+ contribution)").fadeIn();
+        $("#level_indicator").hide().text("Gold Supporters").fadeIn();
         showing = "gold";
       }
       scrollBadges(gold, masterIndex - platinum.length);

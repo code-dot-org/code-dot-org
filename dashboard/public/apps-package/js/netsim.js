@@ -3342,8 +3342,8 @@ NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
   if (this.isConnectedToRouter()) {
     this.disconnectFromRouter();
   }
-  this.myNode.stopSimulation();
 
+  this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
       onComplete(err, result);

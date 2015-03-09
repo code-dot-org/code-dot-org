@@ -18,7 +18,7 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_title
-    if script.stages.many?
+    if script.stages.to_a.many?
       I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       I18n.t "data.script.name.#{script.name}.title"

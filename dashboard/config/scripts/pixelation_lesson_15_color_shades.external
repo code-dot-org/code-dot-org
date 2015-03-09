@@ -1,0 +1,20 @@
+name 'Pixelation - Lesson 15 - Color Shades'
+title 'Pixelation - Lesson 15 - Color Shades'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '3'
+data '0000 0100
+0000 0010
+0000 0110
+110000 100000 010000 000000
+'
+markdown <<MARKDOWN
+# Color Pixelation: Task 2
+**Directions:**
+
+On the next screen we start you out with the row of shades of red that Maddie created. Experiment with 6-bit color by filling in the bottom row of the image. 
+
+* DON'T just type in random 0s and 1s - though you might start that way for fun. 
+* DO: Think of a color and try to make it. 
+MARKDOWN
