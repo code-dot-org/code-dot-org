@@ -464,7 +464,7 @@ html, body {
 }
 
 .full_container {
-  padding: 25px;
+  padding: 0px 25px 25px 25px;
 }
 
 .modal {
@@ -841,6 +841,15 @@ input.header_input {
 }
 
 #blocklyApp {
+  position: absolute;
+  top: 125px;
+  left: 25px;
+  right: 25px;
+  bottom: 0px;
+
+  @media screen and (max-width: 1150px) {
+    top: 95px;
+  }
 
   .loading {
     height: 520px;
