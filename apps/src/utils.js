@@ -211,7 +211,7 @@ if (!String.prototype.repeat) {
 /**
  * Similar to val || defaultVal, except it's gated on whether or not val is
  * undefined instead of whether val is falsey.
- * @returns val if not undefined, otherwise defaultVal
+ * @returns {*} val if not undefined, otherwise defaultVal
  */
 exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
