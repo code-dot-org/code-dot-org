@@ -99,24 +99,28 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Hook up input handlers to controls on the netsim page
- * @private
- */
-NetSim.prototype.attachHandlers_ = function () {
-};
-
-/**
  * Called on page load.
- * @param {Object} config Requires the following members:
- *   skin: ???
- *   level: ???
+ * @param {Object} config
+ * @param {Object} config.skin
+ * @param {NetSimLevelConfiguration} config.level
+ * @param {boolean} config.enableShowCode - Always false for NetSim
+ * @param {function} config.loadAudio
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
 
+  /**
+   * Skin for the loaded level
+   * @type {Object}
+   */
   this.skin = config.skin;
+
+  /**
+   * Configuration for the loaded level
+   * @type {NetSimLevelConfiguration}
+   */
   this.level = config.level;
 
   config.html = page({
@@ -139,7 +143,8 @@ NetSim.prototype.init = function(config) {
 
   this.studioApp_.init(config);
 
-  this.attachHandlers_();
+  // Respond to netsim_specific level configuration
+  this.dnsMode_ = this.level.defaultDnsMode;
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {

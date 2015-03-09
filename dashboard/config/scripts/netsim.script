@@ -5,3 +5,5 @@ hidden 'true'
 
 stage 'Internet Simulator'
 level 'blockly:NetSim:netsim_demo'
+level 'blockly:NetSim:no_dns'
+level 'blockly:NetSim:manual_dns'
