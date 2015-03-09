@@ -10,6 +10,8 @@
  */
 'use strict';
 
+var valueOr = require('../utils').valueOr;
+
 /**
  * Default tween duration in milliseconds
  * @type {number}
@@ -101,9 +103,6 @@ exports.linear = function (t, b, c, d) {
  */
 exports.TweenValueTo = function (target, propertyName, endValue, duration,
     tweenFunction) {
-  duration = duration !== undefined ? duration : DEFAULT_TWEEN_DURATION;
-  tweenFunction = tweenFunction !== undefined ? tweenFunction : exports.linear;
-
   /**
    * Will be set to TRUE when tween is completed.
    * @type {boolean}
@@ -132,7 +131,7 @@ exports.TweenValueTo = function (target, propertyName, endValue, duration,
    * @type {TweenFunction}
    * @private
    */
-  this.tweenFunction_ = tweenFunction;
+  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
 
   /**
    * @type {number}
@@ -151,7 +150,7 @@ exports.TweenValueTo = function (target, propertyName, endValue, duration,
    * @type {number}
    * @private
    */
-  this.duration_ = duration;
+  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
 };
 
 /**
@@ -171,10 +170,6 @@ exports.TweenValueTo.prototype.tick = function (clock) {
         this.deltaValue_,
         this.duration_
     );
-
-    if (isNaN(this.target[this.propertyName])) {
-      console.log("NAN tween result!");
-    }
   }
 
   if (timeSinceStart >= this.duration_) {
