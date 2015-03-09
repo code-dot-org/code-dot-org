@@ -43,9 +43,9 @@
     .lesson-plan
       %h2
         = t('lesson_plan')
-      %a.btn.pdf-button{href: lesson_plan_html_url(@script_level.stage), target: '_blank'}
+      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_html_url, target: '_blank'}
         = t('view_lesson_plan')
-      %a.btn.pdf-button{href: lesson_plan_pdf_url(@script_level.stage), target: '_blank'}
+      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_pdf_url, target: '_blank'}
         = t('pdf_download')
 
 :javascript
@@ -73,7 +73,7 @@
 
 - if video
   :javascript
-    var videoOptions = #{video_info(video, false).to_json};
+    var videoOptions = #{video.summarize(false).to_json};
     var videoHeight = #{page_width} / (16 / 9);
     var video = createVideoWithFallback(videoOptions, #{page_width}, videoHeight);
     $('.video-container').append(video);
