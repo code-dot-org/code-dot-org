@@ -10,3 +10,19 @@ data '04
 18
 FF0000 00AAAA'
 
+
+markdown <<MARKDOWN
+# Pixelation: Task 3
+<img src = "http://staging.code.org/images/cspunit1/ColorTask3.png" align=right width=200 hspace=20>
+**Directions:**
+We start you out with the 4x4 image Maddie created in the video.
+
+Your task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  
+
+Here are the requirements:
+
+ * Row 1 - fill with shades of red. 
+ * Row 2 - shades of green. 
+ * Row 3 - shades of blue. 
+ * Row 4 - shades of gray.
+MARKDOWN
