@@ -25,7 +25,8 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
   // Give our root node a useful class
-  this.getRoot().addClass('viz-node');
+  var root = this.getRoot();
+  root.addClass('viz-node');
 
   /**
    * @type {boolean}
@@ -41,20 +42,17 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .attr('cx', 0)
       .attr('cy', 0)
       .attr('r', 37) /* Half of 75 */
-      .appendTo(this.getRoot());
+      .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
       .attr('y', 2)
       .css('text-anchor', 'middle')
-      .appendTo(this.getRoot());
-
-  this.posX_ = 0;
-  this.posY_ = 0;
-  this.scale_ = 0;
+      .appendTo(root);
 
 // Set an initial default tween for zooming in from nothing.
-  this.scaleTo(0.5, 800);
+  this.snapToScale(0);
+  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
   this.configureFrom(sourceNode);
   this.render();
@@ -81,53 +79,23 @@ NetSimVizNode.prototype.configureFrom = function (sourceNode) {
  */
 NetSimVizNode.prototype.kill = function () {
   NetSimVizNode.superPrototype.kill.call(this);
-  this.tweens_ = [];
-  this.scaleTo(0, 200, tweens.easeInQuad);
+  this.stopAllAnimation();
+  this.tweenToScale(0, 200, tweens.easeInQuad);
 };
 
 /**
- * @override
- * @returns {boolean}
+ * Provides drifting animation for nodes in the background.
+ * @param {RunLoop.Clock} clock
  */
-NetSimVizNode.prototype.isDead = function () {
-  return this.isDead_ && this.tweens_.length === 0;
-};
-
-NetSimVizNode.prototype.moveTo = function (x, y, duration, tweenFunction) {
-  duration = duration !== undefined ?
-      duration : 600;
-  tweenFunction = tweenFunction !== undefined ?
-      tweenFunction : tweens.easeOutElastic;
-  this.tweens_.push(new tweens.TweenValueTo(this, 'posX_', x, duration,
-      tweenFunction));
-  this.tweens_.push(new tweens.TweenValueTo(this, 'posY_', y, duration,
-      tweenFunction));
-};
-
-NetSimVizNode.prototype.scaleTo = function (newScale, duration, tweenFunction) {
-  duration = duration !== undefined ?
-      duration : 600;
-  tweenFunction = tweenFunction !== undefined ?
-      tweenFunction : tweens.easeOutElastic;
-  this.tweens_.push(new tweens.TweenValueTo(this, 'scale_', newScale, duration,
-      tweenFunction));
-};
-
 NetSimVizNode.prototype.tick = function (clock) {
   NetSimVizNode.superPrototype.tick.call(this, clock);
   if (!this.isForeground) {
     if (this.tweens_.length === 0) {
-      var randomX = 200 * Math.random() - 100;
-      var randomY = 200 * Math.random() - 100;
-      this.moveTo(randomX, randomY, 10000, tweens.easeInOutQuad);
+      var randomX = 300 * Math.random() - 150;
+      var randomY = 300 * Math.random() - 150;
+      this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
     }
   }
-};
-
-NetSimVizNode.prototype.render = function () {
-  var transform = 'translate(' + this.posX_ + ', ' + this.posY_ + '),' +
-      'scale(' + this.scale_ + ')';
-  this.rootGroup_.attr('transform', transform);
 };
 
 /**
@@ -137,8 +105,8 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
   this.tweens_ = [];
   if (isForeground) {
-    this.scaleTo(1);
+    this.tweenToScale(1, 600, tweens.easeOutElastic);
   } else {
-    this.scaleTo(0.5);
+    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
   }
 };

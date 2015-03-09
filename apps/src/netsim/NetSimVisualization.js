@@ -16,12 +16,23 @@ var NetSimWire = require('./NetSimWire');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
 var netsimUtils = require('./netsimUtils');
+var tweens = require('./tweens');
 
 /**
- * Generator and controller for visualization
- * @param {jQuery} svgRoot
- * @param {RunLoop} runLoop
- * @param {NetSimConnection} connection
+ * Top-level controller for the network visualization.
+ *
+ * For the most part, the visualization attaches to the raw network state
+ * representation (the storage tables) and updates to reflect that state,
+ * independent of the rest of the controls on the page.  This separation means
+ * that the visualization always has one canonical state to observe.
+ *
+ * @param {jQuery} svgRoot - The <svg> tag within which the visualization
+ *        will be created.
+ * @param {RunLoop} runLoop - Loop providing tick and render events that the
+ *        visualization can hook up to and respond to.
+ * @param {NetSimConnection} connection - Reference to the connection manager,
+ *        which provides the hooks we need to get the shard, the local node,
+ *        and to attach to the shared network state.
  * @constructor
  */
 var NetSimVisualization = module.exports = function (svgRoot, runLoop, connection) {
@@ -31,11 +42,10 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
    */
   this.svgRoot_ = svgRoot;
 
-  runLoop.tick.register(this.tick.bind(this));
-  runLoop.render.register(this.render.bind(this));
-
   /**
    * The shard currently being represented.
+   * We don't have a shard now, but we register with the connection manager
+   * to find out when we have one.
    * @type {NetSimShard}
    * @private
    */
@@ -43,16 +53,55 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
   connection.shardChange.register(this.onShardChange_.bind(this));
 
   /**
+   * List of VizEntities, which are all the elements that will actually show up
+   * in our visualization.
    * @type {Array.<NetSimVizEntity>}
    * @private
    */
   this.entities_ = [];
+
+  /**
+   * Width (in svg-units) of visualization
+   * @type {number}
+   */
+  this.visualizationWidth = 300;
+
+  /**
+   * Height (in svg-units) of visualization
+   * @type {number}
+   */
+  this.visualizationHeight = 300;
+
+  /**
+   * Key used to unregister from the node table.
+   * @type {Object}
+   */
+  this.nodeTableChangeKey = undefined;
+
+  /**
+   * Key used to unregister from the wire table.
+   * @type {Object}
+   */
+  this.wireTableChangeKey = undefined;
+
+  // Hook up tick and render methods
+  runLoop.tick.register(this.tick.bind(this));
+  runLoop.render.register(this.render.bind(this));
 };
 
+/**
+ * Tick: Update all vizentities, giving them an opportunity to recalculate
+ *       their internal state, and remove any dead entities from the
+ *       visualization.
+ * @param {RunLoop.Clock} clock
+ */
 NetSimVisualization.prototype.tick = function (clock) {
+  // Everyone gets an update
   this.entities_.forEach(function (entity) {
     entity.tick(clock);
   });
+
+  // Tear out dead entities.
   this.entities_ = this.entities_.filter(function (entity) {
     if (entity.isDead()) {
       entity.getRoot().remove();
@@ -62,6 +111,9 @@ NetSimVisualization.prototype.tick = function (clock) {
   });
 };
 
+/**
+ * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
+ */
 NetSimVisualization.prototype.render = function () {
   this.entities_.forEach(function (entity) {
     entity.render();
@@ -71,8 +123,8 @@ NetSimVisualization.prototype.render = function () {
 /**
  * Called whenever the connection notifies us that we've connected to,
  * or disconnected from, a shard.
- * @param {NetSimShard} newShard - null if disconnected.
- * @param {NetSimLocalClientNode} localNode - null if disconnected
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @param {?NetSimLocalClientNode} localNode - null if disconnected
  * @private
  */
 NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
@@ -83,7 +135,7 @@ NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
 /**
  * Change the shard this visualization will source its data from.
  * Re-attaches table change listeners for all the tables we need to monitor.
- * @param newShard
+ * @param {?NetSimShard} newShard - null if disconnected
  */
 NetSimVisualization.prototype.setShard = function (newShard) {
   if (this.nodeTableChangeKey !== undefined) {
@@ -108,6 +160,12 @@ NetSimVisualization.prototype.setShard = function (newShard) {
       this.onWireTableChange_.bind(this));
 };
 
+/**
+ * Change which node we consider the 'local node' in the visualization.
+ * We go through a special creation process for this node, so that it
+ * looks and behaves differently.
+ * @param {?NetSimLocalClientNode} newLocalNode - null if disconnected
+ */
 NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
   if (newLocalNode) {
     if (this.localNode) {
@@ -123,6 +181,12 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
   this.pullElementsToForeground();
 };
 
+/**
+ * Find a particular VizEntity in the visualization, by type and ID.
+ * @param {function} entityType - constructor of entity we're looking for
+ * @param {number} entityID - ID, with corresponds to NetSimEntity.entityID
+ * @returns {NetSimVizEntity} or null if not found
+ */
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
   return this.entities_.reduce(function (prev, cur) {
     if (prev) {
@@ -135,8 +199,10 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
 };
 
 /**
- *
+ * Gets the set of VizWires directly attached to the given VizNode, (either
+ * on the local end or remote end)
  * @param {NetSimVizNode} vizNode
+ * @returns {Array.<NetSimVizWire>} the attached wires
  */
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   return this.entities_.filter(function (entity) {
@@ -145,12 +211,18 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   });
 };
 
+/**
+ * Handle notification that node table contents have changed.
+ * @param {Array.<Object>} rows - node table rows
+ * @private
+ */
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
+  // Convert rows to correctly-typed objects
   var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
 
   // 1. Kill nodes from the visualization that are no longer in the table.
-  this.entities_.filter(function (entity) {
-    return entity instanceof NetSimVizNode;
+  this.entities_.filter(function (vizEntity) {
+    return vizEntity instanceof NetSimVizNode;
   }).filter(function (vizNode) {
     return !tableNodes.some(function (node) {
       return node.entityID === vizNode.id;
@@ -160,28 +232,35 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   });
 
   // 2. Add new nodes from the table into the visualization
-  var vizNode;
   tableNodes.forEach(function (node) {
-    vizNode = this.getEntityByID(NetSimVizNode, node.entityID);
+    var vizNode = this.getEntityByID(NetSimVizNode, node.entityID);
     if (vizNode) {
       vizNode.configureFrom(node);
     } else {
       vizNode = new NetSimVizNode(node);
-      vizNode.moveTo(Math.random() * 200 - 100, Math.random() * 200 - 100);
+      vizNode.snapToPosition(
+          Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
+          Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
       this.entities_.push(vizNode);
       this.svgRoot_.find('#background_group').prepend(vizNode.getRoot());
     }
   }, this);
 };
 
+/**
+ * Handle notification taht wire table contents have changed.
+ * @param {Array.<Object>} rows - wire table rows
+ * @private
+ */
 NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
+  // Convert rows to correctly-typed objects
   var tableWires = rows.map(function (row) {
     return new NetSimWire(this.shard_, row);
   }.bind(this));
 
   // 1. Kill wires that are no longer in the table
-  this.entities_.filter(function (entity) {
-    return entity instanceof NetSimVizWire;
+  this.entities_.filter(function (vizEntity) {
+    return vizEntity instanceof NetSimVizWire;
   }).filter(function (vizWire) {
     return !tableWires.some(function (wire) {
       return wire.entityID === vizWire.id;
@@ -203,11 +282,138 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
     }
   }, this);
 
+  // Since the wires table determines simulated connectivity, we trigger a
+  // recalculation of which nodes are in the local network (should be in the
+  // foreground) and then re-layout the foreground nodes.
   this.pullElementsToForeground();
   this.distributeForegroundNodes();
 };
 
+/**
+ * Recalculate which nodes should be in the foreground layer by doing a full
+ * traversal starting with the local node.  In short, everything reachable
+ * from the local node belongs in the foreground.
+ */
+NetSimVisualization.prototype.pullElementsToForeground = function () {
+  // Begin by marking all entities background (unvisited)
+  this.entities_.forEach(function (vizEntity) {
+    vizEntity.speculativeIsForeground = false;
+  });
+
+  // Use a simple stack for our list of nodes that need visiting.
+  // If we have a local node, push it onto the stack as our starting point.
+  // (If we don't have a local node, the next step is REALLY EASY)
+  var exploreStack = [];
+  if (this.localNode) {
+    exploreStack.push(this.localNode);
+  }
+
+  // While there are still nodes that need visiting,
+  // visit the next node, marking it as "foreground/visited" and
+  // pushing all of its unvisited connections onto the stack.
+  var currentVizEntity;
+  while (exploreStack.length > 0) {
+    currentVizEntity = exploreStack.pop();
+    this.visitEntityToSetForeground_(currentVizEntity, exploreStack);
+  }
+
+  // Now, we have to correct "depth" for all nodes.
+  // Move all nodes to their new, correct layers
+  var foreground = this.svgRoot_.find('#foreground_group');
+  var background = this.svgRoot_.find('#background_group');
+  var newParent, isForeground;
+  this.entities_.forEach(function (vizEntity) {
+    newParent = undefined;
+    isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
+
+    // Check whether a change should occur.  If not, we leave
+    // newParent undefined so that we don't make unneeded DOM changes.
+    if (vizEntity.speculativeIsForeground && !isForeground) {
+      newParent = foreground;
+    } else if (!vizEntity.speculativeIsForeground && isForeground) {
+      newParent = background;
+    }
+
+    // If we do need a DOM change, detach the entity and reattach it to the
+    // new layer.
+    // Special rule (for now): Prepend wires so that they show up behind
+    // nodes.  Will need a better solution for this if/when the viz gets
+    // more complex.
+    if (newParent) {
+      vizEntity.getRoot().detach();
+      if (vizEntity instanceof NetSimVizWire) {
+        vizEntity.getRoot().prependTo(newParent);
+      } else {
+        vizEntity.getRoot().appendTo(newParent);
+      }
+      vizEntity.onDepthChange(newParent === foreground);
+    }
+  }, this);
+};
+
+/**
+ * Visit method for pullElementsToForeground, not used anywhere else.
+ * Notes that the current entity is should be foreground when we're all done,
+ * finds the current entity's unvisited connections,
+ * pushes those connections onto the stack.
+ * @param {NetSimVizEntity} entityBeingVisited
+ * @param {Array.<NetSimVizEntity>} stack
+ * @private
+ */
+NetSimVisualization.prototype.visitEntityToSetForeground_ = function (
+    entityBeingVisited, stack) {
+  var typedEntity; // Used to mitigate JSDoc complaints.
+
+  // Visit the entity
+  entityBeingVisited.speculativeIsForeground = true;
+
+  // Push new entities to explore based on node type and connections
+  if (entityBeingVisited instanceof NetSimVizNode) {
+    typedEntity = /** @type {NetSimVizNode} */ (entityBeingVisited);
+
+    // Nodes look for connected wires
+    this.getWiresAttachedToNode(typedEntity).forEach(function (vizWire) {
+      if (!vizWire.speculativeIsForeground) {
+        stack.push(vizWire);
+      }
+    });
+
+  } else if (entityBeingVisited instanceof NetSimVizWire) {
+    typedEntity = /** @type {NetSimVizWire} */ (entityBeingVisited);
+
+    // Wires know their connected nodes
+    if (!typedEntity.localVizNode.speculativeIsForeground) {
+      stack.push(typedEntity.localVizNode);
+    }
+    if (!typedEntity.remoteVizNode.speculativeIsForeground) {
+      stack.push(typedEntity.remoteVizNode);
+    }
+  }
+};
+
+/**
+ * Explicitly control VizNodes in the foreground, moving them into a desired
+ * configuration based on their number and types.  Nodes are given animation
+ * commands (via tweenToPosition) so that they interpolate nicely to their target
+ * positions.
+ *
+ * Configurations:
+ * One node (local node): Centered on the screen.
+ *   |  L  |
+ *
+ * Two nodes: Local node on left, remote node on right, nothing in the middle.
+ *   | L-R |
+ *
+ * Three or more nodes: Local node on left, router in the middle, other
+ * nodes distributed evenly around the router in a circle
+ * 3:         4:    O    5:  O      6:O   O    7:O   O
+ *                 /         |         \ /        \ /
+ *   L-R-0      L-R        L-R-O      L-R        L-R-O
+ *                 \         |         / \        / \
+ *                  O        O        O   O      O   O
+ */
 NetSimVisualization.prototype.distributeForegroundNodes = function () {
+  /** @type {Array.<NetSimVizNode>} */
   var foregroundNodes = this.entities_.filter(function (entity) {
     return entity instanceof NetSimVizNode && entity.isForeground;
   });
@@ -217,16 +423,15 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     return;
   }
 
-  // Sometimes it's just the client node, by itself.
+  // One node: Centered on screen
   if (foregroundNodes.length === 1) {
-    foregroundNodes[0].moveTo(0, 0);
+    foregroundNodes[0].tweenToPosition(0, 0, 600, tweens.easeOutQuad);
     return;
   }
 
   var myNode;
 
-  // Sometimes there's just one other node.  Then we can place them across
-  // from each other.
+  // Two nodes: Placed across from each other, local node on left
   if (foregroundNodes.length === 2) {
     myNode = this.localNode;
     var otherNode = foregroundNodes.reduce(function (prev, cur) {
@@ -235,13 +440,15 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
       }
       return prev;
     }.bind(this));
-    myNode.moveTo(-75, 0);
-    otherNode.moveTo(75, 0);
+    myNode.tweenToPosition(-75, 0, 400, tweens.easeOutQuad);
+    otherNode.tweenToPosition(75, 0, 600, tweens.easeOutQuad);
     return;
   }
 
-  // If there are several other nodes, then we put the router in the middle,
-  // ourselves on the left, and distribute the rest around the router.
+  // Three or more nodes:
+  // * Local node on left
+  // * Router in the middle
+  // * Other nodes evenly distributed in a circle
   myNode = this.localNode;
   var routerNode = foregroundNodes.reduce(function (prev, cur) {
     if (cur.isRouter) {
@@ -253,8 +460,8 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     return node !== myNode && node !== routerNode;
   });
 
-  myNode.moveTo(-100, 0);
-  routerNode.moveTo(0, 0);
+  myNode.tweenToPosition(-100, 0, 400, tweens.easeOutQuad);
+  routerNode.tweenToPosition(0, 0, 500, tweens.easeOutQuad);
   var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
   for (var i = 0; i < otherNodes.length; i++) {
     // sin(rad) = o/h
@@ -263,73 +470,6 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     var rad = Math.PI + (i+1) * radiansBetweenNodes;
     var x = Math.cos(rad) * h;
     var y = Math.sin(rad) * h;
-    otherNodes[i].moveTo(x, y);
+    otherNodes[i].tweenToPosition(x, y, 600, tweens.easeOutQuad);
   }
-};
-
-NetSimVisualization.prototype.visitEntityToSetForeground = function (entity, stack) {
-  entity.speculativeIsForeground = true;
-
-  // Push new entities to explore based on node type and connections
-  if (entity instanceof NetSimVizNode) {
-    // Nodes look for connected wires
-    this.getWiresAttachedToNode(entity).forEach(function (wire) {
-      // Don't explore twice!
-      if (!wire.speculativeIsForeground) {
-        stack.push(wire);
-      }
-    });
-  } else if (entity instanceof NetSimVizWire) {
-    // Wires know their connected nodes
-    if (!entity.localVizNode.speculativeIsForeground) {
-      stack.push(entity.localVizNode);
-    }
-    if (!entity.remoteVizNode.speculativeIsForeground) {
-      stack.push(entity.remoteVizNode);
-    }
-  }
-};
-
-NetSimVisualization.prototype.pullElementsToForeground = function () {
-  // Assume all entities should be background.
-  this.entities_.forEach(function (entity) {
-    entity.speculativeIsForeground = false;
-  });
-
-  var exploreStack = [];
-  if (this.localNode) {
-    exploreStack.push(this.localNode);
-  }
-
-  var currentEntity;
-  while (exploreStack.length > 0) {
-    // Pop end of exploreStack, make it foreground.
-    currentEntity = exploreStack.pop();
-    this.visitEntityToSetForeground(currentEntity, exploreStack);
-  }
-
-  // Move all nodes to their new, correct layers
-  var foreground = this.svgRoot_.find('#foreground_group');
-  var background = this.svgRoot_.find('#background_group');
-  var newParent, isForeground;
-  this.entities_.forEach(function (entity) {
-    newParent = undefined;
-    isForeground = $.contains(foreground[0], entity.getRoot()[0]);
-
-    if (entity.speculativeIsForeground && !isForeground) {
-      newParent = foreground;
-    } else if (!entity.speculativeIsForeground && isForeground) {
-      newParent = background;
-    }
-
-    if (newParent) {
-      entity.getRoot().detach();
-      if (entity instanceof NetSimVizWire) {
-        entity.getRoot().prependTo(newParent);
-      } else {
-        entity.getRoot().appendTo(newParent);
-      }
-      entity.onDepthChange(newParent === foreground);
-    }
-  }, this);
 };

@@ -26,11 +26,12 @@ var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
   NetSimVizEntity.call(this, sourceWire);
 
+  var root = this.getRoot();
+
+  root.addClass('viz-wire');
+
   this.line_ = jQuerySvgElement('path')
-      .appendTo(this.getRoot());
-
-
-  this.getRoot().addClass('viz-wire');
+      .appendTo(root);
 
   /**
    * Bound getEntityByID method from vizualization controller.
@@ -53,10 +54,12 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
 };
 
 NetSimVizWire.prototype.render = function () {
+  NetSimVizWire.superPrototype.render.call(this);
+
   var pathData = 'M 0 0';
   if (this.localVizNode && this.remoteVizNode) {
-    pathData = 'M ' + this.localVizNode.posX_ + ' ' + this.localVizNode.posY_ +
-    ' L ' + this.remoteVizNode.posX_ + ' ' + this.remoteVizNode.posY_;
+    pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
+    ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
   }
   this.line_.attr('d', pathData);
 };
