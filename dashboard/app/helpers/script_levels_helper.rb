@@ -42,14 +42,14 @@ module ScriptLevelsHelper
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
+    video_info_response = wrapup_video.summarize
     video_info_response[:redirect] = redirect
     video_info_response
   end
 
   def script_completion_redirect(script)
     if script.hoc?
-      hoc_finish_url(script)
+      script.hoc_finish_url
     else
       root_path
     end
@@ -91,7 +91,7 @@ module ScriptLevelsHelper
       end
 
     script_data = {
-      title: stage_title(script, script_level.stage),
+      title: script_level.stage.localized_title,
       currentLevelIndex: script_level.position - 1,
       scriptId: script.id,
       scriptLevelId: script_level.try(:level_id),
