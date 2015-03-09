@@ -1557,10 +1557,21 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.saySprite());
       }
       if (options.restrictedDialog) {
-        var dropdown = new blockly.FieldDropdown(
+        /*var dropdown = new blockly.FieldDropdown(
           [[msg.saySpriteChoices_1(), msg.saySpriteChoices_1()],
            [msg.saySpriteChoices_2(), msg.saySpriteChoices_2()],
-           [msg.saySpriteChoices_3(), msg.saySpriteChoices_3()]]);
+           [msg.saySpriteChoices_3(), msg.saySpriteChoices_3()]]); */
+
+        var functionArray = [];
+        var numRestrictedSayChoices = 2; //59;
+        for (var i = 0; i < numRestrictedSayChoices; i++) {
+          var functionElement = functionArray[i] = [];
+          var string = msg["saySpriteChoices_" + (i+1)]();
+          functionElement[0] = functionElement[1] = string;
+        }
+
+        var dropdown = new blockly.FieldDropdown(functionArray);
+        
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
       else if (options.params) {
