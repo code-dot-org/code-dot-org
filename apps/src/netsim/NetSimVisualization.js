@@ -309,6 +309,23 @@ NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
 };
 
 /**
+ * If we do need a DOM change, detach the entity and reattach it to the new
+ * layer. Special rule (for now): Prepend wires so that they show up behind
+ * nodes.  Will need a better solution for this if/when the viz gets more
+ * complex.
+ * @param {NetSimVizEntity} vizEntity
+ * @param {jQuery} newParent
+ */
+var moveVizEntityToGroup = function (vizEntity, newParent) {
+  vizEntity.getRoot().detach();
+  if (vizEntity instanceof NetSimVizWire) {
+    vizEntity.getRoot().prependTo(newParent);
+  } else {
+    vizEntity.getRoot().appendTo(newParent);
+  }
+};
+
+/**
  * Recalculate which nodes should be in the foreground layer by doing a full
  * traversal starting with the local node.  In short, everything reachable
  * from the local node belongs in the foreground.
@@ -316,55 +333,43 @@ NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
 NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Begin by marking all entities background (unvisited)
   this.entities_.forEach(function (vizEntity) {
-    vizEntity.speculativeIsForeground = false;
+    vizEntity.visited = false;
   });
 
   // Use a simple stack for our list of nodes that need visiting.
   // If we have a local node, push it onto the stack as our starting point.
   // (If we don't have a local node, the next step is REALLY EASY)
-  var exploreStack = [];
+  var toExplore = [];
   if (this.localNode) {
-    exploreStack.push(this.localNode);
+    toExplore.push(this.localNode);
   }
 
   // While there are still nodes that need visiting,
   // visit the next node, marking it as "foreground/visited" and
   // pushing all of its unvisited connections onto the stack.
   var currentVizEntity;
-  while (exploreStack.length > 0) {
-    currentVizEntity = exploreStack.pop();
-    this.visitEntityToSetForeground_(currentVizEntity, exploreStack);
+  while (toExplore.length > 0) {
+    currentVizEntity = toExplore.pop();
+    currentVizEntity.visited = true;
+    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
   }
 
-  // Now, we have to correct "depth" for all nodes.
+  // Now, visited nodes belong in the foreground.
   // Move all nodes to their new, correct layers
+  // Possible optimization: Can we do this with just one operation on the live DOM?
   var foreground = this.svgRoot_.find('#foreground_group');
   var background = this.svgRoot_.find('#background_group');
   this.entities_.forEach(function (vizEntity) {
-    var newParent;
     var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 
     // Check whether a change should occur.  If not, we leave
     // newParent undefined so that we don't make unneeded DOM changes.
-    if (vizEntity.speculativeIsForeground && !isForeground) {
-      newParent = foreground;
-    } else if (!vizEntity.speculativeIsForeground && isForeground) {
-      newParent = background;
-    }
-
-    // If we do need a DOM change, detach the entity and reattach it to the
-    // new layer.
-    // Special rule (for now): Prepend wires so that they show up behind
-    // nodes.  Will need a better solution for this if/when the viz gets
-    // more complex.
-    if (newParent) {
-      vizEntity.getRoot().detach();
-      if (vizEntity instanceof NetSimVizWire) {
-        vizEntity.getRoot().prependTo(newParent);
-      } else {
-        vizEntity.getRoot().appendTo(newParent);
-      }
-      vizEntity.onDepthChange(newParent === foreground);
+    if (vizEntity.visited && !isForeground) {
+      moveVizEntityToGroup(vizEntity, foreground);
+      vizEntity.onDepthChange(true);
+    } else if (!vizEntity.visited && isForeground) {
+      moveVizEntityToGroup(vizEntity, background);
+      vizEntity.onDepthChange(false);
     }
   }, this);
 };
@@ -374,34 +379,24 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
  * Notes that the current entity is should be foreground when we're all done,
  * finds the current entity's unvisited connections,
  * pushes those connections onto the stack.
- * @param {NetSimVizEntity} entityBeingVisited
- * @param {Array.<NetSimVizEntity>} stack
+ * @param {NetSimVizNode|NetSimVizWire} vizEntity
+ * @returns {Array.<NetSimVizEntity>}
  * @private
  */
-NetSimVisualization.prototype.visitEntityToSetForeground_ = function (
-    entityBeingVisited, stack) {
+NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
+  // Find new entities to explore based on node type and connections
+  var neighbors = [];
 
-  // Visit the entity
-  entityBeingVisited.speculativeIsForeground = true;
-
-  // Push new entities to explore based on node type and connections
-  if (entityBeingVisited instanceof NetSimVizNode) {
-    // Nodes look for connected wires
-    this.getWiresAttachedToNode(entityBeingVisited).forEach(function (vizWire) {
-      if (!vizWire.speculativeIsForeground) {
-        stack.push(vizWire);
-      }
-    });
-
-  } else if (entityBeingVisited instanceof NetSimVizWire) {
-    // Wires know their connected nodes
-    if (!entityBeingVisited.localVizNode.speculativeIsForeground) {
-      stack.push(entityBeingVisited.localVizNode);
-    }
-    if (!entityBeingVisited.remoteVizNode.speculativeIsForeground) {
-      stack.push(entityBeingVisited.remoteVizNode);
-    }
+  if (vizEntity instanceof NetSimVizNode) {
+    neighbors = this.getWiresAttachedToNode(vizEntity);
+  } else if (vizEntity instanceof NetSimVizWire) {
+    neighbors.push(vizEntity.localVizNode);
+    neighbors.push(vizEntity.remoteVizNode);
   }
+
+  return neighbors.filter(function (vizEntity) {
+    return !vizEntity.visited;
+  });
 };
 
 /**
