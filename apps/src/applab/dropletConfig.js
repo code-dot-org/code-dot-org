@@ -92,11 +92,11 @@ module.exports.blocks = [
 
 module.exports.categories = {
   'UI controls': {
-    'color': 'red',
+    'color': 'yellow',
     'blocks': []
   },
   'Canvas': {
-    'color': 'yellow',
+    'color': 'red',
     'blocks': []
   },
   'Data': {
@@ -104,7 +104,7 @@ module.exports.categories = {
     'blocks': []
   },
   'Turtle': {
-    'color': 'yellow',
+    'color': 'cyan',
     'blocks': []
   },
   'Advanced': {
