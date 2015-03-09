@@ -216,35 +216,18 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
   var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
 
-  // 1. Kill nodes from the visualization that are no longer in the table.
-  this.entities_.filter(function (vizEntity) {
-    return vizEntity instanceof NetSimVizNode;
-  }).filter(function (vizNode) {
-    return !tableNodes.some(function (node) {
-      return node.entityID === vizNode.id;
-    });
-  }).forEach(function (vizNode) {
-    vizNode.kill();
-  });
-
-  // 2. Add new nodes from the table into the visualization
-  tableNodes.forEach(function (node) {
-    var vizNode = this.getEntityByID(NetSimVizNode, node.entityID);
-    if (vizNode) {
-      vizNode.configureFrom(node);
-    } else {
-      vizNode = new NetSimVizNode(node);
-      vizNode.snapToPosition(
-          Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
-          Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
-      this.entities_.push(vizNode);
-      this.svgRoot_.find('#background_group').prepend(vizNode.getRoot());
-    }
-  }, this);
+  // Update collection of VizNodes from source data
+  this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
+    var newVizNode = new NetSimVizNode(node);
+    newVizNode.snapToPosition(
+        Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
+        Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
+    return newVizNode;
+  }.bind(this));
 };
 
 /**
- * Handle notification taht wire table contents have changed.
+ * Handle notification that wire table contents have changed.
  * @param {Array.<Object>} rows - wire table rows
  * @private
  */
@@ -254,35 +237,75 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
     return new NetSimWire(this.shard_, row);
   }.bind(this));
 
-  // 1. Kill wires that are no longer in the table
-  this.entities_.filter(function (vizEntity) {
-    return vizEntity instanceof NetSimVizWire;
-  }).filter(function (vizWire) {
-    return !tableWires.some(function (wire) {
-      return wire.entityID === vizWire.id;
-    });
-  }).forEach(function (vizWire) {
-    vizWire.kill();
-  });
-
-  // 2. Add new wires into the visualization
-  var vizWire;
-  tableWires.forEach(function (wire) {
-    vizWire = this.getEntityByID(NetSimVizWire, wire.entityID);
-    if (vizWire) {
-      vizWire.configureFrom(wire);
-    } else {
-      vizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
-      this.entities_.push(vizWire);
-      this.svgRoot_.find('#background_group').prepend(vizWire.getRoot());
-    }
-  }, this);
+  // Update collection of VizWires from source data
+  this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
+    return new NetSimVizWire(wire, this.getEntityByID.bind(this));
+  }.bind(this));
 
   // Since the wires table determines simulated connectivity, we trigger a
   // recalculation of which nodes are in the local network (should be in the
   // foreground) and then re-layout the foreground nodes.
   this.pullElementsToForeground();
   this.distributeForegroundNodes();
+};
+
+/**
+ * Compares VizEntities of the given type that are currently in the
+ * visualization to the source data given, and creates/updates/removes
+ * VizEntities so that the visualization reflects the new source data.
+ *
+ * @param {function} vizEntityType
+ * @param {Array.<NetSimEntity>} entityCollection
+ * @param {function} creationMethod
+ * @private
+ */
+NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
+    vizEntityType, entityCollection, creationMethod) {
+
+  // 1. Kill VizEntities that are no longer in the source data
+  this.killVizEntitiesOfTypeMissingMatch_(vizEntityType, entityCollection);
+
+  entityCollection.forEach(function (entity) {
+    var vizEntity = this.getEntityByID(vizEntityType, entity.entityID);
+    if (vizEntity) {
+      // 2. Update existing VizEntities from their source data
+      vizEntity.configureFrom(entity);
+    } else {
+      // 3. Create new VizEntities for new source data
+      this.addVizEntity_(creationMethod(entity));
+    }
+  }, this);
+};
+
+/**
+ * Call kill() on any vizentities that match the given type and don't map to
+ * a NetSimEntity in the provided collection.
+ * @param {function} vizEntityType
+ * @param {Array.<NetSimEntity>} entityCollection
+ * @private
+ */
+NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
+    vizEntityType, entityCollection) {
+  this.entities_.forEach(function (vizEntity) {
+    var isCorrectType = (vizEntity instanceof vizEntityType);
+    var foundMatch = entityCollection.some(function (entity) {
+      return entity.entityID === vizEntity.id;
+    });
+
+    if (isCorrectType && !foundMatch) {
+      vizEntity.kill();
+    }
+  });
+};
+
+/**
+ * Adds a VizEntity to the visualization.
+ * @param {NetSimVizEntity} vizEntity
+ * @private
+ */
+NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
+  this.entities_.push(vizEntity);
+  this.svgRoot_.find('#background_group').prepend(vizEntity.getRoot());
 };
 
 /**
