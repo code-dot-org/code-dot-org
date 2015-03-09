@@ -285,11 +285,6 @@ title: "Ops Dashboard"
 
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-      if ($routeParams.id) {
-        $scope.cohort = cohortsService.get({id: $routeParams.id});
-      } else {
-        $scope.cohort = {};
-      }
 
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
@@ -297,7 +292,18 @@ title: "Ops Dashboard"
         });
       };
 
-      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+        $scope.cohort.$promise.then(function(cohort){
+          cohort.program_type_disabled = cohort.program_type ? true : false;
+          if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+            $scope.cohort.districts = [];
+            $scope.newDistrict();
+          }
+        });
+      } else {
+        $scope.cohort = {};
         $scope.cohort.districts = [];
         $scope.newDistrict();
       }
