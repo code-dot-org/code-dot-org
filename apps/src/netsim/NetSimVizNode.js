@@ -89,12 +89,10 @@ NetSimVizNode.prototype.kill = function () {
  */
 NetSimVizNode.prototype.tick = function (clock) {
   NetSimVizNode.superPrototype.tick.call(this, clock);
-  if (!this.isForeground) {
-    if (this.tweens_.length === 0) {
-      var randomX = 300 * Math.random() - 150;
-      var randomY = 300 * Math.random() - 150;
-      this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-    }
+  if (!this.isForeground && this.tweens_.length === 0) {
+    var randomX = 300 * Math.random() - 150;
+    var randomY = 300 * Math.random() - 150;
+    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
   }
 };
 
