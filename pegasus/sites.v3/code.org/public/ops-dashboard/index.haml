@@ -165,28 +165,29 @@ title: "Ops Dashboard"
 
       $scope.districts = districtsService.query();
 
-      $scope.save = function (district) {
-        if (district.id) {
-          districtsService.update({id: district.id}, {district: district}).$promise.then(
-            function(result_district) {
-              $scope.districts[$scope.districts.indexOf(district)] = result_district;
+      $scope.save = function (district, valid) {
+        if (valid) {
+          if (district.id) {
+            districtsService.update({id: district.id}, {district: district}).$promise.then(
+              function(result_district) {
+                $scope.districts[$scope.districts.indexOf(district)] = result_district;
+                  districtsService.query().$promise.then(function (districts) {
+                  $scope.districts = districts;
+                });
+              }
+            ).catch($scope.genericError);
+          } else {
+            districtsService.save({district: district}).$promise.then(
+              function(saved) {
+                $scope.district = null; /* just in case it has been modified on server */
                 districtsService.query().$promise.then(function (districts) {
-                $scope.districts = districts;
-              });
-            }
-          ).catch($scope.genericError);
-        } else {
-          districtsService.save({district: district}).$promise.then(
-            function(saved) {
-              $scope.district = null; /* just in case it has been modified on server */
-              districtsService.query().$promise.then(function (districts) {
-                $scope.districts = districts;
-              });
-            }
-          );
+                  $scope.districts = districts;
+                });
+              }
+            );
+          }
         }
       }
-
       $scope.districts.$promise.then(function(districts) {
         $scope.districtsLoaded = true;
       }).catch($scope.genericError);
