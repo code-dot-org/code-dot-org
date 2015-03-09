@@ -11,7 +11,8 @@
 /* global $ */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var _ = utils.getLodash();
 var NetSimWire = require('./NetSimWire');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
@@ -185,17 +186,12 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
  * Find a particular VizEntity in the visualization, by type and ID.
  * @param {function} entityType - constructor of entity we're looking for
  * @param {number} entityID - ID, with corresponds to NetSimEntity.entityID
- * @returns {NetSimVizEntity} or null if not found
+ * @returns {NetSimVizEntity} or undefined if not found
  */
 NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
-  return this.entities_.reduce(function (prev, cur) {
-    if (prev) {
-      return prev;
-    } else if (cur instanceof entityType && cur.id === entityID) {
-      return cur;
-    }
-    return null;
-  }, null);
+  return _.find(this.entities_, function (entity) {
+    return entity instanceof entityType && entity.id === entityID;
+  });
 };
 
 /**
