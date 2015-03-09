@@ -14,6 +14,34 @@ class Stage < ActiveRecord::Base
   def unplugged?
     script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
-    return script_levels.first.level.unplugged?
+    script_levels.first.level.unplugged?
+  end
+
+  def localized_title
+    if script.stages.to_a.many?
+      I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
+    else # script only has one stage/game, use the script name
+      I18n.t "data.script.name.#{script.name}.title"
+    end
+  end
+
+  def localized_name
+    if script.stages.many?
+      I18n.t "data.script.name.#{script.name}.#{name}"
+    else
+      I18n.t "data.script.name.#{script.name}.title"
+    end
+  end
+
+  def lesson_plan_html_url
+    "#{lesson_plan_base_url}/Teacher"
+  end
+
+  def lesson_plan_pdf_url
+    "#{lesson_plan_base_url}/Teacher.pdf"
+  end
+
+  def lesson_plan_base_url
+    CDO.code_org_url "/curriculum/#{script.name}/#{position}"
   end
 end
