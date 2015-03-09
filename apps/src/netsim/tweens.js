@@ -63,6 +63,14 @@ exports.easeInQuad = function (t, b, c, d) {
   return c*(t/=d)*t + b;
 };
 
+/**
+ * Interpolates, decelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeOutQuad = function (t, b, c, d) {
+  return -c*(t/=d)*(t-2) + b;
+};
+
 exports.easeInOutQuad = function (t, b, c, d) {
   if ((t/=d/2) < 1) {
     return c/2*t*t + b;
@@ -111,15 +119,14 @@ exports.TweenValueTo = function (target, propertyName, endValue, duration,
 
   /**
    * @type {Object}
-   * @private
    */
-  this.target_ = target;
+  this.target = target;
 
   /**
    * @type {string}
    * @private
    */
-  this.propertyName_ = propertyName;
+  this.propertyName = propertyName;
 
   /**
    * @type {TweenFunction}
@@ -158,20 +165,20 @@ exports.TweenValueTo.prototype.tick = function (clock) {
   var timeSinceStart = clock.time - this.startTime_;
 
   if (this.deltaValue_ !== 0) {
-    this.target_[this.propertyName_] = this.tweenFunction_(
+    this.target[this.propertyName] = this.tweenFunction_(
         timeSinceStart,
         this.startValue_,
         this.deltaValue_,
         this.duration_
     );
 
-    if (isNaN(this.target_[this.propertyName_])) {
+    if (isNaN(this.target[this.propertyName])) {
       console.log("NAN tween result!");
     }
   }
 
   if (timeSinceStart >= this.duration_) {
-    this.target_[this.propertyName_] = this.startValue_ + this.deltaValue_;
+    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
     this.isFinished = true;
   }
 };
