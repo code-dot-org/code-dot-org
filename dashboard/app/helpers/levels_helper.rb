@@ -20,23 +20,9 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts
+  def set_videos_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
     @callouts = select_and_remember_callouts(params[:show_callouts])
-
-    if @level.is_a? Blockly
-      @toolbox_blocks ||=
-        @level.try(:project_template_level).try(:toolbox_blocks) ||
-        @level.toolbox_blocks
-
-      @start_blocks ||=
-        @level.try(:project_template_level).try(:start_blocks) ||
-        @level.start_blocks
-
-      @code_functions ||=
-        @level.try(:project_template_level).try(:code_functions) ||
-        @level.code_functions
-    end
   end
 
   def select_and_track_autoplay_video
@@ -141,23 +127,26 @@ module LevelsHelper
     "false"
   end
 
-  # Code for generating the blockly options hash
-  def blockly_options(local_assigns={})
+  # Generate a level-specific blockly options hash
+  def blockly_level_options(level)
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @level.properties.dup || {}
+    level_prop = level.properties.dup || {}
+
+    extra_options = level.embed == 'true' ? {embed: true, hide_source: true, no_padding: true, show_finish: true} : {}
 
     # Set some specific values
-    level['puzzle_number'] = @script_level ? @script_level.position : 1
-    level['stage_total'] = @script_level ? @script_level.stage_total : 1
-    if @level.is_a?(Maze) && @level.step_mode
-      @level.step_mode = blockly_value(@level.step_mode)
-      level['step'] = @level.step_mode == 1 || @level.step_mode == 2
-      level['stepOnly'] = @level.step_mode == 2
+
+    if level.is_a? Blockly
+      level_prop['start_blocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
+      level_prop['toolbox_blocks'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
+      level_prop['code_functions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
     end
 
-    # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-    level['edit_blocks'] = params[:type]
-    level['edit_blocks_success'] = t('builder.success')
+    if level.is_a?(Maze) && level.step_mode
+      step_mode = blockly_value(level.step_mode)
+      level_prop['step'] = step_mode == 1 || step_mode == 2
+      level_prop['stepOnly'] = step_mode == 2
+    end
 
     # Map Dashboard-style names to Blockly-style names in level object.
     # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
@@ -251,86 +240,122 @@ module LevelsHelper
       input_output_table
       complete_on_success_condition_not_goals
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
-    .each do |dashboard, blockly|
-      # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
+        .each do |dashboard, blockly|
+      # Select value from extra options, or properties json
       # Don't override existing valid (non-nil/empty) values
-      property = local_assigns[dashboard.to_sym].presence ||
-        @level[dashboard].presence ||
-        instance_variable_get("@#{dashboard}").presence ||
-        level[dashboard].presence
-      value = blockly_value(level[blockly] || property)
-      level[blockly] = value unless value.nil? # make sure we convert false
+      property = extra_options[dashboard].presence ||
+          level_prop[dashboard].presence
+      value = blockly_value(level_prop[blockly] || property)
+      level_prop[blockly] = value unless value.nil? # make sure we convert false
     end
 
-    level['images'] = JSON.parse(level['images']) if level['images'].present?
+    level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
     # Blockly requires startDirection as an integer not a string
-    level['startDirection'] = level['startDirection'].to_i if level['startDirection'].present?
-    level['sliderSpeed'] = level['sliderSpeed'].to_f if level['sliderSpeed']
-    level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
+    level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
+    level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
+    level_prop['scale'] = {'stepSpeed' =>  level_prop['step_speed'].to_i } if level_prop['step_speed'].present?
 
     # Blockly requires these fields to be objects not strings
     (
-      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
+    %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
       .concat NetSim.json_object_attrs
     ).each do |x|
-      level[x] = JSON.parse(level[x]) if level[x].is_a? String
+      level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
     end
 
     # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
-    if level['fn_successCondition'] || level['fn_failureCondition']
-      level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
-      level.delete('fn_successCondition')
-      level.delete('fn_failureCondition')
+    if level_prop['fn_successCondition'] || level_prop['fn_failureCondition']
+      level_prop['goal'] = {fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']}
+      level_prop.delete('fn_successCondition')
+      level_prop.delete('fn_failureCondition')
     end
 
-    #Fetch localized strings
-    if @level.level_num_custom?
-      loc_val = data_t("instructions", "#{@level.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
-        level['instructions'] = loc_val
-      end
-    else
-      %w(instructions).each do |label|
-        val = [@level.game.app, @level.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{@level.level_num}")
-        }.compact.first
-        level[label] ||= val unless val.nil?
-      end
-    end
+    app_options = {}
+
+    app_options[:levelGameName] = level.game.name if level.game
+    app_options[:skinId] = level.skin if level.is_a?(Blockly)
 
     # Set some values that Blockly expects on the root of its options string
-    app_options = {
+    app_options.merge!({
       baseUrl: "#{ActionController::Base.asset_host}/blockly/",
-      app: @game.try(:app),
-      levelId: @level.level_num,
-      level: level,
-      callouts: @callouts,
+      app: level.game.try(:app),
+      levelId: level.level_num,
+      level: level_prop,
       cacheBust: blockly_cache_bust,
-      autoplayVideo: @autoplay_video_info,
-      report: {
-          fallback_response: @fallback_response,
-          callback: @callback,
-      },
-      droplet: @game.try(:uses_droplet?),
+      droplet: level.game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      applabUserId: @applab_user_id,
-    }
-    app_options[:scriptId] = @script.id if @script
-    app_options[:levelGameName] = @level.game.name if @level.game
-    app_options[:skinId] = @level.skin if @level.is_a?(Blockly)
-    app_options[:level_source_id] = @level_source.id if @level_source
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
-    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
-    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
-    app_options[:isLegacyShare] = true if @is_legacy_share
+    })
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|
-      app_options[key.to_sym] = level[key]
-      level.delete key
+      app_options[key.to_sym] = level_prop[key]
+      level_prop.delete key
     end
+
+    app_options
+  end
+
+  # Code for generating the blockly options hash
+  def blockly_options
+
+    ## Level-dependent options
+    l = @level
+    app_options = Rails.cache.fetch("#{l.cache_key}/blockly_level_options") do
+      blockly_level_options(l)
+    end
+    level_options = app_options[:level]
+
+    ## Locale-dependent option
+    # Fetch localized strings
+    if l.level_num_custom?
+      loc_val = data_t("instructions", "#{l.name}_instruction")
+      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+        level_options['instructions'] = loc_val
+      end
+    else
+      %w(instructions).each do |label|
+        val = [l.game.app, l.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{l.level_num}")
+        }.compact.first
+        level_options[label] ||= val unless val.nil?
+      end
+    end
+
+    ## Script-dependent option
+    script = @script
+    app_options[:scriptId] = script.id if script
+
+    ## ScriptLevel-dependent option
+    script_level = @script_level
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+
+    ## LevelSource-dependent options
+    app_options[:level_source_id] = @level_source.id if @level_source
+    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
+
+    ## Edit blocks-dependent options
+    if @edit_blocks
+      # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
+      level_options['edit_blocks'] = @edit_blocks
+      level_options['edit_blocks_success'] = t('builder.success')
+    end
+
+    ## User/session-dependent options
+    app_options[:callouts] = @callouts
+    app_options[:autoplayVideo] = @autoplay_video_info
+    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
+    app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:applabUserId] = @applab_user_id
+    app_options[:report] = {
+        fallback_response: @fallback_response,
+        callback: @callback,
+    }
+
+    ## Request-dependent option
+    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
 
     app_options
   end

@@ -21,7 +21,7 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    set_videos_and_blocks_and_callouts
+    set_videos_and_callouts
     @full_width = true
     @no_footer_puzzle = (@game == Game.applab)
   end
