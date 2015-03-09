@@ -44,25 +44,21 @@ template: none
       %button.btn.btn-white{'ng-click' => 'district.editing = true', 'ng-hide' => 'district.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-hide' => 'district.editing'} Delete
       %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
-      %button.btn.btn-primary{'ng-click' => 'save(district, $valid)', 'ng-show' => 'district.editing'} Save
-%h2
-  Create a new district
-%form.signupform{name:'newDistrictForm'}
-  %label
-    District Name
-  %input.form-control{autofocus:'autofocus', 'ng-model' => 'district.name', type:'text', required:'true'}
-  %br
-  %label
-    District Location
-  %input.form-control{autofocus:'autofocus', 'ng-model' => 'district.location', type:'text'}
-  %br
-  %label
-    District Contact Name
-  %input.form-control{autofocus:'autofocus', 'ng-model' => 'district.contact.name', type:'text'}
-  %br
-  %label
-    District Contact Email
-  %input.form-control{autofocus:'autofocus', 'ng-model' => 'district.contact.email', type:'email'}
-  %br
-  %button.btn.btn-primary{type:'submit', 'ng-click' => 'save(district, newDistrictForm.$valid)'}
-    Save
+      %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing'} Save
+  %tr
+    %td
+      %input{'ng-model' => 'district.name', type:'text'}
+    %td
+      %input{'ng-model' => 'district.location', type:'text'}
+    %td
+      %input{'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+    %td
+      %input{'ng-model' => 'district.contact.email', type:'text', placeholder: 'Email'}
+    %td
+      %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
+        Create new district
+
+:css
+  .btn {
+    width:48%
+  }
