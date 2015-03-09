@@ -1,9 +1,9 @@
-#petitionblock.greybox{style: " background-image: url('/images/petition_background.jpg');   /*height:300px; padding-top:50px; margin-top:0px; padding-left: 200px; padding-right:200px*/ margin-bottom:10px; padding:5px; padding-bottom:8px"}
+#petitionblock.greybox{style: "background-color:rgba(0,0,0,0.25); padding: 10px 20px 10px 20px"}
 
-  -#petition_message{:style=>"font-size: 21px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
+  #petition_message{:style=>"font-size: 17px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
 
   #form.container_responsive{style: "display:none"}
-    #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message_support).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
+    #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
     %form#petition_form{:onsubmit=>"return petition.signPetition()"}
 
