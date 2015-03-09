@@ -5,7 +5,7 @@
   .video-preview{style: 'display: block'}
 
 - video_infos = {}
-- Video.all.each { |video| video_infos[video.key] = video_info(video, false) }
+- Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
 :javascript
   $(document).ready(function() {
     var videoInfos = #{video_infos.to_json};

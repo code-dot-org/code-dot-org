@@ -5576,9 +5576,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.Blockly) {
-      // TODO: (Josh L.) use $.trigger once we add jQuery
-      Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.jQuery) {
+      $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
   }, 250, true);
@@ -9828,10 +9827,44 @@ exports.workspaceCode = function(blockly) {
 };
 
 //
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -9874,19 +9907,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);
@@ -10430,17 +10451,26 @@ exports.generateAceApiCompleter = function (dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    if (configBlocks[i].type === 'value') {
-      modeOptions.valueFunctions.push(configBlocks[i].func);
+function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+  var mergedCategories = mergeCategoriesWithConfig(config);
+
+  for (var i = 0; i < config.blocks.length; i++) {
+    var newFunc = {};
+
+    if (config.blocks[i].type === 'value') {
+      newFunc.value = true;
     }
-    else if (configBlocks[i].type === 'either') {
-      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    else if (config.blocks[i].type === 'either') {
+      newFunc.value = true;
+      newFunc.command = true;
     }
-    else if (configBlocks[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(configBlocks[i].func);
+
+    var category = mergedCategories[config.blocks[i].category];
+    if (category) {
+      newFunc.color = category.rgb || category.color;
     }
+
+    modeOptions.functions[config.blocks[i].func] = newFunc;
   }
 }
 
@@ -10449,23 +10479,12 @@ function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
  */
 exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: [],
-    eitherFunctions: [],
+    functions: []
   };
 
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
 
   return modeOptions;
 };

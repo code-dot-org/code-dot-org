@@ -17,7 +17,7 @@ class ApiController < ApplicationController
     # stage data
     stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
       {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage_title(@script, stage))}
+       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
     end
 
     # student level completion data

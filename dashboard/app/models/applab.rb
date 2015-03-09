@@ -7,10 +7,6 @@ class Applab < Blockly
     free_play
   )
 
-  def self.builder
-    @@applab_builder ||= Level.find_by(name: 'builder')
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
     ['applab']

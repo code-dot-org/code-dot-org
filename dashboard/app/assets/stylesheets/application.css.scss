@@ -726,6 +726,28 @@ input.header_input {
   overflow: hidden;
 }
 
+.key {
+  margin: 10px 0;
+  float: left;
+  padding: 10px;
+  background-color: #eee;
+  dl {
+    margin: 0;
+    float: left;
+    white-space: nowrap;
+  }
+  dd, dt {
+    float: left;
+    height: 36px;
+  }
+  dt { margin-right: 5px; }
+  dd {
+    line-height: 36px;
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}
+
 .header_popup_header {
   padding: 12px 15px;
   margin-bottom: 0;

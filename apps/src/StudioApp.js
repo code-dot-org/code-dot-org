@@ -1114,9 +1114,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.Blockly) {
-      // TODO: (Josh L.) use $.trigger once we add jQuery
-      Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.jQuery) {
+      $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
   }, 250, true);
