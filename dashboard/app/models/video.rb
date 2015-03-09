@@ -21,4 +21,47 @@ class Video < ActiveRecord::Base
     end
     check_i18n_names
   end
+
+  def self.youtube_base_url
+    'https://www.youtube.com'
+  end
+
+  def self.youtube_url(code, args={})
+    defaults = {
+        v: code,
+        modestbranding: 1,
+        rel: 0,
+        showinfo: 1,
+        autoplay: 1,
+        wmode: 'transparent',
+        iv_load_policy: 3
+    }
+
+    language = I18n.locale.to_s.downcase.split('-').first
+    if language != 'en'
+      defaults.merge!(
+          cc_lang_pref: language,
+          cc_load_policy: 1
+      )
+    end
+    defaults.merge!(args)
+    "#{Video.youtube_base_url}/embed/#{code}/?#{defaults.to_query}"
+  end
+
+  def thumbnail_path
+    "/c/video_thumbnails/#{id}.jpg"
+  end
+
+  def summarize(autoplay = true)
+    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
+    {
+        src: Video.youtube_url(youtube_code, {autoplay: autoplay ? 1 : 0}),
+        key: key,
+        name: I18n.t('data.video.name', key),
+        download: download,
+        thumbnail: thumbnail_path,
+        enable_fallback: true,
+        autoplay: autoplay
+    }
+  end
 end
