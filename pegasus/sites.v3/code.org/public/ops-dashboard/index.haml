@@ -3,6 +3,7 @@ theme: angular
 title: "Ops Dashboard"
 ---
 - authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
