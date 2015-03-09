@@ -131,8 +131,8 @@ NetSimVizEntity.prototype.tick = function (clock) {
 NetSimVizEntity.prototype.render = function () {
   // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
   //                   out of date.
-  var transform = 'translate(' + this.posX + ', ' + this.posY + '),' +
-      'scale(' + this.scale + ')';
+  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
+      ' scale(' + this.scale + ')';
   this.rootGroup_.attr('transform', transform);
 };
 
