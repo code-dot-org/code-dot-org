@@ -13,10 +13,12 @@ lessons = DB[:cdo_lessons].where(course_s:course)
 
 [content]
 
+
+<% lessons.each_with_index do |lesson, index| %>
+
 [together]
 
-<table>
-<% lessons.each_with_index do |lesson, index| %>
+<table style="width: 100%">
 <thead>
 <tr>
 <th colspan="2">
@@ -55,10 +57,11 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 
 </td>
 </tr>
-<% end %>
 </table>
 
 [/together]
+
+<% end %>
 
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
 
