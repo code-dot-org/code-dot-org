@@ -442,12 +442,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   // Two nodes: Placed across from each other, local node on left
   if (foregroundNodes.length === 2) {
     myNode = this.localNode;
-    var otherNode = foregroundNodes.reduce(function (prev, cur) {
-      if (cur !== this.localNode) {
-        return cur;
-      }
-      return prev;
-    }.bind(this));
+    var otherNode = _.find(foregroundNodes, function (node) {
+      return node !== myNode;
+    });
     myNode.tweenToPosition(-75, 0, 400, tweens.easeOutQuad);
     otherNode.tweenToPosition(75, 0, 600, tweens.easeOutQuad);
     return;
