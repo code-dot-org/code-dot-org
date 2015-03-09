@@ -42,14 +42,14 @@ module ScriptLevelsHelper
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
+    video_info_response = wrapup_video.summarize
     video_info_response[:redirect] = redirect
     video_info_response
   end
 
   def script_completion_redirect(script)
     if script.hoc?
-      hoc_finish_url(script)
+      script.hoc_finish_url
     else
       root_path
     end
@@ -82,19 +82,16 @@ module ScriptLevelsHelper
   def header_progress(script_level)
     script = script_level.script
     stage = script_level.stage
-    game = script_level.level.game
 
     game_levels =
       if current_user
-        current_user.levels_from_script(script, game.id, stage)
-      elsif stage
-        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
+        current_user.levels_from_script(script, stage)
       else
-        script.script_levels.to_a.select{|sl| sl.level.game_id == script_level.level.game_id}
+        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
       end
 
     script_data = {
-      title: stage_title(script, script_level.stage),
+      title: script_level.stage.localized_title,
       currentLevelIndex: script_level.position - 1,
       scriptId: script.id,
       scriptLevelId: script_level.try(:level_id),

@@ -80,19 +80,27 @@ div.droplet-palette-group-header-selected {
 }
 
 .droplet-palette-group-header.yellow {
-  border-left:10px solid #e0e053;
+  border-left:10px solid rgb(255, 213, 79);
 }
 
 .droplet-palette-group-header-selected.yellow {
-  background-color: #e0e053;
+  background-color: rgb(255, 213, 79);
 }
 
 .droplet-palette-group-header.red {
-  border-left:10px solid #FA8A8C;
+  border-left:10px solid rgb(248, 116, 119);
 }
 
 .droplet-palette-group-header-selected.red {
-  background-color: #FA8A8C;
+  background-color: rgb(248, 116, 119);
+}
+
+.droplet-palette-group-header.cyan {
+  border-left:10px solid rgb(0, 210, 226);
+}
+
+.droplet-palette-group-header-selected.cyan {
+  background-color: rgb(0, 210, 226);
 }
 
 .droplet-wrapper-div {

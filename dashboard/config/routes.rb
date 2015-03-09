@@ -77,6 +77,7 @@ Dashboard::Application.routes.draw do
     collection do
       get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
       get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
       get '/:template', to: 'projects#template'
     end
   end
@@ -167,11 +168,6 @@ Dashboard::Application.routes.draw do
   resources :zendesk_session, only: [:index]
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-
-  #get '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #post '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #put '/dashboardapi/:anything', to: redirect('/api/%{anything}')
-  #delete '/dashboardapi/:anything', to: redirect('/api/%{anything}')
 
   module OPS
     API = 'api'

@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ScriptLevelsHelperTest < ActionView::TestCase
 
-  include StagesHelper
   include LocaleHelper
   include ApplicationHelper
   include LevelsHelper
@@ -17,10 +16,10 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/finish', hoc_finish_url(Script.get_from_cache(Script::HOC_2013_NAME))
+    assert_equal '//test.code.org/api/hour/finish', Script.get_from_cache(Script::HOC_2013_NAME).hoc_finish_url
 
-    assert_equal '//test.code.org/api/hour/finish/frozen', hoc_finish_url(Script.get_from_cache(Script::FROZEN_NAME))
-    assert_equal '//test.code.org/api/hour/finish/course4', hoc_finish_url(Script.get_from_cache(Script::COURSE4_NAME))
+    assert_equal '//test.code.org/api/hour/finish/frozen', Script.get_from_cache(Script::FROZEN_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish/course4', Script.get_from_cache(Script::COURSE4_NAME).hoc_finish_url
   end
 
   test 'script name instead of stage name in header for HOC' do

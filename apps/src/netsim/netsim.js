@@ -170,6 +170,10 @@ NetSim.prototype.getOverrideShardID = function () {
   return shardID;
 };
 
+NetSim.prototype.shouldEnableCleanup = function () {
+  return !location.search.match(/disableCleaning/i);
+};
+
 /**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
@@ -187,7 +191,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       $('#netsim_sent'), 'Sent Message Log', true);
 
   this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
-      this.receivedMessageLog_);
+      this.receivedMessageLog_, this.shouldEnableCleanup());
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));

@@ -23,14 +23,27 @@ class User < ActiveRecord::Base
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
 
+  # TODO: this way of associating districts with users is not really what we want
   has_one :districts_users
   has_one :district, through: :districts_users
 
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
-  # all Teachers in a Cohort (are supposed to) attend all Workshops associated with a Cohort
+
+  # workshops that I am attending
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
+
+  # you can be associated with a district if you are the district contact
+  has_many :districts_as_contact, class_name: 'District', foreign_key: 'contact_id'
+
+  # TODO: I think we actually want to do this
+  # you can be associated with distrits through cohorts
+#   has_many :districts, through: :cohorts
+
+  def facilitator?
+    permission? UserPermission::FACILITATOR
+  end
 
   def delete_permission(permission)
     permission = permissions.find_by(permission: permission)
@@ -46,7 +59,19 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
-    permission?('district_contact') || district.try(:contact) == self
+    districts_as_contact.any?
+  end
+
+  def User.find_or_create_district_contact(params)
+    user = User.find_by_email_or_hashed_email(params[:email])
+    unless user
+      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
+      # TODO send invitation email
+    end
+
+    user.permission = UserPermission::DISTRICT_CONTACT
+    user.save!
+    user
   end
 
   # a district contact can see the teachers from their district that are part of a cohort
@@ -262,14 +287,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def levels_from_script(script, game_index=nil, stage=nil)
+  def levels_from_script(script, stage = nil)
     ul_map = self.user_levels.includes({level: [:game, :concepts]}).index_by(&:level_id)
-    q = script.script_levels.includes({ level: :game }, :script, :stage).order((stage ? :position : :chapter))
+    q = script.script_levels.includes({ level: :game }, :script, :stage).order(:position)
 
     if stage
       q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
-    elsif game_index
-      q = q.where(['games.id = :game_id', {game_id: game_index}]).references(:game)
     end
 
     q.each do |sl|
@@ -377,7 +400,7 @@ SQL
   end
 
   def confirmation_required?
-    (self.teacher? || self.students.length > 0) && !self.confirmed?
+    self.teacher? && !self.confirmed?
   end
 
   # There are some shenanigans going on with this age stuff. The

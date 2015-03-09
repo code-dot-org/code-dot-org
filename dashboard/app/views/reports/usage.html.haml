@@ -66,7 +66,7 @@
           = link_to build_script_level_path(sl) do
             = data_t_suffix('script.name', sl.script.name, "title")
             %br
-            = stage_title(sl.script, sl.stage)
+            = sl.stage.localized_title
             = t('puzzle')
             = sl.position
       %td

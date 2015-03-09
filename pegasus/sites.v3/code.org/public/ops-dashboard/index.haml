@@ -1,8 +1,8 @@
 ---
 theme: angular
+title: "Ops Dashboard"
 ---
 - authentication_required!
-- forbidden! unless dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -39,7 +39,8 @@ theme: angular
   }]);
 
   // SERVICES
-  var services = angular.module('opsApp.services', []).value('version', '0.1');
+  var services = angular.module('opsApp.services', []).
+      value('version', '0.1');
 
   services.factory('districtsService', ['$resource',
     function($resource) {
@@ -55,9 +56,16 @@ theme: angular
 
       return District;
     }]);
-  services.factory('programsService', [
+  services.factory('programTypesService', [
     function() {
-      return [{name:'MSS'}, {name:'MSM'}, {name:'ECS'}, {name:'CSP'}];
+      var program_types = {
+        1: {id: 1, short_name: 'CS in Science', long_name: 'Computer Science in Science'},
+        2: {id: 2, short_name: 'CS in Algebra', long_name: 'Computer Science in Algebra'},
+        3: {id: 3, short_name: 'ECS', long_name: 'Exploring Computer Science'},
+        4: {id: 4, short_name: 'CSP', long_name: 'Computer Science Principles'}
+      };
+
+      return program_types;
   }]);
 
   services.factory('workshopsService', ['$resource',
@@ -159,8 +167,7 @@ theme: angular
 
       $scope.save = function (district) {
         if (district.id) {
-          var newDistrict = new districtsService($scope.district);
-          districtsService.update({id: district.id}, district).$promise.then(
+          districtsService.update({id: district.id}, {district: district}).$promise.then(
             function(result_district) {
               $scope.districts[$scope.districts.indexOf(district)] = result_district;
                 districtsService.query().$promise.then(function (districts) {
@@ -169,10 +176,9 @@ theme: angular
             }
           ).catch($scope.genericError);
         } else {
-          var newDistrict = new districtsService($scope.district);
-          newDistrict.$save().then(
+          districtsService.save({district: district}).$promise.then(
             function(saved) {
-              $scope.district = saved; /* just in case it has been modified on server */
+              $scope.district = null; /* just in case it has been modified on server */
               districtsService.query().$promise.then(function (districts) {
                 $scope.districts = districts;
               });
@@ -186,12 +192,13 @@ theme: angular
       }).catch($scope.genericError);
   }]);
 
-  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('WorkshopsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, programTypesService) {
       $scope.workshopsLoaded = false;
 
       $scope.workshops = workshopsService.query();
       $scope.cohorts = cohortsService.query();
+      $scope.program_types = programTypesService;
 
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
@@ -276,8 +283,8 @@ theme: angular
     }
   ]);
 
-  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService) {
+  controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});
       } else {
@@ -296,6 +303,7 @@ theme: angular
       }
 
       $scope.districts = districtsService.query();
+      $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
@@ -317,11 +325,11 @@ theme: angular
     }
   ]);
 
-  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programsService',
-    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programsService) {
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
       $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
-      $scope.programs = programsService;
+      $scope.program_types = programTypesService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {
@@ -360,7 +368,7 @@ theme: angular
         var newSegment = new segmentsService($scope.segment);
         newSegment.$save({id: $scope.workshop.id}).then(
           function(saved) {
-            $scope.segment = saved;
+            $scope.segment = null;
             segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
               $scope.workshopSegments = segments;
             });

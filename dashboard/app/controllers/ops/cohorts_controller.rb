@@ -52,6 +52,7 @@ module Ops
     def cohort_params
       params.require(:cohort).permit(
           :name,
+          :program_type,
           :district_ids => [],
           :district_names => [],
           :districts => [],

@@ -71,7 +71,7 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if rack_env?(:staging) || rack_env?(:development)
+if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   #
   # Define the BLOCKLY[-CORE] BUILD task
   #

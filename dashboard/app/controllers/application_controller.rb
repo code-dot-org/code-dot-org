@@ -107,7 +107,7 @@ class ApplicationController < ActionController::Base
     if current_user &&
         options[:level_source].try(:id) &&
         options[:solved?] &&
-        options[:activity] && 
+        options[:activity] &&
         options[:level_source_image]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end

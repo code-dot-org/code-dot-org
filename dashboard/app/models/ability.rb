@@ -56,7 +56,7 @@ class Ability
         can :read, Workshop
       end
 
-      if user.permission? 'facilitator'
+      if user.facilitator?
         can :read, Workshop
         can :teachers, Workshop
         # Allow facilitator to manage Workshop/Attendance for
@@ -69,7 +69,7 @@ class Ability
         end
       end
 
-      if user.permission? 'district_contact'
+      if user.district_contact?
         can :teachers, District
         can [:cohort, :teacher], WorkshopAttendance
       end
