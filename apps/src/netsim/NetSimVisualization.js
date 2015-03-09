@@ -340,10 +340,9 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Move all nodes to their new, correct layers
   var foreground = this.svgRoot_.find('#foreground_group');
   var background = this.svgRoot_.find('#background_group');
-  var newParent, isForeground;
   this.entities_.forEach(function (vizEntity) {
-    newParent = undefined;
-    isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
+    var newParent;
+    var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 
     // Check whether a change should occur.  If not, we leave
     // newParent undefined so that we don't make unneeded DOM changes.
@@ -381,31 +380,26 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
  */
 NetSimVisualization.prototype.visitEntityToSetForeground_ = function (
     entityBeingVisited, stack) {
-  var typedEntity; // Used to mitigate JSDoc complaints.
 
   // Visit the entity
   entityBeingVisited.speculativeIsForeground = true;
 
   // Push new entities to explore based on node type and connections
   if (entityBeingVisited instanceof NetSimVizNode) {
-    typedEntity = /** @type {NetSimVizNode} */ (entityBeingVisited);
-
     // Nodes look for connected wires
-    this.getWiresAttachedToNode(typedEntity).forEach(function (vizWire) {
+    this.getWiresAttachedToNode(entityBeingVisited).forEach(function (vizWire) {
       if (!vizWire.speculativeIsForeground) {
         stack.push(vizWire);
       }
     });
 
   } else if (entityBeingVisited instanceof NetSimVizWire) {
-    typedEntity = /** @type {NetSimVizWire} */ (entityBeingVisited);
-
     // Wires know their connected nodes
-    if (!typedEntity.localVizNode.speculativeIsForeground) {
-      stack.push(typedEntity.localVizNode);
+    if (!entityBeingVisited.localVizNode.speculativeIsForeground) {
+      stack.push(entityBeingVisited.localVizNode);
     }
-    if (!typedEntity.remoteVizNode.speculativeIsForeground) {
-      stack.push(typedEntity.remoteVizNode);
+    if (!entityBeingVisited.remoteVizNode.speculativeIsForeground) {
+      stack.push(entityBeingVisited.remoteVizNode);
     }
   }
 };
@@ -469,12 +463,9 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   // * Router in the middle
   // * Other nodes evenly distributed in a circle
   myNode = this.localNode;
-  var routerNode = foregroundNodes.reduce(function (prev, cur) {
-    if (cur.isRouter) {
-      return cur;
-    }
-    return prev;
-  }.bind(this));
+  var routerNode = _.find(foregroundNodes, function (node) {
+    return node.isRouter;
+  });
   var otherNodes = foregroundNodes.filter(function (node) {
     return node !== myNode && node !== routerNode;
   });
