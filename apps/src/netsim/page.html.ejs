@@ -48,6 +48,9 @@ var helpArea = function(html) { -%>
 
           <filter id="backgroundBlur">
             <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+            <feComponentTransfer>
+              <feFuncA slope="0.5" type="linear"></feFuncA>
+            </feComponentTransfer>
           </filter>
 
           <g id="centered_group" transform="translate(150,150)">
