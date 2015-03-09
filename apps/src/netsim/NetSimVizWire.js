@@ -59,7 +59,7 @@ NetSimVizWire.prototype.render = function () {
   var pathData = 'M 0 0';
   if (this.localVizNode && this.remoteVizNode) {
     pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
-    ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
+        ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
   }
   this.line_.attr('d', pathData);
 };
