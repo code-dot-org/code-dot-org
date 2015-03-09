@@ -30,15 +30,6 @@
   </div>
 <% }; -%>
 
-<% // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { -%>
-  <% if (html) { -%>
-    <div id="helpArea">
-      <%- html %>
-    </div>
-  <% } -%>
-<% }; -%>
-
 <div id="appcontainer">
   <div id="netsim">
     <div id="netsim_rightcol">
@@ -61,7 +52,6 @@ var helpArea = function(html) { -%>
   </div>
   <div id="footers" dir="<%= data.localeDirection %>">
     <% instructions() %>
-    <% helpArea(data.helpHtml) %>
   </div>
 </div>
 

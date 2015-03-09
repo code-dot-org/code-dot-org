@@ -60,10 +60,22 @@ html[dir="RTL"] .farSide {
 .clear {
   clear: both;
 }
+
+#visualizationColumn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 400px;
+  bottom: 10px;
+}
+
 #blockly {
   position: absolute;
+  top: 0px;
+  left: 400px;
+  right: 0px;
   bottom: 10px;
-  margin-left: 415px;
+  margin-left: 15px;
 }
 
 div.droplet-palette-group-header {
@@ -120,14 +132,20 @@ div.droplet-palette-group-header-selected {
 #codeTextbox {
   position: absolute;
   left: 0px;
+  right: 0px;
+  top: 40px;
+  bottom: 0px;
   font-size: 14px;
 }
 
 #codeWorkspace {
   position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 400px;
   bottom: 10px;
   box-shadow: 7px 7px 10px #888;
-  margin-left: 415px;
+  margin-left: 15px;
   border: 4px solid #ddd;
   overflow: hidden;
 }
@@ -188,6 +206,10 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
+    right: $width;
+  }
+  #codeWorkspace, #blockly {
+    left: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -211,6 +233,10 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
+    right: $width;
+  }
+  #codeWorkspace, #blockly {
+    left: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -232,8 +258,12 @@ div.droplet-palette-group-header-selected {
     max-height: $width;
     max-width: $width;
   }
+  #codeWorkspace, #blockly {
+    left: $width;
+  }
   #visualizationColumn.responsive {
     max-width: $width;
+    right: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -257,6 +287,10 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
+    right: $width;
+  }
+  #codeWorkspace, #blockly {
+    left: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;

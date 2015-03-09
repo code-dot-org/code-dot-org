@@ -760,7 +760,7 @@ StudioApp.prototype.onResize = function() {
   var headers = document.getElementById('headers');
   var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
-  div.style.top = divParent.offsetTop + 'px';
+  // div.style.top = divParent.offsetTop + 'px';
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
@@ -775,27 +775,27 @@ StudioApp.prototype.onResize = function() {
   }
 
   if (this.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+    div.style.marginRight = WORKSPACE_PLAYSPACE_GAP + 'px';
   }
   else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+    div.style.marginLeft = WORKSPACE_PLAYSPACE_GAP + 'px';
   }
   if (this.editCode) {
     // Position the inner codeTextbox element below the headers
     var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
+    // codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+    // codeTextbox.style.width = fullWorkspaceWidth + 'px';
     codeTextbox.style.top = headersHeight + 'px';
 
     // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
+    // div.style.height = parentHeight + 'px';
   } else {
     // reduce height by headers height because blockly isn't aware of headers
     // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
+    // div.style.height = (parentHeight - headersHeight) + 'px';
   }
 
-  div.style.width = fullWorkspaceWidth + 'px';
+  // div.style.width = fullWorkspaceWidth + 'px';
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -814,7 +814,7 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
 
   var headersDiv = document.getElementById('headers');
   if (headersDiv) {
-    headersDiv.style.width = fullWorkspaceWidth + 'px';
+    // headersDiv.style.width = fullWorkspaceWidth + 'px';
   }
 
   var toolboxHeader = document.getElementById('toolbox-header');
@@ -1122,11 +1122,13 @@ StudioApp.prototype.configureDom = function (config) {
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
+  /*
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
   if (referenceArea) {
     belowViz.appendChild(referenceArea);
   }
+  */
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
@@ -1302,7 +1304,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
-    scrollbars: config.level.scrollbars,
+    scrollbars: true, // config.level.scrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',

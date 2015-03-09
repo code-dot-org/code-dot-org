@@ -30,15 +30,6 @@
   </div>
 <% }; -%>
 
-<% // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { -%>
-  <% if (html) { -%>
-    <div id="helpArea">
-      <%- html %>
-    </div>
-  <% } -%>
-<% }; -%>
-
 <div id="visualizationColumn">
   <div id="visualization">
     <%- data.visualization %>
@@ -62,9 +53,6 @@ var helpArea = function(html) { -%>
       <%- data.extraControlRows %>
       <% } %>
     </div>
-
-    <% instructions() %>
-    <% helpArea(data.helpHtml) %>
 
   </div>
 </div>
@@ -96,5 +84,8 @@ var helpArea = function(html) { -%>
     <div id="codeTextbox"></div>
   <% } %>
 </div>
+
+<% instructions() %>
+
 
 <div class="clear"></div>

@@ -1,5 +1,5 @@
 !!! 5
-- show_footer = !(@share && browser.mobile?) && !@embed
+- show_footer = !(@share && browser.mobile?) && !@embed && !@full_width
 %html{dir: locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
