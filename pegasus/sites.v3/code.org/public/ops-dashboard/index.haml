@@ -290,6 +290,7 @@ title: "Ops Dashboard"
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',
+          max_teachers: ''
         });
       };
 
@@ -313,14 +314,24 @@ title: "Ops Dashboard"
       $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
+        cohort.district_ids = [];
+        for (var i = 0; i < cohort.districts.length; i++) {
+          if (cohort.districts[i].id) {
+            cohort.district_ids.push(cohort.districts[i].id);
+          }
+        }
+        delete cohort.districts;
+
+        console.log(cohort);
+
         if (cohort.id) { // existing
           cohort =
-            cohortsService.update({id: cohort.id}, cohort, function() {
+            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
               $location.path("/cohorts");
             });
         } else { // new
           cohort =
-            cohortsService.save(cohort, function() {
+            cohortsService.save({cohort: cohort}, function() {
               $location.path("/cohorts");
             });
         }
