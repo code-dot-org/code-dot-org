@@ -105,7 +105,7 @@ private
     @stage = @script_level.stage
     @no_footer_puzzle = (@game == Game.applab)
 
-    set_videos_and_blocks_and_callouts
+    set_videos_and_callouts
 
     load_level_source
 

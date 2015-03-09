@@ -48,7 +48,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # start blocks comes from project_level not real_level
-    assert_equal '<xml/>', assigns(:start_blocks)
+    app_options = blockly_level_options(assigns(:level))
+    assert_equal '<xml/>', app_options[:level]['start_blocks']
   end
 
   test 'project template level sets toolbox blocks' do
@@ -66,7 +67,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
-    assert_equal '<xml><toolbox/></xml>', assigns(:toolbox_blocks)
+    app_options = blockly_level_options(assigns(:level))
+    assert_equal '<xml><toolbox/></xml>', app_options[:level]['toolbox_blocks']
   end
 
   test 'should show video in twenty hour script level' do
