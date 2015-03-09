@@ -13,7 +13,27 @@ template: none
 -#%button.btn-white{'ng-click' => 'district.creation = true'}
 -#  New District
 
-%table{style:'width:100%; margin-top:20px;'}
+:scss
+  .districts input.ng-invalid.ng-dirty {
+    background-color: #EDD;
+  }
+
+  .districts td > span {
+    position: relative;
+  }
+
+  input.ng-invalid + span.error, 
+  select.ng-invalid + span.error {
+    display: inline;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #900;
+  }
+
+%table.districts{style:'width:100%; margin-top:20px;'}
   %tr
     %th.manage-th
       District Name
@@ -25,37 +45,46 @@ template: none
       District Contact Email
     %th.manage-th
       Manage
-  %tr{'ng-repeat' => 'district in districts'}
+  %tr{'ng-repeat' => 'district in districts', 'ng-form' => 'form'}
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.name}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.name', type:'text'}
+      %span{'ng-show' => 'district.editing'}  
+        %input{'ng-model' => 'district.name', type: 'text', name: 'name', 'ng-required' => 'true'}
+        %span.error{'ng-show' => 'form.name.$error.required'} Name is required
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.location}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type:'text'}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type: 'text'}
     %td
       %span{'ng-hide' => 'district.editing'} {{district.contact.name}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type: 'text', placeholder: 'Name'}
     %td
       %span{'ng-hide' => 'district.editing'} {{district.contact.email}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.email', type:'text', placeholder: 'Email'}
+      %span{'ng-show' => 'district.editing'}  
+        %input{'ng-model' => 'district.contact.email', type: 'email', placeholder: 'Email', name: 'email'}
+        %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
+
     %td
       %button.btn.btn-white{'ng-click' => 'district.editing = true', 'ng-hide' => 'district.editing'} Edit
       %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-hide' => 'district.editing'} Delete
       %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
-      %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing'} Save
-  %tr
+      %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing', 'ng-disabled' => 'form.$invalid'} Save
+  %tr{'ng-form' => 'form'}
     %td
-      %input{'ng-model' => 'district.name', type:'text'}
+      %span
+        %input{'ng-model' => 'district.name', type:'text', name: 'name', 'ng-required' => 'true'}
+        %span.error{'ng-show' => 'form.name.$error.required'} Name is required
     %td
       %input{'ng-model' => 'district.location', type:'text'}
     %td
       %input{'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
     %td
-      %input{'ng-model' => 'district.contact.email', type:'text', placeholder: 'Email'}
+      %span
+        %input{'ng-model' => 'district.contact.email', type: 'email', placeholder: 'Email', name: 'email'}
+        %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
     %td
-      %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%'}
+      %button.btn.btn-primary{'ng-click' => 'save(district)', style:'width:100%', 'ng-disabled' => 'form.$invalid'}
         Create new district
 
 :css

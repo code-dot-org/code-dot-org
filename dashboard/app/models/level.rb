@@ -74,40 +74,10 @@ class Level < ActiveRecord::Base
     level_num.eql? 'custom'
   end
 
-  def self.load_custom_levels
-    Dir.glob(Rails.root.join('config/scripts/**/*.level')).sort.map do |path|
-      load_custom_level(File.basename(path, File.extname(path)))
-    end
-  end
-
-  def self.level_file_path(name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level"))
-    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
-    level_paths.first
-  end
-
-  def self.load_custom_level(name)
-    level_path = level_file_path(name) || raise("Level #{name} not found")
-    load_custom_level_xml(File.read(level_path), name)
-  end
-
-  def self.load_custom_level_xml(xml, name)
-    level_xml = Nokogiri::XML(xml)
-    type = level_xml.root.name
-    transaction do
-      level = Level.find_or_create_by(name: name).with_type(type)
-      level.load_level_xml(xml)
-    end
-  end
-
-  def load_level_xml(xml)
-    json = Nokogiri::XML(xml, &:noblanks).xpath('//../config').first.text
-    level_hash = JSON.parse(json)
-    # Delete entries for all other attributes that may no longer be specified in the xml.
-    # Fixes issue #75863324 (delete removed level properties on import)
-    write_attribute('properties', {})
-    update!(level_hash)
-    self
+  # Input: xml level file definition
+  # Output: Hash of level properties
+  def load_level_xml(xml_node)
+    JSON.parse(xml_node.xpath('//../config').first.text)
   end
 
   def self.write_custom_levels
@@ -118,7 +88,7 @@ class Level < ActiveRecord::Base
 
   def write_custom_level_file
     if write_to_file?
-      file_path = self.class.level_file_path(name) || Rails.root.join("config/scripts/levels/#{name}.level")
+      file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
     end
@@ -153,18 +123,6 @@ class Level < ActiveRecord::Base
     if write_to_file?
       file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
       File.delete(file_path) if file_path && File.exists?(file_path)
-    end
-  end
-
-  def self.update_unplugged
-    # Unplugged level data is specified in 'unplugged.en.yml' file
-    unplugged = I18n.t('data.unplugged')
-    unplugged_game = Game.find_by(name: 'Unplugged')
-    unplugged.map do |name,_|
-      Level.where(name: name).first_or_create.update(
-        type: 'Unplugged',
-        game: unplugged_game
-      )
     end
   end
 
