@@ -67,6 +67,29 @@ module Ops
       assert_response :success
     end
 
+    test 'Ops team can create District with district contact' do
+      #87053952
+      assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
+
+      assert_creates(District, User) do
+        post :create, district: {name: 'test district', contact: {name: 'New user', email: 'new_teacher@email.xx'}}
+      end
+      assert_response :success
+
+      dc = User.last
+      district = District.last
+
+      # new user is a district contact
+      assert_equal 'new_teacher@email.xx', dc.email
+      assert dc.teacher?
+      assert dc.district_contact?
+      assert_equal [district], dc.districts_as_contact
+
+      # new district knows about the contact
+      assert_equal dc, district.contact
+    end
+
+
     test 'read district info' do
       assert_routing({ path: "#{API}/districts/1", method: :get }, { controller: 'ops/districts', action: 'show', id: '1' })
 
@@ -85,14 +108,54 @@ module Ops
       assert_response :success
     end
 
-    test 'Ops team can assign District Contact to District' do
-      #87053900
+    test 'assigning district contact to district creates new user' do
+      old_district_contact = @district.contact
+
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
-      teacher = create(:teacher)
-      put :update, id: @district.id, district: {contact_id: teacher.id}
-      get :show, id: @district.id
-      assert_equal teacher.id, JSON.parse(@response.body)['contact_id']
-      assert_response :success
+      assert_creates(User) do 
+        put :update, id: @district.id, district: {contact: {name: 'A New Teacher', email: 'new_teacher@email.xx'}}
+      end
+
+      # user is a district contact
+      dc = User.last
+      assert_equal 'new_teacher@email.xx', dc.email
+      assert dc.teacher?
+      assert dc.district_contact?
+      assert_equal [@district], dc.districts_as_contact
+
+      # district knows about the contact
+      @district = @district.reload
+      assert_equal dc, @district.contact
+
+      # old district contact is no longer a district contact
+      assert !old_district_contact.district_contact?
+    end
+
+
+    test 'assigning district contact to district upgrades existing user' do
+      old_district_contact = @district.contact
+
+      dc = create :teacher, email: 'existing@teacher.xx'
+      assert dc.teacher?
+      assert !dc.district_contact?
+
+      assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
+      assert_does_not_create(User) do
+        put :update, id: @district.id, district: {contact: {name: 'Existing Teacher', email: 'existing@teacher.xx'}}
+      end
+
+      # user is a district contact
+      dc = dc.reload
+      assert dc.teacher?
+      assert dc.district_contact? # upgrade
+      assert_equal [@district], dc.districts_as_contact
+
+      # district knows about the contact
+      @district = @district.reload
+      assert_equal dc, @district.contact
+
+      # old district contact is no longer a district contact
+      assert !old_district_contact.district_contact?
     end
 
     test 'delete district' do

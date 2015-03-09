@@ -77,6 +77,7 @@ Dashboard::Application.routes.draw do
     collection do
       get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
       get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
       get '/:template', to: 'projects#template'
     end
   end
