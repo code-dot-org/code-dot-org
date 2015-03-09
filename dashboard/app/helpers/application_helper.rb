@@ -5,9 +5,7 @@ require 'cdo/graphics/certificate_image'
 module ApplicationHelper
 
   include LocaleHelper
-  include VideosHelper
   include ScriptLevelsHelper
-  include StagesHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
