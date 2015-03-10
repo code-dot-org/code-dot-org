@@ -21779,6 +21779,10 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.initializeAddButton_()
 };
+Blockly.ContractEditor.prototype.createParameterEditor_ = function() {
+};
+Blockly.ContractEditor.prototype.bindToolboxHandlers_ = function() {
+};
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function() {
   return this.isShowingHeaders_() ? HEADER_HEIGHT : 0
 };
