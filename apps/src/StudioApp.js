@@ -1266,7 +1266,15 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         config.forceInsertTopBlock);
   }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  try {
+    this.loadBlocks(startBlocks);
+  } catch (e) {
+    if (loadLastAttempt) {
+      Blockly.mainBlockSpace.clear();
+      // Try loading the default start blocks instead.
+      this.setStartBlocks_(config, false);
+    }
+  }
 };
 
 /**
