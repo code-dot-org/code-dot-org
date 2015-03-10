@@ -1,10 +1,10 @@
 <%
   var EncodingType = require('./netsimConstants').EncodingType;
 
-/**
- * @param {EncodingType} encodingType
- * @param {string} encodingLabel
- */
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} encodingLabel
+   */
   function makeCheckbox(encodingType, encodingLabel) {
     var divClasses = ['encoding_checkboxes_' + encodingType];
     if (level.showEncodingControls.indexOf(encodingType) === -1) {
