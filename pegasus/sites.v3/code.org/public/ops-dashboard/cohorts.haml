@@ -37,5 +37,5 @@ template: none
             %a.btn.btn-success.btn-xs{"ng-click"=>'cohort.confirmDelete = false'} No
           %span{"ng-hide" => "cohort.confirmDelete"}
             %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/edit"} Edit
-            %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete
             %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/teachers"} Teachers
+            %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete
