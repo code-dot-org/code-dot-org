@@ -665,7 +665,7 @@ Calc.generateResults_ = function () {
  * If we have any functions or variables in our expression set, we don't support
  * animating evaluation.
  */
-function displayComplexUserExpressions () {
+function displayComplexUserExpressions() {
   var result;
   clearSvgUserExpression();
 
@@ -704,23 +704,30 @@ function displayComplexUserExpressions () {
   // we could actually be different than the goal)
   tokenList = getTokenList(computeEquation, targetEquation);
 
-  // TODO - make sure it does the right thing in regards to div zero. we probably dont
   var evaluation = appState.userSet.evaluate();
+  var divZeroInUserSet = false;
   if (evaluation.err) {
-    throw evaluation.err;
+    // TODO - single place where we check string
+    if (evaluation.err.message === 'DivZero') {
+      divZeroInUserSet = true;
+    } else {
+      throw evaluation.err;
+    }
   }
-  result = evaluation.result.toString();
-  var expectedResult = result;
-  // Note: we could make singleVariable case smarter and evaluate target using
-  // user constant value
-  if (appState.targetSet.computeEquation() !== null &&
-      !appState.targetSet.computesSingleVariable()) {
-    expectedResult = appState.targetSet.evaluate().result.toString();
-  }
+  if (!divZeroInUserSet) {
+    result = evaluation.result.toString();
+    var expectedResult = result;
+    // Note: we could make singleVariable case smarter and evaluate target using
+    // user constant value
+    if (appState.targetSet.computeEquation() !== null &&
+        !appState.targetSet.computesSingleVariable()) {
+      expectedResult = appState.targetSet.evaluate().result.toString();
+    }
 
-  // add a tokenList diffing our results
-  tokenList = tokenList.concat(getTokenList(' = '),
-    getTokenList(result, expectedResult));
+    // add a tokenList diffing our results
+    tokenList = tokenList.concat(getTokenList(' = '),
+      getTokenList(result, expectedResult));
+  }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
