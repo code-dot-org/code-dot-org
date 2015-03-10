@@ -361,7 +361,7 @@ describe("ExpressionNode", function () {
       ]);
       evaluation = node.evaluate();
       assert(evaluation.err);
-      assert.equal(evaluation.err.message, 'DivZero');
+      assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
     });
 
   });
