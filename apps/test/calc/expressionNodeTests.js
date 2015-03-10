@@ -145,7 +145,6 @@ describe("ExpressionNode", function () {
     var node, evaluation;
 
     it("can evaluate a single number", function () {
-      debugger;
       node = new ExpressionNode(1);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
