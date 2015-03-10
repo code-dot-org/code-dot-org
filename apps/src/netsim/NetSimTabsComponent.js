@@ -97,11 +97,14 @@ NetSimTabsComponent.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.netsim_tabs').tabs();
+  this.rootDiv_.find('.netsim_tabs').tabs({
+    active: this.levelConfig_.defaultTabIndex
+  });
 
   if (this.levelConfig_.showMyDeviceTab) {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
+        this.levelConfig_,
         this.chunkSizeChangeCallback_,
         this.encodingChangeCallback_);
   }
@@ -130,11 +133,11 @@ NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
+NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
   if (this.myDeviceTab_) {
-    this.myDeviceTab_.setEncoding(newEncoding);
+    this.myDeviceTab_.setEncodings(newEncodings);
   }
 };
 

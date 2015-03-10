@@ -1,10 +1,32 @@
+<%
+  var EncodingType = require('./netsimConstants').EncodingType;
+
+/**
+ * @param {EncodingType} encodingType
+ * @param {string} encodingLabel
+ */
+  function makeCheckbox(encodingType, encodingLabel) {
+    var divClasses = ['encoding_checkboxes_' + encodingType];
+    if (level.showEncodingControls.indexOf(encodingType) === -1) {
+      divClasses.push('hiddenControl');
+    }
+    %>
+    <div class="<%= divClasses.join(' ') %>">
+      <input type="checkbox"
+             name="encoding_checkboxes"
+             id="encoding_checkboxes_<%= encodingType %>"
+             value="<%= encodingType %>"
+          />
+      <label for="encoding_checkboxes_<%= encodingType %>"><%= encodingLabel %></label>
+    </div>
+    <%
+  }
+%>
 <div class="netsim_encoding_selector">
-  <label for="encoding_selector">Encoding:</label>
-  <select id="encoding_selector">
-    <option value="all" selected>All</option>
-    <option value="binary">Binary</option>
-    <option value="hexadecimal">Hexadecimal</option>
-    <option value="decimal">Decimal</option>
-    <option value="ascii">ASCII</option>
-  </select>
+  <h1>Encoding</h1>
+  <% makeCheckbox(EncodingType.ASCII, 'ASCII'); %>
+  <% makeCheckbox(EncodingType.DECIMAL, 'Decimal'); %>
+  <% makeCheckbox(EncodingType.HEXADECIMAL, 'Hexadecimal'); %>
+  <% makeCheckbox(EncodingType.BINARY, 'Binary'); %>
+  <% makeCheckbox(EncodingType.A_AND_B, 'A/B'); %>
 </div>

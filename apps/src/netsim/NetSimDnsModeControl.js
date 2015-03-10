@@ -69,7 +69,7 @@ NetSimDnsModeControl.prototype.render = function () {
  * @private
  */
 NetSimDnsModeControl.prototype.onDnsModeChange_ = function () {
-  var newDnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  var newDnsMode = this.dnsModeRadios_.filter(':checked').val();
   this.dnsModeChangeCallback_(newDnsMode);
 };
 
@@ -79,6 +79,6 @@ NetSimDnsModeControl.prototype.onDnsModeChange_ = function () {
 NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
   this.currentDnsMode_ = newDnsMode;
   this.dnsModeRadios_
-      .siblings('[value="' + newDnsMode + '"]')
+      .filter('[value="' + newDnsMode + '"]')
       .prop('checked', true);
 };

@@ -423,10 +423,10 @@ NetSimSendPanel.prototype.getPacketBinary_ = function () {
 /**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimSendPanel.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncoding);
+NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
+  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncodings);
 };
 
 /**
