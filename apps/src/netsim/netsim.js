@@ -190,6 +190,13 @@ NetSim.prototype.shouldEnableCleanup = function () {
   return !location.search.match(/disableCleaning/i);
 };
 
+NetSim.prototype.shouldShowAnyTabs = function () {
+  return this.level.showInstructionsTab ||
+          this.level.showMyDeviceTab ||
+          this.level.showRouterTab ||
+          this.level.showDnsTab;
+};
+
 /**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
@@ -224,13 +231,15 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_, user, this.getOverrideShardID());
 
   // Tab panel - contains instructions, my device, router, dns
-  this.tabs_ = new NetSimTabsComponent(
-      $('#netsim_tabs'),
-      this.level,
-      this.setChunkSize.bind(this),
-      this.changeEncoding.bind(this),
-      this.changeRemoteDnsMode.bind(this),
-      this.becomeDnsNode.bind(this));
+  if (this.shouldShowAnyTabs()) {
+    this.tabs_ = new NetSimTabsComponent(
+        $('#netsim_tabs'),
+        this.level,
+        this.setChunkSize.bind(this),
+        this.changeEncoding.bind(this),
+        this.changeRemoteDnsMode.bind(this),
+        this.becomeDnsNode.bind(this));
+  }
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
 
@@ -266,7 +275,9 @@ NetSim.prototype.refresh_ = function () {
  */
 NetSim.prototype.changeEncoding = function (newEncoding) {
   this.encodingMode_ = newEncoding;
-  this.tabs_.setEncoding(newEncoding);
+  if (this.tabs_) {
+    this.tabs_.setEncoding(newEncoding);
+  }
   this.receivedMessageLog_.setEncoding(newEncoding);
   this.sentMessageLog_.setEncoding(newEncoding);
   this.sendWidget_.setEncoding(newEncoding);
@@ -283,7 +294,9 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  */
 NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
-  this.tabs_.setChunkSize(newChunkSize);
+  if (this.tabs_) {
+    this.tabs_.setChunkSize(newChunkSize);
+  }
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
@@ -300,7 +313,9 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
  */
 NetSim.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
-  this.tabs_.setDnsMode(newDnsMode);
+  if (this.tabs_) {
+    this.tabs_.setDnsMode(newDnsMode);
+  }
 };
 
 /**
@@ -321,7 +336,9 @@ NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
  * @param {boolean} isDnsNode
  */
 NetSim.prototype.setIsDnsNode = function (isDnsNode) {
-  this.tabs_.setIsDnsNode(isDnsNode);
+  if (this.tabs_) {
+    this.tabs_.setIsDnsNode(isDnsNode);
+  }
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
@@ -348,14 +365,18 @@ NetSim.prototype.becomeDnsNode = function () {
  * @param {Array} tableContents
  */
 NetSim.prototype.setDnsTableContents = function (tableContents) {
-  this.tabs_.setDnsTableContents(tableContents);
+  if (this.tabs_) {
+    this.tabs_.setDnsTableContents(tableContents);
+  }
 };
 
 /**
  * @param {Array} logData
  */
 NetSim.prototype.setRouterLogData = function (logData) {
-  this.tabs_.setRouterLogData(logData);
+  if (this.tabs_) {
+    this.tabs_.setRouterLogData(logData);
+  }
 };
 
 /**
