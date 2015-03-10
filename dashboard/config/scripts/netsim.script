@@ -3,7 +3,19 @@ description_short ""
 description ""
 hidden 'true'
 
+stage 'Sending Bits'
+level 'blockly:NetSim:unit1_lesson04'
+level 'blockly:NetSim:unit1_lesson08'
+level 'blockly:NetSim:unit1_lesson10'
+level 'blockly:NetSim:unit1_lesson11'
+level 'blockly:NetSim:variant2'
+
+stage 'Routing and DNS'
+level 'blockly:NetSim:unit2_lesson01'
+level 'blockly:NetSim:unit2_lesson02'
+level 'blockly:NetSim:unit2_lesson03'
+level 'blockly:NetSim:unit2_lesson04'
+level 'blockly:NetSim:variant3'
+
 stage 'Internet Simulator'
 level 'blockly:NetSim:netsim_demo'
-level 'blockly:NetSim:no_dns'
-level 'blockly:NetSim:manual_dns'
