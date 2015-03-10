@@ -15,6 +15,10 @@ var ValueType = {
   NUMBER: 4
 };
 
+function DivideByZeroError(message) {
+  this.message = message || '';
+}
+
 var ExpressionNode = function (val, args, blockId) {
   this.value_ = val;
   this.blockId_ = blockId;
@@ -42,6 +46,7 @@ var ExpressionNode = function (val, args, blockId) {
   }
 };
 module.exports = ExpressionNode;
+ExpressionNode.DivideByZeroError = DivideByZeroError;
 
 /**
  * What type of expression node is this?
@@ -83,24 +88,6 @@ ExpressionNode.prototype.isNumber = function () {
 ExpressionNode.prototype.isDivZero = function () {
   return this.getValue() === '/' && this.getChildValue(1) === 0;
 };
-
-/**
- * @returns {boolean} true if there are any div zeros in the expression node
- *   tree.
- */
-// ExpressionNode.prototype.hasDivZero = function () {
-//   var clone = this.clone();
-//
-//   while (clone.depth() > 0) {
-//     var deepest = clone.getDeepestOperation();
-//     if (deepest.isDivZero()) {
-//       return true;
-//     }
-//     clone.collapse();
-//   }
-//
-//   return false;
-// };
 
 /**
  * Create a deep clone of this node
@@ -189,7 +176,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       return { result: left * right };
     case '/':
       if (right === 0) {
-        return { err: new Error('DivZero') };
+        return { err: new DivideByZeroError() };
       }
       return { result: left / right };
     default:

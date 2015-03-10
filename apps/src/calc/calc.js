@@ -366,7 +366,7 @@ function appSpecificFailureOutcome(message, failedInput) {
 
 // TODO - better name? comment
 function divZeroOrThrowErr(err) {
-  if (err.message === 'DivZero') {
+  if (err instanceof ExpressionNode.DivideByZeroError) {
     return appSpecificFailureOutcome('div zero', null); // TODO - i18n
   }
   throw err;
@@ -707,8 +707,7 @@ function displayComplexUserExpressions() {
   var evaluation = appState.userSet.evaluate();
   var divZeroInUserSet = false;
   if (evaluation.err) {
-    // TODO - single place where we check string
-    if (evaluation.err.message === 'DivZero') {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
       divZeroInUserSet = true;
     } else {
       throw evaluation.err;
@@ -738,8 +737,8 @@ function displayComplexUserExpressions() {
     }
     evaluation = appState.userSet.evaluateWithExpression(expression);
     if (evaluation.err) {
-      // TODO - temp hack
-      if (evaluation.err === 'DivZero') {
+      // TODO - temp hack - do i have ot set result?
+      if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
         evaluation.result = 'DZ';
       } else {
         throw evaluation.err;
