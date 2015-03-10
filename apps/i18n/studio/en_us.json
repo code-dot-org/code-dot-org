@@ -126,7 +126,6 @@
   "saySprite": "say",
   "saySpriteN": "actor {spriteIndex} say",
   "saySpriteTooltip": "Pop up a speech bubble with the associated text from the specified actor.",
-
   "saySpriteChoices_1": "Hi there.",
   "saySpriteChoices_2": "Hi everyone.",
   "saySpriteChoices_3": "How are you doing?",
@@ -186,10 +185,6 @@
   "saySpriteChoices_57": "You almost got me!",
   "saySpriteChoices_58": "Nice try!",
   "saySpriteChoices_59": "You can’t catch me!",
-
-
-
-
   "scoreText": "Score: {playerScore}",
   "setBackground": "set background",
   "setBackgroundRandom": "set random background",
