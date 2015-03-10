@@ -1,0 +1,59 @@
+---
+layout: none
+theme: none
+---
+- authentication_required!
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard#/cohorts'}
+  Cohorts
+>
+%span
+  Cohort Management
+
+%h1{"ng-show" => "cohort.id"} Teachers in {{cohort.name}}
+
+%h3
+  %a{"ng-click" => 'uploading = true'} CSV upload
+.jumbotron{"ng-show" => 'uploading'}
+  %h3 Example format:
+  %pre
+    = preserve do
+      first_name,last_name,email
+      Bob,Smith,bob.smith@example.com
+      Mary,Jones,mary.jones@example.com
+  %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
+  %h3 Debug
+  %pre
+    {{cohort.teachers | json}}
+
+%div{'ng-show' => 'cohort.teachers.length > 0'}
+  %table{style: "width:950px; table-layout:fixed;"}
+    %tr
+      %th.manage-th
+        First name
+      %th.manage-th
+        Last name
+      %th.manage-th
+        Email
+      %th.manage-th
+        District
+      %th.manage-th
+    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:'teacher.name'", style: "vertical-align:top"}
+      %td
+        {{teacher.first_name}}
+      %td
+        {{teacher.last_name}}
+      %td
+        {{teacher.email}}
+      %td
+        {{teacher.district}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "teacher.confirmDelete"}
+          %span Delete?
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
+        %span{"ng-hide" => "teacher.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "teacher.editing = true"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)"} Delete
