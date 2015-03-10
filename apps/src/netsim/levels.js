@@ -5,6 +5,7 @@ var utils = require('../utils');
 var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
+ * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
  * @property {boolean} showInstructionsTab
@@ -61,11 +62,7 @@ levels.netsim_demo = defaultLevel;
  * @type {NetSimLevelConfiguration}
  */
 levels.no_dns = utils.extend(defaultLevel, {
-  showInstructionsTab: false,
-  showMyDeviceTab: false,
-  showRouterTab: false,
   showDnsTab: false,
-  showDnsModeControl: false,
   defaultDnsMode: DnsMode.NONE
 });
 
@@ -76,4 +73,13 @@ levels.no_dns = utils.extend(defaultLevel, {
 levels.manual_dns = utils.extend(defaultLevel, {
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.MANUAL
+});
+
+/**
+ * Level demonstrating configuration that forces students to use "Automatic DNS" mode.
+ * @type {NetSimLevelConfiguration}
+ */
+levels.automatic_dns = utils.extend(defaultLevel, {
+  showDnsModeControl: false,
+  defaultDnsMode: DnsMode.AUTOMATIC
 });
