@@ -52,3 +52,14 @@ exports.EncodingType = {
   /** Renders each chunk of bits (using variable chunksize) in ascii */
   ASCII: 'ascii'
 };
+
+/**
+ * Enumeration of tabs for level configuration
+ * @enum {string}
+ */
+exports.NetSimTabType = {
+  INSTRUCTIONS: 'instructions',
+  MY_DEVICE: 'my_device',
+  ROUTER: 'router',
+  DNS: 'dns'
+};

@@ -5,30 +5,27 @@ var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
+var NetSimTabType = netsimConstants.NetSimTabType;
 
 /**
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
  * @property {boolean} showClientsInLobby
+ *
  * @property {boolean} showRoutersInLobby
+ *
  * @property {boolean} showAddRouterButton
+ *
+ * @property {NetSimTabType[]} showTabs
  *
  * @property {number} defaultTabIndex - The zero-based index of the tab
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {boolean} showInstructionsTab
- *
- * @property {boolean} showMyDeviceTab
- *
  * @property {EncodingType[]} showEncodingControls
  *
  * @property {EncodingType[]} defaultEnabledEncodings
- *
- * @property {boolean} showRouterTab
- *
- * @property {boolean} showDnsTab
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -56,22 +53,34 @@ var defaultLevel = {
   showAddRouterButton: true,
 
   // Tab-panel control
-  defaultTabIndex: 1,
+  showTabs: [
+    NetSimTabType.INSTRUCTIONS,
+    NetSimTabType.MY_DEVICE,
+    NetSimTabType.ROUTER,
+    NetSimTabType.DNS
+  ],
+  defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  showInstructionsTab: true,
+  // Nothing here yet!
 
   // "My Device" tab and its controls
-  showMyDeviceTab: true,
-  showEncodingControls: [EncodingType.BINARY, EncodingType.A_AND_B,
-      EncodingType.HEXADECIMAL, EncodingType.DECIMAL, EncodingType.ASCII],
-  defaultEnabledEncodings: [EncodingType.ASCII, EncodingType.BINARY],
+  showEncodingControls: [
+    EncodingType.BINARY,
+    EncodingType.A_AND_B,
+    EncodingType.HEXADECIMAL,
+    EncodingType.DECIMAL,
+    EncodingType.ASCII
+  ],
+  defaultEnabledEncodings: [
+    EncodingType.ASCII,
+    EncodingType.BINARY
+  ],
 
   // Router tab and its controls
-  showRouterTab: true,
+  // Nothing here yet!
 
   // DNS tab and its controls
-  showDnsTab: true,
   showDnsModeControl: true,
   defaultDnsMode: DnsMode.NONE
 };
@@ -90,9 +99,16 @@ levels.no_dns = utils.extend(defaultLevel, {
   showClientsInLobby: true,
   showRoutersInLobby: false,
   showAddRouterButton: false,
+  showTabs: [
+    NetSimTabType.INSTRUCTIONS,
+    NetSimTabType.MY_DEVICE,
+    NetSimTabType.ROUTER
+  ],
   showEncodingControls: [],
-  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.HEXADECIMAL],
-  showDnsTab: false,
+  defaultEnabledEncodings: [
+    EncodingType.BINARY,
+    EncodingType.HEXADECIMAL
+  ],
   defaultDnsMode: DnsMode.NONE
 });
 
@@ -103,7 +119,10 @@ levels.no_dns = utils.extend(defaultLevel, {
 levels.manual_dns = utils.extend(defaultLevel, {
   showClientsInLobby: false,
   showEncodingControls: [EncodingType.ASCII],
-  defaultEnabledEncodings: [EncodingType.HEXADECIMAL, EncodingType.ASCII],
+  defaultEnabledEncodings: [
+    EncodingType.HEXADECIMAL,
+    EncodingType.ASCII
+  ],
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.MANUAL
 });

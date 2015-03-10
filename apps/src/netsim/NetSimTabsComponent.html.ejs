@@ -1,19 +1,28 @@
+<%
+  var shouldShowTab = require('./netsimUtils').shouldShowTab;
+  var NetSimTabType = require('./netsimConstants').NetSimTabType;
+
+  var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
+  var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
+  var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
+  var showDns = shouldShowTab(level, NetSimTabType.DNS);
+%>
 <div class="netsim_tabs">
   <ul>
-    <% if (level.showInstructionsTab) { %>
+    <% if (showInstructions) { %>
     <li><a href="#tab_instructions">Instructions</a></li>
     <% } %>
-    <% if (level.showMyDeviceTab) { %>
+    <% if (showMyDevice) { %>
       <li><a href="#tab_my_device">My Device</a></li>
     <% } %>
-    <% if (level.showRouterTab) { %>
+    <% if (showRouter) { %>
       <li><a href="#tab_router">Router</a></li>
     <% } %>
-    <% if (level.showDnsTab) { %>
+    <% if (showDns) { %>
       <li><a href="#tab_dns">DNS</a></li>
     <% } %>
   </ul>
-  <% if (level.showInstructionsTab) { %>
+  <% if (showInstructions) { %>
     <div id="tab_instructions">
       <p>In this activity, you and your group will still be acting as
       nodes connected to a router.  But this time, the addresses of the
@@ -25,13 +34,13 @@
       as DNS."</p>
     </div>
   <% } %>
-  <% if (level.showMyDeviceTab) { %>
+  <% if (showMyDevice) { %>
     <div id="tab_my_device"></div>
   <% } %>
-  <% if (level.showRouterTab) { %>
+  <% if (showRouter) { %>
     <div id="tab_router"></div>
   <% } %>
-  <% if (level.showDnsTab) { %>
+  <% if (showDns) { %>
     <div id="tab_dns"></div>
   <% } %>
 </div>

@@ -15,6 +15,8 @@ var buildMarkup = require('./NetSimTabsComponent.html');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
+var NetSimTabType = require('./netsimConstants').NetSimTabType;
+var shouldShowTab = require('./netsimUtils').shouldShowTab;
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
@@ -101,7 +103,7 @@ NetSimTabsComponent.prototype.render = function () {
     active: this.levelConfig_.defaultTabIndex
   });
 
-  if (this.levelConfig_.showMyDeviceTab) {
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.MY_DEVICE)) {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
@@ -109,12 +111,12 @@ NetSimTabsComponent.prototype.render = function () {
         this.encodingChangeCallback_);
   }
 
-  if (this.levelConfig_.showRouterTab) {
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'));
   }
 
-  if (this.levelConfig_.showDnsTab) {
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
     this.dnsTab_ = new NetSimDnsTab(
         this.rootDiv_.find('#tab_dns'),
         this.levelConfig_,
