@@ -179,7 +179,8 @@ EquationSet.prototype.sortedEquations = function () {
 // TODO - unit test
 EquationSet.prototype.hasDivZero = function () {
   var evaluation = this.evaluate();
-  return evaluation.err && evaluation.err.message === 'DivZero';
+  // TODO - string check
+  return !!(evaluation.err && evaluation.err.message === 'DivZero');
 };
 
 /**
@@ -227,7 +228,8 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         testMapping = _.clone(mapping);
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
-        if (evaluation.err) {
+        // TODO - single place for string check
+        if (evaluation.err && evaluation.err.message !== 'DivZero') {
           continue;
         }
 
@@ -239,10 +241,14 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         };
       } else if (mapping[equation.name] === undefined) {
         evaluation = equation.expression.evaluate(mapping);
-        if (!evaluation.err) {
+        if (evaluation.err) {
+          if (evaluation.err.message === 'DivZero') {
+            return { err: evaluation.err };
+          }
+        } else {
           // we have a variable that hasn't yet been mapped and can be
           madeProgress = true;
-          mapping[equation.name] = evaluation.result;
+          mapping[equation.name] = 0; // TODO - not sure htis is right
         }
       }
     }
