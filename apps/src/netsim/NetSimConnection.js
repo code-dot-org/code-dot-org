@@ -23,19 +23,26 @@ var logger = NetSimLogger.getSingleton();
 /**
  * A connection to a NetSim shard
  * @param {Window} thisWindow
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
  * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
  * @param {boolean} [enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (thisWindow, sentLog,
-    receivedLog, enableCleanup) {
+var NetSimConnection = module.exports = function (thisWindow, levelConfig,
+    sentLog, receivedLog, enableCleanup) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
    * @private
    */
   this.displayName_ = '';
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {NetSimLogPanel}
@@ -260,10 +267,12 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
-  var self = this;
-  NetSimRouterNode.create(this.shard_, function () {
-    self.statusChanges.notifyObservers();
-  });
+  NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    router.update(function () {
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**

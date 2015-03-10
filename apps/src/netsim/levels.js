@@ -2,14 +2,13 @@
 
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
+var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
  * @typedef {Object} NetSimLevelConfiguration
- * @property {boolean} freePlay - This was here before, I'm not sure what it
- *           will do.
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
- * @property {string} defaultDnsMode - Which DNS mode the simulator should
+ * @property {DnsMode} defaultDnsMode - Which DNS mode the simulator should
  *           initialize into.
  */
 
@@ -25,9 +24,8 @@ var levels = module.exports = {};
  * @type {NetSimLevelConfiguration}
  */
 var defaultLevel = {
-  freePlay: true,
   showDnsModeControl: true,
-  defaultDnsMode: 'none'
+  defaultDnsMode: DnsMode.NONE
 };
 
 /**
@@ -42,7 +40,7 @@ levels.netsim_demo = defaultLevel;
  */
 levels.no_dns = utils.extend(defaultLevel, {
   showDnsModeControl: false,
-  defaultDnsMode: 'none'
+  defaultDnsMode: DnsMode.NONE
 });
 
 /**
@@ -51,5 +49,5 @@ levels.no_dns = utils.extend(defaultLevel, {
  */
 levels.manual_dns = utils.extend(defaultLevel, {
   showDnsModeControl: false,
-  defaultDnsMode: 'manual'
+  defaultDnsMode: DnsMode.MANUAL
 });

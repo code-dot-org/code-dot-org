@@ -24,7 +24,7 @@ describe("NetSimConnection", function () {
     testWindow = {
       addEventListener: function () {}
     };
-    connection = new NetSimConnection(testWindow, null, null, false);
+    connection = new NetSimConnection(testWindow, {}, null, null, false);
   });
 
   describe("getAllNodes", function () {

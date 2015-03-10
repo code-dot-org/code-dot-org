@@ -19,13 +19,14 @@ var NetSimDnsTab = require('./NetSimDnsTab');
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv,
+var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
     chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
     becomeDnsCallback) {
   /**
@@ -34,6 +35,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -100,6 +107,7 @@ NetSimTabsComponent.prototype.render = function () {
 
   this.dnsTab_ = new NetSimDnsTab(
       this.rootDiv_.find('#tab_dns'),
+      this.levelConfig_,
       this.dnsModeChangeCallback_,
       this.becomeDnsCallback_);
 };
