@@ -99,13 +99,17 @@ NetSimTabsComponent.prototype.render = function () {
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.netsim_tabs').tabs();
 
-  this.routerTab_ = new NetSimRouterTab(
-      this.rootDiv_.find('#tab_router'));
+  if (this.levelConfig_.showMyDeviceTab) {
+    this.myDeviceTab_ = new NetSimMyDeviceTab(
+        this.rootDiv_.find('#tab_my_device'),
+        this.chunkSizeChangeCallback_,
+        this.encodingChangeCallback_);
+  }
 
-  this.myDeviceTab_ = new NetSimMyDeviceTab(
-      this.rootDiv_.find('#tab_my_device'),
-      this.chunkSizeChangeCallback_,
-      this.encodingChangeCallback_);
+  if (this.levelConfig_.showRouterTab) {
+    this.routerTab_ = new NetSimRouterTab(
+        this.rootDiv_.find('#tab_router'));
+  }
 
   if (this.levelConfig_.showDnsTab) {
     this.dnsTab_ = new NetSimDnsTab(
@@ -120,14 +124,18 @@ NetSimTabsComponent.prototype.render = function () {
  * @param {number} newChunkSize
  */
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
-  this.myDeviceTab_.setChunkSize(newChunkSize);
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setChunkSize(newChunkSize);
+  }
 };
 
 /**
  * @param {string} newEncoding
  */
 NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
-  this.myDeviceTab_.setEncoding(newEncoding);
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setEncoding(newEncoding);
+  }
 };
 
 /**
@@ -161,5 +169,7 @@ NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
  * @param {Array} logData
  */
 NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
-  this.routerTab_.setRouterLogData(logData);
+  if (this.routerTab_) {
+    this.routerTab_.setRouterLogData(logData);
+  }
 };
