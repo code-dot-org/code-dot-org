@@ -8,6 +8,10 @@ var DnsMode = require('./netsimConstants').DnsMode;
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
+ * @property {boolean} showClientsInLobby
+ * @property {boolean} showRoutersInLobby
+ * @property {boolean} showAddRouterButton
+ *
  * @property {boolean} showInstructionsTab
  *
  * @property {boolean} showMyDeviceTab
@@ -36,6 +40,11 @@ var levels = module.exports = {};
  */
 var defaultLevel = {
 
+  // Lobby configuration
+  showClientsInLobby: true,
+  showRoutersInLobby: true,
+  showAddRouterButton: true,
+
   // Instructions tab and its controls
   showInstructionsTab: true,
 
@@ -62,6 +71,9 @@ levels.netsim_demo = defaultLevel;
  * @type {NetSimLevelConfiguration}
  */
 levels.no_dns = utils.extend(defaultLevel, {
+  showClientsInLobby: true,
+  showRoutersInLobby: false,
+  showAddRouterButton: false,
   showDnsTab: false,
   defaultDnsMode: DnsMode.NONE
 });
@@ -71,6 +83,7 @@ levels.no_dns = utils.extend(defaultLevel, {
  * @type {NetSimLevelConfiguration}
  */
 levels.manual_dns = utils.extend(defaultLevel, {
+  showClientsInLobby: false,
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.MANUAL
 });
@@ -80,6 +93,7 @@ levels.manual_dns = utils.extend(defaultLevel, {
  * @type {NetSimLevelConfiguration}
  */
 levels.automatic_dns = utils.extend(defaultLevel, {
+  showClientsInLobby: false,
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.AUTOMATIC
 });

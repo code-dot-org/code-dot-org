@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -32,13 +31,21 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = module.exports = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (levelConfig, connection, user,
+    shardID) {
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -92,6 +99,7 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -100,9 +108,9 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * @return {NetSimLobby} A new controller for the generated lobby
  * @static
  */
-NetSimLobby.createWithin = function (element, connection, user, shardID) {
+NetSimLobby.createWithin = function (element, levelConfig, connection, user, shardID) {
   // Create a new NetSimLobby
-  var controller = new NetSimLobby(connection, user, shardID);
+  var controller = new NetSimLobby(levelConfig, connection, user, shardID);
   element.innerHTML = markup({});
   controller.bindElements_();
   controller.refresh_();
@@ -309,17 +317,15 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
   return baseLocation + '?s=' + shardID;
 };
 
-NetSimLobby.prototype.refresh_ = function () {
-  if (!this.connection_.isConnectedToRouter()) {
-    this.refreshOpenLobby_();
-  }
-};
-
 /**
  * Show preconnect controls (name, shard-select) and actual lobby listing.
  * @private
  */
-NetSimLobby.prototype.refreshOpenLobby_ = function () {
+NetSimLobby.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    return;
+  }
+
   this.openRoot_.show();
 
   // Do we have a name yet?
@@ -366,8 +372,12 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
   // TODO: Filter based on level configuration
   var filteredLobbyData = lobbyData.filter(function (simNode) {
-    return simNode.getNodeType() === NetSimRouterNode.getNodeType();
-  });
+    var showClients = this.levelConfig_.showClientsInLobby;
+    var showRouters = this.levelConfig_.showRoutersInLobby;
+    var nodeType = simNode.getNodeType();
+    return (nodeType === NetSimClientNode.getNodeType() && showClients) ||
+        (nodeType === NetSimRouterNode.getNodeType() && showRouters);
+  }.bind(this));
 
   filteredLobbyData.sort(function (a, b) {
     // TODO (bbuchanan): Make this sort localization-friendly.

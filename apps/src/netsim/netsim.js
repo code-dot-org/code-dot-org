@@ -227,7 +227,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.connection_);
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
-  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.level,
       this.connection_, user, this.getOverrideShardID());
 
   // Tab panel - contains instructions, my device, router, dns
