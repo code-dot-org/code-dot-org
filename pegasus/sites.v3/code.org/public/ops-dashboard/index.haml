@@ -1,5 +1,6 @@
 ---
 theme: angular
+angular: opsApp
 title: "Ops Dashboard"
 ---
 - authentication_required!
@@ -9,6 +10,7 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
 :javascript
   'use strict';
 
@@ -31,6 +33,7 @@ title: "Ops Dashboard"
     $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
     $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/cohorts/:id/teachers',                      {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -339,6 +342,34 @@ title: "Ops Dashboard"
         $location.path("/cohorts");
       };
     }
+  ]);
+
+  controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
+
+    $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+    $scope.cohort.$promise.then(function(cohort) {
+    });
+
+    $scope.parsed  = [];
+    // This depends on HTML5 File object so does not work in IE9. This
+    // particular feature is only used by the ops team who all use Chrome.
+    $scope.onFileSelect = function(input) {
+      var files = input.files; // FileList object
+
+      // files is a FileList of File objects. List some properties.
+      if (files && files.length > 0) {
+        Papa.parse(files[0], {
+          header: true,
+          complete: function(results) {
+            $scope.cohort.teachers = results.data;
+            $scope.$apply();
+          }
+        });
+      }
+    }
+  }
   ]);
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
