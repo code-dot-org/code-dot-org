@@ -57,7 +57,7 @@ class Video < ActiveRecord::Base
     {
         src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
-        name: I18n.t('data.video.name', key),
+        name: I18n.t("data.video.name.#{key}"),
         download: download,
         thumbnail: thumbnail_path,
         enable_fallback: true,
