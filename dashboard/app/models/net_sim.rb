@@ -1,0 +1,2 @@
+class NetSim < Level
+end

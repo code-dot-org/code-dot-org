@@ -351,6 +351,9 @@ en:
           Unit 2: Unit 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity Playlab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
