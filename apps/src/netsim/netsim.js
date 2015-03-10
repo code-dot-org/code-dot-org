@@ -181,10 +181,7 @@ NetSim.prototype.shouldEnableCleanup = function () {
 };
 
 NetSim.prototype.shouldShowAnyTabs = function () {
-  return this.level.showInstructionsTab ||
-          this.level.showMyDeviceTab ||
-          this.level.showRouterTab ||
-          this.level.showDnsTab;
+  return this.level.showTabs.length > 0;
 };
 
 /**
