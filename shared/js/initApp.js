@@ -177,13 +177,13 @@ dashboard.updateTimestamp = function() {
 
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-  var app_id = dashboard.currentApp.id;
+  var appId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (app_id) {
-    storageApps().update(app_id, dashboard.currentApp, function(data) {
+  if (appId) {
+    storageApps().update(appId, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       dashboard.updateTimestamp();
       callbackSafe(callback, data);
@@ -199,9 +199,9 @@ dashboard.saveProject = function(callback) {
 };
 
 dashboard.deleteProject = function(callback) {
-  var app_id = dashboard.currentApp.id;
-  if (app_id) {
-    storageApps().delete(app_id, function(data) {
+  var appId = dashboard.currentApp.id;
+  if (appId) {
+    storageApps().delete(appId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -248,6 +248,15 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
+
+    $(window).on('hashchange', function (e) {
+      var hashData = parseHash();
+      if (hashData.appId !== dashboard.currentApp.id
+          || hashData.isEditingProject !== dashboard.isEditingProject) {
+        location.reload();
+      }
+    });
+
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
         if (dashboard.currentApp.levelSource) {
@@ -296,24 +305,38 @@ function loadStyle(name) {
   }));
 }
 
+function parseHash() {
+  // Example paths:
+  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
+  var isEditingProject = false;
+  var appId = location.hash.slice(1);
+  if (appId) {
+    // TODO: Use a router.
+    var params = appId.split("/");
+    if (params.length > 1 && params[1] == "edit") {
+      appId = params[0];
+      isEditingProject = true;
+    }
+  }
+  return {
+    appId: appId,
+    isEditingProject: isEditingProject
+  }
+}
+
 function loadProject(promise) {
   if (appOptions.level.isProjectLevel) {
-    // example paths:
-    // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-    // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-    var app_id = location.hash.slice(1);
-    if (app_id) {
-      // TODO ugh, we should use a router. maybe we should use angular :p
-      var params = app_id.split("/");
-      if (params.length > 1 && params[1] == "edit") {
-        app_id = params[0];
+    var hashData = parseHash();
+    if (hashData.appId) {
+      if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
       }
 
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        storageApps().fetch(app_id, function (data) {
+        storageApps().fetch(hashData.appId, function (data) {
           dashboard.currentApp = data;
           deferred.resolve();
         });
