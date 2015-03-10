@@ -2,7 +2,7 @@
   "badColorStringError": "You used an invalid color string: {val}",
   "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "circle (radius, style, color)",
-  "displayBlockTitle": "display",
+  "displayBlockTitle": "evaluate",
   "ellipseBlockTitle": "ellipse (width, height, style, color)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"display\" block?",
