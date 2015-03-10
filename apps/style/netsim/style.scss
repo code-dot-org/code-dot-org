@@ -488,6 +488,24 @@ svg {
       }
     }
 
+    .netsim_my_device_tab {
+      .netsim_encoding_selector {
+        div.hiddenControl {
+          display: none;
+        }
+
+        input[type="checkbox"] {
+          vertical-align: baseline;
+          margin: 0;
+        }
+
+        label {
+          display: inline;
+          margin-left: 0.25em;
+        }
+      }
+    }
+
     .netsim_router_tab {
       .netsim_router_log {
         max-height: 200px;

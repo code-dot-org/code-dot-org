@@ -79,13 +79,6 @@ var NetSim = module.exports = function () {
   this.runLoop_ = new RunLoop();
 
   /**
-   * Current encoding mode; 'all' or 'binary' or 'ascii', etc.
-   * @type {string}
-   * @private
-   */
-  this.encodingMode_ = 'ascii';
-
-  /**
    * Current chunk size (bytesize)
    * @type {number}
    * @private
@@ -152,9 +145,6 @@ NetSim.prototype.init = function(config) {
   this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
-
-  // Respond to netsim_specific level configuration
-  this.dnsMode_ = this.level.defaultDnsMode;
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
@@ -236,16 +226,16 @@ NetSim.prototype.initWithUserName_ = function (user) {
         $('#netsim_tabs'),
         this.level,
         this.setChunkSize.bind(this),
-        this.changeEncoding.bind(this),
+        this.changeEncodings.bind(this),
         this.changeRemoteDnsMode.bind(this),
         this.becomeDnsNode.bind(this));
   }
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
 
-  this.changeEncoding(this.encodingMode_);
+  this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
-  this.setDnsMode(this.dnsMode_);
+  this.setDnsMode(this.level.defaultDnsMode);
   this.refresh_();
 };
 
@@ -271,16 +261,15 @@ NetSim.prototype.refresh_ = function () {
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSim.prototype.changeEncoding = function (newEncoding) {
-  this.encodingMode_ = newEncoding;
+NetSim.prototype.changeEncodings = function (newEncodings) {
   if (this.tabs_) {
-    this.tabs_.setEncoding(newEncoding);
+    this.tabs_.setEncodings(newEncodings);
   }
-  this.receivedMessageLog_.setEncoding(newEncoding);
-  this.sentMessageLog_.setEncoding(newEncoding);
-  this.sendWidget_.setEncoding(newEncoding);
+  this.receivedMessageLog_.setEncodings(newEncodings);
+  this.sentMessageLog_.setEncodings(newEncodings);
+  this.sendWidget_.setEncodings(newEncodings);
 };
 
 /**

@@ -2,7 +2,9 @@
 
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
-var DnsMode = require('./netsimConstants').DnsMode;
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var EncodingType = netsimConstants.EncodingType;
 
 /**
  * A level configuration that can be used by NetSim
@@ -12,9 +14,17 @@ var DnsMode = require('./netsimConstants').DnsMode;
  * @property {boolean} showRoutersInLobby
  * @property {boolean} showAddRouterButton
  *
+ * @property {number} defaultTabIndex - The zero-based index of the tab
+ *           that should be active by default, which depends on which tabs
+ *           you have enabled.
+ *
  * @property {boolean} showInstructionsTab
  *
  * @property {boolean} showMyDeviceTab
+ *
+ * @property {EncodingType[]} showEncodingControls
+ *
+ * @property {EncodingType[]} defaultEnabledEncodings
  *
  * @property {boolean} showRouterTab
  *
@@ -45,11 +55,17 @@ var defaultLevel = {
   showRoutersInLobby: true,
   showAddRouterButton: true,
 
+  // Tab-panel control
+  defaultTabIndex: 1,
+
   // Instructions tab and its controls
   showInstructionsTab: true,
 
   // "My Device" tab and its controls
   showMyDeviceTab: true,
+  showEncodingControls: [EncodingType.BINARY, EncodingType.A_AND_B,
+      EncodingType.HEXADECIMAL, EncodingType.DECIMAL, EncodingType.ASCII],
+  defaultEnabledEncodings: [EncodingType.ASCII, EncodingType.BINARY],
 
   // Router tab and its controls
   showRouterTab: true,
@@ -74,6 +90,8 @@ levels.no_dns = utils.extend(defaultLevel, {
   showClientsInLobby: true,
   showRoutersInLobby: false,
   showAddRouterButton: false,
+  showEncodingControls: [],
+  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.HEXADECIMAL],
   showDnsTab: false,
   defaultDnsMode: DnsMode.NONE
 });
@@ -84,6 +102,8 @@ levels.no_dns = utils.extend(defaultLevel, {
  */
 levels.manual_dns = utils.extend(defaultLevel, {
   showClientsInLobby: false,
+  showEncodingControls: [EncodingType.ASCII],
+  defaultEnabledEncodings: [EncodingType.HEXADECIMAL, EncodingType.ASCII],
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.MANUAL
 });
