@@ -26,9 +26,9 @@ class Video < ActiveRecord::Base
     'https://www.youtube.com'
   end
 
-  def self.youtube_url(code, args={})
+  def youtube_url(args={})
     defaults = {
-        v: code,
+        v: youtube_code,
         modestbranding: 1,
         rel: 0,
         showinfo: 1,
@@ -45,7 +45,7 @@ class Video < ActiveRecord::Base
       )
     end
     defaults.merge!(args)
-    "#{Video.youtube_base_url}/embed/#{code}/?#{defaults.to_query}"
+    "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
   def thumbnail_path
@@ -55,7 +55,7 @@ class Video < ActiveRecord::Base
   def summarize(autoplay = true)
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
-        src: Video.youtube_url(youtube_code, {autoplay: autoplay ? 1 : 0}),
+        src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
         name: I18n.t('data.video.name').try(:[], key.to_sym),
         download: download,

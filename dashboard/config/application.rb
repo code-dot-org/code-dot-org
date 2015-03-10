@@ -79,5 +79,6 @@ module Dashboard
     )
     config.react.variant = :development
     config.react.addons = true
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

@@ -2,18 +2,27 @@
 layout: none
 theme: none
 ---
+- authentication_required!
+
 %a{href:'/ops-dashboard'}
   Dashboard
 
 %h1
   Dashboard
 
-%a{href:'/ops-dashboard#/districts'}
-  %h2
-    Manage Districts
-%a{href:'/ops-dashboard#/workshops'}
-  %h2
-    Manage Workshops
-%a{href:'/ops-dashboard#/cohorts'}
-  %h2
-    Manage Cohorts
+-if dashboard_user[:admin]
+  %a{href:'/ops-dashboard#/districts'}
+    %h2
+      Manage Districts
+-if dashboard_user[:admin]
+  %a{href:'/ops-dashboard#/workshops'}
+    %h2
+      Manage Workshops
+-elsif have_permission?('district_contact')
+  %a{href:'/ops-dashboard#/workshops'}
+    %h2
+      View Workshops
+-if dashboard_user[:admin] || have_permission?('district_contact')
+  %a{href:'/ops-dashboard#/cohorts'}
+    %h2
+      Manage Cohorts

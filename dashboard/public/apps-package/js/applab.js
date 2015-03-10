@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":173}],14:[function(require,module,exports){
+},{"../skins":178}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":221,"../block_utils":19,"../utils":219}],8:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../block_utils":19,"../utils":224}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2782,7 +2782,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":173,"../slider":174,"../templates/page.html":198,"../timeoutList":204,"../utils":219,"../xml":220,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../../locale/current/common":229,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":178,"../slider":179,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"../xml":225,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2802,7 +2802,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],13:[function(require,module,exports){
+},{"ejs":245}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2822,7 +2822,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"ejs":240}],12:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../../locale/current/common":229,"ejs":245}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -2917,11 +2917,11 @@ module.exports.blocks = [
 
 module.exports.categories = {
   'UI controls': {
-    'color': 'red',
+    'color': 'yellow',
     'blocks': []
   },
   'Canvas': {
-    'color': 'yellow',
+    'color': 'red',
     'blocks': []
   },
   'Data': {
@@ -2929,7 +2929,7 @@ module.exports.categories = {
     'blocks': []
   },
   'Turtle': {
-    'color': 'yellow',
+    'color': 'cyan',
     'blocks': []
   },
   'Advanced': {
@@ -3029,7 +3029,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],9:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3102,7 +3102,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"../codegen":45,"../utils":219}],221:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../../locale/current/common":229,"../codegen":45,"../utils":224}],226:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
