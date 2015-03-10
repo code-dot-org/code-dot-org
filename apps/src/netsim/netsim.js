@@ -18,6 +18,7 @@
 'use strict';
 
 var page = require('./page.html');
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
@@ -93,12 +94,10 @@ var NetSim = module.exports = function () {
 
   /**
    * Current dns mode.
-   * Valid values 'none', 'manual', 'automatic'
-   * TODO: Move these to an enum
-   * @type {string}
+   * @type {DnsMode}
    * @private
    */
-  this.dnsMode_ = 'none';
+  this.dnsMode_ = DnsMode.NONE;
 };
 
 
@@ -307,7 +306,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 /**
  * Sets DNS mode across the whole simulation, propagating the change
  * to other clients.
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
@@ -499,7 +498,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
-  this.setIsDnsNode(router.dnsMode === 'manual' &&
+  this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };
 

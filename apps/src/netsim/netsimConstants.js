@@ -8,6 +8,7 @@
  maxlen: 90,
  maxstatements: 200
  */
+/* global exports */
 'use strict';
 
 /**
