@@ -1,6 +1,9 @@
+<%
+var DnsMode = require('./netsimConstants').DnsMode;
+%>
 <div class="dns_mode_control">
   <h1>DNS Mode</h1>
-  <input id="dns_mode_none" type="radio" name="dns_mode" value="none" /><label for="dns_mode_none">None</label>
-  <br/><input id="dns_mode_manual" type="radio" name="dns_mode" value="manual" /><label for="dns_mode_manual">Manual</label>
-  <br/><input id="dns_mode_automatic" type="radio" name="dns_mode" value="automatic" /><label for="dns_mode_automatic">Automatic</label>
+  <input id="dns_mode_none" type="radio" name="dns_mode" value="<%= DnsMode.NONE %>>" /><label for="dns_mode_none">None</label>
+  <br/><input id="dns_mode_manual" type="radio" name="dns_mode" value="<%= DnsMode.MANUAL %>>" /><label for="dns_mode_manual">Manual</label>
+  <br/><input id="dns_mode_automatic" type="radio" name="dns_mode" value="<%= DnsMode.AUTOMATIC %>>" /><label for="dns_mode_automatic">Automatic</label>
 </div>

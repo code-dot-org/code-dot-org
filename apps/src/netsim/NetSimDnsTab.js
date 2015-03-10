@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimDnsTab.html');
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
@@ -96,7 +97,7 @@ NetSimDnsTab.prototype.render = function () {
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   if (this.dnsModeControl_) {
@@ -104,7 +105,7 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === 'manual') {
+  if (newDnsMode === DnsMode.MANUAL) {
     this.rootDiv_.find('.dns_manual_control').show();
   } else {
     this.rootDiv_.find('.dns_manual_control').hide();
