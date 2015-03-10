@@ -113,28 +113,6 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * See if we can evaluate this node by trying to do so and catching exceptions.
- * @returns Whether we can evaluate.
- */
-ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
-  // TODO - can i get rid of canEvaluate?
-
-  var evaluation = this.evaluate(mapping, localMapping);
-  return !evaluation.err;
-};
-
-// ExpressionNode.prototype.hasDivZero = function (mapping, localMapping) {
-//   try {
-//     this.evaluate(mapping, localMapping)
-//   } catch (err) {
-//     if (err.message === 'DivZero') {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
-
-/**
  * Evaluate the expression, returning the result.
  * @param {Object<string, number|object>} globalMapping Global mapping of
  *   variables and functions
@@ -186,7 +164,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
   }
 
   if (type === ValueType.NUMBER) {
-    return this.value_;
+    return { result: this.value_ };
   }
 
   if (type !== ValueType.ARITHMETIC) {

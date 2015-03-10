@@ -216,8 +216,13 @@ describe('EquationSet', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, [], computeExpression));
 
-      assert.equal(set.evaluate(), 5);
-      assert.equal(set.evaluateWithExpression(computeExpression), 5);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 5);
+
+      evaluation = set.evaluateWithExpression(computeExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 5);
     });
 
     it('can evaluate a simple expression with no vars/function', function () {
@@ -225,11 +230,13 @@ describe('EquationSet', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation(null, [], computeExpression));
 
-      assert.equal(set.evaluate(), 3);
-      assert.equal(set.evaluateWithExpression(computeExpression), 3);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
 
-      var otherExpression = new ExpressionNode('+', [3, 3]);
-      assert.equal(set.evaluateWithExpression(otherExpression), 6);
+      evaluation = set.evaluateWithExpression(computeExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
     });
 
     it('can evaluate using a single function', function () {
@@ -245,11 +252,19 @@ describe('EquationSet', function () {
       set.addEquation_(new Equation('f', ['x','y'], fnExpression));
       set.addEquation_(new Equation(null, [], computeExpression));
 
-      assert.equal(set.evaluate(), 4);
-      assert.equal(set.evaluateWithExpression(computeExpression), 4);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 4);
+
+      evaluation = set.evaluateWithExpression(computeExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 4);
 
       var otherExpression = new ExpressionNode('f', [2, 3]);
-      assert.equal(set.evaluateWithExpression(otherExpression), 7);
+
+      evaluation = set.evaluateWithExpression(otherExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 7);
     });
 
     it('can evaluate with multiple variables', function () {
@@ -262,11 +277,18 @@ describe('EquationSet', function () {
       var computeExpression = new ExpressionNode('+', ['x', 'y']);
       set.addEquation_(new Equation(null, [], computeExpression));
 
-      assert.equal(set.evaluate(), 3);
-      assert.equal(set.evaluateWithExpression(computeExpression), 3);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
+
+      evaluation = set.evaluateWithExpression(computeExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
 
       var otherExpression = new ExpressionNode('*', ['x', 'y']);
-      assert.equal(set.evaluateWithExpression(otherExpression), 2);
+      evaluation = set.evaluateWithExpression(otherExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 2);
     });
 
     it('can evaluate with multiple functions', function () {
@@ -282,14 +304,21 @@ describe('EquationSet', function () {
       ]);
       set.addEquation_(new Equation(null, [], computeExpression));
 
-      assert.equal(set.evaluate(), 5);
-      assert.equal(set.evaluateWithExpression(computeExpression), 5);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 5);
+
+      evaluation = set.evaluateWithExpression(computeExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 5);
 
       var otherExpression = new ExpressionNode('+', [
         new ExpressionNode('f', [2]),
         new ExpressionNode('g', [2])
       ]);
-      assert.equal(set.evaluateWithExpression(otherExpression), 6);
+      evaluation = set.evaluateWithExpression(otherExpression);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 6);
 
     });
 
@@ -306,17 +335,19 @@ describe('EquationSet', function () {
       ]);
       set.addEquation_(new Equation(null, [], computeEquation));
 
-      assert.equal(set.evaluate(), 2);
+      var evaluation = set.evaluate();
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 2);
     });
 
-    it('throws if trying to resolve an unresolveable set of variables', function () {
+    it('fails to resolve an unresolveable set of variables', function () {
       var set = new EquationSet();
       set.addEquation_(new Equation('z', [], new ExpressionNode(0)));
       set.addEquation_(new Equation(null, [], new ExpressionNode('y')));
 
-      assert.throws(function () {
-        set.evaluate();
-      });
+      var evaluation = set.evaluate();
+      assert(evaluation.err);
+      assert.equal(evaluation.result, undefined);
     });
   });
 
