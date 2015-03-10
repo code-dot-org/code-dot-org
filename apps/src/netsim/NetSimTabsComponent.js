@@ -92,7 +92,9 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
-  var rawMarkup = buildMarkup({});
+  var rawMarkup = buildMarkup({
+    level: this.levelConfig_
+  });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.netsim_tabs').tabs();
@@ -105,11 +107,13 @@ NetSimTabsComponent.prototype.render = function () {
       this.chunkSizeChangeCallback_,
       this.encodingChangeCallback_);
 
-  this.dnsTab_ = new NetSimDnsTab(
-      this.rootDiv_.find('#tab_dns'),
-      this.levelConfig_,
-      this.dnsModeChangeCallback_,
-      this.becomeDnsCallback_);
+  if (this.levelConfig_.showDnsTab) {
+    this.dnsTab_ = new NetSimDnsTab(
+        this.rootDiv_.find('#tab_dns'),
+        this.levelConfig_,
+        this.dnsModeChangeCallback_,
+        this.becomeDnsCallback_);
+  }
 };
 
 /**
@@ -130,21 +134,27 @@ NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
  * @param {string} newDnsMode
  */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsTab_.setDnsMode(newDnsMode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsMode(newDnsMode);
+  }
 };
 
 /**
  * @param {boolean} isDnsNode
  */
 NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
-  this.dnsTab_.setIsDnsNode(isDnsNode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setIsDnsNode(isDnsNode);
+  }
 };
 
 /**
  * @param {Array} tableContents
  */
 NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
-  this.dnsTab_.setDnsTableContents(tableContents);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsTableContents(tableContents);
+  }
 };
 
 /**

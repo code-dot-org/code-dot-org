@@ -6,6 +6,8 @@ var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
  * @typedef {Object} NetSimLevelConfiguration
+ *
+ * @property {boolean} showDnsTab - Whether the DNS tab will show up at all.
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  * @property {DnsMode} defaultDnsMode - Which DNS mode the simulator should
@@ -24,6 +26,9 @@ var levels = module.exports = {};
  * @type {NetSimLevelConfiguration}
  */
 var defaultLevel = {
+
+  // DNS Tab and its controls
+  showDnsTab: true,
   showDnsModeControl: true,
   defaultDnsMode: DnsMode.NONE
 };
@@ -39,6 +44,7 @@ levels.netsim_demo = defaultLevel;
  * @type {NetSimLevelConfiguration}
  */
 levels.no_dns = utils.extend(defaultLevel, {
+  showDnsTab: false,
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.NONE
 });

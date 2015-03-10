@@ -3,7 +3,9 @@
     <li><a href="#tab_instructions">Instructions</a></li>
     <li><a href="#tab_my_device">My Device</a></li>
     <li><a href="#tab_router">Router</a></li>
+    <% if (level.showDnsTab) { %>
     <li><a href="#tab_dns">DNS</a></li>
+    <% } %>
   </ul>
   <div id="tab_instructions">
     <p>In this activity, you and your group will still be acting as
