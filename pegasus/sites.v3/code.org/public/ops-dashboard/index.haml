@@ -30,10 +30,10 @@ title: "Ops Dashboard"
     $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
-    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/teachers',                      {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
+    $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -328,18 +328,18 @@ title: "Ops Dashboard"
         if (cohort.id) { // existing
           cohort =
             cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
-              $location.path("/cohorts");
+              $location.path("/teacher-cohorts");
             });
         } else { // new
           cohort =
             cohortsService.save({cohort: cohort}, function() {
-              $location.path("/cohorts");
+              $location.path("/teacher-cohorts");
             });
         }
       };
 
       $scope.cancel_edit = function() {
-        $location.path("/cohorts");
+        $location.path("/teacher-cohorts");
       };
     }
   ]);
