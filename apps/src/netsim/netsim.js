@@ -33,8 +33,19 @@ var RunLoop = require('../RunLoop');
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var NetSim = module.exports = function () {
+  /**
+   * @type {Object}
+   */
   this.skin = null;
-  this.level = null;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   */
+  this.level = {};
+
+  /**
+   * @type {number}
+   */
   this.heading = 0;
 
   /**
@@ -196,8 +207,9 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sentMessageLog_ = new NetSimLogPanel(
       $('#netsim_sent'), 'Sent Message Log', true);
 
-  this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
-      this.receivedMessageLog_, this.shouldEnableCleanup());
+  this.connection_ = new NetSimConnection(window, this.level,
+      this.sentMessageLog_, this.receivedMessageLog_,
+      this.shouldEnableCleanup());
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
@@ -215,6 +227,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Tab panel - contains instructions, my device, router, dns
   this.tabs_ = new NetSimTabsComponent(
       $('#netsim_tabs'),
+      this.level,
       this.setChunkSize.bind(this),
       this.changeEncoding.bind(this),
       this.changeRemoteDnsMode.bind(this),
