@@ -322,8 +322,6 @@ title: "Ops Dashboard"
         }
         delete cohort.districts;
 
-        console.log(cohort);
-
         if (cohort.id) { // existing
           cohort =
             cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
