@@ -8,8 +8,6 @@ $(function() {
 
   $("#location").geocomplete()
     .bind("geocode:result", function(event, result){
-      initializeMap();
-
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
@@ -24,17 +22,6 @@ $(function() {
     submitForm();
   });
 });
-
-function initializeMap() {
-  var mapOptions = {
-    center: new google.maps.LatLng(37.6, -95.665),
-    zoom: 4,
-    minZoom: 2,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-  gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
-}
 
 function submitForm() {
   var form_data = $('#class-search-form').serializeArray();
