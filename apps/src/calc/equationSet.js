@@ -176,6 +176,12 @@ EquationSet.prototype.sortedEquations = function () {
   return this.equations_;
 };
 
+// TODO - unit test
+EquationSet.prototype.hasDivZero = function () {
+  var evaluation = this.evaluate();
+  return evaluation.err && evaluation.err.message === 'DivZero';
+};
+
 /**
  * Evaluate the EquationSet's compute expression in the context of its equations
  */

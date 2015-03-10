@@ -426,7 +426,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   if (evaluation.err) {
     return divZeroOrThrowErr(evaluation.err);
   }
-  var userResult = evalution.result;
+  var userResult = evaluation.result;
 
   var targetClone = targetSet.clone();
   var userClone = userSet.clone();
@@ -436,11 +436,11 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     userClone.getEquation(name).expression.setValue(val);
   };
 
-  evaluation = targetSet.evaluation();
+  evaluation = targetSet.evaluate();
   if (evaluation.err) {
     throw evaluation.err;
   }
-  var targetResult = evaluation.result
+  var targetResult = evaluation.result;
 
   if (userResult !== targetResult) {
     // Our result can different from the target result for two reasons
@@ -473,8 +473,8 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     var values = iterator.next();
     values.forEach(setConstantsToValue);
 
-    var targetEvalution = targetClone.evaluate();
-    var userEvalaution = userClone.evaluate();
+    var targetEvaluation = targetClone.evaluate();
+    var userEvaluation = userClone.evaluate();
     if (targetEvaluation.err || userEvaluation.err) {
       return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
     }
@@ -638,8 +638,8 @@ Calc.generateResults_ = function () {
 
   if (appState.userSet.hasDivZero()) {
     appState.result = ResultType.FAILURE;
-    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-    appstate.message = 'div zero'; // TODO i18n, better string
+    appState.testResults = TestResults.DIVIDE_BY_ZERO;
+    appState.message = 'div zero'; // TODO i18n, better string
     return;
   }
 
@@ -705,7 +705,11 @@ function displayComplexUserExpressions () {
   tokenList = getTokenList(computeEquation, targetEquation);
 
   // TODO - make sure it does the right thing in regards to div zero. we probably dont
-  var evaluation = appState.userSet.evaluate().result.toString();
+  var evaluation = appState.userSet.evaluate();
+  if (evaluation.err) {
+    throw evaluation.err;
+  }
+  result = evaluation.result.toString();
   var expectedResult = result;
   // Note: we could make singleVariable case smarter and evaluate target using
   // user constant value
@@ -725,7 +729,7 @@ function displayComplexUserExpressions () {
     for (var c = 0; c < expression.numChildren(); c++) {
       expression.setChildValue(c, appState.failedInput[c]);
     }
-    evaluation = appState.userSet.evaluateWithExpression(expression).toString();
+    evaluation = appState.userSet.evaluateWithExpression(expression);
     if (evaluation.err) {
       // TODO - temp hack
       if (evaluation.err === 'DivZero') {
@@ -734,7 +738,7 @@ function displayComplexUserExpressions () {
         throw evaluation.err;
       }
     }
-    result = evaluation.result;
+    result = evaluation.result.toString();
 
     tokenList = getTokenList(expression)
       .concat(getTokenList(' = '))
