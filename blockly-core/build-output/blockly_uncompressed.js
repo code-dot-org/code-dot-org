@@ -4264,6 +4264,8 @@ Blockly.FieldDropdown.prototype.showEditor_ = function() {
   Blockly.addClass_(menuDom, "blocklyDropdownMenu");
   Blockly.addClass_(menuDom, "goog-menu-noaccel");
   menuDom.style.borderColor = "hsla(" + this.sourceBlock_.getColour() + ", " + this.sourceBlock_.getSaturation() * 100 + "%, " + this.sourceBlock_.getValue() * 100 + "%" + ", 0.5)";
+  menuDom.style.overflowY = "auto";
+  menuDom.style["max-height"] = "250px";
   var menuSize = goog.style.getSize(menuDom);
   if(xy.y + menuSize.height + borderBBox.height >= windowSize.height + scrollOffset.y) {
     xy.y -= menuSize.height
