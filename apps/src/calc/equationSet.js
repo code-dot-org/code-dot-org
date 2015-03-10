@@ -188,6 +188,9 @@ EquationSet.prototype.evaluate = function () {
  * equations. For example, our equation set might define f(x) = x + 1, and this
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // no variables/functions. this is easy
@@ -201,6 +204,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   var mapping = {};
   var madeProgress;
   var testMapping;
+  var evaluation;
   var setTestMappingToOne = function (item) {
     testMapping[item] = 1;
   };
@@ -216,7 +220,8 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
         equation.params.forEach(setTestMappingToOne);
-        if (!equation.expression.canEvaluate(testMapping)) {
+        evaluation = equation.expression.evaluate(testMapping);
+        if (evaluation.err) {
           continue;
         }
 
@@ -226,19 +231,17 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
           variables: equation.params,
           expression: equation.expression
         };
-      } else if (mapping[equation.name] === undefined &&
-          equation.expression.canEvaluate(mapping)) {
-        // we have a variable that hasn't yet been mapped and can be
-        madeProgress = true;
-        mapping[equation.name] = equation.expression.evaluate(mapping);
+      } else if (mapping[equation.name] === undefined) {
+        evaluation = equation.expression.evaluate(mapping);
+        if (!evaluation.err) {
+          // we have a variable that hasn't yet been mapped and can be
+          madeProgress = true;
+          mapping[equation.name] = evaluation.result;
+        }
       }
     }
 
   } while (madeProgress);
-
-  if (!computeExpression.canEvaluate(mapping)) {
-    throw new Error("Can't resolve EquationSet");
-  }
 
   return computeExpression.evaluate(mapping);
 };

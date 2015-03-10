@@ -212,10 +212,13 @@ function displayGoal(targetSet) {
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = targetSet.evaluate();
+  var evaluation = targetSet.evaluate();
+  if (evaluation.err) {
+    throw evaluation.err;
+  }
 
   if (hasSingleFunction) {
-    tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+    tokenList = tokenList.concat(getTokenList(' = ' + evaluation.result.toString()));
   }
   displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
@@ -299,8 +302,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   }
 
   // First evaluate both with the target set of inputs
-  if (targetSet.evaluateWithExpression(expression) !==
-      userSet.evaluateWithExpression(expression)) {
+  var targetEvaluation = targetSet.evaluateWithExpression(expression);
+  var userEvaluation = userSet.evaluateWithExpression(expression);
+  if (targetEvaluation.err || userEvaluation.err) {
+    return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+  }
+  if (targetEvaluation.result !== userEvaluation.result) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
     return outcome;
@@ -321,8 +328,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     var values = iterator.next();
     values.forEach(setChildToValue);
 
-    if (targetSet.evaluateWithExpression(expression) !==
-        userSet.evaluateWithExpression(expression)) {
+    targetEvaluation = targetSet.evaluateWithExpression(expression);
+    userEvaluation = userSet.evaluateWithExpression(expression);
+    if (targetEvaluation.err || userEvaluation.err) {
+      return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+    }
+    if (targetEvaluation.result !== userEvaluation.result) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -351,6 +362,14 @@ function appSpecificFailureOutcome(message, failedInput) {
     message: message,
     failedInput: failedInput
   };
+}
+
+// TODO - better name? comment
+function divZeroOrThrowErr(err) {
+  if (err.message === 'DivZero') {
+    return appSpecificFailureOutcome('div zero', null); // TODO - i18n
+  }
+  throw err;
 }
 
 /**
@@ -403,7 +422,11 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   // Check to see that evaluating target set with the user value of the constant(s)
   // gives the same result as evaluating the user set.
-  var userResult = userSet.evaluate();
+  var evaluation = userSet.evaluate();
+  if (evaluation.err) {
+    return divZeroOrThrowErr(evaluation.err);
+  }
+  var userResult = evalution.result;
 
   var targetClone = targetSet.clone();
   var userClone = userSet.clone();
@@ -413,13 +436,13 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     userClone.getEquation(name).expression.setValue(val);
   };
 
-  // // overwrite our inputs with user's values
-  // targetConstants.forEach(function (item) {
-  //   var userValue = userSet.getEquation(item.name).expression.getValue();
-  //   targetClone.getEquation(item.name).expression.setValue(userValue);
-  // });
-  //
-  if (userResult !== targetSet.evaluate()) {
+  evaluation = targetSet.evaluation();
+  if (evaluation.err) {
+    throw evaluation.err;
+  }
+  var targetResult = evaluation.result
+
+  if (userResult !== targetResult) {
     // Our result can different from the target result for two reasons
     // (1) We have the right equation, but our "constant" has a different value.
     // (2) We have the wrong equation
@@ -431,8 +454,11 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
       setConstantsToValue(val, index);
     });
 
-    var targetResult = targetClone.evaluate();
-    if (userResult !== targetResult) {
+    evaluation = targetClone.evaluate();
+    if (evaluation.err) {
+      return divZeroOrThrowErr(evaluation.err);
+    }
+    if (userResult !== evaluation.result) {
       return appSpecificFailureOutcome(calcMsg.wrongResult());
     }
   }
@@ -447,7 +473,13 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     var values = iterator.next();
     values.forEach(setConstantsToValue);
 
-    if (targetClone.evaluate() !== userClone.evaluate()) {
+    var targetEvalution = targetClone.evaluate();
+    var userEvalaution = userClone.evaluate();
+    if (targetEvaluation.err || userEvaluation.err) {
+      return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+    }
+
+    if (targetEvaluation.result !== userEvaluation.result) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -604,6 +636,13 @@ Calc.generateResults_ = function () {
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
+  if (appState.userSet.hasDivZero()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appstate.message = 'div zero'; // TODO i18n, better string
+    return;
+  }
+
   if (level.freePlay || level.edit_blocks) {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
@@ -665,14 +704,14 @@ function displayComplexUserExpressions () {
   // we could actually be different than the goal)
   tokenList = getTokenList(computeEquation, targetEquation);
 
-  result = appState.userSet.evaluate().toString();
-
+  // TODO - make sure it does the right thing in regards to div zero. we probably dont
+  var evaluation = appState.userSet.evaluate().result.toString();
   var expectedResult = result;
   // Note: we could make singleVariable case smarter and evaluate target using
   // user constant value
   if (appState.targetSet.computeEquation() !== null &&
       !appState.targetSet.computesSingleVariable()) {
-    expectedResult = appState.targetSet.evaluate().toString();
+    expectedResult = appState.targetSet.evaluate().result.toString();
   }
 
   // add a tokenList diffing our results
@@ -686,7 +725,16 @@ function displayComplexUserExpressions () {
     for (var c = 0; c < expression.numChildren(); c++) {
       expression.setChildValue(c, appState.failedInput[c]);
     }
-    result = appState.userSet.evaluateWithExpression(expression).toString();
+    evaluation = appState.userSet.evaluateWithExpression(expression).toString();
+    if (evaluation.err) {
+      // TODO - temp hack
+      if (evaluation.err === 'DivZero') {
+        evaluation.result = 'DZ';
+      } else {
+        throw evaluation.err;
+      }
+    }
+    result = evaluation.result;
 
     tokenList = getTokenList(expression)
       .concat(getTokenList(' = '))

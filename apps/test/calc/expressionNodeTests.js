@@ -339,6 +339,15 @@ describe("ExpressionNode", function () {
       });
     });
 
+    it('cant evaluate an expression that becomes a div zero', function () {
+      debugger;
+      var node = new ExpressionNode('/', [
+        new ExpressionNode(6),
+        new ExpressionNode('-', [5, 5])
+      ]);
+      assert.equal(node.canEvaluate(), false);
+    });
+
   });
 
   it("depth", function () {
@@ -832,6 +841,52 @@ describe("ExpressionNode", function () {
     it('returns true when node is a div zero', function () {
       var node = new ExpressionNode('/', [3, 0]);
       assert(node.isDivZero() === true);
+    });
+  });
+
+  describe('hasDivZero', function () {
+    it('returns true if node is a div zero', function () {
+      var node = new ExpressionNode('/', [3, 0]);
+      assert(node.hasDivZero() === true);
+    });
+
+    it('returns true if child node is a div zero', function () {
+      var node = new ExpressionNode('/', [
+        new ExpressionNode('/', [5, 0]),
+        new ExpressionNode(4)
+      ]);
+      assert(node.hasDivZero() === true);
+    });
+
+    it('returns true if evaluating child makes it a div zero', function () {
+      var node = new ExpressionNode('/', [
+        new ExpressionNode(6),
+        new ExpressionNode('-', [5, 5])
+      ]);
+      assert(node.hasDivZero() === true);
+    });
+
+    it('returns true if evaluating a grandchild makes child a div zero', function () {
+      var node = new ExpressionNode('+', [
+        new ExpressionNode('/', [
+          new ExpressionNode(6),
+          new ExpressionNode('-', [5, 5])
+        ]),
+        new ExpressionNode(4)
+      ]);
+      assert(node.hasDivZero() === true);
+    });
+
+    it('return false if no div zeros', function () {
+      var node = new ExpressionNode('+', [
+        new ExpressionNode('/', [
+          new ExpressionNode(6),
+          new ExpressionNode('-', [5, 4])
+        ]),
+        new ExpressionNode(4)
+      ]);
+      assert(node.hasDivZero() === false);
+
     });
   });
 
