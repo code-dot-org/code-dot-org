@@ -56,14 +56,13 @@ class Blockly < Level
     self.class.pretty_print(xml_node.to_xml)
   end
 
-  def load_level_xml(xml)
-    xml_node = Nokogiri::XML(xml, &:noblanks)
+  def load_level_xml(xml_node)
     block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
-    super(xml_node.to_xml)
+    level_properties = super(xml_node)
     block_nodes.each do |attr_node|
-      self.send("#{attr_node.name}=", attr_node.child.to_xml)
+      level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
-    self.tap(&:save!)
+    level_properties
   end
 
   def filter_level_attributes(level_hash)

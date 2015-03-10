@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n  \tif (this.studio_.tickCount === 1) {\r\n      this.seconds = 0;\r\n      this.height = 0;\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.time = this.seconds;\r\n    Studio.Globals.succeeded = ((this.seconds == 6 && this.height == 360) && (this.rocket_height(3) == 90));\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
     "failure_condition": "function () {\r\n  return (Studio.Globals.time > 6 && !Studio.Globals.succeeded);\r\n }",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Real rockets start off slowly and gain speed over time - let's add some simple acceleration to it! Can you write a function that describes a rocket that is at 10 meters at 1 second, 40 meters at 2 seconds, 90 meters at 3 seconds, 160 at 4 seconds and so on?",
+    "instructions": "Real rockets start off slowly and gain speed over time - so let's add some simple acceleration to ours! Can you write a function that describes a rocket that is at 10 meters at 1 second, 40 meters at 2 seconds, 90 meters at 3 seconds, 160 at 4 seconds and so on?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -26,7 +26,7 @@
     "first_sprite_index": "23",
     "protaganist_sprite_index": "0",
     "open_function_definition": "rocket-height",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1500",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
     "generate_function_pass_blocks": "true",
@@ -37,8 +37,8 @@
     "examples_collapse": "true",
     "definition_highlight": "false",
     "definition_collapse": "true",
-    "maze_data": null,
-    "custom_game_type": "Rocket Height"
+    "custom_game_type": "Rocket Height",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
