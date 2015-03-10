@@ -111,7 +111,9 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
 NetSimLobby.createWithin = function (element, levelConfig, connection, user, shardID) {
   // Create a new NetSimLobby
   var controller = new NetSimLobby(levelConfig, connection, user, shardID);
-  element.innerHTML = markup({});
+  element.innerHTML = markup({
+    level: levelConfig
+  });
   controller.bindElements_();
   controller.refresh_();
   return controller;
