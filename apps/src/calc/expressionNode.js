@@ -76,9 +76,31 @@ ExpressionNode.prototype.isNumber = function () {
   return this.getType_() === ValueType.NUMBER;
 };
 
+/**
+ * @returns {boolean} true if the root expression node is a divide by zero. Does
+ *   not account for div zeros in descendants
+ */
 ExpressionNode.prototype.isDivZero = function () {
   return this.getValue() === '/' && this.getChildValue(1) === 0;
 };
+
+/**
+ * @returns {boolean} true if there are any div zeros in the expression node
+ *   tree.
+ */
+// ExpressionNode.prototype.hasDivZero = function () {
+//   var clone = this.clone();
+//
+//   while (clone.depth() > 0) {
+//     var deepest = clone.getDeepestOperation();
+//     if (deepest.isDivZero()) {
+//       return true;
+//     }
+//     clone.collapse();
+//   }
+//
+//   return false;
+// };
 
 /**
  * Create a deep clone of this node
@@ -95,13 +117,22 @@ ExpressionNode.prototype.clone = function () {
  * @returns Whether we can evaluate.
  */
 ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
-  try {
-    this.evaluate(mapping, localMapping);
-  } catch (err) {
-    return false;
-  }
-  return true;
+  // TODO - can i get rid of canEvaluate?
+
+  var evaluation = this.evaluate(mapping, localMapping);
+  return !evaluation.err;
 };
+
+// ExpressionNode.prototype.hasDivZero = function (mapping, localMapping) {
+//   try {
+//     this.evaluate(mapping, localMapping)
+//   } catch (err) {
+//     if (err.message === 'DivZero') {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
 /**
  * Evaluate the expression, returning the result.
@@ -109,37 +140,40 @@ ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
  *   variables and functions
  * @param {Object<string, number|object>} localMapping Mapping of
  *   variables/functions local to scope of this function.
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
-ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
-  gloablMapping = gloablMapping || {};
+ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
+  globalMapping = globalMapping || {};
   localMapping = localMapping || {};
 
   var type = this.getType_();
 
   if (type === ValueType.VARIABLE) {
     var mappedVal = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
+      globalMapping[this.value_]);
     if (mappedVal === undefined) {
-      throw new Error('No mapping for variable during evaluation');
+      return { err: new Error('No mapping for variable during evaluation') };
     }
 
     var clone = this.clone();
     clone.setValue(mappedVal);
-    return clone.evaluate(gloablMapping);
+    return clone.evaluate(globalMapping);
   }
 
   if (type === ValueType.FUNCTION_CALL) {
     var functionDef = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
+      globalMapping[this.value_]);
     if (functionDef === undefined) {
-      throw new Error('No mapping for function during evaluation');
+      return { err: new Error('No mapping for function during evaluation') };
     }
 
     if (!functionDef.variables || !functionDef.expression) {
-      throw new Error('Bad mapping for: ' + this.value_);
+      return { err: new Error('Bad mapping for: ' + this.value_) };
     }
     if (functionDef.variables.length !== this.children_.length) {
-      throw new Error('Bad mapping for: ' + this.value_);
+      return { err: new Error('Bad mapping for: ' + this.value_) };
     }
 
     // We're calling a new function, so it gets a new local scope.
@@ -148,7 +182,7 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
       var childVal = this.getChildValue(index);
       newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
     }, this);
-    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
+    return functionDef.expression.evaluate(globalMapping, newLocalMapping);
   }
 
   if (type === ValueType.NUMBER) {
@@ -156,23 +190,32 @@ ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
   }
 
   if (type !== ValueType.ARITHMETIC) {
-    throw new Error('Unexpected error');
+    return { err: new Error('Unexpected') };
   }
 
-  var left = this.children_[0].evaluate(gloablMapping, localMapping);
-  var right = this.children_[1].evaluate(gloablMapping, localMapping);
+  var left = this.children_[0].evaluate(globalMapping, localMapping);
+  var right = this.children_[1].evaluate(globalMapping, localMapping);
+
+  if (left.err || right.err) {
+    return { err: left.err || right.err };
+  }
+  left = left.result;
+  right = right.result;
 
   switch (this.value_) {
     case '+':
-      return left + right;
+      return { result: left + right };
     case '-':
-      return left - right;
+      return { result: left - right };
     case '*':
-      return left * right;
+      return { result: left * right };
     case '/':
-      return left / right;
+      if (right === 0) {
+        return { err: new Error('DivZero') };
+      }
+      return { result: left / right };
     default:
-      throw new Error('Unknown operator: ' + this.value_);
+      return { err: new Error('Unknown operator: ' + this.value_) };
     }
 };
 
@@ -216,7 +259,8 @@ ExpressionNode.prototype.getDeepestOperation = function () {
 
 /**
  * Collapses the next descendant in place. Next is defined as deepest, then
- * furthest left. Returns whether collapse was successful.
+ * furthest left.
+ * @returns {boolea} true if collapse was successful.
  */
 ExpressionNode.prototype.collapse = function () {
   var deepest = this.getDeepestOperation();
@@ -226,7 +270,12 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    this.value_ = this.evaluate();
+    var evaluation = this.evaluate();
+    if (evaluation.err) {
+      // TODO - handle div zero differently?
+      return false;
+    }
+    this.value_ = evaluation.result;
     this.children_ = [];
     return true;
   } else {
