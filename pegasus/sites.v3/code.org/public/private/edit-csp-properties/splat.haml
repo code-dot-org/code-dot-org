@@ -5,7 +5,7 @@ angular: propertiesApp
 ---
 
 -app_id = request.splat_path_info[1..-1]
--api_base_url = "/v3/apps/#{app_id}/shared-properties"
+-api_base_url = "/v3/shared-properties/#{app_id}"
 
 %div{"ng-app" => "propertiesApp", "ng-view" => ""}
 
