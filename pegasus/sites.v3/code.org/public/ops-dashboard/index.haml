@@ -3,6 +3,7 @@ theme: angular
 title: "Ops Dashboard"
 ---
 - authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -285,19 +286,26 @@ title: "Ops Dashboard"
 
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-      if ($routeParams.id) {
-        $scope.cohort = cohortsService.get({id: $routeParams.id});
-      } else {
-        $scope.cohort = {};
-      }
 
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',
+          max_teachers: ''
         });
       };
 
-      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+        $scope.cohort.$promise.then(function(cohort){
+          cohort.program_type_disabled = cohort.program_type ? true : false;
+          if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+            $scope.cohort.districts = [];
+            $scope.newDistrict();
+          }
+        });
+      } else {
+        $scope.cohort = {};
         $scope.cohort.districts = [];
         $scope.newDistrict();
       }
@@ -306,14 +314,22 @@ title: "Ops Dashboard"
       $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
+        cohort.district_ids = [];
+        for (var i = 0; i < cohort.districts.length; i++) {
+          if (cohort.districts[i].id) {
+            cohort.district_ids.push(cohort.districts[i].id);
+          }
+        }
+        delete cohort.districts;
+
         if (cohort.id) { // existing
           cohort =
-            cohortsService.update({id: cohort.id}, cohort, function() {
+            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
               $location.path("/cohorts");
             });
         } else { // new
           cohort =
-            cohortsService.save(cohort, function() {
+            cohortsService.save({cohort: cohort}, function() {
               $location.path("/cohorts");
             });
         }
