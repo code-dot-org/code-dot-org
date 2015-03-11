@@ -1,0 +1,25 @@
+name 'PDK5 Problem Solving'
+title 'Problem Solving Methods'
+
+placeholder 'I could integrate this in my classroom by...'
+
+markdown <<MARKDOWN
+
+Creating a positive classroom culture before you start writing programs with your class goes a long way. Discuss with your students the strategies they should try, either individually or with a partner, to help get themselves unstuck while trying solve a puzzle or write a program. Having common vocabulary as a class can be very helpful, so that when a student asks you for help, you can ask them what parts of the puzzle-solving process they have executed. Here are the 4 main steps:
+
+- Understand the puzzle
+- Create a plan
+- Perform and perfect the plan
+- Check your work
+
+[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.pdf) is available in the Teacher Dashboard in the "Lesson Plans and Resources" tile. 
+
+</br>
+
+![image](http://staging.code.org/images/puzzlesolving.png)
+
+</br>
+
+### How could you integrate this in your classroom? 
+
+MARKDOWN
