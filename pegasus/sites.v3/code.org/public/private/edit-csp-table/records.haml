@@ -37,7 +37,7 @@ theme: none
     %span
       %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"} 
         Import
-      %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/apps/' + appId + '/import-shared-tables/' + tableName}}"}
+      %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
         %input{"name" => "import_file", "type" => "file"}
         %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
   %br        
