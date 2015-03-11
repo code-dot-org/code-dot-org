@@ -12,7 +12,7 @@
 /* global window */
 'use strict';
 
-var SharedTable = require('../appsApi').SharedTable;
+var SharedTable = require('../clientApi').SharedTable;
 var NetSimTable = require('./NetSimTable');
 
 /**
@@ -21,13 +21,13 @@ var NetSimTable = require('./NetSimTable');
  * @readonly
  */
 // TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var APP_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
+var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
 // Ugly null-guards so we can load this file in tests.
 if (window &&
     window.location &&
     window.location.hostname &&
     window.location.hostname.split('.')[0] === 'localhost') {
-  APP_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
+  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
 }
 
 /**
@@ -43,25 +43,25 @@ if (window &&
 var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.nodeTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_n'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_n'));
 
   /** @type {NetSimTable} */
   this.wireTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_w'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_w'));
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_m'));
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_l'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_l'));
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_h'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**
