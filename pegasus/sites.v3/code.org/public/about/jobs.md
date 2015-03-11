@@ -6,7 +6,6 @@ nav: about_nav
 # Job Openings at Code.org
 
 - [Accountant (PT)](#accountant)
-- [Head of Product/Marketing](#head-product)
 - [Head of Engineering](#head-engineering)
 - [Operations Intern](#operations-intern)
 - [HR Generalist](#hr-generalist)
@@ -22,31 +21,36 @@ nav: about_nav
 ## <a name="accountant "href="accountant">Accountant (PT) (Seattle, WA)</a>
 **Job Summary:**
 
-The Accountant plays a critical role in ensuring accurate financial recordkeeping in accordance with IRS regulations and non-profit best practices. Responsibilities of the position include:
+The Accountant plays a critical role in ensuring accurate financial record keeping in accordance with GAAP, IRS regulations and non-profit best practices. Responsibilities of the position include:
 
 - Journal entry processing
-- Bank and general ledger account reconciliations and analysis
+- Bank and balance sheet reconciliations and analysis
 - Inventory reconciliation
 - Month-end and year-end closing processes
-- Prepare monthly, quarterly, and annual financial statements and Board of Directors financial presentations
-- Prepare audit schedules and interface with external auditors
-- Assist with developing annual budgets
+- Preparation of monthly, quarterly, and annual financial statements and Board of Directors financial presentations
+- Ad hoc financial reports and analysis
+- Preparing audit schedules and interfacing with external auditors
+- Assisting with development of annual budgets and rolling forecasts
+- Advising leadership team on accounting implications of operational decisions
+
 
 **Qualifications**
 
 The ideal candidate has the following qualifications:
 
-- A Bachelor’s degree in Accounting and a minimum of 3 years of progressive non-profit accounting experience (REQUIRED)
-- Strong knowledge of general accounting and financial reporting requirements as well as financial audits
-- Expertise in Quickbooks Online is required
+- A Bachelor’s degree in Accounting or equivalent experience
+- A minimum of 3-5 years of progressively responsible accounting experience 
+- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
+- Expertise in Quickbooks Online or other accounting software
+- Must be an advanced or expert user of spreadsheets
 - Strong analytical and problem solving ability
 - Professional demeanor, possessing excellent communication skills
 - Must be extremely organized and detail oriented
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment 
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
 
-A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, must be an Expert user of spreadsheets.
-Must be a U.S. Citizen or Permanent Resident
-Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 ## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
@@ -159,27 +163,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="head-product" href="#head-product">Head of Product/Marketing (Seattle, WA)</a>
-**Job Summary:**
 
-Code.org is recruiting for an experienced Head of Product/Marketing who can lead the Product and Marketing teams. Full-time, salaried. Responsibilities of the position include:
-
-- Acting as central point of leadership for Code.org curriculum + technology products and services
-- Providing end-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms
-- High level ownership of Code.org marketing - celebrities, videos, social media, testimonials, and the international Hour of Code grassroots movement
-- Managing a team comprising product management, user experience, video production and marketing
-- Managing high visibility partnerships such as the one with Disney for the 2014 Hour of Code with Anna and Elsa (from Frozen)
-- Jack of all trades given the disparate types of activities Code.org engages in, and supporting all of them with marketing programs and helping identify how engineering can improve our work
-
-**Qualifications:**
-
-- Bachelor’s degree with a background in Computer Science (as a major or a minor)
-- 3+ years experience as a technical product manager, i.e. defining product, writing specs, closely managing engineering projects, hands on design
-- 3+ years experience as a manager of other PMs
-- Experience with building / managing / marketing of a Web site and/or web services
-- Experience in consumer marketing (PR, social media, advertising) desired, but not required
-
-Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 ## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
 **Job Summary:**
 
@@ -196,15 +180,25 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - 10+ years as a software engineer or manager of software engineers
 - 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
 - Full stack Web engineering experience, i.e. databases, application, front-end
+- DEEP knowledge and experience in either JavaScript OR Ruby
 - Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
 - Experience building and running a large scale consumer-focused Web service, with at least 1M users
-- Mobile development experience (iOS, Android) desired, but not required
+- Mobile development experience (iOS, Android) desired but not required
 - Experience in a fast growth start-up environment desired
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="operations-intern" href="operations-intern">Operations Intern (Seattle,Wa)</a>
+## <a name="operations-intern" href="#operations-intern">Operations Intern (Seattle,Wa)</a>
 **Job Summary:**
+
+Job Status:		Part-time (April/May unpaid); 
+Full-time (June-August stipend available)
 
 Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
 
@@ -217,8 +211,11 @@ Code.org is looking for an Operations Intern to join Code.org’s Operations tea
 
 **Qualifications:**
 
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
 - Minimum 2 years of undergraduate studies completed
 - Experience with Google suite of products
+- Ability to work legally in the United States
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 

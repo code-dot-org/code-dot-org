@@ -141,19 +141,21 @@ describe("ExpressionNode", function () {
     assert.notEqual(clone.children_[0].children_[1].value_, node.children_[0].children_[1].value_);
   });
 
-  describe("evaluate/canEvaluate", function () {
-    var node;
+  describe("evaluate", function () {
+    var node, evaluation;
 
     it("can evaluate a single number", function () {
       node = new ExpressionNode(1);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 1);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 1);
     });
 
     it("can evaluate a simple expression", function () {
       node = new ExpressionNode('+', [1, 2]);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 3);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
     });
 
     it("can evaluate a more complex expression", function () {
@@ -161,44 +163,48 @@ describe("ExpressionNode", function () {
         new ExpressionNode('-', [5, 3]),
         new ExpressionNode('/', [8, 4])
       ]);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 4);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 4);
     });
 
     it("can evaluate a variable with a proper mapping", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate({x: 1}), true);
-      assert.equal(node.evaluate({x: 1}), 1);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate({x: 1});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 1);
     });
 
     it ("can evaluate an expression with variables", function () {
       node = new ExpressionNode('+', ['x', 'y']);
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate({x: 1, y: 2}), true);
-      assert.equal(node.evaluate({x: 1, y: 2}), 3);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate({x: 1, y: 2});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
     });
 
     it("cant evaluate a variable with no mapping", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.canEvaluate({}), false);
-      assert.throws(function () {
-        node.evaluate();
-      }, Error);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
     });
 
     it("doesnt change the node when evaluating", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.evaluate({x: 1}), 1);
+      evaluation = node.evaluate({x: 1});
+      assert.equal(evaluation.result, 1);
       assert.equal(node.value_, 'x');
     });
 
     it("cant evaluate a function with no mapping", function () {
       node = new ExpressionNode('f', [1, 2]);
-      assert.equal(node.canEvaluate({}), false);
-      assert.throws(function () {
-        node.evaluate();
-      }, Error);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
     });
 
     it("can evaluate a function call", function () {
@@ -209,9 +215,12 @@ describe("ExpressionNode", function () {
         variables: ['x', 'y'],
         expression: new ExpressionNode('+', ['x', 'y'])
       };
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 3);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
     });
 
     it("can evaluate a function call when param name collides with global var", function () {
@@ -224,8 +233,9 @@ describe("ExpressionNode", function () {
         variables: ['x'],
         expression: new ExpressionNode('x')
       };
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 1);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 1);
     });
 
     it("can evaluate nested functions", function () {
@@ -242,13 +252,11 @@ describe("ExpressionNode", function () {
         variables: ['x'],
         expression: new ExpressionNode('g', ['x'])
       };
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 2);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 2);
     });
 
-    // pivotal # 87579850 - this is broken right now, because it ends up
-    // evaluating y + x with the x value from f's context, instead of the global
-    // context
     it("can handle transitioning back to global var", function () {
       var mapping = {};
       // x = 1
@@ -266,8 +274,9 @@ describe("ExpressionNode", function () {
 
       // compute f(2)
       node = new ExpressionNode('f', [2]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 3);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 3);
     });
 
     it("can handle transitioning back to global var with more complexity", function () {
@@ -292,8 +301,9 @@ describe("ExpressionNode", function () {
       // f(2) = g(2) + 2
       // f(2) = 3 + 2 = 5
       node = new ExpressionNode('f', [2]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 5);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 5);
     });
 
     it('can handle functions having the same param name', function () {
@@ -315,11 +325,12 @@ describe("ExpressionNode", function () {
         new ExpressionNode('f', [1]),
         new ExpressionNode('g', [2])
       ]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 6);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 6);
     });
 
-    it('throws? on recursion', function () {
+    it('generates error on infinite recursion', function () {
       // f(x) = f(x) + 1
       var mapping = {
         f: {
@@ -332,16 +343,24 @@ describe("ExpressionNode", function () {
       };
 
       node = new ExpressionNode('f', [1]);
-      assert.equal(node.canEvaluate(mapping), false);
-      assert.throws(function () {
-        // pivotal # 87579626
-        // what it throws is Maximum callstack exceeded. i wonder if i
-        // can/should get it to fail earlier
-        // maybe when evaluating, remove self from mapping?
-        node.evaluate(mapping);
-      });
+      evaluation = node.evaluate(mapping);
+
+      // pivotal # 87579626
+      // what it throws is Maximum callstack exceeded. i wonder if i
+      // can/should get it to fail earlier
+      // maybe when evaluating, remove self from mapping?
+      assert(evaluation.err);
     });
 
+    it('cant evaluate an expression that becomes a div zero', function () {
+      var node = new ExpressionNode('/', [
+        new ExpressionNode(6),
+        new ExpressionNode('-', [5, 5])
+      ]);
+      evaluation = node.evaluate();
+      assert(evaluation.err);
+      assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
+    });
   });
 
   it("depth", function () {
@@ -826,4 +845,15 @@ describe("ExpressionNode", function () {
     });
   });
 
+  describe('isDivZero', function () {
+    it('returns false when not a div zero', function () {
+      var node = new ExpressionNode('/', [3,3]);
+      assert(node.isDivZero() === false);
+    });
+
+    it('returns true when node is a div zero', function () {
+      var node = new ExpressionNode('/', [3, 0]);
+      assert(node.isDivZero() === true);
+    });
+  });
 });

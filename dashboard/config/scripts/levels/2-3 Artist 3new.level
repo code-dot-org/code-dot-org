@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. The height of the black hat is 30 pixels.",
+    "instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.",
     "x": "175",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,13 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
   }
 }]]></config>
   <blocks>

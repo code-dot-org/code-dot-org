@@ -15,9 +15,8 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'regular')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script::FLAPPY_ID)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @flappy_user_1 = create(:follower, section: @word_section).student_user
-
   end
 
   test "do not show login screen for invalid section code" do
@@ -54,8 +53,10 @@ class SectionsControllerTest < ActionController::TestCase
 
   test "valid log_in wih picture" do
     new_setup
-    
-    post :log_in, id: @picture_section.code, user_id: @picture_user_1.id, secret_picture_id: @picture_user_1.secret_picture_id
+
+    assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
+      post :log_in, id: @picture_section.code, user_id: @picture_user_1.id, secret_picture_id: @picture_user_1.secret_picture_id
+    end
 
     assert_redirected_to '/'
   end
@@ -63,7 +64,9 @@ class SectionsControllerTest < ActionController::TestCase
   test "invalid log_in wih picture" do
     new_setup
 
-    post :log_in, id: @picture_section.code, user_id: @picture_user_1.id, secret_picture_id: @picture_user_1.secret_picture_id + 1
+    assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, id: @picture_section.code, user_id: @picture_user_1.id, secret_picture_id: @picture_user_1.secret_picture_id + 1
+    end
 
     assert_redirected_to section_path(id: @picture_section.code)
   end
@@ -71,7 +74,9 @@ class SectionsControllerTest < ActionController::TestCase
   test "valid log_in wih word" do
     new_setup
 
-    post :log_in, id: @word_section.code, user_id: @word_user_1.id, secret_words: @word_user_1.secret_words
+    assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
+      post :log_in, id: @word_section.code, user_id: @word_user_1.id, secret_words: @word_user_1.secret_words
+    end
 
     assert_redirected_to '/'
   end
@@ -79,7 +84,9 @@ class SectionsControllerTest < ActionController::TestCase
   test "invalid log_in wih word" do
     new_setup
 
-    post :log_in, id: @word_section.code, user_id: @word_user_1.id, secret_words: "not correct"
+    assert_no_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, id: @word_section.code, user_id: @word_user_1.id, secret_words: "not correct"
+    end
 
     assert_redirected_to section_path(id: @word_section.code)
   end

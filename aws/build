@@ -20,9 +20,6 @@
 # NOTE: Creating the BUILD-STARTED (e.g. `ssh daemon.code.org "touch ~/production/build-started"`) is
 #   an easy way to force a rebuild without needing to make a commit.
 #
-# FUTURE: I intended to replace this polling with a handler on Jupiter (e.g.
-#   https://jupiter.code.org/github-notification) using GitHub's existing push infrastructure.
-#
 require_relative '../deployment'
 require 'cdo/rake_utils'
 require 'cdo/hip_chat'

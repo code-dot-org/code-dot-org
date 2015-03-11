@@ -1,0 +1,34 @@
+---
+layout: none
+template: none
+---
+- authentication_required!
+%h1
+  Attendance for {{workshop.name}}
+
+%table
+  %tr
+    %th
+    %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
+      {{segment.start | date:'shortDate'}}
+      %br
+      {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+
+  %tr{'ng-repeat' => 'teacher in teachers'}
+    %td{'ng-model' => 'workshop_attendance.teacher_id'}
+      {{teacher.name}}
+    %td{'ng-repeat' => 'segment in attendances.segments'}
+      %form
+        %label
+          Attended
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
+        %label
+          Absent
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
+        %label
+          Excused absence
+          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
+          %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+        %br
+        %button.btn.btn-primary
+          Save

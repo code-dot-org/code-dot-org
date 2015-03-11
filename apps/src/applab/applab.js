@@ -13,6 +13,7 @@ var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
 var dom = require('../dom');
@@ -273,6 +274,10 @@ function handleExecutionError(err, lineNumber) {
   Applab.onPuzzleComplete();
 }
 
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -284,15 +289,27 @@ Applab.onTick = function() {
   if (Applab.interpreter) {
     Applab.executeInterpreter();
   } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
-    }
+    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleComplete();
   }
 };
+
+Applab.executeNativeJS = function () {
+  if (Applab.tickCount === 1) {
+    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+  }
+};
+
+function safeStepInterpreter() {
+  try {
+    Applab.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
@@ -319,7 +336,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // step out to - and store that in stepOutToStackDepth:
         if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
           Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
             if (Applab.callExpressionSeenAtDepth[i]) {
               Applab.stepOutToStackDepth = i;
               break;
@@ -336,12 +353,10 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed with blocks, we
+  // NOTE: when running with no source visible or at max speed, we
   // call a simple function to just get the line number, otherwise we call a
   // function that also selects the code:
-  var selectCodeFunc =
-    (studioApp.hideSource ||
-     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
           codegen.getUserCodeLine :
           codegen.selectCurrentCode;
 
@@ -352,12 +367,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -410,33 +426,44 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
       Applab.stoppedAtBreakpointRow = userCodeRow;
       Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
     }
-    try {
-      Applab.interpreter.step();
+    var err = safeStepInterpreter();
+    if (!err) {
       doneUserLine = doneUserLine ||
         (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
+      var stackDepth = Applab.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
       // Truncate any history of call expressions seen deeper than our current stack position:
-      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+      for (var depth = stackDepth + 1;
+            depth <= Applab.maxValidCallExpressionDepth;
+            depth++) {
+        Applab.callExpressionSeenAtDepth[depth] = false;
+      }
+      Applab.maxValidCallExpressionDepth = stackDepth;
 
       if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+        Applab.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (Applab.paused) {
         // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+            Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
             Applab.nextStep === StepType.IN &&
-            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+            stackDepth > Applab.firstCallStackDepthThisStep) {
           reachedBreak = true;
         }
         // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -463,11 +490,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
 
         if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
           if (Applab.nextStep === StepType.OUT &&
-              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+              stackDepth > Applab.stepOutToStackDepth) {
             // trying to step out, but we didn't get out yet... continue on.
           } else if (Applab.nextStep === StepType.OVER &&
               typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+              stackDepth > Applab.firstCallStackDepthThisStep) {
             // trying to step over, and we're in deeper inside a function call... continue next onTick
           } else {
             // Our step operation is complete, reset nextStep to StepType.RUN to
@@ -476,7 +503,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+              Applab.stoppedAtBreakpointStackDepth = stackDepth;
             }
             delete Applab.stepOutToStackDepth;
             delete Applab.firstCallStackDepthThisStep;
@@ -485,8 +512,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
           }
         }
       }
-    }
-    catch(err) {
+    } else {
       handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       return;
     }
@@ -754,6 +780,7 @@ studioApp.reset = function(first) {
     delete Applab.firstCallStackDepthThisStep;
     delete Applab.stoppedAtBreakpointRow;
     delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.maxValidCallExpressionDepth = 0;
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
@@ -935,14 +962,24 @@ JSONApi.stringify = function(object) {
   return JSON.stringify(object);
 };
 
-// Commented out, but available in case we want to expose the droplet/pencilcode
-// style random (with a min, max value)
-/*
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-*/
+function populateNonMarshalledFunctions(interpreter, scope, parent) {
+  for (var i = 0; i < dropletConfig.blocks.length; i++) {
+    var block = dropletConfig.blocks[i];
+    if (block.dontMarshal) {
+      var func = parent[block.func];
+      // 4th param is false to indicate: don't marshal params
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
+      interpreter.setProperty(scope,
+                              block.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
 
 /**
  * Execute the app
@@ -997,19 +1034,24 @@ Applab.execute = function() {
                                     console: consoleApi,
                                     JSON: JSONApi });
 
+        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
+
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));

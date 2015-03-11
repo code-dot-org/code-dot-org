@@ -1,0 +1,29 @@
+name 'Pixelation - Lesson 14 - Make your own B and W Image'
+title 'title'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '2'
+instructions “Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want.  Happy pixeling!"
+data '0000 1010 0000 1010'
+
+markdown <<MARKDOWN
+# Make your own image of any size
+<img src="http://staging.code.org/images/cspunit1/BandWExample1.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample2.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample3.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample5.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample6.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample7.gif"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample8.png"  width=50 >
+<img src="http://staging.code.org/images/cspunit1/BandWExample9.png"  width=50 >
+
+**Directions:**
+
+* Encode an image of anything you like.
+* You might want to do some planning and sketching with graph paper first.
+* DO NOT simply make an abstract pattern, like a checkerboard. 
+* Depict something, perhaps your name written out, your initials, an icon or logo of some sort.
+* Get creative! The image doesn't have to be a perfect square, it can be long and skinny.
+* Optional: for fun, send your image bits to a friend using the sending bits widget.
+MARKDOWN

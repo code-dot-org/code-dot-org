@@ -538,8 +538,17 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Update Blockly's knowledge of its own location.
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  this.select();
+
+  // Calling select changes the order of some of our DOM elements. Doing so
+  // appears to cause IE to stop propogating the event. We don't want this to
+  // happen when we're clicking on an input target, and dont really want
+  // to select in that case anyways.
+  var targetClass = e.target.getAttribute && e.target.getAttribute('class');
+  if (targetClass !== 'inputClickTarget') {
+    this.select();
+  }
   this.blockSpace.blockSpaceEditor.hideChaff();
+
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu

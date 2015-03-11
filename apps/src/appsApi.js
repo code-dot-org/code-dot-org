@@ -38,6 +38,17 @@
 
 require('./utils');
 
+/**
+ * A node-style callback method, that accepts two parameters: err and result.
+ * See article on Node error conventions here:
+ * https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions
+ *
+ * @callback NodeStyleCallback
+ * @param {?Error} err - An error object, or null if no error occurred.
+ * @param {*} result - Callback result, of any type depending on the
+ *        method being invoked.
+ */
+
 /** Namespace for app storage. */
 var appsApi = module.exports;
 
@@ -45,91 +56,116 @@ var ApiRequestHelper = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
 };
 
-ApiRequestHelper.prototype.get = function (localUrl, callback, failureValue) {
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ */
+ApiRequestHelper.prototype.get = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
     dataType: 'json'
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, null);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
-ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback,
-    failureValue) {
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {Object} data
+ * @param {!NodeStyleCallback} callback
+ */
+ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data)
-  }).done(function (result /*, text*/) {
-    callback(result);
-  }).fail(function (/*request, status, error*/) {
-    callback(failureValue);
+  }).done(function (data /*, textStatus, jqXHR*/) {
+    callback(null, data);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
+/**
+ * @param {!string} localUrl - API endpoint relative to API base URL.
+ * @param {!NodeStyleCallback} callback
+ */
 ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'delete'
-  }).done(function (/*result, text*/) {
-    callback(true);
-  }).fail(function (/*request, status, error*/) {
-    callback(false);
+  }).done(function (/*data, textStatus, jqXHR*/) {
+    callback(null, null);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    callback(
+        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+        null);
   });
 };
 
 /**
- * API for master apps table on the server.
+ * API for master channel list on the server.
  * @constructor
  */
 appsApi.AppsTable = function () {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps');
+  this.requestHelper_ = new ApiRequestHelper('/v3/channels');
 };
 
 /**
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
 /**
  * @param {!string} id - unique app GUID
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.read = function (id, callback) {
-  this.requestHelper_.get('/' + id, callback, undefined);
+  this.requestHelper_.get('/' + id, callback);
 };
 
 /**
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.create = function (value, callback) {
-  this.requestHelper_.postToGet('', value, callback, undefined);
+  this.requestHelper_.postToGet('', value, callback);
 };
 
 /**
  * @param {!string} id
  * @param {!Object} value
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.update = function (id, value, callback) {
   this.requestHelper_.post('/' + id, value, callback);
@@ -137,7 +173,7 @@ appsApi.AppsTable.prototype.update = function (id, value, callback) {
 
 /**
  * @param {!string} id
- * @param {!function} callback
+ * @param {!NodeStyleCallback} callback
  */
 appsApi.AppsTable.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
@@ -156,8 +192,8 @@ appsApi.AppsTable.prototype.delete = function (id, callback) {
 appsApi.SharedTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** Shared tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/shared-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.SharedTable.inherits(appsApi.AppsTable);
 
@@ -171,8 +207,8 @@ appsApi.SharedTable.inherits(appsApi.AppsTable);
 appsApi.UserTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** User tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.UserTable.inherits(appsApi.AppsTable);
 
@@ -184,22 +220,38 @@ appsApi.UserTable.inherits(appsApi.AppsTable);
  * @constructor
  */
 appsApi.PropertyBag = function (app_publickey) {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps' + app_publickey +
-      '/shared-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-properties/' +
+      app_publickey);
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.readAll = function (callback) {
-  this.requestHelper_.get('', callback, null);
+  this.requestHelper_.get('', callback);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.read = function (key, callback) {
-  this.requestHelper_.get('/' + key, callback, undefined);
+  this.requestHelper_.get('/' + key, callback);
 };
 
+/**
+ * @param {string} key
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.set = function (key, value, callback) {
   this.requestHelper_.post('/' + key, value, callback);
 };
 
+/**
+ * @param {string} key
+ * @param {!NodeStyleCallback} callback
+ */
 appsApi.PropertyBag.prototype.delete = function (key, callback) {
   this.requestHelper_.delete('/' + key, callback);
 };
@@ -214,7 +266,7 @@ appsApi.PropertyBag.prototype.delete = function (key, callback) {
 appsApi.UserPropertyBag = function (app_publickey) {
   appsApi.PropertyBag.call(this, app_publickey);
   /** User property bags just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-properties/' +
+      app_publickey);
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);

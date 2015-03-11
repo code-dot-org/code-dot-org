@@ -7,10 +7,6 @@ class Applab < Blockly
     free_play
   )
 
-  def self.builder
-    @@applab_builder ||= Level.find_by(name: 'builder')
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
     ['applab']
@@ -78,6 +74,15 @@ class Applab < Blockly
         "getImageData": null,
         "putImageData": null,
         "clearCanvas": null,
+        "getRed": null,
+        "getGreen": null,
+        "getBlue": null,
+        "getAlpha": null,
+        "setRed": null,
+        "setGreen": null,
+        "setBlue": null,
+        "setAlpha": null,
+        "setRGBA": null,
 
         // Data
         "startWebRequest": null,

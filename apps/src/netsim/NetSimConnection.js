@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 'use strict';
@@ -19,15 +18,21 @@ var ObservableEvent = require('../ObservableEvent');
 var NetSimShard = require('./NetSimShard');
 var NetSimShardCleaner = require('./NetSimShardCleaner');
 
-var logger = new NetSimLogger(NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
- * @param {!NetSimLogWidget} sentLog - Widget to post sent messages to
- * @param {!NetSimLogWidget} receivedLog - Widget to post received messages to
+ * @param {Object} options
+ * @param {!Window} options.window - reference to browser window, passed
+ *        in instead of accessed globally to be test-friendly.
+ * @param {!NetSimLevelConfiguration} options.levelConfig
+ * @param {!NetSimLogPanel} options.sentLog - Widget to post sent messages to
+ * @param {!NetSimLogPanel} options.receivedLog - Widget to post received
+ *        messages to
+ * @param {boolean} [options.enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (sentLog, receivedLog) {
+var NetSimConnection = module.exports = function (options) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -36,16 +41,22 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
-  this.sentLog_ = sentLog;
+  this.levelConfig_ = options.levelConfig || {};
 
   /**
-   * @type {NetSimLogWidget}
+   * @type {NetSimLogPanel}
    * @private
    */
-  this.receivedLog_ = receivedLog;
+  this.sentLog_ = options.sentLog;
+
+  /**
+   * @type {NetSimLogPanel}
+   * @private
+   */
+  this.receivedLog_ = options.receivedLog;
 
   /**
    * Accessor object for select simulation shard's tables, where an shard
@@ -59,6 +70,14 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
    * @private
    */
   this.shard_ = null;
+
+  /**
+   * Whether to instantiate a shard cleaner
+   * @type {boolean}
+   * @private
+   */
+  this.enableCleanup_ = options.enableCleanup !== undefined ?
+      options.enableCleanup : true;
 
   /**
    *
@@ -94,7 +113,7 @@ var NetSimConnection = module.exports = function (sentLog, receivedLog) {
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  options.window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 
 /**
@@ -139,18 +158,27 @@ NetSimConnection.prototype.onBeforeUnload_ = function () {
 NetSimConnection.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn("Auto-closing previous connection...");
-    this.disconnectFromShard();
+    this.disconnectFromShard(this.connectToShard.bind(this, shardID, displayName));
+    return;
   }
 
   this.shard_ = new NetSimShard(shardID);
-  this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  if (this.enableCleanup_) {
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+  }
   this.createMyClientNode_(displayName);
 };
 
-/** Ends the connection to the netsim shard. */
-NetSimConnection.prototype.disconnectFromShard = function () {
+/**
+ * Ends the connection to the netsim shard.
+ * @param {NodeStyleCallback} [onComplete]
+ */
+NetSimConnection.prototype.disconnectFromShard = function (onComplete) {
+  onComplete = onComplete || function () {};
+
   if (!this.isConnectedToShard()) {
     logger.warn("Redundant disconnect call.");
+    onComplete(null, null);
     return;
   }
 
@@ -158,11 +186,17 @@ NetSimConnection.prototype.disconnectFromShard = function () {
     this.disconnectFromRouter();
   }
 
-  this.myNode.destroy(function () {
-    this.myNode.stopSimulation();
+  this.myNode.stopSimulation();
+  this.myNode.destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
     this.myNode = null;
     this.shardChange.notifyObservers(null, null);
     this.statusChanges.notifyObservers();
+    onComplete(err, result);
   }.bind(this));
 };
 
@@ -173,31 +207,21 @@ NetSimConnection.prototype.disconnectFromShard = function () {
  * @private
  */
 NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
-  NetSimLocalClientNode.create(this.shard_, function (node) {
-    if (node) {
-      this.myNode = node;
-      this.myNode.onChange.register(this.onMyNodeChange_.bind(this));
-      this.myNode.setDisplayName(displayName);
-      this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
-      this.myNode.update(function () {
-        this.shardChange.notifyObservers(this.shard_, this.myNode);
-        this.statusChanges.notifyObservers();
-      }.bind(this));
-    } else {
-      logger.error("Failed to create client node.");
+  NetSimLocalClientNode.create(this.shard_, function (err, node) {
+    if (err !== null) {
+      logger.error("Failed to create client node; " + err.message);
+      return;
     }
-  }.bind(this));
-};
 
-/**
- * Detects when local client node is unable to reconnect, and kicks user
- * out of the shard.
- * @private
- */
-NetSimConnection.prototype.onMyNodeChange_= function () {
-  if (this.myNode.getStatus() === 'Offline') {
-    this.disconnectFromShard();
-  }
+    this.myNode = node;
+    this.myNode.setDisplayName(displayName);
+    this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
+    this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
+    this.myNode.update(function (/*err, result*/) {
+      this.shardChange.notifyObservers(this.shard_, this.myNode);
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -223,8 +247,8 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
   }
 
   var self = this;
-  this.shard_.nodeTable.readAll(function (rows) {
-    if (!rows) {
+  this.shard_.nodeTable.readAll(function (err, rows) {
+    if (err !== null) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
       return;
@@ -246,10 +270,12 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
-  var self = this;
-  NetSimRouterNode.create(this.shard_, function () {
-    self.statusChanges.notifyObservers();
-  });
+  NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    router.update(function () {
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -272,15 +298,16 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   }
 
   var self = this;
-  NetSimRouterNode.get(routerID, this.shard_, function (router) {
-    if (!router) {
-      logger.warn('Failed to find router with ID ' + routerID);
+  NetSimRouterNode.get(routerID, this.shard_, function (err, router) {
+    if (err !== null) {
+      logger.warn('Failed to find router with ID ' + routerID + '; ' + err.message);
       return;
     }
 
-    self.myNode.connectToRouter(router, function (success) {
-      if (!success) {
-        logger.warn('Failed to connect to ' + router.getDisplayName());
+    self.myNode.connectToRouter(router, function (err) {
+      if (err) {
+        logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
+            err.message);
       }
       self.statusChanges.notifyObservers();
     });

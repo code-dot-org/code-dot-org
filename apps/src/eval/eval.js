@@ -183,21 +183,54 @@ function evalCode (code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      if (console && console.log) {
-        console.log(e);
-      }
+    if (isInfiniteRecursionError(e)) {
+      return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
+
+    // call window.onerror so that we get new relic collection.  prepend with
+    // UserCode so that it's clear this is in eval'ed code.
+    if (window.onerror) {
+      window.onerror("UserCode:" + e.message, document.URL, 0);
+    }
+    if (console && console.log) {
+      console.log(e);
+    }
+
+    return new CustomEvalError(CustomEvalError.Type.UserCodeException, null);
   }
+}
+
+/**
+ * Attempts to analyze whether or not err represents infinite recursion having
+ * occurred. This error differs per browser, and it's possible that we don't
+ * properly discover all cases.
+ * Note: Other languages probably have localized messages, meaning we won't
+ * catch them.
+ */
+function isInfiniteRecursionError(err) {
+  // Chrome/Safari: message ends in a period in Safari, not in Chrome
+  if (err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)) {
+    return true;
+  }
+
+  // Firefox
+  /* jshint ignore:start */
+  // Linter doesn't like our use of InternalError, even though we gate on its
+  // existence.
+  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
+      err.message === 'too much recursion') {
+    return true;
+  }
+  /* jshint ignore:end */
+
+  // IE
+  if (err instanceof Error &&
+      err.message === 'Out of stack space') {
+    return true;
+  }
+
+  return false;
 }
 
 /**
@@ -316,11 +349,11 @@ Eval.execute = function() {
       // We got an EvalImage back, compare it to our target
       Eval.result = evaluateAnswer();
       Eval.testResults = studioApp.getTestResults(Eval.result);
-    }
 
-    if (level.freePlay) {
-      Eval.result = true;
-      Eval.testResults = TestResults.FREE_PLAY;
+      if (level.freePlay) {
+        Eval.result = true;
+        Eval.testResults = TestResults.FREE_PLAY;
+      }
     }
   }
 

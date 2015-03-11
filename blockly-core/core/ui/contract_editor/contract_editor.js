@@ -325,8 +325,10 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     opt_blockCreationCallback(tempFunctionDefinitionBlock);
   }
 
-  for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-    this.createExampleBlock_(tempFunctionDefinitionBlock);
+  if (!tempFunctionDefinitionBlock.isVariable()) {
+    for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
+      this.createExampleBlock_(tempFunctionDefinitionBlock);
+    }
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
@@ -406,6 +408,22 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.initializeAddButton_();
+};
+
+/**
+ * Contract editor uses custom parameter editing area.
+ * Don't create parameter editing DOM.
+ * @override
+ */
+Blockly.ContractEditor.prototype.createParameterEditor_ = function () {
+};
+
+/**
+ * Contract editor uses custom parameter editing area.
+ * Don't attach event handlers.
+ * @override
+ */
+Blockly.ContractEditor.prototype.bindToolboxHandlers_ = function () {
 };
 
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function () {

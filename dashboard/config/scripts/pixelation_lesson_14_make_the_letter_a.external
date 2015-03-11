@@ -1,0 +1,17 @@
+name 'Pixelation - Lesson 14 - Make the Letter A'
+title 'title'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '2'
+instructions “Make a 3x5 letter 'A'.  The widget is setup with the incorrect dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then start entering pixel data.”
+data '0000 0011 0000 0001 010'
+
+markdown <<MARKDOWN
+<img align="right" src="http://staging.code.org/images/cspunit1/letterA.png" width="150" hspace="20">
+# Task 1: Make a 3x5 letter 'A'
+Start by trying to recreate the 3x5 letter “A” depicted (at right) using the pixelation widget.  
+When you click continue it will take you to the widget.
+
+You will find it setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.
+MARKDOWN

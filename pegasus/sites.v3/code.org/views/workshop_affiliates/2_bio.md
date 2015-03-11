@@ -4,11 +4,10 @@ Katie is Code.org's K-8 Program Manager and works in the main Code.org office in
 
 She has lead computer science professional development for the past 4 years. She previously worked at the Seattle-based educational nonprofit, Technically Learning. Prior to that she served in the Peace Corps as an education volunteer in a high school computer lab.
 
-**What teachers are saying…**
+**About Katie**
 
-"I loved everything about it! Thank you so much for creating such a thoughtful and engaging workshop!"
+"I loved everything about it! Thank you so much for creating such a thoughtful and engaging workshop!" - Skye H. from Portland, OR
 
-"This was one of the best PD classes I have ever attended. It was relevant to the grade level I teach. I usually have to figure out away to bring the information down to my first graders. You [Code.org] have already done that work."
+"This was one of the best PD classes I have ever attended. It was relevant to the grade level I teach. I usually have to figure out away to bring the information down to my first graders. You [Code.org] have already done that work." - Karen O. from Kent, WA
 
-"Fabulous workshop!! Eager to apply it in my classroom."
-
+"Fabulous workshop!! Eager to apply it in my classroom." - McKenzie H. from Bellingham, WA
