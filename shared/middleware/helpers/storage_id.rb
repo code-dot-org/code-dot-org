@@ -18,7 +18,7 @@ end
 def storage_decrypt(encrypted)
   decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
   decrypter.decrypt
-  decrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   plain = decrypter.update(encrypted)
   plain << decrypter.final
 end
@@ -44,7 +44,7 @@ end
 def storage_encrypt(plain)
   encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
   encrypter.encrypt
-  encrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   encrypted = encrypter.update(plain.to_s)
   encrypted << encrypter.final
 end
