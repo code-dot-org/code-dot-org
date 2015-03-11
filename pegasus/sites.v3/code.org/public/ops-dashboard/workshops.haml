@@ -24,6 +24,8 @@ template: none
       Teacher Cohort
     %th.manage-th
       Start Date
+    %th.manage-th
+      Address
     - if dashboard_user[:admin]
       %th.manage-th
         Manage
@@ -42,6 +44,9 @@ template: none
     %td
       %div{'ng-repeat' => 'segment in workshopSegments'}
         {{segment.start | date:'longDate'}}
+    %td
+      %span
+        {{workshop.location}}
     - if dashboard_user[:admin]
       %td
         %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit'} Edit
