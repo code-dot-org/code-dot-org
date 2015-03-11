@@ -47,8 +47,8 @@ end
 
 Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  x.to_i.should eq point.x
-  y.to_i.should eq point.y
+  point.x.should eq x.to_i
+  point.y.should eq y.to_i
 end
 
 Then /^block "([^"]*)" is at location "([^"]*)"$/ do |block, location_identifier|
