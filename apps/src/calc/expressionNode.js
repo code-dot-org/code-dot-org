@@ -110,78 +110,82 @@ ExpressionNode.prototype.clone = function () {
  * @returns {Number?} evaluation.result
  */
 ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
-  globalMapping = globalMapping || {};
-  localMapping = localMapping || {};
+  try {
+    globalMapping = globalMapping || {};
+    localMapping = localMapping || {};
 
-  var type = this.getType_();
+    var type = this.getType_();
 
-  if (type === ValueType.VARIABLE) {
-    var mappedVal = utils.valueOr(localMapping[this.value_],
-      globalMapping[this.value_]);
-    if (mappedVal === undefined) {
-      return { err: new Error('No mapping for variable during evaluation') };
-    }
-
-    var clone = this.clone();
-    clone.setValue(mappedVal);
-    return clone.evaluate(globalMapping);
-  }
-
-  if (type === ValueType.FUNCTION_CALL) {
-    var functionDef = utils.valueOr(localMapping[this.value_],
-      globalMapping[this.value_]);
-    if (functionDef === undefined) {
-      return { err: new Error('No mapping for function during evaluation') };
-    }
-
-    if (!functionDef.variables || !functionDef.expression) {
-      return { err: new Error('Bad mapping for: ' + this.value_) };
-    }
-    if (functionDef.variables.length !== this.children_.length) {
-      return { err: new Error('Bad mapping for: ' + this.value_) };
-    }
-
-    // We're calling a new function, so it gets a new local scope.
-    var newLocalMapping = {};
-    functionDef.variables.forEach(function (variable, index) {
-      var childVal = this.getChildValue(index);
-      newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
-    }, this);
-    return functionDef.expression.evaluate(globalMapping, newLocalMapping);
-  }
-
-  if (type === ValueType.NUMBER) {
-    return { result: this.value_ };
-  }
-
-  if (type !== ValueType.ARITHMETIC) {
-    return { err: new Error('Unexpected') };
-  }
-
-  var left = this.children_[0].evaluate(globalMapping, localMapping);
-  var right = this.children_[1].evaluate(globalMapping, localMapping);
-
-  if (left.err || right.err) {
-    return { err: left.err || right.err };
-  }
-  left = left.result;
-  right = right.result;
-
-  switch (this.value_) {
-    case '+':
-      return { result: left + right };
-    case '-':
-      return { result: left - right };
-    case '*':
-      return { result: left * right };
-    case '/':
-      if (right === 0) {
-        return { err: new DivideByZeroError() };
+    if (type === ValueType.VARIABLE) {
+      var mappedVal = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (mappedVal === undefined) {
+        throw new Error('No mapping for variable during evaluation');
       }
-      return { result: left / right };
-    default:
-      return { err: new Error('Unknown operator: ' + this.value_) };
+
+      var clone = this.clone();
+      clone.setValue(mappedVal);
+      return clone.evaluate(globalMapping);
     }
+
+    if (type === ValueType.FUNCTION_CALL) {
+      var functionDef = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (functionDef === undefined) {
+        throw new Error('No mapping for function during evaluation');
+      }
+
+      if (!functionDef.variables || !functionDef.expression) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+      if (functionDef.variables.length !== this.children_.length) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+
+      // We're calling a new function, so it gets a new local scope.
+      var newLocalMapping = {};
+      functionDef.variables.forEach(function (variable, index) {
+        var childVal = this.getChildValue(index);
+        newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
+      }, this);
+      return functionDef.expression.evaluate(globalMapping, newLocalMapping);
+    }
+
+    if (type === ValueType.NUMBER) {
+      return { result: this.value_ };
+    }
+
+    if (type !== ValueType.ARITHMETIC) {
+      throw new Error('Unexpected');
+    }
+
+    var left = this.children_[0].evaluate(globalMapping, localMapping);
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+
+    if (left.err || right.err) {
+      return { err: left.err || right.err };
+    }
+    left = left.result;
+    right = right.result;
+
+    switch (this.value_) {
+      case '+':
+        return { result: left + right };
+      case '-':
+        return { result: left - right };
+      case '*':
+        return { result: left * right };
+      case '/':
+        if (right === 0) {
+          throw new DivideByZeroError();
+        }
+        return { result: left / right };
+      default:
+        throw new Error('Unknown operator: ' + this.value_);
+    }
+  } catch (err) {
+    return { err: err };
+  }
 };
 
 /**

@@ -330,7 +330,7 @@ describe("ExpressionNode", function () {
       assert.equal(evaluation.result, 6);
     });
 
-    it('throws? on recursion', function () {
+    it('generates error on infinite recursion', function () {
       // f(x) = f(x) + 1
       var mapping = {
         f: {
@@ -343,15 +343,13 @@ describe("ExpressionNode", function () {
       };
 
       node = new ExpressionNode('f', [1]);
-      // TODO - a case where we throw instead of providing an err
-      assert.throws(function () {
-        evaluation = node.evaluate(mapping);
-        // pivotal # 87579626
-        // what it throws is Maximum callstack exceeded. i wonder if i
-        // can/should get it to fail earlier
-        // maybe when evaluating, remove self from mapping?
-        node.evaluate(mapping);
-      });
+      evaluation = node.evaluate(mapping);
+
+      // pivotal # 87579626
+      // what it throws is Maximum callstack exceeded. i wonder if i
+      // can/should get it to fail earlier
+      // maybe when evaluating, remove self from mapping?
+      assert(evaluation.err);
     });
 
     it('cant evaluate an expression that becomes a div zero', function () {
@@ -363,7 +361,6 @@ describe("ExpressionNode", function () {
       assert(evaluation.err);
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
     });
-
   });
 
   it("depth", function () {
