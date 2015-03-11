@@ -29,8 +29,29 @@ $wide_column_width: 100px;
   clear: both;
 }
 
-#visualization {
-  background-color: #fff;
+svg {
+  background-color: #000;
+  border: solid black thin;
+  border-radius: 25px;
+
+  .viz-node {
+    circle {
+      stroke: white;
+      stroke-width: 2;
+      fill: lightblue;
+    }
+  }
+  
+  .router-node {
+    circle {
+      fill: yellow;
+    }
+  }
+  
+  .viz-wire {
+    stroke: white;
+    stroke-width: 2;
+  }
 }
 
 /* Sprited icons. */
@@ -464,6 +485,24 @@ $wide_column_width: 100px;
       /* But extra margin around paragraphs of text (instructions) */
       p {
         margin: 0 1em 10px 1em;
+      }
+    }
+
+    .netsim_my_device_tab {
+      .netsim_encoding_selector {
+        div.hiddenControl {
+          display: none;
+        }
+
+        input[type="checkbox"] {
+          vertical-align: baseline;
+          margin: 0;
+        }
+
+        label {
+          display: inline;
+          margin-left: 0.25em;
+        }
       }
     }
 

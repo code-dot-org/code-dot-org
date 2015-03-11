@@ -1,5 +1,5 @@
 <%
-
+var netsimMsg = require('../../locale/current/netsim');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
@@ -12,13 +12,13 @@ var binaryToAscii = dataConverters.binaryToAscii;
 
 function getEncodingLabel(rowClass) {
   if (rowClass === 'ascii') {
-    return 'ASCII';
+    return netsimMsg.ascii();
   } else if (rowClass === 'decimal') {
-    return 'Decimal';
+    return netsimMsg.decimal();
   } else if (rowClass === 'hexadecimal') {
-    return 'Hex';
+    return netsimMsg.hex();
   } else if (rowClass === 'binary') {
-    return 'Binary';
+    return netsimMsg.binary();
   }
   return '';
 }
@@ -40,10 +40,10 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
   <thead>
     <tr>
       <th nowrap class="encodingLabel"></th>
-      <th nowrap class="toAddress">To</th>
-      <th nowrap class="fromAddress">From</th>
-      <th nowrap class="packetInfo">Packet</th>
-      <th nowrap class="message">Message</th>
+      <th nowrap class="toAddress"><%= netsimMsg.to() %></th>
+      <th nowrap class="fromAddress"><%= netsimMsg.from() %></th>
+      <th nowrap class="packetInfo"><%= netsimMsg.packet() %></th>
+      <th nowrap class="message"><%= netsimMsg.message() %></th>
     </tr>
   </thead>
   <tbody>
@@ -57,19 +57,28 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
     logRow('ascii',
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
         binaryToAscii(message, chunkSize));
 
     logRow('decimal',
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
         alignDecimal(binaryToDecimal(message, chunkSize)));
 
     logRow('hexadecimal',
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
-        binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToHex(packetIndex),
+          y: binaryToHex(packetCount)
+        }),
         formatHex(binaryToHex(message), chunkSize));
 
     logRow('binary',

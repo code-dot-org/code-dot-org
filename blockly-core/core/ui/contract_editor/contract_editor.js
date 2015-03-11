@@ -410,6 +410,22 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.initializeAddButton_();
 };
 
+/**
+ * Contract editor uses custom parameter editing area.
+ * Don't create parameter editing DOM.
+ * @override
+ */
+Blockly.ContractEditor.prototype.createParameterEditor_ = function () {
+};
+
+/**
+ * Contract editor uses custom parameter editing area.
+ * Don't attach event handlers.
+ * @override
+ */
+Blockly.ContractEditor.prototype.bindToolboxHandlers_ = function () {
+};
+
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function () {
   return (this.isShowingHeaders_() ? HEADER_HEIGHT : 0);
 };

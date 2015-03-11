@@ -1,5 +1,6 @@
 title 'Computer Science in Algebra'
 description "Learn Functional Programming through Algebra"
+hidden 'false'
 
 stage 'Unplugged: Video Games and Coordinate Planes'
 level 'VideoGamesCoordinatePlanes'
@@ -129,6 +130,7 @@ level 'Play Lab Rocket 5'
 level 'Play Lab Rocket 6'
 level 'Play Lab Rocket 7'
 level 'Play Lab Rocket 8'
+level 'Play Lab Rocket Free Play'
 
 stage 'Eval: Functions'
 level 'Eval Design Recipe .1'
@@ -143,6 +145,7 @@ level 'Calc Design Recipe 1'
 level 'Calc Design Recipe 2'
 level 'Calc Design Recipe 3'
 level 'Calc Design Recipe 4'
+level 'Eval Design Recipe Free Play'
 
 stage 'Play Lab: Animation (Big Game)'
 level 'Big Game Animation 1'
@@ -164,6 +167,7 @@ level 'Blocks to Bools 1'
 level 'Blocks to Bools 2'
 level 'Blocks to Bools 3'
 level 'Blocks to Bools 4'
+level 'Eval Booleans Free Play'
 
 stage 'Play Lab: Booleans'
 level 'Sam the Butterfly 1'

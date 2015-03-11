@@ -180,13 +180,13 @@ class LevelsControllerTest < ActionController::TestCase
     begin
       post :create, :level => { :name => level_name, :type => 'Artist' }, :game_id => Game.find_by_name("Custom").id, :program => @program
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = LevelLoader.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, id: level
       assert_equal false, file_path && File.exist?(file_path)
     ensure
       ENV['FORCE_CUSTOM_LEVELS'] = old_env
-      file_path = Level.level_file_path(level_name)
+      file_path = LevelLoader.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -509,5 +509,37 @@ class LevelsControllerTest < ActionController::TestCase
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
+  end
+
+  test 'artist project level has sharing meta tags' do
+    get :show, key: 'New Artist Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/artist',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 500,
+                            image_height: 261)
+  end
+
+  test 'applab project level has sharing meta tags' do
+    get :show, key: 'New App Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/applab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
+  end
+
+  test 'playlab project level has sharing meta tags' do
+    get :show, key: 'New Play Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/playlab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
   end
 end

@@ -18,7 +18,7 @@ class AppsApi < Sinatra::Base
   end
 
   if rack_env?(:staging) || rack_env?(:development)
-    get '/v3/apps/debug' do
+    get '/v3/channels/debug' do
       dont_cache
       content_type :json
       JSON.pretty_generate({
@@ -29,67 +29,67 @@ class AppsApi < Sinatra::Base
   
   #
   #
-  # APPS
+  # CHANNELS
   #
   #
   
   #
-  # GET /v3/apps
+  # GET /v3/channels
   #
-  # Returns all of the apps registered to the current user
+  # Returns all of the channels registered to the current user
   #
-  get '/v3/apps' do
+  get '/v3/channels' do
     dont_cache
     content_type :json
     StorageApps.new(storage_id('user')).to_a.to_json
   end
 
   #
-  # POST /v3/apps
+  # POST /v3/channels
   #
-  # Create an app.
+  # Create a channel.
   #
-  post '/v3/apps' do
+  post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     timestamp = Time.now
     id = StorageApps.new(storage_id('user')).create(JSON.load(request.body.read).merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
-    redirect "/v3/apps/#{id}", 301
+    redirect "/v3/channels/#{id}", 301
   end
   
   #
-  # GET /v3/apps/<app-id>
+  # GET /v3/channels/<channel-id>
   #
-  # Returns an app by id.
+  # Returns a channel by id.
   #
-  get %r{/v3/apps/([^/]+)$} do |id|
+  get %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     content_type :json
     StorageApps.new(storage_id('user')).get(id).to_json
   end
 
   #
-  # DELETE /v3/apps/<app-id>
+  # DELETE /v3/channels/<channel-id>
   #
-  # Deletes an app by id.
+  # Deletes a channel by id.
   #
-  delete %r{/v3/apps/([^/]+)$} do |id|
+  delete %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     StorageApps.new(storage_id('user')).delete(id)
     no_content
   end
-  post %r{/v3/apps/([^/]+)/delete$} do |name|
+  post %r{/v3/channels/([^/]+)/delete$} do |name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
   #
-  # POST /v3/apps/<app-id>
+  # POST /v3/channels/<channel-id>
   #
-  # Update an existing app.
+  # Update an existing channel.
   #
-  post %r{/v3/apps/([^/]+)$} do |id|
+  post %r{/v3/channels/([^/]+)$} do |id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
@@ -102,10 +102,10 @@ class AppsApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/apps/([^/]+)$} do |id|
+  patch %r{/v3/channels/([^/]+)$} do |id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/apps/([^/]+)$} do |id|
+  put %r{/v3/channels/([^/]+)$} do |id|
     call(env.merge('REQUEST_METHOD'=>'PATCH'))
   end
   
@@ -116,57 +116,57 @@ class AppsApi < Sinatra::Base
   #
   
   #
-  # GET /v3/apps/<app-id>/[user-]properties
+  # GET /v3/(shared|user)-properties/<channel-id>
   #
   # Returns all of the properties in the bag
   #
-  get %r{/v3/apps/([^/]+)/(shared|user)-properties$} do |app_id, endpoint|
+  get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
     dont_cache
     content_type :json
-    PropertyBag.new(app_id, storage_id(endpoint)).to_hash.to_json
+    PropertyBag.new(channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
   #
-  # GET /v3/apps/<app-id>/[user-]properties/<property-name>
+  # GET /v3/(shared|user)-properties/<channel-id>/<property-name>
   #
   # Returns a single value by name.
   #
-  get %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
     content_type :json
-    PropertyBag.new(app_id, storage_id(endpoint)).get(name).to_json
+    PropertyBag.new(channel_id, storage_id(endpoint)).get(name).to_json
   end
   
   #
-  # DELETE /v3/apps/<app-id>/[user-]properties/<property-name>
+  # DELETE /v3/(shared|user)-properties/<channel-id>/<property-name>
   #
   # Deletes a value by name.
   #
-  delete %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
-    PropertyBag.new(app_id, storage_id(endpoint)).delete(name)
+    PropertyBag.new(channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
   
   #
-  # POST /v3/apps/<app-id>/[user-]properties/<property-name>/delete
+  # POST /v3/(shared|user)-properties/<channel-id>/<property-name>/delete
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)/delete$} do |app_id, endpoint, name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |endpoint, channel_id, name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
   #
-  # POST /v3/apps/<app-id>/[user-]properties/<property-name>
+  # POST /v3/(shared|user)-properties/<channel-id>/<property-name>
   #
   # Set a value by name.
   #
-  post %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = PropertyBag.new(app_id, storage_id(endpoint)).set(name, JSON.load(request.body.read), request.ip)
+    value = PropertyBag.new(channel_id, storage_id(endpoint)).set(name, JSON.load(request.body.read), request.ip)
 
     dont_cache
     content_type :json
@@ -179,10 +179,10 @@ class AppsApi < Sinatra::Base
   # to differentiate between create and update so we map all three verbs to "create or update"
   # behavior via the POST handler.
   #
-  patch %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/apps/([^/]+)/(shared|user)-properties/([^/]+)$} do |app_id, endpoint, name|
+  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
@@ -193,99 +193,99 @@ class AppsApi < Sinatra::Base
   #
   
   #
-  # GET /v3/apps/<app-id>/[user-]tables/<table-name>
+  # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
   # Returns all of the rows in the table.
   #
-  get %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    Table.new(app_id, storage_id(endpoint), table_name).to_a.to_json
+    Table.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
   end
   
   #
-  # GET /v3/apps/<app-id>/[user-]tables/<table-name>/<row-id>
+  # GET /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>
   #
   # Returns a single row by id.
   #
-  get %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     content_type :json
-    Table.new(app_id, storage_id(endpoint), table_name).fetch(id).to_json
+    Table.new(channel_id, storage_id(endpoint), table_name).fetch(id).to_json
   end
 
   #
-  # DELETE /v3/apps/<app-id>/[user-]tables/<table-name>/<row-id>
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>
   #
   # Deletes a row by id.
   #
-  delete %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
-    Table.new(app_id, storage_id(endpoint), table_name).delete(id)
+    Table.new(channel_id, storage_id(endpoint), table_name).delete(id)
     no_content
   end
 
   #
-  # POST /v3/apps/<app-id>/[user-]tables/<table-name>/<row-id>/delete
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>/delete
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)/delete$} do |app_id, endpoint, table_name, id|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)/delete$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
   #
-  # POST /v3/apps/<app-id>/[user-]tables/<table-name>
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
   # Insert a new row.
   #
-  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = Table.new(app_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
+    value = Table.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
 
-    redirect "/v3/apps/#{app_id}/#{endpoint}-tables/#{table_name}/#{value[:id]}", 301
+    redirect "/v3/#{endpoint}-tables/#{channel_id}/#{table_name}/#{value[:id]}", 301
   end
 
   #
-  # PATCH (PUT, POST) /v3/apps/<app-id>/[user-]tables/<table-name>/<row-id>
+  # PATCH (PUT, POST) /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>
   #
   # Update an existing row.
   #
-  post %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = Table.new(app_id, storage_id(endpoint), table_name).update(id, JSON.parse(request.body.read), request.ip)
+    value = Table.new(channel_id, storage_id(endpoint), table_name).update(id, JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
     value.to_json
   end
-  patch %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/apps/([^/]+)/(shared|user)-tables/([^/]+)/(\d+)$} do |app_id, endpoint, table_name, id|
+  put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
   #
-  # POST /v3/apps/<app-id>/import-(shared|user)-tables/<table-name>
+  # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
   #
   # Imports a csv form post into a table, erasing previous contents.
   #
-  post %r{/v3/apps/([^/]+)/import-(shared|user)-tables/([^/]+)$} do |app_id, endpoint, table_name|
+  post %r{/v3/import-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     # this check fails on Win 8.1 Chrome 40
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
 
     max_records = 5000
-    table_url = "/private/edit-csp-table/#{app_id}/#{table_name}"
+    table_url = "/private/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
-    table = Table.new(app_id, storage_id(endpoint), table_name)
+    table = Table.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
     records = []
 

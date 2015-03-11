@@ -4102,7 +4102,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-coffee',['droplet-helper', 'droplet-model', 'droplet-parser', 'coffee-script'], function(helper, model, parser, CoffeeScript) {
-    var ANY_DROP, BLOCK_FUNCTIONS, BLOCK_ONLY, CoffeeScriptParser, EITHER_FUNCTIONS, FORBID_ALL, LVALUE, MOSTLY_BLOCK, MOSTLY_VALUE, NO, OPERATOR_PRECEDENCES, PROPERTY_ACCESS, STATEMENT_KEYWORDS, VALUE_FUNCTIONS, VALUE_ONLY, YES, addEmptyBackTickLineAfter, annotateCsNodes, backTickLine, exports, findUnmatchedLine, fixCoffeeScriptError, getClassesFor, spacestring;
+    var ANY_DROP, BLOCK_ONLY, CoffeeScriptParser, FORBID_ALL, KNOWN_FUNCTIONS, LVALUE, MOSTLY_BLOCK, MOSTLY_VALUE, NO, OPERATOR_PRECEDENCES, PROPERTY_ACCESS, STATEMENT_KEYWORDS, VALUE_ONLY, YES, addEmptyBackTickLineAfter, annotateCsNodes, backTickLine, exports, findUnmatchedLine, fixCoffeeScriptError, getClassesFor, spacestring;
     exports = {};
     ANY_DROP = ['any-drop'];
     BLOCK_ONLY = ['block-only'];
@@ -4112,10 +4112,95 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     LVALUE = ['lvalue'];
     FORBID_ALL = ['forbid-all'];
     PROPERTY_ACCESS = ['prop-access'];
-    BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'move', 'movexy', 'moveto', 'jump', 'jumpxy', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert', 'prompt', 'done', 'tick', 'type', 'log'];
-    VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell', '$', 'match', 'toString', 'charCodeAt', 'fromCharCode', 'split', 'join', 'sort'];
-    EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'write', 'table', 'append', 'finish', 'loadscript', 'text', 'html'];
+    KNOWN_FUNCTIONS = {
+      'alert': {},
+      'prompt': {},
+      'console.log': {},
+      'Math.abs': {
+        value: true
+      },
+      'Math.acos': {
+        value: true
+      },
+      'Math.asin': {
+        value: true
+      },
+      'Math.atan': {
+        value: true
+      },
+      'Math.atan2': {
+        value: true
+      },
+      'Math.cos': {
+        value: true
+      },
+      'Math.sin': {
+        value: true
+      },
+      'Math.tan': {
+        value: true
+      },
+      'Math.ceil': {
+        value: true
+      },
+      'Math.floor': {
+        value: true
+      },
+      'Math.round': {
+        value: true
+      },
+      'Math.exp': {
+        value: true
+      },
+      'Math.ln': {
+        value: true
+      },
+      'Math.log10': {
+        value: true
+      },
+      'Math.pow': {
+        value: true
+      },
+      'Math.sqrt': {
+        value: true
+      },
+      'Math.max': {
+        value: true
+      },
+      'Math.min': {
+        value: true
+      },
+      'Math.random': {
+        value: true
+      }
+    };
     STATEMENT_KEYWORDS = ['break', 'continue'];
+
+    /*
+    OPERATOR_PRECEDENCES =
+      '*': 5
+      '/': 5
+      '%': 5
+      '+': 6
+      '-': 6
+      '<<': 7
+      '>>': 7
+      '>>>': 7
+      '<': 8
+      '>': 8
+      '>=': 8
+      'in': 8
+      'instanceof': 8
+      '==': 9
+      '!=': 9
+      '===': 9
+      '!==': 9
+      '&': 10
+      '^': 11
+      '|': 12
+      '&&': 13
+      '||': 14
+     */
     OPERATOR_PRECEDENCES = {
       '||': 1,
       '&&': 2,
@@ -4170,18 +4255,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       __extends(CoffeeScriptParser, _super);
 
       function CoffeeScriptParser(text, opts) {
-        var i, line, _base, _base1, _base2, _i, _len, _ref;
+        var i, line, _base, _i, _len, _ref;
         this.text = text;
         this.opts = opts != null ? opts : {};
         CoffeeScriptParser.__super__.constructor.apply(this, arguments);
-        if ((_base = this.opts).blockFunctions == null) {
-          _base.blockFunctions = BLOCK_FUNCTIONS;
-        }
-        if ((_base1 = this.opts).valueFunctions == null) {
-          _base1.valueFunctions = VALUE_FUNCTIONS;
-        }
-        if ((_base2 = this.opts).eitherFunctions == null) {
-          _base2.eitherFunctions = EITHER_FUNCTIONS;
+        if ((_base = this.opts).functions == null) {
+          _base.functions = KNOWN_FUNCTIONS;
         }
         this.lines = this.text.split('\n');
         this.hasLineBeenMarked = {};
@@ -4306,21 +4385,29 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return (node != null ? (_ref = node.value) != null ? _ref.length : void 0 : void 0) > 1 && this.emptyLocation(node.locationData);
       };
 
-      CoffeeScriptParser.prototype.nameNodesMatch = function(nn, list) {
-        var full, last, _ref;
+      CoffeeScriptParser.prototype.lookupFunctionName = function(nn) {
+        var full, last;
         if (nn.length > 1) {
           full = (nn.map(function(n) {
             return (n != null ? n.value : void 0) || '*';
           })).join('.');
-          if (__indexOf.call(list, full) >= 0) {
-            return 2;
+          if (full in this.opts.functions) {
+            return {
+              name: full,
+              dotted: true,
+              fn: this.opts.functions[full]
+            };
           }
         }
         last = nn[nn.length - 1];
-        if ((last != null) && (_ref = last.value, __indexOf.call(list, _ref) >= 0)) {
-          return 1;
+        if ((last != null) && last.value in this.opts.functions) {
+          return {
+            name: last.value,
+            dotted: false,
+            fn: this.opts.functions[last.value]
+          };
         }
-        return 0;
+        return null;
       };
 
       CoffeeScriptParser.prototype.addCode = function(node, depth, indentDepth) {
@@ -4334,7 +4421,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.mark = function(node, depth, precedence, wrappingParen, indentDepth) {
-        var arg, bounds, childName, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, last, line, lines, namenodes, object, parts, property, secondBounds, shouldBeOneLine, switchCase, textLine, trueIndentDepth, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results2, _results3, _results4, _s;
+        var arg, bounds, childName, classes, color, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, known, last, line, lines, namenodes, object, property, secondBounds, shouldBeOneLine, switchCase, textLine, trueIndentDepth, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results2, _results3, _results4, _s;
         switch (node.nodeType()) {
           case 'Block':
             if (node.expressions.length === 0) {
@@ -4464,23 +4551,25 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           case 'Call':
             if (node.variable != null) {
               namenodes = this.functionNameNodes(node);
-              parts = this.nameNodesMatch(namenodes, this.opts.blockFunctions);
-              if (parts > 0) {
-                this.csBlock(node, depth, 0, 'command', wrappingParen, MOSTLY_BLOCK);
-              } else {
-                parts = this.nameNodesMatch(namenodes, this.opts.valueFunctions);
-                if (parts > 0) {
-                  this.csBlock(node, depth, 0, 'value', wrappingParen, MOSTLY_VALUE);
+              known = this.lookupFunctionName(namenodes);
+              if (known) {
+                if (known.fn.value) {
+                  color = known.fn.color || (known.fn.command ? 'command' : 'value');
+                  classes = known.fn.command ? ANY_DROP : MOSTLY_VALUE;
                 } else {
-                  parts = this.nameNodesMatch(namenodes, this.opts.eitherFunctions);
-                  this.csBlock(node, depth, 0, 'command', wrappingParen, ANY_DROP);
+                  color = known.fn.color || 'command';
+                  classes = MOSTLY_BLOCK;
                 }
+              } else {
+                color = 'command';
+                classes = ANY_DROP;
               }
+              this.csBlock(node, depth, 0, color, wrappingParen, classes);
               if (this.implicitName(namenodes)) {
 
-              } else if (parts === 0) {
+              } else if (!known) {
                 this.csSocketAndMark(node.variable, depth + 1, 0, indentDepth);
-              } else if (parts === 1 && ((_ref9 = node.variable.properties) != null ? _ref9.length : void 0) > 0) {
+              } else if (!known.dotted && ((_ref9 = node.variable.properties) != null ? _ref9.length : void 0) > 0) {
                 this.csSocketAndMark(node.variable.base, depth + 1, 0, indentDepth);
               }
             } else {
@@ -7503,13 +7592,72 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-javascript',['droplet-helper', 'droplet-model', 'droplet-parser', 'acorn'], function(helper, model, parser, acorn) {
-    var BLOCK_FUNCTIONS, CLASS_EXCEPTIONS, COLORS, DEFAULT_INDENT_DEPTH, EITHER_FUNCTIONS, JavaScriptParser, NEVER_PAREN, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, VALUE_FUNCTIONS, exports;
+    var CLASS_EXCEPTIONS, COLORS, DEFAULT_INDENT_DEPTH, JavaScriptParser, KNOWN_FUNCTIONS, NEVER_PAREN, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, exports;
     exports = {};
     STATEMENT_NODE_TYPES = ['ExpressionStatement', 'ReturnStatement', 'BreakStatement', 'ThrowStatement'];
     NEVER_PAREN = 100;
-    BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-    VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-    EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+    KNOWN_FUNCTIONS = {
+      'alert': {},
+      'prompt': {},
+      'console.log': {},
+      'Math.abs': {
+        value: true
+      },
+      'Math.acos': {
+        value: true
+      },
+      'Math.asin': {
+        value: true
+      },
+      'Math.atan': {
+        value: true
+      },
+      'Math.atan2': {
+        value: true
+      },
+      'Math.cos': {
+        value: true
+      },
+      'Math.sin': {
+        value: true
+      },
+      'Math.tan': {
+        value: true
+      },
+      'Math.ceil': {
+        value: true
+      },
+      'Math.floor': {
+        value: true
+      },
+      'Math.round': {
+        value: true
+      },
+      'Math.exp': {
+        value: true
+      },
+      'Math.ln': {
+        value: true
+      },
+      'Math.log10': {
+        value: true
+      },
+      'Math.pow': {
+        value: true
+      },
+      'Math.sqrt': {
+        value: true
+      },
+      'Math.max': {
+        value: true
+      },
+      'Math.min': {
+        value: true
+      },
+      'Math.random': {
+        value: true
+      }
+    };
     COLORS = {
       'BinaryExpression': 'value',
       'UnaryExpression': 'value',
@@ -7575,20 +7723,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       __extends(JavaScriptParser, _super);
 
       function JavaScriptParser(text, opts) {
-        var _base, _base1, _base2;
+        var _base;
         this.text = text;
         this.opts = opts != null ? opts : {};
         JavaScriptParser.__super__.constructor.apply(this, arguments);
-        if ((_base = this.opts).blockFunctions == null) {
-          _base.blockFunctions = BLOCK_FUNCTIONS;
+        if ((_base = this.opts).functions == null) {
+          _base.functions = KNOWN_FUNCTIONS;
         }
-        if ((_base1 = this.opts).valueFunctions == null) {
-          _base1.valueFunctions = VALUE_FUNCTIONS;
-        }
-        if ((_base2 = this.opts).eitherFunctions == null) {
-          _base2.eitherFunctions = EITHER_FUNCTIONS;
-        }
-        this.functionWhitelist = this.opts.blockFunctions.concat(this.opts.eitherFunctions).concat(this.opts.valueFunctions);
         this.lines = this.text.split('\n');
       }
 
@@ -7596,7 +7737,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         var tree;
         tree = acorn.parse(this.text, {
           locations: true,
-          line: 0
+          line: 0,
+          allowReturnOutsideFunction: true
         });
         return this.mark(0, tree, 0, null);
       };
@@ -7620,10 +7762,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return props;
       };
 
-      JavaScriptParser.prototype.functionMatchesList = function(node, list) {
-        var fname, _ref, _ref1;
+      JavaScriptParser.prototype.lookupFunctionName = function(node) {
+        var fname, full, last;
         fname = this.fullFunctionNameArray(node);
-        return (_ref = fname[fname.length - 1], __indexOf.call(list, _ref) >= 0) || (fname.length > 1 && (_ref1 = fname.join('.'), __indexOf.call(list, _ref1) >= 0));
+        if (fname.length > 1) {
+          full = fname.join('.');
+          if (full in this.opts.functions) {
+            return {
+              name: full,
+              dotted: true,
+              fn: this.opts.functions[full]
+            };
+          }
+        }
+        last = fname[fname.length - 1];
+        if (last in this.opts.functions) {
+          return {
+            name: last,
+            dotted: false,
+            fn: this.opts.functions[last]
+          };
+        }
+        return null;
       };
 
       JavaScriptParser.prototype.getAcceptsRule = function(node) {
@@ -7633,16 +7793,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.getClasses = function(node) {
+        var known;
         if (node.type in CLASS_EXCEPTIONS) {
           return CLASS_EXCEPTIONS[node.type].concat([node.type]);
         } else {
           if (node.type === 'CallExpression') {
-            if (this.functionMatchesList(node, this.opts.blockFunctions)) {
-              return [node.type, 'mostly-block'];
-            } else if (this.functionMatchesList(node, this.opts.valueFunctions)) {
+            known = this.lookupFunctionName(node);
+            if (!known || (known.fn.value && known.fn.command)) {
+              return [node.type, 'any-drop'];
+            }
+            if (known.fn.value) {
               return [node.type, 'mostly-value'];
             } else {
-              return [node.type, 'any-drop'];
+              return [node.type, 'mostly-block'];
             }
           }
           if (node.type.match(/Expression$/) != null) {
@@ -7682,16 +7845,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.getColor = function(node) {
+        var known;
         switch (node.type) {
           case 'ExpressionStatement':
             return this.getColor(node.expression);
           case 'CallExpression':
-            if (this.functionMatchesList(node, this.opts.blockFunctions)) {
-              return 'command';
-            } else if (this.functionMatchesList(node, this.opts.valueFunctions)) {
+            known = this.lookupFunctionName(node);
+            if (!known) {
+              return 'violet';
+            } else if (known.fn.color) {
+              return known.fn.color;
+            } else if (known.fn.value && !known.fn.command) {
               return 'value';
             } else {
-              return 'violet';
+              return 'command';
             }
             break;
           default:
@@ -7782,7 +7949,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-        var argument, block, declaration, element, expression, param, prefix, property, statement, switchCase, _i, _j, _k, _l, _len, _len1, _len10, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results10, _results2, _results3, _results4, _results5, _results6, _results7, _results8, _results9, _s;
+        var argument, block, declaration, element, expression, known, param, prefix, property, statement, switchCase, _i, _j, _k, _l, _len, _len1, _len10, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results10, _results2, _results3, _results4, _results5, _results6, _results7, _results8, _results9, _s;
         switch (node.type) {
           case 'Program':
             _ref = node.body;
@@ -7916,7 +8083,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           case 'CallExpression':
           case 'NewExpression':
             this.jsBlock(node, depth, bounds);
-            if (!this.functionMatchesList(node, this.functionWhitelist)) {
+            known = this.lookupFunctionName(node);
+            if (!known) {
               this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
             }
             _ref5 = node["arguments"];
