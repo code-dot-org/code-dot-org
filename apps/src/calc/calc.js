@@ -698,7 +698,7 @@ function displayComplexUserExpressions() {
   }
 
   // Now display our compute equation and the result of evaluating it
-  var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet && appState.targetSet.computeEquation();
 
   // We're either a variable or a function call. Generate a tokenList (since
   // we could actually be different than the goal)
