@@ -2,6 +2,8 @@
 layout: none
 template: none
 ---
+- authentication_required!
+
 %a{href:'/ops-dashboard'}
   Dashboard
 >
@@ -9,29 +11,6 @@ template: none
   Districts
 
 %h1 Districts
-
--#%button.btn-white{'ng-click' => 'district.creation = true'}
--#  New District
-
-:scss
-  .districts input.ng-invalid.ng-dirty {
-    background-color: #EDD;
-  }
-
-  .districts td > span {
-    position: relative;
-  }
-
-  input.ng-invalid + span.error, 
-  select.ng-invalid + span.error {
-    display: inline;
-    position: absolute;
-    top: 20px;
-    left: 0px;
-    font-size: 0.6em;
-    font-weight: bold;
-    color: #900;
-  }
 
 %table.districts{style:'width:100%; margin-top:20px;'}
   %tr
@@ -49,7 +28,7 @@ template: none
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.name}}
-      %span{'ng-show' => 'district.editing'}  
+      %span{'ng-show' => 'district.editing'}
         %input{'ng-model' => 'district.name', type: 'text', name: 'name', 'ng-required' => 'true'}
         %span.error{'ng-show' => 'form.name.$error.required'} Name is required
     %td
@@ -61,7 +40,7 @@ template: none
       %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type: 'text', placeholder: 'Name'}
     %td
       %span{'ng-hide' => 'district.editing'} {{district.contact.email}}
-      %span{'ng-show' => 'district.editing'}  
+      %span{'ng-show' => 'district.editing'}
         %input{'ng-model' => 'district.contact.email', type: 'email', placeholder: 'Email', name: 'email'}
         %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
 
@@ -90,4 +69,24 @@ template: none
 :css
   .btn {
     width:48%
+  }
+
+:scss
+  .districts input.ng-invalid.ng-dirty {
+    background-color: #EDD;
+  }
+
+  .districts td > span {
+    position: relative;
+  }
+
+  input.ng-invalid + span.error,
+  select.ng-invalid + span.error {
+    display: inline;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #900;
   }

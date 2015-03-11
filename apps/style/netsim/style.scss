@@ -29,8 +29,29 @@ $wide_column_width: 100px;
   clear: both;
 }
 
-#visualization {
-  background-color: #fff;
+svg {
+  background-color: #000;
+  border: solid black thin;
+  border-radius: 25px;
+
+  .viz-node {
+    circle {
+      stroke: white;
+      stroke-width: 2;
+      fill: lightblue;
+    }
+  }
+  
+  .router-node {
+    circle {
+      fill: yellow;
+    }
+  }
+  
+  .viz-wire {
+    stroke: white;
+    stroke-width: 2;
+  }
 }
 
 /* Sprited icons. */
