@@ -29,6 +29,43 @@ Scenario: Fail to drag-delete a deleteable block that has an undeletable child
   Then block "turn_right" has not been deleted
   And block "gray set_color" has not been deleted
 
+Scenario: Delete on drag off top-left
+  When I drag block "turn_right" to offset "-1000, -1000"
+  Then block "turn_right" has been deleted
+
+Scenario: Delete on drag off left
+  When I drag block "turn_right" to offset "-1000, 0"
+  Then block "turn_right" has been deleted
+
+Scenario: Delete on drag off bottom-left
+  When I drag block "turn_right" to offset "-1000, 1000"
+  Then block "turn_right" has been deleted
+
+Scenario: Bump on drag off top
+  When I drag block "turn_right" to offset "0, -1000"
+  Then block "turn_right" has not been deleted
+  And block "turn_right" is visible in the workspace
+
+Scenario: Bump on drag off top-right
+  When I drag block "turn_right" to offset "1000, -1000"
+  Then block "turn_right" has not been deleted
+  And block "turn_right" is visible in the workspace
+
+Scenario: Bump on drag off right
+  When I drag block "turn_right" to offset "1000, 0"
+  Then block "turn_right" has not been deleted
+  And block "turn_right" is visible in the workspace
+
+  Scenario: Bump on drag off bottom-right
+    When I drag block "turn_right" to offset "1000, 1000"
+    Then block "turn_right" has not been deleted
+    And block "turn_right" is visible in the workspace
+
+Scenario: Bump on drag off bottom
+  When I drag block "turn_right" to offset "0, 1000"
+  Then block "turn_right" has not been deleted
+  And block "turn_right" is visible in the workspace
+
 # The following scenarios are disabled on mobile because we don't
 # particularly care about hotkeys in a touchscreen-only context.
 @no_mobile
