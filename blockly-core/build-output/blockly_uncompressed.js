@@ -14457,7 +14457,8 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   }
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  if(e.target.getAttribute("class") !== "inputClickTarget") {
+  var targetClass = e.target.getAttribute && e.target.getAttribute("class");
+  if(targetClass !== "inputClickTarget") {
     this.select()
   }
   this.blockSpace.blockSpaceEditor.hideChaff();
@@ -21778,6 +21779,10 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.display = "block";
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.initializeAddButton_()
+};
+Blockly.ContractEditor.prototype.createParameterEditor_ = function() {
+};
+Blockly.ContractEditor.prototype.bindToolboxHandlers_ = function() {
 };
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function() {
   return this.isShowingHeaders_() ? HEADER_HEIGHT : 0
