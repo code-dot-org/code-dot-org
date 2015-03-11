@@ -1,2 +1,2 @@
-class NetSim < Level
+class NetSim < Blockly
 end
