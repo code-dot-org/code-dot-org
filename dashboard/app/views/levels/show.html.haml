@@ -1,5 +1,9 @@
 - @page_title = level_title
-= render partial: 'shared/sharing_meta_tags'
+- content_for :head do
+  - if @game.share_mobile_fullscreen?
+    = tag('meta', property: 'og:image', content: meta_image_url(app: @game.app))
+  - if @game.app == 'flappy'
+    = tag 'meta', name: 'description', content: 'Code your own Flappy game'
 
 #notes-content{style: 'display: none;'}
   %ul
