@@ -176,7 +176,10 @@ EquationSet.prototype.sortedEquations = function () {
   return this.equations_;
 };
 
-// TODO - unit test
+/**
+ * @returns {boolean} true if evaluating our EquationSet would result in
+ *   dividing by zero.
+ */
 EquationSet.prototype.hasDivZero = function () {
   var evaluation = this.evaluate();
   return evaluation.err &&

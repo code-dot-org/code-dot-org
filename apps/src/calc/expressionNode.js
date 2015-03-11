@@ -241,7 +241,6 @@ ExpressionNode.prototype.collapse = function () {
   if (this === deepest) {
     var evaluation = this.evaluate();
     if (evaluation.err) {
-      // TODO - handle div zero differently?
       return false;
     }
     this.value_ = evaluation.result;

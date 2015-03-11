@@ -364,10 +364,13 @@ function appSpecificFailureOutcome(message, failedInput) {
   };
 }
 
-// TODO - better name? comment
+/**
+ * Looks to see if given error is a divide by zero error. If it is, we fail
+ * with an app specific method. If not, we throw the error
+ */
 function divZeroOrThrowErr(err) {
   if (err instanceof ExpressionNode.DivideByZeroError) {
-    return appSpecificFailureOutcome('div zero', null); // TODO - i18n
+    return appSpecificFailureOutcome(msg.divideByZeroError(), null);
   }
   throw err;
 }
@@ -636,10 +639,14 @@ Calc.generateResults_ = function () {
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
+  // Note: This will take precedence over free play, so you can "fail" a free
+  // play level with a divide by zero error.
+  // Also worth noting, we might still end up getting a div zero later when
+  // we start varying inputs in evaluateResults_
   if (appState.userSet.hasDivZero()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.DIVIDE_BY_ZERO;
-    appState.message = 'div zero'; // TODO i18n, better string
+    appState.message = msg.divideByZeroError();
     return;
   }
 
@@ -737,9 +744,8 @@ function displayComplexUserExpressions() {
     }
     evaluation = appState.userSet.evaluateWithExpression(expression);
     if (evaluation.err) {
-      // TODO - temp hack - do i have ot set result?
       if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-        evaluation.result = 'DZ';
+        evaluation.result = ''; // result will not be used in this case
       } else {
         throw evaluation.err;
       }
