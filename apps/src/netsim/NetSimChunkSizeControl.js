@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimChunkSizeControl.html');
+var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for chunk size slider/selector
@@ -94,17 +95,22 @@ NetSimChunkSizeControl.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimChunkSizeControl.prototype.setEncoding = function (newEncoding) {
-  if (newEncoding === 'all') {
-    this.currentUnits_ = ['character', 'number'];
-  } else if (newEncoding === 'ascii') {
-    this.currentUnits_ = ['character'];
-  } else if (newEncoding === 'decimal') {
-    this.currentUnits_ = ['number'];
-  } else {
-    this.currentUnits_ = ['byte'];
+NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
+  this.currentUnits_ = [];
+
+  if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
+    this.currentUnits_.push('character'); // TODO: localize
   }
+
+  if (newEncodings.indexOf(EncodingType.DECIMAL) > -1) {
+    this.currentUnits_.push('number'); // TODO: localize
+  }
+
+  if (this.currentUnits_.length === 0){
+    this.currentUnits_.push('byte'); // TODO: localize
+  }
+
   this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
 };
