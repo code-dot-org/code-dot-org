@@ -478,7 +478,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
     var targetEvaluation = targetClone.evaluate();
     var userEvaluation = userClone.evaluate();
-    var err = targetEvaluation.err || userEvaluation.err
+    var err = targetEvaluation.err || userEvaluation.err;
     if (err) {
       return divZeroOrThrowErr(err);
     }
