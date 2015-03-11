@@ -13653,6 +13653,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   this.inputMarkers_[input.name].setAttribute("height", 5);
   this.inputMarkers_[input.name].setAttribute("fill", input.getHexColour());
   this.inputMarkers_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
+  this.inputClickTargets_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
   var connectionY = connectionsXY.y + inputTopLeft.y;
