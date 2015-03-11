@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimLogPanel.html');
 var packetMarkup = require('./NetSimLogPacket.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -68,7 +69,7 @@ NetSimLogPanel.prototype.render = function () {
   this.getBody().html(newMarkup);
 
   // Add a clear button to the panel header
-  this.addButton('Clear', this.onClearButtonPress_.bind(this));
+  this.addButton(netsimMsg.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');

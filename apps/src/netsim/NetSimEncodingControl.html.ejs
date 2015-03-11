@@ -1,5 +1,6 @@
 <%
   var EncodingType = require('./netsimConstants').EncodingType;
+  var netsimMsg = require('../../locale/current/netsim');
 
   /**
    * @param {EncodingType} encodingType
@@ -23,10 +24,10 @@
   }
 %>
 <div class="netsim_encoding_selector">
-  <h1>Encoding</h1>
-  <% makeCheckbox(EncodingType.ASCII, 'ASCII'); %>
-  <% makeCheckbox(EncodingType.DECIMAL, 'Decimal'); %>
-  <% makeCheckbox(EncodingType.HEXADECIMAL, 'Hexadecimal'); %>
-  <% makeCheckbox(EncodingType.BINARY, 'Binary'); %>
-  <% makeCheckbox(EncodingType.A_AND_B, 'A/B'); %>
+  <h1><%= netsimMsg.encoding() %></h1>
+  <% makeCheckbox(EncodingType.ASCII, netsimMsg.ascii()); %>
+  <% makeCheckbox(EncodingType.DECIMAL, netsimMsg.decimal()); %>
+  <% makeCheckbox(EncodingType.HEXADECIMAL, netsimMsg.hexadecimal()); %>
+  <% makeCheckbox(EncodingType.BINARY, netsimMsg.binary()); %>
+  <% makeCheckbox(EncodingType.A_AND_B, netsimMsg.a_and_b()); %>
 </div>
