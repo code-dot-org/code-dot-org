@@ -2,6 +2,9 @@
 layout: none
 template: none
 ---
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
 %a{href:'/ops-dashboard'}
   Dashboard
 >

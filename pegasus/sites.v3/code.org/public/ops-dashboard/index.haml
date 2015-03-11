@@ -1,13 +1,16 @@
 ---
 theme: angular
+angular: opsApp
 title: "Ops Dashboard"
 ---
 - authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
 :javascript
   'use strict';
 
@@ -27,9 +30,10 @@ title: "Ops Dashboard"
     $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
-    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -285,19 +289,26 @@ title: "Ops Dashboard"
 
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-      if ($routeParams.id) {
-        $scope.cohort = cohortsService.get({id: $routeParams.id});
-      } else {
-        $scope.cohort = {};
-      }
 
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',
+          max_teachers: ''
         });
       };
 
-      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+        $scope.cohort.$promise.then(function(cohort){
+          cohort.program_type_disabled = cohort.program_type ? true : false;
+          if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+            $scope.cohort.districts = [];
+            $scope.newDistrict();
+          }
+        });
+      } else {
+        $scope.cohort = {};
         $scope.cohort.districts = [];
         $scope.newDistrict();
       }
@@ -306,23 +317,59 @@ title: "Ops Dashboard"
       $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
+        cohort.district_ids = [];
+        for (var i = 0; i < cohort.districts.length; i++) {
+          if (cohort.districts[i].id) {
+            cohort.district_ids.push(cohort.districts[i].id);
+          }
+        }
+        delete cohort.districts;
+
         if (cohort.id) { // existing
           cohort =
-            cohortsService.update({id: cohort.id}, cohort, function() {
-              $location.path("/cohorts");
+            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
+              $location.path("/teacher-cohorts");
             });
         } else { // new
           cohort =
-            cohortsService.save(cohort, function() {
-              $location.path("/cohorts");
+            cohortsService.save({cohort: cohort}, function() {
+              $location.path("/teacher-cohorts");
             });
         }
       };
 
       $scope.cancel_edit = function() {
-        $location.path("/cohorts");
+        $location.path("/teacher-cohorts");
       };
     }
+  ]);
+
+  controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
+
+    $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+    $scope.cohort.$promise.then(function(cohort) {
+    });
+
+    $scope.parsed  = [];
+    // This depends on HTML5 File object so does not work in IE9. This
+    // particular feature is only used by the ops team who all use Chrome.
+    $scope.onFileSelect = function(input) {
+      var files = input.files; // FileList object
+
+      // files is a FileList of File objects. List some properties.
+      if (files && files.length > 0) {
+        Papa.parse(files[0], {
+          header: true,
+          complete: function(results) {
+            $scope.cohort.teachers = results.data;
+            $scope.$apply();
+          }
+        });
+      }
+    }
+  }
   ]);
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
