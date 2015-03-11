@@ -1,7 +1,7 @@
 function storageApps()
 {
   var object = {
-    api_base_url: "/v3/apps",
+    api_base_url: "/v3/channels",
 
     all: function(callback) {
       $.ajax({

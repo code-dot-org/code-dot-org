@@ -94,6 +94,9 @@
           <title name="SPRITE">0</title>
           <title name="VALUE">Hi there!</title>
         </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

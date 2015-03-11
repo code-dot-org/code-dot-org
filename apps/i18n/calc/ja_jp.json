@@ -9,5 +9,8 @@
   "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "あなたの計算結果です！このパズルを続けるか、次のパズルに進んでください！",
   "yourExpression": "あなたの式:",
-  "wrongInput": "You are calling your function with the wrong value."
+  "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

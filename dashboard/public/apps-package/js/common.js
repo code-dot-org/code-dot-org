@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({85:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({86:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],167:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3516,7 +3516,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":219,"./utils":214}],199:[function(require,module,exports){
+},{"../locale/current/common":229,"./utils":224}],209:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3576,7 +3576,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],193:[function(require,module,exports){
+},{}],203:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3600,7 +3600,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],169:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],179:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3865,7 +3865,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],168:[function(require,module,exports){
+},{"./dom":48}],178:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4016,7 +4016,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":166,"./utils":214}],166:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":20,"./dom":48,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4294,7 +4294,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":219,"./block_utils":18,"./utils":214,"./xml":215}],19:[function(require,module,exports){
+},{"../locale/current/common":229,"./block_utils":19,"./utils":224,"./xml":225}],20:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4459,7 +4459,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":219}],4:[function(require,module,exports){
+},{"../locale/current/common":229}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5576,9 +5576,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.Blockly) {
-      // TODO: (Josh L.) use $.trigger once we add jQuery
-      Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.jQuery) {
+      $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
   }, 250, true);
@@ -5729,7 +5728,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         config.forceInsertTopBlock);
   }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  try {
+    this.loadBlocks(startBlocks);
+  } catch (e) {
+    if (loadLastAttempt) {
+      Blockly.mainBlockSpace.clear();
+      // Try loading the default start blocks instead.
+      this.setStartBlocks_(config, false);
+    } else {
+      throw e;
+    }
+  }
 };
 
 /**
@@ -5760,19 +5769,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('blockly');
   var options = {
     toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        2 : config.level.defaultNumExampleBlocks,
+    disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
+    disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
+    useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
+    editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -5896,7 +5899,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":219,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":187,"./templates/buttons.html":188,"./templates/instructions.html":190,"./templates/learn.html":191,"./templates/makeYourOwn.html":192,"./utils":214,"./xml":215,"url":234}],234:[function(require,module,exports){
+},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":19,"./constants.js":47,"./dom":48,"./dropletUtils":49,"./feedback":68,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6605,13 +6608,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":230,"querystring":233}],233:[function(require,module,exports){
+},{"punycode":240,"querystring":243}],243:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":231,"./encode":232}],232:[function(require,module,exports){
+},{"./decode":241,"./encode":242}],242:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6698,7 +6701,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],231:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6784,7 +6787,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],230:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7295,7 +7298,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],192:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7315,7 +7318,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],191:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7337,7 +7340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],190:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],200:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7357,7 +7360,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],187:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],197:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7377,7 +7380,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],67:[function(require,module,exports){
+},{"ejs":245}],68:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8581,7 +8584,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":219,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":188,"./templates/code.html":189,"./templates/shareFailure.html":195,"./templates/sharing.html":196,"./templates/showCode.html":197,"./templates/trophy.html":198,"./utils":214,"./xml":215}],198:[function(require,module,exports){
+},{"../locale/current/common":229,"./codegen":45,"./constants":47,"./dom":48,"./feedbackBlocks":69,"./templates/buttons.html":198,"./templates/code.html":199,"./templates/shareFailure.html":205,"./templates/sharing.html":206,"./templates/showCode.html":207,"./templates/trophy.html":208,"./utils":224,"./xml":225}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8601,7 +8604,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],197:[function(require,module,exports){
+},{"ejs":245}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8621,7 +8624,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],196:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8641,7 +8644,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],195:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8661,7 +8664,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],189:[function(require,module,exports){
+},{"ejs":245}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8681,7 +8684,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],188:[function(require,module,exports){
+},{"ejs":245}],198:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8701,9 +8704,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":219,"ejs":235}],219:[function(require,module,exports){
+},{"../../locale/current/common":229,"ejs":245}],229:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],68:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8832,7 +8835,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":194}],194:[function(require,module,exports){
+},{"./constants":47,"./templates/readonly.html":204}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8853,7 +8856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":235}],235:[function(require,module,exports){
+},{"ejs":245}],245:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9208,7 +9211,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":236,"./utils":237,"fs":227,"path":228}],237:[function(require,module,exports){
+},{"./filters":246,"./utils":247,"fs":237,"path":238}],247:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9232,7 +9235,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],236:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9431,7 +9434,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],228:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9659,7 +9662,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":229}],229:[function(require,module,exports){
+},{"_process":239}],239:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9718,9 +9721,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],227:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -9834,10 +9837,44 @@ exports.workspaceCode = function(blockly) {
 };
 
 //
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -9862,7 +9899,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+    });
     retVal = interpreter.createNativeFunction(wrapper);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
@@ -9876,19 +9917,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);
@@ -9924,16 +9953,30 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction = function (opts) {
+  if (opts.dontMarshal) {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  } else {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+      }
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
@@ -9943,7 +9986,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -9955,7 +10002,11 @@ function populateGlobalFunctions(interpreter, scope) {
   for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
     var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: func,
+        nativeParentObj: gf.parent,
+    });
     interpreter.setProperty(scope,
                             gf.func,
                             interpreter.createNativeFunction(wrapper));
@@ -9968,9 +10019,11 @@ function populateJSFunctions(interpreter) {
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction(interpreter,
-                                                   String[functions[i]],
-                                                   String);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: String[functions[i]],
+        nativeParentObj: String,
+    });
     interpreter.setProperty(interpreter.STRING,
                             functions[i],
                             interpreter.createNativeFunction(wrapper),
@@ -10007,13 +10060,34 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
+  if (state.node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
+    // but not mode 1 (test) or mode 2 (body) while unwinding...
+    return mode === 0 || mode === 3;
+  }
   switch (state.node.type) {
+    // Declarations:
     case "VariableDeclaration":
+    // Statements:
     case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
+    // All Expressions:
+    case "ThisExpression":
+    case "ArrayExpression":
+    case "ObjectExpression":
+    case "ArrowExpression":
+    case "SequenceExpression":
+    case "UnaryExpression":
     case "BinaryExpression":
+    case "UpdateExpression":
+    case "LogicalExpression":
+    case "ConditionalExpression":
+    case "NewExpression":
     case "CallExpression":
+    case "MemberExpression":
+    case "FunctionExpression":
+    case "AssignmentExpression":
+    // Other:
     case "Identifier":
     case "Literal":
     case "Program":
@@ -10154,7 +10228,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":48}],48:[function(require,module,exports){
+},{"./dropletUtils":49}],49:[function(require,module,exports){
 var utils = require('./utils');
 
 exports.randomNumber = function (min, max) {
@@ -10217,7 +10291,7 @@ standardConfig.blocks = [
   {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
@@ -10387,17 +10461,26 @@ exports.generateAceApiCompleter = function (dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    if (configBlocks[i].type === 'value') {
-      modeOptions.valueFunctions.push(configBlocks[i].func);
+function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+  var mergedCategories = mergeCategoriesWithConfig(config);
+
+  for (var i = 0; i < config.blocks.length; i++) {
+    var newFunc = {};
+
+    if (config.blocks[i].type === 'value') {
+      newFunc.value = true;
     }
-    else if (configBlocks[i].type === 'either') {
-      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    else if (config.blocks[i].type === 'either') {
+      newFunc.value = true;
+      newFunc.command = true;
     }
-    else if (configBlocks[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(configBlocks[i].func);
+
+    var category = mergedCategories[config.blocks[i].category];
+    if (category) {
+      newFunc.color = category.rgb || category.color;
     }
+
+    modeOptions.functions[config.blocks[i].func] = newFunc;
   }
 }
 
@@ -10406,29 +10489,18 @@ function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
  */
 exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: [],
-    eitherFunctions: [],
+    functions: []
   };
 
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
 
   return modeOptions;
 };
 
 
-},{"./utils":214}],214:[function(require,module,exports){
+},{"./utils":224}],224:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10642,13 +10714,13 @@ if (!String.prototype.repeat) {
 /**
  * Similar to val || defaultVal, except it's gated on whether or not val is
  * undefined instead of whether val is falsey.
- * @returns val if not undefined, otherwise defaultVal
+ * @returns {*} val if not undefined, otherwise defaultVal
  */
-exports.undefOr = function (val, defaultVal) {
+exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":78,"./lodash":86,"./xml":215}],86:[function(require,module,exports){
+},{"./hammer":79,"./lodash":87,"./xml":225}],87:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14017,7 +14089,7 @@ exports.undefOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],78:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16181,7 +16253,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16288,7 +16360,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16366,7 +16438,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16616,7 +16688,55 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":215}],215:[function(require,module,exports){
+/**
+ * Generate xml for a functional defintion
+ * @param {string} name The name of the function
+ * @param {string} outputType Function's output type
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ * @param {string} blockXml Xml for the blocks that actually define the function
+ */
+exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
+  var mutation = '<mutation>';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
+
+  return '<block type="functional_definition" inline="false">'+
+      mutation +
+      '<title name="NAME">' + name + '</title>' +
+     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
+    '</block>';
+};
+
+/**
+ * Generate xml for a calling a functional function
+ * @param {string} name The name of the function
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ */
+exports.functionalCallXml = function (name, argList, inputContents) {
+  if (argList.length !== inputContents.length) {
+    throw new Error('must define contents for each arg');
+  }
+
+  var mutation = '<mutation name="' + name + '">';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '</mutation>';
+
+  var contents = '';
+  inputContents.forEach(function (blockXml, index) {
+    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
+  });
+
+  return '<block type="functional_call">' +
+      mutation +
+      contents +
+    '</block>';
+};
+
+},{"./xml":225}],225:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

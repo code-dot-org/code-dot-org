@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "touches top edge"},
 "whenUp":function(d){return "כאשר חץ למעלה"},
 "whenUpTooltip":function(d){return "בצע את הפעולות להלן כאשר נלחץ המקש חץ למעלה."},
-"yes":function(d){return "כן"}};
+"yes":function(d){return "כן"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

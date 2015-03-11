@@ -19,7 +19,7 @@
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('projectsService', ['$resource',
     function($resource) {
-      var Project = $resource('/v3/apps/:id', {}, {
+      var Project = $resource('/v3/channels/:id', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method: 'GET'},
         //  'save':   {method: 'POST'},

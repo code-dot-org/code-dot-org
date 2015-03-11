@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "ακουμπά την επάνω άκρη"},
 "whenUp":function(d){return "όταν πατηθεί το επάνω βέλος"},
 "whenUpTooltip":function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος."},
-"yes":function(d){return "Ναι"}};
+"yes":function(d){return "Ναι"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

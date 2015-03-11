@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "dotýka sa horného okraja"},
 "whenUp":function(d){return "keď šípka nahor"},
 "whenUpTooltip":function(d){return "Vykonať akcie nižšie pri stlačení šípky hore."},
-"yes":function(d){return "Áno"}};
+"yes":function(d){return "Áno"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

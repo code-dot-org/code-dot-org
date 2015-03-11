@@ -6,8 +6,8 @@ class Table
   class NotFound < Sinatra::NotFound
   end
 
-  def initialize(app_id, storage_id, table_name)
-    app_owner, @app_id = storage_decrypt_app_id(app_id) # TODO(if/when needed): Ensure this is a registered app?
+  def initialize(channel_id, storage_id, table_name)
+    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
     @table_name = table_name
   
@@ -15,13 +15,17 @@ class Table
   end
   
   def items()
-    @items ||= @table.where(app_id:@app_id, storage_id:@storage_id, table_name:@table_name)
+    @items ||= @table.where(app_id:@channel_id, storage_id:@storage_id, table_name:@table_name)
   end
   
   def delete(id)
     delete_count = items.where(row_id:id).delete
     raise NotFound, "row `#{id}` not found `#{@table_name}` table" unless delete_count > 0
     true
+  end
+
+  def delete_all()
+    items.delete
   end
 
   def fetch(id)
@@ -32,7 +36,7 @@ class Table
   
   def insert(value, ip_address)
     row = {
-      app_id:@app_id,
+      app_id:@channel_id,
       storage_id:@storage_id,
       table_name:@table_name,
       value:value.to_json,

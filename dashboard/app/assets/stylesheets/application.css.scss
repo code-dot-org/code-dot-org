@@ -96,6 +96,11 @@ em strong {
   font-family: 'Gotham 7i', sans-serif;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .clear {
   clear: both;
 }
@@ -576,6 +581,10 @@ html, body {
   font-size: 10px;
 }
 
+.project_save[disabled] {
+  background: #aaa;
+}
+
 .header_middle {
   position: absolute;
   left: 0;
@@ -715,6 +724,28 @@ input.header_input {
   z-index: 1050;
   background-color: white;
   overflow: hidden;
+}
+
+.key {
+  margin: 10px 0;
+  float: left;
+  padding: 10px;
+  background-color: #eee;
+  dl {
+    margin: 0;
+    float: left;
+    white-space: nowrap;
+  }
+  dd, dt {
+    float: left;
+    height: 36px;
+  }
+  dt { margin-right: 5px; }
+  dd {
+    line-height: 36px;
+    margin-left: 0;
+    margin-right: 25px;
+  }
 }
 
 .header_popup_header {
@@ -1572,7 +1603,6 @@ div.mini_gallery_activity {
 
 .infobox {
   background-color: rgb(88, 103, 113);
-  margin-left: 0px;
   color: white;
   font-size: 13px;
   padding-right: 10px;

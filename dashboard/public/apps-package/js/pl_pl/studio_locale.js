@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "dotyka górnej krawędzi"},
 "whenUp":function(d){return "kiedy strzałka w górę"},
 "whenUpTooltip":function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w górę."},
-"yes":function(d){return "Tak"}};
+"yes":function(d){return "Tak"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

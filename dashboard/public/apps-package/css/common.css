@@ -57,16 +57,22 @@ div.droplet-palette-group-header-selected {
   color: #000; }
 
 .droplet-palette-group-header.yellow {
-  border-left: 10px solid #e0e053; }
+  border-left: 10px solid #ffd54f; }
 
 .droplet-palette-group-header-selected.yellow {
-  background-color: #e0e053; }
+  background-color: #ffd54f; }
 
 .droplet-palette-group-header.red {
-  border-left: 10px solid #FA8A8C; }
+  border-left: 10px solid #f87477; }
 
 .droplet-palette-group-header-selected.red {
-  background-color: #FA8A8C; }
+  background-color: #f87477; }
+
+.droplet-palette-group-header.cyan {
+  border-left: 10px solid #00d2e2; }
+
+.droplet-palette-group-header-selected.cyan {
+  background-color: #00d2e2; }
 
 .droplet-wrapper-div {
   overflow: hidden;

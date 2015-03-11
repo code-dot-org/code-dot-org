@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "касается верхней границы"},
 "whenUp":function(d){return "когда клавиша вверх"},
 "whenUpTooltip":function(d){return "Выпонить действия, указанные ниже, когда нажата клавиша вверх."},
-"yes":function(d){return "Да"}};
+"yes":function(d){return "Да"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

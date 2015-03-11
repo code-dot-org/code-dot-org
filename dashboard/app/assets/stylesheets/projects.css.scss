@@ -2,18 +2,28 @@
 
 .projects-page {
   h1 {text-align: center;}
-  [class*="span"] {
-    margin: 0;
+  .level_link,.level_link:link, .level_link:visited {
+    background-color: $purple;
+    border-color: $purple;
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+    &:hover {
+      background-color: $level_current;
+      border-color: $level_current;
+      text-decoration: none;
+    }
   }
 }
 
+$projects-table-width: 850px;
+
 .projects-table-wrapper {
-  width: 650px;
-  margin: 0 auto;
+  width: $projects-table-width;
 }
 
 .projects {
-  width: 850px;
+  width: $projects-table-width;
   table-layout: auto;
   margin: 10px 0;
 

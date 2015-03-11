@@ -52,7 +52,7 @@ Revisions and updates to the 2014 docs are coming soon that will include:
 
 | Link| Unit Description |
 | :------------------:|-----------|
-|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols | 
+|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
 |*Coming Soon*| **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography and other security and hacking concerns. Topics include: encryption, security, computationally hard problems, and internet protocols|
 |*Coming Soon*| **Programming** Students learn the fundamentals programming constructs of javascript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
 |*Coming Soon*| **Data** Students continue programming and building web apps, now with a view towards data: processing it with algorithms, and the implications of storing data collected from and by others on the web.  Students explore “big data” by making queries against a data analysis api.|
@@ -63,7 +63,7 @@ Revisions and updates to the 2014 docs are coming soon that will include:
 ## Frequently Asked Questions
 
 <br />
-	
+
 #### When will lessons be published?
 
 Code.org’s CS Principles curriculum will be released publicly on a rolling basis as engineering and field testing of lessons permit. Batches of lessons may be released on a rolling basis from now until Summer 2015.  In Summer of 2015 the full curriculum will be available for viewing.  We will be making ongoing modifications (mostly adding supports) during the 2015-16 school year based on feedback from pilot instructors.
@@ -77,7 +77,13 @@ Yes, please!  As lessons are published on the website we invite anyone to try th
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSP course will be available in select partner districts starting in summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs. 
+In-person professional development for the Code.org CSP course will be available in select partner districts starting in summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
+
+<br />
+
+#### How can I learn more about the progress of the curriculum?
+
+We're now sending out a monthly status email for members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
 <br />
 

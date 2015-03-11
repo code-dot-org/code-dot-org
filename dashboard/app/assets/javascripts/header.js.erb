@@ -113,23 +113,14 @@ dashboard.buildHeader = function (scriptData) {
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
-    $('.project_updated_at').text(dashboard.projectUpdatedAtString()).show();
+    dashboard.updateTimestamp();
     $('.project_save').replaceWith($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
-    $('.project_name').replaceWith($('<input type="text" class="project_name header_input">').val(dashboard.currentApp.name));
+    $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.currentApp.name));
     $('.project_edit').replaceWith($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
-  }
-
-  dashboard.projectUpdatedAtString = function () {
-    if (dashboard.currentApp.updatedAt) {
-      return '<%= I18n.t("project.saved") %> ' +
-          DateHelper.time_ago_in_words_with_parsing(dashboard.currentApp.updatedAt);
-    } else {
-      return '<%= I18n.t("project.not_saved") %>';
-    }
   }
 
   var moreButton = '<%= I18n.t('project.more') %> '
@@ -138,9 +129,9 @@ dashboard.showProjectHeader = function () {
       + '<a href="#" class="project_delete"><%= I18n.t('project.delete') %></a><br>'
       + '<a href="#" class="project_new"><%= I18n.t('project.new') %></a></div>';
 
-  var nameAndUpdated = $('<div class="project_name_wrapper header_text">')
-      .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
-      .append($('<div class="project_updated_at header_text">').text(dashboard.projectUpdatedAtString()));
+  var nameAndUpdated = $('<div class="project_name_wrapper header_text">') // content will be added by projectNameShow
+      .append($('<div class="project_name header_text">'))
+      .append($('<div class="project_updated_at header_text">'));
 
   $('.project_info').append(nameAndUpdated)
       .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
@@ -152,9 +143,20 @@ dashboard.showProjectHeader = function () {
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
+  $(document).on('input', '.project_name', function () {
+    if ($(this).val().trim().length === 0) {
+      $('.project_save').attr('disabled', true);
+    } else {
+      $('.project_save').removeAttr('disabled');
+    }
+  });
+
   $(document).on('click', '.project_save', function () {
+    if ($(this).attr('disabled')) {
+      return;
+    }
     $(this).attr('disabled', true);
-    dashboard.currentApp.name = $('.project_name').val();
+    dashboard.currentApp.name = $('.project_name').val().trim().substr(0, 100);
     dashboard.saveProject(function () {
       projectNameShow();
     });

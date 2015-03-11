@@ -9,5 +9,8 @@
   "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Oto Twoja opowieść! Pracuj nadal nad nią lub przejdź do następnej zagadki!",
   "yourExpression": "Twoje wyrażenie:",
-  "wrongInput": "You are calling your function with the wrong value."
+  "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

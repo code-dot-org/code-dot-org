@@ -111,10 +111,44 @@ exports.workspaceCode = function(blockly) {
 };
 
 //
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -139,7 +173,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+    });
     retVal = interpreter.createNativeFunction(wrapper);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
@@ -153,19 +191,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);
@@ -201,16 +227,30 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction = function (opts) {
+  if (opts.dontMarshal) {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  } else {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+      }
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
@@ -220,7 +260,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -232,7 +276,11 @@ function populateGlobalFunctions(interpreter, scope) {
   for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
     var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: func,
+        nativeParentObj: gf.parent,
+    });
     interpreter.setProperty(scope,
                             gf.func,
                             interpreter.createNativeFunction(wrapper));
@@ -245,9 +293,11 @@ function populateJSFunctions(interpreter) {
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction(interpreter,
-                                                   String[functions[i]],
-                                                   String);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: String[functions[i]],
+        nativeParentObj: String,
+    });
     interpreter.setProperty(interpreter.STRING,
                             functions[i],
                             interpreter.createNativeFunction(wrapper),
@@ -284,13 +334,34 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
+  if (state.node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
+    // but not mode 1 (test) or mode 2 (body) while unwinding...
+    return mode === 0 || mode === 3;
+  }
   switch (state.node.type) {
+    // Declarations:
     case "VariableDeclaration":
+    // Statements:
     case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
+    // All Expressions:
+    case "ThisExpression":
+    case "ArrayExpression":
+    case "ObjectExpression":
+    case "ArrowExpression":
+    case "SequenceExpression":
+    case "UnaryExpression":
     case "BinaryExpression":
+    case "UpdateExpression":
+    case "LogicalExpression":
+    case "ConditionalExpression":
+    case "NewExpression":
     case "CallExpression":
+    case "MemberExpression":
+    case "FunctionExpression":
+    case "AssignmentExpression":
+    // Other:
     case "Identifier":
     case "Literal":
     case "Program":

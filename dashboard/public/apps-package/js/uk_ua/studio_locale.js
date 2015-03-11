@@ -455,4 +455,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenSpriteCollidedWithTopEdge":function(d){return "торкається верхнього краю"},
 "whenUp":function(d){return "коли стрілка Вгору"},
 "whenUpTooltip":function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вгору."},
-"yes":function(d){return "Так"}};
+"yes":function(d){return "Так"},
+"onEventTooltip":function(d){return "Execute code in response to the specified event."}};

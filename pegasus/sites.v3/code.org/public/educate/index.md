@@ -31,11 +31,11 @@ Our 20-hour courses help even the youngest students try computer science
 
 ### Middle school (Grades 6-8)
 
-[CS in Middle School Math](/curriculum/msm/)
+[CS in Algebra](/curriculum/algebra/)
 <br/>
 Learn how computer programmers use algebra and geometry to develop video games 
 
-[CS in Middle School Science](/curriculum/mss/)
+[CS in Science](/curriculum/mss/)
 <br/>
 Explore and develop complex scientific models through agent-based programming 
 
@@ -79,7 +79,12 @@ Sign up now for computer science professional development for K-5 educators
 [<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
 <br/>
 
-Our workshops for teachers in grades 6-12 are available as part of a district-wide partnership.
+[Workshops for middle and high school teachers](/educate/professional-development)
+<br/>
+Our workshops for teachers in grades 6-12 are available as part of a district-wide partnership. Find out more about our full range of professional development offerings.
+
+[<button>Learn more</button>](/educate/professional-development)
+
 
 ## District partnership
 

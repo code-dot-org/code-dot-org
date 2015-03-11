@@ -1114,9 +1114,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.Blockly) {
-      // TODO: (Josh L.) use $.trigger once we add jQuery
-      Blockly.fireUiEvent(window, 'run_button_pressed');
+    if (window.jQuery) {
+      $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
   }, 250, true);
@@ -1267,7 +1266,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         config.forceInsertTopBlock);
   }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  try {
+    this.loadBlocks(startBlocks);
+  } catch (e) {
+    if (loadLastAttempt) {
+      Blockly.mainBlockSpace.clear();
+      // Try loading the default start blocks instead.
+      this.setStartBlocks_(config, false);
+    } else {
+      throw e;
+    }
+  }
 };
 
 /**
@@ -1298,19 +1307,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('blockly');
   var options = {
     toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        2 : config.level.defaultNumExampleBlocks,
+    disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
+    disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
+    useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
+    editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(

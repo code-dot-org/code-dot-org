@@ -77,7 +77,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'cancan'
+gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
@@ -118,9 +118,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by a build script.
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
-    
-# take this out because it is crashing!
-#gem 'i18nema', group: :fast_loc  # faster locale backend (active in dev environment or FAST_LOC=true)
+gem 'i18nema', group: :fast_loc  # faster locale backend (active in dev environment or FAST_LOC=true)
 
 gem 'jwt' # single signon for zendesk
 
@@ -137,3 +135,5 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
 gem 'react-rails'
+# JSON model serializer for REST APIs
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'

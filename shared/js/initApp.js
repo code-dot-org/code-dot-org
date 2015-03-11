@@ -1,3 +1,4 @@
+
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
 var baseOptions = {
@@ -163,31 +164,44 @@ function callbackSafe(callback, data) {
   }
 }
 
+dashboard.updateTimestamp = function() {
+  if (dashboard.currentApp.updatedAt) {
+    // TODO i18n
+    $('.project_updated_at').empty().append("Saved ")  // TODO i18n
+        .append($('<span class="timestamp">').attr('title', dashboard.currentApp.updatedAt)).show();
+    $('.project_updated_at span.timestamp').timeago();
+  } else {
+    $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
+  } 
+};
+
 dashboard.saveProject = function(callback) {
-  $('.project_updated_at').text('Saving...'); // TODO (Josh) i18n
-  var app_id = dashboard.currentApp.id;
-  dashboard.currentApp.levelSource = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+  var channelId = dashboard.currentApp.id;
+  dashboard.currentApp.levelSource = window.Blockly
+      ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (app_id) {
-    storageApps().update(app_id, dashboard.currentApp, function(data) {
+  if (channelId) {
+    storageApps().update(channelId, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
-      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
+      dashboard.updateTimestamp();
       callbackSafe(callback, data);
     });
   } else {
     storageApps().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       location.hash = dashboard.currentApp.id + '/edit';
-      $('.project_updated_at').text(dashboard.projectUpdatedAtString());
+      dashboard.updateTimestamp();
       callbackSafe(callback, data);
     });
   }
 };
 
 dashboard.deleteProject = function(callback) {
-  var app_id = dashboard.currentApp.id;
-  if (app_id) {
-    storageApps().delete(app_id, function(data) {
+  var channelId = dashboard.currentApp.id;
+  if (channelId) {
+    storageApps().delete(channelId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -234,10 +248,19 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
+
+    $(window).on('hashchange', function () {
+      var hashData = parseHash();
+      if ((dashboard.currentApp && hashData.channelId !== dashboard.currentApp.id)
+          || hashData.isEditingProject !== dashboard.isEditingProject) {
+        location.reload();
+      }
+    });
+
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
         if (dashboard.currentApp.levelSource) {
-          appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+          appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
         }
       } else {
         dashboard.currentApp = {
@@ -251,7 +274,7 @@ function initApp() {
         dashboard.showProjectHeader();
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
-      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
@@ -282,38 +305,45 @@ function loadStyle(name) {
   }));
 }
 
-loadStyle('common');
-loadStyle(appOptions.app);
-var promise;
-if (appOptions.droplet) {
-  loadStyle('droplet/droplet.min');
-  promise = loadSource('jsinterpreter/acorn_interpreter')()
-      .then(loadSource('requirejs/require'))
-      .then(loadSource('ace/ace'))
-      .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full.min'));
-} else {
-  promise = loadSource('blockly')()
-    .then(loadSource(appOptions.locale + '/blockly_locale'));
+function parseHash() {
+  // Example paths:
+  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
+  var isEditingProject = false;
+  var channelId = location.hash.slice(1);
+  if (channelId) {
+    // TODO: Use a router.
+    var params = channelId.split("/");
+    if (params.length > 1 && params[1] == "edit") {
+      channelId = params[0];
+      isEditingProject = true;
+    }
+  }
+  return {
+    channelId: channelId,
+    isEditingProject: isEditingProject
+  }
+}
+
+function loadProject(promise) {
   if (appOptions.level.isProjectLevel) {
-    // example paths:
-    // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-    // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-    var app_id = location.hash.slice(1);
-    if (app_id) {
-      // TODO ugh, we should use a router. maybe we should use angular :p
-      var params = app_id.split("/");
-      if (params.length > 1 && params[1] == "edit") {
-        app_id = params[0];
+    var hashData = parseHash();
+    if (hashData.channelId) {
+      if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
       }
 
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        storageApps().fetch(app_id, function (data) {
-          dashboard.currentApp = data;
-          deferred.resolve();
+        storageApps().fetch(hashData.channelId, function (data) {
+          if (data) {
+            dashboard.currentApp = data;
+            deferred.resolve();
+          } else {
+            // Project not found, redirect to the new project experience.
+            location.href = location.pathname;
+          }
         });
         return deferred;
       });
@@ -325,6 +355,24 @@ if (appOptions.droplet) {
     dashboard.isEditingProject = true;
     promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
   }
+  return promise;
+}
+
+loadStyle('common');
+loadStyle(appOptions.app);
+var promise;
+if (appOptions.droplet) {
+  loadStyle('droplet/droplet.min');
+  promise = loadSource('jsinterpreter/acorn_interpreter')()
+      .then(loadSource('requirejs/require'))
+      .then(loadSource('ace/ace'))
+      .then(loadSource('ace/ext-language_tools'))
+      .then(loadSource('droplet/droplet-full.min'));
+  promise = loadProject(promise);
+} else {
+  promise = loadSource('blockly')()
+    .then(loadSource(appOptions.locale + '/blockly_locale'));
+  promise = loadProject(promise);
 }
 promise = promise.then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
