@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Your school is holding a bake sale, and you are in charge of writing computer programs to track the cost of making each treat, the money customers give you, and the total profit from selling them. Cookies cost $0.25 each to bake, and sell for $1.00/cookie.\r\n\r\nWrite the function `cookie-cost`, which takes in the number of cookies you intend to sell, and gives you back the amount of money it would cost to produce that number of cookies.",
+    "instructions": "Your school is holding a bake sale, and you are in charge of writing computer programs to track the cost of making each treat, the money customers give you, and the total profit from selling them. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite the function `cookie-cost`, which takes in the number of cookies you intend to sell, and gives you back the amount of money it would cost to produce that number of cookies.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -16,7 +16,13 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1000"
+    "min_workspace_height": "1000",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
   }
 }]]></config>
   <blocks>
