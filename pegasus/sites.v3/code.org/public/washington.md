@@ -60,8 +60,6 @@ Signed,
 
 [wideletternames]
 
-[letternames]
-
 **Business Leaders**
 
 Steve Ballmer<br />
@@ -127,7 +125,6 @@ Hadi Partovi, Co-founder and CEO, Code.org<br />
 Patrick D’Amelio, CEO, Washington STEM<br />
 Christine Johnson, Chancellor, Spokane Community Colleges<br />
 Chris Korsmo, CEO, League of Education Voters<br />
-Ed Lazowska, Bill & Melinda Gates Chair in Computer Science and Engineering, University of Washington<br />
 Dave Powell, Executive Director, Stand for Children Washington<br />
 Christine Johnson, Chancellor, Spokane Community Colleges<br />
 Tayloe Washburn, CEO and Dean, Northeastern – Seattle Campus<br />
