@@ -206,30 +206,4 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source_id = ExecJS.exec("#{element.child.text};\nreturn appOptions.level_source_id")
     assert_equal @level_source.id, level_source_id
   end
-
-
-  test 'artist levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Artist.first)
-    get :show, id: level_source.id
-
-    assert_response :success
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 500,
-                            image_height: 261)
-  end
-
-  test 'playlab levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: Studio.first)
-    get :show, id: level_source.id
-
-    assert_response :success
-
-    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 400,
-                            image_height: 400,
-                            apple_mobile_web_app: true)
-  end
-
 end
