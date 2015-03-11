@@ -111,11 +111,16 @@ module ApplicationHelper
     end
   end
 
-  def meta_image_url(opts = {})
-    app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
+  def meta_image_url(params)
+    level_source = params[:level_source]
+    if level_source
+      app = level_source.level.game.app
+    else
+      app = params[:app]
+    end
     
     # playlab/studio and artist/turtle can have images
-    if opts[:level_source].try(:level_source_image).try(:image)
+    if level_source.try(:level_source_image).try(:image)
       if level_source.level_source_image.s3?
         if app == Game::ARTIST then
           level_source.level_source_image.s3_framed_url
@@ -125,7 +130,7 @@ module ApplicationHelper
       else
         url_for(controller: 'level_sources', action: 'generate_image', id: level_source.id, only_path: false)
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO].include? app
+    elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
