@@ -2,14 +2,14 @@
 - if @level && @level.game.supports_sharing?
   - content_for :head do
     -# facebook boilerplate
-    = tag('meta', :property => 'fb:app_id', :content => '500177453358606')
-    = tag('meta', :property => 'og:site_name', :content => 'Code.org')
-    = tag('meta', :property => 'og:type', :content => 'article')
-    = tag('meta', :property => 'article:publisher', :content => 'https://www.facebook.com/Code.org')
+    = tag('meta', property: 'fb:app_id', content: '500177453358606')
+    = tag('meta', property: 'og:site_name', content: 'Code.org')
+    = tag('meta', property: 'og:type', content: 'article')
+    = tag('meta', property: 'article:publisher', content: 'https://www.facebook.com/Code.org')
 
     -# twitter boilerplate
-    = tag('meta', :name => 'twitter:site', :content => '@codeorg')
-    = tag('meta', :name => 'twitter:card', :content => 'photo')
+    = tag('meta', name: 'twitter:site', content: '@codeorg')
+    = tag('meta', name: 'twitter:card', content: 'photo')
 
     - if @level.game.app == Game::ARTIST
       - meta_image_width = 500
@@ -20,13 +20,13 @@
 
     -# several meta tags are the same for facebook/og and twitter
     - {og: 'property', twitter: 'name'}.each do |namespace, attr|
-      = tag('meta', attr => "#{namespace}:title", :content => t('share_code.check_out_what_i_made'))
-      = tag('meta', attr => "#{namespace}:description", :content => t('share_code.og_description'))
-      = tag('meta', attr => "#{namespace}:url", :content => request.original_url)
+      = tag('meta', attr => "#{namespace}:title", content: t('share_code.check_out_what_i_made'))
+      = tag('meta', attr => "#{namespace}:description", content: t('share_code.og_description'))
+      = tag('meta', attr => "#{namespace}:url", content: request.original_url)
 
-      = tag('meta', attr => "#{namespace}:image", :content => meta_image_url)
-      = tag('meta', attr => "#{namespace}:image:width", :content => meta_image_width)
-      = tag('meta', attr => "#{namespace}:image:height", :content => meta_image_height)
+      = tag('meta', attr => "#{namespace}:image", content: meta_image_url)
+      = tag('meta', attr => "#{namespace}:image:width", content: meta_image_width)
+      = tag('meta', attr => "#{namespace}:image:height", content: meta_image_height)
 
     - if @level.game.share_mobile_fullscreen?
       = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
