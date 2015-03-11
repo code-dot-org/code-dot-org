@@ -111,16 +111,15 @@ module ApplicationHelper
     end
   end
 
-  def meta_image_url(params)
-    level_source = params[:level_source]
-    if level_source
-      app = level_source.level.game.app
-    else
-      app = params[:app]
+  def meta_image_url
+    if @level_source
+      app = @level_source.level.game.app
+    elsif @level
+      app = @level.game.app
     end
     
     # playlab/studio and artist/turtle can have images
-    if level_source.try(:level_source_image).try(:image)
+    if @level_source.try(:level_source_image).try(:image)
       if level_source.level_source_image.s3?
         if app == Game::ARTIST then
           level_source.level_source_image.s3_framed_url
