@@ -119,15 +119,62 @@ social:
     - if DB[:cdo_homepage].where(type_s: "petition")
       = view :petition_expand
 
-  #slots{style: "text-align:center"}
+  -#### Hero slots
+
+  #heroslots{style: "text-align:center"}
     - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
       - display = entry[:active_s] == "hide" ? "none" : "block"
       .slot{style: "display: #{display}"}
         = view :homepage_quarterslot, entry: entry
-    -# DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
-      - display = entry[:active_s] == "hide" ? "none" : "block"
+
+  .clear{style: "clear:both"}
+
+
+  -#### Below the fold
+
+  %h1#audienceheader{style: "font-size: 24px; margin-top:80px; margin-bottom:40px; text-align:center; color: rgba(0,0,0,0.6)"}
+    Code.org offers something for everybody
+
+  #audienceslots{style: "text-align:center"}
+    - audienceslots = []
+
+    - slot = {name:"Students", bgc: "0, 173, 188", links: []}
+    -   slot[:links] << {text: "Try the Hour of Code.<br/>104,302,201 served"}
+    -   slot[:links] << {text: "Code Studio"}
+    -   slot[:links] << {text: "Find a local class or workshop", priority: 2} #p2
+    -   slot[:links] << {text: "Other learning options ", priority: 2} #p2
+    - audienceslots << slot
+
+    - slot = {name:"Educators", bgc: "118, 101, 160", links: []}
+    -   slot[:links] << {text: "Learn about our K-5 program"}
+    -   slot[:links] << {text: "Find a K-5 educator workshop"}
+    -   slot[:links] << {text: "See our full K-12 curriculum"}
+    -   slot[:links] << {text: "Host an Hour of Code", priority: 2} # p2
+    -   slot[:links] << {text: "District partnership for HS + MS", priority: 2} # p2
+    -   slot[:links] << {text: "Inspire your students ", priority: 2} # p2
+    -   slot[:links] << {text: "3rd party options for CS in your school", priority: 2} # p2
+    - audienceslots << slot
+
+    - slot = {name:"Advocates", bgc: "185, 191, 21", links: []}
+    -   slot[:links] << {text: "Support CS in your state"}
+    -   slot[:links] << {text: "Donate to Code.org"}
+    -   slot[:links] << {text: "Buy a t-shirt or hat", priority: 2} # p2
+    -   slot[:links] << {text: "Advocacy tools  ", priority: 2} # p2
+    -   slot[:links] << {text: "Help in other ways / Become a volunteer", priority: 2} # p2
+    - audienceslots << slot
+
+    - slot = {name:"Others", bgc: "255, 184, 29", links: []}
+    -   slot[:links] << {text: "Try the Hour of Code. 104,302,201 served"}
+    -   slot[:links] << {text: "Code Studio"}
+    -# audienceslots << slot
+
+    - audienceslots.each_with_index do |row, rowindex|
+      -# display = entry[:active_s] == "hide" ? "none" : "block"
       .slot{style: "display: #{display}"}
-        = view :homepage_halfslot, entry: entry
+        = view :homepage_linkslot, entry: row, bgc: row[:bgc]
+
+
+  -#### User hero for signed-in users
 
   %script{:src=>"/js/jquery.placeholder.js"}
 
@@ -138,7 +185,7 @@ social:
 
   -if request.site != 'csedweek.org'
 
-    .container_responsive{style: "margin-top:40px; margin-bottom:40px"}
+    .container_responsive{style: "margin-top:80px; margin-bottom:40px"}
       #donor_slider.desktop-feature{:style=>'width: 100%'}
         = view :donor_slider
 
