@@ -7,13 +7,19 @@ var evalMsg = require('../../locale/current/eval');
  */
 var CustomEvalError = function (type, val) {
   this.type = type;
-  
+
   switch (type) {
     case CustomEvalError.Type.BadStyle:
       this.feedbackMessage = evalMsg.badStyleStringError({val: val});
       break;
     case CustomEvalError.Type.BadColor:
       this.feedbackMessage = evalMsg.badColorStringError({val: val});
+      break;
+    case CustomEvalError.Type.InfiniteRecursion:
+      this.feedbackMessage = evalMsg.infiniteRecursionError();
+      break;
+    case CustomEvalError.Type.UserCodeException:
+      this.feedbackMessage = evalMsg.userCodeException();
       break;
     default:
       this.feedbackMessag = '';
@@ -24,5 +30,7 @@ module.exports = CustomEvalError;
 
 CustomEvalError.Type = {
   BadStyle: 0,
-  BadColor: 1
+  BadColor: 1,
+  InfiniteRecursion: 2,
+  UserCodeException: 3
 };

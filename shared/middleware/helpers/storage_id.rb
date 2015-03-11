@@ -31,6 +31,8 @@ def storage_decrypt_id(encrypted)
 end
 
 def storage_decrypt_app_id(encrypted)
+  # pad to a multiple of 4 characters to make a valid base64 string.
+  encrypted += '=' * ((4 - encrypted.length % 4) % 4)
   storage_id, app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
@@ -58,7 +60,7 @@ def storage_encrypt_app_id(storage_id, app_id)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   app_id = app_id.to_i
   raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}"))
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}")).tr('=', '')
 end
 
 def storage_id(endpoint)

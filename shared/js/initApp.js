@@ -251,7 +251,7 @@ function initApp() {
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
         if (dashboard.currentApp.levelSource) {
-          appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+          appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
         }
       } else {
         dashboard.currentApp = {
@@ -265,7 +265,7 @@ function initApp() {
         dashboard.showProjectHeader();
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
-      appOptions.level.startBlocks = dashboard.currentApp.levelSource;
+      appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
