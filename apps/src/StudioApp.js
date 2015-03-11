@@ -615,7 +615,7 @@ StudioApp.prototype.localeDirection = function() {
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
 StudioApp.prototype.initReadonly = function(options) {
-  Blockly.inject(document.getElementById('blockly'), {
+  Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
     rtl: this.isRtl(),
@@ -742,15 +742,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 StudioApp.prototype.onResize = function() {
 
   // First, grab the main app container
-  // This is inconsistently named across apps right now
-  // TODO (bbuchanan) : Unify parent app container names
-  var div;
-  if (this.editCode) {
-    div = document.getElementById('codeWorkspace');
-  } else if (this.isUsingBlockly()) {
-    div = document.getElementById('blockly');
-  }
-
+  var div = document.getElementById('codeWorkspace');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
 
@@ -1140,7 +1132,7 @@ StudioApp.prototype.configureDom = function (config) {
 
   if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+    Blockly.addClass_(container.querySelector('#codeWorkspace'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -1168,9 +1160,7 @@ StudioApp.prototype.configureDom = function (config) {
 StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
-  var workspaceDiv = this.editCode ?
-    document.getElementById('codeWorkspace') :
-    container.querySelector('#blockly');
+  var workspaceDiv = document.getElementById('codeWorkspace');
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
@@ -1296,7 +1286,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     }
   }
 
-  var div = document.getElementById('blockly');
+  var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
