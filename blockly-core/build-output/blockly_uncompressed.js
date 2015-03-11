@@ -14457,7 +14457,8 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   }
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  if(e.target.getAttribute("class") !== "inputClickTarget") {
+  var targetClass = e.target.getAttribute && e.target.getAttribute("class");
+  if(targetClass !== "inputClickTarget") {
     this.select()
   }
   this.blockSpace.blockSpaceEditor.hideChaff();
