@@ -17,13 +17,13 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
-    config.middleware.use VarnishEnvironment
-    config.middleware.use AppsApi
-    config.middleware.use SharedResources
-
+    # Make sure these middleware are at the very top of the stack and in the correct order:
+    config.middleware.insert_before 0, VarnishEnvironment
+    config.middleware.insert_after VarnishEnvironment, AppsApi
+    config.middleware.insert_after AppsApi, SharedResources
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.use PegasusSites
+      config.middleware.insert_after SharedResources, PegasusSites
     end
 
     config.encoding = 'utf-8'
