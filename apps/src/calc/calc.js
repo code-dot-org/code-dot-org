@@ -370,7 +370,7 @@ function appSpecificFailureOutcome(message, failedInput) {
  */
 function divZeroOrThrowErr(err) {
   if (err instanceof ExpressionNode.DivideByZeroError) {
-    return appSpecificFailureOutcome(msg.divideByZeroError(), null);
+    return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
   }
   throw err;
 }
@@ -645,8 +645,8 @@ Calc.generateResults_ = function () {
   // we start varying inputs in evaluateResults_
   if (appState.userSet.hasDivZero()) {
     appState.result = ResultType.FAILURE;
-    appState.testResults = TestResults.DIVIDE_BY_ZERO;
-    appState.message = msg.divideByZeroError();
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appState.message = calcMsg.divideByZeroError();
     return;
   }
 
