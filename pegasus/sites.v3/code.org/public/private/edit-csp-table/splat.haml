@@ -4,9 +4,9 @@ theme: angular
 angular: recordsApp
 ---
 
--app_id = request.splat_path_info[1..-1].split('/').first
+-channel_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
--api_base_url = "/v3/shared-tables/#{app_id}/#{table_name}"
+-api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
 
 %div{"ng-app" => "recordsApp", "ng-view" => ""}
 
@@ -55,7 +55,7 @@ angular: recordsApp
     $scope.newColumnName = '';
     $scope.newRecord = new recordsService();
     $scope.tableName = "#{table_name}";
-    $scope.appId = "#{app_id}";
+    $scope.channelId = "#{channel_id}";
     $scope.importing = false;
     $scope.reverse = true;
 
