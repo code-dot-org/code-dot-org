@@ -201,9 +201,13 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sentMessageLog_ = new NetSimLogPanel(
       $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
 
-  this.connection_ = new NetSimConnection(window, this.level,
-      this.sentMessageLog_, this.receivedMessageLog_,
-      this.shouldEnableCleanup());
+  this.connection_ = new NetSimConnection({
+    window: window,
+    levelConfig: this.level,
+    sentLog: this.sentMessageLog_,
+    receivedLog: this.receivedMessageLog_,
+    enableCleanup: this.shouldEnableCleanup()
+  });
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
