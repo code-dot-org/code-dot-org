@@ -20,9 +20,9 @@
 
     -# several meta tags are the same for facebook/og and twitter
     - {og: 'property', twitter: 'name'}.each do |namespace, attr|
-      = tag('meta', attr => "#{namespace}:title', :content => t('share_code.check_out_what_i_made'))
+      = tag('meta', attr => "#{namespace}:title", :content => t('share_code.check_out_what_i_made'))
       = tag('meta', attr => "#{namespace}:description", :content => t('share_code.og_description'))
-      = tag('meta', attr => "#{namespace}:url', :content => request.original_url)
+      = tag('meta', attr => "#{namespace}:url", :content => request.original_url)
 
       = tag('meta', attr => "#{namespace}:image", :content => meta_image_url)
       = tag('meta', attr => "#{namespace}:image:width", :content => meta_image_width)
