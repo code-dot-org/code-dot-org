@@ -15,6 +15,10 @@ var ValueType = {
   NUMBER: 4
 };
 
+function DivideByZeroError(message) {
+  this.message = message || '';
+}
+
 var ExpressionNode = function (val, args, blockId) {
   this.value_ = val;
   this.blockId_ = blockId;
@@ -42,6 +46,7 @@ var ExpressionNode = function (val, args, blockId) {
   }
 };
 module.exports = ExpressionNode;
+ExpressionNode.DivideByZeroError = DivideByZeroError;
 
 /**
  * What type of expression node is this?
@@ -77,6 +82,14 @@ ExpressionNode.prototype.isNumber = function () {
 };
 
 /**
+ * @returns {boolean} true if the root expression node is a divide by zero. Does
+ *   not account for div zeros in descendants
+ */
+ExpressionNode.prototype.isDivZero = function () {
+  return this.getValue() === '/' && this.getChildValue(1) === 0;
+};
+
+/**
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
@@ -87,89 +100,93 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * See if we can evaluate this node by trying to do so and catching exceptions.
- * @returns Whether we can evaluate.
- */
-ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
-  try {
-    this.evaluate(mapping, localMapping);
-  } catch (err) {
-    return false;
-  }
-  return true;
-};
-
-/**
  * Evaluate the expression, returning the result.
  * @param {Object<string, number|object>} globalMapping Global mapping of
  *   variables and functions
  * @param {Object<string, number|object>} localMapping Mapping of
  *   variables/functions local to scope of this function.
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
-ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
-  gloablMapping = gloablMapping || {};
-  localMapping = localMapping || {};
+ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
+  try {
+    globalMapping = globalMapping || {};
+    localMapping = localMapping || {};
 
-  var type = this.getType_();
+    var type = this.getType_();
 
-  if (type === ValueType.VARIABLE) {
-    var mappedVal = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (mappedVal === undefined) {
-      throw new Error('No mapping for variable during evaluation');
+    if (type === ValueType.VARIABLE) {
+      var mappedVal = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (mappedVal === undefined) {
+        throw new Error('No mapping for variable during evaluation');
+      }
+
+      var clone = this.clone();
+      clone.setValue(mappedVal);
+      return clone.evaluate(globalMapping);
     }
 
-    var clone = this.clone();
-    clone.setValue(mappedVal);
-    return clone.evaluate(gloablMapping);
+    if (type === ValueType.FUNCTION_CALL) {
+      var functionDef = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (functionDef === undefined) {
+        throw new Error('No mapping for function during evaluation');
+      }
+
+      if (!functionDef.variables || !functionDef.expression) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+      if (functionDef.variables.length !== this.children_.length) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+
+      // We're calling a new function, so it gets a new local scope.
+      var newLocalMapping = {};
+      functionDef.variables.forEach(function (variable, index) {
+        var childVal = this.getChildValue(index);
+        newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
+      }, this);
+      return functionDef.expression.evaluate(globalMapping, newLocalMapping);
+    }
+
+    if (type === ValueType.NUMBER) {
+      return { result: this.value_ };
+    }
+
+    if (type !== ValueType.ARITHMETIC) {
+      throw new Error('Unexpected');
+    }
+
+    var left = this.children_[0].evaluate(globalMapping, localMapping);
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+
+    var err = left.err || right.err;
+    if (err) {
+      throw err;
+    }
+    left = left.result;
+    right = right.result;
+
+    switch (this.value_) {
+      case '+':
+        return { result: left + right };
+      case '-':
+        return { result: left - right };
+      case '*':
+        return { result: left * right };
+      case '/':
+        if (right === 0) {
+          throw new DivideByZeroError();
+        }
+        return { result: left / right };
+      default:
+        throw new Error('Unknown operator: ' + this.value_);
+    }
+  } catch (err) {
+    return { err: err };
   }
-
-  if (type === ValueType.FUNCTION_CALL) {
-    var functionDef = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (functionDef === undefined) {
-      throw new Error('No mapping for function during evaluation');
-    }
-
-    if (!functionDef.variables || !functionDef.expression) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-    if (functionDef.variables.length !== this.children_.length) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-
-    // We're calling a new function, so it gets a new local scope.
-    var newLocalMapping = {};
-    functionDef.variables.forEach(function (variable, index) {
-      var childVal = this.getChildValue(index);
-      newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
-    }, this);
-    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
-  }
-
-  if (type === ValueType.NUMBER) {
-    return this.value_;
-  }
-
-  if (type !== ValueType.ARITHMETIC) {
-    throw new Error('Unexpected error');
-  }
-
-  var left = this.children_[0].evaluate(gloablMapping, localMapping);
-  var right = this.children_[1].evaluate(gloablMapping, localMapping);
-
-  switch (this.value_) {
-    case '+':
-      return left + right;
-    case '-':
-      return left - right;
-    case '*':
-      return left * right;
-    case '/':
-      return left / right;
-    default:
-      throw new Error('Unknown operator: ' + this.value_);
-    }
 };
 
 /**
@@ -212,7 +229,8 @@ ExpressionNode.prototype.getDeepestOperation = function () {
 
 /**
  * Collapses the next descendant in place. Next is defined as deepest, then
- * furthest left. Returns whether collapse was successful.
+ * furthest left.
+ * @returns {boolea} true if collapse was successful.
  */
 ExpressionNode.prototype.collapse = function () {
   var deepest = this.getDeepestOperation();
@@ -222,7 +240,11 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    this.value_ = this.evaluate();
+    var evaluation = this.evaluate();
+    if (evaluation.err) {
+      return false;
+    }
+    this.value_ = evaluation.result;
     this.children_ = [];
     return true;
   } else {
