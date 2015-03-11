@@ -283,8 +283,16 @@ function getEquationFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
+    case 'functional_pow':
+    case 'functional_sqrt':
+    case 'functional_squared':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+      // some of these have 1 arg, others 2
+      var argNames = ['ARG1'];
+      if (block.getInput('ARG2')) {
+        argNames.push('ARG2');
+      }
+      var args = argNames.map(function(inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;

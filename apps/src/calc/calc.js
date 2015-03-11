@@ -27,7 +27,6 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
