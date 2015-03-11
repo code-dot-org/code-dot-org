@@ -69,15 +69,6 @@ html[dir="RTL"] .farSide {
   bottom: 10px;
 }
 
-#blockly {
-  position: absolute;
-  top: 0px;
-  left: 400px;
-  right: 0px;
-  bottom: 10px;
-  margin-left: 15px;
-}
-
 div.droplet-palette-group-header {
   @include font;
 }
@@ -208,7 +199,7 @@ div.droplet-palette-group-header-selected {
     max-width: $width;
     right: $width;
   }
-  #codeWorkspace, #blockly {
+  #codeWorkspace {
     left: $width;
   }
   #visualizationEditor.responsive {
@@ -235,7 +226,7 @@ div.droplet-palette-group-header-selected {
     max-width: $width;
     right: $width;
   }
-  #codeWorkspace, #blockly {
+  #codeWorkspace {
     left: $width;
   }
   #visualizationEditor.responsive {
@@ -258,7 +249,7 @@ div.droplet-palette-group-header-selected {
     max-height: $width;
     max-width: $width;
   }
-  #codeWorkspace, #blockly {
+  #codeWorkspace {
     left: $width;
   }
   #visualizationColumn.responsive {
@@ -289,7 +280,7 @@ div.droplet-palette-group-header-selected {
     max-width: $width;
     right: $width;
   }
-  #codeWorkspace, #blockly {
+  #codeWorkspace {
     left: $width;
   }
   #visualizationEditor.responsive {
@@ -630,7 +621,7 @@ $aniGifPreviewHeight: 60px;
     display: inline-block;
     margin-right: -4px;
   }
-  .blockly-header {
+  .workspace-header {
     text-align: center;
     white-space: nowrap;
     overflow-x: hidden;
@@ -1125,7 +1116,7 @@ body.readonly {
   background-color: transparent;
 }
 
-body.readonly #blockly {
+body.readonly #codeWorkspace {
   position: absolute;
   top: 0;
   left: 0;
@@ -1137,11 +1128,11 @@ body.readonly #blockly {
   border: none;
 }
 
-body.readonly #blockly>svg {
+body.readonly #codeWorkspace>svg {
   background-color: transparent;
   border: none;
 }
 
-body.readonly.embed-block #blockly .userHidden {
+body.readonly.embed-block #codeWorkspace .userHidden {
   display: none;
 }
