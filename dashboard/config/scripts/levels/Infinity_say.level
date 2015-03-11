@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Make Anna say \"Hi there!\" by using the Say block.",
+    "instructions": "Make Anna say \"Hi there.\" by using the Say block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -48,7 +48,7 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_saySpriteChoices">
-          <title name="VALUE">Hi there!</title>
+          <title name="VALUE">Hi there.</title>
         </block>
         <block type="studio_setBackground">
           <title name="VALUE">"leafy"</title>
@@ -58,7 +58,7 @@
     <required_blocks>
       <xml>
         <block type="studio_saySpriteChoices">
-          <title name="VALUE">Hi there!</title>
+          <title name="VALUE">Hi there.</title>
         </block>
       </xml>
     </required_blocks>

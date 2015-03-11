@@ -15,6 +15,7 @@ Blockly.BlockSvgFunctional = function (block, options) {
   this.rowBuffer = options.rowBuffer || 0;
   this.patternId_ = null; // updated when we set colour
   this.inputMarkers_ = {};
+  this.inputClickTargets_ = {};
 
   Blockly.BlockSvg.call(this, block);
 };
@@ -70,8 +71,21 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
       continue;
     }
     this.inputMarkers_[input.name] = Blockly.createSvgElement('rect', {
-      fill: 'red'
+      fill: 'white'
     }, this.svgGroup_);
+
+    // Create a click target, that will end up having the same path as the input
+    // Set opacity to 0 so that we can see marker through it.
+    // Set class so that click handler knows not to select parent.
+    this.inputClickTargets_[input.name] = Blockly.createSvgElement('path', {
+      fill: 'white',
+      opacity: '0',
+      'class': 'inputClickTarget'
+    }, this.svgGroup_);
+
+    if (!this.block_.blockSpace.isFlyout) {
+      this.addInputClickListener_(input);
+    }
   }
 
   // Remove input markers that disappeared
@@ -80,9 +94,50 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
       var element = this.inputMarkers_[markerName];
       element.parentNode.removeChild(element);
       delete this.inputMarkers_[markerName];
+
+      var element = this.inputClickTargets_[markerName];
+      element.parentNode.removeChild(element);
+      delete this.inputMarkers_[markerName];
     }
   }, this);
 
+};
+
+/**
+ * Add a click listener to the marker for the given input, which will add a
+ * child block on click if it's a number or string
+ * @param {Input} input
+ */
+Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function (input) {
+  var blockSpace = this.block_.blockSpace;
+  goog.events.listen(this.inputClickTargets_[input.name], 'click', function (e) {
+    var childType;
+    var titleIndex;
+    if (input.connection.acceptsAnyType()) {
+      return;
+    }
+    if (input.connection.acceptsType('Number')) {
+      childType = 'functional_math_number';
+      titleIndex = 0;
+    } else if (input.connection.acceptsType('String')) {
+      childType = 'functional_string';
+      titleIndex = 1;
+    } else {
+      return;
+    }
+
+    var block = new Blockly.Block(blockSpace, childType);
+    block.initSvg();
+    input.connection.connect(block.previousConnection);
+
+    var titles = block.getTitles();
+    for (var i = 0; i < titles.length; i++) {
+      if (titles[i] instanceof Blockly.FieldTextInput) {
+        titles[i].showEditor_();
+      }
+    }
+    block.render();
+  });
 };
 
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,
@@ -117,13 +172,19 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
   var notchPaths = input.connection.getNotchPaths();
 
-  renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
-  renderInfo.inline.push('h', notchStart);
-  renderInfo.inline.push(notchPaths.left);
-  renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
-  renderInfo.inline.push('v', input.renderHeight);
-  renderInfo.inline.push('H', inputTopLeft.x);
-  renderInfo.inline.push('z');
+  var inputSteps = [];
+
+  inputSteps.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
+  inputSteps.push('h', notchStart);
+  inputSteps.push(notchPaths.left);
+  inputSteps.push('H', inputTopLeft.x + input.renderWidth);
+  inputSteps.push('v', input.renderHeight);
+  inputSteps.push('H', inputTopLeft.x);
+  inputSteps.push('z');
+
+  renderInfo.inline = renderInfo.inline.concat(inputSteps);
+
+  this.inputClickTargets_[input.name].setAttribute('d', inputSteps.join(' '));
 
   this.inputMarkers_[input.name].setAttribute('x', inputTopLeft.x + 5);
   this.inputMarkers_[input.name].setAttribute('y', inputTopLeft.y + 15);
