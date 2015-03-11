@@ -1,7 +1,7 @@
-function sharedProperties(app_id)
+function sharedProperties(channel_id)
 {
   var object = {
-    api_base_url: "/v3/shared-properties/" + app_id,
+    api_base_url: "/v3/shared-properties/" + channel_id,
 
     all: function(callback) {
       $.ajax({
@@ -56,9 +56,9 @@ function sharedProperties(app_id)
   return object;
 }
 
-function userProperties(app_id)
+function userProperties(channel_id)
 {
-  var properties = sharedProperties(app_id);
-  properties.api_base_url = "/v3/user-properties/apps/" + app_id;
+  var properties = sharedProperties(channel_id);
+  properties.api_base_url = "/v3/user-properties/" + channel_id;
   return properties;
 }

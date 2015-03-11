@@ -1,7 +1,7 @@
-function sharedTable(app_id, table_name)
+function sharedTable(channel_id, table_name)
 {
   var object = {
-    api_base_url: "/v3/shared-tables/" + app_id + "/" + table_name,
+    api_base_url: "/v3/shared-tables/" + channel_id + "/" + table_name,
 
     all: function(callback) {
       $.ajax({
@@ -69,9 +69,9 @@ function sharedTable(app_id, table_name)
   return object;
 }
 
-function userTable(app_id, table_name)
+function userTable(channel_id, table_name)
 {
-  var table = sharedTable(app_id, table_name);
-  table.api_base_url = "/v3/user-tables/" + app_id + "/" + table_name;
+  var table = sharedTable(channel_id, table_name);
+  table.api_base_url = "/v3/user-tables/" + channel_id + "/" + table_name;
   return table;
 }

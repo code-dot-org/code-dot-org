@@ -132,11 +132,11 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
 };
 
 /**
- * API for master apps table on the server.
+ * API for master channel list on the server.
  * @constructor
  */
 appsApi.AppsTable = function () {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps');
+  this.requestHelper_ = new ApiRequestHelper('/v3/channels');
 };
 
 /**
