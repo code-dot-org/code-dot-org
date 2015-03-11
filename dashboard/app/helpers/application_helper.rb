@@ -111,16 +111,11 @@ module ApplicationHelper
     end
   end
 
-  def meta_image_url(params)
-    level_source = params[:level_source]
-    if level_source
-      app = level_source.level.game.app
-    else
-      app = params[:app]
-    end
+  def meta_image_url(opts = {})
+    app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
     
     # playlab/studio and artist/turtle can have images
-    if level_source.try(:level_source_image).try(:image)
+    if opts[:level_source].try(:level_source_image).try(:image)
       if level_source.level_source_image.s3?
         if app == Game::ARTIST then
           level_source.level_source_image.s3_framed_url
@@ -130,7 +125,7 @@ module ApplicationHelper
       else
         url_for(controller: 'level_sources', action: 'generate_image', id: level_source.id, only_path: false)
       end
-    elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
@@ -170,14 +165,6 @@ module ApplicationHelper
     is_k1 = @script.try(:is_k1?)
     is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
     is_k1
-  end
-
-  def playlab_freeplay_path
-    script_stage_script_level_path(*is_k1? ? ['course1', 16, 6] : ['playlab', 1, 10])
-  end
-
-  def artist_freeplay_path
-    script_stage_script_level_path(*is_k1? ? ['course1', 18, 10] : ['artist', 1, 10])
   end
   
   def script_certificate_image_url(user, script)

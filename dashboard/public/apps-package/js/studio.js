@@ -2935,7 +2935,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../canvg/StackBlur.js":41,"../canvg/canvg.js":42,"../canvg/rgbcolor.js":43,"../canvg/svg_todataurl":44,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":178,"../templates/page.html":203,"../utils":224,"../xml":225,"./api":180,"./bigGameLogic":181,"./blocks":182,"./collidable":183,"./constants":184,"./controls.html":185,"./dropletConfig":187,"./extraControlRows.html":188,"./projectile":191,"./rocketHeightLogic":192,"./samBatLogic":193,"./visualization.html":196}],196:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":178,"../templates/page.html":203,"../utils":224,"../xml":225,"./api":180,"./bigGameLogic":181,"./blocks":182,"./collidable":183,"./constants":184,"./controls.html":185,"./dropletConfig":187,"./extraControlRows.html":188,"./projectile":191,"./rocketHeightLogic":192,"./samBatLogic":193,"./visualization.html":196}],196:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3079,7 +3079,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":45,"../constants":47,"./api":180,"./constants":184,"./customGameLogic":186}],192:[function(require,module,exports){
+},{"../codegen":44,"../constants":46,"./api":180,"./constants":184,"./customGameLogic":186}],192:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3132,7 +3132,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 
 module.exports = RocketHeightLogic;
 
-},{"../codegen":45,"./api":180,"./constants":184,"./customGameLogic":186}],191:[function(require,module,exports){
+},{"../codegen":44,"./api":180,"./constants":184,"./customGameLogic":186}],191:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -7324,23 +7324,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   /**
-   * functional_sqrt
-   */
-  blockly.Blocks.functional_sqrt = {
-    helpUrl: '',
-    init: function() {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
-        { name: 'ARG1', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_sqrt = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return 'Math.sqrt(' + arg1 + ');';
-  };
-
-  /**
    * functional_keydown
    */
   blockly.Blocks.functional_keydown = {
@@ -7386,7 +7369,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../codegen":45,"../sharedFunctionalBlocks":177,"../utils":224,"./constants":184}],235:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../codegen":44,"../sharedFunctionalBlocks":177,"../utils":224,"./constants":184}],235:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
 },{}],181:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
@@ -7607,7 +7590,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":45,"./api":180,"./constants":184,"./customGameLogic":186}],186:[function(require,module,exports){
+},{"../codegen":44,"./api":180,"./constants":184,"./customGameLogic":186}],186:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7676,7 +7659,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":45,"./api":180,"./constants":184}],180:[function(require,module,exports){
+},{"../codegen":44,"./api":180,"./constants":184}],180:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -8017,7 +8000,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],44:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -8240,7 +8223,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],43:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8530,7 +8513,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],41:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
