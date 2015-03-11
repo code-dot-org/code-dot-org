@@ -195,7 +195,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
     // Add a handler that allows the workspace to bump undeletable blocks
     // back into its working area.
-    this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_);
+    this.addChangeListener(this.bumpBlocksIntoView_);
   }
 
   /**
@@ -265,7 +265,7 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
  * 2. delete blocks on top of flyout
  * @private
  */
-Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   // Immediately return if dragging, to avoid expensive calculations
   if (Blockly.Block.isDragging()) {
     return;
