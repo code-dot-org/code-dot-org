@@ -13,6 +13,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimSendPanel.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
@@ -75,7 +76,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
   
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_send_panel',
-    panelTitle: 'Send a Message'
+    panelTitle: netsimMsg.sendAMessage()
   });
 };
 NetSimSendPanel.inherits(NetSimPanel);
@@ -337,25 +338,25 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
   liveFields.push({
     inputElement: this.binaryUI.message,
     newValue: formatBinary(this.message, chunkSize),
-    watermark: 'Binary'
+    watermark: netsimMsg.binary()
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
     newValue: formatHex(binaryToHex(this.message), chunkSize),
-    watermark: 'Hexadecimal'
+    watermark: netsimMsg.hexadecimal()
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
     newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-    watermark: 'Decimal'
+    watermark: netsimMsg.decimal()
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
     newValue: binaryToAscii(this.message, chunkSize),
-    watermark: 'ASCII'
+    watermark: netsimMsg.ascii()
   });
 
   liveFields.forEach(function (field) {
@@ -373,7 +374,10 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
   });
 
   var packetBinary = this.getPacketBinary_();
-  this.bitCounter.html(packetBinary.length + '/Infinity bits');
+  this.bitCounter.html(netsimMsg.bitCounter({
+    x: packetBinary.length,
+    y: netsimMsg.infinity()
+  }));
 
   // TODO: Hide columns by configuration
   this.getBody().find('th.packetInfo, td.packetInfo').hide();
@@ -423,10 +427,10 @@ NetSimSendPanel.prototype.getPacketBinary_ = function () {
 /**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimSendPanel.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncoding);
+NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
+  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncodings);
 };
 
 /**

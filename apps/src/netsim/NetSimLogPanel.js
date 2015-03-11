@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimLogPanel.html');
 var packetMarkup = require('./NetSimLogPacket.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -38,7 +39,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
    * @type {string}
    * @private
    */
-  this.currentEncoding_ = 'all';
+  this.currentEncodings_ = [];
 
   /**
    * Current chunk size (bytesize) for intepreting binary in the log.
@@ -68,7 +69,7 @@ NetSimLogPanel.prototype.render = function () {
   this.getBody().html(newMarkup);
 
   // Add a clear button to the panel header
-  this.addButton('Clear', this.onClearButtonPress_.bind(this));
+  this.addButton(netsimMsg.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
@@ -96,7 +97,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
       scrollArea.outerHeight();
 
   var newPacket = new NetSimLogPacket(packetBinary,
-      this.currentEncoding_,
+      this.currentEncodings_,
       this.currentChunkSize_);
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
@@ -110,12 +111,12 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
 /**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimLogPanel.prototype.setEncoding = function (newEncoding) {
-  this.currentEncoding_ = newEncoding;
+NetSimLogPanel.prototype.setEncodings = function (newEncodings) {
+  this.currentEncodings_ = newEncodings;
   this.packets_.forEach(function (packet) {
-    packet.setEncoding(newEncoding);
+    packet.setEncodings(newEncodings);
   });
 };
 
@@ -133,12 +134,12 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
 /**
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
- * @param {string} encoding - which display style to use initially
+ * @param {EncodingType[]} encodings - which display style to use initially
  * @param {number} chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, encoding, chunkSize) {
+var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
   /**
    * @type {string}
    * @private
@@ -146,10 +147,10 @@ var NetSimLogPacket = function (packetBinary, encoding, chunkSize) {
   this.packetBinary_ = packetBinary;
 
   /**
-   * @type {string}
+   * @type {EncodingType[]}
    * @private
    */
-  this.encoding_ = encoding;
+  this.encodings_ = encodings;
 
   /**
    * @type {number}
@@ -177,7 +178,7 @@ NetSimLogPacket.prototype.render = function () {
     chunkSize: this.chunkSize_
   });
   var jQueryWrap = $(rawMarkup);
-  NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   // TODO: Hide columns by configuration
   jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
@@ -193,10 +194,10 @@ NetSimLogPacket.prototype.getRoot = function () {
 
 /**
  * Change encoding-display setting and re-render packet contents accordingly.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimLogPacket.prototype.setEncoding = function (newEncoding) {
-  this.encoding_ = newEncoding;
+NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
   this.render();
 };
 
