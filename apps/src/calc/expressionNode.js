@@ -41,8 +41,8 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.isArithmetic() && args.length !== 2) {
-    throw new Error("Arithmetic ExpressionNode needs 2 args");
+  if (this.isArithmetic() && !(args.length === 2 || args.length === 1)) {
+    throw new Error("Arithmetic ExpressionNode needs 1 or 2 args");
   }
 };
 module.exports = ExpressionNode;
@@ -52,7 +52,7 @@ ExpressionNode.DivideByZeroError = DivideByZeroError;
  * What type of expression node is this?
  */
 ExpressionNode.prototype.getType_ = function () {
-  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
+  if (["+", "-", "*", "/", "pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
 
@@ -160,13 +160,26 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     }
 
     var left = this.children_[0].evaluate(globalMapping, localMapping);
-    var right = this.children_[1].evaluate(globalMapping, localMapping);
-
-    var err = left.err || right.err;
-    if (err) {
-      throw err;
+    if (left.err) {
+      throw left.err;
     }
     left = left.result;
+
+    if (this.children_.length === 1) {
+      switch (this.value_) {
+        case 'sqrt':
+          return { result: Math.sqrt(left) };
+        case 'sqr':
+          return { result: left * left };
+        default:
+          throw new Error('Unknown operator: ' + this.value_);
+        }
+    }
+
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+    if (right.err) {
+      throw right.err;
+    }
     right = right.result;
 
     switch (this.value_) {
@@ -181,6 +194,8 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
           throw new DivideByZeroError();
         }
         return { result: left / right };
+      case 'pow':
+        return { result: Math.pow(left, right) };
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }

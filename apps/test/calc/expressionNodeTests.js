@@ -82,14 +82,11 @@ describe("ExpressionNode", function () {
 
       // throw if we have the wrong number of operands
       assert.throws(function () {
-        nodne = new ExpressionNode('-', [1, 2, 3]);
-      }, Error);
-      assert.throws(function () {
-        nodne = new ExpressionNode('-', [1]);
+        node = new ExpressionNode('-', [1, 2, 3]);
       }, Error);
       // or forget to put them in an array
       assert.throws(function () {
-        nodne = new ExpressionNode('-', 1, 2);
+        node = new ExpressionNode('-', 1, 2);
       }, Error);
     });
 
@@ -156,6 +153,27 @@ describe("ExpressionNode", function () {
       evaluation = node.evaluate({});
       assert(!evaluation.err);
       assert.equal(evaluation.result, 3);
+    });
+
+    it('can evaluate a pow', function () {
+      node = new ExpressionNode('pow', [2, 3]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 8);
+    });
+
+    it('can evaluate a sqr', function () {
+      node = new ExpressionNode('sqr', [2]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 4);
+    });
+
+    it('can evaluate a sqrt', function () {
+      node = new ExpressionNode('sqrt', [4]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert.equal(evaluation.result, 2);
     });
 
     it("can evaluate a more complex expression", function () {
