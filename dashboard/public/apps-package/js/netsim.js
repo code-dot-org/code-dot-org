@@ -8558,11 +8558,11 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
 };
 
 /**
- * API for master apps table on the server.
+ * API for master channel list on the server.
  * @constructor
  */
 appsApi.AppsTable = function () {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps');
+  this.requestHelper_ = new ApiRequestHelper('/v3/channels');
 };
 
 /**
@@ -8618,8 +8618,8 @@ appsApi.AppsTable.prototype.delete = function (id, callback) {
 appsApi.SharedTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** Shared tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/shared-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.SharedTable.inherits(appsApi.AppsTable);
 
@@ -8633,8 +8633,8 @@ appsApi.SharedTable.inherits(appsApi.AppsTable);
 appsApi.UserTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** User tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.UserTable.inherits(appsApi.AppsTable);
 
@@ -8646,8 +8646,8 @@ appsApi.UserTable.inherits(appsApi.AppsTable);
  * @constructor
  */
 appsApi.PropertyBag = function (app_publickey) {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps' + app_publickey +
-      '/shared-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-properties/' +
+      app_publickey);
 };
 
 /**
@@ -8692,10 +8692,11 @@ appsApi.PropertyBag.prototype.delete = function (key, callback) {
 appsApi.UserPropertyBag = function (app_publickey) {
   appsApi.PropertyBag.call(this, app_publickey);
   /** User property bags just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-properties/' +
+      app_publickey);
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
+
 },{"./utils":224}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
