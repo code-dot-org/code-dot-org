@@ -398,8 +398,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an applab app.
   def applab_user_id
-    app_id = "1337" # Stub value, until storage for app_id's is available.
+    channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
-    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
+    Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
   end
 end

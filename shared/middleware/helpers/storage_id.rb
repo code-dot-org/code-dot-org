@@ -30,15 +30,15 @@ def storage_decrypt_id(encrypted)
   return id
 end
 
-def storage_decrypt_app_id(encrypted)
+def storage_decrypt_channel_id(encrypted)
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - encrypted.length % 4) % 4)
-  storage_id, app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
+  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  app_id = app_id.to_i
-  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
-  [storage_id, app_id]
+  channel_id = channel_id.to_i
+  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
+  [storage_id, channel_id]
 end
 
 def storage_encrypt(plain)
@@ -55,12 +55,12 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_app_id(storage_id, app_id)
+def storage_encrypt_channel_id(storage_id, channel_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  app_id = app_id.to_i
-  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}")).tr('=', '')
+  channel_id = channel_id.to_i
+  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{channel_id}")).tr('=', '')
 end
 
 def storage_id(endpoint)
