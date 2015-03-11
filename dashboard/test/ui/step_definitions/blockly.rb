@@ -60,6 +60,35 @@ Then /^block "([^"]*)" is at location "([^"]*)"$/ do |block, location_identifier
   location.y.should eq actual_y
 end
 
+Then /^block "([^"]*)" is visible in the workspace$/ do |block|
+  blockId = get_block_id(block)
+
+  # Check block existence, blockly-way
+  steps "Then block \"#{block}\" has not been deleted"
+
+  # Check block position is within visible blockspace
+  # Get block dimensions
+  block_left = @browser.execute_script("return $(\"[block-id='#{blockId}']\")[0].getBoundingClientRect().left")
+  block_right = @browser.execute_script("return $(\"[block-id='#{blockId}']\")[0].getBoundingClientRect().right")
+  block_top = @browser.execute_script("return $(\"[block-id='#{blockId}']\")[0].getBoundingClientRect().top")
+  block_bottom = @browser.execute_script("return $(\"[block-id='#{blockId}']\")[0].getBoundingClientRect().bottom")
+
+  # Get blockspace dimensions
+  # blockspaceRect includes the toolbox on the left, but not the headers on the top.
+  block_space_left = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().left')
+  block_space_right = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().right')
+  block_space_top = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().top')
+  block_space_bottom = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().bottom')
+  toolbox_width = @browser.execute_script('return Blockly.mainBlockSpaceEditor.getToolboxWidth()')
+
+  # Minimum part of block (in pixels) that must be within workspace to be 'visible'
+  block_margin = 10
+  block_bottom.should be > block_space_top + block_margin
+  block_top.should be < block_space_bottom - block_margin
+  block_left.should be < block_space_right - block_margin
+  block_right.should be > block_space_left + block_margin + toolbox_width
+end
+
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
