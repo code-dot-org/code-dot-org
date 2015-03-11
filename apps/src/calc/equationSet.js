@@ -228,9 +228,10 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         testMapping = _.clone(mapping);
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
-        // TODO - single place for string check
-        if (evaluation.err &&
-            evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+        if (evaluation.err) {
+          if(evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
           continue;
         }
 

@@ -349,6 +349,16 @@ describe('EquationSet', function () {
       assert(evaluation.err);
       assert.equal(evaluation.result, undefined);
     });
+
+    it('cant evaluate if function has a div zero', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('/', ['x', 0])));
+      set.addEquation_(new Equation(null, [], new ExpressionNode('f', [5])));
+
+      var evaluation = set.evaluate();
+      assert.equal(evaluation.result, undefined);
+      assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
+    });
   });
 
   describe('computesSingleVariable', function () {
