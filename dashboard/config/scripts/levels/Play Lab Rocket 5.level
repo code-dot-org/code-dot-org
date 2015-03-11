@@ -26,7 +26,7 @@
     "first_sprite_index": "23",
     "protaganist_sprite_index": "0",
     "open_function_definition": "rocket-height",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1500",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
     "generate_function_pass_blocks": "true",
@@ -37,8 +37,8 @@
     "examples_collapse": "true",
     "definition_highlight": "false",
     "definition_collapse": "true",
-    "maze_data": null,
-    "custom_game_type": "Rocket Height"
+    "custom_game_type": "Rocket Height",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

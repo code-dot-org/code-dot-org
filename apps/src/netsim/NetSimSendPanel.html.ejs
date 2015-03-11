@@ -1,41 +1,42 @@
+<% var netsimMsg = require('../../locale/current/netsim'); %>
 <div class="netsim_packet">
   <table>
     <thead>
     <tr>
       <th nowrap class="encodingLabel"></th>
-      <th nowrap class="toAddress">To</th>
-      <th nowrap class="fromAddress">From</th>
-      <th nowrap class="packetInfo">Packet</th>
-      <th class="message">Message</th>
+      <th nowrap class="toAddress"><%= netsimMsg.to() %>></th>
+      <th nowrap class="fromAddress"><%= netsimMsg.from() %></th>
+      <th nowrap class="packetInfo"><%= netsimMsg.packet() %></th>
+      <th class="message"><%= netsimMsg.message() %></th>
     </tr>
     </thead>
     <tbody>
     <tr class="ascii">
-      <th nowrap class="encodingLabel">ASCII</th>
+      <th nowrap class="encodingLabel"><%= netsimMsg.ascii() %></th>
       <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
       <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
+      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= netsimMsg._of_() %><input type="text" readonly class="packetCount" /></td>
       <td class="message"><div><textarea class="message"></textarea></div></td>
     </tr>
     <tr class="decimal">
-      <th nowrap class="encodingLabel">Decimal</th>
+      <th nowrap class="encodingLabel"><%= netsimMsg.decimal() %></th>
       <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
       <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
+      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= netsimMsg._of_() %><input type="text" readonly class="packetCount" /></td>
       <td class="message"><div><textarea class="message"></textarea></div></td>
     </tr>
     <tr class="hexadecimal">
-      <th nowrap class="encodingLabel">Hex</th>
+      <th nowrap class="encodingLabel"><%= netsimMsg.hex() %></th>
       <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
       <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
+      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= netsimMsg._of_() %><input type="text" readonly class="packetCount" /></td>
       <td class="message"><div><textarea class="message"></textarea></div></td>
     </tr>
     <tr class="binary">
-      <th nowrap class="encodingLabel">Binary</th>
+      <th nowrap class="encodingLabel"><%= netsimMsg.binary() %></th>
       <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
       <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
+      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= netsimMsg._of_() %><input type="text" readonly class="packetCount" /></td>
       <td class="message"><div><textarea class="message"></textarea></div></td>
     </tr>
     </tbody>
@@ -45,5 +46,5 @@
 <div class="send_widget_footer">
   <!-- Packet size slider -->
   <!-- Add packet button -->
-  <span class="netsim_button" id="send_button">Send</span>
+  <span class="netsim_button" id="send_button"><%= netsimMsg.send() %></span>
 </div>

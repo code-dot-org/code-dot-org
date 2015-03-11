@@ -9,10 +9,10 @@
     .game-group
       .stage
         %span
-          = stage_title(script, stage)
+          = stage.localized_title
         - if should_show_lesson_plan
           .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), lesson_plan_html_url(stage)
+            = link_to t('view_lesson_plan'), stage.lesson_plan_html_url
 
       .games
         - sl_group = sl_group.sort_by {|sl| sl.position}

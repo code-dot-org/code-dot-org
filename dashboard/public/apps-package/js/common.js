@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],172:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3516,7 +3516,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":224,"./utils":219}],204:[function(require,module,exports){
+},{"../locale/current/common":230,"./utils":225}],210:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3576,7 +3576,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],198:[function(require,module,exports){
+},{}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3600,7 +3600,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],174:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],180:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3865,7 +3865,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":48}],173:[function(require,module,exports){
+},{"./dom":48}],179:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4016,7 +4016,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":20,"./dom":48,"./required_block_utils":171,"./utils":219}],171:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":20,"./dom":48,"./required_block_utils":177,"./utils":225}],177:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4294,7 +4294,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":224,"./block_utils":19,"./utils":219,"./xml":220}],20:[function(require,module,exports){
+},{"../locale/current/common":230,"./block_utils":19,"./utils":225,"./xml":226}],20:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4459,7 +4459,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":224}],4:[function(require,module,exports){
+},{"../locale/current/common":230}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5728,7 +5728,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         config.forceInsertTopBlock);
   }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  try {
+    this.loadBlocks(startBlocks);
+  } catch (e) {
+    if (loadLastAttempt) {
+      Blockly.mainBlockSpace.clear();
+      // Try loading the default start blocks instead.
+      this.setStartBlocks_(config, false);
+    } else {
+      throw e;
+    }
+  }
 };
 
 /**
@@ -5889,7 +5899,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":224,"./ResizeSensor":2,"./block_utils":19,"./constants.js":47,"./dom":48,"./dropletUtils":49,"./feedback":68,"./templates/builder.html":192,"./templates/buttons.html":193,"./templates/instructions.html":195,"./templates/learn.html":196,"./templates/makeYourOwn.html":197,"./utils":219,"./xml":220,"url":239}],239:[function(require,module,exports){
+},{"../locale/current/common":230,"./ResizeSensor":2,"./block_utils":19,"./constants.js":47,"./dom":48,"./dropletUtils":49,"./feedback":68,"./templates/builder.html":198,"./templates/buttons.html":199,"./templates/instructions.html":201,"./templates/learn.html":202,"./templates/makeYourOwn.html":203,"./utils":225,"./xml":226,"url":245}],245:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6598,13 +6608,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":235,"querystring":238}],238:[function(require,module,exports){
+},{"punycode":241,"querystring":244}],244:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":236,"./encode":237}],237:[function(require,module,exports){
+},{"./decode":242,"./encode":243}],243:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6691,7 +6701,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],236:[function(require,module,exports){
+},{}],242:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6777,7 +6787,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],235:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7288,7 +7298,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],197:[function(require,module,exports){
+},{}],203:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7308,7 +7318,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],196:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],202:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7330,7 +7340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],195:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7350,7 +7360,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],192:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],198:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7370,7 +7380,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],68:[function(require,module,exports){
+},{"ejs":246}],68:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8574,7 +8584,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":224,"./codegen":45,"./constants":47,"./dom":48,"./feedbackBlocks":69,"./templates/buttons.html":193,"./templates/code.html":194,"./templates/shareFailure.html":200,"./templates/sharing.html":201,"./templates/showCode.html":202,"./templates/trophy.html":203,"./utils":219,"./xml":220}],203:[function(require,module,exports){
+},{"../locale/current/common":230,"./codegen":45,"./constants":47,"./dom":48,"./feedbackBlocks":69,"./templates/buttons.html":199,"./templates/code.html":200,"./templates/shareFailure.html":206,"./templates/sharing.html":207,"./templates/showCode.html":208,"./templates/trophy.html":209,"./utils":225,"./xml":226}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8594,7 +8604,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],202:[function(require,module,exports){
+},{"ejs":246}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8614,7 +8624,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],201:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8634,7 +8644,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],200:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8654,7 +8664,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],194:[function(require,module,exports){
+},{"ejs":246}],200:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8674,7 +8684,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],193:[function(require,module,exports){
+},{"ejs":246}],199:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8694,7 +8704,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],224:[function(require,module,exports){
+},{"../../locale/current/common":230,"ejs":246}],230:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],69:[function(require,module,exports){
 var constants = require('./constants');
@@ -8825,7 +8835,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":47,"./templates/readonly.html":199}],199:[function(require,module,exports){
+},{"./constants":47,"./templates/readonly.html":205}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8846,7 +8856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],240:[function(require,module,exports){
+},{"ejs":246}],246:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9201,7 +9211,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":241,"./utils":242,"fs":232,"path":233}],242:[function(require,module,exports){
+},{"./filters":247,"./utils":248,"fs":238,"path":239}],248:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9225,7 +9235,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],241:[function(require,module,exports){
+},{}],247:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9424,7 +9434,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],233:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9652,7 +9662,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":234}],234:[function(require,module,exports){
+},{"_process":240}],240:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9711,7 +9721,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],232:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 
 },{}],45:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
@@ -10451,17 +10461,26 @@ exports.generateAceApiCompleter = function (dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    if (configBlocks[i].type === 'value') {
-      modeOptions.valueFunctions.push(configBlocks[i].func);
+function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+  var mergedCategories = mergeCategoriesWithConfig(config);
+
+  for (var i = 0; i < config.blocks.length; i++) {
+    var newFunc = {};
+
+    if (config.blocks[i].type === 'value') {
+      newFunc.value = true;
     }
-    else if (configBlocks[i].type === 'either') {
-      modeOptions.eitherFunctions.push(configBlocks[i].func);
+    else if (config.blocks[i].type === 'either') {
+      newFunc.value = true;
+      newFunc.command = true;
     }
-    else if (configBlocks[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(configBlocks[i].func);
+
+    var category = mergedCategories[config.blocks[i].category];
+    if (category) {
+      newFunc.color = category.rgb || category.color;
     }
+
+    modeOptions.functions[config.blocks[i].func] = newFunc;
   }
 }
 
@@ -10470,29 +10489,18 @@ function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
  */
 exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: [],
-    eitherFunctions: [],
+    functions: []
   };
 
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletBuiltinConfigBlocks);
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig.blocks);
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
 
   return modeOptions;
 };
 
 
-},{"./utils":219}],219:[function(require,module,exports){
+},{"./utils":225}],225:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10706,13 +10714,13 @@ if (!String.prototype.repeat) {
 /**
  * Similar to val || defaultVal, except it's gated on whether or not val is
  * undefined instead of whether val is falsey.
- * @returns val if not undefined, otherwise defaultVal
+ * @returns {*} val if not undefined, otherwise defaultVal
  */
 exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":79,"./lodash":87,"./xml":220}],87:[function(require,module,exports){
+},{"./hammer":79,"./lodash":87,"./xml":226}],87:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -16680,7 +16688,55 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":220}],220:[function(require,module,exports){
+/**
+ * Generate xml for a functional defintion
+ * @param {string} name The name of the function
+ * @param {string} outputType Function's output type
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ * @param {string} blockXml Xml for the blocks that actually define the function
+ */
+exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
+  var mutation = '<mutation>';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
+
+  return '<block type="functional_definition" inline="false">'+
+      mutation +
+      '<title name="NAME">' + name + '</title>' +
+     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
+    '</block>';
+};
+
+/**
+ * Generate xml for a calling a functional function
+ * @param {string} name The name of the function
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ */
+exports.functionalCallXml = function (name, argList, inputContents) {
+  if (argList.length !== inputContents.length) {
+    throw new Error('must define contents for each arg');
+  }
+
+  var mutation = '<mutation name="' + name + '">';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '</mutation>';
+
+  var contents = '';
+  inputContents.forEach(function (blockXml, index) {
+    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
+  });
+
+  return '<block type="functional_call">' +
+      mutation +
+      contents +
+    '</block>';
+};
+
+},{"./xml":226}],226:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

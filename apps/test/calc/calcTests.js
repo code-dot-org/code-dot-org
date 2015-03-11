@@ -240,7 +240,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     userSet.addEquation_(new Equation('age_in_months', [],
       new ExpressionNode('*', [17, 12])));
 
-    assert.equal(targetSet.evaluate(), userSet.evaluate());
+    assert.deepEqual(targetSet.evaluate(), userSet.evaluate());
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -259,7 +259,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     userSet.addEquation_(new Equation('age_in_months', [],
       new ExpressionNode('*', [17, 12])));
 
-    assert.equal(targetSet.evaluate(), userSet.evaluate());
+    assert.deepEqual(targetSet.evaluate(), userSet.evaluate());
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -296,7 +296,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     userSet.addEquation_(new Equation('age_in_months', [],
       new ExpressionNode('*', [17, 12])));
 
-    assert.equal(targetSet.evaluate(), userSet.evaluate());
+    assert.deepEqual(targetSet.evaluate(), userSet.evaluate());
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({166:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({170:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":165,"./netsim":167,"./skins":170}],170:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":169,"./netsim":171,"./skins":175}],175:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":173}],167:[function(require,module,exports){
+},{"../skins":179}],171:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -44,6 +44,8 @@ exports.load = function (assetUrl, id) {
 'use strict';
 
 var page = require('./page.html');
+var netsimMsg = require('../../locale/current/netsim');
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
 var NetSimLobby = require('./NetSimLobby');
@@ -51,6 +53,7 @@ var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
+var NetSimVisualization = require('./NetSimVisualization');
 var RunLoop = require('../RunLoop');
 
 /**
@@ -58,8 +61,19 @@ var RunLoop = require('../RunLoop');
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
 var NetSim = module.exports = function () {
+  /**
+   * @type {Object}
+   */
   this.skin = null;
-  this.level = null;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   */
+  this.level = {};
+
+  /**
+   * @type {number}
+   */
   this.heading = 0;
 
   /**
@@ -92,13 +106,6 @@ var NetSim = module.exports = function () {
   this.runLoop_ = new RunLoop();
 
   /**
-   * Current encoding mode; 'all' or 'binary' or 'ascii', etc.
-   * @type {string}
-   * @private
-   */
-  this.encodingMode_ = 'ascii';
-
-  /**
    * Current chunk size (bytesize)
    * @type {number}
    * @private
@@ -107,12 +114,10 @@ var NetSim = module.exports = function () {
 
   /**
    * Current dns mode.
-   * Valid values 'none', 'manual', 'automatic'
-   * TODO: Move these to an enum
-   * @type {string}
+   * @type {DnsMode}
    * @private
    */
-  this.dnsMode_ = 'none';
+  this.dnsMode_ = DnsMode.NONE;
 };
 
 
@@ -124,24 +129,28 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
 };
 
 /**
- * Hook up input handlers to controls on the netsim page
- * @private
- */
-NetSim.prototype.attachHandlers_ = function () {
-};
-
-/**
  * Called on page load.
- * @param {Object} config Requires the following members:
- *   skin: ???
- *   level: ???
+ * @param {Object} config
+ * @param {Object} config.skin
+ * @param {NetSimLevelConfiguration} config.level
+ * @param {boolean} config.enableShowCode - Always false for NetSim
+ * @param {function} config.loadAudio
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
 
+  /**
+   * Skin for the loaded level
+   * @type {Object}
+   */
   this.skin = config.skin;
+
+  /**
+   * Configuration for the loaded level
+   * @type {NetSimLevelConfiguration}
+   */
   this.level = config.level;
 
   config.html = page({
@@ -163,8 +172,6 @@ NetSim.prototype.init = function(config) {
   this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
-
-  this.attachHandlers_();
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
@@ -200,6 +207,10 @@ NetSim.prototype.shouldEnableCleanup = function () {
   return !location.search.match(/disableCleaning/i);
 };
 
+NetSim.prototype.shouldShowAnyTabs = function () {
+  return this.level.showTabs.length > 0;
+};
+
 /**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
@@ -211,13 +222,18 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   this.receivedMessageLog_ = new NetSimLogPanel(
-      $('#netsim_received'), 'Received Message Log', false);
+      $('#netsim_received'), netsimMsg.receivedMessageLog(), false);
 
   this.sentMessageLog_ = new NetSimLogPanel(
-      $('#netsim_sent'), 'Sent Message Log', true);
+      $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
 
-  this.connection_ = new NetSimConnection(window, this.sentMessageLog_,
-      this.receivedMessageLog_, this.shouldEnableCleanup());
+  this.connection_ = new NetSimConnection({
+    window: window,
+    levelConfig: this.level,
+    sentLog: this.sentMessageLog_,
+    receivedLog: this.receivedMessageLog_,
+    enableCleanup: this.shouldEnableCleanup()
+  });
   this.connection_.attachToRunLoop(this.runLoop_);
   this.connection_.statusChanges.register(this.refresh_.bind(this));
   this.connection_.shardChange.register(this.onShardChange_.bind(this));
@@ -225,23 +241,29 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.statusPanel_ = new NetSimStatusPanel($('#netsim_status'),
       this.connection_.disconnectFromRouter.bind(this.connection_));
 
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
+      this.connection_);
+
   var lobbyContainer = document.getElementById('netsim_lobby_container');
-  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer,
+  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.level,
       this.connection_, user, this.getOverrideShardID());
 
   // Tab panel - contains instructions, my device, router, dns
-  this.tabs_ = new NetSimTabsComponent(
-      $('#netsim_tabs'),
-      this.setChunkSize.bind(this),
-      this.changeEncoding.bind(this),
-      this.changeRemoteDnsMode.bind(this),
-      this.becomeDnsNode.bind(this));
+  if (this.shouldShowAnyTabs()) {
+    this.tabs_ = new NetSimTabsComponent(
+        $('#netsim_tabs'),
+        this.level,
+        this.setChunkSize.bind(this),
+        this.changeEncodings.bind(this),
+        this.changeRemoteDnsMode.bind(this),
+        this.becomeDnsNode.bind(this));
+  }
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
 
-  this.changeEncoding(this.encodingMode_);
+  this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
-  this.setDnsMode(this.dnsMode_);
+  this.setDnsMode(this.level.defaultDnsMode);
   this.refresh_();
 };
 
@@ -267,14 +289,15 @@ NetSim.prototype.refresh_ = function () {
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSim.prototype.changeEncoding = function (newEncoding) {
-  this.encodingMode_ = newEncoding;
-  this.tabs_.setEncoding(newEncoding);
-  this.receivedMessageLog_.setEncoding(newEncoding);
-  this.sentMessageLog_.setEncoding(newEncoding);
-  this.sendWidget_.setEncoding(newEncoding);
+NetSim.prototype.changeEncodings = function (newEncodings) {
+  if (this.tabs_) {
+    this.tabs_.setEncodings(newEncodings);
+  }
+  this.receivedMessageLog_.setEncodings(newEncodings);
+  this.sentMessageLog_.setEncodings(newEncodings);
+  this.sendWidget_.setEncodings(newEncodings);
 };
 
 /**
@@ -288,7 +311,9 @@ NetSim.prototype.changeEncoding = function (newEncoding) {
  */
 NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
-  this.tabs_.setChunkSize(newChunkSize);
+  if (this.tabs_) {
+    this.tabs_.setChunkSize(newChunkSize);
+  }
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
@@ -301,17 +326,19 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
- * @param {"none"|"manual"|"automatic"} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSim.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
-  this.tabs_.setDnsMode(newDnsMode);
+  if (this.tabs_) {
+    this.tabs_.setDnsMode(newDnsMode);
+  }
 };
 
 /**
  * Sets DNS mode across the whole simulation, propagating the change
  * to other clients.
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
@@ -326,7 +353,9 @@ NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
  * @param {boolean} isDnsNode
  */
 NetSim.prototype.setIsDnsNode = function (isDnsNode) {
-  this.tabs_.setIsDnsNode(isDnsNode);
+  if (this.tabs_) {
+    this.tabs_.setIsDnsNode(isDnsNode);
+  }
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
@@ -353,14 +382,18 @@ NetSim.prototype.becomeDnsNode = function () {
  * @param {Array} tableContents
  */
 NetSim.prototype.setDnsTableContents = function (tableContents) {
-  this.tabs_.setDnsTableContents(tableContents);
+  if (this.tabs_) {
+    this.tabs_.setDnsTableContents(tableContents);
+  }
 };
 
 /**
  * @param {Array} logData
  */
 NetSim.prototype.setRouterLogData = function (logData) {
-  this.tabs_.setRouterLogData(logData);
+  if (this.tabs_) {
+    this.tabs_.setRouterLogData(logData);
+  }
 };
 
 /**
@@ -406,7 +439,7 @@ NetSim.prototype.render = function () {
       shareLink;
 
   isConnected = false;
-  clientStatus = 'Disconnected';
+  clientStatus = netsimMsg.disconnected();
   if (this.connection_ && this.connection_.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.connection_.myNode.getHostname();
@@ -417,7 +450,7 @@ NetSim.prototype.render = function () {
 
   if (this.myConnectedRouter_) {
     isConnected = true;
-    clientStatus = 'Connected';
+    clientStatus = netsimMsg.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
@@ -503,7 +536,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
-  this.setIsDnsNode(router.dnsMode === 'manual' &&
+  this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };
 
@@ -518,7 +551,7 @@ NetSim.prototype.onRouterLogChange_ = function () {
     this.setRouterLogData(this.myConnectedRouter_.getLog());
   }
 };
-},{"../RunLoop":3,"./DashboardUser":116,"./NetSimConnection":120,"./NetSimLobby":134,"./NetSimLogPanel":139,"./NetSimSendPanel":153,"./NetSimStatusPanel":157,"./NetSimTabsComponent":160,"./controls.html":163,"./page.html":169}],169:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"../RunLoop":3,"./DashboardUser":116,"./NetSimConnection":120,"./NetSimLobby":134,"./NetSimLogPanel":139,"./NetSimSendPanel":153,"./NetSimStatusPanel":157,"./NetSimTabsComponent":160,"./NetSimVisualization":161,"./controls.html":167,"./netsimConstants":172,"./page.html":174}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -534,7 +567,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <img src="', escape((41,  assetUrl('media/netsim/netsim_viz_mock.png') )), '" />\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((56,  data.localeDirection )), '">\n    ');57; instructions() ; buf.push('\n    ');58; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered_group" transform="translate(150,150)">\n            <g id="background_group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground_group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((69,  data.localeDirection )), '">\n    ');70; instructions() ; buf.push('\n    ');71; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -542,23 +575,143 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"../../locale/current/netsim":229,"ejs":240}],165:[function(require,module,exports){
+},{"../../locale/current/common":230,"../../locale/current/netsim":235,"ejs":246}],169:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
+var utils = require('../utils');
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var EncodingType = netsimConstants.EncodingType;
+var NetSimTabType = netsimConstants.NetSimTabType;
+
+/**
+ * A level configuration that can be used by NetSim
+ * @typedef {Object} NetSimLevelConfiguration
+ *
+ * @property {boolean} showClientsInLobby
+ *
+ * @property {boolean} showRoutersInLobby
+ *
+ * @property {boolean} showAddRouterButton
+ *
+ * @property {NetSimTabType[]} showTabs
+ *
+ * @property {number} defaultTabIndex - The zero-based index of the tab
+ *           that should be active by default, which depends on which tabs
+ *           you have enabled.
+ *
+ * @property {EncodingType[]} showEncodingControls
+ *
+ * @property {EncodingType[]} defaultEnabledEncodings
+ *
+ * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
+ *           be available to the student.
+ *
+ * @property {DnsMode} defaultDnsMode - Which DNS mode the simulator should
+ *           initialize into.
+ */
 
 /*
  * Configuration for all levels.
  */
 var levels = module.exports = {};
 
-levels.netsim_demo = {
-  'freePlay': true
+/**
+ * A default level configuration so that we can define the others by delta.
+ * This default configuration enables everything possible, so other configs
+ * should start with this one and disable features.
+ * @type {NetSimLevelConfiguration}
+ */
+levels.default = {
+
+  // Lobby configuration
+  showClientsInLobby: true,
+  showRoutersInLobby: true,
+  showAddRouterButton: true,
+
+  // Tab-panel control
+  showTabs: [
+    NetSimTabType.INSTRUCTIONS,
+    NetSimTabType.MY_DEVICE,
+    NetSimTabType.ROUTER,
+    NetSimTabType.DNS
+  ],
+  defaultTabIndex: 0,
+
+  // Instructions tab and its controls
+  // Nothing here yet!
+
+  // "My Device" tab and its controls
+  showEncodingControls: [
+    EncodingType.BINARY,
+    EncodingType.A_AND_B,
+    EncodingType.HEXADECIMAL,
+    EncodingType.DECIMAL,
+    EncodingType.ASCII
+  ],
+  defaultEnabledEncodings: [
+    EncodingType.ASCII,
+    EncodingType.BINARY
+  ],
+
+  // Router tab and its controls
+  // Nothing here yet!
+
+  // DNS tab and its controls
+  showDnsModeControl: true,
+  defaultDnsMode: DnsMode.NONE
 };
 
-},{"../../locale/current/netsim":229}],229:[function(require,module,exports){
-/*netsim*/ module.exports = window.blockly.appLocale;
-},{}],163:[function(require,module,exports){
+/**
+ * Variant 1 base level
+ * Sends individual bits at a time.
+ * @type {NetSimLevelConfiguration}
+ */
+levels.variant1 = utils.extend(levels.default, {
+  showAddRouterButton: false,
+
+  showTabs: [NetSimTabType.INSTRUCTIONS],
+
+  defaultEnabledEncodings: [EncodingType.A_AND_B]
+});
+
+/**
+ * Variant 2 base level
+ * Sends messages as packets, all at once.
+ * @type {NetSimLevelConfiguration}
+ */
+levels.variant2 = utils.extend(levels.default, {
+  showAddRouterButton: false,
+  showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
+  showEncodingControls: [EncodingType.ASCII],
+  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
+});
+
+/**
+ * Variant 3 base level
+ * Enables routers.
+ * @type {NetSimLevelConfiguration}
+ */
+levels.variant3 = utils.extend(levels.default, {
+  showClientsInLobby: false,
+  showAddRouterButton: true,
+
+  showTabs: [
+    NetSimTabType.INSTRUCTIONS,
+    NetSimTabType.MY_DEVICE,
+    NetSimTabType.ROUTER,
+    NetSimTabType.DNS
+  ],
+
+  showEncodingControls: [EncodingType.ASCII],
+  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII],
+
+  showDnsModeControl: false,
+  defaultDnsMode: DnsMode.AUTOMATIC
+});
+
+},{"../../locale/current/netsim":235,"../utils":225,"./netsimConstants":172}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -578,7 +731,1079 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],160:[function(require,module,exports){
+},{"ejs":246}],161:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+var utils = require('../utils');
+var _ = utils.getLodash();
+var NetSimWire = require('./NetSimWire');
+var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizWire = require('./NetSimVizWire');
+var netsimUtils = require('./netsimUtils');
+var tweens = require('./tweens');
+
+/**
+ * Top-level controller for the network visualization.
+ *
+ * For the most part, the visualization attaches to the raw network state
+ * representation (the storage tables) and updates to reflect that state,
+ * independent of the rest of the controls on the page.  This separation means
+ * that the visualization always has one canonical state to observe.
+ *
+ * @param {jQuery} svgRoot - The <svg> tag within which the visualization
+ *        will be created.
+ * @param {RunLoop} runLoop - Loop providing tick and render events that the
+ *        visualization can hook up to and respond to.
+ * @param {NetSimConnection} connection - Reference to the connection manager,
+ *        which provides the hooks we need to get the shard, the local node,
+ *        and to attach to the shared network state.
+ * @constructor
+ */
+var NetSimVisualization = module.exports = function (svgRoot, runLoop, connection) {
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.svgRoot_ = svgRoot;
+
+  /**
+   * The shard currently being represented.
+   * We don't have a shard now, but we register with the connection manager
+   * to find out when we have one.
+   * @type {NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
+  connection.shardChange.register(this.onShardChange_.bind(this));
+
+  /**
+   * List of VizEntities, which are all the elements that will actually show up
+   * in our visualization.
+   * @type {Array.<NetSimVizEntity>}
+   * @private
+   */
+  this.entities_ = [];
+
+  /**
+   * Width (in svg-units) of visualization
+   * @type {number}
+   */
+  this.visualizationWidth = 300;
+
+  /**
+   * Height (in svg-units) of visualization
+   * @type {number}
+   */
+  this.visualizationHeight = 300;
+
+  /**
+   * Key used to unregister from the node table.
+   * @type {Object}
+   */
+  this.nodeTableChangeKey = undefined;
+
+  /**
+   * Key used to unregister from the wire table.
+   * @type {Object}
+   */
+  this.wireTableChangeKey = undefined;
+
+  // Hook up tick and render methods
+  runLoop.tick.register(this.tick.bind(this));
+  runLoop.render.register(this.render.bind(this));
+};
+
+/**
+ * Tick: Update all vizentities, giving them an opportunity to recalculate
+ *       their internal state, and remove any dead entities from the
+ *       visualization.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVisualization.prototype.tick = function (clock) {
+  // Everyone gets an update
+  this.entities_.forEach(function (entity) {
+    entity.tick(clock);
+  });
+
+  // Tear out dead entities.
+  this.entities_ = this.entities_.filter(function (entity) {
+    if (entity.isDead()) {
+      entity.getRoot().remove();
+      return false;
+    }
+    return true;
+  });
+};
+
+/**
+ * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
+ */
+NetSimVisualization.prototype.render = function () {
+  this.entities_.forEach(function (entity) {
+    entity.render();
+  });
+};
+
+/**
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
+ * @param {?NetSimLocalClientNode} localNode - null if disconnected
+ * @private
+ */
+NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
+  this.setShard(newShard);
+  this.setLocalNode(localNode);
+};
+
+/**
+ * Change the shard this visualization will source its data from.
+ * Re-attaches table change listeners for all the tables we need to monitor.
+ * @param {?NetSimShard} newShard - null if disconnected
+ */
+NetSimVisualization.prototype.setShard = function (newShard) {
+  if (this.nodeTableChangeKey !== undefined) {
+    this.shard_.nodeTable.tableChange.unregister(this.nodeTableChangeKey);
+    this.nodeTableChangeKey = undefined;
+  }
+
+  if (this.wireTableChangeKey !== undefined) {
+    this.shard_.wireTable.tableChange.unregister(this.wireTableChangeKey);
+    this.wireTableChangeKey = undefined;
+  }
+
+  this.shard_ = newShard;
+  if (!this.shard_) {
+    return;
+  }
+
+  this.nodeTableChangeKey = this.shard_.nodeTable.tableChange.register(
+      this.onNodeTableChange_.bind(this));
+
+  this.wireTableChangeKey = this.shard_.wireTable.tableChange.register(
+      this.onWireTableChange_.bind(this));
+};
+
+/**
+ * Change which node we consider the 'local node' in the visualization.
+ * We go through a special creation process for this node, so that it
+ * looks and behaves differently.
+ * @param {?NetSimLocalClientNode} newLocalNode - null if disconnected
+ */
+NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
+  if (newLocalNode) {
+    if (this.localNode) {
+      this.localNode.configureFrom(newLocalNode);
+    } else {
+      this.localNode = new NetSimVizNode(newLocalNode);
+      this.entities_.push(this.localNode);
+      this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
+    }
+  } else {
+    this.localNode.kill();
+  }
+  this.pullElementsToForeground();
+};
+
+/**
+ * Find a particular VizEntity in the visualization, by type and ID.
+ * @param {function} entityType - constructor of entity we're looking for
+ * @param {number} entityID - ID, with corresponds to NetSimEntity.entityID
+ * @returns {NetSimVizEntity} or undefined if not found
+ */
+NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
+  return _.find(this.entities_, function (entity) {
+    return entity instanceof entityType && entity.id === entityID;
+  });
+};
+
+/**
+ * Gets the set of VizWires directly attached to the given VizNode, (either
+ * on the local end or remote end)
+ * @param {NetSimVizNode} vizNode
+ * @returns {Array.<NetSimVizWire>} the attached wires
+ */
+NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
+  return this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
+  });
+};
+
+/**
+ * Handle notification that node table contents have changed.
+ * @param {Array.<Object>} rows - node table rows
+ * @private
+ */
+NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
+  // Convert rows to correctly-typed objects
+  var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
+
+  // Update collection of VizNodes from source data
+  this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
+    var newVizNode = new NetSimVizNode(node);
+    newVizNode.snapToPosition(
+        Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
+        Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
+    return newVizNode;
+  }.bind(this));
+};
+
+/**
+ * Handle notification that wire table contents have changed.
+ * @param {Array.<Object>} rows - wire table rows
+ * @private
+ */
+NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
+  // Convert rows to correctly-typed objects
+  var tableWires = rows.map(function (row) {
+    return new NetSimWire(this.shard_, row);
+  }.bind(this));
+
+  // Update collection of VizWires from source data
+  this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
+    return new NetSimVizWire(wire, this.getEntityByID.bind(this));
+  }.bind(this));
+
+  // Since the wires table determines simulated connectivity, we trigger a
+  // recalculation of which nodes are in the local network (should be in the
+  // foreground) and then re-layout the foreground nodes.
+  this.pullElementsToForeground();
+  this.distributeForegroundNodes();
+};
+
+/**
+ * Compares VizEntities of the given type that are currently in the
+ * visualization to the source data given, and creates/updates/removes
+ * VizEntities so that the visualization reflects the new source data.
+ *
+ * @param {function} vizEntityType
+ * @param {Array.<NetSimEntity>} entityCollection
+ * @param {function} creationMethod
+ * @private
+ */
+NetSimVisualization.prototype.updateVizEntitiesOfType_ = function (
+    vizEntityType, entityCollection, creationMethod) {
+
+  // 1. Kill VizEntities that are no longer in the source data
+  this.killVizEntitiesOfTypeMissingMatch_(vizEntityType, entityCollection);
+
+  entityCollection.forEach(function (entity) {
+    var vizEntity = this.getEntityByID(vizEntityType, entity.entityID);
+    if (vizEntity) {
+      // 2. Update existing VizEntities from their source data
+      vizEntity.configureFrom(entity);
+    } else {
+      // 3. Create new VizEntities for new source data
+      this.addVizEntity_(creationMethod(entity));
+    }
+  }, this);
+};
+
+/**
+ * Call kill() on any vizentities that match the given type and don't map to
+ * a NetSimEntity in the provided collection.
+ * @param {function} vizEntityType
+ * @param {Array.<NetSimEntity>} entityCollection
+ * @private
+ */
+NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
+    vizEntityType, entityCollection) {
+  this.entities_.forEach(function (vizEntity) {
+    var isCorrectType = (vizEntity instanceof vizEntityType);
+    var foundMatch = entityCollection.some(function (entity) {
+      return entity.entityID === vizEntity.id;
+    });
+
+    if (isCorrectType && !foundMatch) {
+      vizEntity.kill();
+    }
+  });
+};
+
+/**
+ * Adds a VizEntity to the visualization.
+ * @param {NetSimVizEntity} vizEntity
+ * @private
+ */
+NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
+  this.entities_.push(vizEntity);
+  this.svgRoot_.find('#background_group').prepend(vizEntity.getRoot());
+};
+
+/**
+ * If we do need a DOM change, detach the entity and reattach it to the new
+ * layer. Special rule (for now): Prepend wires so that they show up behind
+ * nodes.  Will need a better solution for this if/when the viz gets more
+ * complex.
+ * @param {NetSimVizEntity} vizEntity
+ * @param {jQuery} newParent
+ */
+var moveVizEntityToGroup = function (vizEntity, newParent) {
+  vizEntity.getRoot().detach();
+  if (vizEntity instanceof NetSimVizWire) {
+    vizEntity.getRoot().prependTo(newParent);
+  } else {
+    vizEntity.getRoot().appendTo(newParent);
+  }
+};
+
+/**
+ * Recalculate which nodes should be in the foreground layer by doing a full
+ * traversal starting with the local node.  In short, everything reachable
+ * from the local node belongs in the foreground.
+ */
+NetSimVisualization.prototype.pullElementsToForeground = function () {
+  // Begin by marking all entities background (unvisited)
+  this.entities_.forEach(function (vizEntity) {
+    vizEntity.visited = false;
+  });
+
+  // Use a simple stack for our list of nodes that need visiting.
+  // If we have a local node, push it onto the stack as our starting point.
+  // (If we don't have a local node, the next step is REALLY EASY)
+  var toExplore = [];
+  if (this.localNode) {
+    toExplore.push(this.localNode);
+  }
+
+  // While there are still nodes that need visiting,
+  // visit the next node, marking it as "foreground/visited" and
+  // pushing all of its unvisited connections onto the stack.
+  var currentVizEntity;
+  while (toExplore.length > 0) {
+    currentVizEntity = toExplore.pop();
+    currentVizEntity.visited = true;
+    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+  }
+
+  // Now, visited nodes belong in the foreground.
+  // Move all nodes to their new, correct layers
+  // Possible optimization: Can we do this with just one operation on the live DOM?
+  var foreground = this.svgRoot_.find('#foreground_group');
+  var background = this.svgRoot_.find('#background_group');
+  this.entities_.forEach(function (vizEntity) {
+    var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
+
+    // Check whether a change should occur.  If not, we leave
+    // newParent undefined so that we don't make unneeded DOM changes.
+    if (vizEntity.visited && !isForeground) {
+      moveVizEntityToGroup(vizEntity, foreground);
+      vizEntity.onDepthChange(true);
+    } else if (!vizEntity.visited && isForeground) {
+      moveVizEntityToGroup(vizEntity, background);
+      vizEntity.onDepthChange(false);
+    }
+  }, this);
+};
+
+/**
+ * Visit method for pullElementsToForeground, not used anywhere else.
+ * Notes that the current entity is should be foreground when we're all done,
+ * finds the current entity's unvisited connections,
+ * pushes those connections onto the stack.
+ * @param {NetSimVizNode|NetSimVizWire} vizEntity
+ * @returns {Array.<NetSimVizEntity>}
+ * @private
+ */
+NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
+  // Find new entities to explore based on node type and connections
+  var neighbors = [];
+
+  if (vizEntity instanceof NetSimVizNode) {
+    neighbors = this.getWiresAttachedToNode(vizEntity);
+  } else if (vizEntity instanceof NetSimVizWire) {
+    neighbors.push(vizEntity.localVizNode);
+    neighbors.push(vizEntity.remoteVizNode);
+  }
+
+  return neighbors.filter(function (vizEntity) {
+    return !vizEntity.visited;
+  });
+};
+
+/**
+ * Explicitly control VizNodes in the foreground, moving them into a desired
+ * configuration based on their number and types.  Nodes are given animation
+ * commands (via tweenToPosition) so that they interpolate nicely to their target
+ * positions.
+ *
+ * Configurations:
+ * One node (local node): Centered on the screen.
+ *   |  L  |
+ *
+ * Two nodes: Local node on left, remote node on right, nothing in the middle.
+ *   | L-R |
+ *
+ * Three or more nodes: Local node on left, router in the middle, other
+ * nodes distributed evenly around the router in a circle
+ * 3:         4:    O    5:  O      6:O   O    7:O   O
+ *                 /         |         \ /        \ /
+ *   L-R-0      L-R        L-R-O      L-R        L-R-O
+ *                 \         |         / \        / \
+ *                  O        O        O   O      O   O
+ */
+NetSimVisualization.prototype.distributeForegroundNodes = function () {
+  /** @type {Array.<NetSimVizNode>} */
+  var foregroundNodes = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizNode && entity.isForeground;
+  });
+
+  // Sometimes, there's no work to do.
+  if (foregroundNodes.length === 0) {
+    return;
+  }
+
+  // One node: Centered on screen
+  if (foregroundNodes.length === 1) {
+    foregroundNodes[0].tweenToPosition(0, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  var myNode;
+
+  // Two nodes: Placed across from each other, local node on left
+  if (foregroundNodes.length === 2) {
+    myNode = this.localNode;
+    var otherNode = _.find(foregroundNodes, function (node) {
+      return node !== myNode;
+    });
+    myNode.tweenToPosition(-75, 0, 400, tweens.easeOutQuad);
+    otherNode.tweenToPosition(75, 0, 600, tweens.easeOutQuad);
+    return;
+  }
+
+  // Three or more nodes:
+  // * Local node on left
+  // * Router in the middle
+  // * Other nodes evenly distributed in a circle
+  myNode = this.localNode;
+  var routerNode = _.find(foregroundNodes, function (node) {
+    return node.isRouter;
+  });
+  var otherNodes = foregroundNodes.filter(function (node) {
+    return node !== myNode && node !== routerNode;
+  });
+
+  myNode.tweenToPosition(-100, 0, 400, tweens.easeOutQuad);
+  routerNode.tweenToPosition(0, 0, 500, tweens.easeOutQuad);
+  var radiansBetweenNodes = 2*Math.PI / (otherNodes.length + 1); // Include myNode!
+  for (var i = 0; i < otherNodes.length; i++) {
+    // sin(rad) = o/h
+    var h = 100;
+    // Extra Math.PI here puts 0deg on the left.
+    var rad = Math.PI + (i+1) * radiansBetweenNodes;
+    var x = Math.cos(rad) * h;
+    var y = Math.sin(rad) * h;
+    otherNodes[i].tweenToPosition(x, y, 600, tweens.easeOutQuad);
+  }
+};
+
+},{"../utils":225,"./NetSimVizNode":163,"./NetSimVizWire":164,"./NetSimWire":165,"./netsimUtils":173,"./tweens":176}],164:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimVizEntity = require('./NetSimVizEntity');
+var NetSimVizNode = require('./NetSimVizNode');
+
+/**
+ *
+ * @param sourceWire
+ * @param {function} getEntityByID - Allows this wire to search
+ *        for other entities in the simulation
+ * @constructor
+ * @augments NetSimVizEntity
+ */
+var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
+  NetSimVizEntity.call(this, sourceWire);
+
+  var root = this.getRoot();
+
+  root.addClass('viz-wire');
+
+  this.line_ = jQuerySvgElement('path')
+      .appendTo(root);
+
+  /**
+   * Bound getEntityByID method from vizualization controller.
+   * @type {Function}
+   * @private
+   */
+  this.getEntityByID_ = getEntityByID;
+
+  this.localVizNode = null;
+  this.remoteVizNode = null;
+
+  this.configureFrom(sourceWire);
+  this.render();
+};
+NetSimVizWire.inherits(NetSimVizEntity);
+
+NetSimVizWire.prototype.configureFrom = function (sourceWire) {
+  this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+};
+
+NetSimVizWire.prototype.render = function () {
+  NetSimVizWire.superPrototype.render.call(this);
+
+  var pathData = 'M 0 0';
+  if (this.localVizNode && this.remoteVizNode) {
+    pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
+        ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
+  }
+  this.line_.attr('d', pathData);
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizWire.prototype.kill = function () {
+  NetSimVizWire.superPrototype.kill.call(this);
+  this.localVizNode = null;
+  this.remoteVizNode = null;
+};
+
+},{"../utils":225,"./NetSimVizEntity":162,"./NetSimVizNode":163,"./netsimUtils":173}],163:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimVizEntity = require('./NetSimVizEntity');
+var NetSimRouterNode = require('./NetSimRouterNode');
+var tweens = require('./tweens');
+
+/**
+ * @param {NetSimNode} sourceNode
+ * @constructor
+ * @augments NetSimVizEntity
+ */
+var NetSimVizNode = module.exports = function (sourceNode) {
+  NetSimVizEntity.call(this, sourceNode);
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  /**
+   * @type {boolean}
+   */
+  this.isRouter = false;
+
+  /**
+   *
+   * @type {jQuery}
+   * @private
+   */
+  this.circle_ = jQuerySvgElement('circle')
+      .attr('cx', 0)
+      .attr('cy', 0)
+      .attr('r', 37) /* Half of 75 */
+      .appendTo(root);
+
+  this.displayName_ = jQuerySvgElement('text')
+      .attr('x', 0)
+      .attr('y', 2)
+      .css('text-anchor', 'middle')
+      .appendTo(root);
+
+// Set an initial default tween for zooming in from nothing.
+  this.snapToScale(0);
+  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
+
+  this.configureFrom(sourceNode);
+  this.render();
+};
+NetSimVizNode.inherits(NetSimVizEntity);
+
+/**
+ *
+ * @param {NetSimNode} sourceNode
+ */
+NetSimVizNode.prototype.configureFrom = function (sourceNode) {
+  this.displayName_.text(sourceNode.getDisplayName());
+
+  if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
+    this.isRouter = true;
+    this.getRoot().addClass('router-node');
+  }
+};
+
+/**
+ * Killing a visualization node removes its ID so that it won't conflict with
+ * another node of matching ID being added, and begins its exit animation.
+ * @override
+ */
+NetSimVizNode.prototype.kill = function () {
+  NetSimVizNode.superPrototype.kill.call(this);
+  this.stopAllAnimation();
+  this.tweenToScale(0, 200, tweens.easeInQuad);
+};
+
+/**
+ * Provides drifting animation for nodes in the background.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizNode.prototype.tick = function (clock) {
+  NetSimVizNode.superPrototype.tick.call(this, clock);
+  if (!this.isForeground && this.tweens_.length === 0) {
+    var randomX = 300 * Math.random() - 150;
+    var randomY = 300 * Math.random() - 150;
+    this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
+  }
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizNode.prototype.onDepthChange = function (isForeground) {
+  NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
+  this.tweens_ = [];
+  if (isForeground) {
+    this.tweenToScale(1, 600, tweens.easeOutElastic);
+  } else {
+    this.tweenToScale(0.5, 600, tweens.easeOutElastic);
+  }
+};
+
+},{"../utils":225,"./NetSimRouterNode":149,"./NetSimVizEntity":162,"./netsimUtils":173,"./tweens":176}],162:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var tweens = require('./tweens');
+
+/**
+ * A VizEntity is an object that maps to a NetSimEntity somewhere in shared
+ * storage, and has a representation in the network visualization.  Its role
+ * is to maintain that visual representation and update it to reflect the
+ * state of the stored entity it represents.
+ *
+ * In doing so, it has behaviors and a lifetime that don't directly represent
+ * the stored entity because while quantities in our model snap to new values
+ * or are created/destroyed in a single frame, we want their visual
+ * representation to animate nicely.  Thus, a VizEntity has helpers for tweening
+ * and may often be in progress toward the state of the entity it represents,
+ * rather than an exact representation of that entity.  Likewise, a VizEntity
+ * will outlive its actual entity, because it can have a 'death' animation.
+ *
+ * Every VizEntity has a root element which is a <g> tag, an SVG "group"
+ * that contains the other components that will actually draw.
+ *
+ * @constructor
+ * @param {NetSimEntity} entity - the netsim Entity that this element represents
+ */
+var NetSimVizEntity = module.exports =  function (entity) {
+  /**
+   * @type {number}
+   */
+  this.id = entity.entityID;
+
+  /**
+   * @type {number}
+   */
+  this.posX = 0;
+
+  /**
+   * @type {number}
+   */
+  this.posY = 0;
+
+  /**
+   * @type {number}
+   */
+  this.scale = 1;
+
+  /**
+   * @type {boolean}
+   */
+  this.isForeground = false;
+
+  /**
+   * Root SVG <g> (group) element for this object.
+   * @type {jQuery}
+   * @private
+   */
+  this.rootGroup_ = jQuerySvgElement('g');
+
+  /**
+   * Set of tweens we should currently be running on this node.
+   * Processed by tick()
+   * @type {Array.<exports.TweenValueTo>}
+   * @private
+   */
+  this.tweens_ = [];
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isDead_ = false;
+};
+
+/**
+ * @returns {jQuery} wrapper around root <g> element
+ */
+NetSimVizEntity.prototype.getRoot = function () {
+  return this.rootGroup_;
+};
+
+/**
+ * Begins the process of destroying this VizEntity.  Once started, this
+ * process cannot be stopped.  Immediately clears its ID to remove any
+ * association with the stored entity, which probably doesn't exist anymore.
+ * This method can be overridden to trigger an "on-death" animation.
+ */
+NetSimVizEntity.prototype.kill = function () {
+  this.id = undefined;
+  this.isDead_ = true;
+};
+
+/**
+ * @returns {boolean} whether this entity is done with its death animation
+ *          and is ready to be cleaned up by the visualization manager.
+ *          The default implementation here returns TRUE as soon as kill()
+ *          is called and all animations are completed.
+ */
+NetSimVizEntity.prototype.isDead = function () {
+  return this.isDead_ && this.tweens_.length === 0;
+};
+
+/**
+ * Update all of the tweens currently running on this VizEntity (which will
+ * probably modify its properties) and then remove any tweens that are completed
+ * from the list.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimVizEntity.prototype.tick = function (clock) {
+  this.tweens_.forEach(function (tween) {
+    tween.tick(clock);
+  });
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    return !tween.isFinished;
+  });
+};
+
+/**
+ * Update the root group's properties to reflect our current position
+ * and scale.
+ */
+NetSimVizEntity.prototype.render = function () {
+  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
+  //                   out of date.
+  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
+      ' scale(' + this.scale + ')';
+  this.rootGroup_.attr('transform', transform);
+};
+
+/**
+ * @param {boolean} isForeground
+ */
+NetSimVizEntity.prototype.onDepthChange = function (isForeground) {
+  this.isForeground = isForeground;
+};
+
+/**
+ * Throw away all existing tweens on this object.
+ */
+NetSimVizEntity.prototype.stopAllAnimation = function () {
+  this.tweens_ = [];
+};
+
+/**
+ * Stops any existing motion animation and begins an animated motion to the
+ * given coordinates.  Note: This animates the VizEntity's root group.
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizEntity.prototype.tweenToPosition = function (newX, newY, duration,
+    tweenFunction) {
+  // Remove any existing tweens controlling posX or posY
+  this.tweens_.filter(function (tween) {
+    return tween.target !== this ||
+        (tween.propertyName !== 'posX' && tween.propertyName !== 'posY');
+  });
+
+  // Add two new tweens, one for each axis
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posX', newX, duration,
+        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'posY', newY, duration,
+        tweenFunction));
+  } else {
+    this.posX = newX;
+    this.posY = newY;
+  }
+
+};
+
+/**
+ * Alias for calling tweenToPosition with a zero duration
+ * @param {number} newX given in SVG points
+ * @param {number} newY given in SVG points
+ */
+NetSimVizEntity.prototype.snapToPosition = function (newX, newY) {
+  this.tweenToPosition(newX, newY, 0);
+};
+
+/**
+ * Stops any existing animation of the entity's scale and begins an animated
+ * change to the given target scale value.  Note: this animates the VizEntity's
+ * root group.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
+    tweenFunction) {
+  // Remove existing scale tweens
+  this.tweens_.filter(function (tween) {
+    return tween.target !== this || tween.propertyName !== 'scale';
+  });
+
+  // On nonzero duration, add tween to target scale.  Otherwise just set it.
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'scale', newScale, duration,
+        tweenFunction));
+  } else {
+    this.scale = newScale;
+  }
+};
+
+/**
+ * Alias for calling tweenToScale with a zero duration.
+ * @param {number} newScale where 1.0 is 100% (unscaled)
+ */
+NetSimVizEntity.prototype.snapToScale = function (newScale) {
+  this.tweenToScale(newScale, 0);
+};
+
+},{"./netsimUtils":173,"./tweens":176}],176:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var valueOr = require('../utils').valueOr;
+
+/**
+ * Default tween duration in milliseconds
+ * @type {number}
+ * @const
+ */
+var DEFAULT_TWEEN_DURATION = 600;
+
+/**
+ * A four-arg interpolation function.
+ *
+ * @typedef {function} TweenFunction
+ * @param {number} t - current Time, in milliseconds since tween began
+ * @param {number} b - Begin value
+ * @param {number} c - final Change in value
+ * @param {number} d - total tween Duration
+ * @returns {number} the interpolated value for the current time
+ */
+
+/**
+ * Interpolates with a little back-and-forth over the target value at the end.
+ * @type {TweenFunction}
+ */
+exports.easeOutElastic = function (t, b, c, d) {
+  var s, p, a;
+  s=1.70158;
+  p=0;
+  a=c;
+  if (t===0) {
+    return b;
+  }
+  if ((t/=d)==1) {
+    return b+c;
+  }
+  if (!p) {
+    p=d*0.3;
+  }
+  if (a < Math.abs(c)) {
+    a=c;
+    s=p/4;
+  } else {
+    s = p/(2*Math.PI) * Math.asin (c/a);
+  }
+  return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+};
+
+/**
+ * Interpolates, accelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeInQuad = function (t, b, c, d) {
+  return c*(t/=d)*t + b;
+};
+
+/**
+ * Interpolates, decelerating as it goes.
+ * @type {TweenFunction}
+ */
+exports.easeOutQuad = function (t, b, c, d) {
+  return -c*(t/=d)*(t-2) + b;
+};
+
+exports.easeInOutQuad = function (t, b, c, d) {
+  if ((t/=d/2) < 1) {
+    return c/2*t*t + b;
+  }
+  return -c/2 * ((--t)*(t-2) - 1) + b;
+};
+
+/**
+ * Linear interpolation
+ * @type {TweenFunction}
+ */
+exports.linear = function (t, b, c, d) {
+  return c * (t / d) + b;
+};
+
+/**
+ * Wraps a tween method with the state it needs to animate a property.
+ * On creation, assumes that property's current value for start values.
+ * Must be ticked to progress toward completion.
+ *
+ * @param {!Object} target - The object owning the property we want to animate
+ * @param {!string} propertyName - Must be a valid property on target
+ * @param {!number} endValue - The desired final value of the property
+ * @param {number} [duration] - How long the tween should take in milliseconds,
+ *        default 600ms
+ * @param {TweenFunction} [tweenFunction] - A tween function, default linear
+ * @constructor
+ */
+exports.TweenValueTo = function (target, propertyName, endValue, duration,
+    tweenFunction) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = propertyName;
+
+  /**
+   * @type {TweenFunction}
+   * @private
+   */
+  this.tweenFunction_ = valueOr(tweenFunction, exports.linear);
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.startValue_ = target[propertyName];
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.deltaValue_ = endValue - this.startValue_;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = valueOr(duration, DEFAULT_TWEEN_DURATION);
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.TweenValueTo.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+
+  if (this.deltaValue_ !== 0) {
+    this.target[this.propertyName] = this.tweenFunction_(
+        timeSinceStart,
+        this.startValue_,
+        this.deltaValue_,
+        this.duration_
+    );
+  }
+
+  if (timeSinceStart >= this.duration_) {
+    this.target[this.propertyName] = this.startValue_ + this.deltaValue_;
+    this.isFinished = true;
+  }
+};
+},{"../utils":225}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -596,17 +1821,20 @@ var buildMarkup = require('./NetSimTabsComponent.html');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
+var NetSimTabType = require('./netsimConstants').NetSimTabType;
+var shouldShowTab = require('./netsimUtils').shouldShowTab;
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv,
+var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
     chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
     becomeDnsCallback) {
   /**
@@ -615,6 +1843,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -666,68 +1900,92 @@ var NetSimTabsComponent = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
-  var rawMarkup = buildMarkup({});
+  var rawMarkup = buildMarkup({
+    level: this.levelConfig_
+  });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.netsim_tabs').tabs();
+  this.rootDiv_.find('.netsim_tabs').tabs({
+    active: this.levelConfig_.defaultTabIndex
+  });
 
-  this.routerTab_ = new NetSimRouterTab(
-      this.rootDiv_.find('#tab_router'));
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.MY_DEVICE)) {
+    this.myDeviceTab_ = new NetSimMyDeviceTab(
+        this.rootDiv_.find('#tab_my_device'),
+        this.levelConfig_,
+        this.chunkSizeChangeCallback_,
+        this.encodingChangeCallback_);
+  }
 
-  this.myDeviceTab_ = new NetSimMyDeviceTab(
-      this.rootDiv_.find('#tab_my_device'),
-      this.chunkSizeChangeCallback_,
-      this.encodingChangeCallback_);
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
+    this.routerTab_ = new NetSimRouterTab(
+        this.rootDiv_.find('#tab_router'));
+  }
 
-  this.dnsTab_ = new NetSimDnsTab(
-      this.rootDiv_.find('#tab_dns'),
-      this.dnsModeChangeCallback_,
-      this.becomeDnsCallback_);
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
+    this.dnsTab_ = new NetSimDnsTab(
+        this.rootDiv_.find('#tab_dns'),
+        this.levelConfig_,
+        this.dnsModeChangeCallback_,
+        this.becomeDnsCallback_);
+  }
 };
 
 /**
  * @param {number} newChunkSize
  */
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
-  this.myDeviceTab_.setChunkSize(newChunkSize);
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setChunkSize(newChunkSize);
+  }
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
-  this.myDeviceTab_.setEncoding(newEncoding);
+NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setEncodings(newEncodings);
+  }
 };
 
 /**
  * @param {string} newDnsMode
  */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsTab_.setDnsMode(newDnsMode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsMode(newDnsMode);
+  }
 };
 
 /**
  * @param {boolean} isDnsNode
  */
 NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
-  this.dnsTab_.setIsDnsNode(isDnsNode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setIsDnsNode(isDnsNode);
+  }
 };
 
 /**
  * @param {Array} tableContents
  */
 NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
-  this.dnsTab_.setDnsTableContents(tableContents);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsTableContents(tableContents);
+  }
 };
 
 /**
  * @param {Array} logData
  */
 NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
-  this.routerTab_.setRouterLogData(logData);
+  if (this.routerTab_) {
+    this.routerTab_.setRouterLogData(logData);
+  }
 };
 
-},{"./NetSimDnsTab":126,"./NetSimMyDeviceTab":143,"./NetSimRouterTab":151,"./NetSimTabsComponent.html":159}],159:[function(require,module,exports){
+},{"./NetSimDnsTab":126,"./NetSimMyDeviceTab":143,"./NetSimRouterTab":151,"./NetSimTabsComponent.html":159,"./netsimConstants":172,"./netsimUtils":173}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -739,7 +1997,17 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_tabs">\n  <ul>\n    <li><a href="#tab_instructions">Instructions</a></li>\n    <li><a href="#tab_my_device">My Device</a></li>\n    <li><a href="#tab_router">Router</a></li>\n    <li><a href="#tab_dns">DNS</a></li>\n  </ul>\n  <div id="tab_instructions">\n    <p>In this activity, you and your group will still be acting as\n    nodes connected to a router.  But this time, the addresses of the\n    nodes are not visible to you.  Pick one member of your group to be\n    the DNS node.  To get the addresses of the other nodes, you must\n    send a message to the DNS node asking for the address of a particular\n    hostname.</p>\n    <p>If you are the DNS node: Go to the DNS tab and click "Take over\n    as DNS."</p>\n  </div>\n  <div id="tab_my_device"></div>\n  <div id="tab_router"></div>\n  <div id="tab_dns"></div>\n</div>'); })();
+ buf.push('');1;
+  var netsimMsg = require('../../locale/current/netsim');
+
+  var shouldShowTab = require('./netsimUtils').shouldShowTab;
+  var NetSimTabType = require('./netsimConstants').NetSimTabType;
+
+  var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
+  var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
+  var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
+  var showDns = shouldShowTab(level, NetSimTabType.DNS);
+; buf.push('\n<div class="netsim_tabs">\n  <ul>\n    ');14; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((15,  netsimMsg.instructions() )), '</a></li>\n    ');16; } ; buf.push('\n    ');17; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((18,  netsimMsg.myDevice() )), '</a></li>\n    ');19; } ; buf.push('\n    ');20; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((21,  netsimMsg.router() )), '</a></li>\n    ');22; } ; buf.push('\n    ');23; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((24,  netsimMsg.dns() )), '</a></li>\n    ');25; } ; buf.push('\n  </ul>\n  ');27; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions">\n      <p>In this activity, you and your group will still be acting as\n      nodes connected to a router.  But this time, the addresses of the\n      nodes are not visible to you.  Pick one member of your group to be\n      the DNS node.  To get the addresses of the other nodes, you must\n      send a message to the DNS node asking for the address of a particular\n      hostname.</p>\n      <p>If you are the DNS node: Go to the DNS tab and click "Take over\n      as DNS."</p>\n    </div>\n  ');38; } ; buf.push('\n  ');39; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');41; } ; buf.push('\n  ');42; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');44; } ; buf.push('\n  ');45; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');47; } ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -747,7 +2015,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],157:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"./netsimConstants":172,"./netsimUtils":173,"ejs":246}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -824,7 +2092,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 };
 
-},{"../utils":219,"./NetSimPanel.js":146,"./NetSimStatusPanel.html":156}],156:[function(require,module,exports){
+},{"../utils":225,"./NetSimPanel.js":146,"./NetSimStatusPanel.html":156}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -844,7 +2112,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],153:[function(require,module,exports){
+},{"ejs":246}],153:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -860,6 +2128,7 @@ return buf.join('');
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimSendPanel.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
@@ -922,7 +2191,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
   
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_send_panel',
-    panelTitle: 'Send a Message'
+    panelTitle: netsimMsg.sendAMessage()
   });
 };
 NetSimSendPanel.inherits(NetSimPanel);
@@ -1184,25 +2453,25 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
   liveFields.push({
     inputElement: this.binaryUI.message,
     newValue: formatBinary(this.message, chunkSize),
-    watermark: 'Binary'
+    watermark: netsimMsg.binary()
   });
 
   liveFields.push({
     inputElement: this.hexadecimalUI.message,
     newValue: formatHex(binaryToHex(this.message), chunkSize),
-    watermark: 'Hexadecimal'
+    watermark: netsimMsg.hexadecimal()
   });
 
   liveFields.push({
     inputElement: this.decimalUI.message,
     newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-    watermark: 'Decimal'
+    watermark: netsimMsg.decimal()
   });
 
   liveFields.push({
     inputElement: this.asciiUI.message,
     newValue: binaryToAscii(this.message, chunkSize),
-    watermark: 'ASCII'
+    watermark: netsimMsg.ascii()
   });
 
   liveFields.forEach(function (field) {
@@ -1220,7 +2489,10 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
   });
 
   var packetBinary = this.getPacketBinary_();
-  this.bitCounter.html(packetBinary.length + '/Infinity bits');
+  this.bitCounter.html(netsimMsg.bitCounter({
+    x: packetBinary.length,
+    y: netsimMsg.infinity()
+  }));
 
   // TODO: Hide columns by configuration
   this.getBody().find('th.packetInfo, td.packetInfo').hide();
@@ -1270,10 +2542,10 @@ NetSimSendPanel.prototype.getPacketBinary_ = function () {
 /**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimSendPanel.prototype.setEncoding = function (newEncoding) {
-  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncoding);
+NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
+  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncodings);
 };
 
 /**
@@ -1286,7 +2558,7 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.updateFields_();
 };
 
-},{"../constants":47,"../utils":219,"./NetSimEncodingControl":130,"./NetSimPanel":146,"./NetSimSendPanel.html":152,"./PacketEncoder":162,"./dataConverters":164}],152:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"../constants":47,"../utils":225,"./NetSimEncodingControl":130,"./NetSimPanel":146,"./NetSimSendPanel.html":152,"./PacketEncoder":166,"./dataConverters":168}],152:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1298,7 +2570,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">To</th>\n      <th nowrap class="fromAddress">From</th>\n      <th nowrap class="packetInfo">Packet</th>\n      <th class="message">Message</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">ASCII</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">Decimal</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">Hex</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">Binary</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">Send</span>\n</div>\n'); })();
+ buf.push('');1; var netsimMsg = require('../../locale/current/netsim'); ; buf.push('\n<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((7,  netsimMsg.to() )), '></th>\n      <th nowrap class="fromAddress">', escape((8,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((9,  netsimMsg.packet() )), '</th>\n      <th class="message">', escape((10,  netsimMsg.message() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">', escape((15,  netsimMsg.ascii() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((18,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">', escape((22,  netsimMsg.decimal() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((25,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">', escape((29,  netsimMsg.hex() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((32,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">', escape((36,  netsimMsg.binary() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((39,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">', escape((49,  netsimMsg.send() )), '</span>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1306,7 +2578,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],151:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"ejs":246}],151:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1384,7 +2656,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],148:[function(require,module,exports){
+},{"ejs":246}],148:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1455,9 +2727,8 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = NetSimRouterNode.DnsMode;
-; buf.push('\n<div class="netsim_router_log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      <th nowrap>To</th>\n      <th nowrap>From</th>\n      <th nowrap>Message</th>\n      <th nowrap>Bits</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');17;
+var DnsMode = require('./netsimConstants').DnsMode;
+; buf.push('\n<div class="netsim_router_log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      <th nowrap>To</th>\n      <th nowrap>From</th>\n      <th nowrap>Message</th>\n      <th nowrap>Bits</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');16;
     // Sort: Most recent first
     tableData.sort(function (a, b) {
       return a.timestamp > b.timestamp ? -1 : 1;
@@ -1466,7 +2737,7 @@ var DnsMode = NetSimRouterNode.DnsMode;
     // Create rows
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
-    ; buf.push('\n    <tr class="', escape((27,  rowClasses.join(' ') )), '">\n      <td nowrap>', escape((28,  logEntry.getToAddress() )), '</td>\n      <td nowrap>', escape((29,  logEntry.getFromAddress() )), '</td>\n      <td>', escape((30,  logEntry.getMessageAscii() )), '</td>\n      <td nowrap>', escape((31,  logEntry.packet.length )), '</td>\n    </tr>\n    ');33;
+    ; buf.push('\n    <tr class="', escape((26,  rowClasses.join(' ') )), '">\n      <td nowrap>', escape((27,  logEntry.getToAddress() )), '</td>\n      <td nowrap>', escape((28,  logEntry.getFromAddress() )), '</td>\n      <td>', escape((29,  logEntry.getMessageAscii() )), '</td>\n      <td nowrap>', escape((30,  logEntry.packet.length )), '</td>\n    </tr>\n    ');32;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -1476,7 +2747,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./NetSimRouterNode":149,"ejs":240}],143:[function(require,module,exports){
+},{"./netsimConstants":172,"ejs":246}],143:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1497,11 +2768,12 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (rootDiv,
+var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
     chunkSizeChangeCallback, encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -1509,6 +2781,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -1546,9 +2824,13 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
       this.chunkSizeChangeCallback_);
-  this.encodingControl_ = new NetSimEncodingControl(
-      this.rootDiv_.find('.encoding'),
-      this.encodingChangeCallback_);
+
+  if (this.levelConfig_.showEncodingControls.length > 0) {
+    this.encodingControl_ = new NetSimEncodingControl(
+        this.rootDiv_.find('.encoding'),
+        this.levelConfig_,
+        this.encodingChangeCallback_);
+  }
 };
 
 /**
@@ -1560,11 +2842,13 @@ NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimMyDeviceTab.prototype.setEncoding = function (newEncoding) {
-  this.encodingControl_.setEncoding(newEncoding);
-  this.chunkSizeControl_.setEncoding(newEncoding);
+NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
+  if (this.encodingControl_) {
+    this.encodingControl_.setEncodings(newEncodings);
+  }
+  this.chunkSizeControl_.setEncodings(newEncodings);
 };
 },{"./NetSimChunkSizeControl":118,"./NetSimEncodingControl":130,"./NetSimMyDeviceTab.html":142}],142:[function(require,module,exports){
 module.exports= (function() {
@@ -1586,7 +2870,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],139:[function(require,module,exports){
+},{"ejs":246}],139:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1601,6 +2885,7 @@ return buf.join('');
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimLogPanel.html');
 var packetMarkup = require('./NetSimLogPacket.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -1627,7 +2912,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
    * @type {string}
    * @private
    */
-  this.currentEncoding_ = 'all';
+  this.currentEncodings_ = [];
 
   /**
    * Current chunk size (bytesize) for intepreting binary in the log.
@@ -1657,7 +2942,7 @@ NetSimLogPanel.prototype.render = function () {
   this.getBody().html(newMarkup);
 
   // Add a clear button to the panel header
-  this.addButton('Clear', this.onClearButtonPress_.bind(this));
+  this.addButton(netsimMsg.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
@@ -1685,7 +2970,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
       scrollArea.outerHeight();
 
   var newPacket = new NetSimLogPacket(packetBinary,
-      this.currentEncoding_,
+      this.currentEncodings_,
       this.currentChunkSize_);
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
@@ -1699,12 +2984,12 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
 /**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimLogPanel.prototype.setEncoding = function (newEncoding) {
-  this.currentEncoding_ = newEncoding;
+NetSimLogPanel.prototype.setEncodings = function (newEncodings) {
+  this.currentEncodings_ = newEncodings;
   this.packets_.forEach(function (packet) {
-    packet.setEncoding(newEncoding);
+    packet.setEncodings(newEncodings);
   });
 };
 
@@ -1722,12 +3007,12 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
 /**
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
- * @param {string} encoding - which display style to use initially
+ * @param {EncodingType[]} encodings - which display style to use initially
  * @param {number} chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, encoding, chunkSize) {
+var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
   /**
    * @type {string}
    * @private
@@ -1735,10 +3020,10 @@ var NetSimLogPacket = function (packetBinary, encoding, chunkSize) {
   this.packetBinary_ = packetBinary;
 
   /**
-   * @type {string}
+   * @type {EncodingType[]}
    * @private
    */
-  this.encoding_ = encoding;
+  this.encodings_ = encodings;
 
   /**
    * @type {number}
@@ -1766,7 +3051,7 @@ NetSimLogPacket.prototype.render = function () {
     chunkSize: this.chunkSize_
   });
   var jQueryWrap = $(rawMarkup);
-  NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encoding_);
+  NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   // TODO: Hide columns by configuration
   jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
@@ -1782,10 +3067,10 @@ NetSimLogPacket.prototype.getRoot = function () {
 
 /**
  * Change encoding-display setting and re-render packet contents accordingly.
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimLogPacket.prototype.setEncoding = function (newEncoding) {
-  this.encoding_ = newEncoding;
+NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
   this.render();
 };
 
@@ -1799,7 +3084,7 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
-},{"../utils":219,"./NetSimEncodingControl":130,"./NetSimLogPacket.html":137,"./NetSimLogPanel.html":138,"./NetSimPanel":146}],146:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"../utils":225,"./NetSimEncodingControl":130,"./NetSimLogPacket.html":137,"./NetSimLogPanel.html":138,"./NetSimPanel":146}],146:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1976,7 +3261,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],138:[function(require,module,exports){
+},{"ejs":246}],138:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1996,7 +3281,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],137:[function(require,module,exports){
+},{"ejs":246}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2009,7 +3294,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-
+var netsimMsg = require('../../locale/current/netsim');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
@@ -2022,13 +3307,13 @@ var binaryToAscii = dataConverters.binaryToAscii;
 
 function getEncodingLabel(rowClass) {
   if (rowClass === 'ascii') {
-    return 'ASCII';
+    return netsimMsg.ascii();
   } else if (rowClass === 'decimal') {
-    return 'Decimal';
+    return netsimMsg.decimal();
   } else if (rowClass === 'hexadecimal') {
-    return 'Hex';
+    return netsimMsg.hex();
   } else if (rowClass === 'binary') {
-    return 'Binary';
+    return netsimMsg.binary();
   }
   return '';
 }
@@ -2037,7 +3322,7 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
   ; buf.push('\n    <tr class="', escape((28,  rowClass )), '">\n      <th nowrap class="encodingLabel">', escape((29,  getEncodingLabel(rowClass) )), '</th>\n      <td nowrap class="toAddress">', escape((30,  toAddress )), '</td>\n      <td nowrap class="fromAddress">', escape((31,  fromAddress )), '</td>\n      <td nowrap class="packetInfo">', escape((32,  packetInfo )), '</td>\n      <td class="message">', escape((33,  message )), '</td>\n    </tr>\n');35;
 }
 
- ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">To</th>\n      <th nowrap class="fromAddress">From</th>\n      <th nowrap class="packetInfo">Packet</th>\n      <th nowrap class="message">Message</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');50;
+ ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((43,  netsimMsg.to() )), '</th>\n      <th nowrap class="fromAddress">', escape((44,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((45,  netsimMsg.packet() )), '</th>\n      <th nowrap class="message">', escape((46,  netsimMsg.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');50;
     var toAddress = PacketEncoder.defaultPacketEncoder.getField('toAddress', packetBinary);
     var fromAddress = PacketEncoder.defaultPacketEncoder.getField('fromAddress', packetBinary);
     var packetIndex = PacketEncoder.defaultPacketEncoder.getField('packetIndex', packetBinary);
@@ -2047,19 +3332,28 @@ function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
     logRow('ascii',
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
         binaryToAscii(message, chunkSize));
 
     logRow('decimal',
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        binaryToInt(packetIndex) + ' of ' + binaryToInt(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
         alignDecimal(binaryToDecimal(message, chunkSize)));
 
     logRow('hexadecimal',
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
-        binaryToHex(packetIndex) + ' of ' + binaryToHex(packetCount),
+        netsimMsg.xOfY({
+          x: binaryToHex(packetIndex),
+          y: binaryToHex(packetCount)
+        }),
         formatHex(binaryToHex(message), chunkSize));
 
     logRow('binary',
@@ -2075,7 +3369,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./PacketEncoder":162,"./dataConverters":164,"ejs":240}],134:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"./PacketEncoder":166,"./dataConverters":168,"ejs":246}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2084,7 +3378,6 @@ return buf.join('');
  unused: true,
 
  maxlen: 90,
- maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -2110,13 +3403,21 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = module.exports = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (levelConfig, connection, user,
+    shardID) {
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -2170,6 +3471,7 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -2178,10 +3480,12 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * @return {NetSimLobby} A new controller for the generated lobby
  * @static
  */
-NetSimLobby.createWithin = function (element, connection, user, shardID) {
+NetSimLobby.createWithin = function (element, levelConfig, connection, user, shardID) {
   // Create a new NetSimLobby
-  var controller = new NetSimLobby(connection, user, shardID);
-  element.innerHTML = markup({});
+  var controller = new NetSimLobby(levelConfig, connection, user, shardID);
+  element.innerHTML = markup({
+    level: levelConfig
+  });
   controller.bindElements_();
   controller.refresh_();
   return controller;
@@ -2387,17 +3691,15 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
   return baseLocation + '?s=' + shardID;
 };
 
-NetSimLobby.prototype.refresh_ = function () {
-  if (!this.connection_.isConnectedToRouter()) {
-    this.refreshOpenLobby_();
-  }
-};
-
 /**
  * Show preconnect controls (name, shard-select) and actual lobby listing.
  * @private
  */
-NetSimLobby.prototype.refreshOpenLobby_ = function () {
+NetSimLobby.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    return;
+  }
+
   this.openRoot_.show();
 
   // Do we have a name yet?
@@ -2444,8 +3746,12 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
   // TODO: Filter based on level configuration
   var filteredLobbyData = lobbyData.filter(function (simNode) {
-    return simNode.getNodeType() === NetSimRouterNode.getNodeType();
-  });
+    var showClients = this.levelConfig_.showClientsInLobby;
+    var showRouters = this.levelConfig_.showRoutersInLobby;
+    var nodeType = simNode.getNodeType();
+    return (nodeType === NetSimClientNode.getNodeType() && showClients) ||
+        (nodeType === NetSimRouterNode.getNodeType() && showRouters);
+  }.bind(this));
 
   filteredLobbyData.sort(function (a, b) {
     // TODO (bbuchanan): Make this sort localization-friendly.
@@ -2544,7 +3850,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../utils":219,"./NetSimClientNode":119,"./NetSimLobby.html":133,"./NetSimLogger":140,"./NetSimRouterNode":149,"./netsimUtils":168}],168:[function(require,module,exports){
+},{"../utils":225,"./NetSimClientNode":119,"./NetSimLobby.html":133,"./NetSimLogger":140,"./NetSimRouterNode":149,"./netsimUtils":173}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2556,6 +3862,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var NetSimClientNode = require('./NetSimClientNode');
@@ -2582,6 +3889,43 @@ exports.nodesFromRows = function (shard, rows) {
       });
 };
 
+/**
+ * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
+ * object for (semi-)easy manipulation.
+ * @param {string} type - the tagname for the svg element.
+ * @returns {jQuery}
+ */
+exports.jQuerySvgElement = function (type) {
+  var newElement = $(document.createElementNS('http://www.w3.org/2000/svg', type));
+
+  /**
+   * Override addClass since jQuery addClass doesn't work on svg.
+   * @param {string} className
+   */
+  newElement.addClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    if (!oldClasses) {
+      newElement.attr('class', className);
+    } else if (!oldClasses.split(/\s+/g).some(function (existingClass) {
+          return existingClass === className;
+        })) {
+      newElement.attr('class', oldClasses + ' ' + className);
+    }
+  };
+
+  return newElement;
+};
+
+/**
+ * Checks configuration against tab type to decide whether tab
+ * of type should be shown.
+ * @param {NetSimLevelConfiguration} levelConfig
+ * @param {NetSimTabType} tabType
+ */
+exports.shouldShowTab = function (levelConfig, tabType) {
+  return levelConfig.showTabs.indexOf(tabType) > -1;
+};
+
 },{"./NetSimClientNode":119,"./NetSimRouterNode":149}],133:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -2594,7 +3938,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_lobby_open" class="netsim_panel netsim_lobby">\n  <h1>Lobby</h1>\n  <div class="panel_body">\n    <div id="display_name_view">\n      <label for="netsim_lobby_name">My Name:</label>\n      <input id="netsim_lobby_name" type="text" />\n      <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />\n    </div>\n    <div id="shard_view">\n      <label for="netsim_shard_select">My Section:</label>\n      <select id="netsim_shard_select"></select>\n      <span id="netsim_not_connected_note">You are not connected. Select a class section from the list to connect.</span>\n      <a class="shardLink" href="#">Share this private network</a>\n      <input type="button" id="netsim_lobby_add_router" value="Add Router" />\n      <ul id="netsim_lobby_list"></ul>\n      <input type="button" id="netsim_lobby_connect" value="Connect" />\n    </div>\n  </div>\n</div>\n'); })();
+ buf.push('<div id="netsim_lobby_open" class="netsim_panel netsim_lobby">\n  <h1>Lobby</h1>\n  <div class="panel_body">\n    <div id="display_name_view">\n      <label for="netsim_lobby_name">My Name:</label>\n      <input id="netsim_lobby_name" type="text" />\n      <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />\n    </div>\n    <div id="shard_view">\n      <label for="netsim_shard_select">My Section:</label>\n      <select id="netsim_shard_select"></select>\n      <span id="netsim_not_connected_note">You are not connected. Select a class section from the list to connect.</span>\n      <a class="shardLink" href="#">Share this private network</a>\n      ');14; if (level.showAddRouterButton) { ; buf.push('\n        <input type="button" id="netsim_lobby_add_router" value="Add Router" />\n      ');16; } ; buf.push('\n      <ul id="netsim_lobby_list"></ul>\n      <input type="button" id="netsim_lobby_connect" value="Connect" />\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2602,7 +3946,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],130:[function(require,module,exports){
+},{"ejs":246}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2618,16 +3962,18 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html');
+var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingControl = module.exports = function (rootDiv,
+var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
     changeEncodingCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -2635,6 +3981,12 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -2646,7 +3998,7 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
    * @type {jQuery}
    * @private
    */
-  this.select_ = null;
+  this.checkboxes_ = null;
 
   // Initial render
   this.render();
@@ -2656,55 +4008,68 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimEncodingControl.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
-  this.select_ = this.rootDiv_.find('select');
-  this.select_.change(this.onSelectChange_.bind(this));
-
+  this.checkboxes_ = this.rootDiv_.find(
+      'input[type="checkbox"][name="encoding_checkboxes"]');
+  this.checkboxes_.change(this.onCheckboxesChange_.bind(this));
 };
 
 /**
- * Send new value to registered callback on change.
+ * Send new selected encodings to registered callback on change.
  * @private
  */
-NetSimEncodingControl.prototype.onSelectChange_ = function () {
-  this.changeEncodingCallback_(this.select_.val());
+NetSimEncodingControl.prototype.onCheckboxesChange_ = function () {
+  var selectedEncodings = [];
+  this.checkboxes_.filter(':checked').each(function (i, element) {
+    selectedEncodings.push(element.value);
+  });
+  this.changeEncodingCallback_(selectedEncodings);
 };
 
 /**
  * Change selector value to the new provided value.
- * @param newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimEncodingControl.prototype.setEncoding = function (newEncoding) {
-  this.select_.val(newEncoding);
+NetSimEncodingControl.prototype.setEncodings = function (newEncodings) {
+  this.checkboxes_.each(function (i, element) {
+    $(element).attr('checked', (newEncodings.indexOf(element.value) > -1));
+  });
+};
+
+/**
+ * Generate a jQuery selector string that will get all rows that
+ * have ANY of the provided classes.
+ * @param {EncodingType[]} encodings
+ * @returns {string}
+ */
+var makeEncodingRowSelector = function (encodings) {
+  return encodings.map(function (className) {
+    return 'tr.' + className;
+  }).join(', ');
 };
 
 /**
  * Static helper, shows/hides rows under provided element according to the given
  * encoding setting.
  * @param {jQuery} rootElement - root of elements to show/hide
- * @param {string} encoding - a message encoding setting
+ * @param {EncodingType[]} encodings - a message encoding setting
  */
-NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encoding) {
-  if (encoding === 'all') {
-    rootElement.find('tr.binary, tr.hexadecimal, tr.decimal, tr.ascii').show();
-  } else if (encoding === 'binary') {
-    rootElement.find('tr.binary').show();
-    rootElement.find('tr.hexadecimal, tr.decimal, tr.ascii').hide();
-  } else if (encoding === 'hexadecimal') {
-    rootElement.find('tr.binary, tr.hexadecimal').show();
-    rootElement.find('tr.decimal, tr.ascii').hide();
-  } else if (encoding === 'decimal') {
-    rootElement.find('tr.binary, tr.decimal').show();
-    rootElement.find('tr.hexadecimal, tr.ascii').hide();
-  } else if (encoding === 'ascii') {
-    rootElement.find('tr.binary, tr.ascii').show();
-    rootElement.find('tr.hexadecimal, tr.decimal').hide();
+NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
+  var hiddenEncodings = [];
+  for (var key in EncodingType) {
+    if (EncodingType.hasOwnProperty(key) &&
+        encodings.indexOf(EncodingType[key]) === -1) {
+      hiddenEncodings.push(EncodingType[key]);
+    }
   }
+  rootElement.find(makeEncodingRowSelector(encodings)).show();
+  rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
 
-
-},{"./NetSimEncodingControl.html":129}],129:[function(require,module,exports){
+},{"./NetSimEncodingControl.html":129,"./netsimConstants":172}],129:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2716,7 +4081,22 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_encoding_selector">\n  <label for="encoding_selector">Encoding:</label>\n  <select id="encoding_selector">\n    <option value="all" selected>All</option>\n    <option value="binary">Binary</option>\n    <option value="hexadecimal">Hexadecimal</option>\n    <option value="decimal">Decimal</option>\n    <option value="ascii">ASCII</option>\n  </select>\n</div>'); })();
+ buf.push('');1;
+  var EncodingType = require('./netsimConstants').EncodingType;
+  var netsimMsg = require('../../locale/current/netsim');
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} encodingLabel
+   */
+  function makeCheckbox(encodingType, encodingLabel) {
+    var divClasses = ['encoding_checkboxes_' + encodingType];
+    if (level.showEncodingControls.indexOf(encodingType) === -1) {
+      divClasses.push('hiddenControl');
+    }
+    ; buf.push('\n    <div class="', escape((15,  divClasses.join(' ') )), '">\n      <input type="checkbox"\n             name="encoding_checkboxes"\n             id="encoding_checkboxes_', escape((18,  encodingType )), '"\n             value="', escape((19,  encodingType )), '"\n          />\n      <label for="encoding_checkboxes_', escape((21,  encodingType )), '">', escape((21,  encodingLabel )), '</label>\n    </div>\n    ');23;
+  }
+; buf.push('\n<div class="netsim_encoding_selector">\n  <h1>', escape((27,  netsimMsg.encoding() )), '</h1>\n  ');28; makeCheckbox(EncodingType.ASCII, netsimMsg.ascii()); ; buf.push('\n  ');29; makeCheckbox(EncodingType.DECIMAL, netsimMsg.decimal()); ; buf.push('\n  ');30; makeCheckbox(EncodingType.HEXADECIMAL, netsimMsg.hexadecimal()); ; buf.push('\n  ');31; makeCheckbox(EncodingType.BINARY, netsimMsg.binary()); ; buf.push('\n  ');32; makeCheckbox(EncodingType.A_AND_B, netsimMsg.a_and_b()); ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -2724,7 +4104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],126:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"./netsimConstants":172,"ejs":246}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2739,6 +4119,7 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimDnsTab.html');
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
@@ -2746,11 +4127,12 @@ var NetSimDnsTable = require('./NetSimDnsTable');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsTab = module.exports = function (rootDiv,
+var NetSimDnsTab = module.exports = function (rootDiv, levelConfig,
     dnsModeChangeCallback, becomeDnsCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -2758,6 +4140,12 @@ var NetSimDnsTab = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -2796,25 +4184,35 @@ var NetSimDnsTab = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimDnsTab.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
-  this.dnsModeControl_ = new NetSimDnsModeControl(
-      this.rootDiv_.find('.dns_mode'),
-      this.dnsModeChangeCallback_);
+
+  if (this.levelConfig_.showDnsModeControl) {
+    this.dnsModeControl_ = new NetSimDnsModeControl(
+        this.rootDiv_.find('.dns_mode'),
+        this.dnsModeChangeCallback_);
+  }
+
   this.dnsManualControl_ = new NetSimDnsManualControl(
       this.rootDiv_.find('.dns_manual_control'),
       this.becomeDnsCallback_);
+
   this.dnsTable_ = new NetSimDnsTable(
       this.rootDiv_.find('.dns_table'));
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsModeControl_.setDnsMode(newDnsMode);
+  if (this.dnsModeControl_) {
+    this.dnsModeControl_.setDnsMode(newDnsMode);
+  }
+
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === 'manual') {
+  if (newDnsMode === DnsMode.MANUAL) {
     this.rootDiv_.find('.dns_manual_control').show();
   } else {
     this.rootDiv_.find('.dns_manual_control').hide();
@@ -2835,7 +4233,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };
 
-},{"./NetSimDnsManualControl":122,"./NetSimDnsModeControl":124,"./NetSimDnsTab.html":125,"./NetSimDnsTable":128}],128:[function(require,module,exports){
+},{"./NetSimDnsManualControl":122,"./NetSimDnsModeControl":124,"./NetSimDnsTab.html":125,"./NetSimDnsTable":128,"./netsimConstants":172}],128:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2850,8 +4248,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 'use strict';
 
 var markup = require('./NetSimDnsTable.html');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = NetSimRouterNode.DnsMode;
+var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
  * Generator and controller for DNS network lookup table component.
@@ -2910,7 +4307,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
   this.render();
 };
 
-},{"./NetSimDnsTable.html":127,"./NetSimRouterNode":149}],127:[function(require,module,exports){
+},{"./NetSimDnsTable.html":127,"./netsimConstants":172}],127:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2923,9 +4320,8 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = NetSimRouterNode.DnsMode;
-; buf.push('\n<div class="netsim_dns_table">\n  <h1>My Network</h1>\n  <table>\n    <thead>\n    <tr>\n      <th>Hostname</th>\n      <th>Address</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');15;
+var DnsMode = require('./netsimConstants').DnsMode;
+; buf.push('\n<div class="netsim_dns_table">\n  <h1>My Network</h1>\n  <table>\n    <thead>\n    <tr>\n      <th>Hostname</th>\n      <th>Address</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');14;
     tableData.forEach(function (row) {
       var displayHostname = row.hostname;
       var displayAddress = '';
@@ -2944,7 +4340,7 @@ var DnsMode = NetSimRouterNode.DnsMode;
         displayHostname += " (DNS)";
         rowClasses.push('dnsNode');
       }
-      ; buf.push('\n        <tr class="', escape((35,  rowClasses.join(' ') )), '">\n          <td>', escape((36,  displayHostname )), '</td>\n          <td>', escape((37,  displayAddress )), '</td>\n        </tr>\n      ');39;
+      ; buf.push('\n        <tr class="', escape((34,  rowClasses.join(' ') )), '">\n          <td>', escape((35,  displayHostname )), '</td>\n          <td>', escape((36,  displayAddress )), '</td>\n        </tr>\n      ');38;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -2954,7 +4350,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./NetSimRouterNode":149,"ejs":240}],125:[function(require,module,exports){
+},{"./netsimConstants":172,"ejs":246}],125:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2966,7 +4362,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_dns_tab">\n  <div class="dns_mode"></div>\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2974,7 +4370,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],124:[function(require,module,exports){
+},{"ejs":246}],124:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2989,6 +4385,7 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimDnsModeControl.html');
+var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
  * Generator and controller for DNS mode selector
@@ -3020,10 +4417,10 @@ var NetSimDnsModeControl = module.exports = function (rootDiv,
 
   /**
    * Internal state: Current DNS mode.
-   * @type {string}
+   * @type {DnsMode}
    * @private
    */
-  this.currentDnsMode_ = 'none';
+  this.currentDnsMode_ = DnsMode.NONE;
 
   this.render();
 };
@@ -3045,21 +4442,21 @@ NetSimDnsModeControl.prototype.render = function () {
  * @private
  */
 NetSimDnsModeControl.prototype.onDnsModeChange_ = function () {
-  var newDnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  var newDnsMode = this.dnsModeRadios_.filter(':checked').val();
   this.dnsModeChangeCallback_(newDnsMode);
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
   this.currentDnsMode_ = newDnsMode;
   this.dnsModeRadios_
-      .siblings('[value="' + newDnsMode + '"]')
+      .filter('[value="' + newDnsMode + '"]')
       .prop('checked', true);
 };
 
-},{"./NetSimDnsModeControl.html":123}],123:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html":123,"./netsimConstants":172}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3071,7 +4468,18 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="dns_mode_control">\n  <h1>DNS Mode</h1>\n  <input id="dns_mode_none" type="radio" name="dns_mode" value="none" /><label for="dns_mode_none">None</label>\n  <br/><input id="dns_mode_manual" type="radio" name="dns_mode" value="manual" /><label for="dns_mode_manual">Manual</label>\n  <br/><input id="dns_mode_automatic" type="radio" name="dns_mode" value="automatic" /><label for="dns_mode_automatic">Automatic</label>\n</div>'); })();
+ buf.push('');1;
+  var DnsMode = require('./netsimConstants').DnsMode;
+  var netsimMsg = require('../../locale/current/netsim');
+
+  /**
+   * @param {exports.DnsMode} mode
+   * @param {string} label
+   */
+  function makeRadio(mode, label) {
+    ; buf.push('\n    <div class="dns_mode_', escape((11,  mode )), '">\n      <input id="dns_mode_', escape((12,  mode )), '"\n                   type="radio"\n                   name="dns_mode"\n                   value="', escape((15,  mode )), '" />\n      <label for="dns_mode_', escape((16,  mode )), '">', escape((16,  label )), '</label>\n    </div>\n    ');18;
+  }
+; buf.push('\n<div class="dns_mode_control">\n  <h1>', escape((22,  netsimMsg.dnsMode() )), '</h1>\n  ');23; makeRadio(DnsMode.NONE, netsimMsg.dnsMode_NONE()); ; buf.push('\n  ');24; makeRadio(DnsMode.MANUAL, netsimMsg.dnsMode_MANUAL()); ; buf.push('\n  ');25; makeRadio(DnsMode.AUTOMATIC, netsimMsg.dnsMode_AUTOMATIC()); ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3079,7 +4487,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],122:[function(require,module,exports){
+},{"../../locale/current/netsim":235,"./netsimConstants":172,"ejs":246}],235:[function(require,module,exports){
+/*netsim*/ module.exports = window.blockly.appLocale;
+},{}],122:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3164,7 +4574,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],120:[function(require,module,exports){
+},{"ejs":246}],120:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3189,14 +4599,17 @@ var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
- * @param {Window} thisWindow
- * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
- * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
- * @param {boolean} [enableCleanup] default TRUE
+ * @param {Object} options
+ * @param {!Window} options.window - reference to browser window, passed
+ *        in instead of accessed globally to be test-friendly.
+ * @param {!NetSimLevelConfiguration} options.levelConfig
+ * @param {!NetSimLogPanel} options.sentLog - Widget to post sent messages to
+ * @param {!NetSimLogPanel} options.receivedLog - Widget to post received
+ *        messages to
+ * @param {boolean} [options.enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (thisWindow, sentLog,
-    receivedLog, enableCleanup) {
+var NetSimConnection = module.exports = function (options) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -3205,16 +4618,22 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLogPanel}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
-  this.sentLog_ = sentLog;
+  this.levelConfig_ = options.levelConfig || {};
 
   /**
    * @type {NetSimLogPanel}
    * @private
    */
-  this.receivedLog_ = receivedLog;
+  this.sentLog_ = options.sentLog;
+
+  /**
+   * @type {NetSimLogPanel}
+   * @private
+   */
+  this.receivedLog_ = options.receivedLog;
 
   /**
    * Accessor object for select simulation shard's tables, where an shard
@@ -3234,7 +4653,8 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
    * @type {boolean}
    * @private
    */
-  this.enableCleanup_ = enableCleanup !== undefined ? enableCleanup : true;
+  this.enableCleanup_ = options.enableCleanup !== undefined ?
+      options.enableCleanup : true;
 
   /**
    *
@@ -3270,7 +4690,7 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  thisWindow.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  options.window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 
 /**
@@ -3427,10 +4847,12 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
-  var self = this;
-  NetSimRouterNode.create(this.shard_, function () {
-    self.statusChanges.notifyObservers();
-  });
+  NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    router.update(function () {
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -4073,7 +5495,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":46,"../utils":219,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":161}],154:[function(require,module,exports){
+},{"../commands":46,"../utils":225,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":165}],154:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4379,7 +5801,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":219}],149:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":225}],149:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4395,6 +5817,7 @@ NetSimTable.prototype.tick = function () {
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -4443,7 +5866,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.dnsMode = row.dnsMode !== undefined ?
-      row.dnsMode : NetSimRouterNode.DnsMode.NONE;
+      row.dnsMode : DnsMode.NONE;
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -4530,16 +5953,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.logChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
-
-/**
- * @enum {string}
- */
-var DnsMode = {
-  NONE: 'none',
-  MANUAL: 'manual',
-  AUTOMATIC: 'automatic'
-};
-NetSimRouterNode.DnsMode = DnsMode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -5049,7 +6462,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   );
 };
 
-},{"../ObservableEvent":1,"../utils":219,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":161,"./PacketEncoder":162,"./dataConverters":164}],136:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":225,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":165,"./PacketEncoder":166,"./dataConverters":168,"./netsimConstants":172}],136:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5199,7 +6612,7 @@ NetSimLogEntry.prototype.getMessageAscii = function () {
       PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
       BITS_PER_BYTE);
 };
-},{"../utils":219,"./NetSimEntity":131,"./PacketEncoder":162,"./dataConverters":164}],162:[function(require,module,exports){
+},{"../utils":225,"./NetSimEntity":131,"./PacketEncoder":166,"./dataConverters":168}],166:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5342,7 +6755,7 @@ PacketEncoder.prototype.createBinary = function (data) {
   }
   return result;
 };
-},{"./dataConverters":164}],164:[function(require,module,exports){
+},{"./dataConverters":168}],168:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5633,7 +7046,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
-},{"../utils":219}],135:[function(require,module,exports){
+},{"../utils":225}],135:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5999,7 +7412,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":219,"./NetSimClientNode":119,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogger":140,"./NetSimMessage":141}],141:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":225,"./NetSimClientNode":119,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogger":140,"./NetSimMessage":141}],141:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6091,7 +7504,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":219,"./NetSimEntity":131}],140:[function(require,module,exports){
+},{"../utils":225,"./NetSimEntity":131}],140:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6428,7 +7841,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":219,"./NetSimEntity":131}],119:[function(require,module,exports){
+},{"../utils":225,"./NetSimEntity":131}],119:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6478,7 +7891,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":219,"./NetSimNode":144}],144:[function(require,module,exports){
+},{"../utils":225,"./NetSimNode":144}],144:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6634,7 +8047,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
-},{"../utils":219,"./NetSimEntity":131,"./NetSimWire":161}],161:[function(require,module,exports){
+},{"../utils":225,"./NetSimEntity":131,"./NetSimWire":165}],165:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6733,7 +8146,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":219,"./NetSimEntity":131}],131:[function(require,module,exports){
+},{"../utils":225,"./NetSimEntity":131}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6862,6 +8275,7 @@ NetSimEntity.prototype.buildRow_ = function () {
 'use strict';
 
 var markup = require('./NetSimChunkSizeControl.html');
+var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for chunk size slider/selector
@@ -6944,22 +8358,94 @@ NetSimChunkSizeControl.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimChunkSizeControl.prototype.setEncoding = function (newEncoding) {
-  if (newEncoding === 'all') {
-    this.currentUnits_ = ['character', 'number'];
-  } else if (newEncoding === 'ascii') {
-    this.currentUnits_ = ['character'];
-  } else if (newEncoding === 'decimal') {
-    this.currentUnits_ = ['number'];
-  } else {
-    this.currentUnits_ = ['byte'];
+NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
+  this.currentUnits_ = [];
+
+  if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
+    this.currentUnits_.push('character'); // TODO: localize
   }
+
+  if (newEncodings.indexOf(EncodingType.DECIMAL) > -1) {
+    this.currentUnits_.push('number'); // TODO: localize
+  }
+
+  if (this.currentUnits_.length === 0){
+    this.currentUnits_.push('byte'); // TODO: localize
+  }
+
   this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
 };
 
-},{"./NetSimChunkSizeControl.html":117}],117:[function(require,module,exports){
+},{"./NetSimChunkSizeControl.html":117,"./netsimConstants":172}],172:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+/* global exports */
+'use strict';
+
+/**
+ * DNS modes for the simulator.  Only applies in variant 3, when connecting
+ * to a router.
+ * @enum {string}
+ */
+exports.DnsMode = {
+  /** There is no DNS node.  Everyone can see every other node's address. */
+  NONE: 'none',
+
+  /** One user acts as the DNS node at a time.  Everyone can see their own
+   *  address and the DNS node's address, but nothing else. */
+  MANUAL: 'manual',
+
+  /** An automatic DNS node is added to the simulation.  Nodes are automatically
+   *  registered with the DNS on connection. */
+  AUTOMATIC: 'automatic'
+};
+
+/**
+ * Encodings that can be used to interpret and display binary messages in
+ * the simulator.
+ * @enum {string}
+ */
+exports.EncodingType = {
+  /** All packet data is actually stored and moved around in binary, so
+   *  the 'binary' encoding just represents access to that raw data. */
+  BINARY: 'binary',
+
+  /** An encoding used early in the lessons to show that binary isn't always
+   *  1s and 0s.  Just like binary, but replaces 1/0 with A/B. */
+  A_AND_B: 'a_and_b',
+
+  /** Renders each binary nibble as a hex character. */
+  HEXADECIMAL: 'hexadecimal',
+
+  /** Renders each chunk of bits (using variable chunksize) in decimal */
+  DECIMAL: 'decimal',
+
+  /** Renders each chunk of bits (using variable chunksize) in ascii */
+  ASCII: 'ascii'
+};
+
+/**
+ * Enumeration of tabs for level configuration
+ * @enum {string}
+ */
+exports.NetSimTabType = {
+  INSTRUCTIONS: 'instructions',
+  MY_DEVICE: 'my_device',
+  ROUTER: 'router',
+  DNS: 'dns'
+};
+
+},{}],117:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6979,7 +8465,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],116:[function(require,module,exports){
+},{"ejs":246}],116:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -7319,7 +8805,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":219}],18:[function(require,module,exports){
+},{"./utils":225}],18:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -7454,11 +8940,11 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
 };
 
 /**
- * API for master apps table on the server.
+ * API for master channel list on the server.
  * @constructor
  */
 appsApi.AppsTable = function () {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps');
+  this.requestHelper_ = new ApiRequestHelper('/v3/channels');
 };
 
 /**
@@ -7514,8 +9000,8 @@ appsApi.AppsTable.prototype.delete = function (id, callback) {
 appsApi.SharedTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** Shared tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/shared-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.SharedTable.inherits(appsApi.AppsTable);
 
@@ -7529,8 +9015,8 @@ appsApi.SharedTable.inherits(appsApi.AppsTable);
 appsApi.UserTable = function (app_publickey, table_name) {
   appsApi.AppsTable.call(this);
   /** User tables just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-tables/' + table_name);
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-tables/' +
+      app_publickey + '/' + table_name);
 };
 appsApi.UserTable.inherits(appsApi.AppsTable);
 
@@ -7542,8 +9028,8 @@ appsApi.UserTable.inherits(appsApi.AppsTable);
  * @constructor
  */
 appsApi.PropertyBag = function (app_publickey) {
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps' + app_publickey +
-      '/shared-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/shared-properties/' +
+      app_publickey);
 };
 
 /**
@@ -7588,11 +9074,12 @@ appsApi.PropertyBag.prototype.delete = function (key, callback) {
 appsApi.UserPropertyBag = function (app_publickey) {
   appsApi.PropertyBag.call(this, app_publickey);
   /** User property bags just use a different base URL */
-  this.requestHelper_ = new ApiRequestHelper('/v3/apps/' + app_publickey +
-  '/user-properties');
+  this.requestHelper_ = new ApiRequestHelper('/v3/user-properties/' +
+      app_publickey);
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
-},{"./utils":219}],3:[function(require,module,exports){
+
+},{"./utils":225}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7800,4 +9287,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[166]);
+},{}]},{},[170]);

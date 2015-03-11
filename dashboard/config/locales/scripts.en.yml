@@ -347,6 +347,13 @@ en:
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
+          Unit 1: Unit 1
+          Unit 2: Unit 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity Playlab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -483,4 +490,30 @@ en:
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: The Design Recipe
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'

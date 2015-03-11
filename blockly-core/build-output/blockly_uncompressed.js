@@ -4264,6 +4264,8 @@ Blockly.FieldDropdown.prototype.showEditor_ = function() {
   Blockly.addClass_(menuDom, "blocklyDropdownMenu");
   Blockly.addClass_(menuDom, "goog-menu-noaccel");
   menuDom.style.borderColor = "hsla(" + this.sourceBlock_.getColour() + ", " + this.sourceBlock_.getSaturation() * 100 + "%, " + this.sourceBlock_.getValue() * 100 + "%" + ", 0.5)";
+  menuDom.style.overflowY = "auto";
+  menuDom.style["max-height"] = "250px";
   var menuSize = goog.style.getSize(menuDom);
   if(xy.y + menuSize.height + borderBBox.height >= windowSize.height + scrollOffset.y) {
     xy.y -= menuSize.height
@@ -13321,16 +13323,16 @@ Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnect
     return true
   }
   for(var x = 0;x < this.check_.length;x++) {
-    if(otherConnection.acceptsType_(this.check_[x])) {
+    if(otherConnection.acceptsType(this.check_[x])) {
       return true
     }
   }
   return false
 };
 Blockly.Connection.prototype.acceptsAnyType = function() {
-  return!this.check_ || this.acceptsType_(Blockly.BlockValueType.NONE)
+  return!this.check_ || this.acceptsType(Blockly.BlockValueType.NONE)
 };
-Blockly.Connection.prototype.acceptsType_ = function(type) {
+Blockly.Connection.prototype.acceptsType = function(type) {
   return!this.check_ || goog.array.contains(this.check_, type)
 };
 Blockly.Connection.prototype.setCheck = function(check) {
@@ -13544,6 +13546,7 @@ Blockly.BlockSvgFunctional = function(block, options) {
   this.rowBuffer = options.rowBuffer || 0;
   this.patternId_ = null;
   this.inputMarkers_ = {};
+  this.inputClickTargets_ = {};
   Blockly.BlockSvg.call(this, block)
 };
 goog.inherits(Blockly.BlockSvgFunctional, Blockly.BlockSvg);
@@ -13575,15 +13578,53 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
     if(input.type !== Blockly.FUNCTIONAL_INPUT) {
       continue
     }
-    this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"red"}, this.svgGroup_)
+    this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"white"}, this.svgGroup_);
+    this.inputClickTargets_[input.name] = Blockly.createSvgElement("path", {fill:"white", opacity:"0", "class":"inputClickTarget"}, this.svgGroup_);
+    if(!this.block_.blockSpace.isFlyout) {
+      this.addInputClickListener_(input)
+    }
   }
   Object.keys(this.inputMarkers_).forEach(function(markerName) {
     if(functionalMarkers.indexOf(markerName) === -1) {
       var element = this.inputMarkers_[markerName];
       element.parentNode.removeChild(element);
+      delete this.inputMarkers_[markerName];
+      var element = this.inputClickTargets_[markerName];
+      element.parentNode.removeChild(element);
       delete this.inputMarkers_[markerName]
     }
   }, this)
+};
+Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function(input) {
+  var blockSpace = this.block_.blockSpace;
+  goog.events.listen(this.inputClickTargets_[input.name], "click", function(e) {
+    var childType;
+    var titleIndex;
+    if(input.connection.acceptsAnyType()) {
+      return
+    }
+    if(input.connection.acceptsType("Number")) {
+      childType = "functional_math_number";
+      titleIndex = 0
+    }else {
+      if(input.connection.acceptsType("String")) {
+        childType = "functional_string";
+        titleIndex = 1
+      }else {
+        return
+      }
+    }
+    var block = new Blockly.Block(blockSpace, childType);
+    block.initSvg();
+    input.connection.connect(block.previousConnection);
+    var titles = block.getTitles();
+    for(var i = 0;i < titles.length;i++) {
+      if(titles[i] instanceof Blockly.FieldTextInput) {
+        titles[i].showEditor_()
+      }
+    }
+    block.render()
+  })
 };
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, connectionsXY, inputRows, iconWidth) {
   if(this.rowBuffer) {
@@ -13596,13 +13637,16 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   var inputTopLeft = {x:renderInfo.curX, y:renderInfo.curY + BS.INLINE_PADDING_Y};
   var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
   var notchPaths = input.connection.getNotchPaths();
-  renderInfo.inline.push("M", inputTopLeft.x + "," + inputTopLeft.y);
-  renderInfo.inline.push("h", notchStart);
-  renderInfo.inline.push(notchPaths.left);
-  renderInfo.inline.push("H", inputTopLeft.x + input.renderWidth);
-  renderInfo.inline.push("v", input.renderHeight);
-  renderInfo.inline.push("H", inputTopLeft.x);
-  renderInfo.inline.push("z");
+  var inputSteps = [];
+  inputSteps.push("M", inputTopLeft.x + "," + inputTopLeft.y);
+  inputSteps.push("h", notchStart);
+  inputSteps.push(notchPaths.left);
+  inputSteps.push("H", inputTopLeft.x + input.renderWidth);
+  inputSteps.push("v", input.renderHeight);
+  inputSteps.push("H", inputTopLeft.x);
+  inputSteps.push("z");
+  renderInfo.inline = renderInfo.inline.concat(inputSteps);
+  this.inputClickTargets_[input.name].setAttribute("d", inputSteps.join(" "));
   this.inputMarkers_[input.name].setAttribute("x", inputTopLeft.x + 5);
   this.inputMarkers_[input.name].setAttribute("y", inputTopLeft.y + 15);
   this.inputMarkers_[input.name].setAttribute("width", input.renderWidth - 10);
@@ -14413,7 +14457,10 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   }
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  this.select();
+  var targetClass = e.target.getAttribute && e.target.getAttribute("class");
+  if(targetClass !== "inputClickTarget") {
+    this.select()
+  }
   this.blockSpace.blockSpaceEditor.hideChaff();
   if(Blockly.isRightButton(e)) {
   }else {
@@ -21732,6 +21779,10 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.display = "block";
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.initializeAddButton_()
+};
+Blockly.ContractEditor.prototype.createParameterEditor_ = function() {
+};
+Blockly.ContractEditor.prototype.bindToolboxHandlers_ = function() {
 };
 Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function() {
   return this.isShowingHeaders_() ? HEADER_HEIGHT : 0
