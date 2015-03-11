@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({39:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({38:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":179,"./blocks":31,"./calc":32,"./levels":38}],32:[function(require,module,exports){
+},{"../appMain":5,"../skins":178,"./blocks":30,"./calc":31,"./levels":37}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -41,7 +41,6 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -993,7 +992,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":229,"../../locale/current/common":230,"../StudioApp":4,"../block_utils":19,"../dom":48,"../skins":179,"../templates/page.html":204,"../timeoutList":210,"../utils":225,"./api":30,"./controls.html":33,"./equation":34,"./equationSet":35,"./expressionNode":36,"./inputIterator":37,"./levels":38,"./visualization.html":40}],40:[function(require,module,exports){
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"../StudioApp":4,"../block_utils":19,"../dom":47,"../skins":178,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./levels":37,"./visualization.html":39}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1013,7 +1012,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":229,"ejs":246}],38:[function(require,module,exports){
+},{"../../locale/current/calc":228,"ejs":245}],37:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1052,7 +1051,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":229,"../block_utils":19}],37:[function(require,module,exports){
+},{"../../locale/current/calc":228,"../block_utils":19}],36:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1106,7 +1105,7 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],35:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -1392,8 +1391,16 @@ function getEquationFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
+    case 'functional_pow':
+    case 'functional_sqrt':
+    case 'functional_squared':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+      // some of these have 1 arg, others 2
+      var argNames = ['ARG1'];
+      if (block.getInput('ARG2')) {
+        argNames.push('ARG2');
+      }
+      var args = argNames.map(function(inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;
@@ -1455,149 +1462,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":225,"./equation":34,"./expressionNode":36}],34:[function(require,module,exports){
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- *   params: ['x']
- * In many cases, this will just be an expression with no name.
- * @param {string} name Function or variable name. Null if compute expression
- * @param {string[]} params List of parameter names if a function.
- * @param {ExpressionNode} expression
- */
-var Equation = function (name, params, expression) {
-  this.name = name;
-  this.params = params || [];
-  this.expression = expression;
-
-  if (arguments.length !== 3) {
-    throw new Error('Equation requires name, params, and expression');
-  }
-
-  this.signature = this.name;
-  if (this.params.length > 0) {
-    this.signature += '(' + this.params.join(',') + ')';
-  }
-};
-
-module.exports = Equation;
-
-/**
- * @returns True if a function
- */
-Equation.prototype.isFunction = function () {
-  return this.params.length > 0;
-};
-
-Equation.prototype.clone = function () {
-  return new Equation(this.name, this.params.slice(), this.expression.clone());
-};
-
-},{}],33:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1;
-  var msg = require('../../locale/current/calc');
-  var commonMsg = require('../../locale/current/common');
-; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/calc":229,"../../locale/current/common":230,"ejs":246}],31:[function(require,module,exports){
-/**
- * Blockly Demo: Calc Graphics
- *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Demonstration of Blockly: Calc Graphics.
- * @author fraser@google.com (Neil Fraser)
- */
-'use strict';
-
-var msg = require('../../locale/current/calc');
-var commonMsg = require('../../locale/current/common');
-
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-
-// Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-
-  var generator = blockly.Generator.get('JavaScript');
-  blockly.JavaScript = generator;
-
-  var gensym = function(name) {
-    var NAME_TYPE = blockly.Variables.NAME_TYPE;
-    return generator.variableDB_.getDistinctName(name, NAME_TYPE);
-  };
-
-  sharedFunctionalBlocks.install(blockly, generator, gensym);
-
-  installCompute(blockly, generator, gensym);
-
-};
-
-function installCompute(blockly, generator, gensym) {
-  blockly.Blocks.functional_compute = {
-    helpUrl: '',
-    init: function() {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
-      ]);
-    }
-  };
-
-  generator.functional_compute = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
-  };
-}
-
-},{"../../locale/current/calc":229,"../../locale/current/common":230,"../sharedFunctionalBlocks":178}],229:[function(require,module,exports){
-/*calc*/ module.exports = window.blockly.appLocale;
-},{}],30:[function(require,module,exports){
-var ExpressionNode = require('./expressionNode');
-
-exports.compute = function (expr, blockId) {
-  Calc.computedExpression = expr instanceof ExpressionNode ? expr :
-    new ExpressionNode(parseFloat(expr));
-};
-
-exports.expression = function (operator, arg1, arg2, blockId) {
-  return new ExpressionNode(operator, [arg1, arg2], blockId);
-};
-
-},{"./expressionNode":36}],36:[function(require,module,exports){
+},{"../utils":224,"./equation":33,"./expressionNode":35}],35:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -1641,8 +1506,8 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.isArithmetic() && args.length !== 2) {
-    throw new Error("Arithmetic ExpressionNode needs 2 args");
+  if (this.isArithmetic() && !(args.length === 2 || args.length === 1)) {
+    throw new Error("Arithmetic ExpressionNode needs 1 or 2 args");
   }
 };
 module.exports = ExpressionNode;
@@ -1652,7 +1517,7 @@ ExpressionNode.DivideByZeroError = DivideByZeroError;
  * What type of expression node is this?
  */
 ExpressionNode.prototype.getType_ = function () {
-  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
+  if (["+", "-", "*", "/", "pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
 
@@ -1760,13 +1625,26 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     }
 
     var left = this.children_[0].evaluate(globalMapping, localMapping);
-    var right = this.children_[1].evaluate(globalMapping, localMapping);
-
-    var err = left.err || right.err;
-    if (err) {
-      throw err;
+    if (left.err) {
+      throw left.err;
     }
     left = left.result;
+
+    if (this.children_.length === 1) {
+      switch (this.value_) {
+        case 'sqrt':
+          return { result: Math.sqrt(left) };
+        case 'sqr':
+          return { result: left * left };
+        default:
+          throw new Error('Unknown operator: ' + this.value_);
+        }
+    }
+
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+    if (right.err) {
+      throw right.err;
+    }
     right = right.result;
 
     switch (this.value_) {
@@ -1781,6 +1659,8 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
           throw new DivideByZeroError();
         }
         return { result: left / right };
+      case 'pow':
+        return { result: Math.pow(left, right) };
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }
@@ -2066,4 +1946,134 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":225}]},{},[39]);
+},{"../utils":224}],33:[function(require,module,exports){
+/**
+ * An equation is an expression attached to a particular name. For example:
+ *   f(x) = x + 1
+ *   name: f
+ *   equation: x + 1
+ *   params: ['x']
+ * In many cases, this will just be an expression with no name.
+ * @param {string} name Function or variable name. Null if compute expression
+ * @param {string[]} params List of parameter names if a function.
+ * @param {ExpressionNode} expression
+ */
+var Equation = function (name, params, expression) {
+  this.name = name;
+  this.params = params || [];
+  this.expression = expression;
+
+  if (arguments.length !== 3) {
+    throw new Error('Equation requires name, params, and expression');
+  }
+
+  this.signature = this.name;
+  if (this.params.length > 0) {
+    this.signature += '(' + this.params.join(',') + ')';
+  }
+};
+
+module.exports = Equation;
+
+/**
+ * @returns True if a function
+ */
+Equation.prototype.isFunction = function () {
+  return this.params.length > 0;
+};
+
+Equation.prototype.clone = function () {
+  return new Equation(this.name, this.params.slice(), this.expression.clone());
+};
+
+},{}],32:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
+  var msg = require('../../locale/current/calc');
+  var commonMsg = require('../../locale/current/common');
+; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"ejs":245}],30:[function(require,module,exports){
+/**
+ * Blockly Demo: Calc Graphics
+ *
+ * Copyright 2012 Google Inc.
+ * http://blockly.googlecode.com/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview Demonstration of Blockly: Calc Graphics.
+ * @author fraser@google.com (Neil Fraser)
+ */
+'use strict';
+
+var msg = require('../../locale/current/calc');
+var commonMsg = require('../../locale/current/common');
+
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
+
+// Install extensions to Blockly's language and JavaScript generator.
+exports.install = function(blockly, blockInstallOptions) {
+  var skin = blockInstallOptions.skin;
+
+  var generator = blockly.Generator.get('JavaScript');
+  blockly.JavaScript = generator;
+
+  var gensym = function(name) {
+    var NAME_TYPE = blockly.Variables.NAME_TYPE;
+    return generator.variableDB_.getDistinctName(name, NAME_TYPE);
+  };
+
+  sharedFunctionalBlocks.install(blockly, generator, gensym);
+
+  installCompute(blockly, generator, gensym);
+
+};
+
+function installCompute(blockly, generator, gensym) {
+  blockly.Blocks.functional_compute = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
+      ]);
+    }
+  };
+
+  generator.functional_compute = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
+  };
+}
+
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"../sharedFunctionalBlocks":177}],228:[function(require,module,exports){
+/*calc*/ module.exports = window.blockly.appLocale;
+},{}]},{},[38]);

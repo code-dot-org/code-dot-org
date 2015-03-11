@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({170:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({169:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":169,"./netsim":171,"./skins":175}],175:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":168,"./netsim":170,"./skins":174}],174:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":179}],171:[function(require,module,exports){
+},{"../skins":178}],170:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -551,7 +551,7 @@ NetSim.prototype.onRouterLogChange_ = function () {
     this.setRouterLogData(this.myConnectedRouter_.getLog());
   }
 };
-},{"../../locale/current/netsim":235,"../RunLoop":3,"./DashboardUser":116,"./NetSimConnection":120,"./NetSimLobby":134,"./NetSimLogPanel":139,"./NetSimSendPanel":153,"./NetSimStatusPanel":157,"./NetSimTabsComponent":160,"./NetSimVisualization":161,"./controls.html":167,"./netsimConstants":172,"./page.html":174}],174:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"../RunLoop":3,"./DashboardUser":115,"./NetSimConnection":119,"./NetSimLobby":133,"./NetSimLogPanel":138,"./NetSimSendPanel":152,"./NetSimStatusPanel":156,"./NetSimTabsComponent":159,"./NetSimVisualization":160,"./controls.html":166,"./netsimConstants":171,"./page.html":173}],173:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -575,7 +575,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"../../locale/current/netsim":235,"ejs":246}],169:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/netsim":234,"ejs":245}],168:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -711,7 +711,7 @@ levels.variant3 = utils.extend(levels.default, {
   defaultDnsMode: DnsMode.AUTOMATIC
 });
 
-},{"../../locale/current/netsim":235,"../utils":225,"./netsimConstants":172}],167:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"../utils":224,"./netsimConstants":171}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -731,7 +731,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],161:[function(require,module,exports){
+},{"ejs":245}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1210,7 +1210,7 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   }
 };
 
-},{"../utils":225,"./NetSimVizNode":163,"./NetSimVizWire":164,"./NetSimWire":165,"./netsimUtils":173,"./tweens":176}],164:[function(require,module,exports){
+},{"../utils":224,"./NetSimVizNode":162,"./NetSimVizWire":163,"./NetSimWire":164,"./netsimUtils":172,"./tweens":175}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1288,7 +1288,7 @@ NetSimVizWire.prototype.kill = function () {
   this.remoteVizNode = null;
 };
 
-},{"../utils":225,"./NetSimVizEntity":162,"./NetSimVizNode":163,"./netsimUtils":173}],163:[function(require,module,exports){
+},{"../utils":224,"./NetSimVizEntity":161,"./NetSimVizNode":162,"./netsimUtils":172}],162:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1400,7 +1400,7 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
-},{"../utils":225,"./NetSimRouterNode":149,"./NetSimVizEntity":162,"./netsimUtils":173,"./tweens":176}],162:[function(require,module,exports){
+},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1623,7 +1623,7 @@ NetSimVizEntity.prototype.snapToScale = function (newScale) {
   this.tweenToScale(newScale, 0);
 };
 
-},{"./netsimUtils":173,"./tweens":176}],176:[function(require,module,exports){
+},{"./netsimUtils":172,"./tweens":175}],175:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1803,7 +1803,7 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
-},{"../utils":225}],160:[function(require,module,exports){
+},{"../utils":224}],159:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1985,7 +1985,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
   }
 };
 
-},{"./NetSimDnsTab":126,"./NetSimMyDeviceTab":143,"./NetSimRouterTab":151,"./NetSimTabsComponent.html":159,"./netsimConstants":172,"./netsimUtils":173}],159:[function(require,module,exports){
+},{"./NetSimDnsTab":125,"./NetSimMyDeviceTab":142,"./NetSimRouterTab":150,"./NetSimTabsComponent.html":158,"./netsimConstants":171,"./netsimUtils":172}],158:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2015,7 +2015,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":235,"./netsimConstants":172,"./netsimUtils":173,"ejs":246}],157:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"./netsimConstants":171,"./netsimUtils":172,"ejs":245}],156:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2092,7 +2092,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 };
 
-},{"../utils":225,"./NetSimPanel.js":146,"./NetSimStatusPanel.html":156}],156:[function(require,module,exports){
+},{"../utils":224,"./NetSimPanel.js":145,"./NetSimStatusPanel.html":155}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2112,7 +2112,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],153:[function(require,module,exports){
+},{"ejs":245}],152:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2558,7 +2558,7 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.updateFields_();
 };
 
-},{"../../locale/current/netsim":235,"../constants":47,"../utils":225,"./NetSimEncodingControl":130,"./NetSimPanel":146,"./NetSimSendPanel.html":152,"./PacketEncoder":166,"./dataConverters":168}],152:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"../constants":46,"../utils":224,"./NetSimEncodingControl":129,"./NetSimPanel":145,"./NetSimSendPanel.html":151,"./PacketEncoder":165,"./dataConverters":167}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2578,7 +2578,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":235,"ejs":246}],151:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"ejs":245}],150:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2636,7 +2636,7 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
 };
 
-},{"./NetSimRouterLogTable":148,"./NetSimRouterTab.html":150}],150:[function(require,module,exports){
+},{"./NetSimRouterLogTable":147,"./NetSimRouterTab.html":149}],149:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2656,7 +2656,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],148:[function(require,module,exports){
+},{"ejs":245}],147:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2714,7 +2714,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
   this.render();
 };
 
-},{"./NetSimRouterLogTable.html":147}],147:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html":146}],146:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2747,7 +2747,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":172,"ejs":246}],143:[function(require,module,exports){
+},{"./netsimConstants":171,"ejs":245}],142:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2850,7 +2850,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   }
   this.chunkSizeControl_.setEncodings(newEncodings);
 };
-},{"./NetSimChunkSizeControl":118,"./NetSimEncodingControl":130,"./NetSimMyDeviceTab.html":142}],142:[function(require,module,exports){
+},{"./NetSimChunkSizeControl":117,"./NetSimEncodingControl":129,"./NetSimMyDeviceTab.html":141}],141:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2870,7 +2870,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],139:[function(require,module,exports){
+},{"ejs":245}],138:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3084,7 +3084,7 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
-},{"../../locale/current/netsim":235,"../utils":225,"./NetSimEncodingControl":130,"./NetSimLogPacket.html":137,"./NetSimLogPanel.html":138,"./NetSimPanel":146}],146:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"../utils":224,"./NetSimEncodingControl":129,"./NetSimLogPacket.html":136,"./NetSimLogPanel.html":137,"./NetSimPanel":145}],145:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3241,7 +3241,7 @@ NetSimPanel.prototype.getBody = function () {
   return this.rootDiv_.find('.panel_body');
 };
 
-},{"./NetSimPanel.html":145}],145:[function(require,module,exports){
+},{"./NetSimPanel.html":144}],144:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3261,7 +3261,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],138:[function(require,module,exports){
+},{"ejs":245}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3281,7 +3281,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],137:[function(require,module,exports){
+},{"ejs":245}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3369,7 +3369,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":235,"./PacketEncoder":166,"./dataConverters":168,"ejs":246}],134:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"./PacketEncoder":165,"./dataConverters":167,"ejs":245}],133:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3850,7 +3850,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../utils":225,"./NetSimClientNode":119,"./NetSimLobby.html":133,"./NetSimLogger":140,"./NetSimRouterNode":149,"./netsimUtils":173}],173:[function(require,module,exports){
+},{"../utils":224,"./NetSimClientNode":118,"./NetSimLobby.html":132,"./NetSimLogger":139,"./NetSimRouterNode":148,"./netsimUtils":172}],172:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3926,7 +3926,7 @@ exports.shouldShowTab = function (levelConfig, tabType) {
   return levelConfig.showTabs.indexOf(tabType) > -1;
 };
 
-},{"./NetSimClientNode":119,"./NetSimRouterNode":149}],133:[function(require,module,exports){
+},{"./NetSimClientNode":118,"./NetSimRouterNode":148}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3946,7 +3946,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],130:[function(require,module,exports){
+},{"ejs":245}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4069,7 +4069,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
 
-},{"./NetSimEncodingControl.html":129,"./netsimConstants":172}],129:[function(require,module,exports){
+},{"./NetSimEncodingControl.html":128,"./netsimConstants":171}],128:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4104,7 +4104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":235,"./netsimConstants":172,"ejs":246}],126:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"./netsimConstants":171,"ejs":245}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4233,7 +4233,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };
 
-},{"./NetSimDnsManualControl":122,"./NetSimDnsModeControl":124,"./NetSimDnsTab.html":125,"./NetSimDnsTable":128,"./netsimConstants":172}],128:[function(require,module,exports){
+},{"./NetSimDnsManualControl":121,"./NetSimDnsModeControl":123,"./NetSimDnsTab.html":124,"./NetSimDnsTable":127,"./netsimConstants":171}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4307,7 +4307,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
   this.render();
 };
 
-},{"./NetSimDnsTable.html":127,"./netsimConstants":172}],127:[function(require,module,exports){
+},{"./NetSimDnsTable.html":126,"./netsimConstants":171}],126:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4350,7 +4350,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":172,"ejs":246}],125:[function(require,module,exports){
+},{"./netsimConstants":171,"ejs":245}],124:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4370,7 +4370,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],124:[function(require,module,exports){
+},{"ejs":245}],123:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4456,7 +4456,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
       .prop('checked', true);
 };
 
-},{"./NetSimDnsModeControl.html":123,"./netsimConstants":172}],123:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html":122,"./netsimConstants":171}],122:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4487,9 +4487,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":235,"./netsimConstants":172,"ejs":246}],235:[function(require,module,exports){
+},{"../../locale/current/netsim":234,"./netsimConstants":171,"ejs":245}],234:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],122:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4554,7 +4554,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };
 
-},{"./NetSimDnsManualControl.html":121}],121:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html":120}],120:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4574,7 +4574,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],120:[function(require,module,exports){
+},{"ejs":245}],119:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4906,7 +4906,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"../ObservableEvent":1,"./NetSimClientNode":119,"./NetSimLocalClientNode":135,"./NetSimLogger":140,"./NetSimRouterNode":149,"./NetSimShard":154,"./NetSimShardCleaner":155}],155:[function(require,module,exports){
+},{"../ObservableEvent":1,"./NetSimClientNode":118,"./NetSimLocalClientNode":134,"./NetSimLogger":139,"./NetSimRouterNode":148,"./NetSimShard":153,"./NetSimShardCleaner":154}],154:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5495,7 +5495,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":46,"../utils":225,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":165}],154:[function(require,module,exports){
+},{"../commands":45,"../utils":224,"./NetSimEntity":130,"./NetSimHeartbeat":131,"./NetSimLogEntry":135,"./NetSimLogger":139,"./NetSimMessage":140,"./NetSimNode":143,"./NetSimWire":164}],153:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5574,7 +5574,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.messageTable.tick(clock);
   this.logTable.tick(clock);
 };
-},{"../appsApi":18,"./NetSimTable":158}],158:[function(require,module,exports){
+},{"../appsApi":18,"./NetSimTable":157}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5801,7 +5801,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":225}],149:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":224}],148:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6462,7 +6462,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   );
 };
 
-},{"../ObservableEvent":1,"../utils":225,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogEntry":136,"./NetSimLogger":140,"./NetSimMessage":141,"./NetSimNode":144,"./NetSimWire":165,"./PacketEncoder":166,"./dataConverters":168,"./netsimConstants":172}],136:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":224,"./NetSimEntity":130,"./NetSimHeartbeat":131,"./NetSimLogEntry":135,"./NetSimLogger":139,"./NetSimMessage":140,"./NetSimNode":143,"./NetSimWire":164,"./PacketEncoder":165,"./dataConverters":167,"./netsimConstants":171}],135:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6612,7 +6612,7 @@ NetSimLogEntry.prototype.getMessageAscii = function () {
       PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
       BITS_PER_BYTE);
 };
-},{"../utils":225,"./NetSimEntity":131,"./PacketEncoder":166,"./dataConverters":168}],166:[function(require,module,exports){
+},{"../utils":224,"./NetSimEntity":130,"./PacketEncoder":165,"./dataConverters":167}],165:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6755,7 +6755,7 @@ PacketEncoder.prototype.createBinary = function (data) {
   }
   return result;
 };
-},{"./dataConverters":168}],168:[function(require,module,exports){
+},{"./dataConverters":167}],167:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7046,7 +7046,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
-},{"../utils":225}],135:[function(require,module,exports){
+},{"../utils":224}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7412,7 +7412,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":225,"./NetSimClientNode":119,"./NetSimEntity":131,"./NetSimHeartbeat":132,"./NetSimLogger":140,"./NetSimMessage":141}],141:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":224,"./NetSimClientNode":118,"./NetSimEntity":130,"./NetSimHeartbeat":131,"./NetSimLogger":139,"./NetSimMessage":140}],140:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7504,7 +7504,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":225,"./NetSimEntity":131}],140:[function(require,module,exports){
+},{"../utils":224,"./NetSimEntity":130}],139:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7656,7 +7656,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],132:[function(require,module,exports){
+},{}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7841,7 +7841,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":225,"./NetSimEntity":131}],119:[function(require,module,exports){
+},{"../utils":224,"./NetSimEntity":130}],118:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7891,7 +7891,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":225,"./NetSimNode":144}],144:[function(require,module,exports){
+},{"../utils":224,"./NetSimNode":143}],143:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8047,7 +8047,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
-},{"../utils":225,"./NetSimEntity":131,"./NetSimWire":165}],165:[function(require,module,exports){
+},{"../utils":224,"./NetSimEntity":130,"./NetSimWire":164}],164:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8146,7 +8146,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":225,"./NetSimEntity":131}],131:[function(require,module,exports){
+},{"../utils":224,"./NetSimEntity":130}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8260,7 +8260,7 @@ NetSimEntity.prototype.buildRow_ = function () {
   return {};
 };
 
-},{}],118:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8378,7 +8378,7 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
   this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
 };
 
-},{"./NetSimChunkSizeControl.html":117,"./netsimConstants":172}],172:[function(require,module,exports){
+},{"./NetSimChunkSizeControl.html":116,"./netsimConstants":171}],171:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8445,7 +8445,7 @@ exports.NetSimTabType = {
   DNS: 'dns'
 };
 
-},{}],117:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8465,7 +8465,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],116:[function(require,module,exports){
+},{"ejs":245}],115:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -8581,7 +8581,7 @@ DashboardUser.prototype.whenReady = function (callback) {
     this.whenReadyCallbacks_.push(callback);
   }
 };
-},{}],46:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8805,7 +8805,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":225}],18:[function(require,module,exports){
+},{"./utils":224}],18:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -9079,7 +9079,7 @@ appsApi.UserPropertyBag = function (app_publickey) {
 };
 appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
 
-},{"./utils":225}],3:[function(require,module,exports){
+},{"./utils":224}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9287,4 +9287,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[170]);
+},{}]},{},[169]);
