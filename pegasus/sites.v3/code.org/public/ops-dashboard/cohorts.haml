@@ -2,18 +2,21 @@
 layout: none
 template: none
 ---
+- authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+
 %a{href:'/ops-dashboard'}
   Dashboard
 >
 %span
-  Cohorts
+  Teacher cohorts
 
 %div{'ng-controller' => 'CohortsController'}
-  %h1 Cohorts
-
-  %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/cohorts/new"} Add cohort
-  %br/
-  %br/
+  %h1 Teacher cohorts
+  - if dashboard_user[:admin]
+    %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/teacher-cohorts/new"} Add teacher cohort
+    %br/
+    %br/
 
   %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
     No cohorts are available.
@@ -33,5 +36,6 @@ template: none
             %a.btn.btn-danger.btn-xs{"ng-click"=>'del(cohort)'} Yes
             %a.btn.btn-success.btn-xs{"ng-click"=>'cohort.confirmDelete = false'} No
           %span{"ng-hide" => "cohort.confirmDelete"}
-            %a.btn.btn-white.btn-xs{"ng-href" => "#/cohorts/{{cohort.id}}/edit"} Edit
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/edit"} Edit
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/teachers"} Teachers
             %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete
