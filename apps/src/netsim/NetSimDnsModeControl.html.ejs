@@ -1,5 +1,6 @@
 <%
   var DnsMode = require('./netsimConstants').DnsMode;
+  var netsimMsg = require('../../locale/current/netsim');
 
   /**
    * @param {exports.DnsMode} mode
@@ -18,8 +19,8 @@
   }
 %>
 <div class="dns_mode_control">
-  <h1>DNS Mode</h1>
-  <% makeRadio(DnsMode.NONE, 'None'); %>
-  <% makeRadio(DnsMode.MANUAL, 'Manual'); %>
-  <% makeRadio(DnsMode.AUTOMATIC, 'Automatic'); %>
+  <h1><%= netsimMsg.dnsMode() %></h1>
+  <% makeRadio(DnsMode.NONE, netsimMsg.dnsMode_NONE()); %>
+  <% makeRadio(DnsMode.MANUAL, netsimMsg.dnsMode_MANUAL()); %>
+  <% makeRadio(DnsMode.AUTOMATIC, netsimMsg.dnsMode_AUTOMATIC()); %>
 </div>

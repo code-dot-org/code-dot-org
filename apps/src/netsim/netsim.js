@@ -18,6 +18,7 @@
 'use strict';
 
 var page = require('./page.html');
+var netsimMsg = require('../../locale/current/netsim');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -195,10 +196,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   this.receivedMessageLog_ = new NetSimLogPanel(
-      $('#netsim_received'), 'Received Message Log', false);
+      $('#netsim_received'), netsimMsg.receivedMessageLog(), false);
 
   this.sentMessageLog_ = new NetSimLogPanel(
-      $('#netsim_sent'), 'Sent Message Log', true);
+      $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
 
   this.connection_ = new NetSimConnection(window, this.level,
       this.sentMessageLog_, this.receivedMessageLog_,
@@ -295,7 +296,7 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
- * @param {"none"|"manual"|"automatic"} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSim.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
@@ -408,7 +409,7 @@ NetSim.prototype.render = function () {
       shareLink;
 
   isConnected = false;
-  clientStatus = 'Disconnected';
+  clientStatus = netsimMsg.disconnected();
   if (this.connection_ && this.connection_.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.connection_.myNode.getHostname();
@@ -419,7 +420,7 @@ NetSim.prototype.render = function () {
 
   if (this.myConnectedRouter_) {
     isConnected = true;
-    clientStatus = 'Connected';
+    clientStatus = netsimMsg.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
