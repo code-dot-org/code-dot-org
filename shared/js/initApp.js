@@ -173,7 +173,7 @@ dashboard.updateTimestamp = function() {
   } else {
     $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
   } 
-}
+};
 
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
@@ -249,9 +249,9 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
 
-    $(window).on('hashchange', function (e) {
+    $(window).on('hashchange', function () {
       var hashData = parseHash();
-      if (hashData.appId !== dashboard.currentApp.id
+      if ((dashboard.currentApp && hashData.appId !== dashboard.currentApp.id)
           || hashData.isEditingProject !== dashboard.isEditingProject) {
         location.reload();
       }
@@ -337,8 +337,13 @@ function loadProject(promise) {
       promise = promise.then(function () {
         var deferred = new $.Deferred();
         storageApps().fetch(hashData.appId, function (data) {
-          dashboard.currentApp = data;
-          deferred.resolve();
+          if (data) {
+            dashboard.currentApp = data;
+            deferred.resolve();
+          } else {
+            // Project not found, redirect to the new project experience.
+            location.href = location.pathname;
+          }
         });
         return deferred;
       });
