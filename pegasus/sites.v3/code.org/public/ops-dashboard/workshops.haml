@@ -14,22 +14,27 @@ template: none
 - if dashboard_user[:admin]
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New Workshop
-%table{'ng-controller' => 'WorkshopsController', style:'width:100%; margin-top:20px;'}
+%table{style:'width:100%; margin-top:20px;'}
   %tr
     %th.manage-th
-      Workshops Name
+      %a{'ng-click' => 'order = "name"'}
+        Workshops Name
     %th.manage-th
-      Program Type
+      %a{'ng-click' => 'order = "program"'}
+        Program Type
     %th.manage-th
-      Teacher Cohort
+      %a{'ng-click' => 'order = "cohort"'}
+        Teacher Cohort
     %th.manage-th
-      Start Date
+      %a{'ng-click' => 'order = "date"'}
+        Start Date
     %th.manage-th
-      Address
+      %a{'ng-click' => 'order = "address"'}
+        Address
     - if dashboard_user[:admin]
       %th.manage-th
         Manage
-  %tr{'ng-repeat' => 'workshop in workshops'}
+  %tr{'ng-repeat' => 'workshop in workshops | orderBy:order'}
     %td
       %p
         {{workshop.name}}
@@ -51,3 +56,13 @@ template: none
       %td
         %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit'} Edit
         %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);'} Delete
+
+:css
+
+  a {
+    color: white;
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
