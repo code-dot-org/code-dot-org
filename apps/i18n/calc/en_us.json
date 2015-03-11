@@ -1,5 +1,5 @@
 {
-  "divideByZeroError": "Your program is attempts to divide by zero.",
+  "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
