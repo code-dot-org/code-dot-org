@@ -39,6 +39,9 @@ class Calc < Blockly
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
         </block>
+        <block type="functional_sqrt"></block>
+        <block type="functional_squared"></block>
+        <block type="functional_pow"></block>
       </category>
       <category name="Functions" custom="PROCEDURE" />
       <category name="Variables" custom="FUNCTIONAL_VARIABLE" />

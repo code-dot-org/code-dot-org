@@ -1969,23 +1969,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   /**
-   * functional_sqrt
-   */
-  blockly.Blocks.functional_sqrt = {
-    helpUrl: '',
-    init: function() {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
-        { name: 'ARG1', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_sqrt = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return 'Math.sqrt(' + arg1 + ');';
-  };
-
-  /**
    * functional_keydown
    */
   blockly.Blocks.functional_keydown = {
