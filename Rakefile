@@ -38,7 +38,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed 
+    if CDO.chef_managed
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
@@ -58,6 +58,15 @@ namespace :build do
 
       HipChat.log 'Building <b>blockly-core</b>...'
       RakeUtils.system './deploy.sh'
+    end
+  end
+
+  task :core_and_apps_dev do
+    Dir.chdir(blockly_core_dir) do
+      RakeUtils.system './deploy.sh', 'debug'
+    end
+    Dir.chdir(apps_dir) do
+      RakeUtils.system 'MOOC_DEV=1 grunt build'
     end
   end
 
