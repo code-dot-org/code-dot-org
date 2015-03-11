@@ -232,7 +232,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
-          if(evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
             return { err: evaluation.err };
           }
           continue;

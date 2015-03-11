@@ -162,8 +162,9 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     var left = this.children_[0].evaluate(globalMapping, localMapping);
     var right = this.children_[1].evaluate(globalMapping, localMapping);
 
-    if (left.err || right.err) {
-      return { err: left.err || right.err };
+    var err = left.err || right.err;
+    if (err) {
+      throw err;
     }
     left = left.result;
     right = right.result;
