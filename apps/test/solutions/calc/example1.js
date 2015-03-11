@@ -88,6 +88,20 @@ module.exports = {
         blockUtils.calcBlockXml('functional_plus', [1, 2]) +
         blockUtils.calcBlockXml('functional_plus', [3, 2]) +
       '</xml>'
+    },
+    {
+      description: "divide by zero",
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.divideByZeroError());
+        return true;
+      },
+      xml: '<xml>' +
+        blockUtils.calcBlockXml('functional_dividedby', [4, 0]) +
+      '</xml>'
     }
   ]
 };
