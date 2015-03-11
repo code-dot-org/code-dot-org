@@ -266,61 +266,54 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
+  // Immediately return if dragging, to avoid expensive calculations
   if (Blockly.Block.isDragging()) {
     return;
   }
 
+  // Can't bump if we don't know our workspace dimensions
   var metrics = this.blockSpace.getMetrics();
-  if (!metrics || metrics.contentWidth > metrics.viewWidth ||
-      metrics.contentHeight > metrics.viewHeight) {
-    // Don't try to bump if there are no metrics, or if the viewWidth/Height is
-    // so small that the content overflows on both sides.
+  if (!metrics) {
     return;
   }
 
-  var oneOrMoreBlocksOutOfBounds = metrics.contentTop < 0 ||
-    metrics.contentTop + metrics.contentHeight >
-    metrics.viewHeight + metrics.viewTop ||
-    metrics.contentLeft < (Blockly.RTL ? metrics.viewLeft : 0) ||
-    metrics.contentLeft + metrics.contentWidth >
-    metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft;
-
-  if (!oneOrMoreBlocksOutOfBounds) {
-    return;
-  }
-
+  /** @const */
   var MARGIN = 25;
+
+  /** @const */
   var MARGIN_TOP = 15;
-  var overflow;
-  var blocks = this.blockSpace.getTopBlocks(false);
-  for (var b = 0, block; block = blocks[b]; b++) {
-    var blockXY = block.getRelativeToSurfaceXY();
+
+  // Calculate bounds of view, including bump padding
+  var viewInnerTop = metrics.viewTop + MARGIN_TOP;
+  var viewInnerLeft = metrics.viewLeft + MARGIN;
+  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
+  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN
+  var viewInnerWidth = viewInnerRight - viewInnerLeft;
+  var viewInnerHeight = viewInnerBottom - viewInnerTop;
+
+  // Check every block, and bump if needed.
+  this.blockSpace.getTopBlocks(false).forEach(function (block) {
+    // Skip block if it doesn't fit in the view anyway.
     var blockHW = block.getHeightWidth();
-    // Bump any block that's above the top back inside.
-    overflow = metrics.viewTop + MARGIN_TOP -
-      blockXY.y;
-    if (overflow > 0) {
-      block.moveBy(0, overflow);
+    if (blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
+      return;
     }
-    // Bump any block that's below the bottom back inside.
-    overflow = metrics.viewTop + metrics.viewHeight - MARGIN -
-      blockXY.y;
-    if (overflow < 0) {
-      block.moveBy(0, overflow);
+
+    // If these values are positive, the block needs to be bumped
+    var blockXY = block.getRelativeToSurfaceXY();
+    var howFarOutsideLeft = Math.max(0, viewInnerLeft - blockXY.x);
+    var howFarOutsideRight = Math.max(0, blockXY.x - viewInnerRight);
+    var howFarAboveTop = Math.max(0, viewInnerTop - blockXY.y);
+    var howFarBelowBottom = Math.max(0, blockXY.y - viewInnerBottom);
+
+    // Calculate needed bump
+    var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
+    var moveY = howFarAboveTop ? howFarAboveTop : -howFarBelowBottom;
+
+    if (moveX || moveY) {
+      block.moveBy(moveX, moveY);
     }
-    // Bump any block that's off the left back inside.
-    overflow = MARGIN + metrics.viewLeft - blockXY.x -
-      (Blockly.RTL ? 0 : blockHW.width);
-    if (overflow > 0) {
-      block.moveBy(overflow, 0);
-    }
-    // Bump any block that's off the right back inside.
-    overflow = metrics.viewLeft + metrics.viewWidth - MARGIN -
-      blockXY.x + (Blockly.RTL ? blockHW.width : 0);
-    if (overflow < 0) {
-      block.moveBy(overflow, 0);
-    }
-  }
+  });
 };
 
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
