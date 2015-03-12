@@ -24,7 +24,7 @@ theme: none
     %button.btn.btn-white{"ng-click" => "new_teacher()", "ng-disabled" => "teachers_bulk_import.uploading"} Add teacher
     %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = true", "ng-disabled" => "teachers_bulk_import.uploading"} Import teachers
 
-.jumbotron{"ng-show" => "teachers_bulk_import.uploading || 1"}
+.jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
   %h3 Example format:
   %pre
     = preserve do
