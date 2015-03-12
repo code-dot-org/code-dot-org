@@ -28,9 +28,9 @@ theme: none
   %h3 Example format:
   %pre
     = preserve do
-      first_name,last_name,email
-      Bob,Smith,bob.smith@example.com
-      Mary,Jones,mary.jones@example.com
+      first_name,last_name,email,district
+      Bob,Smith,bob.smith@example.com,Los Angeles Unified School District
+      Mary,Jones,mary.jones@example.com,Broward County Public Schools
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
   %h3 Debug
   %pre
