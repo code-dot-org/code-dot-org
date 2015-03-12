@@ -26,6 +26,11 @@ When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
+When /^I drag block matching selector "([^"]*)" to block matching selector "([^"]*)"$/ do |from, to|
+  code = generate_selector_drag_code(from, to, 0, 30)
+  @browser.execute_script code
+end
+
 When /^I drag block "([^"]*)" to block "([^"]*)" plus offset (\d+), (\d+)$/ do |from, to, dx, dy|
   code = generate_drag_code(get_block_id(from), get_block_id(to), dx, dy)
   @browser.execute_script code
