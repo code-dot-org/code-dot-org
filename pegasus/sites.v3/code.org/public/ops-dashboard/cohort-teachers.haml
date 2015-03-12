@@ -53,22 +53,22 @@ theme: none
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.ops_first_name}}
         %div{"ng-show" => "teacher.editing"}
-          %input{"ng-model" => "teacher.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true"}/
+          %input.form-control{"ng-model" => "teacher.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true"}/
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.ops_last_name}}
         %div{"ng-show" => "teacher.editing"}
-          %input{"ng-model" => "teacher.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true"}/
+          %input.form-control{"ng-model" => "teacher.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true"}/
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.email}}
         %div{"ng-show" => "teacher.editing"}
-          %input{"ng-model" => "teacher.email", placeholder: "Email address", style: "width: 100%", type: "text", required: "true"}/
+          %input.form-control{"ng-model" => "teacher.email", placeholder: "Email address", style: "width: 100%", type: "text", required: "true"}/
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.district}}
         %div{"ng-show" => "teacher.editing"}
-          %input{"ng-model" => "teacher.district", placeholder: "District", style: "width: 100%", type: "text", required: "true"}/
+          %input.form-control{"ng-model" => "teacher.district", placeholder: "District", style: "width: 100%", type: "text", required: "true"}/
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?
