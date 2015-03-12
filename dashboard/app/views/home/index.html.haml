@@ -17,6 +17,8 @@
           .padtopbottom{style: 'line-height: 1.5em'}
             = render partial: 'shared/student_continue', locals: { include_finished: true }
 
+    = render partial: 'home/projects'
+
     - unless @gallery_activities.empty?
       = render partial: 'home/gallery'
 

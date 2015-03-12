@@ -292,7 +292,7 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
 
   this.addRangeEditor_();
-
+  this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
 
@@ -557,15 +557,22 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
   this.outputTypeSelector.render(this.getOutputTypeDropdownElement_());
 };
 
-Blockly.ContractEditor.prototype.outputTypeChanged_ = function(newType) {
-  var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setFrameColor_(newColorHSV);
-
+/**
+ * @param {Blockly.BlockValueType} newType
+ * @private
+ */
+Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
+  this.updateFrameColorForType_(newType);
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.updateOutputType(newType);
     this.modalBlockSpace.events.dispatchEvent(
       Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
   }
+};
+
+Blockly.ContractEditor.prototype.updateFrameColorForType_ = function (newType) {
+  var newColorHSV = Blockly.FunctionalTypeColors[newType];
+  this.setFrameColor_(newColorHSV);
 };
 
 Blockly.ContractEditor.prototype.setFrameColor_ = function (hsvColor) {

@@ -61,7 +61,7 @@ module Ops
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       assert_difference 'Workshop.count' do
-        post :create, workshop: {name: 'test workshop', program_type: 'CSP', cohort_id: @cohort, facilitator_ids: [@facilitator]}
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitator_ids: [@facilitator]}
       end
       assert_response :success
     end

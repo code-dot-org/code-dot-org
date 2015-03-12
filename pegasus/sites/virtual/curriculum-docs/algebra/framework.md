@@ -61,6 +61,7 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 
 [/together]
 
+<br/>
 <% end %>
 
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  

@@ -11,7 +11,9 @@
       <select id="netsim_shard_select"></select>
       <span id="netsim_not_connected_note">You are not connected. Select a class section from the list to connect.</span>
       <a class="shardLink" href="#">Share this private network</a>
-      <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+      <% if (level.showAddRouterButton) { %>
+        <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+      <% } %>
       <ul id="netsim_lobby_list"></ul>
       <input type="button" id="netsim_lobby_connect" value="Connect" />
     </div>

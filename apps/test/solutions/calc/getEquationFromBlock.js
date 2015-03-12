@@ -96,6 +96,21 @@ module.exports = {
         );
 
         validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_pow', [2, 4]),
+          new Equation(null, [], new ExpressionNode('pow', [2, 4]))
+        );
+
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_sqrt', [4]),
+          new Equation(null, [], new ExpressionNode('sqrt', [4]))
+        );
+
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_squared', [2]),
+          new Equation(null, [], new ExpressionNode('sqr', [2]))
+        );
+
+        validateGeneratedEquation(assert,
           blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 } ),
           new Equation(null, [], new ExpressionNode(1))
         );

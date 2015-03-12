@@ -15,16 +15,20 @@ template: none
 %table.districts{style:'width:100%; margin-top:20px;'}
   %tr
     %th.manage-th
-      District Name
+      %a{'ng-click' => 'order = "name"'}
+        District Name
     %th.manage-th
-      Location
+      %a{'ng-click' => 'order = "location"'}
+        Location
     %th.manage-th
-      District Contact Name
+      %a{'ng-click' => 'order = "contact.ops_last_name"'}
+        District Contact Name
     %th.manage-th
-      District Contact Email
+      %a{'ng-click' => 'order = "contact.email"'}
+        District Contact Email
     %th.manage-th
       Manage
-  %tr{'ng-repeat' => 'district in districts', 'ng-form' => 'form'}
+  %tr{'ng-repeat' => 'district in districts | orderBy:order', 'ng-form' => 'form'}
     %td
       %span{'ng-hide' => 'district.editing'}
         {{district.name}}
@@ -36,8 +40,10 @@ template: none
         {{district.location}}
       %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type: 'text'}
     %td
-      %span{'ng-hide' => 'district.editing'} {{district.contact.name}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type: 'text', placeholder: 'Name'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.ops_first_name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.ops_first_name', type: 'text', placeholder: 'First Name'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.ops_last_name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.ops_last_name', type: 'text', placeholder: 'Last Name'}
     %td
       %span{'ng-hide' => 'district.editing'} {{district.contact.email}}
       %span{'ng-show' => 'district.editing'}
@@ -57,7 +63,8 @@ template: none
     %td
       %input{'ng-model' => 'district.location', type:'text'}
     %td
-      %input{'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+      %input{'ng-model' => 'district.contact.ops_first_name', type:'text', placeholder: 'First Name'}
+      %input{'ng-model' => 'district.contact.ops_last_name', type:'text', placeholder: 'Last Name'}
     %td
       %span
         %input{'ng-model' => 'district.contact.email', type: 'email', placeholder: 'Email', name: 'email'}
@@ -69,6 +76,13 @@ template: none
 :css
   .btn {
     width:48%
+  }
+  a {
+    color: white;
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
   }
 
 :scss
