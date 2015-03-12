@@ -59,6 +59,6 @@ Show students [videos](http://hourofcode.com/us/resources#videos) on the importa
 My school district does not currently count computer science as a mathematics or science credit. How can I help my district implement this policy? 
  
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where in the Florida State Statute explicitly states that computer science counts towards a graduation requirement.  
-+ Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with HB 1501. 
++ Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with HB 5101. 
 + Request your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  
