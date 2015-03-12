@@ -5,10 +5,16 @@
  */
 var AppStorage = module.exports;
 
-// TODO(dave): remove once we can store ids for each app.
-AppStorage.tempEncryptedAppId =
+// TODO(dave): remove once all applab data levels are associated with
+// a project.
+AppStorage.tempChannelId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+AppStorage.getChannelId = function() {
+  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  return id || AppStorage.tempChannelId;
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -20,7 +26,7 @@ AppStorage.tempEncryptedAppId =
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.tempEncryptedAppId + '/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
@@ -47,7 +53,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.tempEncryptedAppId + '/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
@@ -84,7 +90,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -122,7 +128,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
   
@@ -170,7 +176,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -214,7 +220,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
