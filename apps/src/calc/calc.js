@@ -454,8 +454,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      // TODO - figure out right thing here
-      var val = userClone.getEquation(name).expression.value_;
+      var val = userClone.getEquation(name).expression.getValue();
       setConstantsToValue(val, index);
     });
 
