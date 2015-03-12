@@ -28,7 +28,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 To make computer science more accessible for all students, the North Carolina Department of Public Instruction now recognizes Advanced Placement Computer Science A as a fourth course option towards a mathematics graduation requirement - see page 3 of <a href="http://www.dpi.state.nc.us/docs/academicservices/2013/math-options-chart.pdf" target="_blank">this document</a>. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing this policy adopted by the North Carolina Department of Public Instruction by counting AP Computer Science as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.   
+Thank you for making our district a leader in computer science education by fully implementing this policy adopted by the North Carolina Department of Public Instruction to count AP Computer Science as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.   
 
 Sincerely, 
 
@@ -51,7 +51,7 @@ What’s a good way to get kids excited about computer science?
 
 How can our district get more girls and underrepresented students of color taking computer science?
 
-+ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics or science).
++ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics).
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 
 Show students [videos](http://hourofcode.com/us/resources#videos) on the importance of computer science education from special messengers, such as Chris Bosh, Bill Gates, Susan Wojcicki, President Obama, among others! 
 
