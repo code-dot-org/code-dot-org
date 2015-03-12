@@ -1,7 +1,7 @@
 Feature: Projects
 
 Background:
-  Given I am on "http://studio.code.org/p/artist"
+  Given I am on "http://learn.code.org/p/artist"
   And I rotate to landscape
   And element "#runButton" is visible
   And element ".project_updated_at" has text "Click 'Run' to save"
