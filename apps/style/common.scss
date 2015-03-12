@@ -650,7 +650,7 @@ $aniGifPreviewHeight: 60px;
     text-align: center;
     white-space: nowrap;
     overflow-x: hidden;
-    height: 40px;
+    height: $headers_height;
     span {
       color: white;
       line-height: $headers_height;
