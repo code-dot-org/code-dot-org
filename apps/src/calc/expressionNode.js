@@ -96,7 +96,7 @@ ExpressionNode.prototype.isNumber = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getStringValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
+  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
 };
 
 /**
@@ -461,12 +461,8 @@ ExpressionNode.prototype.numChildren = function () {
 /**
  * Get the value
  */
-ExpressionNode.prototype.getStringValue = function () {
-  if (this.isNumber()) {
-    return this.value_.toFixnum().toString();
-  } else {
-    return this.value_.toString();
-  }
+ExpressionNode.prototype.getValue = function () {
+  return this.value_.toString();
 };
 
 

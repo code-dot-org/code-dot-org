@@ -193,7 +193,7 @@ describe("ExpressionNode", function () {
       evaluation = node.evaluate({});
       assert(evaluation.err);
 
-      evaluation = node.evaluate({x: 1});
+      evaluation = node.evaluate({x: jsnums.makeFloat(1)});
       assert(!evaluation.err);
       assert.equal(evaluation.result, 1);
     });
@@ -203,7 +203,7 @@ describe("ExpressionNode", function () {
       evaluation = node.evaluate({});
       assert(evaluation.err);
 
-      evaluation = node.evaluate({x: 1, y: 2});
+      evaluation = node.evaluate({x: jsnums.makeFloat(1), y: jsnums.makeFloat(2)});
       assert(!evaluation.err);
       assert.equal(evaluation.result, 3);
     });
@@ -216,7 +216,7 @@ describe("ExpressionNode", function () {
 
     it("doesnt change the node when evaluating", function () {
       node = new ExpressionNode('x');
-      evaluation = node.evaluate({x: 1});
+      evaluation = node.evaluate({x: jsnums.makeFloat(1)});
       assert.equal(evaluation.result, 1);
       assert.equal(node.value_, 'x');
     });
@@ -282,7 +282,7 @@ describe("ExpressionNode", function () {
       // x = 1
       // g(y) = y + x; // should use global x here
       // f(x) = g(x); // should use local x here
-      mapping.x = 1;
+      mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
         expression: new ExpressionNode('+', ['x', 'y'])
@@ -304,7 +304,7 @@ describe("ExpressionNode", function () {
       // x = 1
       // g(y) = y + x; // should use global x here
       // f(x) = g(x) + x; // should use local x here
-      mapping.x = 1;
+      mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
         expression: new ExpressionNode('+', ['x', 'y'])
