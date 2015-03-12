@@ -585,6 +585,27 @@ html, body {
   background: #aaa;
 }
 
+#project-share .social-buttons a {
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    display: table-cell;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: $purple;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24pt;
+    &:hover {
+      box-shadow: 2px 2px 5px #888;
+    }
+  }
+}
+
 .header_middle {
   position: absolute;
   left: 0;
