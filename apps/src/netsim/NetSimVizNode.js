@@ -128,3 +128,7 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
     this.tweenToScale(0.5, 600, tweens.easeOutElastic);
   }
 };
+
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.addressText_.text(address === undefined ? '?' : address);
+};
