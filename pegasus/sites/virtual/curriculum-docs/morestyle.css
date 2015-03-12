@@ -169,6 +169,10 @@ th a:link, th a:visited, th a:hover, th a:active {
     margin: 0 auto;
 }
 
+.units td:nth-child(3) {
+    white-space:nowrap;
+}
+
 @page  
 { 
     size: auto;    

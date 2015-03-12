@@ -13,16 +13,18 @@
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html');
+var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingControl = module.exports = function (rootDiv,
+var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
     changeEncodingCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -30,6 +32,12 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -41,7 +49,7 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
    * @type {jQuery}
    * @private
    */
-  this.select_ = null;
+  this.checkboxes_ = null;
 
   // Initial render
   this.render();
@@ -51,50 +59,63 @@ var NetSimEncodingControl = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimEncodingControl.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
-  this.select_ = this.rootDiv_.find('select');
-  this.select_.change(this.onSelectChange_.bind(this));
-
+  this.checkboxes_ = this.rootDiv_.find(
+      'input[type="checkbox"][name="encoding_checkboxes"]');
+  this.checkboxes_.change(this.onCheckboxesChange_.bind(this));
 };
 
 /**
- * Send new value to registered callback on change.
+ * Send new selected encodings to registered callback on change.
  * @private
  */
-NetSimEncodingControl.prototype.onSelectChange_ = function () {
-  this.changeEncodingCallback_(this.select_.val());
+NetSimEncodingControl.prototype.onCheckboxesChange_ = function () {
+  var selectedEncodings = [];
+  this.checkboxes_.filter(':checked').each(function (i, element) {
+    selectedEncodings.push(element.value);
+  });
+  this.changeEncodingCallback_(selectedEncodings);
 };
 
 /**
  * Change selector value to the new provided value.
- * @param newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimEncodingControl.prototype.setEncoding = function (newEncoding) {
-  this.select_.val(newEncoding);
+NetSimEncodingControl.prototype.setEncodings = function (newEncodings) {
+  this.checkboxes_.each(function (i, element) {
+    $(element).attr('checked', (newEncodings.indexOf(element.value) > -1));
+  });
+};
+
+/**
+ * Generate a jQuery selector string that will get all rows that
+ * have ANY of the provided classes.
+ * @param {EncodingType[]} encodings
+ * @returns {string}
+ */
+var makeEncodingRowSelector = function (encodings) {
+  return encodings.map(function (className) {
+    return 'tr.' + className;
+  }).join(', ');
 };
 
 /**
  * Static helper, shows/hides rows under provided element according to the given
  * encoding setting.
  * @param {jQuery} rootElement - root of elements to show/hide
- * @param {string} encoding - a message encoding setting
+ * @param {EncodingType[]} encodings - a message encoding setting
  */
-NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encoding) {
-  if (encoding === 'all') {
-    rootElement.find('tr.binary, tr.hexadecimal, tr.decimal, tr.ascii').show();
-  } else if (encoding === 'binary') {
-    rootElement.find('tr.binary').show();
-    rootElement.find('tr.hexadecimal, tr.decimal, tr.ascii').hide();
-  } else if (encoding === 'hexadecimal') {
-    rootElement.find('tr.binary, tr.hexadecimal').show();
-    rootElement.find('tr.decimal, tr.ascii').hide();
-  } else if (encoding === 'decimal') {
-    rootElement.find('tr.binary, tr.decimal').show();
-    rootElement.find('tr.hexadecimal, tr.ascii').hide();
-  } else if (encoding === 'ascii') {
-    rootElement.find('tr.binary, tr.ascii').show();
-    rootElement.find('tr.hexadecimal, tr.decimal').hide();
+NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
+  var hiddenEncodings = [];
+  for (var key in EncodingType) {
+    if (EncodingType.hasOwnProperty(key) &&
+        encodings.indexOf(EncodingType[key]) === -1) {
+      hiddenEncodings.push(EncodingType[key]);
+    }
   }
+  rootElement.find(makeEncodingRowSelector(encodings)).show();
+  rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
-
