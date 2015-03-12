@@ -20,7 +20,7 @@ theme: none
         'ng-class' => 'tab == "manage" || 1 ? "active tab" : "tab"'}
       %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
 
-  .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
+  .managebuttons{"ng-show" => "tab == 'manage' || 1", style: "float:right"}
     %button.btn.btn-white{"ng-click" => "new_teacher()", "ng-disabled" => "teachers_bulk_import.uploading"} Add teacher
     %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = true", "ng-disabled" => "teachers_bulk_import.uploading"} Import teachers
 
