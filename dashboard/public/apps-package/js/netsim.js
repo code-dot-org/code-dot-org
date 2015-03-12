@@ -343,9 +343,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
   if (this.myConnectedRouter_) {
-    var router = this.myConnectedRouter_;
-    router.dnsMode = newDnsMode;
-    router.update();
+    this.myConnectedRouter_.setDnsMode(newDnsMode);
   }
 };
 
@@ -566,7 +564,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered_group" transform="translate(150,150)">\n            <g id="background_group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground_group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((64,  data.localeDirection )), '">\n    ');65; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered_group" transform="translate(150,150)">\n            <g id="background_group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground_group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((65,  data.localeDirection )), '">\n    ');66; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2569,7 +2567,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var netsimMsg = require('../../locale/current/netsim'); ; buf.push('\n<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((7,  netsimMsg.to() )), '></th>\n      <th nowrap class="fromAddress">', escape((8,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((9,  netsimMsg.packet() )), '</th>\n      <th class="message">', escape((10,  netsimMsg.message() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">', escape((15,  netsimMsg.ascii() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((18,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">', escape((22,  netsimMsg.decimal() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((25,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">', escape((29,  netsimMsg.hex() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((32,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">', escape((36,  netsimMsg.binary() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((39,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">', escape((49,  netsimMsg.send() )), '</span>\n</div>\n'); })();
+ buf.push('');1; var netsimMsg = require('../../locale/current/netsim'); ; buf.push('\n<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((7,  netsimMsg.to() )), '</th>\n      <th nowrap class="fromAddress">', escape((8,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((9,  netsimMsg.packet() )), '</th>\n      <th class="message">', escape((10,  netsimMsg.message() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">', escape((15,  netsimMsg.ascii() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((18,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">', escape((22,  netsimMsg.decimal() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((25,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">', escape((29,  netsimMsg.hex() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((32,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">', escape((36,  netsimMsg.binary() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((39,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">', escape((49,  netsimMsg.send() )), '</span>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -5817,7 +5815,10 @@ NetSimTable.prototype.tick = function () {
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var DnsMode = require('./netsimConstants').DnsMode;
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -5828,6 +5829,8 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
+var intToBinary = dataConverters.intToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -5836,6 +5839,13 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @readonly
  */
 var MAX_CLIENT_CONNECTIONS = 6;
+
+/**
+ * Conveniently, a router's address in its local network is always zero.
+ * @type {number}
+ * @readonly
+ */
+var ROUTER_LOCAL_ADDRESS = 0;
 
 /**
  * Client model of simulated router
@@ -6146,6 +6156,22 @@ NetSimRouterNode.prototype.stopSimulation = function () {
 };
 
 /**
+ * Puts the router into the given DNS mode, triggers a remote update,
+ * and creates/destroys the network's automatic DNS node.
+ * @param {DnsMode} newDnsMode
+ */
+NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
+  if (this.dnsMode === newDnsMode) {
+    return;
+  }
+
+  // TODO (bbuchanan): Handle DNS node management here
+
+  this.dnsMode = newDnsMode;
+  this.update();
+};
+
+/**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
  * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
@@ -6271,7 +6297,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     wire.localAddress = newAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = 0; // Always 0 for routers
+    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
@@ -6437,6 +6463,14 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     return;
   }
 
+  // Automatic DNS: requests to address zero hit the "automatic DNS" system
+  // and generate responses.
+  // TODO (bbuchanan): Send to a real auto-dns node
+  if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
+    this.generateDnsResponse_(message, myWires);
+    return;
+  }
+
   var destWires = myWires.filter(function (wire) {
     return wire.localAddress === toAddress;
   });
@@ -6459,6 +6493,74 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       function () {
         this.log(message.payload);
       }.bind(this)
+  );
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {NetSimWire[]} myWires
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
+  var fromAddress, query;
+
+  // Extract message contents
+  try {
+    fromAddress = dataConverters.binaryToInt(
+        PacketEncoder.defaultPacketEncoder.getField('fromAddress', message.payload));
+    query = dataConverters.binaryToAscii(
+        PacketEncoder.defaultPacketEncoder.getField('message', message.payload),
+        BITS_PER_BYTE);
+  } catch (error) {
+    // Malformed packet, ignore
+    return;
+  }
+
+  // Check that the query is well-formed
+  // Regex match "GET [hostnames...]"
+  // Then below, we'll split the hostnames on whitespace to process them.
+  var requestMatch = query.match(/GET\s+(\S.*)/);
+  if (requestMatch === null) {
+    // Malformed request, send back directions
+    NetSimMessage.send(
+        this.shard_,
+        ROUTER_LOCAL_ADDRESS,
+        fromAddress,
+        PacketEncoder.defaultPacketEncoder.createBinary({
+          fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+          toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+          packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+          packetCount: intToBinary(1, BITS_PER_NIBBLE),
+          message: asciiToBinary("Automatic DNS Node" +
+              "\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
+        }),
+        function() {}
+    );
+    return;
+  }
+
+  // Good request, look up all addresses and build up response
+  // Skipping first match, which is the full regex
+  var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
+    var wire = _.find(myWires, function (wire) {
+      return wire.localHostname === queryHostname;
+    });
+
+    return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
+  });
+
+  NetSimMessage.send(
+      this.shard_,
+      ROUTER_LOCAL_ADDRESS,
+      fromAddress,
+      PacketEncoder.defaultPacketEncoder.createBinary({
+        fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+        toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+        packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+        packetCount: intToBinary(1, BITS_PER_NIBBLE),
+        message: asciiToBinary(responses.join(' '), BITS_PER_BYTE)
+      }),
+      function() {}
   );
 };
 
@@ -8391,6 +8493,18 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
  */
 /* global exports */
 'use strict';
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_NIBBLE = 4;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_BYTE = 8;
 
 /**
  * DNS modes for the simulator.  Only applies in variant 3, when connecting
