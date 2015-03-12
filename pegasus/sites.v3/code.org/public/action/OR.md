@@ -59,5 +59,5 @@ My school district does not currently count computer a graduation credit. How ca
 
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines the Oregon Department of Education’s graduation requirements and the structure for Personalized Learning Plans. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with the Oregon Department of Education. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  
