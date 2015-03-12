@@ -14,6 +14,7 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
 
 /**
@@ -24,14 +25,36 @@ var tweens = require('./tweens');
 var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
 
   /**
    * @type {boolean}
    */
   this.isRouter = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDNSNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
 
   // Going for a diameter of _close_ to 75
   var radius = 37;
@@ -138,6 +161,30 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
 };
 
 NetSimVizNode.prototype.setAddress = function (address) {
-  this.addressText_.text(address === undefined ? '?' : address);
-  this.addressGroup_.toggle(!this.isRouter);
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  // Routers never show their address
+  // If a DNS mode has not been set we never show an address
+  if (this.isRouter || this.dnsMode_ === undefined) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?')
+  }
 };

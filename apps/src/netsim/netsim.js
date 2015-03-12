@@ -307,6 +307,9 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
   }
+  if (this.visualization_) {
+    this.visualization_.setDnsMode(newDnsMode);
+  }
 };
 
 /**
