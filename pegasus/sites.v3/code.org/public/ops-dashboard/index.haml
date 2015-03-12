@@ -407,6 +407,15 @@ title: "Ops Dashboard"
     $scope.new_teacher = function() {
       $scope.cohort.teachers.unshift({editing: true});
     };
+
+    $scope.save = function(teachers) {
+      if (!$.isArray(teachers)) {
+        return $scope.save([teachers]);
+      }
+
+      var newTeachers = [];
+      var modifiedTeachers = [];
+    }
   }
   ]);
 
