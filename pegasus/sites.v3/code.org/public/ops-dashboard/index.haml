@@ -14,6 +14,9 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
 
+
+%link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
+
 :javascript
   'use strict';
 
@@ -150,14 +153,14 @@ title: "Ops Dashboard"
   var filters = angular.module('opsApp.filters', []).value('version', '0.1');
 
   filters.filter('utc', function() {
-    return function(val) {
+    return function(val){
       var date = new Date(val);
-      return new Date(date.getUTCFullYear(),
-                      date.getUTCMonth(),
-                      date.getUTCDate(),
-                      date.getUTCHours(),
-                      date.getUTCMinutes(),
-                      date.getUTCSeconds());
+       return new Date(date.getUTCFullYear(),
+                       date.getUTCMonth(),
+                       date.getUTCDate(),
+                       date.getUTCHours(),
+                       date.getUTCMinutes(),
+                       date.getUTCSeconds());
     };
   });
 
@@ -188,7 +191,7 @@ title: "Ops Dashboard"
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
-    value('version', '0.1');
+      value('version', '0.1');
 
   controllers.controller('DistrictsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'districtsService',
     function($scope, $route, $routeParams, $location, $window, districtsService) {
@@ -385,6 +388,13 @@ title: "Ops Dashboard"
   controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
 
+    $scope.teachers_bulk_import = {uploading: false};
+
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
     $scope.cohort = cohortsService.get({id: $routeParams.id});
 
     $scope.cohort.$promise.then(function(cohort) {
@@ -406,6 +416,43 @@ title: "Ops Dashboard"
           }
         });
       }
+    }
+
+    $scope.edit = function(teacher) {
+      teacher.editing = true;
+    };
+
+    $scope.confirm_delete = function(teacher) {
+     teacher.confirmDelete = true;
+    };
+
+    $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
+      //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
+      //  function() {
+          $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+      //  }
+      //).catch($scope.genericError);
+    };
+
+    $scope.cancel = function(teacher) {
+      if (teacher.id) {
+        teacher.editing = false;
+      } else {
+        $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+      }
+    };
+
+    $scope.new_teacher = function() {
+      $scope.cohort.teachers.unshift({editing: true});
+    };
+
+    $scope.save = function(teachers) {
+      if (!$.isArray(teachers)) {
+        return $scope.save([teachers]);
+      }
+
+      var newTeachers = [];
+      var modifiedTeachers = [];
     }
   }
   ]);

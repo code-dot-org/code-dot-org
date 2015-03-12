@@ -61,5 +61,5 @@ My school district does not currently count computer science as a mathematics cr
  
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the Utah Department of Education counts Computer Programming as a mathematics graduation credit. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a mathematics graduation requirement in accordance with Utah Department of Education. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  

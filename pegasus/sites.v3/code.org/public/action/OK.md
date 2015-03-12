@@ -28,7 +28,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 To make computer science more accessible for all students, the Oklahoma State Legislature passed <a href="http://webserver1.lsb.state.ok.us/cf_pdf/2013-14%20ENR/SB/SB1422%20ENR.PDF" target="_blank">HB 1422</a> in 2013 to allow school districts to count Advanced Placement computer science courses towards a high school mathematics graduation requirement. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing HB 1422 to count AP Computer Science as mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.    
+Thank you for making our district a leader in computer science education by fully implementing HB 1422 to allow computer science to count as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.    
 
 Sincerely, 
 
@@ -51,7 +51,7 @@ What’s a good way to get kids excited about computer science?
 
 How can our district get more girls and underrepresented students of color taking computer science?
 
-+ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics or science).
++ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics).
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 
 Show students [videos](http://hourofcode.com/us/resources#videos) on the importance of computer science education from special messengers, such as Chris Bosh, Bill Gates, Susan Wojcicki, President Obama, among others! 
 

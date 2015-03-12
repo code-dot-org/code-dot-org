@@ -342,6 +342,7 @@ en:
           Teacher Dashboard: Teacher Dashboard
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -517,3 +518,5 @@ en:
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
