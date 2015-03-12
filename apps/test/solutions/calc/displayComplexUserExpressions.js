@@ -329,31 +329,6 @@ function customValidator(assert) {
     assert.equal(g.children.length, 9);
   });
 
-  // TODO - arguably belongs elsewhere, as this isnt complex
-  displayComplexUserExpressionTest(assert, 'non repeating fraction', function () {
-    // compute: 1 / 4
-    var userSet = new EquationSet();
-    userSet.addEquation_(new Equation(null, [], new ExpressionNode('/', [1, 4])));
-    var targetSet = new EquationSet(); // simulate free play
-    setEquationSets(targetSet, userSet);
-
-    displayComplexUserExpressions();
-
-    assert.equal(userExpression.children.length, 1);
-
-    // line 1: (1 / 4) = 0.25
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], '(', null);
-    validateTextElement(g.children[1], '1', null);
-    validateTextElement(g.children[2], ' / ', null);
-    validateTextElement(g.children[3], '4', null);
-    validateTextElement(g.children[4], ')', null);
-    validateTextElement(g.children[5], ' = ', null);
-    validateTextElement(g.children[6], '0.25', null);
-    assert.equal(g.children.length, 7);
-  });
-
-
   return true;
 }
 

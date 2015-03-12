@@ -21,17 +21,20 @@ function DivideByZeroError(message) {
   this.message = message || '';
 }
 
-var ExpressionNode = function (val, args, blockId) {
-  this.value_ = val;
+function ensureJsnum(val) {
   if (typeof(val) === 'number') {
-    this.value_ = jsnums.makeFloat(val);
+    return jsnums.makeFloat(val);
   }
+  return val;
+}
+
+var ExpressionNode = function (val, args, blockId) {
+  this.value_ = ensureJsnum(val);
 
   this.blockId_ = blockId;
   if (args === undefined) {
     args = [];
   }
-  this.repeaterString_ = null;
 
   if (!Array.isArray(args)) {
     throw new Error("Expected array");
@@ -122,6 +125,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     localMapping = localMapping || {};
 
     var type = this.getType_();
+    var val;
 
     if (type === ValueType.VARIABLE) {
       var mappedVal = utils.valueOr(localMapping[this.value_],
@@ -170,44 +174,51 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     if (left.err) {
       throw left.err;
     }
-    left = left.result;
+    left = left.result.toExact();
 
     if (this.children_.length === 1) {
       switch (this.value_) {
         case 'sqrt':
-          var val = jsnums.sqrt(left);
-          return { result: jsnums.makeFloat(val) };
+          val = jsnums.sqrt(left);
+          break;
         case 'sqr':
-          var val = jsnums.sqr(left);
-          return { result: jsnums.makeFloat(val) };
+          val = jsnums.sqr(left);
+          break;
         default:
           throw new Error('Unknown operator: ' + this.value_);
-        }
+      }
+      return { result: ensureJsnum(val) };
     }
 
     var right = this.children_[1].evaluate(globalMapping, localMapping);
     if (right.err) {
       throw right.err;
     }
-    right = right.result;
+    right = right.result.toExact();
 
     switch (this.value_) {
       case '+':
-        return { result: jsnums.add(left, right) };
+        val = jsnums.add(left, right);
+        break;
       case '-':
-        return { result: jsnums.subtract(left, right) };
+        val = jsnums.subtract(left, right);
+        break;
       case '*':
-        return { result: jsnums.multiply(left, right) };
+        val = jsnums.multiply(left, right);
+        break;
       case '/':
         if (jsnums.equals(right, 0)) {
           throw new DivideByZeroError();
         }
-        return { result: jsnums.divide(left, right) };
+        val = jsnums.divide(left, right);
+        break;
       case 'pow':
-        return { result: jsnums.expt(left, right) };
+        val = jsnums.expt(left, right);
+        break;
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }
+    return { result: ensureJsnum(val) };
   } catch (err) {
     return { err: err };
   }
@@ -266,11 +277,6 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    // TODO - care about other operations too
-    if (this.value_ === '/') {
-      repeaterString = RepeaterString.fromNumeratorDenominator(
-        this.getChildValue(0), this.getChildValue(1));
-    }
     var evaluation = this.evaluate();
     if (evaluation.err) {
       return false;
@@ -296,15 +302,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   var type = this.getType_();
 
   if (this.children_.length === 0) {
-    // TODO - get repeater str working again
-    // var tokenStr = this.repeaterString_ || this.value_.toString();
-    var tokenStr;
-    if (this.isNumber()) {
-      tokenStr = this.value_.toFixnum().toString();
-    } else {
-      tokenStr = this.value_.toString();
-    }
-    return [new Token(tokenStr, !nodesMatch)];
+    return [new Token(this.value_, !nodesMatch)];
   }
 
   if (type === ValueType.ARITHMETIC) {
@@ -525,11 +523,20 @@ ExpressionNode.prototype.debug = function () {
  * (1) We're comparing two expressions and want to mark where they differ.
  * (2) We're looking at a single expression and want to mark the deepest
  *     subexpression.
- * @param {string|RepeaterString} str
+ * @param {} val
  * @param {boolean} marked
  */
-var Token = function (str, marked) {
-  this.str = str;
+var Token = function (val, marked) {
+  if (jsnums.isSchemeNumber(val)) {
+    var repeater = RepeaterString.fromJsnum(val);
+    if (!repeater) {
+      this.str = val.toFixnum().toString();
+    } else {
+      this.str = repeater;
+    }
+  } else {
+    this.str = val.toString();
+  }
   this.marked = marked;
 };
 ExpressionNode.Token = Token;

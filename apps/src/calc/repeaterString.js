@@ -23,16 +23,11 @@ RepeaterString.prototype.addToTextElement = function (element) {
  * @param {number} denominator
  * @returns {RepeaterString?} Repeater string, or null if no repetition.
  */
-RepeaterString.fromNumeratorDenominator = function (numerator, denominator) {
-  // Convert to exact jsnum representations, i.e. 0.1 becomes 1/10
-  var n = jsnums.makeFloat(numerator).toExact();
-  var d = jsnums.makeFloat(denominator).toExact();
-
-  var result = jsnums.divide(n, d);
-  if (result.isInteger()) {
+RepeaterString.fromJsnum = function (jsn) {
+  if (jsn.isInteger()) {
     return null;
   }
-  var repeater = jsnums.toRepeatingDecimal(result.numerator(), result.denominator());
+  var repeater = jsnums.toRepeatingDecimal(jsn.numerator(), jsn.denominator());
   if (!repeater[2] || repeater[2] === '0') {
     return null;
   }
