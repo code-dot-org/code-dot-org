@@ -50,7 +50,7 @@ Blockly.inject = function(container, opt_options, opt_audioPlayer) {
   goog.ui.Component.setDefaultRightToLeft(Blockly.RTL);
 
   // Load CSS
-  Blockly.Css.inject();
+  Blockly.Css.inject(container);
 
   // Load sounds
   if (opt_audioPlayer) {
