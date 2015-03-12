@@ -23437,7 +23437,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   svg.appendChild(this.blockSpace.createDom());
   if(!Blockly.readOnly) {
     this.addToolboxOrFlyout_();
-    this.addChangeListener(this.bumpBlocksIntoView_)
+    this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_)
   }
   this.setEnableToolbox = function(enabled) {
     if(this.flyout_) {
@@ -23477,38 +23477,42 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
   }
   return deleteAreas
 };
-Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
   if(Blockly.Block.isDragging()) {
     return
   }
   var metrics = this.blockSpace.getMetrics();
-  if(!metrics) {
+  if(!metrics || (metrics.contentWidth > metrics.viewWidth || metrics.contentHeight > metrics.viewHeight)) {
+    return
+  }
+  var oneOrMoreBlocksOutOfBounds = metrics.contentTop < 0 || (metrics.contentTop + metrics.contentHeight > metrics.viewHeight + metrics.viewTop || (metrics.contentLeft < (Blockly.RTL ? metrics.viewLeft : 0) || metrics.contentLeft + metrics.contentWidth > metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft));
+  if(!oneOrMoreBlocksOutOfBounds) {
     return
   }
   var MARGIN = 25;
   var MARGIN_TOP = 15;
-  var viewInnerTop = metrics.viewTop + MARGIN_TOP;
-  var viewInnerLeft = metrics.viewLeft + MARGIN;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN;
-  var viewInnerWidth = viewInnerRight - viewInnerLeft;
-  var viewInnerHeight = viewInnerBottom - viewInnerTop;
-  this.blockSpace.getTopBlocks(false).forEach(function(block) {
-    var blockHW = block.getHeightWidth();
-    if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
-      return
-    }
+  var overflow;
+  var blocks = this.blockSpace.getTopBlocks(false);
+  for(var b = 0, block;block = blocks[b];b++) {
     var blockXY = block.getRelativeToSurfaceXY();
-    var howFarOutsideLeft = Math.max(0, viewInnerLeft - blockXY.x);
-    var howFarOutsideRight = Math.max(0, blockXY.x - viewInnerRight);
-    var howFarAboveTop = Math.max(0, viewInnerTop - blockXY.y);
-    var howFarBelowBottom = Math.max(0, blockXY.y - viewInnerBottom);
-    var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
-    var moveY = howFarAboveTop ? howFarAboveTop : -howFarBelowBottom;
-    if(moveX || moveY) {
-      block.moveBy(moveX, moveY)
+    var blockHW = block.getHeightWidth();
+    overflow = metrics.viewTop + MARGIN_TOP - blockXY.y;
+    if(overflow > 0) {
+      block.moveBy(0, overflow)
     }
-  })
+    overflow = metrics.viewTop + metrics.viewHeight - MARGIN - blockXY.y;
+    if(overflow < 0) {
+      block.moveBy(0, overflow)
+    }
+    overflow = MARGIN + metrics.viewLeft - blockXY.x - (Blockly.RTL ? 0 : blockHW.width);
+    if(overflow > 0) {
+      block.moveBy(overflow, 0)
+    }
+    overflow = metrics.viewLeft + metrics.viewWidth - MARGIN - blockXY.x + (Blockly.RTL ? blockHW.width : 0);
+    if(overflow < 0) {
+      block.moveBy(overflow, 0)
+    }
+  }
 };
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
