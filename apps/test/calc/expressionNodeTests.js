@@ -5,6 +5,7 @@ var assert = chai.assert;
 var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
+var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
 
 describe("debug output of an ExpressionNode tree", function () {
   it("works in some simple cases", function () {
@@ -166,14 +167,14 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('sqr', [2]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 4);
+      assert.equal(evaluation.result.toExact(), 4);
     });
 
     it('can evaluate a sqrt', function () {
       node = new ExpressionNode('sqrt', [4]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 2);
+      assert.equal(evaluation.result.toExact(), 2);
     });
 
     it("can evaluate a more complex expression", function () {
@@ -571,7 +572,7 @@ describe("ExpressionNode", function () {
 
       it('differs in child 1', function () {
         node = expected.clone();
-        node.children_[0].value_ = 2;
+        node.children_[0].value_ = jsnums.makeFloat(2);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: '(',  marked: false},
@@ -584,7 +585,7 @@ describe("ExpressionNode", function () {
 
       it('differs in child 2', function () {
         node = expected.clone();
-        node.children_[1].value_ = 3;
+        node.children_[1].value_ = jsnums.makeFloat(3);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           { str: '(',  marked: false},

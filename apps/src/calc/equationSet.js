@@ -122,7 +122,7 @@ EquationSet.prototype.computesSingleConstant = function () {
   var equation = this.equations_[0];
   var computeExpression = this.compute_.expression;
   return computeExpression.isVariable() && equation.expression.isNumber() &&
-    computeExpression.getValue() === equation.name;
+    computeExpression.getStringValue() === equation.name;
 
 };
 

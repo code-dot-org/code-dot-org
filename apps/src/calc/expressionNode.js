@@ -1,6 +1,7 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var RepeaterString = require('./repeaterString');
+var jsnums = require('./js-numbers/js-numbers');
 
 /**
  * A node consisting of an value, and potentially a set of operands.
@@ -22,6 +23,10 @@ function DivideByZeroError(message) {
 
 var ExpressionNode = function (val, args, blockId) {
   this.value_ = val;
+  if (typeof(val) === 'number') {
+    this.value_ = jsnums.makeFloat(val);
+  }
+
   this.blockId_ = blockId;
   if (args === undefined) {
     args = [];
@@ -65,7 +70,7 @@ ExpressionNode.prototype.getType_ = function () {
     return ValueType.FUNCTION_CALL;
   }
 
-  if (typeof(this.value_) === 'number') {
+  if (jsnums.isSchemeNumber(this.value_)) {
     return ValueType.NUMBER;
   }
 };
@@ -88,7 +93,7 @@ ExpressionNode.prototype.isNumber = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && this.getChildValue(1) === 0;
+  return this.getStringValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
 };
 
 /**
@@ -170,9 +175,11 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     if (this.children_.length === 1) {
       switch (this.value_) {
         case 'sqrt':
-          return { result: Math.sqrt(left) };
+          var val = jsnums.sqrt(left);
+          return { result: jsnums.makeFloat(val) };
         case 'sqr':
-          return { result: left * left };
+          var val = jsnums.sqr(left);
+          return { result: jsnums.makeFloat(val) };
         default:
           throw new Error('Unknown operator: ' + this.value_);
         }
@@ -186,18 +193,18 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
 
     switch (this.value_) {
       case '+':
-        return { result: left + right };
+        return { result: jsnums.add(left, right) };
       case '-':
-        return { result: left - right };
+        return { result: jsnums.subtract(left, right) };
       case '*':
-        return { result: left * right };
+        return { result: jsnums.multiply(left, right) };
       case '/':
-        if (right === 0) {
+        if (jsnums.equals(right, 0)) {
           throw new DivideByZeroError();
         }
-        return { result: left / right };
+        return { result: jsnums.divide(left, right) };
       case 'pow':
-        return { result: Math.pow(left, right) };
+        return { result: jsnums.expt(left, right) };
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }
@@ -284,12 +291,19 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
-  var nodesMatch = other && (this.value_ === other.value_) &&
+  var nodesMatch = other && this.hasSameValue_(other) &&
     (this.children_.length === other.children_.length);
   var type = this.getType_();
 
   if (this.children_.length === 0) {
-    var tokenStr = this.repeaterString_ || this.value_.toString();
+    // TODO - get repeater str working again
+    // var tokenStr = this.repeaterString_ || this.value_.toString();
+    var tokenStr;
+    if (this.isNumber()) {
+      tokenStr = this.value_.toFixnum().toString();
+    } else {
+      tokenStr = this.value_.toString();
+    }
     return [new Token(tokenStr, !nodesMatch)];
   }
 
@@ -355,11 +369,26 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 };
 
 /**
+ * Looks to see if two nodes have the same value, using jsnum.equals in the
+ * case of numbers
+ */
+ExpressionNode.prototype.hasSameValue_ = function (other) {
+  if (!other) {
+    return false;
+  }
+
+  if (this.isNumber()) {
+    return jsnums.equals(this.value_, other.value_);
+  }
+
+  return this.value_ === other.value_;
+};
+
+/**
  * Is other exactly the same as this ExpressionNode tree.
  */
 ExpressionNode.prototype.isIdenticalTo = function (other) {
-  if (!other || this.value_ !== other.value_ ||
-      this.children_.length !== other.children_.length) {
+  if (!other || !this.hasSameValue_(other) || this.children_.length !== other.children_.length) {
     return false;
   }
 
@@ -434,8 +463,12 @@ ExpressionNode.prototype.numChildren = function () {
 /**
  * Get the value
  */
-ExpressionNode.prototype.getValue = function () {
-  return this.value_;
+ExpressionNode.prototype.getStringValue = function () {
+  if (this.isNumber()) {
+    return this.value_.toFixnum().toString();
+  } else {
+    return this.value_.toString();
+  }
 };
 
 
@@ -447,7 +480,11 @@ ExpressionNode.prototype.setValue = function (value) {
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
   }
-  this.value_ = value;
+  if (type === ValueType.NUMBER) {
+    this.value_ = jsnums.makeFloat(value);
+  } else {
+    this.value_ = value;
+  }
 };
 
 /**
@@ -470,7 +507,11 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
-    return this.value_;
+    if (this.isNumber()) {
+      return this.value_.toFixnum().toString();
+    } else {
+      return this.value_.toString();
+    }
   }
   return "(" + this.value_ + " " +
     this.children_.map(function (c) {

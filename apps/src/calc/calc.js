@@ -308,7 +308,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   if (targetEvaluation.err || userEvaluation.err) {
     return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
   }
-  if (targetEvaluation.result !== userEvaluation.result) {
+  if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
     return outcome;
@@ -334,7 +334,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     if (targetEvaluation.err || userEvaluation.err) {
       return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
     }
-    if (targetEvaluation.result !== userEvaluation.result) {
+    if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -446,7 +446,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   }
   var targetResult = evaluation.result;
 
-  if (userResult !== targetResult) {
+  if (!jsnums.equals(userResult, targetResult)) {
     // Our result can different from the target result for two reasons
     // (1) We have the right equation, but our "constant" has a different value.
     // (2) We have the wrong equation
@@ -454,7 +454,8 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      var val = userClone.getEquation(name).expression.getValue();
+      // TODO - figure out right thing here
+      var val = userClone.getEquation(name).expression.value_;
       setConstantsToValue(val, index);
     });
 
@@ -462,7 +463,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     if (evaluation.err) {
       return divZeroOrThrowErr(evaluation.err);
     }
-    if (userResult !== evaluation.result) {
+    if (!jsnums.equals(userResult, evaluation.result)) {
       return appSpecificFailureOutcome(calcMsg.wrongResult());
     }
   }
@@ -484,7 +485,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
       return divZeroOrThrowErr(err);
     }
 
-    if (targetEvaluation.result !== userEvaluation.result) {
+    if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -723,7 +724,7 @@ function displayComplexUserExpressions() {
     }
   }
   if (!divZeroInUserSet) {
-    result = evaluation.result.toString();
+    result = evaluation.result.toFixnum().toString();
     var expectedResult = result;
     // Note: we could make singleVariable case smarter and evaluate target using
     // user constant value
@@ -752,7 +753,7 @@ function displayComplexUserExpressions() {
         throw evaluation.err;
       }
     }
-    result = evaluation.result.toString();
+    result = evaluation.result.toFixnum().toString();
 
     tokenList = getTokenList(expression)
       .concat(getTokenList(' = '))
