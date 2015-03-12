@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly. Computers keypresses as numeric key codes - the up arrow is 38 and the down arrow is 40. You can lookup other key codes here <<link to key codes page>>",
+    "instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly. Computers keypresses as numeric key codes - the up arrow is 38 and the down arrow is 40. You can lookup other key codes in your student workbook.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -35,12 +35,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
-    "maze_data": null,
     "min_workspace_height": "1500",
     "soft_buttons": [
       "downButton",
       "upButton"
-    ]
+    ],
+    "maze_data": null
   }
 }]]></config>
   <blocks/>
