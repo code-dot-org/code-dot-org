@@ -30,7 +30,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 To make computer science more accessible for all students, the New York State Education Department has <a href="http://www.regents.nysed.gov/meetings/2014/September2014/914p12d1.pdf
 " target="_blank">clarified</a> that districts have the flexibility to count computer science courses towards mathematics or science graduation requirements. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing the new policy to count qualifying computer science as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing the new policy to count qualifying computer science as a mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 Sincerely, 
 

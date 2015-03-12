@@ -28,7 +28,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 To make computer science more accessible for all students, the Washington State Legislature passed <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a> unanimously in 2013 to direct school districts to allow Advanced Placement computer science courses to count towards high school math or science graduation requirements. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing HB 1472 by counting AP Computer Science A as mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing HB 1472 to allow AP Computer Science A to count as mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 Sincerely, 
 
@@ -59,5 +59,5 @@ My school district does not currently count computer science as a mathematics or
 
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where in the Washington State Statute explicitly states that AP Computer Science counts towards a graduation requirement.  
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a>. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
-Share this letter and information with computer science students and parents and urge them to contact your school board.  
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
++ Share this letter and information with computer science students and parents and urge them to contact your school board.  
