@@ -5,45 +5,26 @@ var assert = chai.assert;
 var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
-var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
+var RepeaterString = require(testUtils.buildPath('/calc/repeaterString'));
 
-/**
- * @param {number} numerator
- * @param {number} denominator
- */
-function getRepeaterString(numerator, denominator) {
-  // Convert to exact jsnum representations, i.e. 0.1 becomes 1/10
-  var n = jsnums.makeFloat(numerator).toExact();
-  var d = jsnums.makeFloat(denominator).toExact();
-
-  var result = jsnums.divide(n, d);
-  if (result.isInteger()) {
-    return result.toString();
-  }
-  var repeater = jsnums.toRepeatingDecimal(result.numerator(), result.denominator());
-  var beforeDecimal = repeater[0];
-  var nonRepeatingAfterDecimal = repeater[1];
-  var repeatingAfterDecimal = repeater[2];
-
-
-  var str = beforeDecimal + '.' + nonRepeatingAfterDecimal;
-  if (repeatingAfterDecimal && repeatingAfterDecimal !== '0') {
-    // TODO - proper bar
-    str += '_' + repeatingAfterDecimal + '_';
+RepeaterString.prototype.debug = function () {
+  var str = this.beforeDecimal + '.' + this.nonRepeatingAfterDecimal;
+  if (this.repeatingAfterDecimal && this.repeatingAfterDecimal !== '0') {
+    str += '_' + this.repeatingAfterDecimal;
   }
   return str;
-}
+};
 
 describe('fractions', function () {
   it('brent', function () {
-    assert.equal(getRepeaterString(1, 9), '0._1_');
-    assert.equal(getRepeaterString(0.1, 9), '0.0_1_');
-    assert.equal(getRepeaterString(0.1, 0.9), '0._1_');
-    assert.equal(getRepeaterString(1032, 990), '1.0_42_');
-    assert.equal(getRepeaterString(10, 1), '10');
-    assert.equal(getRepeaterString(1, 10), '0.1');
-    assert.equal(getRepeaterString(1, 4), '0.25');
-    assert.equal(getRepeaterString(7, 3), '2._3_');
-    assert.equal(getRepeaterString(1, 0.9), '1._1_');
+    assert.equal(RepeaterString.fromNumeratorDenominator(1, 9).debug(), '0._1');
+    assert.equal(RepeaterString.fromNumeratorDenominator(0.1, 9).debug(), '0.0_1');
+    assert.equal(RepeaterString.fromNumeratorDenominator(0.1, 0.9).debug(), '0._1');
+    assert.equal(RepeaterString.fromNumeratorDenominator(1032, 990).debug(), '1.0_42');
+    assert.equal(RepeaterString.fromNumeratorDenominator(10, 1), null);
+    assert.equal(RepeaterString.fromNumeratorDenominator(1, 10), null);
+    assert.equal(RepeaterString.fromNumeratorDenominator(1, 4), null);
+    assert.equal(RepeaterString.fromNumeratorDenominator(7, 3).debug(), '2._3');
+    assert.equal(RepeaterString.fromNumeratorDenominator(1, 0.9).debug(), '1._1');
   });
 });

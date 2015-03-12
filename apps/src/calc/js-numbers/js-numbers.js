@@ -4206,8 +4206,6 @@ module.exports = jsnums;
         };
 
         return function(n, d, options) {
-            console.log('n: ' + n);
-            console.log('d: ' + d);
             // default limit on decimal expansion; can be overridden
             var limit = 512;
             if (options && typeof(options.limit) !== 'undefined') {

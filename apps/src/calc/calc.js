@@ -39,6 +39,7 @@ var EquationSet = require('./equationSet');
 var Equation = require('./equation');
 var Token = ExpressionNode.Token;
 var InputIterator = require('./inputIterator');
+var RepeaterString = require('./repeaterString');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -51,7 +52,7 @@ studioApp.setCheckForEmptyBlocks(false);
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-var LINE_HEIGHT = 20;
+var LINE_HEIGHT = 24;
 
 var appState = {
   targetSet: null,
@@ -890,13 +891,24 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
 function addText(parent, str, xPos, className) {
   var text, textLength;
   text = document.createElementNS(Blockly.SVG_NS, 'text');
-  // getComputedTextLength doesn't respect trailing spaces, so we replace them
-  // with _, calculate our size, then return to the version with spaces.
-  text.textContent = str.replace(/ /g, '_');
+
+  var repeater = str instanceof RepeaterString;
+  if (repeater) {
+    str.addToTextElement(text);
+  } else {
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    text.textContent = str.replace(/ /g, '_');
+  }
+
   parent.appendChild(text);
   // getComputedTextLength isn't available to us in our mochaTests
   textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-  text.textContent = str;
+
+  if (!repeater) {
+    // reset to version with spaces
+    text.textContent = str;
+  }
 
   text.setAttribute('x', xPos + textLength / 2);
   text.setAttribute('text-anchor', 'middle');
