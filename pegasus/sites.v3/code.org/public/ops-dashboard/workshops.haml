@@ -41,7 +41,7 @@ template: none
     - if dashboard_user[:admin]
       %th.manage-th
         Manage
-  %tr{'ng-repeat' => 'workshop in workshops | dateRange:dateRangeStart:dateRangeEnd | orderBy:order'}
+  %tr{'ng-repeat' => 'workshop in workshops | withinDateRange:dateRangeStart:dateRangeEnd | orderBy:order'}
     %td
       %p
         {{workshop.name}}
