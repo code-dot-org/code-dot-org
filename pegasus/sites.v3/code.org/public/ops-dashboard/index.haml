@@ -300,18 +300,23 @@ title: "Ops Dashboard"
         });
       };
 
-      $scope.teachers_bulk_import = {uploading: false};
-
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});
 
-        $scope.cohort.$promise.then(function(cohort){
-          cohort.program_type_disabled = cohort.program_type ? true : false;
-          if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
-            $scope.cohort.districts = [];
-            $scope.newDistrict();
-          }
-        });
+        if ($route.current.loadedTemplateUrl == '/ops-dashboard/cohort-edit') {
+          $scope.cohort.$promise.then(function(cohort){
+            cohort.program_type_disabled = cohort.program_type ? true : false;
+            if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+              $scope.cohort.districts = [];
+              $scope.newDistrict();
+            }
+          });
+        }
+
+        if ($route.current.loadedTemplateUrl == '/ops-dashboard/cohort-teachers') {
+          $scope.teachers_bulk_import = {uploading: false, foo: 'bar'};
+        }
+
       } else {
         $scope.cohort = {};
         $scope.cohort.districts = [];
