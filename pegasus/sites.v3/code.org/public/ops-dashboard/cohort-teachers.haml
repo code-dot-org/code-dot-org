@@ -14,9 +14,17 @@ theme: none
 
 %h1{"ng-show" => "cohort.id"} Teachers in {{cohort.name}}
 
-%h3
-  %a{"ng-click" => 'uploading = true'} CSV upload
-.jumbotron{"ng-show" => 'uploading'}
+#learn-tabs{"ng-show"=>"cohort.id", style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  %ul.nav.nav-tabs{style: "float: left;"}
+    %li{'ng-show' => 'cohort && ! editingAll(cohort.teachers)',
+        'ng-class' => 'tab == "manage" || 1 ? "active tab" : "tab"'}
+      %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
+
+  %managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
+    %button.btn.btn-white{"ng-click" => "new_teacher()", "ng-disabled" => "teachers_bulk_import.uploading"} Add teacher
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = true", "ng-disabled" => "teachers_bulk_import.uploading"} Import teachers
+
+.jumbotron{"ng-show" => "teachers_bulk_import.uploading || 1"}
   %h3 Example format:
   %pre
     = preserve do
