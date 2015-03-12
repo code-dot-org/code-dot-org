@@ -183,13 +183,13 @@ dashboard.saveProject = function(callback) {
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
   if (channelId) {
-    storageApps().update(channelId, dashboard.currentApp, function(data) {
+    channels().update(channelId, dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       dashboard.updateTimestamp();
       callbackSafe(callback, data);
     });
   } else {
-    storageApps().create(dashboard.currentApp, function(data) {
+    channels().create(dashboard.currentApp, function(data) {
       dashboard.currentApp = data;
       location.hash = dashboard.currentApp.id + '/edit';
       dashboard.updateTimestamp();
@@ -201,7 +201,7 @@ dashboard.saveProject = function(callback) {
 dashboard.deleteProject = function(callback) {
   var channelId = dashboard.currentApp.id;
   if (channelId) {
-    storageApps().delete(channelId, function(data) {
+    channels().delete(channelId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -212,7 +212,7 @@ dashboard.deleteProject = function(callback) {
 dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
   var deferred = new $.Deferred();
   // get all projects (TODO: filter on server side?)
-  storageApps().all(function(data) {
+  channels().all(function(data) {
     if (data) {
       // find the one that matches this level
       var projects = $.grep(data, function(app) {
@@ -226,7 +226,7 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
           name: projectTemplateLevelName,
           hidden: true
         };
-        storageApps().create(options, function(app) {
+        channels().create(options, function(app) {
           if (app) {
             dashboard.currentApp = app;
             deferred.resolve();
@@ -336,7 +336,7 @@ function loadProject(promise) {
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        storageApps().fetch(hashData.channelId, function (data) {
+        channels().fetch(hashData.channelId, function (data) {
           if (data) {
             dashboard.currentApp = data;
             deferred.resolve();
