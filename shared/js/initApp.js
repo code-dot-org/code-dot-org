@@ -184,16 +184,24 @@ dashboard.saveProject = function(callback) {
   dashboard.currentApp.level = window.location.pathname;
   if (channelId) {
     channels().update(channelId, dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+      if (data) {
+        dashboard.currentApp = data;
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      }  else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   } else {
     channels().create(dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      location.hash = dashboard.currentApp.id + '/edit';
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+      if (data) {
+        dashboard.currentApp = data;
+        location.hash = dashboard.currentApp.id + '/edit';
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      } else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   }
 };
