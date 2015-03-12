@@ -21,8 +21,8 @@ theme: none
       %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
 
   .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
-    %button.btn.btn-white{"ng-click" => "new_teacher()", "ng-disabled" => "teachers_bulk_import.uploading"} Add teacher
-    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = true", "ng-disabled" => "teachers_bulk_import.uploading"} Import teachers
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"} Add teacher
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
   %h3 Example format:
@@ -48,20 +48,34 @@ theme: none
       %th.manage-th
         District
       %th.manage-th
-    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:'teacher.name'", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top"}
       %td
-        {{teacher.ops_first_name}}
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.ops_first_name}}
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true"}/
       %td
-        {{teacher.ops_last_name}}
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.ops_last_name}}
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true"}/
       %td
-        {{teacher.email}}
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.email}}
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.email", placeholder: "Email address", style: "width: 100%", type: "text", required: "true"}/
       %td
-        {{teacher.district}}
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.district}}
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.district", placeholder: "District", style: "width: 100%", type: "text", required: "true"}/
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?
           %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "teacher.editing = true"} Edit
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)"} Delete
+          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing"} Edit
+          %a.btn.btn-primary.btn-xs{"ng-click" => "save(teacher)", "ng-show" => "teacher.editing", "ng-disabled" => "form.$invalid"} Save
+          %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher)", "ng-show" => "teacher.editing"} Cancel
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete
