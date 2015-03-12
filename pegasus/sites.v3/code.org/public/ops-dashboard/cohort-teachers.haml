@@ -48,7 +48,7 @@ theme: none
       %th.manage-th
         District
       %th.manage-th
-    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:'teacher.name'", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top"}
       %td
         {{teacher.ops_first_name}}
       %td
