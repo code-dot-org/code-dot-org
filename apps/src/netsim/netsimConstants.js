@@ -12,6 +12,18 @@
 'use strict';
 
 /**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_NIBBLE = 4;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_BYTE = 8;
+
+/**
  * DNS modes for the simulator.  Only applies in variant 3, when connecting
  * to a router.
  * @enum {string}
