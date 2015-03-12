@@ -740,19 +740,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-
   // First, grab the main app container
   var div = document.getElementById('codeWorkspace');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
-  var parentHeight = parseInt(parentStyle.height, 10);
-
-  var headers = document.getElementById('headers');
-  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
-
-  // div.style.top = divParent.offsetTop + 'px';
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
@@ -766,28 +759,6 @@ StudioApp.prototype.onResize = function() {
     });
   }
 
-  if (this.isRtl()) {
-    div.style.marginRight = WORKSPACE_PLAYSPACE_GAP + 'px';
-  }
-  else {
-    div.style.marginLeft = WORKSPACE_PLAYSPACE_GAP + 'px';
-  }
-  if (this.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    // codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    // codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    // div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    // div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
-  // div.style.width = fullWorkspaceWidth + 'px';
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -803,11 +774,6 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   var clearPuzzleWidth = clearPuzzleHeader ?
       clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var headersDiv = document.getElementById('headers');
-  if (headersDiv) {
-    // headersDiv.style.width = fullWorkspaceWidth + 'px';
-  }
 
   var toolboxHeader = document.getElementById('toolbox-header');
   if (toolboxHeader) {
@@ -1102,6 +1068,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
@@ -1114,13 +1081,12 @@ StudioApp.prototype.configureDom = function (config) {
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
-  /*
+  // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
   if (referenceArea) {
     belowViz.appendChild(referenceArea);
   }
-  */
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
@@ -1132,7 +1098,7 @@ StudioApp.prototype.configureDom = function (config) {
 
   if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#codeWorkspace'), 'edit');
+    Blockly.addClass_(codeWorkspace, 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -1145,6 +1111,12 @@ StudioApp.prototype.configureDom = function (config) {
     config.level.disableVariableEditing = false;
   } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    if (config.pinWorkspaceToBottom) {
+      container.className = codeWorkspace.className + " pin_bottom";
+    } else {
+      codeWorkspace.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+      container.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+    }
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1304,7 +1276,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
-    scrollbars: true, // config.level.scrollbars,
+    scrollbars: config.level.scrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
