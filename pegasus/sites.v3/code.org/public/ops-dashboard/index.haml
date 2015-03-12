@@ -13,8 +13,6 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
 %script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
-
-
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 
 :javascript
@@ -164,7 +162,7 @@ title: "Ops Dashboard"
     };
   });
 
-  filters.filter('dateRange', function() {
+  filters.filter('withinDateRange', function() {
     return function(workshops, dateRangeStart, dateRangeEnd) {
       if (dateRangeStart || dateRangeEnd) {
         var filtered = [];
