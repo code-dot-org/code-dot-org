@@ -39,6 +39,13 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 var MAX_CLIENT_CONNECTIONS = 6;
 
 /**
+ * Conveniently, a router's address in its local network is always zero.
+ * @type {number}
+ * @readonly
+ */
+var ROUTER_LOCAL_ADDRESS = 0;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -488,7 +495,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     wire.localAddress = newAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = 0; // Always 0 for routers
+    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
@@ -657,7 +664,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // Automatic DNS: requests to address zero hit the "automatic DNS" system
   // and generate responses.
   // TODO (bbuchanan): Send to a real auto-dns node
-  if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === 0) {
+  if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
     this.generateDnsResponse_(message, myWires);
     return;
   }
@@ -708,15 +715,17 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   }
 
   // Check that the query is well-formed
+  // Regex match "GET [hostnames...]"
+  // Then below, we'll split the hostnames on whitespace to process them.
   var requestMatch = query.match(/GET\s+(\S.*)/);
   if (requestMatch === null) {
     // Malformed request, send back directions
     NetSimMessage.send(
         this.shard_,
-        0,
+        ROUTER_LOCAL_ADDRESS,
         fromAddress,
         PacketEncoder.defaultPacketEncoder.createBinary({
-          fromAddress: intToBinary(0, BITS_PER_NIBBLE),
+          fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
           toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
           packetIndex: intToBinary(1, BITS_PER_NIBBLE),
           packetCount: intToBinary(1, BITS_PER_NIBBLE),
@@ -740,10 +749,10 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
 
   NetSimMessage.send(
       this.shard_,
-      0,
+      ROUTER_LOCAL_ADDRESS,
       fromAddress,
       PacketEncoder.defaultPacketEncoder.createBinary({
-        fromAddress: intToBinary(0, BITS_PER_NIBBLE),
+        fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
         toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
         packetIndex: intToBinary(1, BITS_PER_NIBBLE),
         packetCount: intToBinary(1, BITS_PER_NIBBLE),
