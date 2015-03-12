@@ -587,7 +587,7 @@ html, body {
 
 #project-share .social-buttons a {
   display: inline-block;
-  &:hover {
+  &:hover, & {
     text-decoration: none;
   }
   i {
