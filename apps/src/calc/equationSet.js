@@ -177,6 +177,16 @@ EquationSet.prototype.sortedEquations = function () {
 };
 
 /**
+ * @returns {boolean} true if evaluating our EquationSet would result in
+ *   dividing by zero.
+ */
+EquationSet.prototype.hasDivZero = function () {
+  var evaluation = this.evaluate();
+  return evaluation.err &&
+    evaluation.err instanceof ExpressionNode.DivideByZeroError;
+};
+
+/**
  * Evaluate the EquationSet's compute expression in the context of its equations
  */
 EquationSet.prototype.evaluate = function () {
@@ -188,6 +198,9 @@ EquationSet.prototype.evaluate = function () {
  * equations. For example, our equation set might define f(x) = x + 1, and this
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // no variables/functions. this is easy
@@ -201,6 +214,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   var mapping = {};
   var madeProgress;
   var testMapping;
+  var evaluation;
   var setTestMappingToOne = function (item) {
     testMapping[item] = 1;
   };
@@ -216,7 +230,11 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
         equation.params.forEach(setTestMappingToOne);
-        if (!equation.expression.canEvaluate(testMapping)) {
+        evaluation = equation.expression.evaluate(testMapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
           continue;
         }
 
@@ -226,19 +244,21 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
           variables: equation.params,
           expression: equation.expression
         };
-      } else if (mapping[equation.name] === undefined &&
-          equation.expression.canEvaluate(mapping)) {
-        // we have a variable that hasn't yet been mapped and can be
-        madeProgress = true;
-        mapping[equation.name] = equation.expression.evaluate(mapping);
+      } else if (mapping[equation.name] === undefined) {
+        evaluation = equation.expression.evaluate(mapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
+        } else {
+          // we have a variable that hasn't yet been mapped and can be
+          madeProgress = true;
+          mapping[equation.name] = evaluation.result;
+        }
       }
     }
 
   } while (madeProgress);
-
-  if (!computeExpression.canEvaluate(mapping)) {
-    throw new Error("Can't resolve EquationSet");
-  }
 
   return computeExpression.evaluate(mapping);
 };
@@ -263,8 +283,16 @@ function getEquationFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
+    case 'functional_pow':
+    case 'functional_sqrt':
+    case 'functional_squared':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+      // some of these have 1 arg, others 2
+      var argNames = ['ARG1'];
+      if (block.getInput('ARG2')) {
+        argNames.push('ARG2');
+      }
+      var args = argNames.map(function(inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;

@@ -13653,6 +13653,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   this.inputMarkers_[input.name].setAttribute("height", 5);
   this.inputMarkers_[input.name].setAttribute("fill", input.getHexColour());
   this.inputMarkers_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
+  this.inputClickTargets_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
   var connectionY = connectionsXY.y + inputTopLeft.y;
@@ -19245,7 +19246,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   }
   this.container_ = document.createElement("div");
   this.container_.setAttribute("id", "modalContainer");
-  goog.dom.getElement("blockly").appendChild(this.container_);
+  goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, goog.bind(this.calculateMetrics_, this));
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
@@ -21714,6 +21715,7 @@ Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
   this.addRangeEditor_();
+  this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
   if(this.levelConfigForFirstOpen_) {
@@ -21871,12 +21873,15 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
   this.outputTypeSelector.render(this.getOutputTypeDropdownElement_())
 };
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function(newType) {
-  var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setFrameColor_(newColorHSV);
+  this.updateFrameColorForType_(newType);
   if(this.functionDefinitionBlock) {
     this.functionDefinitionBlock.updateOutputType(newType);
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE)
   }
+};
+Blockly.ContractEditor.prototype.updateFrameColorForType_ = function(newType) {
+  var newColorHSV = Blockly.FunctionalTypeColors[newType];
+  this.setFrameColor_(newColorHSV)
 };
 Blockly.ContractEditor.prototype.setFrameColor_ = function(hsvColor) {
   this.frameBase_.style.fill = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255)
@@ -23432,7 +23437,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   svg.appendChild(this.blockSpace.createDom());
   if(!Blockly.readOnly) {
     this.addToolboxOrFlyout_();
-    this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_)
+    this.addChangeListener(this.bumpBlocksIntoView_)
   }
   this.setEnableToolbox = function(enabled) {
     if(this.flyout_) {
@@ -23472,42 +23477,38 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
   }
   return deleteAreas
 };
-Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   if(Blockly.Block.isDragging()) {
     return
   }
   var metrics = this.blockSpace.getMetrics();
-  if(!metrics || (metrics.contentWidth > metrics.viewWidth || metrics.contentHeight > metrics.viewHeight)) {
-    return
-  }
-  var oneOrMoreBlocksOutOfBounds = metrics.contentTop < 0 || (metrics.contentTop + metrics.contentHeight > metrics.viewHeight + metrics.viewTop || (metrics.contentLeft < (Blockly.RTL ? metrics.viewLeft : 0) || metrics.contentLeft + metrics.contentWidth > metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft));
-  if(!oneOrMoreBlocksOutOfBounds) {
+  if(!metrics) {
     return
   }
   var MARGIN = 25;
   var MARGIN_TOP = 15;
-  var overflow;
-  var blocks = this.blockSpace.getTopBlocks(false);
-  for(var b = 0, block;block = blocks[b];b++) {
-    var blockXY = block.getRelativeToSurfaceXY();
+  var viewInnerTop = metrics.viewTop + MARGIN_TOP;
+  var viewInnerLeft = metrics.viewLeft + MARGIN;
+  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
+  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN;
+  var viewInnerWidth = viewInnerRight - viewInnerLeft;
+  var viewInnerHeight = viewInnerBottom - viewInnerTop;
+  this.blockSpace.getTopBlocks(false).forEach(function(block) {
     var blockHW = block.getHeightWidth();
-    overflow = metrics.viewTop + MARGIN_TOP - blockXY.y;
-    if(overflow > 0) {
-      block.moveBy(0, overflow)
+    if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
+      return
     }
-    overflow = metrics.viewTop + metrics.viewHeight - MARGIN - blockXY.y;
-    if(overflow < 0) {
-      block.moveBy(0, overflow)
+    var blockXY = block.getRelativeToSurfaceXY();
+    var howFarOutsideLeft = Math.max(0, viewInnerLeft - blockXY.x);
+    var howFarOutsideRight = Math.max(0, blockXY.x - viewInnerRight);
+    var howFarAboveTop = Math.max(0, viewInnerTop - blockXY.y);
+    var howFarBelowBottom = Math.max(0, blockXY.y - viewInnerBottom);
+    var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
+    var moveY = howFarAboveTop ? howFarAboveTop : -howFarBelowBottom;
+    if(moveX || moveY) {
+      block.moveBy(moveX, moveY)
     }
-    overflow = MARGIN + metrics.viewLeft - blockXY.x - (Blockly.RTL ? 0 : blockHW.width);
-    if(overflow > 0) {
-      block.moveBy(overflow, 0)
-    }
-    overflow = metrics.viewLeft + metrics.viewWidth - MARGIN - blockXY.x + (Blockly.RTL ? blockHW.width : 0);
-    if(overflow < 0) {
-      block.moveBy(overflow, 0)
-    }
-  }
+  })
 };
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();

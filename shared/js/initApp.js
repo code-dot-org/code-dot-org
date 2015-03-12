@@ -2,7 +2,7 @@
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
 var baseOptions = {
-  containerId: 'blocklyApp',
+  containerId: 'codeApp',
   Dialog: Dialog,
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
@@ -177,31 +177,39 @@ dashboard.updateTimestamp = function() {
 
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-  var appId = dashboard.currentApp.id;
+  var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (appId) {
-    storageApps().update(appId, dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+  if (channelId) {
+    channels().update(channelId, dashboard.currentApp, function(data) {
+      if (data) {
+        dashboard.currentApp = data;
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      }  else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   } else {
-    storageApps().create(dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      location.hash = dashboard.currentApp.id + '/edit';
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+    channels().create(dashboard.currentApp, function(data) {
+      if (data) {
+        dashboard.currentApp = data;
+        location.hash = dashboard.currentApp.id + '/edit';
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      } else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   }
 };
 
 dashboard.deleteProject = function(callback) {
-  var appId = dashboard.currentApp.id;
-  if (appId) {
-    storageApps().delete(appId, function(data) {
+  var channelId = dashboard.currentApp.id;
+  if (channelId) {
+    channels().delete(channelId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -212,7 +220,7 @@ dashboard.deleteProject = function(callback) {
 dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
   var deferred = new $.Deferred();
   // get all projects (TODO: filter on server side?)
-  storageApps().all(function(data) {
+  channels().all(function(data) {
     if (data) {
       // find the one that matches this level
       var projects = $.grep(data, function(app) {
@@ -226,7 +234,7 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
           name: projectTemplateLevelName,
           hidden: true
         };
-        storageApps().create(options, function(app) {
+        channels().create(options, function(app) {
           if (app) {
             dashboard.currentApp = app;
             deferred.resolve();
@@ -251,7 +259,7 @@ function initApp() {
 
     $(window).on('hashchange', function () {
       var hashData = parseHash();
-      if ((dashboard.currentApp && hashData.appId !== dashboard.currentApp.id)
+      if ((dashboard.currentApp && hashData.channelId !== dashboard.currentApp.id)
           || hashData.isEditingProject !== dashboard.isEditingProject) {
         location.reload();
       }
@@ -310,17 +318,17 @@ function parseHash() {
   // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
   // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
   var isEditingProject = false;
-  var appId = location.hash.slice(1);
-  if (appId) {
+  var channelId = location.hash.slice(1);
+  if (channelId) {
     // TODO: Use a router.
-    var params = appId.split("/");
+    var params = channelId.split("/");
     if (params.length > 1 && params[1] == "edit") {
-      appId = params[0];
+      channelId = params[0];
       isEditingProject = true;
     }
   }
   return {
-    appId: appId,
+    channelId: channelId,
     isEditingProject: isEditingProject
   }
 }
@@ -328,7 +336,7 @@ function parseHash() {
 function loadProject(promise) {
   if (appOptions.level.isProjectLevel) {
     var hashData = parseHash();
-    if (hashData.appId) {
+    if (hashData.channelId) {
       if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
       }
@@ -336,7 +344,7 @@ function loadProject(promise) {
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        storageApps().fetch(hashData.appId, function (data) {
+        channels().fetch(hashData.channelId, function (data) {
           if (data) {
             dashboard.currentApp = data;
             deferred.resolve();

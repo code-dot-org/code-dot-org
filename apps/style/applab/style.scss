@@ -10,12 +10,19 @@ div#visualization {
 /* Shrink the visualization area on small displays. */
 
 @media screen and (min-width: 1151px) {
+  $width: 400px;
   div#visualization.responsive {
-    max-height: 400px;
-    max-width: 400px;
+    max-height: $width;
+    max-width: $width;
   }
   div#visualizationColumn.responsive {
-    max-width: 400px;
+    max-width: $width;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(1.0);
@@ -25,12 +32,19 @@ div#visualization {
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
   div#visualization.responsive {
-    max-height: 350px;
-    max-width: 350px;
+    max-height: $width;
+    max-width: $width;
   }
   div#visualizationColumn.responsive {
-    max-width: 350px;
+    max-width: $width;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.875);
@@ -40,12 +54,19 @@ div#visualization {
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
   div#visualization.responsive {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: $width;
+    max-width: $width;
   }
   div#visualizationColumn.responsive {
-    max-width: 300px;
+    max-width: $width;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
@@ -55,12 +76,19 @@ div#visualization {
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
   div#visualization.responsive {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: $width;
+    max-width: $width;
   }
   div#visualizationColumn.responsive {
-    max-width: 250px;
+    max-width: $width;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
@@ -70,12 +98,19 @@ div#visualization {
 }
 
 @media screen and (max-width: 1000px) {
+  $width: 200px;
   div#visualization.responsive {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: $width;
+    max-width: $width;
   }
   div#visualizationColumn.responsive {
-    max-width: 200px;
+    max-width: $width;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
   }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.5);

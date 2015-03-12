@@ -23,6 +23,7 @@ class LevelsController < ApplicationController
   def show
     set_videos_and_blocks_and_callouts
     @full_width = true
+    @no_footer_puzzle = (@game == Game.applab)
   end
 
   # GET /levels/1/edit

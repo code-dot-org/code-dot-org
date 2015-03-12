@@ -22,14 +22,17 @@ var logger = NetSimLogger.getSingleton();
 
 /**
  * A connection to a NetSim shard
- * @param {Window} thisWindow
- * @param {!NetSimLogPanel} sentLog - Widget to post sent messages to
- * @param {!NetSimLogPanel} receivedLog - Widget to post received messages to
- * @param {boolean} [enableCleanup] default TRUE
+ * @param {Object} options
+ * @param {!Window} options.window - reference to browser window, passed
+ *        in instead of accessed globally to be test-friendly.
+ * @param {!NetSimLevelConfiguration} options.levelConfig
+ * @param {!NetSimLogPanel} options.sentLog - Widget to post sent messages to
+ * @param {!NetSimLogPanel} options.receivedLog - Widget to post received
+ *        messages to
+ * @param {boolean} [options.enableCleanup] default TRUE
  * @constructor
  */
-var NetSimConnection = module.exports = function (thisWindow, sentLog,
-    receivedLog, enableCleanup) {
+var NetSimConnection = module.exports = function (options) {
   /**
    * Display name for user on local end of connection, to be uploaded to others.
    * @type {string}
@@ -38,16 +41,22 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLogPanel}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
-  this.sentLog_ = sentLog;
+  this.levelConfig_ = options.levelConfig || {};
 
   /**
    * @type {NetSimLogPanel}
    * @private
    */
-  this.receivedLog_ = receivedLog;
+  this.sentLog_ = options.sentLog;
+
+  /**
+   * @type {NetSimLogPanel}
+   * @private
+   */
+  this.receivedLog_ = options.receivedLog;
 
   /**
    * Accessor object for select simulation shard's tables, where an shard
@@ -67,7 +76,8 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
    * @type {boolean}
    * @private
    */
-  this.enableCleanup_ = enableCleanup !== undefined ? enableCleanup : true;
+  this.enableCleanup_ = options.enableCleanup !== undefined ?
+      options.enableCleanup : true;
 
   /**
    *
@@ -103,7 +113,7 @@ var NetSimConnection = module.exports = function (thisWindow, sentLog,
   this.statusChanges = new ObservableEvent();
 
   // Bind to onBeforeUnload event to attempt graceful disconnect
-  thisWindow.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  options.window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
 };
 
 /**
@@ -260,10 +270,12 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
-  var self = this;
-  NetSimRouterNode.create(this.shard_, function () {
-    self.statusChanges.notifyObservers();
-  });
+  NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    router.update(function () {
+      this.statusChanges.notifyObservers();
+    }.bind(this));
+  }.bind(this));
 };
 
 /**

@@ -6,15 +6,15 @@ class PropertyBag
   class NotFound < Sinatra::NotFound
   end
 
-  def initialize(app_id, storage_id)
-    app_owner, @app_id = storage_decrypt_app_id(app_id) # TODO(if/when needed): Ensure this is a registered app?
+  def initialize(channel_id, storage_id)
+    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
   
     @table = PEGASUS_DB[:app_properties]
   end
   
   def items()
-    @items ||= @table.where(app_id:@app_id, storage_id:@storage_id)
+    @items ||= @table.where(app_id:@channel_id, storage_id:@storage_id)
   end
 
   def delete(name)
@@ -31,7 +31,7 @@ class PropertyBag
 
   def set(name, value, ip_address)
     row = {
-      app_id:@app_id,
+      app_id:@channel_id,
       storage_id:@storage_id,
       name:name,
       value:value.to_json,
