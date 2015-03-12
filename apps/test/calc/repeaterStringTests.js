@@ -15,8 +15,8 @@ RepeaterString.prototype.debug = function () {
   return str;
 };
 
-describe('fractions', function () {
-  it('brent', function () {
+describe('repeaterString', function () {
+  it('fromNumeratorDenominator', function () {
     assert.equal(RepeaterString.fromNumeratorDenominator(1, 9).debug(), '0._1');
     assert.equal(RepeaterString.fromNumeratorDenominator(0.1, 9).debug(), '0.0_1');
     assert.equal(RepeaterString.fromNumeratorDenominator(0.1, 0.9).debug(), '0._1');
