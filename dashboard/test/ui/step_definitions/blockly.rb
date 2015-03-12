@@ -51,13 +51,16 @@ Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point.y.should eq y.to_i
 end
 
-Then /^block "([^"]*)" is at location "([^"]*)"$/ do |block, location_identifier|
+Then /^block "([^"]*)" is((?:n't| not)?) at location "([^"]*)"$/ do |block, negation, location_identifier|
   blockId = get_block_id(block)
   actual_x = @browser.execute_script("return $(\"[block-id='#{blockId}']\").position().left")
   actual_y = @browser.execute_script("return $(\"[block-id='#{blockId}']\").position().top")
   location = @locations[location_identifier]
-  location.x.should eq actual_x
-  location.y.should eq actual_y
+  if negation == ''
+    "#{actual_x},#{actual_y}".should eq "#{location.x},#{location.y}"
+  else
+    "#{actual_x},#{actual_y}".should_not eq "#{location.x},#{location.y}"
+  end
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
