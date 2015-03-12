@@ -13653,6 +13653,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   this.inputMarkers_[input.name].setAttribute("height", 5);
   this.inputMarkers_[input.name].setAttribute("fill", input.getHexColour());
   this.inputMarkers_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
+  this.inputClickTargets_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
   var connectionY = connectionsXY.y + inputTopLeft.y;
@@ -21714,6 +21715,7 @@ Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
 Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
   this.addRangeEditor_();
+  this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
   if(this.levelConfigForFirstOpen_) {
@@ -21871,12 +21873,15 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
   this.outputTypeSelector.render(this.getOutputTypeDropdownElement_())
 };
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function(newType) {
-  var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setFrameColor_(newColorHSV);
+  this.updateFrameColorForType_(newType);
   if(this.functionDefinitionBlock) {
     this.functionDefinitionBlock.updateOutputType(newType);
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE)
   }
+};
+Blockly.ContractEditor.prototype.updateFrameColorForType_ = function(newType) {
+  var newColorHSV = Blockly.FunctionalTypeColors[newType];
+  this.setFrameColor_(newColorHSV)
 };
 Blockly.ContractEditor.prototype.setFrameColor_ = function(hsvColor) {
   this.frameBase_.style.fill = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255)
