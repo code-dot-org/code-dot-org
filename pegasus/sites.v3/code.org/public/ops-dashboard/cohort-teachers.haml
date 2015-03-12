@@ -28,7 +28,7 @@ theme: none
   %h3 Example format:
   %pre
     = preserve do
-      first_name,last_name,email,district
+      ops_first_name,ops_last_name,email,district
       Bob,Smith,bob.smith@example.com,Los Angeles Unified School District
       Mary,Jones,mary.jones@example.com,Broward County Public Schools
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
@@ -50,9 +50,9 @@ theme: none
       %th.manage-th
     %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:'teacher.name'", style: "vertical-align:top"}
       %td
-        {{teacher.first_name}}
+        {{teacher.ops_first_name}}
       %td
-        {{teacher.last_name}}
+        {{teacher.ops_last_name}}
       %td
         {{teacher.email}}
       %td
