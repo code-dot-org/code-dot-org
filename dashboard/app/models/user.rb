@@ -2,6 +2,9 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
+  include SerializedProperties
+  serialized_attrs %w(ops_first_name ops_last_name)
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
@@ -65,14 +68,35 @@ class User < ActiveRecord::Base
   def User.find_or_create_district_contact(params)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
       user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
       # TODO send invitation email
     end
+
+    user.update!(params)
 
     user.permission = UserPermission::DISTRICT_CONTACT
     user.save!
     user
   end
+
+  def User.find_or_create_teacher(params)
+    user = User.find_by_email_or_hashed_email(params[:email])
+    unless user
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+
+      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
+      # TODO send invitation email
+    end
+
+    user.update!(params)
+    user
+  end
+
 
   # a district contact can see the teachers from their district that are part of a cohort
   def district_teachers(cohort = nil)
