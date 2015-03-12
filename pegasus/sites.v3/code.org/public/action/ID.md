@@ -7,7 +7,7 @@ title: Help AP Computer Science count for graduation in YOUR school in Idaho
 
 The College Board, Code.org, CSTA, and a coalition of partners spent the last year helping states revise or enact policies to allow computer science to count towards high school math or science graduation requirements. Research has shown that students are more likely to try computer science when it is part of the academic pathway rather than an elective. And CS teachers have told us their work is valued more as well when it’s categorized this way. 
 
-Accordinging to the 2014 Idaho Education Administrative  <a href="http://adminrules.idaho.gov/Legislative_books/2014/pending/14H&S_EDUCATION.pdf"_blank">Handbook</a> (see page 112), AP Computer Science and Dual Credit Computer Science courses now count as a mathematics or science graduation requirement. This policy indicates that districts can and should count computer science towards the required mathematics graduation standards.
+Accordinging to the 2014 Idaho Education Administrative  <a href="http://adminrules.idaho.gov/Legislative_books/2014/pending/14H&S_EDUCATION.pdf"_blank">Handbook</a> (see page 112), AP Computer Science and Dual Credit Computer Science courses now count as a mathematics or science graduation requirement. This policy indicates that districts can and should count computer science towards the required mathematics and science graduation standards.
 
 To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
 
@@ -60,5 +60,5 @@ My school district does not currently count computer science as a mathematics cr
  
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where in the Idaho rules and regulations explicitly state that computer science counts towards a graduation requirement.  
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with Idaho regulations. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board. 

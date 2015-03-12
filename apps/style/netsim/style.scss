@@ -312,6 +312,10 @@ svg {
           /* Make sure table text can be selected and copied */
           @include user_select(text);
         }
+
+        tr.ascii td.message {
+          white-space: pre;
+        }
       }
     }
 
