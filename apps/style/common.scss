@@ -12,7 +12,7 @@ $green: #b9bf15;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
 }
-
+$headers_height: 40px;
 
 body {
   @include font;
@@ -61,11 +61,14 @@ html[dir="RTL"] .farSide {
   clear: both;
 }
 
+html[dir='rtl'] #visualizationColumn {
+  right: 0px;
+}
+
 #visualizationColumn {
   position: absolute;
   top: 0px;
   left: 0px;
-  right: 400px;
   bottom: 10px;
 }
 
@@ -132,9 +135,16 @@ div.droplet-palette-group-header-selected {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 40px;
+  top: $headers_height;
   bottom: 0px;
   font-size: 14px;
+}
+
+html[dir='rtl'] #codeWorkspace {
+  right: 400px;
+  left: 0px;
+  margin-right: 15px;
+  margin-left: 0px;
 }
 
 #codeWorkspace {
@@ -145,7 +155,7 @@ div.droplet-palette-group-header-selected {
   bottom: 10px;
   box-shadow: 7px 7px 10px #888;
   margin-left: 15px;
-  border: 4px solid #ddd;
+  border: 1px solid #ddd;
   overflow: hidden;
 }
 
@@ -205,10 +215,12 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
-    right: $width;
   }
   #codeWorkspace {
     left: $width;
+  }
+  html[dir='rtl'] #codeWorkspace {
+    right: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -232,10 +244,12 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
-    right: $width;
   }
   #codeWorkspace {
     left: $width;
+  }
+  html[dir='rtl'] #codeWorkspace {
+    right: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -257,11 +271,13 @@ div.droplet-palette-group-header-selected {
     max-height: $width;
     max-width: $width;
   }
+  #visualizationColumn.responsive {
+    max-width: $width;
+  }
   #codeWorkspace {
     left: $width;
   }
-  #visualizationColumn.responsive {
-    max-width: $width;
+  html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
   #visualizationEditor.responsive {
@@ -286,10 +302,12 @@ div.droplet-palette-group-header-selected {
   }
   #visualizationColumn.responsive {
     max-width: $width;
-    right: $width;
   }
   #codeWorkspace {
     left: $width;
+  }
+  html[dir='rtl'] #codeWorkspace {
+    right: $width;
   }
   #visualizationEditor.responsive {
     margin-left: $width;
@@ -622,8 +640,7 @@ $aniGifPreviewHeight: 60px;
 }
 
 #headers {
-  $height: 40px;
-  height: $height;
+  height: $headers_height;
   background-color: $purple;
   div {
     display: inline-block;
@@ -636,7 +653,7 @@ $aniGifPreviewHeight: 60px;
     height: $height;
     span {
       color: white;
-      line-height: $height;
+      line-height: $headers_height;
     }
   }
   #toolbox-header {

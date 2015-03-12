@@ -840,16 +840,8 @@ input.header_input {
   overflow: visible;
 }
 
-#blocklyApp {
-  position: absolute;
-  top: 125px;
-  left: 25px;
-  right: 25px;
-  bottom: 0px;
-
-  @media screen and (max-width: 1150px) {
-    top: 95px;
-  }
+#codeApp {
+  position: relative;
 
   .loading {
     height: 520px;
@@ -863,7 +855,18 @@ input.header_input {
     position: relative;
     top: -230px;
   }
+}
 
+#codeApp.pin_bottom {
+  position: absolute;
+  top: 125px;
+  left: 25px;
+  right: 25px;
+  bottom: 0px;
+
+  @media screen and (max-width: 1150px) {
+    top: 95px;
+  }
 }
 
 .reference_area {

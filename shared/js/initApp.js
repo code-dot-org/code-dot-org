@@ -2,7 +2,7 @@
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
 var baseOptions = {
-  containerId: 'blocklyApp',
+  containerId: 'codeApp',
   Dialog: Dialog,
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
