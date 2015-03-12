@@ -6,6 +6,7 @@ var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
+var RepeaterString = require(testUtils.buildPath('/calc/repeaterString'));
 
 describe("debug output of an ExpressionNode tree", function () {
   it("works in some simple cases", function () {
@@ -758,6 +759,26 @@ describe("ExpressionNode", function () {
         { str: '3', marked: false },
         { str: ')', marked: false }
       ]);
+    });
+
+    it("non repeating fraction", function () {
+      var node = new ExpressionNode('/', [1, 4]);
+      node.collapse();
+      assert.deepEqual(node.getTokenList(false), [
+        { str: '0.25', marked: false }
+      ]);
+    });
+
+    it('repeating fraction', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      node.collapse();
+
+      var tokenList = node.getTokenList(false);
+      assert.equal(tokenList.length, 1);
+      assert(tokenList[0].str instanceof RepeaterString);
+      assert.equal(tokenList[0].str.beforeDecimal, "0");
+      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
+      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
     });
   });
 
