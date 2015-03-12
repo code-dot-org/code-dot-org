@@ -28,7 +28,7 @@ var renderApp = function(app, req, res) {
     options: {
       locale: req.query.locale,
       localeDirection: req.query.dir,
-      containerId: 'blocklyApp',
+      containerId: 'codeApp',
       levelId: req.query.level,
       skinId: req.query.skin,
       debugInterpreter: req.query.debugInterpreter,
