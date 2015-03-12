@@ -42,7 +42,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
    * @type {jQuery}
    * @private
    */
-  this.circle_ = jQuerySvgElement('circle')
+  jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
       .attr('r', radius)
@@ -53,24 +53,32 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .attr('y', textVerticalOffset)
       .appendTo(root);
 
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
   var addressBoxHalfWidth = 15;
   var addressBoxHalfHeight = 12;
-  this.addressBox_ = jQuerySvgElement('rect')
+
+  jQuerySvgElement('rect')
       .addClass('address-box')
       .attr('x', -addressBoxHalfWidth)
-      .attr('y', radius - addressBoxHalfHeight)
+      .attr('y', -addressBoxHalfHeight)
+      .attr('rx', 5)
+      .attr('ry', 10)
       .attr('width', addressBoxHalfWidth * 2)
       .attr('height', addressBoxHalfHeight * 2)
-      .appendTo(root);
+      .appendTo(this.addressGroup_);
 
   this.addressText_ = jQuerySvgElement('text')
       .addClass('address-box')
       .attr('x', 0)
-      .attr('y', radius + textVerticalOffset)
+      .attr('y', textVerticalOffset)
       .text('?')
-      .appendTo(root);
+      .appendTo(this.addressGroup_);
 
-// Set an initial default tween for zooming in from nothing.
+  // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
@@ -131,4 +139,5 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
 
 NetSimVizNode.prototype.setAddress = function (address) {
   this.addressText_.text(address === undefined ? '?' : address);
+  this.addressGroup_.toggle(!this.isRouter);
 };
