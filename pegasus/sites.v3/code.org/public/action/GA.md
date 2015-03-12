@@ -1,7 +1,7 @@
 ---
 title: Help AP Computer Science count for graduation in YOUR school in Georgia
 
----`
+---
 
 # Help AP Computer Science count for graduation in YOUR school
 
@@ -22,13 +22,13 @@ This policy indicates that districts can and should count AP Computer Science A 
 
 Dear Administrator, 
 
-I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district. 
+I’m writing to urge you to implement a district-wide change to allow computer science to count as a science graduation requirement in our district. 
 
 Computer science drives job growth and innovation throughout our economy and society. More than half of projected jobs in STEM fields are in computing occupations; computing occupations dominate “help wanted” ads; and computer science is one of the most in-demand degrees for new college graduates. However, computer science education is offered sparingly and underrepresented groups --especially girls and students of color-- report barriers to entry in the field and in accessing academic courses.   
 
 To make computer science more accessible for all students, the <a href="http://www.gadoe.org/Curriculum-Instruction-and-Assessment/CTAE/Documents/Fourth-Science-Options-2013.pdf" target="_blank">Georgia Board of Regents</a> now recognizes AP Computer Science A as a fourth course option to count towards a science graduation requirement. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing this policy passed by the Board of Regent by counting AP Computer Science A as a science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing this policy passed by the Board of Regents by counting AP Computer Science A as a science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 Sincerely, 
 
@@ -59,6 +59,5 @@ My school district does not currently count computer science as a science credit
 
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the Georgia Department of Education counts AP Computer Science A as a science graduation credit. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a science graduation requirement in accordance with Georgia Department of Education. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirements. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirements. 
++ Request your school board pass a proclamation to recognize the new graduation requirements. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  

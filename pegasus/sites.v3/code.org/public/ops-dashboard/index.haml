@@ -11,6 +11,9 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
+
+%link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
+
 :javascript
   'use strict';
 
@@ -296,6 +299,8 @@ title: "Ops Dashboard"
           max_teachers: ''
         });
       };
+
+      $scope.teachers_bulk_import = {uploading: false};
 
       if ($routeParams.id) {
         $scope.cohort = cohortsService.get({id: $routeParams.id});

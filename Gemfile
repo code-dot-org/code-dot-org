@@ -93,11 +93,11 @@ gem 'nokogiri', '1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger'
+gem 'honeybadger', group: [:staging, :production] # error monitoring
+
+gem 'newrelic_rpm', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.1.1'
-
-gem 'newrelic_rpm'
 
 gem 'geocoder'
 

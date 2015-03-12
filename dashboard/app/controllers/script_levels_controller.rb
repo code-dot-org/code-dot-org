@@ -103,6 +103,7 @@ private
     @level = @script_level.level
     @game = @level.game
     @stage = @script_level.stage
+    @no_footer_puzzle = (@game == Game.applab)
 
     set_videos_and_blocks_and_callouts
 
