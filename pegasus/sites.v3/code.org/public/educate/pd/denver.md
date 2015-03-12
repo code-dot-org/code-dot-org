@@ -31,9 +31,12 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location
-
-TBD
+#### April 18th Location
+Holiday Inn Lakewood
+<br />
+7390 W. Hampden Avenue
+<br />
+Lakewood, CO 80227
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -44,9 +47,7 @@ Laptop
 
 ### Phase 4: Post Year Development
 
-#### Save the Dates
-
-6/15/2015 - 6/17/2015
+Coming Summer 2015!
 
 [**Back to the top**](#top)
 
