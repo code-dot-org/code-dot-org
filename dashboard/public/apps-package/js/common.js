@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],41:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -4069,7 +4069,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":20,"./dom":47,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4347,7 +4347,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":229,"./block_utils":19,"./utils":224,"./xml":225}],20:[function(require,module,exports){
+},{"../locale/current/common":229,"./block_utils":18,"./utils":224,"./xml":225}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5952,7 +5952,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":19,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
+},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16491,7 +16491,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var xml = require('./xml');
 
 /**

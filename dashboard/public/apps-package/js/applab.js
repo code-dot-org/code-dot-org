@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":226,"../block_utils":19,"../utils":224}],8:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../block_utils":18,"../utils":224}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *

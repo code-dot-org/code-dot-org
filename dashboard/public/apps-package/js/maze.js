@@ -3055,7 +3055,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":233,"../block_utils":19,"../utils":224,"./karelLevels":97,"./requiredBlocks":103,"./startBlocks.xml":106,"./tiles":107,"./toolboxes/maze.xml":111,"./wordsearchLevels":114}],114:[function(require,module,exports){
+},{"../../locale/current/maze":233,"../block_utils":18,"../utils":224,"./karelLevels":97,"./requiredBlocks":103,"./startBlocks.xml":106,"./tiles":107,"./toolboxes/maze.xml":111,"./wordsearchLevels":114}],114:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3294,7 +3294,7 @@ module.exports = {
 
 };
 
-},{"../block_utils":19,"./requiredBlocks":103,"./tiles":107}],111:[function(require,module,exports){
+},{"../block_utils":18,"./requiredBlocks":103,"./tiles":107}],111:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4612,7 +4612,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":233,"../block_utils":19,"../level_base":85,"./karelStartBlocks.xml":98,"./tiles":107,"./toolboxes/karel1.xml":108,"./toolboxes/karel2.xml":109,"./toolboxes/karel3.xml":110}],110:[function(require,module,exports){
+},{"../../locale/current/maze":233,"../block_utils":18,"../level_base":85,"./karelStartBlocks.xml":98,"./tiles":107,"./toolboxes/karel1.xml":108,"./toolboxes/karel2.xml":109,"./toolboxes/karel3.xml":110}],110:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5316,7 +5316,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/current/common":229,"../../locale/current/maze":233,"../block_utils":19,"../codegen":44,"./beeBlocks":89,"./mazeUtils":102}],90:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/maze":233,"../block_utils":18,"../codegen":44,"./beeBlocks":89,"./mazeUtils":102}],90:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -5971,7 +5971,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/current/maze":233,"../block_utils":19,"../codegen":44}],87:[function(require,module,exports){
+},{"../../locale/current/maze":233,"../block_utils":18,"../codegen":44}],87:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
