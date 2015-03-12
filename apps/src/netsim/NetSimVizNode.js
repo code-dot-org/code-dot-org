@@ -33,6 +33,10 @@ var NetSimVizNode = module.exports = function (sourceNode) {
    */
   this.isRouter = false;
 
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
   /**
    *
    * @type {jQuery}
@@ -41,13 +45,29 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.circle_ = jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
+      .attr('r', radius)
       .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
+      .attr('y', textVerticalOffset)
+      .appendTo(root);
+
+  var addressBoxHalfWidth = 15;
+  var addressBoxHalfHeight = 12;
+  this.addressBox_ = jQuerySvgElement('rect')
+      .addClass('address-box')
+      .attr('x', -addressBoxHalfWidth)
+      .attr('y', radius - addressBoxHalfHeight)
+      .attr('width', addressBoxHalfWidth * 2)
+      .attr('height', addressBoxHalfHeight * 2)
+      .appendTo(root);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', radius + textVerticalOffset)
+      .text('?')
       .appendTo(root);
 
 // Set an initial default tween for zooming in from nothing.
