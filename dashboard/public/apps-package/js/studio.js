@@ -2935,7 +2935,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../canvg/StackBlur.js":40,"../canvg/canvg.js":41,"../canvg/rgbcolor.js":42,"../canvg/svg_todataurl":43,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":178,"../templates/page.html":203,"../utils":224,"../xml":225,"./api":180,"./bigGameLogic":181,"./blocks":182,"./collidable":183,"./constants":184,"./controls.html":185,"./dropletConfig":187,"./extraControlRows.html":188,"./projectile":191,"./rocketHeightLogic":192,"./samBatLogic":193,"./visualization.html":196}],196:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/studio":235,"../StudioApp":4,"../canvg/StackBlur.js":39,"../canvg/canvg.js":40,"../canvg/rgbcolor.js":41,"../canvg/svg_todataurl":42,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../skins":178,"../templates/page.html":203,"../utils":224,"../xml":225,"./api":180,"./bigGameLogic":181,"./blocks":182,"./collidable":183,"./constants":184,"./controls.html":185,"./dropletConfig":187,"./extraControlRows.html":188,"./projectile":191,"./rocketHeightLogic":192,"./samBatLogic":193,"./visualization.html":196}],196:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5182,7 +5182,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":235,"../block_utils":19,"../utils":224,"./constants":184}],188:[function(require,module,exports){
+},{"../../locale/current/studio":235,"../block_utils":18,"../utils":224,"./constants":184}],188:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8000,7 +8000,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],43:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -8223,7 +8223,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],42:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8513,7 +8513,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],40:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
