@@ -352,6 +352,11 @@ title: "Ops Dashboard"
 
     $scope.teachers_bulk_import = {uploading: false};
 
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
     $scope.cohort = cohortsService.get({id: $routeParams.id});
 
     $scope.cohort.$promise.then(function(cohort) {
@@ -374,6 +379,30 @@ title: "Ops Dashboard"
         });
       }
     }
+
+    $scope.confirm_delete = function(teacher) {
+     teacher.confirmDelete = true;
+    };
+
+    $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
+      //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
+      //  function() {
+          $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+      //  }
+      //).catch($scope.genericError);
+    };
+
+    $scope.cancel = function(teacher) {
+      if (teacher.id) {
+        teacher.editing = false;
+      } else {
+        $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+      }
+    };
+
+    $scope.new_teacher = function() {
+      $scope.cohort.teachers.unshift({editing: true});
+    };
   }
   ]);
 
