@@ -342,7 +342,7 @@ StudioApp.prototype.init = function(config) {
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
-      startBlocks: config.level.startBlocks,
+      startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject
     });
@@ -615,7 +615,7 @@ StudioApp.prototype.localeDirection = function() {
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
 StudioApp.prototype.initReadonly = function(options) {
-  Blockly.inject(document.getElementById('blockly'), {
+  Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
     rtl: this.isRtl(),
@@ -740,27 +740,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-
   // First, grab the main app container
-  // This is inconsistently named across apps right now
-  // TODO (bbuchanan) : Unify parent app container names
-  var div;
-  if (this.editCode) {
-    div = document.getElementById('codeWorkspace');
-  } else if (this.isUsingBlockly()) {
-    div = document.getElementById('blockly');
-  }
-
+  var div = document.getElementById('codeWorkspace');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
-  var parentHeight = parseInt(parentStyle.height, 10);
-
-  var headers = document.getElementById('headers');
-  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
-
-  div.style.top = divParent.offsetTop + 'px';
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
@@ -774,28 +759,6 @@ StudioApp.prototype.onResize = function() {
     });
   }
 
-  if (this.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  if (this.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
-  div.style.width = fullWorkspaceWidth + 'px';
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -811,11 +774,6 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   var clearPuzzleWidth = clearPuzzleHeader ?
       clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var headersDiv = document.getElementById('headers');
-  if (headersDiv) {
-    headersDiv.style.width = fullWorkspaceWidth + 'px';
-  }
 
   var toolboxHeader = document.getElementById('toolbox-header');
   if (toolboxHeader) {
@@ -1110,6 +1068,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
@@ -1122,6 +1081,7 @@ StudioApp.prototype.configureDom = function (config) {
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
+  // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
   if (referenceArea) {
@@ -1138,7 +1098,7 @@ StudioApp.prototype.configureDom = function (config) {
 
   if (this.isUsingBlockly() && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+    Blockly.addClass_(codeWorkspace, 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -1151,6 +1111,12 @@ StudioApp.prototype.configureDom = function (config) {
     config.level.disableVariableEditing = false;
   } else if (!config.hideSource) {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    if (config.pinWorkspaceToBottom) {
+      container.className = codeWorkspace.className + " pin_bottom";
+    } else {
+      codeWorkspace.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+      container.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+    }
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1166,9 +1132,7 @@ StudioApp.prototype.configureDom = function (config) {
 StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
-  var workspaceDiv = this.editCode ?
-    document.getElementById('codeWorkspace') :
-    container.querySelector('#blockly');
+  var workspaceDiv = document.getElementById('codeWorkspace');
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
@@ -1304,7 +1268,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     }
   }
 
-  var div = document.getElementById('blockly');
+  var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),

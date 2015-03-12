@@ -760,7 +760,7 @@ module.exports.k1_9 = {
     eventBlock('when_run', setSpeedBlock)
 };
 
-},{"../../locale/current/flappy":231,"../block_utils":19,"../utils":224,"./constants":71}],73:[function(require,module,exports){
+},{"../../locale/current/flappy":231,"../block_utils":18,"../utils":224,"./constants":71}],73:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -2465,7 +2465,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/common":229,"../../locale/current/flappy":231,"../StudioApp":4,"../block_utils":19,"../utils":224}],231:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/flappy":231,"../StudioApp":4,"../block_utils":18,"../utils":224}],231:[function(require,module,exports){
 /*flappy*/ module.exports = window.blockly.appLocale;
 },{}],69:[function(require,module,exports){
 var studioApp = require('../StudioApp').singleton;

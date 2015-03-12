@@ -72,7 +72,7 @@ module Ops
       assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_creates(District, User) do
-        post :create, district: {name: 'test district', contact: {name: 'New user', email: 'new_teacher@email.xx'}}
+        post :create, district: {name: 'test district', contact: {ops_first_name: 'New', ops_last_name: 'user', email: 'new_teacher@email.xx'}}
       end
       assert_response :success
 
@@ -113,7 +113,7 @@ module Ops
 
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
       assert_creates(User) do 
-        put :update, id: @district.id, district: {contact: {name: 'A New Teacher', email: 'new_teacher@email.xx'}}
+        put :update, id: @district.id, district: {contact: {ops_first_name: 'New', ops_last_name: 'Teacher', email: 'new_teacher@email.xx'}}
       end
 
       # user is a district contact

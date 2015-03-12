@@ -1,7 +1,7 @@
-#blockly {
+#codeWorkspace {
   width: 1024px; }
 
-#blocklyApp {
+#codeApp {
   height: 600px; }
 
 /* Sprited icons. */

@@ -7,7 +7,7 @@ title: Help AP Computer Science count for graduation in YOUR school in North Car
 
 The College Board, Code.org, CSTA, and a coalition of partners spent the last year helping states revise or enact policies to allow computer science to count towards high school math or science graduation requirements. Research has shown that students are more likely to try computer science when it is part of the academic pathway rather than an elective. And CS teachers have told us their work is valued more as well when it’s categorized this way. 
 
-The North Carolina Department of Public Instruction now recognizes Advanced Placement Computer Science A as a fourth course option towards a mathematics graduation requirement - see page 3 of <a href="http://www.doe.in.gov/sites/default/files/standards/cte-business-marketing-information-technology/computersciencea.pdf" target="_blank">this document</a>. This policy indicates that districts can and should count AP Computer Science towards the required mathematics graduation standards. 
+The North Carolina Department of Public Instruction now recognizes Advanced Placement Computer Science A as a fourth course option towards a mathematics graduation requirement - see page 3 of <a href="http://www.dpi.state.nc.us/docs/academicservices/2013/math-options-chart.pdf" target="_blank">this document</a>. This policy indicates that districts can and should count AP Computer Science towards the required mathematics graduation standards. 
 
 To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
 
@@ -22,11 +22,11 @@ To ensure all students have access to computer science education, **please use t
 
 Dear Administrator, 
 
-I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district, and communicate the change to all students. 
+I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics graduation requirement in our district, and communicate the change to all students. 
 
 Computer science drives job growth and innovation throughout our economy and society. More than half of projected jobs in STEM fields are in computing occupations; computing occupations dominate “help wanted” ads; and computer science is one of the most in-demand degrees for new college graduates. However, computer science education is offered sparingly and underrepresented groups --especially girls and students of color-- report barriers to entry in the field and in accessing academic courses.   
 
-To make computer science more accessible for all students, the North Carolina Department of Public Instruction now recognizes Advanced Placement Computer Science A as a fourth course option towards a mathematics graduation requirement - see page 3 of <a href="http://www.doe.in.gov/sites/default/files/standards/cte-business-marketing-information-technology/computersciencea.pdf" target="_blank">this document</a>. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
+To make computer science more accessible for all students, the North Carolina Department of Public Instruction now recognizes Advanced Placement Computer Science A as a fourth course option towards a mathematics graduation requirement - see page 3 of <a href="http://www.dpi.state.nc.us/docs/academicservices/2013/math-options-chart.pdf" target="_blank">this document</a>. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
 Thank you for making our district a leader in computer science education by fully implementing this policy adopted by the North Carolina Department of Public Instruction by counting AP Computer Science as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.   
 
@@ -59,5 +59,5 @@ My school district does not currently count computer science as a mathematics cr
 
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the North Carolina Department of Public Instruction counts AP Computer Science as a mathematics graduation credit. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a mathematics graduation requirement in accordance with the North Carolina Department of Public Instruction. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  

@@ -21,10 +21,10 @@ template: none
       %a{'ng-click' => 'order = "location"'}
         Location
     %th.manage-th
-      %a{'ng-click' => 'order = "contact_name"'}
+      %a{'ng-click' => 'order = "contact.ops_last_name"'}
         District Contact Name
     %th.manage-th
-      %a{'ng-click' => 'order = "contact_email"'}
+      %a{'ng-click' => 'order = "contact.email"'}
         District Contact Email
     %th.manage-th
       Manage
@@ -40,8 +40,10 @@ template: none
         {{district.location}}
       %input{'ng-show' => 'district.editing', 'ng-model' => 'district.location', type: 'text'}
     %td
-      %span{'ng-hide' => 'district.editing'} {{district.contact.name}}
-      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.name', type: 'text', placeholder: 'Name'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.ops_first_name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.ops_first_name', type: 'text', placeholder: 'First Name'}
+      %span{'ng-hide' => 'district.editing'} {{district.contact.ops_last_name}}
+      %input{'ng-show' => 'district.editing', 'ng-model' => 'district.contact.ops_last_name', type: 'text', placeholder: 'Last Name'}
     %td
       %span{'ng-hide' => 'district.editing'} {{district.contact.email}}
       %span{'ng-show' => 'district.editing'}
@@ -61,7 +63,8 @@ template: none
     %td
       %input{'ng-model' => 'district.location', type:'text'}
     %td
-      %input{'ng-model' => 'district.contact.name', type:'text', placeholder: 'Name'}
+      %input{'ng-model' => 'district.contact.ops_first_name', type:'text', placeholder: 'First Name'}
+      %input{'ng-model' => 'district.contact.ops_last_name', type:'text', placeholder: 'Last Name'}
     %td
       %span
         %input{'ng-model' => 'district.contact.email', type: 'email', placeholder: 'Email', name: 'email'}

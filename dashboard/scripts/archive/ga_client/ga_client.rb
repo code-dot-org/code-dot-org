@@ -9,7 +9,7 @@ require 'yaml'
 #   CDO.ga_service_account_email: xxx-abcdef@developer.gserviceaccount.com
 #   CDO.ga_api_key: ABCDEF123456 [Base64-encoded pkcs12 key file]
 #   CDO.ga_api_secret: notasecret
-#   CDO.ga_profile_id: 01234567
+#   CDO.ga_profile_id: 01234567 [this is the "View ID", not the "Account ID"]
 
 class GAClient
 # Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb

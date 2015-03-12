@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":226,"../block_utils":19,"../utils":224}],8:[function(require,module,exports){
+},{"../../locale/current/applab":226,"../block_utils":18,"../utils":224}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -424,7 +424,7 @@ function adjustAppSizeStyles() {
         } else if (rules[j].media && childRules) {
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -435,6 +435,16 @@ function adjustAppSizeStyles() {
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+              // set the left for the codeWorkspace
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+              // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
@@ -950,6 +960,7 @@ Applab.init = function(config) {
   config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
+  config.pinWorkspaceToBottom = true;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
