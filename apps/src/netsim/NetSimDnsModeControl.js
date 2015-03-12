@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimDnsModeControl.html');
+var DnsMode = require('./netsimConstants').DnsMode;
 
 /**
  * Generator and controller for DNS mode selector
@@ -43,10 +44,10 @@ var NetSimDnsModeControl = module.exports = function (rootDiv,
 
   /**
    * Internal state: Current DNS mode.
-   * @type {string}
+   * @type {DnsMode}
    * @private
    */
-  this.currentDnsMode_ = 'none';
+  this.currentDnsMode_ = DnsMode.NONE;
 
   this.render();
 };
@@ -68,16 +69,16 @@ NetSimDnsModeControl.prototype.render = function () {
  * @private
  */
 NetSimDnsModeControl.prototype.onDnsModeChange_ = function () {
-  var newDnsMode = this.dnsModeRadios_.siblings(':checked').val();
+  var newDnsMode = this.dnsModeRadios_.filter(':checked').val();
   this.dnsModeChangeCallback_(newDnsMode);
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
   this.currentDnsMode_ = newDnsMode;
   this.dnsModeRadios_
-      .siblings('[value="' + newDnsMode + '"]')
+      .filter('[value="' + newDnsMode + '"]')
       .prop('checked', true);
 };

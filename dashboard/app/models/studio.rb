@@ -312,6 +312,8 @@ class Studio < Grid
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
   <block type="functional_sqrt"></block>
+  <block type="functional_squared"></block>
+  <block type="functional_pow"></block>
 </category>
 <category name="Functional Boolean">
   <block type="functional_greater_than" />

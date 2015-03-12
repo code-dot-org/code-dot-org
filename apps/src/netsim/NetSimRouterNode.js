@@ -13,6 +13,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -61,7 +62,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.dnsMode = row.dnsMode !== undefined ?
-      row.dnsMode : NetSimRouterNode.DnsMode.NONE;
+      row.dnsMode : DnsMode.NONE;
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -148,16 +149,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.logChange = new ObservableEvent();
 };
 NetSimRouterNode.inherits(NetSimNode);
-
-/**
- * @enum {string}
- */
-var DnsMode = {
-  NONE: 'none',
-  MANUAL: 'manual',
-  AUTOMATIC: 'automatic'
-};
-NetSimRouterNode.DnsMode = DnsMode;
 
 /**
  * Static async creation method. See NetSimEntity.create().

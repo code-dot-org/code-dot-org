@@ -2484,7 +2484,7 @@ Artist.prototype.resetStepInfo_ = function () {
   this.stepDistanceCovered = 0;
 };
 
-},{"../../locale/current/common":229,"../../locale/current/turtle":236,"../codegen":45,"../dropletUtils":49,"../slider":179,"../templates/page.html":203,"../utils":224,"./api":211,"./colours":213,"./controls.html":214,"./dropletConfig":216,"./levels":217}],217:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/turtle":236,"../codegen":44,"../dropletUtils":48,"../slider":179,"../templates/page.html":203,"../utils":224,"./api":211,"./colours":213,"./controls.html":214,"./dropletConfig":216,"./levels":217}],217:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
@@ -3389,7 +3389,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/current/turtle":236,"../block_utils":19,"../level_base":86,"../utils":224,"./answers":210,"./colours":213,"./requiredBlocks":219,"./startBlocks.xml":221,"./toolbox.xml":222}],222:[function(require,module,exports){
+},{"../../locale/current/turtle":236,"../block_utils":19,"../level_base":85,"../utils":224,"./answers":210,"./colours":213,"./requiredBlocks":219,"./startBlocks.xml":221,"./toolbox.xml":222}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

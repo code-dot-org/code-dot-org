@@ -13,7 +13,14 @@ Script.transaction do # throw this all in a transaction so we roll it back if so
     !file_scripts.include?(script.name.downcase)
   end
 
-  puts "deleting: #{orphans.collect(&:name).to_s}"
+  puts "deleting scripts: #{orphans.collect(&:name).to_s}"
+
+  puts "and their UserScripts:"
+  orphans.map do |script|
+    uss = UserScript.where(script_id: script.id)
+    puts "#{script.name}: #{uss.count}"
+    uss.destroy_all
+  end
 
   orphans.each(&:destroy)
   raise "run '#{$0} confirm' if you actually want this to happen" unless ARGV[0] && ARGV[0] == 'confirm'

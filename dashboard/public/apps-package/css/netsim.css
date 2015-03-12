@@ -306,6 +306,14 @@ svg {
       /* But extra margin around paragraphs of text (instructions) */ }
       #netsim .netsim_tabs .ui-tabs-panel p {
         margin: 0 1em 10px 1em; }
+    #netsim .netsim_tabs .netsim_my_device_tab .netsim_encoding_selector div.hiddenControl {
+      display: none; }
+    #netsim .netsim_tabs .netsim_my_device_tab .netsim_encoding_selector input[type="checkbox"] {
+      vertical-align: baseline;
+      margin: 0; }
+    #netsim .netsim_tabs .netsim_my_device_tab .netsim_encoding_selector label {
+      display: inline;
+      margin-left: 0.25em; }
     #netsim .netsim_tabs .netsim_router_tab .netsim_router_log {
       max-height: 200px;
       overflow-y: scroll; }

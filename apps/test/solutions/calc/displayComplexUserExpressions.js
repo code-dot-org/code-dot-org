@@ -205,6 +205,131 @@ function customValidator(assert) {
     validateTextElement(g.children[2], '204', null);
   });
 
+  displayComplexUserExpressionTest(assert, 'divide by zero error', function () {
+    // compute: f(10)
+    // f(i) = (4 / (4 - 4))
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [10])));
+    userSet.addEquation_(new Equation('f', ['i'], new ExpressionNode('/', [
+      new ExpressionNode(4),
+      new ExpressionNode('-', [4, 4])
+    ])));
+
+    // target is similar, but no div 0
+    // compute: f(10)
+    // f(i) = (4 / (5 - 4))
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [10])));
+    targetSet.addEquation_(new Equation('f', ['i'], new ExpressionNode('/', [
+      new ExpressionNode(4),
+      new ExpressionNode('-', [4, 4])
+    ])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 2);
+
+    // line 1: f(i) = (4 / (4 - 4))
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], 'f(i) = ', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], '4', null);
+    validateTextElement(g.children[3], ' / ', null);
+    validateTextElement(g.children[4], '(', null);
+    validateTextElement(g.children[5], '4', null);
+    validateTextElement(g.children[6], ' - ', null);
+    validateTextElement(g.children[7], '4', null);
+    validateTextElement(g.children[8], ')', null);
+    validateTextElement(g.children[9], ')', null);
+    validateTextElement(g.children[9], ')', null);
+
+    // line 2: f(10)
+    // Note that there's no = (result), because we have a divide by zero error
+    g = userExpression.children[1];
+    validateTextElement(g.children[0], 'f', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], '10', null);
+    validateTextElement(g.children[3], ')', null);
+  });
+
+  displayComplexUserExpressionTest(assert, 'divide by zero error during freeplay', function () {
+    // same thing as previous test, but no targetSet
+    // compute: f(10)
+    // f(i) = (4 / (4 - 4))
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [10])));
+    userSet.addEquation_(new Equation('f', ['i'], new ExpressionNode('/', [
+      new ExpressionNode(4),
+      new ExpressionNode('-', [4, 4])
+    ])));
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 2);
+
+    // line 1: f(i) = (4 / (4 - 4))
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], 'f(i) = ', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], '4', null);
+    validateTextElement(g.children[3], ' / ', null);
+    validateTextElement(g.children[4], '(', null);
+    validateTextElement(g.children[5], '4', null);
+    validateTextElement(g.children[6], ' - ', null);
+    validateTextElement(g.children[7], '4', null);
+    validateTextElement(g.children[8], ')', null);
+    validateTextElement(g.children[9], ')', null);
+    assert.equal(g.children.length, 10);
+
+
+    // line 2: f(10)
+    // Note that there's no = (result), because we have a divide by zero error
+    g = userExpression.children[1];
+    validateTextElement(g.children[0], 'f', null);
+    validateTextElement(g.children[1], '(', null);
+    validateTextElement(g.children[2], '10', null);
+    validateTextElement(g.children[3], ')', null);
+    assert.equal(g.children.length, 4);
+  });
+
+  displayComplexUserExpressionTest(assert, 'divide by zero error with simple target', function () {
+    // compute: (4 / (4 - 4))
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('/', [
+      new ExpressionNode(4),
+      new ExpressionNode('-', [4, 4])
+    ])));
+
+    // target has no functions
+    // compute: 1 + 2
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+
+    // line 1: (4 / (4 - 4))
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], '(', 'errorToken');
+    validateTextElement(g.children[1], '4', 'errorToken');
+    validateTextElement(g.children[2], ' / ', 'errorToken');
+    validateTextElement(g.children[3], '(', 'errorToken');
+    validateTextElement(g.children[4], '4', 'errorToken');
+    validateTextElement(g.children[5], ' - ', 'errorToken');
+    validateTextElement(g.children[6], '4', 'errorToken');
+    validateTextElement(g.children[7], ')', 'errorToken');
+    validateTextElement(g.children[8], ')', 'errorToken');
+    assert.equal(g.children.length, 9);
+  });
+
+
   return true;
 }
 

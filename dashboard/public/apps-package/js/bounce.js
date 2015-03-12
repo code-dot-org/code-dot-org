@@ -1956,7 +1956,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/bounce":227,"../../locale/current/common":229,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../hammer":79,"../skins":178,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"./api":21,"./controls.html":24,"./tiles":28,"./visualization.html":29}],29:[function(require,module,exports){
+},{"../../locale/current/bounce":227,"../../locale/current/common":229,"../StudioApp":4,"../codegen":44,"../constants":46,"../dom":47,"../dropletUtils":48,"../hammer":78,"../skins":178,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"./api":21,"./controls.html":24,"./tiles":28,"./visualization.html":29}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2494,7 +2494,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/bounce":227,"../codegen":45}],227:[function(require,module,exports){
+},{"../../locale/current/bounce":227,"../codegen":44}],227:[function(require,module,exports){
 /*bounce*/ module.exports = window.blockly.appLocale;
 },{}],21:[function(require,module,exports){
 var tiles = require('./tiles');
