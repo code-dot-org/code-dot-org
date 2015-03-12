@@ -720,7 +720,8 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
           toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
           packetIndex: intToBinary(1, BITS_PER_NIBBLE),
           packetCount: intToBinary(1, BITS_PER_NIBBLE),
-          message: asciiToBinary("Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
+          message: asciiToBinary("Automatic DNS Node" +
+              "\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
         }),
         function() {}
     );
