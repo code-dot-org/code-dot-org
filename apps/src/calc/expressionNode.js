@@ -1,5 +1,6 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
+var RepeaterString = require('./repeaterString');
 
 /**
  * A node consisting of an value, and potentially a set of operands.
@@ -25,6 +26,7 @@ var ExpressionNode = function (val, args, blockId) {
   if (args === undefined) {
     args = [];
   }
+  this.repeaterString_ = null;
 
   if (!Array.isArray(args)) {
     throw new Error("Expected array");
@@ -253,13 +255,21 @@ ExpressionNode.prototype.collapse = function () {
     return false;
   }
 
+  var repeaterString;
+
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
+    // TODO - care about other operations too
+    if (this.value_ === '/') {
+      repeaterString = RepeaterString.fromNumeratorDenominator(
+        this.getChildValue(0), this.getChildValue(1));
+    }
     var evaluation = this.evaluate();
     if (evaluation.err) {
       return false;
     }
     this.value_ = evaluation.result;
+    this.repeaterString_ = repeaterString;
     this.children_ = [];
     return true;
   } else {
@@ -278,9 +288,9 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     (this.children_.length === other.children_.length);
   var type = this.getType_();
 
-  // Empty function calls look slightly different, i.e. foo() instead of foo
   if (this.children_.length === 0) {
-    return [new Token(this.value_.toString(), !nodesMatch)];
+    var tokenStr = this.repeaterString_ || this.value_.toString();
+    return [new Token(tokenStr, !nodesMatch)];
   }
 
   if (type === ValueType.ARITHMETIC) {
@@ -474,6 +484,8 @@ ExpressionNode.prototype.debug = function () {
  * (1) We're comparing two expressions and want to mark where they differ.
  * (2) We're looking at a single expression and want to mark the deepest
  *     subexpression.
+ * @param {string|RepeaterString} str
+ * @param {boolean} marked
  */
 var Token = function (str, marked) {
   this.str = str;
