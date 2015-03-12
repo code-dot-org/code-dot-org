@@ -37,7 +37,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "custom_game_type": "Big Game"
+    "custom_game_type": "Big Game",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -356,7 +357,7 @@
           <mutation>
             <arg name="key" type="Number"/>
             <arg name="y" type="Number"/>
-            <description>Given the player's y coordinate and a keycode for direction, return the new y</description>
+            <description>Given a keycode for direction and the player's y coordinate, return the new y</description>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">update-player</title>
