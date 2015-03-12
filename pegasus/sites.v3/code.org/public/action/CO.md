@@ -23,7 +23,7 @@ This policy indicates that districts can count computer science towards graduati
 
 Dear Administrator, 
 
-I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district, and communicate the change to all students. 
+I’m writing to urge you to implement a district-wide change to allow computer science to count as a graduation requirement in our district, and communicate the change to all students. 
 
 Computer science drives job growth and innovation throughout our economy and society. More than half of projected jobs in STEM fields are in computing occupations; computing occupations dominate “help wanted” ads; and computer science is one of the most in-demand degrees for new college graduates. However, computer science education is offered sparingly and underrepresented groups --especially girls and students of color-- report barriers to entry in the field and in accessing academic courses.   
 
@@ -53,7 +53,7 @@ What’s a good way to get kids excited about computer science?
 
 How can our district get more girls and underrepresented students of color taking computer science?
 
-+ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics or science).
++ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit.
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 
 Show students [videos](http://hourofcode.com/us/resources#videos) on the importance of computer science education from special messengers, such as Chris Bosh, Bill Gates, Susan Wojcicki, President Obama, among others! 
 
@@ -63,6 +63,6 @@ My school district does not currently count computer science as a graduation req
 + Use the above letter to send to your district superintendent or school board members. This letter is tailored to your state and outlines local discretion over setting graduation requirements. 
 + Communicate the importance of computer science education in developing critical thinking skills and preparing students for the 21st century workforce. The goal in allowing computer science to count towards a graduation requirement is not to require all students to take a computer science course. Rather, the goal is to increase access to computer science and to streamline the process for student pursuing this career pathway. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with local control authority. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board. 
 

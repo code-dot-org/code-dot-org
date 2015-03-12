@@ -51,7 +51,7 @@ What’s a good way to get kids excited about computer science?
 
 How can our district get more girls and underrepresented students of color taking computer science?
 
-+ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics or science).
++ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics).
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 
 Show students [videos](http://hourofcode.com/us/resources#videos) on the importance of computer science education from special messengers, such as Chris Bosh, Bill Gates, Susan Wojcicki, President Obama, among others! 
 
