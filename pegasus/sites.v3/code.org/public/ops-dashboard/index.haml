@@ -11,6 +11,9 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
+%script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
+
 :javascript
   'use strict';
 
@@ -147,21 +150,45 @@ title: "Ops Dashboard"
   var filters = angular.module('opsApp.filters', []).value('version', '0.1');
 
   filters.filter('utc', function() {
-    return function(val){
+    return function(val) {
       var date = new Date(val);
-       return new Date(date.getUTCFullYear(),
-                       date.getUTCMonth(),
-                       date.getUTCDate(),
-                       date.getUTCHours(),
-                       date.getUTCMinutes(),
-                       date.getUTCSeconds());
+      return new Date(date.getUTCFullYear(),
+                      date.getUTCMonth(),
+                      date.getUTCDate(),
+                      date.getUTCHours(),
+                      date.getUTCMinutes(),
+                      date.getUTCSeconds());
+    };
+  });
+
+  filters.filter('dateRange', function() {
+    return function(workshops, dateRangeStart, dateRangeEnd) {
+      if (dateRangeStart || dateRangeEnd) {
+        var filtered = [];
+        workshops.forEach(function (workshop) {
+          for (var i = 0; i < workshop.segments.length; i++) {
+            if (
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && workshop.segments[i].end.split('T')[0] >= this.dateRangeStart) ||
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && !this.dateRangeStart) ||
+                (workshop.segments[i].end.split('T')[0] >= this.dateRangeStart && !this.dateRangeEnd)
+               )
+            {
+              filtered.push(workshop);
+              break;
+            }
+          }
+        }, this);
+        return filtered;
+      } else {
+        return workshops;
+      }
     };
   });
 
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
-      value('version', '0.1');
+    value('version', '0.1');
 
   controllers.controller('DistrictsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'districtsService',
     function($scope, $route, $routeParams, $location, $window, districtsService) {
@@ -217,6 +244,17 @@ title: "Ops Dashboard"
           }
         }
         return "N/A";
+      }
+
+      $scope.load = function() {
+        $('.date').on('focus click', function() {
+          $(this).datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            pickTime: false
+
+          });
+        });
       }
 
       //$scope.save = function (workshop) {
