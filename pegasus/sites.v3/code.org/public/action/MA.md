@@ -29,7 +29,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 
 
-According to Massachusetts State Statute, each local school districts has the authority to establish its own high school <a href="http://www.doe.mass.edu/mcas/graduation.html"_blank">graduation requirements</a>, to exceed the minimum expectations outlined in the state graduation guidelines. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
+According to Massachusetts State Statute, each local school districts has the authority to establish its own high school <a href="http://www.doe.mass.edu/mcas/graduation.html"_blank">graduation requirements</a> to exceed the minimum expectations outlined in the state graduation guidelines. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
 Please consider making our district a leader in computer science education by allowing computer science courses to fulfil a district math or science graduation credit for students interested in this career pathway. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
@@ -64,5 +64,5 @@ My school district does not currently count computer science as a graduation req
 + Use the above letter to send to your district superintendent or school board members. This letter is tailored to your state and outlines local discretion over setting graduation requirements. 
 + Communicate the importance of computer science education in developing critical thinking skills and preparing students for the 21st century workforce. The goal in allowing computer science to count towards a graduation requirement is not to require all students to take a computer science course. Rather, the goal is to increase access to computer science and to streamline the process for student pursuing this career pathway. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with local control authority. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board. 
