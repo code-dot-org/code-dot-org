@@ -11,7 +11,8 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
-
+%script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 
 :javascript
@@ -161,6 +162,30 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('withinDateRange', function() {
+    return function(workshops, dateRangeStart, dateRangeEnd) {
+      if (dateRangeStart || dateRangeEnd) {
+        var filtered = [];
+        workshops.forEach(function (workshop) {
+          for (var i = 0; i < workshop.segments.length; i++) {
+            if (
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && workshop.segments[i].end.split('T')[0] >= this.dateRangeStart) ||
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && !this.dateRangeStart) ||
+                (workshop.segments[i].end.split('T')[0] >= this.dateRangeStart && !this.dateRangeEnd)
+               )
+            {
+              filtered.push(workshop);
+              break;
+            }
+          }
+        }, this);
+        return filtered;
+      } else {
+        return workshops;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -220,6 +245,17 @@ title: "Ops Dashboard"
           }
         }
         return "N/A";
+      }
+
+      $scope.load = function() {
+        $('.date').on('focus click', function() {
+          $(this).datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            pickTime: false
+
+          });
+        });
       }
 
       //$scope.save = function (workshop) {
@@ -474,4 +510,4 @@ title: "Ops Dashboard"
 
 %script{type: "text/javascript", src: "/js/angular-selectize.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
-%div{'ng-app' => 'opsApp', 'ng-view' => ''}
+%div{'ng-view' => ''}
