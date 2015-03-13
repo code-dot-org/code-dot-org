@@ -871,12 +871,12 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   var xPos = 0;
   var len;
   if (name) {
-    len = addText(g, (name + ' = '), xPos, null);
+    len = addText(g, new Token(name + ' = ', false), xPos, null);
     xPos += len;
   }
 
   for (var i = 0; i < tokenList.length; i++) {
-    len = addText(g, tokenList[i].str, xPos, tokenList[i].marked && markClass);
+    len = addText(g, tokenList[i], xPos, markClass);
     xPos += len;
   }
 
@@ -888,8 +888,11 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
 /**
  * Add some text to parent element at given xPos with css class className
  */
-function addText(parent, str, xPos, className) {
+function addText(parent, token, xPos, markClass) {
   var text, textLength;
+  var className = token.marked && markClass;
+  var str = token.str;
+  
   text = document.createElementNS(Blockly.SVG_NS, 'text');
 
   var repeater = str instanceof RepeaterString;
