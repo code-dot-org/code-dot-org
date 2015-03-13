@@ -27,16 +27,16 @@ template: none
       %a{'ng-click' => 'order = "name"'}
         Workshops Name
     %th.manage-th
-      %a{'ng-click' => 'order = "program"'}
+      %a{'ng-click' => 'order = "program_types[workshop.program_type].short_name"'}
         Program Type
     %th.manage-th
-      %a{'ng-click' => 'order = "cohort"'}
+      %a{'ng-click' => 'order = "cohortName(workshop.cohort_id)"'}
         Teacher Cohort
     %th.manage-th
-      %a{'ng-click' => 'order = "date"'}
+      %a{'ng-click' => 'order = "workshop.segments.$first.start"'}
         Dates
     %th.manage-th
-      %a{'ng-click' => 'order = "address"'}
+      %a{'ng-click' => 'order = "location"'}
         Address
     - if dashboard_user[:admin]
       %th.manage-th
