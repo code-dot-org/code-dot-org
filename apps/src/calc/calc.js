@@ -39,7 +39,6 @@ var EquationSet = require('./equationSet');
 var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
-var RepeaterString = require('./repeaterString');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
