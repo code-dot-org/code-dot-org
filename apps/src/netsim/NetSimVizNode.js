@@ -38,6 +38,11 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.dnsMode_ = undefined;
 
   /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
+
+  /**
    * @type {boolean}
    */
   this.isRouter = false;
@@ -50,7 +55,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   /**
    * @type {boolean}
    */
-  this.isDNSNode = false;
+  this.isDnsNode = false;
 
   // Give our root node a useful class
   var root = this.getRoot();
@@ -117,6 +122,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
 
+  this.nodeID = sourceNode.entityID;
+
   if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
@@ -173,6 +180,14 @@ NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
   this.updateAddressDisplay();
 };
 
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
 NetSimVizNode.prototype.updateAddressDisplay = function () {
   // Routers never show their address
   // If a DNS mode has not been set we never show an address
@@ -185,6 +200,6 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   if (this.dnsMode_ === DnsMode.NONE) {
     this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
   } else {
-    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?')
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
   }
 };
