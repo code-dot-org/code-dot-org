@@ -37,7 +37,7 @@ var timeoutList = require('../timeoutList');
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');
 var Equation = require('./equation');
-var Token = ExpressionNode.Token;
+var Token = require('./token');
 var InputIterator = require('./inputIterator');
 var RepeaterString = require('./repeaterString');
 
@@ -871,12 +871,12 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   var xPos = 0;
   var len;
   if (name) {
-    len = addText(g, new Token(name + ' = ', false), xPos, null);
+    len = new Token(name + ' = ', false).addToParent(g, xPos, null);
     xPos += len;
   }
 
   for (var i = 0; i < tokenList.length; i++) {
-    len = addText(g, tokenList[i], xPos, markClass);
+    len = tokenList[i].addToParent(g, xPos, markClass);
     xPos += len;
   }
 
@@ -884,44 +884,6 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
-
-/**
- * Add some text to parent element at given xPos with css class className
- */
-function addText(parent, token, xPos, markClass) {
-  var text, textLength;
-  var className = token.marked && markClass;
-  var str = token.str;
-  
-  text = document.createElementNS(Blockly.SVG_NS, 'text');
-
-  var repeater = str instanceof RepeaterString;
-  if (repeater) {
-    str.addToTextElement(text);
-  } else {
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    text.textContent = str.replace(/ /g, '_');
-  }
-
-  parent.appendChild(text);
-  // getComputedTextLength isn't available to us in our mochaTests
-  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-
-  if (!repeater) {
-    // reset to version with spaces
-    text.textContent = str;
-  }
-
-  text.setAttribute('x', xPos + textLength / 2);
-  text.setAttribute('text-anchor', 'middle');
-  if (className) {
-    text.setAttribute('class', className);
-  }
-
-  return textLength;
-}
-
 
 /**
  * Deep clone a node, then removing any ids from the clone so that we don't have
