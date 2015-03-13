@@ -1,4 +1,4 @@
-require_relative 'rake/env'
+require File.expand_path '../../deployment', __FILE__
 
 Dir.glob(shared_dir('rake/*.rake')) do |path|
   load path

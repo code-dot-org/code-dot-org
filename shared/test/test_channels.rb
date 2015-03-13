@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
-require_relative '../rake/env.rb'
-require_relative '../middleware/channels_api'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
