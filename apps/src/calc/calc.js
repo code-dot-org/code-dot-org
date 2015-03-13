@@ -77,18 +77,29 @@ var stepSpeed = 2000;
  * @param {ExpressionNode|Equation|jsnumber|string} two
  * @returns {Token[]}
  */
+
+ // TODO - do i need markDeepest?
 function constructTokenList(one, two) {
   one = asExpressionNode(one);
   two = asExpressionNode(two);
+
+  var tokenList;
 
   if (!one) {
     return null;
   } else if (!two) {
     var markDeepest = false;
-    return one.getTokenList(markDeepest);
+    tokenList = one.getTokenList(markDeepest);
   } else {
-    return one.getTokenListDiff(two);
+    tokenList = one.getTokenListDiff(two);
   }
+
+  // Strip outer parens
+  if (tokenList[0].isParenthesis() && tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
 }
 
 /**
@@ -845,7 +856,7 @@ function animateUserExpression (maxNumSteps) {
     if (numCollapses === maxNumSteps) {
       // This is the last line in the current animation, highlight what has
       // changed since the last line
-      tokenList = current.getTokenListDiff(previousExpression);
+      tokenList = getTokens(current, previousExpression);
     } else if (numCollapses + 1 === maxNumSteps) {
       // This is the second to last line. Highlight the block being collapsed,
       // and the deepest operation (that will be collapsed on the next line)
@@ -853,10 +864,10 @@ function animateUserExpression (maxNumSteps) {
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
-      tokenList = current.getTokenList(true);
+      tokenList = getTokens(current, null, true);
     } else {
       // Don't highlight anything
-      tokenList = current.getTokenList(false);
+      tokenList = getTokens(current);
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
