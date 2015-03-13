@@ -19,7 +19,19 @@
           - if can? :destroy, level
             = link_to t('crud.destroy'), level, method: :delete, data: { confirm: t('crud.confirm') }
           - if can? :create, Level
-            = link_to 'Clone', level_clone_path(level), method: :post
+            = link_to 'Clone', '', onclick: "$('#clone_#{level.id}').toggle(); return false;"
+            %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
+              = form_tag level_clone_path(level), method: :post, remote: true do
+                = label_tag 'New name:'
+                = text_field_tag :name, level.name
+                = submit_tag 'Clone'
 %br/
 - if can? :create, Level
   = link_to t('crud.new_model', model: Level.model_name.human), new_level_path
+#validation-error.validation-error{style: 'background-color: yellow'}
+:javascript
+  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: '.clone_level'}}
+  $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
+    var validation_error = $('#validation-error').detach();
+    $(e.target).parent().append(validation_error);
+  });

@@ -2,7 +2,7 @@
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
 var baseOptions = {
-  containerId: 'blocklyApp',
+  containerId: 'codeApp',
   Dialog: Dialog,
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
@@ -173,35 +173,43 @@ dashboard.updateTimestamp = function() {
   } else {
     $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
   } 
-}
+};
 
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-  var app_id = dashboard.currentApp.id;
+  var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (app_id) {
-    storageApps().update(app_id, dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+  if (channelId) {
+    channels().update(channelId, dashboard.currentApp, function(data) {
+      if (data) {
+        dashboard.currentApp = data;
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      }  else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   } else {
-    storageApps().create(dashboard.currentApp, function(data) {
-      dashboard.currentApp = data;
-      location.hash = dashboard.currentApp.id + '/edit';
-      dashboard.updateTimestamp();
-      callbackSafe(callback, data);
+    channels().create(dashboard.currentApp, function(data) {
+      if (data) {
+        dashboard.currentApp = data;
+        location.hash = dashboard.currentApp.id + '/edit';
+        dashboard.updateTimestamp();
+        callbackSafe(callback, data);
+      } else {
+        $('.project_updated_at').text('Error saving project');  // TODO i18n
+      }
     });
   }
 };
 
 dashboard.deleteProject = function(callback) {
-  var app_id = dashboard.currentApp.id;
-  if (app_id) {
-    storageApps().delete(app_id, function(data) {
+  var channelId = dashboard.currentApp.id;
+  if (channelId) {
+    channels().delete(channelId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -212,7 +220,7 @@ dashboard.deleteProject = function(callback) {
 dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
   var deferred = new $.Deferred();
   // get all projects (TODO: filter on server side?)
-  storageApps().all(function(data) {
+  channels().all(function(data) {
     if (data) {
       // find the one that matches this level
       var projects = $.grep(data, function(app) {
@@ -226,7 +234,7 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
           name: projectTemplateLevelName,
           hidden: true
         };
-        storageApps().create(options, function(app) {
+        channels().create(options, function(app) {
           if (app) {
             dashboard.currentApp = app;
             deferred.resolve();
@@ -248,6 +256,15 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
 
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
+
+    $(window).on('hashchange', function () {
+      var hashData = parseHash();
+      if ((dashboard.currentApp && hashData.channelId !== dashboard.currentApp.id)
+          || hashData.isEditingProject !== dashboard.isEditingProject) {
+        location.reload();
+      }
+    });
+
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
         if (dashboard.currentApp.levelSource) {
@@ -296,26 +313,45 @@ function loadStyle(name) {
   }));
 }
 
+function parseHash() {
+  // Example paths:
+  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
+  var isEditingProject = false;
+  var channelId = location.hash.slice(1);
+  if (channelId) {
+    // TODO: Use a router.
+    var params = channelId.split("/");
+    if (params.length > 1 && params[1] == "edit") {
+      channelId = params[0];
+      isEditingProject = true;
+    }
+  }
+  return {
+    channelId: channelId,
+    isEditingProject: isEditingProject
+  }
+}
+
 function loadProject(promise) {
   if (appOptions.level.isProjectLevel) {
-    // example paths:
-    // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-    // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-    var app_id = location.hash.slice(1);
-    if (app_id) {
-      // TODO ugh, we should use a router. maybe we should use angular :p
-      var params = app_id.split("/");
-      if (params.length > 1 && params[1] == "edit") {
-        app_id = params[0];
+    var hashData = parseHash();
+    if (hashData.channelId) {
+      if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
       }
 
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        storageApps().fetch(app_id, function (data) {
-          dashboard.currentApp = data;
-          deferred.resolve();
+        channels().fetch(hashData.channelId, function (data) {
+          if (data) {
+            dashboard.currentApp = data;
+            deferred.resolve();
+          } else {
+            // Project not found, redirect to the new project experience.
+            location.href = location.pathname;
+          }
         });
         return deferred;
       });

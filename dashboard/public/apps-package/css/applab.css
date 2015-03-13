@@ -11,6 +11,12 @@ div#visualization {
   div#visualizationColumn.responsive {
     max-width: 400px; }
 
+  div#codeWorkspace {
+    left: 400px; }
+
+  html[dir='rtl'] div#codeWorkspace {
+    right: 400px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -24,6 +30,12 @@ div#visualization {
 
   div#visualizationColumn.responsive {
     max-width: 350px; }
+
+  div#codeWorkspace {
+    left: 350px; }
+
+  html[dir='rtl'] div#codeWorkspace {
+    right: 350px; }
 
   div#visualization.responsive > * {
     -webkit-transform: scale(0.875);
@@ -39,6 +51,12 @@ div#visualization {
   div#visualizationColumn.responsive {
     max-width: 300px; }
 
+  div#codeWorkspace {
+    left: 300px; }
+
+  html[dir='rtl'] div#codeWorkspace {
+    right: 300px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -53,6 +71,12 @@ div#visualization {
   div#visualizationColumn.responsive {
     max-width: 250px; }
 
+  div#codeWorkspace {
+    left: 250px; }
+
+  html[dir='rtl'] div#codeWorkspace {
+    right: 250px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -66,6 +90,12 @@ div#visualization {
 
   div#visualizationColumn.responsive {
     max-width: 200px; }
+
+  div#codeWorkspace {
+    left: 200px; }
+
+  html[dir='rtl'] div#codeWorkspace {
+    right: 200px; }
 
   div#visualization.responsive > * {
     -webkit-transform: scale(0.5);

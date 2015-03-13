@@ -18,11 +18,12 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (rootDiv,
+var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
     chunkSizeChangeCallback, encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
@@ -30,6 +31,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv,
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -67,9 +74,13 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
       this.chunkSizeChangeCallback_);
-  this.encodingControl_ = new NetSimEncodingControl(
-      this.rootDiv_.find('.encoding'),
-      this.encodingChangeCallback_);
+
+  if (this.levelConfig_.showEncodingControls.length > 0) {
+    this.encodingControl_ = new NetSimEncodingControl(
+        this.rootDiv_.find('.encoding'),
+        this.levelConfig_,
+        this.encodingChangeCallback_);
+  }
 };
 
 /**
@@ -81,9 +92,11 @@ NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
- * @param {string} newEncoding
+ * @param {EncodingType[]} newEncodings
  */
-NetSimMyDeviceTab.prototype.setEncoding = function (newEncoding) {
-  this.encodingControl_.setEncoding(newEncoding);
-  this.chunkSizeControl_.setEncoding(newEncoding);
+NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
+  if (this.encodingControl_) {
+    this.encodingControl_.setEncodings(newEncodings);
+  }
+  this.chunkSizeControl_.setEncodings(newEncodings);
 };

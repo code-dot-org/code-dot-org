@@ -3,5 +3,18 @@ description_short ""
 description ""
 hidden 'true'
 
-stage 'Internet Simulator'
-level 'blockly:NetSim:netsim_demo'
+stage 'Sending Bits'
+level 'NetSim_SendAB'
+level 'NetSim_SendBits'
+level 'NetSim_SendAscii'
+
+stage 'Routing and DNS'
+level 'NetSim_AddressingMessages'
+level 'NetSim_ManualDNS'
+level 'NetSim_AutomaticDNS'
+
+stage 'Internet Simulator Templates'
+level 'blockly:NetSim:variant1'
+level 'blockly:NetSim:variant2'
+level 'blockly:NetSim:variant3'
+level 'NetSim_Superuser'

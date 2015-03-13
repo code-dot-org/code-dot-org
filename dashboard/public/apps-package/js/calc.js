@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({39:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({37:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":178,"./blocks":31,"./calc":32,"./levels":38}],32:[function(require,module,exports){
+},{"../appMain":5,"../skins":178,"./blocks":29,"./calc":30,"./levels":36}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -41,7 +41,6 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var api = require('./api');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -226,10 +225,13 @@ function displayGoal(targetSet) {
   }
 
   tokenList = computeEquation.expression.getTokenList(false);
-  var result = targetSet.evaluate();
+  var evaluation = targetSet.evaluate();
+  if (evaluation.err) {
+    throw evaluation.err;
+  }
 
   if (hasSingleFunction) {
-    tokenList = tokenList.concat(getTokenList(' = ' + result.toString()));
+    tokenList = tokenList.concat(getTokenList(' = ' + evaluation.result.toString()));
   }
   displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
@@ -313,8 +315,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   }
 
   // First evaluate both with the target set of inputs
-  if (targetSet.evaluateWithExpression(expression) !==
-      userSet.evaluateWithExpression(expression)) {
+  var targetEvaluation = targetSet.evaluateWithExpression(expression);
+  var userEvaluation = userSet.evaluateWithExpression(expression);
+  if (targetEvaluation.err || userEvaluation.err) {
+    return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+  }
+  if (targetEvaluation.result !== userEvaluation.result) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
     return outcome;
@@ -335,8 +341,12 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     var values = iterator.next();
     values.forEach(setChildToValue);
 
-    if (targetSet.evaluateWithExpression(expression) !==
-        userSet.evaluateWithExpression(expression)) {
+    targetEvaluation = targetSet.evaluateWithExpression(expression);
+    userEvaluation = userSet.evaluateWithExpression(expression);
+    if (targetEvaluation.err || userEvaluation.err) {
+      return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+    }
+    if (targetEvaluation.result !== userEvaluation.result) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -365,6 +375,17 @@ function appSpecificFailureOutcome(message, failedInput) {
     message: message,
     failedInput: failedInput
   };
+}
+
+/**
+ * Looks to see if given error is a divide by zero error. If it is, we fail
+ * with an app specific method. If not, we throw the error
+ */
+function divZeroOrThrowErr(err) {
+  if (err instanceof ExpressionNode.DivideByZeroError) {
+    return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
+  }
+  throw err;
 }
 
 /**
@@ -417,7 +438,11 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   // Check to see that evaluating target set with the user value of the constant(s)
   // gives the same result as evaluating the user set.
-  var userResult = userSet.evaluate();
+  var evaluation = userSet.evaluate();
+  if (evaluation.err) {
+    return divZeroOrThrowErr(evaluation.err);
+  }
+  var userResult = evaluation.result;
 
   var targetClone = targetSet.clone();
   var userClone = userSet.clone();
@@ -427,13 +452,13 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     userClone.getEquation(name).expression.setValue(val);
   };
 
-  // // overwrite our inputs with user's values
-  // targetConstants.forEach(function (item) {
-  //   var userValue = userSet.getEquation(item.name).expression.getValue();
-  //   targetClone.getEquation(item.name).expression.setValue(userValue);
-  // });
-  //
-  if (userResult !== targetSet.evaluate()) {
+  evaluation = targetSet.evaluate();
+  if (evaluation.err) {
+    throw evaluation.err;
+  }
+  var targetResult = evaluation.result;
+
+  if (userResult !== targetResult) {
     // Our result can different from the target result for two reasons
     // (1) We have the right equation, but our "constant" has a different value.
     // (2) We have the wrong equation
@@ -445,8 +470,11 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
       setConstantsToValue(val, index);
     });
 
-    var targetResult = targetClone.evaluate();
-    if (userResult !== targetResult) {
+    evaluation = targetClone.evaluate();
+    if (evaluation.err) {
+      return divZeroOrThrowErr(evaluation.err);
+    }
+    if (userResult !== evaluation.result) {
       return appSpecificFailureOutcome(calcMsg.wrongResult());
     }
   }
@@ -461,7 +489,14 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     var values = iterator.next();
     values.forEach(setConstantsToValue);
 
-    if (targetClone.evaluate() !== userClone.evaluate()) {
+    var targetEvaluation = targetClone.evaluate();
+    var userEvaluation = userClone.evaluate();
+    var err = targetEvaluation.err || userEvaluation.err;
+    if (err) {
+      return divZeroOrThrowErr(err);
+    }
+
+    if (targetEvaluation.result !== userEvaluation.result) {
       outcome.failedInput = _.clone(values);
     }
   }
@@ -618,6 +653,17 @@ Calc.generateResults_ = function () {
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
+  // Note: This will take precedence over free play, so you can "fail" a free
+  // play level with a divide by zero error.
+  // Also worth noting, we might still end up getting a div zero later when
+  // we start varying inputs in evaluateResults_
+  if (appState.userSet.hasDivZero()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appState.message = calcMsg.divideByZeroError();
+    return;
+  }
+
   if (level.freePlay || level.edit_blocks) {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
@@ -640,7 +686,7 @@ Calc.generateResults_ = function () {
  * If we have any functions or variables in our expression set, we don't support
  * animating evaluation.
  */
-function displayComplexUserExpressions () {
+function displayComplexUserExpressions() {
   var result;
   clearSvgUserExpression();
 
@@ -673,25 +719,35 @@ function displayComplexUserExpressions () {
   }
 
   // Now display our compute equation and the result of evaluating it
-  var targetEquation = appState.targetSet.computeEquation();
+  var targetEquation = appState.targetSet && appState.targetSet.computeEquation();
 
   // We're either a variable or a function call. Generate a tokenList (since
   // we could actually be different than the goal)
   tokenList = getTokenList(computeEquation, targetEquation);
 
-  result = appState.userSet.evaluate().toString();
-
-  var expectedResult = result;
-  // Note: we could make singleVariable case smarter and evaluate target using
-  // user constant value
-  if (appState.targetSet.computeEquation() !== null &&
-      !appState.targetSet.computesSingleVariable()) {
-    expectedResult = appState.targetSet.evaluate().toString();
+  var evaluation = appState.userSet.evaluate();
+  var divZeroInUserSet = false;
+  if (evaluation.err) {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+      divZeroInUserSet = true;
+    } else {
+      throw evaluation.err;
+    }
   }
+  if (!divZeroInUserSet) {
+    result = evaluation.result.toString();
+    var expectedResult = result;
+    // Note: we could make singleVariable case smarter and evaluate target using
+    // user constant value
+    if (appState.targetSet.computeEquation() !== null &&
+        !appState.targetSet.computesSingleVariable()) {
+      expectedResult = appState.targetSet.evaluate().result.toString();
+    }
 
-  // add a tokenList diffing our results
-  tokenList = tokenList.concat(getTokenList(' = '),
-    getTokenList(result, expectedResult));
+    // add a tokenList diffing our results
+    tokenList = tokenList.concat(getTokenList(' = '),
+      getTokenList(result, expectedResult));
+  }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -700,7 +756,15 @@ function displayComplexUserExpressions () {
     for (var c = 0; c < expression.numChildren(); c++) {
       expression.setChildValue(c, appState.failedInput[c]);
     }
-    result = appState.userSet.evaluateWithExpression(expression).toString();
+    evaluation = appState.userSet.evaluateWithExpression(expression);
+    if (evaluation.err) {
+      if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+        evaluation.result = ''; // result will not be used in this case
+      } else {
+        throw evaluation.err;
+      }
+    }
+    result = evaluation.result.toString();
 
     tokenList = getTokenList(expression)
       .concat(getTokenList(' = '))
@@ -788,6 +852,9 @@ function animateUserExpression (maxNumSteps) {
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
+    if (current.isDivZero()) {
+      finished = true;
+    }
     if (current.collapse()) {
       numCollapses++;
     } else if (currentStep === numCollapses + 1) {
@@ -925,7 +992,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":228,"../../locale/current/common":229,"../StudioApp":4,"../block_utils":19,"../dom":48,"../skins":178,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"./api":30,"./controls.html":33,"./equation":34,"./equationSet":35,"./expressionNode":36,"./inputIterator":37,"./levels":38,"./visualization.html":40}],40:[function(require,module,exports){
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"../StudioApp":4,"../block_utils":18,"../dom":47,"../skins":178,"../templates/page.html":203,"../timeoutList":209,"../utils":224,"./controls.html":31,"./equation":32,"./equationSet":33,"./expressionNode":34,"./inputIterator":35,"./levels":36,"./visualization.html":38}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -945,7 +1012,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":228,"ejs":245}],38:[function(require,module,exports){
+},{"../../locale/current/calc":228,"ejs":245}],36:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -984,7 +1051,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":228,"../block_utils":19}],37:[function(require,module,exports){
+},{"../../locale/current/calc":228,"../block_utils":18}],35:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1038,7 +1105,7 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],35:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -1218,6 +1285,16 @@ EquationSet.prototype.sortedEquations = function () {
 };
 
 /**
+ * @returns {boolean} true if evaluating our EquationSet would result in
+ *   dividing by zero.
+ */
+EquationSet.prototype.hasDivZero = function () {
+  var evaluation = this.evaluate();
+  return evaluation.err &&
+    evaluation.err instanceof ExpressionNode.DivideByZeroError;
+};
+
+/**
  * Evaluate the EquationSet's compute expression in the context of its equations
  */
 EquationSet.prototype.evaluate = function () {
@@ -1229,6 +1306,9 @@ EquationSet.prototype.evaluate = function () {
  * equations. For example, our equation set might define f(x) = x + 1, and this
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // no variables/functions. this is easy
@@ -1242,6 +1322,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   var mapping = {};
   var madeProgress;
   var testMapping;
+  var evaluation;
   var setTestMappingToOne = function (item) {
     testMapping[item] = 1;
   };
@@ -1257,7 +1338,11 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
         equation.params.forEach(setTestMappingToOne);
-        if (!equation.expression.canEvaluate(testMapping)) {
+        evaluation = equation.expression.evaluate(testMapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
           continue;
         }
 
@@ -1267,19 +1352,21 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
           variables: equation.params,
           expression: equation.expression
         };
-      } else if (mapping[equation.name] === undefined &&
-          equation.expression.canEvaluate(mapping)) {
-        // we have a variable that hasn't yet been mapped and can be
-        madeProgress = true;
-        mapping[equation.name] = equation.expression.evaluate(mapping);
+      } else if (mapping[equation.name] === undefined) {
+        evaluation = equation.expression.evaluate(mapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
+        } else {
+          // we have a variable that hasn't yet been mapped and can be
+          madeProgress = true;
+          mapping[equation.name] = evaluation.result;
+        }
       }
     }
 
   } while (madeProgress);
-
-  if (!computeExpression.canEvaluate(mapping)) {
-    throw new Error("Can't resolve EquationSet");
-  }
 
   return computeExpression.evaluate(mapping);
 };
@@ -1304,8 +1391,16 @@ function getEquationFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
+    case 'functional_pow':
+    case 'functional_sqrt':
+    case 'functional_squared':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+      // some of these have 1 arg, others 2
+      var argNames = ['ARG1'];
+      if (block.getInput('ARG2')) {
+        argNames.push('ARG2');
+      }
+      var args = argNames.map(function(inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;
@@ -1367,149 +1462,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":224,"./equation":34,"./expressionNode":36}],34:[function(require,module,exports){
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- *   params: ['x']
- * In many cases, this will just be an expression with no name.
- * @param {string} name Function or variable name. Null if compute expression
- * @param {string[]} params List of parameter names if a function.
- * @param {ExpressionNode} expression
- */
-var Equation = function (name, params, expression) {
-  this.name = name;
-  this.params = params || [];
-  this.expression = expression;
-
-  if (arguments.length !== 3) {
-    throw new Error('Equation requires name, params, and expression');
-  }
-
-  this.signature = this.name;
-  if (this.params.length > 0) {
-    this.signature += '(' + this.params.join(',') + ')';
-  }
-};
-
-module.exports = Equation;
-
-/**
- * @returns True if a function
- */
-Equation.prototype.isFunction = function () {
-  return this.params.length > 0;
-};
-
-Equation.prototype.clone = function () {
-  return new Equation(this.name, this.params.slice(), this.expression.clone());
-};
-
-},{}],33:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1;
-  var msg = require('../../locale/current/calc');
-  var commonMsg = require('../../locale/current/common');
-; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/calc":228,"../../locale/current/common":229,"ejs":245}],31:[function(require,module,exports){
-/**
- * Blockly Demo: Calc Graphics
- *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Demonstration of Blockly: Calc Graphics.
- * @author fraser@google.com (Neil Fraser)
- */
-'use strict';
-
-var msg = require('../../locale/current/calc');
-var commonMsg = require('../../locale/current/common');
-
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-
-// Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
-  var skin = blockInstallOptions.skin;
-
-  var generator = blockly.Generator.get('JavaScript');
-  blockly.JavaScript = generator;
-
-  var gensym = function(name) {
-    var NAME_TYPE = blockly.Variables.NAME_TYPE;
-    return generator.variableDB_.getDistinctName(name, NAME_TYPE);
-  };
-
-  sharedFunctionalBlocks.install(blockly, generator, gensym);
-
-  installCompute(blockly, generator, gensym);
-
-};
-
-function installCompute(blockly, generator, gensym) {
-  blockly.Blocks.functional_compute = {
-    helpUrl: '',
-    init: function() {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
-        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
-      ]);
-    }
-  };
-
-  generator.functional_compute = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
-  };
-}
-
-},{"../../locale/current/calc":228,"../../locale/current/common":229,"../sharedFunctionalBlocks":177}],228:[function(require,module,exports){
-/*calc*/ module.exports = window.blockly.appLocale;
-},{}],30:[function(require,module,exports){
-var ExpressionNode = require('./expressionNode');
-
-exports.compute = function (expr, blockId) {
-  Calc.computedExpression = expr instanceof ExpressionNode ? expr :
-    new ExpressionNode(parseFloat(expr));
-};
-
-exports.expression = function (operator, arg1, arg2, blockId) {
-  return new ExpressionNode(operator, [arg1, arg2], blockId);
-};
-
-},{"./expressionNode":36}],36:[function(require,module,exports){
+},{"../utils":224,"./equation":32,"./expressionNode":34}],34:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -1526,6 +1479,10 @@ var ValueType = {
   VARIABLE: 3,
   NUMBER: 4
 };
+
+function DivideByZeroError(message) {
+  this.message = message || '';
+}
 
 var ExpressionNode = function (val, args, blockId) {
   this.value_ = val;
@@ -1549,17 +1506,18 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.isArithmetic() && args.length !== 2) {
-    throw new Error("Arithmetic ExpressionNode needs 2 args");
+  if (this.isArithmetic() && !(args.length === 2 || args.length === 1)) {
+    throw new Error("Arithmetic ExpressionNode needs 1 or 2 args");
   }
 };
 module.exports = ExpressionNode;
+ExpressionNode.DivideByZeroError = DivideByZeroError;
 
 /**
  * What type of expression node is this?
  */
 ExpressionNode.prototype.getType_ = function () {
-  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
+  if (["+", "-", "*", "/", "pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
   }
 
@@ -1589,6 +1547,14 @@ ExpressionNode.prototype.isNumber = function () {
 };
 
 /**
+ * @returns {boolean} true if the root expression node is a divide by zero. Does
+ *   not account for div zeros in descendants
+ */
+ExpressionNode.prototype.isDivZero = function () {
+  return this.getValue() === '/' && this.getChildValue(1) === 0;
+};
+
+/**
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
@@ -1599,89 +1565,108 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * See if we can evaluate this node by trying to do so and catching exceptions.
- * @returns Whether we can evaluate.
- */
-ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
-  try {
-    this.evaluate(mapping, localMapping);
-  } catch (err) {
-    return false;
-  }
-  return true;
-};
-
-/**
  * Evaluate the expression, returning the result.
  * @param {Object<string, number|object>} globalMapping Global mapping of
  *   variables and functions
  * @param {Object<string, number|object>} localMapping Mapping of
  *   variables/functions local to scope of this function.
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
-ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
-  gloablMapping = gloablMapping || {};
-  localMapping = localMapping || {};
+ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
+  try {
+    globalMapping = globalMapping || {};
+    localMapping = localMapping || {};
 
-  var type = this.getType_();
+    var type = this.getType_();
 
-  if (type === ValueType.VARIABLE) {
-    var mappedVal = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (mappedVal === undefined) {
-      throw new Error('No mapping for variable during evaluation');
+    if (type === ValueType.VARIABLE) {
+      var mappedVal = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (mappedVal === undefined) {
+        throw new Error('No mapping for variable during evaluation');
+      }
+
+      var clone = this.clone();
+      clone.setValue(mappedVal);
+      return clone.evaluate(globalMapping);
     }
 
-    var clone = this.clone();
-    clone.setValue(mappedVal);
-    return clone.evaluate(gloablMapping);
+    if (type === ValueType.FUNCTION_CALL) {
+      var functionDef = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (functionDef === undefined) {
+        throw new Error('No mapping for function during evaluation');
+      }
+
+      if (!functionDef.variables || !functionDef.expression) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+      if (functionDef.variables.length !== this.children_.length) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+
+      // We're calling a new function, so it gets a new local scope.
+      var newLocalMapping = {};
+      functionDef.variables.forEach(function (variable, index) {
+        var childVal = this.getChildValue(index);
+        newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
+      }, this);
+      return functionDef.expression.evaluate(globalMapping, newLocalMapping);
+    }
+
+    if (type === ValueType.NUMBER) {
+      return { result: this.value_ };
+    }
+
+    if (type !== ValueType.ARITHMETIC) {
+      throw new Error('Unexpected');
+    }
+
+    var left = this.children_[0].evaluate(globalMapping, localMapping);
+    if (left.err) {
+      throw left.err;
+    }
+    left = left.result;
+
+    if (this.children_.length === 1) {
+      switch (this.value_) {
+        case 'sqrt':
+          return { result: Math.sqrt(left) };
+        case 'sqr':
+          return { result: left * left };
+        default:
+          throw new Error('Unknown operator: ' + this.value_);
+        }
+    }
+
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+    if (right.err) {
+      throw right.err;
+    }
+    right = right.result;
+
+    switch (this.value_) {
+      case '+':
+        return { result: left + right };
+      case '-':
+        return { result: left - right };
+      case '*':
+        return { result: left * right };
+      case '/':
+        if (right === 0) {
+          throw new DivideByZeroError();
+        }
+        return { result: left / right };
+      case 'pow':
+        return { result: Math.pow(left, right) };
+      default:
+        throw new Error('Unknown operator: ' + this.value_);
+    }
+  } catch (err) {
+    return { err: err };
   }
-
-  if (type === ValueType.FUNCTION_CALL) {
-    var functionDef = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (functionDef === undefined) {
-      throw new Error('No mapping for function during evaluation');
-    }
-
-    if (!functionDef.variables || !functionDef.expression) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-    if (functionDef.variables.length !== this.children_.length) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-
-    // We're calling a new function, so it gets a new local scope.
-    var newLocalMapping = {};
-    functionDef.variables.forEach(function (variable, index) {
-      var childVal = this.getChildValue(index);
-      newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
-    }, this);
-    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
-  }
-
-  if (type === ValueType.NUMBER) {
-    return this.value_;
-  }
-
-  if (type !== ValueType.ARITHMETIC) {
-    throw new Error('Unexpected error');
-  }
-
-  var left = this.children_[0].evaluate(gloablMapping, localMapping);
-  var right = this.children_[1].evaluate(gloablMapping, localMapping);
-
-  switch (this.value_) {
-    case '+':
-      return left + right;
-    case '-':
-      return left - right;
-    case '*':
-      return left * right;
-    case '/':
-      return left / right;
-    default:
-      throw new Error('Unknown operator: ' + this.value_);
-    }
 };
 
 /**
@@ -1724,7 +1709,8 @@ ExpressionNode.prototype.getDeepestOperation = function () {
 
 /**
  * Collapses the next descendant in place. Next is defined as deepest, then
- * furthest left. Returns whether collapse was successful.
+ * furthest left.
+ * @returns {boolea} true if collapse was successful.
  */
 ExpressionNode.prototype.collapse = function () {
   var deepest = this.getDeepestOperation();
@@ -1734,7 +1720,11 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    this.value_ = this.evaluate();
+    var evaluation = this.evaluate();
+    if (evaluation.err) {
+      return false;
+    }
+    this.value_ = evaluation.result;
     this.children_ = [];
     return true;
   } else {
@@ -1956,4 +1946,134 @@ var Token = function (str, marked) {
 };
 ExpressionNode.Token = Token;
 
-},{"../utils":224}]},{},[39]);
+},{"../utils":224}],32:[function(require,module,exports){
+/**
+ * An equation is an expression attached to a particular name. For example:
+ *   f(x) = x + 1
+ *   name: f
+ *   equation: x + 1
+ *   params: ['x']
+ * In many cases, this will just be an expression with no name.
+ * @param {string} name Function or variable name. Null if compute expression
+ * @param {string[]} params List of parameter names if a function.
+ * @param {ExpressionNode} expression
+ */
+var Equation = function (name, params, expression) {
+  this.name = name;
+  this.params = params || [];
+  this.expression = expression;
+
+  if (arguments.length !== 3) {
+    throw new Error('Equation requires name, params, and expression');
+  }
+
+  this.signature = this.name;
+  if (this.params.length > 0) {
+    this.signature += '(' + this.params.join(',') + ')';
+  }
+};
+
+module.exports = Equation;
+
+/**
+ * @returns True if a function
+ */
+Equation.prototype.isFunction = function () {
+  return this.params.length > 0;
+};
+
+Equation.prototype.clone = function () {
+  return new Equation(this.name, this.params.slice(), this.expression.clone());
+};
+
+},{}],31:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
+  var msg = require('../../locale/current/calc');
+  var commonMsg = require('../../locale/current/common');
+; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"ejs":245}],29:[function(require,module,exports){
+/**
+ * Blockly Demo: Calc Graphics
+ *
+ * Copyright 2012 Google Inc.
+ * http://blockly.googlecode.com/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview Demonstration of Blockly: Calc Graphics.
+ * @author fraser@google.com (Neil Fraser)
+ */
+'use strict';
+
+var msg = require('../../locale/current/calc');
+var commonMsg = require('../../locale/current/common');
+
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
+
+// Install extensions to Blockly's language and JavaScript generator.
+exports.install = function(blockly, blockInstallOptions) {
+  var skin = blockInstallOptions.skin;
+
+  var generator = blockly.Generator.get('JavaScript');
+  blockly.JavaScript = generator;
+
+  var gensym = function(name) {
+    var NAME_TYPE = blockly.Variables.NAME_TYPE;
+    return generator.variableDB_.getDistinctName(name, NAME_TYPE);
+  };
+
+  sharedFunctionalBlocks.install(blockly, generator, gensym);
+
+  installCompute(blockly, generator, gensym);
+
+};
+
+function installCompute(blockly, generator, gensym) {
+  blockly.Blocks.functional_compute = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
+      ]);
+    }
+  };
+
+  generator.functional_compute = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
+  };
+}
+
+},{"../../locale/current/calc":228,"../../locale/current/common":229,"../sharedFunctionalBlocks":177}],228:[function(require,module,exports){
+/*calc*/ module.exports = window.blockly.appLocale;
+},{}]},{},[37]);
