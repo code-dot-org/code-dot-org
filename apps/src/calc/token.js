@@ -39,32 +39,24 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
   var text, textLength;
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
+  text.setAttributeNS("http://www.w3.org/XML/1998/namespace", "xml:space",
+    "preserve");
+
+  var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
+  tspan.textContent = this.nonRepeated_;
+  text.appendChild(tspan);
 
   if (this.repeated_) {
-    var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
-    tspan.textContent = this.nonRepeated_;
-    text.appendChild(tspan);
     tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.setAttribute('style', 'text-decoration: overline');
     tspan.textContent = this.repeated_;
     text.appendChild(tspan);
-  } else {
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    text.textContent = this.nonRepeated_.replace(/ /g, '_');
   }
 
   element.appendChild(text);
-  // getComputedTextLength isn't available to us in our mochaTests
-  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+  textLength = text.getBoundingClientRect().width;
 
-  if (!this.repeated_) {
-    // reset to version with spaces
-    text.textContent = this.nonRepeated_;
-  }
-
-  text.setAttribute('x', xPos + textLength / 2);
-  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {
     text.setAttribute('class', markClass);
   }
