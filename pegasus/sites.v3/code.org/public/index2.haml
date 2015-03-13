@@ -239,12 +239,13 @@ social:
 
   -if request.site != 'csedweek.org'
 
-    %h1.desktop-feature{style: "font-size: 24px; margin-top:80px; margin-bottom:20px; text-align:center; color: rgba(0,0,0,0.6)"}
-      Code.org thanks its supporters
+    #donorslider.desktop-feature{style: "background-color:rgba(118, 101, 160, 0.4)"}
+      %h1{style: "font-size: 24px; margin-top:30px; padding-top:30px; margin-bottom:0px; text-align:center; color: rgba(0,0,0,0.6)"}
+        Code.org thanks its supporters
 
-    .container_responsive{style: "margin-top:80px; margin-bottom:40px"}
-      #donor_slider.desktop-feature{:style=>'width: 100%'}
-        = view :donor_slider
+      .container_responsive{style: "margin-top:30px; margin-bottom:0px"}
+        #donor_slider.desktop-feature{:style=>'width: 100%'}
+          = view :donor_slider2
 
 = view 'popup_window.js'
 
