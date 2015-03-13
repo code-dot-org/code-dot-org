@@ -54,6 +54,15 @@ GEM
       builder
       mime-types
       xml-simple
+    aws-sdk (2.0.29)
+      aws-sdk-resources (= 2.0.29)
+    aws-sdk-core (2.0.29)
+      builder (~> 3.0)
+      jmespath (~> 1.0)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
+    aws-sdk-resources (2.0.29)
+      aws-sdk-core (= 2.0.29)
     bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -157,6 +166,8 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -377,6 +388,7 @@ DEPENDENCIES
   active_record_query_trace
   acts_as_list
   aws-s3
+  aws-sdk (~> 2)
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
