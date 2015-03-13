@@ -13,12 +13,15 @@ class Slack
     )
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
-
-    response = Net::HTTP.post_form(url, {
-      payload:payload.to_json
-    })
+    begin
+      response = Net::HTTP.post_form(url, {
+        payload:payload.to_json
+      })
     
-    response.code.to_s == '200'
+      response.code.to_s == '200'
+    rescue
+      return false
+    end
   end
   
 end
