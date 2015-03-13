@@ -23,6 +23,10 @@ def pegasus_dir(*paths)
   deploy_dir 'pegasus', *paths
 end
 
+def shared_dir(*paths)
+  deploy_dir 'pegasus', *paths
+end
+
 def cronjob(params)
   time = params[:at].to_s
   action = params[:do].to_s
