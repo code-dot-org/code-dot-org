@@ -6,4 +6,4 @@ Background:
 @new_courses
 Scenario: The level loads
   When I rotate to landscape
-  Then element "#blockly" is visible
+  Then element "#codeWorkspace" is visible

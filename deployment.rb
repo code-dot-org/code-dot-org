@@ -69,6 +69,8 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
+    'use_dynamo_tables'           => false,#[:staging, :production].include?(rack_env),
+    'dynamo_table_name'           => "#{rack_env}_tables",
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -79,7 +81,7 @@ def load_configuration()
     config.merge! global_config
     config.merge! local_config
 
-    config['apps_api_secret']     ||= config['poste_secret']
+    config['channels_api_secret']     ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']

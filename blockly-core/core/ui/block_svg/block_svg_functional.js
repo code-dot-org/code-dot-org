@@ -196,6 +196,8 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   // dragging
   this.inputMarkers_[input.name].setAttribute('visibility',
     input.connection.targetConnection ? 'hidden' : 'visible');
+  this.inputClickTargets_[input.name].setAttribute('visibility',
+    input.connection.targetConnection ? 'hidden' : 'visible');
 
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
 

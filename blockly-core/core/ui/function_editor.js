@@ -384,7 +384,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
-  goog.dom.getElement('blockly').appendChild(this.container_);
+  goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
         goog.bind(this.calculateMetrics_, this));

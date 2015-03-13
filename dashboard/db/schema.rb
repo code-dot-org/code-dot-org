@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306000000) do
+ActiveRecord::Schema.define(version: 20150312000253) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -441,6 +441,7 @@ ActiveRecord::Schema.define(version: 20150306000000) do
     t.string   "hashed_email"
     t.datetime "deleted_at"
     t.string   "secret_words"
+    t.text     "properties"
   end
 
   add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree

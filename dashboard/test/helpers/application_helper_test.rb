@@ -64,17 +64,6 @@ class ApplicationHelperTest < ActionView::TestCase
     assert !is_k1?
   end
 
-  test "playlab_freeplay_path for k1 levels" do
-    def current_user
-      OpenStruct.new(primary_script: OpenStruct.new('is_k1?'=>true))
-    end
-    assert_equal(script_stage_script_level_path('course1', 16, 6), playlab_freeplay_path)
-  end
-
-  test "artist_freeplay_path for non-k1 levels" do
-    assert_equal(script_stage_script_level_path('artist', 1, 10), artist_freeplay_path)
-  end
-
   test "windows phone 8.1 supported" do
     def request
       OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ' \

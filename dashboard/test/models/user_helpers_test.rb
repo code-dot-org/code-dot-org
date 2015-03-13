@@ -9,7 +9,7 @@ class UserHelpersTest < ActiveSupport::TestCase
       UserHelpers.sponsor_message(teacher)
 
     student = create :student
-    assert_equal "Someone made the generous gift to sponsor your learning.",
+    assert_equal "Someone made the generous gift to sponsor your learning. A generous <a href=\"http://code.org/donate\">gift of $1 to Code.org</a> will help another student learn.",
       UserHelpers.sponsor_message(student)
   end
 end
