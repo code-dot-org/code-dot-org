@@ -69,7 +69,7 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'use_dynamo_tables'           => [:staging, :production].include?(rack_env),
+    'use_dynamo_tables'           => false,#[:staging, :production].include?(rack_env),
     'dynamo_table_name'           => "#{rack_env}_tables",
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
