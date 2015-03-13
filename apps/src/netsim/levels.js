@@ -23,6 +23,11 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
+ * @property {string} instructionsLocKey - Localization key (function name)
+ *           to instructions string for the given level.  Together with the
+ *           localization system, determines the contents of the "Instructions"
+ *           tab in the interface.
+ *
  * @property {EncodingType[]} showEncodingControls
  *
  * @property {EncodingType[]} defaultEnabledEncodings
@@ -62,7 +67,7 @@ levels.default = {
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  // Nothing here yet!
+  instructionsLocKey: "instructions_default",
 
   // "My Device" tab and its controls
   showEncodingControls: [
@@ -95,6 +100,8 @@ levels.variant1 = utils.extend(levels.default, {
 
   showTabs: [NetSimTabType.INSTRUCTIONS],
 
+  instructionsLocKey: "instructions_variant1",
+
   defaultEnabledEncodings: [EncodingType.A_AND_B]
 });
 
@@ -106,6 +113,7 @@ levels.variant1 = utils.extend(levels.default, {
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
+  instructionsLocKey: "instructions_variant2",
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
 });
@@ -125,6 +133,8 @@ levels.variant3 = utils.extend(levels.default, {
     NetSimTabType.ROUTER,
     NetSimTabType.DNS
   ],
+
+  instructionsLocKey: "instructions_variant3",
 
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII],
