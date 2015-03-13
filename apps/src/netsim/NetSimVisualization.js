@@ -171,13 +171,12 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
   if (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
-      this.localNode.isLocalNode = true;
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
-      this.localNode.isLocalNode = true;
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
@@ -392,8 +391,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
   if (vizEntity instanceof NetSimVizNode) {
     neighbors = this.getWiresAttachedToNode(vizEntity);
   } else if (vizEntity instanceof NetSimVizWire) {
-    neighbors.push(vizEntity.localVizNode);
-    neighbors.push(vizEntity.remoteVizNode);
+    if (vizEntity.localVizNode) {
+      neighbors.push(vizEntity.localVizNode);
+    }
+
+    if (vizEntity.remoteVizNode) {
+      neighbors.push(vizEntity.remoteVizNode);
+    }
   }
 
   return neighbors.filter(function (vizEntity) {

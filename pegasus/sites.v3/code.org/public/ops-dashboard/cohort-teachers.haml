@@ -48,6 +48,7 @@ theme: none
       %th.manage-th
         District
       %th.manage-th
+        %a.btn.btn-primary{"ng-click" => "saveAll(cohort)", "ng-show" => "editingAny(cohort.teachers)", "ng-disabled" => "form.$invalid"} Save All
     %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top"}
       %td
         %div{"ng-hide" => "teacher.editing"}
@@ -76,6 +77,5 @@ theme: none
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
           %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing"} Edit
-          %a.btn.btn-primary.btn-xs{"ng-click" => "save(teacher)", "ng-show" => "teacher.editing", "ng-disabled" => "form.$invalid"} Save
           %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher)", "ng-show" => "teacher.editing"} Cancel
           %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete

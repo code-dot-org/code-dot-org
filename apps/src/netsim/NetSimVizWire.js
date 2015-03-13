@@ -52,8 +52,13 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
 
-  this.localVizNode.setAddress(sourceWire.localAddress);
-  this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  if (this.localVizNode) {
+    this.localVizNode.setAddress(sourceWire.localAddress);
+  }
+
+  if (this.remoteVizNode) {
+    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
 };
 
 NetSimVizWire.prototype.render = function () {
