@@ -1160,7 +1160,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      workspaceDiv.style.visibility = 'visible';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.visibility = 'visible';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
