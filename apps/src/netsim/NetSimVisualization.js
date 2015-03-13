@@ -171,13 +171,12 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
   if (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
-      this.localNode.isLocalNode = true;
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
-      this.localNode.isLocalNode = true;
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
