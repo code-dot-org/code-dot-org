@@ -109,7 +109,7 @@ class DynamoTable
   def delete(id)
     begin
       db.delete_item(
-        table_name:'shared_tables',
+        table_name:CDO.dynamo_table_name,
         key:{'hash'=>@hash, 'row_id'=>id},
         expected:row_id_exists(id),
       )
@@ -125,7 +125,7 @@ class DynamoTable
 
   def fetch(id)
     row = db.get_item(
-      table_name:'shared_tables',
+      table_name:CDO.dynamo_table_name,
       key:{'hash'=>@hash, 'row_id'=>id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
@@ -140,7 +140,7 @@ class DynamoTable
       row_id = next_id
 
       db.put_item(
-        table_name:'shared_tables',
+        table_name:CDO.dynamo_table_name,
         item:{
           hash:@hash, 
           row_id:row_id,
@@ -161,7 +161,7 @@ class DynamoTable
   
   def next_id()
     page = db.query(
-      table_name:'shared_tables',
+      table_name:CDO.dynamo_table_name,
       key_conditions: {
         "hash" => {
           attribute_value_list: [@hash],
@@ -190,7 +190,7 @@ class DynamoTable
   def update(id, value, ip_address)
     begin
       db.put_item(
-        table_name:'shared_tables',
+        table_name:CDO.dynamo_table_name,
         item:{
           hash:@hash, 
           row_id:id,
@@ -213,7 +213,7 @@ class DynamoTable
     [].tap do |results|
       begin
         page = db.query(
-          table_name:'shared_tables',
+          table_name:CDO.dynamo_table_name,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
