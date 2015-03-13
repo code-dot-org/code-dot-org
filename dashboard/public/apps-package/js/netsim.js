@@ -5552,7 +5552,7 @@ var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
       new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_m'));
-  this.messageTable.setPollingInterval(3000);
+  this.messageTable.setPollingInterval(1000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
