@@ -965,4 +965,35 @@ describe("ExpressionNode", function () {
       assert(node.isDivZero() === true);
     });
   });
+
+  it('hasSameValue_', function () {
+    var node, other;
+
+    // no other
+    node = new ExpressionNode(1);
+    other = null;
+    assert.equal(node.hasSameValue_(other), false);
+
+    // numbers
+    node = new ExpressionNode(1);
+    other = new ExpressionNode(1);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode(1);
+    other = new ExpressionNode(2);
+    assert.equal(node.hasSameValue_(other), false);
+
+    // strings
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('+', [1, 2]);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('+', [3, 4]);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('-', [3, 4]);
+    assert.equal(node.hasSameValue_(other), false);
+  });
 });

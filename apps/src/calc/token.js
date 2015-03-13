@@ -35,7 +35,6 @@ Token.prototype.addToParent = function (element, xPos, markClass) {
   text = document.createElementNS(Blockly.SVG_NS, 'text');
 
   if (this.repeated_) {
-    // TODO -validate we get error token
     var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.textContent = this.nonRepeated_;
     text.appendChild(tspan);
@@ -43,9 +42,6 @@ Token.prototype.addToParent = function (element, xPos, markClass) {
     tspan.setAttribute('style', 'text-decoration: overline');
     tspan.textContent = this.repeated_;
     text.appendChild(tspan);
-
-    // TODO - validate how things look if we have another string on the same line
-    // later
   } else {
     // getComputedTextLength doesn't respect trailing spaces, so we replace them
     // with _, calculate our size, then return to the version with spaces.
