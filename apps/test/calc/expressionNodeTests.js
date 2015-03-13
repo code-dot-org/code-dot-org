@@ -701,6 +701,20 @@ describe("ExpressionNode", function () {
         ]);
       });
     });
+
+    it('diff repeaters that are thes ame', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      assert(node.collapse());
+      var expected = node.clone();
+      var tokenList = node.getTokenListDiff(expected);
+      
+      assert.equal(tokenList.length, 1);
+      assert(tokenList[0].str instanceof RepeaterString);
+      assert.equal(tokenList[0].str.beforeDecimal, "0");
+      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
+      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
+
+    });
   });
 
   describe("getTokenList", function () {
@@ -771,7 +785,23 @@ describe("ExpressionNode", function () {
 
     it('repeating fraction', function () {
       var node = new ExpressionNode('/', [1, 9]);
-      node.collapse();
+      assert(node.collapse());
+
+      var tokenList = node.getTokenList(false);
+      assert.equal(tokenList.length, 1);
+      assert(tokenList[0].str instanceof RepeaterString);
+      assert.equal(tokenList[0].str.beforeDecimal, "0");
+      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
+      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
+    });
+
+    it('repeating fraction after multiple collapses', function () {
+      var node = new ExpressionNode('*', [
+        1,
+        new ExpressionNode('/', [1, 9])
+      ]);
+      assert(node.collapse());
+      assert(node.collapse());
 
       var tokenList = node.getTokenList(false);
       assert.equal(tokenList.length, 1);
