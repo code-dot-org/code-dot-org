@@ -958,6 +958,7 @@ function displayFeedback() {
     response: appState.response,
     level: level,
     feedbackType: appState.testResults,
+    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },

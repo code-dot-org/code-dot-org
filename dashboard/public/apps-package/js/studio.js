@@ -1404,6 +1404,7 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && (level.freePlay),
