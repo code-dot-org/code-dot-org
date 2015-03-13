@@ -398,7 +398,6 @@ title: "Ops Dashboard"
     $scope.cohort.$promise.then(function(cohort) {
     });
 
-    $scope.parsed  = [];
     // This depends on HTML5 File object so does not work in IE9. This
     // particular feature is only used by the ops team who all use Chrome.
     $scope.onFileSelect = function(input) {
@@ -409,11 +408,28 @@ title: "Ops Dashboard"
         Papa.parse(files[0], {
           header: true,
           complete: function(results) {
-            $scope.cohort.teachers = results.data;
-            $scope.$apply();
+            if (results.data) {
+              for (var i = 0; i < results.data.length; i++) {
+                results.data[i].editing = true;
+              }
+              $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
+              $scope.$apply();
+            }
           }
         });
       }
+    };
+
+    $scope.editingAny = function(things) {
+      if (!things) {
+        return false;
+      }
+      for (var i = 0; i < things.length; i++) {
+        if (things[i].editing) {
+          return true;
+        }
+      }
+      return false;
     }
 
     $scope.edit = function(teacher) {
@@ -444,14 +460,13 @@ title: "Ops Dashboard"
       $scope.cohort.teachers.unshift({editing: true});
     };
 
-    $scope.save = function(teachers) {
-      if (!$.isArray(teachers)) {
-        return $scope.save([teachers]);
-      }
-
-      var newTeachers = [];
-      var modifiedTeachers = [];
-    }
+    $scope.saveAll = function(cohort) {
+      cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
+        function() {
+          $scope.cohort = cohortsService.get({id: $routeParams.id});
+        }
+      ).catch($scope.genericError);
+    };
   }
   ]);
 
