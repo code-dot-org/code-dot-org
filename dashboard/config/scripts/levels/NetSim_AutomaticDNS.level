@@ -5,6 +5,7 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
+    "instructionsLocKey": "instructions_AutomaticDNS",
     "showTabs": [
       "instructions",
       "my_device",

@@ -4,6 +4,8 @@
   "created_at": "2015-01-20T02:25:10.000Z",
   "level_num": "variant2",
   "user_id": 1,
-  "properties": {}
+  "properties": {
+    "instructionsLocKey": "instructions_SendAscii"
+  }
 }]]></config>
 </NetSim>

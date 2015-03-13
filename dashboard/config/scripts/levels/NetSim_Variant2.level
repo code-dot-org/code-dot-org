@@ -4,10 +4,6 @@
   "created_at": "2015-01-20T02:25:10.000Z",
   "level_num": "variant2",
   "user_id": 1,
-  "properties": {
-    "instructionsLocKey": "instructions_SendBits",
-    "showEncodingControls": ["none"],
-    "defaultEnabledEncodings": ["binary"]
-  }
+  "properties": {}
 }]]></config>
 </NetSim>
