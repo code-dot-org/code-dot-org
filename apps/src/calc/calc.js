@@ -31,7 +31,8 @@ var levels = require('./levels');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
-var _ = require('../utils').getLodash();
+var utils = require('../utils');
+var _ = utils.getLodash();
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -75,20 +76,21 @@ var stepSpeed = 2000;
  * ExpressionNodes to allow for token list generation.
  * @param {ExpressionNode|Equation|jsnumber|string} one
  * @param {ExpressionNode|Equation|jsnumber|string} two
+ * @param {boolean} markDeepest Only valid if we have a single input. Passed on
+ *   to getTokenList.
  * @returns {Token[]}
  */
-
- // TODO - do i need markDeepest?
-function constructTokenList(one, two) {
+function constructTokenList(one, two, markDeepest) {
   one = asExpressionNode(one);
   two = asExpressionNode(two);
+
+  markDeepest = utils.valueOr(markDeepest, false);
 
   var tokenList;
 
   if (!one) {
     return null;
   } else if (!two) {
-    var markDeepest = false;
     tokenList = one.getTokenList(markDeepest);
   } else {
     tokenList = one.getTokenListDiff(two);
@@ -856,7 +858,7 @@ function animateUserExpression (maxNumSteps) {
     if (numCollapses === maxNumSteps) {
       // This is the last line in the current animation, highlight what has
       // changed since the last line
-      tokenList = getTokens(current, previousExpression);
+      tokenList = constructTokenList(current, previousExpression);
     } else if (numCollapses + 1 === maxNumSteps) {
       // This is the second to last line. Highlight the block being collapsed,
       // and the deepest operation (that will be collapsed on the next line)
@@ -864,10 +866,10 @@ function animateUserExpression (maxNumSteps) {
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
-      tokenList = getTokens(current, null, true);
+      tokenList = constructTokenList(current, null, true);
     } else {
       // Don't highlight anything
-      tokenList = getTokens(current);
+      tokenList = constructTokenList(current);
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
