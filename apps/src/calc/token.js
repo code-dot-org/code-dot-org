@@ -1,5 +1,4 @@
 var jsnums = require('./js-numbers/js-numbers');
-var jsnums = require('./js-numbers/js-numbers');
 
 /**
  * A token is a value, and a boolean indicating whether or not it is "marked".
@@ -39,11 +38,11 @@ Token.prototype.addToParent = function (element, xPos, markClass) {
     // TODO -validate we get error token
     var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.textContent = this.nonRepeated_;
-    element.appendChild(tspan);
+    text.appendChild(tspan);
     tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.setAttribute('style', 'text-decoration: overline');
     tspan.textContent = this.repeated_;
-    element.appendChild(tspan);
+    text.appendChild(tspan);
 
     // TODO - validate how things look if we have another string on the same line
     // later

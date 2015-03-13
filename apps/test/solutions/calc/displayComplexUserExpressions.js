@@ -329,6 +329,56 @@ function customValidator(assert) {
     assert.equal(g.children.length, 9);
   });
 
+  displayComplexUserExpressionTest(assert, 'non repeating fraction', function () {
+    // compute: 1 / 4
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('/', [1, 4])));
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+
+    // line 1: (1 / 4) = 0.25
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], '(', null);
+    validateTextElement(g.children[1], '1', null);
+    validateTextElement(g.children[2], ' / ', null);
+    validateTextElement(g.children[3], '4', null);
+    validateTextElement(g.children[4], ')', null);
+    validateTextElement(g.children[5], ' = ', null);
+    validateTextElement(g.children[6], '0.25', null);
+    assert.equal(g.children.length, 7);
+  });
+
+  displayComplexUserExpressionTest(assert, 'repeating fraction', function () {
+    // compute: 1 / 9
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('/', [1, 9])));
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+
+    // line 1: (1 / 9) = 0._1
+    var g = userExpression.children[0];
+    validateTextElement(g.children[0], '(', null);
+    validateTextElement(g.children[1], '1', null);
+    validateTextElement(g.children[2], ' / ', null);
+    validateTextElement(g.children[3], '9', null);
+    validateTextElement(g.children[4], ')', null);
+    validateTextElement(g.children[5], ' = ', null);
+    var text = g.children[6];
+    assert.equal(text.children.length, 2);
+    validateTextElement(text.children[0], '0.', null);
+    validateTextElement(text.children[1], '1', null);
+    assert.equal(text.children[1].getAttribute('style'), 'text-decoration: overline');
+    assert.equal(g.children.length, 7);
+  });
+
   return true;
 }
 

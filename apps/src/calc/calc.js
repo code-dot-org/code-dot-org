@@ -81,6 +81,12 @@ function getTokenList(one, two) {
   if (two instanceof Equation) {
     two = two.expression;
   }
+  if (jsnums.isSchemeNumber(one)) {
+    one = new ExpressionNode(one);
+  }
+  if (jsnums.isSchemeNumber(two)) {
+    two = new ExpressionNode(two);
+  }
   if (typeof(one) === 'string') {
     var marked = (one !== two && two !== undefined);
     return [new Token(one, marked)];
@@ -722,13 +728,13 @@ function displayComplexUserExpressions() {
     }
   }
   if (!divZeroInUserSet) {
-    result = evaluation.result.toFixnum().toString();
+    result = evaluation.result;
     var expectedResult = result;
     // Note: we could make singleVariable case smarter and evaluate target using
     // user constant value
     if (appState.targetSet.computeEquation() !== null &&
         !appState.targetSet.computesSingleVariable()) {
-      expectedResult = appState.targetSet.evaluate().result.toString();
+      expectedResult = appState.targetSet.evaluate().result;
     }
 
     // add a tokenList diffing our results
