@@ -29,6 +29,7 @@
   "receivedMessageLog": "Received Message Log",
   "removePacket": "Remove Packet",
   "router": "Router",
+  "routerX": "Router {x}",
   "send": "Send",
   "sendAMessage": "Send a Message",
   "sentMessageLog": "Sent Message Log",
