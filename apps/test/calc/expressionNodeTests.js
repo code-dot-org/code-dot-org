@@ -7,7 +7,6 @@ var testUtils = require('../util/testUtils');
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var Token = require(testUtils.buildPath('/calc/token'));
 var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
-var RepeaterString = require(testUtils.buildPath('/calc/repeaterString'));
 
 describe("debug output of an ExpressionNode tree", function () {
   it("works in some simple cases", function () {
@@ -486,7 +485,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(1);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          new Token('1', false)
+          new Token(jsnums.makeFloat(1), false)
         ]);
       });
 
@@ -494,7 +493,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(2);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          new Token('2', true)
+          new Token(jsnums.makeFloat(2), true)
         ]);
       });
 
@@ -503,9 +502,9 @@ describe("ExpressionNode", function () {
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('(', true),
-          new Token('1', true),
+          new Token(jsnums.makeFloat(1), true),
           new Token(' + ', true),
-          new Token('2', true),
+          new Token(jsnums.makeFloat(2), true),
           new Token(')', true)
         ]);
       });
@@ -552,9 +551,9 @@ describe("ExpressionNode", function () {
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('(', false),
-          new Token('1', false),
+          new Token(jsnums.makeFloat(1), false),
           new Token(' + ', false),
-          new Token('2', false),
+          new Token(jsnums.makeFloat(2), false),
           new Token(')', false)
         ]);
       });
@@ -565,9 +564,9 @@ describe("ExpressionNode", function () {
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('(', true),
-          new Token('1', true),
+          new Token(jsnums.makeFloat(1), true),
           new Token(' - ', true),
-          new Token('2', true),
+          new Token(jsnums.makeFloat(2), true),
           new Token(')', true)
         ]);
       });
@@ -578,9 +577,9 @@ describe("ExpressionNode", function () {
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('(', false),
-          new Token('2', true),
+          new Token(jsnums.makeFloat(2), true),
           new Token(' + ', false),
-          new Token('2', false),
+          new Token(jsnums.makeFloat(2), false),
           new Token(')', false)
         ]);
       });
@@ -591,9 +590,9 @@ describe("ExpressionNode", function () {
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('(', false),
-          new Token('1', false),
+          new Token(jsnums.makeFloat(1), false),
           new Token(' + ', false),
-          new Token('3', true),
+          new Token(jsnums.makeFloat(3), true),
           new Token(')', false)
         ]);
       });
@@ -610,12 +609,12 @@ describe("ExpressionNode", function () {
       var tokenList = node.getTokenListDiff(original);
       assert.deepEqual(tokenList, [
         new Token('(', false),
-        new Token('3', true),
+        new Token(jsnums.makeFloat(3), true),
         new Token(' * ', false),
         new Token('(', false),
-        new Token('3', false),
+        new Token(jsnums.makeFloat(3), false),
         new Token(' + ', false),
-        new Token('4', false),
+        new Token(jsnums.makeFloat(4), false),
         new Token(')', false),
         new Token(')', false)
       ]);
@@ -623,7 +622,11 @@ describe("ExpressionNode", function () {
 
     describe("function calls", function () {
       var node, tokenList;
-      var expected = new ExpressionNode('f', ['1', '2', '3']);
+      var expected = new ExpressionNode('f', [
+        new ExpressionNode(1),
+        new ExpressionNode(2),
+        new ExpressionNode(3)
+      ]);
 
       it("marks nothing when calls are identical", function () {
         node = expected.clone();
@@ -631,101 +634,134 @@ describe("ExpressionNode", function () {
         assert.deepEqual(tokenList, [
           new Token('f', false),
           new Token('(', false),
-          new Token('1', false),
+          new Token(jsnums.makeFloat(1), false),
           new Token(',', false),
-          new Token('2', false),
+          new Token(jsnums.makeFloat(2), false),
           new Token(',', false),
-          new Token('3', false),
+          new Token(jsnums.makeFloat(3), false),
           new Token(')', false),
         ]);
       });
 
       it("marks everything when calling function of wrong name", function () {
-        node = new ExpressionNode('g', ['1', '2', '3']);
+        node = new ExpressionNode('g', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(3)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('g', true),
           new Token('(', true),
-          new Token('1', true),
+          new Token(jsnums.makeFloat(1), true),
           new Token(',', true),
-          new Token('2', true),
+          new Token(jsnums.makeFloat(2), true),
           new Token(',', true),
-          new Token('3', true),
+          new Token(jsnums.makeFloat(3), true),
           new Token(')', true),
         ]);
       });
 
       it ("marks only one param when one param is wrong", function () {
-        node = new ExpressionNode('f', ['1', '2', '4']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(4)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('f', false),
           new Token('(', false),
-          new Token('1', false),
+          new Token(jsnums.makeFloat(1), false),
           new Token(',', false),
-          new Token('2', false),
+          new Token(jsnums.makeFloat(2), false),
           new Token(',', false),
-          new Token('4', true),
+          new Token(jsnums.makeFloat(4), true),
           new Token(')', false),
         ]);
       });
 
       it ("marks all params when all are wrong", function () {
-        node = new ExpressionNode('f', ['4', '5', '6']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(4),
+          new ExpressionNode(5),
+          new ExpressionNode(6)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('f', false),
           new Token('(', false),
-          new Token('4', true),
+          new Token(jsnums.makeFloat(4), true),
           new Token(',', false),
-          new Token('5', true),
+          new Token(jsnums.makeFloat(5), true),
           new Token(',', false),
-          new Token('6', true),
+          new Token(jsnums.makeFloat(6), true),
           new Token(')', false),
         ]);
       });
 
       it ("marks everything but the function when wrong number of params", function () {
-        node = new ExpressionNode('f', ['1', '2', '3', '4']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(3),
+          new ExpressionNode(4)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
           new Token('f', false),
           new Token('(', true),
-          new Token('1', true),
+          new Token(jsnums.makeFloat(1), true),
           new Token(',', true),
-          new Token('2', true),
+          new Token(jsnums.makeFloat(2), true),
           new Token(',', true),
-          new Token('3', true),
+          new Token(jsnums.makeFloat(3), true),
           new Token(',', true),
-          new Token('4', true),
+          new Token(jsnums.makeFloat(4), true),
           new Token(')', true),
         ]);
       });
     });
 
-    it('diff repeaters that are thes ame', function () {
+    it('diff repeaters that are the same', function () {
       var node = new ExpressionNode('/', [1, 9]);
       assert(node.collapse());
       var expected = node.clone();
       var tokenList = node.getTokenListDiff(expected);
 
-      assert.equal(tokenList.length, 1);
-      assert(tokenList[0].str instanceof RepeaterString);
-      assert.equal(tokenList[0].str.beforeDecimal, "0");
-      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
-      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
 
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
     });
+
+    it('diff repeaters with something different', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      assert(node.collapse());
+      var expected = new ExpressionNode(0.1);
+      var tokenList = node.getTokenListDiff(expected);
+
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, true)
+      ]);
+    });
+
+
   });
 
   describe("getTokenList", function () {
     it("single value", function () {
       var node = new ExpressionNode(1);
       assert.deepEqual(node.getTokenList(false), [
-        new Token('1', false)
+        new Token(jsnums.makeFloat(1), false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
-        new Token('1', true)
+        new Token(jsnums.makeFloat(1), true)
       ]);
     });
 
@@ -733,16 +769,16 @@ describe("ExpressionNode", function () {
       var node = new ExpressionNode('+', [1, 2]);
       assert.deepEqual(node.getTokenList(false), [
         new Token('(', false),
-        new Token('1', false),
+        new Token(jsnums.makeFloat(1), false),
         new Token(' + ', false),
-        new Token('2', false),
+        new Token(jsnums.makeFloat(2), false),
         new Token(')', false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
         new Token('(', true),
-        new Token('1', true),
+        new Token(jsnums.makeFloat(1), true),
         new Token(' + ', true),
-        new Token('2', true),
+        new Token(jsnums.makeFloat(2), true),
         new Token(')', true)
       ]);
     });
@@ -755,23 +791,23 @@ describe("ExpressionNode", function () {
       assert.deepEqual(node.getTokenList(false), [
         new Token('(', false),
         new Token('(', false),
-        new Token('1', false),
+        new Token(jsnums.makeFloat(1), false),
         new Token(' * ', false),
-        new Token('2', false),
+        new Token(jsnums.makeFloat(2), false),
         new Token(')', false),
         new Token(' + ', false),
-        new Token('3', false),
+        new Token(jsnums.makeFloat(3), false),
         new Token(')', false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
         new Token('(', false),
         new Token('(', true),
-        new Token('1', true),
+        new Token(jsnums.makeFloat(1), true),
         new Token(' * ', true),
-        new Token('2', true),
+        new Token(jsnums.makeFloat(2), true),
         new Token(')', true),
         new Token(' + ', false),
-        new Token('3', false),
+        new Token(jsnums.makeFloat(3), false),
         new Token(')', false)
       ]);
     });
@@ -780,20 +816,21 @@ describe("ExpressionNode", function () {
       var node = new ExpressionNode('/', [1, 4]);
       node.collapse();
       assert.deepEqual(node.getTokenList(false), [
-        new Token('0.25', false)
+        new Token(jsnums.makeFloat('0.25').toExact(), false)
       ]);
     });
 
     it('repeating fraction', function () {
       var node = new ExpressionNode('/', [1, 9]);
       assert(node.collapse());
-
       var tokenList = node.getTokenList(false);
-      assert.equal(tokenList.length, 1);
-      assert(tokenList[0].str instanceof RepeaterString);
-      assert.equal(tokenList[0].str.beforeDecimal, "0");
-      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
-      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
+
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
     });
 
     it('repeating fraction after multiple collapses', function () {
@@ -805,11 +842,12 @@ describe("ExpressionNode", function () {
       assert(node.collapse());
 
       var tokenList = node.getTokenList(false);
-      assert.equal(tokenList.length, 1);
-      assert(tokenList[0].str instanceof RepeaterString);
-      assert.equal(tokenList[0].str.beforeDecimal, "0");
-      assert.equal(tokenList[0].str.nonRepeatingAfterDecimal, "");
-      assert.equal(tokenList[0].str.repeatingAfterDecimal, "1");
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
     });
   });
 
