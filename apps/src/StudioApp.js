@@ -1109,7 +1109,9 @@ StudioApp.prototype.configureDom = function (config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
+  } else if (config.hideSource) {
+      visualizationColumn.style.position = "relative";
+  } else {
     visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
     if (config.pinWorkspaceToBottom) {
       container.className = codeWorkspace.className + " pin_bottom";
