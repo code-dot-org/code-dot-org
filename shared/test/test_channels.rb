@@ -5,18 +5,12 @@ require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-module Rack
-  module Test
-    module Methods
-      def build_rack_mock_session
-        Rack::MockSession.new(ChannelsApi, 'studio.code.org')
-      end
-    end
-  end
-end
-
 class ChannelsTest < Minitest::Unit::TestCase
   include Rack::Test::Methods
+
+  def build_rack_mock_session
+    Rack::MockSession.new(ChannelsApi, 'studio.code.org')
+  end
 
   def test_create_channel
     post '/v3/channels', {'hello' => 'world'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
