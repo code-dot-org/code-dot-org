@@ -4,6 +4,7 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
