@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var netsimMsg = require('../../locale/current/netsim');
+var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
@@ -295,7 +295,7 @@ NetSimRouterNode.prototype.update = function (onComplete) {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
-  return netsimMsg.routerX({
+  return i18n.routerX({
     x: this.entityID
   });
 };

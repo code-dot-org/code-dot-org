@@ -239,10 +239,7 @@ NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
   }.bind(this));
 };
 
-/**
- * Send message to connected remote
- * @private
- */
+/** Send message to connected remote */
 NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   // Make sure to perform packet truncation here.
   var packetBinaries = this.packets_.map(function (packetEditor) {
