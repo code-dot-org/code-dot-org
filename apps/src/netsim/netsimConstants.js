@@ -24,6 +24,15 @@ exports.BITS_PER_NIBBLE = 4;
 exports.BITS_PER_BYTE = 8;
 
 /**
+ * Types of nodes that can show up in the simulation.
+ * @enum {string}
+ */
+exports.NodeType = {
+  CLIENT: 'client',
+  ROUTER: 'router'
+};
+
+/**
  * DNS modes for the simulator.  Only applies in variant 3, when connecting
  * to a router.
  * @enum {string}

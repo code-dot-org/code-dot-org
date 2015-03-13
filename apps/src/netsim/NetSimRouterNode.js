@@ -12,12 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
 var netsimConstants = require('./netsimConstants');
-var DnsMode = netsimConstants.DnsMode;
-var PacketHeaderType = netsimConstants.PacketHeaderType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -28,8 +23,17 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
+
+var _ = utils.getLodash();
+
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
+
+var DnsMode = netsimConstants.DnsMode;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
+var NodeType = netsimConstants.NodeType;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
 
@@ -295,10 +299,7 @@ NetSimRouterNode.prototype.getDisplayName = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getNodeType = function () {
-  return NetSimRouterNode.getNodeType();
-};
-NetSimRouterNode.getNodeType = function () {
-  return 'router';
+  return NodeType.ROUTER;
 };
 
 /**
