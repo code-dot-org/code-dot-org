@@ -341,5 +341,11 @@ svg {
     #netsim .netsim_tabs .netsim_dns_tab .netsim_dns_table tr.dnsNode {
       color: white;
       background-color: darkorange; }
+    #netsim .netsim_tabs .netsim_dns_tab .dns_notes div {
+      padding-right: 14px; }
+      #netsim .netsim_tabs .netsim_dns_tab .dns_notes div textarea {
+        resize: none;
+        width: 100%;
+        height: 100px; }
   #netsim .netsim_panel.netsim_status_panel div.panel_body {
     padding: 1em; }

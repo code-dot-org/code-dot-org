@@ -4353,11 +4353,8 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === DnsMode.MANUAL) {
-    this.rootDiv_.find('.dns_manual_control').show();
-  } else {
-    this.rootDiv_.find('.dns_manual_control').hide();
-  }
+  this.rootDiv_.find('.dns_manual_control').toggle(newDnsMode === DnsMode.MANUAL);
+  this.rootDiv_.find('.dns_notes').toggle(newDnsMode !== DnsMode.NONE);
 };
 
 /**
@@ -4503,7 +4500,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n  <div class="dns_notes">\n    <h1>Notes</h1>\n    <div>\n      <textarea></textarea>\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
