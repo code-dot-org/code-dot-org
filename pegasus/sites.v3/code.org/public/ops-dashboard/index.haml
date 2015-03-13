@@ -305,10 +305,12 @@ title: "Ops Dashboard"
       }
   }]);
 
-  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, programTypesService) {
       $scope.hasCohorts = false;
       $scope.cohorts = cohortsService.query();
+      $scope.program_types = programTypesService;
+
 
       $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
