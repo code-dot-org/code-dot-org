@@ -5632,8 +5632,7 @@ StudioApp.prototype.configureDom = function (config) {
     if (config.pinWorkspaceToBottom) {
       container.className = codeWorkspace.className + " pin_bottom";
     } else {
-      codeWorkspace.style.height = vizHeight + 'px';
-      container.style.height = vizHeight + 'px';
+      container.style.minHeight = vizHeight + 'px';
     }
   }
 
