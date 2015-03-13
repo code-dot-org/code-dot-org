@@ -25,17 +25,14 @@ Milestone Complete!
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates ####
-
-2/21/2015
-<br />
+#### Save The Date ####
 4/11/2015
 
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
 
-#### February 21st Location ####
+#### April 11th Location ####
 
 Nova Southeastern University (NSU)
 <br />
@@ -48,7 +45,7 @@ Room 1048
 Fort-Lauderdale-Davie, FL 33314
 <br />
 
-NSU is providing free parking to all Code.org PD Participants on the 2nd and 3rd floors of the NSU Parking Garage. Please go [here](/files/nsuparkingpass.pdf) to print your parking pass and [here](/files/NSUdirections.pdf) for directions to the Carl DeSantis Building at NSU. 
+NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -61,6 +58,17 @@ Laptop
 
 #### Save the Dates
 6/8/2015 - 6/10/2015
+
+#### Location
+
+Nova Southeastern University (NSU)
+<br />
+Carl DeSantis Building
+<br />
+3301 College Avenue
+<br />
+Fort-Lauderdale-Davie, FL 33314
+<br />
 
 [**Back to the top**](#top)
 <a id="mss"></a>

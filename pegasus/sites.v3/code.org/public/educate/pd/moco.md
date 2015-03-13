@@ -33,15 +33,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 Breakfast and lunch will be served. 
 
 #### March 28th Location ####
-Howard University
-<br />
-LK Downing Engineering Building 
-<br />
-Classroom 2114
-<br />
-2300 Sixth St. NW
-<br />
-Washington, DC 20059
+We are confirming a location within Montgomery County and will notify you of the exact location as soon as possible. 
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -51,7 +43,17 @@ Green Code.org journal
 Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015 
+
+#### Save the Dates:
+
+7/27/15 - 7/29/15
+
+#### Location
+College of Southern Maryland
+<br />
+8730 Mitchell Road
+<br />
+La Plata, MD 20646
 
 <br/>
 [**Back to the top**](#top)

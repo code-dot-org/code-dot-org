@@ -14,6 +14,13 @@ template: none
 - if dashboard_user[:admin]
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New Workshop
+
+%form{style:'display:inline; float:right;'}
+  From:
+  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  To:
+  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+
 %table{style:'width:100%; margin-top:20px;'}
   %tr
     %th.manage-th
@@ -27,14 +34,14 @@ template: none
         Teacher Cohort
     %th.manage-th
       %a{'ng-click' => 'order = "date"'}
-        Start Date
+        Dates
     %th.manage-th
       %a{'ng-click' => 'order = "address"'}
         Address
     - if dashboard_user[:admin]
       %th.manage-th
         Manage
-  %tr{'ng-repeat' => 'workshop in workshops | orderBy:order'}
+  %tr{'ng-repeat' => 'workshop in workshops | withinDateRange:dateRangeStart:dateRangeEnd | orderBy:order'}
     %td
       %p
         {{workshop.name}}
@@ -47,8 +54,12 @@ template: none
       %span
         {{cohortName(workshop.cohort_id)}}
     %td
-      %div{'ng-repeat' => 'segment in workshopSegments'}
-        {{segment.start | date:'longDate'}}
+      %div{'ng-repeat' => 'segment in workshop.segments'}
+        {{segment.start | utc | date:'longDate'}}
+        %br
+        {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+        %br
+        %br
     %td
       %span
         {{workshop.location}}
