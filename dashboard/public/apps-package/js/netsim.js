@@ -333,6 +333,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
   }
+  this.visualization_.setDnsMode(newDnsMode);
 };
 
 /**
@@ -357,6 +358,13 @@ NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.visualization_.setDnsNodeID(dnsNodeID);
 };
 
 /**
@@ -534,6 +542,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
+  this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };
@@ -907,6 +916,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
@@ -1212,6 +1222,30 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   }
 };
 
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Tell all nodes about the new DNS mode, so they can decide whether to
+  // show or hide their address.
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setDnsMode(newDnsMode);
+    }
+  });
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+    }
+  });
+};
+
 },{"../utils":224,"./NetSimVizNode":162,"./NetSimVizWire":163,"./NetSimWire":164,"./netsimUtils":172,"./tweens":175}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -1266,6 +1300,14 @@ NetSimVizWire.inherits(NetSimVizEntity);
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+
+  if (this.localVizNode) {
+    this.localVizNode.setAddress(sourceWire.localAddress);
+  }
+
+  if (this.remoteVizNode) {
+    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
 };
 
 NetSimVizWire.prototype.render = function () {
@@ -1307,6 +1349,7 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
 
 /**
@@ -1317,9 +1360,22 @@ var tweens = require('./tweens');
 var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -1327,23 +1383,65 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.isRouter = false;
 
   /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
    *
    * @type {jQuery}
    * @private
    */
-  this.circle_ = jQuerySvgElement('circle')
+  jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
+      .attr('r', radius)
       .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
+      .attr('y', textVerticalOffset)
       .appendTo(root);
 
-// Set an initial default tween for zooming in from nothing.
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  var addressBoxHalfWidth = 15;
+  var addressBoxHalfHeight = 12;
+
+  jQuerySvgElement('rect')
+      .addClass('address-box')
+      .attr('x', -addressBoxHalfWidth)
+      .attr('y', -addressBoxHalfHeight)
+      .attr('rx', 5)
+      .attr('ry', 10)
+      .attr('width', addressBoxHalfWidth * 2)
+      .attr('height', addressBoxHalfHeight * 2)
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
@@ -1358,6 +1456,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
+
+  this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
     this.isRouter = true;
@@ -1402,7 +1502,44 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
-},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  // Routers never show their address
+  // If a DNS mode has not been set we never show an address
+  if (this.isRouter || this.dnsMode_ === undefined) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
+  }
+};
+
+},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimConstants":171,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3913,6 +4050,8 @@ exports.jQuerySvgElement = function (type) {
         })) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
+    // Return element for chaining
+    return newElement;
   };
 
   return newElement;

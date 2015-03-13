@@ -8,17 +8,25 @@
   clear: both; }
 
 svg {
-  background-color: #000;
+  background-color: white;
   border: solid black thin;
   border-radius: 25px; }
+  svg .viz-node text {
+    text-anchor: middle; }
   svg .viz-node circle {
-    stroke: white;
+    stroke: black;
     stroke-width: 2;
     fill: lightblue; }
+  svg .viz-node rect.address-box {
+    stroke: black;
+    stroke-width: 2px;
+    fill: white; }
+  svg .viz-node text.address-box {
+    font-weight: bold; }
   svg .router-node circle {
     fill: yellow; }
   svg .viz-wire {
-    stroke: white;
+    stroke: black;
     stroke-width: 2; }
 
 /* Sprited icons. */
