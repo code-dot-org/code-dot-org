@@ -190,7 +190,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 course4 frozen hourofcode algebra algPDmiami}.
+    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 frozen hourofcode algPDmiami}.
       map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
