@@ -382,6 +382,8 @@ svg {
   */
   .netsim_send_panel {
 
+
+
     .netsim_packet {
       border: solid darkgray thin;
       background-color: #ddd;
@@ -416,6 +418,9 @@ svg {
       .bit_counter {
         text-align: right;
         color: darkgray;
+      }
+      .bit_counter.oversized {
+        color: red;
       }
 
       /* All columns but "message" */
@@ -475,6 +480,10 @@ svg {
     .send_widget_footer {
       text-align: right;
       margin: 10px;
+
+      .netsim_packet_size_control {
+        width: 300px;
+      }
     }
   }
 

@@ -18,6 +18,7 @@ var markup = require('./NetSimSendPanel.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -68,6 +69,13 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
   this.message = '';
 
   /**
+   * Maximum packet length configurable by slider.
+   * @type {Number}
+   * @private
+   */
+  this.currentPacketSize_ = Infinity;
+
+  /**
    * Bits per chunk/byte for parsing and formatting purposes.
    * @type {number}
    * @private
@@ -88,6 +96,10 @@ NetSimSendPanel.prototype.render = function () {
   // Put our own content into the panel body
   var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
+
+  this.packetSizeControl_ = new NetSimPacketSizeControl(
+      this.rootDiv_.find('.packet_size'),
+      this.packetSizeChangeCallback_.bind(this));
 
   this.bindElements_();
   this.updateFields_();
@@ -373,11 +385,7 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
     }
   });
 
-  var packetBinary = this.getPacketBinary_();
-  this.bitCounter.html(netsimMsg.bitCounter({
-    x: packetBinary.length,
-    y: netsimMsg.infinity()
-  }));
+  this.updateBitCounter();
 
   // TODO: Hide columns by configuration
   this.getBody().find('th.packetInfo, td.packetInfo').hide();
@@ -441,4 +449,25 @@ NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
 NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.updateFields_();
+};
+
+NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
+  this.currentPacketSize_ = newPacketSize;
+  this.updateBitCounter();
+};
+
+NetSimSendPanel.prototype.updateBitCounter = function () {
+  var size = this.getPacketBinary_().length;
+  var maxSize = this.currentPacketSize_ === Infinity ?
+      netsimMsg.infinity() : this.currentPacketSize_;
+  this.bitCounter.html(netsimMsg.bitCounter({
+    x: size,
+    y: maxSize
+  }));
+
+  if (size <= this.currentPacketSize_) {
+    this.bitCounter.removeClass('oversized');
+  } else {
+    this.bitCounter.addClass('oversized');
+  }
 };
