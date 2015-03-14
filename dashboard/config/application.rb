@@ -20,14 +20,14 @@ module Dashboard
   class Application < Rails::Application
 
     # Make sure these middleware are at the very top of the stack and in the correct order:
-    config.middleware.insert_after Rack::Runtime, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, ChannelsApi
-    config.middleware.insert_after ChannelsApi, PropertiesApi
-    config.middleware.insert_after PropertiesApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.use VarnishEnvironment
+    config.middleware.use ChannelsApi
+    config.middleware.use PropertiesApi
+    config.middleware.use TablesApi
+    config.middleware.use SharedResources
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.insert_after SharedResources, PegasusSites
+      config.middleware.use PegasusSites
     end
 
     config.encoding = 'utf-8'
