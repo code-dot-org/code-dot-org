@@ -44,10 +44,9 @@ html[dir='rtl'] #visualizationColumn {
   right: 0px; }
 
 #visualizationColumn {
-  position: absolute;
+  position: relative;
   top: 0px;
-  left: 0px;
-  bottom: 10px; }
+  left: 0px; }
 
 div.droplet-palette-group-header {
   font-family: 'Gotham 4r', sans-serif;
