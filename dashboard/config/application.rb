@@ -20,7 +20,7 @@ module Dashboard
   class Application < Rails::Application
 
     # Make sure these middleware are at the very top of the stack and in the correct order:
-    config.middleware.insert_before 0, VarnishEnvironment
+    config.middleware.insert_after Rack::Runtime, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
