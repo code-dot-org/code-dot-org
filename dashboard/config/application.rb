@@ -19,7 +19,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
-    config.middleware.insert_before ActionDispatch::ParamsParser, VarnishEnvironment
+    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
