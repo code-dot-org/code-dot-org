@@ -155,7 +155,8 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
-    honeybadger (2.0.8)
+    honeybadger (1.11.2)
+      json
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -411,7 +412,7 @@ DEPENDENCIES
   haml-rails
   heroku_rails_deflate
   highline (~> 1.6.21)
-  honeybadger (~> 2.0.8)
+  honeybadger (~> 1.11.2)
   i18nema
   jbuilder (~> 1.2)
   jquery-rails
