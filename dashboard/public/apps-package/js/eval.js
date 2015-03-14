@@ -442,6 +442,7 @@ var displayFeedback = function(response) {
     feedbackType: Eval.testResults,
     response: response,
     level: level,
+    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
@@ -464,7 +465,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":229,"../../locale/current/eval":230,"../StudioApp":4,"../block_utils":19,"../canvg/canvg.js":41,"../codegen":44,"../dom":47,"../skins":178,"../templates/page.html":203,"./api":49,"./controls.html":51,"./evalError":55,"./evalText":61,"./levels":64,"./visualization.html":66}],66:[function(require,module,exports){
+},{"../../locale/current/common":229,"../../locale/current/eval":230,"../StudioApp":4,"../block_utils":18,"../canvg/canvg.js":40,"../codegen":44,"../dom":47,"../skins":178,"../templates/page.html":203,"./api":49,"./controls.html":51,"./evalError":55,"./evalText":61,"./levels":64,"./visualization.html":66}],66:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -552,7 +553,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":230,"../block_utils":19}],51:[function(require,module,exports){
+},{"../../locale/current/eval":230,"../block_utils":18}],51:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

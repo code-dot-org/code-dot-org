@@ -1,4 +1,4 @@
-function storageApps()
+function channels()
 {
   var object = {
     api_base_url: "/v3/channels",

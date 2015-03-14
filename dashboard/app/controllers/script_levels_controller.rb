@@ -93,7 +93,7 @@ private
   def load_level_source
     # Set start blocks to the user's previous attempt at this puzzle. Must be called after
     # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
-    if current_user
+    if current_user && @level.game.name != 'Jigsaw'
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
   end
@@ -103,6 +103,7 @@ private
     @level = @script_level.level
     @game = @level.game
     @stage = @script_level.stage
+    @no_footer_puzzle = (@game == Game.applab)
 
     set_videos_and_blocks_and_callouts
 

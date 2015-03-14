@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],41:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3644,8 +3644,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n        <span> ', escape((81,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n    ');85; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="blockly-header"><span>', escape((86,  msg.clearPuzzle() )), '</span></div>\n    ');87; } ; buf.push('\n  </div>\n  ');89; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');91; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (33,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((39,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((40,  msg.runProgram() )), '</div>\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((44,  msg.resetProgram() )), '</div>\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');47; if (data.controls) { ; buf.push('\n      ', (48,  data.controls ), '\n      ');49; } ; buf.push('\n      ');50; if (data.extraControlRows) { ; buf.push('\n      ', (51,  data.extraControlRows ), '\n      ');52; } ; buf.push('\n    </div>\n    ');54; instructions() ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((59,  data.localeDirection )), '">\n    <div id="toolbox-header" class="workspace-header"><span>', escape((60,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="workspace-header">\n      <span id="workspace-header-span">', escape((62,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((64,  data.blockCounterClass )), '>\n          ', escape((65,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((68,  data.idealBlockNumber )), '</span>\n        <span> ', escape((69,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="workspace-header"><span>', escape((72,  msg.showCodeHeader() )), '</span></div>\n    ');73; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((74,  msg.clearPuzzle() )), '</span></div>\n    ');75; } ; buf.push('\n  </div>\n  ');77; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');79; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4069,7 +4068,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":20,"./dom":47,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4347,7 +4346,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":229,"./block_utils":19,"./utils":224,"./xml":225}],20:[function(require,module,exports){
+},{"../locale/current/common":229,"./block_utils":18,"./utils":224,"./xml":225}],19:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4857,7 +4856,7 @@ StudioApp.prototype.init = function(config) {
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
-      startBlocks: config.level.startBlocks,
+      startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject
     });
@@ -5130,7 +5129,7 @@ StudioApp.prototype.localeDirection = function() {
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
 StudioApp.prototype.initReadonly = function(options) {
-  Blockly.inject(document.getElementById('blockly'), {
+  Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
     rtl: this.isRtl(),
@@ -5255,27 +5254,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-
   // First, grab the main app container
-  // This is inconsistently named across apps right now
-  // TODO (bbuchanan) : Unify parent app container names
-  var div;
-  if (this.editCode) {
-    div = document.getElementById('codeWorkspace');
-  } else if (this.isUsingBlockly()) {
-    div = document.getElementById('blockly');
-  }
-
+  var div = document.getElementById('codeWorkspace');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
-  var parentHeight = parseInt(parentStyle.height, 10);
-
-  var headers = document.getElementById('headers');
-  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
-
-  div.style.top = divParent.offsetTop + 'px';
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
@@ -5289,28 +5273,6 @@ StudioApp.prototype.onResize = function() {
     });
   }
 
-  if (this.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  if (this.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
-  div.style.width = fullWorkspaceWidth + 'px';
   this.resizeHeaders(fullWorkspaceWidth);
 };
 
@@ -5326,11 +5288,6 @@ StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   var clearPuzzleWidth = clearPuzzleHeader ?
       clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var headersDiv = document.getElementById('headers');
-  if (headersDiv) {
-    headersDiv.style.width = fullWorkspaceWidth + 'px';
-  }
 
   var toolboxHeader = document.getElementById('toolbox-header');
   if (toolboxHeader) {
@@ -5625,6 +5582,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
@@ -5637,6 +5595,7 @@ StudioApp.prototype.configureDom = function (config) {
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
+  // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
   if (referenceArea) {
@@ -5651,21 +5610,30 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
+  if (config.hideSource) {
+    visualizationColumn.style.position = "relative";
+  } else {
+    var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(codeWorkspace, 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      vizHeight = 3000;
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
     }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    visualizationColumn.style.minHeight = vizHeight + 'px';
+    if (config.pinWorkspaceToBottom) {
+      container.className = codeWorkspace.className + " pin_bottom";
+    } else {
+      container.style.minHeight = vizHeight + 'px';
+    }
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5681,9 +5649,7 @@ StudioApp.prototype.configureDom = function (config) {
 StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
-  var workspaceDiv = this.editCode ?
-    document.getElementById('codeWorkspace') :
-    container.querySelector('#blockly');
+  var workspaceDiv = document.getElementById('codeWorkspace');
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
@@ -5709,7 +5675,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      workspaceDiv.style.visibility = 'visible';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.visibility = 'visible';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -5819,7 +5787,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     }
   }
 
-  var div = document.getElementById('blockly');
+  var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
@@ -5952,7 +5920,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":19,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
+},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7557,6 +7525,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
+      tryAgainText: options.tryAgainText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -7740,12 +7709,18 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
 FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
+
+  var tryAgainText = '';
+  if (options.feedbackType !== TestResults.ALL_PASS) {
+    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
+  }
+
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
-      tryAgain: options.feedbackType !== TestResults.ALL_PASS,
+      tryAgain: tryAgainText,
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
@@ -8749,7 +8724,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  msg.tryAgain() )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  msg.tryAgain() )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  msg.tryAgain() )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8901,7 +8876,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -16491,7 +16466,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var xml = require('./xml');
 
 /**

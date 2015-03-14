@@ -28,7 +28,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 To make computer science more accessible for all students, the <a href="http://www.google.com/url?q=http%3A%2F%2Feducation.ky.gov%2Fcurriculum%2FDocuments%2FGrad_Req_FAQ.doc&sa=D&sntz=1&usg=AFQjCNF1aJE2afsCrgYcpMNfEHPATlJvWw"_blank">Kentucky Department of Education</a> now recognizes computer science as a fourth mathematics course or an elective science course if it involves computational thinking, problem solving, computer programming, and a significant emphasis on the science and engineering practices. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing this policy adopted by the Kentucky Department of Education by counting computer science as a mathematics graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing this policy adopted by the Kentucky Department of Education to count computer science as a mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 Sincerely, 
 
@@ -60,5 +60,5 @@ My school district does not currently count computer science as a mathematics cr
  
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the Kentucky Department of Education counts computer science as a mathematics graduation credit. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a mathematics graduation requirement in accordance with the Kentucky Department of Education’s regulations. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  

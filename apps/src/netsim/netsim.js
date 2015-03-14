@@ -307,6 +307,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
   }
+  this.visualization_.setDnsMode(newDnsMode);
 };
 
 /**
@@ -317,9 +318,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
   if (this.myConnectedRouter_) {
-    var router = this.myConnectedRouter_;
-    router.dnsMode = newDnsMode;
-    router.update();
+    this.myConnectedRouter_.setDnsMode(newDnsMode);
   }
 };
 
@@ -333,6 +332,13 @@ NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.visualization_.setDnsNodeID(dnsNodeID);
 };
 
 /**
@@ -510,6 +516,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
+  this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };

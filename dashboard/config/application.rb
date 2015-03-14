@@ -5,7 +5,9 @@ require 'rails/all'
 
 require 'cdo/geocoder'
 require 'varnish_environment'
-require 'apps_api'
+require 'channels_api'
+require 'properties_api'
+require 'tables_api'
 require 'shared_resources'
 
 require 'bootstrap-sass'
@@ -19,8 +21,10 @@ module Dashboard
 
     # Make sure these middleware are at the very top of the stack and in the correct order:
     config.middleware.insert_before 0, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, AppsApi
-    config.middleware.insert_after AppsApi, SharedResources
+    config.middleware.insert_after VarnishEnvironment, ChannelsApi
+    config.middleware.insert_after ChannelsApi, PropertiesApi
+    config.middleware.insert_after PropertiesApi, TablesApi
+    config.middleware.insert_after TablesApi, SharedResources
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites

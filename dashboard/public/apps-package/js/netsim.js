@@ -333,6 +333,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
   }
+  this.visualization_.setDnsMode(newDnsMode);
 };
 
 /**
@@ -343,9 +344,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
   if (this.myConnectedRouter_) {
-    var router = this.myConnectedRouter_;
-    router.dnsMode = newDnsMode;
-    router.update();
+    this.myConnectedRouter_.setDnsMode(newDnsMode);
   }
 };
 
@@ -359,6 +358,13 @@ NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.visualization_.setDnsNodeID(dnsNodeID);
 };
 
 /**
@@ -536,6 +542,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
+  this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };
@@ -566,8 +573,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var netsimMsg = require('../../locale/current/netsim');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="appcontainer">\n  <div id="netsim">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered_group" transform="translate(150,150)">\n            <g id="background_group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground_group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((69,  data.localeDirection )), '">\n    ');70; instructions() ; buf.push('\n    ');71; helpArea(data.helpHtml) ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n    <div id="netsim_rightcol">\n      <div id="netsim_status"></div>\n      <div id="netsim_vizualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered_group" transform="translate(150,150)">\n            <g id="background_group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground_group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim_tabs"></div>\n    </div>\n    <div id="netsim_leftcol">\n      <div class="leftcol_disconnected">\n        <div id="netsim_lobby_container"></div>\n      </div>\n      <div class="leftcol_connected">\n        <div id="netsim_received"></div>\n        <div id="netsim_sent"></div>\n        <div id="netsim_send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((65,  data.localeDirection )), '">\n    ');66; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -910,6 +916,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
@@ -1124,8 +1131,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
   if (vizEntity instanceof NetSimVizNode) {
     neighbors = this.getWiresAttachedToNode(vizEntity);
   } else if (vizEntity instanceof NetSimVizWire) {
-    neighbors.push(vizEntity.localVizNode);
-    neighbors.push(vizEntity.remoteVizNode);
+    if (vizEntity.localVizNode) {
+      neighbors.push(vizEntity.localVizNode);
+    }
+
+    if (vizEntity.remoteVizNode) {
+      neighbors.push(vizEntity.remoteVizNode);
+    }
   }
 
   return neighbors.filter(function (vizEntity) {
@@ -1210,6 +1222,30 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   }
 };
 
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Tell all nodes about the new DNS mode, so they can decide whether to
+  // show or hide their address.
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setDnsMode(newDnsMode);
+    }
+  });
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+    }
+  });
+};
+
 },{"../utils":224,"./NetSimVizNode":162,"./NetSimVizWire":163,"./NetSimWire":164,"./netsimUtils":172,"./tweens":175}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -1264,6 +1300,14 @@ NetSimVizWire.inherits(NetSimVizEntity);
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+
+  if (this.localVizNode) {
+    this.localVizNode.setAddress(sourceWire.localAddress);
+  }
+
+  if (this.remoteVizNode) {
+    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
 };
 
 NetSimVizWire.prototype.render = function () {
@@ -1305,6 +1349,7 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
 
 /**
@@ -1315,9 +1360,22 @@ var tweens = require('./tweens');
 var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -1325,23 +1383,65 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.isRouter = false;
 
   /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
    *
    * @type {jQuery}
    * @private
    */
-  this.circle_ = jQuerySvgElement('circle')
+  jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
+      .attr('r', radius)
       .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
+      .attr('y', textVerticalOffset)
       .appendTo(root);
 
-// Set an initial default tween for zooming in from nothing.
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  var addressBoxHalfWidth = 15;
+  var addressBoxHalfHeight = 12;
+
+  jQuerySvgElement('rect')
+      .addClass('address-box')
+      .attr('x', -addressBoxHalfWidth)
+      .attr('y', -addressBoxHalfHeight)
+      .attr('rx', 5)
+      .attr('ry', 10)
+      .attr('width', addressBoxHalfWidth * 2)
+      .attr('height', addressBoxHalfHeight * 2)
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
@@ -1356,6 +1456,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
+
+  this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
     this.isRouter = true;
@@ -1400,7 +1502,44 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
-},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  // Routers never show their address
+  // If a DNS mode has not been set we never show an address
+  if (this.isRouter || this.dnsMode_ === undefined) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
+  }
+};
+
+},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimConstants":171,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2570,7 +2709,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var netsimMsg = require('../../locale/current/netsim'); ; buf.push('\n<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((7,  netsimMsg.to() )), '></th>\n      <th nowrap class="fromAddress">', escape((8,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((9,  netsimMsg.packet() )), '</th>\n      <th class="message">', escape((10,  netsimMsg.message() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">', escape((15,  netsimMsg.ascii() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((18,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">', escape((22,  netsimMsg.decimal() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((25,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">', escape((29,  netsimMsg.hex() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((32,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">', escape((36,  netsimMsg.binary() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((39,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">', escape((49,  netsimMsg.send() )), '</span>\n</div>\n'); })();
+ buf.push('');1; var netsimMsg = require('../../locale/current/netsim'); ; buf.push('\n<div class="netsim_packet">\n  <table>\n    <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((7,  netsimMsg.to() )), '</th>\n      <th nowrap class="fromAddress">', escape((8,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((9,  netsimMsg.packet() )), '</th>\n      <th class="message">', escape((10,  netsimMsg.message() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr class="ascii">\n      <th nowrap class="encodingLabel">', escape((15,  netsimMsg.ascii() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((18,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="decimal">\n      <th nowrap class="encodingLabel">', escape((22,  netsimMsg.decimal() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((25,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="hexadecimal">\n      <th nowrap class="encodingLabel">', escape((29,  netsimMsg.hex() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((32,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    <tr class="binary">\n      <th nowrap class="encodingLabel">', escape((36,  netsimMsg.binary() )), '</th>\n      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((39,  netsimMsg._of_() )), '<input type="text" readonly class="packetCount" /></td>\n      <td class="message"><div><textarea class="message"></textarea></div></td>\n    </tr>\n    </tbody>\n  </table>\n  <div class="bit_counter"></div>\n</div>\n<div class="send_widget_footer">\n  <!-- Packet size slider -->\n  <!-- Add packet button -->\n  <span class="netsim_button" id="send_button">', escape((49,  netsimMsg.send() )), '</span>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3911,6 +4050,8 @@ exports.jQuerySvgElement = function (type) {
         })) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
+    // Return element for chaining
+    return newElement;
   };
 
   return newElement;
@@ -4212,11 +4353,8 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === DnsMode.MANUAL) {
-    this.rootDiv_.find('.dns_manual_control').show();
-  } else {
-    this.rootDiv_.find('.dns_manual_control').hide();
-  }
+  this.rootDiv_.find('.dns_manual_control').toggle(newDnsMode === DnsMode.MANUAL);
+  this.rootDiv_.find('.dns_notes').toggle(newDnsMode !== DnsMode.NONE);
 };
 
 /**
@@ -4362,7 +4500,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n  <div class="dns_notes">\n    <h1>Notes</h1>\n    <div>\n      <textarea></textarea>\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -5510,7 +5648,7 @@ CleanLogs.prototype.onBegin_ = function () {
 /* global window */
 'use strict';
 
-var SharedTable = require('../appsApi').SharedTable;
+var SharedTable = require('../clientApi').SharedTable;
 var NetSimTable = require('./NetSimTable');
 
 /**
@@ -5519,13 +5657,13 @@ var NetSimTable = require('./NetSimTable');
  * @readonly
  */
 // TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var APP_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
+var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
 // Ugly null-guards so we can load this file in tests.
 if (window &&
     window.location &&
     window.location.hostname &&
     window.location.hostname.split('.')[0] === 'localhost') {
-  APP_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
+  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
 }
 
 /**
@@ -5541,25 +5679,25 @@ if (window &&
 var NetSimShard = module.exports = function (shardID) {
   /** @type {NetSimTable} */
   this.nodeTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_n'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_n'));
 
   /** @type {NetSimTable} */
   this.wireTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_w'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_w'));
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_m'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_m'));
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_l'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_l'));
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
   this.heartbeatTable = new NetSimTable(
-      new SharedTable(APP_PUBLIC_KEY, shardID + '_h'));
+      new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_h'));
 };
 
 /**
@@ -5574,7 +5712,8 @@ NetSimShard.prototype.tick = function (clock) {
   this.messageTable.tick(clock);
   this.logTable.tick(clock);
 };
-},{"../appsApi":18,"./NetSimTable":157}],157:[function(require,module,exports){
+
+},{"../clientApi":43,"./NetSimTable":157}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5817,7 +5956,10 @@ NetSimTable.prototype.tick = function () {
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var DnsMode = require('./netsimConstants').DnsMode;
+var netsimConstants = require('./netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -5828,6 +5970,8 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
+var intToBinary = dataConverters.intToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -5836,6 +5980,13 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @readonly
  */
 var MAX_CLIENT_CONNECTIONS = 6;
+
+/**
+ * Conveniently, a router's address in its local network is always zero.
+ * @type {number}
+ * @readonly
+ */
+var ROUTER_LOCAL_ADDRESS = 0;
 
 /**
  * Client model of simulated router
@@ -6146,6 +6297,22 @@ NetSimRouterNode.prototype.stopSimulation = function () {
 };
 
 /**
+ * Puts the router into the given DNS mode, triggers a remote update,
+ * and creates/destroys the network's automatic DNS node.
+ * @param {DnsMode} newDnsMode
+ */
+NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
+  if (this.dnsMode === newDnsMode) {
+    return;
+  }
+
+  // TODO (bbuchanan): Handle DNS node management here
+
+  this.dnsMode = newDnsMode;
+  this.update();
+};
+
+/**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
  * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
@@ -6271,7 +6438,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     wire.localAddress = newAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = 0; // Always 0 for routers
+    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
@@ -6437,6 +6604,14 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     return;
   }
 
+  // Automatic DNS: requests to address zero hit the "automatic DNS" system
+  // and generate responses.
+  // TODO (bbuchanan): Send to a real auto-dns node
+  if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
+    this.generateDnsResponse_(message, myWires);
+    return;
+  }
+
   var destWires = myWires.filter(function (wire) {
     return wire.localAddress === toAddress;
   });
@@ -6459,6 +6634,74 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       function () {
         this.log(message.payload);
       }.bind(this)
+  );
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {NetSimWire[]} myWires
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
+  var fromAddress, query;
+
+  // Extract message contents
+  try {
+    fromAddress = dataConverters.binaryToInt(
+        PacketEncoder.defaultPacketEncoder.getField('fromAddress', message.payload));
+    query = dataConverters.binaryToAscii(
+        PacketEncoder.defaultPacketEncoder.getField('message', message.payload),
+        BITS_PER_BYTE);
+  } catch (error) {
+    // Malformed packet, ignore
+    return;
+  }
+
+  // Check that the query is well-formed
+  // Regex match "GET [hostnames...]"
+  // Then below, we'll split the hostnames on whitespace to process them.
+  var requestMatch = query.match(/GET\s+(\S.*)/);
+  if (requestMatch === null) {
+    // Malformed request, send back directions
+    NetSimMessage.send(
+        this.shard_,
+        ROUTER_LOCAL_ADDRESS,
+        fromAddress,
+        PacketEncoder.defaultPacketEncoder.createBinary({
+          fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+          toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+          packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+          packetCount: intToBinary(1, BITS_PER_NIBBLE),
+          message: asciiToBinary("Automatic DNS Node" +
+              "\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
+        }),
+        function() {}
+    );
+    return;
+  }
+
+  // Good request, look up all addresses and build up response
+  // Skipping first match, which is the full regex
+  var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
+    var wire = _.find(myWires, function (wire) {
+      return wire.localHostname === queryHostname;
+    });
+
+    return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
+  });
+
+  NetSimMessage.send(
+      this.shard_,
+      ROUTER_LOCAL_ADDRESS,
+      fromAddress,
+      PacketEncoder.defaultPacketEncoder.createBinary({
+        fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+        toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+        packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+        packetCount: intToBinary(1, BITS_PER_NIBBLE),
+        message: asciiToBinary(responses.join(' '), BITS_PER_BYTE)
+      }),
+      function() {}
   );
 };
 
@@ -8393,6 +8636,18 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
 'use strict';
 
 /**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_NIBBLE = 4;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_BYTE = 8;
+
+/**
  * DNS modes for the simulator.  Only applies in variant 3, when connecting
  * to a router.
  * @enum {string}
@@ -8805,7 +9060,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":224}],18:[function(require,module,exports){
+},{"./utils":224}],43:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -8857,8 +9112,10 @@ require('./utils');
  *        method being invoked.
  */
 
-/** Namespace for app storage. */
-var appsApi = module.exports;
+/** 
+ * Namespace for the client API for accessing channels, tables and properties.
+ */
+var clientApi = module.exports;
 
 var ApiRequestHelper = function (baseUrl) {
   this.apiBaseUrl_ = baseUrl;
@@ -8940,17 +9197,17 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
 };
 
 /**
- * API for master channel list on the server.
+ * API for accessing channel resources on the server.
  * @constructor
  */
-appsApi.AppsTable = function () {
+clientApi.Channel = function () {
   this.requestHelper_ = new ApiRequestHelper('/v3/channels');
 };
 
 /**
  * @param {!NodeStyleCallback} callback
  */
-appsApi.AppsTable.prototype.readAll = function (callback) {
+clientApi.Channel.prototype.readAll = function (callback) {
   this.requestHelper_.get('', callback);
 };
 
@@ -8958,7 +9215,7 @@ appsApi.AppsTable.prototype.readAll = function (callback) {
  * @param {!string} id - unique app GUID
  * @param {!NodeStyleCallback} callback
  */
-appsApi.AppsTable.prototype.read = function (id, callback) {
+clientApi.Channel.prototype.read = function (id, callback) {
   this.requestHelper_.get('/' + id, callback);
 };
 
@@ -8966,7 +9223,7 @@ appsApi.AppsTable.prototype.read = function (id, callback) {
  * @param {!Object} value
  * @param {!NodeStyleCallback} callback
  */
-appsApi.AppsTable.prototype.create = function (value, callback) {
+clientApi.Channel.prototype.create = function (value, callback) {
   this.requestHelper_.postToGet('', value, callback);
 };
 
@@ -8975,7 +9232,7 @@ appsApi.AppsTable.prototype.create = function (value, callback) {
  * @param {!Object} value
  * @param {!NodeStyleCallback} callback
  */
-appsApi.AppsTable.prototype.update = function (id, value, callback) {
+clientApi.Channel.prototype.update = function (id, value, callback) {
   this.requestHelper_.post('/' + id, value, callback);
 };
 
@@ -8983,59 +9240,59 @@ appsApi.AppsTable.prototype.update = function (id, value, callback) {
  * @param {!string} id
  * @param {!NodeStyleCallback} callback
  */
-appsApi.AppsTable.prototype.delete = function (id, callback) {
+clientApi.Channel.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
 };
 
 /**
- * App-specific Shared Storage Table
+ * Channel-specific Shared Storage Table
  * Data stored in this table can by modified and retrieved by all users of
- * a particular app, but is not shared between apps.
- * Only real difference with parent class AppsTable is that these
+ * a particular channel, but is not shared between channels.
+ * Only real difference with parent class Channel is that these
  * tables deal in numeric row IDs, not string GUIDs.  Implementation
  * shouldn't care though.
  * @constructor
- * @augments appsApi.AppsTable
+ * @augments clientApi.Channel
  */
-appsApi.SharedTable = function (app_publickey, table_name) {
-  appsApi.AppsTable.call(this);
+clientApi.SharedTable = function (channel_publickey, table_name) {
+  clientApi.Channel.call(this);
   /** Shared tables just use a different base URL */
   this.requestHelper_ = new ApiRequestHelper('/v3/shared-tables/' +
-      app_publickey + '/' + table_name);
+      channel_publickey + '/' + table_name);
 };
-appsApi.SharedTable.inherits(appsApi.AppsTable);
+clientApi.SharedTable.inherits(clientApi.Channel);
 
 /**
- * App-specific User Storage Table
+ * Channel-specific User Storage Table
  * Data stored in this table can only be modified and retrieved by a particular
- * user of an app.
+ * user of a channel.
  * @constructor
- * @augments appsApi.AppsTable
+ * @augments clientApi.Channel
  */
-appsApi.UserTable = function (app_publickey, table_name) {
-  appsApi.AppsTable.call(this);
+clientApi.UserTable = function (channel_publickey, table_name) {
+  clientApi.Channel.call(this);
   /** User tables just use a different base URL */
   this.requestHelper_ = new ApiRequestHelper('/v3/user-tables/' +
-      app_publickey + '/' + table_name);
+      channel_publickey + '/' + table_name);
 };
-appsApi.UserTable.inherits(appsApi.AppsTable);
+clientApi.UserTable.inherits(clientApi.Channel);
 
 /**
  * API for interacting with app property bags on the server.
  * This property bag is shared between all users of the app.
  *
- * @param {!string} app_publickey
+ * @param {!string} channel_publickey
  * @constructor
  */
-appsApi.PropertyBag = function (app_publickey) {
+clientApi.PropertyBag = function (channel_publickey) {
   this.requestHelper_ = new ApiRequestHelper('/v3/shared-properties/' +
-      app_publickey);
+      channel_publickey);
 };
 
 /**
  * @param {!NodeStyleCallback} callback
  */
-appsApi.PropertyBag.prototype.readAll = function (callback) {
+clientApi.PropertyBag.prototype.readAll = function (callback) {
   this.requestHelper_.get('', callback);
 };
 
@@ -9043,7 +9300,7 @@ appsApi.PropertyBag.prototype.readAll = function (callback) {
  * @param {string} key
  * @param {!NodeStyleCallback} callback
  */
-appsApi.PropertyBag.prototype.read = function (key, callback) {
+clientApi.PropertyBag.prototype.read = function (key, callback) {
   this.requestHelper_.get('/' + key, callback);
 };
 
@@ -9052,7 +9309,7 @@ appsApi.PropertyBag.prototype.read = function (key, callback) {
  * @param {Object} value
  * @param {!NodeStyleCallback} callback
  */
-appsApi.PropertyBag.prototype.set = function (key, value, callback) {
+clientApi.PropertyBag.prototype.set = function (key, value, callback) {
   this.requestHelper_.post('/' + key, value, callback);
 };
 
@@ -9060,24 +9317,24 @@ appsApi.PropertyBag.prototype.set = function (key, value, callback) {
  * @param {string} key
  * @param {!NodeStyleCallback} callback
  */
-appsApi.PropertyBag.prototype.delete = function (key, callback) {
+clientApi.PropertyBag.prototype.delete = function (key, callback) {
   this.requestHelper_.delete('/' + key, callback);
 };
 
 /**
  * App-specific User-specific property bag
  * Only accessible to the current user of the particular app.
- * @param app_publickey
+ * @param channel_publickey
  * @constructor
- * @augments appsApi.PropertyBag
+ * @augments clientApi.PropertyBag
  */
-appsApi.UserPropertyBag = function (app_publickey) {
-  appsApi.PropertyBag.call(this, app_publickey);
+clientApi.UserPropertyBag = function (channel_publickey) {
+  clientApi.PropertyBag.call(this, channel_publickey);
   /** User property bags just use a different base URL */
   this.requestHelper_ = new ApiRequestHelper('/v3/user-properties/' +
-      app_publickey);
+      channel_publickey);
 };
-appsApi.UserPropertyBag.inherits(appsApi.PropertyBag);
+clientApi.UserPropertyBag.inherits(clientApi.PropertyBag);
 
 },{"./utils":224}],3:[function(require,module,exports){
 /* jshint

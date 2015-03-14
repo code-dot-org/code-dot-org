@@ -23,14 +23,14 @@ To ensure all students have access to computer science education, **please use t
 
 Dear Administrator, 
 
-I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district, and communicate the change to all students. 
+I’m writing to urge you to implement a district-wide change to allow computer science to count as a science graduation requirement in our district, and communicate the change to all students. 
 
 Computer science drives job growth and innovation throughout our economy and society. More than half of projected jobs in STEM fields are in computing occupations; computing occupations dominate “help wanted” ads; and computer science is one of the most in-demand degrees for new college graduates. However, computer science education is offered sparingly and underrepresented groups --especially girls and students of color-- report barriers to entry in the field and in accessing academic courses.   
 
 
 To make computer science more accessible for all students, the Michigan Department of Education now recognizes Computer Science as a third science course to count towards a graduation requirement (see <a href="http://michigan.gov/documents/mde/FAQ_-_Entire_Document_12.07_217841_7.pdf"_blank">Page 12</a>). This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing Michigan’s graduation standards by counting computer science courses as a science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing Michigan’s graduation standards to count computer science as a science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 
 Sincerely, 
@@ -54,7 +54,7 @@ What’s a good way to get kids excited about computer science?
 
 How can our district get more girls and underrepresented students of color taking computer science?
 
-+ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, mathematics or science).
++ Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit (in this case, science).
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 
 Show students [videos](http://hourofcode.com/us/resources#videos) on the importance of computer science education from special messengers, such as Chris Bosh, Bill Gates, Susan Wojcicki, President Obama, among others! 
 
@@ -63,5 +63,5 @@ My school district does not currently count computer science as a science credit
 
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the Michigan Department of Education counts Computer Science as a science graduation credit. 
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a science graduation requirement in accordance with Michigan Department of Education. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board. 

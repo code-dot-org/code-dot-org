@@ -14,6 +14,7 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
 
 /**
@@ -24,9 +25,22 @@ var tweens = require('./tweens');
 var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -34,23 +48,65 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.isRouter = false;
 
   /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
    *
    * @type {jQuery}
    * @private
    */
-  this.circle_ = jQuerySvgElement('circle')
+  jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
+      .attr('r', radius)
       .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
+      .attr('y', textVerticalOffset)
       .appendTo(root);
 
-// Set an initial default tween for zooming in from nothing.
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  var addressBoxHalfWidth = 15;
+  var addressBoxHalfHeight = 12;
+
+  jQuerySvgElement('rect')
+      .addClass('address-box')
+      .attr('x', -addressBoxHalfWidth)
+      .attr('y', -addressBoxHalfHeight)
+      .attr('rx', 5)
+      .attr('ry', 10)
+      .attr('width', addressBoxHalfWidth * 2)
+      .attr('height', addressBoxHalfHeight * 2)
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
@@ -65,6 +121,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
+
+  this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
     this.isRouter = true;
@@ -106,5 +164,42 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);
   } else {
     this.tweenToScale(0.5, 600, tweens.easeOutElastic);
+  }
+};
+
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  // Routers never show their address
+  // If a DNS mode has not been set we never show an address
+  if (this.isRouter || this.dnsMode_ === undefined) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
   }
 };

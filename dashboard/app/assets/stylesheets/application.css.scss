@@ -304,30 +304,17 @@ em strong {
 }
 
 .header-wrapper {
-  padding-top: 30px;
-  min-height: 100px;
-  @media screen and (max-width: 1150px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-    min-height: 70px;
+  padding-top: 15px;
+  &.feedback-bug-links {
+    padding-top: 30px;
   }
-  @media screen and (max-device-width: 900px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-  }
+  min-height: 70px;
 }
 
 .header {
   padding-top: 0;
   padding-bottom: 0;
-  height: 52px;
-  @media screen and (max-width: 1150px) {
-    height: 44px;
-  }
+  height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
   a:link {color:$header_text;}
@@ -464,7 +451,7 @@ html, body {
 }
 
 .full_container {
-  padding: 25px;
+  padding: 0px 25px 25px 25px;
 }
 
 .modal {
@@ -533,26 +520,18 @@ html, body {
 }
 
 .header_left, .header_right {
-  margin-top: 9px;
-  @media screen and (max-width: 1150px) {
-    margin-top: 5px;
-  }
+  margin-top: 5px;
 }
 
 .header_logo {
   float: left;
-  width: 86px;
-  max-width: 86px;
-  min-width: 86px;
   z-index: 1;
   margin-top: -24px;
-  @media screen and (max-width: 1150px) {
-    width: 55px;
-    max-width: 55px;
-    min-width: 55px;
-    padding-top: 14px;
-    min-width: 0px;
-  }
+  padding-top: 14px;
+  min-width: 0px;
+  max-width: 55px;
+  width: 55px;
+
   a:hover {
     background-color: transparent;
   }
@@ -585,6 +564,27 @@ html, body {
   background: #aaa;
 }
 
+#project-share .social-buttons a {
+  display: inline-block;
+  &:hover, & {
+    text-decoration: none;
+  }
+  i {
+    display: table-cell;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: $purple;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24pt;
+    &:hover {
+      box-shadow: 2px 2px 5px #888;
+    }
+  }
+}
+
 .header_middle {
   position: absolute;
   left: 0;
@@ -599,15 +599,12 @@ html, body {
 }
 
 .header_level {
-  padding-top: 6px;
+  padding-top: 2px;
   padding-bottom: 0;
   text-align: center;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
-  @media screen and (max-width: 1150px) {
-    padding-top: 2px;
-  }
 
   .progress_container {
     background-color: #eee;
@@ -840,7 +837,8 @@ input.header_input {
   overflow: visible;
 }
 
-#blocklyApp {
+#codeApp {
+  position: relative;
 
   .loading {
     height: 520px;
@@ -854,7 +852,14 @@ input.header_input {
     position: relative;
     top: -230px;
   }
+}
 
+#codeApp.pin_bottom {
+  position: absolute;
+  top: 95px;
+  left: 25px;
+  right: 25px;
+  bottom: 0px;
 }
 
 .reference_area {
