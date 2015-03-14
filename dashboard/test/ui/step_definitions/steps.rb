@@ -257,6 +257,17 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
   undone
 end
 
+Then(/^I reload the page$/) do
+  @browser.navigate.refresh
+end
+
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+  @child_item = @browser.find_element(:css, child)
+  @parent_item = @browser.find_element(:css, parent)
+  @actual_parent_item = @child_item.find_element(:xpath, "..")
+  @parent_item.should eq @actual_parent_item
+end
+
 def encrypted_cookie(user_id)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,

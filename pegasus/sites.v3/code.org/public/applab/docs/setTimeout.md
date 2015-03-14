@@ -1,12 +1,13 @@
 ## setTimeout() method
 
+
 ### Example
 
 Display an alert box after  seconds (3000 milliseconds):
 
-    setTimeout(function(){  
-      alert("Hello");  
-      }, 3000);
+    setTimeout(function(){
+    alert("Hello");  
+    }, 3000);
 ### Tips
 - 1000 ms = 1 second.
 - Use the [clearTimeout()](/applab/docs/clearTimeout) method to prevent the function to run.
