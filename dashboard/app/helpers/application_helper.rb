@@ -116,6 +116,7 @@ module ApplicationHelper
     
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image).try(:image)
+      level_source = opts[:level_source]
       if level_source.level_source_image.s3?
         if app == Game::ARTIST then
           level_source.level_source_image.s3_framed_url
