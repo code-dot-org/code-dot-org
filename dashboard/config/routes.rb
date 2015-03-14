@@ -170,8 +170,8 @@ Dashboard::Application.routes.draw do
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
   module OPS
-    API = 'api'
-    DASHBOARDAPI = 'dashboardapi'
+    API ||= 'api'
+    DASHBOARDAPI ||= 'dashboardapi'
   end
 
 
