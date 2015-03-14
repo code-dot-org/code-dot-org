@@ -55,7 +55,7 @@ class Documents < Sinatra::Base
     configs
   end
 
-  # use Honeybadger::Rack if rack_env?(:production)
+  use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
 
