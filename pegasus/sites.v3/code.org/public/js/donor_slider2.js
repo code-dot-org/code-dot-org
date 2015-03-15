@@ -1,80 +1,49 @@
 $(document).ready(function() {
-  randomizeOrder($(".badge"));
-  var platinum = $(".platinum");
-  var gold = $(".gold");
+  var badges = $(".badge");
 
-  var masterIndex = 3; // The number of badges that have been shown this cycle
-  var combinedLength = platinum.length + gold.length;
-  var interval = 8000;
-  var timer = setInterval(setManager, interval);
-  var showing = "platinum";
+  var numberSlotsShowing = 3; // How many slots are shown at a time
+  var totalDonors = badges.length;
+ 
+  // We will update one dest slot at a time, with the next source slot to be shown.
+  var destIndex = -1;
+  var donorIndex = numberSlotsShowing;
 
-  function setManager () {
-    // Check if you've gone through all the platinum donors
-    if (masterIndex < platinum.length) {
-      gold.hide();
-      if (showing !== "platinum") {
-        $("#level_indicator").hide().text("Platinum Supporters").fadeIn();
-        showing = "platinum";
-      }
-      scrollBadges(platinum, masterIndex);
-    } else {
-      platinum.hide();
+  var interval = 3000;
+  var timer = setInterval(updateDonorSlides, interval);
+  updateDonorSlides();
 
-      if (showing !== "gold") {
-        $("#level_indicator").hide().text("Gold Supporters").fadeIn();
-        showing = "gold";
-      }
-      scrollBadges(gold, masterIndex - platinum.length);
-    }
+  var hoverIndex = -1;
+
+  function updateDonorSlides() {
+    // Fade out the current badge, and then discard it.
+    // Copy the next badge into that place, and fade it on.
+
+    do {
+      destIndex = (destIndex + 1) % numberSlotsShowing;
+    } while (destIndex == hoverIndex);
+
+    donorIndex = (donorIndex + 1) % totalDonors;
+
+    //console.log("updating slot", destIndex, "to source item", donorIndex);
+
+    var srcClone = $("#donorbadge_" + donorIndex).clone();
+    var badgeDest = $("#badgedest_" + destIndex);
+
+    badgeDest.animate({opacity:0}, {complete: function() {
+      badgeDest.empty();
+      srcClone.appendTo(badgeDest);
+      badgeDest.animate({opacity:1});
+    }});
   }
 
-  // Takes a jQuery object of badges and an index. Hides the current badges and shows the next ones.
-  function scrollBadges (items, index) {
-    if (items === platinum) {
-      // Old items are faded out. New items are faded in on the completion of the fade out.
-      items.eq(index - 1).fadeOut("slow");
-      items.eq(index - 2).fadeOut("slow");
-      items.eq(index - 3).fadeOut("slow", function () {
-        items.eq(index).fadeIn("slow");
-        items.eq(index + 1).fadeIn("slow");
-        items.eq(index + 2).fadeIn("slow");
-        // If you've only shown a single donor this call (odd number of platinum donors) then only increment masterIndex by one.
-        if (masterIndex + 3 > platinum.length) {
-          masterIndex++;
-        } else {
-          masterIndex += 3;
-        }
-      });
-    } else {
-      items.eq(index - 1).fadeOut("slow");
-      items.eq(index - 2).fadeOut("slow");
-      items.eq(index - 3).fadeOut("slow", function () {
-        items.eq(index).fadeIn("slow");
-        items.eq(index + 1).fadeIn("slow");
-        items.eq(index + 2).fadeIn("slow");
-        if (masterIndex + 3 < combinedLength) {
-          masterIndex += 3;
-        } else {
-          masterIndex = 0;
-        }
-      });
-    }
+  // Don't change a slot if the viewer is hovering over it.
+
+  function donorHoverStart(index) { hoverIndex = index; };
+  function donorHoverEnd()        { hoverIndex = -1; };
+
+  for (var i = 0; i < numberSlotsShowing; i++) {
+    // bind will fail on IE8 but that's okay, this is kind of optional functionality.
+    $("#badgedest_" + i).hover(donorHoverStart.bind(null, i), donorHoverEnd);
   }
 
-  // Reveal the initial two platinum donors before cycle starts.
-  platinum.first().css("display", "inline-block");
-  platinum.eq(1).css("display", "inline-block");
-  platinum.eq(2).css("display", "inline-block");
-
-  // Pause the timer and cycling when a badge is hovered over.
-  $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
-
-// Takes a jQuery object of badges, randomizes (based on Fisher–Yates shuffle) their order in the DOM, and returns a list of badges in the new order.
-function randomizeOrder (items) {
-  for (var i = items.children().length; i >= 0; i--) {
-    var temp = items.eq(Math.random() * i | 0).parent().detach(); // Remove the badge (and the containing anchor) from the DOM
-    temp.appendTo(".badge-container"); // Re-add the badge (and the containing anchor) to thd DOM.
-  }
-}
