@@ -872,9 +872,13 @@ function animateUserExpression (maxNumSteps) {
       // Don't highlight anything
       tokenList = constructTokenList(current);
     }
-    var leftAlign = currentStep > 0;
-    if (leftAlign) {
-      tokenList = getTokens('= ').concat(tokenList);
+
+    // For lines after the first one, we want them left aligned and preceeded
+    // by an equals sign.
+    var leftAlign = false;
+    if (currentStep > 0) {
+      leftAlign = true;
+      tokenList = constructTokenList('= ').concat(tokenList);
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken', leftAlign);
     previousExpression = current.clone();
@@ -900,6 +904,8 @@ function animateUserExpression (maxNumSteps) {
  * @param {Array<Object>} tokenList A list of tokens, representing the expression
  * @param {number} line How many lines deep into parent to display
  * @param {string} markClass Css class to use for 'marked' tokens.
+ * @param {boolean} leftAlign If true, equations are left aligned instead of
+ *   centered.
  */
 function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) {
   var parent = document.getElementById(parentId);
@@ -912,19 +918,21 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
     len = new Token(name + ' = ', false).renderToParent(g, xPos, null);
     xPos += len;
   }
-  var firstLen = 0;
+  var firstTokenLen = 0;
   for (var i = 0; i < tokenList.length; i++) {
     len = tokenList[i].renderToParent(g, xPos, markClass);
     if (i === 0) {
-      firstLen = len;
+      firstTokenLen = len;
     }
     xPos += len;
   }
 
   var xPadding;
   if (leftAlign) {
+    // Align second token with parent (assumption is that first token is our
+    // equal sign).
     var transform = Blockly.getRelativeXY(parent.childNodes[0]);
-    xPadding = parseFloat(transform.x) - firstLen;
+    xPadding = parseFloat(transform.x) - firstTokenLen;
   } else {
     xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
   }

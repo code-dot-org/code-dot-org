@@ -39,9 +39,7 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
   var text, textLength;
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
-  // text.setAttributeNS("http://www.w3.org/XML/1998/namespace", "xml:space",
-  //   "preserve");
-
+  
   var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
   tspan.textContent = this.nonRepeated_.replace(/ /g, '\u00A0\u00A0');
   text.appendChild(tspan);
