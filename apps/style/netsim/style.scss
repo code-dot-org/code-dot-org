@@ -25,20 +25,39 @@ $wide_column_width: 100px;
   padding-top: 2px;
 }
 
+/* Hide the footer instructions, we put them in the instructions tab */
+#prompt-table {
+  display: none;
+}
+
 .clearfix {
   clear: both;
 }
 
 svg {
-  background-color: #000;
+  background-color: white;
   border: solid black thin;
   border-radius: 25px;
 
   .viz-node {
+    text {
+      text-anchor: middle;
+    }
+
     circle {
-      stroke: white;
+      stroke: black;
       stroke-width: 2;
       fill: lightblue;
+    }
+
+    rect.address-box {
+      stroke: black;
+      stroke-width: 2px;
+      fill: white;
+    }
+
+    text.address-box {
+      font-weight: bold;
     }
   }
   
@@ -49,7 +68,7 @@ svg {
   }
   
   .viz-wire {
-    stroke: white;
+    stroke: black;
     stroke-width: 2;
   }
 }
@@ -545,6 +564,17 @@ svg {
         tr.dnsNode {
           color: white;
           background-color: darkorange;
+        }
+      }
+
+      .dns_notes {
+        div {
+          textarea {
+            resize: none;
+            width: 100%;
+            height: 100px;
+          }
+          padding-right: 14px;
         }
       }
     }

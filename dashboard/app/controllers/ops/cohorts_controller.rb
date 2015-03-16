@@ -1,6 +1,6 @@
 module Ops
   class CohortsController < OpsControllerBase
-    before_filter :convert_teachers, :convert_district_names, only: [:create, :update]
+    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, only: [:create, :update]
     load_and_authorize_resource
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
@@ -47,19 +47,24 @@ module Ops
           :program_type,
           :district_ids => [],
           :district_names => [],
-          :districts => [],
-          :teachers => [:ops_first_name, :ops_last_name, :email, :district] # permit array of objects with specified keys
+          :districts => [:id, :max_teachers, :_destroy],
+          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id] # permit array of objects with specified keys
       )
     end
 
-
     # Support district_names in the API
-    def convert_district_names
+    def convert_districts_to_cohorts_districts_attributes
       return unless params[:cohort]
-      district_names_list = params[:cohort].delete :district_names
-      return unless district_names_list
-      params[:cohort][:districts] = district_names_list.map do |district_name|
-        District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
+      district_params_list = params[:cohort].delete :districts
+      return unless district_params_list
+      params[:cohort][:cohorts_districts_attributes] = district_params_list.map do |district_params|
+        {district_id: district_params[:id], 
+         max_teachers: district_params[:max_teachers],
+         _destroy: district_params[:_destroy]}.tap do |cohorts_districts_attrs|
+          if params[:id] && existing = CohortsDistrict.find_by(district_id: district_params[:id], cohort_id: params[:id])
+            cohorts_districts_attrs[:id] = existing.id
+          end
+        end
       end
     end
 

@@ -1,0 +1,26 @@
+- supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s).all
+- supporters.shuffle!
+
+%link{:href=>"/css/donor_slider2.css", :rel=>"stylesheet"}
+%script{:src=>"/js/donor_slider2.js"}
+
+.donor-slider
+
+  .badge-containers-shown{style: "height: 120px; overflow:hidden"}
+    #badgedest_0.col-33.mobile-center
+    #badgedest_1.desktop-feature.col-33
+    #badgedest_2.desktop-feature.col-33
+
+  .badge-containers-hidden{style: "display: none"}
+    - supporters.each_with_index do |supporter, index|
+      - avatar_url = avatar_image(supporter[:name_s])
+      .badge{id: "donorbadge_#{index}", style: "height: 90px; opacity: 1"}
+        %a{:href=>supporter[:url_s], :target=> "_blank"}
+          - if avatar_url != nil
+            - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
+              %img{:src=> avatar_url, :style=>"float: left"}
+            - else
+              %img{:src=> avatar_url}
+          - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
+            %p.label
+              =supporter[:name_s]

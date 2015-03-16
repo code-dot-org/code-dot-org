@@ -57,16 +57,13 @@ Blockly.Css.styleSheet_ = null;
  * b) It speeds up loading by not blocking on a separate HTTP transfer.
  * c) The CSS content may be made dynamic depending on init options.
  */
-Blockly.Css.inject = function() {
+Blockly.Css.inject = function(container) {
   var text = Blockly.Css.CONTENT.join('\n');
 
   // Expand paths.
   text = text
-    .replace('%HAND_OPEN_PATH%', Blockly.assetUrl('media/handopen.cur'))
-    .replace('%HAND_CLOSED_PATH%', Blockly.assetUrl('media/handclosed.cur'))
-    .replace('%HAND_DELETE_PATH%', Blockly.assetUrl('media/handdelete.cur'))
-    .replace('%TREE_PATH%', Blockly.assetUrl('media/tree.png'))
-    .replace('%SPRITES_PATH%', Blockly.assetUrl('media/sprites.png'));
+    .replace(/%CONTAINER_ID%/g, container.id)
+    .replace(/%TREE_PATH%/g, Blockly.assetUrl('media/tree.png'));
   Blockly.Css.styleSheet_ = goog.cssom.addCssText(text).sheet;
   Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
 };
@@ -137,29 +134,29 @@ Blockly.Css.CONTENT = [
   '.blocklyDraggable {',
     // Placeholder for cursor rule. Must be first rule (index 0).
   '}',
-  '#blockly {',
+  '#%CONTAINER_ID% {',
   '  border: 1px solid #ddd;',
   '}',
-  '#blockly .userHidden {',
+  '#%CONTAINER_ID% .userHidden {',
   '  display: none;',
   '}',
-  '#blockly .hiddenFlyout {',
+  '#%CONTAINER_ID% .hiddenFlyout {',
   '  display: none !important;',
   '}',
-  '#blockly.readonly .userHidden {',
+  '#%CONTAINER_ID%.readonly .userHidden {',
   '  display: inline;',
   '}',
-  '#blockly.readonly {',
+  '#%CONTAINER_ID%.readonly {',
   '  border: 0;',
   '}',
-  '#blockly.edit .userHidden {',
+  '#%CONTAINER_ID%.edit .userHidden {',
   '  display: inline;',
   '  fill-opacity: 0.5;',
   '}',
-  '#blockly.edit .userHidden .blocklyPath {',
+  '#%CONTAINER_ID%.edit .userHidden .blocklyPath {',
   '  fill-opacity: 0.5;',
   '}',
-  '#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {',
+  '#%CONTAINER_ID%.edit .userHidden .blocklyPathDark, #%CONTAINER_ID%.edit .userHidden .blocklyPathLight {',
   '  display: none;',
   '}',
   '.blocklySvg {',

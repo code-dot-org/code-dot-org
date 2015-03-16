@@ -5,6 +5,8 @@
   "level_num": "variant2",
   "user_id": 1,
   "properties": {
+    "skin": "netsim",
+    "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to send binary as zeroes and ones to one another",
     "showEncodingControls": ["none"],
     "defaultEnabledEncodings": ["binary"]
   }

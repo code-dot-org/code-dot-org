@@ -11,7 +11,8 @@ title: "Ops Dashboard"
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
-
+%script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 
 :javascript
@@ -161,6 +162,30 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('withinDateRange', function() {
+    return function(workshops, dateRangeStart, dateRangeEnd) {
+      if (dateRangeStart || dateRangeEnd) {
+        var filtered = [];
+        workshops.forEach(function (workshop) {
+          for (var i = 0; i < workshop.segments.length; i++) {
+            if (
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && workshop.segments[i].end.split('T')[0] >= this.dateRangeStart) ||
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && !this.dateRangeStart) ||
+                (workshop.segments[i].end.split('T')[0] >= this.dateRangeStart && !this.dateRangeEnd)
+               )
+            {
+              filtered.push(workshop);
+              break;
+            }
+          }
+        }, this);
+        return filtered;
+      } else {
+        return workshops;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -222,6 +247,17 @@ title: "Ops Dashboard"
         return "N/A";
       }
 
+      $scope.load = function() {
+        $('.date').on('focus click', function() {
+          $(this).datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            pickTime: false
+
+          });
+        });
+      }
+
       //$scope.save = function (workshop) {
       //  if (workshop.id) {
       //    var newWorkshop = new workshopsService($scope.workshop);
@@ -269,10 +305,11 @@ title: "Ops Dashboard"
       }
   }]);
 
-  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, programTypesService) {
       $scope.hasCohorts = false;
       $scope.cohorts = cohortsService.query();
+      $scope.program_types = programTypesService;
 
       $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
@@ -287,6 +324,10 @@ title: "Ops Dashboard"
         cohortsService.remove({id: cohort.id}); // service call
         cohort.confirmDelete = false;
       };
+
+      $scope.setSortOrder = function(new_sort, current_sort) {
+        return (new_sort == current_sort) ? '-' + current_sort : new_sort;
+      }
     }
   ]);
 
@@ -320,14 +361,6 @@ title: "Ops Dashboard"
       $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
-        cohort.district_ids = [];
-        for (var i = 0; i < cohort.districts.length; i++) {
-          if (cohort.districts[i].id) {
-            cohort.district_ids.push(cohort.districts[i].id);
-          }
-        }
-        delete cohort.districts;
-
         if (cohort.id) { // existing
           cohort =
             cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
@@ -362,7 +395,6 @@ title: "Ops Dashboard"
     $scope.cohort.$promise.then(function(cohort) {
     });
 
-    $scope.parsed  = [];
     // This depends on HTML5 File object so does not work in IE9. This
     // particular feature is only used by the ops team who all use Chrome.
     $scope.onFileSelect = function(input) {
@@ -373,11 +405,28 @@ title: "Ops Dashboard"
         Papa.parse(files[0], {
           header: true,
           complete: function(results) {
-            $scope.cohort.teachers = results.data;
-            $scope.$apply();
+            if (results.data) {
+              for (var i = 0; i < results.data.length; i++) {
+                results.data[i].editing = true;
+              }
+              $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
+              $scope.$apply();
+            }
           }
         });
       }
+    };
+
+    $scope.editingAny = function(things) {
+      if (!things) {
+        return false;
+      }
+      for (var i = 0; i < things.length; i++) {
+        if (things[i].editing) {
+          return true;
+        }
+      }
+      return false;
     }
 
     $scope.edit = function(teacher) {
@@ -408,13 +457,25 @@ title: "Ops Dashboard"
       $scope.cohort.teachers.unshift({editing: true});
     };
 
-    $scope.save = function(teachers) {
-      if (!$.isArray(teachers)) {
-        return $scope.save([teachers]);
-      }
+    $scope.saveAll = function(cohort) {
+      cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
+        function() {
+          $scope.cohort = cohortsService.get({id: $routeParams.id});
+        }
+      ).catch($scope.genericError);
+    };
 
-      var newTeachers = [];
-      var modifiedTeachers = [];
+    $scope.countTeachersFromDistrict = function(district) {
+      var count = 0;
+      if (district && district.id) {
+        for (var i = 0; i < $scope.cohort.teachers.length; i++) {
+          if ($scope.cohort.teachers[i].district && 
+              $scope.cohort.teachers[i].district.id === district.id) {
+            count++;
+          }
+        }
+      }
+      return count;
     }
   }
   ]);
@@ -474,4 +535,4 @@ title: "Ops Dashboard"
 
 %script{type: "text/javascript", src: "/js/angular-selectize.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
-%div{'ng-app' => 'opsApp', 'ng-view' => ''}
+%div{'ng-view' => ''}
