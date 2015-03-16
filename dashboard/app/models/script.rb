@@ -346,23 +346,10 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
-      stages: []
+      stages: stages.map(&:summarize),
     }
-    if trophies
-      summary[:trophies] = Concept.cached.map do |concept|
-        {
-          id: concept.name,
-          name: I18n.t("data.concept.description.#{concept.name}"),
-          bronze: Trophy::BRONZE_THRESHOLD,
-          silver: Trophy::SILVER_THRESHOLD,
-          gold: Trophy::GOLD_THRESHOLD
-        }
-      end
-    end
 
-    stages.select{|s| s.script_levels.to_a.count > 0}.sort_by(&:position).each do |stage|
-      summary[:stages].push stage.summarize
-    end
+    summary[:trophies] = Concept.summarize_all if trophies
 
     summary
   end
