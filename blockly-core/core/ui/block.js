@@ -2162,6 +2162,10 @@ Blockly.Block.prototype.setWarningText = function(text) {
   }
 };
 
+Blockly.Block.prototype.svgInitialized = function() {
+  return !!this.svg_;
+};
+
 /**
  * Render the block.
  * Lays out and reflows a block based on its contents and settings.

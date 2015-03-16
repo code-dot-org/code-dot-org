@@ -58,6 +58,8 @@ exports.jQuerySvgElement = function (type) {
         })) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
+    // Return element for chaining
+    return newElement;
   };
 
   return newElement;

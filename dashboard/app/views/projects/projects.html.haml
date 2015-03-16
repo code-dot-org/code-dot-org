@@ -12,8 +12,13 @@
   %br
   %br
   .row
-    .projects-table-wrapper.center
-      = render partial: 'projects/links'
+    .span12
+      %a.level_link{href: playlab_projects_path}
+        %i.fa.fa-rocket
+        = t('nav.header.free_play.playlab')  
+      %a.level_link{href: artist_projects_path}
+        %i.fa.fa-pencil
+        = t('nav.header.free_play.artist')
 
       %table.projects{'ng-show' => 'projects.length > 0'}
         %colgroup

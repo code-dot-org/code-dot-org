@@ -5,6 +5,8 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
+    "skin": "netsim",
+    "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
     "showTabs": [
       "instructions",
       "my_device",

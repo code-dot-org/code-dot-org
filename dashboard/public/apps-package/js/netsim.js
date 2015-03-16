@@ -333,6 +333,7 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
   }
+  this.visualization_.setDnsMode(newDnsMode);
 };
 
 /**
@@ -357,6 +358,13 @@ NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.myConnectedRouter_) {
     this.setDnsTableContents(this.myConnectedRouter_.getAddressTable());
   }
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.visualization_.setDnsNodeID(dnsNodeID);
 };
 
 /**
@@ -534,6 +542,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setDnsMode(router.dnsMode);
+  this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
 };
@@ -586,21 +595,32 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
- * @property {boolean} showClientsInLobby
+ * @property {string} instructions - Inherited from blockly level configuration.
  *
- * @property {boolean} showRoutersInLobby
+ * @property {boolean} showClientsInLobby - Whether client nodes should appear
+ *           in the lobby list at all.
  *
- * @property {boolean} showAddRouterButton
+ * @property {boolean} showRoutersInLobby - Whether router nodes should appear
+ *           in the lobby list at all.
  *
- * @property {NetSimTabType[]} showTabs
+ * @property {boolean} showAddRouterButton - Whether the "Add Router" button
+ *           should appear above the lobby list.
+ *
+ * @property {NetSimTabType[]} showTabs - Which tabs should appear beneath the
+ *           network visualization.  Does not determine tab order; tabs always
+ *           appear in the order "Instructions, My Device, Router, DNS."
  *
  * @property {number} defaultTabIndex - The zero-based index of the tab
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {EncodingType[]} showEncodingControls
+ * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
+ *           binary, etc.) should have visible controls on the "My Device" tab.
  *
- * @property {EncodingType[]} defaultEnabledEncodings
+ * @property {EncodingType[]} defaultEnabledEncodings - Which encodings should
+ *           be enabled on page load.  Note: An encoding enabled here but not
+ *           included in the visible controls will be enabled and cannot be
+ *           disabled by the student.
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -637,7 +657,8 @@ levels.default = {
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  // Nothing here yet!
+  // Note: Uses the blockly-standard level.instructions value, which should
+  //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
   showEncodingControls: [
@@ -907,6 +928,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
@@ -1121,8 +1143,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
   if (vizEntity instanceof NetSimVizNode) {
     neighbors = this.getWiresAttachedToNode(vizEntity);
   } else if (vizEntity instanceof NetSimVizWire) {
-    neighbors.push(vizEntity.localVizNode);
-    neighbors.push(vizEntity.remoteVizNode);
+    if (vizEntity.localVizNode) {
+      neighbors.push(vizEntity.localVizNode);
+    }
+
+    if (vizEntity.remoteVizNode) {
+      neighbors.push(vizEntity.remoteVizNode);
+    }
   }
 
   return neighbors.filter(function (vizEntity) {
@@ -1207,6 +1234,30 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
   }
 };
 
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Tell all nodes about the new DNS mode, so they can decide whether to
+  // show or hide their address.
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setDnsMode(newDnsMode);
+    }
+  });
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+    }
+  });
+};
+
 },{"../utils":224,"./NetSimVizNode":162,"./NetSimVizWire":163,"./NetSimWire":164,"./netsimUtils":172,"./tweens":175}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -1261,6 +1312,14 @@ NetSimVizWire.inherits(NetSimVizEntity);
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
+
+  if (this.localVizNode) {
+    this.localVizNode.setAddress(sourceWire.localAddress);
+  }
+
+  if (this.remoteVizNode) {
+    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
+  }
 };
 
 NetSimVizWire.prototype.render = function () {
@@ -1302,6 +1361,7 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
 
 /**
@@ -1312,9 +1372,22 @@ var tweens = require('./tweens');
 var NetSimVizNode = module.exports = function (sourceNode) {
   NetSimVizEntity.call(this, sourceNode);
 
-  // Give our root node a useful class
-  var root = this.getRoot();
-  root.addClass('viz-node');
+  /**
+   * @type {number}
+   * @private
+   */
+  this.address_ = undefined;
+
+  /**
+   * @type {DnsMode}
+   * @private
+   */
+  this.dnsMode_ = undefined;
+
+  /**
+   * @type {number}
+   */
+  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -1322,23 +1395,65 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   this.isRouter = false;
 
   /**
+   * @type {boolean}
+   */
+  this.isLocalNode = false;
+
+  /**
+   * @type {boolean}
+   */
+  this.isDnsNode = false;
+
+  // Give our root node a useful class
+  var root = this.getRoot();
+  root.addClass('viz-node');
+
+  // Going for a diameter of _close_ to 75
+  var radius = 37;
+  var textVerticalOffset = 4;
+
+  /**
    *
    * @type {jQuery}
    * @private
    */
-  this.circle_ = jQuerySvgElement('circle')
+  jQuerySvgElement('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 37) /* Half of 75 */
+      .attr('r', radius)
       .appendTo(root);
 
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', 2)
-      .css('text-anchor', 'middle')
+      .attr('y', textVerticalOffset)
       .appendTo(root);
 
-// Set an initial default tween for zooming in from nothing.
+  this.addressGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,30)')
+      .hide()
+      .appendTo(root);
+
+  var addressBoxHalfWidth = 15;
+  var addressBoxHalfHeight = 12;
+
+  jQuerySvgElement('rect')
+      .addClass('address-box')
+      .attr('x', -addressBoxHalfWidth)
+      .attr('y', -addressBoxHalfHeight)
+      .attr('rx', 5)
+      .attr('ry', 10)
+      .attr('width', addressBoxHalfWidth * 2)
+      .attr('height', addressBoxHalfHeight * 2)
+      .appendTo(this.addressGroup_);
+
+  this.addressText_ = jQuerySvgElement('text')
+      .addClass('address-box')
+      .attr('x', 0)
+      .attr('y', textVerticalOffset)
+      .text('?')
+      .appendTo(this.addressGroup_);
+
+  // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
 
@@ -1353,6 +1468,8 @@ NetSimVizNode.inherits(NetSimVizEntity);
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
+
+  this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
     this.isRouter = true;
@@ -1397,7 +1514,44 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   }
 };
 
-},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
+NetSimVizNode.prototype.setAddress = function (address) {
+  this.address_ = address;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
+  this.dnsMode_ = newDnsMode;
+  this.updateAddressDisplay();
+};
+
+/**
+ * @param {boolean} isDnsNode
+ */
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
+  this.isDnsNode = isDnsNode;
+  this.updateAddressDisplay();
+};
+
+NetSimVizNode.prototype.updateAddressDisplay = function () {
+  // Routers never show their address
+  // If a DNS mode has not been set we never show an address
+  if (this.isRouter || this.dnsMode_ === undefined) {
+    this.addressGroup_.hide();
+    return;
+  }
+
+  this.addressGroup_.show();
+  if (this.dnsMode_ === DnsMode.NONE) {
+    this.addressText_.text(this.address_ !== undefined ? this.address_ : '?');
+  } else {
+    this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
+  }
+};
+
+},{"../utils":224,"./NetSimRouterNode":148,"./NetSimVizEntity":161,"./netsimConstants":171,"./netsimUtils":172,"./tweens":175}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2004,7 +2158,9 @@ with (locals || {}) { (function(){
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
   var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
-; buf.push('\n<div class="netsim_tabs">\n  <ul>\n    ');14; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((15,  netsimMsg.instructions() )), '</a></li>\n    ');16; } ; buf.push('\n    ');17; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((18,  netsimMsg.myDevice() )), '</a></li>\n    ');19; } ; buf.push('\n    ');20; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((21,  netsimMsg.router() )), '</a></li>\n    ');22; } ; buf.push('\n    ');23; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((24,  netsimMsg.dns() )), '</a></li>\n    ');25; } ; buf.push('\n  </ul>\n  ');27; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions">\n      <p>In this activity, you and your group will still be acting as\n      nodes connected to a router.  But this time, the addresses of the\n      nodes are not visible to you.  Pick one member of your group to be\n      the DNS node.  To get the addresses of the other nodes, you must\n      send a message to the DNS node asking for the address of a particular\n      hostname.</p>\n      <p>If you are the DNS node: Go to the DNS tab and click "Take over\n      as DNS."</p>\n    </div>\n  ');38; } ; buf.push('\n  ');39; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');41; } ; buf.push('\n  ');42; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');44; } ; buf.push('\n  ');45; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');47; } ; buf.push('\n</div>'); })();
+
+  var instructionsContent = level.instructions ? level.instructions : '';
+; buf.push('\n<div class="netsim_tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  netsimMsg.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  netsimMsg.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  netsimMsg.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  netsimMsg.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions"><p>', escape((30,  instructionsContent )), '</p></div>\n  ');31; } ; buf.push('\n  ');32; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');34; } ; buf.push('\n  ');35; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');37; } ; buf.push('\n  ');38; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');40; } ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };
@@ -3908,6 +4064,8 @@ exports.jQuerySvgElement = function (type) {
         })) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
+    // Return element for chaining
+    return newElement;
   };
 
   return newElement;
@@ -4209,11 +4367,8 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === DnsMode.MANUAL) {
-    this.rootDiv_.find('.dns_manual_control').show();
-  } else {
-    this.rootDiv_.find('.dns_manual_control').hide();
-  }
+  this.rootDiv_.find('.dns_manual_control').toggle(newDnsMode === DnsMode.MANUAL);
+  this.rootDiv_.find('.dns_notes').toggle(newDnsMode !== DnsMode.NONE);
 };
 
 /**
@@ -4359,7 +4514,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim_dns_tab">\n  ');2; if (level.showDnsModeControl) { ; buf.push('\n  <div class="dns_mode"></div>\n  ');4; } ; buf.push('\n  <div class="dns_manual_control"></div>\n  <div class="dns_table"></div>\n  <div class="dns_notes">\n    <h1>Notes</h1>\n    <div>\n      <textarea></textarea>\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };

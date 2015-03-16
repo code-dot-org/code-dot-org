@@ -442,6 +442,7 @@ var displayFeedback = function(response) {
     feedbackType: Eval.testResults,
     response: response,
     level: level,
+    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }

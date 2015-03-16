@@ -233,6 +233,17 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     end
   end
 
+  Dir.chdir(shared_dir) do
+    HipChat.log 'Running <b>shared</b> unit tests...'
+    begin
+      RakeUtils.rake 'test'
+    rescue
+      HipChat.log 'Unit tests for <b>shared</b> failed.', color:'red'
+      HipChat.developers 'Unit tests for <b>shared</b> failed.', color:'red', notify:1
+      raise
+    end
+  end
+
   Dir.chdir(dashboard_dir) do
     # Unit tests mess with the database so stop the service before running them and
     # reset the database afterward.

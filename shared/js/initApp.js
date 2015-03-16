@@ -278,7 +278,7 @@ function initApp() {
 
       $(window).on('run_button_pressed', dashboard.saveProject);
 
-      if (!dashboard.currentApp.hidden) {
+      if (!dashboard.currentApp.hidden && dashboard.currentApp.isOwner) {
         dashboard.showProjectHeader();
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {

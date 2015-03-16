@@ -5610,26 +5610,27 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(codeWorkspace, 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
+  if (!config.hideSource) {
+    var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(codeWorkspace, 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      vizHeight = 3000;
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
     }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
       container.className = codeWorkspace.className + " pin_bottom";
     } else {
-      codeWorkspace.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
-      container.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+      container.style.minHeight = vizHeight + 'px';
     }
   }
 
@@ -5672,7 +5673,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      workspaceDiv.style.visibility = 'visible';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.visibility = 'visible';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -7520,6 +7523,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
+      tryAgainText: options.tryAgainText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -7703,12 +7707,18 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
 FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
+
+  var tryAgainText = '';
+  if (options.feedbackType !== TestResults.ALL_PASS) {
+    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
+  }
+
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
-      tryAgain: options.feedbackType !== TestResults.ALL_PASS,
+      tryAgain: tryAgainText,
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
@@ -8712,7 +8722,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  msg.tryAgain() )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  msg.tryAgain() )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  msg.tryAgain() )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
