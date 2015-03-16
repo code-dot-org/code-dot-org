@@ -1,12 +1,12 @@
 - script = @script || (user && user.primary_script) || Script.twenty_hour_script
+- script_summary = script.summarize
 - progress = summarize_user_progress(script) || {}
-- levelProgress = progress[:levels] || {}
-- script = script.summarize
+- level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:script_level_id]
 
 .user-stats-block
-  - script[:stages].each do |stage|
+  - script_summary[:stages].each do |stage|
     .game-group
       .stage
         %span
@@ -18,9 +18,7 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - status = levelProgress[level[:id]] || {}
-            - status = status[:status] || 'not_tried'
-            - link = "/s/#{script[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}"
+            - status = level_progress[level[:id]].try(:status) || 'not_tried'
             - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'
@@ -28,7 +26,7 @@
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a.level_link{ href: link, class: status }
+              %a.level_link{href: "/s/#{script_summary[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}", class: status}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]
@@ -39,7 +37,7 @@
                     = level[:title]
   = render partial: 'shared/user_stats_key'
 
-- if script[:trophies]
+- if script_summary[:trophies]
   %div{style: 'clear: both;'}
   #trophies
     = render partial: 'shared/concept_trophy_block', locals: {concept_progress: progress[:trophies], added_style: 'padding: 10px;'}
