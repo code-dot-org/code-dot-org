@@ -176,12 +176,21 @@ FactoryGirl.define do
     script
   end
 
+  factory :cohorts_district do
+    cohort
+    district
+    max_teachers 5
+  end
+
   factory :cohort do
     name 'Test Cohort'
-    districts {create_list(:district, 1)}
     teachers {[create(:teacher, district: districts.first)]}
 
-    after :create do |cohort, _|
+    before :create do |cohort, _| 
+      cohort.cohorts_districts << create(:cohorts_district, cohort: cohort)
+    end
+
+    after :create do |cohort, _| 
       create_list :workshop, 1, cohort: cohort
     end
   end

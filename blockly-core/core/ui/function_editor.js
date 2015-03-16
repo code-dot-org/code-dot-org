@@ -92,6 +92,16 @@ Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConf
   }
 };
 
+/**
+ * @param {Blockly.Block} procedureBlock procedure block which has a title value 'NAME'
+ */
+Blockly.FunctionEditor.prototype.openEditorForCallBlock_ = function(procedureBlock) {
+  var functionName = procedureBlock.getTitleValue('NAME');
+  procedureBlock.blockSpace.blockSpaceEditor.hideChaff();
+  this.hideIfOpen();
+  this.openAndEditFunction(functionName);
+};
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -499,10 +509,21 @@ Blockly.FunctionEditor.prototype.getContractDivHeight = function () {
     : 0;
 };
 
+/**
+ * @returns {boolean} whether the function editor is open and ready for display
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.readyToBeLaidOut_ = function () {
+  return this.functionDefinitionBlock &&
+    this.functionDefinitionBlock.svgInitialized() &&
+    this.isOpen();
+};
+
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
-  if (!this.functionDefinitionBlock || !this.isOpen()) {
+  if (!this.readyToBeLaidOut_()) {
     return;
   }
+
   var currentX = Blockly.RTL ?
     this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
     FRAME_MARGIN_SIDE;
