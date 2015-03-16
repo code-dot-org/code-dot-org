@@ -4,6 +4,10 @@
 .full_container {
   padding-top: 2px; }
 
+/* Hide the footer instructions, we put them in the instructions tab */
+#prompt-table {
+  display: none; }
+
 .clearfix {
   clear: both; }
 

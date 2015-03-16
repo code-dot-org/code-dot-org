@@ -595,21 +595,32 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
- * @property {boolean} showClientsInLobby
+ * @property {string} instructions - Inherited from blockly level configuration.
  *
- * @property {boolean} showRoutersInLobby
+ * @property {boolean} showClientsInLobby - Whether client nodes should appear
+ *           in the lobby list at all.
  *
- * @property {boolean} showAddRouterButton
+ * @property {boolean} showRoutersInLobby - Whether router nodes should appear
+ *           in the lobby list at all.
  *
- * @property {NetSimTabType[]} showTabs
+ * @property {boolean} showAddRouterButton - Whether the "Add Router" button
+ *           should appear above the lobby list.
+ *
+ * @property {NetSimTabType[]} showTabs - Which tabs should appear beneath the
+ *           network visualization.  Does not determine tab order; tabs always
+ *           appear in the order "Instructions, My Device, Router, DNS."
  *
  * @property {number} defaultTabIndex - The zero-based index of the tab
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {EncodingType[]} showEncodingControls
+ * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
+ *           binary, etc.) should have visible controls on the "My Device" tab.
  *
- * @property {EncodingType[]} defaultEnabledEncodings
+ * @property {EncodingType[]} defaultEnabledEncodings - Which encodings should
+ *           be enabled on page load.  Note: An encoding enabled here but not
+ *           included in the visible controls will be enabled and cannot be
+ *           disabled by the student.
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -646,7 +657,8 @@ levels.default = {
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  // Nothing here yet!
+  // Note: Uses the blockly-standard level.instructions value, which should
+  //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
   showEncodingControls: [
@@ -2146,7 +2158,9 @@ with (locals || {}) { (function(){
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
   var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
-; buf.push('\n<div class="netsim_tabs">\n  <ul>\n    ');14; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((15,  netsimMsg.instructions() )), '</a></li>\n    ');16; } ; buf.push('\n    ');17; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((18,  netsimMsg.myDevice() )), '</a></li>\n    ');19; } ; buf.push('\n    ');20; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((21,  netsimMsg.router() )), '</a></li>\n    ');22; } ; buf.push('\n    ');23; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((24,  netsimMsg.dns() )), '</a></li>\n    ');25; } ; buf.push('\n  </ul>\n  ');27; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions">\n      <p>In this activity, you and your group will still be acting as\n      nodes connected to a router.  But this time, the addresses of the\n      nodes are not visible to you.  Pick one member of your group to be\n      the DNS node.  To get the addresses of the other nodes, you must\n      send a message to the DNS node asking for the address of a particular\n      hostname.</p>\n      <p>If you are the DNS node: Go to the DNS tab and click "Take over\n      as DNS."</p>\n    </div>\n  ');38; } ; buf.push('\n  ');39; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');41; } ; buf.push('\n  ');42; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');44; } ; buf.push('\n  ');45; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');47; } ; buf.push('\n</div>'); })();
+
+  var instructionsContent = level.instructions ? level.instructions : '';
+; buf.push('\n<div class="netsim_tabs">\n  <ul>\n    ');16; if (showInstructions) { ; buf.push('\n    <li><a href="#tab_instructions">', escape((17,  netsimMsg.instructions() )), '</a></li>\n    ');18; } ; buf.push('\n    ');19; if (showMyDevice) { ; buf.push('\n      <li><a href="#tab_my_device">', escape((20,  netsimMsg.myDevice() )), '</a></li>\n    ');21; } ; buf.push('\n    ');22; if (showRouter) { ; buf.push('\n      <li><a href="#tab_router">', escape((23,  netsimMsg.router() )), '</a></li>\n    ');24; } ; buf.push('\n    ');25; if (showDns) { ; buf.push('\n      <li><a href="#tab_dns">', escape((26,  netsimMsg.dns() )), '</a></li>\n    ');27; } ; buf.push('\n  </ul>\n  ');29; if (showInstructions) { ; buf.push('\n    <div id="tab_instructions"><p>', escape((30,  instructionsContent )), '</p></div>\n  ');31; } ; buf.push('\n  ');32; if (showMyDevice) { ; buf.push('\n    <div id="tab_my_device"></div>\n  ');34; } ; buf.push('\n  ');35; if (showRouter) { ; buf.push('\n    <div id="tab_router"></div>\n  ');37; } ; buf.push('\n  ');38; if (showDns) { ; buf.push('\n    <div id="tab_dns"></div>\n  ');40; } ; buf.push('\n</div>'); })();
 } 
 return buf.join('');
 };

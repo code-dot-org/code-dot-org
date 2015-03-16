@@ -25,14 +25,14 @@ template: none
     %table{style: "width:950px; table-layout:fixed;"}
       %tr
         %th.manage-th
-          Name
+          %a{href: "", "ng-click" => "sortOrder = setSortOrder('name', sortOrder)"} Name
         %th
-          Program Type
+          %a{href: "", "ng-click" => "sortOrder = setSortOrder('program_type', sortOrder)"} Program Type
         %th
           Districts
         %th.manage-th
           Manage
-      %tr{"ng-repeat" => "cohort in cohorts | orderBy:'cohort.name'", style: "vertical-align:top"}
+      %tr{"ng-repeat" => "cohort in cohorts | orderBy:sortOrder", style: "vertical-align:top"}
         %td
           {{cohort.name}}
         %td
