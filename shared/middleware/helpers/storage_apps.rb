@@ -42,7 +42,7 @@ class StorageApps
     row = @table.where(id:id).first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    JSON.load(row[:value]).merge(id:channel_id)
+    JSON.load(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
   end
   
   def update(channel_id, value, ip_address)
@@ -57,13 +57,13 @@ class StorageApps
     update_count = @table.where(id:id).update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    JSON.load(row[:value]).merge(id:channel_id)
+    JSON.load(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
   end
   
   def to_a()
     @table.where(storage_id:@storage_id).map do |i|
       channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])
-      JSON.load(i[:value]).merge(id:channel_id)
+      JSON.load(i[:value]).merge(id: channel_id, isOwner: true)
     end
   end
 
