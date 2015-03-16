@@ -153,8 +153,16 @@ config.copy = {
       {
         expand: true,
         cwd: 'lib/droplet',
-        src: ['droplet-full' + droplet_suffix + '.js'],
-        dest: 'build/package/js/droplet/'
+        src: [
+          'droplet.js', // TODO - is this just needed for source mapping?
+          'droplet-full' + droplet_suffix + '.js',
+          'droplet-full' + droplet_suffix + '.js.map'
+        ],
+        dest: 'build/package/js/droplet/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
       },
       {
         expand: true,
