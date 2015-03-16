@@ -311,7 +311,6 @@ title: "Ops Dashboard"
       $scope.cohorts = cohortsService.query();
       $scope.program_types = programTypesService;
 
-
       $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
       });
@@ -325,6 +324,10 @@ title: "Ops Dashboard"
         cohortsService.remove({id: cohort.id}); // service call
         cohort.confirmDelete = false;
       };
+
+      $scope.setSortOrder = function(new_sort, current_sort) {
+        return (new_sort == current_sort) ? '-' + current_sort : new_sort;
+      }
     }
   ]);
 
