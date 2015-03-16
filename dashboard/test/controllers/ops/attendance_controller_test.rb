@@ -10,6 +10,7 @@ module Ops
       @admin = create :admin
       sign_in @admin
       @cohort = create(:cohort)
+      @cohort = @cohort.reload
       @attendance = @cohort.workshops.first.segments.first.attendances.first
     end
 

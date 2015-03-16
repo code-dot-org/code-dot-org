@@ -51,4 +51,9 @@ class ChannelsTest < Minitest::Unit::TestCase
     get "/v3/channels/#{channel_id}"
     assert last_response.not_found?
   end
+
+  def test_channel_requires_hash
+    post '/v3/channels', 5.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.bad_request?
+  end
 end
