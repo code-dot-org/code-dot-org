@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to send ASCII to each other."
+    "instructions": "NetSim: Variant 2 template: UNDER CONSTRUCTION: Variant 2 is not yet functional because P2P connections have not been implemented."
   }
 }]]></config>
 </NetSim>
