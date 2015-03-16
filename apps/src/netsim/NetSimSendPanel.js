@@ -396,7 +396,8 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
   if (myNode) {
     this.disableEverything();
-    myNode.sendMessage(this.getPacketBinary_(), function () {
+    var truncatedPacket = this.getPacketBinary_().substr(0, this.currentPacketSize_);
+    myNode.sendMessage(truncatedPacket, function () {
       var binaryTextarea = this.getBody()
           .find('tr.binary')
           .find('textarea');
