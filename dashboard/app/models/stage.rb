@@ -53,7 +53,8 @@ class Stage < ActiveRecord::Base
         id: id,
         position: position,
         name: localized_name,
-        title: localized_title
+        title: localized_title,
+        levels: script_levels.map(&:summarize),
     }
 
     if script.has_lesson_plan?
@@ -65,10 +66,6 @@ class Stage < ActiveRecord::Base
       stage_data[:finishLink] = script.hoc_finish_url
       stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
     end
-
-    levels = script.script_levels.to_a.select{|sl| sl.stage_id == id}
-    levels.sort_by {|sl| sl.position}
-    stage_data[:levels] = levels.map {|sl| sl.summarize}
 
     stage_data
   end
