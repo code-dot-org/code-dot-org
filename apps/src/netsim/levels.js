@@ -11,26 +11,32 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
- * @property {boolean} showClientsInLobby
+ * @property {string} instructions - Inherited from blockly level configuration.
  *
- * @property {boolean} showRoutersInLobby
+ * @property {boolean} showClientsInLobby - Whether client nodes should appear
+ *           in the lobby list at all.
  *
- * @property {boolean} showAddRouterButton
+ * @property {boolean} showRoutersInLobby - Whether router nodes should appear
+ *           in the lobby list at all.
  *
- * @property {NetSimTabType[]} showTabs
+ * @property {boolean} showAddRouterButton - Whether the "Add Router" button
+ *           should appear above the lobby list.
+ *
+ * @property {NetSimTabType[]} showTabs - Which tabs should appear beneath the
+ *           network visualization.  Does not determine tab order; tabs always
+ *           appear in the order "Instructions, My Device, Router, DNS."
  *
  * @property {number} defaultTabIndex - The zero-based index of the tab
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {string} instructionsLocKey - Localization key (function name)
- *           to instructions string for the given level.  Together with the
- *           localization system, determines the contents of the "Instructions"
- *           tab in the interface.
+ * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
+ *           binary, etc.) should have visible controls on the "My Device" tab.
  *
- * @property {EncodingType[]} showEncodingControls
- *
- * @property {EncodingType[]} defaultEnabledEncodings
+ * @property {EncodingType[]} defaultEnabledEncodings - Which encodings should
+ *           be enabled on page load.  Note: An encoding enabled here but not
+ *           included in the visible controls will be enabled and cannot be
+ *           disabled by the student.
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -67,7 +73,8 @@ levels.default = {
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  instructionsLocKey: "instructions_default",
+  // Note: Uses the blockly-standard level.instructions value, which should
+  //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
   showEncodingControls: [
@@ -100,8 +107,6 @@ levels.variant1 = utils.extend(levels.default, {
 
   showTabs: [NetSimTabType.INSTRUCTIONS],
 
-  instructionsLocKey: "instructions_variant1",
-
   defaultEnabledEncodings: [EncodingType.A_AND_B]
 });
 
@@ -113,7 +118,6 @@ levels.variant1 = utils.extend(levels.default, {
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
-  instructionsLocKey: "instructions_variant2",
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
 });
@@ -133,8 +137,6 @@ levels.variant3 = utils.extend(levels.default, {
     NetSimTabType.ROUTER,
     NetSimTabType.DNS
   ],
-
-  instructionsLocKey: "instructions_variant3",
 
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII],

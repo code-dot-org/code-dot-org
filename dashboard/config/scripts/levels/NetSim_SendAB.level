@@ -5,7 +5,8 @@
   "level_num": "variant1",
   "user_id": 1,
   "properties": {
-    "instructionsLocKey": "instructions_SendAB"
+    "skin": "netsim",
+    "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to manually set/read individual As and Bs on a simplex wire."
   }
 }]]></config>
 </NetSim>
