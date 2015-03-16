@@ -382,8 +382,6 @@ svg {
   */
   .netsim_send_panel {
 
-
-
     .netsim_packet {
       border: solid darkgray thin;
       background-color: #ddd;
@@ -478,11 +476,44 @@ svg {
     }
 
     .send_widget_footer {
-      text-align: right;
       margin: 10px;
 
+      .right-side-controls {
+        float: right;
+        text-align: right;
+      }
+
       .netsim_packet_size_control {
-        width: 300px;
+        label {
+          display: inline-block;
+        }
+        .slider_inline_wrap {
+          display: inline-block;
+          margin-top: 3.5px;
+          width: 300px;
+
+          .slider_labels {
+            margin-bottom: 1px;
+
+            .max_value {
+              float: right;
+              text-align: right;
+              width: 5em;
+            }
+            .min_value {
+              float: left;
+              text-align: left;
+              width: 5em;
+            }
+            .current_value {
+              text-align: center;
+            }
+          }
+
+          .packet_size_slider {
+            clear: both;
+          }
+        }
       }
     }
   }
