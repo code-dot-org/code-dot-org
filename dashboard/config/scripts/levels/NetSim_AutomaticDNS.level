@@ -5,6 +5,8 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
+    "skin": "netsim",
+    "instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service to get a student's address.",
     "showTabs": [
       "instructions",
       "my_device",
