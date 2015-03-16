@@ -25,6 +25,11 @@ $wide_column_width: 100px;
   padding-top: 2px;
 }
 
+/* Hide the footer instructions, we put them in the instructions tab */
+#prompt-table {
+  display: none;
+}
+
 .clearfix {
   clear: both;
 }
