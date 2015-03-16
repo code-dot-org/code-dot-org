@@ -51,4 +51,23 @@ class ChannelsTest < Minitest::Unit::TestCase
     get "/v3/channels/#{channel_id}"
     assert last_response.not_found?
   end
+
+  def test_channel_requires_hash
+    post '/v3/channels', 5.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.bad_request?
+  end
+
+  def test_channel_owner
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    assert_equal true, JSON.parse(last_response.body)['isOwner']
+
+    clear_cookies
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['isOwner']
+  end
 end

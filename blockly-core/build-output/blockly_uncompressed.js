@@ -15446,6 +15446,9 @@ Blockly.Block.prototype.setWarningText = function(text) {
     this.bumpNeighbours_()
   }
 };
+Blockly.Block.prototype.svgInitialized = function() {
+  return!!this.svg_
+};
 Blockly.Block.prototype.render = function() {
   if(!this.svg_) {
     throw"Uninitialized block cannot be rendered.  Call block.initSvg()";
@@ -19046,6 +19049,12 @@ Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConf
     this.openAndEditFunction(levelConfig.openFunctionDefinition)
   }
 };
+Blockly.FunctionEditor.prototype.openEditorForCallBlock_ = function(procedureBlock) {
+  var functionName = procedureBlock.getTitleValue("NAME");
+  procedureBlock.blockSpace.blockSpaceEditor.hideChaff();
+  this.hideIfOpen();
+  this.openAndEditFunction(functionName)
+};
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
   if(!targetFunctionDefinitionBlock) {
@@ -19304,8 +19313,11 @@ Blockly.FunctionEditor.prototype.getWindowBorderChromeHeight = function() {
 Blockly.FunctionEditor.prototype.getContractDivHeight = function() {
   return this.contractDiv_ ? this.contractDiv_.getBoundingClientRect().height : 0
 };
+Blockly.FunctionEditor.prototype.readyToBeLaidOut_ = function() {
+  return this.functionDefinitionBlock && (this.functionDefinitionBlock.svgInitialized() && this.isOpen())
+};
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function() {
-  if(!this.functionDefinitionBlock || !this.isOpen()) {
+  if(!this.readyToBeLaidOut_()) {
     return
   }
   var currentX = Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
@@ -21751,7 +21763,7 @@ Blockly.ContractEditor.prototype.createExampleBlock_ = function(functionDefiniti
   return temporaryExampleBlock
 };
 Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function() {
-  if(!this.isOpen()) {
+  if(!this.readyToBeLaidOut_()) {
     return
   }
   var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;

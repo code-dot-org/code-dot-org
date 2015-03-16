@@ -353,7 +353,7 @@ Blockly.ContractEditor.prototype.createExampleBlock_ = function (functionDefinit
  * @override
  */
 Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
-  if (!this.isOpen()) {
+  if (!this.readyToBeLaidOut_()) {
     return;
   }
 
