@@ -1,3 +1,8 @@
+module OPS
+  API = 'api'
+  DASHBOARDAPI = 'dashboardapi'
+end
+
 Dashboard::Application.routes.draw do
   def redirect_to_teacher_dashboard
     redirect CDO.code_org_url('/teacher-dashboard')
@@ -168,12 +173,6 @@ Dashboard::Application.routes.draw do
   resources :zendesk_session, only: [:index]
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
-
-  module OPS
-    API ||= 'api'
-    DASHBOARDAPI ||= 'dashboardapi'
-  end
-
 
   concern :ops_routes do
     # /ops/district/:id

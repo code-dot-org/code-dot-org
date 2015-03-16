@@ -9,6 +9,8 @@ module Ops
       @admin = create :admin
       sign_in @admin
       @cohort = create(:cohort)
+      @cohort = @cohort.reload
+      @district = @cohort.districts.first
     end
 
     test 'District Contact can add teachers to a cohort' do
@@ -16,12 +18,10 @@ module Ops
       #can click "Add Teacher" button to add a teacher
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
-      district = @cohort.districts.first
-
       teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
       teacher_params += [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district_name: district.name},
-                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district_name: district.name}
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district_name: @district.name},
+                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district_name: @district.name}
                         ]
 
       assert_difference('@cohort.reload.teachers.count', 2) do
@@ -92,16 +92,15 @@ module Ops
 
     def teacher_params
       (1..5).map do |x|
-        {ops_first_name: 'Teacher', ops_last_name: "#{x}", email: "teacher_#{x}@school.edu", district: @cohort.districts.first.name}
+        {ops_first_name: 'Teacher', ops_last_name: "#{x}", email: "teacher_#{x}@school.edu", district: @district.name}
       end
     end
 
     test 'Ops team can create a Cohort from a list of teacher information' do
       #87054348 (part 2)
       assert_difference 'User.count', 5 do
-        assert_difference 'Cohort.count' do
-          post :create, cohort: {name: 'Cohort name', district_names: [@cohort.districts.first.name], teachers: teacher_params}
-          assert_response :success
+        assert_creates(Cohort, CohortsDistrict) do
+          post :create, cohort: {name: 'Cohort name', districts: [{id: @district.id}], teachers: teacher_params}
         end
       end
       assert_response :success
@@ -109,21 +108,47 @@ module Ops
       # Ensure that the returned Cohort JSON object contains the provided District and teacher info
       cohort_json = JSON.parse(@response.body)
       assert_not_equal @cohort.id, cohort_json[:id]
-      assert_equal @cohort.districts.first.id, cohort_json['districts'].first['id']
+      assert_equal @district.id, cohort_json['districts'].first['id']
 
       assert_equal (1..5).map(&:to_s), cohort_json['teachers'].map {|x| x['ops_last_name']}
     end
 
-    test 'Create Cohort using district_ids instead of district_names' do
-      post :create, cohort: {name: 'Cohort name', district_ids: [@cohort.districts.first.id], teachers: teacher_params}
+    test 'Create Cohort with districts' do
+      d1 = create(:district)
+      d2 = create(:district)
+
+      post :create, cohort: {name: 'Cohort name', districts: [{id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}], teachers: teacher_params}
       assert_response :success
 
       cohort_id = JSON.parse(@response.body)['id']
       cohort = Cohort.find(cohort_id)
       assert_not_equal cohort, @cohort
-      assert_equal cohort.districts.first, @cohort.districts.first
 
+      # new teachers
       assert_equal (1..5).map {|x| "Teacher #{x}"}, cohort.teachers.map {|x| x[:name]}
+
+      # only the two new destricts
+      assert_equal [d1, d2], cohort.districts
+    end
+
+    test 'update Cohort with districts' do
+      d1 = create(:district)
+      d2 = create(:district)
+
+      put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, _destroy: 1}, {id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}]}
+      assert_response :success
+
+      # only the two new districts
+      assert_equal [d1, d2], @cohort.reload.districts
+    end
+
+
+    test 'updating Cohort with existing district updates count' do
+      put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @cohort.districts.first.id, max_teachers: 8}]}
+      assert_response :success
+
+      # only the two new districts
+      assert_equal [8], @cohort.reload.cohorts_districts.collect(&:max_teachers)
     end
 
     test 'Can create Cohort without providing list of acceptable districts' do
@@ -136,14 +161,14 @@ module Ops
 
     test 'Create Cohort from a list, including existing teacher account' do
       # Add existing teacher account to teacher info list
-      teacher = create(:teacher, district: @cohort.districts.first)
+      teacher = create(:teacher, district: @district)
       extra_teacher_params = [{ops_first_name: 'Hey', ops_last_name: 'Blah', email: teacher.email, district: teacher.district.name}]
 
       # Only 5 new teachers created, not 6
       assert_difference ->{User.count}, 5 do
-        assert_difference ->{Cohort.count} do
+        assert_creates(Cohort, CohortsDistrict) do
           post :create, cohort: {name: 'Cohort name',
-            district_names: [@cohort.districts.first.name],
+            districts: [{id: @district.id, max_teachers: 5}],
             teachers: teacher_params + extra_teacher_params}
         end
       end
@@ -156,6 +181,10 @@ module Ops
       # Existing teacher added to cohort along with new teachers
       assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map{|x| x.ops_first_name}.sort
       assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map{|x| x.ops_last_name}.sort
+      cd = CohortsDistrict.last
+      assert_equal @district, cd.district
+      assert_equal Cohort.last, cd.cohort
+      assert_equal 5, cd.max_teachers
     end
 
     test 'read cohort info' do
