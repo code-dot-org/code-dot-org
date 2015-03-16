@@ -106,6 +106,10 @@ When /^I press dropdown item with text "([^"]*)"$/ do |text|
   @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
 end
 
+When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+end
+
 When /^I press dropdown item "([^"]*)"$/ do |index|
   @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
