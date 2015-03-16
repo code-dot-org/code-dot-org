@@ -856,10 +856,7 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.currentParameterIDs = this.parameterIDsToArgumentConnections = null
 }, openEditor:function(a) {
   a.stopPropagation();
-  a = this.getTitleValue("NAME");
-  this.blockSpace.blockSpaceEditor.hideChaff();
-  Blockly.functionEditor.hideIfOpen();
-  Blockly.functionEditor.openAndEditFunction(a)
+  Blockly.functionEditor.openEditorForCallBlock_(this)
 }, getCallName:function() {
   return this.getTitleValue("NAME")
 }, renameProcedure:function(a, b) {
@@ -1365,8 +1362,9 @@ Blockly.Blocks.functional_call = {init:function() {
   a && (a.outputType_ && a.outputType_ !== this.currentOutputType_ && (this.currentOutputType_ = a.outputType_, this.changeFunctionalOutput(a.outputType_)), a.description_ && a.description_ !== this.currentDescription_ && (this.currentDescription_ = a.description_, this.setTooltip(a.description_)))
 }, beforeDispose:function() {
   this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.updateAttributesFromDefinition_, !1, this)
-}, openEditor:function() {
-  Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
+}, openEditor:function(a) {
+  a.stopPropagation();
+  Blockly.functionEditor.openEditorForCallBlock_(this)
 }, getCallName:function() {
   return this.getTitleValue("NAME")
 }, renameProcedure:function(a, b) {
@@ -1441,8 +1439,9 @@ Blockly.Blocks.functional_pass = {init:function() {
   }
   this.setFunctional(!0);
   this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION)
-}, openEditor:function() {
-  Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
+}, openEditor:function(a) {
+  a.stopPropagation();
+  Blockly.functionEditor.openEditorForCallBlock_(this)
 }, renameProcedure:function(a, b) {
   Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
 }, mutationToDom:function() {
