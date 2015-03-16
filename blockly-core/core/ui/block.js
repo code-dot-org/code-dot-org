@@ -455,7 +455,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
     var element = this.svg_.getRootElement();
     do {
       // Loop through this block and every parent.
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
