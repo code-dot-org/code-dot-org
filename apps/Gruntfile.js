@@ -154,7 +154,7 @@ config.copy = {
         expand: true,
         cwd: 'lib/droplet',
         src: [
-          'droplet.js', // TODO - is this just needed for source mapping?
+          'droplet.js',
           'droplet-full' + droplet_suffix + '.js',
           'droplet-full' + droplet_suffix + '.js.map'
         ],
