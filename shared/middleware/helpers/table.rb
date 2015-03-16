@@ -120,7 +120,17 @@ class DynamoTable
   end
 
   def delete_all()
-    # TODO
+    ids = ids_to_a
+    unless ids.empty?
+      db.batch_write_item(
+        request_items:{
+          CDO.dynamo_table_name => ids.map do |id|
+            { delete_request: { key:{'hash'=>@hash, 'row_id'=>id}, } }
+          end
+        }
+      )
+    end
+    true
   end
 
   def fetch(id)
@@ -132,6 +142,32 @@ class DynamoTable
     
     value_from_row(row)
   end
+  
+  def ids_to_a()
+    last_evaluated_key = nil
+    
+    [].tap do |results|
+      begin
+        page = db.query(
+          table_name:CDO.dynamo_table_name,
+          key_conditions: {
+            "hash" => {
+              attribute_value_list: [@hash],
+              comparison_operator: "EQ",
+            },
+          },
+          attributes_to_get:['row_id'],
+          exclusive_start_key:last_evaluated_key,
+        ).first
+
+        page[:items].each do |item|
+          results << item['row_id']
+        end
+
+        last_evaluated_key = page[:last_evaluated_key]
+      end while last_evaluated_key
+    end
+  end  
 
   def insert(value, ip_address)
     retries = 5
