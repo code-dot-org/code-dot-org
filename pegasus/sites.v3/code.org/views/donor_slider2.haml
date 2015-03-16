@@ -6,10 +6,10 @@
 
 .donor-slider
 
-  .badge-containers-shown{style: "position: relative; height: 120px"}
-    #badgedest_0{style: "position: absolute; top: 0; left: 0%"}
-    #badgedest_1{style: "position: absolute; top: 0; left: 33%"}
-    #badgedest_2{style: "position: absolute; top: 0; left: 66%"}
+  .badge-containers-shown{style: "height: 120px; overflow:hidden"}
+    #badgedest_0.col-33.mobile-center
+    #badgedest_1.desktop-feature.col-33
+    #badgedest_2.desktop-feature.col-33
 
   .badge-containers-hidden{style: "display: none"}
     - supporters.each_with_index do |supporter, index|
@@ -24,5 +24,3 @@
           - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
             %p.label
               =supporter[:name_s]
-
-.clear{style: "clear:both"}
