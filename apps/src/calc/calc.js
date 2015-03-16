@@ -872,7 +872,11 @@ function animateUserExpression (maxNumSteps) {
       // Don't highlight anything
       tokenList = constructTokenList(current);
     }
-    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
+    var leftAlign = currentStep > 0;
+    if (leftAlign) {
+      tokenList = getTokens('= ').concat(tokenList);
+    }
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken', leftAlign);
     previousExpression = current.clone();
     if (current.isDivZero()) {
       finished = true;
@@ -897,7 +901,7 @@ function animateUserExpression (maxNumSteps) {
  * @param {number} line How many lines deep into parent to display
  * @param {string} markClass Css class to use for 'marked' tokens.
  */
-function displayEquation(parentId, name, tokenList, line, markClass) {
+function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) {
   var parent = document.getElementById(parentId);
 
   var g = document.createElementNS(Blockly.SVG_NS, 'g');
@@ -908,13 +912,22 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     len = new Token(name + ' = ', false).renderToParent(g, xPos, null);
     xPos += len;
   }
-
+  var firstLen = 0;
   for (var i = 0; i < tokenList.length; i++) {
     len = tokenList[i].renderToParent(g, xPos, markClass);
+    if (i === 0) {
+      firstLen = len;
+    }
     xPos += len;
   }
 
-  var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  var xPadding;
+  if (leftAlign) {
+    var transform = Blockly.getRelativeXY(parent.childNodes[0]);
+    xPadding = parseFloat(transform.x) - firstLen;
+  } else {
+    xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  }
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
