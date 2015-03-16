@@ -79,6 +79,12 @@ To fix:
 > rake seed:all FORCE_CUSTOM_LEVELS=1
 ````
 
+If you also need to rebuild levelbuilder:
+````
+> cd ..
+> touch build-started
+````
+
 (you may have to remove the .seeded file as above also).
 
 ## Master failed to start, check stderr log for details?
