@@ -449,6 +449,15 @@ title: "Ops Dashboard"
       };
 
       $scope.saveAll = function(cohort) {
+        for (var i = 0; i < cohort.teachers.length; i++) {
+          if (typeof cohort.teachers[i].district == 'undefined') {
+            cohort.teachers[i].district_id = null;
+          }
+          else {
+            cohort.teachers[i].district_id = cohort.teachers[i].district.id;
+          }
+        }
+
         cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
           function() {
             $scope.cohort = cohortsService.get({id: $routeParams.id});
