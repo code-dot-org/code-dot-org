@@ -31,4 +31,3 @@ end
     variables ({data:node['cdo-github-access'][file]})
   end
 end
-

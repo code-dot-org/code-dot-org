@@ -104,4 +104,3 @@ def company_count(company)
   end
   return company_count
 end
-
