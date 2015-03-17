@@ -34,7 +34,7 @@ Blockly.Blocks.procedures_defnoreturn = {
   },
   // Define a procedure with no return value.
   init: function() {
-    var showParamEditIcon = !Blockly.disableParamEditing;
+    var showParamEditIcon = !Blockly.disableParamEditing && !Blockly.useModalFunctionEditor;
 
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
