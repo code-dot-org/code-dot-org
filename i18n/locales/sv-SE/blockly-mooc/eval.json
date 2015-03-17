@@ -2,15 +2,16 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"cirkel (radie, stil, färg)",
-  "displayBlockTitle":"visa",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ellips (bredd, höjd, stil, färg)",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Du har okopplade block. Menade du att fästa dessa till \"visa\" blocket?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"övertäckning(topp, botten)",
   "placeImageBlockTitle":"placera-bild (x, y, bild)",
   "offsetBlockTitle":"Offset (x, y, bild)",
   "rectangleBlockTitle":"rektangel (bredd, höjd, stil, färg)",
-  "reinfFeedbackMsg":"Du kan trycka på \"Försök igen\"-knappen för att redigera din ritning.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"rotera (grader, bild)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"kvadrat (storlek, stil, färg)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"underlag (botten, topp)",
   "outline":"kontur",
   "solid":"solid",
-  "string":"sträng"
+  "string":"sträng",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

@@ -205,7 +205,7 @@ fi:
         turtle_3_5: 'Luo nyt uusi "piirrä talo" funktio. Piirrä sitten talo kahdelle kissalle. Vihje: luo uusi funktio raahaamalla "suorittaaksesi jotain" -lohko ja muuta "jotain"-tekstin tilalle funktion nimi ("piirrä talo").'
         turtle_3_6: 'Käyttäen "piirrä neliö" -funktiota esimerkkinä, lisää syöte "pituus" "piirrä kolmio" -funtiolle. Tämän jälkeen piirrä eri kokoisia kolmioita. (Vihje: klikkaa tähteä funktion vasemmassa yläkulmassa)'
         turtle_3_7: 'Lisää syöte "pituus" "piirrä talo" -funktiolle ja piirrä iso talo elefantille (sivun pituus 150 kuvapistettä)'
-        turtle_3_8: 'Tässä on kaikki edellisen pulman lohkot. Muokkaa "piirrä talo"-funktiota niin, että päädyn talon oikeaan alakulmaan piirtämisen jälkeen. Käytä muutettua funktiota ja piirrä kolme taloa.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Osaatko luoda "piirrä talo" -funktion ilman apua? Kokeile ja sitten piirrä rivi taloja.'
         turtle_3_10: Olet oppinut todella paljon! Käytä nyt taitojasi ja piirrä jotain mukavaa. Kokeile vaikka piirtää tähti, spiraali tai erikoinen lumihiutale.
         maze_karel_debug_seq_1: Tervetuloa mestästämään koodivirhettä, eli bugia! Koodini ei toimi oikein. Osaatko löytää virheen ja korjata sen? Minun pitäisi saada peltoni tasattua, jotta voin aloittaa istutuksen.
@@ -430,6 +430,12 @@ fi:
         playlab_intro: Johdanto Pelilabraan
         playlab_events: 'Pelilabra: tapahtumat'
         playlab_repeat_forever: 'Pelilabra: ikuinen toisto'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Arviointilohkot
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Muuttujat
+        msm_7_functions: Funktiot
     callout:
       text:
         drag_blocks: 'Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'

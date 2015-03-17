@@ -1,13 +1,17 @@
 {
-  "compute":"вычислить",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"Вам необходимо прикрепить блок к блоку \"Вычислить\".",
+  "emptyFunctionalBlock":"У вас есть блок с незаполненными входными данными.",
   "equivalentExpression":"Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение.",
+  "evaluate":"evaluate",
   "extraTopBlocks":"У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Вычислить\"?",
-  "failedInput":"Ваша функция не возвращает правильный результат для всех значений.",
+  "failedInput":"Ваша процедура возвращает неверный результат для некоторых значений.",
   "goal":"Цель:",
-  "levelIncompleteError":"Your expression does not match the goal.",
+  "levelIncompleteError":"Ваше выражение не соответствует цели.",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"Вот ваши вычисления! Продолжай работать над этим, или переходи к следующей задаче!",
   "yourExpression":"Ваше выражение:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Вы вызываете функцию с неправильным значением параметра.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expresison does not return the correct result."
 }

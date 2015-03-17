@@ -2,15 +2,16 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"دایره (شعاع، سبک، رنگ)",
-  "displayBlockTitle":"نمایش",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"بیضی (عرض، ارتفاع، سبک، رنگ)",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"پوشش (بالا، پایین)",
   "placeImageBlockTitle":"مکان تصویر (x، y، تصویر)",
   "offsetBlockTitle":"اُفسِت (x، y، تصویر)",
   "rectangleBlockTitle":"مستطیل (عرض، ارتفاع، سبک، رنگ)",
-  "reinfFeedbackMsg":"تو می توانی دکمه \"دوباره امتحان کن\" را فشار دهی تا نقاشیت را  ویرایش کنید.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"چرخش (درجه، تصویر)",
   "scaleImageBlockTitle":"مقیاس (عامل، تصویر)",
   "squareBlockTitle":"مربع (اندازه، سبک، رنگ)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"لایه زیرین (زیر، رو)",
   "outline":"طرح کلی",
   "solid":"تو پُر",
-  "string":"رشته"
+  "string":"رشته",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }
