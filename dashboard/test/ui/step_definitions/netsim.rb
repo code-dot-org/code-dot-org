@@ -7,7 +7,7 @@ When /^I load netsim$/ do
 end
 
 When /^I enter the netsim name "([^"]*)"$/ do |username|
-  steps %Q{
+  steps %{
     And I type "#{username}" into "#netsim_lobby_name"
     And I press the "Set Name" button
     And I wait until element "#netsim_shard_select" is visible

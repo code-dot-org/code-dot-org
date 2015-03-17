@@ -251,7 +251,9 @@ class Documents < Sinatra::Base
     Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
   end
 
+  # rubocop:disable Lint/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
 
   # Documents
   get_head_or_post '*' do |uri|

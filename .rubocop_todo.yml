@@ -18,11 +18,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/AssignmentInCondition:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/BlockAlignment:
-  Enabled: false
-
 # Offense count: 14
 # Cop supports --auto-correct.
 Lint/DeprecatedClassMethods:
@@ -31,10 +26,6 @@ Lint/DeprecatedClassMethods:
 # Offense count: 7
 # Configuration parameters: AlignWith, SupportedStyles.
 Lint/EndAlignment:
-  Enabled: false
-
-# Offense count: 3
-Lint/Eval:
   Enabled: false
 
 # Offense count: 7
@@ -162,12 +153,6 @@ Style/AlignParameters:
 Style/AndOr:
   Enabled: false
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/BarePercentLiterals:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Style/BlockComments:
@@ -267,11 +252,6 @@ Style/DoubleNegation:
 
 # Offense count: 1
 Style/EachWithObject:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/ElseAlignment:
   Enabled: false
 
 # Offense count: 23
