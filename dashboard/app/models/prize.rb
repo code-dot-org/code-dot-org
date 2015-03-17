@@ -1,7 +1,7 @@
 class Prize < ActiveRecord::Base
   belongs_to :prize_provider
   belongs_to :user
-  
+
   def self.assign_to_user(user, prize_provider_id)
     prize = nil
     if user.prize.present?

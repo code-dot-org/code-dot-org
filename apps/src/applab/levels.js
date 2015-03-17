@@ -125,6 +125,7 @@ levels.ec_simple = {
     "clearTimeout": null,
     "setInterval": null,
     "clearInterval": null,
+    "getTime": null,
 
     // Math
     "addOperator": null,

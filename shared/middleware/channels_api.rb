@@ -24,13 +24,13 @@ class ChannelsApi < Sinatra::Base
       })
     end
   end
-  
+
   #
   #
   # CHANNELS
   #
   #
-  
+
   #
   # GET /v3/channels
   #
@@ -59,7 +59,7 @@ class ChannelsApi < Sinatra::Base
 
     redirect "/v3/channels/#{id}", 301
   end
-  
+
   #
   # GET /v3/channels/<channel-id>
   #

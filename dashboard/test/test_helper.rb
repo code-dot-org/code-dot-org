@@ -3,7 +3,7 @@
 #  SimpleCov.start :rails
 
 require 'minitest/reporters'
-MiniTest::Reporters.use! ($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
+MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
@@ -104,7 +104,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map { |e|
+      # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      # rubocop:enable Lint/Eval
     }
     before = exps.map { |e| e.call }
 
@@ -123,7 +125,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map { |e|
+      # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      # rubocop:enable Lint/Eval
     }
     before = exps.map { |e| e.call }
 

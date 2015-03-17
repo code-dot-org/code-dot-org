@@ -133,8 +133,8 @@ class ScriptTest < ActiveSupport::TestCase
     first_stage = create(:stage, script: script, position: 1)
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
     second_stage = create(:stage, script: script, position: 2)
-    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position:1)
-    second_stage_last_level = create(:script_level, script: script, stage: second_stage, position:2)
+    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
+    create(:script_level, script: script, stage: second_stage, position: 2)
 
     assert_equal second_stage_first_level, first_stage_last_level.next_progression_level
   end
@@ -179,7 +179,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'blockly level in custom script' do
-    script_data, i18n = ScriptDSL.parse(
+    script_data, _ = ScriptDSL.parse(
                      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
@@ -213,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_cache_to_cache # in test this is in non-distributed memory
 
     Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
-    
+
     Script.connection.disconnect!     # we don't need no stinkin db
 
     assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name

@@ -1,13 +1,8 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
+var Token = require('./token');
+var jsnums = require('./js-numbers/js-numbers');
 
-/**
- * A node consisting of an value, and potentially a set of operands.
- * The value will be either an operator, a string representing a variable, a
- * string representing a functional call, or a number.
- * If args are not ExpressionNode, we convert them to be so, assuming any string
- * represents a variable
- */
 var ValueType = {
   ARITHMETIC: 1,
   FUNCTION_CALL: 2,
@@ -19,8 +14,32 @@ function DivideByZeroError(message) {
   this.message = message || '';
 }
 
+/**
+ * Converts numbers to jsnumber representations. This is needed because some
+ * jsnumber methods will return a number or jsnumber depending on their values,
+ * for example:
+ * jsnums.sqrt(jsnums.makeFloat(4).toExact()) = 4
+ * jsnums.sqrt(jsnums.makeFloat(5).toExact()) = jsnumber
+ * @param {number|jsnumber} val
+ * @returns {jsnumber}
+ */
+function ensureJsnum(val) {
+  if (typeof(val) === 'number') {
+    return jsnums.makeFloat(val);
+  }
+  return val;
+}
+
+/**
+ * A node consisting of an value, and potentially a set of operands.
+ * The value will be either an operator, a string representing a variable, a
+ * string representing a functional call, or a number.
+ * If args are not ExpressionNode, we convert them to be so, assuming any string
+ * represents a variable
+ */
 var ExpressionNode = function (val, args, blockId) {
-  this.value_ = val;
+  this.value_ = ensureJsnum(val);
+
   this.blockId_ = blockId;
   if (args === undefined) {
     args = [];
@@ -63,7 +82,7 @@ ExpressionNode.prototype.getType_ = function () {
     return ValueType.FUNCTION_CALL;
   }
 
-  if (typeof(this.value_) === 'number') {
+  if (jsnums.isSchemeNumber(this.value_)) {
     return ValueType.NUMBER;
   }
 };
@@ -86,7 +105,7 @@ ExpressionNode.prototype.isNumber = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && this.getChildValue(1) === 0;
+  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
 };
 
 /**
@@ -115,6 +134,8 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     localMapping = localMapping || {};
 
     var type = this.getType_();
+    // @type {number|jsnumber}
+    var val;
 
     if (type === ValueType.VARIABLE) {
       var mappedVal = utils.valueOr(localMapping[this.value_],
@@ -163,42 +184,54 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     if (left.err) {
       throw left.err;
     }
-    left = left.result;
+    left = left.result.toExact();
 
     if (this.children_.length === 1) {
       switch (this.value_) {
         case 'sqrt':
-          return { result: Math.sqrt(left) };
+          val = jsnums.sqrt(left);
+          break;
         case 'sqr':
-          return { result: left * left };
+          val = jsnums.sqr(left);
+          break;
         default:
           throw new Error('Unknown operator: ' + this.value_);
-        }
+      }
+      return { result: ensureJsnum(val) };
     }
 
     var right = this.children_[1].evaluate(globalMapping, localMapping);
     if (right.err) {
       throw right.err;
     }
-    right = right.result;
+    right = right.result.toExact();
 
     switch (this.value_) {
       case '+':
-        return { result: left + right };
+        val = jsnums.add(left, right);
+        break;
       case '-':
-        return { result: left - right };
+        val = jsnums.subtract(left, right);
+        break;
       case '*':
-        return { result: left * right };
+        val = jsnums.multiply(left, right);
+        break;
       case '/':
-        if (right === 0) {
+        if (jsnums.equals(right, 0)) {
           throw new DivideByZeroError();
         }
-        return { result: left / right };
+        val = jsnums.divide(left, right);
+        break;
       case 'pow':
-        return { result: Math.pow(left, right) };
+        val = jsnums.expt(left, right);
+        break;
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }
+    // When calling jsnums methods, they will sometimes return a jsnumber and
+    // sometimes a native JavaScript number. We want to make sure to convert
+    // to a jsnumber before we return.
+    return { result: ensureJsnum(val) };
   } catch (err) {
     return { err: err };
   }
@@ -274,13 +307,12 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
-  var nodesMatch = other && (this.value_ === other.value_) &&
+  var nodesMatch = other && this.hasSameValue_(other) &&
     (this.children_.length === other.children_.length);
   var type = this.getType_();
 
-  // Empty function calls look slightly different, i.e. foo() instead of foo
   if (this.children_.length === 0) {
-    return [new Token(this.value_.toString(), !nodesMatch)];
+    return [new Token(this.value_, !nodesMatch)];
   }
 
   if (type === ValueType.ARITHMETIC) {
@@ -345,11 +377,28 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 };
 
 /**
+ * Looks to see if two nodes have the same value, using jsnum.equals in the
+ * case of numbers
+ * @param {ExpressionNode} other ExpresisonNode to compare to
+ * @returns {boolean} True if both nodes have the same value.
+ */
+ExpressionNode.prototype.hasSameValue_ = function (other) {
+  if (!other) {
+    return false;
+  }
+
+  if (this.isNumber()) {
+    return jsnums.equals(this.value_, other.value_);
+  }
+
+  return this.value_ === other.value_;
+};
+
+/**
  * Is other exactly the same as this ExpressionNode tree.
  */
 ExpressionNode.prototype.isIdenticalTo = function (other) {
-  if (!other || this.value_ !== other.value_ ||
-      this.children_.length !== other.children_.length) {
+  if (!other || !this.hasSameValue_(other) || this.children_.length !== other.children_.length) {
     return false;
   }
 
@@ -423,9 +472,10 @@ ExpressionNode.prototype.numChildren = function () {
 
 /**
  * Get the value
+ * @returns {string} String representation of this node's value.
  */
 ExpressionNode.prototype.getValue = function () {
-  return this.value_;
+  return this.value_.toString();
 };
 
 
@@ -437,7 +487,11 @@ ExpressionNode.prototype.setValue = function (value) {
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
   }
-  this.value_ = value;
+  if (type === ValueType.NUMBER) {
+    this.value_ = jsnums.makeFloat(value);
+  } else {
+    this.value_ = value;
+  }
 };
 
 /**
@@ -457,26 +511,18 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
+ * @returns {string} 
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
-    return this.value_;
+    if (this.isNumber()) {
+      return this.value_.toFixnum().toString();
+    } else {
+      return this.value_.toString();
+    }
   }
   return "(" + this.value_ + " " +
     this.children_.map(function (c) {
       return c.debug();
     }).join(' ') + ")";
 };
-
-/**
- * A token is essentially just a string that may or may not be "marked". Marking
- * is done for two different reasons.
- * (1) We're comparing two expressions and want to mark where they differ.
- * (2) We're looking at a single expression and want to mark the deepest
- *     subexpression.
- */
-var Token = function (str, marked) {
-  this.str = str;
-  this.marked = marked;
-};
-ExpressionNode.Token = Token;

@@ -14229,7 +14229,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   if(goog.isFunction(this.init)) {
     this.init()
   }
-  if(this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
+  if(this.shouldHideIfInMainBlockSpace && (this.shouldHideIfInMainBlockSpace() && this.blockSpace === Blockly.mainBlockSpace)) {
     this.setCurrentlyHidden(true)
   }
 };
@@ -14934,7 +14934,7 @@ Blockly.Block.prototype.setEditable = function(editable) {
 Blockly.Block.prototype.isUserVisible = function() {
   return this.userVisible_
 };
-Blockly.Block.prototype.setUserVisible = function(userVisible) {
+Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVisible) {
   this.userVisible_ = userVisible;
   if(userVisible) {
     this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, "userHidden")
@@ -14943,7 +14943,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   }
   this.childBlocks_.forEach(function(child) {
     child.setUserVisible(userVisible)
-  })
+  });
+  if(opt_renderAfterVisible && (userVisible && this.childBlocks_.length === 0)) {
+    this.svg_ && this.render()
+  }
 };
 Blockly.Block.prototype.isCurrentlyHidden = function() {
   return this.currentlyHidden_
@@ -19246,7 +19249,8 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
-  newCopyOfBlock.setUserVisible(true);
+  newCopyOfBlock.setUserVisible(true, true);
+  newCopyOfBlock.setMovable(false);
   return newCopyOfBlock
 };
 Blockly.FunctionEditor.prototype.create_ = function() {

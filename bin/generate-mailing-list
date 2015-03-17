@@ -18,7 +18,7 @@ end
 
 def export_contacts_to_csv(contacts, path)
   columns = nil
-  
+
   CSV.open(path, 'wb') do |results|
     contacts.values.each do |contact|
       unless columns
