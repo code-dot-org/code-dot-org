@@ -21,7 +21,7 @@ end
 
 And(/^callout "([^"]*)" does not exist$/) do |callout_id|
   callout_exists(callout_id).should eq false
-  end
+end
 
 And(/^callout "([^"]*)" exists$/) do |callout_id|
   callout_exists(callout_id).should eq true

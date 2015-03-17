@@ -507,7 +507,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     program = "<whatever>"
 
     level_source = LevelSource.find_identical_or_create(@script_level.level, program)
-    level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
+    LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @blank_image
     end
 
@@ -881,7 +881,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    levels = (1..3).map { |n| create(:level, :name => "Level #{n}", :game => game) }
+    (1..3).each { |n| create(:level, :name => "Level #{n}", :game => game) }
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"

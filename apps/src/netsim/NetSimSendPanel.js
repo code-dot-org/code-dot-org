@@ -18,6 +18,7 @@ var markup = require('./NetSimSendPanel.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 
@@ -39,11 +40,20 @@ var binaryToAscii = dataConverters.binaryToAscii;
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimSendPanel = module.exports = function (rootDiv, connection) {
+var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
+    connection) {
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
+
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -68,11 +78,24 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
   this.message = '';
 
   /**
+   * Maximum packet length configurable by slider.
+   * @type {Number}
+   * @private
+   */
+  this.currentPacketSize_ = levelConfig.defaultPacketSizeLimit;
+
+  /**
    * Bits per chunk/byte for parsing and formatting purposes.
    * @type {number}
    * @private
    */
   this.currentChunkSize_ = 8;
+
+  /**
+   * @type {NetSimPacketSizeControl}
+   * @private
+   */
+  this.packetSizeControl_ = null;
   
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_send_panel',
@@ -81,6 +104,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
 };
 NetSimSendPanel.inherits(NetSimPanel);
 
+/** Replace contents of our root element with our own markup. */
 NetSimSendPanel.prototype.render = function () {
   // Render boilerplate panel stuff
   NetSimSendPanel.superPrototype.render.call(this);
@@ -88,6 +112,13 @@ NetSimSendPanel.prototype.render = function () {
   // Put our own content into the panel body
   var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
+
+  if (this.levelConfig_.showPacketSizeControl) {
+    this.packetSizeControl_ = new NetSimPacketSizeControl(
+        this.rootDiv_.find('.packet_size'),
+        this.packetSizeChangeCallback_.bind(this));
+    this.packetSizeControl_.setPacketSize(this.currentPacketSize_);
+  }
 
   this.bindElements_();
   this.updateFields_();
@@ -278,7 +309,7 @@ NetSimSendPanel.prototype.bindElements_ = function () {
         this.makeBlurHandler('message', rowType.messageConversion));
   }, this);
 
-  this.bitCounter = rootDiv.find('.bit_counter');
+  this.bitCounter = rootDiv.find('.bit-counter');
 
   this.sendButton_ = rootDiv.find('#send_button');
   this.sendButton_.click(this.onSendButtonPress_.bind(this));
@@ -373,11 +404,7 @@ NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
     }
   });
 
-  var packetBinary = this.getPacketBinary_();
-  this.bitCounter.html(netsimMsg.bitCounter({
-    x: packetBinary.length,
-    y: netsimMsg.infinity()
-  }));
+  this.updateBitCounter();
 
   // TODO: Hide columns by configuration
   this.getBody().find('th.packetInfo, td.packetInfo').hide();
@@ -388,7 +415,8 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   var myNode = this.connection_.myNode;
   if (myNode) {
     this.disableEverything();
-    myNode.sendMessage(this.getPacketBinary_(), function () {
+    var truncatedPacket = this.getPacketBinary_().substr(0, this.currentPacketSize_);
+    myNode.sendMessage(truncatedPacket, function () {
       var binaryTextarea = this.getBody()
           .find('tr.binary')
           .find('textarea');
@@ -399,10 +427,12 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   }
 };
 
+/** Disable all controls in this panel, usually during network activity. */
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
 };
 
+/** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
 };
@@ -441,4 +471,35 @@ NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
 NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.updateFields_();
+};
+
+/**
+ * Callback passed down into packet size control, called when packet size
+ * is changed by the user.
+ * @param {number} newPacketSize
+ * @private
+ */
+NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
+  this.currentPacketSize_ = newPacketSize;
+  this.updateBitCounter();
+};
+
+/**
+ * Update the visual state of the bit counter to reflect the current
+ * message binary length and maximum packet size.
+ */
+NetSimSendPanel.prototype.updateBitCounter = function () {
+  var size = this.getPacketBinary_().length;
+  var maxSize = this.currentPacketSize_ === Infinity ?
+      netsimMsg.infinity() : this.currentPacketSize_;
+  this.bitCounter.html(netsimMsg.bitCounter({
+    x: size,
+    y: maxSize
+  }));
+
+  if (size <= this.currentPacketSize_) {
+    this.bitCounter.removeClass('oversized');
+  } else {
+    this.bitCounter.addClass('oversized');
+  }
 };

@@ -80,7 +80,7 @@
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.pretty_block('start')
+  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
   :javascript
     codeMirror('start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field

@@ -8,10 +8,10 @@ class StorageApps
 
   def initialize(storage_id)
     @storage_id = storage_id
-  
+
     @table = PEGASUS_DB[:storage_apps]
   end
-  
+
   def create(value, ip_address)
     row = {
       storage_id:@storage_id,
@@ -23,7 +23,7 @@ class StorageApps
 
     storage_encrypt_channel_id(row[:storage_id], row[:id])
   end
-  
+
   def delete(channel_id)
     owner, id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
@@ -44,7 +44,7 @@ class StorageApps
 
     JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
   end
-  
+
   def update(channel_id, value, ip_address)
     owner, id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
@@ -59,7 +59,7 @@ class StorageApps
 
     JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
   end
-  
+
   def to_a()
     @table.where(storage_id:@storage_id).exclude(state:'deleted').map do |i|
       channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])

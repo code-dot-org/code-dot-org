@@ -370,7 +370,7 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
 };
 
 /**
- * Moves an existing block to this modal BlockSpace.
+ * Moves an existing block to this modal BlockSpace and makes them immovable
  * Note: destroys the existing Block object in the process
  * @param {Blockly.Block} blockToMove
  * @returns {Blockly.Block} copy of block in modal BlockSpace
@@ -383,7 +383,8 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
     ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
-  newCopyOfBlock.setUserVisible(true);
+  newCopyOfBlock.setUserVisible(true, true);
+  newCopyOfBlock.setMovable(false);
   return newCopyOfBlock;
 };
 

@@ -47,7 +47,7 @@ class VolunteerEngineerSubmission
   def self.commitments_with_i18n_labels(*commitments)
     results = {}
     commitments.each do |commitment|
-      results[commitment] = I18n.t("volunteer_engineer_submission_commitment_#{commitment.to_s}")
+      results[commitment] = I18n.t("volunteer_engineer_submission_commitment_#{commitment}")
     end
     results
   end
@@ -63,7 +63,7 @@ class VolunteerEngineerSubmission
   def self.locations_with_i18n_labels(*locations)
     results = {}
     locations.each do |location|
-      results[location] = I18n.t("volunteer_engineer_submission_location_flexibility_#{location.to_s}")
+      results[location] = I18n.t("volunteer_engineer_submission_location_flexibility_#{location}")
     end
     results
   end
@@ -79,7 +79,7 @@ class VolunteerEngineerSubmission
   def self.experiences_with_i18n_labels(*experiences)
     results = {}
     experiences.each do |experience|
-      results[experience] = I18n.t("volunteer_engineer_submission_experience_#{experience.to_s}")
+      results[experience] = I18n.t("volunteer_engineer_submission_experience_#{experience}")
     end
     results
   end

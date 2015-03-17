@@ -41,10 +41,12 @@
     </tr>
     </tbody>
   </table>
-  <div class="bit_counter"></div>
+  <div class="bit-counter"></div>
 </div>
 <div class="send_widget_footer">
-  <!-- Packet size slider -->
-  <!-- Add packet button -->
-  <span class="netsim_button" id="send_button"><%= netsimMsg.send() %></span>
+  <div class="right-side-controls">
+    <!-- Add packet button -->
+    <span class="netsim-button" id="send_button"><%= netsimMsg.send() %></span>
+  </div>
+  <div class="packet_size"></div>
 </div>
