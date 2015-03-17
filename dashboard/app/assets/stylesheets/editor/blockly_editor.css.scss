@@ -18,3 +18,23 @@
 .contract-editor-config td {
   text-align: center;
 }
+
+h2, h3 {
+  border-top: 2px solid #EEE;
+}
+
+.indent {
+  padding-left: 1em;
+}
+
+table.checkboxes {
+  td, th {
+    padding: 0 0.5em;
+    vertical-align: top;
+  }
+
+  label {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
