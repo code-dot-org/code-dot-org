@@ -285,7 +285,7 @@ NetSimLobby.prototype.refreshShardList_ = function () {
     });
 
     self.onShardSelectorChange_();
-  });
+  }.bind(this));
 };
 
 /** Generates a new random shard ID and immediately selects it. */

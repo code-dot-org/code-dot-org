@@ -7,12 +7,13 @@
   "properties": {
     "skin": "netsim",
     "instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
-    "showTabs": [
+    "show_packet_size_control": "false",
+    "show_tabs": [
       "instructions",
       "my_device",
       "router"
     ],
-    "defaultDnsMode": "none"
+    "default_dns_mode": "none"
   }
 }]]></config>
 </NetSim>
