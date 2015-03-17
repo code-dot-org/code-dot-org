@@ -1324,8 +1324,9 @@ Blockly.Block.prototype.isUserVisible = function() {
 /**
  * Set whether this block is visible to the user.
  * @param {boolean} userVisible True if visible to user.
+ * @param {boolean} opt_renderAfterVisible True if should render once if set to visible
  */
-Blockly.Block.prototype.setUserVisible = function(userVisible) {
+Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVisible) {
   this.userVisible_ = userVisible;
   if (userVisible) {
     this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, 'userHidden');
@@ -1336,6 +1337,11 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   this.childBlocks_.forEach(function (child) {
     child.setUserVisible(userVisible);
   });
+
+  if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
+    // At leaf node blocks, renders up through the root
+    this.svg_ && this.render();
+  }
 };
 
 /**
