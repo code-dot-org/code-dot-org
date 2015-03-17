@@ -66,6 +66,48 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.count
   end
 
+  def summarize
+    if level.unplugged?
+      kind = 'unplugged'
+    elsif assessment
+      kind = 'assessment'
+    else
+      kind = 'puzzle'
+    end
+
+    summary = {
+        id: level.id,
+        position: position,
+        kind: kind,
+        title: level_display_text,
+    }
+
+    # Add a previous pointer if it's not the obvious (level-1)
+    if previous_level
+      if previous_level.stage.position != stage.position
+        summary[:previous] = [previous_level.stage.position, previous_level.position]
+      end
+    else
+      # This is the first level in the script
+      summary[:previous] = false
+    end
+
+    # Add a next pointer if it's not the obvious (level+1)
+    if end_of_stage?
+      if next_level
+        summary[:next] = [next_level.stage.position, next_level.position]
+      else
+        # This is the final level in the script
+        summary[:next] = false
+        if script.wrapup_video
+          summary[:wrapupVideo] = script.wrapup_video.summarize
+        end
+      end
+    end
+
+    summary
+  end
+
   def self.cache_find(id)
     @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
