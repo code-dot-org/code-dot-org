@@ -2,10 +2,6 @@
   %h4 #{t('nav.popup.mastery')}
 
   %table{style: 'max-width: 290px;'}
-    - if concept_progress
-      - concept_progress.each_pair do |concept, counts|
-      - completion = counts[:current].to_f / counts[:max]
-        = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: completion}
-    - else
-      - Concept.cached.each do |concept|
-        = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: 0}
+    - Concept.cached.each do |concept|
+      - completion = concept_progress.try(:[], concept.name) || 0
+      = render partial: 'shared/concept_trophy_row', locals: {concept: concept, completion: completion}
