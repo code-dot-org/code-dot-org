@@ -3,13 +3,6 @@ var _ = utils.getLodash();
 var Token = require('./token');
 var jsnums = require('./js-numbers/js-numbers');
 
-/**
- * A node consisting of an value, and potentially a set of operands.
- * The value will be either an operator, a string representing a variable, a
- * string representing a functional call, or a number.
- * If args are not ExpressionNode, we convert them to be so, assuming any string
- * represents a variable
- */
 var ValueType = {
   ARITHMETIC: 1,
   FUNCTION_CALL: 2,
@@ -21,6 +14,15 @@ function DivideByZeroError(message) {
   this.message = message || '';
 }
 
+/**
+ * Converts numbers to jsnumber representations. This is needed because some
+ * jsnumber methods will return a number or jsnumber depending on their values,
+ * for example:
+ * jsnums.sqrt(jsnums.makeFloat(4).toExact()) = 4
+ * jsnums.sqrt(jsnums.makeFloat(5).toExact()) = jsnumber
+ * @param {number|jsnumber} val
+ * @returns {jsnumber}
+ */
 function ensureJsnum(val) {
   if (typeof(val) === 'number') {
     return jsnums.makeFloat(val);
@@ -28,6 +30,13 @@ function ensureJsnum(val) {
   return val;
 }
 
+/**
+ * A node consisting of an value, and potentially a set of operands.
+ * The value will be either an operator, a string representing a variable, a
+ * string representing a functional call, or a number.
+ * If args are not ExpressionNode, we convert them to be so, assuming any string
+ * represents a variable
+ */
 var ExpressionNode = function (val, args, blockId) {
   this.value_ = ensureJsnum(val);
 
@@ -125,6 +134,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     localMapping = localMapping || {};
 
     var type = this.getType_();
+    // @type {number|jsnumber}
     var val;
 
     if (type === ValueType.VARIABLE) {
@@ -218,6 +228,9 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       default:
         throw new Error('Unknown operator: ' + this.value_);
     }
+    // When calling jsnums methods, they will sometimes return a jsnumber and
+    // sometimes a native JavaScript number. We want to make sure to convert
+    // to a jsnumber before we return.
     return { result: ensureJsnum(val) };
   } catch (err) {
     return { err: err };
@@ -366,6 +379,8 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 /**
  * Looks to see if two nodes have the same value, using jsnum.equals in the
  * case of numbers
+ * @param {ExpressionNode} other ExpresisonNode to compare to
+ * @returns {boolean} True if both nodes have the same value.
  */
 ExpressionNode.prototype.hasSameValue_ = function (other) {
   if (!other) {
@@ -457,6 +472,7 @@ ExpressionNode.prototype.numChildren = function () {
 
 /**
  * Get the value
+ * @returns {string} String representation of this node's value.
  */
 ExpressionNode.prototype.getValue = function () {
   return this.value_.toString();
@@ -495,6 +511,7 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
+ * @returns {string} 
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {

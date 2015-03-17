@@ -6,7 +6,7 @@ var jsnums = require('./js-numbers/js-numbers');
  * (1) We're comparing two expressions and want to mark where they differ.
  * (2) We're looking at a single expression and want to mark the deepest
  *     subexpression.
- * @param {} val
+ * @param {string|jsnumber} val
  * @param {boolean} marked
  */
 var Token = function (val, marked) {
@@ -16,7 +16,9 @@ var Token = function (val, marked) {
   // Store string representation of value. In most cases this is just a
   // non repeated portion. In the case of something like 1/9 there will be both
   // a non repeated portion "0." and a repeated portion "1" - i.e. 0.1111111...
+  /** @type {string} */
   this.nonRepeated_ = null;
+  /** @type {string} */
   this.repeated_ = null;
   this.setStringRepresentation_();
 };
@@ -27,9 +29,9 @@ module.exports = Token;
  * @param {HTMLElement} element Parent element to add to
  * @param {number} xPos X position to place element at
  * @param {string?} markClass Class name to use if token is marked
- * @returns {number} the length of hte added text element
+ * @returns {number} the length of the added text element
  */
-Token.prototype.addToParent = function (element, xPos, markClass) {
+Token.prototype.renderToParent = function (element, xPos, markClass) {
   var text, textLength;
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
