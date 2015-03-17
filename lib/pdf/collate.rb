@@ -21,7 +21,7 @@ module PDF
   end
 
   def self.existing_files(paths)
-    paths.select{|f| File.exists?(f)}
+    paths.select{|f| File.exist?(f)}
   end
 
   def self.get_local_markdown_paths(collate_file)

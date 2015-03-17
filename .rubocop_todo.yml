@@ -18,11 +18,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/AssignmentInCondition:
   Enabled: false
 
-# Offense count: 14
-# Cop supports --auto-correct.
-Lint/DeprecatedClassMethods:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: AlignWith, SupportedStyles.
 Lint/EndAlignment:
