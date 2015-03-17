@@ -2,24 +2,24 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
 $white: #ffffff;
 $whitesmoke: #f5f5f5;
-$medium_gray: #ddd;
-$dark_gray: #A9A9A9;
+$medium-gray: #ddd;
+$dark-gray: #a9a9a9;
 $black: #000000;
 $red: #ff0000;
-$code_org_pacific_blue: #00ADBC;
-$code_org_web_orange: #FFA400;
-$own_node_background_color: #e0ffff;
-$router_row_hover_color: rgba(255, 140, 0, 0.21);
-$to_address_color: rgba(255, 233, 238, 0.85);
-$from_address_color: lightcyan;
-$packet_info_color: rgba(212, 238, 212, 0.90);
-$message_color: white;
+$code-org-pacific-blue: #00adbc;
+$code-org-web-orange: #ffa400;
+$own-node-background-color: #e0ffff;
+$router-row-hover-color: rgba(255, 140, 0, 0.21);
+$to-address-color: rgba(255, 233, 238, 0.85);
+$from-address-color: lightcyan;
+$packet-info-color: rgba(212, 238, 212, 0.90);
+$message-color: white;
 
-/* For aligning table columns across panels */
-$narrow_column_width: 50px;
-$wide_column_width: 100px;
+// For aligning table columns across panels
+$narrow-column-width: 50px;
+$wide-column-width: 100px;
 
-/* Cross-browser helper for user_select property */
+// Cross-browser helper for user_select property
 @mixin user_select($val) {
   -moz-user-select: $val;
   -webkit-user-select: $val;
@@ -28,12 +28,12 @@ $wide_column_width: 100px;
   user-select: $val;
 }
 
-/* Reduce top margin to help fit everything above the fold */
+// Reduce top margin to help fit everything above the fold
 .full_container {
   padding-top: 2px;
 }
 
-/* Hide the footer instructions, we put them in the instructions tab */
+// Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
 }
@@ -42,7 +42,7 @@ $wide_column_width: 100px;
   clear: both;
 }
 
-/* Visualization styles */
+// Visualization styles
 svg {
   background-color: $white;
   border: solid $black thin;
@@ -56,7 +56,7 @@ svg {
     circle {
       stroke: $black;
       stroke-width: 2;
-      fill: $own_node_background_color;
+      fill: $own-node-background-color;
     }
 
     rect.address-box {
@@ -72,7 +72,7 @@ svg {
   
   .router-node {
     circle {
-      fill: $code_org_web_orange;
+      fill: $code-org-web-orange;
     }
   }
   
@@ -82,7 +82,7 @@ svg {
   }
 }
 
-/* Sprited icons. */
+// Sprited icons.
 .icon21 {
   height: 21px;
   width: 21px;
@@ -118,11 +118,9 @@ svg {
   font-size: 20px;
 }
 
-/*
-
-  NetSim-specific styles
-
-*/
+//
+// NetSim-specific styles
+//
 #netsim {
   h1 {
     font-family: "Gotham 5r", sans-serif;
@@ -149,7 +147,7 @@ svg {
     td {
       font-family: "Gotham 4r", sans-serif;
 
-      /* Make sure table text can be selected and copied */
+      // Make sure table text can be selected and copied
       @include user_select(text);
     }
 
@@ -160,16 +158,16 @@ svg {
     }
   }
 
-  /* Span around clickable icons and text that show/hide panels. */
+  // Span around clickable icons and text that show/hide panels.
   .minimizer {
     cursor: pointer;
     @include user_select(none);
   }
 
-  /* Orange SPAN button */
+  // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $code_org_web_orange;
+    background-color: $code-org-web-orange;
     color: $white;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
@@ -178,14 +176,13 @@ svg {
     padding: 0 10px;
     cursor: pointer;
 
-    /* Button text should not be selectable */
+    // Button text should not be selectable
     @include user_select(none);
   }
 
-  /*
-    General two-column layout rules
-  */
-
+  //
+  //General two-column layout rules
+  //
   #netsim_rightcol {
     float: right;
     width: 300px;
@@ -219,7 +216,7 @@ svg {
 
     .own_row {
       font-weight: bold;
-      background-color: $own_node_background_color;
+      background-color: $own-node-background-color;
     }
 
     .user_row {
@@ -230,26 +227,24 @@ svg {
       cursor: pointer;
     }
     .router_row:hover {
-      background-color: $router_row_hover_color;
+      background-color: $router-row-hover-color;
       color: $black;
     }
 
     .selected_row {
-      background-color: $code_org_web_orange;
+      background-color: $code-org-web-orange;
       color: white;
     }
     .selected_row:hover {
-      background-color: $code_org_web_orange;
+      background-color: $code-org-web-orange;
     }
   }
 
-  /*
-    NetSim Panel
-    One of the sections in the left column with a colored header
-    and user controls.
-  */
+  // NetSim Panel
+  // One of the sections in the left column with a colored header
+  // and user controls.
 
-  /* How rounded are the corners of the panel? */
+  // How rounded are the corners of the panel?
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
@@ -264,7 +259,7 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code_org_pacific_blue;
+      background-color: $code-org-pacific-blue;
       color: $whitesmoke;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
@@ -279,29 +274,27 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code_org_pacific_blue thin;
+      border-top: solid $code-org-pacific-blue thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
-  }
 
-  /* Minimized panel, contents are hidden. */
-  div.netsim-panel.minimized {
-    h1 {
-      border-radius: $panel_border_radius;
-      .clear_button {
+    // Minimized panel, contents are hidden.
+    &.minimized {
+      h1 {
+        border-radius: $panel_border_radius;
+        .clear_button {
+          display: none;
+        }
+      }
+
+      div.panel-body {
         display: none;
       }
     }
-
-    div.panel-body {
-      display: none;
-    }
   }
 
-  /*
-    Log panel rules
-    Panel that shows a history of sent or received messages in a table.
-  */
+  // Log panel rules
+  // Panel that shows a history of sent or received messages in a table.
   .netsim_log_panel {
 
     .packet {
@@ -309,10 +302,10 @@ svg {
       padding: 5px;
       border: solid darkgray thin;
       border-radius: 3px;
-      background-color: $medium_gray;
+      background-color: $medium-gray;
 
       td {
-        border-color: $medium_gray;
+        border-color: $medium-gray;
       }
     }
 
@@ -333,7 +326,7 @@ svg {
         td {
           font-family: monospace;
 
-          /* Make sure table text can be selected and copied */
+          // Make sure table text can be selected and copied
           @include user_select(text);
         }
 
@@ -351,45 +344,43 @@ svg {
     }
 
     th.encodingLabel, td.encodingLabel {
-      width: 1%; /* Depend on nowrap */
+      width: 1%; // Depend on nowrap
     }
 
     th.toAddress, td.toAddress,
     th.fromAddress, td.fromAddress {
-      width: $narrow_column_width;
+      width: $narrow-column-width;
     }
 
     th.packetInfo, td.packetInfo {
-      width: $wide_column_width;
+      width: $wide-column-width;
     }
 
     td.toAddress {
-      background-color: $to_address_color;
+      background-color: $to-address-color;
     }
 
     td.fromAddress {
-      background-color: $from_address_color;
+      background-color: $from-address-color;
     }
 
     td.packetInfo {
-      background-color: $packet_info_color;
+      background-color: $packet-info-color;
     }
 
     td.message {
-      background-color: $message_color;
+      background-color: $message-color;
     }
   }
 
-  /*
-    Send panel rules
-    Panel that lets the user enter and send messages
-    Mimics the log panel styles as much as possible.
-  */
+  // Send panel rules
+  // Panel that lets the user enter and send messages
+  // Mimics the log panel styles as much as possible.
   .netsim_send_panel {
 
     .netsim_packet {
       border: solid darkgray thin;
-      background-color: $medium_gray;
+      background-color: $medium-gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
@@ -399,7 +390,7 @@ svg {
         color: $black;
       }
 
-      /* All input fields */
+      // All input fields
       input, textarea {
         padding: 0.2em;
         margin-bottom: 0.2em;
@@ -415,19 +406,18 @@ svg {
       }
 
       .watermark {
-        color: $medium_gray;
+        color: $medium-gray;
       }
 
       .bit-counter {
         text-align: right;
-        color: $dark_gray;
+        color: $dark-gray;
+        &.oversized {
+          color: $red;
+        }
       }
 
-      .bit-counter.oversized {
-        color: $red;
-      }
-
-      /* All columns but "message" */
+      // All columns but "message"
       th.encodingLabel, td.encodingLabel,
       th.toAddress, td.toAddress,
       th.fromAddress, td.fromAddress,
@@ -441,35 +431,35 @@ svg {
       }
 
       th.encodingLabel, td.encodingLabel {
-        width: 1%; /* depend on nowrap */
+        width: 1%; // depend on nowrap
       }
 
       th.toAddress, td.toAddress,
       th.fromAddress, td.fromAddress {
-        width: $narrow_column_width;
+        width: $narrow-column-width;
       }
 
       th.packetInfo, td.packetInfo {
-        width: $wide_column_width;
+        width: $wide-column-width;
       }
 
       td.toAddress {
-        background-color: $to_address_color;
+        background-color: $to-address-color;
       }
 
       td.fromAddress {
-        background-color: $from_address_color;
+        background-color: $from-address-color;
       }
 
       td.packetInfo {
-        background-color: $packet_info_color;
+        background-color: $packet-info-color;
       }
 
       td.message {
-        background-color: $message_color;
+        background-color: $message-color;
 
-        /* Wrapper div keeps textarea bound within column, but still
-           able to set padding. */
+        // Wrapper div keeps textarea bound within column, but still
+        // able to set padding.
         div {
           margin-right: 0.4em;
           textarea {
@@ -494,8 +484,8 @@ svg {
     }
   }
 
-  /* Packet size slider and labels, which appear in the
-     send widget footer. */
+  // Packet size slider and labels, which appear in the
+  // send widget footer.
   .netsim_packet_size_control {
     label {
       display: inline-block;
@@ -542,9 +532,9 @@ svg {
       border-bottom: solid darkgrey thin;
     }
 
-    /* Modify actual tabs at top of tab area */
+    // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code_org_pacific_blue;
+      background: $code-org-pacific-blue;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -555,11 +545,11 @@ svg {
       }
     }
 
-    /* Less padding around tab content divs */
+    // Less padding around tab content divs
     .ui-tabs-panel {
       padding: 0.8em 0.5em;
 
-      /* But extra margin around paragraphs of text (instructions) */
+      // But extra margin around paragraphs of text (instructions)
       p {
         margin: 0 1em 10px 1em;
       }
@@ -608,12 +598,12 @@ svg {
   .netsim-dns-table {
     tr.local-node {
       font-weight: bold;
-      background-color: $own_node_background_color;
+      background-color: $own-node-background-color;
     }
 
     tr.dns-node {
       color: $white;
-      background-color: $code_org_web_orange;
+      background-color: $code-org-web-orange;
     }
   }
 
@@ -628,7 +618,7 @@ svg {
     }
   }
 
-  /* Connection status panel, above visualization */
+  // Connection status panel, above visualization
   .netsim-panel.netsim_status_panel {
     div.panel-body {
       padding: 1em;
