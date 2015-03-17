@@ -55,7 +55,7 @@ def hoc_canonicalized_i18n_path(uri)
 
   path = uri if resolve_document(uri)
 
-  return "/#{path.to_s}"
+  return "/#{path}"
 end
 
 def hoc_detect_country()
