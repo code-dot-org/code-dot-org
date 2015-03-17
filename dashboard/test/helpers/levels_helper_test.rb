@@ -11,11 +11,11 @@ class LevelsHelperTest < ActionView::TestCase
   test "should parse maze level with non string array" do
     @level.properties["maze"] = [[0, 0], [2, 3]]
     options = blockly_options
-    assert (options[:level]["map"].is_a? Array), "Maze is not an array"
+    assert options[:level]["map"].is_a?(Array), "Maze is not an array"
 
     @level.properties["maze"] = @level.properties["maze"].to_s
     options = blockly_options
-    assert (options[:level]["map"].is_a? Array), "Maze is not an array"
+    assert options[:level]["map"].is_a?(Array), "Maze is not an array"
   end
 
   test "non-custom level displays localized instruction after locale switch" do

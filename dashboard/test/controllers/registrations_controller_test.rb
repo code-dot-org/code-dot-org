@@ -130,7 +130,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create requires case insensitive unique email" do
-    existing = create(:student, email: 'not_a@unique.email')
+    create(:student, email: 'not_a@unique.email')
     student_params = {name: "A name",
                       password: "apassword",
                       email: 'Not_A@unique.email',

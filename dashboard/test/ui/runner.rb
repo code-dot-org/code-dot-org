@@ -286,9 +286,9 @@ $errbrowserfile.close
 $suite_duration = Time.now - $suite_start_time
 $average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-puts "#{$suite_success_count.to_s} succeeded.  #{$suite_fail_count.to_s} failed.  " +
-  "Test count: #{($suite_success_count + $suite_fail_count).to_s}.  " +
-  "Total duration: #{$suite_duration.round(2).to_s} seconds.  " +
-  "Average test duration: #{$average_test_duration.round(2).to_s} seconds."
+puts "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
+  "Test count: #{($suite_success_count + $suite_fail_count)}.  " +
+  "Total duration: #{$suite_duration.round(2)} seconds.  " +
+  "Average test duration: #{$average_test_duration.round(2)} seconds."
 
 exit $suite_fail_count
