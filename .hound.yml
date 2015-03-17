@@ -1,2 +1,5 @@
 ruby:
   config_file: .rubocop.yml
+
+java_script:
+  config_file: .javascript-style.json
