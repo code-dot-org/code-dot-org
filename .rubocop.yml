@@ -1,0 +1,11 @@
+Lint/AmbiguousOperator:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
