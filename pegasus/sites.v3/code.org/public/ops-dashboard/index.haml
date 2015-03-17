@@ -37,7 +37,7 @@ title: "Ops Dashboard"
     $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
     $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
+    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers', controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
