@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"rectangle\" block to draw this red rectangle - it is 175 pixels wide and 100 pixels tall.",
+    "instructions": "Try using the \"rectangle\" block to draw this solid red rectangle - it is 175 pixels wide and 100 pixels tall.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -14,8 +14,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "ea8bceb0f5dddf7a52af614f941a4d24"
 }]]></config>
   <blocks>
     <toolbox_blocks>
