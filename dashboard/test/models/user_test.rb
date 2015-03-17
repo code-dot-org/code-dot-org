@@ -72,7 +72,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create user with duplicate email" do
     # actually create a user
-    user = User.create!(@good_data)
+    User.create!(@good_data)
 
     # Now create second user 
     user = User.create(@good_data)
@@ -86,7 +86,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create young user with duplicate email" do
     # actually create a user
-    user = User.create!(@good_data_young)
+    User.create!(@good_data_young)
 
     # Now create second user 
     user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email])))
@@ -355,7 +355,7 @@ class UserTest < ActiveSupport::TestCase
     # there's only 22 of them and this is random, so it is possible to
     # get the same password again
 
-    pictures = 1.upto(5).map do |i|
+    pictures = 1.upto(5).map do
       user.reset_secret_picture
       user.secret_picture
     end
@@ -641,7 +641,7 @@ class UserTest < ActiveSupport::TestCase
       
       student = create :student
       section = create :section, script: Script.find_by_name('course1')
-      follower = create :follower, student_user: student, section: section, created_at: assigned_date
+      create :follower, student_user: student, section: section, created_at: assigned_date
 
       assert_creates(UserScript) do
         student.backfill_user_scripts

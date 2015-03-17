@@ -186,6 +186,22 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('matchingProgramType', function() {
+    return function(cohorts, workshopProgramType) {
+      if (workshopProgramType) {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          if (cohort.program_type == workshopProgramType) {
+            filtered.push(cohort);
+          }
+        }, this);
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -257,30 +273,6 @@ title: "Ops Dashboard"
           });
         });
       }
-
-      //$scope.save = function (workshop) {
-      //  if (workshop.id) {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    workshopsService.update({id: workshop.id}, workshop).$promise.then(
-      //      function(result_workshop) {
-      //        $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
-      //          workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    ).catch($scope.genericError);
-      //  } else {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    newWorkshop.$save().then(
-      //      function(saved) {
-      //        $scope.workshop = saved; /* just in case it has been modified on server */
-      //        workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    );
-      //  }
-      //}
     }
   ]);
 
@@ -292,7 +284,6 @@ title: "Ops Dashboard"
       $scope.districts = districtsService.query();
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
-      //$scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -311,7 +302,6 @@ title: "Ops Dashboard"
       $scope.cohorts = cohortsService.query();
       $scope.program_types = programTypesService;
 
-
       $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
       });
@@ -325,6 +315,10 @@ title: "Ops Dashboard"
         cohortsService.remove({id: cohort.id}); // service call
         cohort.confirmDelete = false;
       };
+
+      $scope.setSortOrder = function(new_sort, current_sort) {
+        return (new_sort == current_sort) ? '-' + current_sort : new_sort;
+      }
     }
   ]);
 
@@ -358,14 +352,6 @@ title: "Ops Dashboard"
       $scope.program_types = programTypesService;
 
       $scope.save = function(cohort) {
-        cohort.district_ids = [];
-        for (var i = 0; i < cohort.districts.length; i++) {
-          if (cohort.districts[i].id) {
-            cohort.district_ids.push(cohort.districts[i].id);
-          }
-        }
-        delete cohort.districts;
-
         if (cohort.id) { // existing
           cohort =
             cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
@@ -469,6 +455,19 @@ title: "Ops Dashboard"
         }
       ).catch($scope.genericError);
     };
+
+    $scope.countTeachersFromDistrict = function(district) {
+      var count = 0;
+      if (district && district.id) {
+        for (var i = 0; i < $scope.cohort.teachers.length; i++) {
+          if ($scope.cohort.teachers[i].district && 
+              $scope.cohort.teachers[i].district.id === district.id) {
+            count++;
+          }
+        }
+      }
+      return count;
+    }
   }
   ]);
 
