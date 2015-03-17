@@ -14229,7 +14229,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   if(goog.isFunction(this.init)) {
     this.init()
   }
-  if(this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
+  if(this.shouldHideIfInMainBlockSpace && (this.shouldHideIfInMainBlockSpace() && this.blockSpace === Blockly.mainBlockSpace)) {
     this.setCurrentlyHidden(true)
   }
 };
@@ -19247,6 +19247,7 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
   newCopyOfBlock.moveTo(Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
   newCopyOfBlock.setUserVisible(true);
+  newCopyOfBlock.setMovable(false);
   return newCopyOfBlock
 };
 Blockly.FunctionEditor.prototype.create_ = function() {
