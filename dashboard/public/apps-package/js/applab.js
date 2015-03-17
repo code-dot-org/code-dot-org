@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":181}],14:[function(require,module,exports){
+},{"../skins":183}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -292,7 +292,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":229,"../block_utils":19,"../utils":227}],8:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../block_utils":19,"../utils":229}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2793,7 +2793,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":229,"../../locale/current/common":232,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":181,"../slider":182,"../templates/page.html":206,"../timeoutList":212,"../utils":227,"../xml":228,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":183,"../slider":184,"../templates/page.html":208,"../timeoutList":214,"../utils":229,"../xml":230,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2813,7 +2813,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":248}],16:[function(require,module,exports){
+},{"ejs":250}],16:[function(require,module,exports){
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -2886,7 +2886,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":229,"../../locale/current/common":232,"ejs":248}],12:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"ejs":250}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -3093,7 +3093,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":232,"ejs":248}],9:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3166,7 +3166,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":229,"../../locale/current/common":232,"../codegen":47,"../utils":227}],229:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"../codegen":47,"../utils":229}],231:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';

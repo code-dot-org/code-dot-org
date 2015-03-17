@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({221:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({223:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var Artist = require('./turtle');
@@ -18,7 +18,7 @@ window.turtleMain = function(options) {
   appMain(artist, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./blocks":215,"./levels":220,"./skins":223,"./turtle":226}],223:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./blocks":217,"./levels":222,"./skins":225,"./turtle":228}],225:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -79,7 +79,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":181}],215:[function(require,module,exports){
+},{"../skins":183}],217:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -1025,7 +1025,7 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/current/common":232,"../../locale/current/turtle":239,"./colours":216,"./customLevelBlocks":218,"./turtle":226}],226:[function(require,module,exports){
+},{"../../locale/current/common":234,"../../locale/current/turtle":241,"./colours":218,"./customLevelBlocks":220,"./turtle":228}],228:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -2484,7 +2484,7 @@ Artist.prototype.resetStepInfo_ = function () {
   this.stepDistanceCovered = 0;
 };
 
-},{"../../locale/current/common":232,"../../locale/current/turtle":239,"../codegen":47,"../dropletUtils":51,"../slider":182,"../templates/page.html":206,"../utils":227,"./api":214,"./colours":216,"./controls.html":217,"./dropletConfig":219,"./levels":220}],220:[function(require,module,exports){
+},{"../../locale/current/common":234,"../../locale/current/turtle":241,"../codegen":47,"../dropletUtils":51,"../slider":184,"../templates/page.html":208,"../utils":229,"./api":216,"./colours":218,"./controls.html":219,"./dropletConfig":221,"./levels":222}],222:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
@@ -3389,7 +3389,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/current/turtle":239,"../block_utils":19,"../level_base":88,"../utils":227,"./answers":213,"./colours":216,"./requiredBlocks":222,"./startBlocks.xml":224,"./toolbox.xml":225}],225:[function(require,module,exports){
+},{"../../locale/current/turtle":241,"../block_utils":19,"../level_base":88,"../utils":229,"./answers":215,"./colours":218,"./requiredBlocks":224,"./startBlocks.xml":226,"./toolbox.xml":227}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3517,7 +3517,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":239,"ejs":248}],224:[function(require,module,exports){
+},{"../../locale/current/turtle":241,"ejs":250}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3583,7 +3583,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/turtle":239,"ejs":248}],222:[function(require,module,exports){
+},{"../../locale/current/turtle":241,"ejs":250}],224:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.
@@ -3787,7 +3787,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":179}],219:[function(require,module,exports){
+},{"../required_block_utils":181}],221:[function(require,module,exports){
 var msg = require('../../locale/current/turtle');
 
 module.exports.blocks = [
@@ -3804,7 +3804,7 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/turtle":239}],217:[function(require,module,exports){
+},{"../../locale/current/turtle":241}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3824,7 +3824,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":248}],218:[function(require,module,exports){
+},{"ejs":250}],220:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -4513,9 +4513,9 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/turtle":239,"../utils":227}],239:[function(require,module,exports){
+},{"../../locale/current/turtle":241,"../utils":229}],241:[function(require,module,exports){
 /*turtle*/ module.exports = window.blockly.appLocale;
-},{}],216:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -4548,7 +4548,7 @@ var Colours = {
 
 module.exports = Colours;
 
-},{}],213:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -4895,7 +4895,7 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"./api":214}],214:[function(require,module,exports){
+},{"./api":216}],216:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -5089,4 +5089,4 @@ ArtistAPI.prototype.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../utils":227}]},{},[221]);
+},{"../utils":229}]},{},[223]);
