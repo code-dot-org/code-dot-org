@@ -29,6 +29,9 @@ goog.require('Blockly.Blocks');
 
 
 Blockly.Blocks.procedures_defnoreturn = {
+  shouldHideIfInMainBlockSpace: function () {
+    return Blockly.useModalFunctionEditor;
+  },
   // Define a procedure with no return value.
   init: function() {
     var showParamEditIcon = !Blockly.disableParamEditing;
@@ -251,6 +254,9 @@ Blockly.Blocks.procedures_defnoreturn = {
 };
 
 Blockly.Blocks.procedures_defreturn = {
+  shouldHideIfInMainBlockSpace: function () {
+    return Blockly.useModalFunctionEditor;
+  },
   // Define a procedure with a return value.
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFRETURN_HELPURL);
