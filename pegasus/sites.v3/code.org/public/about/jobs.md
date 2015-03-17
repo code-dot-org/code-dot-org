@@ -8,7 +8,6 @@ nav: about_nav
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
 - [Operations Intern](#operations-intern)
-- [HR Generalist](#hr-generalist)
 - [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
@@ -51,38 +50,6 @@ The ideal candidate has the following qualifications:
 - Must be a U.S. Citizen or Permanent Resident
 - Must pass a pre-employment background check
 
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
-**Job Summary:**
-
-The HR Generalist plays a critical role in supporting Code.org staff in areas such as recruiting and hiring, benefits, performance reviews, and workforce compliance. The candidate selected for this should have experience supporting a multi-state employer and hiring technical employees in a fast-paced start-up environment. Full-time, salaried. Responsibilities of the position include:
-
-- Conducting full cycle recruiting for staff and independent contractor positions including drafting of job descriptions, sourcing and screening of applicants, managing interview cycles, preparing offer letter package, and onboarding all new hires
-- Maintaining organizational compliance with federal, state, and local regulations concerning employment
-- Coordinating employee benefit programs 
-- Maintaining, advising, and updating HR policies, employee handbook, compensation data, and other organization policies and documents
-- Providing support to employees and managers on HR and benefit-related matters
-- Supervising annual performance review process
-- Leading the planning and execution of company events
-- Other duties, as assigned
-
-**Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- A Bachelor’s degree and a minimum of 3 years of HR generalist experience or equivalent work experience. PHR certification preferred.
-- Professional demeanor, possessing excellent communication, organizational and interpersonal skills
-- Experience in marketing positions using internet and social media channels; demonstrated ability to generate a steady flow of qualified candidates
-- Familiarity with federal and state regulations including FLSA, FMLA, state specific leave laws, COBRA, ADA and EEO required
-- Demonstrated ability to provide the highest level of customer service to candidates and employees
-- Have hands-on experience with all aspects of benefits administration
-- Strong communication skills with the ability to maintain a high level of confidentiality
-- Must be extremely organized and detail oriented with strong time-management skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment 
-- **Prior experience in technical recruiting and with a smaller startups, preferably a tech startup**
-
-A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
