@@ -122,7 +122,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.init();
   }
 
-  if (this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
+  if (this.shouldHideIfInMainBlockSpace && this.shouldHideIfInMainBlockSpace() &&
+      this.blockSpace === Blockly.mainBlockSpace) {
     this.setCurrentlyHidden(true);
   }
 };
