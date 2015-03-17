@@ -383,7 +383,7 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
     ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
-  newCopyOfBlock.setUserVisible(true);
+  newCopyOfBlock.setUserVisible(true, true);
   newCopyOfBlock.setMovable(false);
   return newCopyOfBlock;
 };
