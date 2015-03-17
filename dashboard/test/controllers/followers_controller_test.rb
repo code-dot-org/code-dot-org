@@ -277,4 +277,3 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @laurel_section_script.script, @student.primary_script
   end
 end
-
