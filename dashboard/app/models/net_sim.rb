@@ -12,4 +12,17 @@ class NetSim < Blockly
     show_dns_mode_control
     default_dns_mode
   )
+
+  # List of possible skins, the first is used as a default.
+  def self.skins
+    ['netsim']
+  end
+
+  def self.create_from_level_builder(params, level_params)
+    create!(level_params.merge(
+                user: params[:user],
+                game: Game.netsim,
+                level_num: 'default'
+            ))
+  end
 end
