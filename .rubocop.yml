@@ -1,11 +1,4 @@
-Lint/AmbiguousOperator:
-  Enabled: false
+inherit_from: .rubocop_todo.yml
 
-Lint/AmbiguousRegexpLiteral:
-  Enabled: false
-
-Lint/AssignmentInCondition:
-  Enabled: false
-
-Lint/ParenthesesAsGroupedExpression:
-  Enabled: false
+AllCops:
+  RunRailsCops: true
