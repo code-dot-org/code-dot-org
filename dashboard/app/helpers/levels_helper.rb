@@ -349,11 +349,12 @@ module LevelsHelper
 
   def level_title
     if @script_level
-      script = if @script_level.script.flappy?
-        data_t 'game.name', @game.name
-      else
-        data_t_suffix 'script.name', @script_level.script.name, 'title'
-      end
+      script =
+        if @script_level.script.flappy?
+          data_t 'game.name', @game.name
+        else
+          data_t_suffix 'script.name', @script_level.script.name, 'title'
+        end
       stage = @script_level.name
       position = @script_level.position
       if @script_level.script.stages.many?
