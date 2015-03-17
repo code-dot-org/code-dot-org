@@ -202,20 +202,6 @@ title: "Ops Dashboard"
     };
   });
 
-  //filters.filter('matchingCohortType', function() {
-  //  return function(programs, cohortId) {
-  //    var filtered = [];
-  //    if (cohortId) {
-  //      programs.forEach(function (program) {
-  //        if (program.id == cohortId) {
-  //        }
-  //      }, this);
-  //    } else {
-  //      return programs;
-  //    }
-  //  };
-  //});
-
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -287,30 +273,6 @@ title: "Ops Dashboard"
           });
         });
       }
-
-      //$scope.save = function (workshop) {
-      //  if (workshop.id) {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    workshopsService.update({id: workshop.id}, workshop).$promise.then(
-      //      function(result_workshop) {
-      //        $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
-      //          workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    ).catch($scope.genericError);
-      //  } else {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    newWorkshop.$save().then(
-      //      function(saved) {
-      //        $scope.workshop = saved; /* just in case it has been modified on server */
-      //        workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    );
-      //  }
-      //}
     }
   ]);
 
@@ -322,7 +284,6 @@ title: "Ops Dashboard"
       $scope.districts = districtsService.query();
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
-      //$scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
