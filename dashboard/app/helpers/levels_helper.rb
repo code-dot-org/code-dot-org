@@ -32,6 +32,10 @@ module LevelsHelper
       @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
+
+      @code_functions ||=
+        @level.try(:project_template_level).try(:code_functions) ||
+        @level.code_functions
     end
   end
 
