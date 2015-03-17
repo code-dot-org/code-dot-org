@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "NetSim: Variant 3 template: Connects groups of 2-6 students with a router, and explores issues in routing and DNS"
+    "instructions": "NetSim: Variant 3 template: Connects groups of 2-6 students with a router, and explores issues in routing and DNS",
+    "skip_instructions_popup": "true"
   }
 }]]></config>
 </NetSim>

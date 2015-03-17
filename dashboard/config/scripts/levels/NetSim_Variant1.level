@@ -6,7 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "NetSim: Variant 1 playground: UNDER CONSTRUCTION: Variant 1 is not yet functional because P2P connections have not been implemented. Variant 1 allows students to manually work out the timing of sending bits back and forth."
+    "instructions": "NetSim: Variant 1 playground: UNDER CONSTRUCTION: Variant 1 is not yet functional because P2P connections have not been implemented. Variant 1 allows students to manually work out the timing of sending bits back and forth.",
+    "skip_instructions_popup": "true"
   }
 }]]></config>
 </NetSim>

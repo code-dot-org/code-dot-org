@@ -40,11 +40,20 @@ var binaryToAscii = dataConverters.binaryToAscii;
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimSendPanel = module.exports = function (rootDiv, connection) {
+var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
+    connection) {
+
+  /**
+   * @type {NetSimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
+
   /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
@@ -73,7 +82,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
    * @type {Number}
    * @private
    */
-  this.currentPacketSize_ = Infinity;
+  this.currentPacketSize_ = levelConfig.defaultPacketSizeLimit;
 
   /**
    * Bits per chunk/byte for parsing and formatting purposes.
@@ -81,6 +90,12 @@ var NetSimSendPanel = module.exports = function (rootDiv, connection) {
    * @private
    */
   this.currentChunkSize_ = 8;
+
+  /**
+   * @type {NetSimPacketSizeControl}
+   * @private
+   */
+  this.packetSizeControl_ = null;
   
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_send_panel',
@@ -97,9 +112,12 @@ NetSimSendPanel.prototype.render = function () {
   var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
 
-  this.packetSizeControl_ = new NetSimPacketSizeControl(
-      this.rootDiv_.find('.packet_size'),
-      this.packetSizeChangeCallback_.bind(this));
+  if (this.levelConfig_.showPacketSizeControl) {
+    this.packetSizeControl_ = new NetSimPacketSizeControl(
+        this.rootDiv_.find('.packet_size'),
+        this.packetSizeChangeCallback_.bind(this));
+    this.packetSizeControl_.setPacketSize(this.currentPacketSize_);
+  }
 
   this.bindElements_();
   this.updateFields_();
