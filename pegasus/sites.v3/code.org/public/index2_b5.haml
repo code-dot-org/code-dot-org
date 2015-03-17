@@ -147,7 +147,7 @@ social:
   #audienceslots{style: "text-align:center; margin-top:20px"}
     - audienceslots = []
 
-    - slot = {name:"Students", bgc: "0, 173, 188", bgc_body1: "242, 251, 252", bgc_head: "77, 198, 208", bgc_body: "77, 198, 208",links: []}
+    - slot = {name:"Students", bgc: "0, 173, 188", bgc_body1: "242, 251, 252", bgc_head: "0, 173, 188", bgc_body: "89, 202, 211",links: []}
     -   slot[:links] << {img: "/shared/images/courses/logo_tall_elementary.jpg"}
     -   slot[:links] << {text: "Try the Hour of Code"}
     -   slot[:links] << {text: "Code Studio"}
@@ -155,7 +155,7 @@ social:
     -#   slot[:links] << {text: "Other learning options ", priority: 2} #p2
     - audienceslots << slot
 
-    - slot = {name:"Educators", bgc: "118, 101, 160", bgc_body1: "248, 247, 250", bgc_head: "159, 147, 189", bgc_body: "159, 147, 189", links: []}
+    - slot = {name:"Educators", bgc: "118, 101, 160", bgc_body1: "248, 247, 250", bgc_head: "118, 101, 160", bgc_body: "166, 155, 193", links: []}
     -   slot[:links] << {img: "/shared/images/courses/logo_tall_teacher.jpg"}
     -   slot[:links] << {text: "Learn about our K-5 program"}
     -   slot[:links] << {text: "Find a K-5 educator workshop"}
@@ -163,15 +163,15 @@ social:
     -#   slot[:links] << {text: "Host an Hour of Code", priority: 2} # p2
     - audienceslots << slot
 
-    - slot = {name:"Advocates", bgc: "185, 191, 21", bgc_body1: "252, 252, 243", bgc_head: "206, 210, 91",  bgc_body: "206, 210, 91",links: []}
-    -   slot[:links] << {img: "/shared/images/courses/logo_tall_shop_borderless.jpg"}
+    - slot = {name:"Advocates", bgc: "185, 191, 21", bgc_body1: "252, 252, 243", bgc_head: "0, 148, 202",  bgc_body: "89, 185, 220",links: []}
+    -   slot[:links] << {img: "/images/homepage/girl.jpg"}
     -   slot[:links] << {text: "Support CS in your state"}
     -   slot[:links] << {text: "Donate to Code.org"}
     -   slot[:links] << {text: "Buy a t-shirt or hat", priority: 2} # p2
     -#   slot[:links] << {text: "Advocacy tools  ", priority: 2} # p2
     - audienceslots << slot
 
-    - slot = {name:"Highlights", bgc: "255, 184, 29", bgc_body1: "230, 230, 230", bgc_head: "90, 90, 90",  bgc_body: "90, 90, 90",links: []}
+    - slot = {name:"Highlights", bgc: "255, 184, 29", bgc_body1: "230, 230, 230", bgc_head: "185, 191, 21",  bgc_body: "209, 213, 103",links: []}
     -   slot[:links] << {img: "/shared/images/courses/logo_tall_frozen.jpg"}
     -   slot[:links] << {text: "Try the Hour of Code"}
     -   slot[:links] << {text: "Latest News"}
@@ -218,11 +218,11 @@ social:
         %a{:href=>'/about/news'} See all news
 
     - bgc_head =  "51, 169, 213"  # "0,148,202" * 0.8
-    - bgc_body = "242, 250, 252"        # "0,148,202" * 0.05
+    - bgc_body = "255, 164, 0"        # "0,148,202" * 0.05
 
-    .col-100#gallerycolumn.same-height-column{:style=>"margin-bottom:20px;  margin-top:20px; display: table-cell; border: 5px solid white; background-color: rgb(#{bgc_body}); "}
-      .thebox{style: "background-color: rgb(#{bgc_body}); "}
-        .headingbox{style: "background-color: rgb(#{bgc_head}); left:0px;color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 4r', sans-serif; text-align:center"}
+    .col-100#gallerycolumn.same-height-column{:style=>"margin-bottom:20px;  margin-top:20px; display: table-cell; border: 5px solid white; /*background-color: rgb(#{bgc_body}); */ "}
+      .thebox{style: "/*background-color: rgb(#{bgc_body});*/ "}
+        .headingbox{style: "background-color: rgb(#{bgc_body}); left:0px;color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 4r', sans-serif; text-align:center"}
           Made in Code Studio
         .thelinks{style: "padding: 10px; height:100% "}
           %img{style: "float:left; width:50%", src:"/shared/images/gallery/artist_gallery_thumbnails.png"}
