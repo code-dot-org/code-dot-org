@@ -24,6 +24,7 @@ locales = {
   'Finnish' => 'fi-FI',
   'French' => 'fr-FR',
   'Galician' => 'gl-ES',
+  'Georgian' => 'ka-GE',
   'German' => 'de-DE',
   'Greek' => 'el-GR',
   'Hebrew' => 'he-IL',
