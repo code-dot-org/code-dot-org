@@ -12,7 +12,7 @@ exports.randomNumber = function (min, max) {
 
 exports.getTime = function() {
   return (new Date()).getTime();
-}
+};
 
 exports.dropletGlobalConfigBlocks = [
   {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
