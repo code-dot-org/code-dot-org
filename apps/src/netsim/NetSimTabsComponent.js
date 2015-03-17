@@ -99,7 +99,7 @@ NetSimTabsComponent.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.netsim_tabs').tabs({
+  this.rootDiv_.find('.netsim-tabs').tabs({
     active: this.levelConfig_.defaultTabIndex
   });
 

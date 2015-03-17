@@ -309,7 +309,7 @@ NetSimSendPanel.prototype.bindElements_ = function () {
         this.makeBlurHandler('message', rowType.messageConversion));
   }, this);
 
-  this.bitCounter = rootDiv.find('.bit_counter');
+  this.bitCounter = rootDiv.find('.bit-counter');
 
   this.sendButton_ = rootDiv.find('#send_button');
   this.sendButton_.click(this.onSendButtonPress_.bind(this));
