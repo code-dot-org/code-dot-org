@@ -708,7 +708,7 @@ Blockly.Blocks.procedures = {};
 Blockly.Blocks.procedures_defnoreturn = {shouldHideIfInMainBlockSpace:function() {
   return Blockly.useModalFunctionEditor
 }, init:function() {
-  var a = !Blockly.disableParamEditing;
+  var a = !Blockly.disableParamEditing && !Blockly.useModalFunctionEditor;
   this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
   var b = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
