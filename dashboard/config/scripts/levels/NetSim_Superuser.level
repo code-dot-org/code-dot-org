@@ -6,6 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
+    "skip_instructions_popup": "true",
     "instructions": "You have loaded NetSim in superuser mode."
   }
 }]]></config>
