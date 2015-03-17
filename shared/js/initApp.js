@@ -172,7 +172,7 @@ dashboard.updateTimestamp = function() {
     $('.project_updated_at span.timestamp').timeago();
   } else {
     $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
-  } 
+  }
 };
 
 dashboard.saveProject = function(callback) {
@@ -374,8 +374,9 @@ if (appOptions.droplet) {
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
+      .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full.min'));
+      .then(loadSource('droplet/droplet-full'));
   promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()
