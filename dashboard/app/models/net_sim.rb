@@ -25,9 +25,9 @@ class NetSim < Blockly
 
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
-                user: params[:user],
-                game: Game.netsim,
-                level_num: 'default'
+              user: params[:user],
+              game: Game.netsim,
+              level_num: 'default'
             ))
   end
 end
