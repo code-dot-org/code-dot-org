@@ -7,8 +7,8 @@
   "properties": {
     "skin": "netsim",
     "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to send binary as zeroes and ones to one another",
-    "showEncodingControls": ["none"],
-    "defaultEnabledEncodings": ["binary"]
+    "show_encoding_controls": ["none"],
+    "default_enabled_encodings": ["binary"]
   }
 }]]></config>
 </NetSim>
