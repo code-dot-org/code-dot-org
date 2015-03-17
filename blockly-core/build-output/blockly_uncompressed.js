@@ -19114,7 +19114,7 @@ Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement("paramAddText");
   var paramAddButton = goog.dom.getElement("paramAddButton");
   if(!Blockly.disableParamEditing && (paramAddTextElement && paramAddButton)) {
-    Blockly.bindEvent_(paramAddButton, "mousedown", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
+    Blockly.bindEvent_(paramAddButton, "click", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
     Blockly.bindEvent_(paramAddTextElement, "keydown", this, function(e) {
       if(e.keyCode === goog.events.KeyCodes.ENTER) {
         this.addParamFromInputField_(paramAddTextElement)
@@ -19505,7 +19505,7 @@ Blockly.XButton.prototype.render = function(parent) {
   buttonElement.innerHTML = "x";
   buttonElement.style.marginRight = "-10px";
   parent.appendChild(buttonElement);
-  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, "mousedown", this, goog.bind(function() {
+  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, "click", this, goog.bind(function() {
     if(this.onButtonPressed) {
       this.onButtonPressed()
     }
@@ -19723,7 +19723,7 @@ Blockly.SvgHeader = function(parent, opt_options) {
     this.textElement_.textContent = options.headerText
   }
   if(options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, "mousedown", null, options.onMouseDown)
+    Blockly.bindEvent_(this.svgGroup_, "click", null, options.onMouseDown)
   }
 };
 Blockly.SvgHeader.prototype.setPositionSize = function(yOffset, width, height) {
