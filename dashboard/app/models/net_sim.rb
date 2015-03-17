@@ -18,6 +18,11 @@ class NetSim < Blockly
     ['netsim']
   end
 
+  # DNS modes, used by levelbuilder
+  def self.dns_modes
+    ['none', 'manual', 'automatic']
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
                 user: params[:user],
