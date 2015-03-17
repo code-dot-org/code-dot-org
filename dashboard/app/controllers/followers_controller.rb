@@ -36,7 +36,7 @@ class FollowersController < ApplicationController
     current_user.assign_script(@section.script) if @section.script
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: teacher.name)
-   end
+  end
 
   # remove a section/teacher as a logged in student
   def remove

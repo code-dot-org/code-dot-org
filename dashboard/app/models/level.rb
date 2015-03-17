@@ -94,7 +94,7 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(self.type) do
         xml.config do
@@ -114,8 +114,8 @@ class Level < ActiveRecord::Base
   end
 
   def filter_level_attributes(level_hash)
-    %w(name id updated_at type ideal_level_source_id).each {|field| level_hash.delete field }
-    level_hash.reject! { |k, v| v.nil? }
+    %w(name id updated_at type ideal_level_source_id).each {|field| level_hash.delete field}
+    level_hash.reject!{|_, v| v.nil?}
     level_hash
   end
 

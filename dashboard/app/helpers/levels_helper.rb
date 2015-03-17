@@ -32,6 +32,10 @@ module LevelsHelper
       @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
+
+      @code_functions ||=
+        @level.try(:project_template_level).try(:code_functions) ||
+        @level.code_functions
     end
   end
 
@@ -345,11 +349,12 @@ module LevelsHelper
 
   def level_title
     if @script_level
-      script = if @script_level.script.flappy?
-        data_t 'game.name', @game.name
-      else
-        data_t_suffix 'script.name', @script_level.script.name, 'title'
-      end
+      script =
+        if @script_level.script.flappy?
+          data_t 'game.name', @game.name
+        else
+          data_t_suffix 'script.name', @script_level.script.name, 'title'
+        end
       stage = @script_level.name
       position = @script_level.position
       if @script_level.script.stages.many?

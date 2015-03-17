@@ -14,25 +14,18 @@ h2 {
   overflow: hidden;
   white-space:nowrap;
   border-radius: 0;
-  background-color: rgba(255,255,255,1);
+  background-color: rgb(255,255,255);
   margin-bottom: 10px;
-  margin-left:5px;
-  margin-right:5px;
+  margin-left:12px;
+  margin-right:12px;
   border-radius:5px;
+  width: 313px;
 }
 
 .badge img {
   display: inline-block;
   overflow: hidden;
   height: 100%;
-}
-
-.gold {
-  width: 310px;
-}
-
-.platinum {
-  width: 310px;
 }
 
 .badge:hover {

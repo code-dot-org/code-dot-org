@@ -36,6 +36,25 @@ theme: none
   %pre
     {{cohort.teachers | json}}
 
+%div{'ng-show' => 'cohort.districts.length > 0'}
+  %h3 Cohort capacity
+  %table.cohort-capacity{style: "width:950px; table-layout:fixed;"}
+    %tr
+      %th.manage-th
+        District
+      %th.manage-th
+        Teachers Assigned / Max Teachers
+    %tr{'ng-repeat' => 'district in cohort.districts'}
+      %td
+        {{ district.name }}
+      %td
+        {{ countTeachersFromDistrict(district) }} / {{ district.max_teachers }}
+
+%br/
+%br/
+
+%h3 Teachers
+
 %div{'ng-show' => 'cohort.teachers.length > 0'}
   %table{style: "width:950px; table-layout:fixed;"}
     %tr
@@ -67,9 +86,9 @@ theme: none
           %input.form-control{"ng-model" => "teacher.email", placeholder: "Email address", style: "width: 100%", type: "text", required: "true"}/
       %td
         %div{"ng-hide" => "teacher.editing"}
-          {{teacher.district}}
+          {{teacher.district.name}}
         %div{"ng-show" => "teacher.editing"}
-          %input.form-control{"ng-model" => "teacher.district", placeholder: "District", style: "width: 100%", type: "text", required: "true"}/
+          %select.district-name.form-control{"ng-model" => "teacher.district.id", "ng-options"=>"district.id as district.name for district in cohort.districts", selectize: true}
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?

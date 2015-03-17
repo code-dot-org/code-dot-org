@@ -109,7 +109,7 @@ function initAce () {
 function initDroplet () {
   /* jshint -W054 */
   var DROPLET_CODE =
-    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/droplet/droplet-full.min.js'));
+    fs.readFileSync(path.join(__dirname, buildDir + '/package/js/droplet/droplet-full.js'));
   var fn = new Function(DROPLET_CODE);
   fn.call(window);
 }
