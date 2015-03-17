@@ -44,4 +44,29 @@ class Stage < ActiveRecord::Base
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{position}"
   end
+
+  def summarize
+    stage_data = {
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.count,
+        id: id,
+        position: position,
+        name: localized_name,
+        title: localized_title,
+        levels: script_levels.map(&:summarize),
+    }
+
+    if script.has_lesson_plan?
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+    end
+
+    if script.hoc?
+      stage_data[:finishLink] = script.hoc_finish_url
+      stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
+    end
+
+    stage_data
+  end
 end
