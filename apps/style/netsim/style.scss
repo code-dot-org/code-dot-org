@@ -1,7 +1,15 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
+$white: #ffffff;
+$whitesmoke: #f5f5f5;
+$medium_gray: #ddd;
+$dark_gray: #A9A9A9;
+$black: #000000;
+$red: #ff0000;
 $code_org_pacific_blue: #00ADBC;
 $code_org_web_orange: #FFA400;
+$own_node_background_color: #e0ffff;
+$router_row_hover_color: rgba(255, 140, 0, 0.21);
 $to_address_color: rgba(255, 233, 238, 0.85);
 $from_address_color: lightcyan;
 $packet_info_color: rgba(212, 238, 212, 0.90);
@@ -36,8 +44,8 @@ $wide_column_width: 100px;
 
 /* Visualization styles */
 svg {
-  background-color: white;
-  border: solid black thin;
+  background-color: $white;
+  border: solid $black thin;
   border-radius: 25px;
 
   .viz-node {
@@ -46,15 +54,15 @@ svg {
     }
 
     circle {
-      stroke: black;
+      stroke: $black;
       stroke-width: 2;
-      fill: lightblue;
+      fill: $own_node_background_color;
     }
 
     rect.address-box {
-      stroke: black;
+      stroke: $black;
       stroke-width: 2px;
-      fill: white;
+      fill: $white;
     }
 
     text.address-box {
@@ -64,12 +72,12 @@ svg {
   
   .router-node {
     circle {
-      fill: yellow;
+      fill: $code_org_web_orange;
     }
   }
   
   .viz-wire {
-    stroke: black;
+    stroke: $black;
     stroke-width: 2;
   }
 }
@@ -99,11 +107,11 @@ svg {
 }
 
 .markedToken {
-  fill: white;
+  fill: $white;
 }
 
 .errorToken {
-  fill: red;
+  fill: $red;
 }
 
 .expr {
@@ -161,8 +169,8 @@ svg {
   /* Orange SPAN button */
   .netsim-button {
     display: inline-block;
-    color: white;
     background-color: $code_org_web_orange;
+    color: $white;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
     font-size: 8pt;
@@ -199,19 +207,19 @@ svg {
   }
 
   #netsim_lobby_list {
-    background-color: white;
+    background-color: $white;
     padding: 0.5em;
     border: inset darkslategray thin;
     list-style: none;
 
     li {
-      background-color: white;
+      background-color: $white;
       padding: 0.3em;
     }
 
     .own_row {
       font-weight: bold;
-      background-color: lightcyan;
+      background-color: $own_node_background_color;
     }
 
     .user_row {
@@ -222,16 +230,16 @@ svg {
       cursor: pointer;
     }
     .router_row:hover {
-      color: black;
-      background-color: rgba(255, 140, 0, 0.21);
+      background-color: $router_row_hover_color;
+      color: $black;
     }
 
     .selected_row {
+      background-color: $code_org_web_orange;
       color: white;
-      background-color: darkorange;
     }
     .selected_row:hover {
-      background-color: darkorange;
+      background-color: $code_org_web_orange;
     }
   }
 
@@ -245,7 +253,7 @@ svg {
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
-    background-color: white;
+    background-color: $white;
     margin: 0 0 0.5em;
     padding: 0;
 
@@ -256,8 +264,8 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      color: whitesmoke;
       background-color: $code_org_pacific_blue;
+      color: $whitesmoke;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
       .panel_controls {
@@ -301,10 +309,10 @@ svg {
       padding: 5px;
       border: solid darkgray thin;
       border-radius: 3px;
-      background-color: #ddd;
+      background-color: $medium_gray;
 
       td {
-        border-color: #ddd;
+        border-color: $medium_gray;
       }
     }
 
@@ -317,8 +325,8 @@ svg {
 
     table {
       th {
-        color: black;
         background-color: transparent;
+        color: $black;
       }
 
       tbody {
@@ -381,14 +389,14 @@ svg {
 
     .netsim_packet {
       border: solid darkgray thin;
-      background-color: #ddd;
+      background-color: $medium_gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
 
       th {
-        color: black;
         background-color: transparent;
+        color: $black;
       }
 
       /* All input fields */
@@ -407,16 +415,16 @@ svg {
       }
 
       .watermark {
-        color: #d3d3d3;
+        color: $medium_gray;
       }
 
       .bit-counter {
         text-align: right;
-        color: darkgray;
+        color: $dark_gray;
       }
 
       .bit-counter.oversized {
-        color: #ff0000;
+        color: $red;
       }
 
       /* All columns but "message" */
@@ -600,12 +608,12 @@ svg {
   .netsim-dns-table {
     tr.local-node {
       font-weight: bold;
-      background-color: lightcyan;
+      background-color: $own_node_background_color;
     }
 
     tr.dns-node {
-      color: white;
-      background-color: darkorange;
+      color: $white;
+      background-color: $code_org_web_orange;
     }
   }
 
