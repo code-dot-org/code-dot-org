@@ -1,7 +1,7 @@
 require pegasus_dir('router')
 
 class PegasusSites
-  
+
   def initialize(app=nil, params={})
     @app = app
 
@@ -12,7 +12,7 @@ class PegasusSites
       'hourofcode.com',
     ].map{|i| canonical_hostname(i)}
   end
-  
+
   def call(env)
     request = Rack::Request.new(env)
 

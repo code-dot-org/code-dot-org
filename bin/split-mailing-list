@@ -13,10 +13,10 @@ def main()
     ],
     size:10000,
   }
-  
+
   columns = nil
   lines = []
-  
+
   File.readlines(params[:csv]).each do |line|
     unless columns
       columns = line
@@ -24,9 +24,9 @@ def main()
     end
     lines << line unless line.strip.empty?
   end
-  
+
   lines.shuffle!
-  
+
   groups = []
   for group in 0...params[:groups].count
     groups << [].tap do |results|
@@ -37,15 +37,15 @@ def main()
       end
     end
   end
-  
+
   groups << [columns] + lines
-  
+
   i = 0
   params[:groups].each do |group_name|
     IO.write(group_name, groups[i].join)
     i += 1
   end
-  
+
   puts groups.map{|group| group.count}.join("\n")
 end
 

@@ -84,8 +84,8 @@ class Documents < Sinatra::Base
       end
     end
 
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', 
-                 '/teacher-dashboard', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
+                 '/teacher-dashboard',
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
                  '/teacher-dashboard/section_manage',
@@ -165,7 +165,7 @@ class Documents < Sinatra::Base
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
     end
-    
+
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '@2x'
 
@@ -182,7 +182,7 @@ class Documents < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
-    
+
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
@@ -190,7 +190,7 @@ class Documents < Sinatra::Base
       send_file(path)
     else
       image = Magick::Image.read(path).first
-      
+
       mode = :resize
 
       if manipulation
@@ -207,7 +207,7 @@ class Documents < Sinatra::Base
       else
         width = image.columns
         height = image.rows
-        
+
         # Retina sources need to be downsampled for non-retina output
         if retina_in && !retina_out
           width /= 2
@@ -302,7 +302,7 @@ class Documents < Sinatra::Base
       end
       line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
-      
+
       if @header['require_https'] && rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'

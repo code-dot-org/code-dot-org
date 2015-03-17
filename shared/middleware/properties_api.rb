@@ -35,7 +35,7 @@ class PropertiesApi < Sinatra::Base
     content_type :json
     PropertyBag.new(channel_id, storage_id(endpoint)).get(name).to_json
   end
-  
+
   #
   # DELETE /v3/(shared|user)-properties/<channel-id>/<property-name>
   #
@@ -46,7 +46,7 @@ class PropertiesApi < Sinatra::Base
     PropertyBag.new(channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
-  
+
   #
   # POST /v3/(shared|user)-properties/<channel-id>/<property-name>/delete
   #
