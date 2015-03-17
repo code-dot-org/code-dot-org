@@ -3,3 +3,6 @@ ruby:
 
 java_script:
   config_file: .javascript-style.json
+
+scss:
+  enabled: false
