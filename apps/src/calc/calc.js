@@ -69,36 +69,51 @@ Calc.appState_ = appState;
 var stepSpeed = 2000;
 
 /**
- * Get a token list for an equation, expression, or string. If input(s) are not
- * expressions, we convert to expressions.
- * If two inputs are given, we get the diff.
- * If one input is given, we return the tokenlist for that input.
+ * Construct a token list from on or two values. If one value is given, that
+ * token list is just the set of unmarked tokens. If two values are given, the
+ * generated token list has difference marked. Inputs are first converted to
+ * ExpressionNodes to allow for token list generation.
+ * @param {ExpressionNode|Equation|jsnumber|string} one
+ * @param {ExpressionNode|Equation|jsnumber|string} two
+ * @returns {Token[]}
  */
-function getTokenList(one, two) {
-  if (one instanceof Equation) {
-    one = one.expression;
-  }
-  if (two instanceof Equation) {
-    two = two.expression;
-  }
-  if (jsnums.isSchemeNumber(one)) {
-    one = new ExpressionNode(one);
-  }
-  if (jsnums.isSchemeNumber(two)) {
-    two = new ExpressionNode(two);
-  }
-  if (typeof(one) === 'string') {
-    var marked = (one !== two && two !== undefined);
-    return [new Token(one, marked)];
-  }
+function constructTokenList(one, two) {
+  one = asExpressionNode(one);
+  two = asExpressionNode(two);
 
   if (!one) {
     return null;
   } else if (!two) {
-    return one.getTokenList(false);
+    var markDeepest = false;
+    return one.getTokenList(markDeepest);
   } else {
     return one.getTokenListDiff(two);
   }
+}
+
+/**
+ * Converts a val to an ExpressionNode for the purpose of generating a token
+ * list.
+ * @param {ExpressionNode|Equation|jsnumber|string} val
+ * @returns {ExpressionNode}
+ */
+function asExpressionNode(val) {
+  if (val === null || val === undefined) {
+    return val;
+  }
+  if (val instanceof ExpressionNode) {
+    return val;
+  }
+  if (val instanceof Equation) {
+    return val.expression;
+  }
+  // It's perhaps a little weird to convert a string like "= " into an
+  // ExpressionNode (which I believe will treat this as a variable), but this
+  // allows us to more easily generate a tokenList in a consistent manner.
+  if (jsnums.isSchemeNumber(val) || typeof(val) === 'string') {
+    return new ExpressionNode(val);
+  }
+  throw new Error('unexpected');
 }
 
 /**
@@ -212,19 +227,19 @@ function displayGoal(targetSet) {
           "mixed functions/vars");
       }
 
-      tokenList = equation.expression.getTokenList(false);
+      tokenList = constructTokenList(equation);
       displayEquation('answerExpression', equation.signature, tokenList, nextRow++);
     });
   }
 
-  tokenList = computeEquation.expression.getTokenList(false);
+  tokenList = constructTokenList(computeEquation);
   var evaluation = targetSet.evaluate();
   if (evaluation.err) {
     throw evaluation.err;
   }
 
   if (hasSingleFunction) {
-    tokenList = tokenList.concat(getTokenList(' = ' + evaluation.result.toString()));
+    tokenList = tokenList.concat(constructTokenList(' = ' + evaluation.result.toString()));
   }
   displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
@@ -699,7 +714,7 @@ function displayComplexUserExpressions() {
     var expectedEquation = highlightErrors ?
       appState.targetSet.getEquation(userEquation.name) : null;
 
-    tokenList = getTokenList(userEquation, expectedEquation);
+    tokenList = constructTokenList(userEquation, expectedEquation);
 
     displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
       'errorToken');
@@ -716,7 +731,7 @@ function displayComplexUserExpressions() {
 
   // We're either a variable or a function call. Generate a tokenList (since
   // we could actually be different than the goal)
-  tokenList = getTokenList(computeEquation, targetEquation);
+  tokenList = constructTokenList(computeEquation, targetEquation);
 
   var evaluation = appState.userSet.evaluate();
   var divZeroInUserSet = false;
@@ -738,8 +753,8 @@ function displayComplexUserExpressions() {
     }
 
     // add a tokenList diffing our results
-    tokenList = tokenList.concat(getTokenList(' = '),
-      getTokenList(result, expectedResult));
+    tokenList = tokenList.concat(constructTokenList(' = '),
+      constructTokenList(result, expectedResult));
   }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
@@ -759,9 +774,9 @@ function displayComplexUserExpressions() {
     }
     result = evaluation.result.toFixnum().toString();
 
-    tokenList = getTokenList(expression)
-      .concat(getTokenList(' = '))
-      .concat(getTokenList(result, ' ')); // this should always be marked
+    tokenList = constructTokenList(expression)
+      .concat(constructTokenList(' = '))
+      .concat(constructTokenList(result, ' ')); // this should always be marked
     displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
   }
 }
@@ -876,12 +891,12 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
   var xPos = 0;
   var len;
   if (name) {
-    len = new Token(name + ' = ', false).addToParent(g, xPos, null);
+    len = new Token(name + ' = ', false).renderToParent(g, xPos, null);
     xPos += len;
   }
 
   for (var i = 0; i < tokenList.length; i++) {
-    len = tokenList[i].addToParent(g, xPos, markClass);
+    len = tokenList[i].renderToParent(g, xPos, markClass);
     xPos += len;
   }
 
