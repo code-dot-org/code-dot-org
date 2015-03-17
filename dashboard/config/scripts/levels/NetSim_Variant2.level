@@ -6,6 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
+    "skip_instructions_popup": "true",
     "instructions": "NetSim: Variant 2 template: UNDER CONSTRUCTION: Variant 2 is not yet functional because P2P connections have not been implemented."
   }
 }]]></config>
