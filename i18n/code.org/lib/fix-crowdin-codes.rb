@@ -5,7 +5,6 @@ locales = {
   'Albanian' => 'sq-AL',
   'Arabic' => 'ar-SA',
   'Armenian' => 'hy-AM',
-  'Assamese' => 'as-IN',
   'Azerbaijani' => 'az-AZ',
   'Basque' => 'eu-ES',
   'Bengali' => 'bn-BD',
