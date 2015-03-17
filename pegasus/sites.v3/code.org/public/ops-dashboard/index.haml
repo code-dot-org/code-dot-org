@@ -186,6 +186,22 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('matchingProgramType', function() {
+    return function(cohorts, workshopProgramType) {
+      if (workshopProgramType) {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          if (cohort.program_type == workshopProgramType) {
+            filtered.push(cohort);
+          }
+        }, this);
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
