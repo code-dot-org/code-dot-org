@@ -30,7 +30,7 @@ template: none
     {{program_type.long_name}}
 %h3
   Assigned Cohort
-%select.form-control{'ng-model' => 'workshop.cohort_id'}
+%select.form-control{'ng-model' => 'workshop.cohort_id', 'ng-disabled' => '!workshop.program_type'}
   %option{'ng-repeat' => 'cohort in cohorts | matchingProgramType:workshop.program_type', 'value' => '{{cohort.id}}'}
     {{cohort.name}}
 %br
