@@ -39,7 +39,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if params[:lines] 
+    if params[:lines]
       params[:lines] = params[:lines].to_i
       params[:lines] = 0 if params[:lines] < MIN_LINES_OF_CODE
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE

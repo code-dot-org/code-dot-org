@@ -24,7 +24,7 @@ class ProfessionalDevelopmentWorkshop
     if data[:stopped]
       result[:stopped_dt] = DateTime.now.to_solr
     end
-    
+
     result
   end
 

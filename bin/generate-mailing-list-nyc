@@ -18,7 +18,7 @@ end
 
 def dashboard_teachers(params={})
   fields = params[:fields] if params[:fields]
-  
+
   [].tap do |results|
     DASHBOARD_DB[:users].where(user_type:'teacher').each do |i|
       i = yield(i) if block_given?
@@ -29,7 +29,7 @@ end
 
 def export_contacts_to_csv(contacts, path)
   columns = nil
-  
+
   CSV.open(path, 'wb') do |results|
     contacts.values.each do |contact|
       unless columns
