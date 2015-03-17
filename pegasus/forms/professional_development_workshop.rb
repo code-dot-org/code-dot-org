@@ -117,7 +117,7 @@ class ProfessionalDevelopmentWorkshop
       kind_s: self.name,
       type_s: 'Public',
       first_date_dt: '[NOW TO *]',
-    }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
+    }.map{|key,value| "#{key}:#{value}"}.join(' AND ')
 
     {
       q: "*:*",
