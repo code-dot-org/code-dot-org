@@ -310,8 +310,20 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
     var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
+    var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    exampleCall.setMovable(false);
+    exampleCall.setDeletable(false);
     this.exampleBlocks.push(movedExampleBlock);
   }, this);
+};
+
+/**
+ * @override
+ */
+Blockly.ContractEditor.prototype.moveToModalBlockSpace_ = function (block) {
+  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace_.call(this, block);
+  newBlock.setDeletable(false);
+  return newBlock;
 };
 
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
