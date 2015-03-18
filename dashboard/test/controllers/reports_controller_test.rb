@@ -73,9 +73,8 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should have one game group if one stage" do
-    @script = create(:script, name: 'Single Stage Script')
-    @stage = create(:stage, script: @script, name: 'Stage 1')
-    @script_level = create(:script_level, script: @script, stage: @stage)
+    @script_level2.update(stage: @stage)
+    @script_level2.move_to_bottom
 
     get :user_stats, script_id: @script_level.script.id, user_id: @not_admin.id
     css = css_select "div.game-group"
