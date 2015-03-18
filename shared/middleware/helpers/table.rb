@@ -184,13 +184,9 @@ class DynamoTable
       db.put_item(
         table_name:CDO.dynamo_table_name,
         item:{
-<<<<<<< HEAD
-          hash:@hash,
-=======
           hash:@hash, 
           channel_id:@channel_id,
           table_name:@table_name,
->>>>>>> Add 'list tables' support for dynamo db (needed for applab data browser).
           row_id:row_id,
           updated_at:DateTime.now.to_s,
           updated_ip:ip_address,
@@ -272,7 +268,7 @@ class DynamoTable
         ).first
 
         page[:items].each do |item|
-          results << value_from_row(item)
+          results << value_from_item(item)
         end
 
         last_evaluated_key = page[:last_evaluated_key]
@@ -280,8 +276,8 @@ class DynamoTable
     end
   end
 
-  def value_from_row(row)
-    JSON.load(row['value']).merge(id:row['row_id'].to_i)
+  def value_from_item(item)
+    JSON.load(item['value']).merge(id:item['row_id'].to_i)
   end
 
   def self.table_names(channel_id)
