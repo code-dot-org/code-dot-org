@@ -697,6 +697,9 @@ $aniGifPreviewHeight: 60px;
     border-right: 1px solid gray;
     float: left;
   }
+  #blockCounter, #blockUsed {
+    display: inline-block;
+  }
   #clear-puzzle-header, #show-code-header {
     cursor: pointer;
     float: right;
