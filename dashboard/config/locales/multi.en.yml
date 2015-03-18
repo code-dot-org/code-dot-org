@@ -573,7 +573,7 @@ en:
         '17': '17'
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is f(1)?: What is f(1)?
+        What should f(1) produce?: What should f(1) produce?
         x: x
         '117': '117'
         '17': '17'

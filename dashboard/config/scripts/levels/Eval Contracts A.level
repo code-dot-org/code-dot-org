@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Use the \"star\" function to produce a red star with a 60 pixel radius",
+    "instructions": "Use the \"star\" function to produce a solid red star with a 60 pixel radius",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -14,8 +14,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "d40579085f9efc8fec9d9e5cc02f59f7"
 }]]></config>
   <blocks>
     <toolbox_blocks>
