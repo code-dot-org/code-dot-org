@@ -309,7 +309,7 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
-    var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
+    var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
     var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
     exampleCall.setMovable(false);
     exampleCall.setDeletable(false);
@@ -320,8 +320,8 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
 /**
  * @override
  */
-Blockly.ContractEditor.prototype.moveToModalBlockSpace_ = function (block) {
-  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace_.call(this, block);
+Blockly.ContractEditor.prototype.moveToModalBlockSpace = function (block) {
+  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace.call(this, block);
   newBlock.setDeletable(false);
   return newBlock;
 };

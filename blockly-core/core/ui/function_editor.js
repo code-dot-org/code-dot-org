@@ -111,7 +111,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
-  this.functionDefinitionBlock = this.moveToModalBlockSpace_(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
 
@@ -377,7 +377,7 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
  * @returns {Blockly.Block} copy of block in modal BlockSpace
  * @protected
  */
-Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
+Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
