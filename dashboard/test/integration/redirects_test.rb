@@ -67,10 +67,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   test 'redirects cartoon network quick links' do
     get '/flappy/lang/ar'
     assert_redirected_to '/flappy/1'
-    
+
     get '/playlab/lang/ar'
     assert_redirected_to '/s/playlab/stage/1/puzzle/1'
-    
+
     get '/artist/lang/ar'
     assert_redirected_to '/s/artist/stage/1/puzzle/1'
   end

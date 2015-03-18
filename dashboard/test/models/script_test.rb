@@ -213,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_cache_to_cache # in test this is in non-distributed memory
 
     Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
-    
+
     Script.connection.disconnect!     # we don't need no stinkin db
 
     assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name

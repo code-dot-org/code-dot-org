@@ -223,7 +223,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'updating ContractMatch level updates it' do
     File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
-     
+
     name = 'contract match test'
     dsl_text = <<EOS
 name 'Eval Contracts 1 B'
@@ -243,7 +243,7 @@ EOS
     assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
     assert_equal 'Write a contract for the bar function', cm.properties['content1']
   end
-  
+
   test 'delete removed level properties on import' do
     level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
 

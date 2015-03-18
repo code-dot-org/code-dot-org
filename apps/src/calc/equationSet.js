@@ -1,6 +1,7 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
+var jsnums = require('./js-numbers/js-numbers');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -216,7 +217,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   var testMapping;
   var evaluation;
   var setTestMappingToOne = function (item) {
-    testMapping[item] = 1;
+    testMapping[item] = jsnums.makeFloat(1);
   };
   do {
     madeProgress = false;

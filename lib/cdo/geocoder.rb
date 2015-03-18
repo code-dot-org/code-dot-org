@@ -64,4 +64,3 @@ def geocoder_config
 end
 
 Geocoder.configure(geocoder_config)
-
