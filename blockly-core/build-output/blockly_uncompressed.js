@@ -13581,7 +13581,7 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
     this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"white"}, this.svgGroup_);
     this.inputClickTargets_[input.name] = Blockly.createSvgElement("path", {fill:"white", opacity:"0", "class":"inputClickTarget"}, this.svgGroup_);
     if(!this.block_.blockSpace.isFlyout) {
-      this.addInputClickListener_(input)
+      this.addInputClickListener_(input.name)
     }
   }
   Object.keys(this.inputMarkers_).forEach(function(markerName) {
@@ -13595,11 +13595,13 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
     }
   }, this)
 };
-Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function(input) {
+Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function(inputName) {
   var blockSpace = this.block_.blockSpace;
-  goog.events.listen(this.inputClickTargets_[input.name], "click", function(e) {
+  var parentBlock = this.block_;
+  goog.events.listen(this.inputClickTargets_[inputName], "click", function(e) {
     var childType;
     var titleIndex;
+    var input = parentBlock.getInput(inputName);
     if(input.connection.acceptsAnyType()) {
       return
     }
