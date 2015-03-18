@@ -331,7 +331,7 @@ svg {
         }
 
         tr.ascii td.message {
-          white-space: pre;
+          white-space: pre-wrap;
         }
       }
     }
@@ -378,7 +378,7 @@ svg {
   // Mimics the log panel styles as much as possible.
   .netsim-send-panel {
 
-    .netsim_packet {
+    .netsim-packet {
       border: solid darkgray thin;
       background-color: $medium-gray;
       margin: 10px;
@@ -392,6 +392,7 @@ svg {
 
       // All input fields
       input, textarea {
+        resize: none;
         padding: 0.2em;
         margin-bottom: 0.2em;
         font-family: monospace;
@@ -463,8 +464,9 @@ svg {
         div {
           margin-right: 0.4em;
           textarea {
+            resize: none;
+            height: 1.5em;
             width: 100%;
-            padding: 0.2em;
           }
         }
 

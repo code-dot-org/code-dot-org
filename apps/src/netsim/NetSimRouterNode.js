@@ -30,7 +30,7 @@ var dataConverters = require('./dataConverters');
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * @type {number}

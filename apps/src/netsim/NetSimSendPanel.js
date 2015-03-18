@@ -13,29 +13,12 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var netsimMsg = require('../../locale/current/netsim');
+var i18n = require('../../locale/current/netsim');
 var markup = require('./NetSimSendPanel.html');
-var KeyCodes = require('../constants').KeyCodes;
 var NetSimPanel = require('./NetSimPanel');
-var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
-var PacketEncoder = require('./PacketEncoder');
-var dataConverters = require('./dataConverters');
-
-var minifyBinary = dataConverters.minifyBinary;
-var formatBinary = dataConverters.formatBinary;
-var formatHex = dataConverters.formatHex;
-var alignDecimal = dataConverters.alignDecimal;
-var binaryToInt = dataConverters.binaryToInt;
-var intToBinary = dataConverters.intToBinary;
-var hexToInt = dataConverters.hexToInt;
-var intToHex = dataConverters.intToHex;
-var hexToBinary = dataConverters.hexToBinary;
-var binaryToHex = dataConverters.binaryToHex;
-var decimalToBinary = dataConverters.decimalToBinary;
-var binaryToDecimal = dataConverters.binaryToDecimal;
-var asciiToBinary = dataConverters.asciiToBinary;
-var binaryToAscii = dataConverters.binaryToAscii;
+var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
  * Generator and controller for message sending view.
@@ -63,33 +46,50 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.connection_.statusChanges
       .register(this.onConnectionStatusChange_.bind(this));
 
-  /** @type {number} */
-  this.toAddress = 0;
-  /** @type {number} */
-  this.fromAddress = 0;
-  /** @type {number} */
-  this.packetIndex = 1;
-  /** @type {number} */
-  this.packetCount = 1;
   /**
-   * Binary string of message body, live-interpreted to other values.
-   * @type {string}
-   */
-  this.message = '';
-
-  /**
-   * Maximum packet length configurable by slider.
-   * @type {Number}
+   * List of controllers for packets currently being edited.
+   * @type {NetSimPacketEditor[]}
    * @private
    */
-  this.currentPacketSize_ = levelConfig.defaultPacketSizeLimit;
+  this.packets_ = [];
 
   /**
-   * Bits per chunk/byte for parsing and formatting purposes.
+   * Our local node's address, zero until assigned by a router.
    * @type {number}
    * @private
    */
-  this.currentChunkSize_ = 8;
+  this.fromAddress_ = 0;
+
+  /**
+   * Maximum packet length configurable by slider.
+   * @type {number}
+   * @private
+   */
+  this.maxPacketSize_ = levelConfig.defaultPacketSizeLimit;
+
+  /**
+   * Byte-size used for formatting binary and for interpreting it
+   * to decimal or ASCII.
+   * @type {number}
+   * @private
+   */
+  this.chunkSize_ = BITS_PER_BYTE;
+
+  /**
+   * What encodings are currently selected and displayed in each
+   * packet and packet editor.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.enabledEncodings_ = levelConfig.defaultEnabledEncodings;
+
+  /**
+   * Reference to parent div of packet editor list, for adding and
+   * removing packet editors.
+   * @type {jQuery}
+   * @private
+   */
+  this.packetsDiv_ = null;
 
   /**
    * @type {NetSimPacketSizeControl}
@@ -99,7 +99,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-send-panel',
-    panelTitle: netsimMsg.sendAMessage()
+    panelTitle: i18n.sendAMessage()
   });
 };
 NetSimSendPanel.inherits(NetSimPanel);
@@ -113,206 +113,72 @@ NetSimSendPanel.prototype.render = function () {
   var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
 
+  // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet_size'),
         this.packetSizeChangeCallback_.bind(this));
-    this.packetSizeControl_.setPacketSize(this.currentPacketSize_);
+    this.packetSizeControl_.setPacketSize(this.maxPacketSize_);
   }
 
-  this.bindElements_();
-  this.updateFields_();
+  // Bind useful elements and add handlers
+  this.packetsDiv_ = this.getBody().find('.send-widget-packets');
+  this.getBody()
+      .find('#add_packet_button')
+      .click(this.addPacket_.bind(this));
+  this.getBody()
+      .find('#send_button')
+      .click(this.onSendButtonPress_.bind(this));
+
+  // Note: At some point, we might want to replace this with something
+  // that nicely re-renders the contents of this.packets_... for now,
+  // we only call render for set-up, so it's okay.
+  this.resetPackets_();
 };
 
 /**
- * Focus event handler.  If the target element has a 'watermark' class then
- * it contains text we intend to clear before any editing occurs.  This
- * handler clears that text and removes the class.
- * @param focusEvent
- */
-var removeWatermark = function (focusEvent) {
-  var target = $(focusEvent.target);
-  if (target.hasClass('watermark')) {
-    target.val('');
-    target.removeClass('watermark');
-  }
-};
-
-/**
- * Creates a keyPress handler that allows only the given characters to be
- * typed into a text field.
- * @param {RegExp} whitelistRegex
- * @return {function} appropriate to pass to .keypress()
- */
-var whitelistCharacters = function (whitelistRegex) {
-  /**
-   * A keyPress handler that blocks all visible characters except those
-   * matching the whitelist.  Passes through invisible characters (backspace,
-   * delete) and control combinations (copy, paste).
-   *
-   * @param keyEvent
-   * @returns {boolean} - Whether to propagate this event.  Should return
-   *          FALSE if we handle the event and don't want to pass it on, TRUE
-   *          if we are not handling the event.
-   */
-  return function (keyEvent) {
-
-    // Don't block control combinations (copy, paste, etc.)
-    if (keyEvent.metaKey || keyEvent.ctrlKey) {
-      return true;
-    }
-
-    // Don't block invisible characters; we want to allow backspace, delete, etc.
-    if (keyEvent.which < KeyCodes.SPACE || keyEvent.which >= KeyCodes.DELETE) {
-      return true;
-    }
-
-    // At this point, if the character doesn't match, we should block it.
-    var key = String.fromCharCode(keyEvent.which);
-    if (!whitelistRegex.test(key)) {
-      keyEvent.preventDefault();
-      return false;
-    }
-  };
-};
-
-/**
- * Generate a jQuery-appropriate keyup handler for a text field.
- * Grabs the new value of the text field, runs it through the provided
- * converter function, sets the result on the SendWidget's internal state
- * and triggers a field update on the widget that skips the field being edited.
- *
- * Similar to makeBlurHandler, but does not update the field currently
- * being edited.
- *
- * @param {string} fieldName - name of internal state field that the text
- *        field should update.
- * @param {function} converterFunction - Takes the text field's value and
- *        converts it to a format appropriate to the internal state field.
- * @returns {function} that can be passed to $.keyup()
- */
-NetSimSendPanel.prototype.makeKeyupHandler = function (fieldName, converterFunction) {
-  return function (jqueryEvent) {
-    var newValue = converterFunction(jqueryEvent.target.value);
-    if (!isNaN(newValue)) {
-      this[fieldName] = newValue;
-      this.updateFields_(jqueryEvent.target);
-    }
-  }.bind(this);
-};
-
-/**
- * Generate a jQuery-appropriate blur handler for a text field.
- * Grabs the new value of the text field, runs it through the provided
- * converter function, sets the result on the SendWidget's internal state
- * and triggers a full field update of the widget (including the field that was
- * just edited).
- *
- * Similar to makeKeyupHandler, but also updates the field that was
- * just edited.
- *
- * @param {string} fieldName - name of internal state field that the text
- *        field should update.
- * @param {function} converterFunction - Takes the text field's value and
- *        converts it to a format appropriate to the internal state field.
- * @returns {function} that can be passed to $.blur()
- */
-NetSimSendPanel.prototype.makeBlurHandler = function (fieldName, converterFunction) {
-  return function (jqueryEvent) {
-    var newValue = converterFunction(jqueryEvent.target.value);
-    if (isNaN(newValue)) {
-      newValue = converterFunction('0');
-    }
-    this[fieldName] = newValue;
-    this.updateFields_();
-  }.bind(this);
-};
-
-/**
- * Get relevant elements from the page and bind them to local variables.
+ * Add a new, blank packet to the set of packets being edited.
  * @private
  */
-NetSimSendPanel.prototype.bindElements_ = function () {
-  var rootDiv = this.getBody();
+NetSimSendPanel.prototype.addPacket_ = function () {
+  var newPacketCount = this.packets_.length + 1;
 
-  var shortNumberFields = [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
-  ];
+  // Update the total packet count on all existing packets
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setPacketCount(newPacketCount);
+  });
 
-  var rowTypes = [
-    {
-      typeName: 'binary',
-      shortNumberAllowedCharacters: /[01]/,
-      shortNumberConversion: binaryToInt,
-      messageAllowedCharacters: /[01\s]/,
-      messageConversion: minifyBinary
-    },
-    {
-      typeName: 'hexadecimal',
-      shortNumberAllowedCharacters: /[0-9a-f]/i,
-      shortNumberConversion: hexToInt,
-      messageAllowedCharacters: /[0-9a-f\s]/i,
-      messageConversion: hexToBinary
-    },
-    {
-      typeName: 'decimal',
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: parseInt,
-      messageAllowedCharacters: /[0-9\s]/,
-      messageConversion: function (decimalString) {
-        return decimalToBinary(decimalString, this.currentChunkSize_);
-      }.bind(this)
-    },
-    {
-      typeName: 'ascii',
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: parseInt,
-      messageAllowedCharacters: /./,
-      messageConversion: function (asciiString) {
-        return asciiToBinary(asciiString, this.currentChunkSize_);
-      }.bind(this)
-    }
-  ];
+  // Copy the to address of the previous packet, for convenience.
+  // TODO: Do we need to lock the toAddress for all of these packets together?
+  var newPacketToAddress = 0;
+  if (this.packets_.length > 0) {
+    newPacketToAddress = this.packets_[this.packets_.length - 1].toAddress;
+  }
 
-  rowTypes.forEach(function (rowType) {
-    var tr = rootDiv.find('tr.' + rowType.typeName);
-    var rowUIKey = rowType.typeName + 'UI';
-    this[rowUIKey] = {};
-    var rowFields = this[rowUIKey];
+  // Create a new packet
+  var newPacket = new NetSimPacketEditor({
+    toAddress: newPacketToAddress,
+    fromAddress: this.fromAddress_,
+    packetIndex: newPacketCount,
+    packetCount: newPacketCount,
+    maxPacketSize: this.maxPacketSize_,
+    chunkSize: this.chunkSize_,
+    enabledEncodings: this.enabledEncodings_
+  });
 
-    // We attach focus (sometimes) to clear the field watermark, if present
-    // We attach keypress to block certain characters
-    // We attach keyup to live-update the widget as the user types
-    // We attach blur to reformat the edited field when the user leaves it,
-    //    and to catch non-keyup cases like copy/paste.
+  // Attach the new packet to this SendPanel
+  newPacket.getRoot().appendTo(this.packetsDiv_);
+  this.packets_.push(newPacket);
+};
 
-    shortNumberFields.forEach(function (fieldName) {
-      rowFields[fieldName] = tr.find('input.' + fieldName);
-      rowFields[fieldName].keypress(
-          whitelistCharacters(rowType.shortNumberAllowedCharacters));
-      rowFields[fieldName].keyup(
-          this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
-      rowFields[fieldName].blur(
-          this.makeBlurHandler(fieldName, rowType.shortNumberConversion));
-    }, this);
-
-    rowFields.message = tr.find('textarea.message');
-    rowFields.message.focus(removeWatermark);
-    rowFields.message.keypress(
-        whitelistCharacters(rowType.messageAllowedCharacters));
-    rowFields.message.keyup(
-        this.makeKeyupHandler('message', rowType.messageConversion));
-    rowFields.message.blur(
-        this.makeBlurHandler('message', rowType.messageConversion));
-  }, this);
-
-  this.bitCounter = rootDiv.find('.bit-counter');
-
-  this.sendButton_ = rootDiv.find('#send_button');
-  this.sendButton_.click(this.onSendButtonPress_.bind(this));
+/**
+ * Remove all packet editors from the panel.
+ * @private
+ */
+NetSimSendPanel.prototype.resetPackets_ = function () {
+  this.packetsDiv_.empty();
+  this.packets_ = [];
+  this.addPacket_();
 };
 
 /**
@@ -321,107 +187,30 @@ NetSimSendPanel.prototype.bindElements_ = function () {
  * @private
  */
 NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
+  this.fromAddress_ = 0;
   if (this.connection_.myNode && this.connection_.myNode.myWire) {
-    this.fromAddress = this.connection_.myNode.myWire.localAddress;
-  } else {
-    this.fromAddress = 0;
+    this.fromAddress_ = this.connection_.myNode.myWire.localAddress;
   }
 
-  this.updateFields_();
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setFromAddress(this.fromAddress_);
+  }.bind(this));
 };
 
 /**
- * Update send widget display
- * @param {HTMLElement} [skipElement]
+ * Send message to connected remote
  * @private
  */
-NetSimSendPanel.prototype.updateFields_ = function (skipElement) {
-  var chunkSize = this.currentChunkSize_;
-  var liveFields = [];
-
-  [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
-  ].forEach(function (fieldName) {
-    liveFields.push({
-      inputElement: this.binaryUI[fieldName],
-      newValue: intToBinary(this[fieldName], 4)
-    });
-
-    liveFields.push({
-      inputElement: this.hexadecimalUI[fieldName],
-      newValue: intToHex(this[fieldName], 1)
-    });
-
-    liveFields.push({
-      inputElement: this.decimalUI[fieldName],
-      newValue: this[fieldName].toString(10)
-    });
-
-    liveFields.push({
-      inputElement: this.asciiUI[fieldName],
-      newValue: this[fieldName].toString(10)
-    });
-  }, this);
-
-  liveFields.push({
-    inputElement: this.binaryUI.message,
-    newValue: formatBinary(this.message, chunkSize),
-    watermark: netsimMsg.binary()
-  });
-
-  liveFields.push({
-    inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), chunkSize),
-    watermark: netsimMsg.hexadecimal()
-  });
-
-  liveFields.push({
-    inputElement: this.decimalUI.message,
-    newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-    watermark: netsimMsg.decimal()
-  });
-
-  liveFields.push({
-    inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message, chunkSize),
-    watermark: netsimMsg.ascii()
-  });
-
-  liveFields.forEach(function (field) {
-    if (field.inputElement[0] !== skipElement) {
-      if (field.watermark && field.newValue === '') {
-        field.inputElement.val(field.watermark);
-        field.inputElement.addClass('watermark');
-      } else {
-        field.inputElement.val(field.newValue);
-        field.inputElement.removeClass('watermark');
-      }
-
-      // TODO: If textarea, scroll to bottom?
-    }
-  });
-
-  this.updateBitCounter();
-
-  // TODO: Hide columns by configuration
-  this.getBody().find('th.packetInfo, td.packetInfo').hide();
-};
-
-/** Send message to connected remote */
 NetSimSendPanel.prototype.onSendButtonPress_ = function () {
+  var packetBinaries = this.packets_.map(function (packetEditor) {
+    return packetEditor.getPacketBinary();
+  });
+
   var myNode = this.connection_.myNode;
-  if (myNode) {
+  if (myNode && packetBinaries.length > 0) {
     this.disableEverything();
-    var truncatedPacket = this.getPacketBinary_().substr(0, this.currentPacketSize_);
-    myNode.sendMessage(truncatedPacket, function () {
-      var binaryTextarea = this.getBody()
-          .find('tr.binary')
-          .find('textarea');
-      binaryTextarea.val('');
-      binaryTextarea.blur();
+    myNode.sendMessages(packetBinaries, function () {
+      this.resetPackets_();
       this.enableEverything();
     }.bind(this));
   }
@@ -438,29 +227,15 @@ NetSimSendPanel.prototype.enableEverything = function () {
 };
 
 /**
- * Produces a single binary string in the current packet format, based
- * on the current state of the widget (content of its internal fields).
- * @returns {string} - binary representation of packet
- * @private
- */
-NetSimSendPanel.prototype.getPacketBinary_ = function () {
-  var shortNumberFieldWidth = 4;
-  return PacketEncoder.defaultPacketEncoder.createBinary({
-    toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
-    fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
-    packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
-    packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
-    message: this.message
-  });
-};
-
-/**
  * Show or hide parts of the send UI based on the currently selected encoding
  * mode.
  * @param {EncodingType[]} newEncodings
  */
 NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
-  NetSimEncodingControl.hideRowsByEncoding(this.getBody(), newEncodings);
+  this.enabledEncodings_ = newEncodings;
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setEncodings(newEncodings);
+  });
 };
 
 /**
@@ -469,8 +244,10 @@ NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
  * @param {number} newChunkSize
  */
 NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
-  this.currentChunkSize_ = newChunkSize;
-  this.updateFields_();
+  this.chunkSize_ = newChunkSize;
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setChunkSize(newChunkSize);
+  });
 };
 
 /**
@@ -480,26 +257,8 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
  * @private
  */
 NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
-  this.currentPacketSize_ = newPacketSize;
-  this.updateBitCounter();
-};
-
-/**
- * Update the visual state of the bit counter to reflect the current
- * message binary length and maximum packet size.
- */
-NetSimSendPanel.prototype.updateBitCounter = function () {
-  var size = this.getPacketBinary_().length;
-  var maxSize = this.currentPacketSize_ === Infinity ?
-      netsimMsg.infinity() : this.currentPacketSize_;
-  this.bitCounter.html(netsimMsg.bitCounter({
-    x: size,
-    y: maxSize
-  }));
-
-  if (size <= this.currentPacketSize_) {
-    this.bitCounter.removeClass('oversized');
-  } else {
-    this.bitCounter.addClass('oversized');
-  }
+  this.maxPacketSize_ = newPacketSize;
+  this.packets_.forEach(function (packetEditor){
+    packetEditor.setMaxPacketSize(newPacketSize);
+  });
 };
