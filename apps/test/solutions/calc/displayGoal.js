@@ -137,17 +137,14 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.children[1].getAttribute('class'), null);
 
     g = answerExpression.children[1];
-    assert.equal(g.children.length, 5);
-    assert.equal(g.children[0].textContent, "(");
+
+    assert.equal(g.children[0].textContent, "age");
     assert.equal(g.children[0].getAttribute('class'), null);
-    assert.equal(g.children[1].textContent, "age");
+    assert.equal(g.children[1].textContent, " * ");
     assert.equal(g.children[1].getAttribute('class'), null);
-    assert.equal(g.children[2].textContent, " * ");
+    assert.equal(g.children[2].textContent, "12");
     assert.equal(g.children[2].getAttribute('class'), null);
-    assert.equal(g.children[3].textContent, "12");
-    assert.equal(g.children[3].getAttribute('class'), null);
-    assert.equal(g.children[4].textContent, ")");
-    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children.length, 3);
   });
 
   return true;

@@ -24,6 +24,10 @@ var Token = function (val, marked) {
 };
 module.exports = Token;
 
+Token.prototype.isParenthesis = function () {
+  return this.val_ === '(' || this.val_ === ')';
+};
+
 /**
  * Add the given token to the parent element.
  * @param {HTMLElement} element Parent element to add to
