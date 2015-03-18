@@ -163,12 +163,40 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetCount: newPacketCount,
     maxPacketSize: this.maxPacketSize_,
     chunkSize: this.chunkSize_,
-    enabledEncodings: this.enabledEncodings_
+    enabledEncodings: this.enabledEncodings_,
+    removePacketCallback: this.removePacket_.bind(this)
   });
 
   // Attach the new packet to this SendPanel
   newPacket.getRoot().appendTo(this.packetsDiv_);
+  newPacket.getRoot().hide().slideDown('fast');
   this.packets_.push(newPacket);
+};
+
+/**
+ * Remove a packet from the send panel, and adjust other packets for
+ * consistency.
+ * @param {NetSimPacketEditor} packet
+ * @private
+ */
+NetSimSendPanel.prototype.removePacket_ = function (packet) {
+  // Remove from DOM
+  packet.getRoot()
+      .slideUp('fast', function() { $(this).remove(); });
+
+  // Remove from internal collection
+  this.packets_ = this.packets_.filter(function (packetEditor) {
+    return packetEditor !== packet;
+  });
+
+  // Adjust numbering of remaining packets
+  var packetCount = this.packets_.length;
+  var packetIndex;
+  for (var i = 0; i < packetCount; i++) {
+    packetIndex = i + 1;
+    this.packets_[i].setPacketIndex(packetIndex);
+    this.packets_[i].setPacketCount(packetCount);
+  }
 };
 
 /**

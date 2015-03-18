@@ -1,6 +1,6 @@
 {
   "a_and_b": "A/B",
-  "add_packet": "Add Packet",
+  "addPacket": "Add Packet",
   "ascii": "ASCII",
   "binary": "Binary",
   "bitCounter": "{x}/{y} bits",
@@ -24,6 +24,7 @@
   "_of_": " of ",
   "packet": "Packet",
   "receivedMessageLog": "Received Message Log",
+  "removePacket": "Remove Packet",
   "router": "Router",
   "send": "Send",
   "sendAMessage": "Send a Message",
