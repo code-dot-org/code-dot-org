@@ -363,6 +363,7 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
  */
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setMovable(true);
+  blockToMove.setDeletable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
@@ -374,6 +375,7 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
  * Note: destroys the existing Block object in the process
  * @param {Blockly.Block} blockToMove
  * @returns {Blockly.Block} copy of block in modal BlockSpace
+ * @protected
  */
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
   var dom = Blockly.Xml.blockToDom(blockToMove);
