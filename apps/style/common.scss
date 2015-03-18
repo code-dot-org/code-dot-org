@@ -641,10 +641,7 @@ $aniGifPreviewHeight: 60px;
 #headers {
   height: $headers_height;
   background-color: $purple;
-  div {
-    display: inline-block;
-    margin-right: -4px;
-  }
+  overflow-y: hidden;
   .workspace-header {
     text-align: center;
     white-space: nowrap;
@@ -656,10 +653,13 @@ $aniGifPreviewHeight: 60px;
     }
   }
   #toolbox-header {
+    width: 270px;
     border-right: 1px solid gray;
+    float: left;
   }
   #clear-puzzle-header, #show-code-header {
     cursor: pointer;
+    float: right;
     border-left: 1px solid gray;
     &:hover {
       background-color: $cyan;
@@ -682,15 +682,16 @@ $aniGifPreviewHeight: 60px;
 #headers[dir=rtl] {
   div {
     margin-right: 0;
-    margin-left: -4px;
   }
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
+    float: right;
   }
   #clear-puzzle-header, #show-code-header {
     border-left: 0;
     border-right: 1px solid gray;
+    float: left;
   }
 }
 
