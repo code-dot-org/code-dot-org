@@ -644,6 +644,12 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: بلوک های ارزیابی
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: متغیرها
+        msm_7_functions: توابع
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

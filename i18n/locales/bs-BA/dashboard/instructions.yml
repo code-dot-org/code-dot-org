@@ -454,7 +454,7 @@ bs:
       C3-Farmer While Loops 7_instruction: Wow, sada vidim tri gomile zemlje! Možeš li napisati program koji uklanja svaku od njih dok se zemlja ne poravna?
       C3-Farmer While Loops 8_instruction: ' Vidim stvarno duboku rupu i veoma veliku gomilu zemlje. Koliko lopata zemlje trebam premjestiti da bi se zemlja poravnala? Savjet: Koristi "dok" petlju za oboje.'
       C3-Farmer While Loops Assessment 1_instruction: Vidim jako mnogo rupa i gomila. Pomozi mi da premjestim zemlju tako da se sve poravna.
-      C3-Farmer While Loops Multi Pics_instruction: Multiple Choice
+      C3-Farmer While Loops Multi Pics_instruction: Višestruki izbor
       Calc Circles of Eval .1_instruction: Kod koji ćeš napisati u ovom kursu se zove Blokovi Izvršenja, zato što će svaki blok poprimiti jednu vrijednost nakon izvršenja. Promijeni ??? u ovom kodu tako da blok poprimi vrijednost 5.
       Calc Circles of Eval .2_instruction: 'Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 * 5'
       Calc Circles of Eval .3_instruction: 'Ovo je funkcija za Sabiranje - uzima dva broja i vraća njihov zbir. Upotrijebi ovaj Blok Sabiranja da izračunaš 3 + 6.'

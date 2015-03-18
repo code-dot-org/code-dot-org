@@ -42,7 +42,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks, 200: Matematiikan lohkot 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
         (4+5): (4+5)
@@ -51,7 +51,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Matematiikan lohkot 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
         (7 * 6): (7 * 6)
@@ -60,7 +60,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Matematiikan lohkot 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
@@ -69,7 +69,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks: Matematiikan lohkot 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
         ((5 + 8) - 12): ((5 + 8) - 12)
@@ -78,7 +78,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Matematiikan lohkot 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
         ((-2) * (-6)): ((-2) * (-6))
@@ -88,7 +88,7 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Matematiikan lohkot 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
@@ -99,10 +99,64 @@
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Matematiikan lohkot 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
+      Open text response example:
+        Open text response example: Open text response example
+        I loved it because...: I loved it because...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating
+          a positive learning environment in your computer science classroom
+        0: '? Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+        1: ': Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+        In my classroom, I want to...: In my classroom, I want to...
+      PDK5 Course Descriptions:
+        Overview of Courses 1, 2, and 3: Katsaus kursseihin 1, 2 ja 3
+        I am going to start with Course...: I am going to start with Course...
+      PDK5 Difficulty:
+        Degree of Difficulty: Degree of Difficulty
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
+          programming as hard as you expected? Explain why or why not. How does this
+          impact your teaching of computer science?
+        Your thoughts here: Your thoughts here
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Computer Science as a Foundational
+          Skill
+        Do you see computer science as a foundational skill for your students? Why or why not?: Do
+          you see computer science as a foundational skill for your students? Why
+          or why not?
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 1:
+        Impact for students: Impact for students
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
+          you think your students will find the online activities in the K-5 courses
+          fun and engaging? Why or Why not?
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 2:
+        Connections to other Subjects: Connections to other Subjects
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
+          computer science connect to other topics or subjects your students are learning
+          about? Explain why or why not.
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
+        0: '? Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        1: ': Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        Your thoughts here: Your thoughts here
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio
+          are...
+      Test Markdown level:
+        Enter title here: Kirjoita otsikko tähän
+        Enter prompt here: Anna kehote tähän
       text match test:
         Mathematical Expression Assessment: 'Osaamisen arviointi: Matemaattinen lauseke'
         Type out the arithmetic expression that this circle of evaluation evaluates to: Kirjoita
@@ -115,29 +169,197 @@
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
         (9-3)+4*7: (9-3)+4*7
         9-3+4*7: 9-3+4*7
+      Glossary O:
+        ? 'Example: Call out conditional statements. If you line up in for recess
+          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+        : 'Example: Call out conditional statements. If you line up in for recess
+          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+      PDK5 Problem Solving:
+        Problem Solving Methods: Problem Solving Methods
+        I could integrate this in my classroom by...: I could integrate this in my
+          classroom by...
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio
+          are...
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
+          think teaching computer science will be different than teaching other subjects
+          in these ways: ...'
+    external:
+      Code Logo v3:
+        title: otsikko
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      External level test (will):
+        title: otsikko
+        description here: Kuvaus tähän
+      Mixing Colors:
+        title: otsikko
+        description here: Kuvaus tähän
+      Pixelation 1:
+        Pixelation 1: Pikselöinti 1
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      Pixelation 2:
+        Pixelation 2: Pikselöinti 2
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      Pixelation 3:
+        Pixelation 3: Pikselöinti 3
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      Pixelation 3 Bit Colors:
+        title: otsikko
+        description here: Kuvaus tähän
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
+          test of External level -- NOT REAL
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+        Create images with bits and bytes.: Luo kuvia biteillä ja tavuilla.
+      Pixelation Bee:
+        title: otsikko
+        description here: Kuvaus tähän
+      Pixelation Flappy:
+        title: otsikko
+        description here: Kuvaus tähän
+      CSP Lesson 14 encode letter A instructions:
+        'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      Hour of Code test content: {}
+      PDK5 Beyond C:
+        Beyond: Beyond
+      PDK5 Classroom Culture C:
+        Classroom Culture: Classroom Culture
+      PDK5 Course Maps C: {}
+      PDK5 Course Overview C: {}
+      PDK5 Glossary C:
+        Vocabulary: Vocabulary
+      PDK5 Intro C: {}
+      PDK5 Pair Programming 1:
+        Pair Programming: Pair Programming
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: Dashboard 1
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: Dashboard 2
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Teacher Dashboard
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Unplugged intro
+      PDK5 UVideo Overview C:
+        Kiki video overview: Kiki video overview
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: Why teach computer science
+          in elementary school?
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
+          offset
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
+          bit offset v.2
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
+          bit offset v.2
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: Make your own B&W image
+        description here: description here
+      Pixelation - Lesson 14 - Instructions one bit error:
+        'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
+        description here: description here
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: title
+        description here: description here
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: title
+        description here: description here
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: title
+        description here: description here
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
+          Play
+        description here: description here
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        description here: description here
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
+          Shades 4x4
+        description here: description here
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
+          3-bit color
+        description here: description here
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
+          Instructions
+        description here: description here
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
+          1 instructions
+        description here: description here
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
+          2 instructions
+        description here: description here
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
+          3 instructions
+        description here: description here
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        description here: description here
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        description here: description here
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: Pixelation - Video - Color 3
+        description here: description here
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        description here: description here
+      test demo level:
+        demo title: demo title
+        demo description: demo description
+      Test discourse forum-comment level:
+        Degree of Difficulty: Degree of Difficulty
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
+          programming as hard as you expected? Explain why or why not. How does this
+          impact your teaching of computer science?
+      test html katie:
+        testing: testing
+        lkajsdfasdf: lkajsdfasdf
+      unique level name here:
+        title: title
+        description here: description here
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Big Triangle
+        Big Triangle: Iso kolmio
         Write a contract for a big red triangle that is 100 pixels in size: Kirjoita
           sopimus isosta punaisesta kolmiosta, joka on 100 pikseliä kooltaan
         EXAMPLE 1.solution_blocks, 300: ESIMERKKI 1.ratkaisu_lohkoja, 300
-        Big Triangle|image|color:string|size:Number: Suuri kolmio|kuva|väri:merkkijono|koko:Numero
+        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
       Creating Contracts From Examples 2:
-        Square Contract: Square Contract
+        Square Contract: Neliö sopimus
         Write a contract for a purple square that is 15 pixels in size.: Kirjoita
           sopimus violetista neliöstä, joka on kooltaan 15 kuvapistettä.
         Example 2.solution_blocks, 300: Esimerkki 2.ratkaisu_lohkoja, 300
-        Square|image|color:string|size:Number: Neliö|kuva|väri:merkkijono|koko:Numero
+        Square|Image|Number|String: Square|Image|Number|String
       Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
+        Banner Contract: Palkki sopimus
         Banner Function block: Palkki funktion lohko
         Examples 3.solution_blocks, 300: Esimerkkejä 3.ratkaisu_lohkoja, 300
-        banner|image|text:string: palkki|kuva|teksti:merkkijono
+        banner|Image|String: banner|Image|String
       Creating Contracts From Examples 4:
-        Shrink Contract: Shrink Contract
-        Try using the "shrink" function.: Try using the "shrink" function.
+        Shrink Contract: Kutista sopimus
+        Try using the "shrink" function.: Kokeile "kutista"-toimintoa.
         Examples 4.solution_blocks, 300: Esimerkkejä 4.ratkaisu_lohkoja, 300
-        shrink|image|image:image: kutista|kuva|kuva:kuva
+        shrink|Image|Image: shrink|Image|Image
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Suunnittele resepti 1 sopimus
         0: '? Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
@@ -146,7 +368,7 @@
         1: ': Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
           annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
           korkea.'
-        wide-rect|Image|height:Number|color:string: leveä_suorakulmio|Kuva|korkeus:Numero|väri:merkkijono
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
@@ -154,49 +376,49 @@
       Enter name here:
         Enter title here: Kirjoita otsikko tähän
         Enter prompt here: Anna kehote tähän
-        Contract Name|Number|Domain1:Number|Domain2:string: Sopimuksen Nimi|Numero|Palvelin1:Numero|Palvelin2:merkkijono
+        Contract Name|Number|Number|String: Contract Name|Number|Number|String
       Eval Contracts 1 B:
         Star Contract: Tähti-sopimus
         Write a contract for the star function: Kirjoita sopimus tähti-funktiolle
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: tähti|kuva|väri:merkkijono|säde:Numero|tyyli:merkkijono
+        star|Image|String|Number|String: star|Image|String|Number|String
       Eval Contracts 2 B:
         Rotate Contract: Kierto_sopimus
         Write a contract for the rotate function: Kirjoita sopimus kierto-funktiolle
         Eval Contracts 2 A.solution_blocks, 300: Arvioi sopimukset 2 A.ratkaisu_lohkoja,
           300
-        rotate|image|degrees:Number|image:image: kierto|kuva|asteet:Numero|kuva:kuva
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts 3 B:
         Text Contract: Teksti_sopimus
         Write a contract for the text function: Kirjoita sopimus teksti-funktiolle
         Eval Contracts 3 A.solution_blocks, 300: Arvioi sopimukset 3 A.ratkaisu_lohkoja,
           300
-        text|image|color:string|size:Number|string:string: teksti|kuva|väri:merkkijono|koko:Numero|merkkijono:merkkijono
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
         Scale Contract: Mittakaava_sopimus
         Write a contract for the scale function: Kirjoita sopimus mittakaava-funktiolle
         Eval Contracts 4 A.solution_blocks, 300: Arvioi sopimukset 4 A.ratkaisu_lohkoja,
           300
-        scale|image|factor:Number|image:image: mittakaava|kuva|kerroin:Numero|kuva:kuva
+        scale|Image|Number|Image: scale|Image|Number|Image
       Eval Contracts B:
         Star Contract: Tähti-sopimus
         Write a contract for the star function: Kirjoita sopimus tähti-funktiolle
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: tähti|kuva|väri:merkkijono|säde:Numero|tyyli:merkkijono
+        star|Image|Number|String|String: star|Image|Number|String|String
       Eval Contracts D:
         Rotate Contract: Kierto_sopimus
         Write a contract for the rotate function: Kirjoita sopimus kierto-funktiolle
         Eval Contracts 2 A.solution_blocks, 300: Arvioi sopimukset 2 A.ratkaisu_lohkoja,
           300
-        rotate|image|degrees:Number|image:image: kierto|kuva|asteet:Numero|kuva:kuva
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts F:
         Text Contract: Teksti_sopimus
         Write a contract for the text function: Kirjoita sopimus teksti-funktiolle
         Eval Contracts 3 A.solution_blocks, 300: Arvioi sopimukset 3 A.ratkaisu_lohkoja,
           300
-        text|image|color:string|size:Number|string:string: teksti|kuva|väri:merkkijono|koko:Numero|merkkijono:merkkijono
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Suunnittele resepti 1 sopimus
         0: '? Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
@@ -205,22 +427,20 @@
         1: ': Kirjoita sopimus funktiolle nimeltä "leveä_suorakulmio", mikä luo suorakulmion
           annetulla korkeudella ja värillä ja mikä on kaksi kertaa niin leveä kuin
           korkea.'
-        wide-rect|Image|height:Number|color:string: leveä_suorakulmio|Kuva|korkeus:Numero|väri:merkkijono
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
         ? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.
       Rocket Contract 1:
         Contract for rocket-height: Sopimus raketti-korkeudelle
-        'Write a contract for the following question:': 'Kirjoita sopimus seuraavalle
-          kysymykselle:'
         0: '? Raketti lähtee nousuun lentäen 15 metriä sekunnissa. Kirjoita funktio
           nimeltään raketti_korkeus, joka ottaa tiedokseen ajan, mikä on kulunut raketin
           lähdöstä ja joka tuottaa raketin sen hetkisen  korkeuden.'
         1: ': Raketti lähtee nousuun lentäen 15 metriä sekunnissa. Kirjoita funktio
           nimeltään raketti_korkeus, joka ottaa tiedokseen ajan, mikä on kulunut raketin
           lähdöstä ja joka tuottaa raketin sen hetkisen  korkeuden.'
-        rocket-height|Number|seconds:Number: raketti_korkeus|Numero|Sekunnit:Numero
+        rocket-height|Number|Number: rocket-height|Number|Number
         ? A rocket blasts off, traveling at 15 meters per second. Write a function
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
@@ -229,13 +449,3 @@
           called rocket-height that takes in the number of seconds that have passed
           since the rocket took off, and which produces the height of the rocket at
           that time.
-    external:
-      Pixelation 1:
-        Pixelation 1: Pixelation 1
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 2:
-        Pixelation 2: Pixelation 2
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 3:
-        Pixelation 3: Pixelation 3
-        Create images with bits and bytes.: Create images with bits and bytes.

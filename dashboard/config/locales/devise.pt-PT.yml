@@ -21,7 +21,7 @@
       confirmation_instructions:
         subject: Code.org instruções de confirmação
       reset_password_instructions:
-        subject: Instruções de reposição da palavra-passe Code.org
+        subject: Code.org redefinir instruções de palavra-passe
       unlock_instructions:
         subject: Instruções de desbloqueio
     omniauth_callbacks:

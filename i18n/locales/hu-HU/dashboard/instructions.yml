@@ -2729,7 +2729,7 @@ hu:
       k1_Artist2_3_instruction: Draw a long square ABOVE the other square
       k1_Artist2_6_instruction: Draw a rectangle to complete the bridge!
       k1_Artist2_7_instruction: Draw a rectangle to complete the bridge supports!
-      line_instruction: Szia! Elsa vagyok Arendelleből. Segíts nekem egy vonalat létrehozni.
+      line_instruction: Szia! Elsa vagyok Arendelle-ből. Segíts nekem egy vonalat létrehozni.
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the "cost" function, and we'll return the

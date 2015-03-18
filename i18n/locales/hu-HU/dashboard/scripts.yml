@@ -376,9 +376,9 @@ hu:
           The Farmer: A Farmer
           Conditionals: Feltételek
           The Artist 3: A művész 3
-          Song Writing: Dal iras
+          Song Writing: Dal írás
           The Farmer 2: A Farmer 2
-          Abstraction: Absztrakció
+          Abstraction: Változó
           The Artist 4: A művész 4
           Relay Programming: Váltó programozás
           The Farmer 3: A Farmer 3
@@ -395,7 +395,7 @@ hu:
         events:
           title: Események
           description: ""
-          Bounce: Ugrál
+          Bounce: Visszapattanós
           Studio: Studio
           Calc: Calc
           Eval: Eval

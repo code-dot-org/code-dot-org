@@ -9,7 +9,7 @@ pt:
     attributes:
       user:
         name: Nome a exibir
-        email: Email
+        email: E-mail
         username: nome de utilizador
         password: Palavra-passe
         password_confirmation: Confirmar Palavra-passe
@@ -76,7 +76,7 @@ pt:
     address_placeholder: morada, cidade, estado, código postal
     gender: Género (opcional)
     birthday: Aniversário (opcional)
-    age: Idade
+    age:  Idade 
     user_type: É um estudante ou um professor?
     submit: Registar
     teacher: És um professor?
@@ -108,7 +108,7 @@ pt:
   password:
     reset_form:
       title: Esqueceste-te da tua palavra-passe?
-      email: Endereço de Email
+      email: Endereço de e-mail
       submit: Enviar-me as informações para redefinir a palavra-passe
     change_form:
       title: Alterar palavra-passe
@@ -397,7 +397,7 @@ pt:
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Descarregar PDF
-  download_coming_soon: Downloadable activity coming soon.
+  download_coming_soon: 'Brevemente: Atividade para descarregar.'
   video_coming_soon: Video Coming Soon!
   share_code:
     title: "Click 'Run' to see my program in action"

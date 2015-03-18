@@ -2,7 +2,7 @@
   "and": "et",
   "booleanTrue": "vrai",
   "booleanFalse": "faux",
-  "blocks": "blocks",
+  "blocks": "blocs",
   "blocklyMessage": "Blockly",
   "catActions": "Actions",
   "catColour": "Couleur",
@@ -43,6 +43,7 @@
   "help": "Aide",
   "hintTitle": "Indice :",
   "jump": "sauter",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière.",
   "listVariable": "liste",
   "makeYourOwnFlappy": "Réalisez votre propre Flappy Bird",
@@ -81,7 +82,7 @@
   "shareFailure": "Désolé, nous ne pouvons pas partager ce programme.",
   "workspaceHeader": "Assemblez vos blocs ici : ",
   "workspaceHeaderJavaScript": "Tapez ici votre code JavaScript",
-  "workspaceHeaderShort": "Workspace: ",
+  "workspaceHeaderShort": "Espace de travail :",
   "infinity": "Infini",
   "rotateText": "Tournez votre appareil.",
   "orientationLock": "Désactivez le verrouillage de l'orientation dans les réglages de votre appareil.",
@@ -94,5 +95,5 @@
   "hintHeader": "Voici une astuce :",
   "genericFeedback": "Observez le résultat et essayez de corriger les erreurs.",
   "toggleBlocksErrorMsg": "Vous devez corriger une erreur dans votre programme avant qu'il ne puisse être présenté sous forme de blocs.",
-  "defaultTwitterText": "Découvrez ce que j'ai fait"
+  "defaultTwitterText": "Découvre ce que j'ai fait"
 }

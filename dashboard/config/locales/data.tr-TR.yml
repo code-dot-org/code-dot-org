@@ -666,6 +666,12 @@
         playlab_intro: Oyun laboratuarı için giriş
         playlab_events: Laboratuvar Olaylarını Oynatın
         playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Değerlendirme Blokları
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Değişkenler
+        msm_7_functions: Fonksiyonlar
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

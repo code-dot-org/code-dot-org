@@ -50,7 +50,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: 'Labirinto: Associazione'
+        Maze Match One: Esercizio di Verifica (Associazioni)
         Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
           blocchi che la risolve
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
@@ -60,7 +60,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: 'Labirinto: Associazione'
+        Maze Match: Esercizio di Verifica (Associazioni)
         Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
           blocchi che la risolve
         Instructions: Istruzioni
@@ -119,7 +119,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: 'Labirinto: Associazione'
+        Maze Match: Esercizio di Verifica (Associazioni)
         Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
           blocchi che la risolve
         Instructions: Istruzioni
@@ -373,6 +373,24 @@
         'bigger-string: string string -> string': 'stringa-grande: stringa stringa
           -> stringa'
         'find-price: string -> number': 'trova-prezzo: stringa -> numero'
+      PDK5 Pair programming match:
+        Pair programming match: Pair programming match
+        Match the definitions to the words you were introduced to in the last video.: Match
+          the definitions to the words you were introduced to in the last video.
+        Pair programming: Pair programming
+        Driver: Driver
+        Navigator: Navigator
+        When two students work at one computer to write a program together: When two
+          students work at one computer to write a program together
+        The student who controls the keyboard, mouse, or touch screen: The student
+          who controls the keyboard, mouse, or touch screen
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The
+          student who thinks about the big-picture and looks for potential mistakes
+          or misunderstandings
+      PDK5 What is unplugged:
+        What is an unplugged activity?: What is an unplugged activity?
+        Question: Domanda
+        Answer 1: Answer 1
       test matching image:
         Matching Images Two: Esercizio di Verifica (Associazioni)
         Match up all the flowers by colour!: Associa tutti i fiori in base al colore!
