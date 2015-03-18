@@ -161,7 +161,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "elipsa (širina, visina, stil, boja)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Imate nepovezane blokove. Da li ste ih htjeli povezati sa blokom \"prikaz\"?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "sloj (gore, dolje)"},
 "placeImageBlockTitle":function(d){return "Ubaci sliku (x, y, slika)"},
 "offsetBlockTitle":function(d){return "pomak (x, y, slika)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "podloga (dno, vrh)"},
 "outline":function(d){return "struktura"},
 "solid":function(d){return "puno"},
-"string":function(d){return "niz"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "niz"}};

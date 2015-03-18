@@ -159,9 +159,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "okrąg (promień, styl, kolor)"},
 "displayBlockTitle":function(d){return "wyświetl"},
 "ellipseBlockTitle":function(d){return "elipsa (szerokość, wysokość, styl, kolor)"},
-"emptyFunctionalBlock":function(d){return "Nie wprowadziłeś żadnej zawartości do swojego bloku."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "nakładka (góra, dół)"},
 "placeImageBlockTitle":function(d){return "położenie-obraz (x, y, obraz)"},
 "offsetBlockTitle":function(d){return "offset (x, y, obraz)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "podkładka (dół, góra)"},
 "outline":function(d){return "zarys"},
 "solid":function(d){return "trwały"},
-"string":function(d){return "łańcuch"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "łańcuch"}};

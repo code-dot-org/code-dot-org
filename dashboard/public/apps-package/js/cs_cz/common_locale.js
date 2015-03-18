@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Nápověda"},
 "hintTitle":function(d){return "Tip:"},
 "jump":function(d){return "skoč"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Používáš všechny potřebné typy bloků, ale nesprávným způsobem."},
 "listVariable":function(d){return "seznam"},
 "makeYourOwnFlappy":function(d){return "Vytvoř Si Vlastní Hru Flappy"},

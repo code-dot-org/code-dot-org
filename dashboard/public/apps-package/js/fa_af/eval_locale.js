@@ -161,7 +161,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "بیضی (عرض، ارتفاع، سبک، رنگ)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "پوشش (بالا، پایین)"},
 "placeImageBlockTitle":function(d){return "مکان تصویر (x، y، تصویر)"},
 "offsetBlockTitle":function(d){return "اُفسِت (x، y، تصویر)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "لایه زیرین (زیر، رو)"},
 "outline":function(d){return "طرح کلی"},
 "solid":function(d){return "تو پُر"},
-"string":function(d){return "رشته"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "رشته"}};

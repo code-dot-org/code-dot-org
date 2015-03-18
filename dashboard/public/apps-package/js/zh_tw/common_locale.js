@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "說明"},
 "hintTitle":function(d){return "提示："},
 "jump":function(d){return "跳"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "您已使用了所有必要類型的程式積木，但方式不太正確。"},
 "listVariable":function(d){return "列表變數"},
 "makeYourOwnFlappy":function(d){return "做出自己的 Flappy 遊戲"},

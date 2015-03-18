@@ -154,16 +154,15 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Du benyttede en ugyldig farvestreng: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Du benyttede en ugyldig stilstreng: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cirkel (radius, stil, farve)"},
 "displayBlockTitle":function(d){return "display"},
 "ellipseBlockTitle":function(d){return "ellipse (bredde, højde, stil, farve)"},
-"emptyFunctionalBlock":function(d){return "Du har en blok med et ikke-udfyldt input."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bund)"},
-"placeImageBlockTitle":function(d){return "placer-billede (x, y, billede)"},
+"placeImageBlockTitle":function(d){return "put-billede (x, y, billede)"},
 "offsetBlockTitle":function(d){return "offset (x, y, billede)"},
 "rectangleBlockTitle":function(d){return "rektangel (bredde, højde, stil, farve)"},
 "reinfFeedbackMsg":function(d){return "Du kan trykke på knappen \"Prøv igen\" for at redigere din tegning."},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlag (bottom, top)"},
 "outline":function(d){return "skitse"},
 "solid":function(d){return "solid"},
-"string":function(d){return "string"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "string"}};

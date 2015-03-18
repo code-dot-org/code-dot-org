@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Ajuda"},
 "hintTitle":function(d){return "Dica:"},
 "jump":function(d){return "salto"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Estás a usar todos os tipos necessários de blocos, mas não da forma certa."},
 "listVariable":function(d){return "lista"},
 "makeYourOwnFlappy":function(d){return "Cria o teu próprio jogo Flappy"},

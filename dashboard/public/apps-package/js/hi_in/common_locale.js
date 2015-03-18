@@ -154,7 +154,7 @@ v:function(d,k){locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).locale = {
-"and":function(d){return "और"},
+"and":function(d){return "and"},
 "booleanTrue":function(d){return "सही "},
 "booleanFalse":function(d){return "गलत "},
 "blocks":function(d){return "blocks"},
@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Help"},
 "hintTitle":function(d){return "Hint:"},
 "jump":function(d){return "jump"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "You are using all of the necessary types of blocks but not in the right way."},
 "listVariable":function(d){return "सूची"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},

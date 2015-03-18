@@ -594,6 +594,8 @@ input[type="radio"] {
     width: 270px;
     border-right: 1px solid gray;
     float: left; }
+  #headers #blockCounter, #headers #blockUsed {
+    display: inline-block; }
   #headers #clear-puzzle-header, #headers #show-code-header {
     cursor: pointer;
     float: right;

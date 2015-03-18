@@ -161,7 +161,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "القطع الناقص (العرض ، الارتفاع ، النمط واللون )"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "تداخل (الأعلى، الأسفل)"},
 "placeImageBlockTitle":function(d){return "وضع الصورة (س، ص، صورة)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "الأساس الذي تقوم عليه (أسفل، أعلى)"},
 "outline":function(d){return "موجز"},
 "solid":function(d){return "صلب"},
-"string":function(d){return "السلسلة"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "السلسلة"}};

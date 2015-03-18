@@ -154,14 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cercle (rayon, style, couleur)"},
 "displayBlockTitle":function(d){return "affichage"},
 "ellipseBlockTitle":function(d){return "ellipse (largeur, hauteur, style, couleur)"},
-"emptyFunctionalBlock":function(d){return "Un de vos blocs ne contient pas d'entrée."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "superposition (haut, bas)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "decalage(x, y, image)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "arriere-plan (bas, haut)"},
 "outline":function(d){return "contour"},
 "solid":function(d){return "unie"},
-"string":function(d){return "chaîne"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "chaîne"}};

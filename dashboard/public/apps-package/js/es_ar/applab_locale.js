@@ -39,8 +39,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Texto"},
 "catVariables":function(d){return "Variables"},
 "continue":function(d){return "Continuar"},
-"container":function(d){return "crear contenedor"},
-"containerTooltip":function(d){return "Crea un contenedor de división y define su HTML interno."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "¡Felicidades! Ha resuelto el rompecabezas final."},
 "nextLevel":function(d){return "¡Felicidades! Has completado este puzzle."},
 "no":function(d){return "No"},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Entrar"},
 "stepOver":function(d){return "Saltar"},
 "stepOut":function(d){return "Salir"},
-"viewData":function(d){return "Ver Datos"},
+"viewData":function(d){return "Ver datos"},
 "yes":function(d){return "Si"}};

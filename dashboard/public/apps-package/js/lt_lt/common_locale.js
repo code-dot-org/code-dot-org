@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "pagalba"},
 "hintTitle":function(d){return "Patarimas:"},
 "jump":function(d){return "šok"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Tu naudoji visus būtinus blokelius, tačiau netinkamai."},
 "listVariable":function(d){return "sąrašas"},
 "makeYourOwnFlappy":function(d){return "Sukurk savo Flappy žaidimą"},

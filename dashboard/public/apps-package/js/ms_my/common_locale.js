@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Bantu"},
 "hintTitle":function(d){return "Petunjuk:"},
 "jump":function(d){return "lompat"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Anda menggunakan kesemua jenis blok yang diperlukan tetapi dengan cara yang tidak betul."},
 "listVariable":function(d){return "senarai"},
 "makeYourOwnFlappy":function(d){return "Buat permainan Flappy anda sendiri"},

@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "ヘルプ"},
 "hintTitle":function(d){return "ヒント:"},
 "jump":function(d){return "ジャンプ"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "構成に必要なブロックをすべて使っていますが、使い方が適切ではありません。"},
 "listVariable":function(d){return "リスト"},
 "makeYourOwnFlappy":function(d){return "自分だけの「パタパタゲーム」を作りましょう。"},
