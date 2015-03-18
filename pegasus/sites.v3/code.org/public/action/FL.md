@@ -28,7 +28,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 Passing the Florida State Legislature in 2014, <a href="http://www.flsenate.gov/Session/Bill/2014/5101/BillText/Filed/PDF"_blank">HB 5101</a> allows computer science courses to count as a mathematics or science graduation requirement when tied to an industry certification. These new graduation requirements are further detailed by the <a href="http://www.fldoe.org/core/fileparse.php/7764/urlt/0084250-1415freshmenflyer.pdf"_blank">Florida Department of Education</a>.  This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing HB 1501 by counting computer science as mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.
+Thank you for making our district a leader in computer science education by fully implementing HB 1501 to allow computer science to count as a mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.
   
 Sincerely, 
 
@@ -60,5 +60,5 @@ My school district does not currently count computer science as a mathematics or
  
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where in the Florida State Statute explicitly states that computer science counts towards a graduation requirement.  
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation requirement in accordance with HB 5101. 
-+ Request your school board to pass a proclamation to recognize the new graduation requirement. 
++ Ask your school board to pass a proclamation to recognize the new graduation requirement. 
 + Share this letter and information with computer science students and parents and urge them to contact your school board.  

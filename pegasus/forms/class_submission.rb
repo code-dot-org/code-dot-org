@@ -116,7 +116,7 @@ class ClassSubmission
   def self.levels_with_i18n_labels(*levels)
     results = {}
     levels.each do |level|
-      results[level] = I18n.t("class_submission_level_#{level.to_s}")
+      results[level] = I18n.t("class_submission_level_#{level}")
     end
     results
   end

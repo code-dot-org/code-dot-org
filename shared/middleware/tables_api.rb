@@ -15,6 +15,8 @@ class TablesApi < Sinatra::Base
     end
   end
 
+  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
@@ -23,9 +25,9 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    Table.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+    TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
   end
-  
+
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>
   #
@@ -34,7 +36,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     content_type :json
-    Table.new(channel_id, storage_id(endpoint), table_name).fetch(id).to_json
+    TableType.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
   end
 
   #
@@ -44,7 +46,7 @@ class TablesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
-    Table.new(channel_id, storage_id(endpoint), table_name).delete(id)
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
     no_content
   end
 
@@ -66,7 +68,7 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = Table.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
@@ -83,7 +85,7 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = Table.new(channel_id, storage_id(endpoint), table_name).update(id, JSON.parse(request.body.read), request.ip)
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
@@ -103,12 +105,12 @@ class TablesApi < Sinatra::Base
   #
   post %r{/v3/import-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     # this check fails on Win 8.1 Chrome 40
-    #unsupported_media_type unless params[:import_file][:type]== 'text/csv'   
+    #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
     max_records = 5000
     table_url = "/private/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
-    table = Table.new(channel_id, storage_id(endpoint), table_name)
+    table = TableType.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
     records = []
 
@@ -131,7 +133,7 @@ class TablesApi < Sinatra::Base
             "<li>Export your data by doing a 'Save as CSV' or 'Download as Comma-separated values'"
       halt 400, {}, msg
     end
-    
+
     msg = "The CSV file is too big. The maximum number of lines is #{max_records}, "\
           "but the file you chose has #{records.length} lines. "\
           "Please go #{back_link} and try uploading a smaller CSV file."
@@ -139,7 +141,7 @@ class TablesApi < Sinatra::Base
 
     # deleting the old records only after all validity checks have passed.
     table.delete_all()
-    
+
     records.each do |record|
       table.insert(record, request.ip)
     end

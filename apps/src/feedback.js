@@ -121,6 +121,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
+      tryAgainText: options.tryAgainText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -304,12 +305,18 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
 FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
+
+  var tryAgainText = '';
+  if (options.feedbackType !== TestResults.ALL_PASS) {
+    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
+  }
+
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
-      tryAgain: options.feedbackType !== TestResults.ALL_PASS,
+      tryAgain: tryAgainText,
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&

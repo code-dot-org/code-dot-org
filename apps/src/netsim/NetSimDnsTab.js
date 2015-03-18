@@ -105,11 +105,8 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsTable_.setDnsMode(newDnsMode);
-  if (newDnsMode === DnsMode.MANUAL) {
-    this.rootDiv_.find('.dns_manual_control').show();
-  } else {
-    this.rootDiv_.find('.dns_manual_control').hide();
-  }
+  this.rootDiv_.find('.dns_manual_control').toggle(newDnsMode === DnsMode.MANUAL);
+  this.rootDiv_.find('.dns-notes').toggle(newDnsMode !== DnsMode.NONE);
 };
 
 /**

@@ -33,7 +33,7 @@ class LevelsController < ApplicationController
     end
     if @level.is_a? DSLDefined
       @filename = @level.filename
-      @dsl_file = File.read(@filename) if @filename && File.exists?(@filename)
+      @dsl_file = File.read(@filename) if @filename && File.exist?(@filename)
     end
   end
 
@@ -147,6 +147,8 @@ class LevelsController < ApplicationController
         @game = Game.custom_maze
       elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
+      elsif @type_class == NetSim
+        @game = Game.netsim
       end
       @level = @type_class.new
       render :edit
@@ -155,15 +157,23 @@ class LevelsController < ApplicationController
     end
   end
 
-  # POST /levels/1/clone
+  # POST /levels/1/clone?name=new_name
   def clone
-    # Clone existing level and open edit page
-    old_level = Level.find(params[:level_id])
-    @level = old_level.dup
-    # resolve duplicate name conflicts with 'X (copy); X (copy 2); X (copy 3)... X (copy 10)'
-    name = "#{old_level.name} (copy 0)"
-    begin result = @level.update(name: name.next!) end until result
-    redirect_to(edit_level_url(@level))
+    if params[:name]
+      # Clone existing level and open edit page
+      old_level = Level.find(params[:level_id])
+      @level = old_level.dup
+      begin
+        @level.update!(name: params[:name])
+      rescue ArgumentError => e
+        render status: :not_acceptable, text: e.message and return
+      rescue ActiveRecord::RecordInvalid => invalid
+        render status: :not_acceptable, text: invalid and return
+      end
+      render json: {redirect: edit_level_url(@level)}
+    else
+      render status: :not_acceptable, text: 'New name required to clone level'
+    end
   end
 
   def embed_blocks
@@ -201,11 +211,12 @@ class LevelsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_level
-      @level = if params.include? :key
-        Level.find_by_key params[:key]
-      else
-        Level.find(params[:id])
-      end
+      @level =
+        if params.include? :key
+          Level.find_by_key params[:key]
+        else
+          Level.find(params[:id])
+        end
       @game = @level.game
     end
 

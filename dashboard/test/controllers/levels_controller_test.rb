@@ -429,13 +429,13 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_difference('Level.count') do
-      post :clone, level_id: old.id
+      post :clone, level_id: old.id, name: "Fun Level (copy 1)"
     end
 
     new_level = assigns(:level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
-    assert_redirected_to "/levels/#{new_level.id}/edit"
+    assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
   test 'cannot update level name with just a case change' do
@@ -509,5 +509,37 @@ class LevelsControllerTest < ActionController::TestCase
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
+  end
+
+  test 'artist project level has sharing meta tags' do
+    get :show, key: 'New Artist Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/artist',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 500,
+                            image_height: 261)
+  end
+
+  test 'applab project level has sharing meta tags' do
+    get :show, key: 'New App Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/applab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
+  end
+
+  test 'playlab project level has sharing meta tags' do
+    get :show, key: 'New Play Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/playlab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
   end
 end

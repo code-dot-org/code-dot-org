@@ -87,11 +87,16 @@ level 'Big Game Booleans 4'
 level 'Big Game Booleans 5'
 
 stage "Luigi's Pizza"
-level "Luigi's Pizza"
+level "Luigi's Pizza 1"
+level "Luigi's Pizza 2"
+level "Luigi's Pizza 3"
+level "Luigi's Pizza 4"
 
-stage 'Play Lab: Collision Detection (Big Game)'
+stage 'Your Game - Player Movement'
 level 'Big Game Collision 1'
 level 'Big Game Collision 2'
+
+stage 'Your Game - Collision Detection'
 level 'Big Game Collision 3'
 level 'Big Game Collision 4'
 level 'Big Game Final'

@@ -546,7 +546,6 @@ en:
   project:
     projects: "Projects"
     create: "Create Project"
-    create_a_project: 'Create a new project:'
     new: "Create New"
     rename: "Rename"
     save: "Save"
@@ -556,7 +555,7 @@ en:
     share: "Share"
     share_title: Share your project
     share_copy_link: "Copy the link:"
-    ok: "Ok"
+    close: "Close"
     more: "More"
     name: "Name"
     updated: "Updated"

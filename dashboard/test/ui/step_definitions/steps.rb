@@ -106,6 +106,10 @@ When /^I press dropdown item with text "([^"]*)"$/ do |text|
   @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
 end
 
+When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+end
+
 When /^I press dropdown item "([^"]*)"$/ do |index|
   @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
@@ -255,6 +259,17 @@ end
 Then(/^check that level (\d+) on this stage is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
+end
+
+Then(/^I reload the page$/) do
+  @browser.navigate.refresh
+end
+
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+  @child_item = @browser.find_element(:css, child)
+  @parent_item = @browser.find_element(:css, parent)
+  @actual_parent_item = @child_item.find_element(:xpath, "..")
+  @parent_item.should eq @actual_parent_item
 end
 
 def encrypted_cookie(user_id)

@@ -110,7 +110,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
 
     if blockly_core_changed || apps_changed
       if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new 
+        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible
@@ -229,6 +229,17 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     rescue
       HipChat.log 'Unit tests for <b>pegasus</b> failed.', color:'red'
       HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color:'red', notify:1
+      raise
+    end
+  end
+
+  Dir.chdir(shared_dir) do
+    HipChat.log 'Running <b>shared</b> unit tests...'
+    begin
+      RakeUtils.rake 'test'
+    rescue
+      HipChat.log 'Unit tests for <b>shared</b> failed.', color:'red'
+      HipChat.developers 'Unit tests for <b>shared</b> failed.', color:'red', notify:1
       raise
     end
   end
