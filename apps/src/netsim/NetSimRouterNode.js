@@ -623,18 +623,19 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
+  // Setup (sync): Set processing flag
   logger.info("Router received " + messages.length + " messages");
   this.isProcessingMessages_ = true;
 
-  // Step 1: Pull all our messages out of storage.
-  this.destroyMessages_(messages, function (err) {
+  // Step 1 (async): Pull all our messages out of storage.
+  NetSimEntity.destroyEntities(messages, function (err) {
     if (err) {
       logger.error("Error pulling message off the wire for routing; " + err.message);
       this.isProcessingMessages_ = false;
       return;
     }
 
-    // Step 2: Get our connection info, which we will need for routing
+    // Step 2 (async): Get our connection info, which we will need for routing
     this.getConnections(function (err, wires) {
       if (err) {
         logger.error("Error retrieving router connection info");
@@ -642,36 +643,13 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
         return;
       }
 
-      // Step 3: Route all messages to destinations
+      // Step 3 (async): Route all messages to destinations
       this.routeMessages_(messages, wires, function () {
-        // Clean up: Clear "processing" flag so we can process a new batch
-        //           of messages next time the table changes.
+        // Cleanup (sync): Clear "processing" flag
         logger.info("Router finished processing " + messages.length + " messages");
         this.isProcessingMessages_ = false;
       }.bind(this));
     }.bind(this));
-  }.bind(this));
-};
-
-/**
- * Destroys all messages (from remote storage) asynchronously, and calls
- * onComplete when all messages have been destroyed and/or an error occurs.
- * @param {NetSimMessage[]} messages
- * @param {!NodeStyleCallback} onComplete
- */
-NetSimRouterNode.prototype.destroyMessages_ = function (messages, onComplete) {
-  if (messages.length === 0) {
-    onComplete(null, true);
-    return;
-  }
-
-  messages[0].destroy(function (err, result) {
-    if (err) {
-      onComplete(err, result);
-      return;
-    }
-
-    this.destroyMessages_(messages.slice(1), onComplete);
   }.bind(this));
 };
 
