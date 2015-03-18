@@ -1,5 +1,8 @@
 var jsnums = require('./js-numbers/js-numbers');
 
+// Unicode character for non-breaking space
+var NBSP = '\u00A0';
+
 /**
  * A token is a value, and a boolean indicating whether or not it is "marked".
  * Marking is done for two different reasons.
@@ -39,15 +42,17 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
   var text, textLength;
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
-  
+
   var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
-  tspan.textContent = this.nonRepeated_.replace(/ /g, '\u00A0\u00A0');
+  // Replace spaces with 2x nonbreaking space
+  tspan.textContent = this.nonRepeated_.replace(/ /g, NBSP + NBSP);
   text.appendChild(tspan);
 
   if (this.repeated_) {
     tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.setAttribute('style', 'text-decoration: overline');
-    tspan.textContent = this.repeated_.replace(/ /g, '\u00A0\u00A0');
+    // Replace spaces with 2x nonbreaking space
+    tspan.textContent = this.repeated_.replace(/ /g, NBSP + NBSP);
     text.appendChild(tspan);
   }
 
