@@ -2,6 +2,10 @@ class UserScript < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
 
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   def check_completed?
     # the script is completed if there are no more "progression levels" to be completed
     # (unplugged levels are not progression levels, for one)
