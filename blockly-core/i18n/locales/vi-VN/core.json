@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "Gọi hàm",
+  "ACTUAL": "actual",
   "ADD": "Thêm",
   "ADD_COMMENT": "Thêm bình luận",
   "ADD_PARAMETER": "Thêm tham số",
@@ -74,7 +74,7 @@
   "EXAMPLE_DESCRIPTION": "Xác định một ví dụ với hành vi thực tế dự đoán trước được",
   "EXPAND_ALL": "Mở rộng các khối",
   "EXPAND_BLOCK": "Mở rộng khối",
-  "EXPECTED": "Kết quả trả về",
+  "EXPECTED": "dự kiến",
   "EXTERNAL_INPUTS": "Chỗ Gắn Bên Ngoài",
   "FUNCTION_CREATE": "Tạo một Hàm",
   "FUNCTION_EDIT": "edit",
