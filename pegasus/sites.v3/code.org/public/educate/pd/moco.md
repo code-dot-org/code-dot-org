@@ -4,12 +4,7 @@ nav: pd_nav
 ---
 <a id="top"></a>
 
-# Professional Development - Greater DC
-
-- [I'm attending High School PD...](#hs)
-- [I'm attending Administrator / Counselor PD...](#admin)
-
-<a id="hs"></a>
+# Professional Development - Montgomery County
 
 ## High School Professional Development
 
@@ -33,14 +28,23 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 Breakfast and lunch will be served. 
 
 #### March 28th Location ####
-We are confirming a location within Montgomery County and will notify you of the exact location as soon as possible. 
+Poolesville High School
+<br/>
+Room TBD
+<br/>
+17501 W Willard Rd
+<br/>
+Poolesville, MD 20837
 
 #### What do I bring to Phase 3 PD? ####
+
+1 Lego EV3 robot kit with charged battery
+<br />
+Laptop w/ the lego EV3 software installed
+<br />
 Exploring Computer Science binder with curriculum
 <br />
 Green Code.org journal
-<br />
-Laptop
 
 ### Phase 4: Post Year Development
 
