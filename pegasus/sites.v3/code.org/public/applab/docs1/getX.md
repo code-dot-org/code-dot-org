@@ -70,8 +70,7 @@ ____________________________________________________
 function isOffRight(){
   if (getX() > 320) {
     return true
-  }
-  else{
+  } else{
     return false
   }
 }  

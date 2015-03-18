@@ -5181,7 +5181,9 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -5534,7 +5536,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
-  if (!config.enableShowCode) {
+  if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
   var codeWorkspace = container.querySelector('#codeWorkspace');

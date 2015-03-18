@@ -23,8 +23,10 @@
     "definition_collapse": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "480"
-  }
+    "app_height": "480",
+    "slider_speed": "1.0"
+  },
+  "md5": "ece9ebe30c9988006060ab63e63f232d"
 }]]></config>
   <blocks/>
 </Applab>

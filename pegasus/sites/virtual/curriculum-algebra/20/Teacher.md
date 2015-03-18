@@ -30,8 +30,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Update-player Design Recipe](../docs/worksheets/update_player.pdf) (in the student workbook)
-- [Key Code Reference](../docs/worksheets/keycode_ref.pdf)
 - [Line-length Design Recipe](../docs/worksheets/line_length.pdf) (in the student workbook)
 - [Distance Design Recipe](../docs/worksheets/distance.pdf) (in the student workbook)
 - [Collide? Design Recipe](../docs/worksheets/collide.pdf) (in the student workbook)
@@ -63,7 +61,7 @@ Once these last functions are put into place, scoring will automatically update 
 ## Activity: The Big Game - Collision Detection
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Return to your Big Game to use collision detection logic so that you know when your player is touching the target or the danger. Head to [MSM stage 20](http://studio.code.org/s/algebra/stage/20/puzzle/1) in Code Studio to get started programming.
+Return to your Big Game to use collision detection logic so that you know when your player is touching the target or the danger. Head to [CS in Algebra stage 20](http://studio.code.org/s/algebra/stage/20/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
