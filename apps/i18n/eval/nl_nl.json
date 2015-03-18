@@ -1,17 +1,16 @@
 {
-  "badColorStringError": "Je gebruikt een ongeldige kleuren tekenreeks: {val}",
-  "badStyleStringError": "Je gebruikt een ongeldige stijl tekenreeks: {val}",
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "cirkel (straal, stijl, kleur)",
   "displayBlockTitle": "weergeven",
   "ellipseBlockTitle": "ellips (breedte, hoogte, stijl, kleur)",
-  "emptyFunctionalBlock": "Je hebt een blok zonder waarde.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",
-  "infiniteRecursionError": "Je opdracht herhaald zichzelf. We hebben het gestopt, anders zou het zich blijven herhalen telkens weer.",
   "overlayBlockTitle": "overlay (boven, onder)",
   "placeImageBlockTitle": "plaats-afbeelding (x, y, afbeelding)",
   "offsetBlockTitle": "offset (x, y, beeld)",
   "rectangleBlockTitle": "rechthoek (breedte, hoogte, stijl, kleur)",
-  "reinfFeedbackMsg": "Klik op \"blijf spelen\" om je tekening te bewerken.",
+  "reinfFeedbackMsg": "Druk op de \"Probeer Opnieuw\" knop om je tekening te bewerken.",
   "rotateImageBlockTitle": "draaien (graden, afbeelding)",
   "scaleImageBlockTitle": "schaal (factor, afbeelding)",
   "squareBlockTitle": "vierkant (grootte, stijl, kleur)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "onderlaag (bodem, top)",
   "outline": "contour",
   "solid": "vast",
-  "string": "tekenreeks",
-  "stringMismatchError": "Je hebt een tekenreeks met verkeerde (hoofd)letters.",
-  "userCodeException": "Er is een fout opgetreden tijdens het uitvoeren van de code."
+  "string": "tekenreeks"
 }

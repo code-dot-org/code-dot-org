@@ -187,9 +187,9 @@
         turtle_1_7: 'Ok, ora è un po'' più difficile: vedi se riesci a disegnare questi
           occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti
           tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!'
-        turtle_1_8: Cerca di immaginare cosa succede se si esegue questo codice (o
-          premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente
-          a completare il disegno. I colori saranno diversi ogni volta.
+        turtle_1_8: Ok, cerca di immaginare cosa succede se si esegue questo codice
+          (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte
+          sufficiente a completare il disegno. I colori saranno diversi ogni volta.
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi
           per disegnare un cerchio?
         turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
@@ -708,12 +708,6 @@
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Blocchi di Valutazione
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variabili
-        msm_7_functions: Funzioni
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

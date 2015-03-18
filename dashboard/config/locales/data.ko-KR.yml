@@ -99,12 +99,12 @@
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
-        Webapp: 앱 연구실
+        Webapp: 웹 앱
         ArtistEC: The Artist
         TextMatch: 글자 맞추기
         StudioEC: Play Lab
-        Applab: 앱 연구실
-        NetSim: 인터넷 시뮬레이터
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: 동
@@ -405,7 +405,7 @@
         maze_wordsearch_k_15: 어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.
         maze_wordsearch_k_16: 어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.
         maze_wordsearch_k_20: 테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.
-        applab_ec_simple: 도구 상자에 있는 블록을 사용하여 당신의 앱을 만드십시오.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양,
           나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
@@ -511,12 +511,6 @@
         playlab_intro: 플레이 랩 소개
         playlab_events: 플레이 랩 이벤트
         playlab_repeat_forever: 플레이 랩 무한 반복
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: 변수
-        msm_7_functions: 함수
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

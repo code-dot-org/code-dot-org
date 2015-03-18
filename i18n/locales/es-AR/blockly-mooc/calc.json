@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Su programa se traduce en la división por cero.",
+  "divideByZeroError":"Your program results in division by zero.",
   "emptyComputeBlock":"tu debes adjuntar un bloque al bloque \"calcular\".",
   "emptyFunctionalBlock":"Tienes un bloque con una entrada vacía.",
   "equivalentExpression":"Intenta reorganizar tus argumentos para obtener exactamente la misma expresión.",
-  "evaluate":"evaluar",
+  "evaluate":"evaluate",
   "extraTopBlocks":"Tienes bloques sin unir. ¿Quisiste unirlos al bloque \"calcular\"?",
   "failedInput":"Tu función no devuelve el resultado correcto para todos los valores.",
   "goal":"Objetivo:",
   "levelIncompleteError":"Su expresión no coincide con el objetivo.",
-  "missingVariableX":"Su expresión falta variable",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"Aquí esta tu calculo! Continua trabajando en ello, o pasa al siguiente rompecabezas!",
   "yourExpression":"Tu expresión:",
   "wrongInput":"Estas llamando tu función con el valor incorrecto.",
-  "wrongOtherValuesX":"Su expresión se traduce en un valor incorrecto si variamos",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
   "wrongResult":"Your expresison does not return the correct result."
 }

@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "elipsė(plotis, aukštis, stilius, spalva)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "padėk-aukščiau(viršutinis, apatinis)"},
 "placeImageBlockTitle":function(d){return "padėk-vaizdą(x, y, vaizdas)"},
 "offsetBlockTitle":function(d){return "poslinkis(x, y, paveiksliukas)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "padėk-žemiau(apatinis, viršutinis)"},
 "outline":function(d){return "plonai"},
 "solid":function(d){return "storai"},
-"string":function(d){return "tekstas"}};
+"string":function(d){return "tekstas"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

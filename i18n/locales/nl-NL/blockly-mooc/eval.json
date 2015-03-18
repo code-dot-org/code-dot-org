@@ -6,12 +6,12 @@
   "ellipseBlockTitle":"ellips (breedte, hoogte, stijl, kleur)",
   "emptyFunctionalBlock":"Je hebt een blok zonder waarde.",
   "extraTopBlocks":"U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",
-  "infiniteRecursionError":"Je opdracht herhaald zichzelf. We hebben het gestopt, anders zou het zich blijven herhalen telkens weer.",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"overlay (boven, onder)",
   "placeImageBlockTitle":"plaats-afbeelding (x, y, afbeelding)",
   "offsetBlockTitle":"offset (x, y, beeld)",
   "rectangleBlockTitle":"rechthoek (breedte, hoogte, stijl, kleur)",
-  "reinfFeedbackMsg":"Klik op \"blijf spelen\" om je tekening te bewerken.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"draaien (graden, afbeelding)",
   "scaleImageBlockTitle":"schaal (factor, afbeelding)",
   "squareBlockTitle":"vierkant (grootte, stijl, kleur)",
@@ -26,6 +26,6 @@
   "outline":"contour",
   "solid":"vast",
   "string":"tekenreeks",
-  "stringMismatchError":"Je hebt een tekenreeks met verkeerde (hoofd)letters.",
-  "userCodeException":"Er is een fout opgetreden tijdens het uitvoeren van de code."
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

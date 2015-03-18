@@ -681,12 +681,6 @@
         playlab_intro: Въведение в игрална лаборатория
         playlab_events: Игрална Лабораторията събития
         playlab_repeat_forever: Игрална Лаборатория повторение завинаги
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Блокове за оценка
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Променливи
-        msm_7_functions: Функции
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

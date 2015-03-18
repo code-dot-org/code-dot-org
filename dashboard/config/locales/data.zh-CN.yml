@@ -437,12 +437,6 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: 变量
-        msm_7_functions: 函数
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块和捕捉低于它的其他块

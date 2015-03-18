@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Segítség"},
 "hintTitle":function(d){return "Tanács:"},
 "jump":function(d){return "Ugorj"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Minden szükséges blokkot felhasználtál, de nem megfelelően."},
 "listVariable":function(d){return "lista"},
 "makeYourOwnFlappy":function(d){return "Készíts saját Flappy játékot"},

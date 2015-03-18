@@ -1,17 +1,16 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "compute": "計算",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "請嘗試重新排序你的參數，得到完全相同結果。",
-  "evaluate": "evaluate",
   "extraTopBlocks": "你有未連接的積木。你要將它們連接到「計算」積木嗎？",
   "failedInput": "你的程式回傳的結果不完全正確。",
   "goal": "目標：",
   "levelIncompleteError": "Your expression does not match the goal.",
-  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！",
   "yourExpression": "您的運算式：",
   "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
   "wrongResult": "Your expresison does not return the correct result."
 }

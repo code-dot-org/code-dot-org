@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "Elipsa (šířka, výška, styl, barva)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Máš nepřipojené bloky. Nechceš je připojit k bloku \"zobraz\"?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "překrytí (zhora, zdola)",
   "placeImageBlockTitle": "umístit obrázek (x, y, obrázek)",
   "offsetBlockTitle": "offset (x, y, obrázek)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "podklad (zhora, zdola)",
   "outline": "obtáhnout",
   "solid": "plný",
-  "string": "řetězec",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "řetězec"
 }

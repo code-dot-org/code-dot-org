@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "दीर्घवृत्त (चौड़ाई , ऊंचाई , शैली, रंग)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "आपके पास स्वाधीन ब्लॉक है। क्या आप ये ब्लॉक \"प्रदर्शन\" ब्लॉक करने के साथ जोड़ना चाहते हैं?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "उपरिशायी (ऊपर, नीचे)"},
 "placeImageBlockTitle":function(d){return "चित्र की जगह (x, y, चित्र)"},
 "offsetBlockTitle":function(d){return "ऑफ़सेट (x, y, चित्र)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "बुनियाद (नीचे, शीर्ष)"},
 "outline":function(d){return "बाह्य रेखा"},
 "solid":function(d){return "ठोस"},
-"string":function(d){return "स्ट्रिंग"}};
+"string":function(d){return "स्ट्रिंग"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

@@ -687,7 +687,7 @@
         C4_function_create: Crearea de funcții
         C4_function_parameters: Funcții cu Parametrii
         C4_conditionals: Condiţionale
-        C4_unplugged_algorithms: Algoritmi cu Tangrame
+        C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variabile în plicuri
         C4_unplugged_forloops: Repetiții Pentru
@@ -699,12 +699,6 @@
         playlab_intro: Introducere in Play Lab
         playlab_events: Joaca Lab Events
         playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Blocuri de evaluare
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variabile
-        msm_7_functions: Funcţii
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

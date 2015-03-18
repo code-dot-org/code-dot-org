@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "elipsė(plotis, aukštis, stilius, spalva)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "padėk-aukščiau(viršutinis, apatinis)",
   "placeImageBlockTitle": "padėk-vaizdą(x, y, vaizdas)",
   "offsetBlockTitle": "poslinkis(x, y, paveiksliukas)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "padėk-žemiau(apatinis, viršutinis)",
   "outline": "plonai",
   "solid": "storai",
-  "string": "tekstas",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "tekstas"
 }

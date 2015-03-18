@@ -101,13 +101,13 @@
         video: Unplug9
       Unplug10:
         title: İnternet
-        desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki
-          akışı taklit edecekler.
+        desc: In this lesson, students will pretend to flow through the Internet,
+          all the while learning about web addresses, IPs and the DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: paketlemek
+        title: Wrap-Up
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -130,7 +130,7 @@
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
-        video: C1_dikmek_tohum
+        video: C1_planting_seed
       BuildingAFoundation:
         title: Bir Temel Oluşturma
         desc: Students build a structure using only provided supplies. Structures
@@ -139,9 +139,9 @@
         video: C1_building_foundation
       GettingLoopy:
         title: Döngüselleşme
-        desc: Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama
-          konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa
-          edilenleri tekrar etmeyi öğrenecekler.
+        desc: This lesson introduces the programming concept of loops (repeated instructions)
+          through a dance activity. Students will learn simple choreography, then
+          be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
         title: Röle Programlama
@@ -207,17 +207,17 @@
         desc: Students use the concept of the chorus in a song to learn about passing
           parameters (which customize a function without having to rewrite the entire
           function).
-        video: C3_parametreler_ile_şarkıyazımı
+        video: C3_songwriting_with_parameters
       DiceRace:
-        title: Gerçek yaşam algoritması:Zar yarışı
-        desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun
-          bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp
-          kaydedecekler.
-        video: C3_zar_yarışı
+        title: 'Real life algorithms: Dice Race'
+        desc: This lesson calls out ways we use algorithms in our daily lives. As
+          part of that, students will identify and write down the algorithm for a
+          dice race game.
+        video: C3_dice_race
       Internet:
         title: İnternet
-        desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
-          mesajlar yollayarak gösterecekler.
+        desc: Students send messages representing various Internet transmission methods
+          using pieces of paper.
         video: C3_internet
       Crowdsourcing:
         title: Kalabalık Kaynaklandırma 'Crowdsourcing'
@@ -230,11 +230,11 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram algoritmaları
-        desc: Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer
-          algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı
-          şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok
-          detaya ihtiyaç duyacaktır.
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep
+          an algorithm simple there are lots of ways to use it. If you want to make
+          sure everyone ends up with the same thing, then your algorithm needs more
+          detail.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Envelope Variables
@@ -244,18 +244,17 @@
           to really hit the idea home.
         video: C4_unplugged_variables
       MadGlibs:
-        title: Kızgın konuşkan
+        title: Mad Glibs
         desc: Soyutlama bir bilgisayar bilimcisinin sahip olması gereken en önemli
           yeteneklerden biridir. Bu aktivite, öğrencilerinizin hikayelerin farklılıklarını
           analiz etmesini, böylece onları soyutlamasını sağlayacak. Bu soyutlanmış
           hikayeler ise daha bir çok eğlenceli hikayeye yol gösterici olacak.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Eğlenceli tekrar için
-        desc: Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için
-          olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı
-          öğreneceğiz.
-        video: C4_bağımsız_looplar_için
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now
+          we’re going to learn how to use loops with extra structure built right in.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Değiştirgenlerle Şarkı Yazma
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır.
@@ -263,9 +262,9 @@
           tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin
           neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu
           kavramalarına yardımcı olacaktır.  '
-        video: C4_tıkanmamış_parametreler
+        video: C4_unplugged_parameters
       BinaryImages:
-        title: İkili resimler
+        title: Binary Images
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -273,7 +272,7 @@
           as images and colors) in binary, as well.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video oyunları ve kordinat düzlemleri
+        title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
         title: Teknikler

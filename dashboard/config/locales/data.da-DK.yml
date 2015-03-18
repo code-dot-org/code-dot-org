@@ -662,12 +662,6 @@
         playlab_intro: Introduktion til Play Lab
         playlab_events: Play Lab begivenheder
         playlab_repeat_forever: Play Lab gentag for evigt
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evalueringsblokke
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variabler
-        msm_7_functions: Funktioner
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok

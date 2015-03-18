@@ -4,9 +4,8 @@
   "circleBlockTitle": "κύκλος (ακτίνα, στυλ, χρώμα)",
   "displayBlockTitle": "εμφάνιση",
   "ellipseBlockTitle": "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)",
-  "emptyFunctionalBlock": "Έχετε ένα μπλόκ με κενό περιεχόμενο.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "επικάλυμμα (επάνω, κάτω)",
   "placeImageBlockTitle": "τοποθέτησε-εικόνα (χ, ψ, εικόνα)",
   "offsetBlockTitle": "μετατόπιση (x, y, εικόνα)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "υπόστρωμα (κάτω, κορυφή)",
   "outline": "περίγραμμα",
   "solid": "συμπαγής",
-  "string": "συμβολοσειρά",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "συμβολοσειρά"
 }

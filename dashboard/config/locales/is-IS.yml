@@ -347,8 +347,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
-    email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
-    email_confirm_wrong_email: (Rangt netfang?)
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
     new_password_hint: (hafðu autt ef þú vilt ekki breyta því)
     current_password_hint: (við þurfum að fá núverandi lykilorð þitt til að staðfesta
@@ -565,7 +565,7 @@
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
             13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
         Hour of Code:
-          title: Klukkustund kóðunar 2013
+          title: Klukkustund kóðunar
           description: ''
         edit-code:
           title: Breyta kóða
@@ -602,45 +602,11 @@
     að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir
     þig.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_completed: ólokið
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
-    assessment: assessment
   studio:
     courses_working_on: Námskeið sem þú ert að fást við
     completed_courses: Námskeið sem þú hefur lokið
     all_courses: Öll námskeið
-  project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
-    save: Vista
-    delete: Eyða
-    exit: Return to Course
-    my_projects: My Projects
-    share: Deila leik
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
-    more: Meira
-    name: Nafn
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
-    really_delete: Eyða?
-    delete_yes: Já
-    delete_no: Nei
-    saved: Saved
-    not_saved: Not saved
-    cancel: Hætta við
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects

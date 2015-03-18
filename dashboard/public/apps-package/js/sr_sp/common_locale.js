@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Помоћ"},
 "hintTitle":function(d){return "Савет:"},
 "jump":function(d){return "скок"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Користиш све неопходне типове блокова, али не на прави начин."},
 "listVariable":function(d){return "листа"},
 "makeYourOwnFlappy":function(d){return "Направи своју Flappy игру"},

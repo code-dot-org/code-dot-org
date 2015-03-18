@@ -669,12 +669,6 @@
         playlab_intro: Introduktion till Play Lab
         playlab_events: Play Lab händelser
         playlab_repeat_forever: Play Lab Upprepa för evigt
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variabler
-        msm_7_functions: Funktioner
     callout:
       text:
         drag_blocks: Dra ett "flytta" block och fäst det under det andra blocket

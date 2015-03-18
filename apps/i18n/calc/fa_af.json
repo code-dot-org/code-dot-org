@@ -1,17 +1,16 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "compute": "محاسبه",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید.",
-  "evaluate": "evaluate",
   "extraTopBlocks": "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟",
   "failedInput": "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند.",
   "goal": "هدف:",
   "levelIncompleteError": "Your expression does not match the goal.",
-  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!",
   "yourExpression": "عبارت شما:",
   "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
   "wrongResult": "Your expresison does not return the correct result."
 }

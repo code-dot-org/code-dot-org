@@ -101,7 +101,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Koppelen
-        Match the grid to the program: Combineer het plaatje met het programma
+        Match the grid to the program: Combineer het rooster met het programma
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -344,9 +344,9 @@
         (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
         (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
       parts of contract:
-        Parts of a Contract: onderdelen van een functie ontwerp
+        Parts of a Contract: Delen van een Contract
         Here is a contract for a new function. Match each item with the word that describes it.: Hier
-          is een ontwerp voor een nieuwe functie. Combineer elk item met het woord
+          is een contract voor een nieuwe functie.Combineer elk item met het woord
           dat het beschrijft.
         yearbook-picture: Jaarboek-afbeelding
         string numer: tekst nummer
@@ -357,9 +357,9 @@
         range: bereik
         example: voorbeeld
       Match example to contract:
-        Contracts of Functions: Ontwerpen van functies
+        Contracts of Functions: Contracten van functies
         Match each example with the correct contract!: Combineer elk voorbeeld met
-          de juiste ontwerp!
+          de juiste contract!
         (big-string? "gigantic" 5): (grote-tekst? "gigantische" 5)
         (find-price 4): (zoek-prijs 4)
         (small-star "blue"): (kleine-ster 'blauw')
@@ -371,24 +371,6 @@
         'small-star: string -> image': 'kleine-ster: tekst-> afbeelding'
         'bigger-string: string string -> string': 'groter-tekst: tekst tekst-> tekst'
         'find-price: string -> number': 'zoek-prijs: tekst-> nummer'
-      PDK5 Pair programming match:
-        Pair programming match: Pair programming match
-        Match the definitions to the words you were introduced to in the last video.: Match
-          the definitions to the words you were introduced to in the last video.
-        Pair programming: Pair programming
-        Driver: Driver
-        Navigator: Navigator
-        When two students work at one computer to write a program together: When two
-          students work at one computer to write a program together
-        The student who controls the keyboard, mouse, or touch screen: The student
-          who controls the keyboard, mouse, or touch screen
-        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The
-          student who thinks about the big-picture and looks for potential mistakes
-          or misunderstandings
-      PDK5 What is unplugged:
-        What is an unplugged activity?: What is an unplugged activity?
-        Question: Vraag
-        Answer 1: Answer 1
       test matching image:
         Matching Images Two: Plaatjes koppelen twee
         Match up all the flowers by colour!: Koppel alle bloemen aan de juiste kleur!

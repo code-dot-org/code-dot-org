@@ -18,7 +18,6 @@
     untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan
     # orang lain.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -116,8 +115,6 @@
   learn_classes: Cari kelas kursus
   hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
   what_gender: Apa jenis kelamin Anda?
@@ -134,12 +131,12 @@
     menulis %{lines} baris kode.
   start_hoc: Mulai Jam Kode sekarang
   contact_form_topic_press: Press/media (wawancara atau konfrensi)
+  stats_michael: Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira
+    belajar. "-Michael Clark, guru
   stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% menggugah."-Nina
     Nichols Peery, guru'
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana
     Alzate, anak kelas 5'
-  stats_michael: Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira
-    belajar. "-Michael Clark, guru
   studiobar_title: Kunjungi <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Latihan-latihan dasar
   studiobar_elementary_body: Tiga latihan terbaru kami untuk for K&#8209;5
@@ -155,27 +152,6 @@
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: Jam kode
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Kursus 4
-  homepage_slot_text_shop: Belanja
-  homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -382,8 +358,6 @@
   dashboard_login_picture: Gambar
   dashboard_login_none: email
   dashboard_new_password: Kata sandi baru
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: belum selesai
   dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
   dashboard_progress_completed_perfect: selesai, sempurna
@@ -1074,3 +1048,27 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress

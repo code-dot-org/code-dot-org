@@ -104,7 +104,7 @@
         TextMatch: Përshtatja e Tekstit
         StudioEC: Play Lab
         Applab: Laboratori i Aplikacionit
-        NetSim: Imitues Interneti
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronx
@@ -434,8 +434,8 @@
         flappy_8: Ti mund të vendosësh pamje në çdo kohë, jo vetëm kur fillon loja.
           Provo vendosjen e një pamjeje të RASTËSISHME kur ndodhin evente të tjera,
           për shembull, kur je duke kaluar një pengesë.
-        flappy_9: Për ti përzierë gjërat, kur je duke gjuajtur një pengesë, në vend
-          të mbaroni lojën provoni të vendosni pikët përsëri 0.
+        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
+          of ending the game try setting the score back to 0.
         flappy_11: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa pamjet
           dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
           që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
@@ -691,12 +691,6 @@
         playlab_intro: Hyrje në Play Lab
         playlab_events: Ngjarjet Play Lab
         playlab_repeat_forever: Përsërit Gjithmonë Play Lab
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Blloqet e Vlerësimit
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: variabla
-        msm_7_functions: Funksionet
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër

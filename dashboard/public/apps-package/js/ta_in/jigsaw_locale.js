@@ -155,9 +155,9 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "தொடர்க"},
-"nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
+"nextLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் இந்த புதிர் தீர்த்துவிட்டீர்கள்."},
 "no":function(d){return "இல்லை"},
-"numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
+"numBlocksNeeded":function(d){return "இந்த புதிரை  %1 தொகுதிகள் கொண்டு தீர்க்க முடியும்."},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your game."},
 "share":function(d){return "பகிர்"},
 "shareGame":function(d){return "Share your game:"},

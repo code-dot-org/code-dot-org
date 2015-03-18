@@ -1,17 +1,16 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "compute": "skaitļot",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
-  "evaluate": "evaluate",
   "extraTopBlocks": "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Mērķis:",
   "levelIncompleteError": "Your expression does not match the goal.",
-  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Šeit ir tavs stāsts! Turpini pie tā strādāt vai pārej pie nākamā uzdevuma!",
   "yourExpression": "Jūsu izteiksme:",
   "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
   "wrongResult": "Your expresison does not return the correct result."
 }

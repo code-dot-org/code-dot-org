@@ -155,8 +155,8 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "Continue"},
-"doCode":function(d){return "কৰক"},
-"elseCode":function(d){return "অথবা"},
+"doCode":function(d){return "do"},
+"elseCode":function(d){return "else"},
 "endGame":function(d){return "end game"},
 "endGameTooltip":function(d){return "Ends the game."},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
@@ -254,7 +254,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpeedTooltip":function(d){return "Sets the level's speed"},
 "shareFlappyTwitter":function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your game:"},
-"soundRandom":function(d){return "যিকোনো"},
+"soundRandom":function(d){return "შემთხვევითი"},
 "soundBounce":function(d){return "bounce"},
 "soundCrunch":function(d){return "crunch"},
 "soundDie":function(d){return "sad"},

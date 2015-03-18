@@ -7,13 +7,13 @@ pt-PT:
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Código está a chegar</a>. Relembramos todos os professores e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> a planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> És um professor CS? Vê outros recursos CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>Arrisque uma</h1><h2>Hora do Código</h2><h3># served</h3>'
-  anybody_can_learn: Todos podem aprender.
+  anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade de ter uma disciplina de informática
   petition_sign_message: 'Se concordar, escreva o seu nome.  Junte # outros.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nome
-  email: E-mail
+  email: Email
   zipcode: Código postal ou país
   submit: Submeter
   twentyhours_heading: Experimenta a nossa introdução a um curso de Ciências da Computação
@@ -31,7 +31,7 @@ pt-PT:
   california_text: "Qualquer professor pode oferecer os nossos <a href='http://studio.code.org/'>cursos gratuitos</a>. Qualquer escola pode <a href='http://code.org/educate/k5'>ensinar ciências da computação</a>. Solicite às escolas de ensino médio para efectuarem <a href='http://code.org/educate/districts'>uma parceria conosco."
   california_button: Saiba mais
   flappy_heading: 'Feliz "Flappy" Aniversário para Code.org'
-  flappy_text: 'O Code.org fez 1 ano.<br/><br/> Festeja connosco e cria o teu jogo <b>Flappy</b> personalizado. Programa as tuas próprias regras e partilha o teu jogo com os teus amigos!'
+  flappy_text: 'Code.org fez 1 ano.<br/><br/> Festeja connosco criando o teu jogo personalizado <b>Flappy</b>. Cria as tuas regras de código, e partilha com os teus amigos!'
   view_english_site: Ver site em inglês
   non_english_tutorials: 'Tutoriais traduzidos em várias línguas:'
   write_your_first_program: Escreva o seu primeiro programa de computador
@@ -46,7 +46,7 @@ pt-PT:
   get_a_certificate_of_achievement: Obtem um certificado de realização
   enter_valid_email: Introduz um endereço de e-mail válido
   get_a_certificate_message: "Vamos enviar-te um certificado e informações sobre como <a href='/learn/beyond'>Aprender para além de Uma Hora</a>"
-  get_a_certificate_message_after: "Clique no certificado para descarregá-lo ou imprimi-lo. Agora, continue com <a href='http://studio.code.org'>outros cursos</a> ou veja outras opções para <a href='/learn/beyond'>aprender, além da Hora de Código</a>."
+  get_a_certificate_message_after: "Clique no certificado para efectuar o download ou imprimi-lo. Agora, continue com os nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>aprender, para além de uma Hora de Código</a>."
   thanks_for_submitting: Obrigado por submeter!
   if_you_enjoyed: Se gostaste de aprender, convida os teus amigos a experimentarem também! Queremos que o mundo todo aprenda.
   personalize_certificate: Personaliza o teu certificado
@@ -64,21 +64,21 @@ pt-PT:
   boys_team: Equipa dos rapazes
   tell_the_world: Dizer ao mundo!
   thanks_for_voting: Obrigado por votar!
-  share_on_facebook: Partilhar no Facebook
-  share_on_twitter: Partilhar no Twitter
+  share_on_facebook: Partilha no Facebook
+  share_on_twitter: Partilha no Twitter
   beyond_an_hour: Além de uma hora de código
   get_started: Começar
-  i_agree: Concordar
-  participant_select: Selecione
+  i_agree: Concordo
+  participant_select: -Selecione-
   participant_student: Aluno
-  participant_parent: Encarregado de educação
+  participant_parent: Pais
   participant_educator: Educador
   participant_engineer: Engenheiro de software
   participant_other: Nenhuma das anteriores
   print_all: Imprimir tudo
   print_ice_art: Imprimir sua arte do gelo
   create_art_with_zombie: ou fazer arte avançada com zombie
-  i_am_a: Eu sou
+  i_am_a: Eu sou um
   never_spam: Nós nunca te enviaremos spam
   enter_country: Introduzir nome do país se estiver fora dos Estados Unidos
   used_infrequent_updates: Usado apenas para atualizações não frequentes
@@ -180,7 +180,7 @@ pt-PT:
   class_submission_level_preschool: Pré-escola
   class_submission_level_elementary: Básica
   class_submission_level_middle_school: Secundária
-  class_submission_level_high_school: Ensino secundário
+  class_submission_level_high_school: Universidade
   class_submission_level_college: Faculdade
   class_submission_level_vocational: Profissional
   class_submission_languages_other: Outro(s) idioma(s)
@@ -273,7 +273,7 @@ pt-PT:
   dashboard_students_male: Masculino
   dashboard_students_female: Feminino
   dashboard_students_secret: Segredo
-  dashboard_students_password: Palavra-passe
+  dashboard_students_password: palavra-passe
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Níveis concluídos
@@ -292,7 +292,7 @@ pt-PT:
   dashboard_students_no_email: 'Se seus estudantes não possuírem conta de email, ou se você quiser criar uma conta pra eles, mude o tipo desta sessão secreta para <b>palavra</b> ou <b>imagem</b>.'
   dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Clique aqui</a> para partilhar ou imprimir o nosso documento de privacidade.'
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Clique aqui</a> para poder compartilhar ou imprimir para seus estudantes nosso documento de privacidade.'
   dashboard_curriculum_overview: Visão geral do currículo de K-5
   dashboard_view_all_lesson_plans: Ver todos os planos de lições
   dashboard_course1: 'Curso 1:'
@@ -312,7 +312,7 @@ pt-PT:
   dashboard_grade_other: Outro
   dashboard_login_word: Palavra
   dashboard_login_picture: Imagem
-  dashboard_login_none: E-mail
+  dashboard_login_none: Email
   dashboard_new_password: palavra-passe nova
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
@@ -420,12 +420,12 @@ pt-PT:
   thinkersmith_gradelevel: Todas as idades
   condcards_gradelevel: De 8 a 12 anos
   lightbotintl_gradelevel: Todas as idades
-  codehs_gradelevel: Ensino secundário
-  codecademy_gradelevel: Ensino secundário
+  codehs_gradelevel: Universidade
+  codecademy_gradelevel: Universidade
   codecombat_gradelevel: A partir de 10 anos
   codemonkey_gradelevel: A partir de 10 anos
   codeavengers_gradelevel: A partir de 10 anos
-  processing_gradelevel: Ensino secundário
+  processing_gradelevel: Universidade
   robomind_gradelevel: De 8 a 13 anos
   groklearning_gradelevel: A partir de 10 anos
   quorum_gradelevel: A partir de 10 anos
@@ -435,8 +435,8 @@ pt-PT:
   robomindnl_gradelevel: De 8 a 13 anos
   flappy_gradelevel: De 4 a 104 anos
   bitsbox_gradelevel: Básica
-  makegameswithus_gradelevel: Ensino secundário
-  touchdevelop_gradelevel: Ensino secundário
+  makegameswithus_gradelevel: Universidade
+  touchdevelop_gradelevel: Universidade
   appinventor_gradelevel: A partir de 10 anos
   blockly_gradelevel: Todas as idades
   thinkersmith2_gradelevel: A partir de 8 anos
@@ -609,18 +609,18 @@ pt-PT:
   tynker_beyond_gradelevel: De 5 à 13 anos
   scratch_beyond_gradelevel: A partir de 8 anos
   lightbot_beyond_gradelevel: Todas as idades
-  codecademy_beyond_gradelevel: Ensino secundário
+  codecademy_beyond_gradelevel: Universidade
   kodable_beyond_gradelevel: Básica
   scratchjr_beyond_gradelevel: Básica
   hopscotch_beyond_gradelevel: A partir de 10 anos
   pocketcode_beyond_gradelevel: A partir de 10 anos
   groklearning_beyond_gradelevel: A partir de 10 anos
-  hacketyhack_beyond_gradelevel: Ensino secundário
+  hacketyhack_beyond_gradelevel: Universidade
   robomind_beyond_gradelevel: De 8 a 13 anos
-  makegameswithus_beyond_gradelevel: Ensino secundário
+  makegameswithus_beyond_gradelevel: Universidade
   appinventor_beyond_gradelevel: A partir de 10 anos
-  touchdevelop_beyond_gradelevel: Ensino secundário
-  codehs_beyond_gradelevel: Ensino secundário
+  touchdevelop_beyond_gradelevel: Universidade
+  codehs_beyond_gradelevel: Universidade
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -638,7 +638,7 @@ pt-PT:
   lego_beyond_gradelevel: A partir de 10 anos
   finch_beyond_gradelevel: A partir de 8 anos
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: Ensino secundário
+  processing_beyond_gradelevel: Universidade
   alice_beyond_gradelevel: A partir de 10 anos
   sphero_beyond_gradelevel: A partir de 8 anos
   codeorg_beyond_platformtext: Modern browsers, tablets

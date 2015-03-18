@@ -99,12 +99,12 @@
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: Laboratorio de aplicaciones
+        Webapp: Aplicación Web
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
-        Applab: Laboratorio de aplicaciones
-        NetSim: Simulador de internet
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronce
@@ -434,8 +434,8 @@
         flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando
           comience el juego. Intenta establecer una escena AL AZAR cuando sucedan
           otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar
-          el juego intente ajustar el marcador de nuevo a 0.
+        flappy_9: Para complicarlo un poco, cuando golpees un obstáculo o el suelo,
+          en vez de terminar el juego intenta poner el marcador en 0.
         flappy_11: Crea tu propio juego Flappy, Puedes cambiar todos los efectos visuales
           y las reglas, hasta la gravedad. Cuando finalices haz clic en Terminar para
           que tus amigos prueben tu juego en sus teléfonos.
@@ -585,7 +585,7 @@
           la palabra DEBAJO
         maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego
           en otra para deletrear la palabra HISTORIA
-        applab_ec_simple: Crea tu aplicación usando los bloques en la caja de herramientas.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
           en el nuevo bloque "Color De Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras.
@@ -693,12 +693,6 @@
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Bloques de evaluación
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variables
-        msm_7_functions: Funciones
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

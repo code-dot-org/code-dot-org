@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "நீள்வட்ட (அகலம், உயரம், பாணி, வண்ணம்)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"display\" block?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "மேலிடு (மேல், கீழ்)",
   "placeImageBlockTitle": "இடம்-உருவம் (x, y, உருவம்)",
   "offsetBlockTitle": "offset (x, y, image)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "underlay (bottom, top)",
   "outline": "outline",
   "solid": "solid",
-  "string": "string",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "string"
 }

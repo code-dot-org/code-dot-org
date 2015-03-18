@@ -1,12 +1,11 @@
 {
-  "badColorStringError": "Hai usato un nome non valido per il colore: {val}",
-  "badStyleStringError": "Hai usato un nome non valido per lo stile: {val}",
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "cerchio (raggio, stile, colore)",
   "displayBlockTitle": "visualizza",
   "ellipseBlockTitle": "ellisse (larghezza, altezza, stile, colore)",
-  "emptyFunctionalBlock": "C'è un valore mancante in un blocco.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "metti-sopra (superiore, inferiore)",
   "placeImageBlockTitle": "posiziona-immagine (x, y, immagine)",
   "offsetBlockTitle": "spostamento (x, y, immagine)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "metti-sotto (inferiore, superiore)",
   "outline": "contorno",
   "solid": "solido",
-  "string": "stringa",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "stringa"
 }

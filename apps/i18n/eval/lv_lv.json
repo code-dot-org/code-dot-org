@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "elipse (platums, augstums, stils, krāsa)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "pārklājums (augša, apakša)",
   "placeImageBlockTitle": "novietot-attēls (x, y, attēls)",
   "offsetBlockTitle": "nobīdīt (x, y, attēls)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "apakšslānis (apakšējais, augšējais)",
   "outline": "kontūra",
   "solid": "ciets",
-  "string": "virkne",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "virkne"
 }
