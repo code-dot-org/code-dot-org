@@ -223,19 +223,19 @@ svg {
 
     }
 
-    .router_row {
+    .router-row {
       cursor: pointer;
     }
-    .router_row:hover {
+    .router-row:hover {
       background-color: $router-row-hover-color;
       color: $black;
     }
 
-    .selected_row {
+    .selected-row {
       background-color: $code-org-web-orange;
       color: white;
     }
-    .selected_row:hover {
+    .selected-row:hover {
       background-color: $code-org-web-orange;
     }
   }
@@ -295,7 +295,7 @@ svg {
 
   // Log panel rules
   // Panel that shows a history of sent or received messages in a table.
-  .netsim_log_panel {
+  .netsim-log-panel {
 
     .packet {
       margin: 10px;
@@ -376,7 +376,7 @@ svg {
   // Send panel rules
   // Panel that lets the user enter and send messages
   // Mimics the log panel styles as much as possible.
-  .netsim_send_panel {
+  .netsim-send-panel {
 
     .netsim_packet {
       border: solid darkgray thin;
