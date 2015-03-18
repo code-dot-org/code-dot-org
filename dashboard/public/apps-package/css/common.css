@@ -550,10 +550,8 @@ input[type="radio"] {
 
 #headers {
   height: 40px;
-  background-color: #7665a0; }
-  #headers div {
-    display: inline-block;
-    margin-right: -4px; }
+  background-color: #7665a0;
+  overflow-y: hidden; }
   #headers .workspace-header {
     text-align: center;
     white-space: nowrap;
@@ -563,9 +561,12 @@ input[type="radio"] {
       color: white;
       line-height: 40px; }
   #headers #toolbox-header {
-    border-right: 1px solid gray; }
+    width: 270px;
+    border-right: 1px solid gray;
+    float: left; }
   #headers #clear-puzzle-header, #headers #show-code-header {
     cursor: pointer;
+    float: right;
     border-left: 1px solid gray; }
     #headers #clear-puzzle-header:hover, #headers #show-code-header:hover {
       background-color: #0094ca; }
@@ -579,14 +580,15 @@ input[type="radio"] {
     color: #ffb81d; }
 
 #headers[dir=rtl] div {
-  margin-right: 0;
-  margin-left: -4px; }
+  margin-right: 0; }
 #headers[dir=rtl] #toolbox-header {
   border-right: 0;
-  border-left: 1px solid gray; }
+  border-left: 1px solid gray;
+  float: right; }
 #headers[dir=rtl] #clear-puzzle-header, #headers[dir=rtl] #show-code-header {
   border-left: 0;
-  border-right: 1px solid gray; }
+  border-right: 1px solid gray;
+  float: left; }
 
 #rotateContainer {
   position: fixed;
