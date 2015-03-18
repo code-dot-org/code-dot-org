@@ -845,6 +845,10 @@ studioApp.runButtonClick = function() {
   studioApp.attempts++;
   Applab.execute();
 
+  // Show view data button now that channel id is available.
+  var viewDataButton = document.getElementById('viewDataButton');
+  viewDataButton.style.display = "inline-block";
+
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
@@ -1162,7 +1166,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 

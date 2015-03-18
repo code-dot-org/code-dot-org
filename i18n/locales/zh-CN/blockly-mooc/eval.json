@@ -2,15 +2,16 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"圆 （半径、 样式、 颜色）",
-  "displayBlockTitle":"显示",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"椭圆 （宽度、 高度、 样式、 颜色）",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"您有未连接的语句块。您要将其连接至“显示”语句块吗？",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"覆盖 （顶部、 底部）",
   "placeImageBlockTitle":"放置图像（X轴坐标，Y轴坐标，图像）",
   "offsetBlockTitle":"偏移量 （x，y，图片）",
   "rectangleBlockTitle":"矩形 （宽度、 高度、 风格、 颜色)",
-  "reinfFeedbackMsg":"您可以按\"重试\"按钮以编辑您的绘图。",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"旋转(度，图像)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"方形 (大小，样式，颜色)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"衬底 （底部、 顶部）",
   "outline":"轮廓",
   "solid":"固体",
-  "string":"字符串"
+  "string":"字符串",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

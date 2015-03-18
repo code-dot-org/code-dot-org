@@ -860,6 +860,9 @@ input.header_input {
   left: 25px;
   right: 25px;
   bottom: 0px;
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    top: 10px;
+  }
 }
 
 .reference_area {

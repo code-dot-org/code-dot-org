@@ -177,7 +177,7 @@ module Ops
 
       # did not change display name of existing teacher
       assert_equal teacher.name, teacher.reload.name
-      
+
       # Existing teacher added to cohort along with new teachers
       assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map{|x| x.ops_first_name}.sort
       assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map{|x| x.ops_last_name}.sort

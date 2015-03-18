@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":179}],14:[function(require,module,exports){
+},{"../skins":183}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -66,14 +66,6 @@ levels.simple = {
 };
 
 levels.custom = {
-};
-
-levels.ec_simple = {
-  'freePlay': true,
-  'editCode': true,
-  'sliderSpeed': 0.95,
-  'appWidth': 320,
-  'appHeight': 480,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -163,6 +155,7 @@ levels.ec_simple = {
     "clearTimeout": null,
     "setInterval": null,
     "clearInterval": null,
+    "getTime": null,
 
     // Math
     "addOperator": null,
@@ -195,8 +188,17 @@ levels.ec_simple = {
     "functionParams_n": null,
     "callMyFunction": null,
     "callMyFunction_n": null,
+    "return": null,
   },
 };
+
+levels.ec_simple = utils.extend(levels.custom, {
+  'freePlay': true,
+  'editCode': true,
+  'sliderSpeed': 0.95,
+  'appWidth': 320,
+  'appHeight': 480,
+});
 
 // Functions in Advanced category currently disabled in all levels:
 /*
@@ -292,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":227,"../block_utils":19,"../utils":225}],8:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../block_utils":19,"../utils":229}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1140,6 +1142,10 @@ studioApp.runButtonClick = function() {
   studioApp.attempts++;
   Applab.execute();
 
+  // Show view data button now that channel id is available.
+  var viewDataButton = document.getElementById('viewDataButton');
+  viewDataButton.style.display = "inline-block";
+
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
@@ -1457,7 +1463,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
@@ -2793,7 +2799,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":227,"../../locale/current/common":230,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":179,"../slider":180,"../templates/page.html":204,"../timeoutList":210,"../utils":225,"../xml":226,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":183,"../slider":184,"../templates/page.html":208,"../timeoutList":214,"../utils":229,"../xml":230,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2813,7 +2819,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],16:[function(require,module,exports){
+},{"ejs":250}],16:[function(require,module,exports){
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -2878,7 +2884,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share" style="display:none;">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -2886,7 +2892,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":227,"../../locale/current/common":230,"ejs":246}],12:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"ejs":250}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -2982,22 +2988,27 @@ module.exports.blocks = [
 module.exports.categories = {
   'UI controls': {
     'color': 'yellow',
+    'rgb': '#FFD54F',
     'blocks': []
   },
   'Canvas': {
     'color': 'red',
+    'rgb': '#F87477',
     'blocks': []
   },
   'Data': {
-    'color': 'orange',
+    'color': 'lightgreen',
+    'rgb': '#D3E965',
     'blocks': []
   },
   'Turtle': {
     'color': 'cyan',
+    'rgb': '#00D2E2',
     'blocks': []
   },
   'Advanced': {
     'color': 'blue',
+    'rgb': '#19C3E1',
     'blocks': []
   },
 };
@@ -3093,7 +3104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],9:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3166,20 +3177,29 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":227,"../../locale/current/common":230,"../codegen":45,"../utils":225}],227:[function(require,module,exports){
+},{"../../locale/current/applab":231,"../../locale/current/common":234,"../codegen":47,"../utils":229}],231:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';
+
+/* global dashboard */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
 
-// TODO(dave): remove once we can store ids for each app.
-AppStorage.tempEncryptedAppId =
+// TODO(dave): remove once all applab data levels are associated with
+// a project.
+AppStorage.tempChannelId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+AppStorage.getChannelId = function() {
+  // TODO(dave): pull channel id directly from appOptions once available.
+  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  return id || AppStorage.tempChannelId;
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -3191,7 +3211,7 @@ AppStorage.tempEncryptedAppId =
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.tempEncryptedAppId + '/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
@@ -3218,7 +3238,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.tempEncryptedAppId + '/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
@@ -3255,7 +3275,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -3293,7 +3313,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
   
@@ -3341,7 +3361,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -3385,7 +3405,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.tempEncryptedAppId + '/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');

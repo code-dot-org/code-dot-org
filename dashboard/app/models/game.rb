@@ -45,6 +45,10 @@ class Game < ActiveRecord::Base
     @@game_applab ||= find_by_name("Applab")
   end
 
+  def self.netsim
+    @@game_netsim ||= find_by_name("NetSim")
+  end
+
   def unplugged?
     app == UNPLUG
   end

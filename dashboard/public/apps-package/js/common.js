@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({86:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({88:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],41:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],178:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3569,7 +3569,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":230,"./utils":225}],210:[function(require,module,exports){
+},{"../locale/current/common":234,"./utils":229}],214:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3629,7 +3629,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],204:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3644,7 +3644,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (33,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((39,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((40,  msg.runProgram() )), '</div>\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((44,  msg.resetProgram() )), '</div>\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');47; if (data.controls) { ; buf.push('\n      ', (48,  data.controls ), '\n      ');49; } ; buf.push('\n      ');50; if (data.extraControlRows) { ; buf.push('\n      ', (51,  data.extraControlRows ), '\n      ');52; } ; buf.push('\n    </div>\n    ');54; instructions() ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((59,  data.localeDirection )), '">\n    <div id="toolbox-header" class="workspace-header"><span>', escape((60,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="workspace-header">\n      <span id="workspace-header-span">', escape((62,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((64,  data.blockCounterClass )), '>\n          ', escape((65,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((68,  data.idealBlockNumber )), '</span>\n        <span> ', escape((69,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="workspace-header"><span>', escape((72,  msg.showCodeHeader() )), '</span></div>\n    ');73; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((74,  msg.clearPuzzle() )), '</span></div>\n    ');75; } ; buf.push('\n  </div>\n  ');77; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');79; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (33,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((39,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((40,  msg.runProgram() )), '</div>\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((44,  msg.resetProgram() )), '</div>\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');47; if (data.controls) { ; buf.push('\n      ', (48,  data.controls ), '\n      ');49; } ; buf.push('\n      ');50; if (data.extraControlRows) { ; buf.push('\n      ', (51,  data.extraControlRows ), '\n      ');52; } ; buf.push('\n    </div>\n    ');54; instructions() ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((59,  data.localeDirection )), '">\n    <div id="toolbox-header" class="workspace-header"><span>', escape((60,  msg.toolboxHeader() )), '</span></div>\n    <div id="show-code-header" class="workspace-header"><span>', escape((61,  msg.showCodeHeader() )), '</span></div>\n    <div id="clear-puzzle-header" class="workspace-header"><span>', escape((62,  msg.clearPuzzle() )), '</span></div>\n    <div id="workspace-header" class="workspace-header">\n      <span id="workspace-header-span">', escape((64,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((66,  data.blockCounterClass )), '>\n          ', escape((67,  data.blockUsed )), '\n        </div>\n        <span>/</span>\n        <span id="idealBlockNumber">', escape((70,  data.idealBlockNumber )), '</span>\n        <span> ', escape((71,  msg.blocks() )), '</span>\n      </div>\n    </div>\n  </div>\n  ');75; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');77; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3652,7 +3652,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],180:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],184:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3917,7 +3917,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":48}],179:[function(require,module,exports){
+},{"./dom":50}],183:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4068,7 +4068,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":20,"./dom":48,"./required_block_utils":177,"./utils":225}],177:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":20,"./dom":50,"./required_block_utils":181,"./utils":229}],181:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4346,7 +4346,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":230,"./block_utils":19,"./utils":225,"./xml":226}],20:[function(require,module,exports){
+},{"../locale/current/common":234,"./block_utils":19,"./utils":229,"./xml":230}],20:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4511,7 +4511,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":230}],4:[function(require,module,exports){
+},{"../locale/current/common":234}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4866,26 +4866,7 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
-  // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', _.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-  }, this));
   window.addEventListener('resize', _.bind(this.onResize, this));
-
-  // Call initial onResize() asynchronously - need 10ms delay to work around
-  // relayout which changes height on the left side to the proper value
-  window.setTimeout(_.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-    if (this.isUsingBlockly()) {
-      Blockly.mainBlockSpace.fireChangeEvent();
-    }
-  }, this), 10);
 
   this.reset(true);
 
@@ -4908,11 +4889,15 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (Blockly.functionEditor) {
-          Blockly.functionEditor.hideIfOpen();
+        if (this.isUsingBlockly()) {
+          if (Blockly.functionEditor) {
+            Blockly.functionEditor.hideIfOpen();
+          }
+          Blockly.mainBlockSpace.clear();
+          this.setStartBlocks_(config, false);
+        } else {
+          this.editor.setValue(config.level.startBlocks || '');
         }
-        Blockly.mainBlockSpace.clear();
-        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
@@ -5254,73 +5239,40 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-  // First, grab the main app container
-  var div = document.getElementById('codeWorkspace');
-  var divParent = div.parentNode;
-  var parentStyle = window.getComputedStyle(divParent);
-
-  var parentWidth = parseInt(parentStyle.width, 10);
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
   // Keep blocks static relative to the right edge in RTL mode
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
+  if (this.isUsingBlockly() && Blockly.RTL) {
+    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+        topBlock.moveBy(blockOffset, 0);
+      });
+    }
   }
+  this.lastWorkspaceWidth = workspaceWidth;
 
-  this.resizeHeaders(fullWorkspaceWidth);
+  // Droplet toolbox width varies as the window size changes, so refresh:
+  this.resizeToolboxHeader();
 };
 
-// |          toolbox-header          | workspace-header  | show-code-header |
-// |
-// |           toolboxWidth           |
-// |                 |         <--------- workspaceWidth ---------->         |
-// |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+/**
+*  Updates the width of the toolbox-header to match the width of the toolbox
+*  or palette in the workspace below the header.
+*/
+StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  var showCodeWidth = 0;
-
-  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
-  var clearPuzzleWidth = clearPuzzleHeader ?
-      clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var toolboxHeader = document.getElementById('toolbox-header');
-  if (toolboxHeader) {
-    if (this.editCode) {
-      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor && this.editor.currentlyUsingBlocks) {
-        // Set toolboxWidth based on the block palette width:
-        var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = categories.getBoundingClientRect().width;
-      }
-    } else if (this.isUsingBlockly()) {
-      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  if (this.editCode) {
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (this.editor && this.editor.currentlyUsingBlocks) {
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = categories.getBoundingClientRect().width;
     }
-    toolboxHeader.style.width = toolboxWidth + 'px';
+  } else if (this.isUsingBlockly()) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-
-  var showCodeHeader = document.getElementById('show-code-header');
-  if (showCodeHeader) {
-    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
-    if (this.enableShowCode &&
-        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
-      showCodeHeader.style.display = "";
-    } else {
-      showCodeHeader.style.display = "none";
-    }
-  }
-
-  var workspaceHeader = document.getElementById('workspace-header');
-  if (workspaceHeader) {
-    workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
-  }
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
 
 /**
@@ -5582,12 +5534,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  if (!config.enableShowCode) {
+    document.getElementById('show-code-header').style.display = 'none';
+  }
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.jQuery) {
+    if (window.$) {
       $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
@@ -5712,6 +5667,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
+    this.resizeToolboxHeader();
+
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
     }
@@ -5805,6 +5762,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
       }
     });
   this.inject(div, options);
+  this.onResize();
 
   if (config.afterInject) {
     config.afterInject();
@@ -5820,7 +5778,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
+  showCodeHeader.firstChild.textContent = newButtonTitle;
 
   var workspaceHeaderSpan = document.getElementById('workspace-header-span');
   newButtonTitle = usingBlocks ? msg.workspaceHeader() :
@@ -5833,8 +5791,8 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
-  // Resize (including headers), so the category header will appear/disappear:
-  this.onResize();
+  // Resize toolbox header so it will appear/disappear:
+  this.resizeToolboxHeader();
 };
 
 /**
@@ -5919,7 +5877,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":230,"./ResizeSensor":2,"./block_utils":19,"./constants.js":47,"./dom":48,"./dropletUtils":49,"./feedback":68,"./templates/builder.html":198,"./templates/buttons.html":199,"./templates/instructions.html":201,"./templates/learn.html":202,"./templates/makeYourOwn.html":203,"./utils":225,"./xml":226,"url":245}],245:[function(require,module,exports){
+},{"../locale/current/common":234,"./ResizeSensor":2,"./block_utils":19,"./constants.js":49,"./dom":50,"./dropletUtils":51,"./feedback":70,"./templates/builder.html":202,"./templates/buttons.html":203,"./templates/instructions.html":205,"./templates/learn.html":206,"./templates/makeYourOwn.html":207,"./utils":229,"./xml":230,"url":249}],249:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6628,13 +6586,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":241,"querystring":244}],244:[function(require,module,exports){
+},{"punycode":245,"querystring":248}],248:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":242,"./encode":243}],243:[function(require,module,exports){
+},{"./decode":246,"./encode":247}],247:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6721,7 +6679,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],242:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6807,7 +6765,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],241:[function(require,module,exports){
+},{}],245:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7318,7 +7276,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],203:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7338,7 +7296,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],202:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7360,7 +7318,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],201:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7380,7 +7338,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],198:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],202:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7400,7 +7358,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],68:[function(require,module,exports){
+},{"ejs":250}],70:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8611,7 +8569,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":230,"./codegen":45,"./constants":47,"./dom":48,"./feedbackBlocks":69,"./templates/buttons.html":199,"./templates/code.html":200,"./templates/shareFailure.html":206,"./templates/sharing.html":207,"./templates/showCode.html":208,"./templates/trophy.html":209,"./utils":225,"./xml":226}],209:[function(require,module,exports){
+},{"../locale/current/common":234,"./codegen":47,"./constants":49,"./dom":50,"./feedbackBlocks":71,"./templates/buttons.html":203,"./templates/code.html":204,"./templates/shareFailure.html":210,"./templates/sharing.html":211,"./templates/showCode.html":212,"./templates/trophy.html":213,"./utils":229,"./xml":230}],213:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8631,7 +8589,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],208:[function(require,module,exports){
+},{"ejs":250}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8651,7 +8609,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],207:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],211:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8671,7 +8629,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],206:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],210:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8691,7 +8649,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],200:[function(require,module,exports){
+},{"ejs":250}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8711,7 +8669,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],199:[function(require,module,exports){
+},{"ejs":250}],203:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8731,9 +8689,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":230,"ejs":246}],230:[function(require,module,exports){
+},{"../../locale/current/common":234,"ejs":250}],234:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],69:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8862,7 +8820,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":47,"./templates/readonly.html":205}],205:[function(require,module,exports){
+},{"./constants":49,"./templates/readonly.html":209}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8883,7 +8841,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":246}],246:[function(require,module,exports){
+},{"ejs":250}],250:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9238,7 +9196,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":247,"./utils":248,"fs":238,"path":239}],248:[function(require,module,exports){
+},{"./filters":251,"./utils":252,"fs":242,"path":243}],252:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9262,7 +9220,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],247:[function(require,module,exports){
+},{}],251:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9461,7 +9419,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],239:[function(require,module,exports){
+},{}],243:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9689,7 +9647,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":240}],240:[function(require,module,exports){
+},{"_process":244}],244:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9748,9 +9706,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],238:[function(require,module,exports){
+},{}],242:[function(require,module,exports){
 
-},{}],45:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10255,7 +10213,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":49}],49:[function(require,module,exports){
+},{"./dropletUtils":51}],51:[function(require,module,exports){
 var utils = require('./utils');
 
 exports.randomNumber = function (min, max) {
@@ -10268,7 +10226,12 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
+exports.getTime = function() {
+  return (new Date()).getTime();
+};
+
 exports.dropletGlobalConfigBlocks = [
+  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
 ];
@@ -10288,6 +10251,7 @@ standardConfig.blocks = [
   {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'title': 'Do something only if a condition is true', 'category': 'Control' },
   {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'title': 'Do something if a condition is true, otherwise do something else', 'category': 'Control' },
   {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'title': 'Repeat something while a condition is true', 'category': 'Control' },
+  {'func': 'getTime', 'block': 'getTime()', 'title': 'Get the current time in milliseconds', 'category': 'Control', type: 'value' },
 
   // Math
   {'func': 'addOperator', 'block': '__ + __', 'title': 'Add two numbers', 'category': 'Math' },
@@ -10319,23 +10283,28 @@ standardConfig.blocks = [
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
   {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'return', 'block': 'return __;', 'title': 'Return a value from a function', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
   'Control': {
-    'color': 'orange',
+    'color': 'blue',
+    'rgb': '#19C3E1',
     'blocks': []
   },
   'Math': {
-    'color': 'green',
+    'color': 'deeppurple',
+    'rgb': '#A38BC3',
     'blocks': []
   },
   'Variables': {
-    'color': 'blue',
+    'color': 'purple',
+    'rgb': '#B159AB',
     'blocks': []
   },
   'Functions': {
-    'color': 'violet',
+    'color': 'green',
+    'rgb': '#48D882',
     'blocks': []
   },
 };
@@ -10527,7 +10496,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 };
 
 
-},{"./utils":225}],225:[function(require,module,exports){
+},{"./utils":229}],229:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10747,7 +10716,7 @@ exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":79,"./lodash":87,"./xml":226}],87:[function(require,module,exports){
+},{"./hammer":81,"./lodash":89,"./xml":230}],89:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14116,7 +14085,7 @@ exports.valueOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],79:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16280,7 +16249,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],48:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16387,7 +16356,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],47:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16763,7 +16732,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":226}],226:[function(require,module,exports){
+},{"./xml":230}],230:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

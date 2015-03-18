@@ -47,4 +47,3 @@ class LevelLoader
     end
   end
 end
-

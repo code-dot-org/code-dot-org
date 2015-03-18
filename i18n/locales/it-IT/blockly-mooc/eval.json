@@ -1,16 +1,17 @@
 {
-  "badColorStringError":"You used an invalid color string: {val}",
-  "badStyleStringError":"You used an invalid style string: {val}",
+  "badColorStringError":"Hai usato un nome non valido per il colore: {val}",
+  "badStyleStringError":"Hai usato un nome non valido per lo stile: {val}",
   "circleBlockTitle":"cerchio (raggio, stile, colore)",
-  "displayBlockTitle":"visualizza",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ellisse (larghezza, altezza, stile, colore)",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "emptyFunctionalBlock":"C'è un valore mancante in un blocco.",
   "extraTopBlocks":"Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"metti-sopra (superiore, inferiore)",
   "placeImageBlockTitle":"posiziona-immagine (x, y, immagine)",
   "offsetBlockTitle":"spostamento (x, y, immagine)",
   "rectangleBlockTitle":"rettangolo (larghezza, altezza, stile, colore)",
-  "reinfFeedbackMsg":"Premi il pulsante \"Riprova\" per modificare il tuo disegno.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"ruota (gradi, immagine)",
   "scaleImageBlockTitle":"ridimensiona (fattore, immagine)",
   "squareBlockTitle":"quadrato (dimensione, stile, colore)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"metti-sotto (inferiore, superiore)",
   "outline":"contorno",
   "solid":"solido",
-  "string":"stringa"
+  "string":"stringa",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

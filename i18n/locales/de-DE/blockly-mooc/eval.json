@@ -1,16 +1,17 @@
 {
-  "badColorStringError":"You used an invalid color string: {val}",
-  "badStyleStringError":"You used an invalid style string: {val}",
+  "badColorStringError":"Du hast einen ungültigen Farbnamen verwendet: {val}",
+  "badStyleStringError":"Du hast einen ungültigen Stilnamen verwendet: {val}",
   "circleBlockTitle":"Kreis (Radius, Stil, Farbe)",
-  "displayBlockTitle":"Display",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"Ellipse (Breite, Höhe, Stil, Farbe)",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "emptyFunctionalBlock":"Du hast einen Block ohne Eingabe.",
   "extraTopBlocks":"Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"Overlay (oben, unten)",
   "placeImageBlockTitle":"Ort-Bild (x, y, Bild)",
   "offsetBlockTitle":"versatz (x,y,Bild)",
   "rectangleBlockTitle":"Rechteck (Breite, Höhe, Stil, Farbe)",
-  "reinfFeedbackMsg":"Um Deine Zeichnung zu überarbeiten, drücke auf den \"Try again\"-Button",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"Drehen (Grad, Bild)",
   "scaleImageBlockTitle":"Maßstab (Faktor, Bild)",
   "squareBlockTitle":"Quadrat (Größe, Stil, Farbe)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"Unterlage (unten, oben)",
   "outline":"Gliederung",
   "solid":"fest",
-  "string":"String"
+  "string":"String",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

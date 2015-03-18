@@ -217,7 +217,7 @@ namespace :seed do
   end
 
   def stub_path(table)
-    cache_dir(".#{table.to_s}-imported")
+    cache_dir(".#{table}-imported")
   end
 
   def gdrive()

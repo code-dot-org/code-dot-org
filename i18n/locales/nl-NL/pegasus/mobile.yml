@@ -11,10 +11,11 @@ nl-NL:
   learn_now: Nu leren
   petition_message: Elke leerling in elke school moet de kans krijgen om informatica te leren
   petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan bij # anderen.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: naam
   email: E-mail
   zipcode: Postcode of land
-  submit: Opslaan
+  submit: Klaar
   twentyhours_heading: Probeer onze introductiecursus computerkunde
   twentyhours_text: Klaar met je eerste Hour of Code? Leer meer over kern computerkunde en programmeer concepten in deze vervolgcursus.
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
@@ -90,6 +91,7 @@ nl-NL:
   learn_classes: Zoek naar klassen in de buurt
   hoc_is_here: 'Het #UurCode is zover - ga eens kijken! @codeorg'
   just_did_hoc: "Ik heb net het #UurCode gedaan - ga ook 's kijken! @codeorg"
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Leer een Hour of Code
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
@@ -104,9 +106,9 @@ nl-NL:
   students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines} regels code geschreven.'
   start_hoc: Start het Uur Code nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
-  stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien over leren" -Michael Clark, leraar'
   stats_nina: '"Iedere dag leverde hetzelfde resultaat &mdash; 100% deelname." -Nina Nichols Peery, lerares'
   stats_student: '"Ik wist dat dit een <b> een-keer-in-het-leven </b>  kans was" -Mariana Alzate, groep8-er'
+  stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien over leren" -Michael Clark, leraar'
   studiobar_title: "ontdek <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: 'Onze drie Nieuwe Cursussen voor K&#8209;5'
@@ -122,6 +124,29 @@ nl-NL:
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   studiobar_shop_title: winkel
   studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: Het Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Les 4
+  homepage_slot_text_shop: winkel
+  homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ""
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -291,6 +316,8 @@ nl-NL:
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: niet voltooid
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect

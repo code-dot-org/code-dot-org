@@ -12,13 +12,13 @@ class Stage < ActiveRecord::Base
   end
 
   def unplugged?
-    script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
+    script_levels = Script.get_from_cache(script.name).script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
     script_levels.first.level.unplugged?
   end
 
   def localized_title
-    if script.stages.to_a.many?
+    if Script.get_from_cache(script.name).stages.to_a.many?
       I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       I18n.t "data.script.name.#{script.name}.title"
@@ -26,7 +26,7 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_name
-    if script.stages.many?
+    if Script.get_from_cache(script.name).stages.many?
       I18n.t "data.script.name.#{script.name}.#{name}"
     else
       I18n.t "data.script.name.#{script.name}.title"
@@ -49,12 +49,12 @@ class Stage < ActiveRecord::Base
     stage_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: script.stages.to_a.count,
+        script_stages: Script.get_from_cache(script.name).stages.to_a.count,
         id: id,
         position: position,
         name: localized_name,
         title: localized_title,
-        levels: script_levels.map(&:summarize),
+        levels: Script.get_from_cache(script.name).script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
     if script.has_lesson_plan?

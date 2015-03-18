@@ -206,7 +206,7 @@ sr:
         turtle_3_5: 'А сада, креирај нову "draw a house(нацртај кућу)" функцију и искористи је да удомиш две мачке. Напомена: Креирај нову функцију користећи "do something(уради нешто)" блок, и унеси свој текст како бих дао име блоку.'
         turtle_3_6: 'Користите  "draw a square(нацртај квадрат)" као пример, додајте унос кутију назван "length(дужина)" како бих сте нацртали троугао. Затим, нацртајте троуглове различитих величина.(Напомена: кликни на звезду како бих додали унос кутију у функцији)'
         turtle_3_7: 'Додај унос назван "length"(дужина) да бих "нацртао кућу" и направио велику кућу за слона (са ивицама од 150 пиксела дужине)'
-        turtle_3_8: 'Ево их сви блокови из прошле загонетке. Измени "draw a house(нацртај кућу)" функцију, тако да ја завршим у доњем десном углу по завршетку цртања нове куће. Користи измењену функцију да нацрташ три куће.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Можеш ли реконструисати  "draw a house (нацртај кућу)" функцију, без ичије помоћи? Покушај, а затим нацртај ред кућа.'
         turtle_3_10: 'Много сте научили! А сада искористите то знање да нацртате шта год пожелите. Покушајте да нацртате звезду, или спиралу, или кул пахуљицу. '
         maze_karel_debug_seq_1: 'Добро дошао у дебаговање!  Мој код не ради како бих требало. Можеш ли одкрити проблем и  исправити га, тако да могу да поравнам своје поље како бих било спремно за сејање?'
@@ -438,6 +438,12 @@ sr:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Променљиве
+        msm_7_functions: Функције
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

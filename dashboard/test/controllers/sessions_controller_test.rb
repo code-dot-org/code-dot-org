@@ -53,7 +53,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as user with username' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-    
+
     assert user.email.blank?
     assert user.hashed_email.present?
 
@@ -65,7 +65,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as younger user with hashed email' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-    
+
     assert user.email.blank?
     assert user.hashed_email.present?
 
@@ -140,7 +140,7 @@ class SessionsControllerTest < ActionController::TestCase
     teacher = create(:teacher)
     teacher.deleted_at = Time.now # 'delete' the user
     teacher.save!
-    
+
     post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
 
     assert_signed_in_as nil
