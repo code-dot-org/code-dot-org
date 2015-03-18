@@ -81,7 +81,7 @@ pt:
         text: 'Por exemplo, poderias ter um MANIPULADOR DE EVENTOS que diz "quando o rato é clicado, toca um som" '
       4:
         image: notes/flappy04.jpg
-        text: Alguma vez ouviste falar no jogo FlappyBird? Ao usar manipuladores de evento, vamos aprender a programar a nossa própria versão do FlappyBird!
+        text: Alguma vez ouviste falar do jogo FlappyBird? Se utilizarmos manipuladores de eventos, podemos programar a nossa própria versão do FlappyBird!
       5:
         image: notes/flappy05.jpg
         text: O código que vais escrever involve arrastar e largar blocos que representam comandos para o computador. Na verdade, cada um destes blocos representa um verdadeiro código.
@@ -193,7 +193,7 @@ pt:
         text: Olá! Eu sou a Brinna, engenheira no Instagram. Uma função são algumas linhas de código que tu irás precisar muitas vezes num programa. Portanto, em vez de as escreveres constantemente, podes apresentá-las num só bloco.
       2:
         image: notes/stage13_2.jpg
-        text: Nós vamos aprender como definir funções. A definição de funções tem uma estrela no canto. O nome de uma função é escrita logo na primeira linha.
+        text: Vamos aprender a definir funções. A definição de funções tem uma estrela na ponta. O nome de uma função é escrito logo na primeira linha.
       3:
         image: notes/stage13_3.jpg
         text: 'Os blocos que vão dentro da definição de nos dizer o que ele faz. Por essa definição de função é chamada de "encher 5" e ela é composta de um bloco de "repetição" e um bloco de "preencher".'

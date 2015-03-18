@@ -8,20 +8,20 @@ pt:
         blank: é necessário
     attributes:
       user:
-        name: Nome a exibir
-        email: Email
+        name: Nome a apresentar
+        email: E-mail
         username: nome de utilizador
         password: Palavra-passe
-        password_confirmation: Confirmar Palavra-passe
+        password_confirmation: Confirmação da palavra-passe
         current_password: Palavra-passe atual
         locale: Língua
         age: Idade
         gender: Género
-        edit_header: Editar detalhes da Conta
+        edit_header: Edita os detalhes da conta
         error:
           future: Não pode ser no futuro
   hello: Olá mundo
-  welcome_back: 'Bem-vindo, %{name}'
+  welcome_back: 'Olá outra vez, %{name}'
   add_teacher_form:
     code:
       label: 'Adicionar um professor:'
@@ -35,7 +35,7 @@ pt:
   stage_number: 'Estágio %{number}'
   puzzle: Quebra-cabeças
   trophies: troféus
-  courses: percursos
+  courses: Cursos
   of: de
   more: MAIS
   less: MENOS
@@ -49,17 +49,17 @@ pt:
   prize: prémio
   more_info: Mais informação
   auth:
-    sign_in_with: 'Sessão iniciada com %{provider}'
+    sign_in_with: 'Iniciar sessão com o %{provider}'
     signed_in: Sessão iniciada!
     signed_out: 'Acabou de sair de <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Utilizou %{provider} para entrar. <a href="%{url}">Pressione aqui</a> para sair de %{provider}.'
     already_signedup: Já te registaste?
-    notyet_signedup: Ainda não aderiste?
-    google_oauth2: Conta do Google
+    notyet_signedup: Ainda não criaste uma conta?
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Conta da Microsoft
-    forgot_password: Esqueceste-te da tua palavra-passe?
+    windowslive: Outlook
+    forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
@@ -69,22 +69,22 @@ pt:
     teacher_educator_guide: Consulta o guia do educador
     teacher_pitch: Inscrição para Professores no Code.org
     teacher_title: Registo de professor
-    student_pitch: Inscrição para Estudantes no Code.org
-    student_title: Registo para Aluno
+    student_pitch: Cria uma conta de aluno
+    student_title: Criar conta de aluno
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: morada, cidade, estado, código postal
     gender: Género (opcional)
     birthday: Aniversário (opcional)
-    age: Idade
+    age:  Idade 
     user_type: É um estudante ou um professor?
-    submit: Registar
+    submit: Criar conta
     teacher: És um professor?
     valid_username: Disponível!
-    invalid_username: O nome de utilizador deve ter pelo menos 5 caracteres
+    invalid_username: O nome de utilizador tem de ter, pelo menos, 5 caracteres
     taken_username: O nome de utilizador já existe
     valid_password: Palavra-passe válida!
-    invalid_password: A palavra-passe tem de ter no mínimo 6 caracteres
+    invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavra-passe que introduziu não correspondem
     student_terms: "Concordo ficar vinculado pelos <a href='http://code.org/tos'> termos de serviço</a> de Code.org. Se tenho menos de 13 anos de idade, confirmo ao enviar este formulário que tenho permissão dos meus pais ou tutor legal para usar os serviços de Code.org. <br/>Para utilizadores com menos de 13 anos, os endereços de e-mail não serão armazenados num formulário que nos permita contactá-los."
     teacher_terms: "Concordo ficar vinculado pelos <a href='http://code.org/tos'> termos de serviço</a> de Code.org."
@@ -93,23 +93,23 @@ pt:
     title: Já tem uma conta? Entre
     login: E-mail ou nome de utilizador
     password: Palavra-passe
-    remember: Lembrar-se de mim
+    remember: Manter sessão iniciada
     submit: Entrar
   signin:
     try_heading: Quer experimentar trabalhar com código sem se inscrever?
     try_hoc: Tente Uma Hora de Código primeiro
     try_20hours: Experimente a nossa Introdução à Ciência de Computadores de 20 horas
   signinsection:
-    welcome: 'Bem-vindo a %{section_name}'
+    welcome: '%{section_name} dá-te as boas-vindas'
     name: Escolha seu nome
     picture: Agora, encontre a sua imagem secreta
     words: Agora digite as suas palavras secretas
-    login: Entrar
+    login: Iniciar sessão
   password:
     reset_form:
-      title: Esqueceste-te da tua palavra-passe?
-      email: Endereço de Email
-      submit: Enviar-me as informações para redefinir a palavra-passe
+      title: Esqueceste-te da palavra-passe?
+      email: Endereço de e-mail
+      submit: Enviem-me as instruções de reposição da palavra-passe
     change_form:
       title: Alterar palavra-passe
       new_password: Nova palavra-passe
@@ -133,7 +133,7 @@ pt:
     added_teacher: '%{name} foi adicionado como teu professor'
     registered: 'Registou-se para %{section_name}.'
     error:
-      signed_in: Por favor termina a sessão antes de prosseguir
+      signed_in: Antes de prosseguires, termina sessão
       username_not_found: 'Nome de utilizador %{username} não encontrado'
       username_in_use: '%{username} já existe, por favor escolhe outro'
       no_teacher: "Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'. Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente"
@@ -221,14 +221,14 @@ pt:
         artist: Draw Something
     user:
       classroom: Página inicial do professor
-      label: 'Olá % {username}'
+      label: 'Olá, %{username}'
       stats: O meu progresso
-      settings: Minha conta
+      settings: A minha conta
       prizes: Prémios
-      logout: Sair
-      signin: Entrar
-      signup: Registar
-      already_registered: Already registered?
+      logout: Terminar sessão
+      signin: Iniciar sessão
+      signup: Criar conta
+      already_registered: Já criaste uma conta?
     popup:
       progress: O teu progresso
       lines: 'Total de linhas de código: % {linhas}'
@@ -301,7 +301,7 @@ pt:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: (Wrong email address?)
-    email_resend_confirm: Resend confirmation instructions
+    email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixa em branco se não quiseres alterá-lo)
     current_password_hint: (precisamos da tua palavra-passe para confirmar as tuas alterações)
     delete: Delete your account
@@ -317,10 +317,10 @@ pt:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
+    all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Lesson plans
-    signin_message: 'Already registered? %{link}'
-    student_reg_link: Registo para Aluno
+    signin_message: 'Já criaste uma conta? %{link}'
+    student_reg_link: Criar conta de aluno
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: Consulte o painel de controlo do progresso
@@ -358,7 +358,7 @@ pt:
     student: Aluno
     teacher: Professor
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: Os engenheiros da Google, da Microsoft, do Facebook e do Twitter ajudaram a criar este tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Fornecer feedback
@@ -367,7 +367,7 @@ pt:
     support_url: http://support.code.org
     tos: Terms
     privacy: Política de privacidade
-    secure: Secure Version
+    secure: Versão segura
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e dicas
@@ -393,11 +393,11 @@ pt:
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Experimenta atualizar a pagina
   next_stage: Terminou! Continua para a próxima etapa
-  download_pdf: Abre o plano de aula
+  download_pdf: Abrir o plano da aula
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Descarregar PDF
-  download_coming_soon: Downloadable activity coming soon.
+  download_coming_soon: 'Brevemente: Atividade para descarregar.'
   video_coming_soon: Video Coming Soon!
   share_code:
     title: "Click 'Run' to see my program in action"
@@ -483,7 +483,7 @@ pt:
           title: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico
           description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Hora de Código 2013
           description: ""
         edit-code:
           title: Editar código
@@ -522,7 +522,7 @@ pt:
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
-    all_courses: All courses
+    all_courses: Todos os cursos
   project:
     projects: Projects
     create: Create Project
