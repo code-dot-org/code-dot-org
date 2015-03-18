@@ -190,7 +190,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 course4 frozen hourofcode algPDmiami}.
+    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 course4 frozen hourofcode algebra}.
       map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
@@ -213,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_cache_to_cache # in test this is in non-distributed memory
 
     Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
-    
+
     Script.connection.disconnect!     # we don't need no stinkin db
 
     assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name

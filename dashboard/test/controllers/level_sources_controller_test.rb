@@ -29,7 +29,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     get :show, id: @level_source.id, embed: '1'
     assert_response :success
     assert_equal([], assigns(:callouts))
-    
+
     assert_equal true, assigns(:embed)
     assert_equal false, assigns(:share)
     assert_equal true, assigns(:no_padding)
@@ -83,7 +83,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
                    { controller: 'level_sources', action: 'show', id: '1' })
     assert_routing({ path: '/c/1/edit', method: :get },
                    { controller: 'level_sources', action: 'edit', id: '1' })
-    assert_routing({ path: '/c/1/original_image', method: :get }, 
+    assert_routing({ path: '/c/1/original_image', method: :get },
                    {controller: 'level_sources', action: 'original_image', id: '1' })
     assert_routing({ path: '/c/1/generate_image', method: :get },
                    { controller: 'level_sources', action: 'generate_image', id: '1' })
@@ -98,7 +98,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source
-    
+
     expect_s3_upload
 
     get :generate_image, id: level_source.id
@@ -110,7 +110,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
-    
+
     get :generate_image, id: level_source.id
 
     assert_redirected_to level_source_image.s3_framed_url
@@ -132,7 +132,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
-    
+
     get :original_image, id: level_source.id
 
     assert_redirected_to level_source_image.s3_url

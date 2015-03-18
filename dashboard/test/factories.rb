@@ -186,11 +186,11 @@ FactoryGirl.define do
     name 'Test Cohort'
     teachers {[create(:teacher, district: districts.first)]}
 
-    before :create do |cohort, _| 
+    before :create do |cohort, _|
       cohort.cohorts_districts << create(:cohorts_district, cohort: cohort)
     end
 
-    after :create do |cohort, _| 
+    after :create do |cohort, _|
       create_list :workshop, 1, cohort: cohort
     end
   end

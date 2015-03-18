@@ -28,7 +28,7 @@ Blockly.XButton.prototype.render = function (parent) {
 
   parent.appendChild(buttonElement);
 
-  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, 'mousedown', this, goog.bind(function () {
+  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, 'click', this, goog.bind(function () {
     if (this.onButtonPressed) {
       this.onButtonPressed();
     }

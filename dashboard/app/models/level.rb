@@ -122,7 +122,7 @@ class Level < ActiveRecord::Base
   def delete_custom_level_file
     if write_to_file?
       file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
-      File.delete(file_path) if file_path && File.exists?(file_path)
+      File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
 

@@ -38,6 +38,7 @@ group :development, :test do
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'timecop'
+  gem 'rubocop', require: false
 
   # for ui testing
   gem 'cucumber'

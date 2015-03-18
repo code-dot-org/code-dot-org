@@ -61,4 +61,3 @@ end
 service 'pegasus' do
   action [:enable, :start]
 end
-

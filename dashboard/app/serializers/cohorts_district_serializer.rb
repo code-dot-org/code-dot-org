@@ -1,7 +1,7 @@
 class CohortsDistrictSerializer < ActiveModel::Serializer
   attributes :id, :name, :location, :max_teachers
-  
-  def id 
+
+  def id
     object.district.id
   end
 

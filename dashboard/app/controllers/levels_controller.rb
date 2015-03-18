@@ -147,6 +147,8 @@ class LevelsController < ApplicationController
         @game = Game.custom_maze
       elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
+      elsif @type_class == NetSim
+        @game = Game.netsim
       end
       @level = @type_class.new
       render :edit
