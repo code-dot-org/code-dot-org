@@ -1,5 +1,7 @@
 'use strict';
 
+/* global dashboard */
+
 /**
  * Namespace for app storage.
  */
