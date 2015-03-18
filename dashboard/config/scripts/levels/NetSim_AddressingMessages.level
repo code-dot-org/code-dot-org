@@ -5,12 +5,15 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
-    "showTabs": [
+    "skin": "netsim",
+    "instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
+    "show_packet_size_control": "false",
+    "show_tabs": [
       "instructions",
       "my_device",
       "router"
     ],
-    "defaultDnsMode": "none"
+    "default_dns_mode": "none"
   }
 }]]></config>
 </NetSim>

@@ -8,7 +8,6 @@ Given(/^block "([^"]*)" is at a location "([^"]*)"$/) do |block, identifier|
 end
 
 When(/^I click block "([^"]*)"$/) do |block|
-  block_id = get_block_id(block)
   @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
@@ -23,6 +22,11 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
+  @browser.execute_script code
+end
+
+When /^I drag block matching selector "([^"]*)" to block matching selector "([^"]*)"$/ do |from, to|
+  code = generate_selector_drag_code(from, to, 0, 30)
   @browser.execute_script code
 end
 

@@ -15,7 +15,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     Rails.logger.info '--------------'
     Rails.logger.info 'DISCONNECTING DATABASE'
     Rails.logger.info '--------------'
-    
+
     ActiveRecord::Base.connection.disconnect!
   end
 
@@ -28,7 +28,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     get '/s/frozen'
     assert_response :success
   end
-  
+
   test "should get show of frozen level 1" do
     get '/s/frozen/stage/1/puzzle/1'
     assert_response :success
@@ -83,9 +83,9 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response 200
   end
 
-  # 
+  #
   # We do not yet cache hints so turning hints back on makes this test fail.
-  # 
+  #
   # test "post milestone to frozen failing" do
   #   sl = Script.find_by_name('frozen').script_levels[2]
   #   params = {program: 'fake program', testResult: 5, result: 'false'}

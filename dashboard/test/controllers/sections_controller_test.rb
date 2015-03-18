@@ -9,7 +9,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     @word_section = create(:section, user: @teacher, login_type: 'word')
     @word_user_1 = create(:follower, section: @word_section).student_user
-    
+
     @picture_section = create(:section, user: @teacher, login_type: 'picture')
     @picture_user_1 = create(:follower, section: @word_section).student_user
 
@@ -29,7 +29,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   test "do not show login screen for non-picture/word sections" do
     new_setup
-    
+
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, id: @regular_section.code
     end
@@ -42,7 +42,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_response :success
   end
-  
+
   test "show login screen for word section" do
     new_setup
 

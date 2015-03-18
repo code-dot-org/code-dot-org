@@ -53,7 +53,7 @@ Laptop
 ### Phase 4: Post Year Development
 
 #### Save the Dates
-6/24/2015 - 6/26/2015 
+7/8/2015 - 7/10/2015
 
 <br />
 [**Back to the top**](#top)

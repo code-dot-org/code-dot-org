@@ -1,6 +1,7 @@
 def validate_form(kind, data)
 
   def csv_multivalue(value)
+    return value if value.class == FieldError
     begin
       CSV.parse_line(value.to_s) || []
     rescue
@@ -69,6 +70,7 @@ def validate_form(kind, data)
   end
 
   def email_address(value)
+    return value if value.class == FieldError
     email = downcased stripped value
     return nil if email.nil_or_empty?
     return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
@@ -76,6 +78,7 @@ def validate_form(kind, data)
   end
 
   def zip_code(value)
+    return value if value.class == FieldError
     value = stripped value
     return nil if value.nil_or_empty?
     return FieldError.new(value, :invalid) unless zip_code?(value)
@@ -116,9 +119,9 @@ def insert_form(kind, data, options={})
   end
 
   data = validate_form(kind, data)
-  
+
   timestamp = DateTime.now
-  
+
   row = {
     secret: SecureRandom.hex,
     parent_id: options[:parent_id],

@@ -1096,26 +1096,27 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(codeWorkspace, 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
+  if (!config.hideSource) {
+    var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(codeWorkspace, 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      vizHeight = 3000;
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
     }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
       container.className = codeWorkspace.className + " pin_bottom";
     } else {
-      codeWorkspace.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
-      container.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+      container.style.minHeight = vizHeight + 'px';
     }
   }
 
@@ -1158,7 +1159,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      workspaceDiv.style.visibility = 'visible';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.visibility = 'visible';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -1181,6 +1184,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {

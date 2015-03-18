@@ -274,7 +274,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileCherry":function(d){return "cherry"},
 "projectileIce":function(d){return "ice"},
 "projectileDuck":function(d){return "duck"},
-"reinfFeedbackMsg":function(d){return "You can press the \"Try again\" button to go back to playing your story."},
+"reinfFeedbackMsg":function(d){return "You can press the \"Keep Playing\" button to go back to playing your story."},
 "repeatForever":function(d){return "repeat forever"},
 "repeatDo":function(d){return "do"},
 "repeatForeverTooltip":function(d){return "Execute the actions in this block repeatedly while the story is running."},

@@ -10,7 +10,7 @@ def main()
       csv_file += '.csv'
     end
     csv_file = pegasus_dir('data', csv_file) unless File.file?(csv_file)
-    
+
     unless File.file?(csv_file)
       puts "ERROR: #{File.basename(csv_file)} not found."
       next

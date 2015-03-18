@@ -3,7 +3,7 @@ partner_sites = ['al.code.org', 'ar.code.org', 'br.code.org', 'eu.code.org', 'it
 get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
-  pass unless tutorial = DB[:tutorials].where(short_code:short_code).first 
+  pass unless tutorial = DB[:tutorials].where(short_code:short_code).first
   launch_tutorial(tutorial)
 end
 

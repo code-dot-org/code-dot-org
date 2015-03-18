@@ -1,0 +1,104 @@
+#hoc-header-branding {
+    width: 105px;
+    margin: -1.625em 0 0 0;
+    padding: 0;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+#hoc-header-branding img {
+    width: 100%;
+    max-width: 100%;
+}
+.headerlink {
+    text-transform: uppercase;
+}
+.headerlink:link,
+.headerlink:visited,
+.headerlink:hover,
+.headerlink:active {
+    margin-left: 20px;
+}
+
+.front-header-banner {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+
+.front-header-banner h1 {
+  color: white;
+  margin: 0px;
+  font-size: 24px;
+}
+.front-header-banner h2 {
+  color: white;
+  margin: 0px;
+  font-size: 36px;
+}
+.front-header-banner h3 {
+  color: white;
+  margin: 0px;
+  font-size: 22px;
+  line-height: 2.2em;
+}
+.front-header-banner h4 {
+  color: white;
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+#flags-banner {
+    margin: 60px 0 0 0;
+}
+#flags-banner img {
+    width: 100%;
+    max-width: 100%;
+}
+#language-dropdown {
+    float: right;
+    margin: .875em 0 0 40px;
+    width: 150px;
+    text-align: left;
+}
+#language-dropdown .selectize-input,
+#language-dropdown .selectize-dropdown {
+    font-size: 12px;
+}
+#language-dropdown .selectize-input {
+    padding: 2px 8px;
+    min-height: 28px;
+}
+label.has-error {
+    color: #b94a48;
+}
+@media screen and (min-width: 992px) {
+    #signupform h2 {
+        margin-top: 0;
+    }
+}
+.button-container {
+    text-align:right;
+    margin-top: 50px;
+}
+@media (max-width: 768px) {
+    .centered {
+        text-align: left;
+        margin-top: 0px;
+    }
+}
+@media (max-width: 500px) {
+  .front-header-banner h1 {
+      font-size: 14px;
+  }
+  .front-header-banner h2 {
+      font-size: 16px;
+  }
+  .front-header-banner h3 {
+      font-size: 12px;
+  }
+  .front-header-banner h4 {
+      font-size: 16px;
+  }
+}

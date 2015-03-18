@@ -38,6 +38,7 @@ group :development, :test do
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'timecop'
+  gem 'rubocop', require: false
 
   # for ui testing
   gem 'cucumber'
@@ -93,9 +94,9 @@ gem 'nokogiri', '1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', group: [:staging, :production] # error monitoring
+gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
 
-gem 'newrelic_rpm', group: [:staging, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.1.1'
 
@@ -137,3 +138,4 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 gem 'react-rails'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
+gem 'aws-sdk', '~> 2'
