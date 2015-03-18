@@ -154,7 +154,7 @@ levels.custom = {
   },
 };
 
-levels.ec_simple = utils.extend(levels['custom'], {
+levels.ec_simple = utils.extend(levels.custom, {
   'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.95,
