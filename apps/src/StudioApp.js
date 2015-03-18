@@ -667,7 +667,9 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
     }
 
     if (currentlyHidden || userVisible === 'false') {
