@@ -1025,7 +1025,7 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.jQuery) {
+    if (window.$) {
       $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
