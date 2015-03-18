@@ -597,7 +597,6 @@ NetSimRouterNode.prototype.getLog = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
-
   if (!this.simulateForSender_) {
     // Not configured to handle anything yet; don't process messages.
     return;
@@ -609,35 +608,94 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
-  var self = this;
-  var messages = rows.map(function (row) {
-    return new NetSimMessage(self.shard_, row);
-  }).filter(function (message) {
-    return message.fromNodeID === self.simulateForSender_ &&
-        message.toNodeID === self.entityID;
-  });
+  var messages = rows
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this))
+      .filter(function (message) {
+        return message.fromNodeID === this.simulateForSender_ &&
+            message.toNodeID === this.entityID;
+      }.bind(this));
 
-  // If any messages are for us, get our routing table and process messages.
-  if (messages.length > 0) {
-    this.isProcessingMessages_ = true;
-    this.getConnections(function (err, wires) {
-      messages.forEach(function (message) {
 
-        // Pull the message off the wire, and hold it in-memory until we route it.
-        // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (err) {
-          if (err) {
-            logger.error("Error pulling message off the wire for routing; " +
-                err.message);
-            return;
-          }
-          self.routeMessage_(message, wires);
-        });
-
-      });
-      self.isProcessingMessages_ = false;
-    });
+  if (messages.length === 0) {
+    // No messages for us, no work to do.
+    return;
   }
+
+  logger.info("Router received " + messages.length + " messages");
+  this.isProcessingMessages_ = true;
+
+  // Step 1: Pull all our messages out of storage.
+  this.destroyMessages_(messages, function (err) {
+    if (err) {
+      logger.error("Error pulling message off the wire for routing; " + err.message);
+      this.isProcessingMessages_ = false;
+      return;
+    }
+
+    // Step 2: Get our connection info, which we will need for routing
+    this.getConnections(function (err, wires) {
+      if (err) {
+        logger.error("Error retrieving router connection info");
+        this.isProcessingMessages_ = false;
+        return;
+      }
+
+      // Step 3: Route all messages to destinations
+      this.routeMessages_(messages, wires, function () {
+        // Clean up: Clear "processing" flag so we can process a new batch
+        //           of messages next time the table changes.
+        logger.info("Router finished processing " + messages.length + " messages");
+        this.isProcessingMessages_ = false;
+      }.bind(this));
+    }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Destroys all messages (from remote storage) asynchronously, and calls
+ * onComplete when all messages have been destroyed and/or an error occurs.
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimRouterNode.prototype.destroyMessages_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null, true);
+    return;
+  }
+
+  messages[0].destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.destroyMessages_(messages.slice(1), onComplete);
+  }.bind(this));
+};
+
+/**
+ * Routes all messages (to remote storage) asynchronously, and calls
+ * onComplete when all messages have been routed and/or an error occurs.
+ * @param {NetSimMessage[]} messages
+ * @param {Array.<NetSimWire>} myWires
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimRouterNode.prototype.routeMessages_ = function (messages, myWires, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  this.routeMessage_(messages[0], myWires, function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.routeMessages_(messages.slice(1), myWires, onComplete);
+  }.bind(this));
 };
 
 /**
@@ -647,9 +705,10 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  *
  * @param {NetSimMessage} message
  * @param {Array.<NetSimWire>} myWires
+ * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplete) {
   var toAddress;
 
   // Find a connection to route this message to.
@@ -658,6 +717,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
         PacketEncoder.defaultPacketEncoder.getField('toAddress', message.payload));
   } catch (error) {
     this.log(message.payload);
+    onComplete(new Error("Packet not readable by router"));
     return;
   }
 
@@ -666,6 +726,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // TODO (bbuchanan): Send to a real auto-dns node
   if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
     this.generateDnsResponse_(message, myWires);
+    onComplete(null);
     return;
   }
 
@@ -673,8 +734,8 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     return wire.localAddress === toAddress;
   });
   if (destWires.length === 0) {
-    // Destination address not in local network.
     this.log(message.payload);
+    onComplete(new Error("Destination address not in local network"));
     return;
   }
 
@@ -688,8 +749,9 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       destWire.remoteNodeID,
       destWire.localNodeID,
       message.payload,
-      function () {
+      function (err, result) {
         this.log(message.payload);
+        onComplete(err, result);
       }.bind(this)
   );
 };
