@@ -573,7 +573,7 @@ SQL
   end
 
   def primary_script
-    working_on_scripts.first.cached
+    working_on_scripts.first.try(:cached)
   end
 
   def needs_to_backfill_user_scripts?
