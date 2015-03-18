@@ -455,7 +455,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
     var element = this.svg_.getRootElement();
     do {
       // Loop through this block and every parent.
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
@@ -1336,7 +1336,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
   // Apply to all children recursively
   this.childBlocks_.forEach(function (child) {
-    child.setUserVisible(userVisible);
+    child.setUserVisible(userVisible, opt_renderAfterVisible);
   });
 
   if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
