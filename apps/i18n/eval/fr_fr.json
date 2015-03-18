@@ -1,11 +1,12 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Vous avez utilisé une chaîne de couleur invalide : {val}",
+  "badStyleStringError": "Vous avez utilisé une chaîne de couleur invalide : {val}",
   "circleBlockTitle": "cercle (rayon, style, couleur)",
   "displayBlockTitle": "affichage",
   "ellipseBlockTitle": "ellipse (largeur, hauteur, style, couleur)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Un de vos blocs ne contient pas d'entrée.",
   "extraTopBlocks": "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "superposition (haut, bas)",
   "placeImageBlockTitle": "place-image (x, y, image)",
   "offsetBlockTitle": "decalage(x, y, image)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "arriere-plan (bas, haut)",
   "outline": "contour",
   "solid": "unie",
-  "string": "chaîne"
+  "string": "chaîne",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code."
 }

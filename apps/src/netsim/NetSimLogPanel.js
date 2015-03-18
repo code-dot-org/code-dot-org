@@ -50,7 +50,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
-    className: 'netsim_log_panel',
+    className: 'netsim-log-panel',
     panelTitle: logTitle,
     beginMinimized: isMinimized
   });

@@ -2,17 +2,14 @@
 require 'fileutils'
 
 dashboard_files = [
-  'contract_match',
   'data',
   'devise',
   'dsls',
-  'external',
   'instructions',
   'match',
   'multi',
   'scripts',
   'slides',
-  'text_match',
   'unplugged'
 ]
 

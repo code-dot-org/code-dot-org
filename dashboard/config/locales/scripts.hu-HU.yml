@@ -277,34 +277,11 @@
           Artist Binary: 'Művész: a kettes számrendszer'
           description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
         Course4pre:
+          title: A 4. tanfolyam előfeltétel
           description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
             akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          'Maze: Sequence': 'Labirintus: sorozat'
-          'Artist: Sequence': 'Művész: sorozat'
-          'Artist: Loops': 'Művész: ciklusok'
-          'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
-          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
-          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Művész: függvények'
-          'Bee: Debugging': 'Méh: Hibakeresés'
-        course4pre:
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
-            akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          'Maze: Sequence': 'Labirintus: sorozat'
-          'Artist: Sequence': 'Művész: sorozat'
-          'Artist: Loops': 'Művész: ciklusok'
-          'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
-          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
-          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Művész: függvények'
-          'Bee: Debugging': 'Méh: Hibakeresés'
-        Course4pre (Case Conflict):
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
-            akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik
+            nem vettek részt a 2. és 3. tanfolyamon.
           Course 4 Prerequisite: A 4. tanfolyam előfeltétel
           'Maze: Sequence': 'Labirintus: sorozat'
           'Artist: Sequence': 'Művész: sorozat'
@@ -337,6 +314,9 @@
           Special: Különleges
           Binary: Bináris
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Matematikai blokkok
@@ -370,7 +350,7 @@
           'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
           'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
             Feltételes utasítások és összetett függvények'
-          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Eval: Conditionals': Feltételek
           'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
             feladatok: Ütközés észlelése és a távolság képlete'
           'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
@@ -381,7 +361,11 @@
             Játéklaborral!
           description: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
           Play Lab: Játéklabor
+          Infinity: Végtelen
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -391,6 +375,9 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: A dizájn receptje
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
           Blockly Basics: Blockly Basics
           Writing computer programs: Writing computer programs
@@ -399,11 +386,24 @@
           Classroom Culture: Classroom Culture
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
             3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
+          Unit 1: 1. rész
+          Unit 2: 2. rész
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity Playlab
           description_short: Create a story or make a game with Infinity Play Lab!!
@@ -429,12 +429,155 @@
           The Farmer: A Farmer
           Conditionals: Feltételek
           The Artist 3: A művész 3
-          Song Writing: Dal iras
+          Song Writing: Dal írás
           The Farmer 2: A Farmer 2
-          Abstraction: Absztrakció
+          Abstraction: Változó
           The Artist 4: A művész 4
           Relay Programming: Váltó programozás
           The Farmer 3: A Farmer 3
           The Internet: Az internet
           The Artist 5: A művész 5
           Wrap-up: Összefoglaló
+        edit-code:
+          title: Kód szerkesztése
+          description: ''
+          The Maze: A labirintus
+          Applab: Applab
+          The Artist: A művész
+          Play Lab: Játéklabor
+        events:
+          title: Események
+          description: ''
+          Bounce: Visszapattanós
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kód
+          description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc
+            alatt? Próbáld ki a Flappy kód gyakorlatot!
+          Flappy Code: Flappy kód
+        jigsaw:
+          title: Kirakós játék
+          description: ''
+          Jigsaw: Kirakós játék
+        step:
+          title: Lépés
+          description: ''
+          Step: Lépés
+        Hour of Code:
+          title: Kódolás órája 2013
+          description: ''
+          Hour of Code 2013: Kódolás órája 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: A 4. tanfolyam előfeltétel
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
+            akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik
+            nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
+          'Artist: Loops': 'Művész: ciklusok'
+          'Bee: Conditionals': 'Méh: Feltételes mód'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
+          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
+          'Artist: Functions': 'Művész: függvények'
+          'Bee: Debugging': 'Méh: Hibakeresés'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Gép nélküli feladatok:
+            videojátékok és a koordináta síkok'
+          'Calc: Evaluation Blocks': 'Számológép: Kiértékelési blokkok'
+          'Eval: Strings and Images': 'Kiértékelés: Szöveges típus és a képek'
+          'Unplugged: Contracts': 'Számítógép nélkül: Szerződések'
+          'Eval: Writing Contracts': 'Kiértékelés: Szerződések írása'
+          'Calc: Defining Variables': 'Számológép: Változók deklarációja'
+          'Play Lab: Defining Variables (Big Game)': 'Játéklabor: változók deklarálása
+            (A Nagy Játék)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Gép nélküli feladatok: a dizájn receptje'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Játéklabor: Animáció (A Nagy Játék)'
+          'Unplugged: Booleans': 'Gép nélküli feladatok: logikai változók'
+          'Eval: Boolean Operators': 'Kiértékelés: Logikai műveletek'
+          'Play Lab: Booleans': 'Játéklabor: a logikai típus'
+          'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
+            Feltételes utasítások és összetett függvények'
+          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
+            feladatok: Ütközés észlelése és a távolság képlete'
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Szerződések
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: A dizájn receptje
+          Your Game - Animation: Your Game - Animation
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Feltételes utasítások és összetett
+            függvények
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection

@@ -2378,7 +2378,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.packetSizeControl_ = null;
   
   NetSimPanel.call(this, rootDiv, {
-    className: 'netsim_send_panel',
+    className: 'netsim-send-panel',
     panelTitle: netsimMsg.sendAMessage()
   });
 };
@@ -3279,7 +3279,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
-    className: 'netsim_log_panel',
+    className: 'netsim-log-panel',
     panelTitle: logTitle,
     beginMinimized: isMinimized
   });
@@ -4126,7 +4126,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
     // Style rows by row type.
     if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
-      item.addClass('router_row');
+      item.addClass('router-row');
     } else {
       item.addClass('user_row');
       if (simNode.entityID === this.connection_.myNode.entityID) {
@@ -4136,7 +4136,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
     // Preserve selected item across refresh.
     if (simNode.entityID === this.selectedID_) {
-      item.addClass('selected_row');
+      item.addClass('selected-row');
       this.selectedListItem_ = item;
     }
 
@@ -4162,7 +4162,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
 
   // Deselect old row
   if (oldSelectedListItem) {
-    oldSelectedListItem.removeClass('selected_row');
+    oldSelectedListItem.removeClass('selected-row');
   }
   this.selectedID_ = undefined;
   this.selectedListItem_ = undefined;
@@ -4171,7 +4171,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   if (connectionTarget.entityID !== oldSelectedID) {
     this.selectedID_ = connectionTarget.entityID;
     this.selectedListItem_ = listItem;
-    this.selectedListItem_.addClass('selected_row');
+    this.selectedListItem_.addClass('selected-row');
   }
 
   this.onSelectionChange();

@@ -91,8 +91,9 @@
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "defaultTwitterText": "Check out what I made",
   "blocks": "blocks",
-  "clearPuzzle": "Clear Puzzle",
-  "clearPuzzleConfirm": "This will delete all blocks and reset the puzzle to its start state.",
-  "clearPuzzleConfirmHeader": "Are you sure you want to clear the puzzle?",
+  "clearPuzzle": "Start Over",
+  "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
+  "clearPuzzleConfirmHeader": "Are you sure you want to start over?",
+  "keepPlaying": "Keep Playing",
   "workspaceHeaderShort": "Workspace: "
 }

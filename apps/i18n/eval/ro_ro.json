@@ -1,11 +1,12 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Aţi folosit un cod text de culoare invalid: {val}",
+  "badStyleStringError": "Aţi folosit un stil invalid de text: {val}",
   "circleBlockTitle": "cerc (raza, stil, culoare)",
   "displayBlockTitle": "afişare",
   "ellipseBlockTitle": "elipsă (lăţime, înălţime, stil, culoare)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Ai un bloc necompletat.",
   "extraTopBlocks": "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"afișare\"?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "suprapunere (sus, jos)",
   "placeImageBlockTitle": "loc-imagine (x, y, imagine)",
   "offsetBlockTitle": "offset (x, y, image)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "underlay (jos, sus)",
   "outline": "schiță",
   "solid": "solid",
-  "string": "șir"
+  "string": "șir",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code."
 }

@@ -99,12 +99,12 @@ ko:
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
-        Webapp: App Lab
+        Webapp: 앱 연구실
         ArtistEC: The Artist
         TextMatch: 글자 맞추기
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: 앱 연구실
+        NetSim: 인터넷 시뮬레이터
     trophy:
       name:
         Bronze: 동
@@ -203,7 +203,7 @@ ko:
         turtle_3_5: '이제, "집 그리기" 블럭을 새로 만들고, 그 블럭을 이용해서 고양이 2마리를 위한 집을 만들어 보세요. 힌트: "함수 이름" 이 적혀있는 블럭을 이용해서 새로운 블럭을 만들고, 원하는 이름을 넣어서 사용하면 됩니다.'
         turtle_3_6: '"사각형 그리기" 블럭을 살펴보고, "삼각형 그리기" 함수에 "길이" 값을 전달할 수 있도록 추가해 보세요. 그 다음에 다른 크기의 삼각형들을 그리면 됩니다. (힌트: 별 모양을 눌러 함수에게 어떤 값을 사용하도록 할 수 있습니다.)'
         turtle_3_7: '"집 그리기" 함수에 "길이"를 전달할 수 있도록 추가해서 코끼리 집을 만들어 보세요. (각 선의 길이는 150 픽셀)'
-        turtle_3_8: '이전 퍼즐에서 사용된 블럭들이 모두 있습니다. "집 그리기" 함수를 수정해서 사용하고, 모든 집을 그린 후에는 마지막 집의 오른쪽 아래에 위치할 수 있도록 해보세요. 주어진 함수 블럭을 수정해서 3개의 집을 지으면 됩니다.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: '"집 그리기" 함수를 아무 도움 없이 스스로 만들 수 있을까요? 도전해 보세요.'
         turtle_3_10: 지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진 것들을 상상하고 그려보세요.
         maze_karel_debug_seq_1: 잘못된 곳 찾기! 퍼즐에 오신 것을 환영합니다! 만들어져 있는 코드가 제대로 동작하지 않아요. 틀린 부분을 찾고, 수정해서밭을 평평하게 만들 수 있도록 도와줄 수 있겠어요?
@@ -324,7 +324,7 @@ ko:
         maze_wordsearch_k_15: '어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.'
         maze_wordsearch_k_16: '어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.'
         maze_wordsearch_k_20: '테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.'
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: 도구 상자에 있는 블록을 사용하여 당신의 앱을 만드십시오.
         turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양, 나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
         studio_ec_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
@@ -428,6 +428,12 @@ ko:
         playlab_intro: 플레이 랩 소개
         playlab_events: 플레이 랩 이벤트
         playlab_repeat_forever: 플레이 랩 무한 반복
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: 변수
+        msm_7_functions: 함수
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

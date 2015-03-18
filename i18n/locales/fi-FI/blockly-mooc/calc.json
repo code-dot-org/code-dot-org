@@ -1,13 +1,17 @@
 {
-  "compute":"laskea",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"Liitä lohko \"laske\"-lohkoon.",
+  "emptyFunctionalBlock":"Sinulla on lohko, josta puuttuu syöte.",
   "equivalentExpression":"Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
+  "evaluate":"evaluate",
   "extraTopBlocks":"Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
   "failedInput":"Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla.",
   "goal":"Tavoite:",
-  "levelIncompleteError":"Your expression does not match the goal.",
-  "reinfFeedbackMsg":"Tässä on laskelmasi! Jatka sen työstämistä tai siirry tehtävään!",
+  "levelIncompleteError":"Lausekkeesi ei vastaa tavoitetta.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!",
   "yourExpression":"Lausekkeesi:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Kutsut funktiotasi väärällä arvolla.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expresison does not return the correct result."
 }

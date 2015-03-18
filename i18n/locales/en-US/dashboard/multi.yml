@@ -524,13 +524,13 @@ en:
         15: crwdns34707:0crwdne34707:0
         x: crwdns34708:0crwdne34708:0
       msm variables multi 10:
-        f(x) = x * 17: crwdns34709:0crwdne34709:0
+        /script_assets/msm/define_f.png, 300: crwdns35225:0crwdne35225:0
         What is the name of the function?: crwdns34710:0crwdne34710:0
         f: crwdns34711:0crwdne34711:0
         x: crwdns34712:0crwdne34712:0
         17: crwdns34713:0crwdne34713:0
       msm variables multi 11:
-        f(x) = x * 17: crwdns34714:0crwdne34714:0
+        /script_assets/msm/define_f.png, 300: crwdns35226:0crwdne35226:0
         What is the name of the parameter?: crwdns34715:0crwdne34715:0
         f: crwdns34716:0crwdne34716:0
         x: crwdns34717:0crwdne34717:0
@@ -542,8 +542,8 @@ en:
         x: crwdns34722:0crwdne34722:0
         17: crwdns34723:0crwdne34723:0
       msm variables multi 13:
-        f(x) = x * 17: crwdns34724:0crwdne34724:0
-        What is f(1)?: crwdns34725:0crwdne34725:0
+        /script_assets/msm/define_f.png, 300: crwdns35227:0crwdne35227:0
+        What should f(1) produce?: crwdns35585:0crwdne35585:0
         x: crwdns34726:0crwdne34726:0
         117: crwdns34727:0crwdne34727:0
         17: crwdns34728:0crwdne34728:0
@@ -560,19 +560,19 @@ en:
         5: crwdns34737:0crwdne34737:0
         x: crwdns34738:0crwdne34738:0
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: crwdns34739:0crwdne34739:0
+        /script_assets/msm/define_xpq.png, 600: crwdns35228:0crwdne35228:0
         What is the value of x?: crwdns34740:0crwdne34740:0
         3: crwdns34741:0crwdne34741:0
         15: crwdns34742:0crwdne34742:0
         do not know: crwdns34743:0crwdne34743:0
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: crwdns34744:0crwdne34744:0
+        /script_assets/msm/define_xpq.png, 600: crwdns35229:0crwdne35229:0
         What is the value of (p - x)?: crwdns34745:0crwdne34745:0
         q: crwdns34746:0crwdne34746:0
         3: crwdns34747:0crwdne34747:0
         5: crwdns34748:0crwdne34748:0
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: crwdns34749:0crwdne34749:0
+        /script_assets/msm/define_xpq.png, 600: crwdns35230:0crwdne35230:0
         What is the value of string-length(q)?: crwdns34750:0crwdne34750:0
         1: crwdns34751:0crwdne34751:0
         hello: crwdns34752:0crwdne34752:0
@@ -629,13 +629,82 @@ en:
         a week-long course to learn about computers: crwdns34785:0crwdne34785:0
         a set of instructions you give a computer to execute: crwdns34786:0crwdne34786:0
         a secret password: crwdns34787:0crwdne34787:0
+      PDK5 Beyond:
+        What do I do now?: crwdns35231:0crwdne35231:0
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: crwdns35232:0crwdne35232:0
+        Im finished: crwdns35233:0crwdne35233:0
+      PDK5 Blockly Intro:
+        Writing your first computer program!: crwdns35234:0crwdne35234:0
+        Are you ready to move on?: crwdns35235:0crwdne35235:0
+        "Yes": crwdns35236:0crwdne35236:0
+      PDK5 Classroom Culture:
+        Classroom Culture: crwdns35237:0crwdne35237:0
+        Are you ready to move on?: crwdns35238:0crwdne35238:0
+        "Yes": crwdns35239:0crwdne35239:0
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: crwdns35240:0crwdne35240:0
+        Are you ready to move on?: crwdns35241:0crwdne35241:0
+        "Yes": crwdns35242:0crwdne35242:0
+      PDK5 Course Overview:
+        Overview of K-5 Courses: crwdns35243:0crwdne35243:0
+        Are you ready to move on?: crwdns35244:0crwdne35244:0
+        "Yes": crwdns35245:0crwdne35245:0
+      PDK5 Glossary:
+        Glossary: crwdns35246:0crwdne35246:0
+        Are you ready to move on?: crwdns35247:0crwdne35247:0
+        "Yes": crwdns35248:0crwdne35248:0
+      PDK5 Intro:
+        Welcome!: crwdns35249:0crwdne35249:0
+        Before now, have you ever participated in an online PD program?: crwdns35250:0crwdne35250:0
+        "Yes": crwdns35251:0crwdne35251:0
+        "No": crwdns35252:0crwdne35252:0
+      PDK5 Sequence2:
+        More Sequencing: crwdns35253:0crwdne35253:0
+        The grey rectangle to the left of the workspace is called the: crwdns35254:0crwdne35254:0
+        toolbox: crwdns35255:0crwdne35255:0
+        shelf: crwdns35256:0crwdne35256:0
+        bin: crwdns35257:0crwdne35257:0
+        dropdown: crwdns35258:0crwdne35258:0
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: crwdns35259:0crwdne35259:0
+        Are you ready to move on?: crwdns35260:0crwdne35260:0
+        "Yes": crwdns35261:0crwdne35261:0
+      PDK5 Test1:
+        title: crwdns35262:0crwdne35262:0
+        description here: crwdns35263:0crwdne35263:0
+        Question: crwdns35264:0crwdne35264:0
+        wrong answer: crwdns35265:0crwdne35265:0
+        right answer: crwdns35266:0crwdne35266:0
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: crwdns35267:0crwdne35267:0
+        Are you ready to move on?: crwdns35268:0crwdne35268:0
+        "Yes": crwdns35269:0crwdne35269:0
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: crwdns35270:0crwdne35270:0
+        Are you ready to move on?: crwdns35271:0crwdne35271:0
+        "Yes": crwdns35272:0crwdne35272:0
+      PDK5 Visual Languages:
+        Visual Programming Languages: crwdns35273:0crwdne35273:0
+        Based on the video you saw before, please answer the question below.: crwdns35274:0crwdne35274:0
+        Why are visual programming languages easier to learn than text-based programming languages?: crwdns35275:0crwdne35275:0
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: crwdns35276:0crwdne35276:0
+        Because you can focus on the logic of programming: crwdns35277:0crwdne35277:0
+        Because the commands are available in a menu rather than having to remember them yourself: crwdns35278:0crwdne35278:0
+        All of the above: crwdns35279:0crwdne35279:0
+      PDK5 What is CS:
+        What is Computer Science?: crwdns35280:0crwdne35280:0
+        "A computer program, or code, is:": crwdns35281:0crwdne35281:0
+        a part inside of a computer: crwdns35282:0crwdne35282:0
+        a set of instructions a person gives a computer to execute: crwdns35283:0crwdne35283:0
+        a week-long course to learn about computers: crwdns35284:0crwdne35284:0
+        a secret password: crwdns35285:0crwdne35285:0
       Play Lab Rocket 6:
         Rocket Multiple Choice: crwdns34788:0crwdne34788:0
         Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: crwdns34789:0crwdne34789:0
-        rocket-height (seconds) = seconds + 12: crwdns34790:0crwdne34790:0
-        rocket-height (seconds) = seconds * 12: crwdns34791:0crwdne34791:0
-        rocket-height (seconds) = 48 / seconds: crwdns34792:0crwdne34792:0
-        rocket-height (seconds)  = seconds * 48: crwdns34793:0crwdne34793:0
+        rocket-height(seconds) = seconds + 12: crwdns35286:0crwdne35286:0
+        rocket-height(seconds) = seconds * 12: crwdns35287:0crwdne35287:0
+        rocket-height(seconds) = 48 / seconds: crwdns35288:0crwdne35288:0
+        rocket-height(seconds)  = seconds * 48: crwdns35289:0crwdne35289:0
       Play Lab Rocket 7:
         Rocket Multiple Choice: crwdns34794:0crwdne34794:0
         0: crwdns34795:0crwdne34795:0

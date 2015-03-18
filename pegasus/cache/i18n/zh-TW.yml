@@ -14,6 +14,7 @@
   learn_now: 現在就開始進行學習課程
   petition_message: 每個在學校的學生都應該有機會去學習電腦科學
   petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
@@ -99,6 +100,8 @@
   learn_classes: 尋找當地的教室
   hoc_is_here: '#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg'
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -113,9 +116,9 @@
   students_and_lines: '%{students} 個學生已經完成"一小時的程式碼"課程 ，同時撰寫了 %{lines} 行的程式碼。'
   start_hoc: 現在就開始進行"一小時的程式碼"課程吧
   contact_form_topic_press: 新聞/媒體（採訪或演講活動）
-  stats_michael: 我 <b>從來沒有</b> 看過我的學生們對學習感到如此地興奮。" -Michael Clark老師。
   stats_nina: '"每一天都宣告著相同的結果 &mdash; 100%的參與."-Nina Nichols Peery老師'
   stats_student: '"我知道這是 <b>千載難逢</b> 的機會。"-Mariana Alzate, 五年級'
+  stats_michael: 我 <b>從來沒有</b> 看過我的學生們對學習感到如此地興奮。" -Michael Clark老師。
   studiobar_title: 探討 <a href='HTTP://studio.code.org'> 編程工作室</a>
   studiobar_elementary_title: 初級課程
   studiobar_elementary_body: 我們三個的新課程，為 K &#8209; 5
@@ -131,6 +134,27 @@
   studiobar_donate_body: 一個孩子學習為你捐的每一分錢
   studiobar_shop_title: 商店
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: 一小時的編程
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: 課程 4
+  homepage_slot_text_shop: 商店
+  homepage_slot_text_flappy: Flappy遊戲設計
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ''
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -302,6 +326,8 @@
   dashboard_login_picture: 圖片
   dashboard_login_none: 電子郵件
   dashboard_new_password: 新密碼
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: 未完成
   dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
   dashboard_progress_completed_perfect: 完美完成
@@ -790,27 +816,3 @@
   alice_beyond_longdescription: 愛麗絲計劃利用一種創新的程式設計環境支援3D 動畫創作 ，及提供跨年齡和年級的教學工具和教材來訓練學生的計算思維、
     解決問題技巧和電腦程式設計。
   sphero_beyond_longdescription: 無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

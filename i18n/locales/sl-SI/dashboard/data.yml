@@ -203,7 +203,7 @@ sl:
         turtle_3_5: 'Napiši še funkcijo "nariši hišo". Pomoč: ustvarite novo funkcijo z uporabo ukaza "Naredi nekaj" (angl.: "do something") in vnesite besedilo za ime novega bloka.'
         turtle_3_6: 'Zgleduj se po bloku "nariši kvadrat" in dodaj "dolžino" v ukaz "nariši trikotnik", da boš lahko risal/a trikotnike s stranicami različnih dolžin. Pomoč: če klikneš zvezdico, lahko dodaš vnos "dolžine" v funkcijo'
         turtle_3_7: 'V funkcijo "nariši hišo" dodaj "dolžino" in zgradi bivališče za slona (s stranicami dolžine 150 pik)'
-        turtle_3_8: 'Tukaj so vsi bloki iz prejšnje uganke. Funkcijo "nariši hišo" zdaj popravi tako, da bom risanje hiše zaključil v njenem spodnjem desnem kotu. Potem uporabi popravljeno funkcijo za to, da narišeš tri hiše.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: Lahko še enkrat narediš funkcijo »nariši hišo« brez pomoči? Poskusi in nato nariši vrsto hiš.
         turtle_3_10: Zdaj imaš že kar nekaj znanja! Uporabi ga in nariši nekaj novega. Poskusi narisati zvezdo, spiralo ali snežinko.
         maze_karel_debug_seq_1: Bodi detektiv! V tej kodi se skriva napaka. Najdi jo. Če jo odpraviš, bo moja njiva lepo zravnana in pripravljena na sajenje.
@@ -435,6 +435,12 @@ sl:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Spremenljivke
+        msm_7_functions: Funkcije
     callout:
       text:
         drag_blocks: 'Povleci blok "premakni se" in ga postavi pod drugi blok'
