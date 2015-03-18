@@ -115,7 +115,7 @@ class DynamoTable
   def delete(id)
     begin
       db.delete_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         key:{'hash'=>@hash, 'row_id'=>id},
         expected:row_id_exists(id),
       )
@@ -130,7 +130,7 @@ class DynamoTable
     unless ids.empty?
       db.batch_write_item(
         request_items:{
-          CDO.dynamo_table_name => ids.map do |id|
+          CDO.dynamo_tables_table => ids.map do |id|
             { delete_request: { key:{'hash'=>@hash, 'row_id'=>id}, } }
           end
         }
@@ -141,7 +141,7 @@ class DynamoTable
 
   def fetch(id)
     row = db.get_item(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key:{'hash'=>@hash, 'row_id'=>id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
@@ -155,7 +155,7 @@ class DynamoTable
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -182,7 +182,7 @@ class DynamoTable
       row_id = next_id
 
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
           hash:@hash, 
           channel_id:@channel_id,
@@ -205,7 +205,7 @@ class DynamoTable
 
   def next_id()
     page = db.query(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key_conditions: {
         "hash" => {
           attribute_value_list: [@hash],
@@ -234,7 +234,7 @@ class DynamoTable
   def update(id, value, ip_address)
     begin
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
           hash:@hash,
           row_id:id,
@@ -257,7 +257,7 @@ class DynamoTable
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -268,7 +268,7 @@ class DynamoTable
         ).first
 
         page[:items].each do |item|
-          results << value_from_item(item)
+          results << value_from_row(item)
         end
 
         last_evaluated_key = page[:last_evaluated_key]
@@ -276,17 +276,22 @@ class DynamoTable
     end
   end
 
-  def value_from_item(item)
-    JSON.load(item['value']).merge(id:item['row_id'].to_i)
+  def value_from_row(row)
+    JSON.load(row['value']).merge(id:row['row_id'].to_i)
   end
 
   def self.table_names(channel_id)
+    @dynamo_db ||= Aws::DynamoDB::Client.new(
+      region: 'us-east-1',
+      access_key_id: CDO.s3_access_key_id, 
+      secret_access_key: CDO.s3_secret_access_key, 
+    )
     last_evaluated_key = nil
     results = {}
     begin
-      page = db.query(
-        table_name:CDO.dynamo_table_name,
-        index_name:'channel_id-table_name-index',
+      page = @dynamo_db.query(
+        table_name:CDO.dynamo_tables_table,
+        index_name:CDO.dynamo_tables_index,
         key_conditions: {
           "channel_id" => {
             attribute_value_list: [channel_id.to_i],

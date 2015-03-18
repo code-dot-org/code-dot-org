@@ -73,7 +73,7 @@ class DynamoPropertyBag
     @hash = "#{@channel_id}:#{storage_id}"
   end
 
-  def db()
+  def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
       access_key_id: CDO.s3_access_key_id, 
@@ -84,7 +84,7 @@ class DynamoPropertyBag
   def delete(name)
     begin
       db.delete_item(
-        table_name:CDO.dynamo_properties_name,
+        table_name:CDO.dynamo_properties_table,
         key:{'hash'=>@hash,name:name},
         expected:name_exists(name),
       )
@@ -96,27 +96,27 @@ class DynamoPropertyBag
 
   def get(name)
     item = db.get_item(
-      table_name:CDO.dynamo_properties_name,
+      table_name:CDO.dynamo_properties_table,
       key:{'hash'=>@hash, 'name'=>name},
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item
-    item['value']
+    JSON.load(item['value'])
   end
 
   def set(name, value, ip_address)
-    mydb = db
-    retval = mydb.put_item(
-      table_name:CDO.dynamo_properties_name,
+    db.put_item(
+      table_name:CDO.dynamo_properties_table,
       item:{
         hash:@hash,
         name:name,
-        value:value,
-        ip_address:ip_address,
+        updated_at:DateTime.now.to_s,
+        updated_ip:ip_address,
+        value:value.to_json,
       },
     )
     value
-  end        
+  end
 
   def to_hash()
     last_evaluated_key = nil
@@ -124,7 +124,7 @@ class DynamoPropertyBag
     results = {}
     begin
       page = db.query(
-        table_name:CDO.dynamo_properties_name,
+        table_name:CDO.dynamo_properties_table,
         key_conditions: {
           "hash" => {
             attribute_value_list: [@hash],
@@ -134,10 +134,9 @@ class DynamoPropertyBag
         attributes_to_get:['name', 'value'],
         exclusive_start_key:last_evaluated_key,
       ).first
-      puts page.data
 
       page[:items].each do |item|
-        results[item['name']] = item['value']
+        results[item['name']] = JSON.load(item['value'])
       end
 
       last_evaluated_key = page[:last_evaluated_key]
