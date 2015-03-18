@@ -1336,7 +1336,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
   // Apply to all children recursively
   this.childBlocks_.forEach(function (child) {
-    child.setUserVisible(userVisible);
+    child.setUserVisible(userVisible, opt_renderAfterVisible);
   });
 
   if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
