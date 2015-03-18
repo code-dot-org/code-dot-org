@@ -344,6 +344,8 @@ class User < ActiveRecord::Base
     #broze id: 1, silver id: 2 and gold id: 3
     User.connection.select_one(<<SQL)
 select
+  count(case when ul.best_result >= #{Activity::MINIMUM_PASS_RESULT} then 1 else null end) as current_levels,
+  count(*) as max_levels,
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl

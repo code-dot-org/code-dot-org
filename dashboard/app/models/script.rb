@@ -342,18 +342,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def summarize
-    summary = {
-      id: id,
-      name: name,
-      stages: stages.map(&:summarize),
-    }
-
-    summary[:trophies] = Concept.summarize_all if trophies
-
-    summary
-  end
-
   def self.clear_cache
     # only call this in a test!
    @@script_cache = nil
