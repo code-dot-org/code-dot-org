@@ -2987,22 +2987,27 @@ module.exports.blocks = [
 module.exports.categories = {
   'UI controls': {
     'color': 'yellow',
+    'rgb': '#FFD54F',
     'blocks': []
   },
   'Canvas': {
     'color': 'red',
+    'rgb': '#F87477',
     'blocks': []
   },
   'Data': {
-    'color': 'orange',
+    'color': 'lightgreen',
+    'rgb': '#D3E965',
     'blocks': []
   },
   'Turtle': {
     'color': 'cyan',
+    'rgb': '#00D2E2',
     'blocks': []
   },
   'Advanced': {
     'color': 'blue',
+    'rgb': '#19C3E1',
     'blocks': []
   },
 };
