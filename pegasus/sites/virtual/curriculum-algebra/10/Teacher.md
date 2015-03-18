@@ -54,7 +54,7 @@ Another curiousity with this program is that the rocket-height function will be 
 
 # Lesson Tip
 
-The contract can be quite long and may scroll off the screen.  To make dragging into the Definition area easier, consider collapsing the 1. Contract and 2. Examples areas by clicking on the arrow to the left of them.
+After creating simple linear movement, students will be asked to write functions to animate simple acceleration. Students will be given an input/output table from which to write their new function. You may want to work through these problems as a whole class, so that students can see how you might analyze an input/output table in order understand the relationship between input and output values.
 
 [/together]
 
@@ -63,7 +63,7 @@ The contract can be quite long and may scroll off the screen.  To make dragging 
 ## Activity: Rocket Height
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll write functions that manipulate images to create animations. Head to [MSM stage 10](http://studio.code.org/s/algebra/stage/10/puzzle/1) in Code Studio to get started programming.
+In this stage you'll write functions that manipulate images to create animations. Head to [CS in Algebra stage 10](http://studio.code.org/s/algebra/stage/10/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
