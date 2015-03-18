@@ -12821,7 +12821,7 @@ Blockly.Icon.prototype.setIconLocation = function(x, y) {
 };
 Blockly.Icon.prototype.computeIconLocation = function() {
   var blockXY = this.block_.getRelativeToSurfaceXY();
-  var iconXY = Blockly.getRelativeXY_(this.iconGroup_);
+  var iconXY = Blockly.getRelativeXY(this.iconGroup_);
   var newX = blockXY.x + iconXY.x + Blockly.Icon.RADIUS;
   var newY = blockXY.y + iconXY.y + Blockly.Icon.RADIUS;
   if(newX !== this.iconX_ || newY !== this.iconY_) {
@@ -13244,7 +13244,7 @@ Blockly.Connection.prototype.tighten_ = function() {
     if(!svgRoot) {
       throw"block is not rendered.";
     }
-    var xy = Blockly.getRelativeXY_(svgRoot);
+    var xy = Blockly.getRelativeXY(svgRoot);
     block.getSvgRoot().setAttribute("transform", "translate(" + (xy.x - dx) + ", " + (xy.y - dy) + ")");
     block.moveConnections_(-dx, -dy)
   }
@@ -14412,7 +14412,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
   if(this.svg_) {
     var element = this.svg_.getRootElement();
     do {
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode
@@ -22088,22 +22088,22 @@ Blockly.noEvent = function(e) {
   e.preventDefault();
   e.stopPropagation()
 };
-Blockly.getRelativeXY_ = function(element) {
+Blockly.getRelativeXY = function(element) {
   var xy = {x:0, y:0};
   var x = element.getAttribute("x");
   if(x) {
-    xy.x = parseInt(x, 10)
+    xy.x = parseFloat(x)
   }
   var y = element.getAttribute("y");
   if(y) {
-    xy.y = parseInt(y, 10)
+    xy.y = parseFloat(y)
   }
   var transform = element.getAttribute("transform");
   var r = transform && transform.match(/translate\(\s*([-\d.]+)([ ,]\s*([-\d.]+)\s*\))?/);
   if(r) {
-    xy.x += parseInt(r[1], 10);
+    xy.x += parseFloat(r[1]);
     if(r[3]) {
-      xy.y += parseInt(r[3], 10)
+      xy.y += parseFloat(r[3])
     }
   }
   return xy
@@ -22113,7 +22113,7 @@ Blockly.getSvgXY_ = function(element, opt_svgParent) {
   var y = 0;
   var topMostSVG = opt_svgParent || Blockly.topMostSVGParent(element);
   do {
-    var xy = Blockly.getRelativeXY_(element);
+    var xy = Blockly.getRelativeXY(element);
     x += xy.x;
     y += xy.y;
     element = element.parentNode
