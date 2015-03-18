@@ -43,6 +43,7 @@
   "help": "ขอความช่วยเหลือ",
   "hintTitle": "คำแนะนำ:",
   "jump": "กระโดด",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง.",
   "listVariable": "รายการ",
   "makeYourOwnFlappy": "สร้าง Flappy เกม ไว้เป็นของเราเอง",

@@ -347,8 +347,6 @@
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
   user_level:
     completed: Completed
     tried: Tried
@@ -601,6 +599,3 @@
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'

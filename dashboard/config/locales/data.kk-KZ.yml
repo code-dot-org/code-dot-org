@@ -51,7 +51,6 @@
           Webapp: Stage 2
           ArtistEC: Stage 3
           StudioEC: Stage 4
-          Applab: Stage 2
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
@@ -104,8 +103,6 @@
         ArtistEC: The Artist
         TextMatch: Text Match
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Bronze
@@ -546,7 +543,6 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
     levelbuilder:
       frozen line:
         instructions: Hi! I'm Elsa of Arendelle. Help me create a single line.
@@ -765,7 +761,6 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
-        C2_digital_footprint_v2: Your Digital Footprint
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

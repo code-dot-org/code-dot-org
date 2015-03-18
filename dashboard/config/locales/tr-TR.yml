@@ -338,8 +338,8 @@
       olmaktan kaldırıldı'
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
+    email_confirm_wrong_email: (Yanlış e-posta adresi?)
     email_resend_confirm: Onay yönergelerini yeniden gönder
     new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
     current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
@@ -556,7 +556,7 @@
             tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama
             her yaştan öğrenmek için eğlencelidir.
         Hour of Code:
-          title: Saat Kodu
+          title: Kodlama Saati 2013
           description: ''
         edit-code:
           title: Kodu Düzenle
@@ -593,11 +593,45 @@
     <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan
     kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.
   progress:
-    not_completed: tamamlanmadı
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: tamamlanmadı, fazla blok var
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
+    assessment: assessment
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler
     all_courses: Tüm dersler
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: Kaydet
+    delete: Sil
+    exit: Return to Course
+    my_projects: My Projects
+    share: Paylaş
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Daha Fazla
+    name: İsim
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Silinsin mi?
+    delete_yes: Evet
+    delete_no: Hayır
+    saved: Saved
+    not_saved: Not saved
+    cancel: İptal
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects

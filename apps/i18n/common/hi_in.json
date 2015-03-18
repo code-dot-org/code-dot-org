@@ -1,5 +1,5 @@
 {
-  "and": "and",
+  "and": "और",
   "booleanTrue": "सही ",
   "booleanFalse": "गलत ",
   "blocks": "blocks",
@@ -43,6 +43,7 @@
   "help": "Help",
   "hintTitle": "Hint:",
   "jump": "jump",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
   "listVariable": "सूची",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",

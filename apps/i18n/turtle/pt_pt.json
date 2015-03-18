@@ -1,5 +1,5 @@
 {
-  "blocksUsed": "Blocos usados: %1",
+  "blocksUsed": "Blocos utilizados: %1",
   "branches": "branches",
   "catColour": "Cor",
   "catControl": "ciclos",
@@ -39,7 +39,7 @@
   "drawLowerWave": "draw lower wave",
   "drawStamp": "draw stamp",
   "heightParameter": "altura",
-  "hideTurtle": "esconde o artista",
+  "hideTurtle": "ocultar o artista",
   "jump": "salto",
   "jumpBackward": "salta para trás por",
   "jumpForward": "salta para a frente por",

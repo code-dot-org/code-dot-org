@@ -43,6 +43,7 @@
   "help": "Ajuda",
   "hintTitle": "Consell:",
   "jump": "salt",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta.",
   "listVariable": "llista",
   "makeYourOwnFlappy": "Fes el teu propi joc Flappy",

@@ -1,11 +1,12 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Anda menggunakan string warna yang tidak valid: {val}",
+  "badStyleStringError": "Anda menggunakan string gaya yang tidak valid: {val}",
   "circleBlockTitle": "lingkaran(jari-jari, gaya, warna)",
   "displayBlockTitle": "tampilan",
   "ellipseBlockTitle": "lonjong (lebar, panjang, gaya, warna)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Kamu memiliki blok dengan masukan yang tidak terisi.",
   "extraTopBlocks": "Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "lapisan-atas (atas, bawah)",
   "placeImageBlockTitle": "tempat-gambar (x, y, gambar)",
   "offsetBlockTitle": "selisih (x, y, gambar)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "lapisan-bawah (bawah, atas)",
   "outline": "garis luar",
   "solid": "Pejal",
-  "string": "kata"
+  "string": "kata",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code."
 }

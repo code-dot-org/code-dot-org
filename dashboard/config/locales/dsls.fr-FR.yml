@@ -45,7 +45,7 @@
         Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
-        (4+5): (4+5)
+        (4+5): (4 + 5)
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
       Blocks to Math 2:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -83,7 +83,6 @@
         - 2 * -6: -2 * -6
         ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
-        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
@@ -93,7 +92,7 @@
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
-        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
+        ((4 - 1) * (-2)) + 12): ((4-1) *-(2)) + 12)
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
       Blocks to Math 7:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -103,6 +102,78 @@
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
+      Glossary O:
+        ? 'Example: Call out conditional statements. If you line up in for recess
+          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+        : 'Example: Call out conditional statements. If you line up in for recess
+          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
+      Open text response example:
+        Open text response example: Open text response example
+        I loved it because...: I loved it because...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating
+          a positive learning environment in your computer science classroom
+        0: '? Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+        1: ': Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+        In my classroom, I want to...: In my classroom, I want to...
+      PDK5 Course Descriptions:
+        Course Structure: Course Structure
+        I am going to start with Course...: I am going to start with Course...
+      PDK5 Difficulty:
+        Degree of Difficulty: Degree of Difficulty
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
+          programming as hard as you expected? Explain why or why not. How does this
+          impact your teaching of computer science?
+        Your thoughts here: Your thoughts here
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Computer Science as a Foundational
+          Skill
+        Do you see computer science as a foundational skill for your students? Why or why not?: Do
+          you see computer science as a foundational skill for your students? Why
+          or why not?
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 1:
+        Impact for students: Impact for students
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
+          you think your students will find the online activities in the K-5 courses
+          fun and engaging? Why or Why not?
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 2:
+        Connections to other Subjects: Connections to other Subjects
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
+          computer science connect to other topics or subjects your students are learning
+          about? Explain why or why not.
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
+        0: '? Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        1: ': Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        Your thoughts here: Your thoughts here
+      PDK5 Problem Solving:
+        Problem Solving Methods: Problem Solving Methods
+        I could integrate this in my classroom by...: I could integrate this in my
+          classroom by...
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio
+          are...
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
+          think teaching computer science will be different than teaching other subjects
+          in these ways: ...'
+      Test Markdown level:
+        Enter title here: Tapez ici le titre
+        Enter prompt here: Tapez ici l'invite
       text match test:
         Mathematical Expression Assessment: Évaluation de l'Expression mathématique
         Type out the arithmetic expression that this circle of evaluation evaluates to: Tapez
@@ -113,132 +184,262 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
-        (9-3)+4*7: (9-3)+4*7
-        9-3+4*7: 9-3+4*7
+    external:
+      Code Logo v3:
+        title: titre
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      CSP Lesson 14 encode letter A instructions:
+        'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      External level test (will):
+        first computer program: first computer program
+      Hour of Code test content: []
+      Mixing Colors:
+        title: titre
+        description here: description ici
+      PDK5 Beyond C:
+        Beyond: Beyond
+      PDK5 Classroom Culture C:
+        Classroom Culture: Culture de la Classe
+      PDK5 Course Maps C: []
+      PDK5 Course Overview C: []
+      PDK5 Glossary C:
+        Vocabulary: Vocabulary
+      PDK5 Intro C: []
+      PDK5 Pair Programming 1:
+        Pair Programming: Programmation à deux
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: Dashboard 1
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: Dashboard 2
+      PDK5 Teacher Dashboard 3:
+        Course Progress: Course Progress
+      PDK5 Teacher Dashboard 4:
+        Course Progress: Course Progress
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Teacher Dashboard
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Unplugged intro
+      PDK5 UVideo Overview C:
+        Kiki video overview: Kiki video overview
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: Why teach computer science
+          in elementary school?
+      Pixelation 1:
+        Pixelation 1: Pixellisation 1
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      Pixelation 2:
+        Pixelation 2: Pixellisation 2
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      Pixelation 3:
+        Pixelation 3: Pixellisation 3
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      Pixelation 3 Bit Colors:
+        title: titre
+        description here: description ici
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
+          test of External level -- NOT REAL
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+        Create images with bits and bytes.: Créer des images avec des bits et des
+          octets.
+      Pixelation Bee:
+        title: titre
+        description here: description ici
+      Pixelation Flappy:
+        title: titre
+        description here: description ici
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
+          offset
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
+          bit offset v.2
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
+          bit offset v.2
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: Make your own B&W image
+        description here: description ici
+      Pixelation - Lesson 14 - Instructions one bit error:
+        'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
+        description here: description ici
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: titre
+        description here: description ici
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: titre
+        description here: description ici
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: titre
+        description here: description ici
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
+          Play
+        description here: description ici
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        description here: description ici
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
+          Shades 4x4
+        description here: description ici
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
+          3-bit color
+        description here: description ici
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
+          Instructions
+        description here: description ici
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
+          1 instructions
+        description here: description ici
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
+          2 instructions
+        description here: description ici
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
+          3 instructions
+        description here: description ici
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        description here: description ici
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        description here: description ici
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: Pixelation - Video - Color 3
+        description here: description ici
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        description here: description ici
+      test demo level:
+        demo title: demo title
+        demo description: demo description
+      Test discourse forum-comment level:
+        Degree of Difficulty: Degree of Difficulty
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
+          programming as hard as you expected? Explain why or why not. How does this
+          impact your teaching of computer science?
+      test html katie:
+        testing: testing
+        lkajsdfasdf: lkajsdfasdf
+      unique level name here:
+        title: titre
+        description here: description ici
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Big Triangle
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
+        Big Triangle: Grand Triangle
+        Write a contract for a big red triangle that is 100 pixels in size: Écrire
+          un contract pour un grand triangle rouge de 100 pixels
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
       Creating Contracts From Examples 2:
-        Square Contract: Square Contract
+        Square Contract: Contrat Carré
         Write a contract for a purple square that is 15 pixels in size.: Écrire un
           contrat pour un carré violet de 15 pixels de côté.
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Square|Image|Number|String: Square|Image|Number|String
       Creating Contracts From Examples 3A:
         Banner Contract: Banner Contract
         Banner Function block: Bloc de la fonction bannière
         Examples 3.solution_blocks, 300: Exemples 3.solution_blocs, 300
-        banner|image|text:string: Bannière|image|Texte:Chaine
+        banner|Image|String: banner|Image|String
       Creating Contracts From Examples 4:
-        Shrink Contract: Shrink Contract
-        Try using the "shrink" function.: Try using the "shrink" function.
+        Shrink Contract: Réduire le Contrat
+        Try using the "shrink" function.: Essayez d'utiliser la fonction « réduire
+          ».
         Examples 4.solution_blocks, 300: Exemples 4.solution_blocs, 300
-        shrink|image|image:image: Shrink|image|image:image
+        shrink|Image|Image: shrink|Image|Image
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        0: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
+          d'une taille et couleur données qui est deux fois plus large que grand.
+        1: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
+          d'une taille et couleur données qui est deux fois plus large que haut.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Enter name here:
         Enter title here: Tapez ici le titre
         Enter prompt here: Tapez ici l'invite
-        Contract Name|Number|Domain1:Number|Domain2:string: Nom du Contrat|Nombre|Domaine1:Nombre|Domaine2:texte
+        Contract Name|Number|Number|String: Contract Name|Number|Number|String
       Eval Contracts 1 B:
         Star Contract: Contrat étoile
         Write a contract for the star function: Écrire un contrat pour la fonction
           étoile
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|Image|String|Number|String: star|Image|String|Number|String
       Eval Contracts 2 B:
         Rotate Contract: Contrat rotation
         Write a contract for the rotate function: Écrire un contrat pour la fonction
           rotation
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts 3 B:
         Text Contract: Contrat texte
         Write a contract for the text function: Écrire un contrat pour la fonction
           texte
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
         Scale Contract: Contrat échelle
         Write a contract for the scale function: Écrire un contrat pour la fonction
           d'échelle
         Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        scale|Image|Number|Image: scale|Image|Number|Image
       Eval Contracts B:
         Star Contract: Contrat étoile
         Write a contract for the star function: Écrire un contrat pour la fonction
           étoile
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|Image|Number|String|String: star|Image|Number|String|String
       Eval Contracts D:
         Rotate Contract: Contrat rotation
         Write a contract for the rotate function: Écrire un contrat pour la fonction
           rotation
         Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts F:
         Text Contract: Contrat texte
         Write a contract for the text function: Écrire un contrat pour la fonction
           texte
         Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        0: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
+          d'une taille et couleur données qui est deux fois plus large que grand.
+        1: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
+          d'une taille et couleur données qui est deux fois plus large que haut.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Rocket Contract 1:
-        Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Ecrire un contrat pour les
-          questions suivantes :'
-        0: '? Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction
-          appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que
-          la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
-        1: ': Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction
-          appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que
-          la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
-        rocket-height|Number|seconds:Number: hauteur-fusée|Nombre|secondes:Nombre
-        ? A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.
-        : A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.
-    external:
-      Pixelation 1:
-        Pixelation 1: Pixelation 1
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 2:
-        Pixelation 2: Pixelation 2
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 3:
-        Pixelation 3: Pixelation 3
-        Create images with bits and bytes.: Create images with bits and bytes.
+        Contract for rocket-height: Contrat pour la hauteur de fusée
+        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        rocket-height|Number|Number: rocket-height|Number|Number
