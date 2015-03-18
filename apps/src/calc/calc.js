@@ -97,7 +97,8 @@ function constructTokenList(one, two, markDeepest) {
   }
 
   // Strip outer parens
-  if (tokenList[0].isParenthesis() && tokenList[tokenList.length - 1].isParenthesis()) {
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
     tokenList.splice(-1);
     tokenList.splice(0, 1);
   }
