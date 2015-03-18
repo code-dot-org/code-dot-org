@@ -47,6 +47,7 @@ var binaryToAscii = dataConverters.binaryToAscii;
  * @param {number} [initialConfig.maxPacketSize]
  * @param {number} [initialConfig.chunkSize]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
+ * @param {function} initialConfig.removePacketCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
@@ -95,6 +96,26 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.enabledEncodings_ = initialConfig.enabledEncodings || [];
+
+  /**
+   * Method to call in order to remove this packet from its parent.
+   * Function should take this PacketEditor as an argument.
+   * @type {function}
+   * @private
+   */
+  this.removePacketCallback_ = initialConfig.removePacketCallback;
+
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.removePacketButton_ = null;
+
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.bitCounter_ = null;
   
   this.render();
 };
@@ -301,7 +322,9 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
         this.makeBlurHandler('message', rowType.messageConversion));
   }, this);
 
-  this.bitCounter = rootDiv.find('.bit-counter');
+  this.removePacketButton_ = rootDiv.find('.remove-packet-button');
+  this.removePacketButton_.click(this.onRemovePacketButtonClick_.bind(this));
+  this.bitCounter_ = rootDiv.find('.bit-counter');
 };
 
 /**
@@ -452,14 +475,19 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
   var size = this.getPacketBinary().length;
   var maxSize = this.maxPacketSize_ === Infinity ?
       netsimMsg.infinity() : this.maxPacketSize_;
-  this.bitCounter.html(netsimMsg.bitCounter({
+  this.bitCounter_.html(netsimMsg.bitCounter({
     x: size,
     y: maxSize
   }));
 
-  if (size <= this.maxPacketSize_) {
-    this.bitCounter.removeClass('oversized');
-  } else {
-    this.bitCounter.addClass('oversized');
-  }
+  this.bitCounter_.toggleClass('oversized', size > this.maxPacketSize_);
+};
+
+/**
+ * Handler for the "Remove Packet" button. Calls handler provided by
+ * parent, passing self, so that parent can remove this packet.
+ * @private
+ */
+NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
+  this.removePacketCallback_(this);
 };

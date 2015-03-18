@@ -385,6 +385,11 @@ svg {
       padding: 0.5em;
       border-radius: 0.5em;
 
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
       th {
         background-color: transparent;
         color: $black;

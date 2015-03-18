@@ -6,7 +6,12 @@
     <th nowrap class="toAddress"><%= i18n.to() %></th>
     <th nowrap class="fromAddress"><%= i18n.from() %></th>
     <th nowrap class="packetInfo"><%= i18n.packet() %></th>
-    <th class="message"><%= i18n.message() %></th>
+    <th class="message">
+      <%= i18n.message() %>
+      <div class="packet-controls">
+        <span class="netsim-button remove-packet-button"><%= i18n.removePacket() %></span>
+      </div>
+    </th>
   </tr>
   </thead>
   <tbody>
