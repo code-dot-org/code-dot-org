@@ -154,14 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Вы использовали неправильную строку цвета: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Вы использовали неправильную строку стиля: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "круг (радиус, стиль, цвет)"},
 "displayBlockTitle":function(d){return "отобразить"},
 "ellipseBlockTitle":function(d){return "эллипс (ширина, высота, стиль, цвет)"},
-"emptyFunctionalBlock":function(d){return "У вас есть блок с незаполненными входными данными."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Показать\"?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "наложение (сверху, снизу)"},
 "placeImageBlockTitle":function(d){return "поместить изображение (x, y, изображение)"},
 "offsetBlockTitle":function(d){return "сдвиг (x, y, изображение)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "подкладывание (снизу, сверху)"},
 "outline":function(d){return "контур"},
 "solid":function(d){return "заливка"},
-"string":function(d){return "строка"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "строка"}};

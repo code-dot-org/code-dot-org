@@ -154,14 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Utilizaste una cadena de color no válido: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Utilizaste una cadena estilo válido: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "círculo (radio, estilo, color)"},
-"displayBlockTitle":function(d){return "evaluar"},
+"displayBlockTitle":function(d){return "mostrar"},
 "ellipseBlockTitle":function(d){return "elipse (anchura, altura, estilo, color)"},
-"emptyFunctionalBlock":function(d){return "Tienes un bloque con una entrada vacía."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "superposición (arriba, abajo)"},
 "placeImageBlockTitle":function(d){return "lugar-imagen (x, y, imagen)"},
 "offsetBlockTitle":function(d){return "offset (x, y, imagen)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "poner debajo (inferior, superior)"},
 "outline":function(d){return "contorno"},
 "solid":function(d){return "sólido"},
-"string":function(d){return "cadena"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "cadena"}};

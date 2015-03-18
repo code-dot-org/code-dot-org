@@ -45,7 +45,8 @@ var levels = require('./levels');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
-var _ = require('../utils').getLodash();
+var utils = require('../utils');
+var _ = utils.getLodash();
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -89,20 +90,33 @@ var stepSpeed = 2000;
  * ExpressionNodes to allow for token list generation.
  * @param {ExpressionNode|Equation|jsnumber|string} one
  * @param {ExpressionNode|Equation|jsnumber|string} two
+ * @param {boolean} markDeepest Only valid if we have a single input. Passed on
+ *   to getTokenList.
  * @returns {Token[]}
  */
-function constructTokenList(one, two) {
+function constructTokenList(one, two, markDeepest) {
   one = asExpressionNode(one);
   two = asExpressionNode(two);
+
+  markDeepest = utils.valueOr(markDeepest, false);
+
+  var tokenList;
 
   if (!one) {
     return null;
   } else if (!two) {
-    var markDeepest = false;
-    return one.getTokenList(markDeepest);
+    tokenList = one.getTokenList(markDeepest);
   } else {
-    return one.getTokenListDiff(two);
+    tokenList = one.getTokenListDiff(two);
   }
+
+  // Strip outer parens
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
 }
 
 /**
@@ -859,7 +873,7 @@ function animateUserExpression (maxNumSteps) {
     if (numCollapses === maxNumSteps) {
       // This is the last line in the current animation, highlight what has
       // changed since the last line
-      tokenList = current.getTokenListDiff(previousExpression);
+      tokenList = constructTokenList(current, previousExpression);
     } else if (numCollapses + 1 === maxNumSteps) {
       // This is the second to last line. Highlight the block being collapsed,
       // and the deepest operation (that will be collapsed on the next line)
@@ -867,10 +881,10 @@ function animateUserExpression (maxNumSteps) {
       if (deepest) {
         studioApp.highlight('block_id_' + deepest.blockId);
       }
-      tokenList = current.getTokenList(true);
+      tokenList = constructTokenList(current, null, true);
     } else {
       // Don't highlight anything
-      tokenList = current.getTokenList(false);
+      tokenList = constructTokenList(current);
     }
     displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
     previousExpression = current.clone();
@@ -2018,6 +2032,10 @@ var Token = function (val, marked) {
   this.setStringRepresentation_();
 };
 module.exports = Token;
+
+Token.prototype.isParenthesis = function () {
+  return this.val_ === '(' || this.val_ === ')';
+};
 
 /**
  * Add the given token to the parent element.

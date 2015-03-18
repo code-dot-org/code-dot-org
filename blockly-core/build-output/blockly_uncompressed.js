@@ -14942,7 +14942,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && Blockly.addClass_(this.svg_.svgGroup_, "userHidden")
   }
   this.childBlocks_.forEach(function(child) {
-    child.setUserVisible(userVisible)
+    child.setUserVisible(userVisible, opt_renderAfterVisible)
   });
   if(opt_renderAfterVisible && (userVisible && this.childBlocks_.length === 0)) {
     this.svg_ && this.render()
@@ -19065,7 +19065,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
-  this.functionDefinitionBlock = this.moveToModalBlockSpace_(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;
@@ -19238,12 +19238,13 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
 };
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setMovable(true);
+  blockToMove.setDeletable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
   newBlock.setCurrentlyHidden(true)
 };
-Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
+Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
@@ -21742,9 +21743,17 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function(functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
-    var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
+    var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+    var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    exampleCall.setMovable(false);
+    exampleCall.setDeletable(false);
     this.exampleBlocks.push(movedExampleBlock)
   }, this)
+};
+Blockly.ContractEditor.prototype.moveToModalBlockSpace = function(block) {
+  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace.call(this, block);
+  newBlock.setDeletable(false);
+  return newBlock
 };
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();

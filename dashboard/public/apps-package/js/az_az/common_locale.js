@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Kömək"},
 "hintTitle":function(d){return "Məsləhət:"},
 "jump":function(d){return "atıl"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada."},
 "listVariable":function(d){return "siyahı"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},

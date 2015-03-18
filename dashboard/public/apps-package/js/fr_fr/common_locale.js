@@ -157,7 +157,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "and":function(d){return "et"},
 "booleanTrue":function(d){return "vrai"},
 "booleanFalse":function(d){return "faux"},
-"blocks":function(d){return "blocs"},
+"blocks":function(d){return "blocks"},
 "blocklyMessage":function(d){return "Blockly"},
 "catActions":function(d){return "Actions"},
 "catColour":function(d){return "Couleur"},
@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Aide"},
 "hintTitle":function(d){return "Indice :"},
 "jump":function(d){return "sauter"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."},
 "listVariable":function(d){return "liste"},
 "makeYourOwnFlappy":function(d){return "Réalisez votre propre Flappy Bird"},
@@ -237,7 +236,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareFailure":function(d){return "Désolé, nous ne pouvons pas partager ce programme."},
 "workspaceHeader":function(d){return "Assemblez vos blocs ici : "},
 "workspaceHeaderJavaScript":function(d){return "Tapez ici votre code JavaScript"},
-"workspaceHeaderShort":function(d){return "Espace de travail :"},
+"workspaceHeaderShort":function(d){return "Workspace: "},
 "infinity":function(d){return "Infini"},
 "rotateText":function(d){return "Tournez votre appareil."},
 "orientationLock":function(d){return "Désactivez le verrouillage de l'orientation dans les réglages de votre appareil."},
@@ -250,4 +249,4 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Voici une astuce :"},
 "genericFeedback":function(d){return "Observez le résultat et essayez de corriger les erreurs."},
 "toggleBlocksErrorMsg":function(d){return "Vous devez corriger une erreur dans votre programme avant qu'il ne puisse être présenté sous forme de blocs."},
-"defaultTwitterText":function(d){return "Découvre ce que j'ai fait"}};
+"defaultTwitterText":function(d){return "Découvrez ce que j'ai fait"}};

@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Krok"},
 "stepOver":function(d){return "Krok přes"},
 "stepOut":function(d){return "Krok ven"},
-"viewData":function(d){return "Zobrazit data"},
+"viewData":function(d){return "View Data"},
 "yes":function(d){return "Ano"}};

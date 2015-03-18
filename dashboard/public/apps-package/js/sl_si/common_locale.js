@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Pomoč"},
 "hintTitle":function(d){return "Namig:"},
 "jump":function(d){return "skoči"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Uporabljaš vse potrebne tipe blokov, a ne na pravi način."},
 "listVariable":function(d){return "seznam"},
 "makeYourOwnFlappy":function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"},

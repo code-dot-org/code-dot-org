@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "مساعدة"},
 "hintTitle":function(d){return "تلميح:"},
 "jump":function(d){return "إقفز"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."},
 "listVariable":function(d){return "قائمة"},
 "makeYourOwnFlappy":function(d){return "برمج لعبة فلابي الخاصة بك"},

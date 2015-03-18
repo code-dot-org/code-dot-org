@@ -154,14 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "Þú notaðir ógildan streng fyrir lit: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "Þú notaðir ógildan streng fyrir gerð: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "hringur (radíus, gerð, litur)"},
 "displayBlockTitle":function(d){return "sýna"},
 "ellipseBlockTitle":function(d){return "ellipsa (breidd, hæð, gerð, litur)"},
-"emptyFunctionalBlock":function(d){return "Það er kubbur með óútfyllt inntak."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "yfirlögn (yfir, undir)"},
 "placeImageBlockTitle":function(d){return "setja-mynd (x, y, mynd)"},
 "offsetBlockTitle":function(d){return "hliðrun (x, y, mynd)"},
@@ -180,6 +179,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "undirlögn (undir, yfir)"},
 "outline":function(d){return "útlína"},
 "solid":function(d){return "gegnheilt"},
-"string":function(d){return "strengur"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"string":function(d){return "strengur"}};

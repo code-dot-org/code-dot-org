@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "ขอความช่วยเหลือ"},
 "hintTitle":function(d){return "คำแนะนำ:"},
 "jump":function(d){return "กระโดด"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."},
 "listVariable":function(d){return "รายการ"},
 "makeYourOwnFlappy":function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"},

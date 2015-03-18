@@ -198,7 +198,6 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Βοήθεια"},
 "hintTitle":function(d){return "Υπόδειξη:"},
 "jump":function(d){return "πήδα"},
-"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά όχι με τον σωστό τρόπο."},
 "listVariable":function(d){return "λίστα"},
 "makeYourOwnFlappy":function(d){return "Φτιάξτε το δικό σας Flappy παιχνίδι"},
