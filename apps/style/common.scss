@@ -84,28 +84,68 @@ div.droplet-palette-group-header-selected {
   color: #000;
 }
 
-.droplet-palette-group-header.yellow {
+div.droplet-palette-group-header.yellow {
   border-left:10px solid rgb(255, 213, 79);
 }
 
-.droplet-palette-group-header-selected.yellow {
+div.droplet-palette-group-header-selected.yellow {
   background-color: rgb(255, 213, 79);
 }
 
-.droplet-palette-group-header.red {
+div.droplet-palette-group-header.red {
   border-left:10px solid rgb(248, 116, 119);
 }
 
-.droplet-palette-group-header-selected.red {
+div.droplet-palette-group-header-selected.red {
   background-color: rgb(248, 116, 119);
 }
 
-.droplet-palette-group-header.cyan {
+div.droplet-palette-group-header.cyan {
   border-left:10px solid rgb(0, 210, 226);
 }
 
-.droplet-palette-group-header-selected.cyan {
+div.droplet-palette-group-header-selected.cyan {
   background-color: rgb(0, 210, 226);
+}
+
+div.droplet-palette-group-header.lightgreen {
+  border-left:10px solid rgb(211, 233, 101);
+}
+
+div.droplet-palette-group-header-selected.lightgreen {
+  background-color: rgb(211, 233, 101);
+}
+
+div.droplet-palette-group-header.purple {
+  border-left:10px solid rgb(177, 89, 171);
+}
+
+div.droplet-palette-group-header-selected.purple {
+  background-color: rgb(177, 89, 171);
+}
+
+div.droplet-palette-group-header.deeppurple {
+  border-left:10px solid rgb(163, 139, 195);
+}
+
+div.droplet-palette-group-header-selected.deeppurple {
+  background-color: rgb(163, 139, 195);
+}
+
+div.droplet-palette-group-header.blue {
+  border-left:10px solid rgb(25, 195, 225);
+}
+
+div.droplet-palette-group-header-selected.blue {
+  background-color: rgb(25, 195, 225);
+}
+
+div.droplet-palette-group-header.green {
+  border-left:10px solid rgb(72, 216, 130);
+}
+
+div.droplet-palette-group-header-selected.green {
+  background-color: rgb(72, 216, 130);
 }
 
 .droplet-wrapper-div {
