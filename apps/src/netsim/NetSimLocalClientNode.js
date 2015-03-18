@@ -221,6 +221,22 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 };
 
 /**
+ * Connect to a remote node.
+ * @param {NetSimNode} otherNode
+ * @param {!NodeStyleCallback} onComplete
+ * @override
+ */
+NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete) {
+  NetSimLocalClientNode.superPrototype.connectToNode.call(this, otherNode,
+      function (err, wire) {
+        if (!err) {
+          this.myWire = wire;
+        }
+        onComplete(err, wire);
+      }.bind(this));
+};
+
+/**
  * @param {!NetSimRouterNode} router
  * @param {NodeStyleCallback} onComplete
  */
@@ -234,7 +250,6 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
       return;
     }
 
-    self.myWire = wire;
     self.myRouter = router;
     self.myRouter.initializeSimulation(self.entityID);
 
@@ -243,10 +258,10 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
         wire.destroy(function () {
           onComplete(err);
         });
+        self.myWire = null;
         return;
       }
 
-      self.myWire = wire;
       self.myRouter = router;
       self.routerChange.notifyObservers(self.myWire, self.myRouter);
 
@@ -310,6 +325,28 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         onComplete(null);
       }
   );
+};
+
+/**
+ * Sequentially puts a list of messages onto the outgoing wire, to whatever
+ * we are connected to at the moment.
+ * @param {string[]} payloads
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
+  if (payloads.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  this.sendMessage(payloads[0], function (err, result) {
+    if (err !== null) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.sendMessages(payloads.slice(1), onComplete);
+  }.bind(this));
 };
 
 /**
