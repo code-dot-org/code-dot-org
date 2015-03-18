@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "ជំនួយ"},
 "hintTitle":function(d){return "គន្លឹះ៖"},
 "jump":function(d){return "លោត"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "អ្នក​កំពុង​ប្រើ​ប្រភេទ​ប្លុក​សំខាន់ៗ​ទាំង​អស់ ប៉ុន្តែ​មិន​ត្រឹមត្រូវ​នោះ​ទេ។"},
 "listVariable":function(d){return "បញ្ជី"},
 "makeYourOwnFlappy":function(d){return "បង្កើត​ហ្គេម Flappy របស់​អ្នក"},

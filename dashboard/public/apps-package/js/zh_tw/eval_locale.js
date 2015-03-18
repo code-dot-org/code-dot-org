@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "橢圓(寬度,高度,樣式, 顏色)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "你有未連接的區塊，難道你要將它們附加到\"顯示\"區塊嗎?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "覆蓋 (頂部, 底部)"},
 "placeImageBlockTitle":function(d){return "放置圖片(x,y,圖片)"},
 "offsetBlockTitle":function(d){return "偏移量 (x,y,圖片)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "襯底(底部, 頂部)"},
 "outline":function(d){return "輪廓"},
 "solid":function(d){return "實心"},
-"string":function(d){return "字串"}};
+"string":function(d){return "字串"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

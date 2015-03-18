@@ -179,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "string"},
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."}};
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

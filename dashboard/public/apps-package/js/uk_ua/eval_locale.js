@@ -154,13 +154,14 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "Було використано неприпустимий Колір рядка: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Використано неприпустимий стиль рядок: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "коло (радіус, стиль, колір)"},
 "displayBlockTitle":function(d){return "показати"},
 "ellipseBlockTitle":function(d){return "еліпс (ширина, висота, стиль, колір)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "У вас є блок з незаповненими вводу."},
 "extraTopBlocks":function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"показати\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "накладання (верхнє, нижнє)"},
 "placeImageBlockTitle":function(d){return "розмістити-зображення (x, y, зображення)"},
 "offsetBlockTitle":function(d){return "зсув (x, y, зображення)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "підкладання (верхнє, нижнє)"},
 "outline":function(d){return "контур"},
 "solid":function(d){return "суцільний"},
-"string":function(d){return "рядок"}};
+"string":function(d){return "рядок"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

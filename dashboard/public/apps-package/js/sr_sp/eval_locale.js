@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "елипса (ширина, висина, стил, боја)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Имаш откачене блокове. Да ли си их хтео закачити за блок \"приказ\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "покривач (врх, дно)"},
 "placeImageBlockTitle":function(d){return "постави-слику (x, y, слика)"},
 "offsetBlockTitle":function(d){return "помереност (x, y, слика)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "подлога (дно, врх)"},
 "outline":function(d){return "контура"},
 "solid":function(d){return "попуњено"},
-"string":function(d){return "текст"}};
+"string":function(d){return "текст"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};
