@@ -98,7 +98,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.packetSizeControl_ = null;
   
   NetSimPanel.call(this, rootDiv, {
-    className: 'netsim_send_panel',
+    className: 'netsim-send-panel',
     panelTitle: netsimMsg.sendAMessage()
   });
 };
