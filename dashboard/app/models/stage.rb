@@ -7,6 +7,10 @@ class Stage < ActiveRecord::Base
 
   validates_uniqueness_of :name, scope: :script_id
 
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   def to_param
     position.to_s
   end
@@ -18,7 +22,7 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_title
-    if Script.get_from_cache(script.name).stages.to_a.many?
+    if script.stages.to_a.many?
       I18n.t('stage_number', number: position) + ': ' + I18n.t("data.script.name.#{script.name}.#{name}")
     else # script only has one stage/game, use the script name
       I18n.t "data.script.name.#{script.name}.title"
@@ -26,7 +30,7 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_name
-    if Script.get_from_cache(script.name).stages.many?
+    if script.stages.many?
       I18n.t "data.script.name.#{script.name}.#{name}"
     else
       I18n.t "data.script.name.#{script.name}.title"
@@ -49,12 +53,13 @@ class Stage < ActiveRecord::Base
     stage_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: Script.get_from_cache(script.name).stages.to_a.count,
+        script_stages: script.stages.to_a.count,
         id: id,
         position: position,
         name: localized_name,
         title: localized_title,
-        levels: Script.get_from_cache(script.name).script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+        # Ensures we get the cached ScriptLevels, vs hitting the db
+        levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
     if script.has_lesson_plan?
