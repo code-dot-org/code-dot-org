@@ -18,7 +18,7 @@
       .games
         - stage[:levels].each do |level|
           .level
-            - status = level_progress[level[:id]].try(:status) || 'not_tried'
+            - status = level_progress[level[:id]].try(:[], :status) || 'not_tried'
             - if current_level_id == "#{level[:id]}"
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif level[:kind] == 'assessment'

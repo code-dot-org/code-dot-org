@@ -87,6 +87,44 @@ en:
         10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
         (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
         Type the arithmetic expression here: crwdns24897:0crwdne24897:0
+      Open text response example:
+        Open text response example: crwdns35069:0crwdne35069:0
+        I loved it because...: crwdns35070:0crwdne35070:0
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: crwdns35071:0crwdne35071:0
+        0: crwdns35072:0crwdne35072:0
+        1: crwdns35073:0crwdne35073:0
+        In my classroom, I want to...: crwdns35074:0crwdne35074:0
+      PDK5 Course Descriptions:
+        Overview of Courses 1, 2, and 3: crwdns35075:0crwdne35075:0
+        I am going to start with Course...: crwdns35076:0crwdne35076:0
+      PDK5 Difficulty:
+        Degree of Difficulty: crwdns35077:0crwdne35077:0
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: crwdns35078:0crwdne35078:0
+        Your thoughts here: crwdns35079:0crwdne35079:0
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: crwdns35080:0crwdne35080:0
+        Do you see computer science as a foundational skill for your students? Why or why not?: crwdns35081:0crwdne35081:0
+        Your thoughts here: crwdns35082:0crwdne35082:0
+      PDK5 Impact 1:
+        Impact for students: crwdns35083:0crwdne35083:0
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: crwdns35084:0crwdne35084:0
+        Your thoughts here: crwdns35085:0crwdne35085:0
+      PDK5 Impact 2:
+        Connections to other Subjects: crwdns35086:0crwdne35086:0
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: crwdns35087:0crwdne35087:0
+        Your thoughts here: crwdns35088:0crwdne35088:0
+      PDK5 Impact 3:
+        Real-world applications for Students: crwdns35089:0crwdne35089:0
+        0: crwdns35090:0crwdne35090:0
+        1: crwdns35091:0crwdne35091:0
+        Your thoughts here: crwdns35092:0crwdne35092:0
+      PDK5 Promo Video:
+        "Code Studio: Kid tested, Teacher approved": crwdns35093:0crwdne35093:0
+        My first impressions of Code Studio are...: crwdns35094:0crwdne35094:0
+      Test Markdown level:
+        Enter title here: crwdns35095:0crwdne35095:0
+        Enter prompt here: crwdns35096:0crwdne35096:0
       text match test:
         Mathematical Expression Assessment: crwdns23416:0crwdne23416:0
         Type out the arithmetic expression that this circle of evaluation evaluates to: crwdns23417:0crwdne23417:0
@@ -95,83 +133,16 @@ en:
         (9-3)+4: null
         9-3+4: null
         Type the arithmetic expression here: crwdns23420:0crwdne23420:0
-    contract_match:
-      CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: crwdns33894:0crwdne33894:0
-        Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
-        EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
-        "Big Triangle|image|color:string|size:Number": crwdns27906:0crwdne27906:0
-      Creating Contracts From Examples 2:
-        Square Contract: crwdns33895:0crwdne33895:0
-        Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
-        Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
-        "Square|image|color:string|size:Number": crwdns27910:0crwdne27910:0
-      Creating Contracts From Examples 3A:
-        Banner Contract: crwdns33896:0crwdne33896:0
-        Banner Function block: crwdns27912:0crwdne27912:0
-        Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
-        "banner|image|text:string": crwdns27914:0crwdne27914:0
-      Creating Contracts From Examples 4:
-        Shrink Contract: crwdns33897:0crwdne33897:0
-        Try using the "shrink" function.: crwdns33898:0crwdne33898:0
-        Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
-        "shrink|image|image:image": crwdns27918:0crwdne27918:0
-      Design Recipe 1.contract:
-        Design Recipe 1 Contract: crwdns27804:0crwdne27804:0
-        0: crwdns27805:0crwdne27805:0
-        1: crwdns27806:0crwdne27806:0
-        "wide-rect|Image|height:Number|color:string": crwdns27807:0crwdne27807:0
-      Enter name here:
-        Enter title here: crwdns27808:0crwdne27808:0
-        Enter prompt here: crwdns27809:0crwdne27809:0
-        "Contract Name|Number|Domain1:Number|Domain2:string": crwdns27810:0crwdne27810:0
-      Eval Contracts 1 B:
-        Star Contract: crwdns28002:0crwdne28002:0
-        Write a contract for the star function: crwdns27812:0crwdne27812:0
-        Eval Contracts 1 A.solution_blocks, 300: crwdns27813:0crwdne27813:0
-        "star|image|color:string|radius:Number|style:string": crwdns27920:0crwdne27920:0
-      Eval Contracts 2 B:
-        Rotate Contract: crwdns28003:0crwdne28003:0
-        Write a contract for the rotate function: crwdns27816:0crwdne27816:0
-        Eval Contracts 2 A.solution_blocks, 300: crwdns27817:0crwdne27817:0
-        "rotate|image|degrees:Number|image:image": crwdns27818:0crwdne27818:0
-      Eval Contracts 3 B:
-        Text Contract: crwdns28004:0crwdne28004:0
-        Write a contract for the text function: crwdns27820:0crwdne27820:0
-        Eval Contracts 3 A.solution_blocks, 300: crwdns27821:0crwdne27821:0
-        "text|image|color:string|size:Number|string:string": crwdns27921:0crwdne27921:0
-      Eval Contracts 4 B:
-        Scale Contract: crwdns28005:0crwdne28005:0
-        Write a contract for the scale function: crwdns27824:0crwdne27824:0
-        Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
-        "scale|image|factor:Number|image:image": crwdns27826:0crwdne27826:0
-      Eval Contracts B:
-        Star Contract: crwdns33899:0crwdne33899:0
-        Write a contract for the star function: crwdns33900:0crwdne33900:0
-        Eval Contracts 1 A.solution_blocks, 300: crwdns33901:0crwdne33901:0
-        "star|image|color:string|radius:Number|style:string": crwdns33902:0crwdne33902:0
-      Eval Contracts D:
-        Rotate Contract: crwdns33903:0crwdne33903:0
-        Write a contract for the rotate function: crwdns33904:0crwdne33904:0
-        Eval Contracts 2 A.solution_blocks, 300: crwdns33905:0crwdne33905:0
-        "rotate|image|degrees:Number|image:image": crwdns33906:0crwdne33906:0
-      Eval Contracts F:
-        Text Contract: crwdns33907:0crwdne33907:0
-        Write a contract for the text function: crwdns33908:0crwdne33908:0
-        Eval Contracts 3 A.solution_blocks, 300: crwdns33909:0crwdne33909:0
-        "text|image|color:string|size:Number|string:string": crwdns33910:0crwdne33910:0
-      Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
-        0: crwdns27828:0crwdne27828:0
-        1: crwdns27829:0crwdne27829:0
-        "wide-rect|Image|height:Number|color:string": crwdns27830:0crwdne27830:0
-      Rocket Contract 1:
-        Contract for rocket-height: crwdns27922:0crwdne27922:0
-        "Write a contract for the following question:": crwdns27923:0crwdne27923:0
-        0: crwdns27924:0crwdne27924:0
-        1: crwdns27925:0crwdne27925:0
-        "rocket-height|Number|seconds:Number": crwdns27926:0crwdne27926:0
     external:
+      Code Logo v3:
+        title: crwdns35097:0crwdne35097:0
+        Create images with bits and bytes.: crwdns35098:0crwdne35098:0
+      External level test (will):
+        title: crwdns35099:0crwdne35099:0
+        description here: crwdns35100:0crwdne35100:0
+      Mixing Colors:
+        title: crwdns35101:0crwdne35101:0
+        description here: crwdns35102:0crwdne35102:0
       Pixelation 1:
         Pixelation 1: crwdns33911:0crwdne33911:0
         Create images with bits and bytes.: crwdns33912:0crwdne33912:0
@@ -181,3 +152,93 @@ en:
       Pixelation 3:
         Pixelation 3: crwdns33915:0crwdne33915:0
         Create images with bits and bytes.: crwdns33916:0crwdne33916:0
+      Pixelation 3 Bit Colors:
+        title: crwdns35103:0crwdne35103:0
+        description here: crwdns35104:0crwdne35104:0
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: crwdns35105:0crwdne35105:0
+        Create images with bits and bytes.: crwdns35106:0crwdne35106:0
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: crwdns35107:0crwdne35107:0
+        Create images with bits and bytes.: crwdns35108:0crwdne35108:0
+      Pixelation Bee:
+        title: crwdns35109:0crwdne35109:0
+        description here: crwdns35110:0crwdne35110:0
+      Pixelation Flappy:
+        title: crwdns35111:0crwdne35111:0
+        description here: crwdns35112:0crwdne35112:0
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: crwdns33894:0crwdne33894:0
+        Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
+        EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
+        Big Triangle|Image|Number|String: crwdns35113:0crwdne35113:0
+      Creating Contracts From Examples 2:
+        Square Contract: crwdns33895:0crwdne33895:0
+        Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
+        Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
+        Square|Image|Number|String: crwdns35114:0crwdne35114:0
+      Creating Contracts From Examples 3A:
+        Banner Contract: crwdns33896:0crwdne33896:0
+        Banner Function block: crwdns27912:0crwdne27912:0
+        Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
+        banner|Image|String: crwdns35115:0crwdne35115:0
+      Creating Contracts From Examples 4:
+        Shrink Contract: crwdns33897:0crwdne33897:0
+        Try using the "shrink" function.: crwdns33898:0crwdne33898:0
+        Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
+        shrink|Image|Image: crwdns35116:0crwdne35116:0
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: crwdns27804:0crwdne27804:0
+        0: crwdns27805:0crwdne27805:0
+        1: crwdns27806:0crwdne27806:0
+        wide-rect|Image|Number|String: crwdns35117:0crwdne35117:0
+      Enter name here:
+        Enter title here: crwdns27808:0crwdne27808:0
+        Enter prompt here: crwdns27809:0crwdne27809:0
+        Contract Name|Number|Number|String: crwdns35118:0crwdne35118:0
+      Eval Contracts 1 B:
+        Star Contract: crwdns28002:0crwdne28002:0
+        Write a contract for the star function: crwdns27812:0crwdne27812:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns27813:0crwdne27813:0
+        star|Image|String|Number|String: crwdns35119:0crwdne35119:0
+      Eval Contracts 2 B:
+        Rotate Contract: crwdns28003:0crwdne28003:0
+        Write a contract for the rotate function: crwdns27816:0crwdne27816:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns27817:0crwdne27817:0
+        rotate|Image|Number|Image: crwdns35120:0crwdne35120:0
+      Eval Contracts 3 B:
+        Text Contract: crwdns28004:0crwdne28004:0
+        Write a contract for the text function: crwdns27820:0crwdne27820:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns27821:0crwdne27821:0
+        text|Image|String|Number|String: crwdns35121:0crwdne35121:0
+      Eval Contracts 4 B:
+        Scale Contract: crwdns28005:0crwdne28005:0
+        Write a contract for the scale function: crwdns27824:0crwdne27824:0
+        Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
+        scale|Image|Number|Image: crwdns35122:0crwdne35122:0
+      Eval Contracts B:
+        Star Contract: crwdns33899:0crwdne33899:0
+        Write a contract for the star function: crwdns33900:0crwdne33900:0
+        Eval Contracts 1 A.solution_blocks, 300: crwdns33901:0crwdne33901:0
+        star|Image|Number|String|String: crwdns35123:0crwdne35123:0
+      Eval Contracts D:
+        Rotate Contract: crwdns33903:0crwdne33903:0
+        Write a contract for the rotate function: crwdns33904:0crwdne33904:0
+        Eval Contracts 2 A.solution_blocks, 300: crwdns33905:0crwdne33905:0
+        rotate|Image|Number|Image: crwdns35124:0crwdne35124:0
+      Eval Contracts F:
+        Text Contract: crwdns33907:0crwdne33907:0
+        Write a contract for the text function: crwdns33908:0crwdne33908:0
+        Eval Contracts 3 A.solution_blocks, 300: crwdns33909:0crwdne33909:0
+        text|Image|String|Number|String: crwdns35125:0crwdne35125:0
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
+        0: crwdns27828:0crwdne27828:0
+        1: crwdns27829:0crwdne27829:0
+        wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
+      Rocket Contract 1:
+        Contract for rocket-height: crwdns27922:0crwdne27922:0
+        0: crwdns27924:0crwdne27924:0
+        1: crwdns27925:0crwdne27925:0
+        rocket-height|Number|Number: crwdns35127:0crwdne35127:0

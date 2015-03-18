@@ -207,7 +207,7 @@ zh:
         turtle_3_5: '现在创建一个新的"画房子"函数，使用它来圈住两只猫。提示： 使用"做点什么"块创建一个新的函数，并给它命名。'
         turtle_3_6: '以"画一个正方形"为例，给"画一个三角形"加一个“长度”变量。然后画出不同大小的三角形。（提示： 请单击星星标志来为一个函数添加变量)'
         turtle_3_7: 为“画房子”函数添加一个“长度”变量。给大象建一所大房子（边长150像素）
-        turtle_3_8: 这儿是之前那道谜题用到的全部的块。编辑“画房子”函数，使得最后一笔落在右下角。用这个编辑过的函数画三个房子。
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 你能在不看帮助的情况下自己重新创建“画房子”函数吗？试试看！然后画一排房子。
         turtle_3_10: 你已经学会了很多东西了！试着用他们画任何你想画的图案。试着画一颗星星，一个螺旋或者一片好看的雪花。
         maze_karel_debug_seq_1: 欢迎来到代码调试环节！我的代码不能正常工作。你能研究并且解决一下这个问题吗？我想要把地面铲平以便种植作物。
@@ -436,6 +436,12 @@ zh:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: 变量
+        msm_7_functions: 函数
     callout:
       text:
         drag_blocks: '拖动一个"移动"的块和捕捉低于它的其他块'

@@ -205,7 +205,7 @@ hu:
         turtle_3_5: 'Most készítsen egy új "rajzoljon házat" funkciót és használja ház készítésére a két macska körül. Tipp: készítsen egy új funkciót használva a "csinálj valamit" blokkot, majd írja be a saját szövegét, hogy elnevezze a blokkot.'
         turtle_3_6: 'Használja a "négyzet rajzolását" példaként, adjon hozzá egy bemeneti "hosszúság"-ot, ahhoz hogy "rajzoljon egy háromszöget". Aztán rajzoljon háromszögeket különböző méretben! (Tipp: kattintson a csillagra hogy hozzáadjon bemenetit egy funkcióhoz)'
         turtle_3_7: 'Add hozzá egy input nevű "hossza" a "ház" és építsenek egy nagy ház, az elefánt (a szélei 150 pixel hosszú)'
-        turtle_3_8: 'Itt van minden a blokkokat az előző puzzle.  Módosítsa a "egy ház rajzolása", úgyhogy a végén a jobb alsó sarokban után rajz egy új házat. Ehhez a funkcióhoz módosított rajzoljunk három ház.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Lehet újra létrehozni segítség nélkül "dolgozzon egy ház" funkció? Próbálja ki, és Ezután rajzolja a házak sora.'
         turtle_3_10: 'Már sokmindent megtanult! Most használhatja mindezt, és azt rajzolhat, amit csak akar. Megpróbálhat  csillag, spirál, vagy akár egy izgalmas hópehely megrajzolásával.'
         maze_karel_debug_seq_1: Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen. Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet az ültetéshez?
@@ -430,6 +430,12 @@ hu:
         playlab_intro: Bevezetés a játéklaborba
         playlab_events: A Játéklabor eseményei
         playlab_repeat_forever: Játéklabor Végtelen ciklus
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Változók
+        msm_7_functions: Függvények
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

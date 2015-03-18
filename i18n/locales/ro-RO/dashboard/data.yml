@@ -203,7 +203,7 @@ ro:
         turtle_3_5: 'Acum creează o nouă funcție "desenează o casă" şi utilizeaz-o pentru a găzdui două pisici. Sugestie: creează o nouă funcţie folosind blocul "fă ceva" şi introdu propriul text pentru a denumi blocul.'
         turtle_3_6: 'Folosind "desenează un pătrat" de exemplu, adaugă un input numit "lungime" la "desenează un triunghi". Apoi, desenează triunghiuri în dimensiuni diferite. (Sugestie: fă clic pe stea pentru a adăuga o intrare la o funcție)'
         turtle_3_7: 'Adaugă un input numit "lungime" la "desenează o casă" și contruiește o casă mare pentru elefant (cu margini de 150 de pixeli lungime)'
-        turtle_3_8: 'Aici sunt toate blocurile de la puzzle-ul anterior.  Modifică "desenează o casă" astfel încât să ajung până în colţul de jos din dreapta după ce am desenat o casa nouă. Utilizează această funcţie modificată să desenezi trei case.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Poţi re-crea funcţia "desenează o casă" fără ajutor? Încearc-o, și apoi desenează un rând de case.'
         turtle_3_10: Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg de nea sofisticat.
         maze_karel_debug_seq_1: Bine ai venit la depanare! Codul meu nu funcţionează corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine un teren plat şi gata de plantare?
@@ -416,7 +416,7 @@ ro:
         C4_function_create: Crearea de funcții
         C4_function_parameters: Funcții cu Parametrii
         C4_conditionals: Condiţionale
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algoritmi cu Tangrame
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variabile în plicuri
         C4_unplugged_forloops: Repetiții Pentru
@@ -428,6 +428,12 @@ ro:
         playlab_intro: Introducere in Play Lab
         playlab_events: Joaca Lab Events
         playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Blocuri de evaluare
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabile
+        msm_7_functions: Funcţii
     callout:
       text:
         drag_blocks: 'Trage un bloc "mutare" şi fixează-l sub alt bloc'

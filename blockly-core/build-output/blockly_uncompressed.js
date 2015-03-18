@@ -12821,7 +12821,7 @@ Blockly.Icon.prototype.setIconLocation = function(x, y) {
 };
 Blockly.Icon.prototype.computeIconLocation = function() {
   var blockXY = this.block_.getRelativeToSurfaceXY();
-  var iconXY = Blockly.getRelativeXY_(this.iconGroup_);
+  var iconXY = Blockly.getRelativeXY(this.iconGroup_);
   var newX = blockXY.x + iconXY.x + Blockly.Icon.RADIUS;
   var newY = blockXY.y + iconXY.y + Blockly.Icon.RADIUS;
   if(newX !== this.iconX_ || newY !== this.iconY_) {
@@ -13244,7 +13244,7 @@ Blockly.Connection.prototype.tighten_ = function() {
     if(!svgRoot) {
       throw"block is not rendered.";
     }
-    var xy = Blockly.getRelativeXY_(svgRoot);
+    var xy = Blockly.getRelativeXY(svgRoot);
     block.getSvgRoot().setAttribute("transform", "translate(" + (xy.x - dx) + ", " + (xy.y - dy) + ")");
     block.moveConnections_(-dx, -dy)
   }
@@ -14412,7 +14412,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
   if(this.svg_) {
     var element = this.svg_.getRootElement();
     do {
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode
@@ -14942,7 +14942,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && Blockly.addClass_(this.svg_.svgGroup_, "userHidden")
   }
   this.childBlocks_.forEach(function(child) {
-    child.setUserVisible(userVisible)
+    child.setUserVisible(userVisible, opt_renderAfterVisible)
   });
   if(opt_renderAfterVisible && (userVisible && this.childBlocks_.length === 0)) {
     this.svg_ && this.render()
@@ -19065,7 +19065,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
-  this.functionDefinitionBlock = this.moveToModalBlockSpace_(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;
@@ -19114,7 +19114,7 @@ Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement("paramAddText");
   var paramAddButton = goog.dom.getElement("paramAddButton");
   if(!Blockly.disableParamEditing && (paramAddTextElement && paramAddButton)) {
-    Blockly.bindEvent_(paramAddButton, "mousedown", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
+    Blockly.bindEvent_(paramAddButton, "click", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
     Blockly.bindEvent_(paramAddTextElement, "keydown", this, function(e) {
       if(e.keyCode === goog.events.KeyCodes.ENTER) {
         this.addParamFromInputField_(paramAddTextElement)
@@ -19238,12 +19238,13 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
 };
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setMovable(true);
+  blockToMove.setDeletable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
   newBlock.setCurrentlyHidden(true)
 };
-Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
+Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
@@ -19505,7 +19506,7 @@ Blockly.XButton.prototype.render = function(parent) {
   buttonElement.innerHTML = "x";
   buttonElement.style.marginRight = "-10px";
   parent.appendChild(buttonElement);
-  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, "mousedown", this, goog.bind(function() {
+  this.eventsToUnbind_.push(Blockly.bindEvent_(buttonElement, "click", this, goog.bind(function() {
     if(this.onButtonPressed) {
       this.onButtonPressed()
     }
@@ -19723,7 +19724,7 @@ Blockly.SvgHeader = function(parent, opt_options) {
     this.textElement_.textContent = options.headerText
   }
   if(options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, "mousedown", null, options.onMouseDown)
+    Blockly.bindEvent_(this.svgGroup_, "click", null, options.onMouseDown)
   }
 };
 Blockly.SvgHeader.prototype.setPositionSize = function(yOffset, width, height) {
@@ -21742,9 +21743,17 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function(functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
-    var movedExampleBlock = this.moveToModalBlockSpace_(exampleBlock);
+    var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+    var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    exampleCall.setMovable(false);
+    exampleCall.setDeletable(false);
     this.exampleBlocks.push(movedExampleBlock)
   }, this)
+};
+Blockly.ContractEditor.prototype.moveToModalBlockSpace = function(block) {
+  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace.call(this, block);
+  newBlock.setDeletable(false);
+  return newBlock
 };
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
@@ -22079,22 +22088,22 @@ Blockly.noEvent = function(e) {
   e.preventDefault();
   e.stopPropagation()
 };
-Blockly.getRelativeXY_ = function(element) {
+Blockly.getRelativeXY = function(element) {
   var xy = {x:0, y:0};
   var x = element.getAttribute("x");
   if(x) {
-    xy.x = parseInt(x, 10)
+    xy.x = parseFloat(x)
   }
   var y = element.getAttribute("y");
   if(y) {
-    xy.y = parseInt(y, 10)
+    xy.y = parseFloat(y)
   }
   var transform = element.getAttribute("transform");
   var r = transform && transform.match(/translate\(\s*([-\d.]+)([ ,]\s*([-\d.]+)\s*\))?/);
   if(r) {
-    xy.x += parseInt(r[1], 10);
+    xy.x += parseFloat(r[1]);
     if(r[3]) {
-      xy.y += parseInt(r[3], 10)
+      xy.y += parseFloat(r[3])
     }
   }
   return xy
@@ -22104,7 +22113,7 @@ Blockly.getSvgXY_ = function(element, opt_svgParent) {
   var y = 0;
   var topMostSVG = opt_svgParent || Blockly.topMostSVGParent(element);
   do {
-    var xy = Blockly.getRelativeXY_(element);
+    var xy = Blockly.getRelativeXY(element);
     x += xy.x;
     y += xy.y;
     element = element.parentNode

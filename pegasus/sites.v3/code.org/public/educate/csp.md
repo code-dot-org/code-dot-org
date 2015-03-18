@@ -25,6 +25,9 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+### Watch a preview of CS Principles
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
 
 ### <a name="overview"></a>Overview

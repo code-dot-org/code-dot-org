@@ -1,16 +1,17 @@
 {
-  "badColorStringError":"You used an invalid color string: {val}",
-  "badStyleStringError":"You used an invalid style string: {val}",
+  "badColorStringError":"Þú notaðir ógildan streng fyrir lit: {val}",
+  "badStyleStringError":"Þú notaðir ógildan streng fyrir gerð: {val}",
   "circleBlockTitle":"hringur (radíus, gerð, litur)",
-  "displayBlockTitle":"sýna",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ellipsa (breidd, hæð, gerð, litur)",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "emptyFunctionalBlock":"Það er kubbur með óútfyllt inntak.",
   "extraTopBlocks":"Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"yfirlögn (yfir, undir)",
   "placeImageBlockTitle":"setja-mynd (x, y, mynd)",
   "offsetBlockTitle":"hliðrun (x, y, mynd)",
   "rectangleBlockTitle":"rétthyrningur (breidd, hæð, gerð, litur)",
-  "reinfFeedbackMsg":"Þú getur ýtt á \"Reyna aftur\" hnappinn til að breyta teikningunni.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"snúa (gráður, mynd)",
   "scaleImageBlockTitle":"kvarði (stuðull, mynd)",
   "squareBlockTitle":"ferningur (hlið, gerð, litur)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"undirlögn (undir, yfir)",
   "outline":"útlína",
   "solid":"gegnheilt",
-  "string":"strengur"
+  "string":"strengur",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

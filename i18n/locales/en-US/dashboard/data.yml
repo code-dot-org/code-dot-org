@@ -203,7 +203,7 @@ en:
         turtle_3_5: crwdns2721:0crwdne2721:0
         turtle_3_6: crwdns2994:0crwdne2994:0
         turtle_3_7: crwdns3817:0crwdne3817:0
-        turtle_3_8: crwdns2995:0crwdne2995:0
+        turtle_3_8: crwdns35062:0crwdne35062:0
         turtle_3_9: crwdns2996:0crwdne2996:0
         turtle_3_10: crwdns2997:0crwdne2997:0
         maze_karel_debug_seq_1: crwdns2727:0crwdne2727:0
@@ -428,6 +428,12 @@ en:
         playlab_intro: crwdns25663:0crwdne25663:0
         playlab_events: crwdns25664:0crwdne25664:0
         playlab_repeat_forever: crwdns25665:0crwdne25665:0
+        tutorial_puzzle_challenge: crwdns35063:0crwdne35063:0
+        msm_1_intro: crwdns35064:0crwdne35064:0
+        msm_2_eval_block: crwdns35065:0crwdne35065:0
+        msm_3_pemdas: crwdns35066:0crwdne35066:0
+        msm_6_variables: crwdns35067:0crwdne35067:0
+        msm_7_functions: crwdns35068:0crwdne35068:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

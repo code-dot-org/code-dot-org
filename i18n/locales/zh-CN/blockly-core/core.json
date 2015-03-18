@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"hello",
   "ADD":"添加",
   "ADD_COMMENT":"添加注释",
   "ADD_PARAMETER":"添加参数",
@@ -74,7 +74,7 @@
   "EXAMPLE_DESCRIPTION":"定义一个预期和实际行为的示例",
   "EXPAND_ALL":"展开块",
   "EXPAND_BLOCK":"展开块",
-  "EXPECTED":"result",
+  "EXPECTED":"45875221",
   "EXTERNAL_INPUTS":"外部输入",
   "FUNCTION_CREATE":"创建一个函数",
   "FUNCTION_EDIT":"编辑",

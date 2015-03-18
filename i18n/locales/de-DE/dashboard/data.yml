@@ -203,7 +203,7 @@ de:
         turtle_3_5: 'Erstelle jetzt eine neue "zeichne ein Haus"-Funktion und verwende sie um zwei Katzen unterzubringen. Hinweis: erstelle eine neue Funktion mit Hilfe des "mach etwas"-Bausteins und gib einen Namen für den Baustein ein.'
         turtle_3_6: 'Füge eine Eingabe, die "Länge" heißen soll, zu "zeichne ein Dreieck" hinzu, wie im Beispiel "zeichne ein Quadrat". Anschließend, zeichne verschieden große Dreiecke. (Hinweis: klicke auf den Stern, um bei einer Funktion eine Eingabe hinzu zufügen)'
         turtle_3_7: 'Füge eine Eingabe, die "Höhe" heißen soll, zu "zeichne ein Haus" hinzu und baue ein Haus, das groß genug für den Elefanten ist (die Kanten sollen 150 Pixel lang sein)'
-        turtle_3_8: 'Das hier sind alle Bausteine von den vorherigen Puzzles. Ändere "zeichne ein Haus", so das ich in der unteren, rechten Ecke lande, nachdem ein neues Haus gezeichnet worden ist. Verwende diese modifizierte Funktion um drei Häuser zu zeichnen.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Kannst du die "zeichne ein Haus"-Funktion ohne Hilfe wieder erstellen? Versuche es und zeichne anschließend eine ganze Reihe von Häusern.'
         turtle_3_10: Glückwunsch, du hast jetzt schon viel gelernt. Jetzt kannst alles zeichnen was dir einfällt. Versuch doch mal einen Stern, ein Spirale, oder eine hübsche Schneeflocke.
         maze_karel_debug_seq_1: 'Willkommen zur "Fehlerbeseitigung"! Mein Code funktioniert nicht richtig. Kannst du das Problem finden und mein Programm reparieren, damit ich mein Feld flach bekomme und es bepflanzt werden kann?'
@@ -428,6 +428,12 @@ de:
         playlab_intro: Einführung ins Spiele Labor
         playlab_events: Spiele Labor Ereignisse
         playlab_repeat_forever: Spiele Labor für immer wiederholen
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variablen
+        msm_7_functions: Funktionen
     callout:
       text:
         drag_blocks: 'Ziehen Sie einen "bewegen" Block und lassen Sie es unter den anderen Block einrasten'

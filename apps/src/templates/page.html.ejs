@@ -60,21 +60,19 @@
 <div id="codeWorkspace">
   <div id="headers" dir="<%= data.localeDirection %>">
     <div id="toolbox-header" class="workspace-header"><span><%= msg.toolboxHeader() %></span></div>
+    <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
+    <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
     <div id="workspace-header" class="workspace-header">
       <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
       <div id="blockCounter">
         <div id="blockUsed" class=<%= data.blockCounterClass %>>
           <%= data.blockUsed %>
         </div>
-        <span>&nbsp;/</span>
+        <span>/</span>
         <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
         <span> <%= msg.blocks() %></span>
       </div>
     </div>
-    <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
-    <% if (!data.editCode) { %>
-      <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
-    <% } %>
   </div>
   <% if (data.editCode) { %>
     <div id="codeTextbox"></div>

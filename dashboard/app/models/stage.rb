@@ -7,12 +7,16 @@ class Stage < ActiveRecord::Base
 
   validates_uniqueness_of :name, scope: :script_id
 
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   def to_param
     position.to_s
   end
 
   def unplugged?
-    script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
+    script_levels = Script.get_from_cache(script.name).script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
     script_levels.first.level.unplugged?
   end
@@ -54,7 +58,8 @@ class Stage < ActiveRecord::Base
         position: position,
         name: localized_name,
         title: localized_title,
-        levels: script_levels.map(&:summarize),
+        # Ensures we get the cached ScriptLevels, vs hitting the db
+        levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
 
     if script.has_lesson_plan?
