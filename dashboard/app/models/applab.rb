@@ -125,6 +125,7 @@ class Applab < Blockly
         "clearTimeout": null,
         "setInterval": null,
         "clearInterval": null,
+        "getTime": null,
 
         // Math
         "addOperator": null,
