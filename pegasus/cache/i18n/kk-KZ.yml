@@ -1008,7 +1008,6 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
@@ -1028,9 +1027,8 @@
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   dashboard_students_progress: Progress
   dashboard_progress_not_started: not started

@@ -17,7 +17,6 @@
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
     sains komputer
   petition_sign_message: 'Jika anda bersetuju, Daftar nama anda.  Sertai # lain-lain.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nama
   email: E-mel
   zipcode: Kod Zip atau negara
@@ -116,8 +115,6 @@
   learn_classes: cari kelas tempatan
   hoc_is_here: '#SatuJamKod ada di sini - Jom tengok! @codeorg'
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Belajar Hour of Code
   beyond_hoc: Melepasi Satu Jam
   what_gender: Apakah jantina anda?
@@ -133,12 +130,12 @@
     menulis %{lines} baris kod.'
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
     Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
@@ -154,27 +151,6 @@
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: Satu Jam Kod
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Kod Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: saya seorang pelajar
   contact_form_topic_parent: Saya seorang ibu atau bapa
   contact_form_topic_teacher: Saya guru/pendidik
@@ -371,8 +347,6 @@
   dashboard_login_picture: Gambar
   dashboard_login_none: E-mel
   dashboard_new_password: Kata laluan baru
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: not completed
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
@@ -1046,3 +1020,27 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_susan: |-
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |-
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_watchvideo: Watch the video
+  homepage_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
