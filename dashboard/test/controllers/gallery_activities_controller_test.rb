@@ -1,7 +1,7 @@
 
 require 'test_helper'
 
-class GalleryActivitiesControllerTest < ActionController::TestCase 
+class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
     @activity = create(:activity, user: @user,
@@ -21,7 +21,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
   test "index works with empty gallery" do
     GalleryActivity.destroy_all
-    
+
     get :index
     assert_response :success
   end
@@ -60,7 +60,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     u = @playlab_gallery_activity.user
     u.destroy
     @playlab_gallery_activity.reload
-    
+
     get :index, page: 1
 
     assert_response :success
@@ -129,7 +129,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :no_content
   end
 
-  test "cannot destroy someone else's gallery activity" do 
+  test "cannot destroy someone else's gallery activity" do
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
@@ -139,7 +139,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for someone else" do 
+  test "cannot create gallery activity for someone else" do
     sign_in another_user = create(:user)
     create :activity, user: another_user
 
@@ -150,7 +150,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for someone else's gallery activity" do 
+  test "cannot create gallery activity for someone else's gallery activity" do
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
@@ -160,7 +160,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for invalid activity id" do 
+  test "cannot create gallery activity for invalid activity id" do
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
@@ -170,7 +170,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for invalid user id" do 
+  test "cannot create gallery activity for invalid user id" do
     sign_in another_user = create(:user)
     activity = create :activity, user: another_user
 
@@ -182,7 +182,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
 
-  test "cannot create gallery activity with no activity id" do 
+  test "cannot create gallery activity with no activity id" do
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do

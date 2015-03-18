@@ -97,13 +97,13 @@ eos
 end
 
 class Deliverer
-  
+
   def initialize(params)
     @params = params.dup
     @smtp = smtp_connect
     @templates = {}
   end
-  
+
   def send(delivery)
     recipient = POSTE_DB[:contacts].where(id:delivery[:contact_id]).first
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
@@ -116,7 +116,7 @@ class Deliverer
       unsubscribe_link:poste_url("/u/#{encrypted_id}"),
       tracking_pixel:poste_url("/o/#{encrypted_id}"),
     }))
-    
+
     message = StringIO.new
 
     to_address = parse_address(header['to'], recipient)
@@ -129,10 +129,10 @@ class Deliverer
       next unless address = parse_address(header[field.downcase])
       message.puts "#{field}: " + format_address(address)
     end
-    
+
     subject = header['subject'].to_s.strip
     message.puts 'Subject: ' + subject unless subject.empty?
-    
+
     message.puts 'MIME-Version: 1.0'
 
     attachments = header['attachments'] || {}
@@ -167,20 +167,20 @@ class Deliverer
 
     @smtp.send_message message.string, from_address[:email], to_address[:email]
   end
-  
+
   private
-  
+
   def format_address(address)
     email = address[:email].to_s.strip
     raise ArgumentError, 'No :email' if email.empty?
-    
+
     name = address[:name].to_s.strip
     return email if name.empty?
-    
+
     name = "\"#{name.gsub('"', '\"').gsub("'", "\\'")}\"" if name =~ /[;,\"\'\(\)]/
     "#{name} <#{email}>".strip
   end
-  
+
   def load_template(name)
     template = @templates[name]
     return template if template
@@ -198,7 +198,7 @@ class Deliverer
 
     @templates[name] = Poste::Template.new IO.read(path), engine
   end
-  
+
   def parse_addresses(string)
     string.split(', ').map do |user_string|
       if user_string.include? '<'
@@ -213,23 +213,23 @@ class Deliverer
   def parse_address(address, defaults={})
     address = address.to_s.strip
     return parse_addresses(address).first unless address.empty?
-    
+
     email = defaults[:email].to_s.strip
     return nil if email.empty?
-  
+
     {email:email}.tap do |address|
       name = defaults[:name].to_s.strip
       address[:name] = name unless name.empty?
     end
   end
-  
+
   def smtp_connect()
     Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
       smtp.enable_starttls if @params[:enable_starttls_auto]
       smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
     end
   end
-  
+
 end
 
 def create_threads(count)
@@ -280,7 +280,7 @@ def main()
   elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
 
   unless queue_count == 0 && remaining_count == 0
-    message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued." 
+    message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
     if rack_env?(:development)
       puts message
     else

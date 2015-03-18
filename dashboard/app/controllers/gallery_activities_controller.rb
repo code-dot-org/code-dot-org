@@ -1,6 +1,6 @@
 class GalleryActivitiesController < ApplicationController
   before_filter :authenticate_user!, except: :index
-  load_and_authorize_resource 
+  load_and_authorize_resource
   check_authorization
 
   before_action :set_gallery_activity, only: [:destroy]
@@ -11,7 +11,7 @@ class GalleryActivitiesController < ApplicationController
       per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
       GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
     end
-    
+
     if params[:app]
       @gallery_activities = gallery_activities_for_app params[:app]
     else

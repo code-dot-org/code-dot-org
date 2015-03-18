@@ -23,7 +23,7 @@ def analyze_day_fast(date)
   froms = [
     "FROM hoc_activity WHERE started_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_started_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
-  
+
   finished_froms = [
     "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
@@ -49,7 +49,7 @@ def analyze_day_fast(date)
       add_count_to_hash countries, row[:country], row[:count]
     end
   end
-  
+
   #HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
   states = {}
   froms.each do |from_where|
@@ -60,7 +60,7 @@ def analyze_day_fast(date)
       add_count_to_hash states, row[:state], row[:count]
     end
   end
-  
+
   #HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
   cities = {}
   froms.each do |from_where|
@@ -83,7 +83,7 @@ def analyze_day_fast(date)
   finished_froms.each do |from_where|
     finished += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
   end
-  
+
   {
     'started'=>started,
     'finished'=>finished,
@@ -157,7 +157,7 @@ def main()
     states: total_states,
     countries: total_countries,
   }
-  
+
   #HipChat.log 'Calculating lines of code...' if rack_env?(:production)
   lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs')}`.to_i : 0
 
@@ -173,7 +173,7 @@ def main()
     petition_signatures:      DB[:forms].where(kind:'Petition').count,
     lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
-  
+
   total_females = DASHBOARD_DB[:users].where(gender:'f').count;
   total_males = DASHBOARD_DB[:users].where(gender:'m').count;
   total_with_gender = total_females + total_males
@@ -188,4 +188,3 @@ def main()
 end
 
 main()
-

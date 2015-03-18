@@ -33,7 +33,7 @@ class LevelsController < ApplicationController
     end
     if @level.is_a? DSLDefined
       @filename = @level.filename
-      @dsl_file = File.read(@filename) if @filename && File.exists?(@filename)
+      @dsl_file = File.read(@filename) if @filename && File.exist?(@filename)
     end
   end
 
@@ -147,6 +147,8 @@ class LevelsController < ApplicationController
         @game = Game.custom_maze
       elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
+      elsif @type_class == NetSim
+        @game = Game.netsim
       end
       @level = @type_class.new
       render :edit
@@ -209,11 +211,12 @@ class LevelsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_level
-      @level = if params.include? :key
-        Level.find_by_key params[:key]
-      else
-        Level.find(params[:id])
-      end
+      @level =
+        if params.include? :key
+          Level.find_by_key params[:key]
+        else
+          Level.find(params[:id])
+        end
       @game = @level.game
     end
 

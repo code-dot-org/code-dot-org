@@ -58,7 +58,7 @@ module Ops
       district_params_list = params[:cohort].delete :districts
       return unless district_params_list
       params[:cohort][:cohorts_districts_attributes] = district_params_list.map do |district_params|
-        {district_id: district_params[:id], 
+        {district_id: district_params[:id],
          max_teachers: district_params[:max_teachers],
          _destroy: district_params[:_destroy]}.tap do |cohorts_districts_attrs|
           if params[:id] && existing = CohortsDistrict.find_by(district_id: district_params[:id], cohort_id: params[:id])
@@ -73,12 +73,11 @@ module Ops
       teacher_param_list = params[:cohort].delete :teachers
       return unless teacher_param_list
 
-      params[:cohort][:teachers] =
-        teacher_param_list.map do |teacher_params|
-          if teacher_params[:district] && teacher_params[:district].is_a?(String)
-            teacher_params[:district] = District.find_by!(name: teacher_params[:district])
-          end
-          User.find_or_create_teacher(teacher_params)
+      params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
+        if teacher_params[:district] && teacher_params[:district].is_a?(String)
+          teacher_params[:district] = District.find_by!(name: teacher_params[:district])
+        end
+        User.find_or_create_teacher(teacher_params)
       end
     end
   end

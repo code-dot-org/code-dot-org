@@ -119,9 +119,9 @@ def insert_form(kind, data, options={})
   end
 
   data = validate_form(kind, data)
-  
+
   timestamp = DateTime.now
-  
+
   row = {
     secret: SecureRandom.hex,
     parent_id: options[:parent_id],
