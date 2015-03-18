@@ -886,7 +886,15 @@ function animateUserExpression (maxNumSteps) {
       // Don't highlight anything
       tokenList = constructTokenList(current);
     }
-    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken');
+
+    // For lines after the first one, we want them left aligned and preceeded
+    // by an equals sign.
+    var leftAlign = false;
+    if (currentStep > 0) {
+      leftAlign = true;
+      tokenList = constructTokenList('= ').concat(tokenList);
+    }
+    displayEquation('userExpression', null, tokenList, numCollapses, 'markedToken', leftAlign);
     previousExpression = current.clone();
     if (current.isDivZero()) {
       finished = true;
@@ -910,8 +918,10 @@ function animateUserExpression (maxNumSteps) {
  * @param {Array<Object>} tokenList A list of tokens, representing the expression
  * @param {number} line How many lines deep into parent to display
  * @param {string} markClass Css class to use for 'marked' tokens.
+ * @param {boolean} leftAlign If true, equations are left aligned instead of
+ *   centered.
  */
-function displayEquation(parentId, name, tokenList, line, markClass) {
+function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) {
   var parent = document.getElementById(parentId);
 
   var g = document.createElementNS(Blockly.SVG_NS, 'g');
@@ -922,13 +932,24 @@ function displayEquation(parentId, name, tokenList, line, markClass) {
     len = new Token(name + ' = ', false).renderToParent(g, xPos, null);
     xPos += len;
   }
-
+  var firstTokenLen = 0;
   for (var i = 0; i < tokenList.length; i++) {
     len = tokenList[i].renderToParent(g, xPos, markClass);
+    if (i === 0) {
+      firstTokenLen = len;
+    }
     xPos += len;
   }
 
-  var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  var xPadding;
+  if (leftAlign) {
+    // Align second token with parent (assumption is that first token is our
+    // equal sign).
+    var transform = Blockly.getRelativeXY(parent.childNodes[0]);
+    xPadding = parseFloat(transform.x) - firstTokenLen;
+  } else {
+    xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  }
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
@@ -2009,6 +2030,9 @@ ExpressionNode.prototype.debug = function () {
 },{"../utils":229,"./js-numbers/js-numbers":37,"./token":40}],40:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
+// Unicode character for non-breaking space
+var NBSP = '\u00A0';
+
 /**
  * A token is a value, and a boolean indicating whether or not it is "marked".
  * Marking is done for two different reasons.
@@ -2049,31 +2073,23 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
 
+  var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
+  // Replace spaces with 2x nonbreaking space
+  tspan.textContent = this.nonRepeated_.replace(/ /g, NBSP + NBSP);
+  text.appendChild(tspan);
+
   if (this.repeated_) {
-    var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
-    tspan.textContent = this.nonRepeated_;
-    text.appendChild(tspan);
     tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.setAttribute('style', 'text-decoration: overline');
-    tspan.textContent = this.repeated_;
+    // Replace spaces with 2x nonbreaking space
+    tspan.textContent = this.repeated_.replace(/ /g, NBSP + NBSP);
     text.appendChild(tspan);
-  } else {
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    text.textContent = this.nonRepeated_.replace(/ /g, '_');
   }
 
   element.appendChild(text);
-  // getComputedTextLength isn't available to us in our mochaTests
-  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+  textLength = text.getBoundingClientRect().width;
 
-  if (!this.repeated_) {
-    // reset to version with spaces
-    text.textContent = this.nonRepeated_;
-  }
-
-  text.setAttribute('x', xPos + textLength / 2);
-  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {
     text.setAttribute('class', markClass);
   }
