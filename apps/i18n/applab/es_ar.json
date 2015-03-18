@@ -8,8 +8,8 @@
   "catText": "Texto",
   "catVariables": "Variables",
   "continue": "Continuar",
-  "container": "crear contenedor",
-  "containerTooltip": "Crea un contenedor de división y define su HTML interno.",
+  "container": "create container",
+  "containerTooltip": "Creates a division container and sets its inner HTML.",
   "finalLevel": "¡Felicidades! Ha resuelto el rompecabezas final.",
   "nextLevel": "¡Felicidades! Has completado este puzzle.",
   "no": "No",
@@ -24,6 +24,6 @@
   "stepIn": "Entrar",
   "stepOver": "Saltar",
   "stepOut": "Salir",
-  "viewData": "Ver Datos",
+  "viewData": "Ver datos",
   "yes": "Si"
 }

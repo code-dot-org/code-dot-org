@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "elipsa (širina, višina, slog, barva)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Nekaj blokov ostaja nezdruženih. Jih želite dodati k bloku za prikaz?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "prosojnice (zgoraj, spodaj)",
   "placeImageBlockTitle": "postavi sliko (x, y, slika)",
   "offsetBlockTitle": "zamik (x, y, slika)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "podloga (spodnja, zgornja)",
   "outline": "oris",
   "solid": "ploskovita",
-  "string": "niz",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "niz"
 }

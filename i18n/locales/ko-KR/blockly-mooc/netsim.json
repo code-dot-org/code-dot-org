@@ -1,6 +1,6 @@
 {
-  "a_and_b":"A 나누기 B",
-  "ascii":"아스키",
+  "a_and_b":"A\/B",
+  "ascii":"ASCII",
   "binary":"2진",
   "bitCounter":"{x}\/{y} bits",
   "clear":"Clear",

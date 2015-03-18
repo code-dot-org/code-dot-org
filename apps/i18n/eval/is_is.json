@@ -1,12 +1,11 @@
 {
-  "badColorStringError": "Þú notaðir ógildan streng fyrir lit: {val}",
-  "badStyleStringError": "Þú notaðir ógildan streng fyrir gerð: {val}",
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "hringur (radíus, gerð, litur)",
   "displayBlockTitle": "sýna",
   "ellipseBlockTitle": "ellipsa (breidd, hæð, gerð, litur)",
-  "emptyFunctionalBlock": "Það er kubbur með óútfyllt inntak.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "yfirlögn (yfir, undir)",
   "placeImageBlockTitle": "setja-mynd (x, y, mynd)",
   "offsetBlockTitle": "hliðrun (x, y, mynd)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "undirlögn (undir, yfir)",
   "outline": "útlína",
   "solid": "gegnheilt",
-  "string": "strengur",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "strengur"
 }

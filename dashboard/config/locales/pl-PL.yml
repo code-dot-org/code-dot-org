@@ -608,45 +608,11 @@
     support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela,
     by skontaktowali się z nami  w Twoim imieniu.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_completed: nie została zakończona
     completed_too_many_blocks: zakończona, zbyt wiele bloków
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
-    assessment: assessment
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy
     all_courses: Wszystkie kursy
-  project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
-    save: Zapisz
-    delete: Usuń
-    exit: Return to Course
-    my_projects: My Projects
-    share: Udostępnij
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
-    more: Więcej
-    name: Imię/Nazwisko
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
-    really_delete: Usunąć?
-    delete_yes: Tak
-    delete_no: Nie
-    saved: Saved
-    not_saved: Not saved
-    cancel: Anuluj
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects

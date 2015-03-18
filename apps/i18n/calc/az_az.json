@@ -1,17 +1,16 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "compute": "hesablamalı",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Eyni ifadəni almaq üçün arqumentlərinizin yerini dəyişməyə çalışın.",
-  "evaluate": "evaluate",
   "extraTopBlocks": "Sizin qoşulmamış bloklarınız var. Bunları \"hesablamalı\" blokuna qoşmaq istərdinizmi?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Məqsəd:",
   "levelIncompleteError": "Your expression does not match the goal.",
-  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Bu da sizin əhvalat! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin!",
   "yourExpression": "Sizin ifadəniz:",
   "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
   "wrongResult": "Your expresison does not return the correct result."
 }

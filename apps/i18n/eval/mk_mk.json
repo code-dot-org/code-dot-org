@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "елипса (ширина, висина, стил, боја)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \"Прикажи\" блок?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "шалче (горе, долу)",
   "placeImageBlockTitle": "место-на сликата (x, y, слика)",
   "offsetBlockTitle": "offset (x, y, image)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "подлога (дното, врвот)",
   "outline": "Надворешна линија",
   "solid": "цврсто",
-  "string": "Повлекувај",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "Повлекувај"
 }

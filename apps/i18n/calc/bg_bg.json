@@ -1,17 +1,16 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "Трябва да прикачите блок за изчислителния блок.",
-  "emptyFunctionalBlock": "Имате блок с незапълнено поле.",
+  "compute": "изчисляване",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Опитайте пренареждане на аргументите, за да получите точно един и същи израз.",
-  "evaluate": "evaluate",
   "extraTopBlocks": "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?",
   "failedInput": "Вашата функция не връща правилният резултат за всички стойности.",
   "goal": "Цел:",
-  "levelIncompleteError": "Вашият израз не съответства на целта.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "levelIncompleteError": "Your expression does not match the goal.",
   "reinfFeedbackMsg": "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!",
   "yourExpression": "Вашият израз:",
-  "wrongInput": "Вие извикахте функция с грешна стойност.",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
   "wrongResult": "Your expresison does not return the correct result."
 }

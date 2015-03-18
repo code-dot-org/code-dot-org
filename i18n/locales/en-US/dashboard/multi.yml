@@ -140,6 +140,34 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: crwdns8565:0crwdne8565:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns35206:0crwdne35206:0
+        Blue colored blocks are associated with __________ ?: crwdns35207:0__________crwdne35207:0
+        a image: crwdns35208:0crwdne35208:0
+        a number: crwdns35209:0crwdne35209:0
+        a string: crwdns35210:0crwdne35210:0
+        boolean: crwdns35211:0crwdne35211:0
+      2-3 multi match 2:
+         text block <br> scale block <br> offset block <br> circle block <br> triangle block <br> rotate block: crwdns35212:0crwdne35212:0
+        Purple colored blocks are associated with __________ ?: crwdns35213:0__________crwdne35213:0
+        a image: crwdns35214:0crwdne35214:0
+        a number: crwdns35215:0crwdne35215:0
+        a string: crwdns35216:0crwdne35216:0
+        boolean: crwdns35217:0crwdne35217:0
+      2-3 multi match 3:
+         text block <br> color block <br> style block: crwdns35218:0crwdne35218:0
+        Teal colored blocks are associated with __________ ?: crwdns35219:0__________crwdne35219:0
+        a image: crwdns35220:0crwdne35220:0
+        a number: crwdns35221:0crwdne35221:0
+        a string: crwdns35222:0crwdne35222:0
+        boolean: crwdns35223:0crwdne35223:0
+      2-3 multi match 4:
+        ? ' true block <br> false block <br> < block <br> > block <br> = block <br> not block <br> and block <br> or block <br> string=? block':
+          ' true block <br> false block <br> < block <br> > block <br> = block <br> not block <br> and block <br> or block <br> string=? block' Green colored blocks are associated with __________ ?:
+            Green colored blocks are associated with __________ ? a image:
+              a image a number:
+                a number a string:
+                  a string boolean: crwdns35224:0crwdne35224:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -543,7 +571,7 @@ en:
         17: crwdns34723:0crwdne34723:0
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: crwdns35227:0crwdne35227:0
-        What should f(1) produce?: crwdns35585:0crwdne35585:0
+        What is f(1)?: crwdns34725:0crwdne34725:0
         x: crwdns34726:0crwdne34726:0
         117: crwdns34727:0crwdne34727:0
         17: crwdns34728:0crwdne34728:0

@@ -4,9 +4,8 @@
   "circleBlockTitle": "okrąg (promień, styl, kolor)",
   "displayBlockTitle": "wyświetl",
   "ellipseBlockTitle": "elipsa (szerokość, wysokość, styl, kolor)",
-  "emptyFunctionalBlock": "Nie wprowadziłeś żadnej zawartości do swojego bloku.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "nakładka (góra, dół)",
   "placeImageBlockTitle": "położenie-obraz (x, y, obraz)",
   "offsetBlockTitle": "offset (x, y, obraz)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "podkładka (dół, góra)",
   "outline": "zarys",
   "solid": "trwały",
-  "string": "łańcuch",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "łańcuch"
 }

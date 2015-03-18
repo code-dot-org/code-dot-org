@@ -668,125 +668,103 @@
           красный)
       msm variables multi 1:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x?: Какое значение переменной x?
-        a function: функция
+        What is the value of x?: What is the value of x?
+        a function: a function
         15: '15'
         x: x
-        '15': '15'
       msm variables multi 10:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the function?: Какое имя у этой функции?
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the function?: What is the name of the function?
         f: f
         x: x
         17: '17'
-        '17': '17'
       msm variables multi 11:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the parameter?: Какое имя у этого параметра?
+        f(x) = x * 17: f(x) = x * 17
+        What is the name of the parameter?: What is the name of the parameter?
         f: f
         x: x
         17: '17'
-        '17': '17'
       msm variables multi 12:
-        (define (f x) (*x 17)): (определите (f x) (*x 17))
-        What is the name of the variable?: Какое имя у этой переменной?
+        (define (f x) (*x 17)): (define (f x) (*x 17))
+        What is the name of the variable?: What is the name of the variable?
         f: f
         x: x
         17: '17'
-        '17': '17'
       msm variables multi 13:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        f(x) = x * 17: f(x) = x * 17
+        What is f(1)?: What is f(1)?
         x: x
         117: '117'
         17: '17'
-        '117': '117'
-        '17': '17'
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
-        What is the value of a + b?: Какое значение a + b?
+        What is the value of a + b?: What is the value of a + b?
         8: '8'
-        function: функция
+        function: function
         ab: ab
-        '8': '8'
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x-10?: Какое значение x-10?
-        a function: функция
+        What is the value of x-10?: What is the value of x-10?
+        a function: a function
         5: '5'
         x: x
-        '5': '5'
       msm variables multi 4:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
-          600
-        What is the value of x?: Какое значение переменной x?
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of x?: What is the value of x?
         3: '3'
         15: '15'
-        do not know: не знаю
-        '3': '3'
-        '15': '15'
+        do not know: do not know
       msm variables multi 5:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
-          600
-        What is the value of (p - x)?: какое значение (p - x)?
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of (p - x)?: What is the value of (p - x)?
         q: q
         3: '3'
         5: '5'
-        '3': '3'
-        '5': '5'
       msm variables multi 6:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
-          600
-        What is the value of string-length(q)?: Какое значение string-length(q)?
+        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
+          q hello
+        What is the value of string-length(q)?: What is the value of string-length(q)?
         1: '1'
         hello: привет
         5: '5'
-        '1': '1'
-        '5': '5'
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: Какое имя у этой функции?
+        What is the name of the function?: What is the name of the function?
         f: f
         x: x
         3: '3'
-        '3': '3'
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: Какое имя у этой переменной?
+        What is the name of the variable?: What is the name of the variable?
         f: f
         x: x
         3: '3'
-        '3': '3'
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: Какое значение f(2)?
+        What is f(2)?: What is f(2)?
         6: '6'
         5: '5'
         x: x
-        '6': '6'
-        '5': '5'
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: Какое имя у этой функции?
+        What is the name of this function?: What is the name of this function?
         g: g
         y: true
         3: '3'
-        '3': '3'
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: Какое имя у этого параметра?
+        What is the name of the parameter?: What is the name of the parameter?
         g: g
         y: true
         3: '3'
-        '3': '3'
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: Какое значение вернет функция g(2)?
+        What should g(2) return?: What should g(2) return?
         6: '6'
         5: '5'
         y: true
-        '6': '6'
-        '5': '5'
       Multi Strings Images 1:
         Strings and Images Multiple Choice: 'Несколько вариантов: строки и изображения'
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
@@ -801,142 +779,54 @@
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
           1.blocks4.start_blocks, 300, 100
       PDK5 Basic CS:
-        Video Follow-up Question: Видео вопрос
-        Answer this question based on the video you just watched.: Ответьте на этот
-          вопрос, основываясь на видео, которое вы только что посмотрели.
-        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
-        a part inside of a computer: часть внутри компьютера
-        a week-long course to learn about computers: недельный курс обучения компьютеру
-        a set of instructions you give a computer to execute: набор инструкций, которые
-          даются компьютеру для исполнения
-        a secret password: секретный пароль
-      PDK5 Beyond:
-        What do I do now?: What do I do now?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This
-          is the last piece of our online PD. Congratulations! Click Im finished when
-          you are ready!
-        Im finished: Im finished
-      PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Classroom Culture:
-        Classroom Culture: Культура в классе
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Course Maps:
-        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Glossary:
-        Glossary: Словарь терминов
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Intro:
-        Welcome!: Welcome!
-        Before now, have you ever participated in an online PD program?: Before now,
-          have you ever participated in an online PD program?
-        'Yes': Да
-        'No': Нет
-      PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle
-          to the left of the workspace is called the
-        toolbox: toolbox
-        shelf: shelf
-        bin: bin
-        dropdown: dropdown
-      PDK5 Teacher Dashboard:
-        Teacher Dashboard: Teacher Dashboard
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Test1:
-        title: название
-        description here: Описание здесь
-        Question: Вопрос
-        wrong answer: неправильный ответ
-        right answer: правильный ответ
-      PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 UVideo Overview:
-        Teacher Guides to all our unplugged activities: Teacher Guides to all our
-          unplugged activities
-        Are you ready to move on?: Are you ready to move on?
-        'Yes': Да
-      PDK5 Visual Languages:
-        Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based
-          on the video you saw before, please answer the question below.
-        Why are visual programming languages easier to learn than text-based programming languages?: Why
-          are visual programming languages easier to learn than text-based programming
-          languages?
-        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because
-          you dont have to worry about syntax as much, like where to put a semi-colon
-        Because you can focus on the logic of programming: Because you can focus on
-          the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because
-          the commands are available in a menu rather than having to remember them
-          yourself
-        All of the above: All of the above
-      PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
-        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
-        a part inside of a computer: часть внутри компьютера
-        a set of instructions a person gives a computer to execute: a set of instructions
-          a person gives a computer to execute
-        a week-long course to learn about computers: недельный курс обучения компьютеру
-        a secret password: секретный пароль
+        Video Follow-up Question: Video Follow-up Question
+        Answer this question based on the video you just watched.: Answer this question
+          based on the video you just watched.
+        'A computer program, or code, is:': 'A computer program, or code, is:'
+        a part inside of a computer: a part inside of a computer
+        a week-long course to learn about computers: a week-long course to learn about
+          computers
+        a set of instructions you give a computer to execute: a set of instructions
+          you give a computer to execute
+        a secret password: a secret password
       Play Lab Rocket 6:
-        Rocket Multiple Choice: Ракета - выбор правильных ответов
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Какая
-          функция описывает ракету, которая достигает 24 метра за 2 секунды, 60 метров
-          за 5 секунд, и 108 метров за 9 секунд?
-        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
-          12
-        rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
-          12
-        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
-        rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds
+        Rocket Multiple Choice: Rocket Multiple Choice
+        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
+          function would describe a rocket that reaches 24 meters at 2 seconds, 60
+          meters at 5 seconds, and 108 meters at 9 seconds?
+        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds
+          + 12
+        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds
+          * 12
+        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
+        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds
           * 48
       Play Lab Rocket 7:
-        Rocket Multiple Choice: Ракета - выбор правильных ответов
-        0: '? Какая функция описывает ракету, которая достигает 4 метра за 2 секунды,
-          16 метров за 4 секунды, и 256 метров за 16 секунд?'
-        1: ': Какая функция описывает ракету, которая достигает 4 метра за 2 секунды,
-          16 метров за 4 секунды, и 256 метров за 16 секунд?'
-        rocket-height(seconds) = seconds * 2: высота ракеты(секунды) = секунды * 2
-        rocket-height(seconds) = seconds * seconds: высота ракеты(секунды) = секунды
-          * секунды
-        rocket-height(seconds) = seconds * 4: высота ракеты(секунды) = секунды * 4
-        rocket-height(seconds) = seconds * 16: высота ракеты(секунды) = секунды *
+        Rocket Multiple Choice: Rocket Multiple Choice
+        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
+          16 meters at 4 seconds, and  256 meters at 16 seconds?'
+        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
+          16 meters at 4 seconds, and  256 meters at 16 seconds?'
+        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
+        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
+          * seconds
+        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
+        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds *
           16
-        ? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?
-        : Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?
       Play Lab Rocket 8:
-        Rocket Multiple Choice: Ракета - выбор правильных ответов
-        0: '? Какая функция описывает ракету, которая достигает 47 метров за 5 секунд,
-          97 метров за 10 секунд, и 147 метров за 15 секунд?'
-        1: ': Какая функция описывает ракету, которая достигает 47 метров за 5 секунд,
-          97 метров за 10 секунд, и 147 метров за 15 секунд?'
-        rocket-height(seconds) = seconds * 7 + 10: высота ракеты(секунды) = секунды
+        Rocket Multiple Choice: Rocket Multiple Choice
+        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
+          97 meters at 10 seconds, and 147 meters at 15 seconds?'
+        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
+          97 meters at 10 seconds, and 147 meters at 15 seconds?'
+        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
           * 7 + 10
-        rocket-height(seconds) = seconds * 10 + 7: высота_ракеты(секунды) = секунды*10+7
-        rocket-height(seconds) = seconds * 7 + 3: высота ракеты(секунды) = секунды
+        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds
+          * 10 + 7
+        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
           * 7 + 3
-        rocket-height(seconds) = seconds * 10 - 3: высота ракеты(секунды) = секунды
+        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds
           * 10 - 3
-        ? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?
-        : Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?
       test multi image:
         Maze Multiple Choice Two: 'Лабиринт: Выбор варианта - 2'
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -962,13 +852,13 @@
         George Washington: Джордж Вашингтон
         George Jetson: Джордж Джетсон
       Test 1:
-        This is a test: Это тест
-        whatever: неважно
-        this is a question?: Это вопрос?
+        This is a test: This is a test
+        whatever: whatever
+        this is a question?: this is a question?
         wrong answer: неправильный ответ
         right answer: правильный ответ
       unique level name here:
-        line1<br/>line2: линия1<br/>линия2
+        line1<br/>line2: line1<br/>line2
         description here: Описание здесь
         Question: Вопрос
         wrong answer: неправильный ответ

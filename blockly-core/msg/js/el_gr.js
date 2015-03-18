@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.el_gr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "κλήση";
+Blockly.Msg.ACTUAL = "πραγματική";
 Blockly.Msg.ADD = "Πρόσθεσε";
 Blockly.Msg.ADD_COMMENT = "Πρόσθεσε σχόλιο";
 Blockly.Msg.ADD_PARAMETER = "Προσθέστε  παράμετρο";
@@ -75,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Παράδειγμα";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Ορίζει ένα παράδειγμα με την αναμενόμενη και πραγματική συμπεριφορά";
 Blockly.Msg.EXPAND_ALL = "Επέκταση Πλακιδίων";
 Blockly.Msg.EXPAND_BLOCK = "Μπλοκ επέκτασης";
-Blockly.Msg.EXPECTED = "αποτέλεσμα";
+Blockly.Msg.EXPECTED = "αναμενόμενος";
 Blockly.Msg.EXTERNAL_INPUTS = "Εξωτερικές εισόδοι";
 Blockly.Msg.FUNCTION_CREATE = "Δημιουργήστε μια συνάρτηση";
 Blockly.Msg.FUNCTION_EDIT = "επεξεργάσου";

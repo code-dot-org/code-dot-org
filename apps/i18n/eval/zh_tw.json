@@ -6,7 +6,6 @@
   "ellipseBlockTitle": "橢圓(寬度,高度,樣式, 顏色)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "你有未連接的區塊，難道你要將它們附加到\"顯示\"區塊嗎?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "覆蓋 (頂部, 底部)",
   "placeImageBlockTitle": "放置圖片(x,y,圖片)",
   "offsetBlockTitle": "偏移量 (x,y,圖片)",
@@ -25,7 +24,5 @@
   "underlayBlockTitle": "襯底(底部, 頂部)",
   "outline": "輪廓",
   "solid": "實心",
-  "string": "字串",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "string": "字串"
 }

@@ -661,12 +661,6 @@
         playlab_intro: Johdanto Pelilabraan
         playlab_events: 'Pelilabra: tapahtumat'
         playlab_repeat_forever: 'Pelilabra: ikuinen toisto'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Arviointilohkot
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Muuttujat
-        msm_7_functions: Funktiot
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan

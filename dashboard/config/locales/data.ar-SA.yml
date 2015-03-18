@@ -624,12 +624,6 @@
         playlab_intro: مقدمة لمختبر Play اللعب
         playlab_events: أحداث مختبر اللعب
         playlab_repeat_forever: تشغيل مختبر تكرار
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: المتغيرات
-        msm_7_functions: الدوال
     callout:
       text:
         drag_blocks: اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى

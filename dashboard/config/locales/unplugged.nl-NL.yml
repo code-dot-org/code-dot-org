@@ -260,24 +260,24 @@
         video: C4_unplugged_madlibs
       ForLoopFun:
         title: For Lus fun
-        desc: We weten dat lussen ons helpen om stappen te herhalen, nu gaan we leren
-          om gebruik te maken van lussen met extra structuur.
+        desc: We weten dat lussen ons toelalen om dingen steeds opnieuw te herhalen,
+          nu gaan we leren om gebruik te maken van lussen met extra ingebouwde structuur.
         video: C4_unplugged_forlussen
       SongwritingWithParameters:
         title: Songwriting met Parameters
         desc: 'Een van de meest prachtige structuren in de informatica wereld is de
-          functie. Functies (soms procedures genoemd) zijn mini programma''s die telkens
+          functie. Funcites (soms procedures genoemd) zijn mini programma''s die telkens
           opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma.
-          Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen
+          Deze les helpt leerlingen intuïtief begrijpen waarom brokken code samenvoegen
           in functies een nuttige praktijk is.  '
         video: C4_unplugged_parameters
       BinaryImages:
         title: Binaire afbeeldingen
-        desc: Hoewel veel mensen binair zien als enkel nullen en enen, leerde onze
-          vorige lessen de leerlingen dat informatie weergegeven kan worden in een
-          verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder
-          door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen
-          en kleuren) binair kan opslaan.
+        desc: Hoewel veel mensen binair zien als enkel nullen en enen, toonde onze
+          vorige cursussen aan de leerlingen dat informatie kan weergegeven worden
+          in een verscheidenheid van binair opties. In deze les gaan we nog een stapje
+          verder door te tonen hoe een computer nog meer complexe informatie (zoals
+          afbeeldingen en kleuren) kan opslaan in binair.
         video: C4_unplugged_binair
       VideoGamesCoordinatePlanes:
         title: Video games en coördinatenstelsels
