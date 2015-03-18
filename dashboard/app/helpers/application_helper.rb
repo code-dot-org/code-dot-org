@@ -113,7 +113,7 @@ module ApplicationHelper
 
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
-    
+
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image).try(:image)
       level_source = opts[:level_source]
@@ -175,7 +175,7 @@ module ApplicationHelper
   def artist_freeplay_path
     script_stage_script_level_path(*is_k1? ? ['course1', 18, 10] : ['artist', 1, 10])
   end
-  
+
   def script_certificate_image_url(user, script)
     if script.hoc?
       script_name = 'hoc'

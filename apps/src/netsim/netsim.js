@@ -233,7 +233,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
         this.becomeDnsNode.bind(this));
   }
 
-  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
+  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
+      this.connection_);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);

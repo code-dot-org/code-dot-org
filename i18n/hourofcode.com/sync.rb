@@ -32,5 +32,3 @@ end
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/resources.md").each do |file|
   File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
 end
-
-

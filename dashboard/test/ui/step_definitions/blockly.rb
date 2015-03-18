@@ -8,7 +8,6 @@ Given(/^block "([^"]*)" is at a location "([^"]*)"$/) do |block, identifier|
 end
 
 When(/^I click block "([^"]*)"$/) do |block|
-  block_id = get_block_id(block)
   @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 

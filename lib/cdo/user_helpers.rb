@@ -14,7 +14,7 @@ module UserHelpers
     prefix = "coder_#{prefix}" if prefix.length < 5
 
     return prefix if queryable.where(username: prefix).limit(1).count == 0
-    
+
     similar_users = queryable.where(["username like ?", prefix + '%']).select(:username).to_a
     similar_usernames = similar_users.map do |user|
       if user.respond_to?(:username)
@@ -36,7 +36,7 @@ module UserHelpers
     weight = SecureRandom.random_number
     PEGASUS_DB[:cdo_donors].where('((weight_f - ?) >= 0)', weight).first
   end
-  
+
   def self.sponsor_message(user)
     sponsor = random_donor[:name_s]
 

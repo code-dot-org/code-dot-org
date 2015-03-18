@@ -22,6 +22,11 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {boolean} showPacketSizeControl - Whether the packet size slider
+ *           should appear in the send widget.
+ *
+ * @property {number} defaultPacketSizeLimit - Initial maximum packet size.
+ *
  * @property {NetSimTabType[]} showTabs - Which tabs should appear beneath the
  *           network visualization.  Does not determine tab order; tabs always
  *           appear in the order "Instructions, My Device, Router, DNS."
@@ -62,6 +67,10 @@ levels.default = {
   showClientsInLobby: true,
   showRoutersInLobby: true,
   showAddRouterButton: true,
+
+  // Send widget configuration
+  showPacketSizeControl: true,
+  defaultPacketSizeLimit: Infinity,
 
   // Tab-panel control
   showTabs: [
@@ -104,9 +113,8 @@ levels.default = {
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
-
+  showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
-
   defaultEnabledEncodings: [EncodingType.A_AND_B]
 });
 
@@ -117,6 +125,7 @@ levels.variant1 = utils.extend(levels.default, {
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
@@ -130,6 +139,8 @@ levels.variant2 = utils.extend(levels.default, {
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,
   showAddRouterButton: true,
+  showPacketSizeControl: true,
+  defaultPacketSizeLimit: Infinity,
 
   showTabs: [
     NetSimTabType.INSTRUCTIONS,
