@@ -106,7 +106,7 @@ NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
 
   this.dnsTable_.setDnsMode(newDnsMode);
   this.rootDiv_.find('.dns_manual_control').toggle(newDnsMode === DnsMode.MANUAL);
-  this.rootDiv_.find('.dns_notes').toggle(newDnsMode !== DnsMode.NONE);
+  this.rootDiv_.find('.dns-notes').toggle(newDnsMode !== DnsMode.NONE);
 };
 
 /**

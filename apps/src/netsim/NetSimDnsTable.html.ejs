@@ -1,7 +1,7 @@
 <%
 var DnsMode = require('./netsimConstants').DnsMode;
 %>
-<div class="netsim_dns_table">
+<div class="netsim-dns-table">
   <h1>My Network</h1>
   <table>
     <thead>
@@ -23,12 +23,12 @@ var DnsMode = require('./netsimConstants').DnsMode;
 
       if (row.isLocal) {
         displayHostname += " (Me)";
-        rowClasses.push('localNode');
+        rowClasses.push('local-node');
       }
 
       if (row.isDnsNode && dnsMode !== DnsMode.NONE) {
         displayHostname += " (DNS)";
-        rowClasses.push('dnsNode');
+        rowClasses.push('dns-node');
       }
       %>
         <tr class="<%= rowClasses.join(' ') %>">

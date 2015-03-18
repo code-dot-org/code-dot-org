@@ -34,4 +34,3 @@ end
 # rebuild blockly js files
 `./../../blockly-core/i18n/codeorg-messages.sh`
 FileUtils.cp_r '../../blockly-core/msg/js/.', '../../apps/lib/blockly/'
-

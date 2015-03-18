@@ -37,7 +37,7 @@ title: "Ops Dashboard"
     $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
     $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers',     controller: 'CohortTeachersController'});
+    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers', controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -374,101 +374,110 @@ title: "Ops Dashboard"
   controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
 
-    $scope.teachers_bulk_import = {uploading: false};
+      $scope.teachers_bulk_import = {uploading: false};
 
-    // error handling
-    $scope.genericError = function(result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
+      // error handling
+      $scope.genericError = function(result) {
+        $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+      };
 
-    $scope.cohort = cohortsService.get({id: $routeParams.id});
+      $scope.cohort = cohortsService.get({id: $routeParams.id});
 
-    $scope.cohort.$promise.then(function(cohort) {
-    });
+      $scope.cohort.$promise.then(function(cohort) {
+      });
 
-    // This depends on HTML5 File object so does not work in IE9. This
-    // particular feature is only used by the ops team who all use Chrome.
-    $scope.onFileSelect = function(input) {
-      var files = input.files; // FileList object
+      // This depends on HTML5 File object so does not work in IE9. This
+      // particular feature is only used by the ops team who all use Chrome.
+      $scope.onFileSelect = function(input) {
+        var files = input.files; // FileList object
 
-      // files is a FileList of File objects. List some properties.
-      if (files && files.length > 0) {
-        Papa.parse(files[0], {
-          header: true,
-          complete: function(results) {
-            if (results.data) {
-              for (var i = 0; i < results.data.length; i++) {
-                results.data[i].editing = true;
+        // files is a FileList of File objects. List some properties.
+        if (files && files.length > 0) {
+          Papa.parse(files[0], {
+            header: true,
+            complete: function(results) {
+              if (results.data) {
+                for (var i = 0; i < results.data.length; i++) {
+                  results.data[i].editing = true;
+                }
+                $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
+                $scope.$apply();
               }
-              $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
-              $scope.$apply();
             }
-          }
-        });
-      }
-    };
+          });
+        }
+      };
 
-    $scope.editingAny = function(things) {
-      if (!things) {
+      $scope.editingAny = function(things) {
+        if (!things) {
+          return false;
+        }
+        for (var i = 0; i < things.length; i++) {
+          if (things[i].editing) {
+            return true;
+          }
+        }
         return false;
       }
-      for (var i = 0; i < things.length; i++) {
-        if (things[i].editing) {
-          return true;
-        }
-      }
-      return false;
-    }
 
-    $scope.edit = function(teacher) {
-      teacher.editing = true;
-    };
+      $scope.edit = function(teacher) {
+        teacher.editing = true;
+      };
 
-    $scope.confirm_delete = function(teacher) {
-     teacher.confirmDelete = true;
-    };
+      $scope.confirm_delete = function(teacher) {
+       teacher.confirmDelete = true;
+      };
 
-    $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
-      //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
-      //  function() {
+      $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
+        //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
+        //  function() {
+            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+        //  }
+        //).catch($scope.genericError);
+      };
+
+      $scope.cancel = function(teacher) {
+        if (teacher.id) {
+          teacher.editing = false;
+        } else {
           $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
-      //  }
-      //).catch($scope.genericError);
-    };
-
-    $scope.cancel = function(teacher) {
-      if (teacher.id) {
-        teacher.editing = false;
-      } else {
-        $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
-      }
-    };
-
-    $scope.new_teacher = function() {
-      $scope.cohort.teachers.unshift({editing: true});
-    };
-
-    $scope.saveAll = function(cohort) {
-      cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
-        function() {
-          $scope.cohort = cohortsService.get({id: $routeParams.id});
         }
-      ).catch($scope.genericError);
-    };
+      };
 
-    $scope.countTeachersFromDistrict = function(district) {
-      var count = 0;
-      if (district && district.id) {
-        for (var i = 0; i < $scope.cohort.teachers.length; i++) {
-          if ($scope.cohort.teachers[i].district && 
-              $scope.cohort.teachers[i].district.id === district.id) {
-            count++;
+      $scope.new_teacher = function() {
+        $scope.cohort.teachers.unshift({editing: true});
+      };
+
+      $scope.saveAll = function(cohort) {
+        for (var i = 0; i < cohort.teachers.length; i++) {
+          if (typeof cohort.teachers[i].district == 'undefined') {
+            cohort.teachers[i].district_id = null;
+          }
+          else {
+            cohort.teachers[i].district_id = cohort.teachers[i].district.id;
           }
         }
+
+        cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
+          function() {
+            $scope.cohort = cohortsService.get({id: $routeParams.id});
+          }
+        ).catch($scope.genericError);
+      };
+
+      $scope.countTeachersFromDistrict = function(district) {
+        var count = 0;
+        if (district && district.id) {
+          for (var i = 0; i < $scope.cohort.teachers.length; i++) {
+            if ($scope.cohort.teachers[i].district &&
+                $scope.cohort.teachers[i].district.id === district.id) {
+              count++;
+            }
+          }
+        }
+        return count;
       }
-      return count;
     }
-  }
   ]);
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',

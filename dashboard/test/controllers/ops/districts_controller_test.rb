@@ -112,7 +112,7 @@ module Ops
       old_district_contact = @district.contact
 
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
-      assert_creates(User) do 
+      assert_creates(User) do
         put :update, id: @district.id, district: {contact: {ops_first_name: 'New', ops_last_name: 'Teacher', email: 'new_teacher@email.xx'}}
       end
 

@@ -110,7 +110,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
 
     if blockly_core_changed || apps_changed
       if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new 
+        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible

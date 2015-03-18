@@ -27,14 +27,14 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
   def index
     if current_user
-      @gallery_activities = 
+      @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
   end
 
   def gallery_activities
     if current_user
-      @gallery_activities = 
+      @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
     render partial: 'home/gallery_content'

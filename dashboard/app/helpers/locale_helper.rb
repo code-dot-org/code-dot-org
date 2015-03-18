@@ -8,7 +8,7 @@ module LocaleHelper
     #end
     current.downcase.to_sym
   end
-    
+
   def locale_dir
     Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
   end

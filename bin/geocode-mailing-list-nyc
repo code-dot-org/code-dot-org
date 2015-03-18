@@ -30,7 +30,7 @@ def main()
       end
 
       next unless ['bronx', 'brooklyn', 'manhattan', 'queens', 'new york'].include?(row['city'].to_s.downcase)
-      
+
       puts CSV.generate_line([row['email'], row['name'], row['city'], row['state'], row['country']])
     end
   end

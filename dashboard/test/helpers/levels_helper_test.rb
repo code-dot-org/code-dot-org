@@ -39,17 +39,17 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'frozen line'
 
     I18n.locale = DEFAULT_LOCALE
-    options = blockly_options    
+    options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
   end
 
   test "custom level displays localized instruction if exists" do
     DEFAULT_LOCALE = 'en-us'
     NEW_LOCALE = 'es-es'
-    
+
     I18n.locale = NEW_LOCALE
     @level.name = 'frozen line'
-    options = blockly_options    
+    options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: NEW_LOCALE), options[:level]['instructions']
 
     @level.name = 'this_level_doesnt_exist'
