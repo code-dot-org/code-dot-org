@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2015-02-19T05:26:56.000Z",
+  "created_at": "2015-03-18T20:38:21.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click run to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
+    "instructions": "At this point you've programmed a video game with a moving target and danger, both of which return to the screen once they've left, and a player that responds to keyboard input. Click run to see how your game is currently working, and then we'll dig into the final missing piece - collision detection!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,7 +36,8 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "maze_data": null
-  }
+  },
+  "md5": "7fa155d784297c660e3c7e0f9f11d86d"
 }]]></config>
   <blocks/>
 </Studio>
