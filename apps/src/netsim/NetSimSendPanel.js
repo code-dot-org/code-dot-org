@@ -110,7 +110,9 @@ NetSimSendPanel.prototype.render = function () {
   NetSimSendPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
-  var newMarkup = $(markup({}));
+  var newMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.getBody().html(newMarkup);
 
   // Add packet size slider control

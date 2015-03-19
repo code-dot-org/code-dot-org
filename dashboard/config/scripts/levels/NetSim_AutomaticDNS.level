@@ -7,7 +7,8 @@
   "properties": {
     "skin": "netsim",
     "instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service to get a student's address.",
-    "show_packet_size_control": true,
+    "show_add_packet_button": "true",
+    "show_packet_size_control": "true",
     "default_packet_size_limit": 512,
     "show_tabs": [
       "instructions",
