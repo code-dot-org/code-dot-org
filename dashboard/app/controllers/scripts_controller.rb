@@ -20,10 +20,10 @@ class ScriptsController < ApplicationController
     @scripts = Script.all
     @script_file_exists = {}
   end
-  
+
   def new
   end
-  
+
   def create
     @script_text = params[:script_text]
     @script = Script.new(script_params)
@@ -38,7 +38,7 @@ class ScriptsController < ApplicationController
   def destroy
     @script.destroy
     filename = "config/scripts/#{@script.name}.script"
-    File.delete(filename) if File.exists?(filename)
+    File.delete(filename) if File.exist?(filename)
     respond_to do |format|
       format.html { redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human) }
     end
@@ -64,7 +64,7 @@ class ScriptsController < ApplicationController
   def set_script_file
     Dir.chdir(Rails.root) do
       filename = "config/scripts/#{@script.name}.script"
-      @script_file = File.exists?(filename) && File.read(filename)
+      @script_file = File.exist?(filename) && File.read(filename)
     end
   end
 
@@ -74,8 +74,8 @@ class ScriptsController < ApplicationController
     @errors = []
     begin
       Script.rake
-      redirect_to scripts_path, notice: "Updated."
-    rescue Exception => e
+      redirect_to scripts_path, notice: 'Updated.'
+    rescue StandardError => e
       @errors << e.to_s
       render action: 'index'
     end

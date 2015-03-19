@@ -8,7 +8,7 @@ class Video < ActiveRecord::Base
 
     missing_keys = video_keys - i18n_keys
     unless missing_keys.empty?
-      raise "Missing strings for video.name.#{missing_keys.to_s} in config/locales/data.en.yml, please add"
+      raise "Missing strings for video.name.#{missing_keys} in config/locales/data.en.yml, please add"
     end
   end
 

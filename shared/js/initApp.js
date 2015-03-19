@@ -172,7 +172,7 @@ dashboard.updateTimestamp = function() {
     $('.project_updated_at span.timestamp').timeago();
   } else {
     $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
-  } 
+  }
 };
 
 dashboard.saveProject = function(callback) {
@@ -182,7 +182,7 @@ dashboard.saveProject = function(callback) {
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (channelId) {
+  if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
         dashboard.currentApp = data;
@@ -278,7 +278,7 @@ function initApp() {
 
       $(window).on('run_button_pressed', dashboard.saveProject);
 
-      if (!dashboard.currentApp.hidden) {
+      if (!dashboard.currentApp.hidden && (dashboard.currentApp.isOwner || location.hash === '')) {
         dashboard.showProjectHeader();
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
@@ -374,8 +374,9 @@ if (appOptions.droplet) {
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
+      .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full.min'));
+      .then(loadSource('droplet/droplet-full'));
   promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()

@@ -57,4 +57,7 @@ Scenario: Creating and modifying a new contract
   And I open the topmost blockly category "Functions"
   And I see no difference for "opened up functions category"
 
+  And I press the edit button on a function call named "something"
+  And I see no difference for "opened self from the contract editor"
+
   And I close my eyes

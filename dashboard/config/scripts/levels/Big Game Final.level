@@ -36,13 +36,13 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "open_function_definition": "distance",
     "soft_buttons": [
       "downButton",
       "upButton"
     ],
     "maze_data": null
-  }
+  },
+  "md5": "9f198fc7652ee6e8751d17a1c524261f"
 }]]></config>
   <blocks/>
 </Studio>

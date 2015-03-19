@@ -352,26 +352,7 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
-  // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', _.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-  }, this));
   window.addEventListener('resize', _.bind(this.onResize, this));
-
-  // Call initial onResize() asynchronously - need 10ms delay to work around
-  // relayout which changes height on the left side to the proper value
-  window.setTimeout(_.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-    if (this.isUsingBlockly()) {
-      Blockly.mainBlockSpace.fireChangeEvent();
-    }
-  }, this), 10);
 
   this.reset(true);
 
@@ -394,11 +375,15 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (Blockly.functionEditor) {
-          Blockly.functionEditor.hideIfOpen();
+        if (this.isUsingBlockly()) {
+          if (Blockly.functionEditor) {
+            Blockly.functionEditor.hideIfOpen();
+          }
+          Blockly.mainBlockSpace.clear();
+          this.setStartBlocks_(config, false);
+        } else {
+          this.editor.setValue(config.level.startBlocks || '');
         }
-        Blockly.mainBlockSpace.clear();
-        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
@@ -682,7 +667,9 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -740,73 +727,40 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-  // First, grab the main app container
-  var div = document.getElementById('codeWorkspace');
-  var divParent = div.parentNode;
-  var parentStyle = window.getComputedStyle(divParent);
-
-  var parentWidth = parseInt(parentStyle.width, 10);
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
   // Keep blocks static relative to the right edge in RTL mode
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
+  if (this.isUsingBlockly() && Blockly.RTL) {
+    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+        topBlock.moveBy(blockOffset, 0);
+      });
+    }
   }
+  this.lastWorkspaceWidth = workspaceWidth;
 
-  this.resizeHeaders(fullWorkspaceWidth);
+  // Droplet toolbox width varies as the window size changes, so refresh:
+  this.resizeToolboxHeader();
 };
 
-// |          toolbox-header          | workspace-header  | show-code-header |
-// |
-// |           toolboxWidth           |
-// |                 |         <--------- workspaceWidth ---------->         |
-// |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+/**
+*  Updates the width of the toolbox-header to match the width of the toolbox
+*  or palette in the workspace below the header.
+*/
+StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  var showCodeWidth = 0;
-
-  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
-  var clearPuzzleWidth = clearPuzzleHeader ?
-      clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var toolboxHeader = document.getElementById('toolbox-header');
-  if (toolboxHeader) {
-    if (this.editCode) {
-      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor && this.editor.currentlyUsingBlocks) {
-        // Set toolboxWidth based on the block palette width:
-        var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = categories.getBoundingClientRect().width;
-      }
-    } else if (this.isUsingBlockly()) {
-      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  if (this.editCode) {
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (this.editor && this.editor.currentlyUsingBlocks) {
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = categories.getBoundingClientRect().width;
     }
-    toolboxHeader.style.width = toolboxWidth + 'px';
+  } else if (this.isUsingBlockly()) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-
-  var showCodeHeader = document.getElementById('show-code-header');
-  if (showCodeHeader) {
-    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
-    if (this.enableShowCode &&
-        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
-      showCodeHeader.style.display = "";
-    } else {
-      showCodeHeader.style.display = "none";
-    }
-  }
-
-  var workspaceHeader = document.getElementById('workspace-header');
-  if (workspaceHeader) {
-    workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
-  }
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
 
 /**
@@ -1068,12 +1022,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  if (!this.enableShowCode) {
+    document.getElementById('show-code-header').style.display = 'none';
+  }
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.jQuery) {
+    if (window.$) {
       $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
@@ -1096,26 +1053,27 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(codeWorkspace, 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
+  if (!config.hideSource) {
+    var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(codeWorkspace, 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      vizHeight = 3000;
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
     }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
       container.className = codeWorkspace.className + " pin_bottom";
     } else {
-      codeWorkspace.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
-      container.style.height = this.MIN_WORKSPACE_HEIGHT + 'px';
+      container.style.minHeight = vizHeight + 'px';
     }
   }
 
@@ -1158,7 +1116,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      workspaceDiv.style.visibility = 'visible';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.visibility = 'visible';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -1181,6 +1141,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
@@ -1193,6 +1154,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    this.resizeToolboxHeader();
 
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
@@ -1287,6 +1250,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
       }
     });
   this.inject(div, options);
+  this.onResize();
 
   if (config.afterInject) {
     config.afterInject();
@@ -1302,7 +1266,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
+  showCodeHeader.firstChild.textContent = newButtonTitle;
 
   var workspaceHeaderSpan = document.getElementById('workspace-header-span');
   newButtonTitle = usingBlocks ? msg.workspaceHeader() :
@@ -1315,8 +1279,8 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
-  // Resize (including headers), so the category header will appear/disappear:
-  this.onResize();
+  // Resize toolbox header so it will appear/disappear:
+  this.resizeToolboxHeader();
 };
 
 /**

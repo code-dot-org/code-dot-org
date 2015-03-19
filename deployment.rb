@@ -71,6 +71,7 @@ def load_configuration()
     'root_dir'                    => root_dir,
     'use_dynamo_tables'           => false,#[:staging, :production].include?(rack_env),
     'dynamo_table_name'           => "#{rack_env}_tables",
+    'lint'                        => rack_env == :staging || rack_env == :development
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']

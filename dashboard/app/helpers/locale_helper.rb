@@ -8,7 +8,7 @@ module LocaleHelper
     #end
     current.downcase.to_sym
   end
-    
+
   def locale_dir
     Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
   end
@@ -46,8 +46,8 @@ module LocaleHelper
         locale, weight = entry.split(';')
         weight = (weight || 'q=1').split('=')[1].to_f
         [locale, weight]
-      }.sort_by { |locale, weight| -weight
-      }.map { |locale, weight| locale.strip }
+      }.sort_by { |_, weight| -weight
+      }.map { |locale, _| locale.strip }
     rescue
       Logger.warn "Error parsing Accept-Language header: #{header}"
       []
@@ -68,7 +68,7 @@ module LocaleHelper
   # Looks up a localized string driven by a database value.
   # See config/locales/data.en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
-    I18n.t("data.#{dotted_path}.#{key.to_s}.#{suffix}", options)
+    I18n.t("data.#{dotted_path}.#{key}.#{suffix}", options)
   end
 
   # Tries to access translation, returning nil if not found

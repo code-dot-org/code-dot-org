@@ -29,11 +29,6 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
                                  prev_translation[key])
       end
     end
-    en_translation.each_key do |key|
-      if !new_translation.has_key?(key)
-        new_translation[key] = en_translation[key]
-      end
-    end
   end
   new_translation
 end
@@ -44,7 +39,7 @@ new_translation_path = ARGV[2]
 prev_translation_path = ARGV[3]
 
 # is this a new file being translated?
-if (File.exists?(en_translation_path) && File.exists?(new_translation_path) && !File.exists?(prev_translation_path))
+if (File.exist?(en_translation_path) && File.exist?(new_translation_path) && !File.exist?(prev_translation_path))
   FileUtils.copy(new_translation_path, prev_translation_path)
 end
 

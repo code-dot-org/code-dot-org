@@ -38,7 +38,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Rocket Height"
-  }
+  },
+  "md5": "cac0ee6bb21cac0e14b5e356c9b40c99"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -122,6 +123,8 @@
           <block type="functional_times" inline="false"/>
           <block type="functional_dividedby" inline="false"/>
           <block type="functional_sqrt" inline="false"/>
+          <block type="functional_squared" inline="false"/>
+          <block type="functional_pow" inline="false"/>
           <block type="functional_math_number">
             <title name="NUM">0</title>
           </block>

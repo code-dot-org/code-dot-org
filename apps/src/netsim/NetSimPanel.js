@@ -22,7 +22,7 @@ var markup = require('./NetSimPanel.html');
  * @param {Object} [options]
  * @param {string} [options.className] - an additional class to be appended to
  *        the panel's root (one layer inside rootDiv) for style rules.
- *        Defaults to no class, so only the 'netsim_panel' class will be used.
+ *        Defaults to no class, so only the 'netsim-panel' class will be used.
  * @param {string} [options.panelTitle] - Localized initial panel title.
  *        Defaults to empty string.
  * @param {boolean} [options.beginMinimized] - Whether this panel should be
@@ -118,7 +118,7 @@ NetSimPanel.prototype.onMinimizerClick_ = function () {
  * @param {boolean} becomeMinimized
  */
 NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
-  var panelDiv = this.rootDiv_.find('.netsim_panel');
+  var panelDiv = this.rootDiv_.find('.netsim-panel');
   var minimizer = panelDiv.find('.minimizer');
   if (becomeMinimized) {
     panelDiv.addClass('minimized');
@@ -141,7 +141,7 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
  */
 NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
   $('<span>')
-      .addClass('netsim_button')
+      .addClass('netsim-button')
       .html(buttonText)
       .click(pressCallback)
       .appendTo(this.rootDiv_.find('.panel_controls'));
@@ -151,5 +151,5 @@ NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
  * @returns {jQuery} the body Div of the panel, for panel content.
  */
 NetSimPanel.prototype.getBody = function () {
-  return this.rootDiv_.find('.panel_body');
+  return this.rootDiv_.find('.panel-body');
 };

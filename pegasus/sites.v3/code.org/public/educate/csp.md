@@ -25,20 +25,14 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+### Watch a preview of CS Principles
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
 
 ### <a name="overview"></a>Overview
 
 Several documents describe the overarching themes and direction of the course.
-
-### 2014
-
-- A [one-pager](/files/CSPCurriculumFlyer.pdf) describing Code.org's CSP curriculum project, rationale, and features.
-- A [visual explanation](/files/CSPCurriculumMap.png) of Code.org's CSP curriculum units and overarching themes.  
-- A longer [overview](/files/CSPCurriculumOverview.pdf) of Code.org's CSP curriculum.
-
-### 2015
-Revisions and updates to the 2014 docs are coming soon that will include:
 
 - CS Principles [Curriculum Overview 2015](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
 - An [image of the curriculum](/files/CSPCurriculumMap2015.png)
