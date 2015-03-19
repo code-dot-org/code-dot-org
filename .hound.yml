@@ -2,6 +2,7 @@ ruby:
   config_file: .rubocop.yml
 
 java_script:
+  enabled: false
   config_file: .javascript-style.json
 
 scss:
