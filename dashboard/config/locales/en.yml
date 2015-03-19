@@ -547,6 +547,7 @@ en:
   project:
     projects: "Projects"
     create: "Create Project"
+    create_a_project: 'Create a new project:'
     new: "Create New"
     rename: "Rename"
     save: "Save"
