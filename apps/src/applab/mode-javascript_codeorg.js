@@ -21,6 +21,41 @@ oop.inherits(Mode, JavaScriptMode);
   var errorMap = {};
   errorMap["Assignment in conditional expression"] = "For conditionals, use the comparison operator (==) to check if two things are equal.";
 
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keyword) {
+    var index = this.$highlightRules.$keywordList.indexOf(keyword);
+    this.$highlightRules.$keywordList.splice(index);
+  }, this);
+
   this.createWorker = function(session) {
     var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
     worker.attachToDocument(session.getDocument());
