@@ -18,7 +18,7 @@
 'use strict';
 
 var page = require('./page.html');
-var netsimMsg = require('../../locale/current/netsim');
+var i18n = require('../../locale/current/netsim');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -195,11 +195,17 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel(
-      $('#netsim_received'), netsimMsg.receivedMessageLog(), false);
+  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim_received'), {
+    logTitle: i18n.receivedMessageLog(),
+    isMinimized: false,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
-  this.sentMessageLog_ = new NetSimLogPanel(
-      $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
+  this.sentMessageLog_ = new NetSimLogPanel($('#netsim_sent'), {
+    logTitle: i18n.sentMessageLog(),
+    isMinimized: true,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
   this.connection_ = new NetSimConnection({
     window: window,
@@ -420,7 +426,7 @@ NetSim.prototype.render = function () {
       shareLink;
 
   isConnected = false;
-  clientStatus = netsimMsg.disconnected();
+  clientStatus = i18n.disconnected();
   if (this.connection_ && this.connection_.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.connection_.myNode.getHostname();
@@ -431,7 +437,7 @@ NetSim.prototype.render = function () {
 
   if (this.myConnectedRouter_) {
     isConnected = true;
-    clientStatus = netsimMsg.connected();
+    clientStatus = i18n.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
