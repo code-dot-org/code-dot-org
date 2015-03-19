@@ -14,7 +14,7 @@ apt_package 'zsh'
 # For each user defined in cdo-users, ensure there is a basic home folder.
 #
 node['cdo-users'].each_pair do |user_name, user_data|
-  
+
   home_directory = user_data['home'] || "/home/#{user_name}"
 
   # Create the user's account.
@@ -23,18 +23,18 @@ node['cdo-users'].each_pair do |user_name, user_data|
     comment user_data['comment']
     shell user_data['shell'] || '/bin/bash'
   end
-  
+
   # Create the user's group
   group user_name do
     members user_name
   end
-  
+
   # Create the user's home directory
   directory home_directory do
     owner user_name
     group user_name
   end
-  
+
   # The basics
   [
     '.bash_logout',
@@ -61,7 +61,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
   end
 
-  
+
   #
   #
   # Configure SSH
@@ -88,7 +88,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
       mode '0600'
     end
   end
-  
+
   template File.join(ssh_directory, 'config') do
     #action :create_if_missing
     source 'ssh_config.erb'
@@ -97,14 +97,14 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
     mode '0600'
   end
-  
-  
+
+
   #
   #
   # Configure the AWS command-line tools
   #
   #
-  
+
   aws_config = user_data['cdo-awscli'] || node['cdo-awscli']
 
   aws_directory = File.join(home_directory, '.aws')
@@ -123,13 +123,13 @@ node['cdo-users'].each_pair do |user_name, user_data|
     group user_name
     mode '0600'
   end
-  
+
   #
   #
   # Configure CHEF
   #
   #
-  
+
   chef_directory = File.join(home_directory, '.chef')
   directory chef_directory do
     owner user_name

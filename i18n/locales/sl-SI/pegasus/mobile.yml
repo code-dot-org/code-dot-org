@@ -11,6 +11,7 @@ sl-SI:
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
   petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Ime
   email: Elektronska pošta
   zipcode: Poštna številka ali ime države
@@ -90,6 +91,7 @@ sl-SI:
   learn_classes: Poišči lokalne tečaje
   hoc_is_here: '#UraZaKodo je tu! @codeorg'
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Več o Uri za kodo
   beyond_hoc: Po Uri za kodo
   what_gender: Izberite vaš spol
@@ -104,9 +106,9 @@ sl-SI:
   students_and_lines: '%{students} učencev je opravilo uro za kodo in pri tem napisalo %{lines} vrstic kode.'
   start_hoc: Začni Uro za kodo zdaj
   contact_form_topic_press: Tisk/mediji (intervju ali ustno udejstvovanje)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Raziščite <a href='http://studio.code.org'> Studio za kodo</a>"
   studiobar_elementary_title: Osnovni tečaji
   studiobar_elementary_body: 'Naši trije novi tečaji za K&#8209;5'
@@ -122,6 +124,29 @@ sl-SI:
   studiobar_donate_body: En otrok se nauči programirati za vsak doniran dolar
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: Ura za kodo
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Program za Plahutača (Flappyja)
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ""
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
   contact_form_topic_teacher: Sem učitelj/vzgojitelj
@@ -289,6 +314,8 @@ sl-SI:
   dashboard_login_picture: Slika
   dashboard_login_none: Elektronska pošta
   dashboard_new_password: Novo geslo
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: ni dokončano
   dashboard_progress_completed_too_many_blocks: dokončano, imate preveč blokov
   dashboard_progress_completed_perfect: dokončano, odlično

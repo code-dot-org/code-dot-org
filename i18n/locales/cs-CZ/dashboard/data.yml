@@ -203,7 +203,7 @@ cs:
         turtle_3_5: 'Nyní vytvoř novou funkci "nakreslit dům" a použij jí k zabydlení dvou koček. Tip: k vytvoření nové funkce použij blok "proveď něco" a jako název bloku napiš vlastní text.'
         turtle_3_6: 'Použij "nakreslit čtverec" jako příklad a přidej vstup s názvem "délka" do "nakreslit trojúhelník". Poté nakresli trojúhelníky o různých velikostech. (Tip: klikni na hvězdičku aby jsi přidal vstup do funkce)'
         turtle_3_7: 'Přidej vstup s názvem "délka" do "nakreslit dům" a postav veliký dům pro slona (se stranami dlouhými 150 pixelů)'
-        turtle_3_8: 'Zde jsou všechny bloky z předchozí hádanky.  Změň "nakreslit dům" tak, aby jsem po nakreslení nového domu skončil v pravém dolním rohu. Použijte tuto upravenou funkci k nakreslení tří domků.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Zvládneš znovu vytvořit funkci "nakreslit dům" bez pomoci? Zkus to a potom nakresli řadu domů.'
         turtle_3_10: Hodně jsi se toho naučil! Teď to využij a nakresli cokoliv si přeješ. Zkus nakreslit hvězdu, nebo spirálu, nebo fajnovou sněhovou vločku.
         maze_karel_debug_seq_1: Vítej v ladícím módu! Můj kód nefunguje dobře. Rozpoznáš problém a opravíš ho tak, abych pole srovnal a připravil na výsadbu?
@@ -432,6 +432,12 @@ cs:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Proměnné
+        msm_7_functions: Funkce
     callout:
       text:
         drag_blocks: 'Přetáhni blok "posunout vpřed" pod ten druhý blok'

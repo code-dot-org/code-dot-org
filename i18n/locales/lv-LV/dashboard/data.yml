@@ -203,7 +203,7 @@ lv:
         turtle_3_5: 'Tagad izveido jaunu "zīmēt māju" funkciju un izmanto to lai izveidotu māju abiem kaķiem. Padoms: Izveido jaunu funkciju izmantojot "dari kaut ko" programmas bloku un ievadi pats savu tekstu lai nosauktu bloku.'
         turtle_3_6: 'Izmantojot "zīmēt kvadrātu" kā piemēru, pievieno ievadi ar nosaukumu "garums" pie "zīmē trīsstūri". Tad uzzīmē trīsstūrus ar dažādiem izmēriem. (Padoms: uzklikšķini uz zvaigznes, lai pievienotu ievadi funkcijai)'
         turtle_3_7: 'Pievieno ievadi ar nosaukumu "garums" funkcijai "zīmēt māju" un uzzīmē lielu māju zilonim (malu garums 150 pikseļi)'
-        turtle_3_8: 'Šeit ir visi bloki no iepriekšējā uzdevuma. Izmaini "zīmēt māju" tā, lai es atrastos apakšējajā labajā stūrī, kad tiks uzzīmēta jauna māja. Izmanto izmainīto funkciju, lai uzzīmētu rīs mājas.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: |
           Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
           
@@ -431,6 +431,12 @@ lv:
         playlab_intro: Ievads spēļu laboratorijā
         playlab_events: Spēļu laboratorijas notikumi
         playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Mainīgie
+        msm_7_functions: Funkcijas
     callout:
       text:
         drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'

@@ -7,12 +7,16 @@ class Stage < ActiveRecord::Base
 
   validates_uniqueness_of :name, scope: :script_id
 
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   def to_param
     position.to_s
   end
 
   def unplugged?
-    script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
+    script_levels = Script.get_from_cache(script.name).script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
     script_levels.first.level.unplugged?
   end
@@ -43,5 +47,31 @@ class Stage < ActiveRecord::Base
 
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{position}"
+  end
+
+  def summarize
+    stage_data = {
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.count,
+        id: id,
+        position: position,
+        name: localized_name,
+        title: localized_title,
+        # Ensures we get the cached ScriptLevels, vs hitting the db
+        levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+    }
+
+    if script.has_lesson_plan?
+      stage_data[:lesson_plan_html_url] = lesson_plan_html_url
+      stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+    end
+
+    if script.hoc?
+      stage_data[:finishLink] = script.hoc_finish_url
+      stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
+    end
+
+    stage_data
   end
 end

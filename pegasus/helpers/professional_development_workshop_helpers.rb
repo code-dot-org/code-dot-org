@@ -40,7 +40,7 @@ def generate_professional_development_workshop_teachers_report
       # get data on students of the teacher
       teacher_user_id = teacher[:id]
       next unless teacher_user_id
-      
+
       students = DASHBOARD_DB[:followers].
         where(user_id: teacher_user_id).
         join(:users, id: :student_user_id).

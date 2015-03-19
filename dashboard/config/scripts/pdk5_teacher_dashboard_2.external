@@ -20,10 +20,17 @@ When you click the "Student Accounts and Progress" tile, you'll see a list of al
 
 </br>
 
+To decide which log-in type to use for your sections, use the table below. In your teacher dashboard, this table is listed below all of your sections for reference. 
+
+</br>
+
 ![image](http://staging.code.org/images/teacher-dashboard/login-type.png)
 
 </br>
 
+Once you've created your sections of students, you'll be able to click on the name of the section to see students' progress, view stats, and reset their passwords.
+
+</br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
