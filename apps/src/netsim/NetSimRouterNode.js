@@ -97,6 +97,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.simulateForSender_ = undefined;
 
   /**
+   * Packet format specification this router will use to parse, route, and log
+   * packets that it receives.  Set on router that is simulated by client.
+   *
+   * Not persisted on server.
+   *
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = [];
+
+  /**
    * If ticked, tells the network that this router is being used.
    *
    * Not persisted on server (though the heartbeat does its own persisting)
@@ -290,12 +301,39 @@ NetSimRouterNode.getNodeType = function () {
 };
 
 /**
+ * Makes sure that the given specification contains the fields that this
+ * router needs to do its job.
+ * @param {packetHeaderSpec} packetSpec
+ * @private
+ */
+NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
+  // Require 'toAddress' for routing
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === 'toAddress';
+      })) {
+    logger.error("Packet specification does not have a toAddress field.");
+  }
+
+  // Require 'fromAddress' temporarily for auto-DNS tasks
+  // TODO (bbuchanan) remove when real auto-dns nodes are implemented.
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === 'fromAddress';
+      })) {
+    logger.error("Packet specification does not have a fromAddress field.");
+  }
+};
+
+/**
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
+ * @param {packetHeaderSpec} packetSpec
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) {
   this.simulateForSender_ = nodeID;
+  this.packetSpec_ = packetSpec;
+  this.validatePacketSpec_(packetSpec);
+
   if (nodeID !== undefined) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
@@ -688,9 +726,10 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
 
   // Find a connection to route this message to.
   try {
-    toAddress = dataConverters.binaryToInt(
-        PacketEncoder.defaultPacketEncoder.getField('toAddress', message.payload));
+    var decoder = new PacketEncoder(this.packetSpec_);
+    toAddress = decoder.getHeaderFieldAsInt('toAddress', message.payload);
   } catch (error) {
+    logger.warn("Packet not readable by router");
     this.log(message.payload);
     onComplete(new Error("Packet not readable by router"));
     return;
@@ -700,6 +739,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
   // and generate responses.
   // TODO (bbuchanan): Send to a real auto-dns node
   if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
+    logger.warn("Packet passed to auto-DNS shim on router");
     this.generateDnsResponse_(message, myWires);
     onComplete(null);
     return;
@@ -709,6 +749,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
     return wire.localAddress === toAddress;
   });
   if (destWires.length === 0) {
+    logger.warn("Destination address not in local network");
     this.log(message.payload);
     onComplete(new Error("Destination address not in local network"));
     return;
@@ -737,15 +778,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
  * @private
  */
 NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
-  var fromAddress, query;
+  var encoder, fromAddress, query, responseHeaders, responseBody, responseBinary;
 
   // Extract message contents
   try {
-    fromAddress = dataConverters.binaryToInt(
-        PacketEncoder.defaultPacketEncoder.getField('fromAddress', message.payload));
-    query = dataConverters.binaryToAscii(
-        PacketEncoder.defaultPacketEncoder.getField('message', message.payload),
-        BITS_PER_BYTE);
+    encoder = new PacketEncoder(this.packetSpec_);
+    fromAddress = encoder.getHeaderFieldAsInt('fromAddress', message.payload);
+    query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
     return;
@@ -755,46 +794,30 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   // Regex match "GET [hostnames...]"
   // Then below, we'll split the hostnames on whitespace to process them.
   var requestMatch = query.match(/GET\s+(\S.*)/);
-  if (requestMatch === null) {
-    // Malformed request, send back directions
-    NetSimMessage.send(
-        this.shard_,
-        ROUTER_LOCAL_ADDRESS,
-        fromAddress,
-        PacketEncoder.defaultPacketEncoder.createBinary({
-          fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
-          toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-          packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-          packetCount: intToBinary(1, BITS_PER_NIBBLE),
-          message: asciiToBinary("Automatic DNS Node" +
-              "\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
-        }),
-        function() {}
-    );
-    return;
+  if (requestMatch !== null) {
+    // Good request, look up all addresses and build up response
+    // Skipping first match, which is the full regex
+    var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
+      var wire = _.find(myWires, function (wire) {
+        return wire.localHostname === queryHostname;
+      });
+      return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
+    });
+    responseBody = responses.join(' ');
+  } else {
+    // Malformed request, send back instructions
+    responseBody = "Automatic DNS Node\n" +
+    "Usage: GET hostname [hostname [hostname ...]]";
   }
 
-  // Good request, look up all addresses and build up response
-  // Skipping first match, which is the full regex
-  var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
-    var wire = _.find(myWires, function (wire) {
-      return wire.localHostname === queryHostname;
-    });
-
-    return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
-  });
-
-  NetSimMessage.send(
-      this.shard_,
-      ROUTER_LOCAL_ADDRESS,
-      fromAddress,
-      PacketEncoder.defaultPacketEncoder.createBinary({
-        fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
-        toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-        packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-        packetCount: intToBinary(1, BITS_PER_NIBBLE),
-        message: asciiToBinary(responses.join(' '), BITS_PER_BYTE)
-      }),
-      function() {}
-  );
+  responseHeaders = {
+    fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+    toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+    packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+    packetCount: intToBinary(1, BITS_PER_NIBBLE)
+  };
+  responseBinary = encoder.concatenateBinary(responseHeaders,
+      asciiToBinary(responseBody, BITS_PER_BYTE));
+  NetSimMessage.send(this.shard_, this.entityID, message.fromNodeID,
+      responseBinary, function() {});
 };
