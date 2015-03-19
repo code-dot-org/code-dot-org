@@ -1,8 +1,7 @@
 module UsersHelper
 
   # Summarize the current user's progress within a certain script.
-  def summarize_user_progress(script, user)
-    user ||= current_user
+  def summarize_user_progress(script, user = current_user)
     user_data = {}
     if user
       lines = user.total_lines
