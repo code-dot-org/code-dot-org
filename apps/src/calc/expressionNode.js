@@ -359,12 +359,14 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
 ExpressionNode.prototype.getTokenList = function (markDeepest) {
-  if (!markDeepest || this.depth() <= 1) {
-    // if markDeepest is true, we diff against null so that everything is marked
-    // otherwise, we diff against ourself, so that nothing is marked
-    return this.getTokenListDiff(markDeepest ? null : this);
+  if (!markDeepest) {
+    // diff against this so that nothing is marked
+    return this.getTokenListDiff(this);
+  } else if (this.depth() <= 1) {
+    // markDeepest is true. diff against null so that everything is marked
+    return this.getTokenListDiff(null);
   }
-
+    
   if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
