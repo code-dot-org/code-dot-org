@@ -1,0 +1,37 @@
+- bg_image = ""
+- blurb = ""
+- entry[:links].each do |link|
+  - if link[:img]
+    - bg_image = link[:img]
+  - if link[:blurb]
+    - blurb = link[:blurb]
+
+.col-50.col-mobile-100{style: "float:left; padding:10px 5px 10px 5px; "}
+
+  -#.slotbox{style: "position:relative; overflow:hidden; background-image: url(#{bg_image}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; background-position: 0% 50%; height:220px;"}
+    .greybox{style: "position:absolute; bottom:0px; left:0px; background-color: rgba(#{bgc_head},0.92); color:white; width:100%; padding:10px; font-size:18px; text-align:left; font-family: 'Gotham 4r', sans-serif; text-align:center"}
+      = entry[:name]
+
+
+  .thelinks{style: "background-color: rgb(#{bgc_body}); padding:0px; padding-top:0px; overflow:hidden"}
+    .title{style: "width: 100%; background-color: rgb(#{bgc_head}); color:white; font-size:18px; padding:5px"}
+      = entry[:name]
+    -#.below{style: "color: white; font-size: 14px"}
+      = blurb      
+    .image{style: "float:left; text-align:left; width:40%; margin-top:15px; margin-bottom:5px;"}
+      %img{src: "#{bg_image}", width: "100%"}
+    .body{style: "float:left; padding:10px; width:60%; text-align:left;  font-size:16px;"}
+      .blurb{style: "color: white; font-size:14px; padding-bottom:15px"}
+        = blurb
+      - entry[:links].each do |link|
+        - if link[:text]
+          - opacity = 1
+          - if link[:priority] && link[:priority] == 2
+            -# opacity = 0.8
+          %p{style: "opacity: #{opacity}; margin-bottom:20px; padding-left:15px; font-size:16px"}
+            %a{href: "#", style: "font-family: 'Gotham 5r', sans-serif; color:white"}
+              = link[:text]
+
+    
+
+
