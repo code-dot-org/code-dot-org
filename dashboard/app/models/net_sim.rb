@@ -3,6 +3,7 @@ class NetSim < Blockly
     show_clients_in_lobby
     show_routers_in_lobby
     show_add_router_button
+    show_add_packet_button
     show_packet_size_control
     default_packet_size_limit
     show_tabs
