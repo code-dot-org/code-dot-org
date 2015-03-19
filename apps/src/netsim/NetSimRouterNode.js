@@ -30,7 +30,7 @@ var dataConverters = require('./dataConverters');
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+var logger = NetSimLogger.getSingleton();
 
 /**
  * @type {number}
@@ -470,7 +470,6 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
 
-
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
@@ -561,7 +560,6 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
 
   if (!_.isEqual(this.myWireRowCache_, myWireRows)) {
     this.myWireRowCache_ = myWireRows;
-    logger.info("Router wires changed.");
     this.wiresChange.notifyObservers();
   }
 };
@@ -597,7 +595,6 @@ NetSimRouterNode.prototype.getLog = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
-
   if (!this.simulateForSender_) {
     // Not configured to handle anything yet; don't process messages.
     return;
@@ -609,35 +606,71 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
-  var self = this;
-  var messages = rows.map(function (row) {
-    return new NetSimMessage(self.shard_, row);
-  }).filter(function (message) {
-    return message.fromNodeID === self.simulateForSender_ &&
-        message.toNodeID === self.entityID;
-  });
+  var messages = rows
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this))
+      .filter(function (message) {
+        return message.fromNodeID === this.simulateForSender_ &&
+            message.toNodeID === this.entityID;
+      }.bind(this));
 
-  // If any messages are for us, get our routing table and process messages.
-  if (messages.length > 0) {
-    this.isProcessingMessages_ = true;
-    this.getConnections(function (err, wires) {
-      messages.forEach(function (message) {
-
-        // Pull the message off the wire, and hold it in-memory until we route it.
-        // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (err) {
-          if (err) {
-            logger.error("Error pulling message off the wire for routing; " +
-                err.message);
-            return;
-          }
-          self.routeMessage_(message, wires);
-        });
-
-      });
-      self.isProcessingMessages_ = false;
-    });
+  if (messages.length === 0) {
+    // No messages for us, no work to do.
+    return;
   }
+
+  // Setup (sync): Set processing flag
+  logger.info("Router received " + messages.length + " messages");
+  this.isProcessingMessages_ = true;
+
+  // Step 1 (async): Pull all our messages out of storage.
+  NetSimEntity.destroyEntities(messages, function (err) {
+    if (err) {
+      logger.error("Error pulling message off the wire for routing; " + err.message);
+      this.isProcessingMessages_ = false;
+      return;
+    }
+
+    // Step 2 (async): Get our connection info, which we will need for routing
+    this.getConnections(function (err, wires) {
+      if (err) {
+        logger.error("Error retrieving router connection info");
+        this.isProcessingMessages_ = false;
+        return;
+      }
+
+      // Step 3 (async): Route all messages to destinations
+      this.routeMessages_(messages, wires, function () {
+        // Cleanup (sync): Clear "processing" flag
+        logger.info("Router finished processing " + messages.length + " messages");
+        this.isProcessingMessages_ = false;
+      }.bind(this));
+    }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Routes all messages (to remote storage) asynchronously, and calls
+ * onComplete when all messages have been routed and/or an error occurs.
+ * @param {NetSimMessage[]} messages
+ * @param {Array.<NetSimWire>} myWires
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimRouterNode.prototype.routeMessages_ = function (messages, myWires, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  this.routeMessage_(messages[0], myWires, function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.routeMessages_(messages.slice(1), myWires, onComplete);
+  }.bind(this));
 };
 
 /**
@@ -647,9 +680,10 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  *
  * @param {NetSimMessage} message
  * @param {Array.<NetSimWire>} myWires
+ * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplete) {
   var toAddress;
 
   // Find a connection to route this message to.
@@ -658,6 +692,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
         PacketEncoder.defaultPacketEncoder.getField('toAddress', message.payload));
   } catch (error) {
     this.log(message.payload);
+    onComplete(new Error("Packet not readable by router"));
     return;
   }
 
@@ -666,6 +701,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
   // TODO (bbuchanan): Send to a real auto-dns node
   if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
     this.generateDnsResponse_(message, myWires);
+    onComplete(null);
     return;
   }
 
@@ -673,8 +709,8 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
     return wire.localAddress === toAddress;
   });
   if (destWires.length === 0) {
-    // Destination address not in local network.
     this.log(message.payload);
+    onComplete(new Error("Destination address not in local network"));
     return;
   }
 
@@ -688,8 +724,9 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
       destWire.remoteNodeID,
       destWire.localNodeID,
       message.payload,
-      function () {
+      function (err, result) {
         this.log(message.payload);
+        onComplete(err, result);
       }.bind(this)
   );
 };
