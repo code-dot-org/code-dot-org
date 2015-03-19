@@ -18,7 +18,7 @@ var dataConverters = require('./dataConverters');
  * Single packet header field type
  * @typedef {Object} packetHeaderField
  *
- * @property {string} key - Used to identify the field, for parsing.
+ * @property {PacketHeaderType} key - Used to identify the field, for parsing.
  *
  * @property {number} bits - How long (in bits) the field is.
  */
@@ -128,7 +128,7 @@ PacketEncoder.prototype.getField = function (key, binary) {
 };
 
 /**
- * @param {string} key - field name
+ * @param {PacketHeaderType} key - field name
  * @param {string} binary - entire packet as a binary string
  * @returns {number} - requested field, interpreted as an int.
  */
