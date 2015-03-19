@@ -259,18 +259,24 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
 
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
   return block === this.functionDefinitionBlock ||
-    (block.blockSpace === this.modalBlockSpace && block.isUserVisible() &&
+    !this.isAnExampleBlockInEditor_(block) &&
+    (block.blockSpace === this.modalBlockSpace &&
+    block.isVisible() &&
     block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition());
 };
 
 Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
-  return goog.array.contains(this.exampleBlocks, block) ||
-    (block.blockSpace === this.modalBlockSpace && block.isUserVisible() &&
+  return this.isAnExampleBlockInEditor_(block) ||
+    (block.blockSpace === this.modalBlockSpace && block.isVisible() &&
     block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition());
 };
 
 Blockly.ContractEditor.prototype.getFlyoutTopPosition = function () {
   return (this.flyout_.getYPosition() - this.flyout_.getHeight());
+};
+
+Blockly.ContractEditor.prototype.isAnExampleBlockInEditor_ = function (block) {
+  return goog.array.contains(this.exampleBlocks, block);
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
