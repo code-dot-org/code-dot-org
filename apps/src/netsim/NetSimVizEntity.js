@@ -147,7 +147,7 @@ NetSimVizEntity.prototype.onDepthChange = function (isForeground) {
  * Throw away all existing tweens on this object.
  */
 NetSimVizEntity.prototype.stopAllAnimation = function () {
-  this.tweens_ = [];
+  this.tweens_.length = 0;
 };
 
 /**

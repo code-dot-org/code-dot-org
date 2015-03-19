@@ -207,7 +207,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
  */
 NetSimSendPanel.prototype.resetPackets_ = function () {
   this.packetsDiv_.empty();
-  this.packets_ = [];
+  this.packets_.length = 0;
   this.addPacket_();
 };
 

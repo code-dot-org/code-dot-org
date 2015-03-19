@@ -98,7 +98,7 @@ NetSimChunkSizeControl.prototype.setChunkSize = function (newChunkSize) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
-  this.currentUnits_ = [];
+  this.currentUnits_.length = 0;
 
   if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
     this.currentUnits_.push('character'); // TODO: localize
