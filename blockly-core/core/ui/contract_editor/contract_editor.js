@@ -238,7 +238,7 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
  * @param isVisible whether to set blocks in area visible (true) or invisible (false)
  * @param blockFilter subset of blocks to look at
  * @param hiddenBlockArray array containing currently hidden blocks
- * @returns array newly hidden blocks if any are hidden
+ * @returns {Array.<Blockly.Block>} newly hidden blocks if any are hidden
  */
 Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, blockFilter, hiddenBlockArray) {
   var nowHidden = [];
@@ -259,16 +259,18 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
 
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
   return block === this.functionDefinitionBlock ||
-    !this.isAnExampleBlockInEditor_(block) &&
-    (block.blockSpace === this.modalBlockSpace &&
-    block.isVisible() &&
-    block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition());
+    (this.isVisibleInEditor_(block) && !this.isBlockInExampleArea(block));
 };
 
 Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
   return this.isAnExampleBlockInEditor_(block) ||
-    (block.blockSpace === this.modalBlockSpace && block.isVisible() &&
+    (this.isVisibleInEditor_(block) &&
     block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition());
+};
+
+Blockly.ContractEditor.prototype.isVisibleInEditor_ = function (block) {
+  return block.blockSpace === this.modalBlockSpace &&
+    block.isVisible();
 };
 
 Blockly.ContractEditor.prototype.getFlyoutTopPosition = function () {
