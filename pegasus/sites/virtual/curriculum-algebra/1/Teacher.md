@@ -160,7 +160,7 @@ The structure of your students' games will very closely resemble the demo they'v
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]
