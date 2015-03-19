@@ -7,7 +7,8 @@ var ValueType = {
   ARITHMETIC: 1,
   FUNCTION_CALL: 2,
   VARIABLE: 3,
-  NUMBER: 4
+  NUMBER: 4,
+  EXPONENTIAL: 5
 };
 
 function DivideByZeroError(message) {
@@ -60,8 +61,8 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error("Can't have args for number ExpressionNode");
   }
 
-  if (this.isArithmetic() && !(args.length === 2 || args.length === 1)) {
-    throw new Error("Arithmetic ExpressionNode needs 1 or 2 args");
+  if (this.isArithmetic() && args.length !== 2) {
+    throw new Error("Arithmetic ExpressionNode needs 2 args");
   }
 };
 module.exports = ExpressionNode;
@@ -71,8 +72,12 @@ ExpressionNode.DivideByZeroError = DivideByZeroError;
  * What type of expression node is this?
  */
 ExpressionNode.prototype.getType_ = function () {
-  if (["+", "-", "*", "/", "pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
+  if (["+", "-", "*", "/"].indexOf(this.value_) !== -1) {
     return ValueType.ARITHMETIC;
+  }
+
+  if (["pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
+    return ValueType.EXPONENTIAL;
   }
 
   if (typeof(this.value_) === 'string') {
@@ -98,6 +103,9 @@ ExpressionNode.prototype.isVariable = function () {
 };
 ExpressionNode.prototype.isNumber = function () {
   return this.getType_() === ValueType.NUMBER;
+};
+ExpressionNode.prototype.isExponential = function () {
+  return this.getType_() === ValueType.EXPONENTIAL;
 };
 
 /**
@@ -180,7 +188,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       return { result: this.value_ };
     }
 
-    if (type !== ValueType.ARITHMETIC) {
+    if (type !== ValueType.ARITHMETIC && type !== ValueType.EXPONENTIAL) {
       throw new Error('Unexpected');
     }
 
@@ -319,39 +327,59 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     return [new Token(this.value_, !nodesMatch)];
   }
 
+  // var tokenListForChild = function (childIndex) {
+  //   this.children_[childIndex].getTokenListDiff(nodesMatch &&
+  //     other.children_[childIndex]);
+  // }.bind(this);
+
   if (type === ValueType.ARITHMETIC) {
     // Deal with arithmetic, which is always in the form (child0 operator child1)
     tokens = [new Token('(', !nodesMatch)];
-    if (this.children_.length > 0) {
-      tokens.push([
-        this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
-        new Token(" " + this.value_ + " ", !nodesMatch),
-        this.children_[1].getTokenListDiff(nodesMatch && other.children_[1])
-      ]);
-    }
+    tokens.push([
+      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      new Token(" " + this.value_ + " ", !nodesMatch),
+      this.children_[1].getTokenListDiff(nodesMatch && other.children_[1])
+    ]);
     tokens.push(new Token(')', !nodesMatch));
 
-  } else if (type === ValueType.FUNCTION_CALL) {
-    // Deal with a function call which will generate something like: foo(1, 2, 3)
-    tokens = [
-      new Token(this.value_, this.value_ !== other.value_),
-      new Token('(', !nodesMatch)
-    ];
-
-    for (var i = 0; i < this.children_.length; i++) {
-      if (i > 0) {
-        tokens.push(new Token(',', !nodesMatch));
-      }
-      tokens.push(this.children_[i].getTokenListDiff(nodesMatch && other.children_[i]));
-    }
-
-    tokens.push(new Token(")", !nodesMatch));
-  } else if (this.getType_() === ValueType.VARIABLE) {
-
+    return _.flatten(tokens);
   }
+
+  if (this.value_ === 'sqr') {
+    return _.flatten([
+      new Token('(', !nodesMatch),
+      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      new Token(' ^ 2', !nodesMatch),
+      new Token(')', !nodesMatch)
+    ]);
+  } else if (this.value_ === 'pow') {
+    return _.flatten([
+      new Token('(', !nodesMatch),
+      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      new Token(' ^ ', !nodesMatch),
+      this.children_[1].getTokenListDiff(nodesMatch && other.children_[1]),
+      new Token(')', !nodesMatch)
+    ]);
+  }
+
+  // We either have a function call, or an arithmetic node that we want to
+  // treat like a function (i.e. sqrt(4))
+  // A function call will generate something like: foo(1, 2, 3)
+  tokens = [
+    new Token(this.value_, other && this.value_ !== other.value_),
+    new Token('(', !nodesMatch)
+  ];
+
+  for (var i = 0; i < this.children_.length; i++) {
+    if (i > 0) {
+      tokens.push(new Token(',', !nodesMatch));
+    }
+    tokens.push(this.children_[i].getTokenListDiff(nodesMatch && other.children_[i]));
+  }
+
+  tokens.push(new Token(")", !nodesMatch));
   return _.flatten(tokens);
 };
-
 
 /**
  * Get a tokenList for this expression, potentially marking those tokens
@@ -366,21 +394,30 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     // markDeepest is true. diff against null so that everything is marked
     return this.getTokenListDiff(null);
   }
-    
+
+  // TODO - do i also neeed to handle exponents
   if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
 
-  var rightDeeper = this.children_[1].depth() > this.children_[0].depth();
+  var rightDeeper = false;
+  if (this.children_.length === 2) {
+    rightDeeper = this.children_[1].depth() > this.children_[0].depth();
+  }
 
-  return _.flatten([
+  var tokens = [
     new Token('(', false),
     this.children_[0].getTokenList(markDeepest && !rightDeeper),
-    new Token(" " + this.value_ + " ", false),
-    this.children_[1].getTokenList(markDeepest && rightDeeper),
-    new Token(')', false)
-  ]);
+  ];
+  if (this.children_.length > 1) {
+    tokens.push([
+      new Token(" " + this.value_ + " ", false),
+      this.children_[1].getTokenList(markDeepest && rightDeeper)
+    ]);
+  }
+  tokens.push(new Token(')', false));
+  return _.flatten(tokens);
 };
 
 /**
