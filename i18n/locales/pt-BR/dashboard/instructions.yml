@@ -1292,22 +1292,21 @@ pt-BR:
         f(x) = x + 1. O que você poderia esperar como saída dessa função se fosse fornecida uma
         entrada de 15?
       Calc Define Funcs 1_instruction: |
-        Agora, vamos ver mais algumas funções
-        algébricas. Temos aqui uma função traduzida a partir de uma função algébrica simples f(x)
-        = x + 1. O que você poderia esperar como saída dessa função se fosse fornecida uma entrada
-        de 15?
+        Let's look at some more traditional algebraic
+        functions now. Here's a function translated from the simple algebraic function
+        f(x) = x + 1. What would you expect this function to output if provided an
+        input of 15?
       Calc Define Funcs 2_instruction: |
         Escreva uma função "f" que recebe um parâmetro
         "x" e retorna x - 10. Teste sua função usando f(15).
       Calc Define Funcs 3_instruction: |
-        Não precisamos chamar a função "f"
-        toda vez. Temos aqui uma função "vezes-dez" que deve receber um parâmetro
-        "x" e retornar x * 10. Compete a definição da função para que vezes-dez(50)
-        retorne 500.
+        We don't have to call our function 'f'
+        every time; create a function called 'times-ten' that should take a parameter
+        'x' and return x * 10. Once you've created the function, run times-ten(50).
       Calc Define Funcs 4_instruction: |
-        Escreva uma função chamada "metade" que recebe
-        um número "x" e retorna a metade desse número. Quando você tiver escrito a função,
-        use-a para calcular metade(20)
+        Write a function called 'half' that takes
+        a number 'x' and returns half that number. Once you've written the function,
+        use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Vamos usar a receita de design para criar uma
         função chamada "sqr" - essa função deve ter um domínio numérico e
@@ -2235,8 +2234,8 @@ pt-BR:
         Você pode completar esse desafio? O triângulo grande
         tem 200 pixels de tamanho e é roxo?
       Eval Contracts A_instruction: |
-        Use a função "estrela" para produzir uma estrela vermelha
-        com um raio de 60 pixels
+        Use the "star" function to produce a solid
+        red star with a 60 pixel radius
       Eval Contracts C_instruction: |
         Confira a função "rotacione" - você pode
         usá-la para rotacionar esse quadrado verde de 90 pixels em 45 graus?
@@ -2335,15 +2334,15 @@ pt-BR:
         usar é uma imagem. Essa função "estrela" recebe um número e duas strings
         e retorna uma imagem. Use essa função para criar uma estrela vermelha sólida com
         raio 100.
-      Eval Strings Images 2_instruction: "OBSERVAÇÃO - A ATIVIDADE LIVRE NÃO FUNCIONA NESSE NÍVEL.\n\r\nTodos os blocos de cálculo estão identificados por cor para que você saiba que tipo de\ndado ele retorna e quais tipos são necessários como parâmetros. O último parâmetro\nda função triângulo recebe uma string que controla sua cor - experimente\nalgumas cores diferentes para ver o que acontece."
+      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
       Eval Strings Images 3_instruction: |
-        Algumas funções só podem receber um conjunto
-        específico de strings, como o segundo argumento dessa função círculo, que
-        controla seu estilo. Desenhe esse círculo laranja delineado usando o bloco de string
-        especial com um menu suspenso para garantir que você use somente estilos válidos.
+        Some functions can only take a specific
+        set of Strings, such as the second argument of this circle function, which
+        controls its style. Draw this orange outline circle using the special string
+        block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
-        Tente usar o bloco "retângulo" para desenhar
-        esse retângulo vermelho - ele tem 175 pixels de largura e 100 pixels de altura.
+        Try using the "rectangle" block to draw
+        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: |
         Tente usar esse novo bloco de cálculo chamado
         "sobreposição" para desenhar um triângulo branco de 100 pixels em cima de um círculo
@@ -2352,14 +2351,14 @@ pt-BR:
         Use a função sobreposição para colocar uma estrela
         amarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento.
       Eval Strings Images 7_instruction: |
-        O bloco "deslocamento" permite que você mova uma imagem
-        para onde ela normalmente seria colocada. Use o deslocamento para colocar o triângulo
-        acima do quadrado.
+        The "offset" block lets you move an image
+        relative to where it would normally be placed. Use this block to offset the
+        triangle 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Aqui temos um tipo de bloco de estrela diferente,
-        ele é chamado "estrela-radial" e permite que você desenhe estrelas com qualquer número
-        de pontos! Use-o para criar essa estrela laranja com um raio interno de 75 pixels
-        e um raio externo de 175 pixels.
+        Here's a different kinds of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Atividade livre: explore os blocos disponíveis
         para desenhar algo interessante. Lembre-se de salvar e compartilhar suas imagens favoritas.
@@ -2810,6 +2809,9 @@ pt-BR:
         UNDER CONSTRUCTION: This version of NetSim is
         not yet functional. It will allow students to send binary as zeroes and ones
         to one another
+      NetSim_SendingABTest_instruction: |
+        This is Sarah's test of making a netsim
+        level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:

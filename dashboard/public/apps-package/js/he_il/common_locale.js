@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "עזרה"},
 "hintTitle":function(d){return "רמז:"},
 "jump":function(d){return "קפוץ"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."},
 "listVariable":function(d){return "רשימה"},
 "makeYourOwnFlappy":function(d){return "תיצור משחק Flappy משלך"},

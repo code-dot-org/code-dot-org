@@ -22,6 +22,7 @@ bn:
           future: ভবিষ্যতের হতে পারবে না
   hello: হ্যালো ওয়ার্ল্ড
   welcome_back: 'স্বাগতম %{name}'
+  submit: জমা করুন
   add_teacher_form:
     code:
       label: 'শিক্ষক যুক্ত করুন:'

@@ -8,20 +8,20 @@
         de dados, receberás um e-mail com instruções sobre como confirmar a tua conta
         em poucos minutos.
     failure:
-      already_authenticated: Já estás ligado.
+      already_authenticated: Já iniciaste sessão.
       inactive: A tua conta ainda não foi ativada.
-      invalid: Palavra-passe ou e-mail inválido.
-      invalid_token: Token de autenticação inválido.
+      invalid: O e-mail e a palavra-passe não estão corretos.
+      invalid_token: O token de autenticação não é válido.
       locked: A tua conta está bloqueada.
-      not_found_in_database: Palavra-passe ou e-mail inválido.
-      timeout: A tua sessão expirou, por favor entra novamente para continuar.
+      not_found_in_database: O e-mail e a palavra-passe não estão corretos.
+      timeout: A tua sessão expirou. Por favor, volta a iniciar sessão para continuares.
       unauthenticated: Precisas de entrar ou registar-te antes de continuar.
       unconfirmed: Tens de confirmar a tua conta antes de continuar.
     mailer:
       confirmation_instructions:
-        subject: Code.org instruções de confirmação
+        subject: Instruções de confirmação do Code.org
       reset_password_instructions:
-        subject: Instruções de reposição da palavra-passe Code.org
+        subject: Code.org redefinir instruções de palavra-passe
       unlock_instructions:
         subject: Instruções de desbloqueio
     omniauth_callbacks:
@@ -41,7 +41,7 @@
     registrations:
       destroyed: Adeus! A tua conta foi cancelada com sucesso. Esperamos ver-te novamente
         em breve.
-      signed_up: Bem-vindo! Inscreveste-te com êxito.
+      signed_up: Criaste a tua conta com sucesso. O Code.org dá-te as boas-vindas!
       signed_up_but_inactive: Inscreveste-te com êxito. No entanto não poderás ainda
         entrar porque a tua conta ainda não foi ativada.
       signed_up_but_locked: Inscreveste-te com êxito. No entanto não poderás ainda
@@ -54,7 +54,7 @@
       updated: Atualizaste a tua conta com sucesso.
     sessions:
       signed_in: ''
-      signed_out: Desligou-se com sucesso.
+      signed_out: Terminaste sessão com sucesso.
     unlocks:
       send_instructions: Vais receber um e-mail com as instruções sobre como desbloquear
         a tua conta dentro de poucos minutos.

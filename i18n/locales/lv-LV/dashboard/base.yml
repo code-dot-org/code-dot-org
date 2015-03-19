@@ -22,6 +22,7 @@ lv:
           future: nevar būt nākotnē
   hello: Sveika, pasaule
   welcome_back: 'Laipni lūdzu atpakaļ, %{name}'
+  submit: Iesniegt
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'

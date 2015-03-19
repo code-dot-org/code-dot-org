@@ -22,6 +22,7 @@
           future: ei voi olla tulevaisuudessa
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
+  submit: Jatka
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -334,8 +335,8 @@
       %{student_name}
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
+    email_confirm_wrong_email: (Väärä sähköpostiosoite?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
@@ -343,7 +344,7 @@
     delete_text: Klikkaamalla alla olevaa painiketta poistat tilisi.
     delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi
       käyttäjätilejä.'
-    delete_confirm: Oletko varma, että haluat poistaa sinun käyttäjätilisi?
+    delete_confirm: Oletko varma, että haluat poistaa käyttäjätilisi?
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -548,7 +549,7 @@
             ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
             mutta siinä on hauskaa opittavaa kaiken ikäisille.
         Hour of Code:
-          title: Koodaustunti
+          title: Kooditunti 2013
           description: ''
         edit-code:
           title: Muokkaa koodia
@@ -584,11 +585,45 @@
     -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä
     meihin puolestasi.
   progress:
-    not_completed: kesken
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
+    assessment: assessment
   studio:
-    courses_working_on: Kursseja, joilla olet työskennellyt
+    courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
     all_courses: Kaikki kurssit
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: Tallenna
+    delete: Poista
+    exit: Return to Course
+    my_projects: My Projects
+    share: Jaa
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Lisää
+    name: Nimi
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Poista?
+    delete_yes: Kyllä
+    delete_no: Ei
+    saved: Saved
+    not_saved: Not saved
+    cancel: Peru
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects

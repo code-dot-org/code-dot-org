@@ -87,6 +87,8 @@ en:
         10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
         (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
         Type the arithmetic expression here: crwdns24897:0crwdne24897:0
+      Glossary O:
+        "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.": crwdns35672:0crwdne35672:0
       Open text response example:
         Open text response example: crwdns35069:0crwdne35069:0
         I loved it because...: crwdns35070:0crwdne35070:0
@@ -96,7 +98,7 @@ en:
         1: crwdns35073:0crwdne35073:0
         In my classroom, I want to...: crwdns35074:0crwdne35074:0
       PDK5 Course Descriptions:
-        Overview of Courses 1, 2, and 3: crwdns35075:0crwdne35075:0
+        Course Structure: crwdns35590:0crwdne35590:0
         I am going to start with Course...: crwdns35076:0crwdne35076:0
       PDK5 Difficulty:
         Degree of Difficulty: crwdns35077:0crwdne35077:0
@@ -119,9 +121,17 @@ en:
         0: crwdns35090:0crwdne35090:0
         1: crwdns35091:0crwdne35091:0
         Your thoughts here: crwdns35092:0crwdne35092:0
+      PDK5 Problem Solving:
+        Problem Solving Methods: crwdns35591:0crwdne35591:0
+        I could integrate this in my classroom by...: crwdns35592:0crwdne35592:0
       PDK5 Promo Video:
         "Code Studio: Kid tested, Teacher approved": crwdns35093:0crwdne35093:0
-        My first impressions of Code Studio are...: crwdns35094:0crwdne35094:0
+      PDK5 Promo Video 2:
+        "Code Studio: Kid tested, Teacher approved": crwdns35593:0crwdne35593:0
+        My first impressions of Code Studio are...: crwdns35594:0crwdne35594:0
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: crwdns35595:0crwdne35595:0
+        "I think teaching computer science will be different than teaching other subjects in these ways: ...": crwdns35596:0crwdne35596:0
       Test Markdown level:
         Enter title here: crwdns35095:0crwdne35095:0
         Enter prompt here: crwdns35096:0crwdne35096:0
@@ -137,12 +147,43 @@ en:
       Code Logo v3:
         title: crwdns35097:0crwdne35097:0
         Create images with bits and bytes.: crwdns35098:0crwdne35098:0
+      CSP Lesson 14 encode letter A instructions:
+        "Instructions: Encode the Letter A": crwdns35597:0crwdne35597:0
       External level test (will):
-        title: crwdns35099:0crwdne35099:0
-        description here: crwdns35100:0crwdne35100:0
+        first computer program: crwdns35598:0crwdne35598:0
+      Hour of Code test content: [ ]
       Mixing Colors:
         title: crwdns35101:0crwdne35101:0
         description here: crwdns35102:0crwdne35102:0
+      PDK5 Beyond C:
+        Beyond: crwdns35599:0crwdne35599:0
+      PDK5 Classroom Culture C:
+        Classroom Culture: crwdns35600:0crwdne35600:0
+      PDK5 Course Maps C: [ ]
+      PDK5 Course Overview C: [ ]
+      PDK5 Glossary C:
+        Vocabulary: crwdns35601:0crwdne35601:0
+      PDK5 Intro C: [ ]
+      PDK5 Pair Programming 1:
+        Pair Programming: crwdns35602:0crwdne35602:0
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: crwdns35603:0crwdne35603:0
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: crwdns35604:0crwdne35604:0
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: crwdns35605:0crwdne35605:0
+      PDK5 Teacher Dashboard 3:
+        Course Progress: crwdns35606:0crwdne35606:0
+      PDK5 Teacher Dashboard 4:
+        Course Progress: crwdns35607:0crwdne35607:0
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: crwdns35608:0crwdne35608:0
+      PDK5 Unplugged Intro C:
+        Unplugged intro: crwdns35609:0crwdne35609:0
+      PDK5 UVideo Overview C:
+        Kiki video overview: crwdns35610:0crwdne35610:0
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: crwdns35611:0crwdne35611:0
       Pixelation 1:
         Pixelation 1: crwdns33911:0crwdne33911:0
         Create images with bits and bytes.: crwdns33912:0crwdne33912:0
@@ -167,6 +208,77 @@ en:
       Pixelation Flappy:
         title: crwdns35111:0crwdne35111:0
         description here: crwdns35112:0crwdne35112:0
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: crwdns35612:0crwdne35612:0
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: crwdns35613:0crwdne35613:0
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: crwdns35614:0crwdne35614:0
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: crwdns35615:0crwdne35615:0
+        description here: crwdns35616:0crwdne35616:0
+      Pixelation - Lesson 14 - Instructions one bit error:
+        "Lesson 14 - Task 2: fix the error": crwdns35617:0crwdne35617:0
+        description here: crwdns35618:0crwdne35618:0
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: crwdns35619:0crwdne35619:0
+        description here: crwdns35620:0crwdne35620:0
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: crwdns35621:0crwdne35621:0
+        description here: crwdns35622:0crwdne35622:0
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: crwdns35623:0crwdne35623:0
+        description here: crwdns35624:0crwdne35624:0
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: crwdns35625:0crwdne35625:0
+        description here: crwdns35626:0crwdne35626:0
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: crwdns35627:0crwdne35627:0
+        description here: crwdns35628:0crwdne35628:0
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: crwdns35629:0crwdne35629:0
+        description here: crwdns35630:0crwdne35630:0
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: crwdns35631:0crwdne35631:0
+        description here: crwdns35632:0crwdne35632:0
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: crwdns35633:0crwdne35633:0
+        description here: crwdns35634:0crwdne35634:0
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: crwdns35635:0crwdne35635:0
+        description here: crwdns35636:0crwdne35636:0
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: crwdns35637:0crwdne35637:0
+        description here: crwdns35638:0crwdne35638:0
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: crwdns35639:0crwdne35639:0
+        description here: crwdns35640:0crwdne35640:0
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: crwdns35641:0crwdne35641:0
+        description here: crwdns35642:0crwdne35642:0
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: crwdns35643:0crwdne35643:0
+        description here: crwdns35644:0crwdne35644:0
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: crwdns35645:0crwdne35645:0
+        description here: crwdns35646:0crwdne35646:0
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: crwdns35647:0crwdne35647:0
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: crwdns35648:0crwdne35648:0
+        description here: crwdns35649:0crwdne35649:0
+      test demo level:
+        demo title: crwdns35650:0crwdne35650:0
+        demo description: crwdns35651:0crwdne35651:0
+      Test discourse forum-comment level:
+        Degree of Difficulty: crwdns35652:0crwdne35652:0
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: crwdns35653:0crwdne35653:0
+      test html katie:
+        testing: crwdns35654:0crwdne35654:0
+        lkajsdfasdf: crwdns35655:0crwdne35655:0
+      unique level name here:
+        title: crwdns35656:0crwdne35656:0
+        description here: crwdns35657:0crwdne35657:0
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: crwdns33894:0crwdne33894:0
@@ -239,6 +351,6 @@ en:
         wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
       Rocket Contract 1:
         Contract for rocket-height: crwdns27922:0crwdne27922:0
-        0: crwdns27924:0crwdne27924:0
-        1: crwdns27925:0crwdne27925:0
+        0: crwdns35658:0crwdne35658:0
+        1: crwdns35659:0crwdne35659:0
         rocket-height|Number|Number: crwdns35127:0crwdne35127:0

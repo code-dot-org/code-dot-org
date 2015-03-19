@@ -22,6 +22,7 @@ ko:
           future: 오늘 이전 날짜만 가능합니다.
   hello: Hello world
   welcome_back: '%{name} 님, 어서오세요. '
+  submit: 제출하기
   add_teacher_form:
     code:
       label: '선생님 추가:'

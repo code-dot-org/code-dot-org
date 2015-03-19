@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.zh_tw');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "實際";
+Blockly.Msg.ACTUAL = "呼叫";
 Blockly.Msg.ADD = "加入";
 Blockly.Msg.ADD_COMMENT = "加入註解";
 Blockly.Msg.ADD_PARAMETER = "加入參數";
@@ -75,7 +75,7 @@ Blockly.Msg.EXAMPLE = "範例";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "定義一個預期和實際行為的例子";
 Blockly.Msg.EXPAND_ALL = "展開積木";
 Blockly.Msg.EXPAND_BLOCK = "展開區塊";
-Blockly.Msg.EXPECTED = "預期的";
+Blockly.Msg.EXPECTED = "結果";
 Blockly.Msg.EXTERNAL_INPUTS = "外部輸入";
 Blockly.Msg.FUNCTION_CREATE = "建立一個函數";
 Blockly.Msg.FUNCTION_EDIT = "編輯";

@@ -16,6 +16,7 @@
   petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب
     الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: الاسم
   email: البريد الإلكتروني
   zipcode: الرمز البريدي أو اسم البلد
@@ -110,6 +111,8 @@
   learn_classes: ابحث عن الفئات المحلية
   hoc_is_here: ' هنا هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
   just_did_hoc: 'انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: تعلم ساعة من البرمجة
   beyond_hoc: بعد تعلم ساعة من البرمجة
   what_gender: ماهو جنسك؟
@@ -125,12 +128,12 @@
     اسطر من الكود البرمجي.'
   start_hoc: ابدأ ساعة من البرمجة الان
   contact_form_topic_press: الصحافة/وسائل الإعلام (مقابلة أو تحدث المشاركة)
-  stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك،
-    معلم'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
     Alzate, 5th grader'
+  stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك،
+    معلم'
   studiobar_title: إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>
   studiobar_elementary_title: الدورات الابتدائية
   studiobar_elementary_body: دوراتنا الثلاث الجديدة لـ K&#8209;5
@@ -147,6 +150,27 @@
   studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
   studiobar_shop_title: تسوق
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: الساعة من التعليمات البرمجية
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: الدورة 4
+  homepage_slot_text_shop: تسوق
+  homepage_slot_text_flappy: رمز لعبة flappy
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ''
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
   contact_form_topic_teacher: أنا مدرس/ معلم
@@ -339,6 +363,8 @@
   dashboard_login_picture: الصورة
   dashboard_login_none: البريد الإلكتروني
   dashboard_new_password: كلمة مرور جديدة
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: غير مكتمل
   dashboard_progress_completed_too_many_blocks: أكملت، كتل كثيرة جداً
   dashboard_progress_completed_perfect: مكتمل, ممتاز
@@ -1004,27 +1030,3 @@
     وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
   sphero_beyond_longdescription: سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة
     للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

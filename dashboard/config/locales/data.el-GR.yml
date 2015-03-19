@@ -99,12 +99,12 @@
         Jigsaw: Παζλ
         MazeStep: Κατάσταση Βήμα Λαβυρίνθου
         Wordsearch: Αναζήτηση Λέξεων
-        Webapp: Εφαρμογή για Internet
+        Webapp: Εργαστήριο εφαρμογών
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
         StudioEC: Εργαστήριο Παιχνιδιού
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Εργαστήριο εφαρμογών
+        NetSim: Προσομοιωτής Διαδικτύου
     trophy:
       name:
         Bronze: Χάλκινο
@@ -725,6 +725,12 @@
         playlab_intro: Εισαγωγή στο εργαστήριο παιχνιδιού
         playlab_events: Εκδηλώσεις του Εργαστηρίου Παιχνιδιού
         playlab_repeat_forever: Παίξετε εργαστήριο επανάληψη για πάντα
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Μεταβλητές
+        msm_7_functions: Συναρτήσεις
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

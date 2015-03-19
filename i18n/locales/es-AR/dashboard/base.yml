@@ -22,6 +22,7 @@ es-AR:
           future: No puede ser en el futuro
   hello: Hola mundo
   welcome_back: 'Bienvenido, %{name}'
+  submit: Enviar
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
