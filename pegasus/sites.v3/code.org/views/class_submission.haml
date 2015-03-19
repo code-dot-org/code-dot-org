@@ -91,7 +91,8 @@
     .form-group
       %label.control-label{for: "school-website"} Website
       %span.form-required-field *
-      %a{href: school_website_s[/\Ahttp:\/\//] || school_website_s[/\Ahttps:\/\//] ? school_website_s : "http://#{school_website_s}", target: "_blank", style: "float: right;"} (Open in new window)
+      - if mode == 'review'
+        %a{href: school_website_s[/\Ahttp:\/\//] || school_website_s[/\Ahttps:\/\//] ? school_website_s : "http://#{school_website_s}", target: "_blank", style: "float: right;"} (Open in new window)
       %div
         %input#school-website.form-control{name: "school_website_s", placeholder: "School or program website", type: "text", required: "", value: school_website_s}/
     .form-group
