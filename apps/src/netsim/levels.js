@@ -3,6 +3,7 @@
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
@@ -21,6 +22,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
+ *
+ * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
+ *           the router uses to parse incoming packets and figure out where
+ *           to route them.
+ *
+ * @property {packetHeaderSpec} clientInitialPacketHeader - The header format
+ *           used by the local client node when generating/parsing packets,
+ *           which affects the layout of the send panel and log panels.
  *
  * @property {boolean} showAddPacketButton - Whether the "Add Packet" button
  *           should appear in the send widget.
@@ -71,6 +80,20 @@ levels.default = {
   showRoutersInLobby: true,
   showAddRouterButton: true,
 
+  // Packet header specification
+  routerExpectsPacketHeader: [
+    { key: 'toAddress', bits: BITS_PER_NIBBLE },
+    { key: 'fromAddress', bits: BITS_PER_NIBBLE },
+    { key: 'packetIndex', bits: BITS_PER_NIBBLE },
+    { key: 'packetCount', bits: BITS_PER_NIBBLE }
+  ],
+  clientInitialPacketHeader: [
+    { key: 'toAddress', bits: BITS_PER_NIBBLE },
+    { key: 'fromAddress', bits: BITS_PER_NIBBLE },
+    { key: 'packetIndex', bits: BITS_PER_NIBBLE },
+    { key: 'packetCount', bits: BITS_PER_NIBBLE }
+  ],
+
   // Send widget configuration
   showAddPacketButton: true,
   showPacketSizeControl: true,
@@ -117,6 +140,7 @@ levels.default = {
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
@@ -130,6 +154,7 @@ levels.variant1 = utils.extend(levels.default, {
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],

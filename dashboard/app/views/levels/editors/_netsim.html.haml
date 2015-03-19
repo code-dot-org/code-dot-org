@@ -16,6 +16,20 @@
       %td= f.label :show_add_router_button, 'Show "Add Router" Button'
       %td Whether the "Add Router" button should be available to students
 
+%h3 Packet Headers
+.field
+  = f.label :router_expects_packet_header, 'Router expects packet header'
+  %p The header format the router uses to parse incoming packets and figure out where to route them.
+  = f.text_area :router_expects_packet_header, placeholder: 'Router packet header format', rows: 4
+  :javascript
+      codeMirror('router_expects_packet_header', 'javascript');
+.field
+  = f.label :client_initial_packet_header, 'Client initial packet header'
+  %p The header format used by the local client node when generating/parsing packets, which affects the layout of the send panel and log panels.  Usually the same as the router format, unless the lesson asks students to manually compose their header.
+  = f.text_area :client_initial_packet_header, placeholder: 'Client packet header format', rows: 4
+  :javascript
+      codeMirror('client_initial_packet_header', 'javascript');
+
 %h3 Send a Message Panel
 .field
   %table.checkboxes
