@@ -13,6 +13,7 @@
 
 var minifyBinary = require('./dataConverters').minifyBinary;
 var dataConverters = require('./dataConverters');
+var PacketHeaderType = require('./netsimConstants').PacketHeaderType;
 
 /**
  * Single packet header field type
@@ -91,10 +92,10 @@ var BITS_PER_PACKET_HEADER_FIELD = 4;
  * @type {PacketEncoder}
  */
 PacketEncoder.defaultPacketEncoder = new PacketEncoder([
-  { key: 'toAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'fromAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'packetIndex', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'packetCount', bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_PACKET_HEADER_FIELD },
+  { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_PACKET_HEADER_FIELD },
   { key: 'message', bits: Infinity }
 ]);
 

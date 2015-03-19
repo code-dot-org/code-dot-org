@@ -19,6 +19,8 @@ var PacketEncoder = testUtils.requireWithGlobalsCheckBuildFolder('netsim/PacketE
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
+var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -167,8 +169,8 @@ describe("NetSimRouterNode", function () {
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       var packetHeaderSpec = [
-        {key: 'fromAddress', bits: 4},
-        {key: 'toAddress', bits: 4}
+        {key: PacketHeaderType.FROM_ADDRESS, bits: 4},
+        {key: PacketHeaderType.TO_ADDRESS, bits: 4}
       ];
       encoder = new PacketEncoder(packetHeaderSpec);
 

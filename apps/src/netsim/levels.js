@@ -7,6 +7,7 @@ var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 /**
  * A level configuration that can be used by NetSim
@@ -82,16 +83,16 @@ levels.default = {
 
   // Packet header specification
   routerExpectsPacketHeader: [
-    { key: 'toAddress', bits: BITS_PER_NIBBLE },
-    { key: 'fromAddress', bits: BITS_PER_NIBBLE },
-    { key: 'packetIndex', bits: BITS_PER_NIBBLE },
-    { key: 'packetCount', bits: BITS_PER_NIBBLE }
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
   clientInitialPacketHeader: [
-    { key: 'toAddress', bits: BITS_PER_NIBBLE },
-    { key: 'fromAddress', bits: BITS_PER_NIBBLE },
-    { key: 'packetIndex', bits: BITS_PER_NIBBLE },
-    { key: 'packetCount', bits: BITS_PER_NIBBLE }
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
 
   // Send widget configuration

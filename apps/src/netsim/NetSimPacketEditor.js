@@ -19,7 +19,9 @@ var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var netsimConstants = require('./netsimConstants');
+var PacketHeaderType = netsimConstants.PacketHeaderType;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
 var formatBinary = dataConverters.formatBinary;
@@ -268,10 +270,10 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var rootDiv = this.rootDiv_;
 
   var shortNumberFields = [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ];
 
   /** @type {rowType[]} */
@@ -359,10 +361,10 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var liveFields = [];
 
   [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
           inputElement: this.binaryUI[fieldName],
