@@ -203,7 +203,7 @@ hr:
         turtle_3_5: 'Sada napravi novu funkciju "nacrtaj kuću" i iskoristi je da udomiš dvije mačke. Savjet: napravi novu funkciju koristeći blok "uradi nešto" i upiši vlastiti tekst da bi dao ime bloku.'
         turtle_3_6: 'Koristeći "nacrtaj kvadrat" kao primjer, dodaj unos nazvan "duljina" u funkciju "nacrtaj trokut". Potom nacrtaj trokute različitih veličina. (Savjet: klikni na zvjezicu da dodaš unos u funkciju)'
         turtle_3_7: 'Dodaj unos zvan "duljina" u "nacrtaj kuću" i napravi veliku kuću za slona (sa stranicama duljine 150 piksela)'
-        turtle_3_8: 'Ovdje su svi blokovi iz prethodnog zadatka. Izmijeni "nacrtaj kuću" tako da ja nakon crtanja nove kuće završim na njenom donjem desnom kutu. Upotrujebi ovu izmijenjenu funkciju da nacrtaš tri kuće.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći? Pokušaj, a zatim nacrtaj niz kuća.'
         turtle_3_10: Puno si naučio! Sada to iskoristi da nacrtaš što god želiš. Pokušaj nacrtati zvijezdu, spiralu ili kitnjastu pahuljicu.
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati zemljište i pripremiti ga za sadnju?
@@ -432,6 +432,12 @@ hr:
         playlab_intro: Uvod u Laboratorij igara
         playlab_events: Događaji u Laboratoriju igara
         playlab_repeat_forever: Beskonačno ponavljanje u Laboratoriju igara
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Varijable
+        msm_7_functions: Funkcije
     callout:
       text:
         drag_blocks: 'Dovuci blok "idi" i zakači ga ispod drugog bloka'

@@ -207,7 +207,7 @@ fa:
         turtle_3_5: 'حالا یک تابع جدید با نام "draw a house" ایجاد کن و با استفاده از آن، دو گربه را در آن جای بده. راهنمائی: با استفاده از بلوک "do something" یک تابع جدید ایجاد کن و با تایپ متن دلخواهت به آن اسم بده.'
         turtle_3_6: 'با استفاده از "draw a square" بعنوان مثال، یک ورودی با نام "length" به "draw a triangle" اضافه کن.سپس مثلث هائی با اندازه های مختلف رسم کن. (راهنمائی: برای اضافه کردن یک ورودی به یک تابع روی ستاره کلیک کن)'
         turtle_3_7: 'یک ورودی با نام "length" به "draw a house" اضافه کن و یک خانۀ بزرگ برای فیل بساز(طول هر لبه 150 پیکسل)'
-        turtle_3_8: 'تمام بلوک های پازل قبلی اینجا هستند. "draw a house" را طوری تغییر بده که من بعد از رسم یک خانۀ جدید به گوشۀ پائین و سمت راست برسم. با استفاده از این تابع اصلاح شده سه خانه رسم کن.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'می تونی تابع "draw a house" رو بدون کمک دوباره ایجاد کنی؟ تلاش بکن و بعد یک ردیف از خانه ها رو بکش .'
         turtle_3_10: خیلی بلد شدی! حالا با دانسته هات هر چیزی که دلت می خواد بکش. مثلا یه ستاره، یا یه مارپیچ یا یه دانه برف خوشگل.
         maze_karel_debug_seq_1: ' به اشکال زدایی خوش آمدی! کد من درست کار نمی کند. می تونی محل مشکل رو پیدا و درستش کنی طوری که من بتونم مزرعم رو صاف و آماده برای کاشت کنم؟'
@@ -432,6 +432,12 @@ fa:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: بلوک های ارزیابی
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: متغیرها
+        msm_7_functions: توابع
     callout:
       text:
         drag_blocks: 'یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان'

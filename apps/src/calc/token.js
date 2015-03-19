@@ -1,5 +1,8 @@
 var jsnums = require('./js-numbers/js-numbers');
 
+// Unicode character for non-breaking space
+var NBSP = '\u00A0';
+
 /**
  * A token is a value, and a boolean indicating whether or not it is "marked".
  * Marking is done for two different reasons.
@@ -24,6 +27,10 @@ var Token = function (val, marked) {
 };
 module.exports = Token;
 
+Token.prototype.isParenthesis = function () {
+  return this.val_ === '(' || this.val_ === ')';
+};
+
 /**
  * Add the given token to the parent element.
  * @param {HTMLElement} element Parent element to add to
@@ -36,31 +43,23 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
 
+  var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
+  // Replace spaces with 2x nonbreaking space
+  tspan.textContent = this.nonRepeated_.replace(/ /g, NBSP + NBSP);
+  text.appendChild(tspan);
+
   if (this.repeated_) {
-    var tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
-    tspan.textContent = this.nonRepeated_;
-    text.appendChild(tspan);
     tspan = document.createElementNS(Blockly.SVG_NS, 'tspan');
     tspan.setAttribute('style', 'text-decoration: overline');
-    tspan.textContent = this.repeated_;
+    // Replace spaces with 2x nonbreaking space
+    tspan.textContent = this.repeated_.replace(/ /g, NBSP + NBSP);
     text.appendChild(tspan);
-  } else {
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    text.textContent = this.nonRepeated_.replace(/ /g, '_');
   }
 
   element.appendChild(text);
-  // getComputedTextLength isn't available to us in our mochaTests
-  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+  textLength = text.getBoundingClientRect().width;
 
-  if (!this.repeated_) {
-    // reset to version with spaces
-    text.textContent = this.nonRepeated_;
-  }
-
-  text.setAttribute('x', xPos + textLength / 2);
-  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {
     text.setAttribute('class', markClass);
   }

@@ -161,31 +161,31 @@ nl:
         video: C4_unplugged_madlibs
       ForLoopFun:
         title: For Lus fun
-        desc: We weten dat lussen ons toelalen om dingen steeds opnieuw te herhalen, nu gaan we leren om gebruik te maken van lussen met extra ingebouwde structuur.
+        desc: We weten dat lussen ons helpen om stappen te herhalen, nu gaan we leren om gebruik te maken van lussen met extra structuur.
         video: C4_unplugged_forlussen
       SongwritingWithParameters:
         title: Songwriting met Parameters
-        desc: "Een van de meest prachtige structuren in de informatica wereld is de functie. Funcites (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        desc: "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
         video: C4_unplugged_parameters
       BinaryImages:
         title: Binaire afbeeldingen
-        desc: Hoewel veel mensen binair zien als enkel nullen en enen, toonde onze vorige cursussen aan de leerlingen dat informatie kan weergegeven worden in een verscheidenheid van binair opties. In deze les gaan we nog een stapje verder door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen en kleuren) kan opslaan in binair.
+        desc: Hoewel veel mensen binair zien als enkel nullen en enen, leerde onze vorige lessen de leerlingen dat informatie weergegeven kan worden in een verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen en kleuren) binair kan opslaan.
         video: C4_unplugged_binair
       VideoGamesCoordinatePlanes:
         title: Video games en coördinatenstelsels
-        desc: Video games en coördinatenstelsels lesbeschrijving
+        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
       Contracts:
-        title: Contracten
-        desc: Contracten lesbeschrijving
+        title: Contracts, Domain, and Range
+        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
       DesignRecipe:
         title: Het ontwerp Recept
-        desc: Ontwerp recept lesbeschrijving
+        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
       Booleans:
-        title: Booleans
-        desc: Booleans lesbeschrijving
+        title: Booleans and Logic
+        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Conditionele en stuksgewijze functies
-        desc: Voorwaardelijke instructies en stuksgewijse functies lesbeschrijving
+        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
       CollisionDetection:
-        title: Botsingdetectie
-        desc: Botsingdetectie lesbeschrijving
+        title: Collision Detection and the Pythagorean Theorem
+        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theoreom and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."

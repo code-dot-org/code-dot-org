@@ -29,16 +29,16 @@ Feature: Using the Internet Simulator Lobby
     Given I load netsim
     And I enter the netsim name "Pebbles"
     When I add a router
-    Then element ".router_row" contains text "Router"
+    Then element ".router-row" contains text "Router"
 
   Scenario: The connect button enables when a router is selected
     Given I load netsim
     And I enter the netsim name "Barney"
     When I add a router
-    Then element ".router_row" does not have class "selected_row"
+    Then element ".router-row" does not have class "selected-row"
     And element "#netsim_lobby_connect" is disabled
     When I select the first router
-    Then element ".router_row" has class "selected_row"
+    Then element ".router-row" has class "selected-row"
     And element "#netsim_lobby_connect" is enabled
 
   Scenario: Connecting to a router hides the lobby, and shows the send controls
@@ -46,9 +46,9 @@ Feature: Using the Internet Simulator Lobby
     And I enter the netsim name "Betty"
     And I add a router
     And I connect to the first router
-    Then element ".netsim_lobby" is hidden
-    And element ".netsim_send_panel" is visible
-    And element ".netsim_log_panel" is visible
+    Then element ".netsim-lobby" is hidden
+    And element ".netsim-send-panel" is visible
+    And element ".netsim-log-panel" is visible
 
   # Scenario: If I am logged in, my name is filled in automatically
   #   Given I am a teacher

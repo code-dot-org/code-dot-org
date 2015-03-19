@@ -67,23 +67,28 @@ standardConfig.blocks = [
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
   {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'return', 'block': 'return __;', 'title': 'Return a value from a function', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
   'Control': {
-    'color': 'orange',
+    'color': 'blue',
+    'rgb': '#19C3E1',
     'blocks': []
   },
   'Math': {
-    'color': 'green',
+    'color': 'deeppurple',
+    'rgb': '#A38BC3',
     'blocks': []
   },
   'Variables': {
-    'color': 'blue',
+    'color': 'purple',
+    'rgb': '#B159AB',
     'blocks': []
   },
   'Functions': {
-    'color': 'violet',
+    'color': 'green',
+    'rgb': '#48D882',
     'blocks': []
   },
 };

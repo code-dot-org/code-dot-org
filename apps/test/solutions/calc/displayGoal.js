@@ -40,6 +40,10 @@ module.exports = {
   ]
 };
 
+function replaceSpaces(str) {
+  return str.replace(/ /g, '\u00A0\u00A0');
+}
+
 /**
  * Run all our custom validation. Pulled out to reduce nesting.
  */
@@ -131,23 +135,20 @@ function displayGoalCustomValidator(assert) {
 
     var g = answerExpression.children[0];
     assert.equal(g.children.length, 2);
-    assert.equal(g.children[0].textContent, "age = ");
+    assert.equal(g.children[0].textContent, replaceSpaces("age = "));
     assert.equal(g.children[0].getAttribute('class'), null);
     assert.equal(g.children[1].textContent, "17");
     assert.equal(g.children[1].getAttribute('class'), null);
 
     g = answerExpression.children[1];
-    assert.equal(g.children.length, 5);
-    assert.equal(g.children[0].textContent, "(");
+
+    assert.equal(g.children[0].textContent, "age");
     assert.equal(g.children[0].getAttribute('class'), null);
-    assert.equal(g.children[1].textContent, "age");
+    assert.equal(g.children[1].textContent, replaceSpaces(" * "));
     assert.equal(g.children[1].getAttribute('class'), null);
-    assert.equal(g.children[2].textContent, " * ");
+    assert.equal(g.children[2].textContent, "12");
     assert.equal(g.children[2].getAttribute('class'), null);
-    assert.equal(g.children[3].textContent, "12");
-    assert.equal(g.children[3].getAttribute('class'), null);
-    assert.equal(g.children[4].textContent, ")");
-    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children.length, 3);
   });
 
   return true;

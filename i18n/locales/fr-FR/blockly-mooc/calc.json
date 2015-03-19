@@ -1,13 +1,17 @@
 {
-  "compute":"calculer",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"Vous devez joindre un bloc à \"calculer\".",
+  "emptyFunctionalBlock":"Un de vos blocs ne contient pas d'entrée.",
   "equivalentExpression":"Essayez de réorganiser vos arguments pour obtenir exactement la même expression.",
-  "extraTopBlocks":"Vous avez des blocs non attachés. Vouliez-vous les rattacher au bloc \"calcul\"?",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?",
   "failedInput":"Votre fonction ne renvoie pas le bon résultat pour toutes les valeurs.",
   "goal":"Objectif :",
-  "levelIncompleteError":"Your expression does not match the goal.",
+  "levelIncompleteError":"Votre expression ne correspond pas à l'objectif.",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"Voici votre calcul ! Continuez à travailler là-dessus, ou passez à la prochaine énigme !",
   "yourExpression":"Votre expression :",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"La fonction que vous appelez a une valeur incorrecte.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expresison does not return the correct result."
 }

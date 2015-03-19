@@ -2,15 +2,16 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"kruh (poloměr, styl, barva)",
-  "displayBlockTitle":"zobraz",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"Elipsa (šířka, výška, styl, barva)",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Máš nepřipojené bloky. Nechceš je připojit k bloku \"zobraz\"?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"překrytí (zhora, zdola)",
   "placeImageBlockTitle":"umístit obrázek (x, y, obrázek)",
   "offsetBlockTitle":"offset (x, y, obrázek)",
   "rectangleBlockTitle":"obdélník (šířka, výška, styl, barva)",
-  "reinfFeedbackMsg":"Můžeš stisknout tlačítko \"Zkusit znovu\" a upravit svůj obrázek.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"otočení (stupně, obrázek)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"čtverec (velikost, styl, barva)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"podklad (zhora, zdola)",
   "outline":"obtáhnout",
   "solid":"plný",
-  "string":"řetězec"
+  "string":"řetězec",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }
