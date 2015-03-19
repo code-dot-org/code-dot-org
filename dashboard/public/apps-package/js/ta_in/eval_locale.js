@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "நீள்வட்ட (அகலம், உயரம், பாணி, வண்ணம்)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "மேலிடு (மேல், கீழ்)"},
 "placeImageBlockTitle":function(d){return "இடம்-உருவம் (x, y, உருவம்)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlay (bottom, top)"},
 "outline":function(d){return "outline"},
 "solid":function(d){return "solid"},
-"string":function(d){return "string"}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

@@ -254,7 +254,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpeedTooltip":function(d){return "Sets the level's speed"},
 "shareFlappyTwitter":function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"},
 "shareGame":function(d){return "Share your game:"},
-"soundRandom":function(d){return "random"},
+"soundRandom":function(d){return "შემთხვევითი"},
 "soundBounce":function(d){return "bounce"},
 "soundCrunch":function(d){return "crunch"},
 "soundDie":function(d){return "sad"},

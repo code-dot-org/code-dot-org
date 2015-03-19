@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "帮助"},
 "hintTitle":function(d){return "提示："},
 "jump":function(d){return "跳转"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "你虽然把所有必要的模块都用上了，但是使用方法不对。"},
 "listVariable":function(d){return "列表"},
 "makeYourOwnFlappy":function(d){return "制作你自己的Flappy游戏吧"},
