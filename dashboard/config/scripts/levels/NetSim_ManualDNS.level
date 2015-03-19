@@ -7,6 +7,7 @@
   "properties": {
     "skin": "netsim",
     "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
+    "show_add_packet_button": "false",
     "show_packet_size_control": "false",
     "show_tabs": [
       "instructions",
