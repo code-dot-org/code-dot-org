@@ -22,6 +22,7 @@ th:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
+  submit: เสนอ
   add_teacher_form:
     code:
       label: 'Add a teacher:'

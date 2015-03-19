@@ -22,6 +22,7 @@ ja:
           future: 現在までの日付にする
   hello: 世界の皆さん、こんにちは
   welcome_back: 'Welcome Back, %{name}'
+  submit: 送信
   add_teacher_form:
     code:
       label: 先生を追加：

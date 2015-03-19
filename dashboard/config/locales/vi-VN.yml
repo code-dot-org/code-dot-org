@@ -22,6 +22,7 @@
           future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: Chào mừng bạn %{name}
+  submit: Chấp nhận
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'

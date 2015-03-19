@@ -22,6 +22,7 @@
           future: לא יכול להיות בעתיד
   hello: שלום עולם
   welcome_back: ברוך שובך, %{name}
+  submit: שלח
   add_teacher_form:
     code:
       label: 'הוסף מורה:'

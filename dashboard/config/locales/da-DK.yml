@@ -22,6 +22,7 @@
           future: kan ikke være i fremtiden
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
+  submit: Indsend
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'

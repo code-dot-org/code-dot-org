@@ -22,6 +22,7 @@
           future: no pot ser en el futur
   hello: Hola Món
   welcome_back: Benvingut de nou, %{name}
+  submit: Envia
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'

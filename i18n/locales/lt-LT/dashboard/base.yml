@@ -22,6 +22,7 @@ lt:
           future: negali būti ateitis
   hello: Sveikas, pasauli
   welcome_back: 'Sveiki sugrįžę, %{name}'
+  submit: Pateikti
   add_teacher_form:
     code:
       label: 'Pridėkite mokytoja:'

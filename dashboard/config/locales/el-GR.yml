@@ -22,6 +22,7 @@
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
+  submit: Υποβολή
   add_teacher_form:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'

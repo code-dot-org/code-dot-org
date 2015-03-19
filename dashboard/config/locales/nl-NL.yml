@@ -22,6 +22,7 @@
           future: kan niet in de toekomst
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
+  submit: Klaar
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'

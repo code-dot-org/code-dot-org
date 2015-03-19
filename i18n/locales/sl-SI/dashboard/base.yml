@@ -22,6 +22,7 @@ sl:
           future: ne more biti v prihodnosti
   hello: Pozdravljen svet
   welcome_back: 'Dobrodošel/a nazaj, %{name}'
+  submit: Pošlji
   add_teacher_form:
     code:
       label: 'Dodaj učitelja/ico:'

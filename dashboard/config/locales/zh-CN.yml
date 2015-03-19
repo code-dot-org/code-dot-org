@@ -22,6 +22,7 @@
           future: 不能在未来
   hello: 世界你好
   welcome_back: 欢迎回来，%{name}
+  submit: 提交
   add_teacher_form:
     code:
       label: '加上一个老师:'

@@ -22,6 +22,7 @@
           future: nem lehet a jövőben
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
+  submit: Elküldés
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'

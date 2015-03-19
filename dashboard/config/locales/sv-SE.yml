@@ -23,6 +23,7 @@
           future: kan inte vara i framtiden
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
+  submit: Skicka in
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'

@@ -22,6 +22,7 @@ ms:
           future: tidak boleh ada di masa depan
   hello: Helo dunia
   welcome_back: 'Selamat datang kembali, % {nama}'
+  submit: Hantar
   add_teacher_form:
     code:
       label: 'Tambahkan guru:'

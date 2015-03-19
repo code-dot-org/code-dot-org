@@ -22,6 +22,7 @@ sq:
           future: nuk mund të jetë në të ardhmen
   hello: Përshëndetje Botë
   welcome_back: 'Mirë se erdhët sërish, %{name}'
+  submit: Dorëzo
   add_teacher_form:
     code:
       label: 'Shto një mësues:'

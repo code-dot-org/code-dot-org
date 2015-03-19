@@ -22,6 +22,7 @@
           future: tulevikus ei saa olla
   hello: Tere maailm
   welcome_back: Tere tulemast tagasi, %{name}
+  submit: Esita
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'

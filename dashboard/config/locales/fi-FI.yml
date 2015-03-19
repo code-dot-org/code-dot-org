@@ -22,6 +22,7 @@
           future: ei voi olla tulevaisuudessa
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
+  submit: Jatka
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'

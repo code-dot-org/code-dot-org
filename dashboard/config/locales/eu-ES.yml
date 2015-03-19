@@ -22,6 +22,7 @@
           future: Ezin du izan etorkizuenean
   hello: Kaixo mundua
   welcome_back: Ongi etorria berriro, %{name}
+  submit: Bidali
   add_teacher_form:
     code:
       label: 'Add a teacher:'

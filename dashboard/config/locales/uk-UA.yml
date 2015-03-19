@@ -22,6 +22,7 @@
           future: не може бути в майбутньому
   hello: Привіт, світе
   welcome_back: З поверненням, %{name}
+  submit: Надіслати
   add_teacher_form:
     code:
       label: 'Додати учителя:'
