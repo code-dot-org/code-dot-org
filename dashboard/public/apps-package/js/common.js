@@ -5651,7 +5651,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: dropletUtils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig)
+        options.dropletConfig),
+      alwaysShowPalette: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
