@@ -3,11 +3,10 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-# Job Openings at Code.org
+# Job Openings at Code.org	
 
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
-- [Operations Intern](#operations-intern)
 - [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
@@ -161,30 +160,6 @@ In addition, candidates:
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="operations-intern" href="#operations-intern">Operations Intern (Seattle,Wa)</a>
-**Job Summary:**
-
-Job Status:		Part-time (April/May unpaid); 
-Full-time (June-August stipend available)
-
-Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
-
-- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
-- Update and manage attendee lists
-- Utilize our customer service system to respond to professional development questions from teachers in a timely manner
-- Attend and participate in meetings and record notes/follow-up items, as appropriate
-- Respond to requests for information, distribute materials externally
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Qualifications:**
-
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-- Minimum 2 years of undergraduate studies completed
-- Experience with Google suite of products
-- Ability to work legally in the United States
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
