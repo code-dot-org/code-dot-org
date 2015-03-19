@@ -51,10 +51,10 @@ oop.inherits(Mode, JavaScriptMode);
   // Manually create our highlight rules so that we can modify it
   this.$highlightRules = new JavaScriptHighlightRules();
 
-  excludedKeywords.forEach(function (keyword) {
-    var index = this.$highlightRules.$keywordList.indexOf(keyword);
-    if (index !== -1) {
-      this.$highlightRules.$keywordList.splice(index);
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
     }
   }, this);
 
