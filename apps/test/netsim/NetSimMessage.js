@@ -4,8 +4,10 @@ var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
+var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
+var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
 
 describe("NetSimMessage", function () {
   var testShard, messageTable;
@@ -118,6 +120,27 @@ describe("NetSimMessage", function () {
       rowCount = rows.length;
     });
     assertEqual(rowCount, 0);
+  });
+
+  describe("destroyEntities on messages", function () {
+    it ("deletes all messages passed to it", function () {
+      NetSimMessage.send(testShard, 1, 2, 'alpha', function () {});
+      NetSimMessage.send(testShard, 1, 2, 'beta', function () {});
+      NetSimMessage.send(testShard, 1, 2, 'gamma', function () {});
+      assertTableSize(testShard, 'messageTable', 3);
+
+      var messages;
+      messageTable.readAll(function (err, rows) {
+        messages = rows.map(function (row) {
+          return new NetSimMessage(testShard, row);
+        });
+      });
+      assertEqual(3, messages.length);
+      assert(messages[0] instanceof NetSimMessage);
+
+      NetSimEntity.destroyEntities(messages, function () {});
+      assertTableSize(testShard, 'messageTable', 0);
+    });
   });
 
 });

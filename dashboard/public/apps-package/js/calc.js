@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":183,"./blocks":30,"./calc":31,"./levels":38}],31:[function(require,module,exports){
+},{"../appMain":5,"../skins":185,"./blocks":30,"./calc":31,"./levels":38}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1026,7 +1026,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":233,"../../locale/current/common":234,"../StudioApp":4,"../block_utils":19,"../dom":50,"../skins":183,"../templates/page.html":208,"../timeoutList":214,"../utils":229,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./js-numbers/js-numbers.js":37,"./levels":38,"./token":40,"./visualization.html":41}],41:[function(require,module,exports){
+},{"../../locale/current/calc":235,"../../locale/current/common":236,"../StudioApp":4,"../block_utils":19,"../dom":50,"../skins":185,"../templates/page.html":210,"../timeoutList":216,"../utils":231,"./controls.html":32,"./equation":33,"./equationSet":34,"./expressionNode":35,"./inputIterator":36,"./js-numbers/js-numbers.js":37,"./levels":38,"./token":40,"./visualization.html":41}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1046,7 +1046,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":233,"ejs":250}],38:[function(require,module,exports){
+},{"../../locale/current/calc":235,"ejs":252}],38:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1085,7 +1085,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":233,"../block_utils":19}],36:[function(require,module,exports){
+},{"../../locale/current/calc":235,"../block_utils":19}],36:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1497,7 +1497,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":229,"./equation":33,"./expressionNode":35,"./js-numbers/js-numbers":37}],35:[function(require,module,exports){
+},{"../utils":231,"./equation":33,"./expressionNode":35,"./js-numbers/js-numbers":37}],35:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -1666,7 +1666,11 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       // We're calling a new function, so it gets a new local scope.
       var newLocalMapping = {};
       functionDef.variables.forEach(function (variable, index) {
-        var childVal = this.getChildValue(index);
+        var evaluation = this.children_[index].evaluate(globalMapping, localMapping);
+        if (evaluation.err) {
+          throw evaluation.err;
+        }
+        var childVal = evaluation.result;
         newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
       }, this);
       return functionDef.expression.evaluate(globalMapping, newLocalMapping);
@@ -1855,11 +1859,14 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
 ExpressionNode.prototype.getTokenList = function (markDeepest) {
-  var depth = this.depth();
-  if (depth <= 1) {
-    return this.getTokenListDiff(markDeepest ? null : this);
+  if (!markDeepest) {
+    // diff against this so that nothing is marked
+    return this.getTokenListDiff(this);
+  } else if (this.depth() <= 1) {
+    // markDeepest is true. diff against null so that everything is marked
+    return this.getTokenListDiff(null);
   }
-
+    
   if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
@@ -2011,7 +2018,7 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
- * @returns {string} 
+ * @returns {string}
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
@@ -2027,7 +2034,7 @@ ExpressionNode.prototype.debug = function () {
     }).join(' ') + ")";
 };
 
-},{"../utils":229,"./js-numbers/js-numbers":37,"./token":40}],40:[function(require,module,exports){
+},{"../utils":231,"./js-numbers/js-numbers":37,"./token":40}],40:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -6520,7 +6527,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":233,"../../locale/current/common":234,"ejs":250}],30:[function(require,module,exports){
+},{"../../locale/current/calc":235,"../../locale/current/common":236,"ejs":252}],30:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6585,6 +6592,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":233,"../../locale/current/common":234,"../sharedFunctionalBlocks":182}],233:[function(require,module,exports){
+},{"../../locale/current/calc":235,"../../locale/current/common":236,"../sharedFunctionalBlocks":184}],235:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}]},{},[39]);

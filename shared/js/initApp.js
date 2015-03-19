@@ -182,7 +182,7 @@ dashboard.saveProject = function(callback) {
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : Applab.getCode();
   dashboard.currentApp.level = window.location.pathname;
-  if (channelId) {
+  if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
         dashboard.currentApp = data;

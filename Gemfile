@@ -38,7 +38,6 @@ group :development, :test do
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'timecop'
-  gem 'rubocop', require: false
 
   # for ui testing
   gem 'cucumber'
@@ -139,3 +138,5 @@ gem 'react-rails'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
 gem 'aws-sdk', '~> 2'
+
+gem 'rubocop', require: false, group: [:development, :staging]
