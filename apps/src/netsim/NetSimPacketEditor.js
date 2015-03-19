@@ -245,6 +245,22 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFun
 };
 
 /**
+ * Specification for an encoding row in the editor, which designates character
+ * whitelists to limit typing in certain fields, and rules for intepreting the
+ * field from binary.
+ * @typedef {Object} rowType
+ * @property {string} typeName - Identifies encoding type for the row
+ * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
+ *           that may be typed into a header field.
+ * @property {function} shortNumberConversion - How to convert from binary
+ *           to a header value in this row when the binary is updated.
+ * @property {RegExp} messageAllowedCharacters - Whitelist of characters
+ *           that may be typed into the message field.
+ * @property {function} messageConversion - How to convert from binary to
+ *           the message value in this row when the binary is updated.
+ */
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
@@ -258,6 +274,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     'packetCount'
   ];
 
+  /** @type {rowType[]} */
   var rowTypes = [
     {
       typeName: 'binary',
