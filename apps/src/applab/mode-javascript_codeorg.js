@@ -53,7 +53,9 @@ oop.inherits(Mode, JavaScriptMode);
 
   excludedKeywords.forEach(function (keyword) {
     var index = this.$highlightRules.$keywordList.indexOf(keyword);
-    this.$highlightRules.$keywordList.splice(index);
+    if (index !== -1) {
+      this.$highlightRules.$keywordList.splice(index);
+    }
   }, this);
 
   this.createWorker = function(session) {
