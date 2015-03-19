@@ -1,0 +1,48 @@
+<% var i18n = require('../../locale/current/netsim'); %>
+<table>
+  <thead>
+  <tr>
+    <th nowrap class="encodingLabel"></th>
+    <th nowrap class="toAddress"><%= i18n.to() %></th>
+    <th nowrap class="fromAddress"><%= i18n.from() %></th>
+    <th nowrap class="packetInfo"><%= i18n.packet() %></th>
+    <th class="message">
+      <%= i18n.message() %>
+      <div class="packet-controls">
+        <span class="netsim-button remove-packet-button" title="<%= i18n.removePacket() %>"><i class="fa fa-times"></i></span>
+      </div>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="ascii">
+    <th nowrap class="encodingLabel"><%= i18n.ascii() %></th>
+    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
+    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= i18n._of_() %><input type="text" readonly class="packetCount" /></td>
+    <td class="message"><div><textarea class="message"></textarea></div></td>
+  </tr>
+  <tr class="decimal">
+    <th nowrap class="encodingLabel"><%= i18n.decimal() %></th>
+    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
+    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= i18n._of_() %><input type="text" readonly class="packetCount" /></td>
+    <td class="message"><div><textarea class="message"></textarea></div></td>
+  </tr>
+  <tr class="hexadecimal">
+    <th nowrap class="encodingLabel"><%= i18n.hex() %></th>
+    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
+    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= i18n._of_() %><input type="text" readonly class="packetCount" /></td>
+    <td class="message"><div><textarea class="message"></textarea></div></td>
+  </tr>
+  <tr class="binary">
+    <th nowrap class="encodingLabel"><%= i18n.binary() %></th>
+    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
+    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
+    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /><%= i18n._of_() %><input type="text" readonly class="packetCount" /></td>
+    <td class="message"><div><textarea class="message"></textarea></div></td>
+  </tr>
+  </tbody>
+</table>
+<div class="bit-counter"></div>

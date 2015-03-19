@@ -73,9 +73,6 @@ NetSimLogPanel.prototype.render = function () {
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
-
-  // TODO: Hide columns by configuration
-  this.getBody().find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
@@ -84,7 +81,7 @@ NetSimLogPanel.prototype.render = function () {
  */
 NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
-  this.packets_ = [];
+  this.packets_.length = 0;
 };
 
 /**
@@ -179,8 +176,6 @@ NetSimLogPacket.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
-  // TODO: Hide columns by configuration
-  jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
 };
 
