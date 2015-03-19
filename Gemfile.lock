@@ -169,9 +169,6 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
-    i18nema (0.0.8)
-      i18n (>= 0.5)
-      syck (~> 1.0.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -366,7 +363,6 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     stringex (2.5.2)
-    syck (1.0.1)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.7)
       ref
@@ -435,7 +431,6 @@ DEPENDENCIES
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger (~> 1.11.2)
-  i18nema
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails (~> 5.0.3)
