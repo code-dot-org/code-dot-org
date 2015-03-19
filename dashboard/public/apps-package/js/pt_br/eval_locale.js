@@ -154,13 +154,14 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "Você usou uma cor de string inválida: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Você usou um estilo de string inválido: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "círculo (raio, estilo, cor)"},
 "displayBlockTitle":function(d){return "exibir"},
 "ellipseBlockTitle":function(d){return "elipse (largura, altura, estilo, cor)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "Você tem um bloco com uma entrada sem preencher."},
 "extraTopBlocks":function(d){return "Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "sobreposição (superior, inferior)"},
 "placeImageBlockTitle":function(d){return "lugar-imagem (x, y, imagem)"},
 "offsetBlockTitle":function(d){return "offset (x, y, imagem)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "subjacente (inferior, superior)"},
 "outline":function(d){return "definir"},
 "solid":function(d){return "sólido"},
-"string":function(d){return "string"}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "Ocorreu um erro ao tentar executar o teu código."}};

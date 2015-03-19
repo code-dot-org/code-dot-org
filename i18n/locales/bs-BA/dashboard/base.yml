@@ -22,6 +22,7 @@ bs:
           future: ne može biti u budućnosti
   hello: Pozdrav svijete
   welcome_back: 'Dobrodošao/la natrag, %{name}'
+  submit: Potvrdi
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'

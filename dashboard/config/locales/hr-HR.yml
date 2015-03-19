@@ -22,6 +22,7 @@
           future: Ne može biti u budućnosti
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
+  submit: Pošalji
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
@@ -593,11 +594,45 @@
     bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
     tebe.
   progress:
-    not_completed: nije dovršeno
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: dovršeno, previše blokova
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
+    assessment: assessment
   studio:
     courses_working_on: Tečajevi na kojima radite
     completed_courses: Završeni tečajevi
     all_courses: Svi tečajevi
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: Spremi
+    delete: izbriši
+    exit: Return to Course
+    my_projects: My Projects
+    share: Podijeli
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Više
+    name: Ime
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Izbrisati?
+    delete_yes: Da
+    delete_no: Ne
+    saved: Saved
+    not_saved: Not saved
+    cancel: Odustani
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects

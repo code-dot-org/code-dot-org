@@ -1319,22 +1319,21 @@ ar:
         f(x) = x + 1. What would you expect this function to output if provided an
         input of 15?
       Calc Define Funcs 1_instruction: |
-        Let's look at some more algebraic functions
-        now. Here's a function translated from the simple algebraic function f(x)
-        = x + 1. What would you expect this function to output if provided an input
-        of 15?
+        Let's look at some more traditional algebraic
+        functions now. Here's a function translated from the simple algebraic function
+        f(x) = x + 1. What would you expect this function to output if provided an
+        input of 15?
       Calc Define Funcs 2_instruction: |
         Write a function "f" that takes a parameter
         "x" and returns x - 10. Test your function using f(15).
       Calc Define Funcs 3_instruction: |
         We don't have to call our function 'f'
-        every time; here's a function 'times-ten' that should take a parameter
-        'x' and return x * 10. Compete the function definition so that times-ten(50)
-        returns 500.
+        every time; create a function called 'times-ten' that should take a parameter
+        'x' and return x * 10. Once you've created the function, run times-ten(50).
       Calc Define Funcs 4_instruction: |
         Write a function called 'half' that takes
         a number 'x' and returns half that number. Once you've written the function,
-        use it to calculate half(20)
+        use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
         function called "sqr" - this function should have a domain of Number and
@@ -2273,8 +2272,8 @@ ar:
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
       Eval Contracts A_instruction: |
-        Use the "star" function to produce a red star
-        with a 60 pixel radius
+        Use the "star" function to produce a solid
+        red star with a 60 pixel radius
       Eval Contracts C_instruction: |
         Check out the "rotate" function - can you
         use it to rotate this 90 pixel green square by 45 degrees?
@@ -2374,15 +2373,15 @@ ar:
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "NOTE - FREE PLAY NOT WORKING ON THIS LEVEL.\n\r\nEvery Evaluation Block is color-coded to let you know which data type\nit returns and which types in needs for its parameters. The last parameter\nof the triangle function takes a String that controls its color - try some\ndifferent colors to see what works."
+      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outlined circle using the special string
+        controls its style. Draw this orange outline circle using the special string
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
-        this red rectangle - it is 175 pixels wide and 100 pixels tall.
+        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: |
         Try using this new Evaluation Block called
         "overlay" to place a 100 pixel white triangle on top of a 200 pixel red
@@ -2392,13 +2391,13 @@ ar:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to where it would normally be place. Use offset to place the triangle
-        above the square.
+        relative to where it would normally be placed. Use this block to offset the
+        triangle 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block,
-        it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create this orange star with an inner radius of 75 pixels
-        and an outer radius of 175 pixels.
+        Here's a different kinds of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
@@ -2847,6 +2846,9 @@ ar:
         UNDER CONSTRUCTION: This version of NetSim is
         not yet functional. It will allow students to send binary as zeroes and ones
         to one another
+      NetSim_SendingABTest_instruction: |
+        This is Sarah's test of making a netsim
+        level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:

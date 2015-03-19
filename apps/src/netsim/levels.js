@@ -22,6 +22,9 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {boolean} showAddPacketButton - Whether the "Add Packet" button
+ *           should appear in the send widget.
+ *
  * @property {boolean} showPacketSizeControl - Whether the packet size slider
  *           should appear in the send widget.
  *
@@ -69,6 +72,7 @@ levels.default = {
   showAddRouterButton: true,
 
   // Send widget configuration
+  showAddPacketButton: true,
   showPacketSizeControl: true,
   defaultPacketSizeLimit: Infinity,
 
@@ -113,6 +117,7 @@ levels.default = {
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
   defaultEnabledEncodings: [EncodingType.A_AND_B]
@@ -125,6 +130,7 @@ levels.variant1 = utils.extend(levels.default, {
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
   showEncodingControls: [EncodingType.ASCII],
@@ -139,6 +145,7 @@ levels.variant2 = utils.extend(levels.default, {
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,
   showAddRouterButton: true,
+  showAddPacketButton: true,
   showPacketSizeControl: true,
   defaultPacketSizeLimit: Infinity,
 

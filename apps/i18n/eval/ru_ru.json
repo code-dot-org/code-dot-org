@@ -1,11 +1,12 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Вы использовали неправильную строку цвета: {val}",
+  "badStyleStringError": "Вы использовали неправильную строку стиля: {val}",
   "circleBlockTitle": "круг (радиус, стиль, цвет)",
   "displayBlockTitle": "отобразить",
   "ellipseBlockTitle": "эллипс (ширина, высота, стиль, цвет)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "У вас есть блок с незаполненными входными данными.",
   "extraTopBlocks": "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Показать\"?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "наложение (сверху, снизу)",
   "placeImageBlockTitle": "поместить изображение (x, y, изображение)",
   "offsetBlockTitle": "сдвиг (x, y, изображение)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "подкладывание (снизу, сверху)",
   "outline": "контур",
   "solid": "заливка",
-  "string": "строка"
+  "string": "строка",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code."
 }

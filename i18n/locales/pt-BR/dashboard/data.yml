@@ -114,7 +114,7 @@ pt-BR:
       description:
         sequence: Sequência
         if: 'Bloco "se"'
-        if_else: Bloco se-senão
+        if_else: 'Bloco "se" - "se não"'
         loop_times: 'Bloco "Repetir Vezes"'
         loop_until: 'Bloco "Repita até que"'
         loop_while: 'Bloco "Enquanto"'
@@ -341,8 +341,8 @@ pt-BR:
         loop_times: Bloco repita
         loop_until: Bloco repita até
         if: Bloco se
-        if_else: Bloco se/senão
-        if_else_scrat: Bloco se/senão
+        if_else: Bloco se/se não
+        if_else_scrat: Bloco se/se não
         function: Funções
         loop_while: Bloco enquanto
         loop_for: Bloco contador

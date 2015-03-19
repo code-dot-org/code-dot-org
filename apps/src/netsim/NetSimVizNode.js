@@ -159,7 +159,7 @@ NetSimVizNode.prototype.tick = function (clock) {
  */
 NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
-  this.tweens_ = [];
+  this.tweens_.length = 0;
   if (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);
   } else {

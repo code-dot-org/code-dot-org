@@ -48,7 +48,7 @@ Remind students of the game they played in the last stage, what were some of the
 ## Activity: Conditionals
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Head to [MSM stage 18](http://studio.code.org/s/algebra/stage/18/puzzle/1) in Code Studio to get started programming.
+Head to [CS in Algebra stage 18](http://studio.code.org/s/algebra/stage/18/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

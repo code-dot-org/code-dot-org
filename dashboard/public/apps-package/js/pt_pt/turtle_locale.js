@@ -154,7 +154,7 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"blocksUsed":function(d){return "Blocos usados: %1"},
+"blocksUsed":function(d){return "Blocos utilizados: %1"},
 "branches":function(d){return "branches"},
 "catColour":function(d){return "Cor"},
 "catControl":function(d){return "ciclos"},
@@ -194,7 +194,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawLowerWave":function(d){return "draw lower wave"},
 "drawStamp":function(d){return "draw stamp"},
 "heightParameter":function(d){return "altura"},
-"hideTurtle":function(d){return "esconde o artista"},
+"hideTurtle":function(d){return "ocultar o artista"},
 "jump":function(d){return "salto"},
 "jumpBackward":function(d){return "salta para trás por"},
 "jumpForward":function(d){return "salta para a frente por"},

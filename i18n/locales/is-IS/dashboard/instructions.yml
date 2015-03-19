@@ -477,10 +477,20 @@ is:
       Calc Circles of Eval 9_instruction: Ljúktu við gildiskubbana svo þeir samsvari þessari formúlu.
       Calc Circles of Eval Free Play_instruction: 'Frjáls æfing: Reyndu að nota gildiskubbana til að skrifa eigin jöfnur. Hvaða áhrif hefur það á útkomurnar að falda kubbana á mismunandi hátt?'
       Calc Define Funcs 1 (copy 1)_instruction: Skoðum nú fleiri algebruföll. Hér er fall sem er yfirfærsla á algebrufallinu f(x) = x + 1. Hverju heldur þú að fallið muni að skila ef inntak þess er 15?
-      Calc Define Funcs 1_instruction: Skoðum nú fleiri algebruföll. Hér er fall sem er yfirfærsla á algebrufallinu f(x) = x + 1. Hverju heldur þú að fallið muni að skila ef inntak þess er 15?
+      Calc Define Funcs 1_instruction: |
+        Let's look at some more traditional algebraic
+        functions now. Here's a function translated from the simple algebraic function
+        f(x) = x + 1. What would you expect this function to output if provided an
+        input of 15?
       Calc Define Funcs 2_instruction: 'Skrifaðu fallið "f" sem tekur stikann "x" og skilar x - 10. Prófaðu fallið með f(15).'
-      Calc Define Funcs 3_instruction: 'Við þurfum ekki að kalla á fallið "f" í hvert sinn. Hér er fallið "sinnum-tíu" sem hefur stikann "x" og skilar x * 10. Ljúktu við skilgreiningu fallsins svo að sinnum-tíu(50) skili 500.'
-      Calc Define Funcs 4_instruction: 'Skrifaðu fallið "helmingur" sem tekur tölu "x" og skilar hálfri þeirri tölu. Notaðu svo fallið til að reikna helmingur(20)'
+      Calc Define Funcs 3_instruction: |
+        We don't have to call our function 'f'
+        every time; create a function called 'times-ten' that should take a parameter
+        'x' and return x * 10. Once you've created the function, run times-ten(50).
+      Calc Define Funcs 4_instruction: |
+        Write a function called 'half' that takes
+        a number 'x' and returns half that number. Once you've written the function,
+        use it to calculate half(21)
       Calc Design Recipe 1_instruction: 'Notum nú hönnunaruppskriftina til að búa til fallið "v2". Það á að hafa gildamengið Tala og sviðið Tala og reikna annað veldi tölu. Gættu þess að skrifa tvö dæmi! Prófaðu svo fallið með því reikna 7 í öðru veldi.'
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
       Calc Design Recipe 3_instruction: |
@@ -795,7 +805,9 @@ is:
       Eval Contracts 4 A_instruction: 'Fallið "kvarði" skilar mynd sem er ýmist á stærri eða minni kvarða en frummyndin. Prófaðu að kvarða þennan hring með stuðlinum 10. Hvernig er hringurinn, sem verður til, öðruvísi en hringur sem þú hefðir teiknað upphaflega í þeirri stærð?'
       Eval Contracts 4_instruction: 'Fallið "kvarði" skilar mynd sem er ýmist á stærri eða minni kvarða en frummyndin. Prófaðu að kvarða þennan hring með stuðlinum 10. Hvernig er hringurinn, sem verður til, öðruvísi en hringur sem þú hefðir teiknað upphaflega í þeirri stærð?'
       Eval Contracts 8A_instruction: Getur þú lokið við þessa þraut? Stóri þríhyrningurinn er 200 dílar og fjólublár.
-      Eval Contracts A_instruction: 'Notaðu fallið "stjarna" til að búa til rauða stjörnu með 60 díla geisla'
+      Eval Contracts A_instruction: |
+        Use the "star" function to produce a solid
+        red star with a 60 pixel radius
       Eval Contracts C_instruction: 'Skoðaðu þetta fall "snúa" - getur þú notað það til að snúa þessum 90 díla græna ferningi um 45 gráður?'
       Eval Contracts E_instruction: 'Reyndu að nota fallið "texti" til að skrifa þennan blágræna texta í stærð 40.'
       Eval Contracts shrink_instruction: 'Getur þú klárað þessa mynd með fallkubbnum "minnka"? Geislinn er 20. '
@@ -820,13 +832,26 @@ is:
       Eval Strings Images .1_instruction: 'Hingað til höfum við aðeins fengist við eina tegund gagna - það er tölur. Önnur tegund gagna er strengur. Strengur er afmarkaður með gæsalöppum og getur innihaldið bókstafi, tölustafi og önnur tákn. Keyrðu kóðann "Halló heimur!" til að sjá hvað gerist.'
       Eval Strings Images .2_instruction: 'Fallið "skeyta-streng" tekur inn tvo strengi og skilar þeim skeyttum saman. Settu strenginn "alheimur" í seinni stika fallsins.'
       Eval Strings Images 1_instruction: 'Þriðja gagnagerðin sem við munum nota er Mynd. Þetta fall "stjarna" hefur inntök, sem eru tala og tveir strengir, og úttak, sem er mynd. Notaðu þetta fall til að búa til alrauða stjörnu með geislann 100.'
-      Eval Strings Images 2_instruction: "ATH. - FRJÁLSA ÆFINGIN VIRKAR EKKI HÉR. \r\nHver gildiskubbur hefur litamerkingu sem sýnir hvaða tegund gagna hann skilar og hvaða gagnategundir á að setja í stika kubbsins. Síðasti stiki þríhyrningsfallsins þarf að vera strengur sem stjórnar litnum - prófaðu mismunandi liti til að sjá hvað virkar."
-      Eval Strings Images 3_instruction: Sum föll taka aðeins inn tiltekna strengi. Þannig er með annan stika þessa hringfalls, en hann stjórnar gerð hrings. Teiknaðu útlínu þessa appelsínugula hrings. Notaðu sérstaka kubbinn með fellilistanum til að tryggja að fallið fái gildan streng.
-      Eval Strings Images 4_instruction: 'Prófaðu að nota kubbinn "rétthyrningur" til að teikna þennan rauða rétthyrning - hann er 175 dílar á breidd og 100 dílar á hæð.'
+      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
+      Eval Strings Images 3_instruction: |
+        Some functions can only take a specific
+        set of Strings, such as the second argument of this circle function, which
+        controls its style. Draw this orange outline circle using the special string
+        block with a dropdown to make sure you only use valid styles.
+      Eval Strings Images 4_instruction: |
+        Try using the "rectangle" block to draw
+        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: 'Prófaðu að nota þennan nýja gildiskubb "yfirlögn" til að leggja 100 díla hvítan þríhyrning yfir 200 díla rauðan hring.'
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
-      Eval Strings Images 7_instruction: 'Með kubbnum "hliðrun" getur þú fært mynd út frá þeim stað sem hún annars væri sett. Notaðu hliðrun til að setja þríhyrninginn ofan við ferninginn.'
-      Eval Strings Images 8_instruction: 'Hér er önnur tegund af stjörnukubb, sem nefnist "geislastjarna". Með honum geturðu teiknað stjörnur með einhvern fjölda arma! Notaðu hann til að búa til þessa appelsínugulu stjörnu með 75 díla innri radíus og 175 díla ytri radíus.'
+      Eval Strings Images 7_instruction: |
+        The "offset" block lets you move an image
+        relative to where it would normally be placed. Use this block to offset the
+        triangle 80 pixels on the y axis.
+      Eval Strings Images 8_instruction: |
+        Here's a different kinds of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: 'Frjáls æfing: Reyndu að nota kubbana til að búa til eitthvað áhugavert. Mundu að vista og deila bestu myndunum.'
       Examples 4_instruction: 'Fallið "minnka"'
       freeplay_instruction: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til ævintýralegt vetrarríki og deildu því með vinunum.
@@ -1087,6 +1112,9 @@ is:
         UNDER CONSTRUCTION: This version of NetSim is
         not yet functional. It will allow students to send binary as zeroes and ones
         to one another
+      NetSim_SendingABTest_instruction: |
+        This is Sarah's test of making a netsim
+        level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:

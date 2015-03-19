@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "elipsa (šírka, výška, štýl, farba)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Máš nepripojené bloky. Nechcel si ich pripojiť k bloku \"zobraz\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "prekrytie (zhora, zdola)"},
 "placeImageBlockTitle":function(d){return "umiestni-obrázok (x, y, obrázok)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "podklad (zhora, zdola)"},
 "outline":function(d){return "obrys"},
 "solid":function(d){return "plný"},
-"string":function(d){return "reťazec"}};
+"string":function(d){return "reťazec"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

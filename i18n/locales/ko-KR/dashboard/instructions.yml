@@ -2,24 +2,14 @@ ko:
   data:
     instructions:
        (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      10A_instruction: |
-        Alright let's complete this puzzle with a Green Square that
-        is 175 pixels in size.
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
+      10A_instruction: 한 변이 175 픽셀인 초록 정사각형을 그려 보세요.
+      2-3 _instruction: 보라색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다. 아무것도 없는 보라색 꽃에서 꿀을 따려고 하지 마세요.
+      2-3 Artist 1 new_instruction: 안녕, 친구들. 나는 화가란다. 너는 내가 무엇을 그리게 하려면 주어진 블록들로 코드를 작성할 수 있어. 최대한 적은 블록으로 화면에 표시된 회색 선들을 그려 봐. 각 선들은 길이가 100이야.
       2-3 Artist 11_instruction: |
         Give the stop sign a border by making an octagon
         with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
         What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
+      2-3 Artist 12_instruction: 반복 블럭으로 원을 그려서 눈알을 완성해 봐. 한 번 돌 때마다 1도씩 움직이면, 1도씩 몇 번을 돌아야 360도가 될까?
       2-3 Artist 2 new_instruction: |
         This house has a half-finished wall. Each side
         is 100, but the half-finished wall is only 50. Complete the wall. 
@@ -49,7 +39,7 @@ ko:
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
+      2-3 Artist 9_instruction: 이 연을 완성해 봐.
       2-3 Artist Assessment 1_instruction: |
         Assessment: Finish drawing the last tooth,
         25 pixels wide and 25 pixels tall.
@@ -94,11 +84,11 @@ ko:
       2-3 Artist Debugging Assessment 1_instruction: |
         This shape is too small. Can
         you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
+      2-3 Artist Free Play_instruction: 자유 시간이야! 그리고 싶은 것을 그려 봐.
       2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
+        안녕. 나는 좀비 예술가. 그림을 좋아해!
+        이 네모 안경을 그릴 수 있게 도와 줘.
+        힌트: 네모 사이의 다리는 길이가 네모보다 25 짧아.
       2-3 Artist Functions 10_instruction: |
         Here's two functions, one to draw a
         big gear and one to draw a small gear. Use them to draw the inside of a machine!
@@ -181,14 +171,14 @@ ko:
       2-3 Artist Loops New 14_instruction: |
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: 재미있는 것을 그려봐.
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
+      2-3 Artist Match Hex Pic_instruction: 육각형 그리는 것에 도움을 줘.
       2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
       2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
       2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
@@ -232,9 +222,7 @@ ko:
       2-3 Artist Nested Loops 9_instruction: |
         We'll finish this picture by adding
         a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
+      2-3 Artist Nested Loops Free Play_instruction: 자유 시간! 반복문을 여러 개 써서 재미있는 것을 만들어 봐.
       2-3 Bee Conditionals 1_instruction: |
         Hi! I'm a bee. Help me get nectar from
         the flower.
@@ -1319,22 +1307,21 @@ ko:
         f(x) = x + 1. What would you expect this function to output if provided an
         input of 15?
       Calc Define Funcs 1_instruction: |
-        Let's look at some more algebraic functions
-        now. Here's a function translated from the simple algebraic function f(x)
-        = x + 1. What would you expect this function to output if provided an input
-        of 15?
+        Let's look at some more traditional algebraic
+        functions now. Here's a function translated from the simple algebraic function
+        f(x) = x + 1. What would you expect this function to output if provided an
+        input of 15?
       Calc Define Funcs 2_instruction: |
         Write a function "f" that takes a parameter
         "x" and returns x - 10. Test your function using f(15).
       Calc Define Funcs 3_instruction: |
         We don't have to call our function 'f'
-        every time; here's a function 'times-ten' that should take a parameter
-        'x' and return x * 10. Compete the function definition so that times-ten(50)
-        returns 500.
+        every time; create a function called 'times-ten' that should take a parameter
+        'x' and return x * 10. Once you've created the function, run times-ten(50).
       Calc Define Funcs 4_instruction: |
         Write a function called 'half' that takes
         a number 'x' and returns half that number. Once you've written the function,
-        use it to calculate half(20)
+        use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
         function called "sqr" - this function should have a domain of Number and
@@ -2273,8 +2260,8 @@ ko:
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
       Eval Contracts A_instruction: |
-        Use the "star" function to produce a red star
-        with a 60 pixel radius
+        Use the "star" function to produce a solid
+        red star with a 60 pixel radius
       Eval Contracts C_instruction: |
         Check out the "rotate" function - can you
         use it to rotate this 90 pixel green square by 45 degrees?
@@ -2374,15 +2361,15 @@ ko:
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "NOTE - FREE PLAY NOT WORKING ON THIS LEVEL.\n\r\nEvery Evaluation Block is color-coded to let you know which data type\nit returns and which types in needs for its parameters. The last parameter\nof the triangle function takes a String that controls its color - try some\ndifferent colors to see what works."
+      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outlined circle using the special string
+        controls its style. Draw this orange outline circle using the special string
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
-        this red rectangle - it is 175 pixels wide and 100 pixels tall.
+        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: |
         Try using this new Evaluation Block called
         "overlay" to place a 100 pixel white triangle on top of a 200 pixel red
@@ -2392,20 +2379,18 @@ ko:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to where it would normally be place. Use offset to place the triangle
-        above the square.
+        relative to where it would normally be placed. Use this block to offset the
+        triangle 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block,
-        it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create this orange star with an inner radius of 75 pixels
-        and an outer radius of 175 pixels.
+        Here's a different kinds of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
+      freeplay_instruction: 너는 공식적으로 뛰어난 화가가 되었어! 겨울왕국을 만들고 친구들과 공유해 봐.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2570,7 +2555,7 @@ ko:
       K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
       K-1 Artist Loops 8_instruction: This staircase has longer steps.
       K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
-      K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
+      K-1 Artist Loops Free Play_instruction: 자유 시간! 재미있는 것을 만들어 봐.
       K-1 Artist1 1_instruction: Draw the foot of the man with one line
       K-1 Artist1 10_instruction: |
         Draw and Jump to make the dashed path to the treasure
@@ -2847,6 +2832,9 @@ ko:
         UNDER CONSTRUCTION: This version of NetSim is
         not yet functional. It will allow students to send binary as zeroes and ones
         to one another
+      NetSim_SendingABTest_instruction: |
+        This is Sarah's test of making a netsim
+        level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
@@ -2886,7 +2874,7 @@ ko:
         Can you draw a star shape using
         the "draw a line of squares" function? Hint: you may have to move forward
         60 pixels and  turn 144 degrees
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 14_instruction: 자유 시간!
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
