@@ -15,6 +15,7 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimConstants = require('./netsimConstants');
 var DnsMode = netsimConstants.DnsMode;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var NetSimNode = require('./NetSimNode');
@@ -307,17 +308,17 @@ NetSimRouterNode.getNodeType = function () {
  * @private
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
-  // Require 'toAddress' for routing
+  // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === 'toAddress';
+        return headerField.key === PacketHeaderType.TO_ADDRESS;
       })) {
     logger.error("Packet specification does not have a toAddress field.");
   }
 
-  // Require 'fromAddress' temporarily for auto-DNS tasks
+  // Require FROM_ADDRESS temporarily for auto-DNS tasks
   // TODO (bbuchanan) remove when real auto-dns nodes are implemented.
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === 'fromAddress';
+        return headerField.key === PacketHeaderType.FROM_ADDRESS;
       })) {
     logger.error("Packet specification does not have a fromAddress field.");
   }
@@ -622,7 +623,7 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
 
 NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
-    return new NetSimLogEntry(this.shard_, row);
+    return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
 };
 
@@ -727,11 +728,12 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
   // Find a connection to route this message to.
   try {
     var decoder = new PacketEncoder(this.packetSpec_);
-    toAddress = decoder.getHeaderFieldAsInt('toAddress', message.payload);
+    toAddress = decoder.getHeaderFieldAsInt(PacketHeaderType.TO_ADDRESS,
+        message.payload);
   } catch (error) {
     logger.warn("Packet not readable by router");
     this.log(message.payload);
-    onComplete(new Error("Packet not readable by router"));
+    onComplete(null);
     return;
   }
 
@@ -751,7 +753,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
   if (destWires.length === 0) {
     logger.warn("Destination address not in local network");
     this.log(message.payload);
-    onComplete(new Error("Destination address not in local network"));
+    onComplete(null);
     return;
   }
 
@@ -783,7 +785,8 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   // Extract message contents
   try {
     encoder = new PacketEncoder(this.packetSpec_);
-    fromAddress = encoder.getHeaderFieldAsInt('fromAddress', message.payload);
+    fromAddress = encoder.getHeaderFieldAsInt(PacketHeaderType.FROM_ADDRESS,
+        message.payload);
     query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore

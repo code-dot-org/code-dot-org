@@ -75,3 +75,14 @@ exports.NetSimTabType = {
   ROUTER: 'router',
   DNS: 'dns'
 };
+
+/**
+ * Field types that can go into the packet header.
+ * @enum {string}
+ */
+exports.PacketHeaderType = {
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INDEX: 'packetIndex',
+  PACKET_COUNT: 'packetCount'
+};

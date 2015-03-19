@@ -113,7 +113,8 @@ NetSimTabsComponent.prototype.render = function () {
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
-        this.rootDiv_.find('#tab_router'));
+        this.rootDiv_.find('#tab_router'),
+        this.levelConfig_);
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
