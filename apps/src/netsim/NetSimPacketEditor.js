@@ -134,6 +134,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
+  this.removePacketButton_.toggle(this.packetCount > 1);
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -438,6 +439,7 @@ NetSimPacketEditor.prototype.setPacketIndex = function (packetIndex) {
 /** @param {number} packetCount */
 NetSimPacketEditor.prototype.setPacketCount = function (packetCount) {
   this.packetCount = packetCount;
+  this.removePacketButton_.toggle(packetCount > 1);
   this.updateFields_();
 };
 
