@@ -470,7 +470,6 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
 
-
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
@@ -561,7 +560,6 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
 
   if (!_.isEqual(this.myWireRowCache_, myWireRows)) {
     this.myWireRowCache_ = myWireRows;
-    logger.info("Router wires changed.");
     this.wiresChange.notifyObservers();
   }
 };
@@ -616,7 +614,6 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
         return message.fromNodeID === this.simulateForSender_ &&
             message.toNodeID === this.entityID;
       }.bind(this));
-
 
   if (messages.length === 0) {
     // No messages for us, no work to do.
