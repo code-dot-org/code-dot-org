@@ -418,8 +418,6 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
         field.inputElement.val(field.newValue);
         field.inputElement.removeClass('watermark');
       }
-
-      // TODO: If textarea, scroll to bottom?
     }
   });
 
