@@ -38,9 +38,8 @@
     display: none;
   }
 
-
 #pageheader-wrapper
-  - pageheader_class = request.path_info.include?("/index2") ? "pageheader_translucent" : ""
+  - pageheader_class = ["/index2", "/index3"].any? { |path| request.path_info.include? path } ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left
