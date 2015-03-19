@@ -8505,10 +8505,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     exports.Editor = Editor = (function() {
       function Editor(wrapperElement, options) {
-        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2;
+        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3;
         this.wrapperElement = wrapperElement;
         this.options = options;
         this.paletteGroups = this.options.palette;
+        this.alwaysShowPalette = (ref1 = this.options.alwaysShowPalette) != null ? ref1 : false;
         this.options.mode = this.options.mode.replace(/$\/ace\/mode\//, '');
         if (this.options.mode in modes) {
           this.mode = new modes[this.options.mode](this.options.modeOptions);
@@ -8568,9 +8569,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           respectEphemeral: false
         }));
         boundListeners = [];
-        ref1 = editorBindings.populate;
-        for (j = 0, len = ref1.length; j < len; j++) {
-          binding = ref1[j];
+        ref2 = editorBindings.populate;
+        for (j = 0, len = ref2.length; j < len; j++) {
+          binding = ref2[j];
           binding.call(this);
         }
         window.addEventListener('resize', (function(_this) {
@@ -8580,15 +8581,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this));
         dispatchMouseEvent = (function(_this) {
           return function(event) {
-            var handler, k, len1, ref2, state, trackPoint;
+            var handler, k, len1, ref3, state, trackPoint;
             if (event.type !== 'mousemove' && event.which !== 1) {
               return;
             }
             trackPoint = new _this.draw.Point(event.clientX, event.clientY);
             state = {};
-            ref2 = editorBindings[event.type];
-            for (k = 0, len1 = ref2.length; k < len1; k++) {
-              handler = ref2[k];
+            ref3 = editorBindings[event.type];
+            for (k = 0, len1 = ref3.length; k < len1; k++) {
+              handler = ref3[k];
               handler.call(_this, trackPoint, event, state);
             }
             if (event.type === 'mousedown') {
@@ -8602,18 +8603,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this);
         dispatchKeyEvent = (function(_this) {
           return function(event) {
-            var handler, k, len1, ref2, results, state;
+            var handler, k, len1, ref3, results, state;
             state = {};
-            ref2 = editorBindings[event.type];
+            ref3 = editorBindings[event.type];
             results = [];
-            for (k = 0, len1 = ref2.length; k < len1; k++) {
-              handler = ref2[k];
+            for (k = 0, len1 = ref3.length; k < len1; k++) {
+              handler = ref3[k];
               results.push(handler.call(_this, event, state));
             }
             return results;
           };
         })(this);
-        ref2 = {
+        ref3 = {
           keydown: [this.dropletElement, this.paletteElement],
           keyup: [this.dropletElement, this.paletteElement],
           mousedown: [this.dropletElement, this.paletteElement, this.dragCover],
@@ -8636,8 +8637,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return results;
           };
         })(this);
-        for (eventName in ref2) {
-          elements = ref2[eventName];
+        for (eventName in ref3) {
+          elements = ref3[eventName];
           fn1(eventName, elements);
         }
         this.tree = new model.Segment();
@@ -11124,23 +11125,31 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.lineNumberWrapper.style.display = 'none';
         this.mainCanvas.style.transition = this.highlightCanvas.style.transition = this.cursorCanvas.style.opacity = "opacity " + fadeTime + "ms linear";
         this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = this.cursorCanvas.style.opacity = 0;
-        setTimeout(((function(_this) {
-          return function() {
-            _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
-            _this.dropletElement.style.left = '0px';
-            return _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
-          };
-        })(this)), fadeTime);
+        if (!this.alwaysShowPalette) {
+          setTimeout(((function(_this) {
+            return function() {
+              _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
+              _this.dropletElement.style.left = '0px';
+              return _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
+            };
+          })(this)), fadeTime);
+        }
         setTimeout(((function(_this) {
           return function() {
             var l, len1;
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
+            if (!_this.alwaysShowPalette) {
+              _this.paletteWrapper.style.top = '-9999px';
+              _this.paletteWrapper.style.left = '-9999px';
+            }
+            _this.aceElement.style.top = '0px';
+            if (_this.alwaysShowPalette) {
+              _this.aceElement.style.left = _this.paletteWrapper.style.width;
+            } else {
+              _this.aceElement.style.left = '0px';
+            }
             _this.dropletElement.style.top = '-9999px';
             _this.dropletElement.style.left = '-9999px';
-            _this.paletteWrapper.style.top = '-9999px';
-            _this.paletteWrapper.style.left = '-9999px';
-            _this.aceElement.style.top = "0px";
-            _this.aceElement.style.left = "0px";
             _this.currentlyAnimating = false;
             _this.mainScroller.style.overflow = 'auto';
             for (l = 0, len1 = translatingElements.length; l < len1; l++) {
@@ -11200,7 +11209,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.aceElement.style.top = "-9999px";
             _this.aceElement.style.left = "-9999px";
             _this.paletteWrapper.style.top = '0px';
-            _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
+            if (!_this.alwaysShowPalette) {
+              _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
+            }
             _this.dropletElement.style.top = "0px";
             _this.dropletElement.style.left = "0px";
             _this.paletteHeader.style.zIndex = 0;
@@ -11277,7 +11288,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 return _this.cursorCanvas.style.opacity = CURSOR_UNFOCUSED_OPACITY;
               }
             }), translateTime);
-            _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + fadeTime + "ms";
+            if (!_this.alwaysShowPalette) {
+              _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + fadeTime + "ms";
+            }
             _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
             _this.paletteWrapper.style.left = '0px';
             return setTimeout((function() {
