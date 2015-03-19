@@ -21,7 +21,7 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
@@ -39,7 +39,7 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;

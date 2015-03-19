@@ -31,7 +31,7 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
@@ -42,7 +42,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
     shardID) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -99,7 +99,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which

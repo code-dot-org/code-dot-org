@@ -9,7 +9,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
 
 /**
  * A level configuration that can be used by NetSim
- * @typedef {Object} NetSimLevelConfiguration
+ * @typedef {Object} netsimLevelConfiguration
  *
  * @property {string} instructions - Inherited from blockly level configuration.
  *
@@ -62,7 +62,7 @@ var levels = module.exports = {};
  * A default level configuration so that we can define the others by delta.
  * This default configuration enables everything possible, so other configs
  * should start with this one and disable features.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.default = {
 
@@ -113,7 +113,7 @@ levels.default = {
 /**
  * Variant 1 base level
  * Sends individual bits at a time.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
@@ -126,7 +126,7 @@ levels.variant1 = utils.extend(levels.default, {
 /**
  * Variant 2 base level
  * Sends messages as packets, all at once.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
@@ -140,7 +140,7 @@ levels.variant2 = utils.extend(levels.default, {
 /**
  * Variant 3 base level
  * Enables routers.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,

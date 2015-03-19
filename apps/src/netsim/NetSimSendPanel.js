@@ -23,7 +23,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection
  * @constructor
  * @augments NetSimPanel
@@ -32,7 +32,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     connection) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
