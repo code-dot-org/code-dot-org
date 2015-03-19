@@ -355,8 +355,9 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
 ExpressionNode.prototype.getTokenList = function (markDeepest) {
-  var depth = this.depth();
-  if (depth <= 1) {
+  if (!markDeepest || this.depth() <= 1) {
+    // if markDeepest is true, we diff against null so that everything is marked
+    // otherwise, we diff against ourself, so that nothing is marked
     return this.getTokenListDiff(markDeepest ? null : this);
   }
 
@@ -511,7 +512,7 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
- * @returns {string} 
+ * @returns {string}
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
