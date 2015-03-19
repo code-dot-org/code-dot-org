@@ -217,19 +217,21 @@ social:
 
     #newsandgallery{style: "overflow:hidden; display: table; margin-top:20px"}
 
-      - bgc_head =  "255, 198, 74"  # "255,184,29" * 0.8
-      - bgc_body =  "255, 251, 244"  # "255,184,29" * 0.05
+      -# bgc_head =  "255, 164, 0"  # "255,184,29" * 0.8
+      -# bgc_body =  "255, 196, 89"  # "255,184,29" * 0.05
+      - bgc_head = "103, 103, 103"
+      - bgc_body = "134, 134, 134"
 
       .col-50#newscolumn.same-height-column{:style=>"margin-bottom:20px; margin-top:20px; background-color: rgb(#{bgc_body}); display: table-cell; border: 5px solid white;"}     
         .headingbox{style: "background-color: rgb(#{bgc_head}); left:0px;color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 4r', sans-serif; text-align:center"}
           Latest Highlights
-        .thelinks{style: "padding: 10px; height:100% "}
+        .thelinks{style: "padding: 10px; height:100%; color:white"}
           -count = 0
           -DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).limit(4).each do |value|
             -unless count == 0
               -#%hr.narrow_hr
               %div{style: "height:10px"}
-            %a{:href=>value[:url_s], :target=>'_blank'}
+            %a{:href=>value[:url_s], :target=>'_blank', style: "color:white"}
               =value[:heading_s]
             %br
             = value[:date_dt]
@@ -238,7 +240,7 @@ social:
             -count += 1
           %br
           %br
-          %a{:href=>'/about/news'} See all news
+          %a{:href=>'/about/news', style: "color:white"} See all news
 
       - bgc_head =  "51, 169, 213"  # "0,148,202" * 0.8
       - bgc_body = "255, 164, 0"        # "0,148,202" * 0.05
