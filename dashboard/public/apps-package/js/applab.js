@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":183}],14:[function(require,module,exports){
+},{"../skins":185}],14:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":231,"../block_utils":19,"../utils":229}],8:[function(require,module,exports){
+},{"../../locale/current/applab":233,"../block_utils":19,"../utils":231}],8:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -900,7 +900,8 @@ Applab.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      hasDesignMode: true
     }
   });
 
@@ -1007,6 +1008,10 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
+    var designModeButton = document.getElementById('designModeButton');
+    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    var codeModeButton = document.getElementById('codeModeButton');
+    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
   }
 
   user = {applabUserId: config.applabUserId};
@@ -1465,6 +1470,32 @@ Applab.onViewData = function() {
   window.open(
     '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
+};
+
+Applab.onDesignModeButton = function() {
+  studioApp.resetButtonClick();
+  Applab.toggleDesignMode(true);
+};
+
+Applab.onCodeModeButton = function() {
+  Applab.toggleDesignMode(false);
+};
+
+Applab.toggleDesignMode = function(enable) {
+  var codeModeHeaders = document.getElementById('codeModeHeaders');
+  codeModeHeaders.style.display = enable ? 'none' : 'block';
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
+  var codeTextbox = document.getElementById('codeTextbox');
+  codeTextbox.style.display = enable ? 'none' : 'block';
+  var designModeBox = document.getElementById('designModeBox');
+  designModeBox.style.display = enable ? 'block' : 'none';
+
+  var gameButtons =  document.getElementById('gameButtons');
+  gameButtons.style.display = enable ? 'none' : 'block';
+  var designModeButtons = document.getElementById('designModeButtons');
+  designModeButtons.style.display = enable ? 'block' : 'none';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -2799,7 +2830,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":231,"../../locale/current/common":234,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":183,"../slider":184,"../templates/page.html":208,"../timeoutList":214,"../utils":229,"../xml":230,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
+},{"../../locale/current/applab":233,"../../locale/current/common":236,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":185,"../slider":186,"../templates/page.html":210,"../timeoutList":216,"../utils":231,"../xml":232,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2819,7 +2850,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":250}],16:[function(require,module,exports){
+},{"ejs":252}],16:[function(require,module,exports){
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
 
@@ -2842,6 +2873,43 @@ oop.inherits(Mode, JavaScriptMode);
 (function() {
   var errorMap = {};
   errorMap["Assignment in conditional expression"] = "For conditionals, use the comparison operator (==) to check if two things are equal.";
+
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
+    }
+  }, this);
 
   this.createWorker = function(session) {
     var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
@@ -2884,7 +2952,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share" style="display:none;">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share" style="display:none;">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n    <button id="designModeButton" class="share">\n      ', escape((23,  applabMsg.designMode() )), '\n    </button>\n  </div>\n');26; } ; buf.push('\n\n');28; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');36; } ; buf.push('\n\n');38; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((41,  assetUrl('media/1x1.gif') )), '">', escape((41,  msg.finish() )), '\n    </button>\n  </div>\n');44; } ; buf.push('\n\n');46; if (debugButtons) { ; buf.push('\n</div>\n');48; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -2892,7 +2960,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":231,"../../locale/current/common":234,"ejs":250}],12:[function(require,module,exports){
+},{"../../locale/current/applab":233,"../../locale/current/common":236,"ejs":252}],12:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -3104,7 +3172,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":234,"ejs":250}],9:[function(require,module,exports){
+},{"../../locale/current/common":236,"ejs":252}],9:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3177,7 +3245,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":231,"../../locale/current/common":234,"../codegen":47,"../utils":229}],231:[function(require,module,exports){
+},{"../../locale/current/applab":233,"../../locale/current/common":236,"../codegen":47,"../utils":231}],233:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],7:[function(require,module,exports){
 'use strict';

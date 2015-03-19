@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Laguntza"},
 "hintTitle":function(d){return "Aholkua:"},
 "jump":function(d){return "salto egin"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Beharrezko diren kode mota guztiak erabiltzen ari zara baina ez modu egokian."},
 "listVariable":function(d){return "zerrenda"},
 "makeYourOwnFlappy":function(d){return "Egin zure Flappy joko propioa"},

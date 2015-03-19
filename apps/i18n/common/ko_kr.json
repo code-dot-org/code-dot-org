@@ -2,7 +2,7 @@
   "and": "이면서",
   "booleanTrue": "true",
   "booleanFalse": "false",
-  "blocks": "blocks",
+  "blocks": "블록",
   "blocklyMessage": "Blockly(블러클리)",
   "catActions": "동작",
   "catColour": "색",
@@ -43,6 +43,7 @@
   "help": "도움말",
   "hintTitle": "힌트:",
   "jump": "점프",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "필요한 블럭들을 모두 사용했지만, 정확한 방법은 아닙니다.",
   "listVariable": "리스트",
   "makeYourOwnFlappy": "자신만의 플래피 게임을 만들어보세요.",
@@ -81,7 +82,7 @@
   "shareFailure": "프로그램을 공유할 수 없습니다.",
   "workspaceHeader": "블럭들을 이곳에서 조립하세요:",
   "workspaceHeaderJavaScript": "자바스크립트 코드 작성",
-  "workspaceHeaderShort": "Workspace: ",
+  "workspaceHeaderShort": "작업 영역: ",
   "infinity": "무한",
   "rotateText": "돌리세요.",
   "orientationLock": "회전 잠금을 해제하세요.",
@@ -93,6 +94,6 @@
   "signup": "샘플 코스를 위해 가입하기",
   "hintHeader": "도움말:",
   "genericFeedback": "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "오류가 블럭으로 보이기 전에 오류를 수정해야 합니다.",
   "defaultTwitterText": "만든 작품 확인하기"
 }

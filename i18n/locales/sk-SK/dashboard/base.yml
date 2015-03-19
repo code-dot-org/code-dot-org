@@ -22,6 +22,7 @@ sk:
           future: nemôže byť v buducnosti
   hello: Ahoj svet
   welcome_back: 'Vitajte späť, %{name}'
+  submit: Potvrdiť
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'

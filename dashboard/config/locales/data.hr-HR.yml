@@ -655,6 +655,12 @@
         playlab_intro: Uvod u Laboratorij igara
         playlab_events: Događaji u Laboratoriju igara
         playlab_repeat_forever: Beskonačno ponavljanje u Laboratoriju igara
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Varijable
+        msm_7_functions: Funkcije
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

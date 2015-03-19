@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
+  "divideByZeroError":"Votre programme aboutit à une division par zéro.",
   "emptyComputeBlock":"Vous devez joindre un bloc à \"calculer\".",
   "emptyFunctionalBlock":"Un de vos blocs ne contient pas d'entrée.",
   "equivalentExpression":"Essayez de réorganiser vos arguments pour obtenir exactement la même expression.",
-  "evaluate":"evaluate",
+  "evaluate":"évalue",
   "extraTopBlocks":"Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?",
   "failedInput":"Votre fonction ne renvoie pas le bon résultat pour toutes les valeurs.",
   "goal":"Objectif :",
   "levelIncompleteError":"Votre expression ne correspond pas à l'objectif.",
-  "missingVariableX":"Your expression is missing variable {var}.",
+  "missingVariableX":"Votre expression ne contient pas la variable {var}.",
   "reinfFeedbackMsg":"Voici votre calcul ! Continuez à travailler là-dessus, ou passez à la prochaine énigme !",
   "yourExpression":"Votre expression :",
   "wrongInput":"La fonction que vous appelez a une valeur incorrecte.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongOtherValuesX":"Votre expression aboutit à une valeur incorrecte, si nous faisons varier {var}.",
+  "wrongResult":"Votre expression ne retourne pas le résultat correct."
 }

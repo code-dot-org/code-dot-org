@@ -22,6 +22,7 @@ fil:
           future: hindi maaari sa hinaharap
   hello: Mabuhay!
   welcome_back: 'Maligayang pagbabalik, %{name}'
+  submit: Ipasa
   add_teacher_form:
     code:
       label: 'Magdagdag ng guro:'

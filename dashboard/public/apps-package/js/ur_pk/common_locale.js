@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "مدد"},
 "hintTitle":function(d){return "Hint:"},
 "jump":function(d){return "jump"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "You are using all of the necessary types of blocks but not in the right way."},
 "listVariable":function(d){return "فہرست"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},

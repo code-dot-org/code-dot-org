@@ -154,13 +154,14 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
-"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
+"badColorStringError":function(d){return "Вие сте използвали невалиден цвят за низа: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Вие сте използвали невалиден стил за низ: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "кръг (радиус, стил, цвят)"},
 "displayBlockTitle":function(d){return "дисплей"},
 "ellipseBlockTitle":function(d){return "елипса (ширина, височина, стил, цвят)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "Имате блок с незапълнено поле."},
 "extraTopBlocks":function(d){return "Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "наслагване (отгоре, отдолу)"},
 "placeImageBlockTitle":function(d){return "място-изображение (x, y, изображение)"},
 "offsetBlockTitle":function(d){return "изместване (x, y, изображение)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "подложка (отдолу, отгоре)"},
 "outline":function(d){return "контур"},
 "solid":function(d){return "твърд"},
-"string":function(d){return "поредица"}};
+"string":function(d){return "поредица"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

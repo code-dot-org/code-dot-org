@@ -22,6 +22,7 @@ mk:
           future: "can't be in the future"
   hello: Hello world
   welcome_back: 'Welcome back, %{name}'
+  submit: Submit
   add_teacher_form:
     code:
       label: 'Add a teacher:'

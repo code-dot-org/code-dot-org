@@ -6,6 +6,7 @@
   "ellipseBlockTitle": "दीर्घवृत्त (चौड़ाई , ऊंचाई , शैली, रंग)",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "आपके पास स्वाधीन ब्लॉक है। क्या आप ये ब्लॉक \"प्रदर्शन\" ब्लॉक करने के साथ जोड़ना चाहते हैं?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "उपरिशायी (ऊपर, नीचे)",
   "placeImageBlockTitle": "चित्र की जगह (x, y, चित्र)",
   "offsetBlockTitle": "ऑफ़सेट (x, y, चित्र)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "बुनियाद (नीचे, शीर्ष)",
   "outline": "बाह्य रेखा",
   "solid": "ठोस",
-  "string": "स्ट्रिंग"
+  "string": "स्ट्रिंग",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code."
 }

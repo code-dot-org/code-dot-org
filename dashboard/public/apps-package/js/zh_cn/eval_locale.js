@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "椭圆 （宽度、 高度、 样式、 颜色）"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接至“显示”语句块吗？"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "覆盖 （顶部、 底部）"},
 "placeImageBlockTitle":function(d){return "放置图像（X轴坐标，Y轴坐标，图像）"},
 "offsetBlockTitle":function(d){return "偏移量 （x，y，图片）"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "衬底 （底部、 顶部）"},
 "outline":function(d){return "轮廓"},
 "solid":function(d){return "固体"},
-"string":function(d){return "字符串"}};
+"string":function(d){return "字符串"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

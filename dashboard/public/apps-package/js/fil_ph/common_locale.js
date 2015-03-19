@@ -157,7 +157,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "and":function(d){return "at"},
 "booleanTrue":function(d){return "tama"},
 "booleanFalse":function(d){return "mali"},
-"blocks":function(d){return "blocks"},
+"blocks":function(d){return "mga block"},
 "blocklyMessage":function(d){return "Blockly"},
 "catActions":function(d){return "Mga aksyon"},
 "catColour":function(d){return "Kulay"},
@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Tulong"},
 "hintTitle":function(d){return "Pahiwatig:"},
 "jump":function(d){return "talon"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Ginagamit mo ang lahat ng kinakailangang mga uri ng mga bloke ngunit hindi sa tamang paraan."},
 "listVariable":function(d){return "list"},
 "makeYourOwnFlappy":function(d){return "Gumawa Ng Sarili Mong Flappy Game"},
@@ -248,5 +249,5 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "signup":function(d){return "Mag-sign up para sa intro ng kurso"},
 "hintHeader":function(d){return "Narito ang isang tip:"},
 "genericFeedback":function(d){return "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program."},
-"toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
+"toggleBlocksErrorMsg":function(d){return "Kailangan mong iwasto ang isang error sa iyong programa bago ito ay ipapakita bilang mga block."},
 "defaultTwitterText":function(d){return "Check out what I made"}};

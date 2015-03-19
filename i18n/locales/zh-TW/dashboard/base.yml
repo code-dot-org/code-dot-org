@@ -22,6 +22,7 @@ zh:
           future: 不能在未來
   hello: 世界您好
   welcome_back: '歡迎回來，%{name}'
+  submit: 送出
   add_teacher_form:
     code:
       label: 增加一位老師：

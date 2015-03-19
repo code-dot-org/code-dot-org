@@ -123,7 +123,7 @@ pt:
         parameters: Funções com parâmetros
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Consegues ajudar-me a apanhar o porquinho? Empilha alguns blocos "segue em frente" e depois clica em "Executar" para me ajudares a chegar até ele. '
         maze_2_1: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
         maze_2_2_5: Traça o caminho e leva-me até ao porco tolo. Evita a dinamite ou as penas vão voar!
         maze_2_3: Guia-me até à maldade verde! (Cuidado com a dinamite)
@@ -445,7 +445,7 @@ pt:
     callout:
       text:
         drag_blocks: 'Arrasta um bloco "mover" e encaixa-o por baixo de outro bloco'
-        run: 'Clica em "executar" para experimentar o teu programa'
+        run: 'Clica em "Executar" para experimentares o teu programa'
         watch_again: Clica aqui para assistir de novo ao vídeo
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"

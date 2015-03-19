@@ -13,7 +13,11 @@ var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
+var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
+var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
+var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
+var intToBinary = dataConverters.intToBinary;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -153,6 +157,134 @@ describe("NetSimRouterNode", function () {
       });
 
       assertEqual(false, accepted);
+    });
+  });
+
+  describe("message routing rules", function () {
+    var router, localClient, remoteA;
+
+    beforeEach(function () {
+      // Make router
+      NetSimRouterNode.create(testShard, function (e, r) {
+        router = r;
+      });
+
+      // Make clients
+      NetSimLocalClientNode.create(testShard, function (e, n) {
+        localClient = n;
+      });
+
+      NetSimLocalClientNode.create(testShard, function (e, n) {
+        remoteA = n;
+      });
+
+      // Tell router to simulate for local node
+      router.initializeSimulation(localClient.entityID);
+
+      // Manually connect nodes
+      var wire;
+      NetSimWire.create(testShard, localClient.entityID, router.entityID, function(e, w) {
+        wire = w;
+      });
+      wire.localAddress = 1;
+      wire.remoteAddress = 0;
+      wire.update();
+
+      NetSimWire.create(testShard, remoteA.entityID, router.entityID, function (e, w) {
+        wire = w;
+      });
+      wire.localAddress = 2;
+      wire.remoteAddress = 0;
+      wire.update();
+
+      var addressTable = router.getAddressTable();
+      assertEqual(addressTable.length, 2);
+      assertEqual(addressTable[0].isLocal, true);
+      localClient.address = addressTable[0].address;
+      remoteA.address = addressTable[1].address;
+    });
+
+    it ("picks up messages sent to itself from local client", function () {
+      var from = localClient.entityID;
+      var to = router.entityID;
+      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      assertTableSize(testShard, 'messageTable', 0);
+      assertTableSize(testShard, 'logTable', 1);
+    });
+
+    it ("ignores messages sent to itself from other clients", function () {
+      var from = remoteA.entityID;
+      var to = router.entityID;
+      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      assertTableSize(testShard, 'logTable', 0);
+
+      var messages;
+      testShard.messageTable.readAll(function (err, rows) {
+        messages = rows.map(function (row) {
+          return new NetSimMessage(testShard, row);
+        });
+      });
+      assertEqual(messages[0].fromNodeID, from);
+      assertEqual(messages[0].toNodeID, to);
+    });
+
+    it ("ignores messages sent to others", function () {
+      var from = localClient.entityID;
+      var to = remoteA.entityID;
+      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      assertTableSize(testShard, 'messageTable', 1);
+      assertTableSize(testShard, 'logTable', 0);
+
+      var messages;
+      testShard.messageTable.readAll(function (err, rows) {
+        messages = rows.map(function (row) {
+          return new NetSimMessage(testShard, row);
+        });
+      });
+      assertEqual(messages[0].fromNodeID, from);
+      assertEqual(messages[0].toNodeID, to);
+    });
+
+    it ("does not forward malformed packets", function () {
+      var from = localClient.entityID;
+      var to = router.entityID;
+      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      assertTableSize(testShard, 'messageTable', 0);
+      assertTableSize(testShard, 'logTable', 1);
+    });
+
+    it ("does not forward packets with no match in the local network", function () {
+      var from = localClient.entityID;
+      var to = router.entityID;
+      // From: 15, To: 15, packetIndex: 1, packetCount: 1, message: 01010101
+      NetSimMessage.send(testShard, from, to, '1111 1111 0001 0001 01010101', function () {});
+      assertTableSize(testShard, 'messageTable', 0);
+      assertTableSize(testShard, 'logTable', 1);
+    });
+
+    it ("forwards packets when the toAddress is found in the network", function () {
+      var fromNodeID = localClient.entityID;
+      var toNodeID = router.entityID;
+      var fromAddress = localClient.address;
+      var toAddress = remoteA.address;
+
+      var payload = intToBinary(toAddress, 4) +
+              intToBinary(fromAddress, 4) +
+              '00010001' +
+              '01010101';
+      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      assertTableSize(testShard, 'messageTable', 1);
+      assertTableSize(testShard, 'logTable', 1);
+
+      // Verify that message from/to node IDs are correct
+      var messages;
+      testShard.messageTable.readAll(function (err, rows) {
+        messages = rows.map(function (row) {
+          return new NetSimMessage(testShard, row);
+        });
+      });
+      assertEqual(messages[0].fromNodeID, router.entityID);
+      assertEqual(messages[0].toNodeID, remoteA.entityID);
     });
   });
 

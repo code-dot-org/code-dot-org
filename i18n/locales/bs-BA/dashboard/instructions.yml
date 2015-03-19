@@ -454,7 +454,7 @@ bs:
       C3-Farmer While Loops 7_instruction: Wow, sada vidim tri gomile zemlje! Možeš li napisati program koji uklanja svaku od njih dok se zemlja ne poravna?
       C3-Farmer While Loops 8_instruction: ' Vidim stvarno duboku rupu i veoma veliku gomilu zemlje. Koliko lopata zemlje trebam premjestiti da bi se zemlja poravnala? Savjet: Koristi "dok" petlju za oboje.'
       C3-Farmer While Loops Assessment 1_instruction: Vidim jako mnogo rupa i gomila. Pomozi mi da premjestim zemlju tako da se sve poravna.
-      C3-Farmer While Loops Multi Pics_instruction: Multiple Choice
+      C3-Farmer While Loops Multi Pics_instruction: Višestruki izbor
       Calc Circles of Eval .1_instruction: Kod koji ćeš napisati u ovom kursu se zove Blokovi Izvršenja, zato što će svaki blok poprimiti jednu vrijednost nakon izvršenja. Promijeni ??? u ovom kodu tako da blok poprimi vrijednost 5.
       Calc Circles of Eval .2_instruction: 'Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 * 5'
       Calc Circles of Eval .3_instruction: 'Ovo je funkcija za Sabiranje - uzima dva broja i vraća njihov zbir. Upotrijebi ovaj Blok Sabiranja da izračunaš 3 + 6.'
@@ -472,10 +472,20 @@ bs:
       Calc Circles of Eval 9_instruction: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval Free Play_instruction: Vrijeme za slobodno igranje! Pokušaj upotrijebiti Blokove Izvršenja da bi napisao nekoliko svojih jednačina. Kako ugniježdavanje blokova na različite načine utiče na njihovo izvršenje?
       Calc Define Funcs 1 (copy 1)_instruction: Pogledajmo sada neke algebarske funkcije. Evo jedna funkcija f(x) = x + 1. Šta očekuješ da ova funkcija vrati ako joj dadneš 15 kao ulazni parametar?
-      Calc Define Funcs 1_instruction: Pogledajmo sada neke algebarske funkcije. Evo jedna funkcija f(x) = x + 1. Šta očekuješ da ova funkcija vrati ako joj dadneš 15 kao ulazni parametar?
+      Calc Define Funcs 1_instruction: |
+        Let's look at some more traditional algebraic
+        functions now. Here's a function translated from the simple algebraic function
+        f(x) = x + 1. What would you expect this function to output if provided an
+        input of 15?
       Calc Define Funcs 2_instruction: 'Napiši funkciju "f" koja uzima "x" kao parametar i vraća x - 10. Testiraj svoju funkciju sa f(15).'
-      Calc Define Funcs 3_instruction: "Ne moramo zvati funkciju 'f' svaki put; evo funkcija 'puta-deset' koja uzima 'x' kao parametar i vraća x * 10. Dovrši definiciju funkcije tako da puta-deset(50) vrati 500."
-      Calc Define Funcs 4_instruction: "Napiši funkciju sa imenom 'pola' koja uzima broj 'x' i vraća pola od tog broja. Kada napišeš tu funkciju, testiraj je sa pola(20)"
+      Calc Define Funcs 3_instruction: |
+        We don't have to call our function 'f'
+        every time; create a function called 'times-ten' that should take a parameter
+        'x' and return x * 10. Once you've created the function, run times-ten(50).
+      Calc Define Funcs 4_instruction: |
+        Write a function called 'half' that takes
+        a number 'x' and returns half that number. Once you've written the function,
+        use it to calculate half(21)
       Calc Design Recipe 1_instruction: 'Hajde da upotrijebimo Recept za Crtanje da napravimo funkciju pod nazivom "sqr" kojoj je domen i kodomen Broj. Napiši dva primjera! Kada završiš upotrijebi svoju novu funkcije da izračunaš 7 na kvadrat.'
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
       Calc Design Recipe 3_instruction: |
@@ -814,7 +824,9 @@ bs:
       Eval Contracts 4 A_instruction: 'Funkcija "skaliraj" vraća sliku koja je ili veća ili manja od orginalne ulazne slike. Pokušaj skalirati ovaj kurg za faktor 10. Kako bi rezultirajuća slika bila drugačija kada bi se ispočetka napravio krug te veličine?'
       Eval Contracts 4_instruction: 'Funkcija "skaliraj" vraća sliku koja je ili veća ili manja od orginalne ulazne slike. Pokušaj skalirati ovaj kurg za faktor 10. Kako bi rezultirajuća slika bila drugačija kada bi se ispočetka napravio krug te veličine?'
       Eval Contracts 8A_instruction: Možeš li dovršiti ovaj zadatak? Veliki trokut je ljubičast i veličine od 200 piksela.
-      Eval Contracts A_instruction: 'Upotrijebi "zvijezda" funkciju za pravljenje crvene zvijezde prečnika od 60 piksela'
+      Eval Contracts A_instruction: |
+        Use the "star" function to produce a solid
+        red star with a 60 pixel radius
       Eval Contracts C_instruction: 'Provjeri ovu "rotiraj" funkciju. Možeš li je upotrijebiti da zarotiraš ovaj zeleni kvadrat od 90 piksela veličine za 45 stepeni?'
       Eval Contracts E_instruction: 'Pokušaj upotrijebiti "tekst" funkciju za pisanje ovog tirkiznog teksta veličine 40.'
       Eval Contracts shrink_instruction: 'Možeš li dovršiti ovu sliku koristeći "smanji" funkciju? Prečnik je 20. '
@@ -839,13 +851,26 @@ bs:
       Eval Strings Images .1_instruction: 'Do sada smo se samo bavili sa jednom vrstom podataka, Brojevima. Drugi tip podataka je Niz Karaktera, koji je kombinacija slova, brojeva ili ostalih karaktera koji su pod navodnicima. Pokreni Niz Karaktera "Zdravo svijete!" da vidiš šta se dešava.'
       Eval Strings Images .2_instruction: 'Funkcija "nanodaj_na_niz_karaktera" uzima dva Niza karaktera i vraća jedan kombinovani niz karaktera. Dodaj Niz karaktera "Svemir" na drugi argument "nanodaj_na_niz_karaktera".'
       Eval Strings Images 1_instruction: 'Treći tip podataka koji ćemo koristiti je Slika. Ova "zvijezda" funkcija uzima Broj i dva Niza karaktera, i daje Sliku. Upotrijebi ovu funkciju da napraviš popunjenu crvenu zvijezdu sa prečnikom od 100.'
-      Eval Strings Images 2_instruction: "NAPOMENA - BESPLATNA IGRA NE RADI NA OVOJ RAZINI. \r Svaki Blok Izvršenja je označen bojom da bi ti znao/la koji tip podataka blok vraća i koji tip podataka predstavlja njegove parametre. Zadnji parametar funkcije za crtanje trokuta uzima Niz karaktera koji kontroliše boju. Pokušaj korisitit neke druge boje da vidiš kako sve to radi."
-      Eval Strings Images 3_instruction: Neke funkcije mogu uzimati samo određeni skup Niza karaktera, kao što je drugi argument ove funkcije za crtanje kruga, koji kontroliše stil. Nacrtaj ovaj narandžasti krug koristeći posebni niz karaktera blok sa padajućim menijem da bi koristio/la valjani stil
-      Eval Strings Images 4_instruction: 'Pokušaj upotrijebiti "pravougaonik" blok za crtanje ovog crvenog pravougaonija koji je širok 175 piksela i visok 100 piksela.'
+      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
+      Eval Strings Images 3_instruction: |
+        Some functions can only take a specific
+        set of Strings, such as the second argument of this circle function, which
+        controls its style. Draw this orange outline circle using the special string
+        block with a dropdown to make sure you only use valid styles.
+      Eval Strings Images 4_instruction: |
+        Try using the "rectangle" block to draw
+        this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
       Eval Strings Images 5_instruction: 'Pokušaj upotrijebiti ovaj novi Blok Izvršenja pod nazivom "prekrivanje" koji će postaviti bijeli trokut od 100 piksela preko crvenog kruga od 200 piksela.'
       Eval Strings Images 6_instruction: Upotrijebi funkciju prekrivanja da postaviš žutu zvijezdu od 75 piksela preko plavog pravougaonika dugog 150 piksela.
-      Eval Strings Images 7_instruction: 'Blok "pomak" ti omogućuje da pomjeraš sliku u odnosu na mjesto na koje bi inače bila postavljena. Upotrijebi pomak da postaviš trokut iznad pravougaonika.'
-      Eval Strings Images 8_instruction: 'Evo različita vrsta bloka za zvijezdu pod nazivom "radijalna-zvijezda" koja ti omogućuje da nacrtaš zvijezdu sa bilo kojim brojem tačaka! Upotrijebi je da napraviš ovu narandžastu zvijezdu sa unutrašnjim prečnikom od 75 piksela i vanjskim prečnikom od 175 piksela.'
+      Eval Strings Images 7_instruction: |
+        The "offset" block lets you move an image
+        relative to where it would normally be placed. Use this block to offset the
+        triangle 80 pixels on the y axis.
+      Eval Strings Images 8_instruction: |
+        Here's a different kinds of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: Vrijeme za slobodno igranje! Istraži dostupe blokove da bi nacrtai/la nešto interesantno. Pobirni se da snimiš i podijeliš svoje omiljene slike.
       Examples 4_instruction: Funkcija za smanjivanje
       freeplay_instruction: Službeno si postao/la majstor umjetnik! Napravi zimsku idilu i podijeli je sa prijateljima.
@@ -1139,6 +1164,9 @@ bs:
         UNDER CONSTRUCTION: This version of NetSim is
         not yet functional. It will allow students to send binary as zeroes and ones
         to one another
+      NetSim_SendingABTest_instruction: |
+        This is Sarah's test of making a netsim
+        level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:

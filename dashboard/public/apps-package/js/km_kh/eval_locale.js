@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "ពង​ក្រពើ (ទទឹង, កំពស់, ស្ទីល, ពណ៌)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "អ្នក​មាន​ប្លុក​ដែល​មិន​ទាន់​បាន​ភ្ជាប់។ តើ​អ្នក​ចង់​ភ្ជាប់​ពួក​វា​ទៅ​កាន់​ប្លុក \"ការ​បង្ហាញ\" មែនទេ?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlay (bottom, top)"},
 "outline":function(d){return "បន្ទាត់​ក្រៅ"},
 "solid":function(d){return "គំនូស​ជាប់"},
-"string":function(d){return "ខ្សែ​អក្សរ"}};
+"string":function(d){return "ខ្សែ​អក្សរ"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

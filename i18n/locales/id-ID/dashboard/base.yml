@@ -22,6 +22,7 @@ id:
           future: tidak mungkin di masa depan
   hello: Halo dunia
   welcome_back: 'Selamat datang kembali, %{name}'
+  submit: Kirim
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'

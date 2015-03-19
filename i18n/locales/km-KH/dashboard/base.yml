@@ -22,6 +22,7 @@ km:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
   hello: សួស្ដី​ពិភពលោក
   welcome_back: 'ស្វាគមន៍​ការ​មក​វិញ, %{name}'
+  submit: បញ្ជូន
   add_teacher_form:
     code:
       label: បន្ថែម​គ្រូ​ម្នាក់៖

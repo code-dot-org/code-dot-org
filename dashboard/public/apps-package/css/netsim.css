@@ -188,7 +188,7 @@ svg {
   -khtml-user-select: text;
   user-select: text; }
 #netsim .netsim-log-panel table tbody tr.ascii td.message {
-  white-space: pre; }
+  white-space: pre-wrap; }
 #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel, #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress, #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
   text-align: center; }
 #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel {
@@ -205,56 +205,61 @@ svg {
   background-color: rgba(212, 238, 212, 0.9); }
 #netsim .netsim-log-panel td.message {
   background-color: white; }
-#netsim .netsim-send-panel .netsim_packet {
+#netsim .netsim-send-panel .netsim-packet {
   border: solid darkgray thin;
   background-color: #ddd;
   margin: 10px;
   padding: 0.5em;
   border-radius: 0.5em; }
-  #netsim .netsim-send-panel .netsim_packet th {
+  #netsim .netsim-send-panel .netsim-packet .packet-controls {
+    float: right;
+    text-align: right; }
+  #netsim .netsim-send-panel .netsim-packet th {
     background-color: transparent;
     color: #000000; }
-  #netsim .netsim-send-panel .netsim_packet input, #netsim .netsim-send-panel .netsim_packet textarea {
+  #netsim .netsim-send-panel .netsim-packet input, #netsim .netsim-send-panel .netsim-packet textarea {
+    resize: none;
     padding: 0.2em;
     margin-bottom: 0.2em;
     font-family: monospace;
     background-color: transparent;
     box-shadow: none; }
-  #netsim .netsim-send-panel .netsim_packet input {
+  #netsim .netsim-send-panel .netsim-packet input {
     border: solid 1px #ccc; }
-  #netsim .netsim-send-panel .netsim_packet textarea {
+  #netsim .netsim-send-panel .netsim-packet textarea {
     border: none; }
-  #netsim .netsim-send-panel .netsim_packet .watermark {
+  #netsim .netsim-send-panel .netsim-packet .watermark {
     color: #ddd; }
-  #netsim .netsim-send-panel .netsim_packet .bit-counter {
+  #netsim .netsim-send-panel .netsim-packet .bit-counter {
     text-align: right;
     color: #a9a9a9; }
-    #netsim .netsim-send-panel .netsim_packet .bit-counter.oversized {
+    #netsim .netsim-send-panel .netsim-packet .bit-counter.oversized {
       color: #ff0000; }
-  #netsim .netsim-send-panel .netsim_packet th.encodingLabel, #netsim .netsim-send-panel .netsim_packet td.encodingLabel, #netsim .netsim-send-panel .netsim_packet th.toAddress, #netsim .netsim-send-panel .netsim_packet td.toAddress, #netsim .netsim-send-panel .netsim_packet th.fromAddress, #netsim .netsim-send-panel .netsim_packet td.fromAddress, #netsim .netsim-send-panel .netsim_packet th.packetInfo, #netsim .netsim-send-panel .netsim_packet td.packetInfo {
+  #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel, #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress, #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
     text-align: center; }
-    #netsim .netsim-send-panel .netsim_packet th.encodingLabel input, #netsim .netsim-send-panel .netsim_packet td.encodingLabel input, #netsim .netsim-send-panel .netsim_packet th.toAddress input, #netsim .netsim-send-panel .netsim_packet td.toAddress input, #netsim .netsim-send-panel .netsim_packet th.fromAddress input, #netsim .netsim-send-panel .netsim_packet td.fromAddress input, #netsim .netsim-send-panel .netsim_packet th.packetInfo input, #netsim .netsim-send-panel .netsim_packet td.packetInfo input {
+    #netsim .netsim-send-panel .netsim-packet th.encodingLabel input, #netsim .netsim-send-panel .netsim-packet td.encodingLabel input, #netsim .netsim-send-panel .netsim-packet th.toAddress input, #netsim .netsim-send-panel .netsim-packet td.toAddress input, #netsim .netsim-send-panel .netsim-packet th.fromAddress input, #netsim .netsim-send-panel .netsim-packet td.fromAddress input, #netsim .netsim-send-panel .netsim-packet th.packetInfo input, #netsim .netsim-send-panel .netsim-packet td.packetInfo input {
       width: 3em;
       text-align: center; }
-  #netsim .netsim-send-panel .netsim_packet th.encodingLabel, #netsim .netsim-send-panel .netsim_packet td.encodingLabel {
+  #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel {
     width: 1%; }
-  #netsim .netsim-send-panel .netsim_packet th.toAddress, #netsim .netsim-send-panel .netsim_packet td.toAddress, #netsim .netsim-send-panel .netsim_packet th.fromAddress, #netsim .netsim-send-panel .netsim_packet td.fromAddress {
+  #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
     width: 50px; }
-  #netsim .netsim-send-panel .netsim_packet th.packetInfo, #netsim .netsim-send-panel .netsim_packet td.packetInfo {
+  #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
     width: 100px; }
-  #netsim .netsim-send-panel .netsim_packet td.toAddress {
+  #netsim .netsim-send-panel .netsim-packet td.toAddress {
     background-color: rgba(255, 233, 238, 0.85); }
-  #netsim .netsim-send-panel .netsim_packet td.fromAddress {
+  #netsim .netsim-send-panel .netsim-packet td.fromAddress {
     background-color: lightcyan; }
-  #netsim .netsim-send-panel .netsim_packet td.packetInfo {
+  #netsim .netsim-send-panel .netsim-packet td.packetInfo {
     background-color: rgba(212, 238, 212, 0.9); }
-  #netsim .netsim-send-panel .netsim_packet td.message {
+  #netsim .netsim-send-panel .netsim-packet td.message {
     background-color: white; }
-    #netsim .netsim-send-panel .netsim_packet td.message div {
+    #netsim .netsim-send-panel .netsim-packet td.message div {
       margin-right: 0.4em; }
-      #netsim .netsim-send-panel .netsim_packet td.message div textarea {
-        width: 100%;
-        padding: 0.2em; }
+      #netsim .netsim-send-panel .netsim-packet td.message div textarea {
+        resize: none;
+        height: 1.5em;
+        width: 100%; }
 #netsim .netsim-send-panel .send_widget_footer {
   margin: 10px;
   overflow: auto; }
