@@ -127,9 +127,9 @@
           paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten
           komen. '
         maze_2_1: Het biggetje werkt me op mijn zenuwen. Help me het te vinden!
-        maze_2_2_5: Volg het pad en breng me bij het stomme biggetje. Vermijd dynamiet
-          of er zullen veertjes dwarrelen!
-        maze_2_3: Breng me naar de groene naarling! (Pas op voor dynamiet)
+        maze_2_2_5: Volg het pad en breng me bij het gekke biggetje. Blijf weg bij
+          de TNT of er zullen veertjes dwarrelen!
+        maze_2_3: Breng me naar de groene slechterik! (Pas op voor TNT)
         maze_2_4: Rustig blijven, help me het slechte biggetje te vinden. Anders word
           ik misschien nog boos!
         maze_2_5: Er is een manier om bij het biggetje te komen met maar 2 blokken.
@@ -552,22 +552,22 @@
           de kat hallo laat zeggen als hij aankomt.
         studio_k1_5: Kan je een blok toevoegen zodat de octopus blij wordt?
         studio_k1_6: Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
-        maze_wordsearch_k_1: Verplaats me zodat het woord OOST gespeld wordt
-        maze_wordsearch_k_2: Verplaats me zodat het woord ZUID gespeld wordt
+        maze_wordsearch_k_1: Verplaats me zodat het woord EAST (oost) gespeld wordt
+        maze_wordsearch_k_2: Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
         maze_wordsearch_k_3: Verplaats me zodat het woord WEST gespeld wordt
-        maze_wordsearch_k_4: Verplaats me zodat het woord NOORD gespeld wordt
-        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord SPRING
+        maze_wordsearch_k_4: Verplaats me zodat het woord NORTH (noord) gespeld wordt
+        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord JUMP (spring)
           gespeld wordt
         maze_wordsearch_k_9: Verplaats me in een richting, dan in een andere richting
           zodat CODE gespeld wordt
         maze_wordsearch_k_13: Verplaats me in een richting, dan in een andere richting
           zodat DEBUG gespeld wordt
         maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting
-          zodat BOVEN gespeld wordt
+          zodat ABOVE (boven) gespeld wordt
         maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting
-          zodat BENEDEN gespeld wordt
+          zodat BELOW (onder) gespeld wordt
         maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in
-          een andere richting zodat VERHAAL gespeld wordt
+          een andere richting zodat STORY (verhaal) gespeld wordt
         applab_ec_simple: Maak jouw app door de blokken in de gereedschapskist te
           gebruiken.
         turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur
@@ -677,6 +677,12 @@
         playlab_intro: Inleiding tot Play Lab
         playlab_events: Play Lab evenenementen
         playlab_repeat_forever: Play Lab Herhaal voor altijd
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: evaluatie blokken
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabelen
+        msm_7_functions: Functies
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

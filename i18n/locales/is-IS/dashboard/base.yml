@@ -22,6 +22,7 @@ is:
           future: má ekki vera í framtíð
   hello: Halló heimur
   welcome_back: 'Velkomin/n aftur, %{name}'
+  submit: Senda
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'

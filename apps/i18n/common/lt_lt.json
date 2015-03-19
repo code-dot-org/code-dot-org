@@ -43,6 +43,7 @@
   "help": "pagalba",
   "hintTitle": "Patarimas:",
   "jump": "šok",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "Tu naudoji visus būtinus blokelius, tačiau netinkamai.",
   "listVariable": "sąrašas",
   "makeYourOwnFlappy": "Sukurk savo Flappy žaidimą",

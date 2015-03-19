@@ -22,6 +22,7 @@ tr:
           future: gelecekte olması mümkün değil
   hello: Merhaba dünya
   welcome_back: 'Hoş geldiniz %{name}'
+  submit: Gönder
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'

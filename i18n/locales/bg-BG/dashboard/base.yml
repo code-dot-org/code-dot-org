@@ -22,6 +22,7 @@ bg:
           future: не може да бъде в бъдеще
   hello: Здравей, свят
   welcome_back: 'Добре дошли отново, %{name}'
+  submit: Изпрати
   add_teacher_form:
     code:
       label: 'Добавете учител:'

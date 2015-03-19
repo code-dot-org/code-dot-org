@@ -22,6 +22,7 @@ ta:
           future: "can't be in the future"
   hello: ஹலோ உலகம்
   welcome_back: 'மீண்டும் வருக, %{name}'
+  submit: சமர்ப்பிக்க
   add_teacher_form:
     code:
       label: 'Add a teacher:'

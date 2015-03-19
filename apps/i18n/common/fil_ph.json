@@ -2,7 +2,7 @@
   "and": "at",
   "booleanTrue": "tama",
   "booleanFalse": "mali",
-  "blocks": "blocks",
+  "blocks": "mga block",
   "blocklyMessage": "Blockly",
   "catActions": "Mga aksyon",
   "catColour": "Kulay",
@@ -43,6 +43,7 @@
   "help": "Tulong",
   "hintTitle": "Pahiwatig:",
   "jump": "talon",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "Ginagamit mo ang lahat ng kinakailangang mga uri ng mga bloke ngunit hindi sa tamang paraan.",
   "listVariable": "list",
   "makeYourOwnFlappy": "Gumawa Ng Sarili Mong Flappy Game",
@@ -93,6 +94,6 @@
   "signup": "Mag-sign up para sa intro ng kurso",
   "hintHeader": "Narito ang isang tip:",
   "genericFeedback": "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program.",
-  "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
+  "toggleBlocksErrorMsg": "Kailangan mong iwasto ang isang error sa iyong programa bago ito ay ipapakita bilang mga block.",
   "defaultTwitterText": "Check out what I made"
 }

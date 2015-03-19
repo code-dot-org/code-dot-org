@@ -337,7 +337,7 @@ bs:
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Nadzorna Ploča za Nastavnike
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -467,6 +467,7 @@ bs:
           Lesson 14 v2: Lesson 14 v2
           Lesson 15: Lesson 15
           description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra

@@ -22,6 +22,7 @@ sr:
           future: не може бити у будућности
   hello: Здраво свете
   welcome_back: 'Добродошао назад, %{name}'
+  submit: Пошаљи
   add_teacher_form:
     code:
       label: 'Додај наставника:'

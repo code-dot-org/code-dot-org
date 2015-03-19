@@ -22,6 +22,7 @@ ar:
           future: لا يمكن أن يكون في المستقبل
   hello: مرحبا بالعالم
   welcome_back: 'أهلا بكم من جديد, %{name}'
+  submit: تسجيل
   add_teacher_form:
     code:
       label: 'أضف مدرسا:'

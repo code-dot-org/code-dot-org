@@ -2,7 +2,7 @@
   "badColorStringError":"Utilizaste una cadena de color no válido: {val}",
   "badStyleStringError":"Utilizaste una cadena estilo válido: {val}",
   "circleBlockTitle":"círculo (radio, estilo, color)",
-  "displayBlockTitle":"evaluate",
+  "displayBlockTitle":"evaluar",
   "ellipseBlockTitle":"elipse (anchura, altura, estilo, color)",
   "emptyFunctionalBlock":"Tienes un bloque con una entrada vacía.",
   "extraTopBlocks":"Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?",

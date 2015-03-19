@@ -22,6 +22,7 @@ ro:
           future: nu poate fi în viitor
   hello: Salutare lume
   welcome_back: 'Bine ai revenit, %{name}'
+  submit: Trimite
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'

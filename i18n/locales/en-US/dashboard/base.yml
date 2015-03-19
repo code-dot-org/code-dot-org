@@ -22,6 +22,7 @@ en:
           future: crwdns4882:0crwdne4882:0
   hello: crwdns2556:0crwdne2556:0
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
+  submit: crwdns35673:0crwdne35673:0
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0

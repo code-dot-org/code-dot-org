@@ -22,6 +22,7 @@ de:
           future: kann nicht in der Zukunft sein
   hello: Hallo Welt
   welcome_back: 'Willkommen zurück, %{name}'
+  submit: Absenden
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'

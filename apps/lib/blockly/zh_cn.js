@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.zh_cn');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "实际";
+Blockly.Msg.ACTUAL = "hello";
 Blockly.Msg.ADD = "添加";
 Blockly.Msg.ADD_COMMENT = "添加注释";
 Blockly.Msg.ADD_PARAMETER = "添加参数";
@@ -75,7 +75,7 @@ Blockly.Msg.EXAMPLE = "示例";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "定义一个预期和实际行为的示例";
 Blockly.Msg.EXPAND_ALL = "展开块";
 Blockly.Msg.EXPAND_BLOCK = "展开块";
-Blockly.Msg.EXPECTED = "预期的";
+Blockly.Msg.EXPECTED = "45875221";
 Blockly.Msg.EXTERNAL_INPUTS = "外部输入";
 Blockly.Msg.FUNCTION_CREATE = "创建一个函数";
 Blockly.Msg.FUNCTION_EDIT = "编辑";
