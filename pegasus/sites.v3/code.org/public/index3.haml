@@ -147,7 +147,7 @@ social:
     
     .container_responsive
       %h1#mission{style: "font-size: 22px; margin-top:40px; margin-bottom:5px; text-align:center; color: rgb(102,102,102); padding:10px; /*background-color: rgb(239, 239, 239) */; font-family: 'Gotham 4r', sans-serif"}
-        Code.org inspires students, creates free online tutorials, builds K-12 curriculum, and partners with schools.
+        Learn computer science for free online or bring it to your school.
 
   -#### Below the fold
 
@@ -160,8 +160,8 @@ social:
 
       - slot = {name:"Students", bgc: "0, 173, 188", bgc_body1: "242, 251, 252", bgc_head: "0, 173, 188", bgc_body: "89, 202, 211",links: []}
       -   slot[:links] << {img: "/shared/images/courses/logo_tall_elementary.jpg"}
-      -   slot[:links] << {text: "Try the Hour of Code", url: "/learn"}
-      -   slot[:links] << {text: "Code Studio", url: "http://studio.code.org"}
+      -   slot[:links] << {text: "Try the <b>Hour of Code</b>", url: "/learn"}
+      -   slot[:links] << {text: "<b>Code Studio</b>", url: "http://studio.code.org"}
       -   slot[:links] << {text: "Find a local class or workshop", url: "/learn/local", priority: 2} #p2
       -#   slot[:links] << {text: "Other learning options ", priority: 2} #p2
       - audienceslots << slot

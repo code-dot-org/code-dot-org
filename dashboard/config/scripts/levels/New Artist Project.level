@@ -16,8 +16,8 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "start_direction": "90",
-    "x": "150",
-    "y": "250",
+    "x": "200",
+    "y": "200",
     "free_play": "true",
     "impressive": "false",
     "embed": "false",
@@ -29,7 +29,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false"
-  }
+  },
+  "md5": "f702681e02eb04651e39498e455f4ba5"
 }]]></config>
   <blocks>
     <start_blocks>
