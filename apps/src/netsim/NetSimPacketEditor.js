@@ -65,10 +65,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.fromAddress = initialConfig.fromAddress || 0;
   
   /** @type {number} */
-  this.packetIndex = initialConfig.packetIndex || 1;
+  this.packetIndex = initialConfig.packetIndex !== undefined ?
+      initialConfig.packetIndex : 1;
   
   /** @type {number} */
-  this.packetCount = initialConfig.packetCount || 1;
+  this.packetCount = initialConfig.packetCount !== undefined ?
+      initialConfig.packetCount : 1;
 
   /**
    * Binary string of message body, live-interpreted to other values.
@@ -158,7 +160,7 @@ var removeWatermark = function (focusEvent) {
  * @param {RegExp} whitelistRegex
  * @return {function} appropriate to pass to .keypress()
  */
-var whitelistCharacters = function (whitelistRegex) {
+var makeKeypressHandlerWithWhitelist = function (whitelistRegex) {
   /**
    * A keyPress handler that blocks all visible characters except those
    * matching the whitelist.  Passes through invisible characters (backspace,
@@ -306,7 +308,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     shortNumberFields.forEach(function (fieldName) {
       rowFields[fieldName] = tr.find('input.' + fieldName);
       rowFields[fieldName].keypress(
-          whitelistCharacters(rowType.shortNumberAllowedCharacters));
+          makeKeypressHandlerWithWhitelist(rowType.shortNumberAllowedCharacters));
       rowFields[fieldName].keyup(
           this.makeKeyupHandler(fieldName, rowType.shortNumberConversion));
       rowFields[fieldName].blur(
@@ -316,7 +318,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message = tr.find('textarea.message');
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
-        whitelistCharacters(rowType.messageAllowedCharacters));
+        makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
     rowFields.message.keyup(
         this.makeKeyupHandler('message', rowType.messageConversion));
     rowFields.message.blur(
