@@ -28,11 +28,11 @@
         return result += exports.escapeXMLText(text);
       };
       xmlParser.onopentag = function(node) {
-        var attr, val, _ref;
+        var attr, ref, val;
         result += '<' + node.name;
-        _ref = node.attributes;
-        for (attr in _ref) {
-          val = _ref[attr];
+        ref = node.attributes;
+        for (attr in ref) {
+          val = ref[attr];
           result += '\n  ' + attr + '=' + JSON.stringify(val);
         }
         return result += '>';
@@ -46,10 +46,10 @@
     fontMetricsCache = {};
     exports.fontMetrics = fontMetrics = function(fontFamily, fontHeight) {
       var baseline, canvas, capital, ctx, ex, fontStyle, gp, height, lf, metrics, result, textTopAndBottom, width;
-      fontStyle = "" + fontHeight + "px " + fontFamily;
+      fontStyle = fontHeight + "px " + fontFamily;
       result = fontMetricsCache[fontStyle];
       textTopAndBottom = function(testText) {
-        var col, first, index, last, pixels, right, row, _i, _j;
+        var col, first, i, index, j, last, pixels, ref, ref1, right, row;
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
         ctx.textBaseline = 'top';
@@ -59,8 +59,8 @@
         pixels = ctx.getImageData(0, 0, width, height).data;
         first = -1;
         last = height;
-        for (row = _i = 0; 0 <= height ? _i < height : _i > height; row = 0 <= height ? ++_i : --_i) {
-          for (col = _j = 1; 1 <= right ? _j < right : _j > right; col = 1 <= right ? ++_j : --_j) {
+        for (row = i = 0, ref = height; 0 <= ref ? i < ref : i > ref; row = 0 <= ref ? ++i : --i) {
+          for (col = j = 1, ref1 = right; 1 <= ref1 ? j < ref1 : j > ref1; col = 1 <= ref1 ? ++j : --j) {
             index = (row * width + col) * 4;
             if (pixels[index] !== 0) {
               if (first < 0) {
@@ -127,15 +127,15 @@
       return props.join(';');
     };
     exports.deserializeShallowDict = function(str) {
-      var dict, key, prop, props, val, _i, _len, _ref;
+      var dict, i, key, len, prop, props, ref, val;
       if (str == null) {
         return void 0;
       }
       dict = {};
       props = str.split(';');
-      for (_i = 0, _len = props.length; _i < _len; _i++) {
-        prop = props[_i];
-        _ref = prop.split(':'), key = _ref[0], val = _ref[1];
+      for (i = 0, len = props.length; i < len; i++) {
+        prop = props[i];
+        ref = prop.split(':'), key = ref[0], val = ref[1];
         dict[key] = val;
       }
       return dict;
@@ -148,11 +148,11 @@
 //# sourceMappingURL=helper.js.map
 ;
 (function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
 
   define('droplet-draw',['droplet-helper'], function(helper) {
-    var Draw, avgColor, exports, max, memoizedAvgColor, min, toHex, toRGB, twoDigitHex, zeroPad, _area, _intersects;
+    var Draw, _area, _intersects, avgColor, exports, max, memoizedAvgColor, min, toHex, toRGB, twoDigitHex, zeroPad;
     exports = {};
     _area = function(a, b, c) {
       return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
@@ -170,13 +170,13 @@
       var b, c, g, r;
       if (hex.length === 4) {
         hex = ((function() {
-          var _i, _len, _results;
-          _results = [];
-          for (_i = 0, _len = hex.length; _i < _len; _i++) {
-            c = hex[_i];
-            _results.push(c + c);
+          var j, len1, results;
+          results = [];
+          for (j = 0, len1 = hex.length; j < len1; j++) {
+            c = hex[j];
+            results.push(c + c);
           }
-          return _results;
+          return results;
         })()).join('').slice(1);
       }
       r = parseInt(hex.slice(1, 3), 16);
@@ -187,12 +187,12 @@
     zeroPad = function(str, len) {
       if (str.length < len) {
         return ((function() {
-          var _i, _ref, _results;
-          _results = [];
-          for (_i = _ref = str.length; _ref <= len ? _i < len : _i > len; _ref <= len ? _i++ : _i--) {
-            _results.push('0');
+          var j, ref, ref1, results;
+          results = [];
+          for (j = ref = str.length, ref1 = len; ref <= ref1 ? j < ref1 : j > ref1; ref <= ref1 ? j++ : j--) {
+            results.push('0');
           }
-          return _results;
+          return results;
         })()).join('') + str;
       } else {
         return str;
@@ -204,13 +204,13 @@
     toHex = function(rgb) {
       var k;
       return '#' + ((function() {
-        var _i, _len, _results;
-        _results = [];
-        for (_i = 0, _len = rgb.length; _i < _len; _i++) {
-          k = rgb[_i];
-          _results.push(twoDigitHex(k));
+        var j, len1, results;
+        results = [];
+        for (j = 0, len1 = rgb.length; j < len1; j++) {
+          k = rgb[j];
+          results.push(twoDigitHex(k));
         }
-        return _results;
+        return results;
       })()).join('');
     };
     memoizedAvgColor = {};
@@ -223,13 +223,13 @@
       a = toRGB(a);
       b = toRGB(b);
       newRGB = (function() {
-        var _i, _len, _results;
-        _results = [];
-        for (i = _i = 0, _len = a.length; _i < _len; i = ++_i) {
+        var j, len1, results;
+        results = [];
+        for (i = j = 0, len1 = a.length; j < len1; i = ++j) {
           k = a[i];
-          _results.push(a[i] * factor + b[i] * (1 - factor));
+          results.push(a[i] * factor + b[i] * (1 - factor));
         }
-        return _results;
+        return results;
       })();
       return memoizedAvgColor[c] = toHex(newRGB);
     };
@@ -242,9 +242,9 @@
         this.fontAscent = 2;
         self = this;
         this.Point = Point = (function() {
-          function Point(x, y) {
-            this.x = x;
-            this.y = y;
+          function Point(x1, y1) {
+            this.x = x1;
+            this.y = y1;
           }
 
           Point.prototype.clone = function() {
@@ -265,9 +265,9 @@
             return this.y += y;
           };
 
-          Point.prototype.plus = function(_arg) {
+          Point.prototype.plus = function(arg) {
             var x, y;
-            x = _arg.x, y = _arg.y;
+            x = arg.x, y = arg.y;
             return new Point(this.x + x, this.y + y);
           };
 
@@ -315,9 +315,9 @@
 
         })();
         this.Rectangle = Rectangle = (function() {
-          function Rectangle(x, y, width, height) {
-            this.x = x;
-            this.y = y;
+          function Rectangle(x1, y1, width, height) {
+            this.x = x1;
+            this.y = y1;
             this.width = width;
             this.height = height;
           }
@@ -411,11 +411,11 @@
           };
 
           Rectangle.prototype.toPath = function() {
-            var path, point, _i, _len, _ref;
+            var j, len1, path, point, ref;
             path = new Path();
-            _ref = [[this.x, this.y], [this.x, this.bottom()], [this.right(), this.bottom()], [this.right(), this.y]];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              point = _ref[_i];
+            ref = [[this.x, this.y], [this.x, this.bottom()], [this.right(), this.bottom()], [this.right(), this.y]];
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              point = ref[j];
               path.push(new Point(point[0], point[1]));
             }
             return path;
@@ -424,8 +424,8 @@
           return Rectangle;
 
         })();
-        this.NoRectangle = NoRectangle = (function(_super) {
-          __extends(NoRectangle, _super);
+        this.NoRectangle = NoRectangle = (function(superClass) {
+          extend(NoRectangle, superClass);
 
           function NoRectangle() {
             NoRectangle.__super__.constructor.call(this, null, null, 0, 0);
@@ -448,13 +448,13 @@
           }
 
           Path.prototype._clearCache = function() {
-            var maxX, maxY, minX, minY, point, _i, _len, _ref;
+            var j, len1, maxX, maxY, minX, minY, point, ref;
             if (this._cacheFlag) {
               minX = minY = Infinity;
               maxX = maxY = 0;
-              _ref = this._points;
-              for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-                point = _ref[_i];
+              ref = this._points;
+              for (j = 0, len1 = ref.length; j < len1; j++) {
+                point = ref[j];
                 minX = min(minX, point.x);
                 maxX = max(maxX, point.x);
                 minY = min(minY, point.y);
@@ -479,7 +479,7 @@
           };
 
           Path.prototype.contains = function(point) {
-            var count, dest, end, last, _i, _len, _ref;
+            var count, dest, end, j, last, len1, ref;
             this._clearCache();
             if (this._points.length === 0) {
               return false;
@@ -490,9 +490,9 @@
             dest = new Point(this._bounds.x - 10, point.y);
             count = 0;
             last = this._points[this._points.length - 1];
-            _ref = this._points;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              end = _ref[_i];
+            ref = this._points;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              end = ref[j];
               if (_intersects(last, end, point, dest)) {
                 count += 1;
               }
@@ -502,7 +502,7 @@
           };
 
           Path.prototype.intersects = function(rectangle) {
-            var end, last, lastSide, rectSides, side, _i, _j, _len, _len1, _ref;
+            var end, j, l, last, lastSide, len1, len2, rectSides, ref, side;
             this._clearCache();
             if (this._points.length === 0) {
               return false;
@@ -512,12 +512,12 @@
             } else {
               last = this._points[this._points.length - 1];
               rectSides = [new Point(rectangle.x, rectangle.y), new Point(rectangle.right(), rectangle.y), new Point(rectangle.right(), rectangle.bottom()), new Point(rectangle.x, rectangle.bottom())];
-              _ref = this._points;
-              for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-                end = _ref[_i];
+              ref = this._points;
+              for (j = 0, len1 = ref.length; j < len1; j++) {
+                end = ref[j];
                 lastSide = rectSides[rectSides.length - 1];
-                for (_j = 0, _len1 = rectSides.length; _j < _len1; _j++) {
-                  side = rectSides[_j];
+                for (l = 0, len2 = rectSides.length; l < len2; l++) {
+                  side = rectSides[l];
                   if (_intersects(last, end, lastSide, side)) {
                     return true;
                   }
@@ -546,7 +546,7 @@
           };
 
           Path.prototype.draw = function(ctx) {
-            var i, point, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+            var i, j, l, len1, len2, len3, m, point, ref, ref1, ref2;
             this._clearCache();
             if (this._points.length === 0) {
               return;
@@ -558,9 +558,9 @@
             }
             ctx.beginPath();
             ctx.moveTo(this._points[0].x, this._points[0].y);
-            _ref = this._points;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              point = _ref[_i];
+            ref = this._points;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              point = ref[j];
               ctx.lineTo(point.x, point.y);
             }
             ctx.lineTo(this._points[0].x, this._points[0].y);
@@ -577,9 +577,9 @@
             if (this.bevel) {
               ctx.beginPath();
               ctx.moveTo(this._points[0].x, this._points[0].y);
-              _ref1 = this._points.slice(1);
-              for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
-                point = _ref1[i];
+              ref1 = this._points.slice(1);
+              for (i = l = 0, len2 = ref1.length; l < len2; i = ++l) {
+                point = ref1[i];
                 if ((point.x < this._points[i].x && point.y >= this._points[i].y) || (point.y > this._points[i].y && point.x <= this._points[i].x)) {
                   ctx.lineTo(point.x, point.y);
                 } else if (!point.equals(this._points[i])) {
@@ -597,9 +597,9 @@
               ctx.stroke();
               ctx.beginPath();
               ctx.moveTo(this._points[0].x, this._points[0].y);
-              _ref2 = this._points.slice(1);
-              for (i = _k = 0, _len2 = _ref2.length; _k < _len2; i = ++_k) {
-                point = _ref2[i];
+              ref2 = this._points.slice(1);
+              for (i = m = 0, len3 = ref2.length; m < len3; i = ++m) {
+                point = ref2[i];
                 if ((point.x > this._points[i].x && point.y <= this._points[i].y) || (point.y < this._points[i].y && point.x >= this._points[i].x)) {
                   ctx.lineTo(point.x, point.y);
                 } else if (!point.equals(this._points[i])) {
@@ -622,18 +622,18 @@
           };
 
           Path.prototype.clone = function() {
-            var clone, el, _i, _len, _ref;
+            var clone, el, j, len1, ref;
             clone = new Path();
-            _ref = this._points;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              el = _ref[_i];
+            ref = this._points;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              el = ref[j];
               clone.push(el);
             }
             return clone;
           };
 
           Path.prototype.drawShadow = function(ctx, offsetX, offsetY, blur) {
-            var key, oldValues, point, value, _i, _len, _ref, _results;
+            var j, key, len1, oldValues, point, ref, results, value;
             this._clearCache();
             ctx.fillStyle = this.style.fillColor;
             if (this._points.length === 0) {
@@ -653,29 +653,29 @@
             ctx.shadowOffsetY = offsetY;
             ctx.beginPath();
             ctx.moveTo(this._points[0].x, this._points[0].y);
-            _ref = this._points;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              point = _ref[_i];
+            ref = this._points;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              point = ref[j];
               ctx.lineTo(point.x, point.y);
             }
             ctx.lineTo(this._points[0].x, this._points[0].y);
             ctx.fill();
-            _results = [];
+            results = [];
             for (key in oldValues) {
-              if (!__hasProp.call(oldValues, key)) continue;
+              if (!hasProp.call(oldValues, key)) continue;
               value = oldValues[key];
-              _results.push(ctx[key] = value);
+              results.push(ctx[key] = value);
             }
-            return _results;
+            return results;
           };
 
           return Path;
 
         })();
         this.Text = Text = (function() {
-          function Text(point, value) {
-            this.point = point;
-            this.value = value;
+          function Text(point1, value1) {
+            this.point = point1;
+            this.value = value1;
             this.wantedFont = self.fontSize + 'px ' + self.fontFamily;
             if (self.ctx.font !== this.wantedFont) {
               self.ctx.font = self.fontSize + 'px ' + self.fontFamily;
@@ -745,12 +745,12 @@
 //# sourceMappingURL=draw.js.map
 ;
 (function() {
-  var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
 
   define('droplet-model',['droplet-helper'], function(helper) {
-    var Block, BlockEndToken, BlockStartToken, Container, CursorToken, EndToken, FORBID, Indent, IndentEndToken, IndentStartToken, NO, NORMAL, NewlineToken, Segment, SegmentEndToken, SegmentStartToken, Socket, SocketEndToken, SocketStartToken, StartToken, TextToken, Token, YES, exports, traverseOneLevel, _id;
+    var Block, BlockEndToken, BlockStartToken, Container, CursorToken, EndToken, FORBID, Indent, IndentEndToken, IndentStartToken, NO, NORMAL, NewlineToken, Segment, SegmentEndToken, SegmentStartToken, Socket, SocketEndToken, SocketStartToken, StartToken, TextToken, Token, YES, _id, exports, traverseOneLevel;
     exports = {};
     YES = function() {
       return true;
@@ -772,7 +772,7 @@
       });
     };
     exports.isTreeValid = function(tree) {
-      var hare, k, lastHare, stack, tortise, _ref, _ref1, _ref2, _ref3;
+      var hare, k, lastHare, ref, ref1, ref2, ref3, stack, tortise;
       tortise = hare = tree.start.next;
       stack = [];
       while (true) {
@@ -789,13 +789,13 @@
         if (hare === tree.end) {
           if (stack.length > 0) {
             throw new Error('Document ended before: ' + ((function() {
-              var _i, _len, _results;
-              _results = [];
-              for (_i = 0, _len = stack.length; _i < _len; _i++) {
-                k = stack[_i];
-                _results.push(k.type);
+              var i, len, results;
+              results = [];
+              for (i = 0, len = stack.length; i < len; i++) {
+                k = stack[i];
+                results.push(k.type);
               }
-              return _results;
+              return results;
             })()).join(','));
           }
           break;
@@ -804,7 +804,7 @@
           stack.push(hare.container);
         } else if (hare instanceof EndToken) {
           if (stack[stack.length - 1] !== hare.container) {
-            throw new Error("Stack does not align " + ((_ref = stack[stack.length - 1]) != null ? _ref.type : void 0) + " != " + ((_ref1 = hare.container) != null ? _ref1.type : void 0));
+            throw new Error("Stack does not align " + ((ref = stack[stack.length - 1]) != null ? ref.type : void 0) + " != " + ((ref1 = hare.container) != null ? ref1.type : void 0));
           } else {
             stack.pop();
           }
@@ -821,13 +821,13 @@
         if (hare === tree.end) {
           if (stack.length > 0) {
             throw new Error('Document ended before: ' + ((function() {
-              var _i, _len, _results;
-              _results = [];
-              for (_i = 0, _len = stack.length; _i < _len; _i++) {
-                k = stack[_i];
-                _results.push(k.type);
+              var i, len, results;
+              results = [];
+              for (i = 0, len = stack.length; i < len; i++) {
+                k = stack[i];
+                results.push(k.type);
               }
-              return _results;
+              return results;
             })()).join(','));
           }
           break;
@@ -836,7 +836,7 @@
           stack.push(hare.container);
         } else if (hare instanceof EndToken) {
           if (stack[stack.length - 1] !== hare.container) {
-            throw new Error("Stack does not align " + ((_ref2 = stack[stack.length - 1]) != null ? _ref2.type : void 0) + " != " + ((_ref3 = hare.container) != null ? _ref3.type : void 0));
+            throw new Error("Stack does not align " + ((ref2 = stack[stack.length - 1]) != null ? ref2.type : void 0) + " != " + ((ref3 = hare.container) != null ? ref3.type : void 0));
           } else {
             stack.pop();
           }
@@ -1059,14 +1059,14 @@
       };
 
       Container.prototype.spliceOut = function() {
-        var first, last, _ref, _ref1, _ref2, _ref3;
+        var first, last, ref, ref1, ref2, ref3;
         first = this.start.previousVisibleToken();
         last = this.end.nextVisibleToken();
-        while ((first != null ? first.type : void 0) === 'newline' && ((_ref = last != null ? last.type : void 0) === (void 0) || _ref === 'newline' || _ref === 'indentEnd' || _ref === 'segmentEnd') && !(((_ref1 = first.previousVisibleToken()) != null ? _ref1.type : void 0) === 'indentStart' && first.previousVisibleToken().container.end === last)) {
+        while ((first != null ? first.type : void 0) === 'newline' && ((ref = last != null ? last.type : void 0) === (void 0) || ref === 'newline' || ref === 'indentEnd' || ref === 'segmentEnd') && !(((ref1 = first.previousVisibleToken()) != null ? ref1.type : void 0) === 'indentStart' && first.previousVisibleToken().container.end === last)) {
           first = first.previousVisibleToken();
           first.nextVisibleToken().remove();
         }
-        while ((last != null ? last.type : void 0) === 'newline' && ((last != null ? (_ref2 = last.nextVisibleToken()) != null ? _ref2.type : void 0 : void 0) === 'newline' || ((_ref3 = first != null ? first.type : void 0) === (void 0) || _ref3 === 'segmentStart'))) {
+        while ((last != null ? last.type : void 0) === 'newline' && ((last != null ? (ref2 = last.nextVisibleToken()) != null ? ref2.type : void 0 : void 0) === 'newline' || ((ref3 = first != null ? first.type : void 0) === (void 0) || ref3 === 'segmentStart'))) {
           last = last.nextVisibleToken();
           last.previousVisibleToken().remove();
         }
@@ -1081,7 +1081,7 @@
       };
 
       Container.prototype.spliceIn = function(token) {
-        var head, last, _ref;
+        var head, last, ref;
         while (token.type === 'cursor') {
           token = token.prev;
         }
@@ -1089,7 +1089,7 @@
         switch (token.type) {
           case 'indentStart':
             head = token.container.end.prev;
-            while ((_ref = head.type) === 'cursor' || _ref === 'segmentEnd' || _ref === 'segmentStart') {
+            while ((ref = head.type) === 'cursor' || ref === 'segmentEnd' || ref === 'segmentStart') {
               head = head.prev;
             }
             if (head.type === 'newline') {
@@ -1117,11 +1117,11 @@
       };
 
       Container.prototype.moveTo = function(token, mode) {
-        var leading, trailing, _ref, _ref1, _ref2;
+        var leading, ref, ref1, ref2, trailing;
         if ((this.start.prev != null) || (this.end.next != null)) {
           leading = this.getLeadingText();
           trailing = this.getTrailingText();
-          _ref = mode.parens(leading, trailing, this, null), leading = _ref[0], trailing = _ref[1];
+          ref = mode.parens(leading, trailing, this, null), leading = ref[0], trailing = ref[1];
           this.setLeadingText(leading);
           this.setTrailingText(trailing);
           this.spliceOut();
@@ -1129,7 +1129,7 @@
         if (token != null) {
           leading = this.getLeadingText();
           trailing = this.getTrailingText();
-          _ref2 = mode.parens(leading, trailing, this, (_ref1 = token.container) != null ? _ref1 : token.parent), leading = _ref2[0], trailing = _ref2[1];
+          ref2 = mode.parens(leading, trailing, this, (ref1 = token.container) != null ? ref1 : token.parent), leading = ref2[0], trailing = ref2[1];
           this.setLeadingText(leading);
           this.setTrailingText(trailing);
           return this.spliceIn(token);
@@ -1137,14 +1137,14 @@
       };
 
       Container.prototype.notifyChange = function() {
-        var head, _results;
+        var head, results;
         head = this;
-        _results = [];
+        results = [];
         while (head != null) {
           head.version++;
-          _results.push(head = head.parent);
+          results.push(head = head.parent);
         }
-        return _results;
+        return results;
       };
 
       Container.prototype.wrap = function(first, last) {
@@ -1174,17 +1174,17 @@
       };
 
       Container.prototype.find = function(fn, excludes) {
-        var examined, head, _ref;
+        var examined, head, ref;
         if (excludes == null) {
           excludes = [];
         }
         head = this.start;
         while (head !== this.end) {
           examined = head instanceof StartToken ? head.container : head;
-          if (__indexOf.call(excludes, examined) >= 0) {
+          if (indexOf.call(excludes, examined) >= 0) {
             head = examined.end;
           }
-          if (!(head instanceof EndToken || ((_ref = head.type) === 'newline' || _ref === 'cursor'))) {
+          if (!(head instanceof EndToken || ((ref = head.type) === 'newline' || ref === 'cursor'))) {
             if (fn(examined)) {
               return examined;
             }
@@ -1219,7 +1219,7 @@
       };
 
       Container.prototype.getBlockOnLine = function(line) {
-        var head, lineCount, stack, _ref;
+        var head, lineCount, ref, stack;
         head = this.start;
         lineCount = 0;
         stack = [];
@@ -1236,7 +1236,7 @@
           }
           head = head.next;
         }
-        while ((_ref = head != null ? head.type : void 0) === 'newline' || _ref === 'cursor' || _ref === 'segmentStart' || _ref === 'segmentEnd') {
+        while ((ref = head != null ? head.type : void 0) === 'newline' || ref === 'cursor' || ref === 'segmentStart' || ref === 'segmentEnd') {
           head = head.next;
         }
         if ((head != null ? head.type : void 0) === 'blockStart') {
@@ -1250,13 +1250,13 @@
       };
 
       Container.prototype.isFirstOnLine = function() {
-        var _ref, _ref1, _ref2, _ref3, _ref4;
-        return ((_ref = this.start.previousVisibleToken()) === ((_ref1 = this.parent) != null ? _ref1.start : void 0) || _ref === ((_ref2 = this.parent) != null ? (_ref3 = _ref2.parent) != null ? _ref3.start : void 0 : void 0) || _ref === null) || ((_ref4 = this.start.previousVisibleToken()) != null ? _ref4.type : void 0) === 'newline';
+        var ref, ref1, ref2, ref3, ref4;
+        return ((ref = this.start.previousVisibleToken()) === ((ref1 = this.parent) != null ? ref1.start : void 0) || ref === ((ref2 = this.parent) != null ? (ref3 = ref2.parent) != null ? ref3.start : void 0 : void 0) || ref === null) || ((ref4 = this.start.previousVisibleToken()) != null ? ref4.type : void 0) === 'newline';
       };
 
       Container.prototype.isLastOnLine = function() {
-        var _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
-        return ((_ref = this.end.nextVisibleToken()) === ((_ref1 = this.parent) != null ? _ref1.end : void 0) || _ref === ((_ref2 = this.parent) != null ? (_ref3 = _ref2.parent) != null ? _ref3.end : void 0 : void 0) || _ref === null) || ((_ref4 = (_ref5 = this.end.nextVisibleToken()) != null ? _ref5.type : void 0) === 'newline' || _ref4 === 'indentStart' || _ref4 === 'indentEnd');
+        var ref, ref1, ref2, ref3, ref4, ref5;
+        return ((ref = this.end.nextVisibleToken()) === ((ref1 = this.parent) != null ? ref1.end : void 0) || ref === ((ref2 = this.parent) != null ? (ref3 = ref2.parent) != null ? ref3.end : void 0 : void 0) || ref === null) || ((ref4 = (ref5 = this.end.nextVisibleToken()) != null ? ref5.type : void 0) === 'newline' || ref4 === 'indentStart' || ref4 === 'indentEnd');
       };
 
       Container.prototype.visParent = function() {
@@ -1275,16 +1275,16 @@
       Container.prototype.removeLineMark = function(tag) {
         var mark;
         return this.lineMarkStyles = (function() {
-          var _i, _len, _ref, _results;
-          _ref = this.lineMarkStyles;
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            mark = _ref[_i];
+          var i, len, ref, results;
+          ref = this.lineMarkStyles;
+          results = [];
+          for (i = 0, len = ref.length; i < len; i++) {
+            mark = ref[i];
             if (mark.tag !== tag) {
-              _results.push(mark);
+              results.push(mark);
             }
           }
-          return _results;
+          return results;
         }).call(this);
       };
 
@@ -1436,13 +1436,13 @@
       };
 
       Token.prototype.isFirstOnLine = function() {
-        var _ref, _ref1;
-        return this.previousVisibleToken() === ((_ref = this.parent) != null ? _ref.start : void 0) || ((_ref1 = this.previousVisibleToken()) != null ? _ref1.type : void 0) === 'newline';
+        var ref, ref1;
+        return this.previousVisibleToken() === ((ref = this.parent) != null ? ref.start : void 0) || ((ref1 = this.previousVisibleToken()) != null ? ref1.type : void 0) === 'newline';
       };
 
       Token.prototype.isLastOnLine = function() {
-        var _ref, _ref1, _ref2;
-        return this.nextVisibleToken() === ((_ref = this.parent) != null ? _ref.end : void 0) || ((_ref1 = (_ref2 = this.nextVisibleToken()) != null ? _ref2.type : void 0) === 'newline' || _ref1 === 'indentEnd');
+        var ref, ref1, ref2;
+        return this.nextVisibleToken() === ((ref = this.parent) != null ? ref.end : void 0) || ((ref1 = (ref2 = this.nextVisibleToken()) != null ? ref2.type : void 0) === 'newline' || ref1 === 'indentEnd');
       };
 
       Token.prototype.getSerializedLocation = function() {
@@ -1469,8 +1469,8 @@
       return Token;
 
     })();
-    exports.StartToken = StartToken = (function(_super) {
-      __extends(StartToken, _super);
+    exports.StartToken = StartToken = (function(superClass) {
+      extend(StartToken, superClass);
 
       function StartToken(container) {
         this.container = container;
@@ -1511,8 +1511,8 @@
       return StartToken;
 
     })(Token);
-    exports.EndToken = EndToken = (function(_super) {
-      __extends(EndToken, _super);
+    exports.EndToken = EndToken = (function(superClass) {
+      extend(EndToken, superClass);
 
       function EndToken(container) {
         this.container = container;
@@ -1553,8 +1553,8 @@
       return EndToken;
 
     })(Token);
-    exports.BlockStartToken = BlockStartToken = (function(_super) {
-      __extends(BlockStartToken, _super);
+    exports.BlockStartToken = BlockStartToken = (function(superClass) {
+      extend(BlockStartToken, superClass);
 
       function BlockStartToken(container) {
         this.container = container;
@@ -1565,8 +1565,8 @@
       return BlockStartToken;
 
     })(StartToken);
-    exports.BlockEndToken = BlockEndToken = (function(_super) {
-      __extends(BlockEndToken, _super);
+    exports.BlockEndToken = BlockEndToken = (function(superClass) {
+      extend(BlockEndToken, superClass);
 
       function BlockEndToken(container) {
         this.container = container;
@@ -1581,8 +1581,8 @@
       return BlockEndToken;
 
     })(EndToken);
-    exports.Block = Block = (function(_super) {
-      __extends(Block, _super);
+    exports.Block = Block = (function(superClass) {
+      extend(Block, superClass);
 
       function Block(precedence, color, socketLevel, classes) {
         this.precedence = precedence != null ? precedence : 0;
@@ -1603,8 +1603,8 @@
       };
 
       Block.prototype._serialize_header = function() {
-        var _ref, _ref1;
-        return "<block precedence=\"" + this.precedence + "\" color=\"" + this.color + "\" socketLevel=\"" + this.socketLevel + "\" classes=\"" + ((_ref = (_ref1 = this.classes) != null ? typeof _ref1.join === "function" ? _ref1.join(' ') : void 0 : void 0) != null ? _ref : '') + "\" >";
+        var ref, ref1;
+        return "<block precedence=\"" + this.precedence + "\" color=\"" + this.color + "\" socketLevel=\"" + this.socketLevel + "\" classes=\"" + ((ref = (ref1 = this.classes) != null ? typeof ref1.join === "function" ? ref1.join(' ') : void 0 : void 0) != null ? ref : '') + "\" >";
       };
 
       Block.prototype._serialize_footer = function() {
@@ -1614,8 +1614,8 @@
       return Block;
 
     })(Container);
-    exports.SocketStartToken = SocketStartToken = (function(_super) {
-      __extends(SocketStartToken, _super);
+    exports.SocketStartToken = SocketStartToken = (function(superClass) {
+      extend(SocketStartToken, superClass);
 
       function SocketStartToken(container) {
         this.container = container;
@@ -1634,8 +1634,8 @@
       return SocketStartToken;
 
     })(StartToken);
-    exports.SocketEndToken = SocketEndToken = (function(_super) {
-      __extends(SocketEndToken, _super);
+    exports.SocketEndToken = SocketEndToken = (function(superClass) {
+      extend(SocketEndToken, superClass);
 
       function SocketEndToken(container) {
         this.container = container;
@@ -1646,8 +1646,8 @@
       return SocketEndToken;
 
     })(EndToken);
-    exports.Socket = Socket = (function(_super) {
-      __extends(Socket, _super);
+    exports.Socket = Socket = (function(superClass) {
+      extend(Socket, superClass);
 
       function Socket(precedence, handwritten, classes, dropdown) {
         this.precedence = precedence != null ? precedence : 0;
@@ -1673,8 +1673,8 @@
       };
 
       Socket.prototype._serialize_header = function() {
-        var _ref, _ref1, _ref2, _ref3;
-        return "<socket precedence=\"" + this.precedence + "\" handwritten=\"" + this.handwritten + "\" classes=\"" + ((_ref = (_ref1 = this.classes) != null ? typeof _ref1.join === "function" ? _ref1.join(' ') : void 0 : void 0) != null ? _ref : '') + "\"" + (this.dropdown != null ? " dropdown=\"" + ((_ref2 = (_ref3 = this.dropdown) != null ? typeof _ref3.join === "function" ? _ref3.join(' ') : void 0 : void 0) != null ? _ref2 : '') + "\"" : '') + ">";
+        var ref, ref1, ref2, ref3;
+        return "<socket precedence=\"" + this.precedence + "\" handwritten=\"" + this.handwritten + "\" classes=\"" + ((ref = (ref1 = this.classes) != null ? typeof ref1.join === "function" ? ref1.join(' ') : void 0 : void 0) != null ? ref : '') + "\"" + (this.dropdown != null ? " dropdown=\"" + ((ref2 = (ref3 = this.dropdown) != null ? typeof ref3.join === "function" ? ref3.join(' ') : void 0 : void 0) != null ? ref2 : '') + "\"" : '') + ">";
       };
 
       Socket.prototype._serialize_footer = function() {
@@ -1684,8 +1684,8 @@
       return Socket;
 
     })(Container);
-    exports.IndentStartToken = IndentStartToken = (function(_super) {
-      __extends(IndentStartToken, _super);
+    exports.IndentStartToken = IndentStartToken = (function(superClass) {
+      extend(IndentStartToken, superClass);
 
       function IndentStartToken(container) {
         this.container = container;
@@ -1701,8 +1701,8 @@
       return IndentStartToken;
 
     })(StartToken);
-    exports.IndentEndToken = IndentEndToken = (function(_super) {
-      __extends(IndentEndToken, _super);
+    exports.IndentEndToken = IndentEndToken = (function(superClass) {
+      extend(IndentEndToken, superClass);
 
       function IndentEndToken(container) {
         this.container = container;
@@ -1728,8 +1728,8 @@
       return IndentEndToken;
 
     })(EndToken);
-    exports.Indent = Indent = (function(_super) {
-      __extends(Indent, _super);
+    exports.Indent = Indent = (function(superClass) {
+      extend(Indent, superClass);
 
       function Indent(prefix, classes) {
         this.prefix = prefix != null ? prefix : '';
@@ -1746,8 +1746,8 @@
       };
 
       Indent.prototype._serialize_header = function() {
-        var _ref, _ref1;
-        return "<indent prefix=\"" + this.prefix + "\" classes=\"" + ((_ref = (_ref1 = this.classes) != null ? typeof _ref1.join === "function" ? _ref1.join(' ') : void 0 : void 0) != null ? _ref : '') + "\">";
+        var ref, ref1;
+        return "<indent prefix=\"" + this.prefix + "\" classes=\"" + ((ref = (ref1 = this.classes) != null ? typeof ref1.join === "function" ? ref1.join(' ') : void 0 : void 0) != null ? ref : '') + "\">";
       };
 
       Indent.prototype._serialize_footer = function() {
@@ -1757,8 +1757,8 @@
       return Indent;
 
     })(Container);
-    exports.SegmentStartToken = SegmentStartToken = (function(_super) {
-      __extends(SegmentStartToken, _super);
+    exports.SegmentStartToken = SegmentStartToken = (function(superClass) {
+      extend(SegmentStartToken, superClass);
 
       function SegmentStartToken(container) {
         this.container = container;
@@ -1777,8 +1777,8 @@
       return SegmentStartToken;
 
     })(StartToken);
-    exports.SegmentEndToken = SegmentEndToken = (function(_super) {
-      __extends(SegmentEndToken, _super);
+    exports.SegmentEndToken = SegmentEndToken = (function(superClass) {
+      extend(SegmentEndToken, superClass);
 
       function SegmentEndToken(container) {
         this.container = container;
@@ -1797,8 +1797,8 @@
       return SegmentEndToken;
 
     })(EndToken);
-    exports.Segment = Segment = (function(_super) {
-      __extends(Segment, _super);
+    exports.Segment = Segment = (function(superClass) {
+      extend(Segment, superClass);
 
       function Segment(isLassoSegment) {
         this.isLassoSegment = isLassoSegment != null ? isLassoSegment : false;
@@ -1836,8 +1836,8 @@
       return Segment;
 
     })(Container);
-    exports.TextToken = TextToken = (function(_super) {
-      __extends(TextToken, _super);
+    exports.TextToken = TextToken = (function(superClass) {
+      extend(TextToken, superClass);
 
       function TextToken(_value) {
         this._value = _value;
@@ -1867,8 +1867,8 @@
       return TextToken;
 
     })(Token);
-    exports.NewlineToken = NewlineToken = (function(_super) {
-      __extends(NewlineToken, _super);
+    exports.NewlineToken = NewlineToken = (function(superClass) {
+      extend(NewlineToken, superClass);
 
       function NewlineToken(specialIndent) {
         this.specialIndent = specialIndent;
@@ -1877,8 +1877,8 @@
       }
 
       NewlineToken.prototype.stringify = function(state) {
-        var _ref;
-        return '\n' + ((_ref = this.specialIndent) != null ? _ref : state.indent);
+        var ref;
+        return '\n' + ((ref = this.specialIndent) != null ? ref : state.indent);
       };
 
       NewlineToken.prototype.serialize = function() {
@@ -1892,8 +1892,8 @@
       return NewlineToken;
 
     })(Token);
-    exports.CursorToken = CursorToken = (function(_super) {
-      __extends(CursorToken, _super);
+    exports.CursorToken = CursorToken = (function(superClass) {
+      extend(CursorToken, superClass);
 
       function CursorToken() {
         CursorToken.__super__.constructor.apply(this, arguments);
@@ -1916,8 +1916,8 @@
 
     })(Token);
     traverseOneLevel = function(head, fn) {
-      var _results;
-      _results = [];
+      var results;
+      results = [];
       while (true) {
         if (head instanceof EndToken || (head == null)) {
           break;
@@ -1927,9 +1927,9 @@
         } else {
           fn(head, false);
         }
-        _results.push(head = head.next);
+        results.push(head = head.next);
       }
-      return _results;
+      return results;
     };
     return exports;
   });
@@ -1939,10 +1939,10 @@
 //# sourceMappingURL=model.js.map
 ;
 (function() {
-  var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __modulo = function(a, b) { return (+a % (b = +b) + b) % b; };
+  var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty,
+    modulo = function(a, b) { return (+a % (b = +b) + b) % b; };
 
   define('droplet-view',['droplet-helper', 'droplet-draw', 'droplet-model'], function(helper, draw, model) {
     var ANY_DROP, BLOCK_ONLY, CARRIAGE_ARROW_INDENT, CARRIAGE_ARROW_NONE, CARRIAGE_ARROW_SIDEALONG, CARRIAGE_GROW_DOWN, DEFAULT_OPTIONS, DROPDOWN_ARROW_HEIGHT, DROP_TRIANGLE_COLOR, MOSTLY_BLOCK, MOSTLY_VALUE, MULTILINE_END, MULTILINE_END_START, MULTILINE_MIDDLE, MULTILINE_START, NO, NO_MULTILINE, VALUE_ONLY, View, YES, arrayEq, avgColor, defaultStyleObject, exports, toHex, toRGB, twoDigitHex, zeroPad;
@@ -2026,13 +2026,13 @@
         return false;
       }
       if ((function() {
-        var _i, _len, _results;
-        _results = [];
-        for (i = _i = 0, _len = a.length; _i < _len; i = ++_i) {
+        var j, len1, results;
+        results = [];
+        for (i = j = 0, len1 = a.length; j < len1; i = ++j) {
           k = a[i];
-          _results.push(k !== b[i]);
+          results.push(k !== b[i]);
         }
-        return _results;
+        return results;
       })()) {
         return false;
       }
@@ -2042,10 +2042,10 @@
       var BlockViewNode, ContainerViewNode, CursorViewNode, GenericViewNode, IndentViewNode, SegmentViewNode, SocketViewNode, TextViewNode;
 
       function View(opts) {
-        var option, _ref;
+        var option, ref;
         this.opts = opts != null ? opts : {};
         this.map = {};
-        this.draw = (_ref = this.opts.draw) != null ? _ref : new draw.Draw();
+        this.draw = (ref = this.opts.draw) != null ? ref : new draw.Draw();
         for (option in DEFAULT_OPTIONS) {
           if (!(option in this.opts)) {
             this.opts[option] = DEFAULT_OPTIONS[option];
@@ -2088,18 +2088,18 @@
       };
 
       View.prototype.getColor = function(color) {
-        var _ref;
+        var ref;
         if (color && '#' === color.charAt(0)) {
           return color;
         } else {
-          return (_ref = this.opts.colors[color]) != null ? _ref : '#ffffff';
+          return (ref = this.opts.colors[color]) != null ? ref : '#ffffff';
         }
       };
 
       GenericViewNode = (function() {
-        function GenericViewNode(model, view) {
-          this.model = model;
-          this.view = view;
+        function GenericViewNode(model1, view1) {
+          this.model = model1;
+          this.view = view1;
           this.view.map[this.model.id] = this;
           this.invalidate = false;
           this.lineLength = 0;
@@ -2133,39 +2133,39 @@
         }
 
         GenericViewNode.prototype.serialize = function(line) {
-          var child, i, prop, result, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _m, _n, _o, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+          var child, i, j, l, len1, len2, len3, len4, len5, len6, m, o, p, prop, q, ref, ref1, ref2, ref3, ref4, ref5, ref6, result, s;
           result = [];
-          _ref = ['lineLength', 'margins', 'topLineSticksToBottom', 'bottomLineSticksToTop', 'changedBoundingBox', 'path', 'highlightArea', 'computedVersion', 'carriageArrow', 'bevels'];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            prop = _ref[_i];
+          ref = ['lineLength', 'margins', 'topLineSticksToBottom', 'bottomLineSticksToTop', 'changedBoundingBox', 'path', 'highlightArea', 'computedVersion', 'carriageArrow', 'bevels'];
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            prop = ref[j];
             result.push(prop + ': ' + JSON.stringify(this[prop]));
           }
-          _ref1 = this.children;
-          for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
-            child = _ref1[i];
+          ref1 = this.children;
+          for (i = l = 0, len2 = ref1.length; l < len2; i = ++l) {
+            child = ref1[i];
             result.push(("child " + i + ": {startLine: " + child.startLine + ", ") + ("endLine: " + child.endLine + "}"));
           }
           if (line != null) {
-            _ref2 = ['multilineChildrenData', 'minDimensions', 'minDistanceToBase', 'dimensions', 'distanceToBase', 'bounds', 'glue'];
-            for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-              prop = _ref2[_k];
-              result.push("" + prop + " " + line + ": " + (JSON.stringify(this[prop][line])));
+            ref2 = ['multilineChildrenData', 'minDimensions', 'minDistanceToBase', 'dimensions', 'distanceToBase', 'bounds', 'glue'];
+            for (m = 0, len3 = ref2.length; m < len3; m++) {
+              prop = ref2[m];
+              result.push(prop + " " + line + ": " + (JSON.stringify(this[prop][line])));
             }
-            _ref3 = this.lineChildren[line];
-            for (i = _l = 0, _len3 = _ref3.length; _l < _len3; i = ++_l) {
-              child = _ref3[i];
+            ref3 = this.lineChildren[line];
+            for (i = o = 0, len4 = ref3.length; o < len4; i = ++o) {
+              child = ref3[i];
               result.push(("line " + line + " child " + i + ": ") + ("{startLine: " + child.startLine + ", ") + ("endLine: " + child.endLine + "}}"));
             }
           } else {
-            for (line = _m = 0, _ref4 = this.lineLength; 0 <= _ref4 ? _m < _ref4 : _m > _ref4; line = 0 <= _ref4 ? ++_m : --_m) {
-              _ref5 = ['multilineChildrenData', 'minDimensions', 'minDistanceToBase', 'dimensions', 'distanceToBase', 'bounds', 'glue'];
-              for (_n = 0, _len4 = _ref5.length; _n < _len4; _n++) {
-                prop = _ref5[_n];
-                result.push("" + prop + " " + line + ": " + (JSON.stringify(this[prop][line])));
+            for (line = p = 0, ref4 = this.lineLength; 0 <= ref4 ? p < ref4 : p > ref4; line = 0 <= ref4 ? ++p : --p) {
+              ref5 = ['multilineChildrenData', 'minDimensions', 'minDistanceToBase', 'dimensions', 'distanceToBase', 'bounds', 'glue'];
+              for (q = 0, len5 = ref5.length; q < len5; q++) {
+                prop = ref5[q];
+                result.push(prop + " " + line + ": " + (JSON.stringify(this[prop][line])));
               }
-              _ref6 = this.lineChildren[line];
-              for (i = _o = 0, _len5 = _ref6.length; _o < _len5; i = ++_o) {
-                child = _ref6[i];
+              ref6 = this.lineChildren[line];
+              for (i = s = 0, len6 = ref6.length; s < len6; i = ++s) {
+                child = ref6[i];
                 result.push(("line " + line + " child " + i + ": ") + ("{startLine: " + child.startLine + ", ") + ("endLine: " + child.endLine + "}}"));
               }
             }
@@ -2182,11 +2182,11 @@
         };
 
         GenericViewNode.prototype.computeMargins = function() {
-          var childObj, left, padding, parenttype, right, _i, _len, _ref, _ref1;
+          var childObj, j, left, len1, padding, parenttype, ref, ref1, right;
           if (this.computedVersion === this.model.version && ((this.model.parent == null) || this.model.parent.version === this.view.getViewNodeFor(this.model.parent).computedVersion)) {
             return this.margins;
           }
-          parenttype = (_ref = this.model.parent) != null ? _ref.type : void 0;
+          parenttype = (ref = this.model.parent) != null ? ref.type : void 0;
           padding = this.view.opts.padding;
           left = this.model.isFirstOnLine() || this.lineLength > 1 ? padding : 0;
           right = this.model.isLastOnLine() || this.lineLength > 1 ? padding : 0;
@@ -2264,9 +2264,9 @@
             top: this.lineLength === 1 ? this.margins.top : 0,
             bottom: this.margins.bottom
           };
-          _ref1 = this.children;
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            childObj = _ref1[_i];
+          ref1 = this.children;
+          for (j = 0, len1 = ref1.length; j < len1; j++) {
+            childObj = ref1[j];
             this.view.getViewNodeFor(childObj.child).computeMargins();
           }
           return null;
@@ -2292,7 +2292,7 @@
         };
 
         GenericViewNode.prototype.computeMinDimensions = function() {
-          var i, _i, _ref;
+          var i, j, ref;
           if (this.minDimensions.length > this.lineLength) {
             this.minDimensions.length = this.minDistanceToBase.length = this.lineLength;
           } else {
@@ -2304,7 +2304,7 @@
               });
             }
           }
-          for (i = _i = 0, _ref = this.lineLength; 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
+          for (i = j = 0, ref = this.lineLength; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
             this.minDimensions[i].width = this.minDimensions[i].height = 0;
             this.minDistanceToBase[i].above = this.minDistanceToBase[i].below = 0;
           }
@@ -2312,7 +2312,7 @@
         };
 
         GenericViewNode.prototype.computeDimensions = function(startLine, force, root) {
-          var changed, childObj, distance, i, line, lineCount, oldDimensions, oldDistanceToBase, parentNode, size, _i, _j, _k, _len, _len1, _ref, _ref1, _ref2;
+          var changed, childObj, distance, i, j, l, len1, len2, line, lineCount, m, oldDimensions, oldDistanceToBase, parentNode, ref, ref1, ref2, size;
           if (root == null) {
             root = false;
           }
@@ -2322,27 +2322,27 @@
           oldDimensions = this.dimensions;
           oldDistanceToBase = this.distanceToBase;
           this.dimensions = (function() {
-            var _i, _ref, _results;
-            _results = [];
-            for (_i = 0, _ref = this.lineLength; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--) {
-              _results.push(new this.view.draw.Size(0, 0));
+            var j, ref, results;
+            results = [];
+            for (j = 0, ref = this.lineLength; 0 <= ref ? j < ref : j > ref; 0 <= ref ? j++ : j--) {
+              results.push(new this.view.draw.Size(0, 0));
             }
-            return _results;
+            return results;
           }).call(this);
           this.distanceToBase = (function() {
-            var _i, _ref, _results;
-            _results = [];
-            for (_i = 0, _ref = this.lineLength; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--) {
-              _results.push({
+            var j, ref, results;
+            results = [];
+            for (j = 0, ref = this.lineLength; 0 <= ref ? j < ref : j > ref; 0 <= ref ? j++ : j--) {
+              results.push({
                 above: 0,
                 below: 0
               });
             }
-            return _results;
+            return results;
           }).call(this);
-          _ref = this.minDimensions;
-          for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
-            size = _ref[i];
+          ref = this.minDimensions;
+          for (i = j = 0, len1 = ref.length; j < len1; i = ++j) {
+            size = ref[i];
             this.dimensions[i].width = size.width;
             this.dimensions[i].height = size.height;
             this.distanceToBase[i].above = this.minDistanceToBase[i].above;
@@ -2369,7 +2369,7 @@
           }
           changed = oldDimensions.length !== this.lineLength;
           if (!changed) {
-            for (line = _j = 0, _ref1 = this.lineLength; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; line = 0 <= _ref1 ? ++_j : --_j) {
+            for (line = l = 0, ref1 = this.lineLength; 0 <= ref1 ? l < ref1 : l > ref1; line = 0 <= ref1 ? ++l : --l) {
               if (!oldDimensions[line].equals(this.dimensions[line]) || oldDistanceToBase[line].above !== this.distanceToBase[line].above || oldDistanceToBase[line].below !== this.distanceToBase[line].below) {
                 changed = true;
                 break;
@@ -2377,10 +2377,10 @@
             }
           }
           this.changedBoundingBox || (this.changedBoundingBox = changed);
-          _ref2 = this.children;
-          for (_k = 0, _len1 = _ref2.length; _k < _len1; _k++) {
-            childObj = _ref2[_k];
-            if (__indexOf.call(this.lineChildren[0], childObj) >= 0 || __indexOf.call(this.lineChildren[this.lineLength - 1], childObj) >= 0) {
+          ref2 = this.children;
+          for (m = 0, len2 = ref2.length; m < len2; m++) {
+            childObj = ref2[m];
+            if (indexOf.call(this.lineChildren[0], childObj) >= 0 || indexOf.call(this.lineChildren[this.lineLength - 1], childObj) >= 0) {
               this.view.getViewNodeFor(childObj.child).computeDimensions(childObj.startLine, changed);
             } else {
               this.view.getViewNodeFor(childObj.child).computeDimensions(childObj.startLine, false);
@@ -2390,8 +2390,8 @@
         };
 
         GenericViewNode.prototype.computeBoundingBoxX = function(left, line) {
-          var _ref, _ref1, _ref2;
-          if (this.computedVersion === this.model.version && left === ((_ref = this.bounds[line]) != null ? _ref.x : void 0) && !this.changedBoundingBox || ((_ref1 = this.bounds[line]) != null ? _ref1.x : void 0) === left && ((_ref2 = this.bounds[line]) != null ? _ref2.width : void 0) === this.dimensions[line].width) {
+          var ref, ref1, ref2;
+          if (this.computedVersion === this.model.version && left === ((ref = this.bounds[line]) != null ? ref.x : void 0) && !this.changedBoundingBox || ((ref1 = this.bounds[line]) != null ? ref1.x : void 0) === left && ((ref2 = this.bounds[line]) != null ? ref2.width : void 0) === this.dimensions[line].width) {
             return this.bounds[line];
           }
           this.changedBoundingBox = true;
@@ -2405,13 +2405,13 @@
         };
 
         GenericViewNode.prototype.computeAllBoundingBoxX = function(left) {
-          var line, size, _i, _len, _ref;
+          var j, len1, line, ref, size;
           if (left == null) {
             left = 0;
           }
-          _ref = this.dimensions;
-          for (line = _i = 0, _len = _ref.length; _i < _len; line = ++_i) {
-            size = _ref[line];
+          ref = this.dimensions;
+          for (line = j = 0, len1 = ref.length; j < len1; line = ++j) {
+            size = ref[line];
             this.computeBoundingBoxX(left, line);
           }
           return this.bounds;
@@ -2422,8 +2422,8 @@
         };
 
         GenericViewNode.prototype.computeBoundingBoxY = function(top, line) {
-          var _ref;
-          if (this.computedVersion === this.model.version && top === ((_ref = this.bounds[line]) != null ? _ref.y : void 0) && !this.changedBoundingBox || this.bounds[line].y === top && this.bounds[line].height === this.dimensions[line].height) {
+          var ref;
+          if (this.computedVersion === this.model.version && top === ((ref = this.bounds[line]) != null ? ref.y : void 0) && !this.changedBoundingBox || this.bounds[line].y === top && this.bounds[line].height === this.dimensions[line].height) {
             return this.bounds[line];
           }
           this.changedBoundingBox = true;
@@ -2433,13 +2433,13 @@
         };
 
         GenericViewNode.prototype.computeAllBoundingBoxY = function(top) {
-          var line, size, _i, _len, _ref;
+          var j, len1, line, ref, size;
           if (top == null) {
             top = 0;
           }
-          _ref = this.dimensions;
-          for (line = _i = 0, _len = _ref.length; _i < _len; line = ++_i) {
-            size = _ref[line];
+          ref = this.dimensions;
+          for (line = j = 0, len1 = ref.length; j < len1; line = ++j) {
+            size = ref[line];
             this.computeBoundingBoxY(top, line);
             top += size.height;
             if (line in this.glue) {
@@ -2458,13 +2458,13 @@
         };
 
         GenericViewNode.prototype.computePath = function() {
-          var bound, child, childObj, maxRight, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+          var bound, child, childObj, j, l, len1, len2, len3, m, maxRight, ref, ref1, ref2;
           if (this.computedVersion === this.model.version && (this.model.isLastOnLine() === this.lastComputedLinePredicate) && !this.changedBoundingBox) {
             return null;
           }
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).computePath();
           }
           if (this.changedBoundingBox || (this.model.isLastOnLine() !== this.lastComputedLinePredicate)) {
@@ -2475,16 +2475,16 @@
               this.totalBounds.unite(this.bounds[this.bounds.length - 1]);
             }
             if (this.bounds.length > this.children.length) {
-              _ref1 = this.children;
-              for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-                child = _ref1[_j];
+              ref1 = this.children;
+              for (l = 0, len2 = ref1.length; l < len2; l++) {
+                child = ref1[l];
                 this.totalBounds.unite(this.view.getViewNodeFor(child.child).totalBounds);
               }
             } else {
               maxRight = this.totalBounds.right();
-              _ref2 = this.bounds;
-              for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-                bound = _ref2[_k];
+              ref2 = this.bounds;
+              for (m = 0, len3 = ref2.length; m < len3; m++) {
+                bound = ref2[m];
                 this.totalBounds.x = Math.min(this.totalBounds.x, bound.x);
                 maxRight = Math.max(maxRight, bound.right());
               }
@@ -2499,30 +2499,30 @@
         GenericViewNode.prototype.computeOwnDropArea = function() {};
 
         GenericViewNode.prototype.computeDropAreas = function() {
-          var childObj, _i, _len, _ref;
+          var childObj, j, len1, ref;
           if (this.computedVersion === this.model.version && !this.changedBoundingBox) {
             return null;
           }
           this.computeOwnDropArea();
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).computeDropAreas();
           }
           return null;
         };
 
         GenericViewNode.prototype.computeNewVersionNumber = function() {
-          var childObj, _i, _len, _ref;
+          var childObj, j, len1, ref;
           if (this.computedVersion === this.model.version && !this.changedBoundingBox) {
             return null;
           }
           this.changedBoundingBox = false;
           this.invalidate = false;
           this.computedVersion = this.model.version;
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).computeNewVersionNumber();
           }
           return null;
@@ -2531,7 +2531,7 @@
         GenericViewNode.prototype.drawSelf = function(ctx, style) {};
 
         GenericViewNode.prototype.draw = function(ctx, boundingRect, style) {
-          var childObj, _i, _len, _ref;
+          var childObj, j, len1, ref;
           if (this.totalBounds.overlap(boundingRect)) {
             if (style == null) {
               style = defaultStyleObject();
@@ -2540,9 +2540,9 @@
               style.grayscale++;
             }
             this.drawSelf(ctx, style);
-            _ref = this.children;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              childObj = _ref[_i];
+            ref = this.children;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              childObj = ref[j];
               this.view.getViewNodeFor(childObj.child).draw(ctx, boundingRect, style);
             }
             if (this.model.ephemeral && this.view.opts.respectEphemeral) {
@@ -2555,31 +2555,31 @@
         GenericViewNode.prototype.drawShadow = function(ctx) {};
 
         GenericViewNode.prototype.debugDimensions = function(x, y, line, ctx) {
-          var childObj, childView, _i, _len, _ref, _results;
+          var childObj, childView, j, len1, ref, results;
           ctx.fillStyle = '#00F';
           ctx.strokeStyle = '#000';
           ctx.lineWidth = 1;
           ctx.fillRect(x, y, this.dimensions[line].width, this.dimensions[line].height);
           ctx.strokeRect(x, y, this.dimensions[line].width, this.dimensions[line].height);
-          _ref = this.lineChildren[line];
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.lineChildren[line];
+          results = [];
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             childView = this.view.getViewNodeFor(childObj.child);
             x += childView.getMargins(line).left;
             childView.debugDimensions(x, y, line - childObj.startLine, ctx);
-            _results.push(x += childView.dimensions[line - childObj.startLine].width + childView.getMargins(line).right);
+            results.push(x += childView.dimensions[line - childObj.startLine].width + childView.getMargins(line).right);
           }
-          return _results;
+          return results;
         };
 
         GenericViewNode.prototype.debugAllDimensions = function(ctx) {
-          var line, size, y, _i, _len, _ref;
+          var j, len1, line, ref, size, y;
           ctx.globalAlpha = 0.1;
           y = 0;
-          _ref = this.dimensions;
-          for (line = _i = 0, _len = _ref.length; _i < _len; line = ++_i) {
-            size = _ref[line];
+          ref = this.dimensions;
+          for (line = j = 0, len1 = ref.length; j < len1; line = ++j) {
+            size = ref[line];
             this.debugDimensions(0, y, line, ctx);
             y += size.height;
           }
@@ -2587,17 +2587,17 @@
         };
 
         GenericViewNode.prototype.debugAllBoundingBoxes = function(ctx) {
-          var bound, childObj, _i, _j, _len, _len1, _ref, _ref1;
+          var bound, childObj, j, l, len1, len2, ref, ref1;
           ctx.globalAlpha = 0.1;
-          _ref = this.bounds;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            bound = _ref[_i];
+          ref = this.bounds;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            bound = ref[j];
             bound.fill(ctx, '#00F');
             bound.stroke(ctx, '#000');
           }
-          _ref1 = this.children;
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            childObj = _ref1[_j];
+          ref1 = this.children;
+          for (l = 0, len2 = ref1.length; l < len2; l++) {
+            childObj = ref1[l];
             this.view.getViewNodeFor(childObj.child).debugAllBoundingBoxes(ctx);
           }
           return ctx.globalAlpha = 1;
@@ -2607,17 +2607,17 @@
 
       })();
 
-      ContainerViewNode = (function(_super) {
-        __extends(ContainerViewNode, _super);
+      ContainerViewNode = (function(superClass) {
+        extend(ContainerViewNode, superClass);
 
-        function ContainerViewNode(model, view) {
-          this.model = model;
-          this.view = view;
+        function ContainerViewNode(model1, view1) {
+          this.model = model1;
+          this.view = view1;
           ContainerViewNode.__super__.constructor.apply(this, arguments);
         }
 
         ContainerViewNode.prototype.computeChildren = function() {
-          var i, line, _base, _i, _ref;
+          var base, i, j, line, ref;
           if (this.computedVersion === this.model.version) {
             return this.lineLength;
           }
@@ -2630,10 +2630,10 @@
           line = 0;
           this.model.traverseOneLevel((function(_this) {
             return function(head, isContainer) {
-              var childLength, childObject, i, view, _base, _base1, _i, _j, _ref, _ref1, _ref2;
+              var base, base1, childLength, childObject, i, j, l, ref, ref1, ref2, ref3, view;
               if (head.type === 'newline') {
                 line += 1;
-                return (_base = _this.lineChildren)[line] != null ? _base[line] : _base[line] = [];
+                return (base = _this.lineChildren)[line] != null ? base[line] : base[line] = [];
               } else {
                 view = _this.view.getViewNodeFor(head);
                 childLength = view.computeChildren();
@@ -2643,9 +2643,9 @@
                   endLine: line + childLength - 1
                 };
                 _this.children.push(childObject);
-                for (i = _i = line, _ref = line + childLength; line <= _ref ? _i < _ref : _i > _ref; i = line <= _ref ? ++_i : --_i) {
-                  if ((_base1 = _this.lineChildren)[i] == null) {
-                    _base1[i] = [];
+                for (i = j = ref = line, ref1 = line + childLength; ref <= ref1 ? j < ref1 : j > ref1; i = ref <= ref1 ? ++j : --j) {
+                  if ((base1 = _this.lineChildren)[i] == null) {
+                    base1[i] = [];
                   }
                   if (head.type !== 'cursor') {
                     _this.lineChildren[i].push(childObject);
@@ -2657,7 +2657,7 @@
                   } else {
                     _this.multilineChildrenData[line] = MULTILINE_START;
                   }
-                  for (i = _j = _ref1 = line + 1, _ref2 = line + childLength - 1; _ref1 <= _ref2 ? _j < _ref2 : _j > _ref2; i = _ref1 <= _ref2 ? ++_j : --_j) {
+                  for (i = l = ref2 = line + 1, ref3 = line + childLength - 1; ref2 <= ref3 ? l < ref3 : l > ref3; i = ref2 <= ref3 ? ++l : --l) {
                     _this.multilineChildrenData[i] = MULTILINE_MIDDLE;
                   }
                   _this.multilineChildrenData[line + childLength - 1] = MULTILINE_END;
@@ -2671,9 +2671,9 @@
             this.changedBoundingBox = true;
             this.bounds = this.bounds.slice(0, this.lineLength);
           }
-          for (i = _i = 0, _ref = this.lineLength; 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
-            if ((_base = this.multilineChildrenData)[i] == null) {
-              _base[i] = NO_MULTILINE;
+          for (i = j = 0, ref = this.lineLength; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+            if ((base = this.multilineChildrenData)[i] == null) {
+              base[i] = NO_MULTILINE;
             }
           }
           if (this.lineLength > 1) {
@@ -2684,7 +2684,7 @@
         };
 
         ContainerViewNode.prototype.computeCarriageArrow = function(root) {
-          var childObj, head, oldCarriageArrow, parent, _i, _len, _ref;
+          var childObj, head, j, len1, oldCarriageArrow, parent, ref;
           if (root == null) {
             root = false;
           }
@@ -2712,25 +2712,25 @@
           if (this.computedVersion === this.model.version && ((this.model.parent == null) || this.model.parent.version === this.view.getViewNodeFor(this.model.parent).computedVersion)) {
             return null;
           }
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).computeCarriageArrow();
           }
           return null;
         };
 
         ContainerViewNode.prototype.computeBevels = function() {
-          var childObj, oldBevels, _i, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7;
+          var childObj, j, len1, oldBevels, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7;
           oldBevels = this.bevels;
           this.bevels = {
             top: true,
             bottom: true
           };
-          if ((((_ref = this.model.visParent()) != null ? _ref.type : void 0) === 'indent' || ((_ref1 = this.model.visParent()) != null ? _ref1.isRoot : void 0)) && ((_ref2 = this.model.start.previousAffectToken()) != null ? _ref2.type : void 0) === 'newline' && ((_ref3 = this.model.start.previousAffectToken()) != null ? _ref3.previousAffectToken() : void 0) !== this.model.visParent().start) {
+          if ((((ref = this.model.visParent()) != null ? ref.type : void 0) === 'indent' || ((ref1 = this.model.visParent()) != null ? ref1.isRoot : void 0)) && ((ref2 = this.model.start.previousAffectToken()) != null ? ref2.type : void 0) === 'newline' && ((ref3 = this.model.start.previousAffectToken()) != null ? ref3.previousAffectToken() : void 0) !== this.model.visParent().start) {
             this.bevels.top = false;
           }
-          if ((((_ref4 = this.model.visParent()) != null ? _ref4.type : void 0) === 'indent' || ((_ref5 = this.model.visParent()) != null ? _ref5.isRoot : void 0)) && ((_ref6 = this.model.end.nextAffectToken()) != null ? _ref6.type : void 0) === 'newline') {
+          if ((((ref4 = this.model.visParent()) != null ? ref4.type : void 0) === 'indent' || ((ref5 = this.model.visParent()) != null ? ref5.isRoot : void 0)) && ((ref6 = this.model.end.nextAffectToken()) != null ? ref6.type : void 0) === 'newline') {
             this.bevels.bottom = false;
           }
           if (!(oldBevels.top === this.bevels.top && oldBevels.bottom === this.bevels.bottom)) {
@@ -2739,30 +2739,30 @@
           if (this.computedVersion === this.model.version) {
             return null;
           }
-          _ref7 = this.children;
-          for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-            childObj = _ref7[_i];
+          ref7 = this.children;
+          for (j = 0, len1 = ref7.length; j < len1; j++) {
+            childObj = ref7[j];
             this.view.getViewNodeFor(childObj.child).computeBevels();
           }
           return null;
         };
 
         ContainerViewNode.prototype.computeMinDimensions = function() {
-          var bottomMargin, childNode, childObject, desiredLine, line, lineChild, lineChildView, linesToExtend, margins, minDimension, minDimensions, minDistanceToBase, preIndentLines, size, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _m, _n, _ref, _ref1, _ref2;
+          var bottomMargin, childNode, childObject, desiredLine, j, l, len1, len2, len3, len4, len5, len6, line, lineChild, lineChildView, linesToExtend, m, margins, minDimension, minDimensions, minDistanceToBase, o, p, preIndentLines, q, ref, ref1, ref2, size;
           if (this.computedVersion === this.model.version) {
             return null;
           }
           ContainerViewNode.__super__.computeMinDimensions.apply(this, arguments);
           linesToExtend = [];
           preIndentLines = [];
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObject = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObject = ref[j];
             childNode = this.view.getViewNodeFor(childObject.child);
             childNode.computeMinDimensions();
             minDimensions = childNode.minDimensions;
             minDistanceToBase = childNode.minDistanceToBase;
-            for (line = _j = 0, _len1 = minDimensions.length; _j < _len1; line = ++_j) {
+            for (line = l = 0, len2 = minDimensions.length; l < len2; line = ++l) {
               size = minDimensions[line];
               desiredLine = line + childObject.startLine;
               margins = childNode.getMargins(line);
@@ -2780,9 +2780,9 @@
               this.minDistanceToBase[desiredLine].below = Math.max(this.minDistanceToBase[desiredLine].below, minDistanceToBase[line].below + bottomMargin);
             }
           }
-          _ref1 = this.minDimensions;
-          for (line = _k = 0, _len2 = _ref1.length; _k < _len2; line = ++_k) {
-            minDimension = _ref1[line];
+          ref1 = this.minDimensions;
+          for (line = m = 0, len3 = ref1.length; m < len3; line = ++m) {
+            minDimension = ref1[line];
             if (this.lineChildren[line].length === 0) {
               if (this.model.type === 'socket') {
                 this.minDistanceToBase[line].above = this.view.opts.textHeight * this.view.opts.textPadding;
@@ -2794,17 +2794,17 @@
             }
             minDimension.height = this.minDistanceToBase[line].above + this.minDistanceToBase[line].below;
           }
-          for (_l = 0, _len3 = linesToExtend.length; _l < _len3; _l++) {
-            line = linesToExtend[_l];
+          for (o = 0, len4 = linesToExtend.length; o < len4; o++) {
+            line = linesToExtend[o];
             this.minDimensions[line].width = Math.max(this.minDimensions[line].width, this.minDimensions[line - 1].width);
           }
-          for (_m = 0, _len4 = preIndentLines.length; _m < _len4; _m++) {
-            line = preIndentLines[_m];
+          for (p = 0, len5 = preIndentLines.length; p < len5; p++) {
+            line = preIndentLines[p];
             this.minDimensions[line].width = Math.max(this.minDimensions[line].width, this.view.opts.indentWidth + this.view.opts.tabWidth + this.view.opts.tabOffset + this.view.opts.bevelClip);
           }
-          _ref2 = this.lineChildren[this.lineLength - 1];
-          for (_n = 0, _len5 = _ref2.length; _n < _len5; _n++) {
-            lineChild = _ref2[_n];
+          ref2 = this.lineChildren[this.lineLength - 1];
+          for (q = 0, len6 = ref2.length; q < len6; q++) {
+            lineChild = ref2[q];
             lineChildView = this.view.getViewNodeFor(lineChild.child);
             if (lineChildView.carriageArrow !== CARRIAGE_ARROW_NONE) {
               this.minDistanceToBase[this.lineLength - 1].below += this.view.opts.padding;
@@ -2816,14 +2816,14 @@
         };
 
         ContainerViewNode.prototype.computeBoundingBoxX = function(left, line, offset) {
-          var childLeft, childLine, childMargins, childView, i, lineChild, _i, _len, _ref, _ref1, _ref2, _ref3;
+          var childLeft, childLine, childMargins, childView, i, j, len1, lineChild, ref, ref1, ref2, ref3;
           if (offset == null) {
             offset = 0;
           }
-          if (this.computedVersion === this.model.version && left === ((_ref = this.bounds[line]) != null ? _ref.x : void 0) && !this.changedBoundingBox) {
+          if (this.computedVersion === this.model.version && left === ((ref = this.bounds[line]) != null ? ref.x : void 0) && !this.changedBoundingBox) {
             return this.bounds[line];
           }
-          if (!(((_ref1 = this.bounds[line]) != null ? _ref1.x : void 0) === left && ((_ref2 = this.bounds[line]) != null ? _ref2.width : void 0) === this.dimensions[line].width)) {
+          if (!(((ref1 = this.bounds[line]) != null ? ref1.x : void 0) === left && ((ref2 = this.bounds[line]) != null ? ref2.width : void 0) === this.dimensions[line].width)) {
             if (this.bounds[line] != null) {
               this.bounds[line].x = left;
               this.bounds[line].width = this.dimensions[line].width;
@@ -2833,9 +2833,9 @@
             this.changedBoundingBox = true;
           }
           childLeft = left + offset;
-          _ref3 = this.lineChildren[line];
-          for (i = _i = 0, _len = _ref3.length; _i < _len; i = ++_i) {
-            lineChild = _ref3[i];
+          ref3 = this.lineChildren[line];
+          for (i = j = 0, len1 = ref3.length; j < len1; i = ++j) {
+            lineChild = ref3[i];
             childView = this.view.getViewNodeFor(lineChild.child);
             childLine = line - lineChild.startLine;
             childMargins = childView.getMargins(childLine);
@@ -2847,19 +2847,19 @@
         };
 
         ContainerViewNode.prototype.computeGlue = function() {
-          var box, childLine, childObj, childView, line, lineChild, overlap, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3;
+          var box, childLine, childObj, childView, j, l, len1, len2, len3, line, lineChild, m, overlap, ref, ref1, ref2, ref3;
           if (this.computedVersion === this.model.version && !this.changedBoundingBox) {
             return this.glue;
           }
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).computeGlue();
           }
           this.glue = {};
-          _ref1 = this.bounds;
-          for (line = _j = 0, _len1 = _ref1.length; _j < _len1; line = ++_j) {
-            box = _ref1[line];
+          ref1 = this.bounds;
+          for (line = l = 0, len2 = ref1.length; l < len2; line = ++l) {
+            box = ref1[line];
             if (!(line < this.bounds.length - 1)) {
               continue;
             }
@@ -2868,9 +2868,9 @@
               height: 0,
               draw: false
             };
-            _ref2 = this.lineChildren[line];
-            for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-              lineChild = _ref2[_k];
+            ref2 = this.lineChildren[line];
+            for (m = 0, len3 = ref2.length; m < len3; m++) {
+              lineChild = ref2[m];
               childView = this.view.getViewNodeFor(lineChild.child);
               childLine = line - lineChild.startLine;
               if (childLine in childView.glue) {
@@ -2882,7 +2882,7 @@
             }
             if (!(this.multilineChildrenData[line] === MULTILINE_MIDDLE || this.model.type === 'segment')) {
               overlap = Math.min(this.bounds[line].right() - this.bounds[line + 1].x, this.bounds[line + 1].right() - this.bounds[line].x);
-              if ((_ref3 = this.multilineChildrenData[line]) === MULTILINE_START || _ref3 === MULTILINE_END_START) {
+              if ((ref3 = this.multilineChildrenData[line]) === MULTILINE_START || ref3 === MULTILINE_END_START) {
                 overlap = Math.min(overlap, this.bounds[line + 1].x + this.view.opts.indentWidth - this.bounds[line].x);
               }
               if (overlap < this.view.opts.padding && this.model.type !== 'indent') {
@@ -2895,19 +2895,19 @@
         };
 
         ContainerViewNode.prototype.computeBoundingBoxY = function(top, line) {
-          var above, childAbove, childLine, childView, i, lineChild, _i, _len, _ref, _ref1, _ref2, _ref3;
-          if (this.computedVersion === this.model.version && top === ((_ref = this.bounds[line]) != null ? _ref.y : void 0) && !this.changedBoundingBox) {
+          var above, childAbove, childLine, childView, i, j, len1, lineChild, ref, ref1, ref2, ref3;
+          if (this.computedVersion === this.model.version && top === ((ref = this.bounds[line]) != null ? ref.y : void 0) && !this.changedBoundingBox) {
             return this.bounds[line];
           }
-          if (!(((_ref1 = this.bounds[line]) != null ? _ref1.y : void 0) === top && ((_ref2 = this.bounds[line]) != null ? _ref2.height : void 0) === this.dimensions[line].height)) {
+          if (!(((ref1 = this.bounds[line]) != null ? ref1.y : void 0) === top && ((ref2 = this.bounds[line]) != null ? ref2.height : void 0) === this.dimensions[line].height)) {
             this.bounds[line].y = top;
             this.bounds[line].height = this.dimensions[line].height;
             this.changedBoundingBox = true;
           }
           above = this.distanceToBase[line].above;
-          _ref3 = this.lineChildren[line];
-          for (i = _i = 0, _len = _ref3.length; _i < _len; i = ++_i) {
-            lineChild = _ref3[i];
+          ref3 = this.lineChildren[line];
+          for (i = j = 0, len1 = ref3.length; j < len1; i = ++j) {
+            lineChild = ref3[i];
             childView = this.view.getViewNodeFor(lineChild.child);
             childLine = line - lineChild.startLine;
             childAbove = childView.distanceToBase[childLine].above;
@@ -2941,15 +2941,15 @@
         };
 
         ContainerViewNode.prototype.computeOwnPath = function() {
-          var bounds, destinationBounds, el, glueTop, i, innerLeft, innerRight, left, leftmost, line, multilineBounds, multilineChild, multilineNode, multilineView, newPath, next, parentViewNode, path, point, prev, right, rightmost, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
+          var bounds, destinationBounds, el, glueTop, i, innerLeft, innerRight, j, l, left, leftmost, len1, len2, len3, line, m, multilineBounds, multilineChild, multilineNode, multilineView, newPath, next, parentViewNode, path, point, prev, ref, ref1, ref2, ref3, ref4, ref5, ref6, right, rightmost;
           left = [];
           right = [];
           if (this.shouldAddTab() && this.model.isFirstOnLine() && this.carriageArrow !== CARRIAGE_ARROW_SIDEALONG) {
             this.addTabReverse(right, new this.view.draw.Point(this.bounds[0].x + this.view.opts.tabOffset, this.bounds[0].y));
           }
-          _ref = this.bounds;
-          for (line = _i = 0, _len = _ref.length; _i < _len; line = ++_i) {
-            bounds = _ref[line];
+          ref = this.bounds;
+          for (line = j = 0, len1 = ref.length; j < len1; line = ++j) {
+            bounds = ref[line];
             if (this.multilineChildrenData[line] === NO_MULTILINE) {
               left.push(new this.view.draw.Point(bounds.x, bounds.y));
               left.push(new this.view.draw.Point(bounds.x, bounds.bottom()));
@@ -2979,17 +2979,17 @@
               multilineBounds = this.view.getViewNodeFor(multilineChild.child).bounds[line - multilineChild.startLine];
               left.push(new this.view.draw.Point(bounds.x, bounds.y));
               left.push(new this.view.draw.Point(bounds.x, bounds.bottom()));
-              if (!(((_ref1 = this.multilineChildrenData[line - 1]) === MULTILINE_START || _ref1 === MULTILINE_END_START) && multilineChild.child.type === 'indent')) {
+              if (!(((ref1 = this.multilineChildrenData[line - 1]) === MULTILINE_START || ref1 === MULTILINE_END_START) && multilineChild.child.type === 'indent')) {
                 right.push(new this.view.draw.Point(multilineBounds.x, bounds.y));
               }
               right.push(new this.view.draw.Point(multilineBounds.x, bounds.bottom()));
             }
-            if ((_ref2 = this.multilineChildrenData[line]) === MULTILINE_END || _ref2 === MULTILINE_END_START) {
+            if ((ref2 = this.multilineChildrenData[line]) === MULTILINE_END || ref2 === MULTILINE_END_START) {
               left.push(new this.view.draw.Point(bounds.x, bounds.y));
               left.push(new this.view.draw.Point(bounds.x, bounds.bottom()));
               multilineChild = this.lineChildren[line][0];
               multilineBounds = this.view.getViewNodeFor(multilineChild.child).bounds[line - multilineChild.startLine];
-              if (!(((_ref3 = this.multilineChildrenData[line - 1]) === MULTILINE_START || _ref3 === MULTILINE_END_START) && multilineChild.child.type === 'indent')) {
+              if (!(((ref3 = this.multilineChildrenData[line - 1]) === MULTILINE_START || ref3 === MULTILINE_END_START) && multilineChild.child.type === 'indent')) {
                 right.push(new this.view.draw.Point(multilineBounds.x, multilineBounds.y));
               }
               right.push(new this.view.draw.Point(multilineBounds.x, multilineBounds.bottom()));
@@ -3038,7 +3038,7 @@
               innerRight = Math.min(this.bounds[line + 1].right(), this.bounds[line].right());
               left.push(new this.view.draw.Point(innerLeft, this.bounds[line].bottom()));
               left.push(new this.view.draw.Point(innerLeft, this.bounds[line + 1].y));
-              if ((_ref4 = this.multilineChildrenData[line]) !== MULTILINE_START && _ref4 !== MULTILINE_END_START) {
+              if ((ref4 = this.multilineChildrenData[line]) !== MULTILINE_START && ref4 !== MULTILINE_END_START) {
                 right.push(new this.view.draw.Point(innerRight, this.bounds[line].bottom()));
                 right.push(new this.view.draw.Point(innerRight, this.bounds[line + 1].y));
               }
@@ -3066,11 +3066,11 @@
               left.push(new this.view.draw.Point(destinationBounds.x, destinationBounds.bottom() + this.view.opts.padding));
               this.addTab(right, new this.view.draw.Point(destinationBounds.x + this.view.opts.tabOffset, destinationBounds.bottom() + this.view.opts.padding));
             }
-            if ((_ref5 = this.multilineChildrenData[line]) === MULTILINE_START || _ref5 === MULTILINE_END_START) {
+            if ((ref5 = this.multilineChildrenData[line]) === MULTILINE_START || ref5 === MULTILINE_END_START) {
               multilineChild = this.lineChildren[line][this.lineChildren[line].length - 1];
               multilineNode = this.view.getViewNodeFor(multilineChild.child);
               multilineBounds = multilineNode.bounds[line - multilineChild.startLine];
-              if ((_ref6 = this.glue[line]) != null ? _ref6.draw : void 0) {
+              if ((ref6 = this.glue[line]) != null ? ref6.draw : void 0) {
                 glueTop = this.bounds[line + 1].y - this.glue[line].height + this.view.opts.padding;
               } else {
                 glueTop = this.bounds[line].bottom();
@@ -3092,7 +3092,7 @@
           }
           path = left.reverse().concat(right);
           newPath = [];
-          for (i = _j = 0, _len1 = path.length; _j < _len1; i = ++_j) {
+          for (i = l = 0, len2 = path.length; l < len2; i = ++l) {
             point = path[i];
             if (i === 0 && !this.bevels.bottom) {
               newPath.push(point);
@@ -3102,8 +3102,8 @@
               newPath.push(point);
               continue;
             }
-            next = path[__modulo(i + 1, path.length)];
-            prev = path[__modulo(i - 1, path.length)];
+            next = path[modulo(i + 1, path.length)];
+            prev = path[modulo(i - 1, path.length)];
             if ((point.x === next.x) !== (point.y === next.y) && (point.x === prev.x) !== (point.y === prev.y)) {
               newPath.push(point.plus(point.from(prev).toMagnitude(-this.view.opts.bevelClip)));
               newPath.push(point.plus(point.from(next).toMagnitude(-this.view.opts.bevelClip)));
@@ -3112,8 +3112,8 @@
             }
           }
           this.path = new this.view.draw.Path();
-          for (_k = 0, _len2 = newPath.length; _k < _len2; _k++) {
-            el = newPath[_k];
+          for (m = 0, len3 = newPath.length; m < len3; m++) {
+            el = newPath[m];
             this.path.push(el);
           }
           return this.path;
@@ -3160,11 +3160,11 @@
         };
 
         ContainerViewNode.prototype.drawShadow = function(ctx, x, y) {
-          var childObj, _i, _len, _ref;
+          var childObj, j, len1, ref;
           this.path.drawShadow(ctx, x, y, this.view.opts.shadowBlur);
-          _ref = this.children;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            childObj = _ref[_i];
+          ref = this.children;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            childObj = ref[j];
             this.view.getViewNodeFor(childObj.child).drawShadow(ctx, x, y);
           }
           return null;
@@ -3174,22 +3174,22 @@
 
       })(GenericViewNode);
 
-      BlockViewNode = (function(_super) {
-        __extends(BlockViewNode, _super);
+      BlockViewNode = (function(superClass) {
+        extend(BlockViewNode, superClass);
 
         function BlockViewNode() {
           BlockViewNode.__super__.constructor.apply(this, arguments);
         }
 
         BlockViewNode.prototype.computeMinDimensions = function() {
-          var i, size, _i, _len, _ref;
+          var i, j, len1, ref, size;
           if (this.computedVersion === this.model.version) {
             return null;
           }
           BlockViewNode.__super__.computeMinDimensions.apply(this, arguments);
-          _ref = this.minDimensions;
-          for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
-            size = _ref[i];
+          ref = this.minDimensions;
+          for (i = j = 0, len1 = ref.length; j < len1; i = ++j) {
+            size = ref[i];
             size.width = Math.max(size.width, this.view.opts.tabWidth + this.view.opts.tabOffset);
           }
           return null;
@@ -3201,7 +3201,7 @@
             parent = this.model.visParent();
             return (parent != null ? parent.type : void 0) !== 'socket';
           } else {
-            return !(__indexOf.call(this.model.classes, 'mostly-value') >= 0 || __indexOf.call(this.model.classes, 'value-only') >= 0);
+            return !(indexOf.call(this.model.classes, 'mostly-value') >= 0 || indexOf.call(this.model.classes, 'value-only') >= 0);
           }
         };
 
@@ -3214,7 +3214,7 @@
         };
 
         BlockViewNode.prototype.computeOwnDropArea = function() {
-          var destinationBounds, highlightAreaPoints, lastBoundsLeft, lastBoundsRight, parentViewNode, point, _i, _len;
+          var destinationBounds, highlightAreaPoints, j, lastBoundsLeft, lastBoundsRight, len1, parentViewNode, point;
           if (this.carriageArrow === CARRIAGE_ARROW_INDENT) {
             parentViewNode = this.view.getViewNodeFor(this.model.visParent());
             destinationBounds = parentViewNode.bounds[1];
@@ -3244,8 +3244,8 @@
           this.addTab(highlightAreaPoints, new this.view.draw.Point(lastBoundsLeft + this.view.opts.tabOffset, this.dropPoint.y + this.view.opts.highlightAreaHeight / 2));
           highlightAreaPoints.push(new this.view.draw.Point(lastBoundsLeft + this.view.opts.bevelClip, this.dropPoint.y + this.view.opts.highlightAreaHeight / 2));
           highlightAreaPoints.push(new this.view.draw.Point(lastBoundsLeft, this.dropPoint.y + this.view.opts.highlightAreaHeight / 2 - this.view.opts.bevelClip));
-          for (_i = 0, _len = highlightAreaPoints.length; _i < _len; _i++) {
-            point = highlightAreaPoints[_i];
+          for (j = 0, len1 = highlightAreaPoints.length; j < len1; j++) {
+            point = highlightAreaPoints[j];
             this.highlightArea.push(point);
           }
           this.highlightArea.style.lineWidth = 1;
@@ -3257,8 +3257,8 @@
 
       })(ContainerViewNode);
 
-      SocketViewNode = (function(_super) {
-        __extends(SocketViewNode, _super);
+      SocketViewNode = (function(superClass) {
+        extend(SocketViewNode, superClass);
 
         function SocketViewNode() {
           SocketViewNode.__super__.constructor.apply(this, arguments);
@@ -3267,7 +3267,7 @@
         SocketViewNode.prototype.shouldAddTab = NO;
 
         SocketViewNode.prototype.computeMinDimensions = function() {
-          var dimension, _i, _len, _ref;
+          var dimension, j, len1, ref;
           if (this.computedVersion === this.model.version) {
             return null;
           }
@@ -3275,9 +3275,9 @@
           this.minDistanceToBase[0].above = Math.max(this.minDistanceToBase[0].above, this.view.opts.textHeight + this.view.opts.textPadding);
           this.minDistanceToBase[0].below = Math.max(this.minDistanceToBase[0].below, this.view.opts.textPadding);
           this.minDimensions[0].height = this.minDistanceToBase[0].above + this.minDistanceToBase[0].below;
-          _ref = this.minDimensions;
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            dimension = _ref[_i];
+          ref = this.minDimensions;
+          for (j = 0, len1 = ref.length; j < len1; j++) {
+            dimension = ref[j];
             dimension.width = Math.max(dimension.width, this.view.opts.minSocketWidth);
             if (this.model.hasDropdown()) {
               dimension.width += helper.DROPDOWN_ARROW_WIDTH;
@@ -3347,8 +3347,8 @@
 
       })(ContainerViewNode);
 
-      IndentViewNode = (function(_super) {
-        __extends(IndentViewNode, _super);
+      IndentViewNode = (function(superClass) {
+        extend(IndentViewNode, superClass);
 
         function IndentViewNode() {
           IndentViewNode.__super__.constructor.apply(this, arguments);
@@ -3361,12 +3361,12 @@
         };
 
         IndentViewNode.prototype.computeChildren = function() {
-          var childObj, childRef, childView, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+          var childObj, childRef, childView, j, l, len1, len2, len3, m, ref, ref1, ref2;
           IndentViewNode.__super__.computeChildren.apply(this, arguments);
           if (!(arrayEq(this.lineChildren[0], this.lastFirstChildren) && arrayEq(this.lineChildren[this.lineLength - 1], this.lastLastChildren))) {
-            _ref = this.children;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              childObj = _ref[_i];
+            ref = this.children;
+            for (j = 0, len1 = ref.length; j < len1; j++) {
+              childObj = ref[j];
               childView = this.view.getViewNodeFor(childObj.child);
               if (childView.topLineSticksToBottom || childView.bottomLineSticksToTop) {
                 childView.invalidate = true;
@@ -3376,18 +3376,18 @@
               }
             }
           }
-          _ref1 = this.lineChildren[0];
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            childRef = _ref1[_j];
+          ref1 = this.lineChildren[0];
+          for (l = 0, len2 = ref1.length; l < len2; l++) {
+            childRef = ref1[l];
             childView = this.view.getViewNodeFor(childRef.child);
             if (!childView.topLineSticksToBottom) {
               childView.invalidate = true;
             }
             childView.topLineSticksToBottom = true;
           }
-          _ref2 = this.lineChildren[this.lineChildren.length - 1];
-          for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-            childRef = _ref2[_k];
+          ref2 = this.lineChildren[this.lineChildren.length - 1];
+          for (m = 0, len3 = ref2.length; m < len3; m++) {
+            childRef = ref2[m];
             childView = this.view.getViewNodeFor(childRef.child);
             if (!childView.bottomLineSticksToTop) {
               childView.invalidate = true;
@@ -3398,17 +3398,17 @@
         };
 
         IndentViewNode.prototype.computeMinDimensions = function() {
-          var line, size, _i, _len, _ref, _results;
+          var j, len1, line, ref, results, size;
           IndentViewNode.__super__.computeMinDimensions.apply(this, arguments);
-          _ref = this.minDimensions.slice(1);
-          _results = [];
-          for (line = _i = 0, _len = _ref.length; _i < _len; line = ++_i) {
-            size = _ref[line];
+          ref = this.minDimensions.slice(1);
+          results = [];
+          for (line = j = 0, len1 = ref.length; j < len1; line = ++j) {
+            size = ref[line];
             if (size.width === 0) {
-              _results.push(size.width = this.view.opts.emptyLineWidth);
+              results.push(size.width = this.view.opts.emptyLineWidth);
             }
           }
-          return _results;
+          return results;
         };
 
         IndentViewNode.prototype.drawSelf = function() {
@@ -3416,7 +3416,7 @@
         };
 
         IndentViewNode.prototype.computeOwnDropArea = function() {
-          var highlightAreaPoints, lastBounds, point, _i, _len;
+          var highlightAreaPoints, j, lastBounds, len1, point;
           lastBounds = new this.view.draw.NoRectangle();
           if (this.model.start.next.type === 'newline') {
             this.dropPoint = this.bounds[1].upperLeftCorner();
@@ -3438,8 +3438,8 @@
           this.addTab(highlightAreaPoints, new this.view.draw.Point(lastBounds.x + this.view.opts.tabOffset, lastBounds.y + this.view.opts.highlightAreaHeight / 2));
           highlightAreaPoints.push(new this.view.draw.Point(lastBounds.x + this.view.opts.bevelClip, lastBounds.y + this.view.opts.highlightAreaHeight / 2));
           highlightAreaPoints.push(new this.view.draw.Point(lastBounds.x, lastBounds.y + this.view.opts.highlightAreaHeight / 2 - this.view.opts.bevelClip));
-          for (_i = 0, _len = highlightAreaPoints.length; _i < _len; _i++) {
-            point = highlightAreaPoints[_i];
+          for (j = 0, len1 = highlightAreaPoints.length; j < len1; j++) {
+            point = highlightAreaPoints[j];
             this.highlightArea.push(point);
           }
           this.highlightArea.style.lineWidth = 1;
@@ -3451,8 +3451,8 @@
 
       })(ContainerViewNode);
 
-      SegmentViewNode = (function(_super) {
-        __extends(SegmentViewNode, _super);
+      SegmentViewNode = (function(superClass) {
+        extend(SegmentViewNode, superClass);
 
         function SegmentViewNode() {
           SegmentViewNode.__super__.constructor.apply(this, arguments);
@@ -3463,7 +3463,7 @@
         };
 
         SegmentViewNode.prototype.computeOwnDropArea = function() {
-          var highlightAreaPoints, lastBounds, point, _i, _len;
+          var highlightAreaPoints, j, lastBounds, len1, point;
           if (this.model.isLassoSegment) {
             return this.dropArea = null;
           } else {
@@ -3483,8 +3483,8 @@
             this.addTab(highlightAreaPoints, new this.view.draw.Point(lastBounds.x + this.view.opts.tabOffset, lastBounds.y + this.view.opts.highlightAreaHeight / 2));
             highlightAreaPoints.push(new this.view.draw.Point(lastBounds.x + this.view.opts.bevelClip, lastBounds.y + this.view.opts.highlightAreaHeight / 2));
             highlightAreaPoints.push(new this.view.draw.Point(lastBounds.x, lastBounds.y + this.view.opts.highlightAreaHeight / 2 - this.view.opts.bevelClip));
-            for (_i = 0, _len = highlightAreaPoints.length; _i < _len; _i++) {
-              point = highlightAreaPoints[_i];
+            for (j = 0, len1 = highlightAreaPoints.length; j < len1; j++) {
+              point = highlightAreaPoints[j];
               this.highlightArea.push(point);
             }
             this.highlightArea.style.fillColor = '#ff0';
@@ -3514,12 +3514,12 @@
 
       })(ContainerViewNode);
 
-      TextViewNode = (function(_super) {
-        __extends(TextViewNode, _super);
+      TextViewNode = (function(superClass) {
+        extend(TextViewNode, superClass);
 
-        function TextViewNode(model, view) {
-          this.model = model;
-          this.view = view;
+        function TextViewNode(model1, view1) {
+          this.model = model1;
+          this.view = view1;
           TextViewNode.__super__.constructor.apply(this, arguments);
         }
 
@@ -3581,12 +3581,12 @@
 
       })(GenericViewNode);
 
-      CursorViewNode = (function(_super) {
-        __extends(CursorViewNode, _super);
+      CursorViewNode = (function(superClass) {
+        extend(CursorViewNode, superClass);
 
-        function CursorViewNode(model, view) {
-          this.model = model;
-          this.view = view;
+        function CursorViewNode(model1, view1) {
+          this.model = model1;
+          this.view = view1;
           CursorViewNode.__super__.constructor.apply(this, arguments);
         }
 
@@ -3608,13 +3608,13 @@
       var b, c, g, r;
       if (hex.length === 4) {
         hex = ((function() {
-          var _i, _len, _results;
-          _results = [];
-          for (_i = 0, _len = hex.length; _i < _len; _i++) {
-            c = hex[_i];
-            _results.push(c + c);
+          var j, len1, results;
+          results = [];
+          for (j = 0, len1 = hex.length; j < len1; j++) {
+            c = hex[j];
+            results.push(c + c);
           }
-          return _results;
+          return results;
         })()).join('').slice(1);
       }
       r = parseInt(hex.slice(1, 3), 16);
@@ -3625,12 +3625,12 @@
     zeroPad = function(str, len) {
       if (str.length < len) {
         return ((function() {
-          var _i, _ref, _results;
-          _results = [];
-          for (_i = _ref = str.length; _ref <= len ? _i < len : _i > len; _ref <= len ? _i++ : _i--) {
-            _results.push('0');
+          var j, ref, ref1, results;
+          results = [];
+          for (j = ref = str.length, ref1 = len; ref <= ref1 ? j < ref1 : j > ref1; ref <= ref1 ? j++ : j--) {
+            results.push('0');
           }
-          return _results;
+          return results;
         })()).join('') + str;
       } else {
         return str;
@@ -3642,13 +3642,13 @@
     toHex = function(rgb) {
       var k;
       return '#' + ((function() {
-        var _i, _len, _results;
-        _results = [];
-        for (_i = 0, _len = rgb.length; _i < _len; _i++) {
-          k = rgb[_i];
-          _results.push(twoDigitHex(k));
+        var j, len1, results;
+        results = [];
+        for (j = 0, len1 = rgb.length; j < len1; j++) {
+          k = rgb[j];
+          results.push(twoDigitHex(k));
         }
-        return _results;
+        return results;
       })()).join('');
     };
     avgColor = function(a, factor, b) {
@@ -3656,13 +3656,13 @@
       a = toRGB(a);
       b = toRGB(b);
       newRGB = (function() {
-        var _i, _len, _results;
-        _results = [];
-        for (i = _i = 0, _len = a.length; _i < _len; i = ++_i) {
+        var j, len1, results;
+        results = [];
+        for (i = j = 0, len1 = a.length; j < len1; i = ++j) {
           k = a[i];
-          _results.push(a[i] * factor + b[i] * (1 - factor));
+          results.push(a[i] * factor + b[i] * (1 - factor));
         }
-        return _results;
+        return results;
       })();
       return toHex(newRGB);
     };
@@ -3674,11 +3674,11 @@
 //# sourceMappingURL=view.js.map
 ;
 (function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
 
   define('droplet-parser',['droplet-helper', 'droplet-model'], function(helper, model) {
-    var Parser, ParserFactory, YES, exports, hasSomeTextAfter, stripFlaggedBlocks, _extend;
+    var Parser, ParserFactory, YES, _extend, exports, hasSomeTextAfter, stripFlaggedBlocks;
     exports = {};
     _extend = function(opts, defaults) {
       var key, val;
@@ -3697,8 +3697,8 @@
       return true;
     };
     exports.ParserFactory = ParserFactory = (function() {
-      function ParserFactory(opts) {
-        this.opts = opts != null ? opts : {};
+      function ParserFactory(opts1) {
+        this.opts = opts1 != null ? opts1 : {};
       }
 
       ParserFactory.prototype.createParser = function(text) {
@@ -3709,10 +3709,10 @@
 
     })();
     exports.Parser = Parser = (function() {
-      function Parser(text, opts) {
-        var convertFunction, index, key, options, val, _fn, _ref, _ref1;
-        this.text = text;
-        this.opts = opts != null ? opts : {};
+      function Parser(text1, opts1) {
+        var convertFunction, fn, index, key, options, ref, ref1, val;
+        this.text = text1;
+        this.opts = opts1 != null ? opts1 : {};
         convertFunction = function(x) {
           if ((typeof x === 'string') || x instanceof String) {
             return {
@@ -3723,11 +3723,11 @@
             return x;
           }
         };
-        _ref = this.opts.functions;
-        for (key in _ref) {
-          val = _ref[key];
-          _ref1 = val.dropdown;
-          _fn = (function(_this) {
+        ref = this.opts.functions;
+        for (key in ref) {
+          val = ref[key];
+          ref1 = val.dropdown;
+          fn = (function(_this) {
             return function(options) {
               return _this.opts.functions[key].dropdown[index] = function() {
                 if (typeof options === 'function') {
@@ -3738,9 +3738,9 @@
               };
             };
           })(this);
-          for (index in _ref1) {
-            options = _ref1[index];
-            _fn(options);
+          for (index in ref1) {
+            options = ref1[index];
+            fn(options);
           }
         }
         this.originalText = this.text;
@@ -3872,13 +3872,13 @@
       };
 
       Parser.prototype.applyMarkup = function(opts) {
-        var block, document, head, i, indentDepth, lastIndex, line, lines, mark, markupOnLines, stack, _i, _j, _k, _len, _len1, _len2, _name, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+        var block, document, head, i, indentDepth, j, k, l, lastIndex, len, len1, len2, line, lines, mark, markupOnLines, name, ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, stack;
         markupOnLines = {};
-        _ref = this.markup;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          mark = _ref[_i];
-          if (markupOnLines[_name = mark.location.line] == null) {
-            markupOnLines[_name] = [];
+        ref = this.markup;
+        for (j = 0, len = ref.length; j < len; j++) {
+          mark = ref[j];
+          if (markupOnLines[name = mark.location.line] == null) {
+            markupOnLines[name] = [];
           }
           markupOnLines[mark.location.line].push(mark);
         }
@@ -3887,31 +3887,31 @@
         stack = [];
         document = new model.Segment();
         head = document.start;
-        for (i = _j = 0, _len1 = lines.length; _j < _len1; i = ++_j) {
+        for (i = k = 0, len1 = lines.length; k < len1; i = ++k) {
           line = lines[i];
           if (!(i in markupOnLines)) {
             if (indentDepth >= line.length || line.slice(0, indentDepth).trim().length > 0) {
               head.specialIndent = ((function() {
-                var _k, _ref1, _results;
-                _results = [];
-                for (_k = 0, _ref1 = line.length - line.trimLeft().length; 0 <= _ref1 ? _k < _ref1 : _k > _ref1; 0 <= _ref1 ? _k++ : _k--) {
-                  _results.push(' ');
+                var l, ref1, results;
+                results = [];
+                for (l = 0, ref1 = line.length - line.trimLeft().length; 0 <= ref1 ? l < ref1 : l > ref1; 0 <= ref1 ? l++ : l--) {
+                  results.push(' ');
                 }
-                return _results;
+                return results;
               })()).join('');
               line = line.trimLeft();
             } else {
               line = line.slice(indentDepth);
             }
             if (line.length > 0) {
-              if ((opts.wrapAtRoot && stack.length === 0) || ((_ref1 = stack[stack.length - 1]) != null ? _ref1.type : void 0) === 'indent') {
+              if ((opts.wrapAtRoot && stack.length === 0) || ((ref1 = stack[stack.length - 1]) != null ? ref1.type : void 0) === 'indent') {
                 block = this.constructHandwrittenBlock(line);
                 head.append(block.start);
                 head = block.end;
               } else {
                 head = head.append(new model.TextToken(line));
               }
-            } else if (((_ref2 = (_ref3 = stack[stack.length - 1]) != null ? _ref3.type : void 0) === 'indent' || _ref2 === 'segment' || _ref2 === (void 0)) && hasSomeTextAfter(lines, i)) {
+            } else if (((ref2 = (ref3 = stack[stack.length - 1]) != null ? ref3.type : void 0) === 'indent' || ref2 === 'segment' || ref2 === (void 0)) && hasSomeTextAfter(lines, i)) {
               block = new model.Block(0, 'yellow', helper.BLOCK_ONLY);
               head = head.append(block.start);
               head = head.append(block.end);
@@ -3924,11 +3924,11 @@
             } else {
               lastIndex = indentDepth;
             }
-            _ref4 = markupOnLines[i];
-            for (_k = 0, _len2 = _ref4.length; _k < _len2; _k++) {
-              mark = _ref4[_k];
+            ref4 = markupOnLines[i];
+            for (l = 0, len2 = ref4.length; l < len2; l++) {
+              mark = ref4[l];
               if (!(lastIndex >= mark.location.column || lastIndex >= line.length)) {
-                if ((opts.wrapAtRoot && stack.length === 0) || ((_ref5 = stack[stack.length - 1]) != null ? _ref5.type : void 0) === 'indent') {
+                if ((opts.wrapAtRoot && stack.length === 0) || ((ref5 = stack[stack.length - 1]) != null ? ref5.type : void 0) === 'indent') {
                   block = this.constructHandwrittenBlock(line.slice(lastIndex, mark.location.column));
                   head.append(block.start);
                   head = block.end;
@@ -3938,18 +3938,18 @@
               }
               switch (mark.token.type) {
                 case 'indentStart':
-                  if ((stack != null ? (_ref6 = stack[stack.length - 1]) != null ? _ref6.type : void 0 : void 0) !== 'block') {
-                    throw new Error('Improper parser: indent must be inside block, but is inside ' + (stack != null ? (_ref7 = stack[stack.length - 1]) != null ? _ref7.type : void 0 : void 0));
+                  if ((stack != null ? (ref6 = stack[stack.length - 1]) != null ? ref6.type : void 0 : void 0) !== 'block') {
+                    throw new Error('Improper parser: indent must be inside block, but is inside ' + (stack != null ? (ref7 = stack[stack.length - 1]) != null ? ref7.type : void 0 : void 0));
                   }
                   indentDepth += mark.token.container.prefix.length;
                   break;
                 case 'blockStart':
-                  if (((_ref8 = stack[stack.length - 1]) != null ? _ref8.type : void 0) === 'block') {
+                  if (((ref8 = stack[stack.length - 1]) != null ? ref8.type : void 0) === 'block') {
                     throw new Error('Improper parser: block cannot nest immediately inside another block.');
                   }
                   break;
                 case 'socketStart':
-                  if (((_ref9 = stack[stack.length - 1]) != null ? _ref9.type : void 0) !== 'block') {
+                  if (((ref9 = stack[stack.length - 1]) != null ? ref9.type : void 0) !== 'block') {
                     throw new Error('Improper parser: socket must be immediately inside a block.');
                   }
                   break;
@@ -3989,34 +3989,34 @@
       stack = [];
       parser = sax.parser(true);
       parser.ontext = function(text) {
-        var i, token, tokens, _i, _len, _results;
+        var i, j, len, results, token, tokens;
         tokens = text.split('\n');
-        _results = [];
-        for (i = _i = 0, _len = tokens.length; _i < _len; i = ++_i) {
+        results = [];
+        for (i = j = 0, len = tokens.length; j < len; i = ++j) {
           token = tokens[i];
           if (token.length !== 0) {
             head = head.append(new model.TextToken(token));
           }
           if (i !== tokens.length - 1) {
-            _results.push(head = head.append(new model.NewlineToken()));
+            results.push(head = head.append(new model.NewlineToken()));
           } else {
-            _results.push(void 0);
+            results.push(void 0);
           }
         }
-        return _results;
+        return results;
       };
       parser.onopentag = function(node) {
-        var attributes, container, _ref, _ref1, _ref2;
+        var attributes, container, ref, ref1, ref2;
         attributes = node.attributes;
         switch (node.name) {
           case 'block':
-            container = new model.Block(attributes.precedence, attributes.color, attributes.socketLevel, (_ref = attributes.classes) != null ? typeof _ref.split === "function" ? _ref.split(' ') : void 0 : void 0);
+            container = new model.Block(attributes.precedence, attributes.color, attributes.socketLevel, (ref = attributes.classes) != null ? typeof ref.split === "function" ? ref.split(' ') : void 0 : void 0);
             break;
           case 'socket':
-            container = new model.Socket(attributes.precedence, attributes.handritten, (_ref1 = attributes.classes) != null ? typeof _ref1.split === "function" ? _ref1.split(' ') : void 0 : void 0);
+            container = new model.Socket(attributes.precedence, attributes.handritten, (ref1 = attributes.classes) != null ? typeof ref1.split === "function" ? ref1.split(' ') : void 0 : void 0);
             break;
           case 'indent':
-            container = new model.Indent(attributes.prefix, (_ref2 = attributes.classe) != null ? typeof _ref2.split === "function" ? _ref2.split(' ') : void 0 : void 0);
+            container = new model.Indent(attributes.prefix, (ref2 = attributes.classe) != null ? typeof ref2.split === "function" ? ref2.split(' ') : void 0 : void 0);
             break;
           case 'segment':
             if (stack.length !== 0) {
@@ -4058,40 +4058,40 @@
       return false;
     };
     stripFlaggedBlocks = function(segment) {
-      var container, head, text, _ref, _results;
+      var container, head, ref, results, text;
       head = segment.start;
-      _results = [];
+      results = [];
       while (head !== segment.end) {
         if (head instanceof model.StartToken && head.container.flagToRemove) {
           container = head.container;
           head = container.end.next;
-          _results.push(container.spliceOut());
+          results.push(container.spliceOut());
         } else if (head instanceof model.StartToken && head.container.flagToStrip) {
-          if ((_ref = head.container.parent) != null) {
-            _ref.color = 'error';
+          if ((ref = head.container.parent) != null) {
+            ref.color = 'error';
           }
           text = head.next;
           text.value = text.value.substring(head.container.flagToStrip.left, text.value.length - head.container.flagToStrip.right);
-          _results.push(head = text.next);
+          results.push(head = text.next);
         } else {
-          _results.push(head = head.next);
+          results.push(head = head.next);
         }
       }
-      return _results;
+      return results;
     };
     Parser.parens = function(leading, trailing, node, context) {
-      var _results;
+      var results;
       if (context === null || context.type !== 'socket' || (context != null ? context.precedence : void 0) < node.precedence) {
-        _results = [];
+        results = [];
         while (true) {
           if ((leading().match(/^\s*\(/) != null) && (trailing().match(/\)\s*/) != null)) {
             leading(leading().replace(/^\s*\(\s*/, ''));
-            _results.push(trailing(trailing().replace(/^\s*\)\s*/, '')));
+            results.push(trailing(trailing().replace(/^\s*\)\s*/, '')));
           } else {
             break;
           }
         }
-        return _results;
+        return results;
       } else {
         leading('(' + leading());
         return trailing(trailing() + ')');
@@ -4107,11 +4107,11 @@
     Parser.empty = '';
     exports.wrapParser = function(CustomParser) {
       var CustomParserFactory;
-      return CustomParserFactory = (function(_super) {
-        __extends(CustomParserFactory, _super);
+      return CustomParserFactory = (function(superClass) {
+        extend(CustomParserFactory, superClass);
 
-        function CustomParserFactory(opts) {
-          this.opts = opts != null ? opts : {};
+        function CustomParserFactory(opts1) {
+          this.opts = opts1 != null ? opts1 : {};
           this.empty = CustomParser.empty;
         }
 
@@ -4178,9 +4178,9 @@ this.trace(e)},parse:function(e){function t(){var e;return e=n.lexer.lex()||p,"n
 if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObject())return this.compilePatternMatch(e);if(this.variable.isSplice())return this.compileSplice(e);if("||="===(h=this.context)||"&&="===h||"?="===h)return this.compileConditional(e);if("**="===(u=this.context)||"//="===u||"%%="===u)return this.compileSpecialMath(e)}return n=this.variable.compileToFragments(e,L),o=at(n),this.context||(a=this.variable.unwrapAll(),a.isAssignable()||this.variable.error('"'+this.variable.compile(e)+'" cannot be assigned'),("function"==typeof a.hasProperties?a.hasProperties():void 0)||(this.param?e.scope.add(o,"var"):e.scope.find(o))),this.value instanceof c&&(r=S.exec(o))&&(r[2]&&(this.value.klass=r[1]),this.value.name=null!=(l=null!=(p=r[3])?p:r[4])?l:r[5]),s=this.value.compileToFragments(e,L),"object"===this.context?n.concat(this.makeCode(": "),s):(t=n.concat(this.makeCode(" "+(this.context||"=")+" "),s),L>=e.level?t:this.wrapInBraces(t))},n.prototype.compilePatternMatch=function(e){var i,r,o,s,a,c,h,u,l,d,f,m,b,g,k,v,w,C,F,E,S,R,A,I,_,$,O,B;if(v=e.level===x,C=this.value,m=this.variable.base.objects,!(b=m.length))return o=C.compileToFragments(e),e.level>=N?this.wrapInBraces(o):o;if(u=this.variable.isObject(),v&&1===b&&!((f=m[0])instanceof G))return f instanceof n?(A=f,I=A.variable,h=I.base,f=A.value):h=u?f["this"]?f.properties[0].name:f:new D(0),i=y.test(h.unwrap().value||0),C=new Z(C),C.properties.push(new(i?t:T)(h)),_=f.unwrap().value,Ft.call(M,_)>=0&&f.error("assignment to a reserved word: "+f.compile(e)),new n(f,C,null,{param:this.param}).compileToFragments(e,x);for(F=C.compileToFragments(e,L),E=at(F),r=[],s=!1,(!y.test(E)||this.variable.assigns(E))&&(r.push([this.makeCode(""+(g=e.scope.freeVariable("ref"))+" = ")].concat(Lt.call(F))),F=[this.makeCode(g)],E=g),c=S=0,R=m.length;R>S;c=++S){if(f=m[c],h=c,u&&(f instanceof n?($=f,O=$.variable,h=O.base,f=$.value):f.base instanceof j?(B=new Z(f.unwrapAll()).cacheReference(e),f=B[0],h=B[1]):h=f["this"]?f.properties[0].name:f),!s&&f instanceof G)d=f.name.unwrap().value,f=f.unwrap(),w=""+b+" <= "+E+".length ? "+kt("slice")+".call("+E+", "+c,(k=b-c-1)?(l=e.scope.freeVariable("i"),w+=", "+l+" = "+E+".length - "+k+") : ("+l+" = "+c+", [])"):w+=") : []",w=new D(w),s=""+l+"++";else{if(!s&&f instanceof p){(k=b-c-1)&&(1===k?s=""+E+".length - 1":(l=e.scope.freeVariable("i"),w=new D(""+l+" = "+E+".length - "+k),s=""+l+"++",r.push(w.compileToFragments(e,L))));continue}d=f.unwrap().value,(f instanceof G||f instanceof p)&&f.error("multiple splats/expansions are disallowed in an assignment"),"number"==typeof h?(h=new D(s||h),i=!1):i=u&&y.test(h.unwrap().value||0),w=new Z(new D(E),[new(i?t:T)(h)])}null!=d&&Ft.call(M,d)>=0&&f.error("assignment to a reserved word: "+f.compile(e)),r.push(new n(f,w,null,{param:this.param,subpattern:!0}).compileToFragments(e,L))}return v||this.subpattern||r.push(F),a=this.joinFragmentArrays(r,", "),L>e.level?a:this.wrapInBraces(a)},n.prototype.compileConditional=function(e){var t,i,r,o;return o=this.variable.cacheReference(e),i=o[0],r=o[1],!i.properties.length&&i.base instanceof D&&"this"!==i.base.value&&!e.scope.check(i.base.value)&&this.variable.error('the variable "'+i.base.value+"\" can't be assigned with "+this.context+" because it has not been declared before"),Ft.call(this.context,"?")>=0?(e.isExistentialEquals=!0,new v(new l(i),r,{type:"if"}).addElse(new n(r,this.value,"=")).compileToFragments(e)):(t=new $(this.context.slice(0,-1),i,new n(r,this.value,"=")).compileToFragments(e),L>=e.level?t:this.wrapInBraces(t))},n.prototype.compileSpecialMath=function(e){var t,i,r;return r=this.variable.cacheReference(e),t=r[0],i=r[1],new n(t,new $(this.context.slice(0,-1),i,this.value)).compileToFragments(e)},n.prototype.compileSplice=function(e){var t,n,i,r,o,s,a,c,h,u,l,p;return u=this.variable.properties.pop().range,i=u.from,a=u.to,n=u.exclusive,s=this.variable.compile(e),i?(l=this.cacheToCodeFragments(i.cache(e,N)),r=l[0],o=l[1]):r=o="0",a?i instanceof Z&&i.isSimpleNumber()&&a instanceof Z&&a.isSimpleNumber()?(a=a.compile(e)-o,n||(a+=1)):(a=a.compile(e,C)+" - "+o,n||(a+=" + 1")):a="9e9",p=this.value.cache(e,L),c=p[0],h=p[1],t=[].concat(this.makeCode("[].splice.apply("+s+", ["+r+", "+a+"].concat("),c,this.makeCode(")), "),h),e.level>x?this.wrapInBraces(t):t},n}(r),e.Code=c=function(e){function t(e,t,n){this.params=e||[],this.body=t||new o,this.bound="boundfunc"===n}return Ct(t,e),t.prototype.nodeType=function(){return"Code"},t.prototype.children=["params","body"],t.prototype.isStatement=function(){return!!this.ctor},t.prototype.jumps=A,t.prototype.makeScope=function(e){return new H(e,this.body,this)},t.prototype.compileNode=function(e){var r,a,c,h,u,l,d,f,m,y,b,g,k,w,T,F,L,N,E,x,S,R,A,I,_,j,M,B,V,P,U,H,q;if(this.bound&&(null!=(B=e.scope.method)?B.bound:void 0)&&(this.context=e.scope.method.context),this.bound&&!this.context)return this.context="_this",T=new t([new O(new D(this.context))],new o([this])),a=new s(T,[new D("this")]),a.updateLocationDataIfMissing(this.locationData),a.compileNode(e);for(e.scope=it(e,"classScope")||this.makeScope(e.scope),e.scope.shared=it(e,"sharedScope"),e.indent+=X,delete e.bare,delete e.isExistentialEquals,m=[],h=[],V=this.params,F=0,x=V.length;x>F;F++)f=V[F],f instanceof p||e.scope.parameter(f.asReference(e));for(P=this.params,L=0,S=P.length;S>L;L++)if(f=P[L],f.splat||f instanceof p){for(U=this.params,N=0,R=U.length;R>N;N++)d=U[N].name,f instanceof p||(d["this"]&&(d=d.properties[0].name),d.value&&e.scope.add(d.value,"var",!0));b=new i(new Z(new n(function(){var t,n,i,r;for(i=this.params,r=[],t=0,n=i.length;n>t;t++)d=i[t],r.push(d.asReference(e));return r}.call(this))),new Z(new D("arguments")));break}for(H=this.params,E=0,A=H.length;A>E;E++)f=H[E],f.isComplex()?(k=y=f.asReference(e),f.value&&(k=new $("?",y,f.value)),h.push(new i(new Z(f.name),k,"=",{param:!0}))):(y=f,f.value&&(l=new D(y.name.value+" == null"),k=new i(new Z(f.name),f.value,"="),h.push(new v(l,k)))),b||m.push(y);for(w=this.body.isEmpty(),b&&h.unshift(b),h.length&&(q=this.body.expressions).unshift.apply(q,h),u=j=0,I=m.length;I>j;u=++j)d=m[u],m[u]=d.compileToFragments(e),e.scope.parameter(at(m[u]));for(g=[],this.eachParamName(function(e,t){return Ft.call(g,e)>=0&&t.error("multiple parameters named '"+e+"'"),g.push(e)}),w||this.noReturn||this.body.makeReturn(),c="function",this.ctor&&(c+=" "+this.name),c+="(",r=[this.makeCode(c)],u=M=0,_=m.length;_>M;u=++M)d=m[u],u&&r.push(this.makeCode(", ")),r.push.apply(r,d);return r.push(this.makeCode(") {")),this.body.isEmpty()||(r=r.concat(this.makeCode("\n"),this.body.compileWithDeclarations(e),this.makeCode("\n"+this.tab))),r.push(this.makeCode("}")),this.ctor?[this.makeCode(this.tab)].concat(Lt.call(r)):this.front||e.level>=C?this.wrapInBraces(r):r},t.prototype.eachParamName=function(e){var t,n,i,r,o;for(r=this.params,o=[],n=0,i=r.length;i>n;n++)t=r[n],o.push(t.eachName(e));return o},t.prototype.traverseChildren=function(e,n){return e?t.__super__.traverseChildren.call(this,e,n):void 0},t}(r),e.Param=O=function(e){function t(e,t,n){var i;this.name=e,this.value=t,this.splat=n,i=e=this.name.unwrapAll().value,Ft.call(U,i)>=0&&this.name.error('parameter name "'+e+'" is not allowed')}return Ct(t,e),t.prototype.nodeType=function(){return"Param"},t.prototype.children=["name","value"],t.prototype.compileToFragments=function(e){return this.name.compileToFragments(e,L)},t.prototype.asReference=function(e){var t;return this.reference?this.reference:(t=this.name,t["this"]?(t=t.properties[0].name,t.value.reserved&&(t=new D(e.scope.freeVariable(t.value)))):t.isComplex()&&(t=new D(e.scope.freeVariable("arg"))),t=new Z(t),this.splat&&(t=new G(t)),t.updateLocationDataIfMissing(this.locationData),this.reference=t)},t.prototype.isComplex=function(){return this.name.isComplex()},t.prototype.eachName=function(e,t){var n,r,o,s,a,c;if(null==t&&(t=this.name),n=function(t){var n;return n=t.properties[0].name,n.value.reserved?void 0:e(n.value,n)},t instanceof D)return e(t.value,t);if(t instanceof Z)return n(t);for(c=t.objects,s=0,a=c.length;a>s;s++)o=c[s],o instanceof i?this.eachName(e,o.value.unwrap()):o instanceof G?(r=o.name.unwrap(),e(r.value,r)):o instanceof Z?o.isArray()||o.isObject()?this.eachName(e,o.base):o["this"]?n(o):e(o.base.value,o.base):o instanceof p||o.error("illegal parameter "+o.compile())},t}(r),e.Splat=G=function(e){function t(e){this.name=e.compile?e:new D(e)}return Ct(t,e),t.prototype.nodeType=function(){return"Splat"},t.prototype.children=["name"],t.prototype.isAssignable=et,t.prototype.assigns=function(e){return this.name.assigns(e)},t.prototype.compileToFragments=function(e){return this.name.compileToFragments(e)},t.prototype.unwrap=function(){return this.name},t.compileSplattedArray=function(e,n,i){var r,o,s,a,c,h,u,l,p,d;for(u=-1;(l=n[++u])&&!(l instanceof t););if(u>=n.length)return[];if(1===n.length)return l=n[0],c=l.compileToFragments(e,L),i?c:[].concat(l.makeCode(""+kt("slice")+".call("),c,l.makeCode(")"));for(r=n.slice(u),h=p=0,d=r.length;d>p;h=++p)l=r[h],s=l.compileToFragments(e,L),r[h]=l instanceof t?[].concat(l.makeCode(""+kt("slice")+".call("),s,l.makeCode(")")):[].concat(l.makeCode("["),s,l.makeCode("]"));return 0===u?(l=n[0],a=l.joinFragmentArrays(r.slice(1),", "),r[0].concat(l.makeCode(".concat("),a,l.makeCode(")"))):(o=function(){var t,i,r,o;for(r=n.slice(0,u),o=[],t=0,i=r.length;i>t;t++)l=r[t],o.push(l.compileToFragments(e,L));return o}(),o=n[0].joinFragmentArrays(o,", "),a=n[u].joinFragmentArrays(r,", "),[].concat(n[0].makeCode("["),o,n[u].makeCode("].concat("),a,ut(n).makeCode(")")))},t}(r),e.Expansion=p=function(e){function t(){return t.__super__.constructor.apply(this,arguments)}return Ct(t,e),t.prototype.nodeType=function(){return"Expansion"},t.prototype.isComplex=A,t.prototype.compileNode=function(){return this.error("Expansion must be used inside a destructuring assignment or parameter list")},t.prototype.asReference=function(){return this},t.prototype.eachName=function(){},t}(r),e.While=Q=function(e){function t(e,t){this.rawCondition=e,this.condition=(null!=t?t.invert:void 0)?e.invert():e,this.guard=null!=t?t.guard:void 0}return Ct(t,e),t.prototype.nodeType=function(){return"While"},t.prototype.children=["condition","guard","body"],t.prototype.isStatement=et,t.prototype.makeReturn=function(e){return e?t.__super__.makeReturn.apply(this,arguments):(this.returns=!this.jumps({loop:!0}),this)},t.prototype.addBody=function(e){return this.body=e,this},t.prototype.jumps=function(){var e,t,n,i,r;if(e=this.body.expressions,!e.length)return!1;for(i=0,r=e.length;r>i;i++)if(n=e[i],t=n.jumps({loop:!0}))return t;return!1},t.prototype.compileNode=function(e){var t,n,i,r;return e.indent+=X,r="",n=this.body,n.isEmpty()?n=this.makeCode(""):(this.returns&&(n.makeReturn(i=e.scope.freeVariable("results")),r=""+this.tab+i+" = [];\n"),this.guard&&(n.expressions.length>1?n.expressions.unshift(new v(new j(this.guard).invert(),new D("continue"))):this.guard&&(n=o.wrap([new v(this.guard,n)]))),n=[].concat(this.makeCode("\n"),n.compileToFragments(e,x),this.makeCode("\n"+this.tab))),t=[].concat(this.makeCode(r+this.tab+"while ("),this.condition.compileToFragments(e,E),this.makeCode(") {"),n,this.makeCode("}")),this.returns&&t.push(this.makeCode("\n"+this.tab+"return "+i+";")),t},t}(r),e.Op=$=function(e){function n(e,t,n,i){if("in"===e)return new w(t,n);if("do"===e)return this.generateDo(t);if("new"===e){if(t instanceof s&&!t["do"]&&!t.isNew)return t.locationData=void 0,t.newInstance();(t instanceof c&&t.bound||t["do"])&&(t=new j(t))}return this.operator=r[e]||e,this.first=t,this.second=n,this.flip=!!i,this}var r,o;return Ct(n,e),n.prototype.nodeType=function(){return"Op"},r={"==":"===","!=":"!==",of:"in"},o={"!==":"===","===":"!=="},n.prototype.children=["first","second"],n.prototype.isSimpleNumber=A,n.prototype.isUnary=function(){return!this.second},n.prototype.isComplex=function(){var e;return!(this.isUnary()&&("+"===(e=this.operator)||"-"===e))||this.first.isComplex()},n.prototype.isChainable=function(){var e;return"<"===(e=this.operator)||">"===e||">="===e||"<="===e||"==="===e||"!=="===e},n.prototype.invert=function(){var e,t,i,r,s;if(this.isChainable()&&this.first.isChainable()){for(e=!0,t=this;t&&t.operator;)e&&(e=t.operator in o),t=t.first;if(!e)return new j(this).invert();for(t=this;t&&t.operator;)t.invert=!t.invert,t.operator=o[t.operator],t=t.first;return this}return(r=o[this.operator])?(this.operator=r,this.first.unwrap()instanceof n&&this.first.invert(),this):this.second?new j(this).invert():"!"===this.operator&&(i=this.first.unwrap())instanceof n&&("!"===(s=i.operator)||"in"===s||"instanceof"===s)?i:new n("!",this)},n.prototype.unfoldSoak=function(e){var t;return("++"===(t=this.operator)||"--"===t||"delete"===t)&&gt(e,this,"first")},n.prototype.generateDo=function(e){var t,n,r,o,a,h,u,l;for(o=[],n=e instanceof i&&(a=e.value.unwrap())instanceof c?a:e,l=n.params||[],h=0,u=l.length;u>h;h++)r=l[h],r.value?(o.push(r.value),delete r.value):o.push(r);return t=new s(e,o),t["do"]=!0,t},n.prototype.compileNode=function(e){var t,n,i,r,o,s;if(n=this.isChainable()&&this.first.isChainable(),n||(this.first.front=this.front),"delete"===this.operator&&e.scope.check(this.first.unwrapAll().value)&&this.error("delete operand may not be argument or var"),("--"===(o=this.operator)||"++"===o)&&(s=this.first.unwrapAll().value,Ft.call(U,s)>=0)&&this.error('cannot increment/decrement "'+this.first.unwrapAll().value+'"'),this.isUnary())return this.compileUnary(e);if(n)return this.compileChain(e);switch(this.operator){case"?":return this.compileExistence(e);case"**":return this.compilePower(e);case"//":return this.compileFloorDivision(e);case"%%":return this.compileModulo(e);default:return i=this.first.compileToFragments(e,N),r=this.second.compileToFragments(e,N),t=[].concat(i,this.makeCode(" "+this.operator+" "),r),N>=e.level?t:this.wrapInBraces(t)}},n.prototype.compileChain=function(e){var t,n,i,r;return r=this.first.second.cache(e),this.first.second=r[0],i=r[1],n=this.first.compileToFragments(e,N),t=n.concat(this.makeCode(" "+(this.invert?"&&":"||")+" "),i.compileToFragments(e),this.makeCode(" "+this.operator+" "),this.second.compileToFragments(e,N)),this.wrapInBraces(t)},n.prototype.compileExistence=function(e){var t,n;return this.first.isComplex()?(n=new D(e.scope.freeVariable("ref")),t=new j(new i(n,this.first))):(t=this.first,n=t),new v(new l(t),n,{type:"if"}).addElse(this.second).compileToFragments(e)},n.prototype.compileUnary=function(e){var t,i,r;return i=[],t=this.operator,i.push([this.makeCode(t)]),"!"===t&&this.first instanceof l?(this.first.negated=!this.first.negated,this.first.compileToFragments(e)):e.level>=C?new j(this).compileToFragments(e):(r="+"===t||"-"===t,("new"===t||"typeof"===t||"delete"===t||r&&this.first instanceof n&&this.first.operator===t)&&i.push([this.makeCode(" ")]),(r&&this.first instanceof n||"new"===t&&this.first.isStatement(e))&&(this.first=new j(this.first)),i.push(this.first.compileToFragments(e,N)),this.flip&&i.reverse(),this.joinFragmentArrays(i,""))},n.prototype.compilePower=function(e){var n;return n=new Z(new D("Math"),[new t(new D("pow"))]),new s(n,[this.first,this.second]).compileToFragments(e)},n.prototype.compileFloorDivision=function(e){var i,r;return r=new Z(new D("Math"),[new t(new D("floor"))]),i=new n("/",this.first,this.second),new s(r,[i]).compileToFragments(e)},n.prototype.compileModulo=function(e){var t;return t=new Z(new D(kt("modulo"))),new s(t,[this.first,this.second]).compileToFragments(e)},n.prototype.toString=function(e){return n.__super__.toString.call(this,e,this.constructor.name+" "+this.operator)},n}(r),e.In=w=function(e){function t(e,t){this.object=e,this.array=t}return Ct(t,e),t.prototype.nodeType=function(){return"In"},t.prototype.children=["object","array"],t.prototype.invert=R,t.prototype.compileNode=function(e){var t,n,i,r,o;if(this.array instanceof Z&&this.array.isArray()&&this.array.base.objects.length){for(o=this.array.base.objects,i=0,r=o.length;r>i;i++)if(n=o[i],n instanceof G){t=!0;break}if(!t)return this.compileOrTest(e)}return this.compileLoopTest(e)},t.prototype.compileOrTest=function(e){var t,n,i,r,o,s,a,c,h,u,l,p;for(u=this.object.cache(e,N),s=u[0],o=u[1],l=this.negated?[" !== "," && "]:[" === "," || "],t=l[0],n=l[1],a=[],p=this.array.base.objects,i=c=0,h=p.length;h>c;i=++c)r=p[i],i&&a.push(this.makeCode(n)),a=a.concat(i?o:s,this.makeCode(t),r.compileToFragments(e,C));return N>e.level?a:this.wrapInBraces(a)},t.prototype.compileLoopTest=function(e){var t,n,i,r;return r=this.object.cache(e,L),i=r[0],n=r[1],t=[].concat(this.makeCode(kt("indexOf")+".call("),this.array.compileToFragments(e,L),this.makeCode(", "),n,this.makeCode(") "+(this.negated?"< 0":">= 0"))),at(i)===at(n)?t:(t=i.concat(this.makeCode(", "),t),L>e.level?t:this.wrapInBraces(t))},t.prototype.toString=function(e){return t.__super__.toString.call(this,e,this.constructor.name+(this.negated?"!":""))},t}(r),e.Try=K=function(e){function t(e,t,n,i){this.attempt=e,this.errorVariable=t,this.recovery=n,this.ensure=i}return Ct(t,e),t.prototype.nodeType=function(){return"Try"},t.prototype.children=["attempt","recovery","ensure"],t.prototype.isStatement=et,t.prototype.jumps=function(e){var t;return this.attempt.jumps(e)||(null!=(t=this.recovery)?t.jumps(e):void 0)},t.prototype.makeReturn=function(e){return this.attempt&&(this.attempt=this.attempt.makeReturn(e)),this.recovery&&(this.recovery=this.recovery.makeReturn(e)),this},t.prototype.compileNode=function(e){var t,n,r,o;return e.indent+=X,o=this.attempt.compileToFragments(e,x),t=this.recovery?(r=new D("_error"),this.errorVariable?this.recovery.unshift(new i(this.errorVariable,r)):void 0,[].concat(this.makeCode(" catch ("),r.compileToFragments(e),this.makeCode(") {\n"),this.recovery.compileToFragments(e,x),this.makeCode("\n"+this.tab+"}"))):this.ensure||this.recovery?[]:[this.makeCode(" catch (_error) {}")],n=this.ensure?[].concat(this.makeCode(" finally {\n"),this.ensure.compileToFragments(e,x),this.makeCode("\n"+this.tab+"}")):[],[].concat(this.makeCode(""+this.tab+"try {\n"),o,this.makeCode("\n"+this.tab+"}"),t,n)},t}(r),e.Throw=z=function(e){function t(e){this.expression=e}return Ct(t,e),t.prototype.nodeType=function(){return"Throw"},t.prototype.children=["expression"],t.prototype.isStatement=et,t.prototype.jumps=A,t.prototype.makeReturn=Y,t.prototype.compileNode=function(e){return[].concat(this.makeCode(this.tab+"throw "),this.expression.compileToFragments(e),this.makeCode(";"))},t}(r),e.Existence=l=function(e){function t(e){this.expression=e}return Ct(t,e),t.prototype.nodeType=function(){return"Existence"},t.prototype.children=["expression"],t.prototype.invert=R,t.prototype.compileNode=function(e){var t,n,i,r;return this.expression.front=this.front,i=this.expression.compile(e,N),y.test(i)&&!e.scope.check(i)?(r=this.negated?["===","||"]:["!==","&&"],t=r[0],n=r[1],i="typeof "+i+" "+t+' "undefined" '+n+" "+i+" "+t+" null"):i=""+i+" "+(this.negated?"==":"!=")+" null",[this.makeCode(F>=e.level?i:"("+i+")")]},t}(r),e.Parens=j=function(e){function t(e){this.body=e}return Ct(t,e),t.prototype.nodeType=function(){return"Parens"},t.prototype.children=["body"],t.prototype.unwrap=function(){return this.body},t.prototype.isComplex=function(){return this.body.isComplex()},t.prototype.compileNode=function(e){var t,n,i;return n=this.body.unwrap(),n instanceof Z&&n.isAtomic()?(n.front=this.front,n.compileToFragments(e)):(i=n.compileToFragments(e,E),t=N>e.level&&(n instanceof $||n instanceof s||n instanceof f&&n.returns),t?i:this.wrapInBraces(i))},t}(r),e.For=f=function(e){function t(e,t){var n;this.source=t.source,this.guard=t.guard,this.step=t.step,this.name=t.name,this.index=t.index,this.body=o.wrap([e]),this.own=!!t.own,this.object=!!t.object,this.object&&(n=[this.index,this.name],this.name=n[0],this.index=n[1]),this.index instanceof Z&&this.index.error("index cannot be a pattern matching expression"),this.range=this.source instanceof Z&&this.source.base instanceof B&&!this.source.properties.length,this.pattern=this.name instanceof Z,this.range&&this.index&&this.index.error("indexes do not apply to range loops"),this.range&&this.pattern&&this.name.error("cannot pattern match over range loops"),this.own&&!this.object&&this.name.error("cannot use own with for-in"),this.returns=!1}return Ct(t,e),t.prototype.nodeType=function(){return"For"},t.prototype.children=["body","source","guard","step"],t.prototype.compileNode=function(e){var t,n,r,s,a,c,h,u,l,p,d,f,m,b,g,k,w,T,C,F,N,E,S,R,A,_,$,O,M,B,P,U,H,q;return t=o.wrap([this.body]),T=null!=(H=ut(t.expressions))?H.jumps():void 0,T&&T instanceof V&&(this.returns=!1),$=this.range?this.source.base:this.source,_=e.scope,this.pattern||(F=this.name&&this.name.compile(e,L)),b=this.index&&this.index.compile(e,L),F&&!this.pattern&&_.find(F),b&&_.find(b),this.returns&&(A=_.freeVariable("results")),g=this.object&&b||_.freeVariable("i"),k=this.range&&F||b||g,w=k!==g?""+k+" = ":"",this.step&&!this.range&&(q=this.cacheToCodeFragments(this.step.cache(e,L)),O=q[0],B=q[1],M=B.match(I)),this.pattern&&(F=g),U="",d="",h="",f=this.tab+X,this.range?p=$.compileToFragments(pt(e,{index:g,name:F,step:this.step})):(P=this.source.compile(e,L),!F&&!this.own||y.test(P)||(h+=""+this.tab+(E=_.freeVariable("ref"))+" = "+P+";\n",P=E),F&&!this.pattern&&(N=""+F+" = "+P+"["+k+"]"),this.object||(O!==B&&(h+=""+this.tab+O+";\n"),this.step&&M&&(l=0>ft(M[0]))||(C=_.freeVariable("len")),a=""+w+g+" = 0, "+C+" = "+P+".length",c=""+w+g+" = "+P+".length - 1",r=""+g+" < "+C,s=""+g+" >= 0",this.step?(M?l&&(r=s,a=c):(r=""+B+" > 0 ? "+r+" : "+s,a="("+B+" > 0 ? ("+a+") : "+c+")"),m=""+g+" += "+B):m=""+(k!==g?"++"+g:""+g+"++"),p=[this.makeCode(""+a+"; "+r+"; "+w+m)])),this.returns&&(S=""+this.tab+A+" = [];\n",R="\n"+this.tab+"return "+A+";",t.makeReturn(A)),this.guard&&(t.expressions.length>1?t.expressions.unshift(new v(new j(this.guard).invert(),new D("continue"))):this.guard&&(t=o.wrap([new v(this.guard,t)]))),this.pattern&&t.expressions.unshift(new i(this.name,new D(""+P+"["+k+"]"))),u=[].concat(this.makeCode(h),this.pluckDirectCall(e,t)),N&&(U="\n"+f+N+";"),this.object&&(p=[this.makeCode(""+k+" in "+P)],this.own&&(d="\n"+f+"if (!"+kt("hasProp")+".call("+P+", "+k+")) continue;")),n=t.compileToFragments(pt(e,{indent:f}),x),n&&n.length>0&&(n=[].concat(this.makeCode("\n"),n,this.makeCode("\n"))),[].concat(u,this.makeCode(""+(S||"")+this.tab+"for ("),p,this.makeCode(") {"+d+U),n,this.makeCode(""+this.tab+"}"+(R||"")))},t.prototype.pluckDirectCall=function(e,t){var n,r,o,a,h,u,l,p,d,f,m,y,b,g,k,v;for(r=[],f=t.expressions,h=p=0,d=f.length;d>p;h=++p)o=f[h],o=o.unwrapAll(),o instanceof s&&(l=null!=(m=o.variable)?m.unwrapAll():void 0,(l instanceof c||l instanceof Z&&(null!=(y=l.base)?y.unwrapAll():void 0)instanceof c&&1===l.properties.length&&("call"===(b=null!=(g=l.properties[0].name)?g.value:void 0)||"apply"===b))&&(a=(null!=(k=l.base)?k.unwrapAll():void 0)||l,u=new D(e.scope.freeVariable("fn")),n=new Z(u),l.base&&(v=[n,l],l.base=v[0],n=v[1]),t.expressions[h]=new s(n,o.args),r=r.concat(this.makeCode(this.tab),new i(u,a).compileToFragments(e,x),this.makeCode(";\n"))));return r},t}(Q),e.Switch=W=function(e){function t(e,t,n){this.subject=e,this.cases=t,this.otherwise=n}return Ct(t,e),t.prototype.nodeType=function(){return"Switch"},t.prototype.children=["subject","cases","otherwise"],t.prototype.isStatement=et,t.prototype.jumps=function(e){var t,n,i,r,o,s,a,c;for(null==e&&(e={block:!0}),s=this.cases,r=0,o=s.length;o>r;r++)if(a=s[r],n=a[0],t=a[1],i=t.jumps(e))return i;return null!=(c=this.otherwise)?c.jumps(e):void 0},t.prototype.makeReturn=function(e){var t,n,i,r,s;for(r=this.cases,n=0,i=r.length;i>n;n++)t=r[n],t[1].makeReturn(e);return e&&(this.otherwise||(this.otherwise=new o([new D("void 0")]))),null!=(s=this.otherwise)&&s.makeReturn(e),this},t.prototype.compileNode=function(e){var t,n,i,r,o,s,a,c,h,u,l,p,d,f,m,y;for(c=e.indent+X,h=e.indent=c+X,s=[].concat(this.makeCode(this.tab+"switch ("),this.subject?this.subject.compileToFragments(e,E):this.makeCode("false"),this.makeCode(") {\n")),f=this.cases,a=u=0,p=f.length;p>u;a=++u){for(m=f[a],r=m[0],t=m[1],y=st([r]),l=0,d=y.length;d>l;l++)i=y[l],this.subject||(i=i.invert()),s=s.concat(this.makeCode(c+"case "),i.compileToFragments(e,E),this.makeCode(":\n"));if((n=t.compileToFragments(e,x)).length>0&&(s=s.concat(n,this.makeCode("\n"))),a===this.cases.length-1&&!this.otherwise)break;o=this.lastNonComment(t.expressions),o instanceof V||o instanceof D&&o.jumps()&&"debugger"!==o.value||s.push(i.makeCode(h+"break;\n"))}return this.otherwise&&this.otherwise.expressions.length&&s.push.apply(s,[this.makeCode(c+"default:\n")].concat(Lt.call(this.otherwise.compileToFragments(e,x)),[this.makeCode("\n")])),s.push(this.makeCode(this.tab+"}")),s},t}(r),e.If=v=function(e){function t(e,t,n){this.body=t,null==n&&(n={}),this.rawCondition=e,this.condition="unless"===n.type?e.invert():e,this.elseBody=null,this.elseToken=null,this.isChain=!1,this.soak=n.soak}return Ct(t,e),t.prototype.nodeType=function(){return"If"},t.prototype.children=["condition","body","elseBody"],t.prototype.bodyNode=function(){var e;return null!=(e=this.body)?e.unwrap():void 0},t.prototype.elseBodyNode=function(){var e;return null!=(e=this.elseBody)?e.unwrap():void 0},t.prototype.addElse=function(e,n){return this.isChain?this.elseBodyNode().addElse(e,n):(this.isChain=e instanceof t,this.elseBody=this.ensureBlock(e),this.elseBody.updateLocationDataIfMissing(e.locationData),this.elseToken=n),this},t.prototype.isStatement=function(e){var t;return(null!=e?e.level:void 0)===x||this.bodyNode().isStatement(e)||(null!=(t=this.elseBodyNode())?t.isStatement(e):void 0)},t.prototype.jumps=function(e){var t;return this.body.jumps(e)||(null!=(t=this.elseBody)?t.jumps(e):void 0)},t.prototype.compileNode=function(e){return this.isStatement(e)?this.compileStatement(e):this.compileExpression(e)},t.prototype.makeReturn=function(e){return e&&(this.elseBody||(this.elseBody=new o([new D("void 0")]))),this.body&&(this.body=new o([this.body.makeReturn(e)])),this.elseBody&&(this.elseBody=new o([this.elseBody.makeReturn(e)])),this},t.prototype.ensureBlock=function(e){return e instanceof o?e:new o([e])},t.prototype.compileStatement=function(e){var n,i,r,o,s,a,c;return r=it(e,"chainChild"),(s=it(e,"isExistentialEquals"))?new t(this.condition.invert(),this.elseBodyNode(),{type:"if"}).compileToFragments(e):(c=e.indent+X,o=this.condition.compileToFragments(e,E),i=this.ensureBlock(this.body).compileToFragments(pt(e,{indent:c})),a=[].concat(this.makeCode("if ("),o,this.makeCode(") {\n"),i,this.makeCode("\n"+this.tab+"}")),r||a.unshift(this.makeCode(this.tab)),this.elseBody?(n=a.concat(this.makeCode(" else ")),this.isChain?(e.chainChild=!0,n=n.concat(this.elseBody.unwrap().compileToFragments(e,x))):n=n.concat(this.makeCode("{\n"),this.elseBody.compileToFragments(pt(e,{indent:c}),x),this.makeCode("\n"+this.tab+"}")),n):a)},t.prototype.compileExpression=function(e){var t,n,i,r;return i=this.condition.compileToFragments(e,F),n=this.bodyNode().compileToFragments(e,L),t=this.elseBodyNode()?this.elseBodyNode().compileToFragments(e,L):[this.makeCode("void 0")],r=i.concat(this.makeCode(" ? "),n,this.makeCode(" : "),t),e.level>=F?this.wrapInBraces(r):r},t.prototype.unfoldSoak=function(){return this.soak&&this},t}(r),J={"extends":function(){return"function(child, parent) { for (var key in parent) { if ("+kt("hasProp")+".call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; }"},bind:function(){return"function(fn, me){ return function(){ return fn.apply(me, arguments); }; }"},indexOf:function(){return"[].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; }"},modulo:function(){return"function(a, b) { return (+a % (b = +b) + b) % b; }"},hasProp:function(){return"{}.hasOwnProperty"},slice:function(){return"[].slice"}},x=1,E=2,L=3,F=4,N=5,C=6,X="  ",b="[$A-Za-z_\\x7f-\\uffff][$\\w\\x7f-\\uffff]*",y=RegExp("^"+b+"$"),P=/^[+-]?\d+$/,m=/^[+-]?0x[\da-f]+/i,I=/^[+-]?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)$/i,S=RegExp("^("+b+")(\\.prototype)?(?:\\.("+b+")|\\[(\"(?:[^\\\\\"\\r\\n]|\\\\.)*\"|'(?:[^\\\\'\\r\\n]|\\\\.)*')\\]|\\[(0x[\\da-fA-F]+|\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)\\])$"),k=/^['"]/,g=/^\//,kt=function(e){var t;return t="__"+e,H.root.assign(t,J[e]()),t},dt=function(e,t){return e=e.replace(/\n/g,"$&"+t),e.replace(/\s+$/,"")},ft=function(e){return null==e?0:e.match(m)?parseInt(e,16):parseFloat(e)},ct=function(e){return e instanceof D&&"arguments"===e.value&&!e.asKey},ht=function(e){return e instanceof D&&"this"===e.value&&!e.asKey||e instanceof c&&e.bound||e instanceof s&&e.isSuper},gt=function(e,t,n){var i;if(i=t[n].unfoldSoak(e))return t[n]=i.body,i.body=new Z(t),i}}.call(this),t.exports}(),require["./sourcemap"]=function(){var e={},t={exports:e};return function(){var e,n;e=function(){function e(e){this.line=e,this.columns=[]}return e.prototype.add=function(e,t,n){var i,r;return r=t[0],i=t[1],null==n&&(n={}),this.columns[e]&&n.noReplace?void 0:this.columns[e]={line:this.line,column:e,sourceLine:r,sourceColumn:i}},e.prototype.sourceLocation=function(e){for(var t;!((t=this.columns[e])||0>=e);)e--;return t&&[t.sourceLine,t.sourceColumn]},e}(),n=function(){function t(){this.lines=[]}var n,i,r,o;return t.prototype.add=function(t,n,i){var r,o,s,a;return null==i&&(i={}),o=n[0],r=n[1],s=(a=this.lines)[o]||(a[o]=new e(o)),s.add(r,t,i)},t.prototype.sourceLocation=function(e){var t,n,i;for(n=e[0],t=e[1];!((i=this.lines[n])||0>=n);)n--;return i&&i.sourceLocation(t)},t.prototype.generate=function(e,t){var n,i,r,o,s,a,c,h,u,l,p,d,f,m,y,b;for(null==e&&(e={}),null==t&&(t=null),l=0,i=0,o=0,r=0,h=!1,n="",y=this.lines,a=p=0,f=y.length;f>p;a=++p)if(s=y[a])for(b=s.columns,d=0,m=b.length;m>d;d++)if(c=b[d]){for(;c.line>l;)i=0,h=!1,n+=";",l++;h&&(n+=",",h=!1),n+=this.encodeVlq(c.column-i),i=c.column,n+=this.encodeVlq(0),n+=this.encodeVlq(c.sourceLine-o),o=c.sourceLine,n+=this.encodeVlq(c.sourceColumn-r),r=c.sourceColumn,h=!0}return u={version:3,file:e.generatedFile||"",sourceRoot:e.sourceRoot||"",sources:e.sourceFiles||[""],names:[],mappings:n},e.inline&&(u.sourcesContent=[t]),JSON.stringify(u,null,2)},r=5,i=1<<r,o=i-1,t.prototype.encodeVlq=function(e){var t,n,s,a;for(t="",s=0>e?1:0,a=(Math.abs(e)<<1)+s;a||!t;)n=a&o,a>>=r,a&&(n|=i),t+=this.encodeBase64(n);return t},n="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",t.prototype.encodeBase64=function(e){return n[e]||function(){throw Error("Cannot Base64 encode value: "+e)}()},t}(),t.exports=n}.call(this),t.exports}(),require["./coffee-script"]=function(){var e={},t={exports:e};return function(){var t,n,i,r,o,s,a,c,h,u,l,p,d,f,m,y,b,g,k={}.hasOwnProperty,v=[].indexOf||function(e){for(var t=0,n=this.length;n>t;t++)if(t in this&&this[t]===e)return t;return-1};if(s=require("fs"),d=require("vm"),l=require("path"),t=require("./lexer").Lexer,u=require("./parser").parser,c=require("./helpers"),n=require("./sourcemap"),e.VERSION="1.7.1",e.FILE_EXTENSIONS=[".coffee",".litcoffee",".coffee.md"],e.helpers=c,f=function(e){return function(t,n){var i;null==n&&(n={});try{return e.call(this,t,n)}catch(r){throw i=r,c.updateSyntaxError(i,t,n.filename)}}},e.compile=i=f(function(e,t){var i,r,o,s,a,l,p,d,f,m,y,b,g;for(m=c.merge,s=c.extend,t=s({},t),t.sourceMap&&(f=new n),l=u.parse(h.tokenize(e,t)).compileToFragments(t),o=0,t.header&&(o+=1),t.shiftLine&&(o+=1),r=0,d="",b=0,g=l.length;g>b;b++)a=l[b],t.sourceMap&&(a.locationData&&f.add([a.locationData.first_line,a.locationData.first_column],[o,r],{noReplace:!0}),y=c.count(a.code,"\n"),o+=y,y?r=a.code.length-(a.code.lastIndexOf("\n")+1):r+=a.code.length),d+=a.code;return t.header&&(p="Generated by CoffeeScript "+this.VERSION,d="// "+p+"\n"+d),t.sourceMap?(i={js:d},i.sourceMap=f,i.v3SourceMap=f.generate(t,e),i):d
 }),e.tokens=f(function(e,t){return h.tokenize(e,t)}),e.nodes=f(function(e,t){return"string"==typeof e?u.parse(h.tokenize(e,t)):u.parse(e)}),e.run=function(e,t){var n,r,o,a;return null==t&&(t={}),o=require.main,o.filename=process.argv[1]=t.filename?s.realpathSync(t.filename):".",o.moduleCache&&(o.moduleCache={}),r=t.filename?l.dirname(s.realpathSync(t.filename)):s.realpathSync("."),o.paths=require("module")._nodeModulePaths(r),(!c.isCoffee(o.filename)||require.extensions)&&(n=i(e,t),e=null!=(a=n.js)?a:n),o._compile(e,o.filename)},e.eval=function(e,t){var n,r,o,s,a,c,h,u,p,f,m,y,b,g;if(null==t&&(t={}),e=e.trim()){if(r=d.Script){if(null!=t.sandbox){if(t.sandbox instanceof r.createContext().constructor)h=t.sandbox;else{h=r.createContext(),y=t.sandbox;for(s in y)k.call(y,s)&&(u=y[s],h[s]=u)}h.global=h.root=h.GLOBAL=h}else h=global;if(h.__filename=t.filename||"eval",h.__dirname=l.dirname(h.__filename),h===global&&!h.module&&!h.require){for(n=require("module"),h.module=m=new n(t.modulename||"eval"),h.require=g=function(e){return n._load(e,m,!0)},m.filename=h.__filename,b=Object.getOwnPropertyNames(require),p=0,f=b.length;f>p;p++)c=b[p],"paths"!==c&&(g[c]=require[c]);g.paths=m.paths=n._nodeModulePaths(process.cwd()),g.resolve=function(e){return n._resolveFilename(e,m)}}}a={};for(s in t)k.call(t,s)&&(u=t[s],a[s]=u);return a.bare=!0,o=i(e,a),h===global?d.runInThisContext(o):d.runInContext(o,h)}},e.register=function(){return require("./register")},require.extensions)for(g=this.FILE_EXTENSIONS,y=0,b=g.length;b>y;y++)r=g[y],null==(m=require.extensions)[r]&&(m[r]=function(){throw Error("Use CoffeeScript.register() or require the coffee-script/register module to require "+r+" files.")});e._compileFile=function(e,t){var n,r,o,a;null==t&&(t=!1),o=s.readFileSync(e,"utf8"),a=65279===o.charCodeAt(0)?o.substring(1):o;try{n=i(a,{filename:e,sourceMap:t,literate:c.isLiterate(e)})}catch(h){throw r=h,c.updateSyntaxError(r,a,e)}return n},h=new t,u.lexer={lex:function(){var e,t;return t=this.tokens[this.pos++],t?(e=t[0],this.yytext=t[1],this.yylloc=t[2],this.errorToken=t.origin||t,this.yylineno=this.yylloc.first_line):e="",e},setInput:function(e){return this.tokens=e,this.pos=0},upcomingInput:function(){return""}},u.yy=require("./nodes"),u.yy.parseError=function(e,t){var n,i,r,o,s,a,h;return s=t.token,h=u.lexer,o=h.errorToken,a=h.tokens,i=o[0],r=o[1],n=o[2],r=o===a[a.length-1]?"end of input":"INDENT"===i||"OUTDENT"===i?"indentation":c.nameWhitespaceCharacter(r),c.throwSyntaxError("unexpected "+r,n)},o=function(e,t){var n,i,r,o,s,a,c,h,u,l,p,d;return o=void 0,r="",e.isNative()?r="native":(e.isEval()?(o=e.getScriptNameOrSourceURL(),o||(r=""+e.getEvalOrigin()+", ")):o=e.getFileName(),o||(o="<anonymous>"),h=e.getLineNumber(),i=e.getColumnNumber(),l=t(o,h,i),r=l?""+o+":"+l[0]+":"+l[1]:""+o+":"+h+":"+i),s=e.getFunctionName(),a=e.isConstructor(),c=!(e.isToplevel()||a),c?(u=e.getMethodName(),d=e.getTypeName(),s?(p=n="",d&&s.indexOf(d)&&(p=""+d+"."),u&&s.indexOf("."+u)!==s.length-u.length-1&&(n=" [as "+u+"]"),""+p+s+n+" ("+r+")"):""+d+"."+(u||"<anonymous>")+" ("+r+")"):a?"new "+(s||"<anonymous>")+" ("+r+")":s?""+s+" ("+r+")":r},p={},a=function(t){var n,i;if(p[t])return p[t];if(i=null!=l?l.extname(t):void 0,!(0>v.call(e.FILE_EXTENSIONS,i)))return n=e._compileFile(t,!0),p[t]=n.sourceMap},Error.prepareStackTrace=function(t,n){var i,r,s;return s=function(e,t,n){var i,r;return r=a(e),r&&(i=r.sourceLocation([t-1,n-1])),i?[i[0]+1,i[1]+1]:null},r=function(){var t,r,a;for(a=[],t=0,r=n.length;r>t&&(i=n[t],i.getFunction()!==e.run);t++)a.push("  at "+o(i,s));return a}(),""+(""+t)+"\n"+r.join("\n")+"\n"}}.call(this),t.exports}(),require["./browser"]=function(){var exports={},module={exports:exports};return function(){var CoffeeScript,compile,runScripts,__indexOf=[].indexOf||function(e){for(var t=0,n=this.length;n>t;t++)if(t in this&&this[t]===e)return t;return-1};CoffeeScript=require("./coffee-script"),CoffeeScript.require=require,compile=CoffeeScript.compile,CoffeeScript.eval=function(code,options){return null==options&&(options={}),null==options.bare&&(options.bare=!0),eval(compile(code,options))},CoffeeScript.run=function(e,t){return null==t&&(t={}),t.bare=!0,t.shiftLine=!0,Function(compile(e,t))()},"undefined"!=typeof window&&null!==window&&("undefined"!=typeof btoa&&null!==btoa&&"undefined"!=typeof JSON&&null!==JSON&&"undefined"!=typeof unescape&&null!==unescape&&"undefined"!=typeof encodeURIComponent&&null!==encodeURIComponent&&(compile=function(e,t){var n,i,r;return null==t&&(t={}),t.sourceMap=!0,t.inline=!0,r=CoffeeScript.compile(e,t),n=r.js,i=r.v3SourceMap,""+n+"\n//# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(i)))+"\n//# sourceURL=coffeescript"}),CoffeeScript.load=function(e,t,n,i){var r;return null==n&&(n={}),null==i&&(i=!1),n.sourceFiles=[e],r=window.ActiveXObject?new window.ActiveXObject("Microsoft.XMLHTTP"):new window.XMLHttpRequest,r.open("GET",e,!0),"overrideMimeType"in r&&r.overrideMimeType("text/plain"),r.onreadystatechange=function(){var o,s;if(4===r.readyState){if(0!==(s=r.status)&&200!==s)throw Error("Could not load "+e);if(o=[r.responseText,n],i||CoffeeScript.run.apply(CoffeeScript,o),t)return t(o)}},r.send(null)},runScripts=function(){var e,t,n,i,r,o,s,a,c,h,u;for(a=window.document.getElementsByTagName("script"),t=["text/coffeescript","text/literate-coffeescript"],e=function(){var e,n,i,r;for(r=[],e=0,n=a.length;n>e;e++)o=a[e],i=o.type,__indexOf.call(t,i)>=0&&r.push(o);return r}(),r=0,n=function(){var t;return t=e[r],t instanceof Array?(CoffeeScript.run.apply(CoffeeScript,t),r++,n()):void 0},c=function(i,r){var o;return o={literate:i.type===t[1]},i.src?CoffeeScript.load(i.src,function(t){return e[r]=t,n()},o,!0):(o.sourceFiles=["embedded"],e[r]=[i.innerHTML,o])},i=h=0,u=e.length;u>h;i=++h)s=e[i],c(s,i);return n()},window.addEventListener?window.addEventListener("DOMContentLoaded",runScripts,!1):window.attachEvent("onload",runScripts))}.call(this),module.exports}(),require["./coffee-script"]}();"function"==typeof define&&define.amd?define('coffee-script',[],function(){return CoffeeScript}):root.CoffeeScript=CoffeeScript})(this);
 (function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty,
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-coffee',['droplet-helper', 'droplet-model', 'droplet-parser', 'coffee-script'], function(helper, model, parser, CoffeeScript) {
     var ANY_DROP, BLOCK_ONLY, CoffeeScriptParser, FORBID_ALL, KNOWN_FUNCTIONS, LVALUE, MOSTLY_BLOCK, MOSTLY_VALUE, NO, OPERATOR_PRECEDENCES, PROPERTY_ACCESS, STATEMENT_KEYWORDS, VALUE_ONLY, YES, addEmptyBackTickLineAfter, annotateCsNodes, backTickLine, exports, findUnmatchedLine, fixCoffeeScriptError, getClassesFor, spacestring;
@@ -4308,12 +4308,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     spacestring = function(n) {
       return ((function() {
-        var _i, _ref, _results;
-        _results = [];
-        for (_i = 0, _ref = Math.max(0, n); 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--) {
-          _results.push(' ');
+        var j, ref, results;
+        results = [];
+        for (j = 0, ref = Math.max(0, n); 0 <= ref ? j < ref : j > ref; 0 <= ref ? j++ : j--) {
+          results.push(' ');
         }
-        return _results;
+        return results;
       })()).join('');
     };
     getClassesFor = function(node) {
@@ -4332,28 +4332,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       });
       return tree;
     };
-    exports.CoffeeScriptParser = CoffeeScriptParser = (function(_super) {
-      __extends(CoffeeScriptParser, _super);
+    exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
+      extend(CoffeeScriptParser, superClass);
 
       function CoffeeScriptParser(text, opts) {
-        var i, line, _base, _i, _len, _ref;
+        var base, i, j, len, line, ref;
         this.text = text;
         this.opts = opts != null ? opts : {};
         CoffeeScriptParser.__super__.constructor.apply(this, arguments);
-        if ((_base = this.opts).functions == null) {
-          _base.functions = KNOWN_FUNCTIONS;
+        if ((base = this.opts).functions == null) {
+          base.functions = KNOWN_FUNCTIONS;
         }
         this.lines = this.text.split('\n');
         this.hasLineBeenMarked = {};
-        _ref = this.lines;
-        for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
-          line = _ref[i];
+        ref = this.lines;
+        for (i = j = 0, len = ref.length; j < len; i = ++j) {
+          line = ref[i];
           this.hasLineBeenMarked[i] = false;
         }
       }
 
       CoffeeScriptParser.prototype.markRoot = function() {
-        var e, firstError, node, nodes, retries, tree, _i, _len;
+        var e, firstError, j, len, node, nodes, retries, tree;
         this.stripComments();
         retries = Math.max(1, Math.min(5, Math.ceil(this.lines.length / 2)));
         firstError = null;
@@ -4382,8 +4382,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
           retries -= 1;
         }
-        for (_i = 0, _len = nodes.length; _i < _len; _i++) {
-          node = nodes[_i];
+        for (j = 0, len = nodes.length; j < len; j++) {
+          node = nodes[j];
           this.mark(node, 3, 0, null, 0);
         }
         return this.wrapSemicolons(nodes, 0);
@@ -4394,7 +4394,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.stripComments = function() {
-        var i, line, syntaxError, token, tokens, _i, _j, _len, _ref, _ref1;
+        var i, j, k, len, line, ref, ref1, syntaxError, token, tokens;
         try {
           tokens = CoffeeScript.tokens(this.text, {
             rewrite: false,
@@ -4410,8 +4410,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
           throw syntaxError;
         }
-        for (_i = 0, _len = tokens.length; _i < _len; _i++) {
-          token = tokens[_i];
+        for (j = 0, len = tokens.length; j < len; j++) {
+          token = tokens[j];
           if (token[0] === 'COMMENT') {
             if (token[2].first_line === token[2].last_line) {
               line = this.lines[token[2].first_line];
@@ -4420,7 +4420,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               line = this.lines[token[2].first_line];
               this.lines[token[2].first_line] = line.slice(0, token[2].first_column) + spacestring(line.length - token[2].first_column);
               this.lines[token[2].last_line] = spacestring(token[2].last_column + 1) + this.lines[token[2].last_line].slice(token[2].last_column + 1);
-              for (i = _j = _ref = token[2].first_line + 1, _ref1 = token[2].last_line; _ref <= _ref1 ? _j < _ref1 : _j > _ref1; i = _ref <= _ref1 ? ++_j : --_j) {
+              for (i = k = ref = token[2].first_line + 1, ref1 = token[2].last_line; ref <= ref1 ? k < ref1 : k > ref1; i = ref <= ref1 ? ++k : --k) {
                 this.lines[i] = spacestring(this.lines[i].length);
               }
             }
@@ -4430,21 +4430,21 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.functionNameNodes = function(node) {
-        var nodes, prop, _i, _len, _ref, _ref1;
+        var j, len, nodes, prop, ref, ref1;
         if (node.nodeType() !== 'Call') {
           throw new Error;
         }
         if (node.variable != null) {
           nodes = [];
-          if ((_ref = node.variable.base) != null ? _ref.value : void 0) {
+          if ((ref = node.variable.base) != null ? ref.value : void 0) {
             nodes.push(node.variable.base);
           } else {
             nodes.push(null);
           }
           if (node.variable.properties != null) {
-            _ref1 = node.variable.properties;
-            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-              prop = _ref1[_i];
+            ref1 = node.variable.properties;
+            for (j = 0, len = ref1.length; j < len; j++) {
+              prop = ref1[j];
               nodes.push(prop.name);
             }
           }
@@ -4458,12 +4458,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.implicitName = function(nn) {
-        var node, _ref;
+        var node, ref;
         if (nn.length === 0) {
           return false;
         }
         node = nn[nn.length - 1];
-        return (node != null ? (_ref = node.value) != null ? _ref.length : void 0 : void 0) > 1 && this.emptyLocation(node.locationData);
+        return (node != null ? (ref = node.value) != null ? ref.length : void 0 : void 0) > 1 && this.emptyLocation(node.locationData);
       };
 
       CoffeeScriptParser.prototype.lookupFunctionName = function(nn) {
@@ -4492,17 +4492,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.addCode = function(node, depth, indentDepth) {
-        var param, _i, _len, _ref;
-        _ref = node.params;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          param = _ref[_i];
+        var j, len, param, ref;
+        ref = node.params;
+        for (j = 0, len = ref.length; j < len; j++) {
+          param = ref[j];
           this.csSocketAndMark(param, depth, 0, indentDepth, FORBID_ALL);
         }
         return this.mark(node.body, depth, 0, null, indentDepth);
       };
 
       CoffeeScriptParser.prototype.mark = function(node, depth, precedence, wrappingParen, indentDepth) {
-        var arg, bounds, childName, classes, color, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, known, last, line, lines, namenodes, object, property, secondBounds, shouldBeOneLine, switchCase, textLine, trueIndentDepth, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results2, _results3, _results4, _s;
+        var arg, bounds, childName, classes, color, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, j, k, known, l, last, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, line, lines, m, namenodes, o, object, p, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, s, secondBounds, shouldBeOneLine, switchCase, t, textLine, trueIndentDepth, u;
         switch (node.nodeType()) {
           case 'Block':
             if (node.expressions.length === 0) {
@@ -4510,7 +4510,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             }
             bounds = this.getBounds(node);
             shouldBeOneLine = false;
-            for (line = _i = _ref = bounds.start.line, _ref1 = bounds.end.line; _ref <= _ref1 ? _i <= _ref1 : _i >= _ref1; line = _ref <= _ref1 ? ++_i : --_i) {
+            for (line = j = ref = bounds.start.line, ref1 = bounds.end.line; ref <= ref1 ? j <= ref1 : j >= ref1; line = ref <= ref1 ? ++j : --j) {
               shouldBeOneLine || (shouldBeOneLine = this.hasLineBeenMarked[line]);
             }
             if (this.lines[bounds.start.line].slice(0, bounds.start.column).trim().length !== 0) {
@@ -4534,9 +4534,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               });
               indentDepth = trueIndentDepth;
             }
-            _ref2 = node.expressions;
-            for (_j = 0, _len = _ref2.length; _j < _len; _j++) {
-              expr = _ref2[_j];
+            ref2 = node.expressions;
+            for (k = 0, len = ref2.length; k < len; k++) {
+              expr = ref2[k];
               this.mark(expr, depth + 3, 0, null, indentDepth);
             }
             return this.wrapSemicolons(node.expressions, depth);
@@ -4547,13 +4547,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               } else {
                 if (node.body.unwrap() === node.body) {
                   this.csBlock(node, depth, -2, 'command', null, MOSTLY_BLOCK);
-                  _ref3 = node.body.expressions;
-                  _results = [];
-                  for (_k = 0, _len1 = _ref3.length; _k < _len1; _k++) {
-                    expr = _ref3[_k];
-                    _results.push(this.csSocketAndMark(expr, depth + 1, -2, indentDepth));
+                  ref3 = node.body.expressions;
+                  results = [];
+                  for (l = 0, len1 = ref3.length; l < len1; l++) {
+                    expr = ref3[l];
+                    results.push(this.csSocketAndMark(expr, depth + 1, -2, indentDepth));
                   }
-                  return _results;
+                  return results;
                 } else {
                   return this.mark(node.body.unwrap(), depth + 1, 0, wrappingParen != null ? wrappingParen : node, indentDepth);
                 }
@@ -4570,7 +4570,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 return;
               }
             }
-            if (node.first && !node.second && ((_ref4 = node.operator) === '+' || _ref4 === '-') && ((_ref5 = node.first) != null ? (_ref6 = _ref5.base) != null ? typeof _ref6.nodeType === "function" ? _ref6.nodeType() : void 0 : void 0 : void 0) === 'Literal') {
+            if (node.first && !node.second && ((ref4 = node.operator) === '+' || ref4 === '-') && ((ref5 = node.first) != null ? (ref6 = ref5.base) != null ? typeof ref6.nodeType === "function" ? ref6.nodeType() : void 0 : void 0 : void 0) === 'Literal') {
               return;
             }
             this.csBlock(node, depth, OPERATOR_PRECEDENCES[node.operator], 'value', wrappingParen, VALUE_ONLY);
@@ -4590,19 +4590,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if ((node.properties != null) && node.properties.length > 0) {
               this.csBlock(node, depth, 0, 'value', wrappingParen, MOSTLY_VALUE);
               this.csSocketAndMark(node.base, depth + 1, 0, indentDepth);
-              _ref7 = node.properties;
-              _results1 = [];
-              for (_l = 0, _len2 = _ref7.length; _l < _len2; _l++) {
-                property = _ref7[_l];
+              ref7 = node.properties;
+              results1 = [];
+              for (m = 0, len2 = ref7.length; m < len2; m++) {
+                property = ref7[m];
                 if (property.nodeType() === 'Access') {
-                  _results1.push(this.csSocketAndMark(property.name, depth + 1, -2, indentDepth, PROPERTY_ACCESS));
+                  results1.push(this.csSocketAndMark(property.name, depth + 1, -2, indentDepth, PROPERTY_ACCESS));
                 } else if (property.nodeType() === 'Index') {
-                  _results1.push(this.csSocketAndMark(property.index, depth + 1, 0, indentDepth));
+                  results1.push(this.csSocketAndMark(property.index, depth + 1, 0, indentDepth));
                 } else {
-                  _results1.push(void 0);
+                  results1.push(void 0);
                 }
               }
-              return _results1;
+              return results1;
             } else if (node.base.nodeType() === 'Literal' && node.base.value === '') {
               fakeBlock = this.csBlock(node.base, depth, 0, 'value', wrappingParen, ANY_DROP);
               return fakeBlock.flagToRemove = true;
@@ -4618,7 +4618,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             }
             break;
           case 'Literal':
-            if (_ref8 = node.value, __indexOf.call(STATEMENT_KEYWORDS, _ref8) >= 0) {
+            if (ref8 = node.value, indexOf.call(STATEMENT_KEYWORDS, ref8) >= 0) {
               return this.csBlock(node, depth, 0, 'return', wrappingParen, BLOCK_ONLY);
             } else {
               return 0;
@@ -4650,26 +4650,26 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
               } else if (!known) {
                 this.csSocketAndMark(node.variable, depth + 1, 0, indentDepth);
-              } else if (!known.dotted && ((_ref9 = node.variable.properties) != null ? _ref9.length : void 0) > 0) {
+              } else if (!known.dotted && ((ref9 = node.variable.properties) != null ? ref9.length : void 0) > 0) {
                 this.csSocketAndMark(node.variable.base, depth + 1, 0, indentDepth);
               }
             } else {
               this.csBlock(node, depth, 0, 'command', wrappingParen, ANY_DROP);
             }
             if (!node["do"]) {
-              _ref10 = node.args;
-              _results2 = [];
-              for (index = _m = 0, _len3 = _ref10.length; _m < _len3; index = ++_m) {
-                arg = _ref10[index];
+              ref10 = node.args;
+              results2 = [];
+              for (index = o = 0, len3 = ref10.length; o < len3; index = ++o) {
+                arg = ref10[index];
                 last = index === node.args.length - 1;
                 precedence = last ? -1 : 0;
                 if (last && arg.nodeType() === 'Code') {
-                  _results2.push(this.addCode(arg, depth + 1, indentDepth));
+                  results2.push(this.addCode(arg, depth + 1, indentDepth));
                 } else {
-                  _results2.push(this.csSocketAndMark(arg, depth + 1, precedence, indentDepth, null, known != null ? (_ref11 = known.fn) != null ? (_ref12 = _ref11.dropdown) != null ? _ref12[index] : void 0 : void 0 : void 0));
+                  results2.push(this.csSocketAndMark(arg, depth + 1, precedence, indentDepth, null, known != null ? (ref11 = known.fn) != null ? (ref12 = ref11.dropdown) != null ? ref12[index] : void 0 : void 0 : void 0));
                 }
               }
-              return _results2;
+              return results2;
             }
             break;
           case 'Code':
@@ -4686,16 +4686,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'For':
             this.csBlock(node, depth, -3, 'control', wrappingParen, MOSTLY_BLOCK);
-            _ref13 = ['source', 'from', 'guard', 'step'];
-            for (_n = 0, _len4 = _ref13.length; _n < _len4; _n++) {
-              childName = _ref13[_n];
+            ref13 = ['source', 'from', 'guard', 'step'];
+            for (p = 0, len4 = ref13.length; p < len4; p++) {
+              childName = ref13[p];
               if (node[childName] != null) {
                 this.csSocketAndMark(node[childName], depth + 1, 0, indentDepth);
               }
             }
-            _ref14 = ['index', 'name'];
-            for (_o = 0, _len5 = _ref14.length; _o < _len5; _o++) {
-              childName = _ref14[_o];
+            ref14 = ['index', 'name'];
+            for (q = 0, len5 = ref14.length; q < len5; q++) {
+              childName = ref14[q];
               if (node[childName] != null) {
                 this.csSocketAndMark(node[childName], depth + 1, 0, indentDepth, FORBID_ALL);
               }
@@ -4729,17 +4729,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (node.objects.length > 0) {
               this.csIndentAndMark(indentDepth, node.objects, depth + 1);
             }
-            _ref15 = node.objects;
-            _results3 = [];
-            for (_p = 0, _len6 = _ref15.length; _p < _len6; _p++) {
-              object = _ref15[_p];
-              if (object.nodeType() === 'Value' && object.base.nodeType() === 'Literal' && ((_ref16 = (_ref17 = object.properties) != null ? _ref17.length : void 0) === 0 || _ref16 === (void 0))) {
-                _results3.push(this.csBlock(object, depth + 2, 100, 'return', null, VALUE_ONLY));
+            ref15 = node.objects;
+            results3 = [];
+            for (r = 0, len6 = ref15.length; r < len6; r++) {
+              object = ref15[r];
+              if (object.nodeType() === 'Value' && object.base.nodeType() === 'Literal' && ((ref16 = (ref17 = object.properties) != null ? ref17.length : void 0) === 0 || ref16 === (void 0))) {
+                results3.push(this.csBlock(object, depth + 2, 100, 'return', null, VALUE_ONLY));
               } else {
-                _results3.push(void 0);
+                results3.push(void 0);
               }
             }
-            return _results3;
+            return results3;
             break;
           case 'Return':
             this.csBlock(node, depth, 0, 'return', wrappingParen, BLOCK_ONLY);
@@ -4759,13 +4759,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (node.subject != null) {
               this.csSocketAndMark(node.subject, depth + 1, 0, indentDepth);
             }
-            _ref18 = node.cases;
-            for (_q = 0, _len7 = _ref18.length; _q < _len7; _q++) {
-              switchCase = _ref18[_q];
+            ref18 = node.cases;
+            for (s = 0, len7 = ref18.length; s < len7; s++) {
+              switchCase = ref18[s];
               if (switchCase[0].constructor === Array) {
-                _ref19 = switchCase[0];
-                for (_r = 0, _len8 = _ref19.length; _r < _len8; _r++) {
-                  condition = _ref19[_r];
+                ref19 = switchCase[0];
+                for (t = 0, len8 = ref19.length; t < len8; t++) {
+                  condition = ref19[t];
                   this.csSocketAndMark(condition, depth + 1, 0, indentDepth);
                 }
               } else {
@@ -4791,18 +4791,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'Obj':
             this.csBlock(node, depth, 0, 'purple', wrappingParen, VALUE_ONLY);
-            _ref20 = node.properties;
-            _results4 = [];
-            for (_s = 0, _len9 = _ref20.length; _s < _len9; _s++) {
-              property = _ref20[_s];
+            ref20 = node.properties;
+            results4 = [];
+            for (u = 0, len9 = ref20.length; u < len9; u++) {
+              property = ref20[u];
               if (property.nodeType() === 'Assign') {
                 this.csSocketAndMark(property.variable, depth + 1, 0, indentDepth, FORBID_ALL);
-                _results4.push(this.csSocketAndMark(property.value, depth + 1, 0, indentDepth));
+                results4.push(this.csSocketAndMark(property.value, depth + 1, 0, indentDepth));
               } else {
-                _results4.push(void 0);
+                results4.push(void 0);
               }
             }
-            return _results4;
+            return results4;
         }
       };
 
@@ -4835,7 +4835,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.getBounds = function(node) {
-        var bounds, match, property, _i, _len, _ref, _ref1, _ref2, _ref3;
+        var bounds, j, len, match, property, ref, ref1, ref2, ref3;
         bounds = {
           start: {
             line: node.locationData.first_line,
@@ -4877,14 +4877,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         if (node.nodeType() === 'Value') {
           bounds = this.getBounds(node.base);
           if ((node.properties != null) && node.properties.length > 0) {
-            _ref = node.properties;
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              property = _ref[_i];
+            ref = node.properties;
+            for (j = 0, len = ref.length; j < len; j++) {
+              property = ref[j];
               bounds.end = this.boundMax(bounds.end, this.getBounds(property).end);
             }
           }
         }
-        if (((_ref1 = node.dropletParent) != null ? typeof _ref1.nodeType === "function" ? _ref1.nodeType() : void 0 : void 0) === 'Arr' || ((_ref2 = node.dropletParent) != null ? typeof _ref2.nodeType === "function" ? _ref2.nodeType() : void 0 : void 0) === 'Value' && ((_ref3 = node.dropletParent.dropletParent) != null ? typeof _ref3.nodeType === "function" ? _ref3.nodeType() : void 0 : void 0) === 'Arr') {
+        if (((ref1 = node.dropletParent) != null ? typeof ref1.nodeType === "function" ? ref1.nodeType() : void 0 : void 0) === 'Arr' || ((ref2 = node.dropletParent) != null ? typeof ref2.nodeType === "function" ? ref2.nodeType() : void 0 : void 0) === 'Value' && ((ref3 = node.dropletParent.dropletParent) != null ? typeof ref3.nodeType === "function" ? ref3.nodeType() : void 0 : void 0) === 'Arr') {
           match = this.lines[bounds.end.line].slice(bounds.end.column).match(/^\s*,\s*/);
           if (match != null) {
             bounds.end.column += match[0].length;
@@ -4894,14 +4894,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.flagLineAsMarked = function(line) {
-        var _results;
+        var results;
         this.hasLineBeenMarked[line] = true;
-        _results = [];
+        results = [];
         while (this.lines[line][this.lines[line].length - 1] === '\\') {
           line += 1;
-          _results.push(this.hasLineBeenMarked[line] = true);
+          results.push(this.hasLineBeenMarked[line] = true);
         }
-        return _results;
+        return results;
       };
 
       CoffeeScriptParser.prototype.addMarkup = function(container, bounds, depth) {
@@ -4951,14 +4951,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.csIndentAndMark = function(indentDepth, nodes, depth) {
-        var node, trueDepth, _i, _len, _results;
+        var j, len, node, results, trueDepth;
         trueDepth = this.csIndent(indentDepth, nodes[0], nodes[nodes.length - 1], depth);
-        _results = [];
-        for (_i = 0, _len = nodes.length; _i < _len; _i++) {
-          node = nodes[_i];
-          _results.push(this.mark(node, depth + 1, 0, null, trueDepth));
+        results = [];
+        for (j = 0, len = nodes.length; j < len; j++) {
+          node = nodes[j];
+          results.push(this.mark(node, depth + 1, 0, null, trueDepth));
         }
-        return _results;
+        return results;
       };
 
       CoffeeScriptParser.prototype.csSocket = function(node, depth, precedence, classes, dropdown) {
@@ -4982,7 +4982,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       CoffeeScriptParser.prototype.wrapSemicolonLine = function(firstBounds, lastBounds, expressions, depth) {
-        var child, surroundingBounds, _i, _len, _results;
+        var child, j, len, results, surroundingBounds;
         surroundingBounds = {
           start: firstBounds.start,
           end: lastBounds.end
@@ -4995,20 +4995,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           socketLevel: ANY_DROP,
           classes: ['semicolon']
         });
-        _results = [];
-        for (_i = 0, _len = expressions.length; _i < _len; _i++) {
-          child = expressions[_i];
-          _results.push(this.csSocket(child, depth + 2, -2));
+        results = [];
+        for (j = 0, len = expressions.length; j < len; j++) {
+          child = expressions[j];
+          results.push(this.csSocket(child, depth + 2, -2));
         }
-        return _results;
+        return results;
       };
 
       CoffeeScriptParser.prototype.wrapSemicolons = function(expressions, depth) {
-        var bounds, expr, firstBounds, firstNode, lastBounds, lastNode, nodesOnCurrentLine, _i, _len;
+        var bounds, expr, firstBounds, firstNode, j, lastBounds, lastNode, len, nodesOnCurrentLine;
         firstNode = lastNode = firstBounds = lastBounds = null;
         nodesOnCurrentLine = [];
-        for (_i = 0, _len = expressions.length; _i < _len; _i++) {
-          expr = expressions[_i];
+        for (j = 0, len = expressions.length; j < len; j++) {
+          expr = expressions[j];
           bounds = this.getBounds(expr);
           if (bounds.start.line === (firstBounds != null ? firstBounds.end.line : void 0)) {
             lastNode = expr;
@@ -5041,7 +5041,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (/unexpected/.test(e.message)) {
         return backTickLine(lines, e.location.first_line);
       }
-      if (/missing "/.test(e.message) && __indexOf.call(lines[e.location.first_line], '"') >= 0) {
+      if (/missing "/.test(e.message) && indexOf.call(lines[e.location.first_line], '"') >= 0) {
         return backTickLine(lines, e.location.first_line);
       }
       if (/unmatched|missing \)/.test(e.message)) {
@@ -5081,32 +5081,32 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     CoffeeScriptParser.empty = "``";
     CoffeeScriptParser.drop = function(block, context, pred) {
-      var _ref, _ref1;
+      var ref, ref1;
       if (context.type === 'socket') {
-        if (__indexOf.call(context.classes, 'forbid-all') >= 0) {
+        if (indexOf.call(context.classes, 'forbid-all') >= 0) {
           return helper.FORBID;
         }
-        if (__indexOf.call(context.classes, 'lvalue') >= 0) {
-          if (__indexOf.call(block.classes, 'Value') >= 0 && ((_ref = block.properties) != null ? _ref.length : void 0) > 0) {
+        if (indexOf.call(context.classes, 'lvalue') >= 0) {
+          if (indexOf.call(block.classes, 'Value') >= 0 && ((ref = block.properties) != null ? ref.length : void 0) > 0) {
             return helper.ENCOURAGE;
           } else {
             return helper.FORBID;
           }
-        } else if (__indexOf.call(context.classes, 'property-access') >= 0) {
-          if (__indexOf.call(block.classes, 'works-as-method-call') >= 0) {
+        } else if (indexOf.call(context.classes, 'property-access') >= 0) {
+          if (indexOf.call(block.classes, 'works-as-method-call') >= 0) {
             return helper.ENCOURAGE;
           } else {
             return helper.FORBID;
           }
-        } else if (__indexOf.call(block.classes, 'value-only') >= 0 || __indexOf.call(block.classes, 'mostly-value') >= 0 || __indexOf.call(block.classes, 'any-drop') >= 0) {
+        } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0) {
           return helper.ENCOURAGE;
-        } else if (__indexOf.call(block.classes, 'mostly-block') >= 0) {
+        } else if (indexOf.call(block.classes, 'mostly-block') >= 0) {
           return helper.DISCOURAGE;
         }
-      } else if ((_ref1 = context.type) === 'indent' || _ref1 === 'segment') {
-        if (__indexOf.call(block.classes, 'block-only') >= 0 || __indexOf.call(block.classes, 'mostly-block') >= 0 || __indexOf.call(block.classes, 'any-drop') >= 0 || block.type === 'segment') {
+      } else if ((ref1 = context.type) === 'indent' || ref1 === 'segment') {
+        if (indexOf.call(block.classes, 'block-only') >= 0 || indexOf.call(block.classes, 'mostly-block') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || block.type === 'segment') {
           return helper.ENCOURAGE;
-        } else if (__indexOf.call(block.classes, 'mostly-value') >= 0) {
+        } else if (indexOf.call(block.classes, 'mostly-value') >= 0) {
           return helper.DISCOURAGE;
         }
       }
@@ -7669,9 +7669,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 });
 
 (function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty,
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-javascript',['droplet-helper', 'droplet-model', 'droplet-parser', 'acorn'], function(helper, model, parser, acorn) {
     var CLASS_EXCEPTIONS, COLORS, DEFAULT_INDENT_DEPTH, JavaScriptParser, KNOWN_FUNCTIONS, NEVER_PAREN, OPERATOR_PRECEDENCES, STATEMENT_NODE_TYPES, exports;
@@ -7801,16 +7801,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       'AssignmentExpression': ['mostly-block']
     };
     DEFAULT_INDENT_DEPTH = '  ';
-    exports.JavaScriptParser = JavaScriptParser = (function(_super) {
-      __extends(JavaScriptParser, _super);
+    exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
+      extend(JavaScriptParser, superClass);
 
-      function JavaScriptParser(text, opts) {
-        var _base;
-        this.text = text;
+      function JavaScriptParser(text1, opts) {
+        var base;
+        this.text = text1;
         this.opts = opts != null ? opts : {};
         JavaScriptParser.__super__.constructor.apply(this, arguments);
-        if ((_base = this.opts).functions == null) {
-          _base.functions = KNOWN_FUNCTIONS;
+        if ((base = this.opts).functions == null) {
+          base.functions = KNOWN_FUNCTIONS;
         }
         this.lines = this.text.split('\n');
       }
@@ -7953,7 +7953,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.getBounds = function(node) {
-        var bounds, line, semicolon, semicolonLength, _ref;
+        var bounds, line, ref, semicolon, semicolonLength;
         if (node.type === 'BlockStatement') {
           bounds = {
             start: {
@@ -7970,7 +7970,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             bounds.end.column = this.lines[bounds.end.line].length;
           }
           return bounds;
-        } else if (_ref = node.type, __indexOf.call(STATEMENT_NODE_TYPES, _ref) >= 0) {
+        } else if (ref = node.type, indexOf.call(STATEMENT_NODE_TYPES, ref) >= 0) {
           line = this.lines[node.loc.end.line];
           semicolon = this.lines[node.loc.end.line].slice(node.loc.end.column - 1).indexOf(';');
           if (semicolon >= 0) {
@@ -8031,41 +8031,41 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-        var argument, block, declaration, element, expression, i, known, param, prefix, property, statement, switchCase, _i, _j, _k, _l, _len, _len1, _len10, _len2, _len3, _len4, _len5, _len6, _len7, _len8, _len9, _m, _n, _o, _p, _q, _r, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results, _results1, _results10, _results2, _results3, _results4, _results5, _results6, _results7, _results8, _results9, _s;
+        var argument, block, declaration, element, expression, i, j, k, known, l, len, len1, len10, len2, len3, len4, len5, len6, len7, len8, len9, m, n, o, p, param, prefix, property, q, r, ref, ref1, ref10, ref11, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results10, results2, results3, results4, results5, results6, results7, results8, results9, s, statement, switchCase, t;
         switch (node.type) {
           case 'Program':
-            _ref = node.body;
-            _results = [];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              statement = _ref[_i];
-              _results.push(this.mark(indentDepth, statement, depth + 1, null));
+            ref = node.body;
+            results = [];
+            for (j = 0, len = ref.length; j < len; j++) {
+              statement = ref[j];
+              results.push(this.mark(indentDepth, statement, depth + 1, null));
             }
-            return _results;
+            return results;
             break;
           case 'Function':
             this.jsBlock(node, depth, bounds);
             return this.mark(indentDepth, node.body, depth + 1, null);
           case 'SequenceExpression':
             this.jsBlock(node, depth, bounds);
-            _ref1 = node.expressions;
-            _results1 = [];
-            for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-              expression = _ref1[_j];
-              _results1.push(this.jsSocketAndMark(indentDepth, expression, depth + 1, null));
+            ref1 = node.expressions;
+            results1 = [];
+            for (k = 0, len1 = ref1.length; k < len1; k++) {
+              expression = ref1[k];
+              results1.push(this.jsSocketAndMark(indentDepth, expression, depth + 1, null));
             }
-            return _results1;
+            return results1;
             break;
           case 'FunctionDeclaration':
             this.jsBlock(node, depth, bounds);
             this.mark(indentDepth, node.body, depth + 1, null);
             this.jsSocketAndMark(indentDepth, node.id, depth + 1, null, null, ['no-drop']);
-            _ref2 = node.params;
-            _results2 = [];
-            for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-              param = _ref2[_k];
-              _results2.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
+            ref2 = node.params;
+            results2 = [];
+            for (l = 0, len2 = ref2.length; l < len2; l++) {
+              param = ref2[l];
+              results2.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
             }
-            return _results2;
+            return results2;
             break;
           case 'FunctionExpression':
             this.jsBlock(node, depth, bounds);
@@ -8073,13 +8073,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (node.id != null) {
               this.jsSocketAndMark(indentDepth, node.id, depth + 1, null, null, ['no-drop']);
             }
-            _ref3 = node.params;
-            _results3 = [];
-            for (_l = 0, _len3 = _ref3.length; _l < _len3; _l++) {
-              param = _ref3[_l];
-              _results3.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
+            ref3 = node.params;
+            results3 = [];
+            for (m = 0, len3 = ref3.length; m < len3; m++) {
+              param = ref3[m];
+              results3.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
             }
-            return _results3;
+            return results3;
             break;
           case 'AssignmentExpression':
             this.jsBlock(node, depth, bounds);
@@ -8139,13 +8139,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               depth: depth,
               prefix: prefix
             });
-            _ref4 = node.body;
-            _results4 = [];
-            for (_m = 0, _len4 = _ref4.length; _m < _len4; _m++) {
-              statement = _ref4[_m];
-              _results4.push(this.mark(indentDepth, statement, depth + 1, null));
+            ref4 = node.body;
+            results4 = [];
+            for (n = 0, len4 = ref4.length; n < len4; n++) {
+              statement = ref4[n];
+              results4.push(this.mark(indentDepth, statement, depth + 1, null));
             }
-            return _results4;
+            return results4;
             break;
           case 'BinaryExpression':
             this.jsBlock(node, depth, bounds);
@@ -8169,13 +8169,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             if (!known) {
               this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
             }
-            _ref5 = node["arguments"];
-            _results5 = [];
-            for (i = _n = 0, _len5 = _ref5.length; _n < _len5; i = ++_n) {
-              argument = _ref5[i];
-              _results5.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, known != null ? (_ref6 = known.dropdown) != null ? _ref6[i] : void 0 : void 0));
+            ref5 = node["arguments"];
+            results5 = [];
+            for (i = o = 0, len5 = ref5.length; o < len5; i = ++o) {
+              argument = ref5[i];
+              results5.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, known != null ? (ref6 = known.dropdown) != null ? ref6[i] : void 0 : void 0));
             }
-            return _results5;
+            return results5;
             break;
           case 'MemberExpression':
             this.jsBlock(node, depth, bounds);
@@ -8186,13 +8186,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
           case 'VariableDeclaration':
             this.jsBlock(node, depth, bounds);
-            _ref7 = node.declarations;
-            _results6 = [];
-            for (_o = 0, _len6 = _ref7.length; _o < _len6; _o++) {
-              declaration = _ref7[_o];
-              _results6.push(this.mark(indentDepth, declaration, depth + 1));
+            ref7 = node.declarations;
+            results6 = [];
+            for (p = 0, len6 = ref7.length; p < len6; p++) {
+              declaration = ref7[p];
+              results6.push(this.mark(indentDepth, declaration, depth + 1));
             }
-            return _results6;
+            return results6;
             break;
           case 'VariableDeclarator':
             this.jsSocketAndMark(indentDepth, node.id, depth);
@@ -8211,25 +8211,25 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
           case 'ObjectExpression':
             this.jsBlock(node, depth, bounds);
-            _ref8 = node.properties;
-            _results7 = [];
-            for (_p = 0, _len7 = _ref8.length; _p < _len7; _p++) {
-              property = _ref8[_p];
+            ref8 = node.properties;
+            results7 = [];
+            for (q = 0, len7 = ref8.length; q < len7; q++) {
+              property = ref8[q];
               this.jsSocketAndMark(indentDepth, property.key, depth + 1);
-              _results7.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
+              results7.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
             }
-            return _results7;
+            return results7;
             break;
           case 'SwitchStatement':
             this.jsBlock(node, depth, bounds);
             this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-            _ref9 = node.cases;
-            _results8 = [];
-            for (_q = 0, _len8 = _ref9.length; _q < _len8; _q++) {
-              switchCase = _ref9[_q];
-              _results8.push(this.mark(indentDepth, switchCase, depth + 1, null));
+            ref9 = node.cases;
+            results8 = [];
+            for (r = 0, len8 = ref9.length; r < len8; r++) {
+              switchCase = ref9[r];
+              results8.push(this.mark(indentDepth, switchCase, depth + 1, null));
             }
-            return _results8;
+            return results8;
             break;
           case 'SwitchCase':
             if (node.test != null) {
@@ -8244,13 +8244,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 depth: depth + 1,
                 prefix: prefix
               });
-              _ref10 = node.consequent;
-              _results9 = [];
-              for (_r = 0, _len9 = _ref10.length; _r < _len9; _r++) {
-                statement = _ref10[_r];
-                _results9.push(this.mark(indentDepth, statement, depth + 2));
+              ref10 = node.consequent;
+              results9 = [];
+              for (s = 0, len9 = ref10.length; s < len9; s++) {
+                statement = ref10[s];
+                results9.push(this.mark(indentDepth, statement, depth + 2));
               }
-              return _results9;
+              return results9;
             }
             break;
           case 'TryStatement':
@@ -8271,17 +8271,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'ArrayExpression':
             this.jsBlock(node, depth, bounds);
-            _ref11 = node.elements;
-            _results10 = [];
-            for (_s = 0, _len10 = _ref11.length; _s < _len10; _s++) {
-              element = _ref11[_s];
+            ref11 = node.elements;
+            results10 = [];
+            for (t = 0, len10 = ref11.length; t < len10; t++) {
+              element = ref11[t];
               if (element != null) {
-                _results10.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
+                results10.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
               } else {
-                _results10.push(void 0);
+                results10.push(void 0);
               }
             }
-            return _results10;
+            return results10;
             break;
           case 'Literal':
             return null;
@@ -8318,54 +8318,54 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(parser.Parser);
     JavaScriptParser.parens = function(leading, trailing, node, context) {
-      var _results;
-      if ((context != null ? context.type : void 0) === 'socket' || ((context == null) && __indexOf.call(node.classes, 'mostly-value') >= 0 || __indexOf.call(node.classes, 'value-only') >= 0) || __indexOf.call(node.classes, 'ends-with-brace') >= 0 || node.type === 'segment') {
+      var results;
+      if ((context != null ? context.type : void 0) === 'socket' || ((context == null) && indexOf.call(node.classes, 'mostly-value') >= 0 || indexOf.call(node.classes, 'value-only') >= 0) || indexOf.call(node.classes, 'ends-with-brace') >= 0 || node.type === 'segment') {
         trailing(trailing().replace(/;?\s*$/, ''));
       } else {
         trailing(trailing().replace(/;?\s*$/, ';'));
       }
       if (context === null || context.type !== 'socket' || context.precedence > node.precedence) {
-        _results = [];
+        results = [];
         while (true) {
           if ((leading().match(/^\s*\(/) != null) && (trailing().match(/\)\s*/) != null)) {
             leading(leading().replace(/^\s*\(\s*/, ''));
-            _results.push(trailing(trailing().replace(/\s*\)\s*$/, '')));
+            results.push(trailing(trailing().replace(/\s*\)\s*$/, '')));
           } else {
             break;
           }
         }
-        return _results;
+        return results;
       } else {
         leading('(' + leading());
         return trailing(trailing() + ')');
       }
     };
     JavaScriptParser.drop = function(block, context, pred) {
-      var _ref, _ref1;
+      var ref, ref1;
       if (context.type === 'socket') {
-        if (__indexOf.call(context.classes, 'lvalue') >= 0) {
-          if (__indexOf.call(block.classes, 'Value') >= 0 && ((_ref = block.properties) != null ? _ref.length : void 0) > 0) {
+        if (indexOf.call(context.classes, 'lvalue') >= 0) {
+          if (indexOf.call(block.classes, 'Value') >= 0 && ((ref = block.properties) != null ? ref.length : void 0) > 0) {
             return helper.ENCOURAGE;
           } else {
             return helper.FORBID;
           }
-        } else if (__indexOf.call(context.classes, 'no-drop') >= 0) {
+        } else if (indexOf.call(context.classes, 'no-drop') >= 0) {
           return helper.FORBID;
-        } else if (__indexOf.call(context.classes, 'property-access') >= 0) {
-          if (__indexOf.call(block.classes, 'works-as-method-call') >= 0) {
+        } else if (indexOf.call(context.classes, 'property-access') >= 0) {
+          if (indexOf.call(block.classes, 'works-as-method-call') >= 0) {
             return helper.ENCOURAGE;
           } else {
             return helper.FORBID;
           }
-        } else if (__indexOf.call(block.classes, 'value-only') >= 0 || __indexOf.call(block.classes, 'mostly-value') >= 0 || __indexOf.call(block.classes, 'any-drop') >= 0 || __indexOf.call(context.classes, 'for-statement-init') >= 0) {
+        } else if (indexOf.call(block.classes, 'value-only') >= 0 || indexOf.call(block.classes, 'mostly-value') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || indexOf.call(context.classes, 'for-statement-init') >= 0) {
           return helper.ENCOURAGE;
-        } else if (__indexOf.call(block.classes, 'mostly-block') >= 0) {
+        } else if (indexOf.call(block.classes, 'mostly-block') >= 0) {
           return helper.DISCOURAGE;
         }
-      } else if ((_ref1 = context.type) === 'indent' || _ref1 === 'segment') {
-        if (__indexOf.call(block.classes, 'block-only') >= 0 || __indexOf.call(block.classes, 'mostly-block') >= 0 || __indexOf.call(block.classes, 'any-drop') >= 0 || block.type === 'segment') {
+      } else if ((ref1 = context.type) === 'indent' || ref1 === 'segment') {
+        if (indexOf.call(block.classes, 'block-only') >= 0 || indexOf.call(block.classes, 'mostly-block') >= 0 || indexOf.call(block.classes, 'any-drop') >= 0 || block.type === 'segment') {
           return helper.ENCOURAGE;
-        } else if (__indexOf.call(block.classes, 'mostly-value') >= 0) {
+        } else if (indexOf.call(block.classes, 'mostly-value') >= 0) {
           return helper.DISCOURAGE;
         }
       }
@@ -8380,12 +8380,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 //# sourceMappingURL=javascript.js.map
 ;
 (function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var hasProp = {}.hasOwnProperty,
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   define('droplet-controller',['droplet-helper', 'droplet-coffee', 'droplet-javascript', 'droplet-draw', 'droplet-model', 'droplet-view'], function(helper, coffee, javascript, draw, model, view) {
-    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getCharactersTo, getOffsetLeft, getOffsetTop, getSocketAtChar, hook, isOSX, isValidCursorPosition, key, last_, modes, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection, _i, _len, _ref, _ref1;
+    var ANIMATION_FRAME_RATE, ANY_DROP, AnimatedColor, BACKSPACE_KEY, BLOCK_ONLY, CONTROL_KEYS, CURSOR_HEIGHT_DECREASE, CURSOR_UNFOCUSED_OPACITY, CURSOR_WIDTH_DECREASE, CreateSegmentOperation, DEBUG_FLAG, DEFAULT_INDENT_DEPTH, DISCOURAGE_DROP_TIMEOUT, DOWN_ARROW_KEY, DestroySegmentOperation, DropOperation, ENTER_KEY, Editor, FloatingBlockRecord, FromFloatingOperation, LEFT_ARROW_KEY, MAX_DROP_DISTANCE, META_KEYS, MIN_DRAG_DISTANCE, MOSTLY_BLOCK, MOSTLY_VALUE, PALETTE_LEFT_MARGIN, PALETTE_MARGIN, PALETTE_TOP_MARGIN, PickUpOperation, RIGHT_ARROW_KEY, ReparseOperation, SetValueOperation, TAB_KEY, TOUCH_SELECTION_TIMEOUT, TextChangeOperation, TextReparseOperation, ToFloatingOperation, UP_ARROW_KEY, UndoOperation, VALUE_ONLY, Z_KEY, binding, command_modifiers, command_pressed, containsCursor, deepCopy, deepEquals, editorBindings, escapeString, exports, extend_, getAtChar, getCharactersTo, getOffsetLeft, getOffsetTop, getSocketAtChar, hook, isOSX, isValidCursorPosition, j, key, last_, len, modes, ref, ref1, touchEvents, unsortedEditorBindings, userAgent, validateLassoSelection;
     modes = {
       'coffeescript': coffee,
       'coffee': coffee,
@@ -8419,7 +8419,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     META_KEYS = [91, 92, 93, 223, 224];
     CONTROL_KEYS = [17, 162, 163];
     userAgent = '';
-    if (typeof window !== 'undefined' && ((_ref = window.navigator) != null ? _ref.userAgent : void 0)) {
+    if (typeof window !== 'undefined' && ((ref = window.navigator) != null ? ref.userAgent : void 0)) {
       userAgent = window.navigator.userAgent;
     }
     isOSX = /OS X/.test(userAgent);
@@ -8462,14 +8462,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       var key, val;
       if (a instanceof Object) {
         for (key in a) {
-          if (!__hasProp.call(a, key)) continue;
+          if (!hasProp.call(a, key)) continue;
           val = a[key];
           if (!deepEquals(b[key], val)) {
             return false;
           }
         }
         for (key in b) {
-          if (!__hasProp.call(b, key)) continue;
+          if (!hasProp.call(b, key)) continue;
           val = b[key];
           if (!key in a) {
             if (!deepEquals(a[key], val)) {
@@ -8505,7 +8505,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     exports.Editor = Editor = (function() {
       function Editor(wrapperElement, options) {
-        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, _fn, _i, _len, _ref1, _ref2;
+        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2;
         this.wrapperElement = wrapperElement;
         this.options = options;
         this.paletteGroups = this.options.palette;
@@ -8568,9 +8568,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           respectEphemeral: false
         }));
         boundListeners = [];
-        _ref1 = editorBindings.populate;
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          binding = _ref1[_i];
+        ref1 = editorBindings.populate;
+        for (j = 0, len = ref1.length; j < len; j++) {
+          binding = ref1[j];
           binding.call(this);
         }
         window.addEventListener('resize', (function(_this) {
@@ -8580,15 +8580,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this));
         dispatchMouseEvent = (function(_this) {
           return function(event) {
-            var handler, state, trackPoint, _j, _len1, _ref2;
+            var handler, k, len1, ref2, state, trackPoint;
             if (event.type !== 'mousemove' && event.which !== 1) {
               return;
             }
             trackPoint = new _this.draw.Point(event.clientX, event.clientY);
             state = {};
-            _ref2 = editorBindings[event.type];
-            for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-              handler = _ref2[_j];
+            ref2 = editorBindings[event.type];
+            for (k = 0, len1 = ref2.length; k < len1; k++) {
+              handler = ref2[k];
               handler.call(_this, trackPoint, event, state);
             }
             if (event.type === 'mousedown') {
@@ -8602,18 +8602,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this);
         dispatchKeyEvent = (function(_this) {
           return function(event) {
-            var handler, state, _j, _len1, _ref2, _results;
+            var handler, k, len1, ref2, results, state;
             state = {};
-            _ref2 = editorBindings[event.type];
-            _results = [];
-            for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-              handler = _ref2[_j];
-              _results.push(handler.call(_this, event, state));
+            ref2 = editorBindings[event.type];
+            results = [];
+            for (k = 0, len1 = ref2.length; k < len1; k++) {
+              handler = ref2[k];
+              results.push(handler.call(_this, event, state));
             }
-            return _results;
+            return results;
           };
         })(this);
-        _ref2 = {
+        ref2 = {
           keydown: [this.dropletElement, this.paletteElement],
           keyup: [this.dropletElement, this.paletteElement],
           mousedown: [this.dropletElement, this.paletteElement, this.dragCover],
@@ -8621,24 +8621,24 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           mouseup: [window],
           mousemove: [window]
         };
-        _fn = (function(_this) {
+        fn1 = (function(_this) {
           return function(eventName, elements) {
-            var element, _j, _len1, _results;
-            _results = [];
-            for (_j = 0, _len1 = elements.length; _j < _len1; _j++) {
-              element = elements[_j];
+            var element, k, len1, results;
+            results = [];
+            for (k = 0, len1 = elements.length; k < len1; k++) {
+              element = elements[k];
               if (/^key/.test(eventName)) {
-                _results.push(element.addEventListener(eventName, dispatchKeyEvent));
+                results.push(element.addEventListener(eventName, dispatchKeyEvent));
               } else {
-                _results.push(element.addEventListener(eventName, dispatchMouseEvent));
+                results.push(element.addEventListener(eventName, dispatchMouseEvent));
               }
             }
-            return _results;
+            return results;
           };
         })(this);
-        for (eventName in _ref2) {
-          elements = _ref2[eventName];
-          _fn(eventName, elements);
+        for (eventName in ref2) {
+          elements = ref2[eventName];
+          fn1(eventName, elements);
         }
         this.tree = new model.Segment();
         this.tree.start.insert(this.cursor);
@@ -8675,16 +8675,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
       Editor.prototype.resizeBlockMode = function() {
         this.resizeTextMode();
-        this.dropletElement.style.left = "" + this.paletteElement.offsetWidth + "px";
-        this.dropletElement.style.height = "" + this.wrapperElement.offsetHeight + "px";
-        this.dropletElement.style.width = "" + (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
+        this.dropletElement.style.left = this.paletteElement.offsetWidth + "px";
+        this.dropletElement.style.height = this.wrapperElement.offsetHeight + "px";
+        this.dropletElement.style.width = (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
         this.resizeGutter();
         this.mainCanvas.height = this.dropletElement.offsetHeight;
         this.mainCanvas.width = this.dropletElement.offsetWidth - this.gutter.offsetWidth;
-        this.mainCanvas.style.height = "" + this.mainCanvas.height + "px";
-        this.mainCanvas.style.width = "" + this.mainCanvas.width + "px";
-        this.mainCanvas.style.left = "" + this.gutter.offsetWidth + "px";
-        this.transitionContainer.style.left = "" + this.gutter.offsetWidth + "px";
+        this.mainCanvas.style.height = this.mainCanvas.height + "px";
+        this.mainCanvas.style.width = this.mainCanvas.width + "px";
+        this.mainCanvas.style.left = this.gutter.offsetWidth + "px";
+        this.transitionContainer.style.left = this.gutter.offsetWidth + "px";
         this.resizePalette();
         this.resizePaletteHighlight();
         this.resizeNubby();
@@ -8706,15 +8706,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         @paletteWrapper.style.height = "#{@paletteElement.offsetHeight}px"
         @paletteWrapper.style.width = "#{@paletteElement.offsetWidth}px"
          */
-        var binding, _i, _len, _ref1;
-        this.paletteCanvas.style.top = "" + this.paletteHeader.offsetHeight + "px";
+        var binding, j, len, ref1;
+        this.paletteCanvas.style.top = this.paletteHeader.offsetHeight + "px";
         this.paletteCanvas.height = this.paletteWrapper.offsetHeight - this.paletteHeader.offsetHeight;
         this.paletteCanvas.width = this.paletteWrapper.offsetWidth;
-        this.paletteCanvas.style.height = "" + this.paletteCanvas.height + "px";
-        this.paletteCanvas.style.width = "" + this.paletteCanvas.width + "px";
-        _ref1 = editorBindings.resize_palette;
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          binding = _ref1[_i];
+        this.paletteCanvas.style.height = this.paletteCanvas.height + "px";
+        this.paletteCanvas.style.width = this.paletteCanvas.width + "px";
+        ref1 = editorBindings.resize_palette;
+        for (j = 0, len = ref1.length; j < len; j++) {
+          binding = ref1[j];
           binding.call(this);
         }
         this.paletteCtx.setTransform(1, 0, 0, 1, -this.scrollOffsets.palette.x, -this.scrollOffsets.palette.y);
@@ -8767,7 +8767,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.setTopNubbyStyle(this.nubbyHeight, this.nubbyColor);
     };
     Editor.prototype.redrawMain = function(opts) {
-      var binding, layoutResult, oldScroll, _i, _len, _ref1, _ref2, _ref3;
+      var binding, j, layoutResult, len, oldScroll, ref1, ref2, ref3;
       if (opts == null) {
         opts = {};
       }
@@ -8781,19 +8781,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           opts.boundingRectangle.clip(this.mainCtx);
         }
         layoutResult = this.view.getViewNodeFor(this.tree).layout(0, this.nubbyHeight);
-        this.view.getViewNodeFor(this.tree).draw(this.mainCtx, (_ref1 = opts.boundingRectangle) != null ? _ref1 : new this.draw.Rectangle(this.scrollOffsets.main.x, this.scrollOffsets.main.y, this.mainCanvas.width, this.mainCanvas.height), {
+        this.view.getViewNodeFor(this.tree).draw(this.mainCtx, (ref1 = opts.boundingRectangle) != null ? ref1 : new this.draw.Rectangle(this.scrollOffsets.main.x, this.scrollOffsets.main.y, this.mainCanvas.width, this.mainCanvas.height), {
           grayscale: 0,
           selected: 0,
-          noText: (_ref2 = opts.noText) != null ? _ref2 : false
+          noText: (ref2 = opts.noText) != null ? ref2 : false
         });
         this.redrawCursors();
         this.redrawHighlights();
         if (opts.boundingRectangle != null) {
           this.mainCtx.restore();
         }
-        _ref3 = editorBindings.redraw_main;
-        for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
-          binding = _ref3[_i];
+        ref3 = editorBindings.redraw_main;
+        for (j = 0, len = ref3.length; j < len; j++) {
+          binding = ref3[j];
           binding.call(this, layoutResult);
         }
         if (this.changeEventVersion !== this.tree.version) {
@@ -8809,11 +8809,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     Editor.prototype.redrawHighlights = function() {
-      var id, info, line, path, _ref1, _ref2, _ref3;
+      var id, info, line, path, ref1, ref2, ref3;
       this.clearHighlightCanvas();
-      _ref1 = this.markedLines;
-      for (line in _ref1) {
-        info = _ref1[line];
+      ref1 = this.markedLines;
+      for (line in ref1) {
+        info = ref1[line];
         if (this.inTree(info.model)) {
           path = this.getHighlightPath(info.model, info.style);
           path.draw(this.highlightCtx);
@@ -8821,9 +8821,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           delete this.markedLines[line];
         }
       }
-      _ref2 = this.markedBlocks;
-      for (id in _ref2) {
-        info = _ref2[id];
+      ref2 = this.markedBlocks;
+      for (id in ref2) {
+        info = ref2[id];
         if (this.inTree(info.model)) {
           path = this.getHighlightPath(info.model, info.style);
           path.draw(this.highlightCtx);
@@ -8831,9 +8831,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           delete this.markedLines[id];
         }
       }
-      _ref3 = this.extraMarks;
-      for (id in _ref3) {
-        info = _ref3[id];
+      ref3 = this.extraMarks;
+      for (id in ref3) {
+        info = ref3[id];
         if (this.inTree(info.model)) {
           path = this.getHighlightPath(info.model, info.style);
           path.draw(this.highlightCtx);
@@ -8864,36 +8864,36 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.paletteHighlightCtx.clearRect(this.scrollOffsets.palette.x, this.scrollOffsets.palette.y, this.paletteHighlightCanvas.width, this.paletteHighlightCanvas.height);
     };
     Editor.prototype.redrawPalette = function() {
-      var binding, boundingRect, entry, lastBottomEdge, paletteBlockView, _i, _j, _len, _len1, _ref1, _ref2, _results;
+      var binding, boundingRect, entry, j, k, lastBottomEdge, len, len1, paletteBlockView, ref1, ref2, results;
       this.clearPalette();
       lastBottomEdge = PALETTE_TOP_MARGIN;
       boundingRect = new this.draw.Rectangle(this.scrollOffsets.palette.x, this.scrollOffsets.palette.y, this.paletteCanvas.width, this.paletteCanvas.height);
-      _ref1 = this.currentPaletteBlocks;
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        entry = _ref1[_i];
+      ref1 = this.currentPaletteBlocks;
+      for (j = 0, len = ref1.length; j < len; j++) {
+        entry = ref1[j];
         paletteBlockView = this.view.getViewNodeFor(entry.block);
         paletteBlockView.layout(PALETTE_LEFT_MARGIN, lastBottomEdge);
         paletteBlockView.draw(this.paletteCtx, boundingRect);
         lastBottomEdge = paletteBlockView.getBounds().bottom() + PALETTE_MARGIN;
       }
-      _ref2 = editorBindings.redraw_palette;
-      _results = [];
-      for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-        binding = _ref2[_j];
-        _results.push(binding.call(this));
+      ref2 = editorBindings.redraw_palette;
+      results = [];
+      for (k = 0, len1 = ref2.length; k < len1; k++) {
+        binding = ref2[k];
+        results.push(binding.call(this));
       }
-      return _results;
+      return results;
     };
     Editor.prototype.rebuildPalette = function() {
-      var binding, _i, _len, _ref1, _results;
+      var binding, j, len, ref1, results;
       this.redrawPalette();
-      _ref1 = editorBindings.rebuild_palette;
-      _results = [];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        binding = _ref1[_i];
-        _results.push(binding.call(this));
+      ref1 = editorBindings.rebuild_palette;
+      results = [];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        binding = ref1[j];
+        results.push(binding.call(this));
       }
-      return _results;
+      return results;
     };
     Editor.prototype.absoluteOffset = function(el) {
       var point;
@@ -8990,15 +8990,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })();
     Editor.prototype.removeBlankLines = function() {
-      var head, next, _results;
+      var head, next, results;
       head = this.tree.end.previousVisibleToken();
-      _results = [];
+      results = [];
       while ((head != null ? head.type : void 0) === 'newline') {
         next = head.previousVisibleToken();
         head.remove();
-        _results.push(head = next);
+        results.push(head = next);
       }
-      return _results;
+      return results;
     };
     Editor.prototype.addMicroUndoOperation = function(operation) {
       this.undoStack.push(operation);
@@ -9026,17 +9026,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return this.undo();
       }
     });
-    PickUpOperation = (function(_super) {
-      __extends(PickUpOperation, _super);
+    PickUpOperation = (function(superClass) {
+      extend(PickUpOperation, superClass);
 
       function PickUpOperation(block) {
-        var beforeToken, _ref1, _ref2;
+        var beforeToken, ref1, ref2;
         this.block = block.clone();
         beforeToken = block.start.prev;
-        while (((beforeToken != null ? beforeToken.prev : void 0) != null) && ((_ref1 = beforeToken.type) === 'newline' || _ref1 === 'segmentStart' || _ref1 === 'cursor')) {
+        while (((beforeToken != null ? beforeToken.prev : void 0) != null) && ((ref1 = beforeToken.type) === 'newline' || ref1 === 'segmentStart' || ref1 === 'cursor')) {
           beforeToken = beforeToken.prev;
         }
-        this.before = (_ref2 = beforeToken != null ? beforeToken.getSerializedLocation() : void 0) != null ? _ref2 : null;
+        this.before = (ref2 = beforeToken != null ? beforeToken.getSerializedLocation() : void 0) != null ? ref2 : null;
       }
 
       PickUpOperation.prototype.undo = function(editor) {
@@ -9071,13 +9071,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return PickUpOperation;
 
     })(UndoOperation);
-    DropOperation = (function(_super) {
-      __extends(DropOperation, _super);
+    DropOperation = (function(superClass) {
+      extend(DropOperation, superClass);
 
       function DropOperation(block, dest) {
-        var _ref1;
+        var ref1;
         this.block = block.clone();
-        this.dest = (_ref1 = dest != null ? dest.getSerializedLocation() : void 0) != null ? _ref1 : null;
+        this.dest = (ref1 = dest != null ? dest.getSerializedLocation() : void 0) != null ? ref1 : null;
         if ((dest != null ? dest.type : void 0) === 'socketStart') {
           this.displacedSocketText = dest.container.contents();
         } else {
@@ -9114,28 +9114,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(UndoOperation);
     Editor.prototype.spliceOut = function(node) {
-      var leading, trailing, _ref1;
+      var leading, ref1, trailing;
       leading = node.getLeadingText();
       if (node.start.next === node.end.prev) {
         trailing = null;
       } else {
         trailing = node.getTrailingText();
       }
-      _ref1 = this.mode.parens(leading, trailing, node.getReader(), null), leading = _ref1[0], trailing = _ref1[1];
+      ref1 = this.mode.parens(leading, trailing, node.getReader(), null), leading = ref1[0], trailing = ref1[1];
       node.setLeadingText(leading);
       node.setTrailingText(trailing);
       return node.spliceOut();
     };
     Editor.prototype.spliceIn = function(node, location) {
-      var container, leading, trailing, _ref1, _ref2, _ref3, _ref4;
+      var container, leading, ref1, ref2, ref3, ref4, trailing;
       leading = node.getLeadingText();
       if (node.start.next === node.end.prev) {
         trailing = null;
       } else {
         trailing = node.getTrailingText();
       }
-      container = (_ref1 = location.container) != null ? _ref1 : location.visParent();
-      _ref4 = this.mode.parens(leading, trailing, node.getReader(), (_ref2 = (_ref3 = (container.type === 'block' ? container.visParent() : container)) != null ? typeof _ref3.getReader === "function" ? _ref3.getReader() : void 0 : void 0) != null ? _ref2 : null), leading = _ref4[0], trailing = _ref4[1];
+      container = (ref1 = location.container) != null ? ref1 : location.visParent();
+      ref4 = this.mode.parens(leading, trailing, node.getReader(), (ref2 = (ref3 = (container.type === 'block' ? container.visParent() : container)) != null ? typeof ref3.getReader === "function" ? ref3.getReader() : void 0 : void 0) != null ? ref2 : null), leading = ref4[0], trailing = ref4[1];
       node.setLeadingText(leading);
       node.setTrailingText(trailing);
       return node.spliceIn(location);
@@ -9168,13 +9168,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.dragCanvas.width = 0;
       this.dragCanvas.height = 0;
       this.highlightCanvas.width = this.dropletElement.offsetWidth - this.gutter.offsetWidth;
-      this.highlightCanvas.style.width = "" + this.highlightCanvas.width + "px";
+      this.highlightCanvas.style.width = this.highlightCanvas.width + "px";
       this.highlightCanvas.height = this.dropletElement.offsetHeight - this.gutter.offsetWidth;
-      this.highlightCanvas.style.height = "" + this.highlightCanvas.height + "px";
-      return this.highlightCanvas.style.left = "" + this.mainCanvas.offsetLeft + "px";
+      this.highlightCanvas.style.height = this.highlightCanvas.height + "px";
+      return this.highlightCanvas.style.left = this.mainCanvas.offsetLeft + "px";
     };
     hook('mousedown', 1, function(point, event, state) {
-      var box, hitTestResult, i, line, mainPoint, node, _i, _len, _ref1;
+      var box, hitTestResult, i, j, len, line, mainPoint, node, ref1;
       if (state.consumedHitTest) {
         return;
       }
@@ -9186,9 +9186,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (this.debugging && event.shiftKey) {
         line = null;
         node = this.view.getViewNodeFor(hitTestResult);
-        _ref1 = node.bounds;
-        for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-          box = _ref1[i];
+        ref1 = node.bounds;
+        for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+          box = ref1[i];
           if (box.contains(mainPoint)) {
             line = i;
             break;
@@ -9212,13 +9212,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     Editor.prototype.wouldDelete = function(position) {
-      var mainPoint, palettePoint, _ref1, _ref2, _ref3, _ref4;
+      var mainPoint, palettePoint, ref1, ref2, ref3, ref4;
       mainPoint = this.trackerPointToMain(position);
       palettePoint = this.trackerPointToPalette(position);
-      return !this.lastHighlight && !((this.mainCanvas.width + this.scrollOffsets.main.x > (_ref1 = mainPoint.x) && _ref1 > this.scrollOffsets.main.x) && (this.mainCanvas.height + this.scrollOffsets.main.y > (_ref2 = mainPoint.y) && _ref2 > this.scrollOffsets.main.y)) || ((this.paletteCanvas.width + this.scrollOffsets.palette.x > (_ref3 = palettePoint.x) && _ref3 > this.scrollOffsets.palette.x) && (this.paletteCanvas.height + this.scrollOffsets.palette.y > (_ref4 = palettePoint.y) && _ref4 > this.scrollOffsets.palette.y));
+      return !this.lastHighlight && !((this.mainCanvas.width + this.scrollOffsets.main.x > (ref1 = mainPoint.x) && ref1 > this.scrollOffsets.main.x) && (this.mainCanvas.height + this.scrollOffsets.main.y > (ref2 = mainPoint.y) && ref2 > this.scrollOffsets.main.y)) || ((this.paletteCanvas.width + this.scrollOffsets.palette.x > (ref3 = palettePoint.x) && ref3 > this.scrollOffsets.palette.x) && (this.paletteCanvas.height + this.scrollOffsets.palette.y > (ref4 = palettePoint.y) && ref4 > this.scrollOffsets.palette.y));
     };
     hook('mousemove', 1, function(point, event, state) {
-      var acceptLevel, bound, draggingBlockView, dropPoint, head, line, mainPoint, position, viewNode, _i, _len, _ref1;
+      var acceptLevel, bound, draggingBlockView, dropPoint, head, j, len, line, mainPoint, position, ref1, viewNode;
       if (!state.capturedPickup && (this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
         this.draggingBlock = this.clickedBlock;
         if (this.clickedBlockIsPaletteBlock) {
@@ -9228,9 +9228,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           mainPoint = this.trackerPointToMain(this.clickedPoint);
           viewNode = this.view.getViewNodeFor(this.draggingBlock);
           this.draggingOffset = null;
-          _ref1 = viewNode.bounds;
-          for (line = _i = 0, _len = _ref1.length; _i < _len; line = ++_i) {
-            bound = _ref1[line];
+          ref1 = viewNode.bounds;
+          for (line = j = 0, len = ref1.length; j < len; line = ++j) {
+            bound = ref1[line];
             if (bound.contains(mainPoint)) {
               this.draggingOffset = bound.upperLeftCorner().from(mainPoint);
               this.draggingOffset.y += viewNode.bounds[0].y - bound.y;
@@ -9279,8 +9279,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
           head = head.next;
         }
-        this.dragCanvas.style.top = "" + (position.y + getOffsetTop(this.dropletElement)) + "px";
-        this.dragCanvas.style.left = "" + (position.x + getOffsetLeft(this.dropletElement)) + "px";
+        this.dragCanvas.style.top = (position.y + getOffsetTop(this.dropletElement)) + "px";
+        this.dragCanvas.style.left = (position.x + getOffsetLeft(this.dropletElement)) + "px";
         this.clickedPoint = this.clickedBlock = null;
         this.clickedBlockIsPaletteBlock = false;
         this.begunTrash = this.wouldDelete(position);
@@ -9305,20 +9305,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     hook('mousemove', 0, function(point, event, state) {
-      var best, head, mainPoint, min, palettePoint, position, rect, testPoints, _ref1, _ref2, _ref3;
+      var best, head, mainPoint, min, palettePoint, position, rect, ref1, ref2, ref3, testPoints;
       if (this.draggingBlock != null) {
         position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
         rect = this.wrapperElement.getBoundingClientRect();
-        this.dragCanvas.style.top = "" + (position.y - rect.top) + "px";
-        this.dragCanvas.style.left = "" + (position.x - rect.left) + "px";
+        this.dragCanvas.style.top = (position.y - rect.top) + "px";
+        this.dragCanvas.style.left = (position.x - rect.left) + "px";
         mainPoint = this.trackerPointToMain(position);
         best = null;
         min = Infinity;
         head = this.tree.start.next;
-        while (((_ref1 = head.type) === 'newline' || _ref1 === 'cursor') || head.type === 'text' && head.value === '') {
+        while (((ref1 = head.type) === 'newline' || ref1 === 'cursor') || head.type === 'text' && head.value === '') {
           head = head.next;
         }
-        if (head === this.tree.end && (this.mainCanvas.width + this.scrollOffsets.main.x > (_ref2 = mainPoint.x) && _ref2 > this.scrollOffsets.main.x - this.gutter.offsetWidth) && (this.mainCanvas.height + this.scrollOffsets.main.y > (_ref3 = mainPoint.y) && _ref3 > this.scrollOffsets.main.y)) {
+        if (head === this.tree.end && (this.mainCanvas.width + this.scrollOffsets.main.x > (ref2 = mainPoint.x) && ref2 > this.scrollOffsets.main.x - this.gutter.offsetWidth) && (this.mainCanvas.height + this.scrollOffsets.main.y > (ref3 = mainPoint.y) && ref3 > this.scrollOffsets.main.y)) {
           this.view.getViewNodeFor(this.tree).highlightArea.draw(this.highlightCtx);
           this.lastHighlight = this.tree;
         } else {
@@ -9449,16 +9449,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.floatingBlocks = [];
     });
     FloatingBlockRecord = (function() {
-      function FloatingBlockRecord(block, position) {
-        this.block = block;
-        this.position = position;
+      function FloatingBlockRecord(block1, position1) {
+        this.block = block1;
+        this.position = position1;
       }
 
       return FloatingBlockRecord;
 
     })();
-    ToFloatingOperation = (function(_super) {
-      __extends(ToFloatingOperation, _super);
+    ToFloatingOperation = (function(superClass) {
+      extend(ToFloatingOperation, superClass);
 
       function ToFloatingOperation(block, position, editor) {
         this.position = new editor.draw.Point(position.x, position.y);
@@ -9507,7 +9507,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return block === this.tree;
     };
     hook('mouseup', 0, function(point, event, state) {
-      var palettePoint, renderPoint, trackPoint, _ref1, _ref2, _ref3, _ref4;
+      var palettePoint, ref1, ref2, ref3, ref4, renderPoint, trackPoint;
       if ((this.draggingBlock != null) && (this.lastHighlight == null)) {
         trackPoint = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
         renderPoint = this.trackerPointToMain(trackPoint);
@@ -9519,7 +9519,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           this.spliceOut(this.draggingBlock);
         }
         palettePoint = this.trackerPointToPalette(point);
-        if ((0 < (_ref1 = palettePoint.x - this.scrollOffsets.palette.x) && _ref1 < this.paletteCanvas.width) && (0 < (_ref2 = palettePoint.y - this.scrollOffsets.palette.y) && _ref2 < this.paletteCanvas.height) || !((-this.gutter.offsetWidth < (_ref3 = renderPoint.x - this.scrollOffsets.main.x) && _ref3 < this.mainCanvas.width) && (0 < (_ref4 = renderPoint.y - this.scrollOffsets.main.y) && _ref4 < this.mainCanvas.height))) {
+        if ((0 < (ref1 = palettePoint.x - this.scrollOffsets.palette.x) && ref1 < this.paletteCanvas.width) && (0 < (ref2 = palettePoint.y - this.scrollOffsets.palette.y) && ref2 < this.paletteCanvas.height) || !((-this.gutter.offsetWidth < (ref3 = renderPoint.x - this.scrollOffsets.main.x) && ref3 < this.mainCanvas.width) && (0 < (ref4 = renderPoint.y - this.scrollOffsets.main.y) && ref4 < this.mainCanvas.height))) {
           if (this.draggingBlock === this.lassoSegment) {
             this.lassoSegment = null;
           }
@@ -9539,36 +9539,36 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     hook('mousedown', 5, function(point, event, state) {
-      var hitTestResult, i, record, _i, _len, _ref1, _results;
+      var hitTestResult, i, j, len, record, ref1, results;
       if (state.consumedHitTest) {
         return;
       }
       if (!this.trackerPointIsInMain(point)) {
         return;
       }
-      _ref1 = this.floatingBlocks;
-      _results = [];
-      for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-        record = _ref1[i];
+      ref1 = this.floatingBlocks;
+      results = [];
+      for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+        record = ref1[i];
         hitTestResult = this.hitTest(this.trackerPointToMain(point), record.block);
         if (hitTestResult != null) {
           this.setTextInputFocus(null);
           this.clickedBlock = record.block;
           this.clickedPoint = point;
           state.consumedHitTest = true;
-          _results.push(this.redrawMain());
+          results.push(this.redrawMain());
         } else {
-          _results.push(void 0);
+          results.push(void 0);
         }
       }
-      return _results;
+      return results;
     });
     hook('mousemove', 7, function(point, event, state) {
-      var i, record, _i, _len, _ref1;
+      var i, j, len, record, ref1;
       if ((this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
-        _ref1 = this.floatingBlocks;
-        for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-          record = _ref1[i];
+        ref1 = this.floatingBlocks;
+        for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+          record = ref1[i];
           if (record.block === this.clickedBlock) {
             if (!state.addedCapturePoint) {
               this.addMicroUndoOperation('CAPTURE_POINT');
@@ -9583,17 +9583,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     hook('redraw_main', 7, function() {
-      var blockView, boundingRect, record, _i, _len, _ref1, _results;
+      var blockView, boundingRect, j, len, record, ref1, results;
       boundingRect = new this.draw.Rectangle(this.scrollOffsets.main.x, this.scrollOffsets.main.y, this.mainCanvas.width, this.mainCanvas.height);
-      _ref1 = this.floatingBlocks;
-      _results = [];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        record = _ref1[_i];
+      ref1 = this.floatingBlocks;
+      results = [];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        record = ref1[j];
         blockView = this.view.getViewNodeFor(record.block);
         blockView.layout(record.position.x, record.position.y);
-        _results.push(blockView.draw(this.mainCtx, boundingRect));
+        results.push(blockView.draw(this.mainCtx, boundingRect));
       }
-      return _results;
+      return results;
     });
     hook('populate', 0, function() {
       this.paletteHeader = document.createElement('div');
@@ -9602,16 +9602,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.setPalette(this.paletteGroups);
     });
     Editor.prototype.setPalette = function(paletteGroups) {
-      var i, paletteGroup, paletteHeaderRow, _fn, _i, _len, _ref1;
+      var fn1, i, j, len, paletteGroup, paletteHeaderRow, ref1;
       this.paletteHeader.innerHTML = '';
       this.paletteGroups = paletteGroups;
       this.currentPaletteBlocks = [];
       this.currentPaletteMetadata = [];
       paletteHeaderRow = null;
-      _ref1 = this.paletteGroups;
-      _fn = (function(_this) {
+      ref1 = this.paletteGroups;
+      fn1 = (function(_this) {
         return function(paletteGroup, i) {
-          var clickHandler, data, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, updatePalette, _j, _len1, _ref2;
+          var clickHandler, data, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
           if (i % 2 === 0) {
             paletteHeaderRow = document.createElement('div');
             paletteHeaderRow.className = 'droplet-palette-header-row';
@@ -9628,9 +9628,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
           paletteHeaderRow.appendChild(paletteGroupHeader);
           newPaletteBlocks = [];
-          _ref2 = paletteGroup.blocks;
-          for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-            data = _ref2[_j];
+          ref2 = paletteGroup.blocks;
+          for (k = 0, len1 = ref2.length; k < len1; k++) {
+            data = ref2[k];
             newBlock = _this.mode.parse(data.block).start.next.container;
             newBlock.spliceOut();
             newBlock.parent = null;
@@ -9642,12 +9642,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
           paletteGroupBlocks = newPaletteBlocks;
           updatePalette = function() {
-            var _ref3;
+            var ref3;
             _this.currentPaletteGroup = paletteGroup.name;
             _this.currentPaletteBlocks = paletteGroupBlocks;
             _this.currentPaletteMetadata = paletteGroupBlocks;
-            if ((_ref3 = _this.currentPaletteGroupHeader) != null) {
-              _ref3.className = _this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
+            if ((ref3 = _this.currentPaletteGroupHeader) != null) {
+              ref3.className = _this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
             }
             _this.currentPaletteGroupHeader = paletteGroupHeader;
             _this.currentPaletteIndex = i;
@@ -9665,15 +9665,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
         };
       })(this);
-      for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-        paletteGroup = _ref1[i];
-        _fn(paletteGroup, i);
+      for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+        paletteGroup = ref1[i];
+        fn1(paletteGroup, i);
       }
       this.resizePalette();
       return this.resizePaletteHighlight();
     };
     hook('mousedown', 6, function(point, event, state) {
-      var entry, hitTestResult, palettePoint, _i, _len, _ref1, _ref2, _ref3;
+      var entry, hitTestResult, j, len, palettePoint, ref1, ref2, ref3;
       if (state.consumedHitTest) {
         return;
       }
@@ -9681,10 +9681,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return;
       }
       palettePoint = this.trackerPointToPalette(point);
-      if ((this.scrollOffsets.palette.y < (_ref1 = palettePoint.y) && _ref1 < this.scrollOffsets.palette.y + this.paletteCanvas.height) && (this.scrollOffsets.palette.x < (_ref2 = palettePoint.x) && _ref2 < this.scrollOffsets.palette.x + this.paletteCanvas.width)) {
-        _ref3 = this.currentPaletteBlocks;
-        for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
-          entry = _ref3[_i];
+      if ((this.scrollOffsets.palette.y < (ref1 = palettePoint.y) && ref1 < this.scrollOffsets.palette.y + this.paletteCanvas.height) && (this.scrollOffsets.palette.x < (ref2 = palettePoint.x) && ref2 < this.scrollOffsets.palette.x + this.paletteCanvas.width)) {
+        ref3 = this.currentPaletteBlocks;
+        for (j = 0, len = ref3.length; j < len; j++) {
+          entry = ref3[j];
           hitTestResult = this.hitTest(palettePoint, entry.block);
           if (hitTestResult != null) {
             this.setTextInputFocus(null);
@@ -9719,11 +9719,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     hook('rebuild_palette', 1, function() {
-      var block, bounds, data, hoverDiv, _fn, _i, _len, _ref1, _ref2, _results;
+      var block, bounds, data, fn1, hoverDiv, j, len, ref1, ref2, results;
       this.paletteScrollerStuffing.innerHTML = '';
       this.currentHighlightedPaletteBlock = null;
-      _ref1 = this.currentPaletteMetadata;
-      _fn = (function(_this) {
+      ref1 = this.currentPaletteMetadata;
+      fn1 = (function(_this) {
         return function(block) {
           hoverDiv.addEventListener('mousemove', function(event) {
             var palettePoint;
@@ -9750,28 +9750,28 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           });
         };
       })(this);
-      _results = [];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        data = _ref1[_i];
+      results = [];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        data = ref1[j];
         block = data.block;
         hoverDiv = document.createElement('div');
         hoverDiv.className = 'droplet-hover-div';
-        hoverDiv.title = (_ref2 = data.title) != null ? _ref2 : block.stringify(this.mode.empty);
+        hoverDiv.title = (ref2 = data.title) != null ? ref2 : block.stringify(this.mode.empty);
         bounds = this.view.getViewNodeFor(block).totalBounds;
-        hoverDiv.style.top = "" + bounds.y + "px";
-        hoverDiv.style.left = "" + bounds.x + "px";
-        hoverDiv.style.width = "" + (Math.min(bounds.width, Infinity)) + "px";
-        hoverDiv.style.height = "" + bounds.height + "px";
-        _fn(block);
-        _results.push(this.paletteScrollerStuffing.appendChild(hoverDiv));
+        hoverDiv.style.top = bounds.y + "px";
+        hoverDiv.style.left = bounds.x + "px";
+        hoverDiv.style.width = (Math.min(bounds.width, Infinity)) + "px";
+        hoverDiv.style.height = bounds.height + "px";
+        fn1(block);
+        results.push(this.paletteScrollerStuffing.appendChild(hoverDiv));
       }
-      return _results;
+      return results;
     });
-    TextChangeOperation = (function(_super) {
-      __extends(TextChangeOperation, _super);
+    TextChangeOperation = (function(superClass) {
+      extend(TextChangeOperation, superClass);
 
-      function TextChangeOperation(socket, before, editor) {
-        this.before = before;
+      function TextChangeOperation(socket, before1, editor) {
+        this.before = before1;
         this.after = socket.stringify(editor.mode.empty);
         this.socket = socket.start.getSerializedLocation();
       }
@@ -9791,11 +9791,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return TextChangeOperation;
 
     })(UndoOperation);
-    TextReparseOperation = (function(_super) {
-      __extends(TextReparseOperation, _super);
+    TextReparseOperation = (function(superClass) {
+      extend(TextReparseOperation, superClass);
 
-      function TextReparseOperation(socket, before) {
-        this.before = before;
+      function TextReparseOperation(socket, before1) {
+        this.before = before1;
         this.after = socket.start.next.container;
         this.socket = socket.start.getSerializedLocation();
       }
@@ -9819,7 +9819,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(UndoOperation);
     hook('populate', 1, function() {
-      var event, _i, _len, _ref1, _results;
+      var event, j, len, ref1, results;
       this.hiddenInput = document.createElement('textarea');
       this.hiddenInput.className = 'droplet-hidden-input';
       this.hiddenInput.addEventListener('focus', (function(_this) {
@@ -9839,17 +9839,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.oldFocusValue = null;
       this.hiddenInput.addEventListener('keydown', (function(_this) {
         return function(event) {
-          var _ref1;
-          if (event.keyCode === 8 && _this.hiddenInput.value.length > 1 && _this.hiddenInput.value[0] === _this.hiddenInput.value[_this.hiddenInput.value.length - 1] && ((_ref1 = _this.hiddenInput.value[0]) === '\'' || _ref1 === '\"') && _this.hiddenInput.selectionEnd === 1) {
+          var ref1;
+          if (event.keyCode === 8 && _this.hiddenInput.value.length > 1 && _this.hiddenInput.value[0] === _this.hiddenInput.value[_this.hiddenInput.value.length - 1] && ((ref1 = _this.hiddenInput.value[0]) === '\'' || ref1 === '\"') && _this.hiddenInput.selectionEnd === 1) {
             return event.preventDefault();
           }
         };
       })(this));
-      _ref1 = ['input', 'keyup', 'keydown', 'select'];
-      _results = [];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        event = _ref1[_i];
-        _results.push(this.hiddenInput.addEventListener(event, (function(_this) {
+      ref1 = ['input', 'keyup', 'keydown', 'select'];
+      results = [];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        event = ref1[j];
+        results.push(this.hiddenInput.addEventListener(event, (function(_this) {
           return function() {
             _this.highlightFlashShow();
             if (_this.textFocus != null) {
@@ -9859,11 +9859,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           };
         })(this)));
       }
-      return _results;
+      return results;
     });
     Editor.prototype.resizeAceElement = function() {
-      this.aceElement.style.width = "" + this.wrapperElement.offsetWidth + "px";
-      return this.aceElement.style.height = "" + this.wrapperElement.offsetHeight + "px";
+      this.aceElement.style.width = this.wrapperElement.offsetWidth + "px";
+      return this.aceElement.style.height = this.wrapperElement.offsetHeight + "px";
     };
     last_ = function(array) {
       return array[array.length - 1];
@@ -9909,7 +9909,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     Editor.prototype.redrawTextHighlights = function(scrollIntoView) {
-      var endPosition, endRow, i, lines, startPosition, startRow, textFocusView, _i, _ref1;
+      var endPosition, endRow, i, j, lines, ref1, ref2, startPosition, startRow, textFocusView;
       if (scrollIntoView == null) {
         scrollIntoView = false;
       }
@@ -9931,7 +9931,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           this.cursorCtx.fillRect(startPosition, textFocusView.bounds[startRow].y + this.view.opts.textPadding, endPosition - startPosition, this.view.opts.textHeight);
         } else {
           this.cursorCtx.fillRect(startPosition, textFocusView.bounds[startRow].y + this.view.opts.textPadding + textFocusView.bounds[startRow].right() - this.view.opts.textPadding - startPosition, this.view.opts.textHeight);
-          for (i = _i = _ref1 = startRow + 1; _ref1 <= endRow ? _i < endRow : _i > endRow; i = _ref1 <= endRow ? ++_i : --_i) {
+          for (i = j = ref1 = startRow + 1, ref2 = endRow; ref1 <= ref2 ? j < ref2 : j > ref2; i = ref1 <= ref2 ? ++j : --j) {
             this.cursorCtx.fillRect(textFocusView.bounds[i].x, textFocusView.bounds[i].y + this.view.opts.textPadding, textFocusView.bounds[i].width, this.view.opts.textHeight);
           }
           this.cursorCtx.fillRect(textFocusView.bounds[endRow].x, textFocusView.bounds[endRow].y + this.view.opts.textPadding, endPosition - textFocusView.bounds[endRow].x, this.view.opts.textHeight);
@@ -9945,7 +9945,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return str[0] + str.slice(1, -1).replace(/(\'|\"|\n)/g, '\\$1') + str[str.length - 1];
     };
     Editor.prototype.setTextInputFocus = function(focus, selectionStart, selectionEnd) {
-      var cursorParent, cursorPosition, newParse, originalText, shouldPop, shouldRecoverCursor, string, unparsedValue, _ref1, _ref2;
+      var cursorParent, cursorPosition, newParse, originalText, ref1, ref2, shouldPop, shouldRecoverCursor, string, unparsedValue;
       if (selectionStart == null) {
         selectionStart = null;
       }
@@ -9976,7 +9976,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               wrapAtRoot: false
             });
           } catch (_error) {
-            if (string[0] === string[string.length - 1] && ((_ref1 = string[0]) === '"' || _ref1 === '\'')) {
+            if (string[0] === string[string.length - 1] && ((ref1 = string[0]) === '"' || ref1 === '\'')) {
               try {
                 string = escapeString(string);
                 newParse = this.mode.parse(unparsedValue = string, {
@@ -10024,7 +10024,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.hiddenInput.focus();
         if ((selectionStart != null) && (selectionEnd != null)) {
           this.hiddenInput.setSelectionRange(selectionStart, selectionEnd);
-        } else if (this.hiddenInput.value[0] === this.hiddenInput.value[this.hiddenInput.value.length - 1] && ((_ref2 = this.hiddenInput.value[0]) === '\'' || _ref2 === '"')) {
+        } else if (this.hiddenInput.value[0] === this.hiddenInput.value[this.hiddenInput.value.length - 1] && ((ref2 = this.hiddenInput.value[0]) === '\'' || ref2 === '"')) {
           this.hiddenInput.setSelectionRange(1, this.hiddenInput.value.length - 1);
         } else {
           this.hiddenInput.setSelectionRange(0, this.hiddenInput.value.length);
@@ -10035,11 +10035,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.redrawTextInput();
     };
     Editor.prototype.populateSocket = function(socket, string) {
-      var head, i, line, lines, _i, _len;
+      var head, i, j, len, line, lines;
       lines = string.split('\n');
       socket.start.append(socket.end);
       head = socket.start;
-      for (i = _i = 0, _len = lines.length; _i < _len; i = ++_i) {
+      for (i = j = 0, len = lines.length; j < len; i = ++j) {
         line = lines[i];
         head = head.insert(new model.TextToken(line));
         if (i + 1 !== lines.length) {
@@ -10049,10 +10049,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return socket.notifyChange();
     };
     Editor.prototype.hitTestTextInput = function(point, block) {
-      var head, _ref1;
+      var head, ref1;
       head = block.start;
       while (head != null) {
-        if (head.type === 'socketStart' && ((_ref1 = head.next.type) === 'text' || _ref1 === 'socketEnd') && this.view.getViewNodeFor(head.container).path.contains(point)) {
+        if (head.type === 'socketStart' && ((ref1 = head.next.type) === 'text' || ref1 === 'socketEnd') && this.view.getViewNodeFor(head.container).path.contains(point)) {
           return head.container;
         }
         head = head.next;
@@ -10075,10 +10075,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.hiddenInput.setSelectionRange(this.textInputAnchor, this.textInputHead);
     };
     Editor.prototype.selectDoubleClick = function(point) {
-      var after, before, position, _ref1, _ref2, _ref3, _ref4;
+      var after, before, position, ref1, ref2, ref3, ref4;
       position = this.getTextPosition(point);
-      before = (_ref1 = (_ref2 = this.textFocus.stringify(this.mode.empty).slice(0, position).match(/\w*$/)[0]) != null ? _ref2.length : void 0) != null ? _ref1 : 0;
-      after = (_ref3 = (_ref4 = this.textFocus.stringify(this.mode.empty).slice(position).match(/^\w*/)[0]) != null ? _ref4.length : void 0) != null ? _ref3 : 0;
+      before = (ref1 = (ref2 = this.textFocus.stringify(this.mode.empty).slice(0, position).match(/\w*$/)[0]) != null ? ref2.length : void 0) != null ? ref1 : 0;
+      after = (ref3 = (ref4 = this.textFocus.stringify(this.mode.empty).slice(position).match(/^\w*/)[0]) != null ? ref4.length : void 0) != null ? ref3 : 0;
       this.textInputAnchor = position - before;
       this.textInputHead = position + after;
       return this.hiddenInput.setSelectionRange(this.textInputAnchor, this.textInputHead);
@@ -10125,13 +10125,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.wrapperElement.appendChild(this.dropdownElement);
     });
     Editor.prototype.showDropdown = function() {
-      var el, i, location, textFocus, _fn, _i, _len, _ref1;
+      var el, fn1, i, j, len, location, ref1, textFocus;
       if (this.textFocus.hasDropdown()) {
         this.dropdownElement.innerHTML = '';
         this.dropdownElement.style.display = 'inline-block';
         textFocus = this.textFocus;
-        _ref1 = this.textFocus.dropdown();
-        _fn = (function(_this) {
+        ref1 = this.textFocus.dropdown();
+        fn1 = (function(_this) {
           return function(el) {
             var div;
             div = document.createElement('div');
@@ -10149,9 +10149,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return _this.dropdownElement.appendChild(div);
           };
         })(this);
-        for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-          el = _ref1[i];
-          _fn(el);
+        for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+          el = ref1[i];
+          fn1(el);
         }
         location = this.view.getViewNodeFor(this.textFocus).bounds[0];
         this.dropdownElement.style.top = location.y + this.fontSize - this.scrollOffsets.main.y;
@@ -10207,8 +10207,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return this.textInputSelecting = false;
       }
     });
-    CreateSegmentOperation = (function(_super) {
-      __extends(CreateSegmentOperation, _super);
+    CreateSegmentOperation = (function(superClass) {
+      extend(CreateSegmentOperation, superClass);
 
       function CreateSegmentOperation(segment) {
         this.first = segment.start.getSerializedLocation();
@@ -10232,8 +10232,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return CreateSegmentOperation;
 
     })(UndoOperation);
-    DestroySegmentOperation = (function(_super) {
-      __extends(DestroySegmentOperation, _super);
+    DestroySegmentOperation = (function(superClass) {
+      extend(DestroySegmentOperation, superClass);
 
       function DestroySegmentOperation(segment) {
         this.first = segment.start.getSerializedLocation();
@@ -10273,10 +10273,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.resizeLassoCanvas = function() {
       this.lassoSelectCanvas.width = this.dropletElement.offsetWidth - this.gutter.offsetWidth;
-      this.lassoSelectCanvas.style.width = "" + this.lassoSelectCanvas.width + "px";
+      this.lassoSelectCanvas.style.width = this.lassoSelectCanvas.width + "px";
       this.lassoSelectCanvas.height = this.dropletElement.offsetHeight - this.gutter.offsetWidth;
-      this.lassoSelectCanvas.style.height = "" + this.lassoSelectCanvas.height + "px";
-      return this.lassoSelectCanvas.style.left = "" + this.mainCanvas.offsetLeft + "px";
+      this.lassoSelectCanvas.style.height = this.lassoSelectCanvas.height + "px";
+      return this.lassoSelectCanvas.style.left = this.mainCanvas.offsetLeft + "px";
     };
     Editor.prototype.clearLassoSelection = function() {
       var head, needToRedraw, next;
@@ -10317,7 +10317,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.lassoSelectAnchor = this.trackerPointToMain(point);
     });
     hook('mousemove', 0, function(point, event, state) {
-      var first, lassoRectangle, last, mainPoint, _ref1;
+      var first, lassoRectangle, last, mainPoint, ref1;
       if (this.lassoSelectAnchor != null) {
         mainPoint = this.trackerPointToMain(point);
         this.clearLassoSelectCanvas();
@@ -10335,27 +10335,27 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.lassoSelectCtx.strokeStyle = '#00f';
         this.lassoSelectCtx.strokeRect(lassoRectangle.x - this.scrollOffsets.main.x, lassoRectangle.y - this.scrollOffsets.main.y, lassoRectangle.width, lassoRectangle.height);
         if (first && (last != null)) {
-          _ref1 = validateLassoSelection(this.tree, first, last), first = _ref1[0], last = _ref1[1];
+          ref1 = validateLassoSelection(this.tree, first, last), first = ref1[0], last = ref1[1];
           return this.drawTemporaryLasso(first, last);
         }
       }
     });
     Editor.prototype.drawTemporaryLasso = function(first, last) {
-      var head, mainCanvasRectangle, _results;
+      var head, mainCanvasRectangle, results;
       mainCanvasRectangle = new this.draw.Rectangle(this.scrollOffsets.main.x, this.scrollOffsets.main.y, this.mainCanvas.width, this.mainCanvas.height);
       head = first;
-      _results = [];
+      results = [];
       while (head !== last) {
         if (head instanceof model.StartToken) {
           this.view.getViewNodeFor(head.container).draw(this.highlightCtx, mainCanvasRectangle, {
             selected: Infinity
           });
-          _results.push(head = head.container.end);
+          results.push(head = head.container.end);
         } else {
-          _results.push(head = head.next);
+          results.push(head = head.next);
         }
       }
-      return _results;
+      return results;
     };
     validateLassoSelection = function(tree, first, last) {
       var head, tokensToInclude;
@@ -10369,11 +10369,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         head = head.next;
       }
       first = tree.start;
-      while (__indexOf.call(tokensToInclude, first) < 0) {
+      while (indexOf.call(tokensToInclude, first) < 0) {
         first = first.next;
       }
       last = tree.end;
-      while (__indexOf.call(tokensToInclude, last) < 0) {
+      while (indexOf.call(tokensToInclude, last) < 0) {
         last = last.prev;
       }
       while (first.type !== 'blockStart') {
@@ -10391,7 +10391,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return [first, last];
     };
     hook('mouseup', 0, function(point, event, state) {
-      var first, lassoRectangle, last, mainPoint, _ref1;
+      var first, lassoRectangle, last, mainPoint, ref1;
       if (this.lassoSelectAnchor != null) {
         mainPoint = this.trackerPointToMain(point);
         lassoRectangle = new this.draw.Rectangle(Math.min(this.lassoSelectAnchor.x, mainPoint.x), Math.min(this.lassoSelectAnchor.y, mainPoint.y), Math.abs(this.lassoSelectAnchor.x - mainPoint.x), Math.abs(this.lassoSelectAnchor.y - mainPoint.y));
@@ -10408,7 +10408,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         if (!((first != null) && (last != null))) {
           return;
         }
-        _ref1 = validateLassoSelection(this.tree, first, last), first = _ref1[0], last = _ref1[1];
+        ref1 = validateLassoSelection(this.tree, first, last), first = ref1[0], last = ref1[1];
         this.lassoSegment = new model.Segment();
         this.lassoSegment.isLassoSegment = true;
         this.lassoSegment.wrap(first, last);
@@ -10434,11 +10434,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.cursor = new model.CursorToken();
     });
     isValidCursorPosition = function(pos) {
-      var _ref1;
-      return (_ref1 = pos.parent.type) === 'indent' || _ref1 === 'segment';
+      var ref1;
+      return (ref1 = pos.parent.type) === 'indent' || ref1 === 'segment';
     };
     Editor.prototype.moveCursorTo = function(destination, attemptReparse) {
-      var head, _ref1;
+      var head, ref1;
       if (attemptReparse == null) {
         attemptReparse = false;
       }
@@ -10461,7 +10461,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         destination.insert(this.cursor);
       } else {
         head = destination;
-        while (!(((_ref1 = head.type) === 'newline' || _ref1 === 'indentEnd') || head === this.tree.end)) {
+        while (!(((ref1 = head.type) === 'newline' || ref1 === 'indentEnd') || head === this.tree.end)) {
           head = head.next;
         }
         if (head.type === 'newline') {
@@ -10476,16 +10476,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.redrawHighlights();
     };
     Editor.prototype.moveCursorUp = function() {
-      var head, _ref1, _ref2;
+      var head, ref1, ref2;
       if (this.cursor.prev == null) {
         return;
       }
-      head = (_ref1 = this.cursor.prev) != null ? _ref1.prev : void 0;
+      head = (ref1 = this.cursor.prev) != null ? ref1.prev : void 0;
       this.highlightFlashShow();
       if (head == null) {
         return;
       }
-      while (!(((_ref2 = head.type) === 'newline' || _ref2 === 'indentEnd') || head === this.tree.start)) {
+      while (!(((ref2 = head.type) === 'newline' || ref2 === 'indentEnd') || head === this.tree.start)) {
         head = head.prev;
       }
       this.cursor.remove();
@@ -10560,7 +10560,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     Editor.prototype.moveCursorHorizontally = function(direction) {
-      var chars, head, persistentParent, position, socket, _ref1;
+      var chars, head, persistentParent, position, ref1, socket;
       if (this.textFocus != null) {
         if (direction === 'right') {
           head = this.textFocus.end.next;
@@ -10577,7 +10577,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return;
       }
       while (true) {
-        if (((_ref1 = head.type) === 'newline' || _ref1 === 'indentEnd') || head.container === this.tree) {
+        if (((ref1 = head.type) === 'newline' || ref1 === 'indentEnd') || head.container === this.tree) {
           this.cursor.remove();
           if (head === this.tree.start || head.type === 'newline') {
             head.insert(this.cursor);
@@ -10633,7 +10633,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     Editor.prototype.determineCursorPosition = function() {
-      var bound, head, line, _ref1, _ref2;
+      var bound, head, line, ref1, ref2;
       if ((this.cursor != null) && (this.cursor.parent != null)) {
         this.view.getViewNodeFor(this.tree).layout(0, this.nubbyHeight);
         head = this.cursor;
@@ -10645,7 +10645,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           }
         }
         bound = this.view.getViewNodeFor(this.cursor.parent).bounds[line];
-        if (((_ref1 = this.cursor.nextVisibleToken()) != null ? _ref1.type : void 0) === 'indentEnd' && ((_ref2 = this.cursor.prev) != null ? _ref2.prev.type : void 0) !== 'indentStart' || (this.cursor.next === this.tree.end && this.cursor.prev !== this.tree.start)) {
+        if (((ref1 = this.cursor.nextVisibleToken()) != null ? ref1.type : void 0) === 'indentEnd' && ((ref2 = this.cursor.prev) != null ? ref2.prev.type : void 0) !== 'indentStart' || (this.cursor.next === this.tree.end && this.cursor.prev !== this.tree.start)) {
           return new this.draw.Point(bound.x, bound.bottom());
         } else {
           return new this.draw.Point(bound.x, bound.y);
@@ -10757,10 +10757,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     Editor.prototype.deleteAtCursor = function() {
-      var before, blockEnd, start, _ref1, _ref2;
+      var before, blockEnd, ref1, ref2, start;
       this.setTextInputFocus(null);
       blockEnd = this.cursor.prev;
-      while ((_ref1 = blockEnd != null ? blockEnd.type : void 0) !== 'blockEnd' && _ref1 !== 'indentStart' && _ref1 !== (void 0)) {
+      while ((ref1 = blockEnd != null ? blockEnd.type : void 0) !== 'blockEnd' && ref1 !== 'indentStart' && ref1 !== (void 0)) {
         blockEnd = blockEnd.prev;
       }
       if (blockEnd == null) {
@@ -10779,7 +10779,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           return;
         }
         before = blockEnd.container.parent.start;
-        while ((_ref2 = before.type) !== 'blockEnd' && _ref2 !== 'indentStart' && _ref2 !== 'segmentStart') {
+        while ((ref2 = before.type) !== 'blockEnd' && ref2 !== 'indentStart' && ref2 !== 'segmentStart') {
           before = before.previousVisibleToken();
         }
         this.addMicroUndoOperation(new PickUpOperation(blockEnd.container.parent));
@@ -10825,7 +10825,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.handwrittenBlocks = [];
     });
     hook('keydown', 0, function(event, state) {
-      var head, newBlock, newSocket, _ref1;
+      var head, newBlock, newSocket, ref1;
       if (event.which === ENTER_KEY) {
         if ((this.textFocus == null) && !event.shiftKey) {
           this.setTextInputFocus(null);
@@ -10835,7 +10835,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           newSocket.handwritten = true;
           this.handwrittenBlocks.push(newBlock);
           head = this.cursor.prev;
-          while (((_ref1 = head.type) === 'newline' || _ref1 === 'cursor' || _ref1 === 'segmentStart' || _ref1 === 'segmentEnd') && head !== this.tree.start) {
+          while (((ref1 = head.type) === 'newline' || ref1 === 'cursor' || ref1 === 'segmentStart' || ref1 === 'segmentEnd') && head !== this.tree.start) {
             head = head.prev;
           }
           this.addMicroUndoOperation('CAPTURE_POINT');
@@ -10868,8 +10868,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
       return false;
     };
-    ReparseOperation = (function(_super) {
-      __extends(ReparseOperation, _super);
+    ReparseOperation = (function(superClass) {
+      extend(ReparseOperation, superClass);
 
       function ReparseOperation(block, parse) {
         this.before = block.clone();
@@ -11013,19 +11013,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
     };
     AnimatedColor = (function() {
-      function AnimatedColor(start, end, time) {
-        this.start = start;
-        this.end = end;
+      function AnimatedColor(start1, end1, time) {
+        this.start = start1;
+        this.end = end1;
         this.time = time;
         this.currentRGB = [parseInt(this.start.slice(1, 3), 16), parseInt(this.start.slice(3, 5), 16), parseInt(this.start.slice(5, 7), 16)];
         this.step = [(parseInt(this.end.slice(1, 3), 16) - this.currentRGB[0]) / this.time, (parseInt(this.end.slice(3, 5), 16) - this.currentRGB[1]) / this.time, (parseInt(this.end.slice(5, 7), 16) - this.currentRGB[2]) / this.time];
       }
 
       AnimatedColor.prototype.advance = function() {
-        var i, item, _i, _len, _ref1;
-        _ref1 = this.currentRGB;
-        for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
-          item = _ref1[i];
+        var i, item, j, len, ref1;
+        ref1 = this.currentRGB;
+        for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+          item = ref1[i];
           this.currentRGB[i] += this.step[i];
         }
         return "rgb(" + (Math.round(this.currentRGB[0])) + "," + (Math.round(this.currentRGB[1])) + "," + (Math.round(this.currentRGB[2])) + ")";
@@ -11035,7 +11035,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })();
     Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
-      var aceScrollTop, bottom, div, i, line, lineHeight, textElement, textElements, top, translatingElements, translationVectors, treeView, _fn, _fn1, _i, _j, _len, _ref1;
+      var aceScrollTop, bottom, div, fn1, fn2, i, j, k, len, line, lineHeight, ref1, ref2, ref3, textElement, textElements, top, translatingElements, translationVectors, treeView;
       if (fadeTime == null) {
         fadeTime = 500;
       }
@@ -11065,9 +11065,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.currentlyUsingBlocks = false;
         this.currentlyAnimating = this.currentlyAnimating_suppressRedraw = true;
         this.paletteHeader.style.zIndex = 0;
-        _ref1 = this.computePlaintextTranslationVectors(), textElements = _ref1.textElements, translationVectors = _ref1.translationVectors;
+        ref1 = this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
         translatingElements = [];
-        _fn = (function(_this) {
+        fn1 = (function(_this) {
           return function(div, textElement, translationVectors, i) {
             return setTimeout((function() {
               div.style.left = (textElement.bounds[0].x - _this.scrollOffsets.main.x + translationVectors[i].x) + 'px';
@@ -11076,7 +11076,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             }), fadeTime);
           };
         })(this);
-        for (i = _i = 0, _len = textElements.length; _i < _len; i = ++_i) {
+        for (i = j = 0, len = textElements.length; j < len; i = ++j) {
           textElement = textElements[i];
           if (!(0 < textElement.bounds[0].bottom() - this.scrollOffsets.main.y + translationVectors[i].y && textElement.bounds[0].y - this.scrollOffsets.main.y + translationVectors[i].y < this.mainCanvas.height)) {
             continue;
@@ -11085,20 +11085,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           div.style.whiteSpace = 'pre';
           div.innerText = div.textContent = textElement.model.value;
           div.style.font = this.fontSize + 'px ' + this.fontFamily;
-          div.style.left = "" + (textElement.bounds[0].x - this.scrollOffsets.main.x) + "px";
-          div.style.top = "" + (textElement.bounds[0].y - this.scrollOffsets.main.y - this.fontAscent) + "px";
+          div.style.left = (textElement.bounds[0].x - this.scrollOffsets.main.x) + "px";
+          div.style.top = (textElement.bounds[0].y - this.scrollOffsets.main.y - this.fontAscent) + "px";
           div.className = 'droplet-transitioning-element';
           div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
           translatingElements.push(div);
           this.transitionContainer.appendChild(div);
-          _fn(div, textElement, translationVectors, i);
+          fn1(div, textElement, translationVectors, i);
         }
         top = Math.max(this.aceEditor.getFirstVisibleRow(), 0);
         bottom = Math.min(this.aceEditor.getLastVisibleRow(), this.view.getViewNodeFor(this.tree).lineLength - 1);
         aceScrollTop = this.aceEditor.session.getScrollTop();
         treeView = this.view.getViewNodeFor(this.tree);
         lineHeight = this.aceEditor.renderer.layerConfig.lineHeight;
-        _fn1 = (function(_this) {
+        fn2 = (function(_this) {
           return function(div, line) {
             return setTimeout((function() {
               div.style.left = '0px';
@@ -11107,19 +11107,19 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             }), fadeTime);
           };
         })(this);
-        for (line = _j = top; top <= bottom ? _j <= bottom : _j >= bottom; line = top <= bottom ? ++_j : --_j) {
+        for (line = k = ref2 = top, ref3 = bottom; ref2 <= ref3 ? k <= ref3 : k >= ref3; line = ref2 <= ref3 ? ++k : --k) {
           div = document.createElement('div');
           div.style.whiteSpace = 'pre';
           div.innerText = div.textContent = line + 1;
           div.style.left = 0;
-          div.style.top = "" + (treeView.bounds[line].y + treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
+          div.style.top = (treeView.bounds[line].y + treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
           div.style.font = this.fontSize + 'px ' + this.fontFamily;
-          div.style.width = "" + this.gutter.offsetWidth + "px";
+          div.style.width = this.gutter.offsetWidth + "px";
           translatingElements.push(div);
           div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
           div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
           this.dropletElement.appendChild(div);
-          _fn1(div, line);
+          fn2(div, line);
         }
         this.lineNumberWrapper.style.display = 'none';
         this.mainCanvas.style.transition = this.highlightCanvas.style.transition = this.cursorCanvas.style.opacity = "opacity " + fadeTime + "ms linear";
@@ -11128,12 +11128,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           return function() {
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
             _this.dropletElement.style.left = '0px';
-            return _this.paletteWrapper.style.left = "" + (-_this.paletteWrapper.offsetWidth) + "px";
+            return _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
           };
         })(this)), fadeTime);
         setTimeout(((function(_this) {
           return function() {
-            var _k, _len1;
+            var l, len1;
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
             _this.dropletElement.style.top = '-9999px';
             _this.dropletElement.style.left = '-9999px';
@@ -11143,8 +11143,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.aceElement.style.left = "0px";
             _this.currentlyAnimating = false;
             _this.mainScroller.style.overflow = 'auto';
-            for (_k = 0, _len1 = translatingElements.length; _k < _len1; _k++) {
-              div = translatingElements[_k];
+            for (l = 0, len1 = translatingElements.length; l < len1; l++) {
+              div = translatingElements[l];
               div.parentNode.removeChild(div);
             }
             _this.fireEvent('toggledone', [_this.currentlyUsingBlocks]);
@@ -11190,7 +11190,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.fireEvent('statechange', [true]);
         setTimeout(((function(_this) {
           return function() {
-            var aceScrollTop, bottom, div, el, i, line, lineHeight, textElement, textElements, top, translatingElements, translationVectors, treeView, _fn, _fn1, _i, _j, _k, _len, _len1, _ref1, _ref2;
+            var aceScrollTop, bottom, div, el, fn1, fn2, i, j, k, l, len, len1, line, lineHeight, ref1, ref2, ref3, ref4, textElement, textElements, top, translatingElements, translationVectors, treeView;
             _this.mainScroller.style.overflow = 'hidden';
             _this.dropletElement.style.width = _this.wrapperElement.offsetWidth + 'px';
             _this.redrawMain({
@@ -11200,20 +11200,20 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.aceElement.style.top = "-9999px";
             _this.aceElement.style.left = "-9999px";
             _this.paletteWrapper.style.top = '0px';
-            _this.paletteWrapper.style.left = "" + (-_this.paletteWrapper.offsetWidth) + "px";
+            _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
             _this.dropletElement.style.top = "0px";
             _this.dropletElement.style.left = "0px";
             _this.paletteHeader.style.zIndex = 0;
-            _ref1 = _this.computePlaintextTranslationVectors(), textElements = _ref1.textElements, translationVectors = _ref1.translationVectors;
+            ref1 = _this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
             translatingElements = [];
-            _fn = function(div, textElement) {
+            fn1 = function(div, textElement) {
               return setTimeout((function() {
-                div.style.left = "" + (textElement.bounds[0].x - _this.scrollOffsets.main.x) + "px";
-                div.style.top = "" + (textElement.bounds[0].y - _this.scrollOffsets.main.y - _this.fontAscent) + "px";
+                div.style.left = (textElement.bounds[0].x - _this.scrollOffsets.main.x) + "px";
+                div.style.top = (textElement.bounds[0].y - _this.scrollOffsets.main.y - _this.fontAscent) + "px";
                 return div.style.fontSize = _this.fontSize + 'px';
               }), 0);
             };
-            for (i = _i = 0, _len = textElements.length; _i < _len; i = ++_i) {
+            for (i = j = 0, len = textElements.length; j < len; i = ++j) {
               textElement = textElements[i];
               if (!(0 < textElement.bounds[0].bottom() - _this.scrollOffsets.main.y + translationVectors[i].y && textElement.bounds[0].y - _this.scrollOffsets.main.y + translationVectors[i].y < _this.mainCanvas.height)) {
                 continue;
@@ -11223,50 +11223,50 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               div.innerText = div.textContent = textElement.model.value;
               div.style.font = _this.aceFontSize() + ' ' + _this.fontFamily;
               div.style.position = 'absolute';
-              div.style.left = "" + (textElement.bounds[0].x - _this.scrollOffsets.main.x + translationVectors[i].x) + "px";
-              div.style.top = "" + (textElement.bounds[0].y - _this.scrollOffsets.main.y + translationVectors[i].y) + "px";
+              div.style.left = (textElement.bounds[0].x - _this.scrollOffsets.main.x + translationVectors[i].x) + "px";
+              div.style.top = (textElement.bounds[0].y - _this.scrollOffsets.main.y + translationVectors[i].y) + "px";
               div.className = 'droplet-transitioning-element';
               div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
               translatingElements.push(div);
               _this.transitionContainer.appendChild(div);
-              _fn(div, textElement);
+              fn1(div, textElement);
             }
             top = Math.max(_this.aceEditor.getFirstVisibleRow(), 0);
             bottom = Math.min(_this.aceEditor.getLastVisibleRow(), _this.view.getViewNodeFor(_this.tree).lineLength - 1);
             treeView = _this.view.getViewNodeFor(_this.tree);
             lineHeight = _this.aceEditor.renderer.layerConfig.lineHeight;
             aceScrollTop = _this.aceEditor.session.getScrollTop();
-            _fn1 = function(div, line) {
+            fn2 = function(div, line) {
               return setTimeout((function() {
                 div.style.left = 0;
-                div.style.top = "" + (treeView.bounds[line].y + treeView.distanceToBase[line].above - _this.view.opts.textHeight - _this.fontAscent - _this.scrollOffsets.main.y) + "px";
+                div.style.top = (treeView.bounds[line].y + treeView.distanceToBase[line].above - _this.view.opts.textHeight - _this.fontAscent - _this.scrollOffsets.main.y) + "px";
                 return div.style.fontSize = _this.fontSize + 'px';
               }), 0);
             };
-            for (line = _j = top; top <= bottom ? _j <= bottom : _j >= bottom; line = top <= bottom ? ++_j : --_j) {
+            for (line = k = ref2 = top, ref3 = bottom; ref2 <= ref3 ? k <= ref3 : k >= ref3; line = ref2 <= ref3 ? ++k : --k) {
               div = document.createElement('div');
               div.style.whiteSpace = 'pre';
               div.innerText = div.textContent = line + 1;
               div.style.font = _this.aceFontSize() + ' ' + _this.fontFamily;
-              div.style.width = "" + _this.aceEditor.renderer.$gutter.offsetWidth + "px";
+              div.style.width = _this.aceEditor.renderer.$gutter.offsetWidth + "px";
               div.style.left = 0;
-              div.style.top = "" + (_this.aceEditor.session.documentToScreenRow(line, 0) * lineHeight - aceScrollTop) + "px";
+              div.style.top = (_this.aceEditor.session.documentToScreenRow(line, 0) * lineHeight - aceScrollTop) + "px";
               div.className = 'droplet-transitioning-element droplet-transitioning-gutter';
               div.style.transition = "left " + translateTime + "ms, top " + translateTime + "ms, font-size " + translateTime + "ms";
               translatingElements.push(div);
               _this.dropletElement.appendChild(div);
-              _fn1(div, line);
+              fn2(div, line);
             }
-            _ref2 = [_this.mainCanvas, _this.highlightCanvas, _this.cursorCanvas];
-            for (_k = 0, _len1 = _ref2.length; _k < _len1; _k++) {
-              el = _ref2[_k];
+            ref4 = [_this.mainCanvas, _this.highlightCanvas, _this.cursorCanvas];
+            for (l = 0, len1 = ref4.length; l < len1; l++) {
+              el = ref4[l];
               el.style.opacity = 0;
             }
             setTimeout((function() {
-              var _l, _len2, _ref3;
-              _ref3 = [_this.mainCanvas, _this.highlightCanvas, _this.cursorCanvas];
-              for (_l = 0, _len2 = _ref3.length; _l < _len2; _l++) {
-                el = _ref3[_l];
+              var len2, m, ref5;
+              ref5 = [_this.mainCanvas, _this.highlightCanvas, _this.cursorCanvas];
+              for (m = 0, len2 = ref5.length; m < len2; m++) {
+                el = ref5[m];
                 el.style.transition = "opacity " + fadeTime + "ms linear";
               }
               _this.mainCanvas.style.opacity = 1;
@@ -11278,18 +11278,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               }
             }), translateTime);
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + fadeTime + "ms";
-            _this.dropletElement.style.left = "" + _this.paletteWrapper.offsetWidth + "px";
+            _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
             _this.paletteWrapper.style.left = '0px';
             return setTimeout((function() {
-              var _l, _len2;
+              var len2, m;
               _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
               _this.mainScroller.style.overflow = 'auto';
               _this.currentlyAnimating = false;
               _this.lineNumberWrapper.style.display = 'block';
               _this.redrawMain();
               _this.paletteHeader.style.zIndex = 257;
-              for (_l = 0, _len2 = translatingElements.length; _l < _len2; _l++) {
-                div = translatingElements[_l];
+              for (m = 0, len2 = translatingElements.length; m < len2; m++) {
+                div = translatingElements[m];
                 div.parentNode.removeChild(div);
               }
               _this.resizeBlockMode();
@@ -11354,34 +11354,34 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this));
     });
     Editor.prototype.resizeMainScroller = function() {
-      this.mainScroller.style.width = "" + this.dropletElement.offsetWidth + "px";
-      return this.mainScroller.style.height = "" + this.dropletElement.offsetHeight + "px";
+      this.mainScroller.style.width = this.dropletElement.offsetWidth + "px";
+      return this.mainScroller.style.height = this.dropletElement.offsetHeight + "px";
     };
     hook('resize_palette', 0, function() {
-      this.paletteScroller.style.top = "" + this.paletteHeader.offsetHeight + "px";
-      this.paletteScroller.style.width = "" + this.paletteCanvas.offsetWidth + "px";
-      return this.paletteScroller.style.height = "" + this.paletteCanvas.offsetHeight + "px";
+      this.paletteScroller.style.top = this.paletteHeader.offsetHeight + "px";
+      this.paletteScroller.style.width = this.paletteCanvas.offsetWidth + "px";
+      return this.paletteScroller.style.height = this.paletteCanvas.offsetHeight + "px";
     });
     hook('redraw_main', 1, function() {
-      var bounds, record, _i, _len, _ref1;
+      var bounds, j, len, record, ref1;
       bounds = this.view.getViewNodeFor(this.tree).getBounds();
-      _ref1 = this.floatingBlocks;
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        record = _ref1[_i];
+      ref1 = this.floatingBlocks;
+      for (j = 0, len = ref1.length; j < len; j++) {
+        record = ref1[j];
         bounds.unite(this.view.getViewNodeFor(record.block).getBounds());
       }
-      this.mainScrollerStuffing.style.width = "" + (bounds.right()) + "px";
-      return this.mainScrollerStuffing.style.height = "" + (bounds.bottom()) + "px";
+      this.mainScrollerStuffing.style.width = (bounds.right()) + "px";
+      return this.mainScrollerStuffing.style.height = (bounds.bottom()) + "px";
     });
     hook('redraw_palette', 0, function() {
-      var bounds, entry, _i, _len, _ref1;
+      var bounds, entry, j, len, ref1;
       bounds = new this.draw.NoRectangle();
-      _ref1 = this.currentPaletteBlocks;
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        entry = _ref1[_i];
+      ref1 = this.currentPaletteBlocks;
+      for (j = 0, len = ref1.length; j < len; j++) {
+        entry = ref1[j];
         bounds.unite(this.view.getViewNodeFor(entry.block).getBounds());
       }
-      return this.paletteScrollerStuffing.style.height = "" + (bounds.bottom()) + "px";
+      return this.paletteScrollerStuffing.style.height = (bounds.bottom()) + "px";
     });
     hook('populate', 0, function() {
       this.fontSize = 15;
@@ -11391,8 +11391,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.setFontSize_raw = function(fontSize) {
       if (this.fontSize !== fontSize) {
         this.fontSize = fontSize;
-        this.paletteHeader.style.fontSize = "" + fontSize + "px";
-        this.gutter.style.fontSize = "" + fontSize + "px";
+        this.paletteHeader.style.fontSize = fontSize + "px";
+        this.gutter.style.fontSize = fontSize + "px";
         this.view.opts.textHeight = this.dragView.opts.textHeight = helper.getFontHeight(this.fontFamily, this.fontSize);
         this.fontAscent = helper.fontMetrics(this.fontFamily, this.fontSize).prettytop;
         this.view.clearCache();
@@ -11510,8 +11510,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         }
       }
     });
-    SetValueOperation = (function(_super) {
-      __extends(SetValueOperation, _super);
+    SetValueOperation = (function(superClass) {
+      extend(SetValueOperation, superClass);
 
       function SetValueOperation(oldValue, newValue) {
         this.oldValue = oldValue;
@@ -11632,7 +11632,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (useBlocks) {
         this.setValue(this.getAceValue());
         this.dropletElement.style.top = this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
-        this.dropletElement.style.left = "" + this.paletteWrapper.offsetWidth + "px";
+        this.dropletElement.style.left = this.paletteWrapper.offsetWidth + "px";
         this.aceElement.style.top = this.aceElement.style.left = '-9999px';
         this.currentlyUsingBlocks = true;
         this.lineNumberWrapper.style.display = 'block';
@@ -11696,15 +11696,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.queueLassoMousedown = function(trackPoint, event) {
       return this.lassoSelectStartTimeout = setTimeout(((function(_this) {
         return function() {
-          var handler, state, _i, _len, _ref1, _results;
+          var handler, j, len, ref1, results, state;
           state = {};
-          _ref1 = editorBindings.mousedown;
-          _results = [];
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            handler = _ref1[_i];
-            _results.push(handler.call(_this, trackPoint, event, state));
+          ref1 = editorBindings.mousedown;
+          results = [];
+          for (j = 0, len = ref1.length; j < len; j++) {
+            handler = ref1[j];
+            results.push(handler.call(_this, trackPoint, event, state));
           }
-          return _results;
+          return results;
         };
       })(this)), TOUCH_SELECTION_TIMEOUT);
     };
@@ -11713,15 +11713,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.lassoSelectStartTimeout = null;
       this.wrapperElement.addEventListener('touchstart', (function(_this) {
         return function(event) {
-          var handler, state, trackPoint, _i, _len, _ref1;
+          var handler, j, len, ref1, state, trackPoint;
           clearTimeout(_this.lassoSelectStartTimeout);
           trackPoint = _this.touchEventToPoint(event, 0);
           state = {
             suppressLassoSelect: true
           };
-          _ref1 = editorBindings.mousedown;
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            handler = _ref1[_i];
+          ref1 = editorBindings.mousedown;
+          for (j = 0, len = ref1.length; j < len; j++) {
+            handler = ref1[j];
             handler.call(_this, trackPoint, event, state);
           }
           if (state.consumedHitTest) {
@@ -11733,16 +11733,16 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this));
       this.wrapperElement.addEventListener('touchmove', (function(_this) {
         return function(event) {
-          var handler, state, trackPoint, _i, _len, _ref1;
+          var handler, j, len, ref1, state, trackPoint;
           clearTimeout(_this.lassoSelectStartTimeout);
           trackPoint = _this.touchEventToPoint(event, 0);
           if (!((_this.clickedBlock != null) || (_this.draggingBlock != null))) {
             _this.queueLassoMousedown(trackPoint, event);
           }
           state = {};
-          _ref1 = editorBindings.mousemove;
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            handler = _ref1[_i];
+          ref1 = editorBindings.mousemove;
+          for (j = 0, len = ref1.length; j < len; j++) {
+            handler = ref1[j];
             handler.call(_this, trackPoint, event, state);
           }
           if ((_this.clickedBlock != null) || (_this.draggingBlock != null) || (_this.lassoSelectAnchor != null) || _this.textInputSelecting) {
@@ -11752,13 +11752,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this));
       return this.wrapperElement.addEventListener('touchend', (function(_this) {
         return function(event) {
-          var handler, state, trackPoint, _i, _len, _ref1;
+          var handler, j, len, ref1, state, trackPoint;
           clearTimeout(_this.lassoSelectStartTimeout);
           trackPoint = _this.touchEventToPoint(event, 0);
           state = {};
-          _ref1 = editorBindings.mouseup;
-          for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-            handler = _ref1[_i];
+          ref1 = editorBindings.mouseup;
+          for (j = 0, len = ref1.length; j < len; j++) {
+            handler = ref1[j];
             handler.call(_this, trackPoint, event, state);
           }
           return event.preventDefault();
@@ -11773,10 +11773,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     });
     Editor.prototype.resizeCursorCanvas = function() {
       this.cursorCanvas.width = this.dropletElement.offsetWidth - this.gutter.offsetWidth;
-      this.cursorCanvas.style.width = "" + this.cursorCanvas.width + "px";
+      this.cursorCanvas.style.width = this.cursorCanvas.width + "px";
       this.cursorCanvas.height = this.dropletElement.offsetHeight - this.gutter.offsetWidth;
-      this.cursorCanvas.style.height = "" + this.cursorCanvas.height + "px";
-      return this.cursorCanvas.style.left = "" + this.mainCanvas.offsetLeft + "px";
+      this.cursorCanvas.style.height = this.cursorCanvas.height + "px";
+      return this.cursorCanvas.style.left = this.mainCanvas.offsetLeft + "px";
     };
     Editor.prototype.strokeCursor = function(point) {
       var arcAngle, arcCenter, endAngle, h, startAngle, w;
@@ -11821,8 +11821,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this)), 500);
     };
     Editor.prototype.editorHasFocus = function() {
-      var _ref1;
-      return ((_ref1 = document.activeElement) === this.dropletElement || _ref1 === this.hiddenInput || _ref1 === this.copyPasteInput) && document.hasFocus();
+      var ref1;
+      return ((ref1 = document.activeElement) === this.dropletElement || ref1 === this.hiddenInput || ref1 === this.copyPasteInput) && document.hasFocus();
     };
     Editor.prototype.flash = function() {
       if ((this.lassoSegment != null) || (this.draggingBlock != null) || ((this.textFocus != null) && this.textInputHighlighted) || !this.highlightsCurrentlyShown || !this.editorHasFocus()) {
@@ -11861,14 +11861,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this)), 0);
     });
     Editor.prototype.mainViewOrChildrenContains = function(model, point) {
-      var childObj, modelView, _i, _len, _ref1;
+      var childObj, j, len, modelView, ref1;
       modelView = this.view.getViewNodeFor(model);
       if (modelView.path.contains(point)) {
         return true;
       }
-      _ref1 = modelView.children;
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        childObj = _ref1[_i];
+      ref1 = modelView.children;
+      for (j = 0, len = ref1.length; j < len; j++) {
+        childObj = ref1[j];
         if (this.mainViewOrChildrenContains(childObj.child, point)) {
           return true;
         }
@@ -11896,9 +11896,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.dropletElement.appendChild(this.gutter);
     });
     Editor.prototype.resizeGutter = function() {
-      var _ref1, _ref2;
+      var ref1, ref2;
       this.gutter.style.width = this.aceEditor.renderer.$gutterLayer.gutterWidth + 'px';
-      return this.gutter.style.height = "" + (Math.max(this.dropletElement.offsetHeight, (_ref1 = (_ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? _ref2.height : void 0) != null ? _ref1 : 0)) + "px";
+      return this.gutter.style.height = (Math.max(this.dropletElement.offsetHeight, (ref1 = (ref2 = this.view.getViewNodeFor(this.tree).totalBounds) != null ? ref2.height : void 0) != null ? ref1 : 0)) + "px";
     };
     Editor.prototype.addLineNumberForLine = function(line) {
       var lineDiv, treeView;
@@ -11911,7 +11911,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         lineDiv.innerText = lineDiv.textContent = line + 1;
         this.lineNumberTags[line] = lineDiv;
       }
-      lineDiv.style.top = "" + (treeView.bounds[line].y + treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
+      lineDiv.style.top = (treeView.bounds[line].y + treeView.distanceToBase[line].above - this.view.opts.textHeight - this.fontAscent - this.scrollOffsets.main.y) + "px";
       lineDiv.style.height = treeView.bounds[line].height + 'px';
       lineDiv.style.fontSize = this.fontSize + 'px';
       return this.lineNumberWrapper.appendChild(lineDiv);
@@ -11942,23 +11942,23 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return pivot;
     };
     hook('redraw_main', 0, function(changedBox) {
-      var bottom, line, tag, top, treeView, _i, _ref1;
+      var bottom, j, line, ref1, ref2, ref3, tag, top, treeView;
       treeView = this.view.getViewNodeFor(this.tree);
       top = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y);
       bottom = this.findLineNumberAtCoordinate(this.scrollOffsets.main.y + this.mainCanvas.height);
-      for (line = _i = top; top <= bottom ? _i <= bottom : _i >= bottom; line = top <= bottom ? ++_i : --_i) {
+      for (line = j = ref1 = top, ref2 = bottom; ref1 <= ref2 ? j <= ref2 : j >= ref2; line = ref1 <= ref2 ? ++j : --j) {
         this.addLineNumberForLine(line);
       }
-      _ref1 = this.lineNumberTags;
-      for (line in _ref1) {
-        tag = _ref1[line];
+      ref3 = this.lineNumberTags;
+      for (line in ref3) {
+        tag = ref3[line];
         if (line < top || line > bottom) {
           this.lineNumberTags[line].parentNode.removeChild(this.lineNumberTags[line]);
           delete this.lineNumberTags[line];
         }
       }
       if (changedBox) {
-        return this.gutter.style.height = "" + (Math.max(this.mainScroller.offsetHeight, treeView.totalBounds.height)) + "px";
+        return this.gutter.style.height = (Math.max(this.mainScroller.offsetHeight, treeView.totalBounds.height)) + "px";
       }
     });
     Editor.prototype.setPaletteWidth = function(width) {
@@ -11989,25 +11989,25 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       });
       return this.copyPasteInput.addEventListener('input', (function(_this) {
         return function() {
-          var blocks, e, line, minIndent, str, _i, _len, _ref1, _ref2;
+          var blocks, e, j, len, line, minIndent, ref1, ref2, str;
           if (pressedVKey) {
             try {
               str = _this.copyPasteInput.value;
               minIndent = Infinity;
-              _ref1 = str.split('\n');
-              for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-                line = _ref1[_i];
+              ref1 = str.split('\n');
+              for (j = 0, len = ref1.length; j < len; j++) {
+                line = ref1[j];
                 minIndent = Math.min(minIndent, str.length - str.trimLeft().length);
               }
               str = ((function() {
-                var _j, _len1, _ref2, _results;
-                _ref2 = str.split('\n');
-                _results = [];
-                for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-                  line = _ref2[_j];
-                  _results.push(line.slice(minIndent));
+                var k, len1, ref2, results;
+                ref2 = str.split('\n');
+                results = [];
+                for (k = 0, len1 = ref2.length; k < len1; k++) {
+                  line = ref2[k];
+                  results.push(line.slice(minIndent));
                 }
-                return _results;
+                return results;
               })()).join('\n');
               str = str.replace(/^\n*|\n*$/g, '');
               blocks = _this.mode.parse(str);
@@ -12019,7 +12019,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
               }
               _this.addMicroUndoOperation(new DropOperation(blocks, _this.cursor.previousVisibleToken()));
               _this.spliceIn(blocks, _this.cursor);
-              if ((_ref2 = blocks.end.nextVisibleToken().type) !== 'newline' && _ref2 !== 'indentEnd') {
+              if ((ref2 = blocks.end.nextVisibleToken().type) !== 'newline' && ref2 !== 'indentEnd') {
                 blocks.end.insert(new model.NewlineToken());
               }
               _this.addMicroUndoOperation(new DestroySegmentOperation(blocks));
@@ -12041,8 +12041,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this));
     });
     hook('keydown', 0, function(event, state) {
-      var x, y, _ref1;
-      if (_ref1 = event.which, __indexOf.call(command_modifiers, _ref1) >= 0) {
+      var ref1, x, y;
+      if (ref1 = event.which, indexOf.call(command_modifiers, ref1) >= 0) {
         if (this.textFocus == null) {
           x = document.body.scrollLeft;
           y = document.body.scrollTop;
@@ -12056,8 +12056,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     });
     hook('keyup', 0, function(point, event, state) {
-      var _ref1;
-      if (_ref1 = event.which, __indexOf.call(command_modifiers, _ref1) >= 0) {
+      var ref1;
+      if (ref1 = event.which, indexOf.call(command_modifiers, ref1) >= 0) {
         if (this.textFocus != null) {
           return this.hiddenInput.focus();
         } else {
@@ -12107,9 +12107,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         }
       });
       editorBindings[key] = [];
-      _ref1 = unsortedEditorBindings[key];
-      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-        binding = _ref1[_i];
+      ref1 = unsortedEditorBindings[key];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        binding = ref1[j];
         editorBindings[key].push(binding.fn);
       }
     }
