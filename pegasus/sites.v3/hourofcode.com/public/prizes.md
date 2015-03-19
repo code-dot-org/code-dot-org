@@ -12,10 +12,6 @@ layout: wide
 <h2 id="dc">One classroom will win a trip to Washington, D.C. for a historic, top-secret Hour of Code!</h2>
 Code.org will select one lucky classroom to attend a very special Hour of Code event in the nation’s capital — so special that all the details are under wraps! Winning students (with chaperones) will enjoy an all-expenses-covered trip to Washington, D.C. Students will participate in a full day of top-secret activities on Monday, December 8. 
 
-<% end %>
-
-<% if @country == 'us' %>
-
 <h2 id="hardware_prize" style="font-size: 18px">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
 One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth of technology. [**See all 51 winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 

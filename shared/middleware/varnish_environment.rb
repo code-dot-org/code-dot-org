@@ -7,31 +7,31 @@ class VarnishEnvironment < Sinatra::Base
       File.basename(i, '.yml').downcase
     end.sort
   end
-  
+
   configure do
     set :locales_supported, load_supported_locales
   end
-  
+
   before do
     env['cdo.locale'] = varnish_locale || cookie_locale || default_locale
   end
-  
+
   after do
   end
-  
+
   helpers do
     def varnish_locale
       language_to_locale(request.env['HTTP_X_VARNISH_ACCEPT_LANGUAGE'])
     end
-    
+
     def cookie_locale
       language_to_locale(request.cookies['language_'])
     end
-    
+
     def default_locale
       'en-US'
     end
-    
+
     def language_to_locale(language)
       case language
       when 'es'

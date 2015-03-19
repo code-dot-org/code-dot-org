@@ -44,7 +44,7 @@ class Script < ActiveRecord::Base
   # distributed cache (Rails.cache)
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
-  
+
   def self.script_cache_to_cache
     Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
   end
@@ -60,7 +60,7 @@ class Script < ActiveRecord::Base
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
         script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
-        
+
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
@@ -70,6 +70,10 @@ class Script < ActiveRecord::Base
   def self.script_cache
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
+  end
+
+  def cached
+    self.class.get_from_cache(id)
   end
 
   def self.get_from_cache(id)
@@ -340,6 +344,18 @@ class Script < ActiveRecord::Base
     else
       CDO.code_org_url "/api/hour/finish/#{name}"
     end
+  end
+
+  def summarize
+    summary = {
+      id: id,
+      name: name,
+      stages: stages.map(&:summarize),
+    }
+
+    summary[:trophies] = Concept.summarize_all if trophies
+
+    summary
   end
 
   def self.clear_cache

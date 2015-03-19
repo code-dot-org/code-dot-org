@@ -20,10 +20,10 @@ class ScriptsController < ApplicationController
     @scripts = Script.all
     @script_file_exists = {}
   end
-  
+
   def new
   end
-  
+
   def create
     @script_text = params[:script_text]
     @script = Script.new(script_params)

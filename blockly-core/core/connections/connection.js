@@ -470,7 +470,7 @@ Blockly.Connection.prototype.tighten_ = function() {
     if (!svgRoot) {
       throw 'block is not rendered.';
     }
-    var xy = Blockly.getRelativeXY_(svgRoot);
+    var xy = Blockly.getRelativeXY(svgRoot);
     block.getSvgRoot().setAttribute('transform',
         'translate(' + (xy.x - dx) + ', ' + (xy.y - dy) + ')');
     block.moveConnections_(-dx, -dy);

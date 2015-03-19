@@ -67,10 +67,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   test 'redirects cartoon network quick links' do
     get '/flappy/lang/ar'
     assert_redirected_to '/flappy/1'
-    
+
     get '/playlab/lang/ar'
     assert_redirected_to '/s/playlab/stage/1/puzzle/1'
-    
+
     get '/artist/lang/ar'
     assert_redirected_to '/s/artist/stage/1/puzzle/1'
   end
@@ -97,7 +97,7 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'old script id paths redirect to named paths' do
-    %w(2:Hour%20of%20Code 3:edit-code 4:events 7:jigsaw 8:step).map{ |s| s.split ':' }.each do |before, after|
+    %w(2:Hour%20of%20Code 3:edit-code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
       get "/s/#{before}"
       assert_redirected_to "/s/#{after}"
     end

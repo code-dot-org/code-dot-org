@@ -32,7 +32,7 @@ class ApiController < ApplicationController
           student_levels << {class: activity_css_class(nil),
                              title: script_level.position}
         end
-      end   
+      end
       {id: student.id, levels: student_levels}
     end
 
