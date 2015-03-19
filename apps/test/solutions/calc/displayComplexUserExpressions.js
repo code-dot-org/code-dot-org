@@ -380,6 +380,21 @@ function customValidator(assert) {
     assert.equal(text.children[1].getAttribute('style'), 'text-decoration: overline');
   });
 
+  displayComplexUserExpressionTest(assert, 'function called with expression', function () {
+    // f(x) = x
+    // f(1 + 1)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [
+      new ExpressionNode('+', [1, 1])
+    ])));
+
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+  });
+
   return true;
 }
 
