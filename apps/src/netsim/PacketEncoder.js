@@ -14,9 +14,24 @@
 var minifyBinary = require('./dataConverters').minifyBinary;
 
 /**
+ * Single packet header field type
+ * @typedef {Object} packetHeaderField
+ *
+ * @property {string} key - Used to identify the field, for parsing.
+ *
+ * @property {number} bits - How long (in bits) the field is.
+ */
+
+/**
+ * Packet header specification type
+ * Note: Always assumes variable-length body following the header.
+ * @typedef {packetHeaderField[]} packetHeaderSpec
+ */
+
+/**
  * Verify that a given format specification describes a valid format that
  * can be used by the PacketEncoder object.
- * @param {Array.<Object>} formatSpec
+ * @param {packetHeaderSpec} formatSpec
  */
 var validateSpec = function (formatSpec) {
   var keyCache = {};
@@ -48,10 +63,10 @@ var validateSpec = function (formatSpec) {
  * Given a particular packet format, can convert a set of fields down
  * into a binary string matching the specification, or extract fields
  * on demand from a binary string.
- * @param {Array} formatSpec - Specification of packet format, an ordered set
- *        of objects in the form {key:string, bits:number} where key is the
- *        field name you'll use to retrieve the information, and bits is the
- *        length of the field.
+ * @param {packetHeaderSpec} formatSpec - Specification of packet format, an
+ *        ordered set of objects in the form {key:string, bits:number} where
+ *        key is the field name you'll use to retrieve the information, and
+ *        bits is the length of the field.
  * @constructor
  */
 var PacketEncoder = module.exports = function (formatSpec) {
