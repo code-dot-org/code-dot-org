@@ -1666,7 +1666,11 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       // We're calling a new function, so it gets a new local scope.
       var newLocalMapping = {};
       functionDef.variables.forEach(function (variable, index) {
-        var childVal = this.getChildValue(index);
+        var evaluation = this.children_[index].evaluate(globalMapping, localMapping);
+        if (evaluation.err) {
+          throw evaluation.err;
+        }
+        var childVal = evaluation.result;
         newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
       }, this);
       return functionDef.expression.evaluate(globalMapping, newLocalMapping);
@@ -1855,11 +1859,14 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
 ExpressionNode.prototype.getTokenList = function (markDeepest) {
-  var depth = this.depth();
-  if (depth <= 1) {
-    return this.getTokenListDiff(markDeepest ? null : this);
+  if (!markDeepest) {
+    // diff against this so that nothing is marked
+    return this.getTokenListDiff(this);
+  } else if (this.depth() <= 1) {
+    // markDeepest is true. diff against null so that everything is marked
+    return this.getTokenListDiff(null);
   }
-
+    
   if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
@@ -2011,7 +2018,7 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
- * @returns {string} 
+ * @returns {string}
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
