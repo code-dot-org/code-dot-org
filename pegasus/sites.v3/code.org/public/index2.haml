@@ -185,7 +185,11 @@ social:
 
     .clear{style: "clear:both"}
 
+  - if request.site == 'code.org'
+    .container_responsive{style: "margin-top:40px; margin-bottom: 40px"}
+      #user_hero
 
+    %div{style: 'clear:both;'}
 
   -#### News & gallery
 
@@ -234,14 +238,10 @@ social:
             %a{style: "font-size:18px"} Play Lab Gallery
             %img{style: "width:100%", src:"/shared/images/gallery/playlab_gallery_thumbnails.png"}
 
-  -#### User hero for signed-in users
-
   %script{:src=>"/js/jquery.placeholder.js"}
 
-  - if request.site == 'code.org'
-    #user_hero
 
-    %div{style: 'clear:both;'}
+  -#### User hero for signed-in users
 
   -if request.site != 'csedweek.org'
 

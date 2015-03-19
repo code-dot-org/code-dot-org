@@ -196,6 +196,15 @@ social:
   .clear{style: "clear:both"}
 
 
+  -#### User hero for signed-in users
+
+  - if request.site == 'code.org'
+    .container_responsive{style: "margin-top:40px; margin-bottom: 40px"}
+      #user_hero
+
+    %div{style: 'clear:both;'}
+
+
   -#### News & gallery
 
   -#%h1#newsheader{style: "font-size: 24px; margin-top:80px; margin-bottom:40px; text-align:center; color: rgb(102,102,102)"}
@@ -237,14 +246,8 @@ social:
           %img{style: "float:left; width:50%", src:"/shared/images/gallery/artist_gallery_thumbnails.png"}
           %img{style: "float:left; width:50%", src:"/shared/images/gallery/playlab_gallery_thumbnails.png"}
 
-  -#### User hero for signed-in users
-
   %script{:src=>"/js/jquery.placeholder.js"}
 
-  - if request.site == 'code.org'
-    #user_hero
-
-    %div{style: 'clear:both;'}
 
   -if request.site != 'csedweek.org'
 
@@ -325,7 +328,7 @@ social:
 
 - if request.site == 'code.org'
   :javascript
-    $(document).ready_not(function() {
+    $(document).ready(function() {
       $.ajax({
         type: "GET",
         url: '/dashboardapi/user_hero',
