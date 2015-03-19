@@ -81,7 +81,7 @@ NetSimLogPanel.prototype.render = function () {
  */
 NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
-  this.packets_ = [];
+  this.packets_.length = 0;
 };
 
 /**
@@ -176,8 +176,6 @@ NetSimLogPacket.prototype.render = function () {
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
-  // TODO: Hide columns by configuration
-  jQueryWrap.find('th.packetInfo, td.packetInfo').hide();
   this.rootDiv_.html(jQueryWrap);
 };
 
