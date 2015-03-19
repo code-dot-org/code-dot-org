@@ -8,14 +8,14 @@
   .answers
 
     %span
-      %strong.multi-question!= data['questions'][0]['text']
+      %h4.multi-question!= multi_t(data['questions'][0]['text'])
 
     %br/
     %br/
 
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
-        Submit
+        =t('submit')
 
     - height = data['height'] || '20'
     - height += 'px'
@@ -36,7 +36,7 @@
 
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
-          Submit
+          =t('submit')
 
   .clear
 
