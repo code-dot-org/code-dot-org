@@ -68,7 +68,7 @@ exports.jQuerySvgElement = function (type) {
 /**
  * Checks configuration against tab type to decide whether tab
  * of type should be shown.
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimTabType} tabType
  */
 exports.shouldShowTab = function (levelConfig, tabType) {

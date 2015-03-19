@@ -41,7 +41,7 @@ var NetSim = module.exports = function () {
   this.skin = null;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = {};
 
@@ -106,7 +106,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * Called on page load.
  * @param {Object} config
  * @param {Object} config.skin
- * @param {NetSimLevelConfiguration} config.level
+ * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
@@ -123,7 +123,7 @@ NetSim.prototype.init = function(config) {
 
   /**
    * Configuration for the loaded level
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = config.level;
 
