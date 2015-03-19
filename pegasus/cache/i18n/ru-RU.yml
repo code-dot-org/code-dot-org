@@ -11,13 +11,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Вы преподаватель информатики ? См. также другие ресурсы
     CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>попыток</h3><h2>Час Кода</h2>
+  n_have_learned_an_hoc: <h1>Попробуйте </h1><h2>Час кода</h2><h3>#</h3>
   anybody_can_learn: Это может каждый.
   learn_now: Начать изучение
   petition_message: Каждый ученик в каждой школе должен иметь возможность для изучения
     информатики
   petition_sign_message: 'Если Вы согласны, впишите свое имя.  Присоединяйтесь к #
     подписавших.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Имя
   email: Электронная почта
   zipcode: Почтовый индекс или страна
@@ -115,6 +116,8 @@
   learn_classes: Найти организации в которых обучают программированию
   hoc_is_here: '#HourOfCode уже здесь - посмотрите! @codeorg'
   just_did_hoc: 'Я только что закончил #HourOfCode - посмотрите! @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Учитесь программировать с Часом Кода
   beyond_hoc: После первого часа
   what_gender: Какого Вы пола?
@@ -130,12 +133,12 @@
     строк кода.'
   start_hoc: Приступить к Часу Кода
   contact_form_topic_press: Пресса/СМИ (интервью или выступления участников)
-  stats_michael: '"Я еще никогда<b> не видел</b>своих учеников такими заинтересованными
-    в обучении." - Майкл Кларк, учитель'
   stats_nina: '"Каждый день приносил один и тот же результат - &mdash; 100% участие."
     - Nina Nichols Peery, Учитель'
   stats_student: '"Я знала, что этот шанс - <b>единственный в жизни</b>." - Mariana
     Alzate, пятиклассница'
+  stats_michael: '"Я еще никогда<b> не видел</b>своих учеников такими заинтересованными
+    в обучении." - Майкл Кларк, учитель'
   studiobar_title: Исследуй <a href='http://studio.code.org'>Студию Кода</a>
   studiobar_elementary_title: Начальные курсы
   studiobar_elementary_body: Наши три новых курса для K&#8209;5
@@ -152,6 +155,27 @@
     учиться
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ломайте стереотипы. Носите наш логотип с гордостью.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: Час кода
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Порхающий код
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ''
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: Я ученик
   contact_form_topic_parent: Я родитель
   contact_form_topic_teacher: Я преподаватель/воспитатель
@@ -296,7 +320,7 @@
     учеников</b>.'
   dashboard_students_placeholder_name: Имя ученика
   dashboard_students_name: Имя
-  dashboard_students_progress: Выполнение
+  dashboard_students_progress: Прогресс
   dashboard_students_age: Возраст
   dashboard_students_gender: Пол
   dashboard_students_male: Мужской
@@ -353,6 +377,8 @@
   dashboard_login_picture: Изображение
   dashboard_login_none: Электронная почта
   dashboard_new_password: новый пароль
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: Не завершено
   dashboard_progress_completed_too_many_blocks: Завершено, слишком много блоков
   dashboard_progress_completed_perfect: Завершено, отлично
@@ -362,7 +388,8 @@
   stats_hoc_2013_image_alt: Статистика с Часа Кода 2013 года
   dashboard_teacher: Учитель
   dashboard_student: Ученик
-  dashboard_sections_email_question: Есть ли у всех учеников действующий адрес электропочты?
+  dashboard_sections_email_question: Есть ли у всех учеников действительный адрес
+    электронной почты?
   dashboard_sections_account_creation_question: Кто регистрирует ученика?
   dashboard_sections_password_question: Что ученики используют в качестве "пароля"?
   dashboard_sections_picture_account_creation: Изображение, назначенное Code.org
@@ -541,8 +568,8 @@
   khanhe_shortdescription: Учитесь рисовать в JavaScript
   khanfr_shortdescription: Учитесь рисовать в JavaScript
   khanpl_shortdescription: Учитесь рисовать в JavaScript
-  tynker_shortdescription: Учитесь программировать решая веселые загадки, и создайте
-    свою собственную игру для мобильных устройств.
+  tynker_shortdescription: Учитесь программировать, решая занимательные головоломки,
+    и создайте свою собственную игру для мобильных устройств.
   scratch_shortdescription: Создавайте интерактивные игры, рассказы и анимации.
   lightbot_shortdescription: Запрограммируйте Lightbot для решения головоломок, с
     помощью процедур и циклов!
@@ -1066,27 +1093,3 @@
   sphero_beyond_longdescription: Неважно, являетесь ли вы педагогом или родителем,
     уроки SPRK позволят детишкам пройти интенсивный курс по программированию роботов,
     одновременно улучшая их навыки в математике и точных науках.
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

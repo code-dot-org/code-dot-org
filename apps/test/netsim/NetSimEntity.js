@@ -95,4 +95,39 @@ describe("NetSimEntity", function () {
       assertEqual(entity.entityID, clientNodeID);
     });
   });
+
+  describe("static destroyEntities()", function () {
+    var testShard;
+
+    beforeEach(function () {
+      testShard = fakeShard();
+    });
+
+    it ("returns immediate success for empty message list", function () {
+      var success = false;
+      NetSimEntity.destroyEntities([], function (err) {
+        success = (err === null);
+      });
+      assert(success, "Called callback with null error");
+    });
+
+    it ("deletes all entities passed to it", function () {
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
+      assertTableSize(testShard, 'nodeTable', 3);
+
+      var nodes;
+      testShard.nodeTable.readAll(function (err, rows) {
+        nodes = rows.map(function (row) {
+          return new NetSimClientNode(testShard, row);
+        });
+      });
+      assertEqual(3, nodes.length);
+      assert(nodes[0] instanceof NetSimClientNode);
+
+      NetSimEntity.destroyEntities(nodes, function () {});
+      assertTableSize(testShard, 'nodeTable', 0);
+    });
+  });
 });

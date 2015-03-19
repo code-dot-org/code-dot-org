@@ -30,7 +30,7 @@ Breakfast and lunch will be served.
 #### March 28th Location ####
 Poolesville High School
 <br/>
-Room TBD
+Room 8
 <br/>
 17501 W Willard Rd
 <br/>

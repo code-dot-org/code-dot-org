@@ -603,7 +603,8 @@ Applab.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      hasDesignMode: true
     }
   });
 
@@ -710,6 +711,10 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
+    var designModeButton = document.getElementById('designModeButton');
+    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    var codeModeButton = document.getElementById('codeModeButton');
+    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
   }
 
   user = {applabUserId: config.applabUserId};
@@ -1168,6 +1173,32 @@ Applab.onViewData = function() {
   window.open(
     '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
+};
+
+Applab.onDesignModeButton = function() {
+  studioApp.resetButtonClick();
+  Applab.toggleDesignMode(true);
+};
+
+Applab.onCodeModeButton = function() {
+  Applab.toggleDesignMode(false);
+};
+
+Applab.toggleDesignMode = function(enable) {
+  var codeModeHeaders = document.getElementById('codeModeHeaders');
+  codeModeHeaders.style.display = enable ? 'none' : 'block';
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
+  var codeTextbox = document.getElementById('codeTextbox');
+  codeTextbox.style.display = enable ? 'none' : 'block';
+  var designModeBox = document.getElementById('designModeBox');
+  designModeBox.style.display = enable ? 'block' : 'none';
+
+  var gameButtons =  document.getElementById('gameButtons');
+  gameButtons.style.display = enable ? 'none' : 'block';
+  var designModeButtons = document.getElementById('designModeButtons');
+  designModeButtons.style.display = enable ? 'block' : 'none';
 };
 
 Applab.onPuzzleComplete = function() {

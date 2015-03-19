@@ -1022,7 +1022,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
-  if (!config.enableShowCode) {
+  if (!this.enableShowCode) {
     document.getElementById('show-code-header').style.display = 'none';
   }
   var codeWorkspace = container.querySelector('#codeWorkspace');
@@ -1137,7 +1137,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: dropletUtils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig)
+        options.dropletConfig),
+      alwaysShowPalette: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
