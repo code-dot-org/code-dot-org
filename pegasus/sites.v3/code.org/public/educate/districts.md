@@ -31,7 +31,7 @@ social:
 
 ## Code.org provides (at no charge): 
 
-1. Professional development for teachers (*including stipends*)
+1. Professional development for teachers
 2. Nationally-recognized courses and curriculum in a blended-learning environment
 3. Materials to promote computer science to parents/students
 4. Support for all grade levels K-12
