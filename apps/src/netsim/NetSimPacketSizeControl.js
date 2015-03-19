@@ -45,7 +45,7 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
    * @type {number}
    * @private
    */
-  this.currentPacketSize_ = Infinity;
+  this.maxPacketSize_ = Infinity;
 
   this.render();
 };
@@ -57,13 +57,13 @@ NetSimPacketSizeControl.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.packet-size-slider').slider({
-    value: this.currentPacketSize_,
+    value: this.maxPacketSize_,
     min: 16,
     max: SLIDER_INFINITY_VALUE,
     step: 1,
     slide: this.onPacketSizeChange_.bind(this)
   });
-  this.setPacketSize(this.currentPacketSize_);
+  this.setPacketSize(this.maxPacketSize_);
 };
 
 NetSimPacketSizeControl.prototype.packetSizeToSliderValue_ = function (packetSize) {
@@ -101,7 +101,7 @@ NetSimPacketSizeControl.prototype.onPacketSizeChange_ = function (event, ui) {
  */
 NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   var rootDiv = this.rootDiv_;
-  this.currentPacketSize_ = newPacketSize;
+  this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
   rootDiv.find('.packet_size_value').html(newPacketSize);

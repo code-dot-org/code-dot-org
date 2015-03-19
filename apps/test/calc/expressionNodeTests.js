@@ -849,6 +849,26 @@ describe("ExpressionNode", function () {
         new Token(jsnumber, false)
       ]);
     });
+
+    it("diffs function calls that are passed expressions", function () {
+      // f(1 + 2)
+      node = new ExpressionNode('f', [
+        new ExpressionNode('+', [1, 2])
+      ]);
+
+      // TODO extra set of parens. tracked by #90669534
+      tokenList = node.getTokenList(false);
+      assert.deepEqual(tokenList, [
+        new Token('f', false),
+        new Token('(', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(1), false),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(2), false),
+        new Token(')', false),
+        new Token(')', false)
+      ]);
+    });
   });
 
   it("isEquivalentTo", function () {
