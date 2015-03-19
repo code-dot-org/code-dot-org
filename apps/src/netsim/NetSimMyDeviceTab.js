@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimMyDeviceTab.html');
+var markup = require('./NetSimMyDeviceTab.html.ejs');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 

@@ -763,7 +763,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
       '<p>' + msg.clearPuzzleConfirm() + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       clearPuzzle: true,
       cancel: true

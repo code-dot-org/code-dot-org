@@ -22,8 +22,9 @@ var APPS = [
   'studio',
   'jigsaw',
   'calc',
-  'webapp',
-  'eval'
+  'applab',
+  'eval',
+  'netsim'
 ];
 var allFilesSrc = [];
 var allFilesDest = [];

@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimChunkSizeControl.html');
+var markup = require('./NetSimChunkSizeControl.html.ejs');
 var EncodingType = require('./netsimConstants').EncodingType;
 
 /**

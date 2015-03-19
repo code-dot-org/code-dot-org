@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimDnsTable.html');
+var markup = require('./NetSimDnsTable.html.ejs');
 var DnsMode = require('./netsimConstants').DnsMode;
 
 /**

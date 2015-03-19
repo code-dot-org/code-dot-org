@@ -1,4 +1,4 @@
-var evalMsg = require('../../locale/current/eval');
+var evalMsg = window.blockly.eval_locale;
 
 /**
  * An Eval error indicating that something bad happened, but we understand

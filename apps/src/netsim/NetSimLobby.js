@@ -16,7 +16,7 @@ var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
-var markup = require('./NetSimLobby.html');
+var markup = require('./NetSimLobby.html.ejs');
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 

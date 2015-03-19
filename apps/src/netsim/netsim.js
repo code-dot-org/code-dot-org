@@ -17,8 +17,8 @@
 /* global $ */
 'use strict';
 
-var page = require('./page.html');
-var netsimMsg = require('../../locale/current/netsim');
+var page = require('./page.html.ejs');
+var netsimMsg = window.blockly.netsim_locale;
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -132,7 +132,7 @@ NetSim.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl})
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
     },
     hideRunButton: true
   });

@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/studio');
+var msg = window.blockly.studio_locale;
 
 module.exports.blocks = [
   {'func': 'setSprite', 'title': msg.setSpriteTooltip(), 'category': 'Play Lab', 'params': ["0", "'cat'"] },

@@ -1,5 +1,5 @@
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html');
+var readonly = require('./templates/readonly.html.ejs');
 
 var TestResults = constants.TestResults;
 

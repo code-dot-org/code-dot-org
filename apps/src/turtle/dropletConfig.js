@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/turtle');
+var msg = window.blockly.turtle_locale;
 
 module.exports.blocks = [
   {'func': 'moveForward', 'title': msg.moveForwardTooltip(), 'category': 'Artist', 'params': ["100"], 'idArgLast': true },

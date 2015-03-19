@@ -12,7 +12,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var markup = require('./NetSimStatusPanel.html');
+var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel.js');
 
 /**

@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/applab');
+var msg = window.blockly.applab_locale;
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;

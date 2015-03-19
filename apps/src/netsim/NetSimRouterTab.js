@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimRouterTab.html');
+var markup = require('./NetSimRouterTab.html.ejs');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 
 /**

@@ -871,7 +871,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // to the server.
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
+  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: builderDetails,

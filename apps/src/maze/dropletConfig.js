@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/maze');
+var msg = window.blockly.maze_locale;
 
 module.exports.blocks = [
   {'func': 'moveForward', 'title': msg.moveForwardTooltip(), 'category': 'Movement' },

@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/netsim');
+var msg = window.blockly.netsim_locale;
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
 var DnsMode = netsimConstants.DnsMode;
