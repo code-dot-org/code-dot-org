@@ -11526,7 +11526,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return results;
     });
     Editor.prototype.resizeAceElement = function() {
-      this.aceElement.style.width = this.wrapperElement.offsetWidth + "px";
+      var width;
+      width = this.wrapperElement.offsetWidth;
+      if (this.alwaysShowPalette) {
+        width -= this.paletteElement.offsetWidth;
+      }
+      this.aceElement.style.width = width + "px";
       return this.aceElement.style.height = this.wrapperElement.offsetHeight + "px";
     };
     last_ = function(array) {
