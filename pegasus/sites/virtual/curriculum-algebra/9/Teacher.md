@@ -140,7 +140,7 @@ Once students have worked through the Fast Functions, you can have them use the 
 ## Assessment 
 ### <a name="Assessment"></a>4) The Design Recipe Assessment
 
-Visit [MSM Stage 9](http://studio.code.org/s/algebra/stage/9/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 9](http://studio.code.org/s/algebra/stage/9/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

@@ -46,7 +46,7 @@ Creating some simple booleans and some more complex expressions prior to the pro
 ## Activity: Boolean Operators
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Head to [MSM stage 14](http://studio.code.org/s/algebra/stage/14/puzzle/1) in Code Studio to get started programming.
+Head to [CS in Algebra stage 14](http://studio.code.org/s/algebra/stage/14/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
