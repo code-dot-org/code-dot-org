@@ -9,7 +9,7 @@
   function makeCheckbox(encodingType, encodingLabel) {
     var divClasses = ['encoding_checkboxes_' + encodingType];
     if (level.showEncodingControls.indexOf(encodingType) === -1) {
-      divClasses.push('hiddenControl');
+      divClasses.push('hidden-control');
     }
     %>
     <div class="<%= divClasses.join(' ') %>">
@@ -23,7 +23,7 @@
     <%
   }
 %>
-<div class="netsim_encoding_selector">
+<div class="netsim-encoding-selector">
   <h1><%= netsimMsg.encoding() %></h1>
   <% makeCheckbox(EncodingType.ASCII, netsimMsg.ascii()); %>
   <% makeCheckbox(EncodingType.DECIMAL, netsimMsg.decimal()); %>

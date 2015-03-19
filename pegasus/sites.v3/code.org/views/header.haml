@@ -40,7 +40,7 @@
 
 
 #pageheader-wrapper
-  - pageheader_class = request.path_info == "/index2" ? "pageheader_translucent" : ""
+  - pageheader_class = request.path_info.include?("/index2") ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left

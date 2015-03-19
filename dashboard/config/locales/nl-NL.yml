@@ -22,6 +22,7 @@
           future: kan niet in de toekomst
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
+  submit: Klaar
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -353,8 +354,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
+    email_confirm_wrong_email: (Verkeerde e-mailadres?)
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
     new_password_hint: (laat leeg als je het niet wilt veranderen)
     current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen
@@ -574,7 +575,7 @@
             en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is
             voor alle leeftijden leuk om te leren.
         Hour of Code:
-          title: Uur Code
+          title: Uur van Code 2013
           description: ''
         edit-code:
           title: Bewerk de code
@@ -611,11 +612,45 @@
     wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact
     op te nemen.
   progress:
-    not_completed: niet voltooid
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: voltooid, teveel blokken
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
+    assessment: assessment
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen
     all_courses: Alle cursussen
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: Opslaan
+    delete: Verwijderen
+    exit: Return to Course
+    my_projects: My Projects
+    share: Delen
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Meer
+    name: naam
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Verwijderen?
+    delete_yes: Ja
+    delete_no: Nee
+    saved: Saved
+    not_saved: Not saved
+    cancel: Annuleren
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects

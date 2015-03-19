@@ -203,7 +203,7 @@ sv:
         turtle_3_5: 'Skapa nu en ny "rita ett hus"-funktion och använd den för att sätta hus runt två katter. Tips: skapa en ny funktion som använder "gör något"-blocket och skriv din egen text för att namnge blocket.'
         turtle_3_6: 'Med "Rita en fyrkant" som ett exempel, lägg till en ruta som heter "längd" till "Rita en triangel". Rita sedan trianglar i olika storlekar. (Tips: Klicka på stjärnan för att lägga till en ruta till en funktion)'
         turtle_3_7: "Lägg till en 'input' kallad 'längd' för att 'rita ett hus' och bygg ett stort hus till elefanten( med sidor som är 150 pixlar långa)"
-        turtle_3_8: 'Här är alla blocken från förra pusslet.  Ändra "rita ett hus" så att jag hamnar i det nedre högra hörnet efter att jag ritat nytt hus. Använd den här ändrade funktionen för att rita tre hus.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Kan du återskapa funktionen "rita ett hus" utan hjälp? Prova. Rita sedan en rad av hus.'
         turtle_3_10: 'Du har lärt dig mycket! Använd nu  det för att rita vad du vill. Försök att rita en stjärna, eller en spiral eller en snygg snöflinga.'
         maze_karel_debug_seq_1: Välkommen till felsökning! Min kod fungerar inte rätt. Kan du hitta felet och fixa det så att jag kan få min åker platt och redo för plantering?
@@ -428,6 +428,12 @@ sv:
         playlab_intro: Introduktion till Play Lab
         playlab_events: Play Lab händelser
         playlab_repeat_forever: Play Lab Upprepa för evigt
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabler
+        msm_7_functions: Funktioner
     callout:
       text:
         drag_blocks: 'Dra ett "flytta" block och fäst det under det andra blocket'

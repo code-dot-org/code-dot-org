@@ -1,13 +1,17 @@
 {
-  "compute":"beregn",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"Du skal vedhæfte en blok til \"Beregn\"-blokken.",
+  "emptyFunctionalBlock":"Du har en blok med et ikke-udfyldt input.",
   "equivalentExpression":"Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk.",
+  "evaluate":"evaluate",
   "extraTopBlocks":"Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?",
   "failedInput":"Din funktion returnerer ikke det korrekte resultat for alle værdier.",
   "goal":"Mål:",
-  "levelIncompleteError":"Your expression does not match the goal.",
+  "levelIncompleteError":"Dit udtryk er ikke det samme som målet.",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"Her er din beregning! Fortsæt med at arbejde på det, eller gå videre til det næste puslespil!",
   "yourExpression":"Dit udtryk:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Du kalder din funktion med den forkerte værdi.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expresison does not return the correct result."
 }

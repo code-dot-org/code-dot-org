@@ -237,31 +237,9 @@ pt-BR:
           Artist Binary: 'Artista: binário'
           description_audience: A partir de 10 anos (após o Curso 3)
         Course4pre:
+          title: Pré-requisitos para o Curso 4
           description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          Course 4 Prerequisite: Pré-requisitos para o Curso 4
-          "Maze: Sequence": 'Labirinto: Sequência'
-          "Artist: Sequence": 'Artista: Sequência'
-          "Artist: Loops": 'Artista: Laços'
-          "Bee: Conditionals": 'Abelha: Condicionais'
-          "Artist: Nested Loops": 'Artista: Laços Aninhados'
-          "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
-          "Bee: Nested Loops": 'Abelha: Laços Aninhados'
-          "Artist: Functions": 'Artista: Funções'
-          "Bee: Debugging": 'Abelha: Depuração'
-        course4pre:
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
-          Course 4 Prerequisite: Pré-requisitos para o Curso 4
-          "Maze: Sequence": 'Labirinto: Sequência'
-          "Artist: Sequence": 'Artista: Sequência'
-          "Artist: Loops": 'Artista: Laços'
-          "Bee: Conditionals": 'Abelha: Condicionais'
-          "Artist: Nested Loops": 'Artista: Laços Aninhados'
-          "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
-          "Bee: Nested Loops": 'Abelha: Laços Aninhados'
-          "Artist: Functions": 'Artista: Funções'
-          "Bee: Debugging": 'Abelha: Depuração'
-        Course4pre (Case Conflict):
-          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos para o Curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
@@ -294,6 +272,9 @@ pt-BR:
           Special: Especial
           Binary: Binário
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Teste de usabilidade para MSM
           Evaluation Blocks: Blocos de cálculo
           Blocks to Math: Dos blocos para a matemática
@@ -308,31 +289,34 @@ pt-BR:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
           "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
-          "Calc: Evaluation Blocks": 'Calc: Blocos de cálculo'
-          "Eval: Strings and Images": 'Eval: Strings e imagens'
-          "Unplugged: Contracts": 'Offline: contratos'
-          "Eval: Writing Contracts": 'Eval: Escrever contratos'
-          "Calc: Defining Variables": 'Cálculo: definir variáveis'
-          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
-          "Eval: Defining Functions": 'Avaliação: definir funções'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strings e imagens
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
           "Unplugged: The Design Recipe": 'Offline: a receita de design'
-          "Play Lab: Defining Functions": 'Laboratório: definir funções'
-          "Eval: Functions": 'Avaliação: funções'
-          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
-          "Unplugged: Booleans": 'Offline: booleanos'
-          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
-          "Play Lab: Booleans": 'Laboratório: booleanos'
-          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
-          "Eval: Conditionals": 'Eval: Condicionais'
-          "Unplugged: Collision Detection and the Distance Formula": 'Offline: detecção de colisão e fórmula da distância'
-          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Detecção de colisão (O Grande Jogo)'
+          "Eval: Conditionals": Condições
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: Laboratório
-          description_short: Crie uma história ou um jogo no Laboratório!
-          description: Crie uma história ou um jogo no Laboratório!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Laboratório
+          Infinity: Infinito
         algebrademo:
+          title: Demonstração de algébra
+          description_short: Vários desafios para demonstrar o ambiente e a linguagem de programação usados no Code.org CS em álgebra
           description: Vários desafios para demonstrar o ambiente e a linguagem de programação usados no Code.org CS em álgebra
           Algebra Demo: Demonstração de algébra
           Evaluation Blocks: Blocos de cálculo
@@ -341,29 +325,45 @@ pt-BR:
           Defining Simple Functions: Definindo Funções Simples
           The Design Recipe: A receita de design
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introdução a PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          Blockly Basics: Princípios do Blockly
+          Writing computer programs: Escrevendo programas de computador
+          Navigating the teacher dashboard: Navegação no painel do professor
+          Unplugged lessons: Aulas offline
+          Classroom Culture: Cultura de sala de aula
+          Ways to go beyond Courses 1, 2, and 3: Formas de ir além dos cursos 1, 2 e 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Simulador de internet
           description_short: ""
           description: ""
           Internet Simulator: Simulador de internet
+          Unit 1: Unidade 1
+          Unit 2: Unidade 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Laboratório infinito
-          description_short: Crie uma história ou um jogo com o Laboratório Infinito!!
-          description: Crie uma história ou um jogo com o Laboratório Infinito!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Infinity: Infinito
         pixelation:
-          title: Pixelation
-          description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          title: Pixelização
+          description: Crie imagens com bits e bytes.
+          Pixelation: Pixelização
         20-hour:
-          title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
+          title: 20-Hour Intro Course
           description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
           Introduction to Computer Science: Introdução à Ciência da Computação
           The Maze: O Labirinto
@@ -385,3 +385,137 @@ pt-BR:
           The Internet: A Internet
           The Artist 5: O Artista 5
           Wrap-up: Resumo
+        edit-code:
+          title: Editar o código
+          description: ""
+          The Maze: O Labirinto
+          Applab: Applab
+          The Artist: O Artista
+          Play Lab: Laboratório
+        events:
+          title: Eventos
+          description: ""
+          Bounce: Pingue-pongue
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Código do Flappy bird
+          description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
+          Flappy Code: Código do Flappy bird
+        jigsaw:
+          title: Quebra-cabeça
+          description: ""
+          Jigsaw: Quebra-cabeça
+        step:
+          title: Passo
+          description: ""
+          Step: Passo
+        Hour of Code:
+          title: Hora do Código 2013
+          description: ""
+          Hour of Code 2013: Hora do Código 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Pré-requisitos para o Curso 4
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          Course 4 Prerequisite: Pré-requisitos para o Curso 4
+          "Maze: Sequence": 'Labirinto: Sequência'
+          "Artist: Sequence": 'Artista: Sequência'
+          "Artist: Loops": 'Artista: Laços'
+          "Bee: Conditionals": 'Abelha: Condicionais'
+          "Artist: Nested Loops": 'Artista: Laços Aninhados'
+          "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
+          "Bee: Nested Loops": 'Abelha: Laços Aninhados'
+          "Artist: Functions": 'Artista: Funções'
+          "Bee: Debugging": 'Abelha: Depuração'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
+          "Calc: Evaluation Blocks": 'Calc: Blocos de cálculo'
+          "Eval: Strings and Images": 'Eval: Strings e imagens'
+          "Unplugged: Contracts": 'Offline: contratos'
+          "Eval: Writing Contracts": 'Eval: Escrever contratos'
+          "Calc: Defining Variables": 'Cálculo: definir variáveis'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
+          "Unplugged: Booleans": 'Offline: booleanos'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          "Play Lab: Booleans": 'Laboratório: booleanos'
+          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
+          "Eval: Conditionals": 'Eval: Condicionais'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: detecção de colisão e fórmula da distância'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Detecção de colisão (O Grande Jogo)'
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Contracts: Contratos
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: A receita de design
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleanos
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Condicionais e funções definidas por partes
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleanos
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Detecção de colisão (O Grande Jogo)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'

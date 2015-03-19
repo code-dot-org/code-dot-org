@@ -11,21 +11,37 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * A level configuration that can be used by NetSim
  * @typedef {Object} NetSimLevelConfiguration
  *
- * @property {boolean} showClientsInLobby
+ * @property {string} instructions - Inherited from blockly level configuration.
  *
- * @property {boolean} showRoutersInLobby
+ * @property {boolean} showClientsInLobby - Whether client nodes should appear
+ *           in the lobby list at all.
  *
- * @property {boolean} showAddRouterButton
+ * @property {boolean} showRoutersInLobby - Whether router nodes should appear
+ *           in the lobby list at all.
  *
- * @property {NetSimTabType[]} showTabs
+ * @property {boolean} showAddRouterButton - Whether the "Add Router" button
+ *           should appear above the lobby list.
+ *
+ * @property {boolean} showPacketSizeControl - Whether the packet size slider
+ *           should appear in the send widget.
+ *
+ * @property {number} defaultPacketSizeLimit - Initial maximum packet size.
+ *
+ * @property {NetSimTabType[]} showTabs - Which tabs should appear beneath the
+ *           network visualization.  Does not determine tab order; tabs always
+ *           appear in the order "Instructions, My Device, Router, DNS."
  *
  * @property {number} defaultTabIndex - The zero-based index of the tab
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {EncodingType[]} showEncodingControls
+ * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
+ *           binary, etc.) should have visible controls on the "My Device" tab.
  *
- * @property {EncodingType[]} defaultEnabledEncodings
+ * @property {EncodingType[]} defaultEnabledEncodings - Which encodings should
+ *           be enabled on page load.  Note: An encoding enabled here but not
+ *           included in the visible controls will be enabled and cannot be
+ *           disabled by the student.
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -52,6 +68,10 @@ levels.default = {
   showRoutersInLobby: true,
   showAddRouterButton: true,
 
+  // Send widget configuration
+  showPacketSizeControl: true,
+  defaultPacketSizeLimit: Infinity,
+
   // Tab-panel control
   showTabs: [
     NetSimTabType.INSTRUCTIONS,
@@ -62,7 +82,8 @@ levels.default = {
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
-  // Nothing here yet!
+  // Note: Uses the blockly-standard level.instructions value, which should
+  //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
   showEncodingControls: [
@@ -92,9 +113,8 @@ levels.default = {
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
-
+  showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
-
   defaultEnabledEncodings: [EncodingType.A_AND_B]
 });
 
@@ -105,6 +125,7 @@ levels.variant1 = utils.extend(levels.default, {
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
   showEncodingControls: [EncodingType.ASCII],
   defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
@@ -118,6 +139,8 @@ levels.variant2 = utils.extend(levels.default, {
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,
   showAddRouterButton: true,
+  showPacketSizeControl: true,
+  defaultPacketSizeLimit: Infinity,
 
   showTabs: [
     NetSimTabType.INSTRUCTIONS,

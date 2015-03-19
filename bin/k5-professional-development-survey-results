@@ -28,9 +28,9 @@ end
 
 def main()
   keys = nil
-  
-  DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|    
-    data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))    
+
+  DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|
+    data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))
 
     workshop = fetch_workshop_info data['workshop_id_i']
     data['workshop_stopped_dt'] = workshop['stopped_dt']
@@ -40,7 +40,7 @@ def main()
     data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
     data['teacher_years_s'] = "'#{data['teacher_years_s']}"
     data['send_materials_zip_s'] = "'#{data['send_materials_zip_s']}"
-    
+
     unless keys
       keys = data.keys
       puts CSV.generate_line keys

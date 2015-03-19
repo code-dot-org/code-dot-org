@@ -1,7 +1,7 @@
 ko:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: '다음 오류를 수정하시기 바랍니다:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ ko:
           future: 오늘 이전 날짜만 가능합니다.
   hello: Hello world
   welcome_back: '%{name} 님, 어서오세요. '
+  submit: 제출하기
   add_teacher_form:
     code:
       label: '선생님 추가:'
@@ -296,15 +297,15 @@ ko:
     student_teacher_disassociated: '%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서 삭제되었습니다.'
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
+    email_confirm_wrong_email: (잘못된 이메일 주소?)
     email_resend_confirm: 이메일 확인 재발송
     new_password_hint: (바꾸고 싶지 않으면, 비워 두세요)
     current_password_hint: (수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: 당신의 계정을 삭제합니다.
+    delete_text: 아래 버튼을 클릭하면 당신의 계정이 삭제될 것입니다.
+    delete_text_teacher_note: '반드시 참고: 당신의 계정을 삭제하는 것은 당신의 학생들의 계정을 삭제하진 않을 것입니다.'
+    delete_confirm: 정말로 당신의 계정을 삭제하시겠습니까?
   user_level:
     completed: 완료
     tried: 시도
@@ -480,7 +481,7 @@ ko:
           title: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
           description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
         Hour of Code:
-          title: Hour of Code 2013
+          title: 시간의 암호 2013
           description: ""
         edit-code:
           title: 코드 수정
@@ -510,11 +511,41 @@ ko:
     sign_out: '나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.'
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
   progress:
-    not_completed: 완료되지 않음
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
     completed_perfect: 완료
     furthest_level_attempted: 시도한 가장 높은 레벨
+    assessment: assessment
   studio:
     courses_working_on: 진행중인 코스
     completed_courses: 완료한 코스
     all_courses: 모든 코스
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: 저장
+    delete: 삭제
+    exit: Return to Course
+    my_projects: My Projects
+    share: 공유하기
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: 더 많은
+    name: 이름
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: 삭제하시겠습니까?
+    delete_yes: 예
+    delete_no: 아니요
+    saved: Saved
+    not_saved: Not saved
+    cancel: 취소
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects

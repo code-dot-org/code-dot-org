@@ -123,7 +123,7 @@ pt:
         parameters: Funções com parâmetros
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Consegues ajudar-me a apanhar o porquinho? Empilha alguns blocos "segue em frente" e depois clica em "Executar" para me ajudares a chegar até ele. '
         maze_2_1: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
         maze_2_2_5: Traça o caminho e leva-me até ao porco tolo. Evita a dinamite ou as penas vão voar!
         maze_2_3: Guia-me até à maldade verde! (Cuidado com a dinamite)
@@ -204,7 +204,7 @@ pt:
         turtle_3_5: 'Agora cria uma nova função "desenhar uma casa" e usa-a para hospedar dois gatos. Dica: Cria uma nova função usando o bloco "fazer algo" e digite o teu próprio texto para o nome do bloco.'
         turtle_3_6: 'Usando "desenhar um quadrado" como exemplo, adiciona uma entrada denominada "comprimento" para "desenhar um triângulo". Em seguida, desenha triângulos em tamanhos diferentes. (Dica: clica na estrela para adicionar uma entrada para uma função)'
         turtle_3_7: 'Adiciona uma entrada chamada "altura" para "desenhar uma casa" e constrói uma casa grande para o elefante ( com arestas de 150 pixeis de comprimento)'
-        turtle_3_8: 'Aqui estão todos os blocos do quebra-cabeças anterior.  Modifica "desenhar uma casa" para eu acabar no canto inferior direito depois de desenhar uma nova casa. Usa esta função modificada para desenhar três casas.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Podes recriar a função "Desenha uma casa" sem ajuda? Tenta, e depois desenha uma fileira de casas.'
         turtle_3_10: Aprendeste muito! Agora, já consegues desenhar o que quiseres. Tenta desenhar uma estrela, ou uma espiral ou um floco de neve extravagante.
         maze_karel_debug_seq_1: Bem-vindo à depuração! O meu código não funciona bem. Consegues detectar o problema e corrigi-lo para que eu possa ficar com o meu campo plano e pronto para começar a plantar?
@@ -436,10 +436,16 @@ pt:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variáveis
+        msm_7_functions: Funções
     callout:
       text:
         drag_blocks: 'Arrasta um bloco "mover" e encaixa-o por baixo de outro bloco'
-        run: 'Clica em "executar" para experimentar o teu programa'
+        run: 'Clica em "Executar" para experimentares o teu programa'
         watch_again: Clica aqui para assistir de novo ao vídeo
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"

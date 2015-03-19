@@ -204,7 +204,7 @@ az:
         turtle_3_5: 'İndi yeni bir "ev çək" funksiyası düzəldin və iki pişiyi evlə təmin etmək üçün istifadə edin. Məsləhət: "nə isə et" blokundan istifadə etməklə yeni bir funksiya düzəldin və bloku adlandırmaq üçün öz mətninizi yazın.'
         turtle_3_6: '"Kvadrat çək"dən nümunə kimi istifadə edərək, "üçbucaq çək"ə "uzunluq" adlı bir giriş əlavə edin. Sonra, müxtəlif ölçülü üçbucaqlar çəkin (Məsləhət: funksiyaya bir giriş əlavə etmək üçün ulduzu klikləyin).'
         turtle_3_7: '"Ev çək"ə "uzunluq" adlanan bir giriş əlavə edin və fil üçün böyük bir ev tikin (tərəflərinin uzunluğu 150 piksel)'
-        turtle_3_8: 'Əvvəlki tapmacadakı blokların hamısı buradadır.  "Ev çək"i elə dəyişdirin ki, yeni bir evi çəkib bitirəndən sonra mən aşağı sağ küncdə olum. Bu dəyişdirilmiş funksiyadan üç ev çəkmək üçün istifadə edin.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Siz kömək olmadan "ev çək" funksiyasını yenidən yarada bilərsiniz mi? Buna cəhd edin və sonra bir sıra evlər çəkin.'
         turtle_3_10: Siz artıq çoxlu məlumat öyrənmisiniz! İndi bu biliklərdən istifadə etməklə istədiyiniz fiquru çəkin. Ulduz, spiral və ya qar dənəciyi çəkməyə cəhd edin.
         maze_karel_debug_seq_1: Sazlamaya xoş gəldiniz! Mənim kodum yaxşı işləmir. Problemi tapıb həll edə bilərsinizmi ki, mən sahəmi hamarlayaraq əkinə hazırlaya bilim?
@@ -436,6 +436,12 @@ az:
         playlab_intro: Oyun Labına giriş
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Dəyişənlər
+        msm_7_functions: Funksiyalar
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

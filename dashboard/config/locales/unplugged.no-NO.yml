@@ -1,73 +1,73 @@
-"nn":
+'no':
   data:
     unplugged:
       Unplug1:
         title: Introduksjon til informatikk
-        desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer
-          kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som
-          informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim
-          som prov på kva han eller ho har lært. Du kan bli fristet til å hoppe over
-          å lære unge barn ordforrådet forbundet med leksonane som kjem, men å presenter
-          dei alt no på ein morsam og leiken måte er langt meir produktivt enn å vente
-          på meir avanserte muligheiter.
+        desc: Denne leksjonen introduserer begrepet informatikk og forklarer hva en
+          informatiker gjør. Den vil også gi elever muligheten til å prøve rollen
+          som en informatiker. Etter aktiviteten vil eleven kunne ta med seg en påminnelse
+          hjem av hva han eller hun har lært. Du kan bli fristet til å hoppe over
+          å lære unge barn ordforrådet forbundet med oppgavene som følger, men presenter
+          dem på et morsomt og lekent lys allerede nå er langt mer produktivt enn
+          å vente på mer avanserte muligheter.
         pdfs:
         - unplug1
         video: Koble fra 1
       Unplug2:
         title: Programmeringstenkning
-        desc: Uten anna enn penn og papir kan elevane lære seg de fire stega i tenkemåten
-          innan programmering. Etter ein kort introduksjon, bør elevane delast inn
-          i grupper der dei må lage instruksjonar for korleis andre elevar skal teikne
-          eit bestemt monster (frå ein kataolog av utvalde monster). Heile oppgåva
-          må brytast ned, så gruppene kan analysere alle monstrene i kataologen for
-          mønstere, abstrahere forskjellige detaljer fra monstrene for å så bruke
-          den informasjonen til å lage ei algoritme (en rekkje instruksjonar) til
-          eit anna lag som skal teikne monsteret. Lagane skal så byte algoritmer med
-          en annan gruppe og teikne monsteret basert på kva algoritma indikerer. Er
-          teikninga slik det opprinnelige laget tenkte seg?
+        desc: Uten annet enn penn og papir kan elevene lære seg de fire trinnene i
+          programmeringsbasert tenkning. Etter en kort introduksjon burde studentene
+          bli delt inn i grupper hvor de skal lage kommandoer til andre studenter
+          for å tegne et spesifikt monster (fra en kataolog av forhondsbestemte monstere).
+          Hele oppgaven må brytes ned, så gruppene kan analysere alle monstrene i
+          kataologen for mønstere, abstrahere forskjellige detaljer fra monstrene
+          for å så bruke den informasjonen til å lage en algoritme (en rekke kommandoer)
+          for et annet lag som skal tegne monsteret. Lagene skal så bytte algoritmer
+          med en annen gruppe og tegne monsteret basert på hva algoritmen indikerer.
+          Er tegningen hva det opprinnelige laget tenkte seg?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Millimeterpapirprogrammering
-        desc: Ved å programmere kvarandre til å teikne bilder, vil elevane begynne
-          å forstå kva programmering eigentleg går ut på. Leksjonen vil starte med
-          at elevar instruerer kvarandre til å fargelegge firkantar på millimeterpapir
-          for å reprodusere eit eksisterande bilde. Hvis det blir tid til det, kan
-          timen avsluttast med bilder som elevane lagar sjølv.
+        desc: Ved å programmere en annen til å tegne bilder vil studentene begynne
+          å forstå hva programmering egentlig handler om. Klassen begynner med at
+          elever instruerer hverandre til å fargelegge firkanter på millimeterpapir
+          for å reprodusere et eksisterende bilde. Hvis det er tid kan timen avslutte
+          med bilder som elevene lager selv.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritmer
-        desc: Denne leksjonen dekkjer algoritmer.  Ved å bruke tangram figurar og
-          millimeterpapir, viser den første øvelsen kor viktig det er å gjere kvar
-          instruksjon så klart og tydeleg som mulig.  Etterpå vil leksjonen utforske
-          kor mange måtar du kan brette papir til et rektangel, og leggje merke til
-          korleis nokre metodar brukar fleire eller ferre brett enn andre.
+        desc: Denne leksjonen er om algoritmer. Ved å bruke tangram figurer og millimeterpapir
+          vil den første øvelsen vise hvor viktig det er å gjøre hver instruksjon
+          som klar og utvetydig som mulig. Etterpå vil klassen utforske hvor mange
+          måter du kan brette et papir til et rektangel, merke hvordan noen metoder
+          bruker flere eller færre bretter enn andre.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Funksjoner
-        desc: I denne leksjonen vil eleverne lage ein solfangar af streng, perler
-          og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg,
-          og så bli spurt om å identifisere bestemte ferdigheiter", som blir gjentatt
-          fleire gonger. Når desse ferdigheitene er defineret, vil dei bli kalla frå
-          hovedprogrammet og heile den kreative prosessen vil notert på eit enkelt
-          papirark. Det endelige programmet vil felles for heile klassa, uavhengig
-          av type streng, perler og smykker. For å gjere dette effektivt, må elevane
-          "abstraktahere" detaljane i deira specifikke materialer og finne felles
-          begrep for den enkeltes forsyningar.  Denne bruken av generiske plasshaldar
-          er ein nydeleg introduksjoon til variablar.
+        desc: I denne leksjonen vil elevene lage en solfanger av streng, perler og
+          et spesielt smykke. Elevene vil følge en rekke gjentagende steg og vil bli
+          bedt om å identifisere bestemte sett med "ferdigheter" som blir dupliserte
+          flere ganger. Når disse ferdighetene er definert, vil de bli kalt fra en
+          hovedprogram og hele den vakre prosessen med skapelse vil bli registrert
+          på et enkelt papirark. Det endelige programmet vil involvere hele klassen,
+          uansett hvilken type streng, perler og smykke. For å effektivt tillate dette,
+          må elevene abstrahere bort fra detaljene i sine spesifikke materialer og
+          bruke generelle begreper det en elev har. Denne bruken av generiske plassholdere
+          er en flott introduksjon til variabler.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Vilkår
-        desc: Dette er eit klasse-spel. Etter introduseringa av føresetnader, hvis-setninger
-          og løkker, kan klassa øve saman med eit ferdig-skreve program, ein kortstokk
-          og trekningshell.
+        title: Betingelser
+        desc: Dette er et spill for hele klassen. Etter en innføring av betingelser,
+          hvis-setninger og løkker, kan klassen øve sammen med et forhåndsskrevet
+          program, en kortstokk, og litt flaks.
         pdfs:
         - unplug6
         video: Unplug6
@@ -137,7 +137,7 @@
           diskuterer ideen om å bli værende når ting blir mer komplisert. '
         video: C1_building_foundation
       GettingLoopy:
-        title: Me blir sløyfete
+        title: Gå i spinn
         desc: 'Denne leksjonen introduserer programmeringen av konseptet av sløyfer
           (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
           koreografi, og deretter bli bedt om å gjenta den. '
@@ -163,7 +163,7 @@
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Går steder trygt
+        title: Trygg reise
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
           hvordan å være trygg når du navigerer på Internett.
         video: C1_going_places_safely
@@ -173,7 +173,7 @@
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Verkelege algoritmar: Papirfly'
+        title: 'Algoritmer fra virkeligheten: Papirfly'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
@@ -196,7 +196,7 @@
           with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Fungerande solfangarar
+        title: Fungerende solfangere
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -255,7 +255,7 @@
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Låtskriving med parameter
+        title: Låtskriving med parametere
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -277,13 +277,13 @@
         title: Kontrakter
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: Design oppskrifta
+        title: Design-oppskriften
         desc: Design Recipe lesson description
       Booleans:
         title: Boolske verdiar
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Vilkår og stykkevise funksjonar
+        title: Betingelser og stykkevise funksjoner
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Collision Detection

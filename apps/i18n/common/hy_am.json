@@ -1,7 +1,7 @@
 {
-  "and": "and",
-  "booleanTrue": "true",
-  "booleanFalse": "false",
+  "and": "իսկ",
+  "booleanTrue": "ճիշտ",
+  "booleanFalse": "կեղծ",
   "blocks": "blocks",
   "blocklyMessage": "Blockly",
   "catActions": "Actions",
@@ -43,6 +43,7 @@
   "help": "Help",
   "hintTitle": "Hint:",
   "jump": "jump",
+  "keepPlaying": "Keep Playing",
   "levelIncompleteError": "You are using all of the necessary types of blocks but not in the right way.",
   "listVariable": "list",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",

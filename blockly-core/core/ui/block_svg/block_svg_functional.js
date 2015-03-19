@@ -84,7 +84,7 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
     }, this.svgGroup_);
 
     if (!this.block_.blockSpace.isFlyout) {
-      this.addInputClickListener_(input);
+      this.addInputClickListener_(input.name);
     }
   }
 
@@ -106,13 +106,15 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
 /**
  * Add a click listener to the marker for the given input, which will add a
  * child block on click if it's a number or string
- * @param {Input} input
+ * @param {string} inputName
  */
-Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function (input) {
+Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function (inputName) {
   var blockSpace = this.block_.blockSpace;
-  goog.events.listen(this.inputClickTargets_[input.name], 'click', function (e) {
+  var parentBlock = this.block_;
+  goog.events.listen(this.inputClickTargets_[inputName], 'click', function (e) {
     var childType;
     var titleIndex;
+    var input = parentBlock.getInput(inputName);
     if (input.connection.acceptsAnyType()) {
       return;
     }

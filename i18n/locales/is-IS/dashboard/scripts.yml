@@ -237,31 +237,9 @@ is:
           Artist Binary: 'Listamaður: Tvíundir'
           description_audience: Fyrir 10+ ára (eftir Námskeið 3)
         Course4pre:
+          title: Forkröfur Námskeiðs 4
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
-          Course 4 Prerequisite: Forkröfur Námskeiðs 4
-          "Maze: Sequence": 'Völundarhús: Röð'
-          "Artist: Sequence": 'Listamaður: Röð'
-          "Artist: Loops": 'Listamaður: Lykkjur'
-          "Bee: Conditionals": 'Býfluga: Skilyrði'
-          "Artist: Nested Loops": 'Listamaður: Innri lykkjur'
-          "Farmer: While Loops": 'Bóndi: Meðan lykkjur'
-          "Bee: Nested Loops": 'Býfluga: Innri lykkjur'
-          "Artist: Functions": 'Listamaður: Föll'
-          "Bee: Debugging": 'Býfluga: Villuleit'
-        course4pre:
-          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
-          Course 4 Prerequisite: Forkröfur Námskeiðs 4
-          "Maze: Sequence": 'Völundarhús: Röð'
-          "Artist: Sequence": 'Listamaður: Röð'
-          "Artist: Loops": 'Listamaður: Lykkjur'
-          "Bee: Conditionals": 'Býfluga: Skilyrði'
-          "Artist: Nested Loops": 'Listamaður: Innri lykkjur'
-          "Farmer: While Loops": 'Bóndi: Meðan lykkjur'
-          "Bee: Nested Loops": 'Býfluga: Innri lykkjur'
-          "Artist: Functions": 'Listamaður: Föll'
-          "Bee: Debugging": 'Býfluga: Villuleit'
-        Course4pre (Case Conflict):
-          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
+          description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
           Course 4 Prerequisite: Forkröfur Námskeiðs 4
           "Maze: Sequence": 'Völundarhús: Röð'
           "Artist: Sequence": 'Listamaður: Röð'
@@ -294,6 +272,9 @@ is:
           Special: Sérstakt
           Binary: Tvíundir
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Nothæfnisprófun fyrir MSM
           Evaluation Blocks: Matskubbar
           Blocks to Math: Kubbar og stærðfræði
@@ -308,31 +289,34 @@ is:
           title: Tölvunarfræði í algebru
           description: Læra fallmiðaða forritun í gegnum algebru
           "Unplugged: Video Games and Coordinate Planes": 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
-          "Calc: Evaluation Blocks": 'Reiknir: Greiningarkubbar'
-          "Eval: Strings and Images": 'Greining: Strengir og myndir'
-          "Unplugged: Contracts": 'Verkefni án tölvu: Samningar'
-          "Eval: Writing Contracts": 'Greining: Ritun samninga'
-          "Calc: Defining Variables": 'Reiknir: Skilgreining breytna'
-          "Play Lab: Defining Variables (Big Game)": 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
-          "Eval: Defining Functions": 'Mat: Skilgreining falla'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strengir og myndir
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
           "Unplugged: The Design Recipe": 'Verkefni án tölvu: Hönnunaruppskriftin'
-          "Play Lab: Defining Functions": 'Leikjasmiðja: Skilgreining falla'
-          "Eval: Functions": 'Mat: Föll'
-          "Play Lab: Animation (Big Game)": 'Leikjasmiðjan: Hreyfing (Stórleikur)'
-          "Unplugged: Booleans": 'Verkefni án tölvu: Boolean gildi'
-          "Eval: Boolean Operators": 'Greining: Boolean virkjar'
-          "Play Lab: Booleans": 'Leikjasmiðjan: Boolean gildi'
-          "Play Lab: Boolean (Big Game)": 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Verkefni án tölvu: Skilyrði og Piecewise föll'
-          "Eval: Conditionals": 'Greining: Skilyrði'
-          "Unplugged: Collision Detection and the Distance Formula": 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
-          "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
+          "Eval: Conditionals": Skilyrði
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: Leikjasmiðja
-          description_short: Búðu til sögu eða leik með Leikjasmiðju!
-          description: Búðu til sögu eða leik með Leikjasmiðju!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Leikjasmiðja
+          Infinity: Óendanleiki
         algebrademo:
+          title: Dæmi með Algebru
+          description_short: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem Code.org notar í Tölvunarfræði í Algebru
           description: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem Code.org notar í Tölvunarfræði í Algebru
           Algebra Demo: Dæmi með Algebru
           Evaluation Blocks: Matskubbar
@@ -341,29 +325,45 @@ is:
           Defining Simple Functions: Skilgreining einfaldra falla
           The Design Recipe: Hönnunaruppskriftin
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Kynning á PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          Blockly Basics: Blockly grunnur
+          Writing computer programs: Skrifa tölvuforrit
+          Navigating the teacher dashboard: Ferðast um stjórnborð kennara
+          Unplugged lessons: Verkefni án tölvu
+          Classroom Culture: Bekkjarmenning
+          Ways to go beyond Courses 1, 2, and 3: Valkostir eftir námskeið 1, 2 og 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet hermir
           description_short: ""
           description: ""
           Internet Simulator: Internet hermir
+          Unit 1: 1. eining
+          Unit 2: 2. eining
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity leikjasmiðja
-          description_short: Semja sögu eða búa til leik með Infinity leikjasmiðju!!
-          description: Semja sögu eða búa til leik með Infinity leikjasmiðju!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Infinity: Óendanleiki
         pixelation:
-          title: Pixelation
-          description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          title: Dílamynstur
+          description: Búa til myndir með bitum og bætum.
+          Pixelation: Dílamynstur
         20-hour:
-          title: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
+          title: 20-Hour Intro Course
           description: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
           Introduction to Computer Science: Kynning á tölvunarfræði
           The Maze: Völundarhúsið
@@ -385,3 +385,137 @@ is:
           The Internet: Internetið
           The Artist 5: Listamaðurinn 5
           Wrap-up: Samantekt
+        edit-code:
+          title: Breyta kóða
+          description: ""
+          The Maze: Völundarhúsið
+          Applab: Applab
+          The Artist: Listamaðurinn
+          Play Lab: Leikjasmiðja
+        events:
+          title: Atvik
+          description: ""
+          Bounce: Skopp
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kóði
+          description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
+          Flappy Code: Flappy kóði
+        jigsaw:
+          title: Púsl
+          description: ""
+          Jigsaw: Púsl
+        step:
+          title: Þrep
+          description: ""
+          Step: Þrep
+        Hour of Code:
+          title: Klukkustund kóðunar 2013
+          description: ""
+          Hour of Code 2013: Klukkustund kóðunar 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Forkröfur Námskeiðs 4
+          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
+          description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
+          Course 4 Prerequisite: Forkröfur Námskeiðs 4
+          "Maze: Sequence": 'Völundarhús: Röð'
+          "Artist: Sequence": 'Listamaður: Röð'
+          "Artist: Loops": 'Listamaður: Lykkjur'
+          "Bee: Conditionals": 'Býfluga: Skilyrði'
+          "Artist: Nested Loops": 'Listamaður: Innri lykkjur'
+          "Farmer: While Loops": 'Bóndi: Meðan lykkjur'
+          "Bee: Nested Loops": 'Býfluga: Innri lykkjur'
+          "Artist: Functions": 'Listamaður: Föll'
+          "Bee: Debugging": 'Býfluga: Villuleit'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          "Calc: Evaluation Blocks": 'Reiknir: Greiningarkubbar'
+          "Eval: Strings and Images": 'Greining: Strengir og myndir'
+          "Unplugged: Contracts": 'Verkefni án tölvu: Samningar'
+          "Eval: Writing Contracts": 'Greining: Ritun samninga'
+          "Calc: Defining Variables": 'Reiknir: Skilgreining breytna'
+          "Play Lab: Defining Variables (Big Game)": 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Verkefni án tölvu: Hönnunaruppskriftin'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+          "Unplugged: Booleans": 'Verkefni án tölvu: Boolean gildi'
+          "Eval: Boolean Operators": 'Greining: Boolean virkjar'
+          "Play Lab: Booleans": 'Leikjasmiðjan: Boolean gildi'
+          "Play Lab: Boolean (Big Game)": 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Verkefni án tölvu: Skilyrði og Piecewise föll'
+          "Eval: Conditionals": 'Greining: Skilyrði'
+          "Unplugged: Collision Detection and the Distance Formula": 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
+          "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Contracts: Samningar
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Hönnunaruppskriftin
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean gildi
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean gildi
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'

@@ -113,9 +113,10 @@ module ApplicationHelper
 
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
-    
+
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image).try(:image)
+      level_source = opts[:level_source]
       if level_source.level_source_image.s3?
         if app == Game::ARTIST then
           level_source.level_source_image.s3_framed_url
@@ -166,7 +167,7 @@ module ApplicationHelper
     is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
     is_k1
   end
-  
+
   def script_certificate_image_url(user, script)
     if script.hoc?
       script_name = 'hoc'

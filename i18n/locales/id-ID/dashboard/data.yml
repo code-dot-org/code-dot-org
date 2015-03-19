@@ -203,7 +203,7 @@ id:
         turtle_3_5: 'Sekarang buatlah fungsi baru "gambar sebuah rumah" dan gunakan untuk membuat rumah untuk dua kucing. Tips: membuat fungsi baru menggunakan blok "lakukan sesuatu", dan ketik teks Anda sendiri untuk memberi nama blok tersebut.'
         turtle_3_6: 'Gunakan "gambar persegi" sebagai contoh, tambahkan input bernama "panjang" untuk "gambar segitiga". Kemudian, gambar segitiga dalam berbagai ukuran. (Tips: Klik bintang untuk menambahkan masukan ke fungsi)'
         turtle_3_7: 'Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun sebuah rumah yang besar untuk gajah (panjang 150 pixel)'
-        turtle_3_8: 'Berikut adalah semua blok dari teka-teki sebelumnya.  Modifikasi "gambar rumah" sehingga saya berada di sudut kanan bawah setelah mengambar rumah baru. Gunakan fungsi yang telah dimodifikasi ini untuk menggambar tiga rumah.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.'
         turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar apapun yang anda mau. Misalnya cobalah untuk menggambar sebuah bintang, sebuah spiral, atau kepingan salju.
         maze_karel_debug_seq_1: Selamat datang di debugging! Kode saya tidak bekerja dengan benar. Bisakah anda menemukan masalah dan memperbaikinya sehingga saya bisa mendapat lapangan datar dan siap tanam?
@@ -445,6 +445,12 @@ id:
         playlab_intro: Pengantar Lab Permainan
         playlab_events: 'Lab Permainan Event '
         playlab_repeat_forever: Lab Permainan Ulangi Selamanya
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabel
+        msm_7_functions: Fungsi
     callout:
       text:
         drag_blocks: 'Tarik blok "gerak" dan letakkan di bawah blok lain'

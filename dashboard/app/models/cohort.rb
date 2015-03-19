@@ -4,7 +4,9 @@ class Cohort < ActiveRecord::Base
   has_many :workshops
 
   # A Cohort is associated with one or more Districts
-  has_and_belongs_to_many :districts
+  has_many :cohorts_districts
+  has_many :districts, through: :cohorts_districts
+  accepts_nested_attributes_for :cohorts_districts, allow_destroy: true
 
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :teachers, class_name: 'User'

@@ -22,6 +22,7 @@ ru:
           future: не может быть в будущем
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
+  submit: Отправить
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -291,8 +292,8 @@ ru:
     student_teacher_disassociated: 'Учитель %{teacher_name} удалён у ученика %{student_name}'
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
+    email_confirm_wrong_email: (Неверный адрес электронной почты?)
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
@@ -475,7 +476,7 @@ ru:
           title: 'Курс "Введение в информатику" (15-25 часов)'
           description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Час кода 2013
           description: ""
         edit-code:
           title: Редактирование кода
@@ -505,11 +506,41 @@ ru:
     sign_out: 'Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}"> выйти</a>.'
   zendesk_too_young_message: 'Извини, но пользователи твоего возраста не могут авторизоваться на нашем сайте технической поддержки. Ты можешь зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
   progress:
-    not_completed: Не завершено
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
+    assessment: assessment
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
     all_courses: Все курсы
+  project:
+    projects: Projects
+    create: Create Project
+    new: Create New
+    rename: Rename
+    save: Сохранить
+    delete: Удалить
+    exit: Return to Course
+    my_projects: My Projects
+    share: Поделитесь
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Ещё
+    name: Имя
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Удалить?
+    delete_yes: Да
+    delete_no: Нет
+    saved: Saved
+    not_saved: Not saved
+    cancel: Отмена
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects

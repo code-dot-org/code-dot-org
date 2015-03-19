@@ -4,7 +4,7 @@ default['cdo-apps'] = {
   },
 
   'pegasus' => {
-    'port' => 8081,    
+    'port' => 8081,
   },
 
   'i18n' => {

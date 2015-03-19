@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Hjälp"},
 "hintTitle":function(d){return "Tips:"},
 "jump":function(d){return "hoppa"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."},
 "listVariable":function(d){return "lista"},
 "makeYourOwnFlappy":function(d){return "Gör ditt eget Flappy-spel"},

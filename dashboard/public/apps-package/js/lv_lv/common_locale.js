@@ -198,6 +198,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Palīdzība"},
 "hintTitle":function(d){return "Padoms:"},
 "jump":function(d){return "lēkt"},
+"keepPlaying":function(d){return "Keep Playing"},
 "levelIncompleteError":function(d){return "Jūs izmantojat visus nepieciešamos bloka veidus, bet ne pareizā veidā."},
 "listVariable":function(d){return "saraksts"},
 "makeYourOwnFlappy":function(d){return "Izveido savu \"Flappy\" spēli"},

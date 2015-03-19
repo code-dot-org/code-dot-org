@@ -2,15 +2,16 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"aplis (rādiuss, stils, krāsa)",
-  "displayBlockTitle":"rādīt",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"elipse (platums, augstums, stils, krāsa)",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "extraTopBlocks":"Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"pārklājums (augša, apakša)",
   "placeImageBlockTitle":"novietot-attēls (x, y, attēls)",
   "offsetBlockTitle":"nobīdīt (x, y, attēls)",
   "rectangleBlockTitle":"četrstūris (platums, augstums, stils, krāsa)",
-  "reinfFeedbackMsg":"Nospiediet pogu \"Mēģināt vēlreiz\", lai labotu savu zīmējumu.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"pagriezt (grādi, attēls)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"kvadrāts (izmērs, stils, krāsa)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle":"apakšslānis (apakšējais, augšējais)",
   "outline":"kontūra",
   "solid":"ciets",
-  "string":"virkne"
+  "string":"virkne",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code."
 }

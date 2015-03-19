@@ -162,7 +162,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dirS":function(d){return "S"},
 "dirW":function(d){return "O"},
 "doCode":function(d){return "faça"},
-"elseCode":function(d){return "senão"},
+"elseCode":function(d){return "se não"},
 "finalLevel":function(d){return "Parabéns! Você resolveu o último desafio."},
 "heightParameter":function(d){return "altura"},
 "ifCode":function(d){return "se"},

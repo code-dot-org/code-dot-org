@@ -176,6 +176,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
     }
+    this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
@@ -390,8 +391,13 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizEntity) {
   if (vizEntity instanceof NetSimVizNode) {
     neighbors = this.getWiresAttachedToNode(vizEntity);
   } else if (vizEntity instanceof NetSimVizWire) {
-    neighbors.push(vizEntity.localVizNode);
-    neighbors.push(vizEntity.remoteVizNode);
+    if (vizEntity.localVizNode) {
+      neighbors.push(vizEntity.localVizNode);
+    }
+
+    if (vizEntity.remoteVizNode) {
+      neighbors.push(vizEntity.remoteVizNode);
+    }
   }
 
   return neighbors.filter(function (vizEntity) {
@@ -474,4 +480,28 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
     var y = Math.sin(rad) * h;
     otherNodes[i].tweenToPosition(x, y, 600, tweens.easeOutQuad);
   }
+};
+
+/**
+ * @param {string} newDnsMode
+ */
+NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+  // Tell all nodes about the new DNS mode, so they can decide whether to
+  // show or hide their address.
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setDnsMode(newDnsMode);
+    }
+  });
+};
+
+/**
+ * @param {number} dnsNodeID
+ */
+NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizNode) {
+      vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+    }
+  });
 };

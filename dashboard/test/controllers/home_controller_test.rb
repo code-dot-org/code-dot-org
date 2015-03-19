@@ -163,7 +163,7 @@ class HomeControllerTest < ActionController::TestCase
     user.backfill_user_scripts
 
     assert_equal [], user.working_on_scripts # if you finish a script you are not working on it!
-    
+
     get :index
     assert_response :success
     assert_select '#left_off', false
@@ -177,7 +177,7 @@ class HomeControllerTest < ActionController::TestCase
 
     sign_in user
     get :index
-    
+
     assert_select '#age-modal'
   end
 
@@ -194,7 +194,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'anonymous does not get age prompt' do
     get :index
-    
+
     assert_select '#age-modal', false
   end
 

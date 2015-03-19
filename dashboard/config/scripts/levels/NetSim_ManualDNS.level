@@ -5,12 +5,15 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
-    "showTabs": [
+    "skin": "netsim",
+    "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
+    "show_packet_size_control": "false",
+    "show_tabs": [
       "instructions",
       "my_device",
       "dns"
     ],
-    "defaultDnsMode": "manual"
+    "default_dns_mode": "manual"
   }
 }]]></config>
 </NetSim>

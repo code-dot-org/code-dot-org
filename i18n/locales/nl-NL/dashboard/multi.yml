@@ -92,7 +92,7 @@ nl:
       2-3 Algorithms Multi 2:
         Multiple Choice: Meerkeuze
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats nog een driehoek onder het vierkant'
-        Which image does <em>not</em> follow this algorithm?: 'Welk plaatje volgt dit algoritme <em>niet</em>?'
+        Which image does <em>not</em> follow this algorithm?: 'Welke afbeelding volgt dit algoritme <em>niet</em>?'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
@@ -100,7 +100,7 @@ nl:
       2-3 Binary Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Welk programma maakt deze afbeelding?
+        Which program makes this image?: Welk programma maakt het plaatje?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
@@ -371,14 +371,14 @@ nl:
       K-1 Maze Loops Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
-        Which repeat block is the same?: Welk herhaalblok is hetzelfde?
+        Which repeat block is the same?: Welk herhaal blok is hetzelfde?
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
       K-1 Maze Loops Multi 2:
         Multiple Choice: Meerkeuze
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
-        Pick the correct repeat block.: Kies het juiste herhaalblok.
+        Pick the correct repeat block.: Kies het juiste herhaal blok.
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
@@ -435,7 +435,7 @@ nl:
       K-1 Word Search Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
-        Which blocks spell "MOVE"?: 'Welke blokken spellen "BEWEEG"?'
+        Which blocks spell "MOVE"?: 'Welke blokken spellen "MOVE" (bewegen)?'
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
@@ -502,7 +502,7 @@ nl:
         (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
       valid contracts multi:
-        Valid Contracts: Geldige contracten
+        Valid Contracts: Geldige ontwerpen
         Pick the best answer to the question.: Kies het beste antwoord op de vraag.
         Which of these is a valid contract for the function circle?: Welke van de volgende is een geldig opdracht voor de functie cirkel?
         "circle: size style color -> image": 'cirkel: grootte stijl kleur-> plaatje'
@@ -519,73 +519,73 @@ nl:
         (rectangle (+ 8 2) (- 7 5) solid red): '(rechthoek (+ 8 2) (-7 5) "geheel" "rood")'
       msm variables multi 1:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x?: What is the value of x?
-        a function: a function
+        What is the value of x?: Wat is de waarde van x?
+        a function: een functie
         15: "15"
         x: x
       msm variables multi 10:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is the name of the function?: What is the name of the function?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the function?: Wat is de naam van de functie?
         f: f
         x: x
         17: "17"
       msm variables multi 11:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is the name of the parameter?: What is the name of the parameter?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the parameter?: Wat is de naam van de parameter?
         f: f
         x: x
         17: "17"
       msm variables multi 12:
         (define (f x) (*x 17)): '(define (f x) (*x 17))'
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Wat is de naam van de variabele?
         f: f
         x: x
         17: "17"
       msm variables multi 13:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is f(1)?: What is f(1)?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What should f(1) produce?: What should f(1) produce?
         x: x
         117: "117"
         17: "17"
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
-        What is the value of a + b?: What is the value of a + b?
+        What is the value of a + b?: Wat is de waarde van a + b?
         8: "8"
-        function: function
+        function: functie
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x-10?: What is the value of x-10?
-        a function: a function
+        What is the value of x-10?: Wat is de waarde van x-10?
+        a function: een functie
         5: "5"
         x: x
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
-        What is the value of x?: What is the value of x?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
+        What is the value of x?: Wat is de waarde van x?
         3: "3"
         15: "15"
         do not know: do not know
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of (p - x)?: 'What is the value of (p - x)?'
         q: q
         3: "3"
         5: "5"
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of string-length(q)?: What is the value of string-length(q)?
         1: "1"
         hello: hallo
         5: "5"
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: Wat is de naam van de functie?
         f: f
         x: x
         3: "3"
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Wat is de naam van de variabele?
         f: f
         x: x
         3: "3"
@@ -603,7 +603,7 @@ nl:
         3: "3"
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: Wat is de naam van de parameter?
         g: g
         "y": true
         3: "3"
@@ -629,13 +629,82 @@ nl:
         a week-long course to learn about computers: a week-long course to learn about computers
         a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
         a secret password: a secret password
+      PDK5 Beyond:
+        What do I do now?: What do I do now?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!
+        Im finished: Im finished
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Writing your first computer program!
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Classroom Culture:
+        Classroom Culture: Sfeer in de klas
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Overview of K-5 Courses
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Glossary:
+        Glossary: Overzicht
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Intro:
+        Welcome!: Welcome!
+        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        "Yes": Ja
+        "No": Nee
+      PDK5 Sequence2:
+        More Sequencing: More Sequencing
+        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
+        toolbox: toolbox
+        shelf: shelf
+        bin: bin
+        dropdown: dropdown
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Teacher Dashboard
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Test1:
+        title: titel
+        description here: beschrijving hier
+        Question: Vraag
+        wrong answer: verkeerd antwoord
+        right answer: juist antwoord
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: What is an unplugged activity?
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Teacher Guides to all our unplugged activities
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Ja
+      PDK5 Visual Languages:
+        Visual Programming Languages: Visual Programming Languages
+        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
+        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
+        Because you can focus on the logic of programming: Because you can focus on the logic of programming
+        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
+        All of the above: All of the above
+      PDK5 What is CS:
+        What is Computer Science?: What is Computer Science?
+        "A computer program, or code, is:": 'A computer program, or code, is:'
+        a part inside of a computer: a part inside of a computer
+        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
+        a week-long course to learn about computers: a week-long course to learn about computers
+        a secret password: a secret password
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds + 12
-        rocket-height (seconds) = seconds * 12: 'rocket-height (seconds) = seconds * 12'
-        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
-        rocket-height (seconds)  = seconds * 48: 'rocket-height (seconds)  = seconds * 48'
+        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
+        rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
+        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
+        rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
         0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?'

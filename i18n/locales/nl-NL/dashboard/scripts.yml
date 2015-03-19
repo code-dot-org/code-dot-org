@@ -7,7 +7,7 @@ nl:
           The Maze: Het Doolhof
           Multi: meerdere
           Match: Overeenkomst
-          Math Image: Wiskunde plaatje
+          Math Image: Wiskundige afbeelding
           title: Test Cursus
           description: Een interne test cursus.
         course1:
@@ -142,9 +142,9 @@ nl:
           Unit 2: Eenheid 2
           Ninja Cat and the Coordinate Plane: Ninja Kat en het coördinaat vliegtuig
           "Calc: Circles of Evaluation": 'Calc: Evaluatiekringen'
-          "Artist: Strings and Images": 'Artiest: Tekst en afbeeldingen'
-          Contracts: Contracten
-          "Artist: Writing Contracts": 'Artiest: Contracten schrijven'
+          "Artist: Strings and Images": 'Kunstenaar: Tekst en Afbeeldingen'
+          Contracts: Ontwerpen
+          "Artist: Writing Contracts": 'Artiest: Functies ontwerpen'
           "Calc: Defining Variables": 'Calc: Variabelen definiëren'
           "Play Lab: Defining Variables": 'Speel Lab: Variabelen definiëren'
           The Design Recipe: Het ontwerp Recept
@@ -162,8 +162,8 @@ nl:
           "Play Lab: Collision Detection": 'Speel Lab: Botsingdetectie'
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Kat en het coördinaten vliegtuig'
           "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
-          "Unplugged: Contracts": 'Unplugged: Contracten'
-          "Eval: Writing Contracts": 'Eval: Schrijven van contracten'
+          "Unplugged: Contracts": 'Unplugged: Functies ontwerpen'
+          "Eval: Writing Contracts": 'Samenvatting: Functies ontwerpen'
           "Unplugged: The Design Recipe": 'Unplugged: Het ontwerp recept'
           "Eval: Defining Functions": 'Eval: Snelle functies'
           "Eval: Functions": 'Eval: Ontwerp recept'
@@ -237,31 +237,9 @@ nl:
           Artist Binary: Kunstenaar Binary
           description_audience: Leeftijden 10 + (na cursus 3)
         Course4pre:
+          title: Vereisten voor cursus 4
           description_short: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
-          Course 4 Prerequisite: Vereisten voor cursus 4
-          "Maze: Sequence": 'Doolhof: Nummering'
-          "Artist: Sequence": 'Kunstenaar: volgorde'
-          "Artist: Loops": 'Kustenaar: lussen'
-          "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
-          "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          "Farmer: While Loops": 'Boer: Terwijl Lussen'
-          "Bee: Nested Loops": 'Bij: geneste lussen'
-          "Artist: Functions": 'Kunstenaar: Functies'
-          "Bee: Debugging": 'Bij: Foutopsporing'
-        course4pre:
-          description_short: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
-          Course 4 Prerequisite: Vereisten voor cursus 4
-          "Maze: Sequence": 'Doolhof: Nummering'
-          "Artist: Sequence": 'Kunstenaar: volgorde'
-          "Artist: Loops": 'Kustenaar: lussen'
-          "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
-          "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          "Farmer: While Loops": 'Boer: Terwijl Lussen'
-          "Bee: Nested Loops": 'Bij: geneste lussen'
-          "Artist: Functions": 'Kunstenaar: Functies'
-          "Bee: Debugging": 'Bij: Foutopsporing'
-        Course4pre (Case Conflict):
-          description_short: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
+          description: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
           Course 4 Prerequisite: Vereisten voor cursus 4
           "Maze: Sequence": 'Doolhof: Nummering'
           "Artist: Sequence": 'Kunstenaar: volgorde'
@@ -294,6 +272,9 @@ nl:
           Special: Speciale
           Binary: Binaire
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Bruikbaarheidstests voor MSM
           Evaluation Blocks: evaluatie blokken
           Blocks to Math: Blokken naar Wiskunde
@@ -308,31 +289,34 @@ nl:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
-          "Calc: Evaluation Blocks": 'Calc: Evaluatie blokken'
-          "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
-          "Unplugged: Contracts": 'Unplugged: Contracten'
-          "Eval: Writing Contracts": 'Eval: Schrijven van contracten'
-          "Calc: Defining Variables": 'Calc: Variabelen definiëren'
-          "Play Lab: Defining Variables (Big Game)": 'Speel Lab: Variabelen definiëren (Groot Spel)'
-          "Eval: Defining Functions": 'Eval: Het definiëren van functies'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Tekenreeksen en afbeeldingen
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
           "Unplugged: The Design Recipe": 'Unplugged: Het ontwerp recept'
-          "Play Lab: Defining Functions": 'Speel Lab: Definieer Functies'
-          "Eval: Functions": 'Eval: functies'
-          "Play Lab: Animation (Big Game)": 'Speel Lab: Animatie (Groot Spel)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Booleaanse operatoren'
-          "Play Lab: Booleans": 'Speel Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Speel Lab: Booleans (Groot Spel)'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals en stuksgewijze functies'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Botsingdetectie en de afstand formule'
-          "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'
+          "Eval: Conditionals": Voorwaardelijke instructies
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: Speel Lab
-          description_short: Maak een verhaal of een spel met Speel Lab!
-          description: Maak een verhaal of een spel met Speel Lab!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Speel Lab
+          Infinity: Oneindig
         algebrademo:
+          title: Algebra Demo
+          description_short: Een handvol puzzels om de programmeertaal en omgeving te tonen die gebruikt is in Code.org CS in Algebra
           description: Een handvol puzzels om de programmeertaal en omgeving te tonen die gebruikt is in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
           Evaluation Blocks: evaluatie blokken
@@ -341,29 +325,45 @@ nl:
           Defining Simple Functions: Eenvoudige functies definiëren
           The Design Recipe: Het ontwerp Recept
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Inleiding tot PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          Blockly Basics: Blockly Basis
+          Writing computer programs: "Computerprogramma's schrijven"
+          Navigating the teacher dashboard: Navigeren in het dashboard van de leraar
+          Unplugged lessons: Offline lessen
+          Classroom Culture: Sfeer in de klas
+          Ways to go beyond Courses 1, 2, and 3: Manieren om verder te gaan na cursussen 1, 2 en 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ""
           description: ""
           Internet Simulator: Internet Simulator
+          Unit 1: Eenheid 1
+          Unit 2: Eenheid 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity Playlab
-          description_short: Maak een verhaal of spel met Infinity Play Lab!!
-          description: Maak een verhaal of spel met Infinity Play Lab!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Infinity: Oneindig
         pixelation:
-          title: Pixelation
-          description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          title: Pixelachtig
+          description: Maak afbeeldingen met bits en bytes.
+          Pixelation: Pixelachtig
         20-hour:
-          title: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
+          title: 20-Hour Intro Course
           description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.
           Introduction to Computer Science: Inleiding Informatica
           The Maze: Het Doolhof
@@ -385,3 +385,137 @@ nl:
           The Internet: Het Internet
           The Artist 5: De Artiest 5
           Wrap-up: Einde
+        edit-code:
+          title: Bewerk de code
+          description: ""
+          The Maze: Het Doolhof
+          Applab: Applab
+          The Artist: De Artiest
+          Play Lab: Speel Lab
+        events:
+          title: Gebeurtenissen
+          description: ""
+          Bounce: Stuiter
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Code
+          description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Legpuzzel
+          description: ""
+          Jigsaw: Legpuzzel
+        step:
+          title: Stap
+          description: ""
+          Step: Stap
+        Hour of Code:
+          title: Uur van Code 2013
+          description: ""
+          Hour of Code 2013: Uur van Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Vereisten voor cursus 4
+          description_short: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
+          description: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
+          "Maze: Sequence": 'Doolhof: Nummering'
+          "Artist: Sequence": 'Kunstenaar: volgorde'
+          "Artist: Loops": 'Kustenaar: lussen'
+          "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
+          "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
+          "Farmer: While Loops": 'Boer: Terwijl Lussen'
+          "Bee: Nested Loops": 'Bij: geneste lussen'
+          "Artist: Functions": 'Kunstenaar: Functies'
+          "Bee: Debugging": 'Bij: Foutopsporing'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          "Calc: Evaluation Blocks": 'Calc: Evaluatie blokken'
+          "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
+          "Unplugged: Contracts": 'Unplugged: Functies ontwerpen'
+          "Eval: Writing Contracts": 'Samenvatting: Functies ontwerpen'
+          "Calc: Defining Variables": 'Calc: Variabelen definiëren'
+          "Play Lab: Defining Variables (Big Game)": 'Speel Lab: Variabelen definiëren (Groot Spel)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: Het ontwerp recept'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Speel Lab: Animatie (Groot Spel)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Booleaanse operatoren'
+          "Play Lab: Booleans": 'Speel Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Speel Lab: Booleans (Groot Spel)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals en stuksgewijze functies'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Botsingdetectie en de afstand formule'
+          "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Contracts: Ontwerpen
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Het ontwerp Recept
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Conditionele en stuksgewijze functies
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'

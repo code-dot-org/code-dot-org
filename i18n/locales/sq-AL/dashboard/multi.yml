@@ -519,97 +519,97 @@ sq:
         (rectangle (+ 8 2) (- 7 5) solid red): '(drejtkëndësh (+ 8 2) (- 7 5) solid i kuq)'
       msm variables multi 1:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x?: What is the value of x?
-        a function: a function
+        What is the value of x?: Cila është vlera e x?
+        a function: një funksion
         15: "15"
         x: x
       msm variables multi 10:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is the name of the function?: What is the name of the function?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the function?: Cili është emri i funksionit?
         f: f
         x: x
         17: "17"
       msm variables multi 11:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is the name of the parameter?: What is the name of the parameter?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the parameter?: Cili është emri i parametrit?
         f: f
         x: x
         17: "17"
       msm variables multi 12:
-        (define (f x) (*x 17)): '(define (f x) (*x 17))'
-        What is the name of the variable?: What is the name of the variable?
+        (define (f x) (*x 17)): '(përcakto  (f x) (*x 17))'
+        What is the name of the variable?: Kush është emri i variablës?
         f: f
         x: x
         17: "17"
       msm variables multi 13:
-        f(x) = x * 17: 'f(x) = x * 17'
-        What is f(1)?: What is f(1)?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What should f(1) produce?: What should f(1) produce?
         x: x
         117: "117"
         17: "17"
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
-        What is the value of a + b?: What is the value of a + b?
+        What is the value of a + b?: Cila është vlera e a + b?
         8: "8"
-        function: function
+        function: funksion
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x-10?: What is the value of x-10?
-        a function: a function
+        What is the value of x-10?: Cila është vlera e x-10?
+        a function: një funksion
         5: "5"
         x: x
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
-        What is the value of x?: What is the value of x?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
+        What is the value of x?: Cila është vlera e x?
         3: "3"
         15: "15"
-        do not know: do not know
+        do not know: nuk e di
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
-        What is the value of (p - x)?: 'What is the value of (p - x)?'
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
+        What is the value of (p - x)?: 'Cila është vlera e (p - x)?'
         q: q
         3: "3"
         5: "5"
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: 'define x 3<br>define p 8<br>define q hello'
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
+        What is the value of string-length(q)?: Cila është vlera e string-gjatësisë(q)?
         1: "1"
         hello: përshëndetje
         5: "5"
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: Cili është emri i funksionit?
         f: f
         x: x
         3: "3"
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Kush është emri i variablës?
         f: f
         x: x
         3: "3"
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        What is f(2)?: Çfarë është f(1)?
         6: "6"
         5: "5"
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: 'Cili është emri i  këtij funksioni?'
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: Cili është emri i parametrit?
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: Çfarë duhet g(2) të kthej?
         6: "6"
         5: "5"
         "y": true
@@ -622,36 +622,105 @@ sq:
         Multi Strings Images 1.blocks3.start_blocks, 300, 100: Imazhet me Shumë Stringje 1.blocks3.fillo_blloqet, 300, 100
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Imazhet me Shumë Stringje 1.blloqet4.fillo_blloqet, 300,100
       PDK5 Basic CS:
-        Video Follow-up Question: Video Follow-up Question
-        Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
-        "A computer program, or code, is:": 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about computers
-        a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
-        a secret password: a secret password
+        Video Follow-up Question: 'Video  Përfundo Pyetjet'
+        Answer this question based on the video you just watched.: Përgjigju kësaj pyetje duke u bazuar në videon që sapo patë.
+        "A computer program, or code, is:": 'Një program kompjuteri, ose kod është:'
+        a part inside of a computer: një pjesë brënda kompjuterit
+        a week-long course to learn about computers: një kurs një-javor për të mësuar rreth kompjuterave
+        a set of instructions you give a computer to execute: një set instruksionesh që i jepni kompjuterit për të ekzekutuar
+        a secret password: një password sekret
+      PDK5 Beyond:
+        What do I do now?: What do I do now?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!
+        Im finished: Im finished
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Writing your first computer program!
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Classroom Culture:
+        Classroom Culture: Kultura e klasës
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Overview of K-5 Courses
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Glossary:
+        Glossary: Fjalor
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Intro:
+        Welcome!: Welcome!
+        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        "Yes": Po
+        "No": Jo
+      PDK5 Sequence2:
+        More Sequencing: More Sequencing
+        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
+        toolbox: toolbox
+        shelf: shelf
+        bin: bin
+        dropdown: dropdown
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Teacher Dashboard
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Test1:
+        title: titull
+        description here: përshkrimi këtu
+        Question: Pyetje
+        wrong answer: përgjigje e gabuar
+        right answer: përgjigje e duhur
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: What is an unplugged activity?
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Teacher Guides to all our unplugged activities
+        Are you ready to move on?: Are you ready to move on?
+        "Yes": Po
+      PDK5 Visual Languages:
+        Visual Programming Languages: Visual Programming Languages
+        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
+        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
+        Because you can focus on the logic of programming: Because you can focus on the logic of programming
+        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
+        All of the above: All of the above
+      PDK5 What is CS:
+        What is Computer Science?: What is Computer Science?
+        "A computer program, or code, is:": 'Një program kompjuteri, ose kod është:'
+        a part inside of a computer: një pjesë brënda kompjuterit
+        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
+        a week-long course to learn about computers: një kurs një-javor për të mësuar rreth kompjuterave
+        a secret password: një password sekret
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds + 12
-        rocket-height (seconds) = seconds * 12: 'rocket-height (seconds) = seconds * 12'
-        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
-        rocket-height (seconds)  = seconds * 48: 'rocket-height (seconds)  = seconds * 48'
+        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Kush funksion do të përshkruaj një raketë që do të arrij 24 metra në 2 sekonda, 60 metra në 5 sekonda, dhe 108 metra në 9 sekonda?
+        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
+        rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
+        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
+        rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        rocket-height(seconds) = seconds * 2: 'rocket-height(seconds) = seconds * 2'
-        rocket-height(seconds) = seconds * seconds: 'rocket-height(seconds) = seconds * seconds'
-        rocket-height(seconds) = seconds * 4: 'rocket-height(seconds) = seconds * 4'
-        rocket-height(seconds) = seconds * 16: 'rocket-height(seconds) = seconds * 16'
+        0: '? Cili funksion do të përshkruaj një raketë që arrin 4 metra në 2 sekonda, 16 metra në 4 sekonda, dhe 256 metra në 16 sekonda?'
+        1: ': Cili funksion do të përshkruajë një raketë që arrin 4 metra në 2 sekonda, 16 metra në 4 sekonda, dhe 256 metra në 16 sekonda?'
+        rocket-height(seconds) = seconds * 2: 'lartësia-raketës (sekondat) = sekondat * 2'
+        rocket-height(seconds) = seconds * seconds: 'lartësia-raketës (sekondat) = sekondat * sekondat'
+        rocket-height(seconds) = seconds * 4: 'lartësia-raketës (sekondat) = sekondat * 4'
+        rocket-height(seconds) = seconds * 16: 'lartësia-raketës (sekondat) = sekondat * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        rocket-height(seconds) = seconds * 7 + 10: 'rocket-height(seconds) = seconds * 7 + 10'
+        0: '? Cili funksion do të përshkruajë një raketë që arrin 47 metra në 5 sekonda, 97 metra në 10 sekonda, dhe 147 metra në 15 sekonda?'
+        1: ': Cili funskion do të përshkruaj një raketë që arrin 47 metra në 5 sekonda, 97 metra në 10 sekonda, dhe 147 metra në 15 sekonda?'
+        rocket-height(seconds) = seconds * 7 + 10: 'lartësia-raketës(sekondat) = sekondat * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'rocket-height(seconds) = seconds * 10 + 7'
-        rocket-height(seconds) = seconds * 7 + 3: 'rocket-height(seconds) = seconds * 7 + 3'
-        rocket-height(seconds) = seconds * 10 - 3: 'rocket-height(seconds) = seconds * 10 - 3'
+        rocket-height(seconds) = seconds * 7 + 3: 'rocket-height(seconds) = seconds * 10 + 7'
+        rocket-height(seconds) = seconds * 10 - 3: 'lartësia-raketës(sekondat) = sekondat * 7 + 10'
       test multi image:
         Maze Multiple Choice Two: Maze me Zgjedhje të Shumëfishtë Dy
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -673,9 +742,9 @@ sq:
         George Washington: George Washtington
         George Jetson: George Jetson
       Test 1:
-        This is a test: This is a test
-        whatever: whatever
-        this is a question?: this is a question?
+        This is a test: Ky është një test
+        whatever: sidoqoftë
+        this is a question?: kjo është një pyetje?
         wrong answer: përgjigje e gabuar
         right answer: përgjigje e duhur
       unique level name here:

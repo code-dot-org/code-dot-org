@@ -1,0 +1,7 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'apps/**/*'
+    - 'dashboard/scripts/**/*'
+  RunRailsCops: true
