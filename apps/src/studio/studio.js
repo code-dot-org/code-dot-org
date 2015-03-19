@@ -1368,8 +1368,8 @@ studioApp.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && !level.isProjectLevel
-      && (!studioApp.hideSource || level.showFinish)) {
+  if (level.freePlay && !level.isProjectLevel &&
+      (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
