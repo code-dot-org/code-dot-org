@@ -73,9 +73,6 @@ NetSimLogPanel.prototype.render = function () {
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
-
-  // TODO: Hide columns by configuration
-  this.getBody().find('th.packetInfo, td.packetInfo').hide();
 };
 
 /**
