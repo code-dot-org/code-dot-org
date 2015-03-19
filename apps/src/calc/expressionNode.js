@@ -166,7 +166,11 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
       // We're calling a new function, so it gets a new local scope.
       var newLocalMapping = {};
       functionDef.variables.forEach(function (variable, index) {
-        var childVal = this.getChildValue(index);
+        var evaluation = this.children_[index].evaluate(globalMapping, localMapping);
+        if (evaluation.err) {
+          throw evaluation.err;
+        }
+        var childVal = evaluation.result;
         newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
       }, this);
       return functionDef.expression.evaluate(globalMapping, newLocalMapping);
