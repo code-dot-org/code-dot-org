@@ -97,7 +97,7 @@ Blockly.BlockSvg.prototype.init = function() {
 /**
  * Add or remove the UI indicating if this block is movable or not.
  */
-Blockly.BlockSvg.prototype.updateMovable = function() {
+Blockly.BlockSvg.prototype.updateMovable = function () {
   if (this.block_.isMovable()) {
     Blockly.addClass_(this.svgGroup_, 'blocklyDraggable');
     Blockly.removeClass_(this.svgGroup_, 'blocklyUndraggable');

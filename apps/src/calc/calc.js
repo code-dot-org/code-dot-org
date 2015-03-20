@@ -201,7 +201,7 @@ Calc.init = function(config) {
 
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
-    dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
+    dom.addClickOrTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
   studioApp.init(config);

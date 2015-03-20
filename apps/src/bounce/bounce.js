@@ -698,7 +698,7 @@ Bounce.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
+      dom.addClickOrTouchEvent(document.getElementById(ArrowIds[btn]),
                              delegate(this,
                                       Bounce.onArrowButtonUp,
                                       ArrowIds[btn]));
@@ -784,7 +784,7 @@ Bounce.init = function(config) {
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
+  dom.addClickOrTouchEvent(finishButton, Bounce.onPuzzleComplete);
 };
 
 /**

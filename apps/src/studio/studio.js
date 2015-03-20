@@ -1099,7 +1099,7 @@ Studio.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
+      dom.addClickOrTouchEvent(document.getElementById(ArrowIds[btn]),
                              delegate(this,
                                       Studio.onArrowButtonUp,
                                       ArrowIds[btn]));
@@ -1151,7 +1151,7 @@ Studio.init = function(config) {
 
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+    dom.addClickOrTouchEvent(finishButton, Studio.onPuzzleComplete);
   }
 
   // pre-load images asynchronously
