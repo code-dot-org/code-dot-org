@@ -112,7 +112,7 @@ social:
 
       .col-33{style: "position:relative; padding: 20px; margin-top:80px; text-align:center"}   
         - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"]).all
-        - actions = actions.first(1)
+        -# actions = actions.first(1)
         - actions.each_with_index do |entry, index|
           - display = entry[:active_s] == "hide" ? "none" : "block"
           .action{style: "display: #{display}; opacity: 0"}
@@ -145,7 +145,7 @@ social:
 
   -if request.site != 'csedweek.org'
     
-    .container_responsive
+    -#.container_responsive
       %h1#mission{style: "font-size: 22px; margin-top:40px; margin-bottom:5px; text-align:center; color: rgb(102,102,102); padding:10px; /*background-color: rgb(239, 239, 239) */; font-family: 'Gotham 4r', sans-serif"}
         Learn computer science for free online or bring it to your school.
 
@@ -155,38 +155,38 @@ social:
     Code.org offers something for everybody
 
   -if request.site != 'csedweek.org'
-    #audienceslots{style: "text-align:center; margin-top:20px"}
+    #audienceslots{style: "text-align:center; margin-top:0px"}
       - audienceslots = []
 
-      - slot = {name:"Students", bgc: "0, 173, 188", bgc_body1: "242, 251, 252", bgc_head: "0, 173, 188", bgc_body: "89, 202, 211",links: []}
-      -   slot[:links] << {img: "/shared/images/courses/logo_tall_elementary.jpg"}
-      -   slot[:links] << {text: "Try the <b>Hour of Code</b>", url: "/learn"}
-      -   slot[:links] << {text: "<b>Code Studio</b>", url: "http://studio.code.org"}
-      -   slot[:links] << {text: "Find a local class or workshop", url: "/learn/local", priority: 2} #p2
+      - slot = {name:"Hour of Code", bgc: "0, 173, 188", bgc_body1: "242, 251, 252", bgc_head: "0, 173, 188", bgc_body: "89, 202, 211",links: [], url: "/learn"}
+      -   slot[:links] << {img: "/shared/images/courses/logo_tall_hoc.jpg"}
+      -   slot[:links] << {text: "Try the Hour of Code", url: "/learn"}
+      -   slot[:links] << {text: "Host an Hour of Code", url: "/educate/hoc"}
+      -   slot[:links] << {text: "100,303,030 served", url: "/leaderboards", priority: 2} #p2
       -#   slot[:links] << {text: "Other learning options ", priority: 2} #p2
       - audienceslots << slot
 
-      - slot = {name:"Educators", bgc: "118, 101, 160", bgc_body1: "248, 247, 250", bgc_head: "118, 101, 160", bgc_body: "166, 155, 193", links: []}
-      -   slot[:links] << {img: "/shared/images/courses/logo_tall_teacher.jpg"}
-      -   slot[:links] << {text: "Learn about our K-5 program", url: "/educate/k5"}
-      -   slot[:links] << {text: "Find a K-5 educator workshop", url: "/professional-development-workshops"}
-      -   slot[:links] << {text: "See our full K-12 curriculum", url: "/educate"}
+      - slot = {name:"Students", bgc: "118, 101, 160", bgc_body1: "248, 247, 250", bgc_head: "118, 101, 160", bgc_body: "166, 155, 193", links: [], url: "http://studio.code.org"}
+      -   slot[:links] << {img: "/shared/images/courses/logo_tall_elementary.jpg"}
+      -   slot[:links] << {text: "Try Code Studio", url: "http://studio.code.org"}
+      -   slot[:links] << {text: "Find a local class", url: "/learn/local"}
+      -   slot[:links] << {text: "Other online courses", url: "/learn/beyond"}
       -#   slot[:links] << {text: "Host an Hour of Code", priority: 2} # p2
       - audienceslots << slot
 
-      - slot = {name:"Advocates", bgc: "185, 191, 21", bgc_body1: "252, 252, 243", bgc_head: "0, 148, 202",  bgc_body: "89, 185, 220",links: []}
-      -   slot[:links] << {img: "/images/homepage/girl.jpg"}
-      -   slot[:links] << {text: "Support CS in your state", url: "/promote"}
-      -   slot[:links] << {text: "Donate to Code.org", url: "/donate"}
-      -   slot[:links] << {text: "Buy a t-shirt or hat", url: "http://store.code.org", priority: 2} # p2
+      - slot = {name:"Educators", bgc: "185, 191, 21", bgc_body1: "252, 252, 243", bgc_head: "0, 148, 202",  bgc_body: "89, 185, 220",links: [], url: "/educate"}
+      -   slot[:links] << {img: "/shared/images/courses/logo_tall_teacher.jpg"}
+      -   slot[:links] << {text: "Courses for grades K-5", url: "/educate/k5"}
+      -   slot[:links] << {text: "See our full curriculum", url: "/educate/curriculum"}
+      -   slot[:links] << {text: "Professional development", url: "/educate/professional-development", priority: 2} # p2
       -#   slot[:links] << {text: "Advocacy tools  ", priority: 2} # p2
       - audienceslots << slot
 
-      - slot = {name:"Highlights", bgc: "255, 184, 29", bgc_body1: "230, 230, 230", bgc_head: "185, 191, 21",  bgc_body: "209, 213, 103",links: []}
-      -   slot[:links] << {img: "/shared/images/courses/logo_tall_frozen.jpg"}
-      -   slot[:links] << {text: "Try the Hour of Code", url: "/learn"}
-      -   slot[:links] << {text: "Latest News", url: "/about/news"}
-      -   slot[:links] << {text: "Code Studio", url: "http://studio.code.org"}
+      - slot = {name:"Advocates", bgc: "255, 184, 29", bgc_body1: "230, 230, 230", bgc_head: "185, 191, 21",  bgc_body: "209, 213, 103",links: [], url: "/promote"}
+      -   slot[:links] << {img: "/shared/images/courses/logo_tall_map.jpg"}
+      -   slot[:links] << {text: "See the stats", url: "/promote"}
+      -   slot[:links] << {text: "Buy a t-shirt or hat", url: "/shop"}
+      -   slot[:links] << {text: "Make a donation", url: "/donate"}
       - audienceslots << slot
 
       - audienceslots.each_with_index do |row, rowindex|
