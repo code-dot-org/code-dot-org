@@ -69,64 +69,67 @@ describe("PacketEncoder", function () {
     beforeEach(function () {
       shortFormat = new PacketEncoder([
         { key: 'toAddress', bits: 4 },
-        { key: 'payload', bits: 4 }
+        { key: 'fromAddress', bits: 4 }
       ]);
     });
 
     it ("concatenates binary for keys in correct order", function () {
-      var binary = shortFormat.createBinary({
-        toAddress: '0001',
-        payload: '0010'
-      });
+      var binary = shortFormat.concatenateBinary(
+          shortFormat.makeBinaryHeaders({
+            toAddress: 1,
+            fromAddress: 2
+          }),
+          '0010');
 
-      assertEqual('00010010', binary);
+      assertEqual('000100100010', binary);
     });
 
     it ("doesn't care what order keys exist in data object", function () {
-      var binary = shortFormat.createBinary({
-        payload: '0010',
-        toAddress: '0001'
-      });
+      var binary = shortFormat.concatenateBinary(
+          shortFormat.makeBinaryHeaders({
+            fromAddress: 2,
+            toAddress: 1
+          }),
+          '0010');
 
-      assertEqual('00010010', binary);
+      assertEqual('000100100010', binary);
     });
 
     it ("left-pads short information in data, within field", function () {
-      var binary = shortFormat.createBinary({
+      var binary = shortFormat.concatenateBinary({
         toAddress: '101',
-        payload: '10'
-      });
+        fromAddress: '10'
+      }, '');
 
       assertEqual('01010010', binary);
     });
 
     it ("right-truncates long information in data, within field", function () {
-      var binary = shortFormat.createBinary({
+      var binary = shortFormat.concatenateBinary({
         toAddress: '01011',
-        payload: '0000'
-      });
+        fromAddress: '0000'
+      }, '');
 
       assertEqual('01010000', binary);
     });
 
     it ("zero-fills missing fields in data", function () {
-      var binary = shortFormat.createBinary({
-        payload: '10'
-      });
+      var binary = shortFormat.concatenateBinary({
+        fromAddress: '10'
+      }, '');
 
       assertEqual('00000010', binary);
     });
 
     it ("ignores extra fields in data", function () {
-      var binary = shortFormat.createBinary({
+      var binary = shortFormat.concatenateBinary({
         toAddress: '101',
-        payload: '10',
+        fromAddress: '10',
         other: '1101'
-      });
+      }, '');
 
       assertEqual('01010010', binary);
     });
-
   });
 
   describe("retrieving fields from binary", function () {
