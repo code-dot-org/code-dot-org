@@ -6,7 +6,6 @@ class Calc < Blockly
   )
 
   before_save :update_ideal_level_source
-  before_save :update_input_output_table
 
   def xml_blocks
     super + %w(solution_blocks)
@@ -28,12 +27,6 @@ class Calc < Blockly
           use_contract_editor: true
         }
     ))
-  end
-
-  def update_input_output_table
-    if self.input_output_table.present? && self.input_output_table.is_a?(String)
-      self.input_output_table = JSON.parse(self.input_output_table)
-    end
   end
 
   def self.toolbox
