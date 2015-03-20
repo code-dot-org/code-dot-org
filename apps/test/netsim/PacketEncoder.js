@@ -77,7 +77,7 @@ describe("PacketEncoder", function () {
           }),
           '0010');
 
-      assertEqual('000100100010', binary);
+      assertEqual('0001'+ '0010' + '0010', binary);
     });
 
     it ("doesn't care what order keys exist in data object", function () {
@@ -88,7 +88,7 @@ describe("PacketEncoder", function () {
           }),
           '0010');
 
-      assertEqual('000100100010', binary);
+      assertEqual('0001' + '0010' + '0010', binary);
     });
 
     it ("left-pads short information in data, within field", function () {
@@ -97,7 +97,7 @@ describe("PacketEncoder", function () {
         fromAddress: '10'
       }, '');
 
-      assertEqual('01010010', binary);
+      assertEqual('0101' + '0010', binary);
     });
 
     it ("right-truncates long information in data, within field", function () {
@@ -106,7 +106,7 @@ describe("PacketEncoder", function () {
         fromAddress: '0000'
       }, '');
 
-      assertEqual('01010000', binary);
+      assertEqual('0101' + '0000', binary);
     });
 
     it ("zero-fills missing fields in data", function () {
@@ -114,7 +114,7 @@ describe("PacketEncoder", function () {
         fromAddress: '10'
       }, '');
 
-      assertEqual('00000010', binary);
+      assertEqual('0000' + '0010', binary);
     });
 
     it ("ignores extra fields in data", function () {
@@ -124,7 +124,7 @@ describe("PacketEncoder", function () {
         other: '1101'
       }, '');
 
-      assertEqual('01010010', binary);
+      assertEqual('0101' + '0010', binary);
     });
   });
 
@@ -192,7 +192,7 @@ describe("PacketEncoder", function () {
       ]);
 
       assertEqual('00000001', format.getHeader('toAddress', packet));
-      assertEqual('101010101010101010101', format.getBody(packet));
+      assertEqual('10101010' + '10101010' + '10101', format.getBody(packet));
     });
 
     it ("gets zero bits into Infinity field if it's beyond the binary length", function () {
