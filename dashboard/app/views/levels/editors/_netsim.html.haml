@@ -18,6 +18,9 @@
 
 %h3 Packet Headers
 .field
+  %p Packet headers can be customized to different header column combinations, orderings, and sizes with a JSON spec.
+  %p Example: <tt>[{"key":"toAddress", "bits":8}, {"key":"fromAddress", "bits":8}]</tt>
+  %p Valid header keys are "toAddress", "fromAddress", "packetIndex" and "packetCount"
   = f.label :router_expects_packet_header, 'Router expects packet header'
   %p The header format the router uses to parse incoming packets and figure out where to route them.
   = f.text_area :router_expects_packet_header, placeholder: 'Router packet header format', rows: 4

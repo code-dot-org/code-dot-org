@@ -21,6 +21,8 @@ class NetSim < Blockly
   # returns camelCase properties because of where it's used in the pipeline.
   def self.json_object_attrs
     %w(
+      router_expects_packet_header
+      client_initial_packet_header
       show_tabs
       show_encoding_controls
       default_enabled_encodings
