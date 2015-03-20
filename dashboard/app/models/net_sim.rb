@@ -14,6 +14,17 @@ class NetSim < Blockly
     default_dns_mode
   )
 
+  # Attributes that are stored as JSON strings but should be passed through to the app as
+  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
+  # returns camelCase properties because of where it's used in the pipeline.
+  def self.json_object_attrs
+    %w(
+      show_tabs
+      show_encoding_controls
+      default_enabled_encodings
+    ).map{ |x| x.camelize(:lower) }
+  end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     ['netsim']
@@ -21,7 +32,7 @@ class NetSim < Blockly
 
   # DNS modes, used by levelbuilder
   def self.dns_modes
-    ['none', 'manual', 'automatic']
+    %w( none manual automatic )
   end
 
   def self.create_from_level_builder(params, level_params)
