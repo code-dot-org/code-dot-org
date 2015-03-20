@@ -20,6 +20,8 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
 var PacketHeaderType = netsimConstants.PacketHeaderType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
@@ -260,7 +262,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFun
  * whitelists to limit typing in certain fields, and rules for intepreting the
  * field from binary.
  * @typedef {Object} rowType
- * @property {string} typeName - Identifies encoding type for the row
+ * @property {EncodingType} typeName
  * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
  *           that may be typed into a header field.
  * @property {function} shortNumberConversion - How to convert from binary
@@ -288,21 +290,21 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   /** @type {rowType[]} */
   var rowTypes = [
     {
-      typeName: 'binary',
+      typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
       messageAllowedCharacters: /[01\s]/,
       messageConversion: minifyBinary
     },
     {
-      typeName: 'hexadecimal',
+      typeName: EncodingType.HEXADECIMAL,
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: hexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
       messageConversion: hexToBinary
     },
     {
-      typeName: 'decimal',
+      typeName: EncodingType.DECIMAL,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -311,7 +313,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       }.bind(this)
     },
     {
-      typeName: 'ascii',
+      typeName: EncodingType.ASCII,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
