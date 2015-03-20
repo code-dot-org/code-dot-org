@@ -586,7 +586,7 @@ Flappy.init = function(config) {
   studioApp.init(config);
 
   var rightButton = document.getElementById('rightButton');
-  dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+  dom.addClickOrTouchEvent(rightButton, Flappy.onPuzzleComplete);
 };
 
 /**

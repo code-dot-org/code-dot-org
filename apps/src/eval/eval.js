@@ -136,7 +136,7 @@ Eval.init = function(config) {
 
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
-    dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
+    dom.addClickOrTouchEvent(resetButton, Eval.resetButtonClick);
   };
 
   studioApp.init(config);

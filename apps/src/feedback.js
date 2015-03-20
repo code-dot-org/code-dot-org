@@ -160,13 +160,13 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (againButton) {
-    dom.addClickTouchEvent(againButton, function() {
+    dom.addClickOrTouchEvent(againButton, function() {
       feedbackDialog.hide();
     });
   }
 
   if (previousLevelButton) {
-    dom.addClickTouchEvent(previousLevelButton, function() {
+    dom.addClickOrTouchEvent(previousLevelButton, function() {
       feedbackDialog.hide();
       options.backToPreviousLevel();
     });
@@ -193,7 +193,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     }
 
     // If the user requests the hint...
-    dom.addClickTouchEvent(hintRequestButton, function() {
+    dom.addClickOrTouchEvent(hintRequestButton, function() {
       // Swap the specific feedback message back in.
       parentNode.replaceChild(feedbackMessage, genericFeedback);
 
@@ -215,7 +215,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
-    dom.addClickTouchEvent(continueButton, function() {
+    dom.addClickOrTouchEvent(continueButton, function() {
       feedbackDialog.hide();
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
@@ -227,7 +227,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   // set up the Save To Gallery button if necessary
   var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
   if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function() {
+    dom.addClickOrTouchEvent(saveToGalleryButton, function() {
       $.post(options.response.save_to_gallery_url,
              function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
@@ -243,7 +243,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
-    dom.addClickTouchEvent(printButton, function() {
+    dom.addClickOrTouchEvent(printButton, function() {
       createHiddenPrintWindow(options.feedbackImage);
     });
   }
@@ -557,7 +557,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
+    dom.addClickOrTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
     });
@@ -565,7 +565,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
   if (sharingShapeways) {
-    dom.addClickTouchEvent(sharingShapeways, function() {
+    dom.addClickOrTouchEvent(sharingShapeways, function() {
       $('#send-to-phone').hide();
       $('#shapeways-message').show();
     });
@@ -574,7 +574,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
-    dom.addClickTouchEvent(sharingPhone, function() {
+    dom.addClickOrTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         $('#shapeways-message').hide();
@@ -595,7 +595,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
           }
         );
         phone.focus();
-        dom.addClickTouchEvent(submitButton, function() {
+        dom.addClickOrTouchEvent(submitButton, function() {
           var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
@@ -745,7 +745,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
+    dom.addClickOrTouchEvent(okayButton, function() {
       dialog.hide();
     });
   }
@@ -780,14 +780,14 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
 
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
+    dom.addClickOrTouchEvent(cancelButton, function() {
       dialog.hide();
     });
   }
 
   var clearPuzzleButton = buttons.querySelector('#continue-button');
   if (clearPuzzleButton) {
-    dom.addClickTouchEvent(clearPuzzleButton, function() {
+    dom.addClickOrTouchEvent(clearPuzzleButton, function() {
       callback();
       dialog.hide();
     });
@@ -820,7 +820,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
+    dom.addClickOrTouchEvent(okayButton, function() {
       dialog.hide();
     });
   }

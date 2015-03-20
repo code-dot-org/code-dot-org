@@ -226,7 +226,7 @@ StudioApp.prototype.init = function(config) {
 
   var showCode = document.getElementById('show-code-header');
   if (showCode && this.enableShowCode) {
-    dom.addClickTouchEvent(showCode, _.bind(function() {
+    dom.addClickOrTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
         if (result.error) {
@@ -373,7 +373,7 @@ StudioApp.prototype.init = function(config) {
   // Bind listener to 'Clear Puzzle' button
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
-    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+    dom.addClickOrTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
         if (this.isUsingBlockly()) {
           if (Blockly.functionEditor) {
@@ -713,7 +713,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
+    dom.addClickOrTouchEvent(okayButton, function() {
       if (dialog) {
         dialog.hide();
       }
@@ -832,7 +832,7 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
     icon: this.icon
   });
   var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
+  dom.addClickOrTouchEvent(createLevelButton, function() {
     var instructions = builderDetails.querySelector('[name="instructions"]').value;
     var name = builderDetails.querySelector('[name="level_name"]').value;
     var query = url.parse(window.location.href, true).query;
@@ -1035,8 +1035,8 @@ StudioApp.prototype.configureDom = function (config) {
     }
     this.runButtonClick();
   }, 250, true);
-  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  dom.addClickOrTouchEvent(runButton, _.bind(throttledRunClick, this));
+  dom.addClickOrTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
@@ -1110,7 +1110,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       onMainPage: true
     }));
 
-    dom.addClickTouchEvent(openWorkspace, function() {
+    dom.addClickOrTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
       // workspaceDiv.style.visibility = 'visible';
       location.href += '/edit';

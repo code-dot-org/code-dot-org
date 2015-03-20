@@ -621,11 +621,11 @@ Maze.init = function(config) {
     drawMap();
 
     var stepButton = document.getElementById('stepButton');
-    dom.addClickTouchEvent(stepButton, stepButtonClick);
+    dom.addClickOrTouchEvent(stepButton, stepButtonClick);
 
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
-    dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
+    dom.addClickOrTouchEvent(resetButton, Maze.resetButtonClick);
 
     if (skin.hideInstructions) {
       document.getElementById("bubble").style.display = "none";

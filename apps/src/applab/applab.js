@@ -682,19 +682,14 @@ Applab.init = function(config) {
     if (slider) {
       Applab.speedSlider = new Slider(10, 35, 130, slider);
 
-      // Change default speed (eg Speed up levels that have lots of steps).
-      if (config.level.sliderSpeed) {
-        Applab.speedSlider.setValue(config.level.sliderSpeed);
-      }
-    }
-    var debugInput = document.getElementById('debug-input');
+      // Change default speed (eg Speed sdflndsagjklnergkjenger oopsById('debug-input');
     if (debugInput) {
       debugInput.addEventListener('keydown', onDebugInputKeyDown);
     }
   }
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+  dom.addClickOrTouchEvent(finishButton, Applab.onPuzzleComplete);
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
@@ -702,19 +697,19 @@ Applab.init = function(config) {
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
     if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
-      dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
-      dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
-      dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
+      dom.addClickOrTouchEvent(pauseButton, Applab.onPauseButton);
+      dom.addClickOrTouchEvent(stepInButton, Applab.onStepInButton);
+      dom.addClickOrTouchEvent(stepOverButton, Applab.onStepOverButton);
+      dom.addClickOrTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
+      dom.addClickOrTouchEvent(viewDataButton, Applab.onViewData);
     }
     var designModeButton = document.getElementById('designModeButton');
-    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    dom.addClickOrTouchEvent(designModeButton, Applab.onDesignModeButton);
     var codeModeButton = document.getElementById('codeModeButton');
-    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    dom.addClickOrTouchEvent(codeModeButton, Applab.onCodeModeButton);
   }
 
   user = {applabUserId: config.applabUserId};
