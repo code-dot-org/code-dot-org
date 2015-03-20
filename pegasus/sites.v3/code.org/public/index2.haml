@@ -251,19 +251,7 @@ social:
   -#### User hero for signed-in users
 
   -if request.site != 'csedweek.org'
-
-    #donorslider{style: "background-color:rgb(200, 193, 217); margin-top:20px; padding-top:10px; margin-bottom:0px"}
-      .container_responsive{style: "margin-top:30px; margin-bottom:0px"}
-        #donorheader{style: "position:relative; height:60px"}
-          %h1{style: "width:100%; font-size: 24px; margin: 0px; padding:0px; text-align:center; color: rgb(255,255,255); position: absolute; top:0px; font-family: 'Gotham 4r', sans-serif"}
-            Code.org thanks its supporters
-
-          #donorlinks.desktop-feature{style: "text-align:right; position:absolute; width:100%"}
-            %a{href: "/about/donors", style: "color:white"} See all
-            &nbsp; &nbsp; &nbsp;
-            %a{href: "/donate", style: "color:white"} Donate
-
-        = view :donor_slider2
+    = view :donor_slider2
 
 = view 'popup_window.js'
 
