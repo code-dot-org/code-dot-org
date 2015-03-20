@@ -202,6 +202,13 @@
   = f.label :failure_message_override, 'Failure Message Override'
   %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
   = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+-if @level.respond_to? :input_output_table
+  = f.label :input_output_table, 'Input/Output Table'
+  %p An array of tuples where each tuple is [input, output].
+  %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
+  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: (JSON.pretty_generate(@level.input_output_table) if @level.input_output_table)
+  :javascript
+      codeMirror('input_output_table', 'javascript')
 -if @level.respond_to? :solution_blocks
   .field
     - if @level.game.uses_droplet?

@@ -235,6 +235,7 @@ module LevelsHelper
       default_enabled_encodings
       show_dns_mode_control
       default_dns_mode
+      input_output_table
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
