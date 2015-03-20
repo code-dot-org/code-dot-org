@@ -13,7 +13,6 @@
 
 var minifyBinary = require('./dataConverters').minifyBinary;
 var dataConverters = require('./dataConverters');
-var PacketHeaderType = require('./netsimConstants').PacketHeaderType;
 
 /**
  * Single packet header field type
@@ -80,25 +79,6 @@ var PacketEncoder = module.exports = function (formatSpec) {
   this.formatSpec_ = formatSpec;
 };
 
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_PACKET_HEADER_FIELD = 4;
-
-/**
- * Static, globally available packet encoder for final packet layout.
- * TODO (bbuchanan): Replace this with a changeable format we can pass around!
- * @type {PacketEncoder}
- */
-PacketEncoder.defaultPacketEncoder = new PacketEncoder([
-  { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'message', bits: Infinity }
-]);
-
 PacketEncoder.prototype.getField = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
@@ -161,34 +141,23 @@ PacketEncoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
   return dataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
 };
 
-PacketEncoder.prototype.createBinary = function (data) {
-  var result = '';
-
-  // For each field
-  for (var i = 0; i < this.formatSpec_.length; i++) {
-    var fieldBits = '';
-
-    // If the field exists in the data, grab it
-    if (data.hasOwnProperty(this.formatSpec_[i].key)) {
-      fieldBits = data[this.formatSpec_[i].key];
+/**
+ * Given a "headers" object where the values are numbers, returns a corresponding
+ * "headers" object where the values have all been converted to binary
+ * representations at the appropriate width.  Only header fields that appear in
+ * the configured packet header format will be converted and passed through to
+ * output.
+ * @param {Object} headers - with number values
+ */
+PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
+  var binaryHeaders = {};
+  this.formatSpec_.forEach(function (headerField){
+    if (headers.hasOwnProperty(headerField.key)) {
+      binaryHeaders[headerField.key] = dataConverters.intToBinary(
+          headers[headerField.key], headerField.bits);
     }
-
-    // Right-truncate to the desired size
-    if (fieldBits.length > this.formatSpec_[i].bits) {
-      fieldBits = fieldBits.slice(0, this.formatSpec_[i].bits);
-    }
-
-    // Left-pad data to desired size
-    if (this.formatSpec_[i].bits !== Infinity) {
-      while (fieldBits.length < this.formatSpec_[i].bits) {
-        fieldBits = '0' + fieldBits;
-      }
-    }
-
-    // Append field to result
-    result += fieldBits;
-  }
-  return result;
+  });
+  return binaryHeaders;
 };
 
 /**
@@ -208,18 +177,18 @@ PacketEncoder.prototype.createBinary = function (data) {
 PacketEncoder.prototype.concatenateBinary = function (headers, body) {
   var parts = [];
 
-  this.formatSpec_.forEach(function (headerField) {
+  this.formatSpec_.forEach(function (fieldSpec) {
     // Get header value from provided headers, if it exists.
     // If not, we'll start with an empty string and pad it to the correct
     // length, below.
-    var fieldBits = headers.hasOwnProperty(headerField.key) ?
-        headers[headerField.key] : '';
+    var fieldBits = headers.hasOwnProperty(fieldSpec.key) ?
+        headers[fieldSpec.key] : '';
 
     // Right-truncate to the desired size
-    fieldBits = fieldBits.slice(0, headerField.bits);
+    fieldBits = fieldBits.slice(0, fieldSpec.bits);
 
     // Left-pad to desired size
-    dataConverters.zeroPadLeft(fieldBits, headerField.bits);
+    fieldBits = dataConverters.zeroPadLeft(fieldBits, fieldSpec.bits);
 
     parts.push(fieldBits);
   });

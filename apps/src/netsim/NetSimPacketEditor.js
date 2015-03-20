@@ -41,6 +41,7 @@ var binaryToAscii = dataConverters.binaryToAscii;
 /**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
+ * @param {packetHeaderSpec} packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -59,6 +60,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('netsim-packet');
+
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {number} */
   this.toAddress = initialConfig.toAddress || 0;
@@ -433,14 +440,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var shortNumberFieldWidth = 4;
-  return PacketEncoder.defaultPacketEncoder.createBinary({
-    toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
-    fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
-    packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
-    packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
-    message: this.message
-  });
+  var encoder = new PacketEncoder(this.packetSpec_);
+  return encoder.concatenateBinary(
+      encoder.makeBinaryHeaders({
+        toAddress: this.toAddress,
+        fromAddress: this.fromAddress,
+        packetIndex: this.packetIndex,
+        packetCount: this.packetCount
+      }),
+      this.message);
 };
 
 /** @param {number} fromAddress */

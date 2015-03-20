@@ -38,6 +38,12 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.levelConfig_ = levelConfig;
 
   /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = levelConfig.clientInitialPacketHeader;
+
+  /**
    * Connection that owns the router we will represent / manipulate
    * @type {NetSimConnection}
    * @private
@@ -159,6 +165,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
 
   // Create a new packet
   var newPacket = new NetSimPacketEditor({
+    packetSpec: this.packetSpec_,
     toAddress: newPacketToAddress,
     fromAddress: this.fromAddress_,
     packetIndex: newPacketCount,
