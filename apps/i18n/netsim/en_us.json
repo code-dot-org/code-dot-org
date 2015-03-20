@@ -32,6 +32,8 @@
   "sendAMessage": "Send a Message",
   "sentMessageLog": "Sent Message Log",
   "to": "To",
+  "unlimited": "Unlimited",
   "workspaceHeader": "Internet Simulator",
+  "xBitsPerPacket": "{x} bits per packet",
   "xOfY": "{x} of {y}"
 }

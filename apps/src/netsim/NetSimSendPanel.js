@@ -18,6 +18,7 @@ var markup = require('./NetSimSendPanel.html');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
+var PacketEncoder = require('./PacketEncoder');
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
@@ -125,7 +126,11 @@ NetSimSendPanel.prototype.render = function () {
   if (this.levelConfig_.showPacketSizeControl) {
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet_size'),
-        this.packetSizeChangeCallback_.bind(this));
+        this.packetSizeChangeCallback_.bind(this),
+        {
+          minimumPacketSize: PacketEncoder.getHeaderLength(this.packetSpec_),
+          sliderStepValue: 1
+        });
     this.packetSizeControl_.setPacketSize(this.maxPacketSize_);
   }
 

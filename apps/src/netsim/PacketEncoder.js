@@ -124,10 +124,18 @@ PacketEncoder.prototype.getHeaderFieldAsInt = function (key, binary) {
  * @returns {string} packet body binary string
  */
 PacketEncoder.prototype.getBody = function (binary) {
-  var totalHeaderLength = this.formatSpec_.reduce(function (prev, cur) {
+  return minifyBinary(binary)
+      .slice(PacketEncoder.getHeaderLength(this.formatSpec_));
+};
+
+/**
+ * @param {packetHeaderSpec} formatSpec
+ * @returns {number} How many bits the header takes up
+ */
+PacketEncoder.getHeaderLength = function (formatSpec) {
+  return formatSpec.reduce(function (prev, cur) {
     return prev + cur.bits;
   }, 0);
-  return minifyBinary(binary).slice(totalHeaderLength);
 };
 
 /**
