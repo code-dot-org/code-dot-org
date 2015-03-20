@@ -92,7 +92,7 @@ class ProfessionalDevelopmentWorkshopSignup
 
     data['workshop_id_i'] = data['parent_form_i']
 
-    data.delete('teacher_role_ss')
+    data.delete('teacher_role_other_ss')
     data.delete('school_type_other_ss')
     data.delete('school_levels_other_ss')
 

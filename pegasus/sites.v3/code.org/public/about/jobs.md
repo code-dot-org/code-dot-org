@@ -3,12 +3,10 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-# Job Openings at Code.org
+# Job Openings at Code.org	
 
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
-- [Operations Intern](#operations-intern)
-- [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
@@ -161,30 +159,6 @@ In addition, candidates:
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="operations-intern" href="#operations-intern">Operations Intern (Seattle,Wa)</a>
-**Job Summary:**
-
-Job Status:		Part-time (April/May unpaid); 
-Full-time (June-August stipend available)
-
-Code.org is looking for an Operations Intern to join Code.org’s Operations team. Responsibilities of the position include:
-
-- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
-- Update and manage attendee lists
-- Utilize our customer service system to respond to professional development questions from teachers in a timely manner
-- Attend and participate in meetings and record notes/follow-up items, as appropriate
-- Respond to requests for information, distribute materials externally
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Qualifications:**
-
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-- Minimum 2 years of undergraduate studies completed
-- Experience with Google suite of products
-- Ability to work legally in the United States
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
@@ -223,40 +197,6 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="grant-writer" href="#grant-writer">Grant Writer and Relationships Manager</a>
-
-**Job Summary:**
-
-The Grant Writer and Relationship Manager plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector. Full-time, salaried. Responsibilities of the position include:
-
-- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
-- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
-- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
-- Working with Director of Finance & Administration, ensure timely reporting on grant deliverables by managing grants calendar
-- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
-- Coordinating Code.org fundraising events
-- Other duties, as assigned
-
-**Qualifications:**
-
-- A Bachelor’s degree and a minimum of 5 years of relevant experience are required
-- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants
-- An incredible passion for our mission and an ability to inspire others to get involved
-- Strategic thinker, analytical and proactive
-- Candidates must be self-motivated, detail-oriented, and highly-organized to succeed in a demanding, impact-focused environment
-- Ability to be flexible and adaptive in a growing organization; be able to work alongside a diverse group of people
-- Thrive in a collaborative, team environment and also work independently 
-- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
-- Strong and thoughtful customer service orientation
-- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects
-- A solid understanding of budgets as they relate to proposals and grants is required
-
-
-A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred.
-
-Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 
