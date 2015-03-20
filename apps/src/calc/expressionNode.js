@@ -95,15 +95,19 @@ ExpressionNode.prototype.getType_ = function () {
 ExpressionNode.prototype.isArithmetic = function () {
   return this.getType_() === ValueType.ARITHMETIC;
 };
+
 ExpressionNode.prototype.isFunctionCall = function () {
   return this.getType_() === ValueType.FUNCTION_CALL;
 };
+
 ExpressionNode.prototype.isVariable = function () {
   return this.getType_() === ValueType.VARIABLE;
 };
+
 ExpressionNode.prototype.isNumber = function () {
   return this.getType_() === ValueType.NUMBER;
 };
+
 ExpressionNode.prototype.isExponential = function () {
   return this.getType_() === ValueType.EXPONENTIAL;
 };
@@ -327,18 +331,18 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     return [new Token(this.value_, !nodesMatch)];
   }
 
-  // var tokenListForChild = function (childIndex) {
-  //   this.children_[childIndex].getTokenListDiff(nodesMatch &&
-  //     other.children_[childIndex]);
-  // }.bind(this);
+  var tokensForChild = function (childIndex) {
+    return this.children_[childIndex].getTokenListDiff(nodesMatch &&
+      other.children_[childIndex]);
+  }.bind(this);
 
   if (type === ValueType.ARITHMETIC) {
     // Deal with arithmetic, which is always in the form (child0 operator child1)
     tokens = [new Token('(', !nodesMatch)];
     tokens.push([
-      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      tokensForChild(0),
       new Token(" " + this.value_ + " ", !nodesMatch),
-      this.children_[1].getTokenListDiff(nodesMatch && other.children_[1])
+      tokensForChild(1)
     ]);
     tokens.push(new Token(')', !nodesMatch));
 
@@ -348,16 +352,16 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   if (this.value_ === 'sqr') {
     return _.flatten([
       new Token('(', !nodesMatch),
-      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      tokensForChild(0),
       new Token(' ^ 2', !nodesMatch),
       new Token(')', !nodesMatch)
     ]);
   } else if (this.value_ === 'pow') {
     return _.flatten([
       new Token('(', !nodesMatch),
-      this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
+      tokensForChild(0),
       new Token(' ^ ', !nodesMatch),
-      this.children_[1].getTokenListDiff(nodesMatch && other.children_[1]),
+      tokensForChild(1),
       new Token(')', !nodesMatch)
     ]);
   }
@@ -374,7 +378,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     if (i > 0) {
       tokens.push(new Token(',', !nodesMatch));
     }
-    tokens.push(this.children_[i].getTokenListDiff(nodesMatch && other.children_[i]));
+    tokens.push(tokensForChild(i));
   }
 
   tokens.push(new Token(")", !nodesMatch));
@@ -395,7 +399,6 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(null);
   }
 
-  // TODO - do i also neeed to handle exponents
   if (this.getType_() !== ValueType.ARITHMETIC) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
