@@ -728,7 +728,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
   // Find a connection to route this message to.
   try {
     var decoder = new PacketEncoder(this.packetSpec_);
-    toAddress = decoder.getHeaderFieldAsInt(PacketHeaderType.TO_ADDRESS,
+    toAddress = decoder.getHeaderAsInt(PacketHeaderType.TO_ADDRESS,
         message.payload);
   } catch (error) {
     logger.warn("Packet not readable by router");
@@ -785,7 +785,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   // Extract message contents
   try {
     encoder = new PacketEncoder(this.packetSpec_);
-    fromAddress = encoder.getHeaderFieldAsInt(PacketHeaderType.FROM_ADDRESS,
+    fromAddress = encoder.getHeaderAsInt(PacketHeaderType.FROM_ADDRESS,
         message.payload);
     query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
   } catch (error) {

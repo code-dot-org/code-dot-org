@@ -41,24 +41,20 @@ describe("PacketEncoder", function () {
       });
     });
 
-    it ("throws on construction if Infinity field length used in middle of packet", function () {
+    it ("throws on construction if Infinity field length used", function () {
       assertThrows(Error, function () {
         var format = new PacketEncoder([
           { key: 'infinityFirst', bits: Infinity },
           { key: 'fixedLater', bits: 8 }
         ]);
       });
-    });
 
-    it ("accepts Infinity length for final field", function () {
-      var packet = '00000001 10101010 10101010 10101';
-
-      var format = new PacketEncoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: Infinity }
-      ]);
-
-      assertEqual('101010101010101010101', format.getField('payload', packet));
+      assertThrows(Error, function () {
+        var format = new PacketEncoder([
+          { key: 'infinityFirst', bits: 8 },
+          { key: 'fixedLater', bits: Infinity }
+        ]);
+      });
     });
   });
 
@@ -141,16 +137,16 @@ describe("PacketEncoder", function () {
         { key: 'fromAddress', bits: 8 }
       ]);
 
-      assertEqual('00000001', format.getField('toAddress', packet));
-      assertEqual('00000010', format.getField('fromAddress', packet));
+      assertEqual('00000001', format.getHeader('toAddress', packet));
+      assertEqual('00000010', format.getHeader('fromAddress', packet));
 
       var otherFormat = new PacketEncoder([
         { key: 'toAddress', bits: 4 },
         { key: 'fromAddress', bits: 4 }
       ]);
 
-      assertEqual('0000', otherFormat.getField('toAddress', packet));
-      assertEqual('0001', otherFormat.getField('fromAddress', packet));
+      assertEqual('0000', otherFormat.getHeader('toAddress', packet));
+      assertEqual('0001', otherFormat.getHeader('fromAddress', packet));
     });
 
     it ("throws when getting a key that isn't in the spec", function () {
@@ -162,7 +158,7 @@ describe("PacketEncoder", function () {
       ]);
 
       assertThrows(Error, function () {
-        format.getField('fromAddress', packet);
+        format.getHeader('fromAddress', packet);
       });
     });
 
@@ -174,7 +170,7 @@ describe("PacketEncoder", function () {
         { key: 'payload', bits: 4 }
       ]);
 
-      assertEqual('0000', format.getField('payload', packet));
+      assertEqual('0000', format.getHeader('payload', packet));
     });
 
     it ("right-pads with zeroes when getting a key that overlaps the binary end", function () {
@@ -185,31 +181,29 @@ describe("PacketEncoder", function () {
         { key: 'payload', bits: 4 }
       ]);
 
-      assertEqual('1100', format.getField('payload', packet));
+      assertEqual('1100', format.getHeader('payload', packet));
     });
 
     it ("gets remaining bits into Infinity field", function () {
       var packet = '00000001 10101010 10101010 10101';
 
       var format = new PacketEncoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: Infinity }
+        { key: 'toAddress', bits: 8 }
       ]);
 
-      assertEqual('00000001', format.getField('toAddress', packet));
-      assertEqual('101010101010101010101', format.getField('payload', packet));
+      assertEqual('00000001', format.getHeader('toAddress', packet));
+      assertEqual('101010101010101010101', format.getBody(packet));
     });
 
     it ("gets zero bits into Infinity field if it's beyond the binary length", function () {
       var packet = '1111';
 
       var format = new PacketEncoder([
-        { key: 'toAddress', bits: 8 },
-        { key: 'payload', bits: Infinity }
+        { key: 'toAddress', bits: 8 }
       ]);
 
-      assertEqual('11110000', format.getField('toAddress', packet));
-      assertEqual('', format.getField('payload', packet));
+      assertEqual('11110000', format.getHeader('toAddress', packet));
+      assertEqual('', format.getBody(packet));
     });
   });
 

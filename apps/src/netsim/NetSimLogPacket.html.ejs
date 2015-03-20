@@ -71,10 +71,10 @@
   </thead>
   <tbody>
   <%
-    var toAddress = showToAddress ? encoder.getField(PacketHeaderType.TO_ADDRESS, packetBinary) : '';
-    var fromAddress = showFromAddress ? encoder.getField(PacketHeaderType.FROM_ADDRESS, packetBinary) : '';
-    var packetIndex = showPacketInfo ? encoder.getField(PacketHeaderType.PACKET_INDEX, packetBinary) : '';
-    var packetCount = showPacketInfo ? encoder.getField(PacketHeaderType.PACKET_COUNT, packetBinary) : '';
+    var toAddress = showToAddress ? encoder.getHeader(PacketHeaderType.TO_ADDRESS, packetBinary) : '';
+    var fromAddress = showFromAddress ? encoder.getHeader(PacketHeaderType.FROM_ADDRESS, packetBinary) : '';
+    var packetIndex = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_INDEX, packetBinary) : '';
+    var packetCount = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_COUNT, packetBinary) : '';
     var message = encoder.getBody(packetBinary);
 
     logRow(EncodingType.ASCII,
