@@ -141,7 +141,9 @@ NetSimPacketEditor.prototype.getRoot = function () {
 
 /** Replace contents of our root element with our own markup. */
 NetSimPacketEditor.prototype.render = function () {
-  var newMarkup = $(markup({}));
+  var newMarkup = $(markup({
+    packetSpec: this.packetSpec_
+  }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
