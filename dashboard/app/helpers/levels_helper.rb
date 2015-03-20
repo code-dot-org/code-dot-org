@@ -256,7 +256,10 @@ module LevelsHelper
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
     # Blockly requires these fields to be objects not strings
-    %w(map initialDirt finalDirt goal soft_buttons inputOutputTable).each do |x|
+    (
+      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
+      .concat NetSim.json_object_attrs
+    ).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
     end
 
