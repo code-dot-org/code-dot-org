@@ -36,7 +36,7 @@
           - if link[:priority] && link[:priority] == 2
             -# opacity = 0.8
           %p{style: "opacity: #{opacity}; margin-bottom:20px; padding-left:15px; font-size:16px"}
-            %a{href: "#", style: "font-family: 'Gotham 4r', sans-serif; color:white"}
+            %a{href: link[:url], style: "font-family: 'Gotham 4r', sans-serif; color:white"}
               = link[:text]
 
     
