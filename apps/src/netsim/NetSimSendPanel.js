@@ -239,9 +239,10 @@ NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
  * @private
  */
 NetSimSendPanel.prototype.onSendButtonPress_ = function () {
+  // Make sure to perform packet truncation here.
   var packetBinaries = this.packets_.map(function (packetEditor) {
-    return packetEditor.getPacketBinary();
-  });
+    return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
+  }.bind(this));
 
   var myNode = this.connection_.myNode;
   if (myNode && packetBinaries.length > 0) {

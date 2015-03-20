@@ -1,16 +1,58 @@
 <%
-  var netsimConstants = require('./netsimConstants');
-  var PacketHeaderType = netsimConstants.PacketHeaderType;
   var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var netsimUtils = require('./netsimUtils');
+  var getEncodingLabel = netsimUtils.getEncodingLabel;
+  var forEachEnumValue = netsimUtils.forEachEnumValue;
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ */
+  function editorRow(encodingType) {
+    %>
+      <tr class="<%= encodingType %>">
+        <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+        <% if (showToAddress) { %>
+        <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><input type="text" class="<%= PacketHeaderType.TO_ADDRESS %>" /></td>
+        <% } %>
+        <% if (showFromAddress) { %>
+        <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><input type="text" readonly class="<%= PacketHeaderType.FROM_ADDRESS %>" /></td>
+        <% } %>
+        <% if (showPacketInfo) { %>
+        <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><input type="text" readonly class="<%= PacketHeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= PacketHeaderType.PACKET_COUNT %>" /></td>
+        <% } %>
+        <td class="<%= PacketUIColumnType.MESSAGE %>"><div><textarea class="message"></textarea></div></td>
+      </tr>
+    <%
+  }
 %>
 <table>
   <thead>
   <tr>
-    <th nowrap class="encodingLabel"></th>
-    <th nowrap class="toAddress"><%= i18n.to() %></th>
-    <th nowrap class="fromAddress"><%= i18n.from() %></th>
-    <th nowrap class="packetInfo"><%= i18n.packet() %></th>
-    <th class="message">
+    <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+    <% if (showToAddress) { %>
+      <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+    <% } %>
+    <% if (showFromAddress) { %>
+      <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+    <% } %>
+    <% if (showPacketInfo) { %>
+      <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+    <% } %>
+    <th class="<%= PacketUIColumnType.MESSAGE %>">
       <%= i18n.message() %>
       <div class="packet-controls">
         <span class="netsim-button remove-packet-button" title="<%= i18n.removePacket() %>"><i class="fa fa-times"></i></span>
@@ -19,34 +61,11 @@
   </tr>
   </thead>
   <tbody>
-  <tr class="ascii">
-    <th nowrap class="encodingLabel"><%= i18n.ascii() %></th>
-    <td nowrap class="toAddress"><input type="text" class="<%= PacketHeaderType.TO_ADDRESS %>" /></td>
-    <td nowrap class="fromAddress"><input type="text" readonly class="<%= PacketHeaderType.FROM_ADDRESS %>" /></td>
-    <td nowrap class="packetInfo"><input type="text" readonly class="<%= PacketHeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= PacketHeaderType.PACKET_COUNT %>" /></td>
-    <td class="message"><div><textarea class="message"></textarea></div></td>
-  </tr>
-  <tr class="decimal">
-    <th nowrap class="encodingLabel"><%= i18n.decimal() %></th>
-    <td nowrap class="toAddress"><input type="text" class="<%= PacketHeaderType.TO_ADDRESS %>" /></td>
-    <td nowrap class="fromAddress"><input type="text" readonly class="<%= PacketHeaderType.FROM_ADDRESS %>" /></td>
-    <td nowrap class="packetInfo"><input type="text" readonly class="<%= PacketHeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= PacketHeaderType.PACKET_COUNT %>" /></td>
-    <td class="message"><div><textarea class="message"></textarea></div></td>
-  </tr>
-  <tr class="hexadecimal">
-    <th nowrap class="encodingLabel"><%= i18n.hex() %></th>
-    <td nowrap class="toAddress"><input type="text" class="<%= PacketHeaderType.TO_ADDRESS %>" /></td>
-    <td nowrap class="fromAddress"><input type="text" readonly class="<%= PacketHeaderType.FROM_ADDRESS %>" /></td>
-    <td nowrap class="packetInfo"><input type="text" readonly class="<%= PacketHeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= PacketHeaderType.PACKET_COUNT %>" /></td>
-    <td class="message"><div><textarea class="message"></textarea></div></td>
-  </tr>
-  <tr class="binary">
-    <th nowrap class="encodingLabel"><%= i18n.binary() %></th>
-    <td nowrap class="toAddress"><input type="text" class="<%= PacketHeaderType.TO_ADDRESS %>" /></td>
-    <td nowrap class="fromAddress"><input type="text" readonly class="<%= PacketHeaderType.FROM_ADDRESS %>" /></td>
-    <td nowrap class="packetInfo"><input type="text" readonly class="<%= PacketHeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= PacketHeaderType.PACKET_COUNT %>" /></td>
-    <td class="message"><div><textarea class="message"></textarea></div></td>
-  </tr>
+  <%
+    forEachEnumValue(EncodingType, function (encodingType) {
+      editorRow(encodingType);
+    });
+  %>
   </tbody>
 </table>
 <div class="bit-counter"></div>
