@@ -2,6 +2,7 @@ class Calc < Blockly
   serialized_attrs %w(
     solution_blocks
     free_play
+    input_output_table
   )
 
   before_save :update_ideal_level_source

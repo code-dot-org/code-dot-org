@@ -7,7 +7,6 @@ nav: about_nav
 
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
-- [Grant Writer and Relationships Manager](#grant-writer)
 - [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
@@ -198,40 +197,6 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="grant-writer" href="#grant-writer">Grant Writer and Relationships Manager</a>
-
-**Job Summary:**
-
-The Grant Writer and Relationship Manager plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector. Full-time, salaried. Responsibilities of the position include:
-
-- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
-- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
-- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
-- Working with Director of Finance & Administration, ensure timely reporting on grant deliverables by managing grants calendar
-- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
-- Coordinating Code.org fundraising events
-- Other duties, as assigned
-
-**Qualifications:**
-
-- A Bachelor’s degree and a minimum of 5 years of relevant experience are required
-- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants
-- An incredible passion for our mission and an ability to inspire others to get involved
-- Strategic thinker, analytical and proactive
-- Candidates must be self-motivated, detail-oriented, and highly-organized to succeed in a demanding, impact-focused environment
-- Ability to be flexible and adaptive in a growing organization; be able to work alongside a diverse group of people
-- Thrive in a collaborative, team environment and also work independently 
-- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
-- Strong and thoughtful customer service orientation
-- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects
-- A solid understanding of budgets as they relate to proposals and grants is required
-
-
-A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred.
-
-Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 

@@ -393,7 +393,85 @@ function customValidator(assert) {
     setEquationSets(targetSet, userSet);
 
     displayComplexUserExpressions();
+
+    // line 1: f(x) = x
+    validateTextElementContainer(userExpression.children[0], [
+      ['f(x) = ',  null],
+      ['x',  null],
+    ]);
+
+    // line 2: f((1 + 1)) = 2 // extra parens tracked by 90669534
+    validateTextElementContainer(userExpression.children[1], [
+      ['f',  null],
+      ['(',  null],
+      ['(',  null],
+      ['1',  null],
+      [' + ',  null],
+      ['1',  null],
+      [')',  null],
+      [')',  null],
+      [' = ',  null],
+      ['2',  null],
+    ]);
   });
+
+  displayComplexUserExpressionTest(assert, 'pow block', function () {
+    // pow(2, 3)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('pow', [2, 3])));
+
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['2', null],
+      [' ^ ', null],
+      ['3', null],
+      [' = ', null],
+      ['8', null]
+    ]);
+  });
+
+  displayComplexUserExpressionTest(assert, 'sqr block', function () {
+    // sqr(2)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('sqr', [2])));
+
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['2', null],
+      [' ^ 2', null],
+      [' = ', null],
+      ['4', null]
+    ]);
+  });
+
+  displayComplexUserExpressionTest(assert, 'sqrt block', function () {
+    // sqrt(4)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('sqrt', [4])));
+
+    var targetSet = new EquationSet(); // simulate free play
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['sqrt', null],
+      ['(', null],
+      ['4', null],
+      [')', null],
+      [' = ', null],
+      ['2', null]
+    ]);
+  });
+
 
   return true;
 }

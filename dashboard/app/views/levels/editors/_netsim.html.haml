@@ -49,7 +49,7 @@
 %h3 Tabs
 .field
   = f.label :show_tabs, 'Visible tabs'
-  %p An array of tabs to appear beneath the network visualization.  Does not determine tab order; tabs always appear in the order "Instructions, My Device, Router, DNS." Valid tab names are 'instructions', 'my_device', 'router' and 'dns'.  Example: <tt>['my_device', 'router']</tt>
+  %p An array of tabs to appear beneath the network visualization.  Does not determine tab order; tabs always appear in the order "Instructions, My Device, Router, DNS." Valid tab names are "instructions", "my_device", "router" and "dns".  Example: <tt>["my_device", "router"]</tt>
   = f.text_area :show_tabs, placeholder: 'Which tabs to show?', rows: 4
   :javascript
       codeMirror('show_tabs', 'javascript');
@@ -61,13 +61,13 @@
 %h3 My Device Tab
 .field
   = f.label :show_encoding_controls, 'Show which encoding controls?'
-  %p An array of encoding types ('ascii', 'binary', etc.) which should have visible checkbox controls on the "My Device" tab.  Valid encoding names are 'a_and_b', 'binary', 'hexadecimal', 'decimal' and 'ascii'.  Example: <tt>['a_and_b', 'binary', 'ascii']</tt>
+  %p An array of encoding types ("ascii", "binary", etc.) which should have visible checkbox controls on the "My Device" tab.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4
   :javascript
       codeMirror('show_encoding_controls', 'javascript');
 .field
   = f.label :default_enabled_encodings, 'Default enabled encodings'
-  %p An array of encoding types ('ascii', 'binary', etc.) to enable on page load.  An encoding enabled here but omitted from the visible controls becomes mandatory and cannot be disabled by the student.  Valid encoding names are 'a_and_b', 'binary', 'hexadecimal', 'decimal' and 'ascii'.  Example: <tt>['a_and_b', 'binary', 'ascii']</tt>
+  %p An array of encoding types ("ascii", "binary", etc.) to enable on page load.  An encoding enabled here but omitted from the visible controls becomes mandatory and cannot be disabled by the student.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
   :javascript
       codeMirror('default_enabled_encodings', 'javascript');

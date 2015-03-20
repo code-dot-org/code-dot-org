@@ -1048,12 +1048,7 @@ StudioApp.prototype.configureDom = function (config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
 
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
-  }
-
-  if (!config.hideSource) {
+  if (!config.hideSource || config.embed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
