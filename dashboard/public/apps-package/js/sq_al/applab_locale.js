@@ -139,6 +139,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Vazhdo"},
 "container":function(d){return "krijo mbajtësin"},
 "containerTooltip":function(d){return "Krijon një mbajtës të ndarë dhe vendosni HTML e brendshme të tij."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Urime! Ju keni përfunduar puzzle përfundimtar."},
 "nextLevel":function(d){return "Urime! Ti ke përfunduar këtë puzzle."},
 "no":function(d){return "Jo"},

@@ -71,8 +71,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Teksts"},
 "catVariables":function(d){return "Mainīgie"},
 "continue":function(d){return "Turpināt"},
-"container":function(d){return "create container"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"container":function(d){return "izveidot konteineru"},
+"containerTooltip":function(d){return "Izveidot nodalītu konteineru un uzstādīt tā iekšējo HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
 "nextLevel":function(d){return "Apsveicu! Jūs pabeidzāt šo puzli."},
 "no":function(d){return "Nē"},
@@ -87,5 +88,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "iesaistīties"},
 "stepOver":function(d){return "pārkāpt"},
 "stepOut":function(d){return "izstāties"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Skatīt datus"},
 "yes":function(d){return "Jā"}};

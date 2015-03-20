@@ -155,6 +155,7 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "a_and_b":function(d){return "A / B"},
+"addPacket":function(d){return "Ajouter le paquet"},
 "ascii":function(d){return "ASCII"},
 "binary":function(d){return "Binaire"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" bits"},
@@ -178,6 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "_of_":function(d){return " sur "},
 "packet":function(d){return "Paquet"},
 "receivedMessageLog":function(d){return "Journal des messages reçus"},
+"removePacket":function(d){return "Supprimer le paquet"},
 "router":function(d){return "Routeur"},
 "send":function(d){return "Envoyer"},
 "sendAMessage":function(d){return "Envoyer un Message"},

@@ -41,6 +41,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuar"},
 "container":function(d){return "crear contenedor"},
 "containerTooltip":function(d){return "Crea un contenedor de división y define su HTML interno."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "¡Felicidades! Has resuelto el puzzle final."},
 "nextLevel":function(d){return "¡Felicidades! Has completado este puzzle."},
 "no":function(d){return "No"},

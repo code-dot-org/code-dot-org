@@ -84,6 +84,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsett"},
 "container":function(d){return "lag beholder"},
 "containerTooltip":function(d){return "Lag en delebeholder og fyll inn HTML-en."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Gratulerer! Du har løst den siste oppgaven."},
 "nextLevel":function(d){return "Gratulerer! Du har fullført denne oppgaven."},
 "no":function(d){return "Nei"},
