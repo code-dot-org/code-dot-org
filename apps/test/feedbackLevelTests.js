@@ -11,7 +11,7 @@ describe("required blocks for specific levels", function () {
   });
 
   // Use globify transform to require a directory of files within the browserify bundle
-  var collections = require('./solutions/flappy/*.js', {hash: 'path'});
+  var collections = require('./solutions/maze/*.js', {hash: 'path'});
 
   // Extract the 'data.js' files containing app-specific require paths.
   var data = Object.keys(collections).filter(function(key){return /data$/.test(key)});
@@ -54,7 +54,8 @@ function validateMissingBlocksFromLevelTest(studioApp, collection, dataItem, lev
 
   var blocks = data.blocks;
   blocks.install(Blockly, blockInstallOptions);
-  var levels = data.levels;
+  var levels = data.levels[collection.levelFile];
+
   validateBlocks(studioApp, {
     requiredBlocks: levels[collection.levelId].requiredBlocks,
     numToFlag: 1,
