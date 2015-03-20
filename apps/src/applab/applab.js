@@ -580,15 +580,13 @@ Applab.init = function(config) {
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
@@ -604,6 +602,7 @@ Applab.init = function(config) {
       idealBlockNumber: undefined,
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
+      pinWorkspaceToBottom: true,
       hasDesignMode: true
     }
   });
