@@ -1,0 +1,39 @@
+name 'CSPStudentLessonPlanTemplate'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+
+## Unit X: Lesson X - Name of Lesson
+
+[Note to editor: If a lesson does not have a particular resource or section, just remove the heading]
+
+# Lesson Summary
+* Description
+ * In this lesson you did this that and the other thing and learned this and experienced that.
+* Objectives
+ * Student is able to...
+ * Student is able to...
+* Key terms
+ * Protocol
+ * Bit
+ * Binary
+
+# Resources
+* Video: [link to video]
+* Handouts/Worksheets
+ * Handout
+ * Worksheet
+* Widgets/Levels
+ *[link to level progression if applicable]
+
+# Assessment
+* Rubric
+* Online Reflection question
+* Quiz (mc, multi, etc).
+
+
+
+MARKDOWN

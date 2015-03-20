@@ -21710,13 +21710,19 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
   return nowHidden
 };
 Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
-  return block === this.functionDefinitionBlock || block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y >= this.getFlyoutTopPosition())
+  return block === this.functionDefinitionBlock || this.isVisibleInEditor_(block) && !this.isBlockInExampleArea(block)
 };
 Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
-  return goog.array.contains(this.exampleBlocks, block) || block.blockSpace === this.modalBlockSpace && (block.isUserVisible() && block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition())
+  return this.isAnExampleBlockInEditor_(block) || this.isVisibleInEditor_(block) && block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition()
+};
+Blockly.ContractEditor.prototype.isVisibleInEditor_ = function(block) {
+  return block.blockSpace === this.modalBlockSpace && block.isVisible()
 };
 Blockly.ContractEditor.prototype.getFlyoutTopPosition = function() {
   return this.flyout_.getYPosition() - this.flyout_.getHeight()
+};
+Blockly.ContractEditor.prototype.isAnExampleBlockInEditor_ = function(block) {
+  return goog.array.contains(this.exampleBlocks, block)
 };
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
