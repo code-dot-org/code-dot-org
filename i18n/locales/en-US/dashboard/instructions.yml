@@ -385,13 +385,15 @@ en:
       Big Game Booleans 4_instruction: crwdns34937:0crwdne34937:0
       Big Game Booleans 5_instruction: crwdns34938:0crwdne34938:0
       Big Game Collision 1 (copy 1)_instruction: crwdns34939:0crwdne34939:0
-      Big Game Collision 1_instruction: crwdns34940:0crwdne34940:0
-      Big Game Collision 2_instruction: crwdns35132:0crwdne35132:0
-      Big Game Collision 3_instruction: crwdns34944:0crwdne34944:0
-      Big Game Collision 4_instruction: crwdns34946:0crwdne34946:0
+      Big Game Collision 1_instruction: crwdns35677:0crwdne35677:0
+      Big Game Collision 2_instruction: crwdns35678:0crwdne35678:0
+      Big Game Collision 3_instruction: crwdns35679:0crwdne35679:0
+      Big Game Collision 4_instruction: crwdns35680:0crwdne35680:0
       Big Game Complete (copy 1)_instruction: crwdns34947:0crwdne34947:0
       Big Game Complete_instruction: crwdns34948:0crwdne34948:0
       Big Game Final_instruction: crwdns34949:0crwdne34949:0
+      Big Game Player 1_instruction: crwdns35681:0crwdne35681:0
+      Big Game Player 2_instruction: crwdns35682:0crwdne35682:0
       Big Game Testing_instruction: crwdns34950:0crwdne34950:0
       Big Game Vars 1 (copy 1)_instruction: crwdns34951:0crwdne34951:0
       Big Game Vars 1_instruction: crwdns34952:0crwdne34952:0
@@ -715,7 +717,7 @@ en:
       Eval Design Recipe 1_instruction: crwdns34482:0crwdne34482:0
       Eval Design Recipe 2 (copy 1)_instruction: crwdns34483:0crwdne34483:0
       Eval Design Recipe 2_instruction: crwdns34484:0crwdne34484:0
-      Eval Design Recipe 3_instruction: crwdns34485:0crwdne34485:0
+      Eval Design Recipe 3_instruction: crwdns35683:0crwdne35683:0
       Eval Design Recipe 4_instruction: crwdns34486:0crwdne34486:0
       Eval Design Recipe 5_instruction: crwdns34487:0crwdne34487:0
       Eval Design Recipe 6_instruction: crwdns34488:0crwdne34488:0
@@ -898,7 +900,7 @@ en:
       Luigi's Pizza 2 (copy 1)_instruction: crwdns35171:0crwdne35171:0
       Luigi's Pizza 2_instruction: crwdns35172:0crwdne35172:0
       Luigi's Pizza 3 (copy 1)_instruction: crwdns35173:0crwdne35173:0
-      Luigi's Pizza 3_instruction: crwdns35174:0crwdne35174:0
+      Luigi's Pizza 3_instruction: crwdns35684:0crwdne35684:0
       Luigi's Pizza 4_instruction: crwdns35175:0crwdne35175:0
       maze level test_instruction: crwdns31069:0crwdne31069:0
       Maze screenshot Work_instruction: crwdns31070:0crwdne31070:0

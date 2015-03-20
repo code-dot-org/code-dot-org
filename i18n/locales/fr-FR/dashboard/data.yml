@@ -207,7 +207,7 @@ fr:
         turtle_3_5: 'Maintenant, crée une nouvelle fonction "créer une maison" et utilise-la pour abriter deux chats. Astuce : crée une nouvelle fonction en utilisant le bloc "faire quelque chose", et écris ton propre texte pour nommer le bloc.'
         turtle_3_6: "En vous basant sur l'exemple de la fonction « dessiner un carré », ajoutez un paramètre nommé « longueur » à la fonction « dessiner un triangle ». Ensuite, dessinez des triangles de différentes tailles. (Astuce : cliquez sur l'étoile pour ajouter un paramètre à la fonction.)"
         turtle_3_7: "Ajoutez un paramètre nommé « longueur » à la fonction « dessiner une maison » et construisez une grande maison pour l'éléphant (avec des côtés de 150 pixels de long)."
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: Modifier « dessiner une maison » pour que je me retrouve dans le coin inférieur droit après avoir dessiné une nouvelle maison. Utilisez cette fonction modifiée pour dessiner trois maisons.
         turtle_3_9: Saurez-vous remettre en place la fonction « dessiner une maison » sans aucune indication ? Lancez-vous, puis dessinez une nouvelle rangée de maisons.
         turtle_3_10: Vous avez beaucoup appris ! Vous pouvez à présent profiter de vos nouvelles connaissances pour dessiner tout ce dont vous avez envie. Essayez de dessiner une étoile, ou une spirale, ou encore un flocon de neige.
         maze_karel_debug_seq_1: "Bienvenue au débogage ! Mon code ne fonctionne pas bien. Pouvez-vous repérer le problème et le corriger afin que je puisse aplanir mon champ et qu'il soit prêt pour la plantation ?"
@@ -436,8 +436,8 @@ fr:
         playlab_intro: Introduction au Labo
         playlab_events: Évènements du Play Lab
         playlab_repeat_forever: Play Lab Répétition Infinie
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Tutoriel Puzzle Challenge
+        msm_1_intro: CS en algèbre chapitre 1 Introduction
         msm_2_eval_block: "Blocs d'évaluation"
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variables

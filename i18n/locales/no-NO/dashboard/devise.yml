@@ -16,7 +16,7 @@
       unconfirmed: Du må bekrefte kontoen før du fortsetter.
     mailer:
       confirmation_instructions:
-        subject: Code.org bekreftelse instruksjoner
+        subject: Code.org instruksjoner for bekreftelse
       reset_password_instructions:
         subject: Code.org instruksjoner for å tilbakestille passord
       unlock_instructions:

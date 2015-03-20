@@ -203,7 +203,7 @@ pt-BR:
         turtle_3_5: 'Agora, crie uma nova função "desenhe uma casa" e use-a para abrigar dois gatos. Dica: crie uma nova função usando o bloco "faça alguma coisa" e nomeie o bloco como quiser.'
         turtle_3_6: 'Usando "desenhe um quadrado" como exemplo, adicione uma entrada denominada "comprimento" para "desenhe um triângulo". Em seguida, desenhe triângulos de tamanhos diferentes. (Dica: clique na estrela para adicionar uma entrada a uma função)'
         turtle_3_7: 'Coloque uma entrada "comprimento" em "desenhe uma casa" e construa uma casa grande para o elefante (com bordas de 150 pixels de comprimento)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Modifique "desenhe uma casa" para que eu termine de desenhar uma nova casa no canto inferior direito. Use essa função modificada para desenhar três casas.'
         turtle_3_9: 'Você pode recriar a função "desenhe uma casa" sem ajuda? Tente, e em seguida desenhe uma fileira de casas.'
         turtle_3_10: Você aprendeu muito! Agora, use seu conhecimento para desenhar o que quiser. Tente desenhar uma estrela, ou uma espiral, ou um floco de neve.
         maze_karel_debug_seq_1: Bem-vindo à depuração! Meu código não está funcionando bem. Você pode achar o problema e corrigi-lo para que eu possa deixar meu terreno pronto para o plantio?
@@ -432,8 +432,8 @@ pt-BR:
         playlab_intro: Introdução ao Laboratório
         playlab_events: Eventos do Laboratório
         playlab_repeat_forever: 'Laboratório: repetir infinitamente'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Desafio tutorial
+        msm_1_intro: 'Capítulo 1 - introdução à ciência da computação em álgebra'
         msm_2_eval_block: Blocos de cálculo
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variáveis

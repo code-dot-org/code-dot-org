@@ -340,10 +340,9 @@
         turtle_3_7: Ajoutez un paramètre nommé « longueur » à la fonction « dessiner
           une maison » et construisez une grande maison pour l'éléphant (avec des
           côtés de 150 pixels de long).
-        turtle_3_8: Revoici tous les blocs de l'énigme précédente. Refaites la fonction
-          « dessiner une maison » de sorte que je m'arrête dans le coin inférieur
-          droit après avoir dessiné ma nouvelle maison. Utilisez cette fonction modifiée
-          pour dessiner trois maisons.
+        turtle_3_8: Modifier « dessiner une maison » pour que je me retrouve dans
+          le coin inférieur droit après avoir dessiné une nouvelle maison. Utilisez
+          cette fonction modifiée pour dessiner trois maisons.
         turtle_3_9: Saurez-vous remettre en place la fonction « dessiner une maison »
           sans aucune indication ? Lancez-vous, puis dessinez une nouvelle rangée
           de maisons.
@@ -721,8 +720,8 @@
         playlab_intro: Introduction au Labo
         playlab_events: Évènements du Play Lab
         playlab_repeat_forever: Play Lab Répétition Infinie
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Tutoriel Puzzle Challenge
+        msm_1_intro: CS en algèbre chapitre 1 Introduction
         msm_2_eval_block: Blocs d'évaluation
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variables

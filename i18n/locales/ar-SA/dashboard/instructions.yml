@@ -2,89 +2,35 @@ ar:
   data:
     instructions:
        (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      10A_instruction: |
-        Alright let's complete this puzzle with a Green Square that
-        is 175 pixels in size.
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      10A_instruction: حسناً، لنكمل هذا اللغز برسم مربع بحجم 175 بكسل.
+      2-3 _instruction: لكل زهرة بنفسجية 1 أو 0 من الرحيق، كن حذراً من جمع الرحيق من الزهور التي لا تحتوي أري رحيق.
+      2-3 Artist 1 new_instruction: مرحبا، أنا فنان، تستطيع كتابة كود لتجعلني أرسم كل شيئ تقريباً. استخدم بضعة مربعات لتجعلني ارسم على الخطوط الرمادية بالصورة. (كل سطر بطول 100 بكسل).
+      2-3 Artist 11_instruction: 'أرسم حدود لإشارة التوقف برسم مثمن ذو 8 أضلاع، طول كل ضلع 100 بكسل. كم درجة يجب أن تستدير؟ (ملاحظة: ما هو ناتج القسمة 360 على 8).'
+      2-3 Artist 12_instruction: 'ضع القطعة "repeat time" لتشكل دائرة "circle" حتى تنتهي من رسم بؤبؤ العين. إذا كان مقدار كل حركة إلى اليمين درجة واحدة، فكم درجة تحتاج لتكمل رسم الدائرة؟ 180؟ 360؟ 500؟'
+      2-3 Artist 2 new_instruction: 'تم إنهاء نصف جدار هذا المنزل فقط، كل جانب هو 100 ، ولكن نصف الجدار هو 50 فقط. أكمل هذا الجدار. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
+      2-3 Artist 3.4_instruction: 'كتلة القفز "jump" تحرك الرسام بدون أن يرسم. ارسم خط متقطع باستخدام كلا من قطع القفز "jump" و الرسم"draw".'
+      2-3 Artist 3_instruction: هذه القبعة بارتفاع 100 بكسل. ارسم قبعة بطول 70 بكسل اقل.
+      2-3 Artist 3new_instruction: القبعة الحمراء بطول 100 بكسل. قم برسم قبعة سوداء أقصر بـ 70 بكسل. عرض القبعة السوداء 50 بكسل.
+      2-3 Artist 4_instruction: 'ساعدني لأكمل المنزل لهذه القطة '
+      2-3 Artist 5_instruction: 'قم باستبدال هذه التعليمات بتعليمة تكرار "repeat times" لترسم نفس المنزل باستخدام 3 قطع فقط.'
+      2-3 Artist 6_instruction: 'هذا المنزل بحاجة إلى سقف! ارسم مثلث. تلميح: أضلاع المثلث جميعها بنفس الطول.'
+      2-3 Artist 7_instruction: أنهي رسم النصف الأيمن من الشباك الاخير. كل مربع في الشباك يساوي 25 بكسل.
+      2-3 Artist 8_instruction: أكمل الغرف لكل حيوان من خلال تقسيم المستطيل إلى مربعين متساويين. المستطيل بعرض 200 بكسل وارتفاع 100 بكسل.
+      2-3 Artist 9_instruction: قم بإنهاء هذه الطائرة الورقية
+      2-3 Artist Assessment 1_instruction: 'التقييم: قم بإنهاء رسم أخر ضرس. العرض 25 بكسل والطول 25 بكسل.'
+      2-3 Artist Debugging 1_instruction: هل تستطيع أن تصنع هذه القبعة بأكثر من 100؟
+      2-3 Artist Debugging 10_instruction: 'لوحة التوجيه على موجه الألعاب ضيقة جداً. ملاحظة: اجعلها أعرض بـ 10 بكسل.'
+      2-3 Artist Debugging 11_instruction: ساعدني لأنهي كرة الثلج الجميلة. كم مرة تحتاج للإعادة حتى تنتهي؟
+      2-3 Artist Debugging 12_instruction: من المفترض أن أضيف موجة محيط إلى هذا المشهد. هل تستطيع مساعدتي؟
+      2-3 Artist Debugging 2_instruction: 'النص البرمجي للشوارب الثلاث خاطئ. تلميح: كل شاب بطول 75 بكسل. أصلح هذا الكود لرسم هذه الشوارب.'
+      2-3 Artist Debugging 3_instruction: 'يوجد ثقب في قاربي! هل تستطيع اصلاحه بتغير زاوية الخط؟ تلميح: الزاوية الاخيرة خارجية بـ 15 درجة.'
+      2-3 Artist Debugging 4_instruction: ما هي الصورة التي نحاول ان نرسمها؟ أنه توصيل النقاط باستخدام الخطوط المناسبة والزوايا.
+      2-3 Artist Debugging 5_instruction: 'النص البرمجي للساق والقدم التي أمامك خاطئ. تلميح: القدم طويل جداً، قد نحتاج إلى حذف خطوة (بقصد الاخفاء)'
+      2-3 Artist Debugging 6_instruction: يبدو كأنني أجلس على كرسي بثلاث أرجل. عدل القطع لرسم الرجل الرابعة.
+      2-3 Artist Debugging 7_instruction: يبدو أن حرف C في النص البرمجي مرسوم بشكل عكسي. هل تستطيع جعله يبدو حرف C؟
       2-3 Artist Debugging 8_instruction: |
         My pinwheel is not finished. How many
         times do I need to repeat to finish it?
@@ -1141,29 +1087,31 @@ ar:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Collision 1_instruction: |
-        When you last worked on your game we got
-        our target and danger sprites to fly across the screen, but they never come
-        back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        Our target, danger, and player all move
-        now - the only thing left to do is figure out when they're touching so we
-        can update the score accordingly. First you'll need to complete the distance
-        function so that we can measure the distance between two points on the plane.
-        We've provided a working line-length function to help you out.
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
       Big Game Collision 4_instruction: |
-        You're almost there! Now that you have
-        a way to measure the distance between two points, you just need to decide
-        when those points are close enough to be considered touching. Complete the
-        collide? function so that it checks the distance function and returns true
-        if the two points are close enough to touch (100 pixels apart is a good place
-        to start).
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1175,6 +1123,18 @@ ar:
         fully functioning, take some time to enjoy your new game and make any final
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -2337,7 +2297,7 @@ ar:
       Eval Design Recipe 3_instruction: |
         The design recipe for "wide-rect" already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should draw a rectangle of given
+        the definition. The "wide-rect" function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
@@ -2754,7 +2714,8 @@ ar:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions

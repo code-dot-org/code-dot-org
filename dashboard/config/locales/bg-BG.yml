@@ -603,45 +603,46 @@
     support.code.org</a> без регистрация или попитайте вашия родител или учител да
     се свърже с нас за вас.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: не стартира
+    in_progress: в ход
     completed_too_many_blocks: завършено, но с повече блокове
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
-    assessment: assessment
+    assessment: Оценка
   studio:
     courses_working_on: Курсове, върху който работите
     completed_courses: Завършени курсове
     all_courses: Всички курсове
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: Проекти
+    create: Създаване на проект
+    create_a_project: 'Create a new project:'
+    new: Създаване на нов
+    rename: Преименуване
     save: Запазване
     delete: Изтриване
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Връщане към курса
+    my_projects: Моите проекти
     share: Сподели
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Споделяне на вашия проект
+    share_copy_link: 'Копиране на връзката:'
+    close: Затваряне
     more: Повече
     name: Име
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Актуализиран
+    project_type: Тип проект
+    help_text: Щракнете върху <strong>направи приложение</strong> или <strong>Начертайте
+      нещо</strong> по-долу за да направите нов проект в Игрална Лаборатория или проект
+      с художника! <br/>Можете да се върне към работа по проектите си по всяко време.
+    need_help: Нужда от помощ за да започнете?
     really_delete: Да се изтрие ли?
     delete_yes: Да
     delete_no: Не
-    saved: Saved
-    not_saved: Not saved
+    saved: Запазено
+    not_saved: Не е запазено
     cancel: Отмяна
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Наистина ли искате да изтриете този проект?
+    delete_confirm_text: Изтриването на вашия проект ще го премахне завинаги от списъка
+      ви с проекти. Всеки, с който сте споделили връзката към проект или проекти няма
+      да може да ги вижда.
+    view_all: Покажи моите проекти

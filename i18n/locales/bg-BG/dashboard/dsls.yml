@@ -87,8 +87,6 @@ bg:
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Въведете аритметичния израз тук
-      Glossary O:
-        "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.": 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
         Open text response example: Open text response example
         I loved it because...: I loved it because...
@@ -177,7 +175,7 @@ bg:
       PDK5 Teacher Dashboard 4:
         Course Progress: Course Progress
       PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Teacher Dashboard
+        Teacher Dashboard: Учителско табло
       PDK5 Unplugged Intro C:
         Unplugged intro: Unplugged intro
       PDK5 UVideo Overview C:

@@ -1497,74 +1497,80 @@
       Examples 4_instruction: Shrink function
       freeplay_instruction: You've officially become a master artist! Create a winter
         wonderland and share with your friends.
-      frozen circle function (copy 1)_instruction: Use the new 'create a circle' block
-        to create 10 overlapping circles. Don't forget to jump forward between circles
-      frozen circle function in circle_instruction: Ahora crearemos 20 círculos superpuestos,
-        girando 18 grados entre cada círculo.
-      frozen circle function with parameter_instruction: Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: Use the new “Create a circle” block to create
-        10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: Un círculo es una figura especial. ¿Puedes adivinar
+      frozen circle function (copy 1)_instruction: 'Utiliza el nuevo bloque "Crear un 
+        círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia 
+        adelante entre cada círculo.'
+      frozen circle function in circle_instruction: Ahora crearemos 20 círculos 
+        superpuestos, girando 18 grados entre cada círculo.
+      frozen circle function with parameter_instruction: 'Aquí está un bloque "Crear 
+        círculo" que puede dibujar círculos de diferentes tamaños. ¿Puedes usarlo para 
+        dibujar un circulo pequeño de tamaño 5 y uno más grande de tamaño 10?'
+      frozen circle function_instruction: 'Utiliza el nuevo bloque "Crear un círculo" 
+        para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante 
+        entre cada círculo.'
+      frozen circle_instruction: Un círculo es una figura especial. ¿Puedes adivinar 
         qué número debe reemplazar los signos de interrogación para dibujar un círculo?
-      frozen cross rotate (copy 1)_instruction: Ahora trata de repetirlo 10 veces.
-        ¿Cuántos  grados necesitas girar entre cada línea?
-      frozen cross rotate dense_instruction: '¡Ahora repitámoslo 90 veces! ¿Cuántas
-        veces cabe 90 en 360? Pista: Es un número muy pequeño.'
-      frozen cross rotate_instruction: Ahora trata de repetirlo 10 veces. ¿Cuántos  grados
-        necesitas girar entre cada línea?
-      frozen cross_instruction: Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: Did you know every snowflake is a
-        different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake (copy 1)_instruction: Did you know every snowflake
-        is a different shape?  Let's create a new snowflake by using the repeat block
-        and repeating the diamond 10 times, turning right by 36 degrees between each
-        diamond.
-      frozen diamond snowflake_instruction: Ahora crearemos un nuevo copo de nieve,
-        utilizando el bloque "Repetir" para repetir el paralelogramo 10 veces, girando
-        a la derecha 36 grados entre cada uno.
-      frozen diamond_instruction: 'Let''s create a parallelogram. It''s just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.ii'
-      frozen freeplay (copy 1)_instruction: ¡Te has convertido oficialmente en un
-        artista maestro! Crea un paraíso invernal.
-      frozen freeplay_instruction: ¡Te has convertido oficialmente en un artista maestro!
+      frozen cross rotate (copy 1)_instruction: 'Ahora trata de repetirlo 10 veces. 
+        ¿Cuántos  grados necesitas girar entre cada línea?'
+      frozen cross rotate dense_instruction: '¡Ahora repitámoslo 90 veces! ¿Cuántas veces 
+        cabe 90 en 360? Pista: Es un número muy pequeño.'
+      frozen cross rotate_instruction: 'Ahora trata de repetirlo 10 veces. ¿Cuántos  
+        grados necesitas girar entre cada línea?'
+      frozen cross_instruction: 'Utiliza el bloque "Repetir" para crear un signo de más 
+        (+). ¿Notaste que Elsa puede moverse hacia adelante y hacia atrás?'
+      frozen diamond mini snowflake_instruction: '¿Sabías que cada copo de nieve tiene 
+        una forma distinta? Crearemos un nuevo copo de nieve utilizando el bloque 
+        "Repetir" para repetir el paralelogramo 4 veces, girando hacia la derecha 90 
+        grados entre cada paralelogramo.'
+      frozen diamond snowflake (copy 1)_instruction: '¿Sabías que cada copo de nieve 
+        tiene una forma distinta? Crearemos un nuevo copo de nieve utilizando el bloque 
+        "Repetir" para repetir el paralelogramo 4 veces, girando hacia la derecha 90 
+        grados entre cada paralelogramo.'
+      frozen diamond snowflake_instruction: 'Ahora crearemos un nuevo copo de nieve, 
+        utilizando el bloque "Repetir" para repetir el paralelogramo 10 veces, girando 
+        a la derecha 36 grados entre cada uno.'
+      frozen diamond_instruction: 'Ahora crearemos un paralelogramo. Es como un cuadrado 
+        pero tiene diferentes ángulos: 60 y 120 grados en lugar de ángulos de 90 grados.'
+      frozen freeplay (copy 1)_instruction: ¡Te has convertido oficialmente en un artista 
+        maestro! Crea un paraíso invernal.
+      frozen freeplay_instruction: ¡Te has convertido oficialmente en un artista maestro! 
         Crea un paraíso invernal.
       frozen line_instruction: ¡Hola! Soy Elsa de Arendelle. Ayúdame a crear una línea.
-      frozen perpendicular_instruction: Now let's see if we can create two lines that
-        are at a 90 degree angle to each other. You will need to use the “Turn” block
-        as well as the “Move” block.
-      frozen snowflake base_instruction: Create these 3 lines that are 45 degrees
+      frozen perpendicular_instruction: 'Ahora veamos si podemos crear dos líneas que se 
+        encuentran a un ángulo de 90 grados una de la otra. Necesitarás usar tanto el 
+        bloque de "Giro" como el bloque de "Mover".'
+      frozen snowflake base_instruction: |
+        Create these 3 lines that are 45 degrees
         apart
-      frozen snowflake branch_instruction: Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: ¡Ahora repitámoslo 8 veces para dibujar un
+      frozen snowflake branch_instruction: 'Intenta utilizar el bloque "Crear una rama de 
+        copo de nieve" para dibujar 3 ramas, lo que empezará a parecerse a un copo de 
+        nieve.'
+      frozen snowflake full_instruction: ¡Ahora repitámoslo 8 veces para dibujar un 
         hermoso copo de nieve!
-      frozen snowflower pattern_instruction: What beautiful snowflowers! Let's make
-        smaller snowflowers to cover the entire ice rink. Don't forget to jump forward
-        150 pixels between each snowflower.
-      frozen snowflower_instruction: Formas complejas de nieve pueden crearse usando
-        figuras geométricas muy simples. ¿Puedes crear uno repitiendo 5 círculos de
-        tamaño 10 y 5 círculos de tamaño 5?
-      frozen square iterative_instruction: Parece que estamos a la mitad de completar
-        un cuadrado. Ahora pongamos 4 líneas juntas para crear un cuadrado.
-      frozen square loop (copy 1)_instruction: There is more than one way to make
+      frozen snowflower pattern_instruction: |
+        What beautiful snowflowers! Let's
+        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
+        forward 150 pixels between each snowflower.
+      frozen snowflower_instruction: Formas complejas de nieve pueden crearse usando 
+        figuras geométricas muy simples. ¿Puedes crear uno repitiendo 5 círculos de tamaño 
+        5 y 5 círculos de tamaño 10?
+      frozen square iterative_instruction: Parece que estamos a la mitad de completar un 
+        cuadrado. Ahora pongamos 4 líneas juntas para crear un cuadrado.
+      frozen square loop (copy 1)_instruction: |
+        There is more than one way to make
         a square. Can you use the Repeat block to create the square again, but with
         fewer blocks? What pattern do you see repeating, that you can put inside the
         Repeat block?
-      frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al
-        terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un
-        nuevo cuadrado.
-      frozen square loop_instruction: Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: Can you create a snowflake using the “Repeat”
-        block to make a square 10 times, and the “Turn” block to turn 36 degrees between
-        each square?
+      frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al 
+        terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo 
+        cuadrado.
+      frozen square loop_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado 
+        con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas 
+        veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" 
+        para formar un cuadrado?'
+      frozen square snowflake_instruction: '¿Puedes dibujar un copo de nieve utilizando el 
+        bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 
+        36 grados entre cada cuadrado?'
       Function Block 1_instruction: 'Here is a new type of Block. It is called a "Function
         block." Click on "RUN" to see what it can do. '
       Function Block 3.0_instruction: 'Here is a new type of Block. It is called a
