@@ -80,7 +80,7 @@
     logRow(EncodingType.ASCII,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        i18n.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
@@ -89,7 +89,7 @@
     logRow(EncodingType.DECIMAL,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        i18n.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
@@ -98,7 +98,7 @@
     logRow(EncodingType.HEXADECIMAL,
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
-        i18n.xOfY({
+        i18n.xOfYPackets({
           x: binaryToHex(packetIndex),
           y: binaryToHex(packetCount)
         }),

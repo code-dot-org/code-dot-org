@@ -22,6 +22,7 @@
   "instructions": "Instructions",
   "message": "Message",
   "myDevice": "My Device",
+  "numBitsPerPacket": "{x} bits per packet",
   "_of_": " of ",
   "packet": "Packet",
   "packetInfo": "Packet Info",
@@ -34,6 +35,5 @@
   "to": "To",
   "unlimited": "Unlimited",
   "workspaceHeader": "Internet Simulator",
-  "xBitsPerPacket": "{x} bits per packet",
-  "xOfY": "{x} of {y}"
+  "xOfYPackets": "{x} of {y}"
 }

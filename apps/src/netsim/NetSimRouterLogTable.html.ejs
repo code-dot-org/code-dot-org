@@ -50,7 +50,7 @@
         <td nowrap><%= logEntry.getHeaderField(PacketHeaderType.FROM_ADDRESS) %></td>
       <% } %>
       <% if (showPacketInfo) { %>
-        <td nowrap><%= i18n.xOfY({
+        <td nowrap><%= i18n.xOfYPackets({
             x: logEntry.getHeaderField(PacketHeaderType.PACKET_INDEX),
             y: logEntry.getHeaderField(PacketHeaderType.PACKET_COUNT)
           }) %></td>

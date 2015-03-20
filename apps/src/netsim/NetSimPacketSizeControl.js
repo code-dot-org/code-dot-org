@@ -122,7 +122,7 @@ NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
-  rootDiv.find('.packet_size_value').text(i18n.xBitsPerPacket({
+  rootDiv.find('.packet_size_value').text(i18n.numBitsPerPacket({
     x: newPacketSize
   }));
 };
