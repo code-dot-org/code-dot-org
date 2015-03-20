@@ -1,7 +1,9 @@
 title 'CSP Unit 1: Digital Information'
 description_short "Make Black and White Images with the pixelation tool"
 
-stage 'Lesson 8'
+stage "Lesson 3"
+
+stage 'Lesson 4'
 level 'NetSim_SendingABTest'
 
 stage 'Lesson 14'
