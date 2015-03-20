@@ -115,7 +115,7 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
  */
 NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
-    return this.encoder_.getHeaderFieldAsInt(field, this.packet);
+    return this.encoder_.getHeaderAsInt(field, this.packet);
   } catch (e) {
     return '';
   }

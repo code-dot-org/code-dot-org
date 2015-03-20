@@ -17,9 +17,7 @@ var dataConverters = require('./dataConverters');
 /**
  * Single packet header field type
  * @typedef {Object} packetHeaderField
- *
  * @property {PacketHeaderType} key - Used to identify the field, for parsing.
- *
  * @property {number} bits - How long (in bits) the field is.
  */
 
@@ -53,9 +51,8 @@ var validateSpec = function (formatSpec) {
       keyCache[formatSpec[i].key] = 'used';
     }
 
-    if (formatSpec[i].bits === Infinity && i+1 < formatSpec.length) {
-      throw new Error("Invalid packet format: Infinity field length is only " +
-      "allowed in the last field.");
+    if (formatSpec[i].bits === Infinity) {
+      throw new Error("Invalid packet format: Infinity field length not allowed.");
     }
   }
 };
@@ -73,13 +70,19 @@ var validateSpec = function (formatSpec) {
 var PacketEncoder = module.exports = function (formatSpec) {
   validateSpec(formatSpec);
 
-  /**
-   * @type {Array.<Object>}
-   */
+  /** @type {packetHeaderSpec} */
   this.formatSpec_ = formatSpec;
 };
 
-PacketEncoder.prototype.getField = function (key, binary) {
+/**
+ * Retrieve requested header field by key from the provided binary blob.
+ *
+ * @param {PacketHeaderType} key - which header to retrieve
+ * @param {string} binary for entire packet
+ * @returns {string} binary string value for header field
+ * @throws when requested key is not in the configured packet spec
+ */
+PacketEncoder.prototype.getHeader = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
@@ -113,8 +116,8 @@ PacketEncoder.prototype.getField = function (key, binary) {
  * @param {string} binary - entire packet as a binary string
  * @returns {number} - requested field, interpreted as an int.
  */
-PacketEncoder.prototype.getHeaderFieldAsInt = function (key, binary) {
-  return dataConverters.binaryToInt(this.getField(key, binary));
+PacketEncoder.prototype.getHeaderAsInt = function (key, binary) {
+  return dataConverters.binaryToInt(this.getHeader(key, binary));
 };
 
 /**
@@ -173,7 +176,7 @@ PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
  * packet binary matching the configured packet spec in terms of header width
  * and ordering.
  *
- * @param {Object} headers - hash containing packet headers in binary, where
+ * @param {Object} binaryHeaders - hash containing packet headers in binary, where
  *        the hash keys correspond to the "key" values in the packet spec, and
  *        the hash values are binary strings.
  * @param {string} body - binary string of the unlimited-length body of the
@@ -182,15 +185,15 @@ PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
  * @returns {string} binary string of provided data, conforming to configured
  *          packet format.
  */
-PacketEncoder.prototype.concatenateBinary = function (headers, body) {
+PacketEncoder.prototype.concatenateBinary = function (binaryHeaders, body) {
   var parts = [];
 
   this.formatSpec_.forEach(function (fieldSpec) {
     // Get header value from provided headers, if it exists.
     // If not, we'll start with an empty string and pad it to the correct
     // length, below.
-    var fieldBits = headers.hasOwnProperty(fieldSpec.key) ?
-        headers[fieldSpec.key] : '';
+    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec.key) ?
+        binaryHeaders[fieldSpec.key] : '';
 
     // Right-truncate to the desired size
     fieldBits = fieldBits.slice(0, fieldSpec.bits);
