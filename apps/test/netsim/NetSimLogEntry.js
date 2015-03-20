@@ -113,7 +113,7 @@ describe("NetSimLogEntry", function () {
 
   it ("can extract packet data based on standard format", function () {
     var logEntry = new NetSimLogEntry(null, {
-      packet: '000100100011010001010110'
+      packet: '0001 0010 0011 0100 01010110'
     }, [
       { key: PacketHeaderType.TO_ADDRESS, bits: 4 },
       { key: PacketHeaderType.FROM_ADDRESS, bits: 4 },
