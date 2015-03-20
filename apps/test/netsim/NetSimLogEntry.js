@@ -7,7 +7,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 
 describe("NetSimLogEntry", function () {
   var testShard;

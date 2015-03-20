@@ -5,7 +5,7 @@ var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 
-var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 
 describe("NetSimMessage", function () {
   var testShard, messageTable;

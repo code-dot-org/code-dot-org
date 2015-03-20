@@ -1,44 +1,47 @@
-// Options: locale (required), global, namespace, prepend, append
-var transform = function(data) {
-  var string = data.string;
-  var options = data.options || {};
-  if (!options.locale) {
-    console.log('Error: Options `locale` is required.');
-    return null;
-  }
-  options.namespace = options.namespace || 'i18n';
-  options.global = options.global || 'this';
-  var locale = options.locale;
-  var namespace = options.namespace;
-  if (!string) {
-    return null;
-  }
+module.exports = getTransform;
+function getTransform() {
+  var stream = require('stream');
+  var t = new stream.Transform({objectMode: true});
+  t._transform = function (file, encoding, callback) {
+    var output = transform(file);
+    file.contents = output ? new Buffer(output) : null;
+    return callback(null, file);
+  };
+  return t;
+}
 
+// Options: locale (required), global, namespace, prepend, append
+function transform(file) {
+  var filepath = file.path;
+  var path = require('path');
+  var locale = path.basename(path.dirname(filepath));
+  var app = path.basename(filepath, path.extname(filepath));
+  var namespace = (app == 'common_locale' ? 'locale' : app);
+
+  var contents = JSON.parse(file.contents.toString());
+  return process(locale, namespace, contents);
+}
+
+function process(locale, namespace, json) {
   var mf;
   var MessageFormat = require('messageformat');
   try {
     mf = new MessageFormat(locale, false, namespace);
   } catch (e) {
-    // Fallback to English locale
-    try {
-      mf = new MessageFormat('en', false, namespace);
-    } catch (e2) {
-      console.log(e2.toString());
-      return null;
+    // Fallback to en if locale is not found
+    if(locale != 'en') {
+      return process('en', namespace, json);
+    } else {
+      throw e;
     }
   }
 
+  var EOL = require('os').EOL;
   try {
-    var str = [
-      options.prepend,
-      '(function(g){',
+    return [
       'var ' + namespace + ' = ' + mf.functions() + ';',
-      (namespace + '["' + namespace + '"] = ' + mf.precompileObject(JSON.parse(string)) + ';'),
-      'return g["' + namespace + '"] = ' + namespace + ';',
-      '})(' + options.global + ');',
-      options.append
-    ];
-    return str.join(require('os').EOL);
+      '(window.blockly = window.blockly || {}).' + namespace + ' = ' + mf.precompileObject(json) + ';'
+    ].join(EOL);
   } catch (errs) {
     var message = '';
     if (errs.join) {
@@ -47,33 +50,6 @@ var transform = function(data) {
       message = errs.name + ': ' +  errs.message;
     }
     console.log('Error (locale=' + locale + ': ' + message);
-    return require('os').EOL;
+    return EOL;
   }
-};
-
-var path = require('path');
-var messageFunc = function(file) {
-  var filepath = file.path;
-  var locale = path.basename(path.dirname(filepath));
-  var app = path.basename(filepath, path.extname(filepath));
-  var namespace = (app == 'common_locale' ? 'locale' : app);
-  return {
-    locale: locale.split('_')[0],
-    namespace: app,
-    prepend: "window.blockly = window.blockly || {};\n",
-    append: "\nwindow.blockly." + namespace + " = " + app + "['" + app + "'];\n"
-  };
-};
-
-function getTransform() {
-  var stream = require('stream');
-  var t = new stream.Transform({objectMode: true});
-  t._transform = function (file, encoding, callback) {
-    var output = transform({string: file.contents.toString(), options: messageFunc(file)});
-    file.contents = output ? new Buffer(output) : null;
-    return callback(null, file);
-  };
-  return t;
 }
-
-module.exports = getTransform;

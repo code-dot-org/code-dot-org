@@ -1,10 +1,10 @@
 var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var canvas = require('canvas');
+//var canvas = require('canvas');
 
 // Some of our feedback tests need to use Image
-global.Image = canvas.Image;
+//global.Image = canvas.Image;
 global.Turtle = {};
 
 testUtils.setupLocales();
@@ -389,7 +389,7 @@ describe("getMissingRequiredBlocks_ tests", function () {
       }
 
       var blockInstallOptions = { skin: skinForTests, isK1: false };
-      var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
+      var blocksCommon = require('@cdo/apps/blocksCommon');
       blocksCommon.install(Blockly, blockInstallOptions);
       var blocks = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/blocks');
       blocks.install(Blockly, blockInstallOptions);

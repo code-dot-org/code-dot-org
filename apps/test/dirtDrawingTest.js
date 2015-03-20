@@ -1,17 +1,14 @@
-var jsdom = require('jsdom').jsdom;
 var testUtils = require('./util/testUtils');
 
 function setGlobals() {
-  var html = '<html><head></head><body><div id="svgMaze"><div class="pegman-location"></div></div></body></html>';
-  global.document = jsdom(html);
-  global.window = global.document.parentWindow;
+  document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
   global.Blockly = {
     SVG_NS: "http://www.w3.org/2000/svg"
   };
 }
 
-var DirtDrawer = testUtils.requireWithGlobalsCheckBuildFolder('maze/dirtDrawer');
-var cellId = testUtils.requireWithGlobalsCheckBuildFolder('maze/mazeUtils').cellId;
+var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
+var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
 var assert = testUtils.assert;
 
 function createFakeSkin() {
@@ -79,8 +76,8 @@ describe("DirtDrawer", function () {
 
     assert.notEqual(image, undefined, 'image got created');
     assert.notEqual(clip, undefined, 'clipPath got created');
-
-    var rect = clip.children[0];
+    assert.notEqual(clip.childNodes, undefined, 'clipPath has children');
+    var rect = clip.childNodes[0];
     assert.notEqual(rect, undefined, "clipPath has a child");
 
     assert.equal(rect.getAttribute('x'), 150);

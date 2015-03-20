@@ -7,8 +7,8 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
+var NetSimShardCleaner = require('@cdo/apps/netsim/NetSimShardCleaner');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 var makeNode = function (shard) {
   var newNodeID;

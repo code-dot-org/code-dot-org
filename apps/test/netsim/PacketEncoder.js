@@ -8,7 +8,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var PacketEncoder = testUtils.requireWithGlobalsCheckBuildFolder('netsim/PacketEncoder');
+var PacketEncoder = require('@cdo/apps/netsim/PacketEncoder');
 
 describe("PacketEncoder", function () {
 

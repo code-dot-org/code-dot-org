@@ -10,10 +10,10 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-var NetSimConnection = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimConnection');
-var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
-var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimConnection = require('@cdo/apps/netsim/NetSimConnection');
+var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 
 describe("NetSimConnection", function () {
   var connection, testShard, testWindow;

@@ -3,7 +3,7 @@ var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
 var reqBlocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return testUtils.requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
+  return require('@cdo/apps/maze/requiredBlocks.js');
 };
 
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;

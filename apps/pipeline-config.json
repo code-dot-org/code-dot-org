@@ -1,9 +1,25 @@
 {
   "public": "./dashboard/public",
+  "apps": [
+    "maze",
+    "turtle",
+    "bounce",
+    "flappy",
+    "studio",
+    "jigsaw",
+    "calc",
+    "applab",
+    "eval",
+    "netsim"
+  ],
   "javascripts": {
-    "./shared/js/*.scss": "./build/package/css"
+    "./test.js": "./build/test.js"
   },
   "stylesheets": {
     "./style/*.scss": "./build/package/css"
+  },
+  "media": {
+    "static/**/*": "./build/package/media",
+    "lib/blockly/media/**/*": "./build/package/media"
   }
 }

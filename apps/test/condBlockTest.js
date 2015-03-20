@@ -1,8 +1,8 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var canvas = require('canvas');
+//var canvas = require('canvas');
 
-global.Image = canvas.Image;
+//global.Image = canvas.Image;
 global.Turtle = {};
 
 // needed for Hammerjs
@@ -18,7 +18,7 @@ describe('functional_cond', function () {
     testUtils.setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
 
-    var sharedFunctionalBlocks = testUtils.requireWithGlobalsCheckBuildFolder('./sharedFunctionalBlocks');
+    var sharedFunctionalBlocks = require('@cdo/apps/./sharedFunctionalBlocks');
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
 
     studioApp.loadBlocks('<xml><block type="functional_cond"></block></xml>');
@@ -142,7 +142,7 @@ describe('functional_cond', function () {
     //   else { return   3; }
     // })()
 
-    var codegen = testUtils.requireWithGlobalsCheckBuildFolder('./codegen');
+    var codegen = require('@cdo/apps/./codegen');
     var result = codegen.evalWith('return ' + code, {});
     assert(result === 3);
   });

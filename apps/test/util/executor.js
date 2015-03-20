@@ -4,7 +4,7 @@ var fs = require('fs');
 var jsdomRoot = require('jsdom');
 var jsdom = require('jsdom').jsdom;
 var xmldom = require('xmldom');
-var canvas = require('canvas');
+//var canvas = require('canvas');
 var requirejs = require('requirejs');
 var testUtils = require('./testUtils');
 testUtils.setupLocales();
@@ -47,7 +47,7 @@ function setGlobals () {
     'appName': 'other',
     'userAgent': 'other'
   };
-  global.Image = canvas.Image;
+  //global.Image = canvas.Image;
 
   jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
     return {
