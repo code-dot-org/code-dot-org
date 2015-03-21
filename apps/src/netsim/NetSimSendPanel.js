@@ -18,12 +18,13 @@ var markup = require('./NetSimSendPanel.html');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
+var PacketEncoder = require('./PacketEncoder');
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection
  * @constructor
  * @augments NetSimPanel
@@ -32,10 +33,16 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     connection) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
+
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = levelConfig.clientInitialPacketHeader;
 
   /**
    * Connection that owns the router we will represent / manipulate
@@ -119,7 +126,11 @@ NetSimSendPanel.prototype.render = function () {
   if (this.levelConfig_.showPacketSizeControl) {
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet_size'),
-        this.packetSizeChangeCallback_.bind(this));
+        this.packetSizeChangeCallback_.bind(this),
+        {
+          minimumPacketSize: PacketEncoder.getHeaderLength(this.packetSpec_),
+          sliderStepValue: 1
+        });
     this.packetSizeControl_.setPacketSize(this.maxPacketSize_);
   }
 
@@ -159,6 +170,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
 
   // Create a new packet
   var newPacket = new NetSimPacketEditor({
+    packetSpec: this.packetSpec_,
     toAddress: newPacketToAddress,
     fromAddress: this.fromAddress_,
     packetIndex: newPacketCount,
@@ -232,9 +244,10 @@ NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
  * @private
  */
 NetSimSendPanel.prototype.onSendButtonPress_ = function () {
+  // Make sure to perform packet truncation here.
   var packetBinaries = this.packets_.map(function (packetEditor) {
-    return packetEditor.getPacketBinary();
-  });
+    return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
+  }.bind(this));
 
   var myNode = this.connection_.myNode;
   if (myNode && packetBinaries.length > 0) {

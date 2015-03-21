@@ -19,7 +19,11 @@ var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
 var formatBinary = dataConverters.formatBinary;
@@ -39,6 +43,7 @@ var binaryToAscii = dataConverters.binaryToAscii;
 /**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
+ * @param {packetHeaderSpec} packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -57,6 +62,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('netsim-packet');
+
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {number} */
   this.toAddress = initialConfig.toAddress || 0;
@@ -132,7 +143,9 @@ NetSimPacketEditor.prototype.getRoot = function () {
 
 /** Replace contents of our root element with our own markup. */
 NetSimPacketEditor.prototype.render = function () {
-  var newMarkup = $(markup({}));
+  var newMarkup = $(markup({
+    packetSpec: this.packetSpec_
+  }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
@@ -249,7 +262,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFun
  * whitelists to limit typing in certain fields, and rules for intepreting the
  * field from binary.
  * @typedef {Object} rowType
- * @property {string} typeName - Identifies encoding type for the row
+ * @property {EncodingType} typeName
  * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
  *           that may be typed into a header field.
  * @property {function} shortNumberConversion - How to convert from binary
@@ -268,30 +281,30 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var rootDiv = this.rootDiv_;
 
   var shortNumberFields = [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ];
 
   /** @type {rowType[]} */
   var rowTypes = [
     {
-      typeName: 'binary',
+      typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
       messageAllowedCharacters: /[01\s]/,
       messageConversion: minifyBinary
     },
     {
-      typeName: 'hexadecimal',
+      typeName: EncodingType.HEXADECIMAL,
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: hexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
       messageConversion: hexToBinary
     },
     {
-      typeName: 'decimal',
+      typeName: EncodingType.DECIMAL,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -300,7 +313,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       }.bind(this)
     },
     {
-      typeName: 'ascii',
+      typeName: EncodingType.ASCII,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
@@ -359,10 +372,10 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var liveFields = [];
 
   [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
           inputElement: this.binaryUI[fieldName],
@@ -431,14 +444,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var shortNumberFieldWidth = 4;
-  return PacketEncoder.defaultPacketEncoder.createBinary({
-    toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
-    fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
-    packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
-    packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
-    message: this.message
-  });
+  var encoder = new PacketEncoder(this.packetSpec_);
+  return encoder.concatenateBinary(
+      encoder.makeBinaryHeaders({
+        toAddress: this.toAddress,
+        fromAddress: this.fromAddress,
+        packetIndex: this.packetIndex,
+        packetCount: this.packetCount
+      }),
+      this.message);
 };
 
 /** @param {number} fromAddress */
