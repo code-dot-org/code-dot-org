@@ -20,7 +20,7 @@ var NetSimDnsTable = require('./NetSimDnsTable');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
@@ -35,7 +35,7 @@ var NetSimDnsTab = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
