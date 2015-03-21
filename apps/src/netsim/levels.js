@@ -3,13 +3,15 @@
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 /**
  * A level configuration that can be used by NetSim
- * @typedef {Object} NetSimLevelConfiguration
+ * @typedef {Object} netsimLevelConfiguration
  *
  * @property {string} instructions - Inherited from blockly level configuration.
  *
@@ -21,6 +23,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
+ *
+ * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
+ *           the router uses to parse incoming packets and figure out where
+ *           to route them.
+ *
+ * @property {packetHeaderSpec} clientInitialPacketHeader - The header format
+ *           used by the local client node when generating/parsing packets,
+ *           which affects the layout of the send panel and log panels.
  *
  * @property {boolean} showAddPacketButton - Whether the "Add Packet" button
  *           should appear in the send widget.
@@ -62,7 +72,7 @@ var levels = module.exports = {};
  * A default level configuration so that we can define the others by delta.
  * This default configuration enables everything possible, so other configs
  * should start with this one and disable features.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.default = {
 
@@ -70,6 +80,20 @@ levels.default = {
   showClientsInLobby: true,
   showRoutersInLobby: true,
   showAddRouterButton: true,
+
+  // Packet header specification
+  routerExpectsPacketHeader: [
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+  ],
+  clientInitialPacketHeader: [
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+  ],
 
   // Send widget configuration
   showAddPacketButton: true,
@@ -113,10 +137,11 @@ levels.default = {
 /**
  * Variant 1 base level
  * Sends individual bits at a time.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
@@ -126,10 +151,11 @@ levels.variant1 = utils.extend(levels.default, {
 /**
  * Variant 2 base level
  * Sends messages as packets, all at once.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
@@ -140,7 +166,7 @@ levels.variant2 = utils.extend(levels.default, {
 /**
  * Variant 3 base level
  * Enables routers.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,
