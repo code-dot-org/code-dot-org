@@ -57,23 +57,12 @@ gulp.task('messages', function () {
     .pipe(gulp.dest(outputDir));
 });
 
-var ext = 'compressed';
+var ext = 'uncompressed';
 var vendorFiles = [
   'lib/blockly/blockly_' + ext + '.js',
   'lib/blockly/blocks_' + ext + '.js',
-  'lib/blockly/javascript_' + ext + '.js',
+  'lib/blockly/javascript_' + ext + '.js'
 ];
-
-var x = {
-  cwd: 'lib/blockly',
-  src: ['??_??.js'],
-  dest: 'build/package/js',
-  // e.g., ar_sa.js -> ar_sa/blockly_locale.js
-  rename: function (dest, src) {
-    var outputPath = src.replace(/(.{2}_.{2})\.js/g, '$1/blockly_locale.js');
-    return path.join(dest, outputPath);
-  }
-};
 
 gulp.task('blockly_locale', function() {
   var path = require('path');
