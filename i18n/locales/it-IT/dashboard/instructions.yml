@@ -1,8 +1,6 @@
 it:
   data:
     instructions:
-       (copy 1)_instruction: |-
-        Prova ad usare il blocco "ripeti" per risolvere l'esercizio con meno blocchi...
       10A_instruction: |
         Alright let's complete this puzzle with a Green Square that
         is 175 pixels in size.

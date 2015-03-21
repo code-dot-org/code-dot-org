@@ -1,7 +1,6 @@
 fr:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: "OK, complétons ce puzzle à l'aide d'un Carré Vert de 175 pixels."
       2-3 _instruction: "Une fleur violette peut posséder 1 ou 0 nectar. Ne récupérez un nectar que si une fleur n'en possède pas déjà."
       2-3 Artist 1 new_instruction: "Salut ! Je suis un artiste. Tu peux écrire du code pour me faire dessiner presque n'importe quoi. Utilise quelques blocs pour me faire repasser les lignes grises de l'image. (Chaque ligne a une longueur d'environ 100 pixels.)"

@@ -1,7 +1,6 @@
 de:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Gut. Vervollständigen wir dieses Puzzle mit einem grünen Quadrat, das 175 Pixel groß ist.
       2-3 _instruction: Lila Blumen haben entweder 1 oder 0 Nektar. Achte darauf, nicht von eine lila Blume Nektar zu sammeln, wenn es keinen hat.
       2-3 Artist 1 new_instruction: 'Hi, ich bin  ein Künstler. Du kannst Code schreiben, um mich fast alles zeichnen zu lassen. Nutze ein paar Bausteine, um über die grauen Linien im Bild zu zeichnen. (Jede Linie ist 100 Pixel lang)'

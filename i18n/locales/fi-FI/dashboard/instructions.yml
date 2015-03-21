@@ -1,7 +1,6 @@
 fi:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Okei, täydennetäänpä tämä tehtävä vihreällä neliöllä, joka on kooltaan 175 kuvapistettä.
       2-3 _instruction: Violeteillä kukilla voi olla mettä joko 1 tai 0. Vältä keräämästä mettä violetista kukasta, jos sillä ei ole yhtään.
       2-3 Artist 1 new_instruction: Hei olen taiteilija. Voit kirjoittaa koodin, joka saa minut tekemään melkein mitä tahansa. Käytä muutamia lohkoja, joilla saat minut piirtämään kuvan harmaiden linjojen yli. (Jokainen linja on 100 pikseliä pitkä)

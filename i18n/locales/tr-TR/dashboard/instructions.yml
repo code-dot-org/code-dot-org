@@ -1,7 +1,6 @@
 tr:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Tamam hadi 175 piksel boyutunda olan yeşil kare ile bu bulmacayı tamamla.
       2-3 _instruction: Mor çiçekler 1 yada 0 nektara sahip olabilir.Dikkatli ol!Eğer mor çiçek hiç nektara sahip değilse,toplamaya çalışma.
       2-3 Artist 1 new_instruction: Merhaba,ben bir ressamım.Benim herhangi bir şey çizmem için kod yazabilirsin?Bir kaç kod bloğu kullanarak benim resim içine gri çizgiler çizmemi sağla.(Her çizgi 100 pixel uzunluğunda olmalı.)

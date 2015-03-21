@@ -404,40 +404,41 @@
         Custom_builder: Húzd a blokkokat az eszköztárból a munkaterületre, és állítsd
           be rajta a szintet amit szeretnél létrehozni. Nyomd meg a "Futtatás"-t,
           ha kész vagy.
-        flappy_1: Csatolj egy blokkot a "klikkelés" eseményhez, majd nyomd meg a "Futtatás"-t.
-          Kattintson, vagy érintse meg a képernyőt, és mozgassa Flappy-t a célba.
-        flappy_2: Nos mi hozzáadtuk a talajt. Csatolj egy blokkot a "ha becsapódik
-          a talajba" blokkhoz. Ha Flappy ütközik, itt a "VÉGE A JÁTÉKNAK".
-        flappy_3: A "futtatás" tégla segítségével fut végig a programod, amikor a
-          játék elindul. Különböző sebességekkel próbálj meg elrepülni a célig.
+        flappy_1: Csatolj egy blokkot a "klikkelésre" blokkhoz, majd nyomd meg a "Futtatás"-t.
+          Kattints, vagy érintsd meg a képernyőt, hogy Flappy-t a célba segítsd.
+        flappy_2: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik a talajba"
+          blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
+        flappy_3: A "futtatáskor" blokk segítségével fut végig a programod, amikor
+          a játék elindul. Próbálj különböző sebességeket beállítani és elrepülni
+          a célig.
         flappy_4: Flappy át fog repülni az akadályokon, hacsak te nem írsz egy olyan
-          parancsot, amitől nekik ütközik. Csatolj  egy blokkot a "amikor akadálynak
-          ütközik" blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a
-          "VÉGE A JÁTÉKNAK".
-        flappy_5: Adjunk hozzá egy eredményjelzőt, és számoljuk  pontokat, amikor
-          Flappy áthalad egy akadályon. Adjuk az "amikor áthalad egy akadályon" blokkhoz,
-          és azután szerezzünk pontot Flappy-vel átrepülve az első csövek között.
-        flappy_6: 'Kíváncsi vagyok, hogy át tudnál-e menni az első akadályon, hogyha
-          átállítanád Flappy csapásainak hosszát, '
-        flappy_7: A következőkben próbáld megváltoztatni a helyzetet úgy, hogy a "mikor
-          fut" blokkhoz egy újabb blokkot csatolsz.
+          parancsot, amitől nekik ütközik. Csatolj egy blokkot a "ha akadálynak ütközik"
+          blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a "JÁTÉK VÉGE".
+        flappy_5: Használjunk eredményjelzőt, és nőjön eggyel a pontszám, amikor Flappy
+          áthalad egy akadályon. Add hozzá a "ha átjut egy akadályon" blokkhoz, és
+          azután szerezz pontot Flappy-vel átrepülve az első csövek között.
+        flappy_6: Kíváncsi vagyok, hogy át tudnál-e menni az első akadályon, hogyha
+          átállítanád Flappy csapásait kisebbre vagy nagyobbra.
+        flappy_7: A következőkben próbáld megváltoztatni a jelenetet úgy, hogy a "futtatáskor"
+          blokkhoz egy újabb blokkot csatolsz.
         flappy_8: Bármikor átállíthatod a játék környezetét, nem csak akkor, amikor
-          elkezdődik. Próbáld ki a RANDOM HÁTTÉR beállítást különböző eseményekhez,
-          például egy akadály áthaladásakor.
+          elkezdődik. Próbáld ki a VÉLETLEN hátteret különböző eseményekhez párosítani,
+          például ahhoz, ha Flappy átjut egy akadályon.
         flappy_9: Hogy kicsit felkavarjuk a dolgokat, változtasd meg a szabályokat.
           Amikor beleütközöl egy akadályba, a játék ne álljon meg, hanem csak a pontszámlálót
           állítsd vissza nullára.
         flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet
           és az összes szabályt, sőt még a gravitációt is. Ha elkészültél, kattints
-          a Befejezés gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon!
+          a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
         flappy_k1_1: Flappy játék
-        flappy_k1_2: Csatolj egy blokkot a "klikkelés" eseményhez, majd nyomd meg
-          a "Futtatás"-t. Kattintson, vagy érintse meg a képernyőt, és mozgassa Flappy-t
-          a célba.
+        flappy_k1_2: Csatolj egy blokkot a "klikkelésre" blokkhoz, majd nyomd meg
+          a "Futtatás"-t. Kattints, vagy érintsd meg a képernyőt, hogy Flappy-t a
+          célba segítsd.
         flappy_k1_3: Nos mi hozzáadtuk a talajt. Csatolj egy blokkot a "ha becsapódik
           a talajba" blokkhoz. Ha Flappy ütközik, itt a "VÉGE A JÁTÉKNAK".
-        flappy_k1_4: A "futtatás" tégla segítségével fut végig a programod, amikor
-          a játék elindul. Különböző sebességekkel próbálj meg elrepülni a célig.
+        flappy_k1_4: A "futtatáskor" blokk segítségével fut végig a programod, amikor
+          a játék elindul. Próbálj különböző sebességeket beállítani és elrepülni
+          a célig.
         flappy_k1_5: Flappy át fog repülni az akadályokon, hacsak te nem írsz egy
           olyan parancsot, amitől nekik ütközik. Csatolj  egy blokkot a "amikor akadálynak
           ütközik" blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a
@@ -445,10 +446,9 @@
         flappy_k1_6: Adjunk hozzá egy eredményjelzőt, és számoljuk  pontokat, amikor
           Flappy áthalad egy akadályon. Adjuk az "amikor áthalad egy akadályon" blokkhoz,
           és azután szerezzünk pontot Flappy-vel átrepülve az első csövek között.
-        flappy_k1_7: Nézd meg, hogyan tudsz szerezni több pontot az akadályokon való
-          átjutással!
-        flappy_k1_8: A következőkben próbáld megváltoztatni a helyzetet úgy, hogy
-          a "mikor fut" blokkhoz egy újabb blokkot csatolsz.
+        flappy_k1_7: Nézd meg, tudsz-e szerezni több pontot az akadályokon való átjutással!
+        flappy_k1_8: A következőkben próbáld megváltoztatni a jelenetet úgy, hogy
+          a "futtatáskor" blokkhoz egy újabb blokkot csatolsz.
         flappy_k1_9: Próbálj kiválasztani más játékost a "játékos beállítása" blokk
           csatolásával a "futtatáskor" blokk alá.
         jigsaw_1: Kattints a blokkra
@@ -483,17 +483,16 @@
         studio_c2_7: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan
           fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően
           fel és le mozogjon?
-        studio_c2_8: Meg tudod csinálni hogy a pingvin, azt mondja, "Au!" és legyen
-          egy "találat" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt
-          a nyilakkal, hogy ez megtörténjen.
-        studio_c2_9: Ki tudnád egészíteni egy blokkal ami a pontokat számolja, ha
-          a pingvin nekifut a polipnak, és aztán a pont eléréséig a nyilak mozgassák
-          őt?
-        studio_c2_10: Ki tudnád egészíteni egy blokkal ami megváltoztatná a hátteret
-          és a a pingvin sebességét, és aztán a pont eléréséig a nyilak mozgassák
-          őt?
-        studio_c2_11: Hozzon létre egy saját történetet! Ha elkészült, kattints a
-          Befejezés gombra, hogy megpróbálhassák a barátaid is a történetedet a telefonjaikon!
+        studio_c2_8: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen
+          egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a
+          nyilakkal, hogy ez megtörténjen.
+        studio_c2_9: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin
+          nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem
+          szerzel.
+        studio_c2_10: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin
+          sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
+        studio_c2_11: Hozz létre egy saját történetet! Ha elkészült, kattints a Kész
+          gombra, hogy a barátaid is kipróbálhassák a történetedet a telefonjaikon.
         studio_c3_story_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_c3_story_2: Rá tudod bírni először a kutyát, ez után pedig a macskát
           is, hogy egymás után mondjanak valamit?
@@ -502,9 +501,8 @@
         studio_c3_story_4: Tudsz írni egy programot, amiben a kutya, a macska felé
           megy, és amikor a kutya odaér hozzá, a macska azt mondja "hello"?
         studio_c3_story_5: Hozzáadnál egy blokkot, hogy boldoggá tedd a polipot?
-        studio_c3_story_6: Hozzon létre egy saját történetet! Ha elkészült, kattints
-          a Befejezés gombra, hogy megpróbálhassák a barátaid is a történetedet a
-          telefonjaikon!
+        studio_c3_story_6: Hozz létre egy saját történetet! Ha elkészült, kattints
+          a Kész gombra, hogy a barátaid is kipróbálhassák a történetedet a telefonjaikon.
         studio_c3_game_1: Tudsz írni egy olyan programot, hogy azt mondja a polip,
           hogy "hello", amikor rákattintasz?
         studio_c3_game_2: Tudsz írni egy olyan programot, amelyben a pingvint a fel
@@ -512,44 +510,44 @@
         studio_c3_game_3: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan
           fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően
           fel és le mozogjon?
-        studio_c3_game_4: Meg tudod csinálni hogy a pingvin, azt mondja, "Au!" és
-          legyen egy "találat" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd
+        studio_c3_game_4: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és
+          legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd
           őt a nyilakkal, hogy ez megtörténjen.
-        studio_c3_game_5: Ki tudnád egészíteni egy blokkal ami a pontokat számolja,
-          ha a pingvin nekifut a polipnak, és aztán a pont eléréséig a nyilak mozgassák
-          őt?
-        studio_c3_game_6: Ki tudnád egészíteni egy blokkal ami megváltoztatná a hátteret
-          és a a pingvin sebességét, és aztán a pont eléréséig a nyilak mozgassák
-          őt?
-        studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés
-          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
+        studio_c3_game_5: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin
+          nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem
+          szerzel.
+        studio_c3_game_6: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a
+          pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem
+          szerzel.
+        studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
+          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_playlab_1: Pingvin azt akarja mondani, hogy "hello" - tudsz segíteni
           neki ebben?
-        studio_playlab_2: A Barlanglakó fiú (1 szereplő) és a Barlanglakó lány (2
+        studio_playlab_2: A Barlanglakó fiú (1. szereplő) és a Barlanglakó lány (2.
           szereplő) azt szeretnék mondani egymásnak, hogy "hello". Tudnál segíteni
           nekik, felhasználva kétszer a "mondani" blokkot?
         studio_playlab_3: Segítesz a teniszező lánynak a zászlóhoz jutni?
-        studio_playlab_4: Segítesz a teniszező fiúnak (az 1 szereplőnek) a teniszező
-          lányhoz (a 2 szereplőhöz) jutni és lejátszani egy hangot, amikor ő odaér?
+        studio_playlab_4: Segítesz a Teniszező fiúnak (az 1. szereplőnek) a Teniszező
+          lányhoz (a 2. szereplőhöz) jutni és lejátszani egy hangot, amikor ő odaér?
         studio_playlab_5: Tudsz segíteni az Űrrobotnak azt mondani, hogy "Üdvözlet
-          Földlakók", amikor rákattintasz? Ne felejts el kattintást a Futtatás gombra
-          történő kattintás után!
+          Földlakók", amikor rákattintasz? Ne felejtsd el a kattintást a Futtatás
+          gombra történő kattintás után!
         studio_playlab_6: Tudsz segíteni a Boszorkánynak odajutni minden egyes tűzgolyóhoz
           a fel/le/jobbra/balra nyilakkal?
-        studio_playlab_7: Az "ismételd örökké" blokkal a kód folyamatosan futtatható.
-          Be tudnál illeszteni blokkokat hogy segíts a varázslónak ismételten jobbra
-          és balra mozogni?
-        studio_playlab_8: Ki tudnád egészíteni egy blokkal ami a pontokat számolja,
-          és egy blokkal ami hangot ad ha az egyszarvú nekifut egy varázslónak, és
-          aztán a pont eléréséig a nyilak mozgassák őt?
+        studio_playlab_7: A "végtelen ismétlés" blokkal a kód folyamatosan futtatható.
+          Be tudnál illeszteni blokkokat, hogy segíts a varázslónak folyamatosan jobbra-balra
+          mozogni?
+        studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja,
+          és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak?
+          Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
         studio_playlab_9: Állítsd be ennek az idegen inváziónak a hátterét, és segíts
           az ürrobotnak - a sebességének növelésével - , hogy gyorsabban eljuthasson
           az idegenekhez. Utána mozgasd a nyíl billentyűkkel hogy eljusson az űrrobothoz,
           és figyelmeztessen mindenkit
-        studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés
-          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
+        studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
+          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_full_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a
-          Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
+          Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_k1_2: Rá tudod bírni először a kutyát, ez után pedig a macskát is,
           hogy egymás után mondjanak valamit?
@@ -581,8 +579,8 @@
         turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit amit csak akarsz. Néhány
           szórakoztató ötlet: egy pálcikaember, hópehely, vagy spirál. Próbáld ki
           az új "penWidth" blokkot is. Jó szórakozást!'
-        studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés
-          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
+        studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
+          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
     video:
       name:
         maze_intro: Útvesztő ismertető

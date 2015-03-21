@@ -1,7 +1,6 @@
 zh:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: 好吧，让我们完成这个猜谜游戏用一个175像素的绿色正方形。
       2-3 _instruction: 紫色的花可能有 1 或 0 的花蜜。小心如果它没有,不要从一朵紫色的花中采集花蜜。
       2-3 Artist 1 new_instruction: 您好，我是一个艺术家。你写的代码可以让我画几乎所有的东西。 用几个块去画过图像的灰色线条. (每一行是100个像素长)

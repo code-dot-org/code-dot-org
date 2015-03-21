@@ -1,7 +1,6 @@
 th:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: |
         Alright let's complete this puzzle with a Green Square that
         is 175 pixels in size.

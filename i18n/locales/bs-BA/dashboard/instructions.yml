@@ -1,7 +1,6 @@
 bs:
   data:
     instructions:
-       (copy 1)_instruction: 'Pokušaj koristiti blok "ponavljanja" da bi koristio/la manje blokova...'
       10A_instruction: Dobro, hajmo da završimo ovaj zadatak sa Zelenim Kvadratom sa veličinom od 175 piksela.
       2-3 _instruction: Ljubičasti cvjetovi mogu imati 1 ili 0 za nektar. Obrati pažnju da ne sakupiš nektar iz ljubičastog cvijeta ako on ne sadrži nektar.
       2-3 Artist 1 new_instruction: Zdravo, ja sam umjetnik. Možeš napisati kod pomoću kojeg ću ja nacrtati skoro sve što želiš. Koristi nekoliko blokova da bih ja nacrtao sive linije u slici. (Svaka linija je 100 piksela duga)

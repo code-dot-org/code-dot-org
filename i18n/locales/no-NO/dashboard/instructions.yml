@@ -1,7 +1,6 @@
 "no":
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Okei, la oss fullføre denne oppgaven med en grønn firkant som er 175 piksler stor.
       2-3 _instruction: Lilla blomster må ha enten 1 eller o nektar. Pass på så du ikke samler nektar fra en lilla blomst som ikke har noe.
       2-3 Artist 1 new_instruction: Hei, jeg er en kunstner. Du kan skrive kode for å få meg til å tegne nesten hva som helst. Bruk noen blokker for å få meg til å tegne over de grå linjene på bildet. (Hver linje er 100 piksler lange)

@@ -1,7 +1,6 @@
 ko:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: 한 변이 175 픽셀인 초록 정사각형을 그려 보세요.
       2-3 _instruction: 보라색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다. 아무것도 없는 보라색 꽃에서 꿀을 따려고 하지 마세요.
       2-3 Artist 1 new_instruction: 안녕, 친구들. 나는 화가란다. 너는 내가 무엇을 그리게 하려면 주어진 블록들로 코드를 작성할 수 있어. 최대한 적은 블록으로 화면에 표시된 회색 선들을 그려 봐. 각 선들은 길이가 100이야.

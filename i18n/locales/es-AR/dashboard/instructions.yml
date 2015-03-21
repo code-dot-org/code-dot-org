@@ -1,7 +1,6 @@
 es-AR:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: ¡Vamos! completemos el próximo puzzle con un Cuadrado Verde que tenga un tamaño de 175 pixeles.
       2-3 _instruction: Las flores moradas tienen 1 o 0 de néctar. Ten cuidado de no recolectar néctar de una flor morada, si no tiene nada.
       2-3 Artist 1 new_instruction: Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)

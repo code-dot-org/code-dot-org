@@ -2,7 +2,6 @@
 en:
   data:
     instructions:
-      ' (copy 1)_instruction': "Try the \"repeat\" block to use fewer blocks..."
       10A_instruction: "Alright let's complete this puzzle with a Green Square that
         is 175 pixels in size."
       2-3 _instruction: "Purple flowers may have either 1 or 0 nectar. Be careful

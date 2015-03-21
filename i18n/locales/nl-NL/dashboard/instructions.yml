@@ -1,7 +1,6 @@
 nl:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Oké, laten we deze puzzel afmaken met een groen vierkant dat 175 pixels groot is.
       2-3 _instruction: Paarse bloemen mogen alleen 1 OF 0 nectar hebben. Wees voorzichtig, verzamel geen nectar van paarse bloemen ALS deze bloemen geen nectar hebben.
       2-3 Artist 1 new_instruction: Hoi, ik ben een kunstenaar. Je kan mij programmeren om bijna alles te tekenen. Gebruik een paar blokken om mij over de grijze lijnen in de afbeelding te laten tekenen. (Elke lijn is 100 pixels breed)

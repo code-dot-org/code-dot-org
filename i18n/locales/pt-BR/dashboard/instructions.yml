@@ -1,7 +1,6 @@
 pt-BR:
   data:
     instructions:
-       (copy 1)_instruction: 'Experimente o bloco "repita" para usar menos blocos...'
       10A_instruction: |
         Certo, vamos completar esse desafio com um quadrado verde que
         tem 175 pixels de tamanho.

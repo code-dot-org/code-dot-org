@@ -1,7 +1,6 @@
 is:
   data:
     instructions:
-       (copy 1)_instruction: 'Prófaðu að nota "endurtaka" kubbinn til að spara kubba...'
       10A_instruction: Jæja, nú skulum við klára þessa þraut með grænum ferningi sem er 175 dílar á stærð.
       2-3 _instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3 Artist 1 new_instruction: Hæ ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin í myndinni. (Hver lína er 100 díla löng.)

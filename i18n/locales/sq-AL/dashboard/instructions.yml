@@ -1,7 +1,6 @@
 sq:
   data:
     instructions:
-       (copy 1)_instruction: 'Provo bllokun "përsërit" për të përdorur më pak blloqe...'
       10A_instruction: Në rregull le të plotësojmë këtë puzzle me një Katror Jeshil që është me masë 175 pixel.
       2-3 _instruction: |
         Lulet lejla mund të kenë ose 1 ose 0 nektar. Kujdes
