@@ -2,7 +2,7 @@
   "badColorStringError": "Vous avez utilisé une chaîne de couleur invalide : {val}",
   "badStyleStringError": "Vous avez utilisé une chaîne de couleur invalide : {val}",
   "circleBlockTitle": "cercle (rayon, style, couleur)",
-  "displayBlockTitle": "évalue",
+  "displayBlockTitle": "évaluez",
   "ellipseBlockTitle": "ellipse (largeur, hauteur, style, couleur)",
   "emptyFunctionalBlock": "Un de vos blocs ne contient pas d'entrée.",
   "extraTopBlocks": "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?",

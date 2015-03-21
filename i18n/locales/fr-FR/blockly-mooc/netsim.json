@@ -1,5 +1,6 @@
 {
   "a_and_b":"A \/ B",
+  "addPacket":"Ajouter le paquet",
   "ascii":"ASCII",
   "binary":"Binaire",
   "bitCounter":"{x}\/{y} bits",
@@ -23,6 +24,7 @@
   "_of_":" sur ",
   "packet":"Paquet",
   "receivedMessageLog":"Journal des messages reçus",
+  "removePacket":"Supprimer le paquet",
   "router":"Routeur",
   "send":"Envoyer",
   "sendAMessage":"Envoyer un Message",

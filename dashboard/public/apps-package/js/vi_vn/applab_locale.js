@@ -165,6 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tiếp tục"},
 "container":function(d){return "Khởi tạo container"},
 "containerTooltip":function(d){return "Khởi tạo ra một division container và thiết lập thành phần HTML bên trong của nó."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."},
 "nextLevel":function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố này."},
 "no":function(d){return "Không"},

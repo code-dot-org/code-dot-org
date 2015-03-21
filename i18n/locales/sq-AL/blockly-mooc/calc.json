@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
+  "divideByZeroError":"Rezultatet e programit tuaj të pjestuar me zero.",
   "emptyComputeBlock":"Ti duhet të bashkangjitësh një bllok tek blloku \"llogarit\".",
   "emptyFunctionalBlock":"Ti ke një bllok me një input të pambushur.",
   "equivalentExpression":"Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje.",
-  "evaluate":"evaluate",
+  "evaluate":"përcakto",
   "extraTopBlocks":"Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?",
   "failedInput":"Funksioni juaj nuk kthen rezultatet e duhura për të gjitha vlerat.",
   "goal":"Qëllimi:",
   "levelIncompleteError":"Shprehja juaj nuk shkon me qëllimin.",
-  "missingVariableX":"Your expression is missing variable {var}.",
+  "missingVariableX":"Frazës tuaj i mungon variabla {var}.",
   "reinfFeedbackMsg":"Ja ku është llogaritja juaj! Vazhdoni të punoni me të, ose shko tek puzzle tjetër!",
   "yourExpression":"Thënia jote:",
   "wrongInput":"Ju jeni duke e thërritur funksionin tuaj me vlerën e gabuar.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongOtherValuesX":"Rezultatet e frazës tuaj në vlerën e gabuar nëqoftëse ndryshojmë {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

@@ -13,5 +13,5 @@
   "yourExpression":"계산식:",
   "wrongInput":"잘못된 값을 가지고 함수를 호출하였습니다.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }

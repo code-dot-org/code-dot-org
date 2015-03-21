@@ -10,6 +10,7 @@
   "continue":"ดำเนินการต่อไป",
   "container":"create container",
   "containerTooltip":"Creates a division container and sets its inner HTML.",
+  "designMode":"Design",
   "finalLevel":"ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว.",
   "nextLevel":"ขอแสดงความยินดีคุณสำเร็จปริศนานี้.",
   "no":"ไม่ใช่",

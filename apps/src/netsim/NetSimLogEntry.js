@@ -15,9 +15,7 @@ require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
-var binaryToInt = dataConverters.binaryToInt;
 var formatBinary = dataConverters.formatBinary;
-var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * @type {number}
@@ -35,10 +33,12 @@ var BITS_PER_BYTE = 8;
  * @param {Object} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
+ * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
+ *        interpret the contents of the logged packet
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimLogEntry = module.exports = function (shard, row) {
+var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
   row = row !== undefined ? row : {};
   NetSimEntity.call(this, shard, row);
 
@@ -53,6 +53,12 @@ var NetSimLogEntry = module.exports = function (shard, row) {
    * @type {string}
    */
   this.packet = (row.packet !== undefined) ? row.packet : '';
+
+  /**
+   * @type {PacketEncoder}
+   * @private
+   */
+  this.encoder_ = new PacketEncoder(packetSpec ? packetSpec : []);
 
   /**
    * Unix timestamp (local) of log creation time.
@@ -102,48 +108,25 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
 };
 
 /**
- * Get packet toAddress as integer.
+ * Get requested packet header field as a number.  Returns empty string
+ * if the requested field is not in the current packet format.
+ * @param {PacketHeaderType} field
+ * @returns {number|string}
  */
-NetSimLogEntry.prototype.getToAddress = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('toAddress', this.packet));
+NetSimLogEntry.prototype.getHeaderField = function (field) {
+  try {
+    return this.encoder_.getHeaderAsInt(field, this.packet);
+  } catch (e) {
+    return '';
+  }
 };
 
-/**
- * Get packet fromAddress as integer.
- */
-NetSimLogEntry.prototype.getFromAddress = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('fromAddress', this.packet));
-};
-
-/**
- * Get packetIndex as integer.
- */
-NetSimLogEntry.prototype.getPacketIndex = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('packetIndex', this.packet));
-};
-
-/**
- * Get packetCount as integer.
- */
-NetSimLogEntry.prototype.getPacketCount = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('packetCount', this.packet));
-};
-
-/**
- * Get packet message as binary.
- */
+/** Get packet message as binary. */
 NetSimLogEntry.prototype.getMessageBinary = function () {
-  return formatBinary(
-      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
-      BITS_PER_BYTE);
+  return formatBinary(this.encoder_.getBody(this.packet), BITS_PER_BYTE);
 };
 
+/** Get packet message as ASCII */
 NetSimLogEntry.prototype.getMessageAscii = function () {
-  return binaryToAscii(
-      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
-      BITS_PER_BYTE);
+  return this.encoder_.getBodyAsAscii(this.packet, BITS_PER_BYTE);
 };

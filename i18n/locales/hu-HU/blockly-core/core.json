@@ -81,7 +81,7 @@
   "FUNCTION_NAME_LABEL":"A függvény neve:",
   "FUNCTION_DESCRIPTION_LABEL":"Mit csinálna a függvény?",
   "FUNCTION_PARAMETERS_LABEL":"Milyen paramétereket fogad a függvényed?",
-  "FUNCTION_HEADER":"Funkció",
+  "FUNCTION_HEADER":"Függvény",
   "FUNCTIONAL_CREATE":"Új blokk",
   "FUNCTIONAL_EDIT":"szerkeszt",
   "FUNCTIONAL_NAME_LABEL":"Név",

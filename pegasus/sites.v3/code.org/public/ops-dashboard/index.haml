@@ -15,6 +15,9 @@ title: "Ops Dashboard"
 %link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 
+%script{type: "text/javascript", src: "/js/angular-selectize.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%div{'ng-view' => ''}
 :javascript
   'use strict';
 
@@ -501,7 +504,7 @@ title: "Ops Dashboard"
         return 'N/A';
       }
 
-      $scope.save = function (workshop) {
+      $scope.save = function (workshop, segment) {
          if (workshop.id) {
            var newWorkshop = new workshopsService($scope.workshop);
            workshopsService.update({id: workshop.id}, workshop);
@@ -511,12 +514,18 @@ title: "Ops Dashboard"
              function(saved) {
                $scope.workshop = saved; /* just in case it has been modified on server */
                workshopsService.query().$promise.then(function (workshops) {
-                 $scope.workshops = workshops;
+                 if (segment) {
+                  $scope.saveSegment(segment);
+                 } else {
+                  $scope.workshops = workshops;
+                 }
                });
              }
            );
          }
-         $location.path('/workshops');
+         if (!segment) {
+          $location.path('/workshops');
+         }
       }
 
       $scope.saveSegment = function (segment) {
@@ -526,13 +535,12 @@ title: "Ops Dashboard"
             $scope.segment = null;
             segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
               $scope.workshopSegments = segments;
+              $scope.workshops = workshops;
             });
           }
         );
+        $location.path('/workshops');
       }
     }
   ]);
 
-%script{type: "text/javascript", src: "/js/angular-selectize.js"}
-%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
-%div{'ng-view' => ''}

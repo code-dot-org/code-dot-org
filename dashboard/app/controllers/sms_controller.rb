@@ -13,7 +13,7 @@ SMS_FROM = CDO.twilio_phone
       send_sms(level_source_url(level_source), params[:phone])
       render status: :ok, nothing: true
     elsif params[:channel_id] && params[:phone] && %w(artist applab playlab).include?(params[:type])
-      send_sms(polymorphic_path([params[:type], 'projects']) + '#' + params[:channel_id], params[:phone])
+      send_sms(polymorphic_url([params[:type], 'projects']) + '#' + params[:channel_id], params[:phone])
     else
       render status: :not_acceptable, nothing: true
     end

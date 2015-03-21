@@ -226,6 +226,8 @@ module LevelsHelper
       show_clients_in_lobby
       show_routers_in_lobby
       show_add_router_button
+      router_expects_packet_header
+      client_initial_packet_header
       show_add_packet_button
       show_packet_size_control
       default_packet_size_limit
@@ -235,6 +237,7 @@ module LevelsHelper
       default_enabled_encodings
       show_dns_mode_control
       default_dns_mode
+      input_output_table
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -255,7 +258,10 @@ module LevelsHelper
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
     # Blockly requires these fields to be objects not strings
-    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
+    (
+      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
+      .concat NetSim.json_object_attrs
+    ).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
     end
 

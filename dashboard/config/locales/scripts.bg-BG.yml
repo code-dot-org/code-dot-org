@@ -309,9 +309,9 @@
           Special: Специален
           Binary: Двоичен код
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
+          title: Използване в средното училище на математика
+          description_short: Използване на тестване в средното училище по математика
+          description: Използване на тестване в средното училище по математика
           Usability testing for MSM: Тестиране за ползваемост за MSM
           Evaluation Blocks: Блокове за оценка
           Blocks to Math: Блокове за математика
@@ -327,34 +327,33 @@
           description: Научете функционално програмиране чрез алгебра
           'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
             координатните системи'
-          'Calc: Evaluation Blocks': 'Калколиране: Оценка блокове'
+          'Calc: Evaluation Blocks': Блокове за оценка и аритметични изрази
           'Eval: Strings and Images': Стрингове и изображения
-          'Unplugged: Contracts': 'Ънплъгд: договори'
-          'Eval: Writing Contracts': 'Оценка: Писане на договори'
-          'Calc: Defining Variables': 'Изчисление: Определяне на променливите'
-          'Play Lab: Defining Variables (Big Game)': 'Игрална лаборатория: Дефиниране
-            на променливи (голямата игра)'
-          'Eval: Defining Functions': 'Оценка: Дефиниране на функции'
+          'Unplugged: Contracts': 'Ънплъгд: Договори, домейн и обхват'
+          'Eval: Writing Contracts': Писане на Договори
+          'Calc: Defining Variables': Определяне на променливи и заместване
+          'Play Lab: Defining Variables (Big Game)': Голямата игра - променливи
+          'Eval: Defining Functions': Композитни функции
           'Unplugged: The Design Recipe': 'Ънплъгд: Напиши рецепта'
-          'Play Lab: Defining Functions': 'Театрална лаборатория: Дефиниране на функции'
-          'Eval: Functions': 'Оценка: функции'
-          'Play Lab: Animation (Big Game)': 'Игрална лаборатория: Анимация (голямата
-            игра)'
-          'Unplugged: Booleans': 'Ънплъгд: Booleans'
-          'Eval: Boolean Operators': 'Оценка: Булеви оператори'
-          'Play Lab: Booleans': 'Театрална лаборатория: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Игрална лаборатория: Boolean(голямата игра)'
+          'Play Lab: Defining Functions': Ракетна височина
+          'Eval: Functions': Решаване на проблеми с дизайна рецепта
+          'Play Lab: Animation (Big Game)': Голямата игра - анимация
+          'Unplugged: Booleans': 'Ънплъгд: Booleans и логика'
+          'Eval: Boolean Operators': Booleans оператори
+          'Play Lab: Booleans': Сам прилепа
+          'Play Lab: Boolean (Big Game)': Голямата игра - Booleans
           'Unplugged: Conditionals and Piecewise Functions': 'Ънплъгд: Условия и Piecewise
             функции'
           'Eval: Conditionals': Условия
           'Unplugged: Collision Detection and the Distance Formula': 'Ънплъгд: Collision
-            Detection и формула за разстояние'
-          'Play Lab: Collision Detection (Big Game)': 'Игрална лаборатория: Collision
-            Detection (голямата игра)'
+            Detection и Питагорова теорема'
+          'Play Lab: Collision Detection (Big Game)': Голямата игра - Collision Detection
         infinity:
           title: Театрална лаборатория
-          description_short: Създайте история или направете игра с Театрална лаборатория!
-          description: Създайте история или направете игра с Театрална лаборатория!
+          description_short: Използвайте Игрална Лаборатория за да създадете история
+            или игра с участието на Дисни Инфинити героите.
+          description: Използвайте Игрална Лаборатория за да създадете история или
+            игра с участието на Дисни Инфинити героите.
           Play Lab: Театрална лаборатория
           Infinity: Безкрайност
         algebrademo:
@@ -370,9 +369,9 @@
           Defining Simple Functions: Дефиниране на прости функции
           The Design Recipe: Рецепта за дизайн
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
+          title: K5 Професионално развитие
+          description: Професионално развитие за K5 курсове
+          description_short: Професионално развитие за K5 курсове
           Introduction to PD: Въведение в PD
           Blockly Basics: Основи на Blockly
           Writing computer programs: Писане на компютърни програми
@@ -381,12 +380,12 @@
           Classroom Culture: Култура на класната стая
           Ways to go beyond Courses 1, 2, and 3: Начини да се образовате след курсове
             1, 2 и 3
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          K-5 Courses: Курсове за K-5
+          Writing computer programs in Blockly: Писане компютърни програми в Blockly
+          Teacher Dashboard: Учителско табло
+          Personal Reflection: Лична рефлексия
+          Next Steps: Следващи стъпки
+          Computer Science Pedagogy: Педагогика на Компютърните науки
         netsim:
           title: Интернет симулатор
           description_short: ''
@@ -394,22 +393,24 @@
           Internet Simulator: Интернет симулатор
           Unit 1: Част 1
           Unit 2: Част 2
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
-          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Sending Bits: Изпращане на битове
+          Routing and DNS: Маршрутизиране и DNS
+          'Unit 1: Sending Bits': 'Урок 1: Изпращане на битове'
+          'Unit 2: Routing and DNS': 'Раздел 2: Маршрут и DNS'
+          Internet Simulator Templates: Интернет симулатор шаблони
         Infinity:
           title: Безкрайност Игрална лаборатория
-          description_short: Създайте история или направете игра без край в лабораторията!!
-          description: Създайте история или направете игра без край в лабораторията!
+          description_short: Използвайте Игрална Лаборатория за да създадете история
+            или игра с участието на Дисни Инфинити героите.
+          description: Използвайте Игрална Лаборатория за да създадете история или
+            игра с участието на Дисни Инфинити героите.
           Infinity: Безкрайност
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
           Pixelation: Пикселизация
         20-hour:
-          title: K-8 представяне на курс по компютърни науки (15-25 часа)
+          title: 20-часов въвеждащ курс
           description: Този 20-часов курс, представя основните компютърни науки, концепции
             и термини в програмирането. Курсът е предназначен най-вече за използване
             в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
@@ -437,16 +438,16 @@
           title: Редактиране на кода
           description: ''
           The Maze: Лабиринтът
-          Applab: Applab
+          Applab: Лаборатория за приложения
           The Artist: Художникът
           Play Lab: Театрална лаборатория
         events:
           title: Събития
           description: ''
           Bounce: Bounce
-          Studio: Studio
+          Studio: Студио
           Calc: Calc
-          Eval: Eval
+          Eval: Оценяване
         flappy:
           title: Flappy код
           description: Искате ли да напишете своя собствена игра за по-малко от 10
@@ -465,35 +466,41 @@
           description: ''
           Hour of Code 2013: Час на кодирането 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Код студио пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Код студио пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Тествай  пъзел предизвикателството на Студиото по кодиране
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Тествай  пъзел предизвикателството на Студиото по кодиране
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Урок - Студио по кодиране пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Урок - Студио по кодиране пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко
+            възможно!
+          Puzzles: Пъзели
         course4pre:
           title: Курс 4 предпоставка (необходимо условие)
           description_short: Кратък курс за концепциите, предназначен за ученици,
@@ -511,17 +518,20 @@
           'Artist: Functions': 'Художник: функции'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
-          Lesson 8: Lesson 8
+          title: CSP блок 1
+          description: CSP единица 1 етапи
+          Lesson14: Урок14
+          Lesson 14: Урок 14
+          Lesson 14 v2: Урок 14 v2
+          Lesson 15: Урок 15
+          description_short: Направи черно-бели изображения с инструмента за пикселизация
+          Lesson 8: Урок 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
+          title: Компютърни науки в алгебрата
+          description: Научете функционално програмиране чрез алгебра
           'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
             координатните системи'
           'Calc: Evaluation Blocks': 'Калколиране: Оценка блокове'
@@ -531,10 +541,10 @@
           'Calc: Defining Variables': 'Изчисление: Определяне на променливите'
           'Play Lab: Defining Variables (Big Game)': 'Игрална лаборатория: Дефиниране
             на променливи (голямата игра)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Eval: Defining Functions': 'Оценка: Дефиниране на функции'
           'Unplugged: The Design Recipe': 'Ънплъгд: Напиши рецепта'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Театрална лаборатория: Дефиниране на функции'
+          'Eval: Functions': 'Оценка: функции'
           'Play Lab: Animation (Big Game)': 'Игрална лаборатория: Анимация (голямата
             игра)'
           'Unplugged: Booleans': 'Ънплъгд: Booleans'
@@ -551,29 +561,29 @@
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
           Contracts: Договори
-          Your Game - Defining Variables: Your Game - Defining Variables
-          Simple Function Definition: Simple Function Definition
+          Your Game - Defining Variables: Вашата игра - дефиниране на променливи
+          Simple Function Definition: Дефиниция на Проста функция
           The Design Recipe: Рецепта за дизайн
-          Your Game - Animation: Your Game - Animation
+          Your Game - Animation: Вашата игра - анимация
           Booleans: Booleans
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
+          Sam the Bat: Сам прилепа
+          Your Game - Booleans: Вашата игра - Booleans
           Conditionals and Piecewise Functions: Условни и линейни функции
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
+          Rocket-Height: Ракетна височина
+          Design Recipe Practice: Дизайн на рецепта - практика
         algPDmiami:
-          title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
+          title: Компютърни науки в алгебрата
+          description: Научи алгебра чрез функционално програмиране
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
-          Your Game - Animation: Your Game - Animation
+          Rocket-Height: Ракетна височина
+          Design Recipe Practice: Дизайн на рецепта - практика
+          Your Game - Animation: Вашата игра - анимация
           Booleans: Booleans
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
-          Luigi's Pizza: Luigi's Pizza
+          Sam the Bat: Сам прилепа
+          Your Game - Booleans: Вашата игра - Booleans
+          Luigi's Pizza: Луиджи пица
           'Play Lab: Collision Detection (Big Game)': 'Игрална лаборатория: Collision
             Detection (голямата игра)'
-          Your Game - Player Movement: Your Game - Player Movement
-          Your Game - Collision Detection: Your Game - Collision Detection
+          Your Game - Player Movement: Вашата игра - движение на героя
+          Your Game - Collision Detection: Вашата игра - Collision Detection
