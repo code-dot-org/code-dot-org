@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.en_us');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "call";
 Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "Add Comment";

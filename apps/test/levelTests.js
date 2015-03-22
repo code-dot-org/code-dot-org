@@ -22,7 +22,7 @@ describe('Level tests', function() {
   var studioApp;
 
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();
   });
 
@@ -45,7 +45,7 @@ function getTestCollections () {
     if (/data$/.test(file)) {
       console.log('got data!');
       dataItem = files[file];
-    } else if (/\/2_1$/.test(file)) {
+    } else if (!/data$/.test(file) && !/3_1$/.test(file)) {
       testCollections.push({path: file, data: files[file]});
     }
   });
@@ -65,7 +65,7 @@ function runTestCollection (item) {
       // test is being run, since we're using the same JSON files for these
       // and our getMissingRequiredBlocks tests (and likely also other things
       // in the future)
-      if (index == 0 && testData.expected) {
+      if (testData.expected) {
         runTest(testCollection, testData);
       }
     });
@@ -73,7 +73,7 @@ function runTestCollection (item) {
 }
 
 function runTest (testCollection, testData) {
-  it(testData.description, function () {
+  it(testData.description, function (done) {
     console.log('Running test: ' + testData.description);
 
     // can specify a test specific timeout in json file.
@@ -82,7 +82,7 @@ function runTest (testCollection, testData) {
     }
 
     var runLevelTest = require('./util/runLevelTest');
-    runLevelTest(testCollection, testData, dataItem);
+    runLevelTest(testCollection, testData, dataItem, done);
     console.log('ran level test');
   });
 }

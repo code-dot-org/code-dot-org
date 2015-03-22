@@ -67,10 +67,8 @@ function setupLocales() {
 
 exports.setupLocales = setupLocales;
 
-/**
- * Initializes an instance of blockly for testing
- */
-exports.setupTestBlockly = function() {
+exports.setupBlocklyFrame = setupBlocklyFrame;
+function setupBlocklyFrame() {
   require('./frame');
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
@@ -87,7 +85,13 @@ exports.setupTestBlockly = function() {
   studioApp.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
+}
 
+/**
+ * Initializes an instance of blockly for testing
+ */
+exports.setupTestBlockly = function() {
+  setupBlocklyFrame();
   var options = {
     assetUrl: studioApp.assetUrl
   };

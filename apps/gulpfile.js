@@ -57,7 +57,7 @@ gulp.task('messages', function () {
     .pipe(gulp.dest(outputDir));
 });
 
-var ext = 'uncompressed';
+var ext = 'compressed';
 var vendorFiles = [
   'lib/blockly/blockly_' + ext + '.js',
   'lib/blockly/blocks_' + ext + '.js',

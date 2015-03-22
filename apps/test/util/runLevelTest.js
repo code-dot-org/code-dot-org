@@ -1,6 +1,8 @@
 var assert = require('chai').assert;
+var cb;
 
-module.exports = function(testCollection, testData, dataItem) {
+module.exports = function(testCollection, testData, dataItem, done) {
+  cb = done;
   var data = dataItem();
   var app = testCollection.app;
   //testUtils.setupLocale(app);
@@ -65,7 +67,8 @@ module.exports = function(testCollection, testData, dataItem) {
     //  we will have problems with the animating_ / waitingForReport_ states
     //  in the maze state machine)
     if (report.onComplete) {
-      setTimeout(report.onComplete, 0);
+      report.onComplete();
+      //setTimeout(report.onComplete, 0);
     }
   };
 
@@ -87,7 +90,10 @@ StubDialog.prototype.show = function() {
   }
   // Level is complete and feedback dialog has appeared: exit() succesfully here
   // (otherwise process may continue indefinitely due to timers)
-  logError("Finished, exit!!");
+  var done = cb;
+  cb = null;
+  Blockly.mainBlockSpace.clear();
+  done();
 };
 
 StubDialog.prototype.hide = function() {
