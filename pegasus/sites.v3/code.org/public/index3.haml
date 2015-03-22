@@ -108,11 +108,10 @@ social:
         &nbsp;
 
         -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-        #blankspaceleft{style: "height:350px"}
+        #blankspaceleft{style: "height:370px"}
 
-      .col-33{style: "position:relative; padding: 20px; margin-top:80px; text-align:center"}   
+      .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}   
         - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"]).all
-        -# actions = actions.first(1)
         - actions.each_with_index do |entry, index|
           - display = entry[:active_s] == "hide" ? "none" : "block"
           .action{style: "display: #{display}; opacity: 0"}
@@ -120,8 +119,12 @@ social:
               %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
               %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
                 = I18n.t(entry[:text1_s])
+            - elsif entry[:param1_s] == "learn"
+              %a{href: "/learn", style: "color:white; font-size:20px"}
+                %button{style: "font-weight: 500; font-size: 20px; height: 50px"}
+                  = I18n.t(entry[:text1_s])
             - elsif entry[:param1_s] == "petition"
-              %button{style: "font-weight: 500; font-size: 20px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock');"}
+              %span{style: "font-weight: 500; font-size: 14px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock'); cursor:pointer"}
                 = I18n.t(entry[:text1_s])
             %div{style: "height:40px"}
 
@@ -246,7 +249,7 @@ social:
       .col-100#gallerycolumn.same-height-column{:style=>"margin-bottom:20px;  margin-top:20px; display: table-cell; border: 5px solid white; /*background-color: rgb(#{bgc_body}); */ "}
         .thebox{style: "/*background-color: rgb(#{bgc_body});*/ "}
           .headingbox{style: "background-color: rgb(#{bgc_body}); left:0px;color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 4r', sans-serif; text-align:center"}
-            Made in Code Studio
+            Code Studio student creations
           %a{href: "http://studio.code.org"}
             .thelinks{style: "padding: 10px; height:100% "}
               %img{style: "float:left; width:50%", src:"/shared/images/gallery/artist_gallery_thumbnails.png"}
