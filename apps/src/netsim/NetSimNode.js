@@ -88,7 +88,7 @@ NetSimNode.prototype.getHostname = function () {
 
 /**
  * Get node's type.
- * @returns {string}
+ * @returns {NodeType}
  */
 NetSimNode.prototype.getNodeType = function () {
   throw new Error('getNodeType method is not implemented');

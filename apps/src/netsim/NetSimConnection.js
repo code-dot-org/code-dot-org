@@ -10,6 +10,7 @@
  */
 'use strict';
 
+var NodeType = require('./netsimConstants').NodeType;
 var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
@@ -255,9 +256,9 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     }
 
     var nodes = rows.map(function (row) {
-      if (row.type === NetSimClientNode.getNodeType()) {
+      if (row.type === NodeType.CLIENT) {
         return new NetSimClientNode(self.shard_, row);
-      } else if (row.type === NetSimRouterNode.getNodeType()) {
+      } else if (row.type === NodeType.ROUTER) {
         return new NetSimRouterNode(self.shard_, row);
       }
     }).filter(function (node) {
