@@ -515,41 +515,42 @@ fr:
   zendesk_too_young_message: |-
     Désolé, les plus jeunes utilisateurs ne peuvent pas s'enregistrer sur notre site de support. Néanmoins, vous pouvez parcourir les <a href="http://support.code.org"> support.code.org</a> en ou demandez à votre parent ou enseignant à nous contacter pour vous.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: pas commencé
+    in_progress: en cours
     completed_too_many_blocks: terminé, trop de blocs
     completed_perfect: terminé, parfait
     furthest_level_attempted: le plus haut niveau tenté
-    assessment: assessment
+    assessment: évaluation
   studio:
     courses_working_on: Les cours sur lesquels vous travaillez
     completed_courses: Cours terminés
     all_courses: Tous les cours
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: Projets
+    create: Créer un projet
+    create_a_project: 'Create a new project:'
+    new: Créer un nouveau
+    rename: Renommer
     save: Sauvegarder
     delete: Supprimer
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Retourner au cours
+    my_projects: Mes projets
     share: Partager
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Partages votre projet
+    share_copy_link: 'Copiez le lien :'
+    close: Fermer
     more: Plus
     name: Nom
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Mis à jour
+    project_type: Type de projet
+    help_text: "Cliquez sur <strong>faire une application</strong> ou <strong>Dessiner quelque chose</strong> ci-dessous pour faire un nouveau projet de laboratoire de jeu ou d'artiste ! <br/>Vous pouvez y revenir et travailler sur vos projets à tout moment."
+    need_help: "Besoin d'aide pour démarrer ?"
     really_delete: Supprimer ?
     delete_yes: Oui
     delete_no: Non
-    saved: Saved
-    not_saved: Not saved
+    saved: Enregistré
+    not_saved: Pas enregistré
     cancel: Annuler
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Êtes-vous sûr de que vouloir supprimer ce projet ?
+    delete_confirm_text: Supprimer votre projet le supprimera définitivement de votre liste de mes projets. Tous ceux auxquels vous avez partagé le lien ne seront plus en mesure de visualiser votre projet.
+    view_all: Afficher mes projets

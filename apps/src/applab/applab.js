@@ -6,7 +6,7 @@
  */
 
 'use strict';
-require('./mode-javascript_codeorg');
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');

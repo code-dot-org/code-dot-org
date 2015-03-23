@@ -328,7 +328,7 @@
       add: Add section
       manage: Manage sections
       section: Section
-      students: Students
+      students: Alunos
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
@@ -542,15 +542,15 @@
     support: Get Help
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
+    wrong_title: Resposta incorreta
     wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -619,6 +619,7 @@
   project:
     projects: Projects
     create: Create Project
+    create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
     save: Guardar

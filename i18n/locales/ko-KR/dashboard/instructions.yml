@@ -1,7 +1,6 @@
 ko:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: 한 변이 175 픽셀인 초록 정사각형을 그려 보세요.
       2-3 _instruction: 보라색 꽃에서는 꿀이 있을 수도 있고 없을 수도 있습니다. 아무것도 없는 보라색 꽃에서 꿀을 따려고 하지 마세요.
       2-3 Artist 1 new_instruction: 안녕, 친구들. 나는 화가란다. 너는 내가 무엇을 그리게 하려면 주어진 블록들로 코드를 작성할 수 있어. 최대한 적은 블록으로 화면에 표시된 회색 선들을 그려 봐. 각 선들은 길이가 100이야.
@@ -29,9 +28,7 @@ ko:
       2-3 Artist 5_instruction: |
         Replace this code with a "repeat times" block
         to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
+      2-3 Artist 6_instruction: 이 집은 지붕이 없잖아! 정삼각형 지붕을 그려야 되겠어. 네가 해 줄 수 있니?
       2-3 Artist 7_instruction: |
         Finish drawing the right half of the last window.
         Each square of the window is 25 pixels. 
@@ -565,9 +562,7 @@ ko:
       4-5 Artist For Loops Assessment 1_instruction: |
         Complete the "for" block
         so that it counts 10, 20, 30, 40, 50... 200.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
+      4-5 Artist Free Draw 1_instruction: 자유시간! 그리고 싶은 것을 그려 보세요.
       4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
       4-5 Artist Functions 10_instruction: |
         Draw a snowflake using the 'draw a square'
@@ -992,9 +987,7 @@ ko:
       Artist Functions 8_instruction: |
         Can you create a new function called "Draw
         a Square Line" function?
-      Artist Functions free play_instruction: |
-        It's Free Play time! Use your new
-        functions to draw an awesome picture. Have fun!
+      Artist Functions free play_instruction: 자유시간! 여러 가지 함수들로 그리고 싶은 것을 그려 보세요.
       Artist level 10_instruction: |
         It's Free Play time! I have included all the
         new functions you have built. Have fun and draw anything you want. 
@@ -1129,29 +1122,31 @@ ko:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Collision 1_instruction: |
-        When you last worked on your game we got
-        our target and danger sprites to fly across the screen, but they never come
-        back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        Our target, danger, and player all move
-        now - the only thing left to do is figure out when they're touching so we
-        can update the score accordingly. First you'll need to complete the distance
-        function so that we can measure the distance between two points on the plane.
-        We've provided a working line-length function to help you out.
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
       Big Game Collision 4_instruction: |
-        You're almost there! Now that you have
-        a way to measure the distance between two points, you just need to decide
-        when those points are close enough to be considered touching. Complete the
-        collide? function so that it checks the distance function and returns true
-        if the two points are close enough to touch (100 pixels apart is a good place
-        to start).
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1163,6 +1158,18 @@ ko:
         fully functioning, take some time to enjoy your new game and make any final
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -2325,7 +2332,7 @@ ko:
       Eval Design Recipe 3_instruction: |
         The design recipe for "wide-rect" already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should draw a rectangle of given
+        the definition. The "wide-rect" function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
@@ -2740,7 +2747,8 @@ ko:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions

@@ -46,14 +46,6 @@ social:
 ---
 
 :css
-  @media screen and (max-width: 600px)
-  {
-    .captions {font-size: 12px}
-  }
-  @media screen and (min-width: 601px)
-  {
-    .captions {font-size:18px}
-  }
 
   @media screen and (max-width: 512px)
   {
@@ -62,6 +54,10 @@ social:
   @media screen and (min-width: 513px)
   {
     .same-height-column {float:none !important; width:50%}
+  }
+
+  a.hover:hover {
+    text-decoration: underline !important;
   }
 
   body.modal-open .supreme-container{
@@ -73,65 +69,19 @@ social:
   }
 
 .supreme-container
-  #top{style: "position:relative; width:100%; overflow:hidden"}
-    - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"]).all
-    - heroes.shuffle!
-    - heroes.each_with_index do |entry, index|
-      - display = entry[:active_s] == "hide" ? "none" : "block"
-      - opacity = index == 0 ? 1 : 0
-      .widehero{id: "fullwidth#{index}", style: "display: #{display}; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
 
-    #fullwidth{style: "width: 100%;"}
-      .thegap{style: "height: 1px"}
-        &nbsp;
-      #desktop-header.desktop-feature
-        = view :header
-      #mobile-header.mobile-feature
-        = view :header
-
-    .container_responsive{style: "color: white; font-size: 20px"}
-      .col-66{style: "position:relative;"}
-        - heroes.each_with_index do |entry, index|
-          - display = entry[:active_s] == "hide" ? "none" : "block"
-          - unless entry[:text1_s].nil_or_empty?
-            - text = I18n.t(entry[:text1_s])
-            - unless text.nil_or_empty?
-              - lines = text.lines 
-              .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#eee; line-height:22px"}
-                .caption1{style: "left: 50px; top: 68px; position: absolute; opacity: 0; padding:8px"}
-                  = lines[0]
-                .caption2{style: "left: 30px; top: 106px; position: absolute; opacity: 0; padding:8px"}
-                  = lines[1]
-                .caption3{style: "left: 40px; top: 156px; position: absolute; opacity: 0; font-size: 14px; padding:8px"}
-                  = lines[2]
-
-        &nbsp;
-
-        -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-        #blankspaceleft{style: "height:300px"}
-
-      .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}   
-        - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"]).all
-        - actions.each_with_index do |entry, index|
-          - display = entry[:active_s] == "hide" ? "none" : "block"
-          .action{style: "display: #{display}; opacity: 0"}
-            - if entry[:param1_s] == "video"
-              %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-              %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-                = I18n.t(entry[:text1_s])
-            - elsif entry[:param1_s] == "petition"
-              %button{style: "font-weight: 500; font-size: 20px; height: 50px", onclick: "expandPetition(); adjustScroll('petitionblock');"}
-                = I18n.t(entry[:text1_s])
-            %div{style: "height:40px"}
-
-    %div{style: "clear:both"}
-    - if DB[:cdo_homepage].where(type_s: "petition")
-      = view :petition_expand
+  = view :homepage_hero
 
   -#### Hero slots
 
-  #heroslots{style: "text-align:center"}
-    - DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
+  #heroslots{style: "text-align:center; margin-top:0px"}
+    -# DB[:cdo_homepage].where(type_s: "slot", active_s: ["show","hide"], site_s: [request.site,"both"]).all do |entry|
+    - entries = []
+    - entries << { text1_s: "Hour of Code", image_t: "/shared/images/courses/logo_tall_hoc.jpg", sentence: "Anybody can learn. Start today", param1_s: "/learn", bgc_head: "0, 173, 188" }
+    - entries << { text1_s: "Code Studio", image_t: "/shared/images/courses/logo_tall_elementary.jpg", sentence: "Explore all of our tutorials", param1_s: "http://studio.code.org", bgc_head: "118, 101, 160" }
+    - entries << { text1_s: "Educators", image_t: "/shared/images/courses/logo_tall_teacher2.jpg", sentence: "Teach your students", param1_s: "/educate", bgc_head: "0, 148, 202" }
+    - entries << { text1_s: "Advocates", image_t: "/shared/images/courses/logo_tall_map.jpg", sentence: "Support our work", param1_s: "/promote", bgc_head: "185, 191, 21" }
+    - entries.each do |entry|
       - display = entry[:active_s] == "hide" ? "none" : "block"
       .slot{style: "display: #{display}"}
         = view :homepage_quarterslot, entry: entry
@@ -244,19 +194,7 @@ social:
   -#### User hero for signed-in users
 
   -if request.site != 'csedweek.org'
-
-    #donorslider{style: "background-color:rgb(200, 193, 217); margin-top:20px; padding-top:10px; margin-bottom:0px"}
-      .container_responsive{style: "margin-top:30px; margin-bottom:0px"}
-        #donorheader{style: "position:relative; height:60px"}
-          %h1{style: "width:100%; font-size: 24px; margin: 0px; padding:0px; text-align:center; color: rgb(255,255,255); position: absolute; top:0px"}
-            Code.org thanks its supporters
-
-          #donorlinks.desktop-feature{style: "text-align:right; position:absolute; width:100%"}
-            %a{href: "/about/donors", style: "color:white"} See all
-            &nbsp; &nbsp; &nbsp;
-            %a{href: "/donate", style: "color:white"} Donate
-
-        = view :donor_slider2
+    = view :donor_slider2
 
 = view 'popup_window.js'
 
@@ -362,6 +300,6 @@ social:
 
   $.ready()
   {
-    timerId = setInterval(cycleImage, 13000);
+    //timerId = setInterval(cycleImage, 13000);
   }
 

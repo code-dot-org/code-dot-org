@@ -4,6 +4,7 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
@@ -15,6 +16,7 @@ var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLo
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
+var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
@@ -161,9 +163,16 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("message routing rules", function () {
-    var router, localClient, remoteA;
+    var router, localClient, remoteA, encoder;
 
     beforeEach(function () {
+      // Spec reversed in test vs production to show that it's flexible
+      var packetHeaderSpec = [
+        {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
+        {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
+      ];
+      encoder = new Packet.Encoder(packetHeaderSpec);
+
       // Make router
       NetSimRouterNode.create(testShard, function (e, r) {
         router = r;
@@ -179,7 +188,7 @@ describe("NetSimRouterNode", function () {
       });
 
       // Tell router to simulate for local node
-      router.initializeSimulation(localClient.entityID);
+      router.initializeSimulation(localClient.entityID, packetHeaderSpec);
 
       // Manually connect nodes
       var wire;
@@ -254,10 +263,15 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("does not forward packets with no match in the local network", function () {
-      var from = localClient.entityID;
-      var to = router.entityID;
-      // From: 15, To: 15, packetIndex: 1, packetCount: 1, message: 01010101
-      NetSimMessage.send(testShard, from, to, '1111 1111 0001 0001 01010101', function () {});
+      var fromNodeID = localClient.entityID;
+      var toNodeID = router.entityID;
+
+      var payload = encoder.concatenateBinary({
+        toAddress: '1111',
+        fromAddress: '1111'
+      }, 'messageBody');
+
+      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -268,10 +282,11 @@ describe("NetSimRouterNode", function () {
       var fromAddress = localClient.address;
       var toAddress = remoteA.address;
 
-      var payload = intToBinary(toAddress, 4) +
-              intToBinary(fromAddress, 4) +
-              '00010001' +
-              '01010101';
+      var payload = encoder.concatenateBinary({
+        toAddress: intToBinary(toAddress, 4),
+        fromAddress: intToBinary(fromAddress, 4)
+      }, 'messageBody');
+
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 1);

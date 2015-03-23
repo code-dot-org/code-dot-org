@@ -13,5 +13,5 @@
   "yourExpression":"Formúlan þín:",
   "wrongInput":"Þú ert að kalla á fallið þitt með röngu gildi.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }

@@ -14,9 +14,8 @@
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
+var NodeType = require('./netsimConstants').NodeType;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -31,7 +30,7 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
@@ -42,7 +41,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
     shardID) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -99,7 +98,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -377,8 +376,8 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
     var showClients = this.levelConfig_.showClientsInLobby;
     var showRouters = this.levelConfig_.showRoutersInLobby;
     var nodeType = simNode.getNodeType();
-    return (nodeType === NetSimClientNode.getNodeType() && showClients) ||
-        (nodeType === NetSimRouterNode.getNodeType() && showRouters);
+    return (nodeType === NodeType.CLIENT && showClients) ||
+        (nodeType === NodeType.ROUTER && showRouters);
   }.bind(this));
 
   filteredLobbyData.sort(function (a, b) {
@@ -397,8 +396,8 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
         simNode.getStatusDetail());
 
     // Style rows by row type.
-    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
-      item.addClass('router-row');
+    if (simNode.getNodeType() === NodeType.ROUTER) {
+      item.addClass('router_row');
     } else {
       item.addClass('user_row');
       if (simNode.entityID === this.connection_.myNode.entityID) {
@@ -425,7 +424,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
+  if (NodeType.CLIENT === connectionTarget.getNodeType()) {
     return;
   }
 

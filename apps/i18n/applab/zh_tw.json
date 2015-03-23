@@ -10,6 +10,7 @@
   "continue": "繼續 ",
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "designMode": "Design",
   "finalLevel": "恭喜！你已經完成最後的關卡。",
   "nextLevel": "恭喜！你已經完成這個關卡。",
   "no": "否",

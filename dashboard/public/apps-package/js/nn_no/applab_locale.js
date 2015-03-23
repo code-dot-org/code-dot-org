@@ -84,6 +84,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Hald fram"},
 "container":function(d){return "lag beholder"},
 "containerTooltip":function(d){return "Lag en delebeholder og fyll inn HTML-en."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Gratulerer! Du har løyst den siste oppgåva."},
 "nextLevel":function(d){return "Gratulerer! Du har fullført denne oppgåva."},
 "no":function(d){return "Nei"},

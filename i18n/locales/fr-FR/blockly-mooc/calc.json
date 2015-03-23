@@ -3,7 +3,7 @@
   "emptyComputeBlock":"Vous devez joindre un bloc à \"calculer\".",
   "emptyFunctionalBlock":"Un de vos blocs ne contient pas d'entrée.",
   "equivalentExpression":"Essayez de réorganiser vos arguments pour obtenir exactement la même expression.",
-  "evaluate":"évalue",
+  "evaluate":"évaluez",
   "extraTopBlocks":"Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?",
   "failedInput":"Votre fonction ne renvoie pas le bon résultat pour toutes les valeurs.",
   "goal":"Objectif :",

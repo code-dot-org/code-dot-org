@@ -1,7 +1,6 @@
 es:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: ¡Vamos! completemos el próximo puzzle con un Cuadrado Verde que tenga un tamaño de 175 pixeles.
       2-3 _instruction: Las flores moradas tienen 1 o 0 de néctar. Ten cuidado de no recolectar néctar de una flor morada, si no tiene nada.
       2-3 Artist 1 new_instruction: Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
@@ -1083,29 +1082,31 @@ es:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Collision 1_instruction: |
-        When you last worked on your game we got
-        our target and danger sprites to fly across the screen, but they never come
-        back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        Our target, danger, and player all move
-        now - the only thing left to do is figure out when they're touching so we
-        can update the score accordingly. First you'll need to complete the distance
-        function so that we can measure the distance between two points on the plane.
-        We've provided a working line-length function to help you out.
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
       Big Game Collision 4_instruction: |
-        You're almost there! Now that you have
-        a way to measure the distance between two points, you just need to decide
-        when those points are close enough to be considered touching. Complete the
-        collide? function so that it checks the distance function and returns true
-        if the two points are close enough to touch (100 pixels apart is a good place
-        to start).
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1117,6 +1118,18 @@ es:
         fully functioning, take some time to enjoy your new game and make any final
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -2279,7 +2292,7 @@ es:
       Eval Design Recipe 3_instruction: |
         The design recipe for "wide-rect" already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should draw a rectangle of given
+        the definition. The "wide-rect" function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
@@ -2347,102 +2360,42 @@ es:
       freeplay_instruction: |
         You've officially become a master artist! Create a
         winter wonderland and share with your friends.
-      frozen circle function (copy 1)_instruction: |
-        Use the new 'create a circle'
-        block to create 10 overlapping circles. Don't forget to jump forward between
-        circles
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate (copy 1)_instruction: |
-        Now try repeating it 10 times. How
-        many degrees do you need to turn between each line?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake (copy 1)_instruction: |
-        Did you know every snowflake
-        is a different shape?  Let's create a new snowflake by using the repeat block
-        and repeating the diamond 10 times, turning right by 36 degrees between each
-        diamond.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay (copy 1)_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
+      frozen circle function (copy 1)_instruction: 'Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante entre cada círculo.'
+      frozen circle function in circle_instruction: Ahora crearemos 20 círculos superpuestos, girando 18 grados entre cada círculo.
+      frozen circle function with parameter_instruction: 'Aquí está un bloque "Crear círculo" que puede dibujar círculos de diferentes tamaños. ¿Puedes usarlo para dibujar un circulo pequeño de tamaño 5 y uno más grande de tamaño 10?'
+      frozen circle function_instruction: 'Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante entre cada círculo.'
+      frozen circle_instruction: Un círculo es una figura especial. ¿Puedes adivinar qué número debe reemplazar los signos de interrogación para dibujar un círculo?
+      frozen cross rotate (copy 1)_instruction: 'Ahora trata de repetirlo 10 veces. ¿Cuántos  grados necesitas girar entre cada línea?'
+      frozen cross rotate dense_instruction: '¡Ahora repitámoslo 90 veces! ¿Cuántas veces cabe 90 en 360? Pista: Es un número muy pequeño.'
+      frozen cross rotate_instruction: 'Ahora trata de repetirlo 10 veces. ¿Cuántos  grados necesitas girar entre cada línea?'
+      frozen cross_instruction: 'Utiliza el bloque "Repetir" para crear un signo de más (+). ¿Notaste que Elsa puede moverse hacia adelante y hacia atrás?'
+      frozen diamond mini snowflake_instruction: '¿Sabías que cada copo de nieve tiene una forma distinta? Crearemos un nuevo copo de nieve utilizando el bloque "Repetir" para repetir el paralelogramo 4 veces, girando hacia la derecha 90 grados entre cada paralelogramo.'
+      frozen diamond snowflake (copy 1)_instruction: '¿Sabías que cada copo de nieve tiene una forma distinta? Crearemos un nuevo copo de nieve utilizando el bloque "Repetir" para repetir el paralelogramo 4 veces, girando hacia la derecha 90 grados entre cada paralelogramo.'
+      frozen diamond snowflake_instruction: 'Ahora crearemos un nuevo copo de nieve, utilizando el bloque "Repetir" para repetir el paralelogramo 10 veces, girando a la derecha 36 grados entre cada uno.'
+      frozen diamond_instruction: 'Ahora crearemos un paralelogramo. Es como un cuadrado pero tiene diferentes ángulos: 60 y 120 grados en lugar de ángulos de 90 grados.'
+      frozen freeplay (copy 1)_instruction: ¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal.
+      frozen freeplay_instruction: ¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal.
+      frozen line_instruction: ¡Hola! Soy Elsa de Arendelle. Ayúdame a crear una línea.
+      frozen perpendicular_instruction: 'Ahora veamos si podemos crear dos líneas que se encuentran a un ángulo de 90 grados una de la otra. Necesitarás usar tanto el bloque de "Giro" como el bloque de "Mover".'
       frozen snowflake base_instruction: |
         Create these 3 lines that are 45 degrees
         apart
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
+      frozen snowflake branch_instruction: 'Intenta utilizar el bloque "Crear una rama de copo de nieve" para dibujar 3 ramas, lo que empezará a parecerse a un copo de nieve.'
+      frozen snowflake full_instruction: ¡Ahora repitámoslo 8 veces para dibujar un hermoso copo de nieve!
       frozen snowflower pattern_instruction: |
         What beautiful snowflowers! Let's
         make smaller snowflowers to cover the entire ice rink. Don't forget to jump
         forward 150 pixels between each snowflower.
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
+      frozen snowflower_instruction: Formas complejas de nieve pueden crearse usando figuras geométricas muy simples. ¿Puedes crear uno repitiendo 5 círculos de tamaño 5 y 5 círculos de tamaño 10?
+      frozen square iterative_instruction: Parece que estamos a la mitad de completar un cuadrado. Ahora pongamos 4 líneas juntas para crear un cuadrado.
       frozen square loop (copy 1)_instruction: |
         There is more than one way to make
         a square. Can you use the Repeat block to create the square again, but with
         fewer blocks? What pattern do you see repeating, that you can put inside the
         Repeat block?
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
+      frozen square loop_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
+      frozen square snowflake_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
       Function Block 1_instruction: |
         Here is a new type of Block. It is called a
         "Function block." Click on "RUN" to see what it can do. 
@@ -2696,7 +2649,8 @@ es:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions
@@ -3150,32 +3104,16 @@ es:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: '¡Bellota! ¡Bellota! ¡Bellota! Usa un bloque "si" para llevarme ahí con el menor número de bloques.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
-      scrat 18 (copy 1)_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the acorn try to use this
-        new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
-      scrat 19 (copy 1)_instruction: |
-        One more practice of the "if-else" block,
-        can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 17_instruction: 'Ok, vamos a hacerlo de nuevo para practicar - este no es muy diferente, ¡Pero ten cuidado con la pared!'
+      scrat 18 (copy 1)_instruction: 'El bloque "If-else" verifica una condición y después hace o una cosa u otra. Para llevarme a la bellota intenta usar este nuevo bloque.'
+      scrat 18_instruction: 'El bloque "If-else" verifica una condición y después hace o una cosa u otra. Para llevarme a la bellota intenta usar este nuevo bloque.'
+      scrat 19 (copy 1)_instruction: 'Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu primer intento?'
+      scrat 19_instruction: 'Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu primer intento?'
+      scrat 20_instruction: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!
       shrink_instruction: |
         Can you complete this puzzle by writing out "Hello World!"
         in solid red text that is 40 pixels in size?

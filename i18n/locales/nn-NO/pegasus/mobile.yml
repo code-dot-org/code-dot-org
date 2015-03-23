@@ -314,8 +314,8 @@ nn-NO:
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: ikke påbegynt
+  dashboard_progress_in_progress: pågår
   dashboard_progress_not_completed: ikkje fullført
   dashboard_progress_completed_too_many_blocks: fullført, for mange blokker
   dashboard_progress_completed_perfect: Perfekt fullført

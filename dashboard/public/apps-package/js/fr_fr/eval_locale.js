@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Vous avez utilisé une chaîne de couleur invalide : "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cercle (rayon, style, couleur)"},
-"displayBlockTitle":function(d){return "évalue"},
+"displayBlockTitle":function(d){return "évaluez"},
 "ellipseBlockTitle":function(d){return "ellipse (largeur, hauteur, style, couleur)"},
 "emptyFunctionalBlock":function(d){return "Un de vos blocs ne contient pas d'entrée."},
 "extraTopBlocks":function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?"},

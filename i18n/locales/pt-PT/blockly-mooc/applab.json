@@ -10,6 +10,7 @@
   "continue":"Continuar",
   "container":"create container",
   "containerTooltip":"Creates a division container and sets its inner HTML.",
+  "designMode":"Design",
   "finalLevel":"Parabéns! Resolveste o enigma final.",
   "nextLevel":"Parabéns! Completaste este puzzle.",
   "no":"Não",

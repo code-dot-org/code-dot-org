@@ -152,6 +152,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ดำเนินการต่อไป"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."},
 "nextLevel":function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."},
 "no":function(d){return "ไม่ใช่"},

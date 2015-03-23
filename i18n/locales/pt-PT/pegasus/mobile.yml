@@ -19,7 +19,7 @@ pt-PT:
   twentyhours_heading: Experimenta a nossa introdução a um curso de Ciências da Computação
   twentyhours_text: Terminaste a tua primeira Hora de Código? Aprende mais sobre a verdadeira ciência computacional e conceitos de programação neste curso de acompanhamento.
   hoc2014_heading: 'Junte-se à <a href="http://hourofcode.com">Hora de Código</a><br/>8 - 14 de Dezembro de 2014<br/>'
-  hoc2014_students: Students
+  hoc2014_students: Alunos
   hoc2014_try: Experimentar
   hoc2014_teachers: Professores
   hoc2014_host: Apresenta-o
@@ -252,7 +252,7 @@ pt-PT:
   dashboard_sections_table_secret: Tipo de início de sessão
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Nome da Seção
   dashboard_sections_choose_secret: 'Se você gostaria de prestar contas aos seus alunos, escolha um tipo de segredo de <b>palavra</b> ou <b>foto</b> para essa seção.'

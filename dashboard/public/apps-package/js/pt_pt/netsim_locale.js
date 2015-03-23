@@ -155,6 +155,7 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "a_and_b":function(d){return "A/B"},
+"addPacket":function(d){return "Add Packet"},
 "ascii":function(d){return "ASCII"},
 "binary":function(d){return "Binary"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" bits"},
@@ -178,10 +179,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "_of_":function(d){return " of "},
 "packet":function(d){return "Packet"},
 "receivedMessageLog":function(d){return "Received Message Log"},
+"removePacket":function(d){return "Remove Packet"},
 "router":function(d){return "Router"},
 "send":function(d){return "Send"},
 "sendAMessage":function(d){return "Send a Message"},
 "sentMessageLog":function(d){return "Sent Message Log"},
 "to":function(d){return "To"},
 "workspaceHeader":function(d){return "Internet Simulator"},
-"xOfY":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")}};
+"xOfY":function(d){return appLocale.v(d,"x")+" de "+appLocale.v(d,"y")}};

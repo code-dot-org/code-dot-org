@@ -828,9 +828,6 @@
         a secret password: o parolă secretă
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
-          function would describe a rocket that reaches 24 meters at 2 seconds, 60
-          meters at 5 seconds, and 108 meters at 9 seconds?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
           12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
@@ -840,10 +837,6 @@
           * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
         rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
         rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
           * seconds
@@ -852,10 +845,6 @@
           16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Ce funcție descrie o rachetă ce atinge 47 de metrii după 5 secunde,
-          97 de metrii după 10 secunde și 147 de metrii după 15 secunde?'
         rocket-height(seconds) = seconds * 7 + 10: înălțime-rachetă(secunde) = secunde
           * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: înălțime-rachetă(secunde) = secunde

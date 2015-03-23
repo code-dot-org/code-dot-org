@@ -13,5 +13,5 @@
   "yourExpression":"Lausekkeesi:",
   "wrongInput":"Kutsut funktiotasi väärällä arvolla.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }
