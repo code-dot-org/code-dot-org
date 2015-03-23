@@ -1,15 +1,34 @@
 <%
-var DnsMode = require('./netsimConstants').DnsMode;
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = level.routerExpectsPacketHeader.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
 %>
 <div class="netsim-router-log">
   <h1>Router Traffic</h1>
   <table>
     <thead>
     <tr>
-      <th nowrap>To</th>
-      <th nowrap>From</th>
-      <th nowrap>Message</th>
-      <th nowrap>Bits</th>
+      <% if (showToAddress) { %>
+        <th nowrap><%= i18n.to() %></th>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <th nowrap><%= i18n.from() %></th>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <th nowrap><%= i18n.packetInfo() %></th>
+      <% } %>
+      <th nowrap><%= i18n.message() %></th>
+      <th nowrap><%= i18n.bits() %></th>
     </tr>
     </thead>
     <tbody>
@@ -24,8 +43,18 @@ var DnsMode = require('./netsimConstants').DnsMode;
       var rowClasses = [];
     %>
     <tr class="<%= rowClasses.join(' ') %>">
-      <td nowrap><%= logEntry.getToAddress() %></td>
-      <td nowrap><%= logEntry.getFromAddress() %></td>
+      <% if (showToAddress) { %>
+        <td nowrap><%= logEntry.getHeaderField(PacketHeaderType.TO_ADDRESS) %></td>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <td nowrap><%= logEntry.getHeaderField(PacketHeaderType.FROM_ADDRESS) %></td>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <td nowrap><%= i18n.xOfYPackets({
+            x: logEntry.getHeaderField(PacketHeaderType.PACKET_INDEX),
+            y: logEntry.getHeaderField(PacketHeaderType.PACKET_COUNT)
+          }) %></td>
+      <% }%>
       <td><%= logEntry.getMessageAscii() %></td>
       <td nowrap><%= logEntry.packet.length %></td>
     </tr>
