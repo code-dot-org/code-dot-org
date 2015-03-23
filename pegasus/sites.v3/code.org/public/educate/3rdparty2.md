@@ -39,6 +39,7 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
+| [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Amplify](https://users-mooc.amplify.com/) | Year-long AP Computer Science course, FREE | Online, $2200/school |
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Computer science activities for algebra. FREE | 3-day workshops for schools and districts, $15/teacher/hour |
