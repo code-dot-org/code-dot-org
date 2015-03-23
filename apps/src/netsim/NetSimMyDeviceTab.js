@@ -18,7 +18,7 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
@@ -33,7 +33,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;

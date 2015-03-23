@@ -3,6 +3,7 @@ layout: none
 theme: none
 ---
 - authentication_required!
+- forbidden! unless dashboard_user[:admin]
 
 %a{href:'/ops-dashboard'}
   Dashboard
@@ -29,6 +30,13 @@ theme: none
         %select.cohort-program-type.form-control{"ng-model" => "cohort.program_type", "ng-disabled" => "cohort.program_type_disabled"}
           %option{"ng-repeat" => "program_type in program_types", value: "{{program_type.id}}"}
             {{program_type.long_name}}
+  .row
+    .form-group.col-sm-6
+      %label.control-label{for: "cohort-cutoff-date"} Cutoff Date
+      %div
+      %div
+        %input#cohort-cutoff-date.form-control{type: "text", "ng-model" => "cohort.cutoff_date"}
+  .row
     .col-sm-8
       .panel.panel-default
         .panel-heading

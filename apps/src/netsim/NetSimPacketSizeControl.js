@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimPacketSizeControl.html');
+var i18n = require('../../locale/current/netsim');
 
 /**
  * @type {number}
@@ -23,10 +24,13 @@ var SLIDER_INFINITY_VALUE = 1025;
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
  * @param {function} packetSizeChangeCallback
+ * @param {Object} options
+ * @param {number} options.minimumPacketSize
+ * @param {number} options.sliderStepValue
  * @constructor
  */
 var NetSimPacketSizeControl = module.exports = function (rootDiv,
-    packetSizeChangeCallback) {
+    packetSizeChangeCallback, options) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -39,6 +43,18 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
    * @private
    */
   this.packetSizeChangeCallback_ = packetSizeChangeCallback;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.minimumPacketSize_ = options.minimumPacketSize;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.sliderStepValue_ = options.sliderStepValue;
 
   /**
    * Internal state
@@ -54,13 +70,15 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimPacketSizeControl.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    minValue: this.minimumPacketSize_
+  }));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.packet-size-slider').slider({
     value: this.maxPacketSize_,
-    min: 16,
+    min: this.minimumPacketSize_,
     max: SLIDER_INFINITY_VALUE,
-    step: 1,
+    step: this.sliderStepValue_,
     slide: this.onPacketSizeChange_.bind(this)
   });
   this.setPacketSize(this.maxPacketSize_);
@@ -104,5 +122,7 @@ NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
-  rootDiv.find('.packet_size_value').html(newPacketSize);
+  rootDiv.find('.packet_size_value').text(i18n.numBitsPerPacket({
+    x: newPacketSize
+  }));
 };

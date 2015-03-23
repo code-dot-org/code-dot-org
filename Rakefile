@@ -26,6 +26,9 @@ def with_retries(count=5)
   end
 end
 
+task :lint do
+  RakeUtils.system 'rubocop'
+end
 
 ##################################################################################################
 ##
@@ -49,10 +52,6 @@ namespace :build do
         RakeUtils.bundle_install
       end
     end
-  end
-
-  task :lint do
-    RakeUtils.system 'rubocop'
   end
 
   task :blockly_core do
@@ -164,7 +163,6 @@ namespace :build do
 
   tasks = []
   tasks << :configure
-  tasks << :lint if CDO.lint
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
