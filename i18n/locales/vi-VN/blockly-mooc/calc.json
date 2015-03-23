@@ -13,5 +13,5 @@
   "yourExpression":"Cách diễn tả của bạn:",
   "wrongInput":"Bạn đang gọi chức năng của mình với giá trị sai.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }

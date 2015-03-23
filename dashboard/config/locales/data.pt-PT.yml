@@ -642,7 +642,7 @@
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: For Loops
+        C4_for_loops: Ciclos "for"
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -651,7 +651,7 @@
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: Ciclos "for"
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro

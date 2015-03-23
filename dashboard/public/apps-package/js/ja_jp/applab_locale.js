@@ -56,6 +56,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "次へ"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "おめでとうございます ！最後のパズルを解決しました。"},
 "nextLevel":function(d){return "おめでとうございます ！このパズルを完了しました。"},
 "no":function(d){return "いいえ"},

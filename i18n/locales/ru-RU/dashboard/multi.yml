@@ -700,23 +700,18 @@ ru:
         a secret password: секретный пароль
       Play Lab Rocket 6:
         Rocket Multiple Choice: 'Ракета - выбор правильных ответов'
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Какая функция описывает ракету, которая достигает 24 метра за 2 секунды, 60 метров за 5 секунд, и 108 метров за 9 секунд?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: 'Ракета - выбор правильных ответов'
-        0: '? Какая функция описывает ракету, которая достигает 4 метра за 2 секунды, 16 метров за 4 секунды, и 256 метров за 16 секунд?'
-        1: ': Какая функция описывает ракету, которая достигает 4 метра за 2 секунды, 16 метров за 4 секунды, и 256 метров за 16 секунд?'
         rocket-height(seconds) = seconds * 2: 'высота ракеты(секунды) = секунды * 2'
         rocket-height(seconds) = seconds * seconds: 'высота ракеты(секунды) = секунды * секунды'
         rocket-height(seconds) = seconds * 4: 'высота ракеты(секунды) = секунды * 4'
         rocket-height(seconds) = seconds * 16: 'высота ракеты(секунды) = секунды * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: 'Ракета - выбор правильных ответов'
-        0: '? Какая функция описывает ракету, которая достигает 47 метров за 5 секунд, 97 метров за 10 секунд, и 147 метров за 15 секунд?'
-        1: ': Какая функция описывает ракету, которая достигает 47 метров за 5 секунд, 97 метров за 10 секунд, и 147 метров за 15 секунд?'
         rocket-height(seconds) = seconds * 7 + 10: 'высота ракеты(секунды) = секунды * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'высота_ракеты(секунды) = секунды*10+7'
         rocket-height(seconds) = seconds * 7 + 3: 'высота ракеты(секунды) = секунды * 7 + 3'

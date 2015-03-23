@@ -342,10 +342,10 @@ lv:
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
-          title: Internet Simulator
+          title: Interneta simulators
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Interneta simulators
           Unit 1: 1. nodaļa
           Unit 2: 2. nodaļa
           Sending Bits: Sending Bits
@@ -468,6 +468,9 @@ lv:
           Lesson 15: Lesson 15
           description_short: Make Black and White Images with the pixelation tool
           Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra

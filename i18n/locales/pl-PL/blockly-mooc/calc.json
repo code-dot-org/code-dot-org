@@ -13,5 +13,5 @@
   "yourExpression":"Twoje wyrażenie:",
   "wrongInput":"Przekazujesz nieprawidłową wartość wywołująć swoją funkcję.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }

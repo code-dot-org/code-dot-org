@@ -41,6 +41,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Weiter"},
 "container":function(d){return "Container erstellen"},
 "containerTooltip":function(d){return "Erzeugt einen Teil-Container und legt seine innere HTML fest."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."},
 "nextLevel":function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."},
 "no":function(d){return "Nein"},

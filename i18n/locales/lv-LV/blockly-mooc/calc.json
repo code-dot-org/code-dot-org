@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Tavas programmas rezultāts dalījumā ar nulli.",
+  "emptyComputeBlock":"Tev jāpievieno bloks ''rēķināt'' blokā.",
+  "emptyFunctionalBlock":"Jums ir bloks ar neaizpildītu ievadi.",
   "equivalentExpression":"Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
-  "evaluate":"evaluate",
+  "evaluate":"novērtē",
   "extraTopBlocks":"Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "failedInput":"Jūsu funkcija neatgriež pareizos rezultātus priekš visām vērtībām.",
   "goal":"Mērķis:",
-  "levelIncompleteError":"Your expression does not match the goal.",
-  "missingVariableX":"Your expression is missing variable {var}.",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
+  "levelIncompleteError":"Jūsu izteiksme neatbilst mērķim.",
+  "missingVariableX":"Jūsu izteiksmei trūkst mainīgā {var}.",
+  "reinfFeedbackMsg":"Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!",
   "yourExpression":"Jūsu izteiksme:",
-  "wrongInput":"You are calling your function with the wrong value.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongInput":"Jūs izsaucat savu fukciju ar nepareizu vērtību.",
+  "wrongOtherValuesX":"Jūsu izteiksmes rezultāti nepareizā daudzumā, ja ir mainīgs {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

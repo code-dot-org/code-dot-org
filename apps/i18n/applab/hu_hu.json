@@ -10,6 +10,7 @@
   "continue": "Tovább",
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "designMode": "Design",
   "finalLevel": "Gratulálok, megoldottad az utolsó feladatot.",
   "nextLevel": "Gratulálok! Ezt a feladatot megoldottad.",
   "no": "Nem",

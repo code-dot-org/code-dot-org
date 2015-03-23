@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({176:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({177:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":175,"./netsim":177,"./skins":181}],181:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":176,"./netsim":178,"./skins":182}],182:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":185}],177:[function(require,module,exports){
+},{"../skins":186}],178:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -44,7 +44,7 @@ exports.load = function (assetUrl, id) {
 'use strict';
 
 var page = require('./page.html');
-var netsimMsg = require('../../locale/current/netsim');
+var i18n = require('../../locale/current/netsim');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -67,7 +67,7 @@ var NetSim = module.exports = function () {
   this.skin = null;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = {};
 
@@ -132,7 +132,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * Called on page load.
  * @param {Object} config
  * @param {Object} config.skin
- * @param {NetSimLevelConfiguration} config.level
+ * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
@@ -149,7 +149,7 @@ NetSim.prototype.init = function(config) {
 
   /**
    * Configuration for the loaded level
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = config.level;
 
@@ -221,11 +221,17 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel(
-      $('#netsim_received'), netsimMsg.receivedMessageLog(), false);
+  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim_received'), {
+    logTitle: i18n.receivedMessageLog(),
+    isMinimized: false,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
-  this.sentMessageLog_ = new NetSimLogPanel(
-      $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
+  this.sentMessageLog_ = new NetSimLogPanel($('#netsim_sent'), {
+    logTitle: i18n.sentMessageLog(),
+    isMinimized: true,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
   this.connection_ = new NetSimConnection({
     window: window,
@@ -446,7 +452,7 @@ NetSim.prototype.render = function () {
       shareLink;
 
   isConnected = false;
-  clientStatus = netsimMsg.disconnected();
+  clientStatus = i18n.disconnected();
   if (this.connection_ && this.connection_.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.connection_.myNode.getHostname();
@@ -457,7 +463,7 @@ NetSim.prototype.render = function () {
 
   if (this.myConnectedRouter_) {
     isConnected = true;
-    clientStatus = netsimMsg.connected();
+    clientStatus = i18n.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
@@ -559,7 +565,7 @@ NetSim.prototype.onRouterLogChange_ = function () {
     this.setRouterLogData(this.myConnectedRouter_.getLog());
   }
 };
-},{"../../locale/current/netsim":241,"../RunLoop":3,"./DashboardUser":118,"./NetSimConnection":122,"./NetSimLobby":136,"./NetSimLogPanel":141,"./NetSimSendPanel":159,"./NetSimStatusPanel":163,"./NetSimTabsComponent":166,"./NetSimVisualization":167,"./controls.html":173,"./netsimConstants":178,"./page.html":180}],180:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"../RunLoop":3,"./DashboardUser":119,"./NetSimConnection":123,"./NetSimLobby":137,"./NetSimLogPanel":142,"./NetSimSendPanel":160,"./NetSimStatusPanel":164,"./NetSimTabsComponent":167,"./NetSimVisualization":168,"./controls.html":174,"./netsimConstants":179,"./page.html":181}],181:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -582,19 +588,21 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"../../locale/current/netsim":241,"ejs":252}],175:[function(require,module,exports){
+},{"../../locale/current/common":237,"../../locale/current/netsim":242,"ejs":253}],176:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 /**
  * A level configuration that can be used by NetSim
- * @typedef {Object} NetSimLevelConfiguration
+ * @typedef {Object} netsimLevelConfiguration
  *
  * @property {string} instructions - Inherited from blockly level configuration.
  *
@@ -606,6 +614,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
+ *
+ * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
+ *           the router uses to parse incoming packets and figure out where
+ *           to route them.
+ *
+ * @property {packetHeaderSpec} clientInitialPacketHeader - The header format
+ *           used by the local client node when generating/parsing packets,
+ *           which affects the layout of the send panel and log panels.
  *
  * @property {boolean} showAddPacketButton - Whether the "Add Packet" button
  *           should appear in the send widget.
@@ -647,7 +663,7 @@ var levels = module.exports = {};
  * A default level configuration so that we can define the others by delta.
  * This default configuration enables everything possible, so other configs
  * should start with this one and disable features.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.default = {
 
@@ -655,6 +671,20 @@ levels.default = {
   showClientsInLobby: true,
   showRoutersInLobby: true,
   showAddRouterButton: true,
+
+  // Packet header specification
+  routerExpectsPacketHeader: [
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+  ],
+  clientInitialPacketHeader: [
+    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+  ],
 
   // Send widget configuration
   showAddPacketButton: true,
@@ -698,10 +728,11 @@ levels.default = {
 /**
  * Variant 1 base level
  * Sends individual bits at a time.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant1 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS],
@@ -711,10 +742,11 @@ levels.variant1 = utils.extend(levels.default, {
 /**
  * Variant 2 base level
  * Sends messages as packets, all at once.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant2 = utils.extend(levels.default, {
   showAddRouterButton: false,
+  clientInitialPacketHeader: [],
   showAddPacketButton: false,
   showPacketSizeControl: false,
   showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
@@ -725,7 +757,7 @@ levels.variant2 = utils.extend(levels.default, {
 /**
  * Variant 3 base level
  * Enables routers.
- * @type {NetSimLevelConfiguration}
+ * @type {netsimLevelConfiguration}
  */
 levels.variant3 = utils.extend(levels.default, {
   showClientsInLobby: false,
@@ -748,7 +780,7 @@ levels.variant3 = utils.extend(levels.default, {
   defaultDnsMode: DnsMode.AUTOMATIC
 });
 
-},{"../../locale/current/netsim":241,"../utils":231,"./netsimConstants":178}],173:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"../utils":232,"./netsimConstants":179}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -768,7 +800,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],167:[function(require,module,exports){
+},{"ejs":253}],168:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1277,7 +1309,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   });
 };
 
-},{"../utils":231,"./NetSimVizNode":169,"./NetSimVizWire":170,"./NetSimWire":171,"./netsimUtils":179,"./tweens":182}],170:[function(require,module,exports){
+},{"../utils":232,"./NetSimVizNode":170,"./NetSimVizWire":171,"./NetSimWire":172,"./netsimUtils":180,"./tweens":183}],171:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1363,7 +1395,7 @@ NetSimVizWire.prototype.kill = function () {
   this.remoteVizNode = null;
 };
 
-},{"../utils":231,"./NetSimVizEntity":168,"./NetSimVizNode":169,"./netsimUtils":179}],169:[function(require,module,exports){
+},{"../utils":232,"./NetSimVizEntity":169,"./NetSimVizNode":170,"./netsimUtils":180}],170:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1570,7 +1602,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   }
 };
 
-},{"../utils":231,"./NetSimRouterNode":155,"./NetSimVizEntity":168,"./netsimConstants":178,"./netsimUtils":179,"./tweens":182}],168:[function(require,module,exports){
+},{"../utils":232,"./NetSimRouterNode":156,"./NetSimVizEntity":169,"./netsimConstants":179,"./netsimUtils":180,"./tweens":183}],169:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1793,7 +1825,7 @@ NetSimVizEntity.prototype.snapToScale = function (newScale) {
   this.tweenToScale(newScale, 0);
 };
 
-},{"./netsimUtils":179,"./tweens":182}],182:[function(require,module,exports){
+},{"./netsimUtils":180,"./tweens":183}],183:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1973,7 +2005,7 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
-},{"../utils":231}],166:[function(require,module,exports){
+},{"../utils":232}],167:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1997,7 +2029,7 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @param {function} dnsModeChangeCallback
@@ -2015,7 +2047,7 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -2089,7 +2121,8 @@ NetSimTabsComponent.prototype.render = function () {
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
-        this.rootDiv_.find('#tab_router'));
+        this.rootDiv_.find('#tab_router'),
+        this.levelConfig_);
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
@@ -2155,7 +2188,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
   }
 };
 
-},{"./NetSimDnsTab":128,"./NetSimMyDeviceTab":145,"./NetSimRouterTab":157,"./NetSimTabsComponent.html":165,"./netsimConstants":178,"./netsimUtils":179}],165:[function(require,module,exports){
+},{"./NetSimDnsTab":129,"./NetSimMyDeviceTab":146,"./NetSimRouterTab":158,"./NetSimTabsComponent.html":166,"./netsimConstants":179,"./netsimUtils":180}],166:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2187,7 +2220,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"./netsimConstants":178,"./netsimUtils":179,"ejs":252}],163:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],164:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2264,7 +2297,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 };
 
-},{"../utils":231,"./NetSimPanel.js":152,"./NetSimStatusPanel.html":162}],162:[function(require,module,exports){
+},{"../utils":232,"./NetSimPanel.js":153,"./NetSimStatusPanel.html":163}],163:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2284,7 +2317,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],159:[function(require,module,exports){
+},{"ejs":253}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2305,12 +2338,13 @@ var markup = require('./NetSimSendPanel.html');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
+var PacketEncoder = require('./PacketEncoder');
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection
  * @constructor
  * @augments NetSimPanel
@@ -2319,10 +2353,16 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     connection) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
+
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = levelConfig.clientInitialPacketHeader;
 
   /**
    * Connection that owns the router we will represent / manipulate
@@ -2406,7 +2446,11 @@ NetSimSendPanel.prototype.render = function () {
   if (this.levelConfig_.showPacketSizeControl) {
     this.packetSizeControl_ = new NetSimPacketSizeControl(
         this.rootDiv_.find('.packet_size'),
-        this.packetSizeChangeCallback_.bind(this));
+        this.packetSizeChangeCallback_.bind(this),
+        {
+          minimumPacketSize: PacketEncoder.getHeaderLength(this.packetSpec_),
+          sliderStepValue: 1
+        });
     this.packetSizeControl_.setPacketSize(this.maxPacketSize_);
   }
 
@@ -2446,6 +2490,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
 
   // Create a new packet
   var newPacket = new NetSimPacketEditor({
+    packetSpec: this.packetSpec_,
     toAddress: newPacketToAddress,
     fromAddress: this.fromAddress_,
     packetIndex: newPacketCount,
@@ -2519,9 +2564,10 @@ NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
  * @private
  */
 NetSimSendPanel.prototype.onSendButtonPress_ = function () {
+  // Make sure to perform packet truncation here.
   var packetBinaries = this.packets_.map(function (packetEditor) {
-    return packetEditor.getPacketBinary();
-  });
+    return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
+  }.bind(this));
 
   var myNode = this.connection_.myNode;
   if (myNode && packetBinaries.length > 0) {
@@ -2580,7 +2626,7 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   });
 };
 
-},{"../../locale/current/netsim":241,"../utils":231,"./NetSimPacketEditor":148,"./NetSimPacketSizeControl":150,"./NetSimPanel":152,"./NetSimSendPanel.html":158,"./netsimConstants":178}],158:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"../utils":232,"./NetSimPacketEditor":149,"./NetSimPacketSizeControl":151,"./NetSimPanel":153,"./NetSimSendPanel.html":159,"./PacketEncoder":173,"./netsimConstants":179}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2600,7 +2646,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"ejs":252}],157:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"ejs":253}],158:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2621,15 +2667,22 @@ var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 /**
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
+ * @param {netsimLevelConfiguration} levelConfig
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {NetSimRouterLogTable}
@@ -2648,7 +2701,7 @@ NetSimRouterTab.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
-      this.rootDiv_.find('.router_log_table'));
+      this.rootDiv_.find('.router_log_table'), this.levelConfig_);
 };
 
 /**
@@ -2658,7 +2711,7 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
 };
 
-},{"./NetSimRouterLogTable":154,"./NetSimRouterTab.html":156}],156:[function(require,module,exports){
+},{"./NetSimRouterLogTable":155,"./NetSimRouterTab.html":157}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2678,7 +2731,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],154:[function(require,module,exports){
+},{"ejs":253}],155:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2699,15 +2752,22 @@ var markup = require('./NetSimRouterLogTable.html');
  * Shows different amounts of information depending on the DNS mode.
  *
  * @param {jQuery} rootDiv
+ * @param {netsimLevelConfiguration} levelConfig
  * @constructor
  */
-var NetSimRouterLogTable = module.exports = function (rootDiv) {
+var NetSimRouterLogTable = module.exports = function (rootDiv, levelConfig) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {Array}
@@ -2723,6 +2783,7 @@ var NetSimRouterLogTable = module.exports = function (rootDiv) {
  */
 NetSimRouterLogTable.prototype.render = function () {
   var renderedMarkup = $(markup({
+    level: this.levelConfig_,
     tableData: this.routerLogData_
   }));
   this.rootDiv_.html(renderedMarkup);
@@ -2736,7 +2797,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
   this.render();
 };
 
-},{"./NetSimRouterLogTable.html":153}],153:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html":154}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2749,8 +2810,20 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-var DnsMode = require('./netsimConstants').DnsMode;
-; buf.push('\n<div class="netsim-router-log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      <th nowrap>To</th>\n      <th nowrap>From</th>\n      <th nowrap>Message</th>\n      <th nowrap>Bits</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');16;
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = level.routerExpectsPacketHeader.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+; buf.push('\n<div class="netsim-router-log">\n  <h1>Router Traffic</h1>\n  <table>\n    <thead>\n    <tr>\n      ');21; if (showToAddress) { ; buf.push('\n        <th nowrap>', escape((22,  i18n.to() )), '</th>\n      ');23; } ; buf.push('\n      ');24; if (showFromAddress) { ; buf.push('\n        <th nowrap>', escape((25,  i18n.from() )), '</th>\n      ');26; } ; buf.push('\n      ');27; if (showPacketInfo) { ; buf.push('\n        <th nowrap>', escape((28,  i18n.packetInfo() )), '</th>\n      ');29; } ; buf.push('\n      <th nowrap>', escape((30,  i18n.message() )), '</th>\n      <th nowrap>', escape((31,  i18n.bits() )), '</th>\n    </tr>\n    </thead>\n    <tbody>\n    ');35;
     // Sort: Most recent first
     tableData.sort(function (a, b) {
       return a.timestamp > b.timestamp ? -1 : 1;
@@ -2759,7 +2832,10 @@ var DnsMode = require('./netsimConstants').DnsMode;
     // Create rows
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
-    ; buf.push('\n    <tr class="', escape((26,  rowClasses.join(' ') )), '">\n      <td nowrap>', escape((27,  logEntry.getToAddress() )), '</td>\n      <td nowrap>', escape((28,  logEntry.getFromAddress() )), '</td>\n      <td>', escape((29,  logEntry.getMessageAscii() )), '</td>\n      <td nowrap>', escape((30,  logEntry.packet.length )), '</td>\n    </tr>\n    ');32;
+    ; buf.push('\n    <tr class="', escape((45,  rowClasses.join(' ') )), '">\n      ');46; if (showToAddress) { ; buf.push('\n        <td nowrap>', escape((47,  logEntry.getHeaderField(PacketHeaderType.TO_ADDRESS) )), '</td>\n      ');48; } ; buf.push('\n      ');49; if (showFromAddress) { ; buf.push('\n        <td nowrap>', escape((50,  logEntry.getHeaderField(PacketHeaderType.FROM_ADDRESS) )), '</td>\n      ');51; } ; buf.push('\n      ');52; if (showPacketInfo) { ; buf.push('\n        <td nowrap>', escape((53,  i18n.xOfYPackets({
+            x: logEntry.getHeaderField(PacketHeaderType.PACKET_INDEX),
+            y: logEntry.getHeaderField(PacketHeaderType.PACKET_COUNT)
+          }) )), '</td>\n      ');57; }; buf.push('\n      <td>', escape((58,  logEntry.getMessageAscii() )), '</td>\n      <td nowrap>', escape((59,  logEntry.packet.length )), '</td>\n    </tr>\n    ');61;
     });
     ; buf.push('\n    </tbody>\n  </table>\n</div>'); })();
 } 
@@ -2769,7 +2845,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":178,"ejs":252}],150:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./netsimConstants":179,"ejs":253}],151:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2784,6 +2860,7 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimPacketSizeControl.html');
+var i18n = require('../../locale/current/netsim');
 
 /**
  * @type {number}
@@ -2795,10 +2872,13 @@ var SLIDER_INFINITY_VALUE = 1025;
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
  * @param {function} packetSizeChangeCallback
+ * @param {Object} options
+ * @param {number} options.minimumPacketSize
+ * @param {number} options.sliderStepValue
  * @constructor
  */
 var NetSimPacketSizeControl = module.exports = function (rootDiv,
-    packetSizeChangeCallback) {
+    packetSizeChangeCallback, options) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -2811,6 +2891,18 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
    * @private
    */
   this.packetSizeChangeCallback_ = packetSizeChangeCallback;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.minimumPacketSize_ = options.minimumPacketSize;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.sliderStepValue_ = options.sliderStepValue;
 
   /**
    * Internal state
@@ -2826,13 +2918,15 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimPacketSizeControl.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    minValue: this.minimumPacketSize_
+  }));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.packet-size-slider').slider({
     value: this.maxPacketSize_,
-    min: 16,
+    min: this.minimumPacketSize_,
     max: SLIDER_INFINITY_VALUE,
-    step: 1,
+    step: this.sliderStepValue_,
     slide: this.onPacketSizeChange_.bind(this)
   });
   this.setPacketSize(this.maxPacketSize_);
@@ -2876,10 +2970,12 @@ NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
-  rootDiv.find('.packet_size_value').html(newPacketSize);
+  rootDiv.find('.packet_size_value').text(i18n.numBitsPerPacket({
+    x: newPacketSize
+  }));
 };
 
-},{"./NetSimPacketSizeControl.html":149}],149:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./NetSimPacketSizeControl.html":150}],150:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2891,7 +2987,9 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim_packet_size_control">\n  <div class="slider-inline-wrap">\n    <div class="packet-size-slider"></div>\n    <div class="slider-labels">\n      <div class="max-value">Unlimited</div>\n      <div class="min-value">16</div>\n      <div class="current-value">\n        <label for="packet-size-slider"><span class="packet_size_value"></span> bits per packet</label>\n      </div>\n    </div>\n  </div>\n</div>\n'); })();
+ buf.push('');1;
+  var i18n = require('../../locale/current/netsim');
+; buf.push('\n<div class="netsim_packet_size_control">\n  <div class="slider-inline-wrap">\n    <div class="packet-size-slider"></div>\n    <div class="slider-labels">\n      <div class="max-value">', escape((8,  i18n.unlimited() )), '</div>\n      <div class="min-value">', escape((9,  minValue )), '</div>\n      <div class="current-value">\n        <label for="packet-size-slider"><span class="packet_size_value"></span></label>\n      </div>\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2899,7 +2997,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],148:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"ejs":253}],149:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2921,7 +3019,11 @@ var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
 var formatBinary = dataConverters.formatBinary;
@@ -2941,6 +3043,7 @@ var binaryToAscii = dataConverters.binaryToAscii;
 /**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
+ * @param {packetHeaderSpec} packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -2959,6 +3062,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('netsim-packet');
+
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = initialConfig.packetSpec;
 
   /** @type {number} */
   this.toAddress = initialConfig.toAddress || 0;
@@ -3034,7 +3143,9 @@ NetSimPacketEditor.prototype.getRoot = function () {
 
 /** Replace contents of our root element with our own markup. */
 NetSimPacketEditor.prototype.render = function () {
-  var newMarkup = $(markup({}));
+  var newMarkup = $(markup({
+    packetSpec: this.packetSpec_
+  }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
@@ -3151,7 +3262,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName, converterFun
  * whitelists to limit typing in certain fields, and rules for intepreting the
  * field from binary.
  * @typedef {Object} rowType
- * @property {string} typeName - Identifies encoding type for the row
+ * @property {EncodingType} typeName
  * @property {RegExp} shortNumberAllowedCharacters - Whitelist of characters
  *           that may be typed into a header field.
  * @property {function} shortNumberConversion - How to convert from binary
@@ -3170,30 +3281,30 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var rootDiv = this.rootDiv_;
 
   var shortNumberFields = [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ];
 
   /** @type {rowType[]} */
   var rowTypes = [
     {
-      typeName: 'binary',
+      typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
       messageAllowedCharacters: /[01\s]/,
       messageConversion: minifyBinary
     },
     {
-      typeName: 'hexadecimal',
+      typeName: EncodingType.HEXADECIMAL,
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: hexToInt,
       messageAllowedCharacters: /[0-9a-f\s]/i,
       messageConversion: hexToBinary
     },
     {
-      typeName: 'decimal',
+      typeName: EncodingType.DECIMAL,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /[0-9\s]/,
@@ -3202,7 +3313,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       }.bind(this)
     },
     {
-      typeName: 'ascii',
+      typeName: EncodingType.ASCII,
       shortNumberAllowedCharacters: /[0-9]/,
       shortNumberConversion: parseInt,
       messageAllowedCharacters: /./,
@@ -3261,10 +3372,10 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var liveFields = [];
 
   [
-    'toAddress',
-    'fromAddress',
-    'packetIndex',
-    'packetCount'
+    PacketHeaderType.TO_ADDRESS,
+    PacketHeaderType.FROM_ADDRESS,
+    PacketHeaderType.PACKET_INDEX,
+    PacketHeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
           inputElement: this.binaryUI[fieldName],
@@ -3333,14 +3444,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var shortNumberFieldWidth = 4;
-  return PacketEncoder.defaultPacketEncoder.createBinary({
-    toAddress: intToBinary(this.toAddress, shortNumberFieldWidth),
-    fromAddress: intToBinary(this.fromAddress, shortNumberFieldWidth),
-    packetIndex: intToBinary(this.packetIndex, shortNumberFieldWidth),
-    packetCount: intToBinary(this.packetCount, shortNumberFieldWidth),
-    message: this.message
-  });
+  var encoder = new PacketEncoder(this.packetSpec_);
+  return encoder.concatenateBinary(
+      encoder.makeBinaryHeaders({
+        toAddress: this.toAddress,
+        fromAddress: this.fromAddress,
+        packetIndex: this.packetIndex,
+        packetCount: this.packetCount
+      }),
+      this.message);
 };
 
 /** @param {number} fromAddress */
@@ -3413,7 +3525,7 @@ NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
   this.removePacketCallback_(this);
 };
 
-},{"../../locale/current/netsim":241,"../constants":49,"../utils":231,"./NetSimEncodingControl":132,"./NetSimPacketEditor.html":147,"./PacketEncoder":172,"./dataConverters":174,"./netsimConstants":178}],147:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"../constants":50,"../utils":232,"./NetSimEncodingControl":133,"./NetSimPacketEditor.html":148,"./PacketEncoder":173,"./dataConverters":175,"./netsimConstants":179}],148:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3425,7 +3537,37 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var i18n = require('../../locale/current/netsim'); ; buf.push('\n<table>\n  <thead>\n  <tr>\n    <th nowrap class="encodingLabel"></th>\n    <th nowrap class="toAddress">', escape((6,  i18n.to() )), '</th>\n    <th nowrap class="fromAddress">', escape((7,  i18n.from() )), '</th>\n    <th nowrap class="packetInfo">', escape((8,  i18n.packet() )), '</th>\n    <th class="message">\n      ', escape((10,  i18n.message() )), '\n      <div class="packet-controls">\n        <span class="netsim-button remove-packet-button" title="', escape((12,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n      </div>\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr class="ascii">\n    <th nowrap class="encodingLabel">', escape((19,  i18n.ascii() )), '</th>\n    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((22,  i18n._of_() )), '<input type="text" readonly class="packetCount" /></td>\n    <td class="message"><div><textarea class="message"></textarea></div></td>\n  </tr>\n  <tr class="decimal">\n    <th nowrap class="encodingLabel">', escape((26,  i18n.decimal() )), '</th>\n    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((29,  i18n._of_() )), '<input type="text" readonly class="packetCount" /></td>\n    <td class="message"><div><textarea class="message"></textarea></div></td>\n  </tr>\n  <tr class="hexadecimal">\n    <th nowrap class="encodingLabel">', escape((33,  i18n.hex() )), '</th>\n    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((36,  i18n._of_() )), '<input type="text" readonly class="packetCount" /></td>\n    <td class="message"><div><textarea class="message"></textarea></div></td>\n  </tr>\n  <tr class="binary">\n    <th nowrap class="encodingLabel">', escape((40,  i18n.binary() )), '</th>\n    <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>\n    <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>\n    <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" />', escape((43,  i18n._of_() )), '<input type="text" readonly class="packetCount" /></td>\n    <td class="message"><div><textarea class="message"></textarea></div></td>\n  </tr>\n  </tbody>\n</table>\n<div class="bit-counter"></div>\n'); })();
+ buf.push('');1;
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var netsimUtils = require('./netsimUtils');
+  var getEncodingLabel = netsimUtils.getEncodingLabel;
+  var forEachEnumValue = netsimUtils.forEachEnumValue;
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ */
+  function editorRow(encodingType) {
+    ; buf.push('\n      <tr class="', escape((26,  encodingType )), '">\n        <th nowrap class="', escape((27,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((27,  getEncodingLabel(encodingType) )), '</th>\n        ');28; if (showToAddress) { ; buf.push('\n        <td nowrap class="', escape((29,  PacketUIColumnType.TO_ADDRESS )), '"><input type="text" class="', escape((29,  PacketHeaderType.TO_ADDRESS )), '" /></td>\n        ');30; } ; buf.push('\n        ');31; if (showFromAddress) { ; buf.push('\n        <td nowrap class="', escape((32,  PacketUIColumnType.FROM_ADDRESS )), '"><input type="text" readonly class="', escape((32,  PacketHeaderType.FROM_ADDRESS )), '" /></td>\n        ');33; } ; buf.push('\n        ');34; if (showPacketInfo) { ; buf.push('\n        <td nowrap class="', escape((35,  PacketUIColumnType.PACKET_INFO )), '"><input type="text" readonly class="', escape((35,  PacketHeaderType.PACKET_INDEX )), '" />', escape((35,  i18n._of_() )), '<input type="text" readonly class="', escape((35,  PacketHeaderType.PACKET_COUNT )), '" /></td>\n        ');36; } ; buf.push('\n        <td class="', escape((37,  PacketUIColumnType.MESSAGE )), '"><div><textarea class="message"></textarea></div></td>\n      </tr>\n    ');39;
+  }
+; buf.push('\n<table>\n  <thead>\n  <tr>\n    <th nowrap class="', escape((45,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n    ');46; if (showToAddress) { ; buf.push('\n      <th nowrap class="', escape((47,  PacketUIColumnType.TO_ADDRESS )), '">', escape((47,  i18n.to() )), '</th>\n    ');48; } ; buf.push('\n    ');49; if (showFromAddress) { ; buf.push('\n      <th nowrap class="', escape((50,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((50,  i18n.from() )), '</th>\n    ');51; } ; buf.push('\n    ');52; if (showPacketInfo) { ; buf.push('\n      <th nowrap class="', escape((53,  PacketUIColumnType.PACKET_INFO )), '">', escape((53,  i18n.packet() )), '</th>\n    ');54; } ; buf.push('\n    <th class="', escape((55,  PacketUIColumnType.MESSAGE )), '">\n      ', escape((56,  i18n.message() )), '\n      <div class="packet-controls">\n        <span class="netsim-button remove-packet-button" title="', escape((58,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n      </div>\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  ');64;
+    forEachEnumValue(EncodingType, function (encodingType) {
+      editorRow(encodingType);
+    });
+  ; buf.push('\n  </tbody>\n</table>\n<div class="bit-counter"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3433,7 +3575,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"ejs":252}],145:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],146:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3454,7 +3596,7 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
@@ -3469,7 +3611,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -3536,7 +3678,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   }
   this.chunkSizeControl_.setEncodings(newEncodings);
 };
-},{"./NetSimChunkSizeControl":120,"./NetSimEncodingControl":132,"./NetSimMyDeviceTab.html":144}],144:[function(require,module,exports){
+},{"./NetSimChunkSizeControl":121,"./NetSimEncodingControl":133,"./NetSimMyDeviceTab.html":145}],145:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3556,7 +3698,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],141:[function(require,module,exports){
+},{"ejs":253}],142:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3580,12 +3722,20 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
- * @param {string} logTitle
- * @param {boolean} [isMinimized] defaults to FALSE
+ * @param {Object} options
+ * @param {string} options.logTitle
+ * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) {
+var NetSimLogPanel = module.exports = function (rootDiv, options) {
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = options.packetSpec;
+
   /**
    * List of controllers for currently displayed packets.
    * @type {Array.<NetSimLogPacket>}
@@ -3601,7 +3751,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
   this.currentEncodings_ = [];
 
   /**
-   * Current chunk size (bytesize) for intepreting binary in the log.
+   * Current chunk size (bytesize) for interpreting binary in the log.
    * @type {number}
    * @private
    */
@@ -3610,8 +3760,8 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
-    panelTitle: logTitle,
-    beginMinimized: isMinimized
+    panelTitle: options.logTitle,
+    beginMinimized: options.isMinimized
   });
 };
 NetSimLogPanel.inherits(NetSimPanel);
@@ -3621,10 +3771,7 @@ NetSimLogPanel.prototype.render = function () {
   NetSimLogPanel.superPrototype.render.call(this);
 
   // Add our own content markup
-  var newMarkup = $(markup({
-    logInstanceID: this.instanceID_,
-    logTitle: this.logTitle_
-  }));
+  var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
 
   // Add a clear button to the panel header
@@ -3652,9 +3799,11 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
       scrollArea.outerHeight();
 
-  var newPacket = new NetSimLogPacket(packetBinary,
-      this.currentEncodings_,
-      this.currentChunkSize_);
+  var newPacket = new NetSimLogPacket(packetBinary, {
+    packetSpec: this.packetSpec_,
+    encodings: this.currentEncodings_,
+    chunkSize: this.currentChunkSize_
+  });
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
 
@@ -3690,12 +3839,14 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
 /**
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
- * @param {EncodingType[]} encodings - which display style to use initially
- * @param {number} chunkSize - (or bytesize) to use when interpreting and
+ * @param {Object} options
+ * @param {packetHeaderSpec} options.packetSpec
+ * @param {EncodingType[]} options.encodings - which display style to use initially
+ * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
+var NetSimLogPacket = function (packetBinary, options) {
   /**
    * @type {string}
    * @private
@@ -3703,16 +3854,22 @@ var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
   this.packetBinary_ = packetBinary;
 
   /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = options.packetSpec;
+
+  /**
    * @type {EncodingType[]}
    * @private
    */
-  this.encodings_ = encodings;
+  this.encodings_ = options.encodings;
 
   /**
    * @type {number}
    * @private
    */
-  this.chunkSize_ = chunkSize;
+  this.chunkSize_ = options.chunkSize;
 
   /**
    * Wrapper div that we create once, and fill repeatedly with render()
@@ -3731,6 +3888,7 @@ var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
 NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
+    packetSpec: this.packetSpec_,
     chunkSize: this.chunkSize_
   });
   var jQueryWrap = $(rawMarkup);
@@ -3765,7 +3923,7 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
-},{"../../locale/current/netsim":241,"../utils":231,"./NetSimEncodingControl":132,"./NetSimLogPacket.html":139,"./NetSimLogPanel.html":140,"./NetSimPanel":152}],152:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"../utils":232,"./NetSimEncodingControl":133,"./NetSimLogPacket.html":140,"./NetSimLogPanel.html":141,"./NetSimPanel":153}],153:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3922,7 +4080,7 @@ NetSimPanel.prototype.getBody = function () {
   return this.rootDiv_.find('.panel-body');
 };
 
-},{"./NetSimPanel.html":151}],151:[function(require,module,exports){
+},{"./NetSimPanel.html":152}],152:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3942,7 +4100,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],140:[function(require,module,exports){
+},{"ejs":253}],141:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3962,7 +4120,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],139:[function(require,module,exports){
+},{"ejs":253}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3975,69 +4133,80 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-var netsimMsg = require('../../locale/current/netsim');
-var PacketEncoder = require('./PacketEncoder');
-var dataConverters = require('./dataConverters');
-var formatBinary = dataConverters.formatBinary;
-var formatHex = dataConverters.formatHex;
-var alignDecimal = dataConverters.alignDecimal;
-var binaryToInt = dataConverters.binaryToInt;
-var binaryToHex = dataConverters.binaryToHex;
-var binaryToDecimal = dataConverters.binaryToDecimal;
-var binaryToAscii = dataConverters.binaryToAscii;
+  var netsimConstants = require('./netsimConstants');
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var i18n = require('../../locale/current/netsim');
+  var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
+  var PacketEncoder = require('./PacketEncoder');
+  var dataConverters = require('./dataConverters');
+  var formatBinary = dataConverters.formatBinary;
+  var formatHex = dataConverters.formatHex;
+  var alignDecimal = dataConverters.alignDecimal;
+  var binaryToInt = dataConverters.binaryToInt;
+  var binaryToHex = dataConverters.binaryToHex;
+  var binaryToDecimal = dataConverters.binaryToDecimal;
+  var binaryToAscii = dataConverters.binaryToAscii;
 
-function getEncodingLabel(rowClass) {
-  if (rowClass === 'ascii') {
-    return netsimMsg.ascii();
-  } else if (rowClass === 'decimal') {
-    return netsimMsg.decimal();
-  } else if (rowClass === 'hexadecimal') {
-    return netsimMsg.hex();
-  } else if (rowClass === 'binary') {
-    return netsimMsg.binary();
+  /** @type {PacketEncoder} */
+  var encoder = new PacketEncoder(packetSpec);
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ * @param {string} toAddress
+ * @param {string} fromAddress
+ * @param {string} packetInfo
+ * @param {string} message
+ */
+  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
+    ; buf.push('\n      <tr class="', escape((40,  encodingType )), '">\n        <th nowrap class="', escape((41,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((41,  getEncodingLabel(encodingType) )), '</th>\n        ');42; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((43,  PacketUIColumnType.TO_ADDRESS )), '">', escape((43,  toAddress )), '</td>\n        ');44; } ; buf.push('\n        ');45; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((46,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((46,  fromAddress )), '</td>\n        ');47; } ; buf.push('\n        ');48; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((49,  PacketUIColumnType.PACKET_INFO )), '">', escape((49,  packetInfo )), '</td>\n        ');50; } ; buf.push('\n        <td class="', escape((51,  PacketUIColumnType.MESSAGE )), '">', escape((51,  message )), '</td>\n      </tr>\n  ');53;
   }
-  return '';
-}
+ ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="', escape((59,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n      ');60; if (showToAddress) { ; buf.push('\n        <th nowrap class="', escape((61,  PacketUIColumnType.TO_ADDRESS )), '">', escape((61,  i18n.to() )), '</th>\n      ');62; } ; buf.push('\n      ');63; if (showFromAddress) { ; buf.push('\n        <th nowrap class="', escape((64,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((64,  i18n.from() )), '</th>\n      ');65; } ; buf.push('\n      ');66; if (showPacketInfo) { ; buf.push('\n        <th nowrap class="', escape((67,  PacketUIColumnType.PACKET_INFO )), '">', escape((67,  i18n.packet() )), '</th>\n      ');68; } ; buf.push('\n      <th nowrap class="', escape((69,  PacketUIColumnType.MESSAGE )), '">', escape((69,  i18n.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');73;
+    var toAddress = showToAddress ? encoder.getHeader(PacketHeaderType.TO_ADDRESS, packetBinary) : '';
+    var fromAddress = showFromAddress ? encoder.getHeader(PacketHeaderType.FROM_ADDRESS, packetBinary) : '';
+    var packetIndex = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_INDEX, packetBinary) : '';
+    var packetCount = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_COUNT, packetBinary) : '';
+    var message = encoder.getBody(packetBinary);
 
-function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
-  ; buf.push('\n    <tr class="', escape((28,  rowClass )), '">\n      <th nowrap class="encodingLabel">', escape((29,  getEncodingLabel(rowClass) )), '</th>\n      <td nowrap class="toAddress">', escape((30,  toAddress )), '</td>\n      <td nowrap class="fromAddress">', escape((31,  fromAddress )), '</td>\n      <td nowrap class="packetInfo">', escape((32,  packetInfo )), '</td>\n      <td class="message">', escape((33,  message )), '</td>\n    </tr>\n');35;
-}
-
- ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="encodingLabel"></th>\n      <th nowrap class="toAddress">', escape((43,  netsimMsg.to() )), '</th>\n      <th nowrap class="fromAddress">', escape((44,  netsimMsg.from() )), '</th>\n      <th nowrap class="packetInfo">', escape((45,  netsimMsg.packet() )), '</th>\n      <th nowrap class="message">', escape((46,  netsimMsg.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');50;
-    var toAddress = PacketEncoder.defaultPacketEncoder.getField('toAddress', packetBinary);
-    var fromAddress = PacketEncoder.defaultPacketEncoder.getField('fromAddress', packetBinary);
-    var packetIndex = PacketEncoder.defaultPacketEncoder.getField('packetIndex', packetBinary);
-    var packetCount = PacketEncoder.defaultPacketEncoder.getField('packetCount', packetBinary);
-    var message = PacketEncoder.defaultPacketEncoder.getField('message', packetBinary);
-
-    logRow('ascii',
+    logRow(EncodingType.ASCII,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
         binaryToAscii(message, chunkSize));
 
-    logRow('decimal',
+    logRow(EncodingType.DECIMAL,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
         alignDecimal(binaryToDecimal(message, chunkSize)));
 
-    logRow('hexadecimal',
+    logRow(EncodingType.HEXADECIMAL,
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToHex(packetIndex),
           y: binaryToHex(packetCount)
         }),
         formatHex(binaryToHex(message), chunkSize));
 
-    logRow('binary',
+    logRow(EncodingType.BINARY,
         formatBinary(toAddress, 4),
         formatBinary(fromAddress, 4),
         formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
@@ -4050,7 +4219,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"./PacketEncoder":172,"./dataConverters":174,"ejs":252}],136:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./PacketEncoder":173,"./dataConverters":175,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],137:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4084,7 +4253,7 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
@@ -4095,7 +4264,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
     shardID) {
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -4152,7 +4321,7 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -4531,7 +4700,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../utils":231,"./NetSimClientNode":121,"./NetSimLobby.html":135,"./NetSimLogger":142,"./NetSimRouterNode":155,"./netsimUtils":179}],179:[function(require,module,exports){
+},{"../utils":232,"./NetSimClientNode":122,"./NetSimLobby.html":136,"./NetSimLogger":143,"./NetSimRouterNode":156,"./netsimUtils":180}],180:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4546,6 +4715,9 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
 /* global $ */
 'use strict';
 
+var i18n = require('../../locale/current/netsim');
+var netsimConstants = require('./netsimConstants');
+var EncodingType = netsimConstants.EncodingType;
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 
@@ -4602,14 +4774,48 @@ exports.jQuerySvgElement = function (type) {
 /**
  * Checks configuration against tab type to decide whether tab
  * of type should be shown.
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimTabType} tabType
  */
 exports.shouldShowTab = function (levelConfig, tabType) {
   return levelConfig.showTabs.indexOf(tabType) > -1;
 };
 
-},{"./NetSimClientNode":121,"./NetSimRouterNode":155}],135:[function(require,module,exports){
+/**
+ * Get the localized string for the given encoding type.
+ * @param {EncodingType} encodingType
+ * @returns {string} localized encoding name
+ */
+exports.getEncodingLabel = function (encodingType) {
+  if (encodingType === EncodingType.ASCII) {
+    return i18n.ascii();
+  } else if (encodingType === EncodingType.DECIMAL) {
+    return i18n.decimal();
+  } else if (encodingType === EncodingType.HEXADECIMAL) {
+    return i18n.hex();
+  } else if (encodingType === EncodingType.BINARY) {
+    return i18n.binary();
+  } else if (encodingType === EncodingType.A_AND_B) {
+    return i18n.a_and_b();
+  }
+  return '';
+};
+
+/**
+ * @param {Object} enumObj - Technically any object, but should be used with
+ *        an enum like those found in netsimConstants
+ * @param {function} func - A function to call for each value in the enum,
+ *        which gets passed the enum value.
+ */
+exports.forEachEnumValue = function (enumObj, func) {
+  for (var enumKey in enumObj) {
+    if (enumObj.hasOwnProperty(enumKey)) {
+      func(enumObj[enumKey]);
+    }
+  }
+};
+
+},{"../../locale/current/netsim":242,"./NetSimClientNode":122,"./NetSimRouterNode":156,"./netsimConstants":179}],136:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4629,7 +4835,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],132:[function(require,module,exports){
+},{"ejs":253}],133:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4652,7 +4858,7 @@ var EncodingType = require('./netsimConstants').EncodingType;
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} changeEncodingCallback
  * @constructor
  */
@@ -4666,7 +4872,7 @@ var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -4752,7 +4958,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
 
-},{"./NetSimEncodingControl.html":131,"./netsimConstants":178}],131:[function(require,module,exports){
+},{"./NetSimEncodingControl.html":132,"./netsimConstants":179}],132:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4787,7 +4993,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"./netsimConstants":178,"ejs":252}],128:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./netsimConstants":179,"ejs":253}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4810,7 +5016,7 @@ var NetSimDnsTable = require('./NetSimDnsTable');
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {NetSimLevelConfiguration} levelConfig
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
@@ -4825,7 +5031,7 @@ var NetSimDnsTab = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -4913,7 +5119,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };
 
-},{"./NetSimDnsManualControl":124,"./NetSimDnsModeControl":126,"./NetSimDnsTab.html":127,"./NetSimDnsTable":130,"./netsimConstants":178}],130:[function(require,module,exports){
+},{"./NetSimDnsManualControl":125,"./NetSimDnsModeControl":127,"./NetSimDnsTab.html":128,"./NetSimDnsTable":131,"./netsimConstants":179}],131:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4987,7 +5193,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
   this.render();
 };
 
-},{"./NetSimDnsTable.html":129,"./netsimConstants":178}],129:[function(require,module,exports){
+},{"./NetSimDnsTable.html":130,"./netsimConstants":179}],130:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5030,7 +5236,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":178,"ejs":252}],127:[function(require,module,exports){
+},{"./netsimConstants":179,"ejs":253}],128:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5050,7 +5256,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],126:[function(require,module,exports){
+},{"ejs":253}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5136,7 +5342,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
       .prop('checked', true);
 };
 
-},{"./NetSimDnsModeControl.html":125,"./netsimConstants":178}],125:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html":126,"./netsimConstants":179}],126:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5167,9 +5373,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":241,"./netsimConstants":178,"ejs":252}],241:[function(require,module,exports){
+},{"../../locale/current/netsim":242,"./netsimConstants":179,"ejs":253}],242:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],124:[function(require,module,exports){
+},{}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5234,7 +5440,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };
 
-},{"./NetSimDnsManualControl.html":123}],123:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html":124}],124:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5254,7 +5460,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],122:[function(require,module,exports){
+},{"ejs":253}],123:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5282,7 +5488,7 @@ var logger = NetSimLogger.getSingleton();
  * @param {Object} options
  * @param {!Window} options.window - reference to browser window, passed
  *        in instead of accessed globally to be test-friendly.
- * @param {!NetSimLevelConfiguration} options.levelConfig
+ * @param {!netsimLevelConfiguration} options.levelConfig
  * @param {!NetSimLogPanel} options.sentLog - Widget to post sent messages to
  * @param {!NetSimLogPanel} options.receivedLog - Widget to post received
  *        messages to
@@ -5298,7 +5504,7 @@ var NetSimConnection = module.exports = function (options) {
   this.displayName_ = '';
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = options.levelConfig || {};
@@ -5473,7 +5679,7 @@ NetSimConnection.prototype.createMyClientNode_ = function (displayName) {
     this.myNode = node;
     this.myNode.setDisplayName(displayName);
     this.myNode.setLostConnectionCallback(this.disconnectFromShard.bind(this));
-    this.myNode.initializeSimulation(this.sentLog_, this.receivedLog_);
+    this.myNode.initializeSimulation(this.levelConfig_, this.sentLog_, this.receivedLog_);
     this.myNode.update(function (/*err, result*/) {
       this.shardChange.notifyObservers(this.shard_, this.myNode);
       this.statusChanges.notifyObservers();
@@ -5586,7 +5792,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"../ObservableEvent":1,"./NetSimClientNode":121,"./NetSimLocalClientNode":137,"./NetSimLogger":142,"./NetSimRouterNode":155,"./NetSimShard":160,"./NetSimShardCleaner":161}],161:[function(require,module,exports){
+},{"../ObservableEvent":1,"./NetSimClientNode":122,"./NetSimLocalClientNode":138,"./NetSimLogger":143,"./NetSimRouterNode":156,"./NetSimShard":161,"./NetSimShardCleaner":162}],162:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6166,7 +6372,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":48,"../utils":231,"./NetSimEntity":133,"./NetSimHeartbeat":134,"./NetSimLogEntry":138,"./NetSimLogger":142,"./NetSimMessage":143,"./NetSimNode":146,"./NetSimWire":171}],160:[function(require,module,exports){
+},{"../commands":49,"../utils":232,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogEntry":139,"./NetSimLogger":143,"./NetSimMessage":144,"./NetSimNode":147,"./NetSimWire":172}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6246,7 +6452,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.logTable.tick(clock);
 };
 
-},{"../clientApi":46,"./NetSimTable":164}],164:[function(require,module,exports){
+},{"../clientApi":47,"./NetSimTable":165}],165:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6473,7 +6679,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":231}],155:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":232}],156:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6491,6 +6697,7 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var netsimConstants = require('./netsimConstants');
 var DnsMode = netsimConstants.DnsMode;
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var NetSimNode = require('./NetSimNode');
@@ -6571,6 +6778,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
+
+  /**
+   * Packet format specification this router will use to parse, route, and log
+   * packets that it receives.  Set on router that is simulated by client.
+   *
+   * Not persisted on server.
+   *
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = [];
 
   /**
    * If ticked, tells the network that this router is being used.
@@ -6766,12 +6984,39 @@ NetSimRouterNode.getNodeType = function () {
 };
 
 /**
+ * Makes sure that the given specification contains the fields that this
+ * router needs to do its job.
+ * @param {packetHeaderSpec} packetSpec
+ * @private
+ */
+NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
+  // Require TO_ADDRESS for routing
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === PacketHeaderType.TO_ADDRESS;
+      })) {
+    logger.error("Packet specification does not have a toAddress field.");
+  }
+
+  // Require FROM_ADDRESS temporarily for auto-DNS tasks
+  // TODO (bbuchanan) remove when real auto-dns nodes are implemented.
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === PacketHeaderType.FROM_ADDRESS;
+      })) {
+    logger.error("Packet specification does not have a fromAddress field.");
+  }
+};
+
+/**
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
+ * @param {packetHeaderSpec} packetSpec
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) {
   this.simulateForSender_ = nodeID;
+  this.packetSpec_ = packetSpec;
+  this.validatePacketSpec_(packetSpec);
+
   if (nodeID !== undefined) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
@@ -7060,7 +7305,7 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
 
 NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
-    return new NetSimLogEntry(this.shard_, row);
+    return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
 };
 
@@ -7164,11 +7409,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
 
   // Find a connection to route this message to.
   try {
-    toAddress = dataConverters.binaryToInt(
-        PacketEncoder.defaultPacketEncoder.getField('toAddress', message.payload));
+    var decoder = new PacketEncoder(this.packetSpec_);
+    toAddress = decoder.getHeaderAsInt(PacketHeaderType.TO_ADDRESS,
+        message.payload);
   } catch (error) {
+    logger.warn("Packet not readable by router");
     this.log(message.payload);
-    onComplete(new Error("Packet not readable by router"));
+    onComplete(null);
     return;
   }
 
@@ -7176,6 +7423,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
   // and generate responses.
   // TODO (bbuchanan): Send to a real auto-dns node
   if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
+    logger.warn("Packet passed to auto-DNS shim on router");
     this.generateDnsResponse_(message, myWires);
     onComplete(null);
     return;
@@ -7185,8 +7433,9 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
     return wire.localAddress === toAddress;
   });
   if (destWires.length === 0) {
+    logger.warn("Destination address not in local network");
     this.log(message.payload);
-    onComplete(new Error("Destination address not in local network"));
+    onComplete(null);
     return;
   }
 
@@ -7213,15 +7462,14 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
  * @private
  */
 NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
-  var fromAddress, query;
+  var encoder, fromAddress, query, responseHeaders, responseBody, responseBinary;
 
   // Extract message contents
   try {
-    fromAddress = dataConverters.binaryToInt(
-        PacketEncoder.defaultPacketEncoder.getField('fromAddress', message.payload));
-    query = dataConverters.binaryToAscii(
-        PacketEncoder.defaultPacketEncoder.getField('message', message.payload),
-        BITS_PER_BYTE);
+    encoder = new PacketEncoder(this.packetSpec_);
+    fromAddress = encoder.getHeaderAsInt(PacketHeaderType.FROM_ADDRESS,
+        message.payload);
+    query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
     return;
@@ -7231,51 +7479,35 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   // Regex match "GET [hostnames...]"
   // Then below, we'll split the hostnames on whitespace to process them.
   var requestMatch = query.match(/GET\s+(\S.*)/);
-  if (requestMatch === null) {
-    // Malformed request, send back directions
-    NetSimMessage.send(
-        this.shard_,
-        ROUTER_LOCAL_ADDRESS,
-        fromAddress,
-        PacketEncoder.defaultPacketEncoder.createBinary({
-          fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
-          toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-          packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-          packetCount: intToBinary(1, BITS_PER_NIBBLE),
-          message: asciiToBinary("Automatic DNS Node" +
-              "\nUsage: GET hostname [hostname [hostname ...]]", BITS_PER_BYTE)
-        }),
-        function() {}
-    );
-    return;
+  if (requestMatch !== null) {
+    // Good request, look up all addresses and build up response
+    // Skipping first match, which is the full regex
+    var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
+      var wire = _.find(myWires, function (wire) {
+        return wire.localHostname === queryHostname;
+      });
+      return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
+    });
+    responseBody = responses.join(' ');
+  } else {
+    // Malformed request, send back instructions
+    responseBody = "Automatic DNS Node\n" +
+    "Usage: GET hostname [hostname [hostname ...]]";
   }
 
-  // Good request, look up all addresses and build up response
-  // Skipping first match, which is the full regex
-  var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
-    var wire = _.find(myWires, function (wire) {
-      return wire.localHostname === queryHostname;
-    });
-
-    return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
-  });
-
-  NetSimMessage.send(
-      this.shard_,
-      ROUTER_LOCAL_ADDRESS,
-      fromAddress,
-      PacketEncoder.defaultPacketEncoder.createBinary({
-        fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
-        toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
-        packetIndex: intToBinary(1, BITS_PER_NIBBLE),
-        packetCount: intToBinary(1, BITS_PER_NIBBLE),
-        message: asciiToBinary(responses.join(' '), BITS_PER_BYTE)
-      }),
-      function() {}
-  );
+  responseHeaders = {
+    fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+    toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+    packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+    packetCount: intToBinary(1, BITS_PER_NIBBLE)
+  };
+  responseBinary = encoder.concatenateBinary(responseHeaders,
+      asciiToBinary(responseBody, BITS_PER_BYTE));
+  NetSimMessage.send(this.shard_, this.entityID, message.fromNodeID,
+      responseBinary, function() {});
 };
 
-},{"../ObservableEvent":1,"../utils":231,"./NetSimEntity":133,"./NetSimHeartbeat":134,"./NetSimLogEntry":138,"./NetSimLogger":142,"./NetSimMessage":143,"./NetSimNode":146,"./NetSimWire":171,"./PacketEncoder":172,"./dataConverters":174,"./netsimConstants":178}],138:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":232,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogEntry":139,"./NetSimLogger":143,"./NetSimMessage":144,"./NetSimNode":147,"./NetSimWire":172,"./PacketEncoder":173,"./dataConverters":175,"./netsimConstants":179}],139:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7293,9 +7525,7 @@ require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 var PacketEncoder = require('./PacketEncoder');
 var dataConverters = require('./dataConverters');
-var binaryToInt = dataConverters.binaryToInt;
 var formatBinary = dataConverters.formatBinary;
-var binaryToAscii = dataConverters.binaryToAscii;
 
 /**
  * @type {number}
@@ -7313,10 +7543,12 @@ var BITS_PER_BYTE = 8;
  * @param {Object} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
+ * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
+ *        interpret the contents of the logged packet
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimLogEntry = module.exports = function (shard, row) {
+var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
   row = row !== undefined ? row : {};
   NetSimEntity.call(this, shard, row);
 
@@ -7331,6 +7563,12 @@ var NetSimLogEntry = module.exports = function (shard, row) {
    * @type {string}
    */
   this.packet = (row.packet !== undefined) ? row.packet : '';
+
+  /**
+   * @type {PacketEncoder}
+   * @private
+   */
+  this.encoder_ = new PacketEncoder(packetSpec ? packetSpec : []);
 
   /**
    * Unix timestamp (local) of log creation time.
@@ -7380,52 +7618,29 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
 };
 
 /**
- * Get packet toAddress as integer.
+ * Get requested packet header field as a number.  Returns empty string
+ * if the requested field is not in the current packet format.
+ * @param {PacketHeaderType} field
+ * @returns {number|string}
  */
-NetSimLogEntry.prototype.getToAddress = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('toAddress', this.packet));
+NetSimLogEntry.prototype.getHeaderField = function (field) {
+  try {
+    return this.encoder_.getHeaderAsInt(field, this.packet);
+  } catch (e) {
+    return '';
+  }
 };
 
-/**
- * Get packet fromAddress as integer.
- */
-NetSimLogEntry.prototype.getFromAddress = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('fromAddress', this.packet));
-};
-
-/**
- * Get packetIndex as integer.
- */
-NetSimLogEntry.prototype.getPacketIndex = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('packetIndex', this.packet));
-};
-
-/**
- * Get packetCount as integer.
- */
-NetSimLogEntry.prototype.getPacketCount = function () {
-  return binaryToInt(
-      PacketEncoder.defaultPacketEncoder.getField('packetCount', this.packet));
-};
-
-/**
- * Get packet message as binary.
- */
+/** Get packet message as binary. */
 NetSimLogEntry.prototype.getMessageBinary = function () {
-  return formatBinary(
-      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
-      BITS_PER_BYTE);
+  return formatBinary(this.encoder_.getBody(this.packet), BITS_PER_BYTE);
 };
 
+/** Get packet message as ASCII */
 NetSimLogEntry.prototype.getMessageAscii = function () {
-  return binaryToAscii(
-      PacketEncoder.defaultPacketEncoder.getField('message', this.packet),
-      BITS_PER_BYTE);
+  return this.encoder_.getBodyAsAscii(this.packet, BITS_PER_BYTE);
 };
-},{"../utils":231,"./NetSimEntity":133,"./PacketEncoder":172,"./dataConverters":174}],172:[function(require,module,exports){
+},{"../utils":232,"./NetSimEntity":134,"./PacketEncoder":173,"./dataConverters":175}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7440,11 +7655,25 @@ NetSimLogEntry.prototype.getMessageAscii = function () {
 'use strict';
 
 var minifyBinary = require('./dataConverters').minifyBinary;
+var dataConverters = require('./dataConverters');
+
+/**
+ * Single packet header field type
+ * @typedef {Object} packetHeaderField
+ * @property {PacketHeaderType} key - Used to identify the field, for parsing.
+ * @property {number} bits - How long (in bits) the field is.
+ */
+
+/**
+ * Packet header specification type
+ * Note: Always assumes variable-length body following the header.
+ * @typedef {packetHeaderField[]} packetHeaderSpec
+ */
 
 /**
  * Verify that a given format specification describes a valid format that
  * can be used by the PacketEncoder object.
- * @param {Array.<Object>} formatSpec
+ * @param {packetHeaderSpec} formatSpec
  */
 var validateSpec = function (formatSpec) {
   var keyCache = {};
@@ -7465,9 +7694,8 @@ var validateSpec = function (formatSpec) {
       keyCache[formatSpec[i].key] = 'used';
     }
 
-    if (formatSpec[i].bits === Infinity && i+1 < formatSpec.length) {
-      throw new Error("Invalid packet format: Infinity field length is only " +
-      "allowed in the last field.");
+    if (formatSpec[i].bits === Infinity) {
+      throw new Error("Invalid packet format: Infinity field length not allowed.");
     }
   }
 };
@@ -7476,41 +7704,28 @@ var validateSpec = function (formatSpec) {
  * Given a particular packet format, can convert a set of fields down
  * into a binary string matching the specification, or extract fields
  * on demand from a binary string.
- * @param {Array} formatSpec - Specification of packet format, an ordered set
- *        of objects in the form {key:string, bits:number} where key is the
- *        field name you'll use to retrieve the information, and bits is the
- *        length of the field.
+ * @param {packetHeaderSpec} formatSpec - Specification of packet format, an
+ *        ordered set of objects in the form {key:string, bits:number} where
+ *        key is the field name you'll use to retrieve the information, and
+ *        bits is the length of the field.
  * @constructor
  */
 var PacketEncoder = module.exports = function (formatSpec) {
   validateSpec(formatSpec);
 
-  /**
-   * @type {Array.<Object>}
-   */
+  /** @type {packetHeaderSpec} */
   this.formatSpec_ = formatSpec;
 };
 
 /**
- * @type {number}
- * @const
+ * Retrieve requested header field by key from the provided binary blob.
+ *
+ * @param {PacketHeaderType} key - which header to retrieve
+ * @param {string} binary for entire packet
+ * @returns {string} binary string value for header field
+ * @throws when requested key is not in the configured packet spec
  */
-var BITS_PER_PACKET_HEADER_FIELD = 4;
-
-/**
- * Static, globally available packet encoder for final packet layout.
- * TODO (bbuchanan): Replace this with a changeable format we can pass around!
- * @type {PacketEncoder}
- */
-PacketEncoder.defaultPacketEncoder = new PacketEncoder([
-  { key: 'toAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'fromAddress', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'packetIndex', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'packetCount', bits: BITS_PER_PACKET_HEADER_FIELD },
-  { key: 'message', bits: Infinity }
-]);
-
-PacketEncoder.prototype.getField = function (key, binary) {
+PacketEncoder.prototype.getHeader = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
@@ -7539,36 +7754,105 @@ PacketEncoder.prototype.getField = function (key, binary) {
   return bits;
 };
 
-PacketEncoder.prototype.createBinary = function (data) {
-  var result = '';
+/**
+ * @param {PacketHeaderType} key - field name
+ * @param {string} binary - entire packet as a binary string
+ * @returns {number} - requested field, interpreted as an int.
+ */
+PacketEncoder.prototype.getHeaderAsInt = function (key, binary) {
+  return dataConverters.binaryToInt(this.getHeader(key, binary));
+};
 
-  // For each field
-  for (var i = 0; i < this.formatSpec_.length; i++) {
-    var fieldBits = '';
+/**
+ * Skip over headers given in spec and return remainder of binary which
+ * must be the message body.
+ * @param {string} binary - entire packet as a binary string
+ * @returns {string} packet body binary string
+ */
+PacketEncoder.prototype.getBody = function (binary) {
+  return minifyBinary(binary)
+      .slice(PacketEncoder.getHeaderLength(this.formatSpec_));
+};
 
-    // If the field exists in the data, grab it
-    if (data.hasOwnProperty(this.formatSpec_[i].key)) {
-      fieldBits = data[this.formatSpec_[i].key];
+/**
+ * @param {packetHeaderSpec} formatSpec
+ * @returns {number} How many bits the header takes up
+ */
+PacketEncoder.getHeaderLength = function (formatSpec) {
+  return formatSpec.reduce(function (prev, cur) {
+    return prev + cur.bits;
+  }, 0);
+};
+
+/**
+ * Skip over headers given in spec, and return remainder of packet interpreted
+ * to ascii with the given character width.
+ * @param {string} binary - entire packet as a binary string
+ * @param {number} bitsPerChar - bits to represent as a single character,
+ *        recommended to use 8 for normal ASCII.
+ */
+PacketEncoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
+  return dataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
+};
+
+/**
+ * Given a "headers" object where the values are numbers, returns a corresponding
+ * "headers" object where the values have all been converted to binary
+ * representations at the appropriate width.  Only header fields that appear in
+ * the configured packet header format will be converted and passed through to
+ * output.
+ * @param {Object} headers - with number values
+ */
+PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
+  var binaryHeaders = {};
+  this.formatSpec_.forEach(function (headerField){
+    if (headers.hasOwnProperty(headerField.key)) {
+      binaryHeaders[headerField.key] = dataConverters.intToBinary(
+          headers[headerField.key], headerField.bits);
     }
+  });
+  return binaryHeaders;
+};
+
+/**
+ * Takes a set of binary headers and a binary body, and generates a complete
+ * packet binary matching the configured packet spec in terms of header width
+ * and ordering.
+ *
+ * @param {Object} binaryHeaders - hash containing packet headers in binary, where
+ *        the hash keys correspond to the "key" values in the packet spec, and
+ *        the hash values are binary strings.
+ * @param {string} body - binary string of the unlimited-length body of the
+ *        packet, which will be placed after the packet headers.
+ *
+ * @returns {string} binary string of provided data, conforming to configured
+ *          packet format.
+ */
+PacketEncoder.prototype.concatenateBinary = function (binaryHeaders, body) {
+  var parts = [];
+
+  this.formatSpec_.forEach(function (fieldSpec) {
+    // Get header value from provided headers, if it exists.
+    // If not, we'll start with an empty string and pad it to the correct
+    // length, below.
+    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec.key) ?
+        binaryHeaders[fieldSpec.key] : '';
 
     // Right-truncate to the desired size
-    if (fieldBits.length > this.formatSpec_[i].bits) {
-      fieldBits = fieldBits.slice(0, this.formatSpec_[i].bits);
-    }
+    fieldBits = fieldBits.slice(0, fieldSpec.bits);
 
-    // Left-pad data to desired size
-    if (this.formatSpec_[i].bits !== Infinity) {
-      while (fieldBits.length < this.formatSpec_[i].bits) {
-        fieldBits = '0' + fieldBits;
-      }
-    }
+    // Left-pad to desired size
+    fieldBits = dataConverters.zeroPadLeft(fieldBits, fieldSpec.bits);
 
-    // Append field to result
-    result += fieldBits;
-  }
-  return result;
+    parts.push(fieldBits);
+  });
+
+  parts.push(body);
+
+  return parts.join('');
 };
-},{"./dataConverters":174}],174:[function(require,module,exports){
+
+},{"./dataConverters":175}],175:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7700,12 +7984,12 @@ exports.binaryToInt = function (binaryString) {
   return parseInt(exports.minifyBinary(binaryString), 2);
 };
 
-var zeroPadLeft = function (string, desiredWidth) {
+exports.zeroPadLeft = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (padding + string).slice(-desiredWidth);
 };
 
-var zeroPadRight = function (string, desiredWidth) {
+exports.zeroPadRight = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
@@ -7714,7 +7998,7 @@ var intToString = function (int, base, width) {
   if (width <= 0) {
     throw new RangeError("Output width must be greater than zero");
   }
-  return zeroPadLeft(int.toString(base), width);
+  return exports.zeroPadLeft(int.toString(base), width);
 };
 
 /**
@@ -7776,7 +8060,7 @@ exports.binaryToHex = function (binaryString) {
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    currentNibble = zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
+    currentNibble = exports.zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
   return chars.join('');
@@ -7814,7 +8098,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -7853,13 +8137,13 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
 };
 
-},{"../utils":231}],137:[function(require,module,exports){
+},{"../utils":232}],138:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7914,6 +8198,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {NetSimRouterNode}
    */
   this.myRouter = null;
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = {};
 
   /**
    * Widget where we will post sent messages.
@@ -7996,11 +8286,13 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 /**
  * Configure this node controller to actively simulate, and to post sent and
  * received messages to the given log widgets.
+ * @param {!netsimLevelConfiguration} levelConfig
  * @param {!NetSimLogPanel} sentLog
  * @param {!NetSimLogPanel} receivedLog
  */
-NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
-    receivedLog) {
+NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
+    sentLog, receivedLog) {
+  this.levelConfig_ = levelConfig;
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
@@ -8105,33 +8397,33 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
       return;
     }
 
-    self.myRouter = router;
-    self.myRouter.initializeSimulation(self.entityID);
+    this.myRouter = router;
+    this.myRouter.initializeSimulation(this.entityID,
+        this.levelConfig_.routerExpectsPacketHeader);
 
-    router.requestAddress(wire, self.getHostname(), function (err) {
+    router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
         wire.destroy(function () {
           onComplete(err);
         });
-        self.myWire = null;
+        this.myWire = null;
         return;
       }
 
-      self.myRouter = router;
-      self.routerChange.notifyObservers(self.myWire, self.myRouter);
+      this.myRouter = router;
+      this.routerChange.notifyObservers(this.myWire, this.myRouter);
 
-      self.status_ = "Connected to " + router.getDisplayName() +
-      " with address " + wire.localAddress;
-      self.update(onComplete);
-    });
-  });
+      this.status_ = "Connected to " + router.getDisplayName() +
+          " with address " + wire.localAddress;
+      this.update(onComplete);
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -8271,7 +8563,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":231,"./NetSimClientNode":121,"./NetSimEntity":133,"./NetSimHeartbeat":134,"./NetSimLogger":142,"./NetSimMessage":143}],143:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":232,"./NetSimClientNode":122,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogger":143,"./NetSimMessage":144}],144:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8363,7 +8655,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":231,"./NetSimEntity":133}],142:[function(require,module,exports){
+},{"../utils":232,"./NetSimEntity":134}],143:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8515,7 +8807,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],134:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8700,7 +8992,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":231,"./NetSimEntity":133}],121:[function(require,module,exports){
+},{"../utils":232,"./NetSimEntity":134}],122:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8750,7 +9042,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":231,"./NetSimNode":146}],146:[function(require,module,exports){
+},{"../utils":232,"./NetSimNode":147}],147:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8906,7 +9198,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
-},{"../utils":231,"./NetSimEntity":133,"./NetSimWire":171}],171:[function(require,module,exports){
+},{"../utils":232,"./NetSimEntity":134,"./NetSimWire":172}],172:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9005,7 +9297,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":231,"./NetSimEntity":133}],133:[function(require,module,exports){
+},{"../utils":232,"./NetSimEntity":134}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9141,7 +9433,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
   }.bind(this));
 };
 
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9259,7 +9551,7 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
   this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
 };
 
-},{"./NetSimChunkSizeControl.html":119,"./netsimConstants":178}],178:[function(require,module,exports){
+},{"./NetSimChunkSizeControl.html":120,"./netsimConstants":179}],179:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9306,25 +9598,26 @@ exports.DnsMode = {
 /**
  * Encodings that can be used to interpret and display binary messages in
  * the simulator.
+ * Map to class-names that can be applied to related table rows.
  * @enum {string}
  */
 exports.EncodingType = {
+  /** Renders each chunk of bits (using variable chunksize) in ascii */
+  ASCII: 'ascii',
+
+  /** Renders each chunk of bits (using variable chunksize) in decimal */
+  DECIMAL: 'decimal',
+
+  /** Renders each binary nibble as a hex character. */
+  HEXADECIMAL: 'hexadecimal',
+
   /** All packet data is actually stored and moved around in binary, so
    *  the 'binary' encoding just represents access to that raw data. */
   BINARY: 'binary',
 
   /** An encoding used early in the lessons to show that binary isn't always
    *  1s and 0s.  Just like binary, but replaces 1/0 with A/B. */
-  A_AND_B: 'a_and_b',
-
-  /** Renders each binary nibble as a hex character. */
-  HEXADECIMAL: 'hexadecimal',
-
-  /** Renders each chunk of bits (using variable chunksize) in decimal */
-  DECIMAL: 'decimal',
-
-  /** Renders each chunk of bits (using variable chunksize) in ascii */
-  ASCII: 'ascii'
+  A_AND_B: 'a_and_b'
 };
 
 /**
@@ -9338,7 +9631,34 @@ exports.NetSimTabType = {
   DNS: 'dns'
 };
 
-},{}],119:[function(require,module,exports){
+/**
+ * Field types that can go into the packet header.
+ * Map to class-names that can be applied to related input fields.
+ * @enum {string}
+ */
+exports.PacketHeaderType = {
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INDEX: 'packetIndex',
+  PACKET_COUNT: 'packetCount'
+};
+
+/**
+ * Column types that can be used any time a packet is displayed on the page.
+ * Related to PacketHeaderType, but different because this includes columns
+ * that aren't part of the header, and groups the packetInfo together.
+ * Map to class-names that can be applied to related table cells.
+ * @enum {string}
+ */
+exports.PacketUIColumnType = {
+  ENCODING_LABEL: 'encodingLabel',
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INFO: 'packetInfo',
+  MESSAGE: 'message'
+};
+
+},{}],120:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9358,7 +9678,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],118:[function(require,module,exports){
+},{"ejs":253}],119:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -9474,7 +9794,7 @@ DashboardUser.prototype.whenReady = function (callback) {
     this.whenReadyCallbacks_.push(callback);
   }
 };
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9698,7 +10018,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":231}],46:[function(require,module,exports){
+},{"./utils":232}],47:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -9974,7 +10294,7 @@ clientApi.UserPropertyBag = function (channel_publickey) {
 };
 clientApi.UserPropertyBag.inherits(clientApi.PropertyBag);
 
-},{"./utils":231}],3:[function(require,module,exports){
+},{"./utils":232}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10182,4 +10502,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[176]);
+},{}]},{},[177]);

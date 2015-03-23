@@ -5,7 +5,8 @@ rightbar: blank
 ---
 [#sotw-intro]
 
-# Student of the Week winners
+# Student of the Month winners
+
 
 - [Paulina](http://codeorg.tumblr.com/post/96102625248/sotw20), 9th grade, Mansfield, MA
 - [Djassi](http://codeorg.tumblr.com/post/95389174313/sotw19), 11th grade, New York, NY

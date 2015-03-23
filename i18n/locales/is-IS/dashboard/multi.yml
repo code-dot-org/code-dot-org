@@ -700,23 +700,18 @@ is:
         a secret password: leynilegt leyniorð
       Play Lab Rocket 6:
         Rocket Multiple Choice: Valspurningar eldflaugar
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Hvaða fall mundi lýsa eldflaug sem nær 24 metrum eftir 2 sekúndur, 60 metrum eftir 5 sekúndur og 108 metrum eftir 9 sekúndur?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Valspurningar eldflaugar
-        0: '? Hvaða fall mundi lýsa eldflaug sem nær 4 metrum eftir 2 sekúndur, 16 metrum eftir 4 sekúndur og 256 metrum eftir 16 sekúndur?'
-        1: ': Hvaða fall mundi lýsa eldflaug sem nær 4 metrum eftir 2 sekúndur, 16 metrum eftir 4 sekúndur og 256 metrum eftir 16 sekúndur?'
         rocket-height(seconds) = seconds * 2: 'hæð-flaugar(sekúndur) = sekúndur * 2'
         rocket-height(seconds) = seconds * seconds: 'hæð-flaugar(sekúndur) = sekúndur * sekúndur'
         rocket-height(seconds) = seconds * 4: 'hæð-flaugar(sekúndur) = sekúndur * 4'
         rocket-height(seconds) = seconds * 16: 'hæð-flaugar(sekúndur) = sekúndur * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: Valspurningar eldflaugar
-        0: '? Hvaða fall mundi lýsa eldflaug sem nær 47 metrum eftir 5 sekúndur, 97 metrum eftir 10 sekúndur og 147 metrum eftir 15 sekúndur?'
-        1: ': Hvaða fall mundi lýsa eldflaug sem nær 47 metrum eftir 5 sekúndur, 97 metrum eftir 10 sekúndur og 147 metrum eftir 15 sekúndur?'
         rocket-height(seconds) = seconds * 7 + 10: 'hæð-flaugar(sekúndur) = sekúndur * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'hæð-flaugar(sekúndur) = sekúndur * 10 + 7'
         rocket-height(seconds) = seconds * 7 + 3: 'hæð-flaugar(sekúndur) = sekúndur * 7 + 3'
