@@ -67,7 +67,12 @@
       %div{style: "display:inline-block"}
         <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false">Follow @codeorg</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+-# = request.env.inspect.to_json
+
+
 :javascript
+
+  var petitionClickReported = false;
 
   function expandPetition()
   {
@@ -137,18 +142,28 @@
       data: $('#petition_form').serialize()
     }).done(this.processResponse).fail(this.processError);
 
+    // Let's just try to report a petition click once.
+    if (! petitionClickReported) {
+
+      if (console && console.log)
+        console.log("Recording petition click", "#{request.path}");
+
+      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});   
+      petitionClickReported = true;
+    }
+
     return false;
   }
 
 
 :javascript
-  // Create a function for a user to call to pass in the options.
   function trackFacebook(opt_pagePath) {
     try {
       if (FB && FB.Event && FB.Event.subscribe) {
         FB.Event.subscribe('edge.create', function(targetUrl) {
-          _gaq.push(['_trackSocial', 'facebook', 'like',
-            opt_target, opt_pagePath]);
+          if (console && console.log)
+            console.log("Recording facebook like", "http://#{request.host + request.path}");
+          ga('send', 'social', 'facebook', 'like', "http://#{request.host + request.path}");
         });
       }
     } catch(e) {}
@@ -161,10 +176,8 @@
       version    : 'v2.1'
     });
 
-    FB.getLoginStatus(function(response){
-      trackFacebook();
-    });
-
+    // Send back some analytics.
+    trackFacebook();
   };
 
   (function(d, s, id){
