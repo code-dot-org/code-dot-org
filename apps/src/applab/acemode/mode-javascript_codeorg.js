@@ -1,4 +1,5 @@
-var dropletConfig = require('./dropletConfig');
+var dropletConfig = require('../dropletConfig');
+var errorMapper = require('./errorMapper');
 
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
@@ -20,8 +21,6 @@ var Mode = function() {
 oop.inherits(Mode, JavaScriptMode);
 
 (function() {
-  var errorMap = {};
-  errorMap["Assignment in conditional expression"] = "For conditionals, use the comparison operator (==) to check if two things are equal.";
 
   // A set of keywords we don't want to autocomplete
   var excludedKeywords = [
@@ -78,13 +77,8 @@ oop.inherits(Mode, JavaScriptMode);
     worker.send("changeOptions", [newOptions]);
 
     worker.on("jslint", function(results) {
-      results.data.forEach(function (item) {
-        var errorText = errorMap[item.raw];
-        if (errorText) {
-          // replace existing text
-          item.text = errorText;
-        }
-      });
+      errorMapper.processResults(results);
+
       session.setAnnotations(results.data);
     });
 
