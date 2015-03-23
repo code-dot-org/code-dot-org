@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313155049) do
+ActiveRecord::Schema.define(version: 20150323201349) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150313155049) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "program_type"
+    t.datetime "cutoff_date"
   end
 
   add_index "cohorts", ["name"], name: "index_cohorts_on_name", using: :btree

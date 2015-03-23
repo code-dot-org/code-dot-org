@@ -55,11 +55,10 @@ template: none
         {{cohortName(workshop.cohort_id)}}
     %td
       %div{'ng-repeat' => 'segment in workshop.segments'}
-        {{segment.start | utc | date:'longDate'}}
-        %br
-        {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
-        %br
-        %br
+        %p
+          {{segment.start | utc | date:'longDate'}}
+          %br
+          {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
     %td
       %span
         {{workshop.location}}

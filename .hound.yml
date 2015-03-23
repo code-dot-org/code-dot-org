@@ -3,7 +3,6 @@ ruby:
 
 java_script:
   enabled: false
-  config_file: .javascript-style.json
 
 scss:
   enabled: false

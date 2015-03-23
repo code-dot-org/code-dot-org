@@ -9,28 +9,6 @@
   </div>
 </div>
 
-<% var instructions = function() { -%>
-  <div id="bubble" class="clearfix">
-    <table id="prompt-table">
-      <tr>
-        <td id="prompt-icon-cell">
-          <img id="prompt-icon"/>
-        </td>
-        <td id="prompt-cell">
-          <p id="prompt">
-          </p>
-        </td>
-      </tr>
-    </table>
-    <div id="ani-gif-preview-wrapper">
-      <div id="ani-gif-preview">
-        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
-      </div>
-    </div>
-  </div>
-<% }; -%>
-
-
 <% var gameButtons = function() { -%>
   <div id="gameButtons">
     <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
@@ -58,8 +36,41 @@
   <div id="belowVisualization">
 
     <% gameButtons() %>
-    <% instructions() %>
-    
+    <div id="bubble" class="clearfix">
+      <table id="prompt-table">
+        <tr>
+          <td id="prompt-icon-cell">
+            <img id="prompt-icon"/>
+          </td>
+          <td id="prompt-cell">
+            <p id="prompt">
+            </p>
+          </td>
+        </tr>
+      </table>
+      <% if (data.inputOutputTable) { %>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+      <% } %>
+      <div id="ani-gif-preview-wrapper">
+        <div id="ani-gif-preview">
+          <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+        </div>
+      </div>
+    </div>
+
     <% if (data.hasDesignMode) { %>
       <div id="designModeButtons" style="display:none;">
         <button id="codeModeButton" class="share">

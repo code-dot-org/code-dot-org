@@ -28,7 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "free_play": "true",
-    "disable_sharing": "false",
+    "disable_sharing": "true",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "contract_highlight": "false",
@@ -36,8 +36,10 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
-  }
+    "definition_collapse": "false",
+    "maze_data": null
+  },
+  "md5": "527d3f037a95d92962636e608e5ec783"
 }]]></config>
   <blocks>
     <start_blocks>
