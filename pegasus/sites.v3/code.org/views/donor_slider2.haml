@@ -16,7 +16,7 @@
         &nbsp; &nbsp; &nbsp;
         %a{href: "/donate", style: "color:white"} Donate
 
-    .donor-slider{style: "color:white; text-align:center"}
+    .donor-slider{style: "color:white; text-align:center; font-size:13px"}
       - supporters.each_with_index do |supporter, index|
         %a{:href=>supporter[:url_s], :target=> "_blank", :style=>"color:white; font-family: 'Gotham 4r', sans-serif;"}
           - if index == supporters.length-1
