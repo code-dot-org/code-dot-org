@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
-require 'cdo/json'
 
 class PropertiesApi < Sinatra::Base
 
@@ -66,7 +65,7 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = PropertyBag.new(channel_id, storage_id(endpoint)).set(name, JSON.from_json(request.body.read), request.ip)
+    value = PropertyBag.new(channel_id, storage_id(endpoint)).set(name, PropertyBag.parse_value(request.body.read), request.ip)
 
     dont_cache
     content_type :json
