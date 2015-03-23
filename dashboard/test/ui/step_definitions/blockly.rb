@@ -124,6 +124,11 @@ And /^I've initialized the workspace with an auto\-positioned flappy puzzle with
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
+And /^I've initialized the workspace with the Calc solution blocks$/ do
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  @browser.execute_script("__TestInterface.loadBlocks(appOptions.level.solutionBlocks);")
+end
+
 And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|
   @browser.execute_script("Blockly.mainBlockSpace.clear();")
   xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">'+ phrase +'</title></block></next></block></xml>'
