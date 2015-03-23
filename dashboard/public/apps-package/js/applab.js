@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({15:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({17:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":14,"./skins":17}],17:[function(require,module,exports){
+},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":16,"./skins":18}],18:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":185}],14:[function(require,module,exports){
+},{"../skins":186}],16:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":233,"../block_utils":19,"../utils":231}],8:[function(require,module,exports){
+},{"../../locale/current/applab":234,"../block_utils":20,"../utils":232}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -303,7 +303,7 @@ levels.full_sandbox =  {
  */
 
 'use strict';
-require('./mode-javascript_codeorg');
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
@@ -2830,7 +2830,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":233,"../../locale/current/common":236,"../StudioApp":4,"../codegen":47,"../constants":49,"../dom":50,"../dropletUtils":51,"../skins":185,"../slider":186,"../templates/page.html":210,"../timeoutList":216,"../utils":231,"../xml":232,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./mode-javascript_codeorg":16,"./visualization.html":18}],18:[function(require,module,exports){
+},{"../../locale/current/applab":234,"../../locale/current/common":237,"../StudioApp":4,"../codegen":48,"../constants":50,"../dom":51,"../dropletUtils":52,"../skins":186,"../slider":187,"../templates/page.html":211,"../timeoutList":217,"../utils":232,"../xml":233,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./dontMarshalApi":13,"./dropletConfig":14,"./extraControlRows.html":15,"./visualization.html":19}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2850,97 +2850,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],16:[function(require,module,exports){
-// define ourselves for ace, so that it knows where to get us
-ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
-
-var oop = acerequire("ace/lib/oop");
-var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
-var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
-var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
-var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
-var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
-var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
-
-var Mode = function() {
-    this.HighlightRules = JavaScriptHighlightRules;
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
-    this.foldingRules = new CStyleFoldMode();
-};
-oop.inherits(Mode, JavaScriptMode);
-
-(function() {
-  var errorMap = {};
-  errorMap["Assignment in conditional expression"] = "For conditionals, use the comparison operator (==) to check if two things are equal.";
-
-  // A set of keywords we don't want to autocomplete
-  var excludedKeywords = [
-    'ArrayBuffer',
-    'Collator',
-    'EvalError',
-    'Float32Array',
-    'Float64Array',
-    'Intl',
-    'Int16Array',
-    'Int32Array',
-    'Int8Array',
-    'Iterator',
-    'NumberFormat',
-    'Object',
-    'QName',
-    'RangeError',
-    'ReferenceError',
-    'StopIteration',
-    'SyntaxError',
-    'TypeError',
-    'Uint16Array',
-    'Uint32Array',
-    'Uint8Array',
-    'Uint8ClampedArra',
-    'URIError'
-  ];
-
-  // Manually create our highlight rules so that we can modify it
-  this.$highlightRules = new JavaScriptHighlightRules();
-
-  excludedKeywords.forEach(function (keywordToRemove) {
-    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-    if (keywordIndex > 0) {
-      this.$highlightRules.$keywordList.splice(keywordIndex);
-    }
-  }, this);
-
-  this.createWorker = function(session) {
-    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
-    worker.attachToDocument(session.getDocument());
-    worker.send("changeOptions", [{
-      unused: true
-    }]);
-
-    worker.on("jslint", function(results) {
-      results.data.forEach(function (item) {
-        var errorText = errorMap[item.raw];
-        if (errorText) {
-          // replace existing text
-          item.text = errorText;
-        }
-      });
-      session.setAnnotations(results.data);
-    });
-
-    worker.on("terminate", function() {
-      session.clearAnnotations();
-    });
-
-    return worker;
-  };
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-});
-
-},{}],13:[function(require,module,exports){
+},{"ejs":253}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2960,128 +2870,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":233,"../../locale/current/common":236,"ejs":252}],12:[function(require,module,exports){
-module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
-  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
-  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
-  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false"] },
-  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
-  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"', "true"] },
-  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
-  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
-  {'func': 'write', 'title': 'Create a block of text', 'category': 'UI controls', 'params': ['"html"'] },
-  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-
-  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
-  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ['"id"'] },
-  {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
-  {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
-  {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
-  {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ['"red"'] },
-  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ['"yellow"'] },
-  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
-  {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
-  {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
-  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
-
-  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
-  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
-
-  {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
-  {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
-  {'func': 'dot', 'title': "Draw a dot in the turtle's location with the specified radius", 'category': 'Turtle', 'params': ["5"] },
-  {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnTo', 'title': 'Turn the turtle to the specified direction (0 degrees is pointing up)', 'category': 'Turtle', 'params': ["0"] },
-  {'func': 'arcRight', 'title': 'Move the turtle in a clockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'arcLeft', 'title': 'Move the turtle in a counterclockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'getX', 'title': "Get the turtle's x position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getY', 'title': "Get the turtle's y position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getDirection', 'title': "Get the turtle's direction (0 degrees is pointing up)", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
-  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ['"red"'] },
-  {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
-  {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
-  {'func': 'speed', 'title': "Change the execution speed of the program to the specified percentage value", 'category': 'Turtle', 'params': ["50"] },
-
-  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
-  {'func': 'setInterval', 'title': 'Continue to execute code each time the specified number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearInterval', 'title': 'Clear an existing interval timer by passing in the value returned from setInterval()', 'category': 'Control', 'params': ["0"] },
-
-  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
-
-  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
-  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
-  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
-  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
-  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
-];
-
-module.exports.categories = {
-  'UI controls': {
-    'color': 'yellow',
-    'rgb': '#FFD54F',
-    'blocks': []
-  },
-  'Canvas': {
-    'color': 'red',
-    'rgb': '#F87477',
-    'blocks': []
-  },
-  'Data': {
-    'color': 'lightgreen',
-    'rgb': '#D3E965',
-    'blocks': []
-  },
-  'Turtle': {
-    'color': 'cyan',
-    'rgb': '#00D2E2',
-    'blocks': []
-  },
-  'Advanced': {
-    'color': 'blue',
-    'rgb': '#19C3E1',
-    'blocks': []
-  },
-};
-
-},{}],11:[function(require,module,exports){
+},{"../../locale/current/applab":234,"../../locale/current/common":237,"ejs":253}],13:[function(require,module,exports){
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 
@@ -3152,7 +2941,7 @@ exports.setRGBA = function (imageData, x, y, r, g, b, a) {
   }
 };
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3172,7 +2961,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],9:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3245,9 +3034,9 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":233,"../../locale/current/common":236,"../codegen":47,"../utils":231}],233:[function(require,module,exports){
+},{"../../locale/current/applab":234,"../../locale/current/common":237,"../codegen":48,"../utils":232}],234:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 /* global dashboard */
@@ -3496,7 +3285,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -4000,4 +3789,254 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[15]);
+},{}],7:[function(require,module,exports){
+var dropletConfig = require('../dropletConfig');
+var errorMapper = require('./errorMapper');
+
+// define ourselves for ace, so that it knows where to get us
+ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
+
+var oop = acerequire("ace/lib/oop");
+var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
+var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
+var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
+var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
+var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
+
+var Mode = function() {
+    this.HighlightRules = JavaScriptHighlightRules;
+    this.$outdent = new MatchingBraceOutdent();
+    this.$behaviour = new CstyleBehaviour();
+    this.foldingRules = new CStyleFoldMode();
+};
+oop.inherits(Mode, JavaScriptMode);
+
+(function() {
+
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
+    }
+  }, this);
+
+  this.createWorker = function(session) {
+    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
+    worker.attachToDocument(session.getDocument());
+    var newOptions = {
+      unused: true,
+      undef: true,
+      predef: {
+      }
+    };
+    // Mark all of our blocks as predefined so that linter doesnt complain about
+    // using undefined variables
+    dropletConfig.blocks.forEach(function (block) {
+      newOptions.predef[block.func] = false;
+    });
+
+    worker.send("changeOptions", [newOptions]);
+
+    worker.on("jslint", function(results) {
+      errorMapper.processResults(results);
+
+      session.setAnnotations(results.data);
+    });
+
+    worker.on("terminate", function() {
+      session.clearAnnotations();
+    });
+
+    return worker;
+  };
+}).call(Mode.prototype);
+
+exports.Mode = Mode;
+});
+
+},{"../dropletConfig":14,"./errorMapper":6}],14:[function(require,module,exports){
+module.exports.blocks = [
+  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
+  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
+  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false"] },
+  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
+  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"', "true"] },
+  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'title': 'Create a block of text', 'category': 'UI controls', 'params': ['"html"'] },
+  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+
+  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ['"id"'] },
+  {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
+  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ['"red"'] },
+  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ['"yellow"'] },
+  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
+  {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
+  {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
+  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+
+  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
+
+  {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
+  {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'dot', 'title': "Draw a dot in the turtle's location with the specified radius", 'category': 'Turtle', 'params': ["5"] },
+  {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnTo', 'title': 'Turn the turtle to the specified direction (0 degrees is pointing up)', 'category': 'Turtle', 'params': ["0"] },
+  {'func': 'arcRight', 'title': 'Move the turtle in a clockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'arcLeft', 'title': 'Move the turtle in a counterclockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'getX', 'title': "Get the turtle's x position", 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getY', 'title': "Get the turtle's y position", 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getDirection', 'title': "Get the turtle's direction (0 degrees is pointing up)", 'category': 'Turtle', 'type': 'value' },
+  {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
+  {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
+  {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ['"red"'] },
+  {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
+  {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
+  {'func': 'speed', 'title': "Change the execution speed of the program to the specified percentage value", 'category': 'Turtle', 'params': ["50"] },
+
+  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
+  {'func': 'setInterval', 'title': 'Continue to execute code each time the specified number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'title': 'Clear an existing interval timer by passing in the value returned from setInterval()', 'category': 'Control', 'params': ["0"] },
+
+  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
+
+  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
+  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
+  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
+  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
+];
+
+module.exports.categories = {
+  'UI controls': {
+    'color': 'yellow',
+    'rgb': '#FFD54F',
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'red',
+    'rgb': '#F87477',
+    'blocks': []
+  },
+  'Data': {
+    'color': 'lightgreen',
+    'rgb': '#D3E965',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'cyan',
+    'rgb': '#00D2E2',
+    'blocks': []
+  },
+  'Advanced': {
+    'color': 'blue',
+    'rgb': '#19C3E1',
+    'blocks': []
+  },
+};
+
+},{}],6:[function(require,module,exports){
+var errorMap = [
+  {
+    original: /Assignment in conditional expression/,
+    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+  },
+  {
+    original: /(.*)\sis defined but never used./,
+    replacement: "$1 is defined, but it's not called in your program."
+  },
+  {
+    original: /(.*)\sis not defined./,
+    replacement: "$1 hasn't been declared yet."
+  }
+];
+
+/**
+ * Takes the results of a JSLint pass, and modifies the error text according to
+ * our mapping. Note this makes changes in place to the passed in results
+ * object.
+ */
+module.exports.processResults = function (results) {
+  results.data.forEach(function (item) {
+    errorMap.forEach(function (errorMapping) {
+      if (!errorMapping.original.test(item.text)) {
+        return;
+      }
+
+      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+    });
+  });
+};
+
+},{}]},{},[17]);
