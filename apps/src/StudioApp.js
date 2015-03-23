@@ -229,7 +229,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
-        if (result.error) {
+        if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
@@ -750,13 +750,10 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (this.editor && this.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = categories.getBoundingClientRect().width;
-    }
+  if (this.editCode && this.editor) {
+    // If in the droplet editor, set toolboxWidth based on the block palette width:
+    var categories = document.querySelector('.droplet-palette-wrapper');
+    toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
@@ -1064,10 +1061,17 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
-    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
-      container.className = codeWorkspace.className + " pin_bottom";
+      document.body.style.overflow = "hidden";
+      container.className = container.className + " pin_bottom";
+      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
+      if (this.editCode) {
+        var codeTextbox = document.getElementById('codeTextbox');
+        codeTextbox.className = codeTextbox.className + " pin_bottom";
+      }
     } else {
+      visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
   }
@@ -1274,9 +1278,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
-
-  // Resize toolbox header so it will appear/disappear:
-  this.resizeToolboxHeader();
 };
 
 /**
