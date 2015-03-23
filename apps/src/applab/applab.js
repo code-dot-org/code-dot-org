@@ -1194,8 +1194,8 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
-  var gameButtons =  document.getElementById('gameButtons');
-  gameButtons.style.display = enable ? 'none' : 'block';
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
   var designModeButtons = document.getElementById('designModeButtons');
   designModeButtons.style.display = enable ? 'block' : 'none';
 };
