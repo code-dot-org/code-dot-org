@@ -187,6 +187,9 @@ end
 #
 $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
+    # Lint
+    RakeUtils.system 'rake', 'lint' if CDO.lint
+
     # Build myself
     RakeUtils.system 'rake', 'build'
 

@@ -1,87 +1,110 @@
 <%
-var netsimMsg = require('../../locale/current/netsim');
-var PacketEncoder = require('./PacketEncoder');
-var dataConverters = require('./dataConverters');
-var formatBinary = dataConverters.formatBinary;
-var formatHex = dataConverters.formatHex;
-var alignDecimal = dataConverters.alignDecimal;
-var binaryToInt = dataConverters.binaryToInt;
-var binaryToHex = dataConverters.binaryToHex;
-var binaryToDecimal = dataConverters.binaryToDecimal;
-var binaryToAscii = dataConverters.binaryToAscii;
+  var netsimConstants = require('./netsimConstants');
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketHeaderType = netsimConstants.PacketHeaderType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var i18n = require('../../locale/current/netsim');
+  var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
+  var PacketEncoder = require('./PacketEncoder');
+  var dataConverters = require('./dataConverters');
+  var formatBinary = dataConverters.formatBinary;
+  var formatHex = dataConverters.formatHex;
+  var alignDecimal = dataConverters.alignDecimal;
+  var binaryToInt = dataConverters.binaryToInt;
+  var binaryToHex = dataConverters.binaryToHex;
+  var binaryToDecimal = dataConverters.binaryToDecimal;
+  var binaryToAscii = dataConverters.binaryToAscii;
 
-function getEncodingLabel(rowClass) {
-  if (rowClass === 'ascii') {
-    return netsimMsg.ascii();
-  } else if (rowClass === 'decimal') {
-    return netsimMsg.decimal();
-  } else if (rowClass === 'hexadecimal') {
-    return netsimMsg.hex();
-  } else if (rowClass === 'binary') {
-    return netsimMsg.binary();
+  /** @type {PacketEncoder} */
+  var encoder = new PacketEncoder(packetSpec);
+
+  /** @type {PacketHeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ * @param {string} toAddress
+ * @param {string} fromAddress
+ * @param {string} packetInfo
+ * @param {string} message
+ */
+  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
+    %>
+      <tr class="<%= encodingType %>">
+        <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+        <% if (showToAddress) { %>
+          <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= toAddress %></td>
+        <% } %>
+        <% if (showFromAddress) { %>
+          <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= fromAddress %></td>
+        <% } %>
+        <% if (showPacketInfo) { %>
+          <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= packetInfo %></td>
+        <% } %>
+        <td class="<%= PacketUIColumnType.MESSAGE %>"><%= message %></td>
+      </tr>
+  <%
   }
-  return '';
-}
-
-function logRow(rowClass, toAddress, fromAddress, packetInfo, message) {
-  %>
-    <tr class="<%= rowClass %>">
-      <th nowrap class="encodingLabel"><%= getEncodingLabel(rowClass) %></th>
-      <td nowrap class="toAddress"><%= toAddress %></td>
-      <td nowrap class="fromAddress"><%= fromAddress %></td>
-      <td nowrap class="packetInfo"><%= packetInfo %></td>
-      <td class="message"><%= message %></td>
-    </tr>
-<%
-}
-
  %>
 <table>
   <thead>
     <tr>
-      <th nowrap class="encodingLabel"></th>
-      <th nowrap class="toAddress"><%= netsimMsg.to() %></th>
-      <th nowrap class="fromAddress"><%= netsimMsg.from() %></th>
-      <th nowrap class="packetInfo"><%= netsimMsg.packet() %></th>
-      <th nowrap class="message"><%= netsimMsg.message() %></th>
+      <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+      <% if (showToAddress) { %>
+        <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+      <% } %>
+      <th nowrap class="<%= PacketUIColumnType.MESSAGE %>"><%= i18n.message() %></th>
     </tr>
   </thead>
   <tbody>
   <%
-    var toAddress = PacketEncoder.defaultPacketEncoder.getField('toAddress', packetBinary);
-    var fromAddress = PacketEncoder.defaultPacketEncoder.getField('fromAddress', packetBinary);
-    var packetIndex = PacketEncoder.defaultPacketEncoder.getField('packetIndex', packetBinary);
-    var packetCount = PacketEncoder.defaultPacketEncoder.getField('packetCount', packetBinary);
-    var message = PacketEncoder.defaultPacketEncoder.getField('message', packetBinary);
+    var toAddress = showToAddress ? encoder.getHeader(PacketHeaderType.TO_ADDRESS, packetBinary) : '';
+    var fromAddress = showFromAddress ? encoder.getHeader(PacketHeaderType.FROM_ADDRESS, packetBinary) : '';
+    var packetIndex = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_INDEX, packetBinary) : '';
+    var packetCount = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_COUNT, packetBinary) : '';
+    var message = encoder.getBody(packetBinary);
 
-    logRow('ascii',
+    logRow(EncodingType.ASCII,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
         binaryToAscii(message, chunkSize));
 
-    logRow('decimal',
+    logRow(EncodingType.DECIMAL,
         binaryToInt(toAddress),
         binaryToInt(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToInt(packetIndex),
           y: binaryToInt(packetCount)
         }),
         alignDecimal(binaryToDecimal(message, chunkSize)));
 
-    logRow('hexadecimal',
+    logRow(EncodingType.HEXADECIMAL,
         binaryToHex(toAddress),
         binaryToHex(fromAddress),
-        netsimMsg.xOfY({
+        i18n.xOfYPackets({
           x: binaryToHex(packetIndex),
           y: binaryToHex(packetCount)
         }),
         formatHex(binaryToHex(message), chunkSize));
 
-    logRow('binary',
+    logRow(EncodingType.BINARY,
         formatBinary(toAddress, 4),
         formatBinary(fromAddress, 4),
         formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),

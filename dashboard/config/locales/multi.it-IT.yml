@@ -852,9 +852,6 @@
         a secret password: una password segreta
       Play Lab Rocket 6:
         Rocket Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Quale
-          funzione può descrivere un razzo che arriva a 24 metri in 2 secondi, a 60
-          metri in 5 secondi ed a 108 metri in 9 secondi?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
           12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
@@ -864,10 +861,6 @@
           * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        0: '? Quale funzione può descrivere un razzo che arriva a 4 metri in 2 secondi,
-          a 16 metri in 4 secondi ed a 256 metri in 16 secondi?'
-        1: ': Quale funzione può descrivere un razzo che arriva a 4 metri in 2 secondi,
-          a 16 metri in 4 secondi ed a 256 metri in 16 secondi?'
         rocket-height(seconds) = seconds * 2: altezza-razzo (secondi) = secondi *
           2
         rocket-height(seconds) = seconds * seconds: altezza-razzo (secondi) = secondi
@@ -878,10 +871,6 @@
           16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        0: '? Quale funzione può descrivere un razzo che arriva a 47 metri in 5 secondi,
-          a 97 metri in 10 secondi ed a 147 metri in 15 secondi?'
-        1: ': Quale funzione può descrivere un razzo che arriva a 47 metri in 5 secondi,
-          a 97 metri in 10 secondi ed a 147 metri in 15 secondi?'
         rocket-height(seconds) = seconds * 7 + 10: altezza-razzo (secondi) = secondi
           * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: altezza-razzo (secondi) = secondi

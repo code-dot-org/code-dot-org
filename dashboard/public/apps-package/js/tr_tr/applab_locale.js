@@ -152,6 +152,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Devam"},
 "container":function(d){return "Bir tanım komutu oluşturun"},
 "containerTooltip":function(d){return "HTML içerisinde bir bölme oluşturur."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Tebrikler! Son bulmacayı da çözdünüz."},
 "nextLevel":function(d){return "Tebrikler! Bu bulmacayı tamamladınız."},
 "no":function(d){return "Hayır"},

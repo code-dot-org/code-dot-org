@@ -13,5 +13,5 @@
   "yourExpression":"Η έκφρασή σας:",
   "wrongInput":"Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"Your expression does not return the correct result."
 }

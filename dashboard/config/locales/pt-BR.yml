@@ -613,45 +613,46 @@
     sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em
     contato conosco.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: não iniciado
+    in_progress: em progresso
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
-    assessment: assessment
+    assessment: avaliação
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos
     all_courses: Todos os cursos
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: Projetos
+    create: Criar projeto
+    create_a_project: 'Create a new project:'
+    new: Criar novo
+    rename: Renomear
     save: Salvar
     delete: Excluir
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Voltar ao curso
+    my_projects: Meus projetos
     share: Compartilhar
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Compartilhar seu projeto
+    share_copy_link: 'Copie o link:'
+    close: Fechar
     more: Mais
     name: Nome
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Atualizado
+    project_type: Tipo do projeto
+    help_text: Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma
+      coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você
+      pode voltar a trabalhar nos seus projetos a qualquer hora.
+    need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
     delete_yes: Sim
     delete_no: Não
-    saved: Saved
-    not_saved: Not saved
+    saved: Salvo
+    not_saved: Não salvo
     cancel: Cancelar
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Tem certeza que deseja excluir esse projeto?
+    delete_confirm_text: Excluir seu projeto vai removê-lo permanentemente da sua
+      lista "Meus projetos". As pessoas com quem você compartilhou o link não vão
+      mais poder visualizar seu projeto.
+    view_all: Visualizar meus projetos

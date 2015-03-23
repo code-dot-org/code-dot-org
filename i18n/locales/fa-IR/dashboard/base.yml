@@ -295,8 +295,8 @@ fa:
     student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name} حذف شده است'
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
+    email_confirm_wrong_email: (آدرس ایمیل اشتباه است؟)
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
     new_password_hint: (اگر نمی خواهید تغییر بدهید خالی بگذارید)
     current_password_hint: (کلمه عبور برای ذخیره تغییرات لازم است)
@@ -479,7 +479,7 @@ fa:
           title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
           description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
         Hour of Code:
-          title: Hour of Code 2013
+          title: ساعت کد نویسی سال 2013
           description: ""
         edit-code:
           title: ویرایش کد
@@ -509,41 +509,42 @@ fa:
     sign_out: 'اگر شما نمی خواهید سن خود را اعلام کنید میتوانید <a href="%{url}"> خارج شوید</a>.'
   zendesk_too_young_message: 'با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی سایت ما وارد شوند . شما می توانید بخش <a href="http://support.code.org"> support.code.org</a> را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید .'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: شروع نشده
+    in_progress: در حال اجرا
     completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
     completed_perfect: تکمیل, کامل
     furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
-    assessment: assessment
+    assessment: ارزیابی
   studio:
     courses_working_on: دوره های شما در حال کار بر روی
     completed_courses: دوره های تکمیل شده
     all_courses: تمام دوره ها
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: پروژه ها
+    create: پروژه ایجاد کنید
+    create_a_project: 'Create a new project:'
+    new: جدید ایجاد کنید
+    rename: تغییر نام
     save: ذخيره
     delete: پاک کردن
-    exit: Return to Course
-    my_projects: My Projects
+    exit: به درس برگرد
+    my_projects: پروژه های من
     share: به اشتراک گذاری
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: پروژه خود را به اشتراک بگذارید
+    share_copy_link: 'لینک را کپی کنید:'
+    close: ببند
     more: بیشتر
     name: نام
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: به روز رسانی شده
+    project_type: نوع پروژه
+    help_text: 'روی<strong>یک برنامه بساز</strong>یا<strong>چیزی بکش</strong>در زیر کلیک کنید تا یک آزمایشگاه بازی جدید یا پروژه هنری بسازید!<br/>شما میتوانید در هر زمان برگردید و روی پروژه تان کار کنید.'
+    need_help: برای شروع کردن نیاز به کمک دارید?
     really_delete: پاک گردد؟
     delete_yes: بله
     delete_no: نه
-    saved: Saved
-    not_saved: Not saved
+    saved: ذخیره شد
+    not_saved: ذخیره نشده
     cancel: لغو کن
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: آیا مطمئنید می خواهید این پروژه را پاک کنید?
+    delete_confirm_text: پاک کردن پروژه تان آن را به طور دائم از لیست پروژه های من شما حذف خواهد کرد. هرکسی که لینک را با او به اشتراک گذاشته اید دیگر قادر نخواهد بود پروژه شما را ببیند.
+    view_all: پروژه های من را ببینید

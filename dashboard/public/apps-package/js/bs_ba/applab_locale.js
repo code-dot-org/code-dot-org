@@ -33,6 +33,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Nastavi"},
 "container":function(d){return "kreiraj kontejner"},
 "containerTooltip":function(d){return "Kreira kontejner za dijeljenje i postavlja njegov unutarnji HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Čestitamo! Riješen je posljednji zadatak."},
 "nextLevel":function(d){return "Čestitamo! Ovaj zadatak je riješen."},
 "no":function(d){return "Ne"},

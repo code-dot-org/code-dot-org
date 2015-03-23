@@ -464,7 +464,7 @@
   video_coming_soon: Hamarosan lesz videó!
   share_code:
     title: Kattints a "Fuss"-ra, hogy lásd a programomat működés közben
-    bounce_og_title: Nézd meg a Bounce Game-emet
+    bounce_og_title: Nézd meg a Visszapattanós játékomat
     flappy_og_title: Nézd meg a Flappy játékomat
     studio_og_title: Próbáld ki a Játéklabor alkalmazásomat
     check_out_what_i_made: Nézd meg, mit csináltam
@@ -611,6 +611,7 @@
   project:
     projects: Projects
     create: Create Project
+    create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
     save: Mentés

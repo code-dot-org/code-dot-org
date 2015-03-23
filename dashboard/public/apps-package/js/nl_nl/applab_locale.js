@@ -84,6 +84,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Doorgaan"},
 "container":function(d){return "Maak container"},
 "containerTooltip":function(d){return "Maakt een container en stelt de innerlijke HTML-code in."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."},
 "nextLevel":function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."},
 "no":function(d){return "Nee"},

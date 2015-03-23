@@ -10,6 +10,7 @@
   "continue":"次へ",
   "container":"create container",
   "containerTooltip":"Creates a division container and sets its inner HTML.",
+  "designMode":"Design",
   "finalLevel":"おめでとうございます ！最後のパズルを解決しました。",
   "nextLevel":"おめでとうございます ！このパズルを完了しました。",
   "no":"いいえ",

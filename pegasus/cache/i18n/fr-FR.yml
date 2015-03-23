@@ -18,7 +18,8 @@
     d'apprendre l'informatique
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres
     participants.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Si vous nous soutenez, signez votre nom.  Rejoignez
+    #.'
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -117,8 +118,9 @@
   hoc_is_here: '#HourOfCode L''Heure de Code est là — jettes-y un œil ! @codeorg'
   just_did_hoc: 'Je viens de faire l''Heure de Code #HourOfCode — jettes-y un œil
     ! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique
+    ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/
+    pour en savoir plus.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Plus loin qu'Une Heure
   what_gender: Es-tu un garçon ou une fille ?
@@ -155,27 +157,23 @@
   studiobar_donate_body: Un enfant apprend pour chaque dollar donné
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_malala: "« Je mets au défi les filles dans chaque pays pour apprendre
+    une heure de Code » \nMalala\n"
+  homepage_hero_text_susan: "« Il est jamais trop tard pour apprendre » \nSusan, PDG
+    de YouTube\n"
+  homepage_hero_text_sheryl: "« Une compréhension de l'informatique est de plus en
+    plus indispensable... » \nSheryl, COO de Facebook\n"
   homepage_slot_text_hoc: L'Heure de Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Tous nos tutoriels
   homepage_slot_text_course4: Cours 4
   homepage_slot_text_shop: Boutique
   homepage_slot_text_flappy: Flappy l'oiseau
-  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_signpetition: Signez la pétition
+  homepage_signpetition_dropdown: Signez notre pétition &#x25BE;
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur
@@ -384,8 +382,8 @@
   dashboard_login_picture: Image
   dashboard_login_none: E-mail
   dashboard_new_password: nouveau mot de passe
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: pas commencé
+  dashboard_progress_in_progress: en cours
   dashboard_progress_not_completed: pas terminé
   dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
   dashboard_progress_completed_perfect: terminé, parfait
