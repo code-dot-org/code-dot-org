@@ -103,6 +103,10 @@ StubDialog.prototype.hide = function() {
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   if(app == 'maze') {
     require('@cdo/apps/maze/main');
+  } else if (app == 'flappy') {
+    require('@cdo/apps/flappy/main');
+  } else if (app == 'turtle') {
+    require('@cdo/apps/turtle/main');
   } else {
     logError('Not maze?!?!?!');
   }

@@ -26,8 +26,8 @@ describe('Level tests', function() {
     studioApp = testUtils.getStudioAppSingleton();
   });
 
-  getTestCollections().forEach(function (item) {
-    runTestCollection(item);
+  getTestCollections().forEach(function (item, index) {
+    if(index === 3) runTestCollection(item);
   });
 
 });
@@ -45,7 +45,7 @@ function getTestCollections () {
     if (/data$/.test(file)) {
       console.log('got data!');
       dataItem = files[file];
-    } else if (!/data$/.test(file) && !/3_1$/.test(file)) {
+    } else if (!/data$/.test(file) && !/3_1$/.test(file) && !/ec_1_2$/.test(file)) {
       testCollections.push({path: file, data: files[file]});
     }
   });
@@ -74,8 +74,6 @@ function runTestCollection (item) {
 
 function runTest (testCollection, testData) {
   it(testData.description, function (done) {
-    console.log('Running test: ' + testData.description);
-
     // can specify a test specific timeout in json file.
     if (testData.timeout !== undefined) {
       this.timeout(testData.timeout);
@@ -83,6 +81,5 @@ function runTest (testCollection, testData) {
 
     var runLevelTest = require('./util/runLevelTest');
     runLevelTest(testCollection, testData, dataItem, done);
-    console.log('ran level test');
   });
 }

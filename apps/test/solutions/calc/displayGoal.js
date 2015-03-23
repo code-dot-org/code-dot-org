@@ -1,13 +1,13 @@
 var testUtils = require('../../util/testUtils');
 testUtils.setupLocale('calc');
 
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
-var Calc = require(testUtils.buildPath('calc/calc.js'));
-var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
-var Equation = require(testUtils.buildPath('/calc/equation.js'));
-var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
+var studioApp = require('@cdo/apps/StudioApp').singleton;
+var Calc = require('@cdo/apps/calc/calc.js');
+var EquationSet = require('@cdo/apps/calc/equationSet.js');
+var Equation = require('@cdo/apps//calc/equation.js');
+var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
 
 /**
  * This is another example of me taking advantage of the fact that our level

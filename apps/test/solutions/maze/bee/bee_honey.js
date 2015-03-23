@@ -1,7 +1,7 @@
 var testUtils = require('../../../util/testUtils');
-var constants = require(testUtils.buildPath('constants'));
+var constants = require('@cdo/apps/constants');
 var TestResults = constants.TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var blockUtils = require('@cdo/apps/block_utils');
 var TerminationValue = constants.BeeTerminationValue;
 
 // Honey goal of 2.  No specific hive goals

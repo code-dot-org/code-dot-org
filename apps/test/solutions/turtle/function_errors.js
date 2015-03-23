@@ -1,6 +1,4 @@
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var levelDef = {
   solutionBlocks: '<xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">25</title></block></value><value name="TO"><block type="math_number"><title name="NUM">200</title></block></value><value name="BY"><block type="math_number"><title name="NUM">25</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_number"><title name="NUM">3</title></block></value><statement name="DO"><block type="draw_move" inline="true"><title name="DIR">moveForward</title><value name="VALUE"><block type="variables_get"><title name="VAR">counter</title></block></value><next><block type="draw_turn" inline="true"><title name="DIR">turnRight</title><value name="VALUE"><block type="math_number"><title name="NUM">120</title></block></value></block></next></block></statement></block></statement></block></next></block></xml>',

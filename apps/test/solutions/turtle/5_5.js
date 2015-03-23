@@ -1,6 +1,4 @@
-var testUtils = require('../../util/testUtils');
-var constants = require(testUtils.buildPath('constants.js'));
-var TestResults = constants.TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 module.exports = {
   app: "turtle",
