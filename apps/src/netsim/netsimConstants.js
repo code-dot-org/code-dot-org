@@ -44,25 +44,26 @@ exports.DnsMode = {
 /**
  * Encodings that can be used to interpret and display binary messages in
  * the simulator.
+ * Map to class-names that can be applied to related table rows.
  * @enum {string}
  */
 exports.EncodingType = {
+  /** Renders each chunk of bits (using variable chunksize) in ascii */
+  ASCII: 'ascii',
+
+  /** Renders each chunk of bits (using variable chunksize) in decimal */
+  DECIMAL: 'decimal',
+
+  /** Renders each binary nibble as a hex character. */
+  HEXADECIMAL: 'hexadecimal',
+
   /** All packet data is actually stored and moved around in binary, so
    *  the 'binary' encoding just represents access to that raw data. */
   BINARY: 'binary',
 
   /** An encoding used early in the lessons to show that binary isn't always
    *  1s and 0s.  Just like binary, but replaces 1/0 with A/B. */
-  A_AND_B: 'a_and_b',
-
-  /** Renders each binary nibble as a hex character. */
-  HEXADECIMAL: 'hexadecimal',
-
-  /** Renders each chunk of bits (using variable chunksize) in decimal */
-  DECIMAL: 'decimal',
-
-  /** Renders each chunk of bits (using variable chunksize) in ascii */
-  ASCII: 'ascii'
+  A_AND_B: 'a_and_b'
 };
 
 /**
@@ -74,4 +75,31 @@ exports.NetSimTabType = {
   MY_DEVICE: 'my_device',
   ROUTER: 'router',
   DNS: 'dns'
+};
+
+/**
+ * Field types that can go into the packet header.
+ * Map to class-names that can be applied to related input fields.
+ * @enum {string}
+ */
+exports.PacketHeaderType = {
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INDEX: 'packetIndex',
+  PACKET_COUNT: 'packetCount'
+};
+
+/**
+ * Column types that can be used any time a packet is displayed on the page.
+ * Related to PacketHeaderType, but different because this includes columns
+ * that aren't part of the header, and groups the packetInfo together.
+ * Map to class-names that can be applied to related table cells.
+ * @enum {string}
+ */
+exports.PacketUIColumnType = {
+  ENCODING_LABEL: 'encodingLabel',
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INFO: 'packetInfo',
+  MESSAGE: 'message'
 };

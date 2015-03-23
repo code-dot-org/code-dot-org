@@ -8,6 +8,8 @@ var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
+var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
+var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 describe("NetSimLogEntry", function () {
   var testShard;
@@ -111,12 +113,17 @@ describe("NetSimLogEntry", function () {
 
   it ("can extract packet data based on standard format", function () {
     var logEntry = new NetSimLogEntry(null, {
-      packet: '000100100011010001010110'
-    });
-    assertEqual(1, logEntry.getToAddress());
-    assertEqual(2, logEntry.getFromAddress());
-    assertEqual(3, logEntry.getPacketIndex());
-    assertEqual(4, logEntry.getPacketCount());
+      packet: '0001 0010 0011 0100 01010110'
+    }, [
+      { key: PacketHeaderType.TO_ADDRESS, bits: 4 },
+      { key: PacketHeaderType.FROM_ADDRESS, bits: 4 },
+      { key: PacketHeaderType.PACKET_INDEX, bits: 4 },
+      { key: PacketHeaderType.PACKET_COUNT, bits: 4 }
+    ]);
+    assertEqual(1, logEntry.getHeaderField(PacketHeaderType.TO_ADDRESS));
+    assertEqual(2, logEntry.getHeaderField(PacketHeaderType.FROM_ADDRESS));
+    assertEqual(3, logEntry.getHeaderField(PacketHeaderType.PACKET_INDEX));
+    assertEqual(4, logEntry.getHeaderField(PacketHeaderType.PACKET_COUNT));
     assertEqual('01010110', logEntry.getMessageBinary());
   });
 
