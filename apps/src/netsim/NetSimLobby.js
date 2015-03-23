@@ -14,9 +14,8 @@
 var utils = require('../utils');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
+var NodeType = require('./netsimConstants').NodeType;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -377,8 +376,8 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
     var showClients = this.levelConfig_.showClientsInLobby;
     var showRouters = this.levelConfig_.showRoutersInLobby;
     var nodeType = simNode.getNodeType();
-    return (nodeType === NetSimClientNode.getNodeType() && showClients) ||
-        (nodeType === NetSimRouterNode.getNodeType() && showRouters);
+    return (nodeType === NodeType.CLIENT && showClients) ||
+        (nodeType === NodeType.ROUTER && showRouters);
   }.bind(this));
 
   filteredLobbyData.sort(function (a, b) {
@@ -397,8 +396,8 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
         simNode.getStatusDetail());
 
     // Style rows by row type.
-    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
-      item.addClass('router-row');
+    if (simNode.getNodeType() === NodeType.ROUTER) {
+      item.addClass('router_row');
     } else {
       item.addClass('user_row');
       if (simNode.entityID === this.connection_.myNode.entityID) {
@@ -425,7 +424,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
+  if (NodeType.CLIENT === connectionTarget.getNodeType()) {
     return;
   }
 

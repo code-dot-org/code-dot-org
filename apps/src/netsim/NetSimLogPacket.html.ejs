@@ -1,12 +1,13 @@
 <%
   var netsimConstants = require('./netsimConstants');
-  var EncodingType = netsimConstants.EncodingType;
-  var PacketHeaderType = netsimConstants.PacketHeaderType;
-  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var dataConverters = require('./dataConverters');
   var i18n = require('../../locale/current/netsim');
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
-  var PacketEncoder = require('./PacketEncoder');
-  var dataConverters = require('./dataConverters');
+  var Packet = require('./Packet');
+
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+
   var formatBinary = dataConverters.formatBinary;
   var formatHex = dataConverters.formatHex;
   var alignDecimal = dataConverters.alignDecimal;
@@ -15,18 +16,18 @@
   var binaryToDecimal = dataConverters.binaryToDecimal;
   var binaryToAscii = dataConverters.binaryToAscii;
 
-  /** @type {PacketEncoder} */
-  var encoder = new PacketEncoder(packetSpec);
+  /** @type {Packet} */
+  var packet = new Packet(packetSpec, packetBinary);
 
-  /** @type {PacketHeaderType[]} */
+  /** @type {Packet.HeaderType[]} */
   var headerFields = packetSpec.map(function (headerField) {
     return headerField.key;
   });
 
-  var showToAddress = headerFields.indexOf(PacketHeaderType.TO_ADDRESS) > -1;
-  var showFromAddress = headerFields.indexOf(PacketHeaderType.FROM_ADDRESS) > -1;
-  var showPacketInfo = headerFields.indexOf(PacketHeaderType.PACKET_INDEX) > -1 &&
-      headerFields.indexOf(PacketHeaderType.PACKET_COUNT) > -1;
+  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
 /**
  * @param {EncodingType} encodingType
@@ -71,11 +72,11 @@
   </thead>
   <tbody>
   <%
-    var toAddress = showToAddress ? encoder.getHeader(PacketHeaderType.TO_ADDRESS, packetBinary) : '';
-    var fromAddress = showFromAddress ? encoder.getHeader(PacketHeaderType.FROM_ADDRESS, packetBinary) : '';
-    var packetIndex = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_INDEX, packetBinary) : '';
-    var packetCount = showPacketInfo ? encoder.getHeader(PacketHeaderType.PACKET_COUNT, packetBinary) : '';
-    var message = encoder.getBody(packetBinary);
+    var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
+    var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
+    var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
+    var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
+    var message = packet.getBodyAsBinary();
 
     logRow(EncodingType.ASCII,
         binaryToInt(toAddress),
