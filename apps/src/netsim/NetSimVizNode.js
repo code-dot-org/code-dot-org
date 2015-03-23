@@ -14,7 +14,6 @@ require('../utils');
 var netsimConstants = require('./netsimConstants');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
-var NetSimRouterNode = require('./NetSimRouterNode');
 var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;

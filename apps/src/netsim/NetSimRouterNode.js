@@ -22,7 +22,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
-var PacketEncoder = require('./PacketEncoder');
+var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 
 var _ = utils.getLodash();
@@ -31,7 +31,6 @@ var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 
 var DnsMode = netsimConstants.DnsMode;
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 var NodeType = netsimConstants.NodeType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
@@ -314,7 +313,7 @@ NetSimRouterNode.prototype.getNodeType = function () {
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
   // Require TO_ADDRESS for routing
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === PacketHeaderType.TO_ADDRESS;
+        return headerField.key === Packet.HeaderType.TO_ADDRESS;
       })) {
     logger.error("Packet specification does not have a toAddress field.");
   }
@@ -322,7 +321,7 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
   // Require FROM_ADDRESS temporarily for auto-DNS tasks
   // TODO (bbuchanan) remove when real auto-dns nodes are implemented.
   if (!packetSpec.some(function (headerField) {
-        return headerField.key === PacketHeaderType.FROM_ADDRESS;
+        return headerField.key === Packet.HeaderType.FROM_ADDRESS;
       })) {
     logger.error("Packet specification does not have a fromAddress field.");
   }
@@ -731,9 +730,8 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
 
   // Find a connection to route this message to.
   try {
-    var decoder = new PacketEncoder(this.packetSpec_);
-    toAddress = decoder.getHeaderAsInt(PacketHeaderType.TO_ADDRESS,
-        message.payload);
+    var decoder = new Packet(this.packetSpec_, message.payload);
+    toAddress = decoder.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
     this.log(message.payload);
@@ -788,9 +786,8 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
 
   // Extract message contents
   try {
-    encoder = new PacketEncoder(this.packetSpec_);
-    fromAddress = encoder.getHeaderAsInt(PacketHeaderType.FROM_ADDRESS,
-        message.payload);
+    encoder = new Packet(this.packetSpec_, message.payload);
+    fromAddress = encoder.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
     query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore

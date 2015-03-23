@@ -87,20 +87,8 @@ exports.NetSimTabType = {
 };
 
 /**
- * Field types that can go into the packet header.
- * Map to class-names that can be applied to related input fields.
- * @enum {string}
- */
-exports.PacketHeaderType = {
-  TO_ADDRESS: 'toAddress',
-  FROM_ADDRESS: 'fromAddress',
-  PACKET_INDEX: 'packetIndex',
-  PACKET_COUNT: 'packetCount'
-};
-
-/**
  * Column types that can be used any time a packet is displayed on the page.
- * Related to PacketHeaderType, but different because this includes columns
+ * Related to Packet.HeaderType, but different because this includes columns
  * that aren't part of the header, and groups the packetInfo together.
  * Map to class-names that can be applied to related table cells.
  * @enum {string}

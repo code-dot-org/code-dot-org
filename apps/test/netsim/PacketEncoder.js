@@ -8,15 +8,15 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var PacketEncoder = testUtils.requireWithGlobalsCheckBuildFolder('netsim/PacketEncoder');
+var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 
-describe("PacketEncoder", function () {
+describe("Packet.Encoder", function () {
 
   describe("format validation", function () {
 
     it ("throws on construction if any field is missing a key", function () {
       assertThrows(Error, function () {
-        var format = new PacketEncoder([
+        var format = new Packet.Encoder([
           { bits: 8 },
           { key: 'fieldTwo', bits: 8 }
         ]);
@@ -25,7 +25,7 @@ describe("PacketEncoder", function () {
 
     it ("throws on construction if any field is missing a length", function () {
       assertThrows(Error, function () {
-        var format = new PacketEncoder([
+        var format = new Packet.Encoder([
           { key: 'fieldOne' },
           { key: 'fieldTwo', bits: 8 }
         ]);
@@ -34,7 +34,7 @@ describe("PacketEncoder", function () {
 
     it ("throws on construction if keys are not unique", function () {
       assertThrows(Error, function () {
-        var format = new PacketEncoder([
+        var format = new Packet.Encoder([
           { key: 'fieldOne', bits: 8 },
           { key: 'fieldOne', bits: 8 }
         ]);
@@ -43,14 +43,14 @@ describe("PacketEncoder", function () {
 
     it ("throws on construction if Infinity field length used", function () {
       assertThrows(Error, function () {
-        var format = new PacketEncoder([
+        var format = new Packet.Encoder([
           { key: 'infinityFirst', bits: Infinity },
           { key: 'fixedLater', bits: 8 }
         ]);
       });
 
       assertThrows(Error, function () {
-        var format = new PacketEncoder([
+        var format = new Packet.Encoder([
           { key: 'infinityFirst', bits: 8 },
           { key: 'fixedLater', bits: Infinity }
         ]);
@@ -63,7 +63,7 @@ describe("PacketEncoder", function () {
     var shortFormat;
 
     beforeEach(function () {
-      shortFormat = new PacketEncoder([
+      shortFormat = new Packet.Encoder([
         { key: 'toAddress', bits: 4 },
         { key: 'fromAddress', bits: 4 }
       ]);
@@ -132,7 +132,7 @@ describe("PacketEncoder", function () {
     it ("deconstructs binary using a provided format", function () {
       var packet = '00000001 00000010';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 8 },
         { key: 'fromAddress', bits: 8 }
       ]);
@@ -140,7 +140,7 @@ describe("PacketEncoder", function () {
       assertEqual('00000001', format.getHeader('toAddress', packet));
       assertEqual('00000010', format.getHeader('fromAddress', packet));
 
-      var otherFormat = new PacketEncoder([
+      var otherFormat = new Packet.Encoder([
         { key: 'toAddress', bits: 4 },
         { key: 'fromAddress', bits: 4 }
       ]);
@@ -152,7 +152,7 @@ describe("PacketEncoder", function () {
     it ("throws when getting a key that isn't in the spec", function () {
       var packet = '00000001 10101010 10101010 10101';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 8 },
         { key: 'payload', bits: 8 }
       ]);
@@ -165,7 +165,7 @@ describe("PacketEncoder", function () {
     it ("returns zeroes when getting a key that is beyond the binary length", function () {
       var packet = '1111';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 4 },
         { key: 'payload', bits: 4 }
       ]);
@@ -176,7 +176,7 @@ describe("PacketEncoder", function () {
     it ("right-pads with zeroes when getting a key that overlaps the binary end", function () {
       var packet = '1111 11';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 4 },
         { key: 'payload', bits: 4 }
       ]);
@@ -187,7 +187,7 @@ describe("PacketEncoder", function () {
     it ("gets remaining bits into Infinity field", function () {
       var packet = '00000001 10101010 10101010 10101';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 8 }
       ]);
 
@@ -198,7 +198,7 @@ describe("PacketEncoder", function () {
     it ("gets zero bits into Infinity field if it's beyond the binary length", function () {
       var packet = '1111';
 
-      var format = new PacketEncoder([
+      var format = new Packet.Encoder([
         { key: 'toAddress', bits: 8 }
       ]);
 
