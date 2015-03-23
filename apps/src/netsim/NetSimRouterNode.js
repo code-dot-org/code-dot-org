@@ -51,6 +51,14 @@ var MAX_CLIENT_CONNECTIONS = 6;
 var ROUTER_LOCAL_ADDRESS = 0;
 
 /**
+ * Address that can only be used for the auto-dns node.
+ * May eventually be replaced with a dynamically assigned address.
+ * @type {number}
+ * @readonly
+ */
+var AUTO_DNS_RESERVED_ADDRESS = 15;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -405,7 +413,11 @@ NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
     return;
   }
 
-  // TODO (bbuchanan): Handle DNS node management here
+  if (this.dnsMode === DnsMode.NONE) {
+    this.dnsNodeID = undefined;
+  } else if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.dnsNodeID = AUTO_DNS_RESERVED_ADDRESS;
+  }
 
   this.dnsMode = newDnsMode;
   this.update();
@@ -561,6 +573,55 @@ NetSimRouterNode.prototype.getAddressTable = function () {
 };
 
 /**
+ * Given a node ID, finds the local network address of that node.  Cannot
+ * be used to find the address of the router or auto-dns node (since their
+ * node IDs are not unique).  Will return undefined if the node ID is not
+ * found.
+ *
+ * @param {number} nodeID
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getAddressForNodeID_ = function (nodeID) {
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localNodeID === nodeID;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localAddress;
+  }
+  return undefined;
+};
+
+/**
+ * Given a local network address, finds the node ID of the node at that
+ * address.  Will return undefined if no node is found at the given address.
+ *
+ * @param {number} address
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
+  if (address === ROUTER_LOCAL_ADDRESS) {
+    return this.entityID;
+  }
+
+  if (this.dnsMode === DnsMode.AUTOMATIC &&
+      address === AUTO_DNS_RESERVED_ADDRESS) {
+    return this.entityID;
+  }
+
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localAddress === address;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localNodeID;
+  }
+  return undefined;
+};
+
+/**
  * When the node table changes, we check whether our own row has changed
  * and propagate those changes as appropriate.
  * @param rows
@@ -630,6 +691,46 @@ NetSimRouterNode.prototype.getLog = function () {
   }.bind(this));
 };
 
+NetSimRouterNode.prototype.canHandleMessage_ = function (message) {
+  var fromNodeID, toNodeID, fromAddress, toAddress, simulateForNodeID,
+      simulateForAddress, routerNodeID, autoDnsNodeID, autoDnsAddress, packet;
+
+  fromNodeID = message.fromNodeID;
+  toNodeID = message.toNodeID;
+  simulateForNodeID = this.simulateForSender_;
+  routerNodeID = this.entityID;
+
+  // When auto-dns mode is enabled, we can handle some additional messages
+  // because the router IS the auto-dns
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    packet = new Packet(this.packetSpec_, message.payload);
+    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    simulateForAddress = this.getAddressForNodeID_(simulateForNodeID);
+    autoDnsNodeID = routerNodeID;
+    autoDnsAddress = AUTO_DNS_RESERVED_ADDRESS;
+
+    // Handle all messages originating with client & from router to auto dns
+    if (fromAddress === simulateForAddress &&
+        toAddress === autoDnsAddress &&
+        fromNodeID === routerNodeID &&
+        toNodeID === autoDnsNodeID) {
+      return true;
+    }
+
+    // Handle all messages destined for client & to router from auto dns
+    if (fromAddress === autoDnsAddress &&
+        toAddress === simulateForAddress &&
+        fromNodeID === autoDnsNodeID &&
+        toNodeID === routerNodeID) {
+      return true;
+    }
+  }
+
+  // Default case: Handle all messages from client node to router node
+  return fromNodeID === simulateForNodeID && toNodeID === routerNodeID;
+};
+
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
@@ -652,10 +753,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
       .map(function (row) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this))
-      .filter(function (message) {
-        return message.fromNodeID === this.simulateForSender_ &&
-            message.toNodeID === this.entityID;
-      }.bind(this));
+      .filter(this.canHandleMessage_.bind(this));
 
   if (messages.length === 0) {
     // No messages for us, no work to do.
@@ -721,17 +819,19 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, myWires, onCompl
  * the new address.
  *
  * @param {NetSimMessage} message
- * @param {Array.<NetSimWire>} myWires
+ * @param {NetSimWire[]} myWires
  * @param {!NodeStyleCallback} onComplete
  * @private
  */
 NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplete) {
   var toAddress;
+  var routerNodeID = this.entityID;
+  var autoDnsNodeID = this.entityID;
 
   // Find a connection to route this message to.
   try {
-    var decoder = new Packet(this.packetSpec_, message.payload);
-    toAddress = decoder.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    var packet = new Packet(this.packetSpec_, message.payload);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
     this.log(message.payload);
@@ -739,20 +839,28 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
     return;
   }
 
-  // Automatic DNS: requests to address zero hit the "automatic DNS" system
-  // and generate responses.
-  // TODO (bbuchanan): Send to a real auto-dns node
-  if (this.dnsMode === DnsMode.AUTOMATIC && toAddress === ROUTER_LOCAL_ADDRESS) {
-    logger.warn("Packet passed to auto-DNS shim on router");
+  if (toAddress === ROUTER_LOCAL_ADDRESS) {
+    // This packet has reached its destination, it's done.
+    logger.warn("Packet stopped at router.");
+    this.log(message.payload);
+    onComplete(null);
+    return;
+  }
+
+  // Automatic DNS: Requests to the reserved auto-DNS address that are coming
+  // FROM the router node are handled by the auto-dns node logic
+  if (this.dnsMode === DnsMode.AUTOMATIC &&
+      message.fromNodeID === routerNodeID &&
+      message.toNodeID === autoDnsNodeID &&
+      toAddress === AUTO_DNS_RESERVED_ADDRESS) {
+    logger.warn("Packet passed to auto-DNS");
     this.generateDnsResponse_(message, myWires);
     onComplete(null);
     return;
   }
 
-  var destWires = myWires.filter(function (wire) {
-    return wire.localAddress === toAddress;
-  });
-  if (destWires.length === 0) {
+  var destinationNodeID = this.getNodeIDForAddress_(toAddress);
+  if (destinationNodeID === undefined) {
     logger.warn("Destination address not in local network");
     this.log(message.payload);
     onComplete(null);
@@ -761,13 +869,11 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
-  var destWire = destWires[0];
-
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
-      destWire.remoteNodeID,
-      destWire.localNodeID,
+      routerNodeID,
+      destinationNodeID,
       message.payload,
       function (err, result) {
         this.log(message.payload);
@@ -782,13 +888,15 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
  * @private
  */
 NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
-  var encoder, fromAddress, query, responseHeaders, responseBody, responseBinary;
+  var packet, fromAddress, query, responseHeaders, responseBody, responseBinary;
+  var routerNodeID = this.entityID;
+  var autoDnsNodeID = this.entityID;
 
   // Extract message contents
   try {
-    encoder = new Packet(this.packetSpec_, message.payload);
-    fromAddress = encoder.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    query = encoder.getBodyAsAscii(message.payload, BITS_PER_BYTE);
+    packet = new Packet(this.packetSpec_, message.payload);
+    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    query = packet.getBodyAsAscii(BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
     return;
@@ -815,13 +923,20 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
   }
 
   responseHeaders = {
-    fromAddress: intToBinary(ROUTER_LOCAL_ADDRESS, BITS_PER_NIBBLE),
+    fromAddress: intToBinary(AUTO_DNS_RESERVED_ADDRESS, BITS_PER_NIBBLE),
     toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
     packetIndex: intToBinary(1, BITS_PER_NIBBLE),
     packetCount: intToBinary(1, BITS_PER_NIBBLE)
   };
-  responseBinary = encoder.concatenateBinary(responseHeaders,
+
+  responseBinary = packet.encoder.concatenateBinary(
+      responseHeaders,
       asciiToBinary(responseBody, BITS_PER_BYTE));
-  NetSimMessage.send(this.shard_, this.entityID, message.fromNodeID,
-      responseBinary, function() {});
+
+  NetSimMessage.send(
+      this.shard_,
+      autoDnsNodeID,
+      routerNodeID,
+      responseBinary,
+      function() {});
 };
