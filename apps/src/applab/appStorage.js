@@ -38,6 +38,10 @@ var handleGetKeyValue = function(onSuccess, onError) {
   if (this.readyState !== 4) {
     return;
   }
+  if (this.status === 404) {
+    onSuccess(undefined);
+    return;
+  }
   if (this.status < 200 || this.status >= 300) {
     onError('error reading value: unexpected http status ' + this.status);
     return;
