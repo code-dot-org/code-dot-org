@@ -172,19 +172,19 @@ bg:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Видео игрите и координатните системи
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Открийте как видео игрите, които обичате да играете всъщност са задвижени от алгебрата! Разгледайте как алгебричните изрази и координатната система могат да ни помогнат да разберем как работят видео игрите и след това да започнете да планирате видео игра, която ще създадете сами.
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Договори, домейн и обхват
+        desc: Договорите ни дават начин да разберем и да се обсъдим функциите. В този урок ние ще разгледаме как договорите може да ни помогнат да разберем нов език за програмиране или функция.
       DesignRecipe:
         title: Рецепта за дизайн
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'В последния етап учениците ще напишат някои много прости функции - но по-сложните функции изискват по-внимателен подход. Дизайн рецептата е структуриран подход за написването на функции, включващ писане на тестове за да се гарантира, че функцията работи както се очаква.'
       Booleans:
-        title: Booleans and Logic
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        title: Booleans и логика
+        desc: Booleans са четвъртият и последен тип данни, които вие ще научите в този курс. В това упражнение вие ще научите за какво са Booleans, и как те могат да ни помогнат да напишем функции, които мислят логично
       ConditionalsPiecewiseFunctions:
         title: Условни и линейни функции
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: 'Параметрите, които прикрепяме към функция дават резултатите да варират в зависимост от правилния модел. Да предположим, че искаме  с параметри с определени стойности, за да създадем резултати, с помощта на един модел, но чрез други стойности можем да получим различен модел. Това е мястото, където са необходими условията...'
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theoreom and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Collision Detection и Питагорова теорема
+        desc: Определянето на момента, когато обекти на екрана се докосват, е важен аспект на повечето игри. В този урок ние ще разгледаме как Питагоровата теорема и формулата за разстояние може да се използва за измерване на разстоянието между две точки от равнината и след това да реши дали тези две точки (или герои от игра) се докосват.

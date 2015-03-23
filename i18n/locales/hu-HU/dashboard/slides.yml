@@ -3,7 +3,7 @@ hu:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét.
+        text: Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási leckét.
       2:
         image: notes/hoc1_2.jpg
         text: A Blockly nevű vizuális programozási nyelvezetet fogjuk használni, ahol blokkok egymáshoz illesztésével tudsz kódot írni.
@@ -62,13 +62,13 @@ hu:
         text: Szia, a nevem Paola! Ezekben a rejtvényekben te egy farmer leszel, akinek ki kell simítania a földét, hogy elkezdhesse az ültetvények elültetését.
       2:
         image: notes/stage9_2.jpg
-        text: Segítened kell neki eltávolítani az összes földet, s kitölteni vele a lyukakat.
+        text: Segítened kell neki eltávolítani az összes halmot, és kitölteni a lyukakat.
       3:
         image: notes/stage9_3.jpg
-        text: 'Az új blokk  1 eltüntet egy ásónyi földet a kupacból, ill.  egy ásónyi földdel feltölt egy gödröt.'
+        text: Az új blokkok eltüntetnek egy lapátnyi földet a halomból, illetve egy lapátnyi földdel feltöltenek egy gödröt.
       4:
         image: notes/stage9_4.jpg
-        text: A halmok és a lyukak különböző méretűek, meg kell mondania a farmernek, hogy hány shovelfult használjon.
+        text: A halmok és a lyukak különböző méretűek, így meg kell mondd a farmernek, hogy hányat lapátoljon.
     flappy_intro:
       1:
         image: Megjegyzések/flappy01.jpg

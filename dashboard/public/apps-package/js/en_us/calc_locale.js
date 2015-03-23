@@ -168,4 +168,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "yourExpression":function(d){return "Your expression:"},
 "wrongInput":function(d){return "You are calling your function with the wrong value."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Your expression does not return the correct result."}};

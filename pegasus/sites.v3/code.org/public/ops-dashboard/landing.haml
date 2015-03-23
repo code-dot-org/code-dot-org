@@ -17,11 +17,11 @@ theme: none
 -if dashboard_user[:admin]
   %a{href:'/ops-dashboard#/workshops'}
     %h2
-      Manage Workshops
+      Manage PD Workshops
 -elsif have_permission?('district_contact')
   %a{href:'/ops-dashboard#/workshops'}
     %h2
-      View Workshops
+      View PD Workshops
 -if dashboard_user[:admin] || have_permission?('district_contact')
   %a{href:'/ops-dashboard#/teacher-cohorts'}
     %h2

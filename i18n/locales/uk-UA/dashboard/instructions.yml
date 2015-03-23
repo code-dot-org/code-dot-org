@@ -1,7 +1,6 @@
 uk:
   data:
     instructions:
-       (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       10A_instruction: Добре, давайте завершити цей головоломки з зелений квадрат, який є 175 pixels у величині.
       2-3 _instruction: Пурпурні квіти, можливо 1 або 0 нектар. Будьте обережні, щоб не збирати нектар з Пурпурна квітка, якщо це не якийсь.
       2-3 Artist 1 new_instruction: Привіт, я художник. Ви можете написати код, щоб зробити мені зробити майже нічого. Використовувати кілька блоків, щоб зробити мені зробити, а сірі лінії на малюнку. (Кожний рядок представляє довгий 100 пікселів)
@@ -495,17 +494,47 @@ uk:
       Big Game Booleans 4_instruction: Великий, тепер у вас є функціями для перевірки ліву і праву частину екрана, редагувати на екрані? функціонувати таким чином, щоб він перевіряє сейф лівий? І сейф справа?, просто, як ви зробили з Сем кажана.
       Big Game Booleans 5_instruction: На даному етапі ваше гри своїх небезпеки повинен працювати по екрану справа наліво, вашої цільової слід запускати поперек сторінки зліва направо і обидва вони повернуться до протилежної сторони. Знайдіть хвилинку, щоб переконатися, що ваша гра працює, як ви хочете його, а потім натисніть кнопку Готово, щоб рухатися далі.
       Big Game Collision 1 (copy 1)_instruction: "Коли ви останній раз працював на вашій грі ми отримали наші цілі і небезпека спрайт літати по всьому екрану, але вони ніколи не повертається. Посилання запустити, щоб побачити, як ваша гра в даний час працює і потім натисніть закінчити, і ми будемо працювати з виготовлення цих спрайт, з'являються знову на екрані після того, як вони вийшли."
-      Big Game Collision 1_instruction: "Коли ви останній раз працював на вашій грі ми отримали наші цілі і небезпека спрайт літати по всьому екрану, але вони ніколи не повертається. Посилання запустити, щоб побачити, як ваша гра в даний час працює і потім натисніть закінчити, і ми будемо працювати з виготовлення цих спрайт, з'являються знову на екрані після того, як вони вийшли."
+      Big Game Collision 1_instruction: |
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
-      Big Game Collision 3_instruction: "Нашої цільової, небезпеки і гравець рухатися все тепер - єдине, що залишилося зробити це з'ясувати, коли вони зворушливі так ми зможемо оновити рахунок відповідно. Спочатку потрібно буде завершити відстань функції, так що ми можемо виміряти відстань між двома точками на площині. Ми наводимо робочих довжина линій функції, щоб вам допомогти."
-      Big Game Collision 4_instruction: Ви майже у мети! Тепер у вас є спосіб, щоб виміряти відстань між двома точками, потрібно просто вирішити, коли ці очки є досить близько, щоб бути розглянуті зворушливо. Завершити в стикаються? функціонувати так, щоб вона перевіряє функцію відстань і Повертає true якщо два пункти досить близько, щоб торкнутися (100 пікселів apart є хорошим місцем для початку).
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Collision 3_instruction: |
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
+      Big Game Collision 4_instruction: |
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: Демо-завершено CS у проекті алгебра велика гра
       Big Game Complete_instruction: Демо-завершено CS у проекті алгебра велика гра
       Big Game Final_instruction: Ви зробили це! At цей момент ваше гри повинні бути повністю функціонуючої, знайдіть час, щоб користуватися нову гру і зробити будь-який остаточний твіков до нього. Коли ви щасливі з кінцевого продукту, натисніть кнопку Готово і ви будете мати можливість поділитися посиланням на вашій грі. Хорошу роботу!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: Демо-завершено CS у проекті алгебра велика гра
       Big Game Vars 1 (copy 1)_instruction: 'Давайте все почалося на велику гру! Тут можна побачити цілу купу шаблонного коду, що ви будете в кінцевому підсумку замінити свій власний, але на даний момент ми тільки збираємося турбуватися про визначення змінних. Натисніть кнопку "Виконати", щоб побачити, як гра виглядає значеннями за промовчанням.'
       Big Game Vars 1_instruction: |
@@ -1652,7 +1681,7 @@ uk:
       Eval Design Recipe 3_instruction: |
         The design recipe for "wide-rect" already
         has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should draw a rectangle of given
+        the definition. The "wide-rect" function should produce a rectangle of given
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
@@ -2067,7 +2096,8 @@ uk:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions

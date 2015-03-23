@@ -165,6 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "繼續 "},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
 "nextLevel":function(d){return "恭喜！你已經完成這個關卡。"},
 "no":function(d){return "否"},

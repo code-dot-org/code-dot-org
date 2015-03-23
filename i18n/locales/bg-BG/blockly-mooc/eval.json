@@ -2,16 +2,16 @@
   "badColorStringError":"Вие сте използвали невалиден цвят за низа: {val}",
   "badStyleStringError":"Вие сте използвали невалиден стил за низ: {val}",
   "circleBlockTitle":"кръг (радиус, стил, цвят)",
-  "displayBlockTitle":"evaluate",
+  "displayBlockTitle":"Оценка",
   "ellipseBlockTitle":"елипса (ширина, височина, стил, цвят)",
   "emptyFunctionalBlock":"Имате блок с незапълнено поле.",
   "extraTopBlocks":"Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?",
-  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
+  "infiniteRecursionError":"Вашата функция се стартира сама. Ние я спряхме, в противен случай щеше да продължи да се стартира безброй пъти.",
   "overlayBlockTitle":"наслагване (отгоре, отдолу)",
   "placeImageBlockTitle":"място-изображение (x, y, изображение)",
   "offsetBlockTitle":"изместване (x, y, изображение)",
   "rectangleBlockTitle":"правоъгълник (ширина, височина, стил, цвят)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"Можете да натиснете бутона \"Продължете да  играете\", за да редактирате вашата рисунка.",
   "rotateImageBlockTitle":"завъртане (градуси, изображение)",
   "scaleImageBlockTitle":"скала (фактор, изображение)",
   "squareBlockTitle":"квадрат (размер, стил, цвят)",
@@ -26,6 +26,6 @@
   "outline":"контур",
   "solid":"твърд",
   "string":"поредица",
-  "stringMismatchError":"You have a string with the wrong capitalization.",
-  "userCodeException":"An error occurred while executing your code."
+  "stringMismatchError":"Имате стринг с грешен капитализация.",
+  "userCodeException":"Възникна грешка при изпълнение на вашия код."
 }

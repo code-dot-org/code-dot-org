@@ -700,23 +700,18 @@ uk:
         a secret password: секретний пароль
       Play Lab Rocket 6:
         Rocket Multiple Choice: Ракетний множинний вибір
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Які функції б описати ракети, що досягає 24 метрів на 2 секунди, 60 метрів на 5 секунд і 108 м на 9 секунд?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Ракетний множинний вибір
-        0: '? Які функції б описати ракети, що досягає 4 метрів на 2 секунд, 16 метрів на 4 секунд і 256 м на 16 секунд?'
-        1: ': Якої функціонують б описати ракети, що досягає 4 метрів на 2 секунд, 16 метрів на 4 секунд і 256 м на 16 секунд?'
         rocket-height(seconds) = seconds * 2: 'Rocket-Height(seconds) = секунд * 2'
         rocket-height(seconds) = seconds * seconds: 'Rocket-Height(seconds) = секунд * секунд'
         rocket-height(seconds) = seconds * 4: 'Rocket-Height(seconds) = секунд * 4'
         rocket-height(seconds) = seconds * 16: 'Rocket-Height(seconds) = секунд * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: Ракетний множинний вибір
-        0: '? Які функції б описати ракетою, яка сягає 47 метрів на 5 секунд, 97 м на 10 секунд і 147 м на 15 секунд?'
-        1: ': Якої функціонують б описати ракетою, яка сягає 47 метрів на 5 секунд, 97 м на 10 секунд і 147 м на 15 секунд?'
         rocket-height(seconds) = seconds * 7 + 10: 'Rocket-Height(seconds) = секунд * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'Rocket-Height(seconds) = секунд * 10 + 7'
         rocket-height(seconds) = seconds * 7 + 3: 'Rocket-Height(seconds) = секунд * 7 + 3'

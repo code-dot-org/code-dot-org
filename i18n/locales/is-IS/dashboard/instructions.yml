@@ -1,7 +1,6 @@
 is:
   data:
     instructions:
-       (copy 1)_instruction: 'Prófaðu að nota "endurtaka" kubbinn til að spara kubba...'
       10A_instruction: Jæja, nú skulum við klára þessa þraut með grænum ferningi sem er 175 dílar á stærð.
       2-3 _instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3 Artist 1 new_instruction: Hæ ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin í myndinni. (Hver lína er 100 díla löng.)
@@ -423,17 +422,47 @@ is:
       Big Game Booleans 4_instruction: 'Nú höfum við föll til að athuga með vinstri og hægri brúnir skjásins. Breyttu fallinu "á-skjá?" svo það noti föllin "öruggt-v?" og "örugg-h?", eins og þú gerðir með Samma leðurblöku.'
       Big Game Booleans 5_instruction: 'Á þessu stigi leiksins ætti hættan að hlaupa yfir skjáinn frá vinstri til hægri og markið frá hægri til vinstri og bæði ættu að fara til baka. Gakktu úr skugga um að leikurinn virki eins og ætlast er til og smelltu á "ljúka" til að halda áfram.'
       Big Game Collision 1 (copy 1)_instruction: 'Síðast þegar við unnum með leikinn fóru mark- og hættukvikarnir yfir skjáinn, en þeir komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta kvikana birtast aftur.'
-      Big Game Collision 1_instruction: 'Síðast þegar við unnum með leikinn fóru mark- og hættukvikarnir yfir skjáinn, en þeir komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta kvikana birtast aftur.'
+      Big Game Collision 1_instruction: |
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
-      Big Game Collision 3_instruction: Nú hreyfast markið, hættan og leikmaðurinn. En enn er eftir að finna út hvenær þeir snertast svo hægt sé að uppfæra skorið. Fyrst þarf að ljúka við fjarlægðarfall svo að við getum mælt fjarlægðina milli tveggja punkta á fletinum. Við höfum látið þig fá línulengdarfall til að auðvelda þetta.
-      Big Game Collision 4_instruction: 'Þetta er alveg að klárast! Nú geturðu mælt fjarlægðina milli tveggja punkta, svo það er bara eftir að ákveða hvenær fjarlægðin er svo lítil að það teljist snerting. Ljúktu við fallið "árekstur?" svo það noti fjarlægðarfallið og skili sönnu ef punktarnir snertast (það er ágætt að byrja með 100 díla fjarlægð).'
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Collision 3_instruction: |
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
+      Big Game Collision 4_instruction: |
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Final_instruction: Þér tókst þetta! Nú ætti leikurinn að hafa fulla virkni. Taktu þér tíma til að njóta hans og fínpússa ef með þarf. Þegar þú ert ánægð/ur með afraksturinn, skaltu smella á Ljúka og þá færðu tækifæri til að deila tengli á leikinn. Vel gert!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Vars 1 (copy 1)_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
       Big Game Vars 1_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
@@ -823,7 +852,11 @@ is:
       Eval Design Recipe 1_instruction: 'Gefum okkur samninginn breiður-rétth: Tala Strengur -> Mynd. Skrifaðu dæmi - teikna algrænan rétthyrning með hæðina 100 dílar.'
       Eval Design Recipe 2 (copy 1)_instruction: 'Búum til enn eitt dæmi áður en við skrifum skilgreiningu fallsins - í þetta sinn er dæmið að teikna alrauðan rétthyrning með hæðina 75 dílar.'
       Eval Design Recipe 2_instruction: 'Búum til enn eitt dæmi áður en við skrifum skilgreiningu fallsins - í þetta sinn er dæmið að teikna alrauðan rétthyrning með hæðina 75 dílar.'
-      Eval Design Recipe 3_instruction: 'Hönnunaruppskriftin fyrir "breiður-rétth" hefur þegar samning og eitt dæmi. Getur þú skrifað annað dæmi og síðan lokið við skilgreininguna? Fallið "breiður-rétth" á að teikna rétthyrning í tilteknum lit sem er tvöfalt breiðari en hann er hár.'
+      Eval Design Recipe 3_instruction: |
+        The design recipe for "wide-rect" already
+        has a contract and one example. Can you write a second example and then complete
+        the definition. The "wide-rect" function should produce a rectangle of given
+        color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: 'Notaðu hönnunaruppskriftina til að búa til fallið "geislastjarna", sem tekur inn fjölda arma og lengd geisla og skilar gulri stjörnu með þennan fjölda arma og innri geisla, sem er helmingur ytri geislans.'
       Eval Design Recipe 5_instruction: 'Notaðu hönnunaruppskriftina til að skrifa fallið "röndótt flagg", sem tekur inn tvo liti og býr til flagg, sem er 250 díla langt og 150 díla hátt með þrjár jafnbreiðar láréttar rendur í tilteknu litunum í röðinni litur2, litur1, litur2.'
       Eval Design Recipe 6_instruction: 'Notaðu hönnunaruppskriftina til að skrifa fallið "stór-fjölhyrningur", sem á að búa til fjölhyrning með tilteknar hliðar og í tilteknum lit og á að fylla að mestu út í gluggann án tillits til fjölda hliða. Til að tryggja að fjölhyrningurinn verði ekki of stór þegar hliðunum fjölgar, ætti lengd hliðar að vera í öfugu hlutfalli við fjölda hliða, sem næst með því að nota formúluna 800/hliðar.'
@@ -1061,7 +1094,8 @@ is:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Gerðu þetta!
       Maze screenshot Work_instruction: Prófleiðbeiningar

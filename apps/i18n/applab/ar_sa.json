@@ -10,6 +10,7 @@
   "continue": "أستمر",
   "container": "أنشئ حاوية",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "designMode": "Design",
   "finalLevel": "تهانينا ! لقد قمت بحل اللغز الاخير.",
   "nextLevel": "تهانينا ! لقد تم الانتهاء من اللغز.",
   "no": "لا",
