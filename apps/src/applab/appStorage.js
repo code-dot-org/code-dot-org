@@ -35,7 +35,7 @@ AppStorage.getKeyValue = function(key, onSuccess, onError) {
 };
 
 var handleGetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status === 404) {
@@ -67,7 +67,7 @@ AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
 };
 
 var handleSetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -104,7 +104,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleCreateRecord = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -142,7 +142,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -191,7 +191,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status === 404) {
@@ -235,7 +235,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  if (this.readyState !== XMLHttpRequest.DONE) {
     return;
   }
   if (this.status === 404) {
