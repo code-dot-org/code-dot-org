@@ -178,4 +178,17 @@ module ApplicationHelper
     end
     certificate_image_url(name: user.name, course: script_name)
   end
+
+  # Sets custom options to be used by the view layer. The option hash is immutable once read.
+  def view_options(opts = nil)
+    @view_options ||= {}
+    if opts.blank?
+      @view_options_locked = true
+      @view_options
+    elsif @view_options_locked
+      throw ArgumentError("Can't update locked view options")
+    else
+      @view_options.merge!(opts)
+    end
+  end
 end
