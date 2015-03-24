@@ -48,9 +48,18 @@ html[dir='rtl'] #visualizationColumn {
   top: 0px;
   left: 0px; }
 
+#visualizationColumn.pin_bottom {
+  position: absolute;
+  bottom: 10px;
+  overflow-y: hidden; }
+
 div.droplet-palette-group-header {
   font-family: 'Gotham 4r', sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 24px; }
+
+div.droplet-palette-header-row {
+  height: 24px; }
 
 div.droplet-palette-group-header:active {
   color: #000; }
@@ -133,6 +142,10 @@ div.droplet-palette-group-header-selected.green {
   bottom: 0px;
   font-size: 14px; }
 
+#codeTextbox.pin_bottom {
+  bottom: 170px;
+  box-shadow: 7px 7px 10px #888; }
+
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
   left: 0px;
@@ -149,6 +162,11 @@ html[dir='rtl'] #codeWorkspace {
   margin-left: 15px;
   border: 1px solid #ddd;
   overflow: hidden; }
+
+#codeWorkspace.pin_bottom {
+  box-shadow: none;
+  border: none;
+  overflow: visible; }
 
 .ace_gutter-cell.ace_breakpoint {
   border-radius: 15px 0px 0px 15px;
@@ -581,7 +599,11 @@ input[type="radio"] {
 #headers {
   height: 40px;
   background-color: #7665a0;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   #headers .workspace-header {
     text-align: center;
     white-space: nowrap;
