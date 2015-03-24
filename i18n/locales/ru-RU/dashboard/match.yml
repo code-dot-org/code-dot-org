@@ -329,18 +329,18 @@ ru:
         "bigger-string: string string -> string": 'большая строка: строка строка -> строка'
         "find-price: string -> number": 'Найти значение: строка -> номер'
       PDK5 Pair programming match:
-        Pair programming match: Pair programming match
-        Match the definitions to the words you were introduced to in the last video.: Match the definitions to the words you were introduced to in the last video.
-        Pair programming: Pair programming
-        Driver: Driver
-        Navigator: Navigator
-        When two students work at one computer to write a program together: When two students work at one computer to write a program together
-        The student who controls the keyboard, mouse, or touch screen: The student who controls the keyboard, mouse, or touch screen
-        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
+        Pair programming match: 'Программирование в парах: сопоставление'
+        Match the definitions to the words you were introduced to in the last video.: Сопоставьте определения со словами, которые вы узнали из последнего видео.
+        Pair programming: Программирование в парах
+        Driver: Водитель
+        Navigator: Штурман
+        When two students work at one computer to write a program together: Когда двое учеников работают за одним компьютером, чтобы написать программу вместе
+        The student who controls the keyboard, mouse, or touch screen: Ученик, который использует клавиатуру, мышь, или сенсорный экран
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: Ученик, который думает об общей структуре программы и смотрит за возможными ошибками и непониманием
       PDK5 What is unplugged:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: Что такое урок без компьютера?
         Question: Вопрос
-        Answer 1: Answer 1
+        Answer 1: Ответ 1
       test matching image:
         Matching Images Two: 'Соответствие изображений - 2'
         Match up all the flowers by colour!: Составь пары цветков по из цвету!

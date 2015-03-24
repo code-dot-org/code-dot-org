@@ -1,17 +1,17 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "divideByZeroError": "Forritið þitt leiðir til deilingar með núlli.",
   "emptyComputeBlock": "Þú verður að festa kubb við \"reikna\" kubbinn.",
   "emptyFunctionalBlock": "Það er kubbur með óútfyllt inntak.",
   "equivalentExpression": "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi.",
-  "evaluate": "evaluate",
+  "evaluate": "meta",
   "extraTopBlocks": "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?",
   "failedInput": "Fallið þitt gefur stundum ekki rétta útkomu.",
   "goal": "Markmið:",
   "levelIncompleteError": "Formúlan þín samsvarar ekki markmiðinu.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "missingVariableX": "Það vantar breytuna {var} í formúluna þína.",
   "reinfFeedbackMsg": "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!",
   "yourExpression": "Formúlan þín:",
   "wrongInput": "Þú ert að kalla á fallið þitt með röngu gildi.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongOtherValuesX": "Formúlan þín gefur rangt gildi ef breytunni {var} er breytt.",
+  "wrongResult": "Formúlan þín gefur ekki rétta niðurstöðu."
 }

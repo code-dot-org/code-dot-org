@@ -393,7 +393,7 @@ th:
           The Artist: ศิลปิน
           Play Lab: Play Lab
         events:
-          title: Events
+          title: เหตุการณ์
           description: ""
           Bounce: Bounce
           Studio: Studio

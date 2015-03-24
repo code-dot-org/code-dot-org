@@ -29,7 +29,7 @@
       placeholder: Código de Secção (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
-    placeholder: Por favor introduza a sua dica aqui
+    placeholder: Por favor, digite a sua pista aqui
     submit: Adicionar dica
   appname: Code.org
   stage: nível
@@ -107,10 +107,10 @@
       a inscrevê-lo(a).
   signin_form:
     title: Já tem uma conta? Entre
-    login: E-mail ou nome de utilizador
+    login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
-    submit: Entrar
+    submit: Iniciar sessão
   signin:
     try_heading: Quer experimentar trabalhar com código sem se inscrever?
     try_hoc: Tente Uma Hora de Código primeiro
@@ -150,7 +150,7 @@
       no_teacher: Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'.
         Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente
       section_not_found: Não foi possível encontrar uma secção com o código '%{section_code}'.
-      blank_code: Por favor, introduza um código de secção
+      blank_code: Por favor, digite um código de secção
       cant_join_own_section: Pedimos desculpa, mas não pode juntar a sua própria secção.
     mail:
       invite_student:

@@ -64,7 +64,7 @@ hu:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Labirintus Többszörös választás Egy
+        Maze Multiple Choice One: Labirintus, többszörös választás
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Choose the best answer.: Válaszd ki a legmegfelelőbb választ.
         Which blocks work?: Melyik blokkok működnek?
@@ -73,7 +73,7 @@ hu:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Labirintus Több választási lehetőség
+        Maze Multiple Choice: Labirintus, többszörös választás
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
         Which blocks work?: Melyik blokkok működnek?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
@@ -140,6 +140,13 @@ hu:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Művész. Feleletválasztás
         Which blocks draw a rectangle with a perimeter of 100?: Melyik blokkok rajzolnak egy 100-as kerületű téglalapot?
@@ -213,7 +220,7 @@ hu:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Labirintus Több választási lehetőség
+        Maze Multiple Choice: Labirintus, többszörös választás
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
         Which blocks solve the puzzle?: Melyik blokkok oldják meg ezt a rejtvényt?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -646,7 +653,7 @@ hu:
         Are you ready to move on?: Are you ready to move on?
         "Yes": Igen
       PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
+        Overview of K-5 Courses: Alsó tagozatos tanfolyamok áttekintése
         Are you ready to move on?: Are you ready to move on?
         "Yes": Igen
       PDK5 Glossary:
@@ -661,7 +668,7 @@ hu:
       PDK5 Sequence2:
         More Sequencing: More Sequencing
         The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
-        toolbox: toolbox
+        toolbox: eszköztár
         shelf: shelf
         bin: bin
         dropdown: dropdown

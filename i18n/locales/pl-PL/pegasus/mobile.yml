@@ -3,7 +3,7 @@ pl-PL:
   select_language: Wybierz język
   computer_science: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 grudnia 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>. Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> zaplanujcie swoją Godzinę Kodowania (Hour of Code)</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
@@ -11,7 +11,7 @@ pl-PL:
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do # innych.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz do # innych.'
   name: Imię/Nazwisko
   email: Adres e-mail
   zipcode: Kod pocztowy lub kraj
@@ -92,7 +92,7 @@ pl-PL:
   learn_classes: Znajdź grupę w swoim otoczeniu
   hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić. http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/ aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza One Hour
   what_gender: Jakiej jesteś płci?
@@ -107,9 +107,9 @@ pl-PL:
   students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of Code)  i napisało %{lines} linii kodu.'
   start_hoc: Rozpocznij teraz godzinę programowania (Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania." - Nina Nichols Peery, nauczycielka'
+  stats_student: '"Taka szansa zdarza się <b>tylko raz w życiu</b> ."- Mariana Alzate, uczennica 5 klasy'
+  stats_michael: '"<b>Nigdy</b> nie widziałem swoich uczniów tak podekscytowanych nauką." - Michael Clark, nauczyciel'
   studiobar_title: "Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>"
   studiobar_elementary_title: Kursy podstawowe
   studiobar_elementary_body: 'Nasze trzy nowe kursy dla K &#8209;5'
@@ -123,16 +123,17 @@ pl-PL:
   studiobar_frozen_body: Twórz z Anną i Elsą zimową krainę czarów
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Sklep
+  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
     Malala
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+  homepage_hero_text_susan: '&ldquo;Nigdy nie jest za późno na naukę&rdquo; Susan, CEO z YouTube'
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
@@ -140,14 +141,15 @@ pl-PL:
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Wszystkie nasze poradniki
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Sklep
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ""
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Obejrzyj wideo
+  homepage_action_text_teachervideo: Obejrzyj wideo
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Podpisz petycję
+  homepage_signpetition_dropdown: 'Podpisz naszą petycję &#x25BE;'
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -228,8 +230,8 @@ pl-PL:
   dashboard_action_delete_yes: Tak
   dashboard_action_delete_no: Nie
   dashboard_action_confirm: Usunąć?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Usuń
+  dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
   dashboard_navigation_home_page: Domowa strona nauczyciela
@@ -268,7 +270,7 @@ pl-PL:
   dashboard_students_new_section: 'Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b> powyżej.'
   dashboard_students_placeholder_name: Imię ucznia
   dashboard_students_name: Imię/Nazwisko
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Postęp
   dashboard_students_age: Wiek
   dashboard_students_gender: Płeć
   dashboard_students_male: Mężczyzna

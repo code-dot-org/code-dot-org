@@ -4,6 +4,7 @@
   "ascii":"ASCII",
   "binary":"Двоичный",
   "bitCounter":"{x}\/{y} бит",
+  "bits":"Bits",
   "clear":"Очистить",
   "connected":"Соединен",
   "decimal":"Десятичное",
@@ -21,15 +22,19 @@
   "instructions":"Инструкции",
   "message":"Сообщение",
   "myDevice":"Мое устройство",
+  "numBitsPerPacket":"{x} bits per packet",
   "_of_":" от ",
   "packet":"Пакет",
+  "packetInfo":"Packet Info",
   "receivedMessageLog":"Полученное сообщение журнала",
   "removePacket":"Удалить пакет",
   "router":"Маршрутизатор",
+  "routerX":"Router {x}",
   "send":"Отправить",
   "sendAMessage":"Отправить сообщение",
   "sentMessageLog":"Отправить несколько сообщений",
   "to":"Кому",
+  "unlimited":"Unlimited",
   "workspaceHeader":"Интернет симулятор",
-  "xOfY":"{x} от {y}"
+  "xOfYPackets":"{x} of {y}"
 }

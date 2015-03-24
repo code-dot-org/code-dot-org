@@ -56,7 +56,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Áfram"},
 "container":function(d){return "búa til ílát"},
 "containerTooltip":function(d){return "Býr til div ílát og setur HTML innihald í það."},
-"designMode":function(d){return "Design"},
+"designMode":function(d){return "Hönnun"},
 "finalLevel":function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."},
 "nextLevel":function(d){return "Til hamingju! Þú hefur klárað þessa þraut."},
 "no":function(d){return "Nei"},

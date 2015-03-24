@@ -28,8 +28,8 @@ hu:
       no_token: Ezt az oldalt csak egy jelszó megváltoztatása e-mailen keresztül érheted el. Ha egy jelszó megváltoztatásai e-mail-en keresztül jutottál ide, kérünk ellenőrizd le, hogy a kapott URL-címet teljes egészében megadtad-e.
       send_instructions: Néhány percen belül kapni fogsz egy e-mailt arról, hogy miként tudod beállítani jelszavad.
       send_paranoid_instructions: Ha az e-mail címed létezik adatbázisunkban, néhány percen belül kapni fogsz egy jelszó-beállítási hivatkozást a e-mail címedre.
-      updated: A jelszót sikeresen megváltoztatta. Most bejelentkezett.
-      updated_not_active: A jelszót sikeresen megváltoztatta.
+      updated: A jelszót sikeresen megváltoztattad. Most be vagy jelentkezve.
+      updated_not_active: A jelszót sikeresen megváltoztattad.
     registrations:
       destroyed: Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan újra találkozunk.
       signed_up: Üdvözlet! Sikeresen feliratkoztál.

@@ -129,9 +129,34 @@ div#visualization {
 #divApplab div {
   overflow: hidden; }
 
+#runButton, #resetButton {
+  margin-right: 0;
+  outline-style: none; }
+
 img#turtleImage {
   position: relative;
   height: 45px; }
+
+.debugger_button {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 3px;
+  font-size: 12px; }
+
+.debugger_button:focus {
+  outline-style: none; }
+
+#debug-area {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0; }
+
+#spinner {
+  margin-left: -15px; }
 
 .debug-console {
   display: block; }
@@ -187,8 +212,7 @@ img#turtleImage {
   fill: #eee; }
 
 #pauseButton {
-  min-width: 111px;
-  margin-right: 10px; }
+  min-width: 80px; }
 
 /* Sprited icons. */
 .icon21 {
