@@ -5395,6 +5395,10 @@ var generateSetterCode = function (opts) {
     value = 'Studio.random([' + possibleValues + '])';
   }
 
+  if (opts.returnValue) {
+    return value;
+  }
+
   return 'Studio.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
     (opts.extraParams ? opts.extraParams + ', ' : '') + value + ');\n';
 };
@@ -7325,7 +7329,11 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.functional_background_dropdown = function () {
     // returns the sprite index
-    return this.getTitleValue('BACKGROUND');
+    return generateSetterCode({
+      value: this.getTitleValue('BACKGROUND'),
+      ctx: this,
+      returnValue: true
+    });
   };
 
   /**

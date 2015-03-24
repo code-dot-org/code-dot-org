@@ -157,6 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "a_and_b":function(d){return "A/B"},
 "addPacket":function(d){return "Add Packet"},
 "ascii":function(d){return "ASCII"},
+"autoDnsUsageMessage":function(d){return "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]"},
 "binary":function(d){return "Binary"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" bits"},
 "bits":function(d){return "Bits"},
