@@ -67,6 +67,14 @@ var AUTO_DNS_RESERVED_ADDRESS = 15;
 var AUTO_DNS_HOSTNAME = 'dns';
 
 /**
+ * Value the auto-DNS will return instead of an address when it can't
+ * locate a node with the given hostname in the local network.
+ * @type {string}
+ * @readonly
+ */
+var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -964,8 +972,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
     // Skipping first match, which is the full regex
     var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
       var address = this.getAddressForHostname_(queryHostname);
-      return queryHostname + ':' +
-          (address !== undefined ? address : i18n.autoDnsNotFound());
+      return queryHostname + ':' + utils.valueOr(address, AUTO_DNS_NOT_FOUND);
     }.bind(this));
     responseBody = responses.join(' ');
   } else {
