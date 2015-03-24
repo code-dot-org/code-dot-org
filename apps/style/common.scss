@@ -71,6 +71,10 @@ html[dir='rtl'] #visualizationColumn {
   left: 0px;
 }
 
+#visualizationColumn.embed {
+  margin: 0 auto;
+}
+
 #visualizationColumn.pin_bottom {
   position: absolute;
   bottom: 10px;
