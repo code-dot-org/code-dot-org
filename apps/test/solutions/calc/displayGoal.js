@@ -65,6 +65,34 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.children[0].getAttribute('class'), null);
   });
 
+  displayGoalTest(assert, 'single function', function () {
+    // f(x) = x
+    // compute: f(5)
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [5])));
+
+    displayGoal(targetSet);
+
+    assert.equal(answerExpression.children.length, 1);
+
+    // f(5) = 5
+    var g = answerExpression.children[0];
+    // assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "f");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "(");
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, "5");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children[3].textContent, ")");
+    assert.equal(g.children[3].getAttribute('class'), null);
+    assert.equal(g.children[4].textContent, replaceSpaces(" = "));
+    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children[5].textContent, replaceSpaces("5"));
+    assert.equal(g.children[5].getAttribute('class'), null);
+  });
+
   displayGoalTest(assert, 'multiple functions', function () {
     // f(x) = x
     // g(y) = y

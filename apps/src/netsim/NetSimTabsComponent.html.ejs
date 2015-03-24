@@ -1,5 +1,5 @@
 <%
-  var netsimMsg = require('../../locale/current/netsim');
+  var i18n = require('../../locale/current/netsim');
 
   var shouldShowTab = require('./netsimUtils').shouldShowTab;
   var NetSimTabType = require('./netsimConstants').NetSimTabType;
@@ -14,16 +14,16 @@
 <div class="netsim-tabs">
   <ul>
     <% if (showInstructions) { %>
-    <li><a href="#tab_instructions"><%= netsimMsg.instructions() %></a></li>
+    <li><a href="#tab_instructions"><%= i18n.instructions() %></a></li>
     <% } %>
     <% if (showMyDevice) { %>
-      <li><a href="#tab_my_device"><%= netsimMsg.myDevice() %></a></li>
+      <li><a href="#tab_my_device"><%= i18n.myDevice() %></a></li>
     <% } %>
     <% if (showRouter) { %>
-      <li><a href="#tab_router"><%= netsimMsg.router() %></a></li>
+      <li><a href="#tab_router"><%= i18n.router() %></a></li>
     <% } %>
     <% if (showDns) { %>
-      <li><a href="#tab_dns"><%= netsimMsg.dns() %></a></li>
+      <li><a href="#tab_dns"><%= i18n.dns() %></a></li>
     <% } %>
   </ul>
   <% if (showInstructions) { %>
