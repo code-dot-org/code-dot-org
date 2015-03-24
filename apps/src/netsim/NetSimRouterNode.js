@@ -59,6 +59,14 @@ var ROUTER_LOCAL_ADDRESS = 0;
 var AUTO_DNS_RESERVED_ADDRESS = 15;
 
 /**
+ * Hostname assigned to the automatic dns 'node' in the local network.
+ * There will only be one of these, so it can be simple.
+ * @type {string}
+ * @readonly
+ */
+var AUTO_DNS_HOSTNAME = 'dns';
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -305,6 +313,15 @@ NetSimRouterNode.prototype.getDisplayName = function () {
   return i18n.routerX({
     x: this.entityID
   });
+};
+
+/**
+ * Get node's hostname, a modified version of its display name.
+ * @returns {string}
+ * @override
+ */
+NetSimRouterNode.prototype.getHostname = function () {
+  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
 };
 
 /** @inheritdoc */
@@ -573,7 +590,7 @@ NetSimRouterNode.prototype.getAddressTable = function () {
   // Special case: In auto-dns mode we add the DNS entry to the address table
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     addressTable.push({
-      hostname: 'dns',
+      hostname: AUTO_DNS_HOSTNAME,
       address: AUTO_DNS_RESERVED_ADDRESS,
       isLocal: false,
       isDnsNode: true
@@ -596,6 +613,33 @@ NetSimRouterNode.prototype.getAddressTable = function () {
 NetSimRouterNode.prototype.getAddressForNodeID_ = function (nodeID) {
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localNodeID === nodeID;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localAddress;
+  }
+  return undefined;
+};
+
+/**
+ * Given a hostname, finds the local network address of the node with that
+ * hostname.  Will return undefined if no node with that hostname is found.
+ *
+ * @param {string} hostname
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
+  if (hostname === this.getHostname()) {
+    return ROUTER_LOCAL_ADDRESS;
+  }
+
+  if (this.dnsMode === DnsMode.AUTOMATIC && hostname === AUTO_DNS_HOSTNAME) {
+    return AUTO_DNS_RESERVED_ADDRESS;
+  }
+
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localHostname === hostname;
   });
 
   if (wireRow !== undefined) {
@@ -783,8 +827,9 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
       return;
     }
 
-    // Step 2 (async): Get our connection info, which we will need for routing
-    this.getConnections(function (err, wires) {
+    // Step 2 (async): Fetch our connection info, which we will need for routing
+    // This request caches the info, so we don't need the result.
+    this.getConnections(function (err) {
       if (err) {
         logger.error("Error retrieving router connection info");
         this.isProcessingMessages_ = false;
@@ -792,7 +837,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
       }
 
       // Step 3 (async): Route all messages to destinations
-      this.routeMessages_(messages, wires, function () {
+      this.routeMessages_(messages, function () {
         // Cleanup (sync): Clear "processing" flag
         logger.info("Router finished processing " + messages.length + " messages");
         this.isProcessingMessages_ = false;
@@ -805,22 +850,21 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  * Routes all messages (to remote storage) asynchronously, and calls
  * onComplete when all messages have been routed and/or an error occurs.
  * @param {NetSimMessage[]} messages
- * @param {Array.<NetSimWire>} myWires
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimRouterNode.prototype.routeMessages_ = function (messages, myWires, onComplete) {
+NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
   if (messages.length === 0) {
     onComplete(null);
     return;
   }
 
-  this.routeMessage_(messages[0], myWires, function (err, result) {
+  this.routeMessage_(messages[0], function (err, result) {
     if (err) {
       onComplete(err, result);
       return;
     }
 
-    this.routeMessages_(messages.slice(1), myWires, onComplete);
+    this.routeMessages_(messages.slice(1), onComplete);
   }.bind(this));
 };
 
@@ -830,11 +874,10 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, myWires, onCompl
  * the new address.
  *
  * @param {NetSimMessage} message
- * @param {NetSimWire[]} myWires
  * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplete) {
+NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
   var toAddress;
   var routerNodeID = this.entityID;
   var autoDnsNodeID = this.entityID;
@@ -865,7 +908,7 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
       message.toNodeID === autoDnsNodeID &&
       toAddress === AUTO_DNS_RESERVED_ADDRESS) {
     logger.warn("Packet passed to auto-DNS");
-    this.generateDnsResponse_(message, myWires);
+    this.generateDnsResponse_(message);
     onComplete(null);
     return;
   }
@@ -895,10 +938,9 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, myWires, onComplet
 
 /**
  * @param {NetSimMessage} message
- * @param {NetSimWire[]} myWires
  * @private
  */
-NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
   var packet, fromAddress, query, responseHeaders, responseBody, responseBinary;
   var routerNodeID = this.entityID;
   var autoDnsNodeID = this.entityID;
@@ -921,11 +963,10 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, myWires) {
     // Good request, look up all addresses and build up response
     // Skipping first match, which is the full regex
     var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
-      var wire = _.find(myWires, function (wire) {
-        return wire.localHostname === queryHostname;
-      });
-      return queryHostname + ':' + (wire ? wire.localAddress : 'NOT_FOUND');
-    });
+      var address = this.getAddressForHostname_(queryHostname);
+      return queryHostname + ':' +
+          (address !== undefined ? address : 'NOT_FOUND');
+    }.bind(this));
     responseBody = responses.join(' ');
   } else {
     // Malformed request, send back instructions
