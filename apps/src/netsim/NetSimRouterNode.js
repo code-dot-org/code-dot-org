@@ -329,6 +329,9 @@ NetSimRouterNode.prototype.getDisplayName = function () {
  * @override
  */
 NetSimRouterNode.prototype.getHostname = function () {
+  // Use regex to strip anything that's not a word-character or a digit
+  // from the node's display name.  For routers, we don't append the node ID
+  // because it's already part of the display name.
   return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
 };
 
