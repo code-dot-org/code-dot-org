@@ -8,6 +8,13 @@ var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var Token = require(testUtils.buildPath('/calc/token'));
 var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
 
+function isJsNumber(val) {
+  return (val instanceof jsnums.Rational ||
+      val instanceof jsnums.FloatPoint ||
+      val instanceof jsnums.Complex ||
+      val instanceof jsnums.BigInteger);
+}
+
 describe("debug output of an ExpressionNode tree", function () {
   it("works in some simple cases", function () {
     var node = new ExpressionNode("+", [1, 2]);
@@ -147,27 +154,31 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode(1);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 1);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it("can evaluate a simple expression", function () {
       node = new ExpressionNode('+', [1, 2]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 3);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it('can evaluate a pow', function () {
       node = new ExpressionNode('pow', [2, 3]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 8);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 8));
     });
 
     it('can evaluate a sqr', function () {
       node = new ExpressionNode('sqr', [2]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
       assert.equal(evaluation.result.toExact(), 4);
     });
 
@@ -175,6 +186,7 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('sqrt', [4]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
       assert.equal(evaluation.result.toExact(), 2);
     });
 
@@ -185,7 +197,8 @@ describe("ExpressionNode", function () {
       ]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 4);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 4));
     });
 
     it("can evaluate a variable with a proper mapping", function () {
@@ -195,7 +208,8 @@ describe("ExpressionNode", function () {
 
       evaluation = node.evaluate({x: jsnums.makeFloat(1)});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 1);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it ("can evaluate an expression with variables", function () {
@@ -205,7 +219,8 @@ describe("ExpressionNode", function () {
 
       evaluation = node.evaluate({x: jsnums.makeFloat(1), y: jsnums.makeFloat(2)});
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 3);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("cant evaluate a variable with no mapping", function () {
@@ -217,7 +232,8 @@ describe("ExpressionNode", function () {
     it("doesnt change the node when evaluating", function () {
       node = new ExpressionNode('x');
       evaluation = node.evaluate({x: jsnums.makeFloat(1)});
-      assert.equal(evaluation.result, 1);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
       assert.equal(node.value_, 'x');
     });
 
@@ -240,7 +256,8 @@ describe("ExpressionNode", function () {
 
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 3);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("can evaluate a function call when param name collides with global var", function () {
@@ -255,7 +272,8 @@ describe("ExpressionNode", function () {
       };
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 1);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it("can evaluate nested functions", function () {
@@ -274,7 +292,8 @@ describe("ExpressionNode", function () {
       };
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 2);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 2));
     });
 
     it("can handle transitioning back to global var", function () {
@@ -296,7 +315,8 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('f', [2]);
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 3);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("can handle transitioning back to global var with more complexity", function () {
@@ -323,7 +343,8 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('f', [2]);
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 5);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 5));
     });
 
     it('can handle functions having the same param name', function () {
@@ -347,7 +368,8 @@ describe("ExpressionNode", function () {
       ]);
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
-      assert.equal(evaluation.result, 6);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 6));
     });
 
     it('generates error on infinite recursion', function () {
