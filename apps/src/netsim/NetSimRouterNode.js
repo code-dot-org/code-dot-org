@@ -965,13 +965,12 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
     var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
       var address = this.getAddressForHostname_(queryHostname);
       return queryHostname + ':' +
-          (address !== undefined ? address : 'NOT_FOUND');
+          (address !== undefined ? address : i18n.autoDnsNotFound());
     }.bind(this));
     responseBody = responses.join(' ');
   } else {
     // Malformed request, send back instructions
-    responseBody = "Automatic DNS Node\n" +
-    "Usage: GET hostname [hostname [hostname ...]]";
+    responseBody = i18n.autoDnsUsageMessage();
   }
 
   responseHeaders = {
