@@ -17,7 +17,7 @@ var dataConverters = require('./dataConverters');
 /**
  * Single packet header field type
  * @typedef {Object} packetHeaderField
- * @property {PacketHeaderType} key - Used to identify the field, for parsing.
+ * @property {Packet.HeaderType} key - Used to identify the field, for parsing.
  * @property {number} bits - How long (in bits) the field is.
  */
 
@@ -28,8 +28,70 @@ var dataConverters = require('./dataConverters');
  */
 
 /**
+ * Wraps binary packet content with the format information required to
+ * interpret it.
+ * @param {packetHeaderSpec} formatSpec
+ * @param {string} binary
+ * @constructor
+ */
+var Packet = module.exports = function (formatSpec, binary) {
+  validateSpec(formatSpec);
+
+  /** @type {Packet.Encoder} */
+  this.encoder = new Packet.Encoder(formatSpec);
+
+  /** @type {string} of binary content */
+  this.binary = binary;
+};
+
+/**
+ * Possible packet header fields.  Values to this enum become keys
+ * that can be used when defining a level configuration.  They also correspond
+ * to class names that get applied to fields representing data in that column.
+ * @enum {string}
+ * @readonly
+ */
+Packet.HeaderType = {
+  TO_ADDRESS: 'toAddress',
+  FROM_ADDRESS: 'fromAddress',
+  PACKET_INDEX: 'packetIndex',
+  PACKET_COUNT: 'packetCount'
+};
+
+/**
+ * @param {Packet.HeaderType} headerType
+ * @returns {string} of binary content
+ */
+Packet.prototype.getHeaderAsBinary = function (headerType) {
+  return this.encoder.getHeader(headerType, this.binary);
+};
+
+/**
+ * @param {Packet.HeaderType} headerType
+ * @returns {number}
+ */
+Packet.prototype.getHeaderAsInt = function (headerType) {
+  return this.encoder.getHeaderAsInt(headerType, this.binary);
+};
+
+/**
+ * @returns {string} binary content
+ */
+Packet.prototype.getBodyAsBinary = function () {
+  return this.encoder.getBody(this.binary);
+};
+
+/**
+ * @param {number} bitsPerChar
+ * @returns {string} ascii content
+ */
+Packet.prototype.getBodyAsAscii = function (bitsPerChar) {
+  return this.encoder.getBodyAsAscii(this.binary, bitsPerChar);
+};
+
+/**
  * Verify that a given format specification describes a valid format that
- * can be used by the PacketEncoder object.
+ * can be used by the Packet.Encoder object.
  * @param {packetHeaderSpec} formatSpec
  */
 var validateSpec = function (formatSpec) {
@@ -67,7 +129,7 @@ var validateSpec = function (formatSpec) {
  *        bits is the length of the field.
  * @constructor
  */
-var PacketEncoder = module.exports = function (formatSpec) {
+Packet.Encoder = function (formatSpec) {
   validateSpec(formatSpec);
 
   /** @type {packetHeaderSpec} */
@@ -77,12 +139,12 @@ var PacketEncoder = module.exports = function (formatSpec) {
 /**
  * Retrieve requested header field by key from the provided binary blob.
  *
- * @param {PacketHeaderType} key - which header to retrieve
+ * @param {Packet.HeaderType} key - which header to retrieve
  * @param {string} binary for entire packet
  * @returns {string} binary string value for header field
  * @throws when requested key is not in the configured packet spec
  */
-PacketEncoder.prototype.getHeader = function (key, binary) {
+Packet.Encoder.prototype.getHeader = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
@@ -112,11 +174,11 @@ PacketEncoder.prototype.getHeader = function (key, binary) {
 };
 
 /**
- * @param {PacketHeaderType} key - field name
+ * @param {Packet.HeaderType} key - field name
  * @param {string} binary - entire packet as a binary string
  * @returns {number} - requested field, interpreted as an int.
  */
-PacketEncoder.prototype.getHeaderAsInt = function (key, binary) {
+Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
   return dataConverters.binaryToInt(this.getHeader(key, binary));
 };
 
@@ -126,16 +188,16 @@ PacketEncoder.prototype.getHeaderAsInt = function (key, binary) {
  * @param {string} binary - entire packet as a binary string
  * @returns {string} packet body binary string
  */
-PacketEncoder.prototype.getBody = function (binary) {
+Packet.Encoder.prototype.getBody = function (binary) {
   return minifyBinary(binary)
-      .slice(PacketEncoder.getHeaderLength(this.formatSpec_));
+      .slice(Packet.Encoder.getHeaderLength(this.formatSpec_));
 };
 
 /**
  * @param {packetHeaderSpec} formatSpec
  * @returns {number} How many bits the header takes up
  */
-PacketEncoder.getHeaderLength = function (formatSpec) {
+Packet.Encoder.getHeaderLength = function (formatSpec) {
   return formatSpec.reduce(function (prev, cur) {
     return prev + cur.bits;
   }, 0);
@@ -148,7 +210,7 @@ PacketEncoder.getHeaderLength = function (formatSpec) {
  * @param {number} bitsPerChar - bits to represent as a single character,
  *        recommended to use 8 for normal ASCII.
  */
-PacketEncoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
+Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
   return dataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
 };
 
@@ -160,7 +222,7 @@ PacketEncoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
  * output.
  * @param {Object} headers - with number values
  */
-PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
+Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
   var binaryHeaders = {};
   this.formatSpec_.forEach(function (headerField){
     if (headers.hasOwnProperty(headerField.key)) {
@@ -185,7 +247,7 @@ PacketEncoder.prototype.makeBinaryHeaders = function (headers) {
  * @returns {string} binary string of provided data, conforming to configured
  *          packet format.
  */
-PacketEncoder.prototype.concatenateBinary = function (binaryHeaders, body) {
+Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
   var parts = [];
 
   this.formatSpec_.forEach(function (fieldSpec) {

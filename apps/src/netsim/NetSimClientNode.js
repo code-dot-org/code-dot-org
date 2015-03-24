@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils');
+var NodeType = require('./netsimConstants').NodeType;
 var NetSimNode = require('./NetSimNode');
 
 /**
@@ -36,10 +37,7 @@ NetSimClientNode.inherits(NetSimNode);
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getNodeType = function () {
-  return NetSimClientNode.getNodeType();
-};
-NetSimClientNode.getNodeType = function () {
-  return 'user';
+  return NodeType.CLIENT;
 };
 
 /** @inheritdoc */

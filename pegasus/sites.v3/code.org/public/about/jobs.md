@@ -4,7 +4,8 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org	
-
+- [Technology Product Manager](#Tech-PM)
+- [K-5 Affiliate Program Manager](#K-5-PM)
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
 - [K-8 Program Manager](#K8-PM)
@@ -15,7 +16,70 @@ nav: about_nav
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
 
-## <a name="accountant "href="accountant">Accountant (PT) (Seattle, WA)</a>
+## <a name="Tech-PM"href="#Tech-PM">Technology Product Manager (Seattle,WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. Responsibilities of the position include:
+
+- Defining the scope of these projects
+- Designing user experience and working with engineers and other teams at Code.org to implement them
+
+This person must be able to work in a fast paced environment with continuous release to customers
+
+**Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelors degree in Computer Science
+- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
+- Experience in designing user experience for non-tech savvy customers
+- Strong technical background
+- Strong communication and collaboration skills
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+## <a name="K-5-PM"href="#K-5-PM">K-5 Affiliate Program Manager (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting a K-5 Affiliate Program Manager who can manage our K-5 Affiliate Program and support our outreach team to spread the K-5 program to Code.org’s school district partners. The Affiliate program is the centerpiece of Code.org’s K-5 talent development pipeline. The program is intended to develop and then support facilitators across the country who can, in turn, train teachers to teach our K-5 curriculum in the formal classroom.
+
+Responsibilities of the position include:
+
+- Setting strategy for scaling, management and potential expansion of the K-5 Affiliate Program
+- Managing the relationships with existing Code.org K-5 Affiliates across the country
+- Manage vendor relationships and monitor K-5 supplies and inventory
+- Manage and continuously update the K-5 budget 
+- Determining potential expansion areas for recruiting new affiliates
+- Leading the development of Code.org’s Affiliate Summit (where new affiliates are trained)
+- Supporting Code.org’s District Program Managers in growing the K-5 program within our existing partner districts and addressing implementation issues
+- Determining, tracking and evaluating overall program metrics
+- Evaluating data/feedback from teachers trained by affiliates and affiliates (as well as other sources) to make course corrections in Affiliate Program
+- Working with Code.org’s K-5 Education Team leads and K-5 Product Team leads to incorporate feedback from teachers/affiliates into the K-5 product
+- Working with Code.org’s education operations team and defining operations workflows to ensure logistical support of affiliate workshops
+- Other duties as assigned
+
+**Qualifications:**
+
+- 2-3 years experience in K-12 education (required)
+- 3+ years experience in relationship management in an education setting (required)
+- 3+ years experience in educational and/or professional development program management (including train the trainer) (required)
+- Knowledge of computer science education (preferred)
+- Strong analytical and problem solving ability
+- Professional demeanor, possessing excellent communication skills
+- Must be extremely organized and detail oriented
+- Must be an advanced or expert user of spreadsheets
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
+- Ability to work in a fast-paced, team-based environment with a geographically dispersed team
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="accountant"href="#accountant">Accountant (PT) (Seattle, WA)</a>
 **Job Summary:**
 
 The Accountant plays a critical role in ensuring accurate financial record keeping in accordance with GAAP, IRS regulations and non-profit best practices. Responsibilities of the position include:
@@ -29,7 +93,6 @@ The Accountant plays a critical role in ensuring accurate financial record keepi
 - Preparing audit schedules and interfacing with external auditors
 - Assisting with development of annual budgets and rolling forecasts
 - Advising leadership team on accounting implications of operational decisions
-
 
 **Qualifications**
 
