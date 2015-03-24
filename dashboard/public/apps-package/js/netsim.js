@@ -4616,11 +4616,11 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
     // Style rows by row type.
     if (simNode.getNodeType() === NodeType.ROUTER) {
-      item.addClass('router_row');
+      item.addClass('router-row');
     } else {
-      item.addClass('user_row');
+      item.addClass('user-row');
       if (simNode.entityID === this.connection_.myNode.entityID) {
-        item.addClass('own_row');
+        item.addClass('own-row');
       }
     }
 
