@@ -2,7 +2,6 @@
   "a_and_b": "A/B",
   "addPacket": "Add Packet",
   "ascii": "ASCII",
-  "autoDnsNotFound": "NOT_FOUND",
   "autoDnsUsageMessage": "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
   "binary": "Binary",
   "bitCounter": "{x}/{y} bits",
