@@ -185,6 +185,13 @@
         Create images with bits and bytes.: Bitler ve baytlar ile görüntüler oluştur.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: açıklama burada
+      CSPStudentLessonPlanTemplate:
+        title: başlık
+        description here: açıklama burada
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []
@@ -347,7 +354,7 @@
         Banner Contract: Banner Contract
         Banner Function block: Banner Function block
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: Logo|Resim|Dize
       Creating Contracts From Examples 4:
         Shrink Contract: Shrink Contract
         Try using the "shrink" function.: Try using the "shrink" function.

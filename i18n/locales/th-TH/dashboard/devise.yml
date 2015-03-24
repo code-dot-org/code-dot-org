@@ -1,7 +1,7 @@
 th:
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: อีเมล์ของคุณได้รับการยืนยันเรียบร้อยแล้ว.
       send_instructions: คุณจะได้รับอีเมล์พร้อมคำแนะนำเกี่ยวกับวิธีการยืนยันบัญชีของคุณในไม่กี่นาที.
       send_paranoid_instructions: ถ้าอีเมล์ของคุณที่มีอยู่ในฐานข้อมูลของเรา คุณจะได้รับอีเมล์พร้อมคำแนะนำเกี่ยวกับวิธีการยืนยันบัญชีของคุณในไม่กี่นาที.
     failure:
@@ -16,9 +16,9 @@ th:
       unconfirmed: คุณต้องยืนยันบัญชีของคุณก่อนที่จะดำเนินการต่อ.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: ขั้นตอนในการยืนยันของ Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: ขั้นตอนในการติดตั้งรหัสผ่านอีกครั้งหนึ่ง ของ Code.org
       unlock_instructions:
         subject: คำสั่งปลดล็อก
     omniauth_callbacks:

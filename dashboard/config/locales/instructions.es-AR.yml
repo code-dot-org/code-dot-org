@@ -2384,9 +2384,6 @@
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: Utiliza el nuevo bloque "Crear
         un círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia
         adelante entre cada círculo.
@@ -2429,28 +2426,16 @@
       frozen perpendicular_instruction: Ahora veamos si podemos crear dos líneas que
         se encuentran a un ángulo de 90 grados una de la otra. Necesitarás usar tanto
         el bloque de "Giro" como el bloque de "Mover".
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: Intenta utilizar el bloque "Crear una rama
         de copo de nieve" para dibujar 3 ramas, lo que empezará a parecerse a un copo
         de nieve.
       frozen snowflake full_instruction: ¡Ahora repitámoslo 8 veces para dibujar un
         hermoso copo de nieve!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: Formas complejas de nieve pueden crearse usando
         figuras geométricas muy simples. ¿Puedes crear uno repitiendo 5 círculos de
         tamaño 5 y 5 círculos de tamaño 10?
       frozen square iterative_instruction: Parece que estamos a la mitad de completar
         un cuadrado. Ahora pongamos 4 líneas juntas para crear un cuadrado.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al
         terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un
         nuevo cuadrado.

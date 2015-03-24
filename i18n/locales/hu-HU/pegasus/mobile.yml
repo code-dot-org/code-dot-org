@@ -132,6 +132,10 @@ hu-HU:
     &ldquo;It's never too late
     to learn&rdquo;
     Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
@@ -144,7 +148,8 @@ hu-HU:
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy kód
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   contact_form_topic_student: Diák vagyok
@@ -204,7 +209,7 @@ hu-HU:
   dashboard_landing_view_as_student: Az oldal megtekintése diákként
   dashboard_landing_students_title: A diákjaid
   dashboard_landing_students_manage: Diákok megtekintése és kezelése
-  dashboard_landing_news_title: K-5 pedagógus erőforrások (csak angol nyelven)
+  dashboard_landing_news_title: alsó tagozatos oktatói segédanyagok (csak angol nyelven)
   dashboard_landing_new_beta: ÚJ! Próbáld ki az alsós diákoknak szánt béta kurzusokat.
   dashboard_landing_new_k5courses: Új! Próbáld ki az alsós diákoknak szánt kurzusokat.
   dashboard_landing_useful_links: Egyéb hasznos linkek (csak angol nyelven)
@@ -524,7 +529,7 @@ hu-HU:
   projguts_shortdescription: Próbáld ki a modellezést és a szimulációt a kő-papír-ollóval
   hourofcode_shortdescription: Az új code.org/hoc helyőrzője
   frozen_shortdescription: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
-  playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
+  playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
   codeorg_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
   codeintl_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
   thinkersmithspanish_longdescription: 'Az előre meghatározott "Robot Szótár" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt.'

@@ -147,6 +147,12 @@ bn:
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: description here
+      CSPStudentLessonPlanTemplate:
+        title: title
+        description here: description here
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]

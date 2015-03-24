@@ -4,6 +4,7 @@
   "ascii": "ASCII",
   "binary": "Binære",
   "bitCounter": "{x}/{y} bits",
+  "bits": "Bits",
   "clear": "Ryd",
   "connected": "Forbundet",
   "decimal": "Decimal",
@@ -21,15 +22,19 @@
   "instructions": "Instruktioner",
   "message": "Besked",
   "myDevice": "Min enhed",
+  "numBitsPerPacket": "{x} bits per packet",
   "_of_": " af ",
   "packet": "Pakke",
+  "packetInfo": "Packet Info",
   "receivedMessageLog": "Modtaget Beskedoversigt",
   "removePacket": "Remove Packet",
   "router": "Router",
+  "routerX": "Router {x}",
   "send": "Send",
   "sendAMessage": "Send en besked",
   "sentMessageLog": "Sendt Beskedoversigt",
   "to": "Til",
+  "unlimited": "Unlimited",
   "workspaceHeader": "Internet Simulator",
-  "xOfY": "{x} af {y}"
+  "xOfYPackets": "{x} of {y}"
 }

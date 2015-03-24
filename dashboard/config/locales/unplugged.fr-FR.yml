@@ -16,10 +16,10 @@
         video: Unplug1
       Unplug2:
         title: Algorithmique
-        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
-          les quatre étapes de la pensée informatique. Après une brève introduction,
+        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les
+          quatre étapes de la pensée computationnelle. Après une brève introduction,
           ils seront séparées en groupes pour créer des instructions à partir desquelles
-          d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue
+          d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue
           de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
           puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
           s'écarter des détails des différents monstres, puis utiliser ces informations
@@ -32,7 +32,7 @@
         video: Unplug2
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En se programmant les uns les autres pour créer des images, les étudiants
+        desc: En se programmant les uns les autres pour créer des images, les élèves
           commenceront à comprendre ce qu'est réellement la programmation. Au début
           du cours, les élèves devront échanger des instructions pour colorier chaque
           carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
@@ -304,13 +304,13 @@
           l'écriture de fonctions qui inclut la rédaction des scénarios de test pour
           s'assurer que la fonction fonctionne comme prévu.
       Booleans:
-        title: Les types booléens et logique
+        title: Les booléens et la logique
         desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
           dans ce cours. Dans cette activité, vous apprendrez quels sont les types
           booléens, et comment ils peuvent aider à nous écrire des fonctions qui raisonnent
           de façon logique
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Instructions conditionnelles et des fonctions par morceaux
         desc: Les paramètres que nous passons aux fonctions font varier les sorties
           selon un schéma très rigide. Supposons que nous voulons que des paramètres
           créent des sorties qui suivent un certain schéma lorsqu'ils ont certaines

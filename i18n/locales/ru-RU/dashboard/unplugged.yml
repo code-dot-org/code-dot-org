@@ -174,13 +174,13 @@ ru:
         title: Видеоигры и координатные плоскости
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
       Contracts:
-        title: Contracts, Domain, and Range
+        title: Контракты, домен, и диапазон
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
       DesignRecipe:
         title: Создание рецепта
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
       Booleans:
-        title: Booleans and Logic
+        title: Логика и логические выражения
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Условные выражения и сложные функции

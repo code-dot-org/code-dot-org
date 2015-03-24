@@ -378,7 +378,7 @@
   "VARIABLES_GET_TOOLTIP":"Skilar gildi þessarar breytu.",
   "VARIABLES_SET_CREATE_GET":"Búa til 'sækja %1'",
   "VARIABLES_SET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Set",
-  "VARIABLES_SET_TAIL":"við",
-  "VARIABLES_SET_TITLE":"setja",
+  "VARIABLES_SET_TAIL":"á",
+  "VARIABLES_SET_TITLE":"stilla",
   "VARIABLES_SET_TOOLTIP":"Stillir þessa breytu á innihald inntaksins."
 }

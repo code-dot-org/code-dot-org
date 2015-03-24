@@ -132,6 +132,10 @@ pt-BR:
     &ldquo;Nunca é tarde demais
     para aprender&rdquo;
     Susan, CEO do YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;Compreender a ciência da computação
     está se tornando cada vez mais essencial...&rdquo;
@@ -144,7 +148,8 @@ pt-BR:
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_codevideo: Assista ao vídeo
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: Assista ao vídeo
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: 'Assine nossa petição &#x25BE;'
   contact_form_topic_student: Sou um estudante
