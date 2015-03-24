@@ -213,14 +213,6 @@ describe("NetSimRouterNode", function () {
       remoteA.address = addressTable[1].address;
     });
 
-    it ("picks up messages sent to itself from local client", function () {
-      var from = localClient.entityID;
-      var to = router.entityID;
-      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
-      assertTableSize(testShard, 'messageTable', 0);
-      assertTableSize(testShard, 'logTable', 1);
-    });
-
     it ("ignores messages sent to itself from other clients", function () {
       var from = remoteA.entityID;
       var to = router.entityID;
@@ -257,6 +249,8 @@ describe("NetSimRouterNode", function () {
     it ("does not forward malformed packets", function () {
       var from = localClient.entityID;
       var to = router.entityID;
+      // Here, the payload gets 'cleaned' down to empty string, then treated
+      // as zero when parsing the toAddress.
       NetSimMessage.send(testShard, from, to, 'garbage', function () {});
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
