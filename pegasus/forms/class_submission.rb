@@ -180,6 +180,7 @@ class ClassSubmission
       facet:true,
       'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows:rows,
+      sort:"school_name_s asc"
     }
   end
 
