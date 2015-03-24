@@ -61,6 +61,8 @@ class PropertyBag
   end
 end
 
+require 'aws-sdk'
+
 class DynamoPropertyBag
 
   class NotFound < Sinatra::NotFound
