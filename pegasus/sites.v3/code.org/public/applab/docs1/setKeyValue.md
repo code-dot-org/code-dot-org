@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## setKeyValue(key, value, callbackFunction)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Data
 
 [/category]
 
@@ -19,11 +19,13 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Stores a key/value pair in App Lab's remote data storage, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+App Lab's remote key/value data storage enables persistent data storage for an app. Consider a variable that is declared in an app such as `var highscore = 10;`. 'highscore' will get recreated with a value of 10 every time the app loads. `setKeyValue` can be used to essentially store or update a variable in the cloud that the app can access across app refreshes. You can think of the `key` parameter as similar to the variable name (e.g. "highscore") and the `value` parameter as similar to the variable value (e.g. 10). When the key/value pair is saved, the callbackFunction is asynchronously called. Use with [getKeyValue()](/applab/docs/getKeyValue).
+
+**Note:** View your app's key/value data by clicking 'View data' in App Lab and clicking 'View key/value pairs'
 
 [/description]
 
@@ -33,8 +35,10 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+//Stores "highScore": 100 in the app's key/value data storage
+setKeyValue('highScore', 100, function(){     console.log("I execute asynchronously when key/value is stored.  Click View Data to see the data.");
+});
+console.log("I execute immediately after");
 </pre>
 
 [/example]
@@ -44,11 +48,37 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app's key/value data storage
+  console.log("highScore stored");
+
+  getKeyValue("highScore", function (value) { //When the data is successfully stored, fetch it again
+    console.log("high score is: " + value); //Log "highScore", which will be 100.
+  });
+
+});
 </pre>
 
+[/example]
+
+____________________________________________________
+
+[example]
+
+In this more detailed example, a random number between 1 and 100 is generated every time the app runs. The program checks whether the random number that was generated is bigger than the value stored in persistent key/value storage. If it is, then it updates the saved value. Try running this example multiple times and view the key/value data to see `biggestNumber` update.
+
+<pre>
+var random = randomNumber(1, 100); //Generate a random number
+/*Get current value of "biggestNum". The data comes back asynchronously and is stored in 'value' */
+getKeyValue("biggestNum", function (value) {
+  console.log("random: " + random + " biggestNumber: " + value);
+  if ((value === undefined) || (random > value)) { //Check if 'value' is undefined or smaller than random
+    setKeyValue("biggestNumber", random, function () { //If so, update 'biggestNum' to 'random'
+      console.log(random + " is bigger than " + value + ". Updated biggestNumber");
+    });
+  }
+});
+
+</pre>
 
 [/example]
 
@@ -58,7 +88,9 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+setKeyValue(key, value, function(){
+    //callback function code goes here
+  });
 </pre>
 
 [/syntax]
@@ -69,25 +101,24 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| key | string | Yes | The name of the key to be stored.  |
+| value | string, number, array, or object | Yes | The data to be stored.  |
+| callbackFunction | function | No | A function that is asynchronously called when the call to setKeyValue is finished.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+When `setKeyValue` is finished executing, `callbackFunction` is automatically called.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
+- Use with [getKeyValue()](/applab/docs/getKeyValue)
 
 [/tips]
 
