@@ -26,7 +26,7 @@ class PropertyBag
   def get(name)
     row = items.where(name:name).first
     raise NotFound, "property `#{name}` not found" unless row
-    JSON.load(row[:value])
+    PropertyBag.parse_value(row[:value])
   end
 
   def set(name, value, ip_address)
@@ -50,9 +50,13 @@ class PropertyBag
   def to_hash()
     {}.tap do |results|
       items.each do |row|
-        results[row[:name]] = JSON.load(row[:value])
+        results[row[:name]] = PropertyBag.parse_value(row[:value])
       end
     end
   end
 
+  def self.parse_value(str)
+    # safely parse a string, number or boolean encoded as a JSON value.
+    JSON.parse("{\"value\":#{str}}")['value']
+  end
 end
