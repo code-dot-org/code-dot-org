@@ -138,7 +138,7 @@ ExpressionNode.prototype.clone = function () {
  *   variables/functions local to scope of this function.
  * @returns {Object} evaluation An object with either an err or result field
  * @returns {Error?} evalatuion.err
- * @returns {Number?} evaluation.result
+ * @returns {jsnumber?} evaluation.result
  */
 ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
   try {
