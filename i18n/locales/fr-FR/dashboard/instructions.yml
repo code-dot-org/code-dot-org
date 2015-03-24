@@ -10,9 +10,7 @@ fr:
       2-3 Artist 2_instruction: 'Le mur de cette maison est à moitié terminé. Chaque côté a une longueur de 100, mais le mur à moitié fait a une hauteur de 50. Finis le mur. '
       2-3 Artist 3.4_instruction: "Le bloc de saut déplace l'artiste sans rien dessiner. Dessine la ligne pointillée en utilisant les blocs de saut et de dessin."
       2-3 Artist 3_instruction: Ce chapeau a une taille de 100 pixels. Dessine un chapeau qui fait 70 pixels de moins.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: "Le chapeau rouge est de 100 pixels de haut. Terminez le dessin d'un chapeau noir qui est plus court de 70 pixels. La largeur du chapeau noir est de 50 pixels."
       2-3 Artist 4_instruction: Aide-moi à terminer la maison pour ce chat.
       2-3 Artist 5_instruction: "Refais ce code avec un bloc « répéter plusieurs fois » pour dessiner la même maison à l'aide de seulement 3 blocs."
       2-3 Artist 6_instruction: "Cette maison a besoin d'un toit ! Dessine le triangle. Astuce : les 3 côtés sont égaux."
@@ -49,257 +47,101 @@ fr:
       2-3 Artist Functions 7_instruction: "Utilise la fonction « dessiner une maison » pour dessiner les deux maisons à l'aide de deux paramètres différents. (Astuce : la première maison fait 100 pixels.)"
       2-3 Artist Functions 9_instruction: "Voici une fonction pour le flocon de neige. Expérimente-la pour créer une scène d'hiver ! Il s'agit d'un niveau de jeu libre, donc il n'y a aucun puzzle à résoudre. Amuse-toi !"
       2-3 Artist Loops 1_instruction: "Peux-tu tracer un hexagone avec des côtés de 100 pixels de long pour terminer la cellule ? N'oublie pas, cela signifie que tu devras seulement tourner de 60 degrés !"
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops 10_instruction: Que se passe-t-il à la conception, lorsque nous faisons notre dernier pas deux fois moins long ?
+      2-3 Artist Loops 11_instruction: "Maintenant nous allons mettre *autre* boucle autour de notre création toute entière !  N'oubliez pas d'ajouter un angle à la fin de la boucle externe."
+      2-3 Artist Loops 2_instruction: Maintenant, utilisez un bloc répéter pour que la cellule devienne une coquille.
+      2-3 Artist Loops 4_instruction: "Voulez-vous voir ce qui se passe lorsque nous répétons cette forme encore et encore une fois à l'aide d'une boucle ?"
+      2-3 Artist Loops 5_instruction: Maintenant faisons un petit changement à la boucle et voyons comment ce que devient notre image.
+      2-3 Artist Loops 6_instruction: "Ajoutez un déplacement et un tour supplémentaire à l'intérieur de la boucle et voyez l'évolution de votre conception."
+      2-3 Artist Loops 7_instruction: "Nous pouvons utiliser les boucles pour faire toutes sortes de polygones.  Pouvez-vous créer un losange à l'intérieur de cet hexagone ?"
+      2-3 Artist Loops 8_instruction: "Mettons les deux éléments à l'intérieur d'une boucle."
+      2-3 Artist Loops 9_instruction: "Nous allons boucler sur les mêmes éléments, mais maintenant nous allons ajouter quelques distance entre eux. \r Utilisez le même code que précédemment, mais ajoutez un pas en avant à la fin de la boucle externe."
+      2-3 Artist Loops New 1_instruction: Dessinons la tête de ce robot ! Pouvez-vous faire un carré de 100 pixels de côté ?
+      2-3 Artist Loops New 10_instruction: Maintenant connectons ensemble un groupe de V, en les dessinant dans une boucle.
+      2-3 Artist Loops New 11_instruction: Cette fois nous allons le dessiner 24 fois. Ajoutez un virage à gauche de 30 degrés à ce code et mettez le tout dans un bloc Répéter.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        Dessinez un losange avec des côtés de 100 pixels.
         
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey. 
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
+      2-3 Artist Loops New 13_instruction: Maintenant dessinez le losange 3 fois dans une boucle.
+      2-3 Artist Loops New 14_instruction: Maintenant nous allons dessiner le losange 10 fois mais en pivotant de 90 degrés entre chaque losange.
+      2-3 Artist Loops New 15_instruction: "Dessinez quelque chose d'amusant."
+      2-3 Artist Loops New 2_instruction: Voici une partie du code que vous utilisé pour dessiner ce carré. Que se passe-t-il si vous utilisez le bloc Répéter pour exécuter ce code 4 fois ?
+      2-3 Artist Loops New 9_instruction: Pour remplir la flèche, dessinez un simple V dont les deux parties font 50 pixels de long.
+      2-3 Artist Match Hex Pic_instruction: "Correspondances : Aidez à finir l'hexagone."
+      2-3 Artist Match Rho Pic_instruction: 'Correspondances : Terminez le code manquant.'
+      2-3 Artist Match Sq Pic_instruction: 'Correspondances : Complétez le code manquant'
+      2-3 Artist Match Tri pic_instruction: 'Correspondances : Renseignez le code manquant.'
+      2-3 Artist Nested Loops 1_instruction: "Vous avez utilisé des boucles pour dessiner des formes avant, mais saviez-vous que vous pouvez mettre une boucle à l'intérieur d'une autre boucle ? \r bouclez tout ce bloc de code 3 fois pour dessiner le motif."
+      2-3 Artist Nested Loops 10_instruction: Bouclez ce code 12 fois pour compléter le motif.
+      2-3 Artist Nested Loops 11_instruction: Bouclez ce code 4 fois pour compléter le motif, en tournant à 90 degrés après chaque cercle.
+      2-3 Artist Nested Loops 12_instruction: Bouclez ce code 12 fois pour compléter les boucles.
+      2-3 Artist Nested Loops 2_instruction: Maintenant bouclez le triangle 6 fois. Après chaque triangle, vous devrez tourner à 60 degrés avant de dessiner la prochaine.
+      2-3 Artist Nested Loops 3_instruction: Vous aurez besoin de boucler le triangle 12 fois dessiner ce motif. Divisez le nombre de degrés dans un cercle (360) par le nombre de formes que vous dessinez (12) pour découvrir de combien est-ce que vous devez tourner après chaque forme.
+      2-3 Artist Nested Loops 4_instruction: 'Boucle ce losange 12 fois pour dessiner une fleur. Conseil : les 12 losanges sont juste comme les 12 triangles, que vous avez fait - de combien est-ce que vous devez tourner après chaque forme ?'
+      2-3 Artist Nested Loops 5_instruction: Retrace les fenêtres de ce bâtiment avec une boucle imbriquée. Les fenêtres mesurent 20 pixels et sont séparées de 20 pixels.
+      2-3 Artist Nested Loops 6_instruction: "Ce dinosaure a 8 pointes en haut sa queue ; chaque pointe mesure 30 pixels. Boucle le triangle 8 fois, mais n'oublie pas d'aller vers l'avant après chacun d'eux."
+      2-3 Artist Nested Loops 7_instruction: "Boucle ce triangle 10 fois pour dessiner le soleil. Tu devras déplacer et tourner après chaque triangle. Tu peux déterminer l'angle de rotation en divisant le nombre de degrés dans un cercle par le nombre de formes qui composent ton soleil."
+      2-3 Artist Nested Loops 8_instruction: "Maintenant nous allons ajouter quelques herbes à notre image. Les touffes d'herbe sont séparées de 50 pixels."
+      2-3 Artist Nested Loops 9_instruction: Nous allons terminer ce dessin en ajoutant une fleur. Boucle le losange 12 fois pour dessiner ta fleur.
+      2-3 Artist Nested Loops Free Play_instruction: Activité libre, dessine quelque chose de cool avec des boucles imbriquées.
+      2-3 Bee Conditionals 1_instruction: Salut ! Je suis une abeille. Aide-moi à obtenir le nectar de la fleur.
+      2-3 Bee Conditionals 10_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar. Veille à ne pas butiner une fleur violette si celui-ci n'en possède pas. \r\n"
+      2-3 Bee Conditionals 11_instruction: Butine sur les fleurs qui ont du nectar.
+      2-3 Bee Conditionals 12_instruction: Utilise une boucle pour vérifier et collecter le nectar de toutes ces fleurs.
+      2-3 Bee Conditionals 13_instruction: 'Collecte du nectar et fais du miel. Astuce : que se passe-t-il si tu utilises la condition "si nectar" sur une fleur rouge ? Peux-tu compléter ceci avec une boucle ?'
+      2-3 Bee Conditionals 14_instruction: "Collecte le nectar et fais du miel. Veille à ne pas butiner de fleur pourpre, si elle n'en a pas."
+      2-3 Bee Conditionals 15_instruction: Collecte le nectar des quatre fleurs.
+      2-3 Bee Conditionals 2_instruction: "Salut, je suis une abeille ! Aide-moi à collecter l'ensemble du nectar des fleurs. Utilise une boucle."
+      2-3 Bee Conditionals 3_instruction: "Aide-moi à collecter l'ensemble du nectar des fleurs et miel. Utilise une boucle."
+      2-3 Bee Conditionals 4_instruction: "Aide-moi à collecter l'ensemble du nectar des fleurs et faire tout le miel."
+      2-3 Bee Conditionals 5_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles ! Veille à ne pas butiner de fleur violette si elle n'en a pas. Vérifie si le nectar est égal à 1 à l'aide du bloc « si »."
+      2-3 Bee Conditionals 6_instruction: "Vérifie cette fleur avec un bloc « si » pour voir s'il y a du nectar disponible."
+      2-3 Bee Conditionals 7_instruction: Butine chaque fleur qui a du nectar.
+      2-3 Bee Conditionals 8_instruction: Ce champ possède des fleurs rouges et violettes. Les fleurs rouges ont une quantité connue de nectar, mais le nectar de la fleur violette est inconnue. Recueille tout le nectar.
+      2-3 Bee Conditionals 9_instruction: Recueille tout le nectar de chaque fleur.
+      2-3 Bee Conditionals Assessment 1_instruction: "Évaluation : Collecte tout le nectar. Veille à ne pas butiner de fleur pourpre, si elle n'en a pas."
+      2-3 Bee Debugging 1_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 10_instruction: "Ces blocs sont vraiment casse-pieds. Corriger la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 2_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 3_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 4_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 5_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel.  Tu peux maintenant utiliser exécuter et étape."
+      2-3 Bee Debugging 6_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel. "
+      2-3 Bee Debugging 7_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 8_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging 9_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Debugging Assessment 1_instruction: "Évaluation : Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
+      2-3 Bee Functions 1_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 2 nectars » pour recueillir le nectar de chaque fleur.
+      2-3 Bee Functions 10_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar.  Crée une fonction qui recueille du nectar qu'à partir des fleurs violettes qui ont du nectar."
+      2-3 Bee Functions 2_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 5 » pour obtenir 5 nectars à la fois. Veille aussi à utiliser une boucle pour obtenir un nombre de blocs idéal.
+      2-3 Bee Functions 3_instruction: Recueille tout le nectar de chaque fleur.
+      2-3 Bee Functions 4_instruction: "La fonction « déplacer et obtenir le nectar » déplace l'abeille, recueille le nectar et renvoie l'abeille à où elle a commencé. Utilise la fonction pour recueillir l'ensemble du nectar."
       2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
+        Il y a maintenant plus de nectar dans les fleurs. 
+        Modifie la fonction donnée afin qu'elle recueille 4 nectars et utilise-la pour recueillir l'ensemble du nectar des fleurs.
+      2-3 Bee Functions 6_instruction: Maintenant, utilise la même fonction pour recueillir le nectar des trois fleurs.
+      2-3 Bee Functions 7_instruction: "Les fleurs sont maintenant plus loin. Modifie la fonction donnée et utilise-la pour recueillir l'ensemble du nectar des fleurs."
+      2-3 Bee Functions 8_instruction: "Crée ta propre fonction qui obtient 7 nectar, se déplace vers l'avant et fait 7 de miel. Utilise cette fonction pour recueillir du nectar sur chaque fleur et faire du miel à chaque nid d'abeille."
+      2-3 Bee Functions 9_instruction: "Créer ta propre fonction qui descend un chemin, obtient du nectar, produit du miel, puis retourne l'abeille vers le haut du chemin."
+      2-3 Bee Functions Assessment 1_instruction: 'Évaluation : Utilise la fonction donnée pour recueillir le nectar de chaque fleur.'
+      2-3 Bee Functions Assessment 2_instruction: 'Évaluation : Crée une fonction pour faire 3 de miel à la fois.'
+      2-3 Bee Loops 1_instruction: 'Chaque fleur contient une unité de nectar. Recueille le nectar de chacune des fleurs. '
+      2-3 Bee Loops 10_instruction: |-
+        Peux-tu utiliser une boucle "tant que" à l'intérieur de deux autres boucles pour recueillir tout le nectar ?
+      2-3 Bee Loops 11_instruction: |-
+        Utilise des boucles "Tant que" pour recueillir l'ensemble du nectar des fleurs dans ce terrain.
+      2-3 Bee Loops 12_instruction: |-
+        Utilise des boucles "Tant que" pour recueillir l'ensemble du nectar des fleurs dans ce terrain.
+      2-3 Bee Loops 2_instruction: Utilise une boucle pour recueillir le nectar et faire le miel.
+      2-3 Bee Loops 3_instruction: "Récolte le nectar de chaque fleur et produit du miel à chaque nid d'abeille."
+      2-3 Bee Loops 4_instruction: Utilisez une boucle semblable comme le dernier puzzle, mais rajoute un tour dedans.
+      2-3 Bee Loops 5_instruction: Utilise une boucle pour descendre les marches et recueillir le nectar.
+      2-3 Bee Loops 6_instruction: "Utilise une boucle pour recueillir le nectar de chaque fleur et faire du miel à chaque nid d'abeille."
+      2-3 Bee Loops 7_instruction: Met ces blocs dans une boucle pour recueillir le nectar de chaque fleur.
+      2-3 Bee Loops 8_instruction: |-
+        Ces fleurs ont une quantité inconnue de nectar. Utilise la boucle "tant qu'il y a du nectar"  pour recueillir l'ensemble du nectar. Cette boucle s'exécutera tant que la condition est vraie, dans ce cas Nectar > 0.
+      2-3 Bee Loops 9_instruction: |-
+        La boucle "Tant que" peut exécuter la même action qu'une instruction "if" dans une boucle. Ajouter une boucle "Tant que" à ce code pour effectuer la même tâche.
       2-3 Bee Loops Assessment 1_instruction: |
         Assessment - Use a while loop to collect
         all of the nectar from this flower.
@@ -369,22 +211,12 @@ fr:
         Create loop with "repeat until" block.
       2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
       2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 maze sq16_instruction: "OK, c'est similaire, mais légèrement différent. Peux-tu le faire en seulement cinq blocs ?"
+      2-3 Maze sq2_instruction: 'Suis le chemin et amène-moi à ce stupide cochon.  Évite la TNT ou les plumes vont voler !'
       2-3 Maze sq3_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze sq4_instruction: "Garde ton calme et aide-moi à trouver le méchant cochon. Dans le cas contraire, je pourrais m'énerver !"
+      2-3 Maze sq5_instruction: Envoie-moi sur le cochon ! Combien de fois dois-tu répéter un bloc ?
+      2-3 Maze sq6_instruction: "Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Astuce : crée une boucle à l'aide d'un bloc « répéter X fois ».)"
       2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
       2-3 Maze sq8_instruction: |
         Get me to the pig! (Where is that "repeat times"
@@ -2323,9 +2155,6 @@ fr:
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2386,19 +2215,12 @@ fr:
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
         block as well as the “Move” block.
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
       frozen snowflake full_instruction: |
         Now let's repeat it 8 times to make a
         beautiful snowflake!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: |
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
@@ -2406,11 +2228,6 @@ fr:
       frozen square iterative_instruction: |
         It seems like we're halfway to making
         a square. Let's put 4 lines together to create a square.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.

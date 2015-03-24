@@ -4,6 +4,7 @@
   "ascii":"ASCII",
   "binary":"Binary",
   "bitCounter":"{x}\/{y} bits",
+  "bits":"Bits",
   "clear":"Clear",
   "connected":"Connected",
   "decimal":"Decimal",
@@ -21,15 +22,19 @@
   "instructions":"Instructions",
   "message":"შეტყობინება",
   "myDevice":"My Device",
+  "numBitsPerPacket":"{x} bits per packet",
   "_of_":" of ",
   "packet":"Packet",
+  "packetInfo":"Packet Info",
   "receivedMessageLog":"Received Message Log",
   "removePacket":"Remove Packet",
   "router":"Router",
+  "routerX":"Router {x}",
   "send":"Send",
   "sendAMessage":"Send a Message",
   "sentMessageLog":"Sent Message Log",
   "to":"To",
+  "unlimited":"Unlimited",
   "workspaceHeader":"Internet Simulator",
-  "xOfY":"{x} of {y}"
+  "xOfYPackets":"{x} of {y}"
 }

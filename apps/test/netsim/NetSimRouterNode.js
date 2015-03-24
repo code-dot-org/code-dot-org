@@ -4,6 +4,7 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
@@ -15,12 +16,10 @@ var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLo
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
-var PacketEncoder = testUtils.requireWithGlobalsCheckBuildFolder('netsim/PacketEncoder');
+var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
-var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -169,10 +168,10 @@ describe("NetSimRouterNode", function () {
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       var packetHeaderSpec = [
-        {key: PacketHeaderType.FROM_ADDRESS, bits: 4},
-        {key: PacketHeaderType.TO_ADDRESS, bits: 4}
+        {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
+        {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
-      encoder = new PacketEncoder(packetHeaderSpec);
+      encoder = new Packet.Encoder(packetHeaderSpec);
 
       // Make router
       NetSimRouterNode.create(testShard, function (e, r) {

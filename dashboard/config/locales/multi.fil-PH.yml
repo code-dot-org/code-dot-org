@@ -170,6 +170,16 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Artist maraming pagpipilian
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw

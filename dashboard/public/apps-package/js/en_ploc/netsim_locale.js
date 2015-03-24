@@ -184,6 +184,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "receivedMessageLog":function(d){return "!!-Received Message Log-!!"},
 "removePacket":function(d){return "!!-Remove Packet-!!"},
 "router":function(d){return "!!-Router-!!"},
+"routerX":function(d){return "!!-Router "+appLocale.v(d,"x")+"-!!"},
 "send":function(d){return "!!-Send-!!"},
 "sendAMessage":function(d){return "!!-Send a Message-!!"},
 "sentMessageLog":function(d){return "!!-Sent Message Log-!!"},

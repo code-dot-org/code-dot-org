@@ -3,7 +3,7 @@
   "emptyComputeBlock":"Musisz dołączyć blok do \"bloku obliczającego\".",
   "emptyFunctionalBlock":"Nie wprowadziłeś żadnej zawartości do swojego bloku.",
   "equivalentExpression":"Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie.",
-  "evaluate":"evaluate",
+  "evaluate":"Oceń",
   "extraTopBlocks":"Masz niezałączone bloki. Czy chciałeś je dołączyć do bloku obliczeniowego?",
   "failedInput":"Twoja funkcja nie zwraca prawidłowych wyników dla wszystkich wartości.",
   "goal":"Cel:",

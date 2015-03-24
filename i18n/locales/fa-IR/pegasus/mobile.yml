@@ -131,6 +131,10 @@ fa-IR:
   homepage_hero_text_susan: |
     &ldquo;هیچ وقت برای یادگرفتن دیر نیست&rdquo;
     سوزان، مدیرعامل یوتیوب
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo; درک علوم کامپیوتر به طور گسترده ای حیاتی می شود&rdquo;
     شریل،مامور ارشد اجرایی فیسبوک
@@ -142,7 +146,8 @@ fa-IR:
   homepage_slot_text_shop: فروشگاه
   homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_codevideo: فیلم را تماشا کنید
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: فیلم را تماشا کنید
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
   contact_form_topic_student: من یک دانش آموز هستم

@@ -3644,7 +3644,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (14,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((20,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((21,  msg.runProgram() )), '</div>\n        <img src="', escape((22,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((25,  msg.resetProgram() )), '</div>\n        <img src="', escape((26,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');28; if (data.controls) { ; buf.push('\n      ', (29,  data.controls ), '\n      ');30; } ; buf.push('\n      ');31; if (data.extraControlRows) { ; buf.push('\n      ', (32,  data.extraControlRows ), '\n      ');33; } ; buf.push('\n    </div>\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');47; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');54; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (56,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (57,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');59; } ; buf.push('\n        </table>\n      </div>\n      ');62; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((65,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');70; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeButtons" style="display:none;">\n        <button id="codeModeButton" class="share">\n          ', escape((73,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');76; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((81,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((83,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((85,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((87,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((89,  data.blockCounterClass )), '>\n            ', escape((90,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((93,  data.idealBlockNumber )), '</span>\n          <span> ', escape((94,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');98; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((101,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');104; } ; buf.push('\n  </div>\n  ');106; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');108; } ; buf.push('\n  ');109; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      Welcome to Design mode. Under construction.\n    </div>\n  ');113; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeButtons" style="display:none;">\n        <button id="codeModeButton" class="share">\n          ', escape((75,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');78; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((85,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((86,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((87,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((89,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((91,  data.blockCounterClass )), '>\n            ', escape((92,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((95,  data.idealBlockNumber )), '</span>\n          <span> ', escape((96,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');100; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((103,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');106; } ; buf.push('\n  </div>\n  ');108; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');110; } ; buf.push('\n  ');111; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      Welcome to Design mode. Under construction.\n    </div>\n  ');115; } ; buf.push('\n  ');116; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (117,  data.extraControlRows ), '\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4743,7 +4743,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
-        if (result.error) {
+        if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
@@ -5264,13 +5264,10 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (this.editor && this.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = categories.getBoundingClientRect().width;
-    }
+  if (this.editCode && this.editor) {
+    // If in the droplet editor, set toolboxWidth based on the block palette width:
+    var categories = document.querySelector('.droplet-palette-wrapper');
+    toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
@@ -5578,12 +5575,23 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
-    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
-      container.className = codeWorkspace.className + " pin_bottom";
+      document.body.style.overflow = "hidden";
+      container.className = container.className + " pin_bottom";
+      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
+      if (this.editCode) {
+        var codeTextbox = document.getElementById('codeTextbox');
+        codeTextbox.className = codeTextbox.className + " pin_bottom";
+      }
     } else {
+      visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.embed) {
+    visualizationColumn.className = visualizationColumn.className + " embed";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5788,9 +5796,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
-
-  // Resize toolbox header so it will appear/disappear:
-  this.resizeToolboxHeader();
 };
 
 /**

@@ -42,7 +42,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks, 200: Blocs à Math 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
         (4+5): (4 + 5)
@@ -51,7 +51,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Blocs à Math 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
         (7 * 6): (7 * 6)
@@ -60,7 +60,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Blocs à Math 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
@@ -69,7 +69,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks: Blocs à Math 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
         ((5 + 8) - 12): ((5 + 8) - 12)
@@ -78,7 +78,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Blocs à Math 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
         ((-2) * (-6)): ((-2) * (-6))
@@ -87,7 +87,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Blocs à Math 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: ((4-1) *-(2)) + 12
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
@@ -98,7 +98,7 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Blocs à Math 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
@@ -129,28 +129,29 @@
       PDK5 Foundation:
         Computer Science as a Foundational Skill: L'informatique comme une compétence
           fondamentale
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do
-          you see computer science as a foundational skill for your students? Why
-          or why not?
+        Do you see computer science as a foundational skill for your students? Why or why not?: Voyez-vous
+          informatique comme une compétence fondamentale pour vos élèves ? Pourquoi
+          ou pourquoi pas ?
         Your thoughts here: Vos pensées ici
       PDK5 Impact 1:
-        Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
-          you think your students will find the online activities in the K-5 courses
-          fun and engaging? Why or Why not?
+        Impact for students: Impact pour les élèves
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Pensez-vous
+          que vos élèves trouveront les activités en ligne dans les cours pour CM2
+          amusantes et fascinantes ? Pourquoi ou pourquoi pas ?
         Your thoughts here: Vos pensées ici
       PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
-          computer science connect to other topics or subjects your students are learning
-          about? Explain why or why not.
+        Connections to other Subjects: Connexions à d'autres sujets
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Est-ce
+          que l'informatique se connecte à d'autres thèmes ou sujets que vos élèves
+          apprennent ? Expliquez pourquoi ou pourquoi pas.
         Your thoughts here: Vos pensées ici
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Applications en réel pour les élèves
         0: '? Does learning about computer science help students grow into the kind
           of citizens you are preparing them to be? Explain why or why not.'
-        1: ': Does learning about computer science help students grow into the kind
-          of citizens you are preparing them to be? Explain why or why not.'
+        1: ' : est-ce qu''apprendre l''informatique aide les élèves à devenir dans
+          le genre de citoyens que vous les préparez à être ? Expliquer pourquoi ou
+          pourquoi pas.'
         Your thoughts here: Vos pensées ici
       PDK5 Problem Solving:
         Problem Solving Methods: Méthodes de résolution de problème
@@ -189,6 +190,13 @@
           octets.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions : Coder la lettre A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: description ici
+      CSPStudentLessonPlanTemplate:
+        title: titre
+        description here: description ici
       External level test (will):
         first computer program: premier programme informatique
       Hour of Code test content: []
@@ -213,18 +221,18 @@
       PDK5 Teacher Dashboard 2:
         Dashboard 2: Tableau de bord 2
       PDK5 Teacher Dashboard 3:
-        Course Progress: Course Progress
+        Course Progress: L'avancement du cours
       PDK5 Teacher Dashboard 4:
-        Course Progress: Course Progress
+        Course Progress: L'avancement du cours
       PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Teacher Dashboard
+        Teacher Dashboard: Tableau de bord enseignant
       PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
+        Unplugged intro: Intro débranché
       PDK5 UVideo Overview C:
-        Kiki video overview: Kiki video overview
+        Kiki video overview: Aperçu vidéo de kiki
       PDK5 Why K5 CS:
-        Why teach computer science in elementary school?: Why teach computer science
-          in elementary school?
+        Why teach computer science in elementary school?: Pourquoi enseigner les sciences
+          informatiques à l'école primaire ?
       Pixelation 1:
         Pixelation 1: Pixellisation 1
         Create images with bits and bytes.: Créer des images avec des bits et des
@@ -242,11 +250,11 @@
         description here: description ici
       Pixelation 4:
         Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
-          test of External level -- NOT REAL
+          test d'un niveau externe -- PAS EN VRAI
         Create images with bits and bytes.: Créer des images avec des bits et des
           octets.
       Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+        Pixelation 4x4 Empty: Pixelation 4x4 vide
         Create images with bits and bytes.: Créer des images avec des bits et des
           octets.
       Pixelation Bee:
@@ -256,19 +264,19 @@
         title: titre
         description here: description ici
       Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
-          offset
+        Pixelation - Lesson 14 - Fix bit offset: Pixelation - leçon 14 - Décalage
+          de bits fixe
       Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
-          bit offset v.2
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - leçon 14 - Décalage
+          de bits fixe
       Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
-          bit offset v.2
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - leçon 14 - Décalage
+          de bits fixe
       Pixelation - Lesson 14 - Instructions Make Your Own:
-        Make your own B&W image: Make your own B&W image
+        Make your own B&W image: Faites votre propre image N&B
         description here: description ici
       Pixelation - Lesson 14 - Instructions one bit error:
-        'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
+        'Lesson 14 - Task 2: fix the error': 'Leçon 14 - tâche 2 : corriger l''erreur'
         description here: description ici
       Pixelation - Lesson 14 - Make the Letter A:
         title: titre
@@ -280,49 +288,51 @@
         title: titre
         description here: description ici
       Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
-          Play
+        Pixelation - Lesson 15 - Color Free Play: Pixellisation - leçon 15 - Jeu libre
+          avec les couleurs
         description here: description ici
       Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        Pixelation - Lesson 15 - Color Shades: Pixellisation - leçon 15 - Nuances
+          de couleurs
         description here: description ici
       Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
-          Shades 4x4
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixellisation - leçon 15 - Nuances
+          de couleurs 4x4
         description here: description ici
       Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
-          3-bit color
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixellisation - leçon 15 -
+          Couleurs complètes en 3-bits
         description here: description ici
       Pixelation - Lesson 15 - Favicon Instructions:
-        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
-          Instructions
+        Pixelation - Lesson 15 - Favicon Instructions: Pixellisation - leçon 15 -
+          Instructions de Favicon
         description here: description ici
       Pixelation - Lesson 15 - Task 1 instructions:
-        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
-          1 instructions
+        Pixelation - Lesson 15 - Task 1 instructions: Pixellisation - leçon 15 - instructions
+          de tâche 1
         description here: description ici
       Pixelation - Lesson 15 - Task 2 instructions:
-        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
-          2 instructions
+        Pixelation - Lesson 15 - Task 2 instructions: Pixellisation - leçon 15 - instructions
+          de tâche 2
         description here: description ici
       Pixelation - Lesson 15 - Task 3 instructions:
-        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
+        Pixelation - Lesson 15 - Task 3 instructions: Pixellisation - leçon 15 - tâche
           3 instructions
         description here: description ici
       Pixelation - Video - Color 1:
-        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        Pixelation - Video - Color 1: Pixellisation - vidéo - couleur 1
         description here: description ici
       Pixelation - Video - Color 2:
-        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        Pixelation - Video - Color 2: Pixelation - vidéo - couleur 2
         description here: description ici
       Pixelation - Video - Color 3:
-        Pixelation - Video - Color 3: Pixelation - Video - Color 3
+        Pixelation - Video - Color 3: Pixelation - vidéo - couleur 3
         description here: description ici
       Pixelation - Video - Lesson 14 - B and W:
-        How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
+        How to use the B&W Pixelation Widget: Comment utiliser le widget de pixelation
+          N&B
       Pixelation - Video - Tips and Tricks:
-        Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        Pixelation - Video - Tips and Tricks: Pixelation - vidéo - trucs et astuces
         description here: description ici
       test demo level:
         demo title: demo title
@@ -344,100 +354,99 @@
         Big Triangle: Grand Triangle
         Write a contract for a big red triangle that is 100 pixels in size: Écrire
           un contract pour un grand triangle rouge de 100 pixels
-        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        EXAMPLE 1.solution_blocks, 300: EXEMPLE 1. solution_blocks, 300
+        Big Triangle|Image|Number|String: Gros Triangle|Image|Numéro|Chaîne
       Creating Contracts From Examples 2:
         Square Contract: Contrat Carré
         Write a contract for a purple square that is 15 pixels in size.: Écrire un
           contrat pour un carré violet de 15 pixels de côté.
-        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|Image|Number|String: Square|Image|Number|String
+        Example 2.solution_blocks, 300: Exemple 2.solution_blocks, 300
+        Square|Image|Number|String: Carré|Image|Numéro|Chaîne
       Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
+        Banner Contract: Contrat de bannière
         Banner Function block: Bloc de la fonction bannière
         Examples 3.solution_blocks, 300: Exemples 3.solution_blocs, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: Bannière|Image|Chaîne
       Creating Contracts From Examples 4:
         Shrink Contract: Réduire le Contrat
         Try using the "shrink" function.: Essayez d'utiliser la fonction « réduire
           ».
         Examples 4.solution_blocks, 300: Exemples 4.solution_blocs, 300
-        shrink|Image|Image: shrink|Image|Image
+        shrink|Image|Image: réduction|Image|Image
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
+        Design Recipe 1 Contract: Contrat de recette de conception 1
         0: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
           d'une taille et couleur données qui est deux fois plus large que grand.
         1: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
           d'une taille et couleur données qui est deux fois plus large que haut.
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: Rectangle large|Image|Numéro|Chaîne
       Enter name here:
         Enter title here: Tapez ici le titre
         Enter prompt here: Tapez ici l'invite
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
+        Contract Name|Number|Number|String: Nom de contrat|Numéro|Numéro|Chaîne
       Eval Contracts 1 B:
         Star Contract: Contrat étoile
         Write a contract for the star function: Écrire un contrat pour la fonction
           étoile
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Eval Contracts 1 A.solution_blocks, 300: Evaluer contrats 1.Solution blocs.
           300
-        star|Image|String|Number|String: star|Image|String|Number|String
+        star|Image|String|Number|String: Etoile|Image|Chaîne|Numéro|Chaîne
       Eval Contracts 2 B:
         Rotate Contract: Contrat rotation
         Write a contract for the rotate function: Écrire un contrat pour la fonction
           rotation
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+        Eval Contracts 2 A.solution_blocks, 300: Evaluer contrats 2 A.Solution blocs.
           300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Rotation|Image|Numéro|Image
       Eval Contracts 3 B:
         Text Contract: Contrat texte
         Write a contract for the text function: Écrire un contrat pour la fonction
           texte
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+        Eval Contracts 3 A.solution_blocks, 300: Evaluer contrats 3 A.Solution blocs.
           300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Texte|Image|Chaîne|Numéro|Chaîne
       Eval Contracts 4 B:
         Scale Contract: Contrat échelle
         Write a contract for the scale function: Écrire un contrat pour la fonction
           d'échelle
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+        Eval Contracts 4 A.solution_blocks, 300: Evaluer contrats 4 A.Solution blocs.
           300
-        scale|Image|Number|Image: scale|Image|Number|Image
+        scale|Image|Number|Image: Echelle|Image|Numéro|Image
       Eval Contracts B:
         Star Contract: Contrat étoile
         Write a contract for the star function: Écrire un contrat pour la fonction
           étoile
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Eval Contracts 1 A.solution_blocks, 300: Evaluer contrats 1.Solution blocs.
           300
-        star|Image|Number|String|String: star|Image|Number|String|String
+        star|Image|Number|String|String: Etoile|Image|Numéro|Chaîne|Chaîne
       Eval Contracts D:
         Rotate Contract: Contrat rotation
         Write a contract for the rotate function: Écrire un contrat pour la fonction
           rotation
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+        Eval Contracts 2 A.solution_blocks, 300: Evaluer contrats 2 A.Solution blocs.
           300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Rotation|Image|Numéro|Image
       Eval Contracts F:
         Text Contract: Contrat texte
         Write a contract for the text function: Écrire un contrat pour la fonction
           texte
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+        Eval Contracts 3 A.solution_blocks, 300: Evaluer contrats 3 A.Solution blocs.
           300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Texte|Image|Chaîne|Numéro|Chaîne
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
+        Design Recipe 1 Contract: Contrat de recette de conception 1
         0: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
           d'une taille et couleur données qui est deux fois plus large que grand.
         1: Écrire le contration pour la fonction "larguer-rect" qui dessine un rectangle
           d'une taille et couleur données qui est deux fois plus large que haut.
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: Rectangle large|Image|Numéro|Chaîne
       Rocket Contract 1:
         Contract for rocket-height: Contrat pour la hauteur de fusée
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        rocket-height|Number|Number: rocket-height|Number|Number
+        0: ' ? Une fusée décolle, voyageant à 15 mètres par seconde. Écrire une fonction
+          appelée hauteur-fusée qui reçoit le nombre de secondes écoulées depuis que
+          la fusée à décollé, et qui donne la hauteur de la fusée à ce moment-là.'
+        1: ' : Une fusée décolle, voyageant à 15 mètres par seconde. Écrire un contrat
+          pour une fonction appelée hauteur-fusée qui reçoit le nombre de secondes
+          écoulées depuis que la fusée à décollé, et qui donne la hauteur de la fusée
+          à ce moment-là.'
+        rocket-height|Number|Number: hauteur-de-fusée|Numéro|Nombre

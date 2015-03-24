@@ -161,6 +161,10 @@
     един Час кодиране"&rdquo; Malala'
   homepage_hero_text_susan: '&ldquo;"Никога не е късно да учите"&rdquo; Сюзън, изпълнителен
     директор на YouTube'
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: '&ldquo;"Разбирането на компютърните науки се превръща
     все по-съществено..."&rdquo; Шерил, главен оперативен директор на Facebook'
   homepage_slot_text_hoc: Час по кодиране
@@ -171,7 +175,8 @@
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Flappy код
   homepage_action_text_codevideo: Гледайте видеото
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Гледайте видеото
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Подпишете петицията
   homepage_signpetition_dropdown: Регистрирайте се в подкрепа на нашата петиция &#x25BE;
   contact_form_topic_student: Аз съм ученик

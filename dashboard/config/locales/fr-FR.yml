@@ -632,7 +632,7 @@
   project:
     projects: Projets
     create: Créer un projet
-    create_a_project: 'Create a new project:'
+    create_a_project: 'Créez un nouveau projet :'
     new: Créer un nouveau
     rename: Renommer
     save: Sauvegarder

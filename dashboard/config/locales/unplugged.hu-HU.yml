@@ -112,7 +112,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Boldog térképek
+        title: Vidám térképek
         desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
           hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
         video: C1_happy_maps_unplugged
@@ -129,7 +129,7 @@
           szerepet.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Az alap megépítése
+        title: Alapozás
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
           A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
           bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg
@@ -196,7 +196,7 @@
           kitalálásához, mivel nincsenek megadva a játékszabályok.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Funkcionális Dekor
+        title: Hasznos díszek
         desc: A diákok létrehoznak egy algoritmust változók és függvények (olyan kódrészletek,
           amiket újra és újra fel lehet használni) segítségével zsinórra fűzött csillogó
           dekor és gyöngyök elkészítéséhez.

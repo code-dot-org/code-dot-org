@@ -616,7 +616,7 @@
   project:
     projects: Проекти
     create: Създаване на проект
-    create_a_project: 'Create a new project:'
+    create_a_project: 'Създаване на нов проект:'
     new: Създаване на нов
     rename: Преименуване
     save: Запазване

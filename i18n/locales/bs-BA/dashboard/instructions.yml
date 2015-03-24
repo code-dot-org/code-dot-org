@@ -906,7 +906,6 @@ bs:
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: Vrijeme za slobodno igranje! Istraži dostupe blokove da bi nacrtai/la nešto interesantno. Pobirni se da snimiš i podijeliš svoje omiljene slike.
       Examples 4_instruction: Funkcija za smanjivanje
-      freeplay_instruction: Službeno si postao/la majstor umjetnik! Napravi zimsku idilu i podijeli je sa prijateljima.
       frozen circle function (copy 1)_instruction: "Upotrijebi novu 'kreiraj krug' blok i napravi 10 preklapajućih blokova. Nemoj zaboraviti skočiti naprijed između krugova"
       frozen circle function in circle_instruction: Hajde sada da napravimo 20 preklapajućih krugova, okrećući za 18 stepeni između svakog kruga.
       frozen circle function with parameter_instruction: 'Evo "Napravi krug" blok koji može napraviti krugove različitih veličina. Možeš li ovo upotrijebiti da napraviš mali krug veličine 5 i veliki krug veličine 10?'
@@ -924,13 +923,10 @@ bs:
       frozen freeplay_instruction: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
       frozen line_instruction: Zdravo! Ja sam Elsa od Arendelle. Pomozi mi da napravim liniju.
       frozen perpendicular_instruction: 'Hajde sada da napravimo dvije linije koje zatvaraju ugao od 90 stepeni. Trebati ćeš koristiti "Okreni" i "Pokreni" blok.'
-      frozen snowflake base_instruction: Napravi ove tri linije koje su razmaknute za 45 stepeni
       frozen snowflake branch_instruction: 'Pokušaj upotrijebiti "Napravi granu pahulje" blok da bi se napravile tri grane koje počinju ličiti na pahuljice.'
       frozen snowflake full_instruction: Hajde da to ponovimo 8 puta da bismo napravili predivnu pahulju!
-      frozen snowflower pattern_instruction: Kakvi divni sniježni cvjetovi! Hajde da napravimo manje sniježne cvjetove da bismo pokrili čitavo klizalište. Ne zaboravi skočiti naprijed za 150 piksela između svakog od cvjetova.
       frozen snowflower_instruction: Zamršeni sniježni uzorci mogu biti napravljeni pomoću vrlo jednostavnih oblika. Možeš li napraviti uzorak ponavljajući 5 krugova veličine 5 i 5 krugova veličine 10?
       frozen square iterative_instruction: Izgleda da smo na pola puta za pravljenje kvadrata. Hajde da sastavimo 4 linije da bismo dobili kvadrat.
-      frozen square loop (copy 1)_instruction: Postoji više načina da se napravi kvadrat. Možeš li upotrijebiti blok Ponavljanja da bi ponovo napravio/la kvadrat, ali sada koristeći manje blokova? Koji uzorak možeš staviti unutar Ponavljaj bloka?
       frozen square loop 3x_instruction: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       frozen square loop_instruction: 'Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? '
       frozen square snowflake_instruction: 'Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?'
