@@ -1,20 +1,22 @@
-- @script ||= Script.twenty_hour_script
+- script = local_assigns[:script] || Script.twenty_hour_script
+- script_level = local_assigns[:script_level]
+- full_width = local_assigns[:full_width]
 
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if @script_level && @script.show_report_bug_link?)}
-  - if @script_level && @script.show_report_bug_link?
+.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if script_level && script.show_report_bug_link?)}
+  - if script_level && script.show_report_bug_link?
     #betainfo
-      - if @script.feedback_url
-        = link_to t('landing.feedback'), @script.feedback_url
+      - if script.feedback_url
+        = link_to t('landing.feedback'), script.feedback_url
         |
-      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
+      = link_to t('landing.report_bug'), script_level.report_bug_url(request), target: '_blank'
 
   .navbar-static-top.header{class: 'hide_on_mobile'}
-    .container{style: (@full_width ? 'width: 880px;' : '')}
+    .container{style: (full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
           .header_left
@@ -22,7 +24,7 @@
               = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
           .header_middle
-            - if @script_level
+            - if script_level
               = render partial: 'shared/header_progress'
             - elsif @edit_blocks
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
@@ -36,8 +38,8 @@
               .header_button.header_user
                 = render partial: 'shared/user_header'
 
-- if @script_level
+- if script_level
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{@script_level.stage.summarize.to_json}, #{summarize_user_progress(@script_level.script).to_json}, #{@script_level.try(:level_id)});
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{summarize_user_progress(script_level.script).to_json}, #{script_level.try(:level_id)});
     //]]>
