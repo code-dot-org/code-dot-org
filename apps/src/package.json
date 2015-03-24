@@ -1,4 +1,8 @@
 {
+  "name": "@cdo/apps",
+  "version": "0.0.1",
+  "description": "Workaround for browserify relative paths problem",
+  "private": true,
   "browserify": {
     "transform": [
       "ejsify"
