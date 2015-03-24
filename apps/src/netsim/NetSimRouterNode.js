@@ -326,8 +326,7 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
     logger.error("Packet specification does not have a toAddress field.");
   }
 
-  // Require FROM_ADDRESS temporarily for auto-DNS tasks
-  // TODO (bbuchanan) remove when real auto-dns nodes are implemented.
+  // Require FROM_ADDRESS for auto-DNS tasks
   if (!packetSpec.some(function (headerField) {
         return headerField.key === Packet.HeaderType.FROM_ADDRESS;
       })) {
@@ -562,7 +561,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
  *          whether they are the current DNS node for the network.
  */
 NetSimRouterNode.prototype.getAddressTable = function () {
-  return this.myWireRowCache_.map(function (row) {
+  var addressTable = this.myWireRowCache_.map(function (row) {
     return {
       hostname: row.localHostname,
       address: row.localAddress,
@@ -570,6 +569,18 @@ NetSimRouterNode.prototype.getAddressTable = function () {
       isDnsNode: (row.localNodeID === this.dnsNodeID)
     };
   }.bind(this));
+
+  // Special case: In auto-dns mode we add the DNS entry to the address table
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    addressTable.push({
+      hostname: 'dns',
+      address: AUTO_DNS_RESERVED_ADDRESS,
+      isLocal: false,
+      isDnsNode: true
+    });
+  }
+
+  return addressTable;
 };
 
 /**
