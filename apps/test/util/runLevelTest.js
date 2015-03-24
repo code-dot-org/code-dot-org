@@ -93,23 +93,27 @@ StubDialog.prototype.show = function() {
   var done = cb;
   cb = null;
   Blockly.mainBlockSpace.clear();
-  done();
+  if(done) {
+    done();
+  }
 };
 
 StubDialog.prototype.hide = function() {
 };
 
 
+// Hack to compile files into browserify. Don't call this function!
+function ಠ_ಠ() {
+  require('@cdo/apps/maze/main');
+  require('@cdo/apps/flappy/main');
+  require('@cdo/apps/turtle/main');
+  require('@cdo/apps/eval/main');
+  require('@cdo/apps/studio/main');
+  require('@cdo/apps/calc/main');
+}
+
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
-  if(app == 'maze') {
-    require('@cdo/apps/maze/main');
-  } else if (app == 'flappy') {
-    require('@cdo/apps/flappy/main');
-  } else if (app == 'turtle') {
-    require('@cdo/apps/turtle/main');
-  } else {
-    logError('Not maze?!?!?!');
-  }
+  require('@cdo/apps/' + app + '/main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
   setAppSpecificGlobals(app);

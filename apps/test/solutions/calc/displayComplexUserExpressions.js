@@ -73,27 +73,27 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 17
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'age = ', null);
-    validateTextElement(g.children[1], '17', null);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'age = ', null);
+    validateTextElement(g.childNodes[1], '17', null);
 
     // line 2: age_in_months = (age * 12)
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'age_in_months = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], 'age', null);
-    validateTextElement(g.children[3], ' * ', null);
-    validateTextElement(g.children[4], '12', null);
-    validateTextElement(g.children[5], ')', null);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'age_in_months = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], 'age', null);
+    validateTextElement(g.childNodes[3], ' * ', null);
+    validateTextElement(g.childNodes[4], '12', null);
+    validateTextElement(g.childNodes[5], ')', null);
 
     // line 3: age_in_months = 194
-    g = userExpression.children[2];
-    validateTextElement(g.children[0], 'age_in_months', null);
-    validateTextElement(g.children[1], ' = ', null);
-    validateTextElement(g.children[2], '204', null);
+    g = userExpression.childNodes[2];
+    validateTextElement(g.childNodes[0], 'age_in_months', null);
+    validateTextElement(g.childNodes[1], ' = ', null);
+    validateTextElement(g.childNodes[2], '204', null);
   });
 
   displayComplexUserExpressionTest(assert, 'correct answer with different age', function () {
@@ -109,27 +109,27 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 10
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'age = ', null);
-    validateTextElement(g.children[1], '10', null);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'age = ', null);
+    validateTextElement(g.childNodes[1], '10', null);
 
     // line 2: age_in_months = (age * 12)
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'age_in_months = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], 'age', null);
-    validateTextElement(g.children[3], ' * ', null);
-    validateTextElement(g.children[4], '12', null);
-    validateTextElement(g.children[5], ')', null);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'age_in_months = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], 'age', null);
+    validateTextElement(g.childNodes[3], ' * ', null);
+    validateTextElement(g.childNodes[4], '12', null);
+    validateTextElement(g.childNodes[5], ')', null);
 
     // line 3: age_in_months = 120
-    g = userExpression.children[2];
-    validateTextElement(g.children[0], 'age_in_months', null);
-    validateTextElement(g.children[1], ' = ', null);
-    validateTextElement(g.children[2], '120', null);
+    g = userExpression.childNodes[2];
+    validateTextElement(g.childNodes[0], 'age_in_months', null);
+    validateTextElement(g.childNodes[1], ' = ', null);
+    validateTextElement(g.childNodes[2], '120', null);
   });
 
   displayComplexUserExpressionTest(assert, 'age hard coded', function () {
@@ -145,27 +145,27 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 17
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'age = ', null);
-    validateTextElement(g.children[1], '17', null);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'age = ', null);
+    validateTextElement(g.childNodes[1], '17', null);
 
     // line 2: age_in_months = (17 * 12)
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'age_in_months = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], '17', null);
-    validateTextElement(g.children[3], ' * ', null);
-    validateTextElement(g.children[4], '12', null);
-    validateTextElement(g.children[5], ')', null);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'age_in_months = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], '17', null);
+    validateTextElement(g.childNodes[3], ' * ', null);
+    validateTextElement(g.childNodes[4], '12', null);
+    validateTextElement(g.childNodes[5], ')', null);
 
     // line 3: age_in_months = 120
-    g = userExpression.children[2];
-    validateTextElement(g.children[0], 'age_in_months', null);
-    validateTextElement(g.children[1], ' = ', null);
-    validateTextElement(g.children[2], '204', null);
+    g = userExpression.childNodes[2];
+    validateTextElement(g.childNodes[0], 'age_in_months', null);
+    validateTextElement(g.childNodes[1], ' = ', null);
+    validateTextElement(g.childNodes[2], '204', null);
   });
 
   displayComplexUserExpressionTest(assert, 'wrong variable name', function () {
@@ -181,27 +181,27 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 10
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'age = ', null);
-    validateTextElement(g.children[1], '17', null);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'age = ', null);
+    validateTextElement(g.childNodes[1], '17', null);
 
     // line 2: age_in_months = (age * 12)
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'age_in_months2 = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], 'age', null);
-    validateTextElement(g.children[3], ' * ', null);
-    validateTextElement(g.children[4], '12', null);
-    validateTextElement(g.children[5], ')', null);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'age_in_months2 = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], 'age', null);
+    validateTextElement(g.childNodes[3], ' * ', null);
+    validateTextElement(g.childNodes[4], '12', null);
+    validateTextElement(g.childNodes[5], ')', null);
 
     // line 3: age_in_months = 120
-    g = userExpression.children[2];
-    validateTextElement(g.children[0], 'age_in_months2', 'errorToken');
-    validateTextElement(g.children[1], ' = ', null);
-    validateTextElement(g.children[2], '204', null);
+    g = userExpression.childNodes[2];
+    validateTextElement(g.childNodes[0], 'age_in_months2', 'errorToken');
+    validateTextElement(g.childNodes[1], ' = ', null);
+    validateTextElement(g.childNodes[2], '204', null);
   });
 
   displayComplexUserExpressionTest(assert, 'divide by zero error', function () {
@@ -228,29 +228,29 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
     // line 1: f(i) = (4 / (4 - 4))
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'f(i) = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], '4', null);
-    validateTextElement(g.children[3], ' / ', null);
-    validateTextElement(g.children[4], '(', null);
-    validateTextElement(g.children[5], '4', null);
-    validateTextElement(g.children[6], ' - ', null);
-    validateTextElement(g.children[7], '4', null);
-    validateTextElement(g.children[8], ')', null);
-    validateTextElement(g.children[9], ')', null);
-    validateTextElement(g.children[9], ')', null);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'f(i) = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], '4', null);
+    validateTextElement(g.childNodes[3], ' / ', null);
+    validateTextElement(g.childNodes[4], '(', null);
+    validateTextElement(g.childNodes[5], '4', null);
+    validateTextElement(g.childNodes[6], ' - ', null);
+    validateTextElement(g.childNodes[7], '4', null);
+    validateTextElement(g.childNodes[8], ')', null);
+    validateTextElement(g.childNodes[9], ')', null);
+    validateTextElement(g.childNodes[9], ')', null);
 
     // line 2: f(10)
     // Note that there's no = (result), because we have a divide by zero error
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'f', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], '10', null);
-    validateTextElement(g.children[3], ')', null);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'f', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], '10', null);
+    validateTextElement(g.childNodes[3], ')', null);
   });
 
   displayComplexUserExpressionTest(assert, 'divide by zero error during freeplay', function () {
@@ -268,31 +268,31 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
     // line 1: f(i) = (4 / (4 - 4))
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], 'f(i) = ', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], '4', null);
-    validateTextElement(g.children[3], ' / ', null);
-    validateTextElement(g.children[4], '(', null);
-    validateTextElement(g.children[5], '4', null);
-    validateTextElement(g.children[6], ' - ', null);
-    validateTextElement(g.children[7], '4', null);
-    validateTextElement(g.children[8], ')', null);
-    validateTextElement(g.children[9], ')', null);
-    assert.equal(g.children.length, 10);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], 'f(i) = ', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], '4', null);
+    validateTextElement(g.childNodes[3], ' / ', null);
+    validateTextElement(g.childNodes[4], '(', null);
+    validateTextElement(g.childNodes[5], '4', null);
+    validateTextElement(g.childNodes[6], ' - ', null);
+    validateTextElement(g.childNodes[7], '4', null);
+    validateTextElement(g.childNodes[8], ')', null);
+    validateTextElement(g.childNodes[9], ')', null);
+    assert.equal(g.childNodes.length, 10);
 
 
     // line 2: f(10)
     // Note that there's no = (result), because we have a divide by zero error
-    g = userExpression.children[1];
-    validateTextElement(g.children[0], 'f', null);
-    validateTextElement(g.children[1], '(', null);
-    validateTextElement(g.children[2], '10', null);
-    validateTextElement(g.children[3], ')', null);
-    assert.equal(g.children.length, 4);
+    g = userExpression.childNodes[1];
+    validateTextElement(g.childNodes[0], 'f', null);
+    validateTextElement(g.childNodes[1], '(', null);
+    validateTextElement(g.childNodes[2], '10', null);
+    validateTextElement(g.childNodes[3], ')', null);
+    assert.equal(g.childNodes.length, 4);
   });
 
   displayComplexUserExpressionTest(assert, 'divide by zero error with simple target', function () {
@@ -312,20 +312,20 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
+    assert.equal(userExpression.childNodes.length, 1);
 
     // line 1: (4 / (4 - 4))
-    var g = userExpression.children[0];
-    validateTextElement(g.children[0], '(', 'errorToken');
-    validateTextElement(g.children[1], '4', 'errorToken');
-    validateTextElement(g.children[2], ' / ', 'errorToken');
-    validateTextElement(g.children[3], '(', 'errorToken');
-    validateTextElement(g.children[4], '4', 'errorToken');
-    validateTextElement(g.children[5], ' - ', 'errorToken');
-    validateTextElement(g.children[6], '4', 'errorToken');
-    validateTextElement(g.children[7], ')', 'errorToken');
-    validateTextElement(g.children[8], ')', 'errorToken');
-    assert.equal(g.children.length, 9);
+    var g = userExpression.childNodes[0];
+    validateTextElement(g.childNodes[0], '(', 'errorToken');
+    validateTextElement(g.childNodes[1], '4', 'errorToken');
+    validateTextElement(g.childNodes[2], ' / ', 'errorToken');
+    validateTextElement(g.childNodes[3], '(', 'errorToken');
+    validateTextElement(g.childNodes[4], '4', 'errorToken');
+    validateTextElement(g.childNodes[5], ' - ', 'errorToken');
+    validateTextElement(g.childNodes[6], '4', 'errorToken');
+    validateTextElement(g.childNodes[7], ')', 'errorToken');
+    validateTextElement(g.childNodes[8], ')', 'errorToken');
+    assert.equal(g.childNodes.length, 9);
   });
 
 

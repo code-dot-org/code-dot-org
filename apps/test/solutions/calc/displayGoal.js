@@ -53,12 +53,12 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.children.length, 1);
+    assert.equal(answerExpression.childElementCount, 1);
 
-    var g = answerExpression.children[0];
-    assert.equal(g.children.length, 1);
-    assert.equal(g.children[0].textContent, "5");
-    assert.equal(g.children[0].getAttribute('class'), null);
+    var g = answerExpression.firstElementChild;
+    assert.equal(g.childNodes.length, 1);
+    assert.equal(g.childNodes[0].textContent, "5");
+    assert.equal(g.childNodes[0].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'multiple functions', function () {
@@ -109,12 +109,12 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.children.length, 1);
+    console.log('element count: ' + answerExpression.childElementCount);
 
-    var g = answerExpression.children[0];
-    assert.equal(g.children.length, 1);
-    assert.equal(g.children[0].textContent, "age_in_months");
-    assert.equal(g.children[0].getAttribute('class'), null);
+    var g = answerExpression.firstElementChild;
+    assert.equal(g.childNodes.length, 1);
+    assert.equal(g.childNodes[0].textContent, "age_in_months");
+    assert.equal(g.childNodes[0].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'variables without single variable in compute', function () {
@@ -127,27 +127,27 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.children.length, 2);
+    assert.equal(answerExpression.childNodes.length, 2);
 
-    var g = answerExpression.children[0];
-    assert.equal(g.children.length, 2);
-    assert.equal(g.children[0].textContent, "age = ");
-    assert.equal(g.children[0].getAttribute('class'), null);
-    assert.equal(g.children[1].textContent, "17");
-    assert.equal(g.children[1].getAttribute('class'), null);
+    var g = answerExpression.childNodes[0];
+    assert.equal(g.childNodes.length, 2);
+    assert.equal(g.childNodes[0].textContent, "age = ");
+    assert.equal(g.childNodes[0].getAttribute('class'), null);
+    assert.equal(g.childNodes[1].textContent, "17");
+    assert.equal(g.childNodes[1].getAttribute('class'), null);
 
-    g = answerExpression.children[1];
-    assert.equal(g.children.length, 5);
-    assert.equal(g.children[0].textContent, "(");
-    assert.equal(g.children[0].getAttribute('class'), null);
-    assert.equal(g.children[1].textContent, "age");
-    assert.equal(g.children[1].getAttribute('class'), null);
-    assert.equal(g.children[2].textContent, " * ");
-    assert.equal(g.children[2].getAttribute('class'), null);
-    assert.equal(g.children[3].textContent, "12");
-    assert.equal(g.children[3].getAttribute('class'), null);
-    assert.equal(g.children[4].textContent, ")");
-    assert.equal(g.children[4].getAttribute('class'), null);
+    g = answerExpression.childNodes[1];
+    assert.equal(g.childNodes.length, 5);
+    assert.equal(g.childNodes[0].textContent, "(");
+    assert.equal(g.childNodes[0].getAttribute('class'), null);
+    assert.equal(g.childNodes[1].textContent, "age");
+    assert.equal(g.childNodes[1].getAttribute('class'), null);
+    assert.equal(g.childNodes[2].textContent, " * ");
+    assert.equal(g.childNodes[2].getAttribute('class'), null);
+    assert.equal(g.childNodes[3].textContent, "12");
+    assert.equal(g.childNodes[3].getAttribute('class'), null);
+    assert.equal(g.childNodes[4].textContent, ")");
+    assert.equal(g.childNodes[4].getAttribute('class'), null);
   });
 
   return true;

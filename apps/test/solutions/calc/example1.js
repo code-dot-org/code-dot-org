@@ -2,7 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 testUtils.setupLocale('calc');
-var calcMsg = require('@cdo/apps/../locale/current/calc');
+var calcMsg = window.blockly.calc_locale;
 
 module.exports = {
   app: "calc",

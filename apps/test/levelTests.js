@@ -27,7 +27,7 @@ describe('Level tests', function() {
   });
 
   getTestCollections().forEach(function (item, index) {
-    if(index === 3) runTestCollection(item);
+    runTestCollection(item);
   });
 
 });
@@ -39,14 +39,16 @@ function getTestCollections () {
   //var files = wrench.readdirSyncRecursive(directory);
 
   // require-globify transform
-  var files = require('./solutions/maze/*.js', {hash: 'path'});
+  var files = require('./solutions/calc/*.js', {hash: 'path'});
   var testCollections = [];
   Object.keys(files).forEach(function (file) {
     if (/data$/.test(file)) {
       console.log('got data!');
       dataItem = files[file];
     } else if (!/data$/.test(file) && !/3_1$/.test(file) && !/ec_1_2$/.test(file)) {
-      testCollections.push({path: file, data: files[file]});
+      if(/displayGoal/.test(file)) {
+        testCollections.push({path: file, data: files[file]});
+      }
     }
   });
   return testCollections;
@@ -54,6 +56,7 @@ function getTestCollections () {
 
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection (item) {
+  var runLevelTest = require('./util/runLevelTest');
   var path = item.path;
   var testCollection = item.data;
 
@@ -66,20 +69,15 @@ function runTestCollection (item) {
       // and our getMissingRequiredBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
-        runTest(testCollection, testData);
+        it(testData.description, function (done) {
+          // can specify a test specific timeout in json file.
+          if (testData.timeout !== undefined) {
+            this.timeout(testData.timeout);
+          }
+          runLevelTest(testCollection, testData, dataItem, done);
+        });
       }
     });
   });
 }
 
-function runTest (testCollection, testData) {
-  it(testData.description, function (done) {
-    // can specify a test specific timeout in json file.
-    if (testData.timeout !== undefined) {
-      this.timeout(testData.timeout);
-    }
-
-    var runLevelTest = require('./util/runLevelTest');
-    runLevelTest(testCollection, testData, dataItem, done);
-  });
-}
