@@ -140,7 +140,7 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
   var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
@@ -165,9 +165,8 @@ function adjustAppSizeStyles() {
   // 4th item in the array.
   var defaultHeightRules = [ 600, 550, 500, 450 ];
   var newHeightRules = defaultHeightRules.slice(0);
-  var offsetTop = document.getElementById('codeApp').offsetTop;
   for (var z = 0; z < newHeightRules.length; z++) {
-    newHeightRules[z] += offsetTop +
+    newHeightRules[z] += container.offsetTop +
         (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
   }
 
@@ -638,7 +637,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
