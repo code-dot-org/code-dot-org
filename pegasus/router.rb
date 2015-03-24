@@ -107,7 +107,7 @@ class Documents < Sinatra::Base
       headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
     end
 
-    locale = settings.vary.include?(request.path_info) ? request.locale : 'en-US'
+    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
