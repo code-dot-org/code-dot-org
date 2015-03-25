@@ -32,8 +32,8 @@ class PropertiesTest < Minitest::Unit::TestCase
     assert @properties.last_response.successful?
   end
 
-  def test_get_set
-    # The properties API does not need to share a cookie jar with the Channels API.
+  def test_get_set_delete
+    # The Properties API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
 
@@ -45,15 +45,13 @@ class PropertiesTest < Minitest::Unit::TestCase
     value_boolean = true.to_json
 
     set_key_value(key, value_string)
-    value = get_key_value(key)
-    #assert !last_response.not_found?
-    assert_equal value, value_string
+    assert_equal value_string, get_key_value(key)
 
     set_key_value(key, value_num)
-    assert_equal get_key_value(key), value_num
+    assert_equal value_num, get_key_value(key)
 
     set_key_value(key, value_boolean)
-    assert_equal get_key_value(key), value_boolean
+    assert_equal value_boolean, get_key_value(key)
 
     delete_key_value(key)
 
