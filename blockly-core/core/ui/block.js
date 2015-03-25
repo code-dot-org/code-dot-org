@@ -493,11 +493,24 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
  * @return {!Object} Object with height and width properties.
  */
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
+
   try {
-    if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
-      this.getSvgRoot().style.display = "inline";   /* reqd for IE */
+    var ieLessThan10 = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+
+    if (ieLessThan10) {
+      // Required to set display to inline during calculation in IE <= 10
+      initialStyle = this.getSvgRoot().style.display;
+      this.getSvgRoot().style.display = "inline";
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    if (ieLessThan10) {
+      // Reset to original display value
+      this.getSvgRoot().style.display = initialStyle;
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return {height: 0, width: 0};
