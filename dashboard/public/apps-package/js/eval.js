@@ -437,7 +437,7 @@ var displayFeedback = function(response) {
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
   var options = {
-    app: 'Eval',
+    app: 'eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
