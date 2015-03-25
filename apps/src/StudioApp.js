@@ -1299,29 +1299,19 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @returns true if any block in the workspace has an unfilled input
+ * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
-    var rootBlock = block;
-    var parent;
-    do {
-      parent = rootBlock.getParent();
-      if (parent) {
-        rootBlock = parent;
-      }
-    } while(parent);
+    var rootBlock = block.getRootBlock();
 
     // Allow example blocks to have unfilled inputs
     if (rootBlock.type === 'functional_example') {
       return false;
     }
 
-    // Does this block have a connection without a block attached
-    return block.inputList.some(function (input) {
-      return input.connection && !input.connection.targetBlock();
-    });
+    return block.hasUnfilledInput();
   });
 };
 

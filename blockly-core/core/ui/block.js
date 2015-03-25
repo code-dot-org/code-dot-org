@@ -2190,3 +2190,27 @@ Blockly.Block.prototype.render = function() {
 Blockly.Block.prototype.getSvgRenderer = function () {
   return this.svg_;
 };
+
+/**
+ * Get the oldest ancestor of this block.
+ */
+Blockly.Block.prototype.getRootBlock = function () {
+  var rootBlock;
+  var current = this;
+  while (current) {
+    rootBlock = current;
+    current = current.getParent();
+  }
+
+  return rootBlock;
+};
+
+/**
+ * @returns True if any of this blocks inputs have a connection that is unfilled
+ */
+Blockly.Block.prototype.hasUnfilledInput = function () {
+  // Does this block have a connection without a block attached
+  return this.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
+};
