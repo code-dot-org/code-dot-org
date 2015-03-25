@@ -162,10 +162,10 @@ module.exports = {
           var failedInputGroup = userExpression.childNodes[2];
           assert(failedInputGroup.childNodes.length === 6);
           var equalSign = failedInputGroup.childNodes[4];
-          assert(equalSign.className === '', 'actual: ' + equalSign.className);
+          assert(equalSign.className.baseVal === '', 'actual: ' + equalSign.className);
           assert(equalSign.textContent === " = ", 'actual: ' + equalSign.textContent.replace(/ /g, "_"));
           var failureText = failedInputGroup.childNodes[5];
-          assert(failureText.className === 'errorToken');
+          assert(failureText.className.baseVal === 'errorToken');
           assert(failureText.textContent === "3");
         }, 0);
 

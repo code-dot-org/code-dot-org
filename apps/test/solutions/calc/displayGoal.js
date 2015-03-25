@@ -162,6 +162,9 @@ function displayGoalCustomValidator(assert) {
  */
 function displayGoalTest(assert, description, fn) {
   var answerExpression = document.getElementById('answerExpression');
+  while (answerExpression.firstChild) {
+    answerExpression.removeChild(answerExpression.firstChild);
+  }
   answerExpression.innerHTML = ''; // clear children
 
   fn();
