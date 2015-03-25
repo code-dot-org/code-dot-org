@@ -39,16 +39,16 @@ function getTestCollections () {
   //var files = wrench.readdirSyncRecursive(directory);
 
   // require-globify transform
-  var files = require('./solutions/calc/*.js', {hash: 'path'});
+  var files = require('./solutions/turtle/*.js', {hash: 'path'});
   var testCollections = [];
   Object.keys(files).forEach(function (file) {
     if (/data$/.test(file)) {
       console.log('got data!');
       dataItem = files[file];
     } else if (!/data$/.test(file) && !/3_1$/.test(file) && !/ec_1_2$/.test(file)) {
-      if(/displayGoal/.test(file)) {
+//      if(/1_4$/.test(file)) {
         testCollections.push({path: file, data: files[file]});
-      }
+//      }
     }
   });
   return testCollections;

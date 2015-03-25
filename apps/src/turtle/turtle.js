@@ -322,7 +322,7 @@ Artist.prototype.drawAnswer = function() {
   if (this.level.solutionBlocks) {
     this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
-    this.drawLogOnCanvas(this.level.answer, this.ctxAnswer);
+    this.drawLogOnCanvas(this.level.answer.slice(0), this.ctxAnswer);
   }
 };
 
@@ -333,7 +333,7 @@ Artist.prototype.drawAnswer = function() {
 Artist.prototype.drawLogOnCanvas = function(log, canvas) {
   this.studioApp_.reset();
   while (log.length) {
-    var tuple = log.shift();
+    var tuple = log.shift().slice(0);
     this.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
     this.resetStepInfo_();
   }
