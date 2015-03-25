@@ -31,16 +31,16 @@ var DropletTooltipManager = module.exports = function () {
 };
 
 var repositionLastTooltip = function () {
-  var $tooltipBase = $(".tooltipster-base").last();
-  var tooltipsterOffset = $tooltipBase.offset();
-  var $dropletToolboxArea = $('.droplet-palette-wrapper');
-  var rightSideOfToolbox = $dropletToolboxArea.offset().left +
-    $dropletToolboxArea.width();
+  var tooltipBase = $(".tooltipster-base").last();
+  var tooltipsterOffset = tooltipBase.offset();
+  var dropletToolboxArea = $('.droplet-palette-wrapper');
+  var rightSideOfToolbox = dropletToolboxArea.offset().left +
+    dropletToolboxArea.width();
   var rightSideOfBlock = tooltipsterOffset.left;
   var tipWidth = 8;
   tooltipsterOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
   tooltipsterOffset.top -= 2; // Account for block notch height
-  $tooltipBase.offset(tooltipsterOffset);
+  tooltipBase.offset(tooltipsterOffset);
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
