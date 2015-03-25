@@ -23621,8 +23621,9 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
     borderWidth = parseInt(style.borderLeftWidth, 10) + parseInt(style.borderRightWidth, 10)
   }
   var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
+  var topSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : this.svg_;
+  var width = div.clientWidth - borderWidth;
+  var height = div.clientHeight - topSvgElement.offsetTop;
   if(svg.cachedWidth_ != width) {
     svg.setAttribute("width", width + "px");
     svg.cachedWidth_ = width
