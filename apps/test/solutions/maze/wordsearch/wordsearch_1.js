@@ -4,7 +4,7 @@ var blockUtils = require('@cdo/apps/block_utils');
 
 var reqBlocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return require('../../../util/testUtils').requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
+  return require('@cdo/apps/maze/requiredBlocks.js');
 };
 
 module.exports = {

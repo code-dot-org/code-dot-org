@@ -11,9 +11,6 @@
 
 var path = require('path');
 var assert = require('chai').assert;
-//var wrench = require('wrench');
-
-var child_process = require('child_process');
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
@@ -32,24 +29,15 @@ describe('Level tests', function() {
 
 });
 
-var dataItem;
-
 // Get all json files under directory path
 function getTestCollections () {
   //var files = wrench.readdirSyncRecursive(directory);
 
   // require-globify transform
-  var files = require('./solutions/turtle/*.js', {hash: 'path'});
+  var files = require('./solutions/**/*.js', {hash: 'path'});
   var testCollections = [];
   Object.keys(files).forEach(function (file) {
-    if (/data$/.test(file)) {
-      console.log('got data!');
-      dataItem = files[file];
-    } else if (!/data$/.test(file) && !/3_1$/.test(file) && !/ec_1_2$/.test(file)) {
-//      if(/1_4$/.test(file)) {
-        testCollections.push({path: file, data: files[file]});
-//      }
-    }
+    testCollections.push({path: file, data: files[file]});
   });
   return testCollections;
 }
@@ -70,6 +58,7 @@ function runTestCollection (item) {
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
+          var dataItem = require('./util/data')(app);
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);

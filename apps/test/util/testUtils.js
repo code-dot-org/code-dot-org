@@ -69,7 +69,7 @@ exports.setupLocales = setupLocales;
 
 exports.setupBlocklyFrame = setupBlocklyFrame;
 function setupBlocklyFrame() {
-  require('./frame');
+  require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
 
   setupLocales();

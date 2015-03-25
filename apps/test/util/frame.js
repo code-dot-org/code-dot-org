@@ -4,9 +4,6 @@
  * space as global.Blockly.
  */
 
-// todo - have this be used by the levelTests also?
-
-
 function setGlobals () {
   // Initialize browser environment.
   document.body.innerHTML = '<div id="app"></div>';
@@ -14,5 +11,4 @@ function setGlobals () {
   window.Blockly = require('blockly');
   require('blockly_locale');
 }
-
-setGlobals();
+module.exports = setGlobals;
