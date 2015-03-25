@@ -362,8 +362,6 @@ NetSimRouterNode.prototype.tick = function (clock) {
  * @private
  */
 NetSimRouterNode.prototype.tickRouting_ = function (clock) {
-  this.scheduleNewPackets();
-
   if (this.isRouterProcessing_) {
     return;
   }
@@ -1003,9 +1001,9 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
 
     // TODO: Drop packets that exceed queue memory (IF not already processing?)
 
-    // Propagate notification of queue change (for stats, etc)
+    this.scheduleNewPackets();
 
-    // Work will proceed on next tick
+    // Propagate notification of queue change (for stats, etc)
   }
 };
 

@@ -331,16 +331,18 @@ describe("NetSimRouterNode", function () {
         toNodeID = router.entityID;
         fromAddress = localClient.address;
         toAddress = remoteA.address;
+
+        // Establish time baseline of zero
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 0);
       });
 
       it ("requires variable time to forward packets based on bandwidth", function () {
-        router.bandwidthBitsPerSecond_ = 1000; // 1 bit per ms
-        sendMessageOfSize(1008);
+        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
 
-        // Router detects message on first tick, but does not send it until
+        // Router detects message immediately, but does not send it until
         // enough time has passed to send the message based on bandwidth
-        router.tick({time: 0});
-        assertTableSize(testShard, 'logTable', 0);
+        sendMessageOfSize(1008);
 
         // Message still has not been sent at 1007ms
         router.tick({time: 1007});
@@ -351,37 +353,76 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 1);
       });
 
+      it ("respects bandwidth setting", function () {
+        // 0.1 bit / ms, so 10ms / bit
+        router.bandwidthBitsPerSecond_ = 100;
+
+        // This message should be sent at t=200
+        sendMessageOfSize(20);
+
+        // Message is sent at t=200
+        router.tick({time: 199});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 200});
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
       it ("routes packet on first tick if bandwidth is infinite", function () {
         router.bandwidthBitsPerSecond_ = Infinity;
+
+        // Message is detected immediately, though that's not obvious here.
         sendMessageOfSize(1008);
 
-        // At infinite bandwidth, router forwards message as soon as it is
-        // detected, on the first tick.
+        // At infinite bandwidth, router forwards message even though zero
+        // time has passed.
         router.tick({time: 0});
         assertTableSize(testShard, 'logTable', 1);
       });
 
       it ("routes 'batches' of packets when multiple packets fit in the bandwidth", function () {
-        router.bandwidthBitsPerSecond_ = 100; // 0.1 bit per ms
+        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
 
+        // Router should schedule these all as soon as they show up, for
+        // 40, 80 and 120 ms respectively (due to the 0.1 bit per ms rate)
         sendMessageOfSize(40);
         sendMessageOfSize(40);
         sendMessageOfSize(40);
-
-        // On initial appearance, no messages get sent, but they should all
-        // 'start processing' because they've been seen by the router.  This
-        // enables batch processing on slow ticks later.
-        router.tick({time: 0});
-        assertTableSize(testShard, 'logTable', 0);
 
         // On this tick, two messages should get forwarded because enough
         // time has passed for them both to be sent given our current bandwidth.
-        router.tick({time: 800});
+        router.tick({time: 80});
         assertTableSize(testShard, 'logTable', 2);
 
         // On this final tick, the third message should be sent
-        router.tick({time: 1200});
+        router.tick({time: 120});
         assertTableSize(testShard, 'logTable', 3);
+      });
+
+      it ("is pessimistic when scheduling new packets", function () {
+        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
+
+        // Router 'starts sending' this message now, expected to finish
+        // at t=40
+        sendMessageOfSize(40);
+
+        // At t=30, we do schedule another message
+        // You might think this one is scheduled for t=80, but because
+        // we can't see partial progress from other clients we assume the
+        // worst and schedule it for t=110 (30 + 40 + 40)
+        router.tick({time: 30});
+        sendMessageOfSize(40);
+
+        // At t=40, the first message is sent
+        router.tick({time: 39});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 40});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // At t=110, the second message is sent
+        router.tick({time: 109});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 110});
+        assertTableSize(testShard, 'logTable', 2);
       });
     });
   });
