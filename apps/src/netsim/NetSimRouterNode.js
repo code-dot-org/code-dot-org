@@ -199,6 +199,58 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
+
+  /**
+   * Speed at which messages are processed, in bits per second.
+   * @type {number}
+   * @private
+   */
+  this.bandwidthBitsPerSecond_ = 1000;
+
+  /**
+   * Whether router is in the middle of work.  Keeps router from picking up
+   * its own change notifications or interrupting its own processes.
+   * @type {boolean}
+   * @private
+   */
+  this.isProcessing_ = false;
+
+  /**
+   * Message currently being processed.
+   * @type {NetSimMessage}
+   * @private
+   */
+  this.currentMessage_ = null;
+
+  /**
+   * Completion time for processing current message, on RunLoop clock.
+   * @type {number}
+   * @private
+   */
+  this.processingCompletionTime_ = undefined;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the router.  Used for tracking router memory, throughput, etc.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.routerQueue_ = [];
+
+  /**
+   *
+   * @type {boolean}
+   * @private
+   */
+  this.isAutoDnsProcessing_ = false;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the auto-DNS. Used for stats and limiting.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.autoDnsQueue_ = [];
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -297,6 +349,72 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.heartbeat_.tick(clock);
+
+  if (this.isProcessing_) {
+    this.tickWhileProcessing_(clock);
+  } else {
+    this.tickNotProcessing_(clock);
+  }
+
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.tickAutoDns_(clock);
+  }
+};
+
+/**
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.tickWhileProcessing_ = function (clock) {
+  var doneProcessingCurrentMessage =
+      this.currentMessage_ &&
+      this.processingCompletionTime_ &&
+      clock.time >= this.processingCompletionTime_;
+
+  if (doneProcessingCurrentMessage) {
+    this.finishRoutingCurrentMessage_();
+  }
+};
+
+/**
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.tickNotProcessing_ = function (clock) {
+  var canProcessNextMessage = this.routerQueue_.length > 0 &&
+      this.localSimulationOwnsMessageRow_(this.routerQueue_[0]);
+
+  if (canProcessNextMessage) {
+    this.beginRoutingMessage_(
+        new NetSimMessage(this.shard_, this.routerQueue_[0]),
+        clock);
+  }
+};
+
+/**
+ * Lets the auto-DNS part of the router simulation handle its requests.
+ * For now, auto-DNS can do "batch" processing, no throughput limits.
+ * @private
+ */
+NetSimRouterNode.prototype.tickAutoDns_ = function () {
+  if (this.isAutoDnsProcessing_) {
+    return;
+  }
+
+  // Filter DNS queue down to requests the local simulation should handle.
+  var localSimDnsRequests = this.autoDnsQueue_
+      .filter(this.localSimulationOwnsMessageRow_.bind(this))
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this));
+
+  // If there's anything we can process, kick off the processing.
+  if (localSimDnsRequests.length > 0) {
+    this.isAutoDnsProcessing_ = true;
+    this.processAutoDnsRequests_(localSimDnsRequests, function () {
+      this.isAutoDnsProcessing_ = false;
+    }.bind(this));
+  }
 };
 
 /**
@@ -805,77 +923,106 @@ NetSimRouterNode.prototype.canHandleMessage_ = function (message) {
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   if (!this.simulateForSender_) {
-    // Not configured to handle anything yet; don't process messages.
+    // Not a simulating router, we can ignore these.
+    // Really should never hit this, since we don't hook up listeners
+    // unless simulating.
     return;
   }
 
-  if (this.isProcessingMessages_) {
-    // We're already in this method, getting called recursively because
-    // we are making changes to the table.  Ignore this call.
-    return;
+  this.updateRouterQueue_(rows);
+
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.updateAutoDnsQueue_(rows);
   }
+};
 
-  var messages = rows
-      .map(function (row) {
-        return new NetSimMessage(this.shard_, row);
-      }.bind(this))
-      .filter(this.canHandleMessage_.bind(this));
 
-  if (messages.length === 0) {
-    // No messages for us, no work to do.
-    return;
+/**
+ * Updates our cache of all messages that are going to the router (regardless
+ * of which simulation will handle them), so we can use it for stats and rate
+ * limiting.
+ * @param {messageRow[]} rows - message table rows
+ */
+NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToRouter_.bind(this));
+  if (!_.isEqual(this.routerQueue_, newQueue)) {
+    this.routerQueue_ = newQueue;
+
+    // TODO: Drop packets that exceed queue memory (IF not already processing?)
+
+    // Propagate notification of queue change (for stats, etc)
+
+    // Work will proceed on next tick
   }
-
-  // Setup (sync): Set processing flag
-  logger.info("Router received " + messages.length + " messages");
-  this.isProcessingMessages_ = true;
-
-  // Step 1 (async): Pull all our messages out of storage.
-  NetSimEntity.destroyEntities(messages, function (err) {
-    if (err) {
-      logger.error("Error pulling message off the wire for routing; " + err.message);
-      this.isProcessingMessages_ = false;
-      return;
-    }
-
-    // Step 2 (async): Fetch our connection info, which we will need for routing
-    // This request caches the info, so we don't need the result.
-    this.getConnections(function (err) {
-      if (err) {
-        logger.error("Error retrieving router connection info");
-        this.isProcessingMessages_ = false;
-        return;
-      }
-
-      // Step 3 (async): Route all messages to destinations
-      this.routeMessages_(messages, function () {
-        // Cleanup (sync): Clear "processing" flag
-        logger.info("Router finished processing " + messages.length + " messages");
-        this.isProcessingMessages_ = false;
-      }.bind(this));
-    }.bind(this));
-  }.bind(this));
 };
 
 /**
- * Routes all messages (to remote storage) asynchronously, and calls
- * onComplete when all messages have been routed and/or an error occurs.
- * @param {NetSimMessage[]} messages
- * @param {!NodeStyleCallback} onComplete
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if this message is destined for the router (not the
+ *          auto-DNS part though!) and FALSE if destined anywhere else.
+ * @private
  */
-NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
-  if (messages.length === 0) {
-    onComplete(null);
-    return;
+NetSimRouterNode.prototype.isMessageToRouter_ = function (messageRow) {
+  if (this.dnsMode === DnsMode.AUTOMATIC && this.isMessageToAutoDns_(messageRow)) {
+    return false;
   }
 
-  this.routeMessage_(messages[0], function (err, result) {
+  return messageRow.toNodeID === this.entityID;
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.beginRoutingMessage_ = function (message, clock) {
+  logger.info("Begin routing: " + message.payload);
+  this.isProcessing_ = true;
+  this.currentMessage_ = message;
+  this.processingCompletionTime_ = clock.time +
+      this.calculateProcessingDurationForMessage_(message);
+  logger.info("Will complete at " + this.processingCompletionTime_);
+};
+
+/**
+ * @private
+ */
+NetSimRouterNode.prototype.finishRoutingCurrentMessage_ = function () {
+  logger.info("Finishing routing for message");
+  this.routeMessage_(this.currentMessage_, function (err) {
+    if (err) {
+      logger.error(err);
+    }
+
+    // No matter what, we should clear our processing status so we can
+    // try again on the next packet.
+    this.isProcessing_ = false;
+    logger.info("Done routing message");
+  }.bind(this));
+
+  // Clear the current message immediately so we don't try to route
+  // it more than once.
+  this.currentMessage_ = null;
+  this.processingCompletionTime_ = undefined;
+};
+
+/**
+ *
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
+  logger.info("Destroying message...");
+  message.destroy(function (err, result) {
     if (err) {
       onComplete(err, result);
       return;
     }
 
-    this.routeMessages_(messages.slice(1), onComplete);
+    logger.info("Message destroyed.");
+
+    this.forwardMessageToRecipient_(message, onComplete);
   }.bind(this));
 };
 
@@ -888,10 +1035,10 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
  * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
+NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onComplete) {
+  logger.info("Forwarding message...");
   var toAddress;
   var routerNodeID = this.entityID;
-  var autoDnsNodeID = this.entityID;
 
   // Find a connection to route this message to.
   try {
@@ -908,18 +1055,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
     // This packet has reached its destination, it's done.
     logger.warn("Packet stopped at router.");
     this.log(message.payload);
-    onComplete(null);
-    return;
-  }
-
-  // Automatic DNS: Requests to the reserved auto-DNS address that are coming
-  // FROM the router node are handled by the auto-dns node logic
-  if (this.dnsMode === DnsMode.AUTOMATIC &&
-      message.fromNodeID === routerNodeID &&
-      message.toNodeID === autoDnsNodeID &&
-      toAddress === AUTO_DNS_RESERVED_ADDRESS) {
-    logger.warn("Packet passed to auto-DNS");
-    this.generateDnsResponse_(message);
     onComplete(null);
     return;
   }
@@ -948,10 +1083,146 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
 };
 
 /**
- * @param {NetSimMessage} message
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given row should be operated on by the local
+ *          simulation, FALSE if another user's simulation should handle it.
  * @private
  */
-NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
+NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
+  // Local simulation can't handle anything if it's not initialized.
+  if (!this.simulateForSender_) {
+    return false;
+  }
+
+  var packet, fromAddress, toAddress, simulateForAddress;
+  var routerNodeID = this.entityID;
+
+  // One extra responsibility in auto-DNS mode: Should handle messages from the
+  // auto-DNS to the router IF they are addressed to the local client.
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+
+    // Gather address info to confirm this packet's destination
+    packet = new Packet(this.packetSpec_, messageRow.payload);
+    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    simulateForAddress = this.getAddressForNodeID_(this.simulateForSender_);
+
+    var isOnRouterLoopback = messageRow.fromNodeID === routerNodeID &&
+        messageRow.toNodeID === routerNodeID;
+
+    var isBetweenLocalAndDns = (
+        fromAddress === simulateForAddress &&
+        toAddress === AUTO_DNS_RESERVED_ADDRESS
+        ) || (
+        fromAddress === AUTO_DNS_RESERVED_ADDRESS &&
+        toAddress === simulateForAddress
+        );
+
+    if (isOnRouterLoopback && isBetweenLocalAndDns) {
+      return true;
+    }
+  }
+
+  // Local simulation of router normally handles only the messages from the
+  // local client to the router.
+  return messageRow.fromNodeID === this.simulateForSender_ &&
+      messageRow.toNodeID === routerNodeID;
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @returns {number} time required to process this message, in milliseconds.
+ * @private
+ */
+NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (message) {
+  return message.payload.length * 1000 / this.bandwidthBitsPerSecond_;
+};
+
+/**
+ * Update queue of all auto-dns messages, which can be used for stats or limiting.
+ * @param {messageRow[]} rows
+ * @private
+ */
+NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToAutoDns_.bind(this));
+  if (!_.isEqual(this.autoDnsQueue_, newQueue)) {
+    this.autoDnsQueue_ = newQueue;
+
+    // Propagate notification of queue change?
+
+    // Work will proceed on next tick
+  }
+};
+
+/**
+ *
+ * @param {messageRow} messageRow
+ */
+NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
+  var packet, toAddress;
+  try {
+    packet = new Packet(this.packetSpec_, messageRow.payload);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+  } catch (error) {
+    logger.warn("Packet not readable by auto-DNS: " + error);
+    return false;
+  }
+
+  // Messages to the auto-dns are both to and from the router node, and
+  // addressed to the DNS.
+  return messageRow.toNodeID === this.entityID &&
+      messageRow.fromNodeID === this.entityID &&
+      toAddress === AUTO_DNS_RESERVED_ADDRESS;
+};
+
+/**
+ * Batch-process DNS requests, generating responses wherever possible.
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.processAutoDnsRequests_ = function (messages, onComplete) {
+  // 1. Remove the requests from the wire
+  NetSimEntity.destroyEntities(messages, function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // 2. Generate all responses, asynchronously.
+    this.generateDnsResponses_(messages, onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponses_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  // Process head
+  this.generateDnsResponse_(messages[0], function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // Process tail
+    this.generateDnsResponses_(messages.slice(1), onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete) {
   var packet, fromAddress, query, responseHeaders, responseBody, responseBinary;
   var routerNodeID = this.entityID;
   var autoDnsNodeID = this.entityID;
@@ -963,6 +1234,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
     query = packet.getBodyAsAscii(BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
+    onComplete(error);
     return;
   }
 
@@ -999,5 +1271,5 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
       autoDnsNodeID,
       routerNodeID,
       responseBinary,
-      function() {});
+      onComplete);
 };

@@ -252,6 +252,12 @@ describe("NetSimRouterNode", function () {
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
       NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 0});
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -266,6 +272,12 @@ describe("NetSimRouterNode", function () {
       }, 'messageBody');
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 0});
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -282,6 +294,12 @@ describe("NetSimRouterNode", function () {
       }, 'messageBody');
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 0});
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 1);
 
@@ -294,6 +312,35 @@ describe("NetSimRouterNode", function () {
       });
       assertEqual(messages[0].fromNodeID, router.entityID);
       assertEqual(messages[0].toNodeID, remoteA.entityID);
+    });
+
+    it ("requires variable time to forward packets based on bandwidth", function () {
+      var fromNodeID = localClient.entityID;
+      var toNodeID = router.entityID;
+      var fromAddress = localClient.address;
+      var toAddress = remoteA.address;
+
+      var payload = encoder.concatenateBinary({
+        toAddress: intToBinary(toAddress, 4),
+        fromAddress: intToBinary(fromAddress, 4)
+      }, '0'.repeat(1000));
+
+      assertEqual(payload.length, 1008);
+
+      router.bandwidthBitsPerSecond_ = 1000;
+      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+
+      // Router detects message on first tick, but does not send it until
+      // elapsed time has passed.
+      router.tick({time: 0});
+      assertTableSize(testShard, 'logTable', 0);
+
+      router.tick({time: 1007});
+      assertTableSize(testShard, 'logTable', 0);
+
+      // At 1000bps, it should take 1008ms to send 1008 bits
+      router.tick({time: 1008});
+      assertTableSize(testShard, 'logTable', 1);
     });
   });
 
