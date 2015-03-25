@@ -496,10 +496,10 @@ Blockly.Block.prototype.getHeightWidth = function() {
   var bBox;
 
   try {
-    var ieLessThan10 = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
     var initialStyle;
 
-    if (ieLessThan10) {
+    if (ie10OrOlder) {
       // Required to set display to inline during calculation in IE <= 10
       initialStyle = this.getSvgRoot().style.display;
       this.getSvgRoot().style.display = "inline";
@@ -507,7 +507,7 @@ Blockly.Block.prototype.getHeightWidth = function() {
 
     bBox = goog.object.clone(this.getSvgRoot().getBBox());
 
-    if (ieLessThan10) {
+    if (ie10OrOlder) {
       // Reset to original display value
       this.getSvgRoot().style.display = initialStyle;
     }
