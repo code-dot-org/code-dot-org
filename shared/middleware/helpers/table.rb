@@ -78,6 +78,12 @@ class Table
     end
   end
 
+  def self.table_names(channel_id)
+    PEGASUS_DB[:app_tables].where(app_id:channel_id, storage_id:nil).group(:table_name).map do |row|
+      row[:table_name]
+    end
+  end
+
 end
 
 require 'aws-sdk'
@@ -98,7 +104,7 @@ class DynamoTable
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
   end
 
-  def db()
+  def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
       access_key_id: CDO.s3_access_key_id,
@@ -109,7 +115,7 @@ class DynamoTable
   def delete(id)
     begin
       db.delete_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         key:{'hash'=>@hash, 'row_id'=>id},
         expected:row_id_exists(id),
       )
@@ -124,7 +130,7 @@ class DynamoTable
     unless ids.empty?
       db.batch_write_item(
         request_items:{
-          CDO.dynamo_table_name => ids.map do |id|
+          CDO.dynamo_tables_table => ids.map do |id|
             { delete_request: { key:{'hash'=>@hash, 'row_id'=>id}, } }
           end
         }
@@ -135,7 +141,7 @@ class DynamoTable
 
   def fetch(id)
     row = db.get_item(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key:{'hash'=>@hash, 'row_id'=>id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
@@ -149,7 +155,7 @@ class DynamoTable
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -176,9 +182,11 @@ class DynamoTable
       row_id = next_id
 
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
           hash:@hash,
+          channel_id:@channel_id,
+          table_name:@table_name,
           row_id:row_id,
           updated_at:DateTime.now.to_s,
           updated_ip:ip_address,
@@ -197,7 +205,7 @@ class DynamoTable
 
   def next_id()
     page = db.query(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key_conditions: {
         "hash" => {
           attribute_value_list: [@hash],
@@ -226,7 +234,7 @@ class DynamoTable
   def update(id, value, ip_address)
     begin
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
           hash:@hash,
           row_id:id,
@@ -249,7 +257,7 @@ class DynamoTable
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -270,6 +278,37 @@ class DynamoTable
 
   def value_from_row(row)
     JSON.load(row['value']).merge(id:row['row_id'].to_i)
+  end
+
+  def self.table_names(channel_id)
+    @dynamo_db ||= Aws::DynamoDB::Client.new(
+      region: 'us-east-1',
+      access_key_id: CDO.s3_access_key_id,
+      secret_access_key: CDO.s3_secret_access_key,
+    )
+    last_evaluated_key = nil
+    results = {}
+    begin
+      page = @dynamo_db.query(
+        table_name:CDO.dynamo_tables_table,
+        index_name:CDO.dynamo_tables_index,
+        key_conditions: {
+          "channel_id" => {
+            attribute_value_list: [channel_id.to_i],
+            comparison_operator: "EQ",
+          },
+        },
+        attributes_to_get:['table_name'],
+        exclusive_start_key:last_evaluated_key,
+      ).first
+
+      page[:items].each do |item|
+        results[item['table_name']] = true
+      end
+
+      last_evaluated_key = page[:last_evaluated_key]
+    end while last_evaluated_key
+    results.keys
   end
 
 end

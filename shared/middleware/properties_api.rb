@@ -14,6 +14,8 @@ class PropertiesApi < Sinatra::Base
     end
   end
 
+  PropertyType = CDO.use_dynamo_properties ? DynamoPropertyBag : PropertyBag
+
   #
   # GET /v3/(shared|user)-properties/<channel-id>
   #
@@ -22,7 +24,7 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
     dont_cache
     content_type :json
-    PropertyBag.new(channel_id, storage_id(endpoint)).to_hash.to_json
+    PropertyType.new(channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
   #
@@ -33,7 +35,7 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
     content_type :json
-    PropertyBag.new(channel_id, storage_id(endpoint)).get(name).to_json
+    PropertyType.new(channel_id, storage_id(endpoint)).get(name).to_json
   end
 
   #
@@ -43,7 +45,7 @@ class PropertiesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
-    PropertyBag.new(channel_id, storage_id(endpoint)).delete(name)
+    PropertyType.new(channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
 
@@ -65,7 +67,7 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = PropertyBag.new(channel_id, storage_id(endpoint)).set(name, PropertyBag.parse_value(request.body.read), request.ip)
+    value = PropertyType.new(channel_id, storage_id(endpoint)).set(name, PropertyBag.parse_value(request.body.read), request.ip)
 
     dont_cache
     content_type :json
