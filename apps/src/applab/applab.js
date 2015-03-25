@@ -129,7 +129,7 @@ function adjustAppSizeStyles() {
         } else if (rules[j].media && childRules) {
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -141,6 +141,11 @@ function adjustAppSizeStyles() {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#codeWorkspace") {
               // set the left for the codeWorkspace
@@ -177,12 +182,6 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function stepSpeedFromSliderSpeed(sliderSpeed) {
@@ -675,6 +674,22 @@ Applab.init = function(config) {
 
   studioApp.init(config);
 
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
+
   if (level.editCode) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
@@ -711,9 +726,13 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
     var designModeButton = document.getElementById('designModeButton');
-    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
     var codeModeButton = document.getElementById('codeModeButton');
-    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
   }
 
   user = {applabUserId: config.applabUserId};
@@ -851,7 +870,9 @@ studioApp.runButtonClick = function() {
 
   // Show view data button now that channel id is available.
   var viewDataButton = document.getElementById('viewDataButton');
-  viewDataButton.style.display = "inline-block";
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
