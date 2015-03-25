@@ -350,12 +350,18 @@ NetSimRouterNode.prototype.buildRow_ = function () {
 NetSimRouterNode.prototype.tick = function (clock) {
   this.heartbeat_.tick(clock);
 
-  if (this.isProcessing_) {
-    this.tickWhileProcessing_(clock);
-  } else {
+  // Check whether we should start processing.
+  if (!this.isProcessing_) {
     this.tickNotProcessing_(clock);
   }
 
+  // Can have a processing tick on the same tick, if we
+  // started processing something.
+  if (this.isProcessing_) {
+    this.tickWhileProcessing_(clock);
+  }
+
+  // Give the auto-dns its own tick as well.
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
   }
@@ -368,7 +374,7 @@ NetSimRouterNode.prototype.tick = function (clock) {
 NetSimRouterNode.prototype.tickWhileProcessing_ = function (clock) {
   var doneProcessingCurrentMessage =
       this.currentMessage_ &&
-      this.processingCompletionTime_ &&
+      this.processingCompletionTime_ !== undefined &&
       clock.time >= this.processingCompletionTime_;
 
   if (doneProcessingCurrentMessage) {
@@ -389,6 +395,38 @@ NetSimRouterNode.prototype.tickNotProcessing_ = function (clock) {
         new NetSimMessage(this.shard_, this.routerQueue_[0]),
         clock);
   }
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.beginRoutingMessage_ = function (message, clock) {
+  this.isProcessing_ = true;
+  this.currentMessage_ = message;
+  this.processingCompletionTime_ = clock.time +
+  this.calculateProcessingDurationForMessage_(message);
+};
+
+/**
+ * @private
+ */
+NetSimRouterNode.prototype.finishRoutingCurrentMessage_ = function () {
+  this.routeMessage_(this.currentMessage_, function (err) {
+    if (err) {
+      logger.error(err);
+    }
+
+    // No matter what, we should clear our processing status so we can
+    // try again on the next packet.
+    this.isProcessing_ = false;
+  }.bind(this));
+
+  // Clear the current message immediately so we don't try to route
+  // it more than once.
+  this.currentMessage_ = null;
+  this.processingCompletionTime_ = undefined;
 };
 
 /**
@@ -971,42 +1009,6 @@ NetSimRouterNode.prototype.isMessageToRouter_ = function (messageRow) {
 };
 
 /**
- * @param {NetSimMessage} message
- * @param {RunLoop.Clock} clock
- * @private
- */
-NetSimRouterNode.prototype.beginRoutingMessage_ = function (message, clock) {
-  logger.info("Begin routing: " + message.payload);
-  this.isProcessing_ = true;
-  this.currentMessage_ = message;
-  this.processingCompletionTime_ = clock.time +
-      this.calculateProcessingDurationForMessage_(message);
-  logger.info("Will complete at " + this.processingCompletionTime_);
-};
-
-/**
- * @private
- */
-NetSimRouterNode.prototype.finishRoutingCurrentMessage_ = function () {
-  logger.info("Finishing routing for message");
-  this.routeMessage_(this.currentMessage_, function (err) {
-    if (err) {
-      logger.error(err);
-    }
-
-    // No matter what, we should clear our processing status so we can
-    // try again on the next packet.
-    this.isProcessing_ = false;
-    logger.info("Done routing message");
-  }.bind(this));
-
-  // Clear the current message immediately so we don't try to route
-  // it more than once.
-  this.currentMessage_ = null;
-  this.processingCompletionTime_ = undefined;
-};
-
-/**
  *
  * @param {NetSimMessage} message
  * @param {!NodeStyleCallback} onComplete
@@ -1135,6 +1137,9 @@ NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow
  * @private
  */
 NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (message) {
+  if (this.bandwidthBitsPerSecond_ === Infinity) {
+    return 0;
+  }
   return message.payload.length * 1000 / this.bandwidthBitsPerSecond_;
 };
 
