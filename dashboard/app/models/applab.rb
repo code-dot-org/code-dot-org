@@ -82,7 +82,7 @@ class Applab < Blockly
         "setGreen": null,
         "setBlue": null,
         "setAlpha": null,
-        "setRGBA": null,
+        "setRGB": null,
 
         // Data
         "startWebRequest": null,

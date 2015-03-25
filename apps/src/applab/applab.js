@@ -1612,6 +1612,8 @@ Applab.dot = function (opts) {
       // If the pen is up and the color has been changed, use that color:
       ctx.strokeStyle = Applab.turtle.penUpColor;
     }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -1619,6 +1621,7 @@ Applab.dot = function (opts) {
       // If the pen is up, reset strokeStyle back to transparent:
       ctx.strokeStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1627,8 +1630,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1688,6 +1693,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
