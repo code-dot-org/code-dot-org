@@ -5590,8 +5590,8 @@ StudioApp.prototype.configureDom = function (config) {
     }
   }
 
-  if (config.embed) {
-    visualizationColumn.className = visualizationColumn.className + " embed";
+  if (config.embed && config.hideSource) {
+    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
   if (!config.embed && !config.hideSource) {

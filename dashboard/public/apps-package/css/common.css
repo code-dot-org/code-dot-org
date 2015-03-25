@@ -48,7 +48,7 @@ html[dir='rtl'] #visualizationColumn {
   top: 0px;
   left: 0px; }
 
-#visualizationColumn.embed {
+#visualizationColumn.embed_hidesource {
   margin: 0 auto; }
 
 #visualizationColumn.pin_bottom {
