@@ -1299,20 +1299,30 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
  * @returns true if any block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block;
+    var parent;
+    do {
+      parent = rootBlock.getParent();
+      if (parent) {
+        rootBlock = parent;
+      }
+    } while(parent);
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    // Does this block have a connection without a block attached
+    return block.inputList.some(function (input) {
+      return input.connection && !input.connection.targetBlock();
+    });
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
