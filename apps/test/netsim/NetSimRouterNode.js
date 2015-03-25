@@ -315,29 +315,30 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("Router bandwidth limits", function () {
-      var fromNodeID, toNodeID, fromAddress, toAddress, payload;
+      var fromNodeID, toNodeID, fromAddress, toAddress;
+
+      var sendMessageOfSize = function (messageSizeBits) {
+        var payload = encoder.concatenateBinary({
+          toAddress: intToBinary(toAddress, 4),
+          fromAddress: intToBinary(fromAddress, 4)
+        }, '0'.repeat(messageSizeBits - 8));
+
+        NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      };
 
       beforeEach(function () {
         fromNodeID = localClient.entityID;
         toNodeID = router.entityID;
         fromAddress = localClient.address;
         toAddress = remoteA.address;
-
-        payload = encoder.concatenateBinary({
-          toAddress: intToBinary(toAddress, 4),
-          fromAddress: intToBinary(fromAddress, 4)
-        }, '0'.repeat(1000));
-
-        // Payload is 1008 bits
-        assertEqual(payload.length, 1008);
       });
 
       it ("requires variable time to forward packets based on bandwidth", function () {
-        router.bandwidthBitsPerSecond_ = 1000;
+        router.bandwidthBitsPerSecond_ = 1000; // 1 bit per ms
+        sendMessageOfSize(1008);
 
         // Router detects message on first tick, but does not send it until
         // enough time has passed to send the message based on bandwidth
-        NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
         router.tick({time: 0});
         assertTableSize(testShard, 'logTable', 0);
 
@@ -352,12 +353,35 @@ describe("NetSimRouterNode", function () {
 
       it ("routes packet on first tick if bandwidth is infinite", function () {
         router.bandwidthBitsPerSecond_ = Infinity;
+        sendMessageOfSize(1008);
 
         // At infinite bandwidth, router forwards message as soon as it is
         // detected, on the first tick.
-        NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
         router.tick({time: 0});
         assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("routes 'batches' of packets when multiple packets fit in the bandwidth", function () {
+        router.bandwidthBitsPerSecond_ = 100; // 0.1 bit per ms
+
+        sendMessageOfSize(40);
+        sendMessageOfSize(40);
+        sendMessageOfSize(40);
+
+        // On initial appearance, no messages get sent, but they should all
+        // 'start processing' because they've been seen by the router.  This
+        // enables batch processing on slow ticks later.
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 0);
+
+        // On this tick, two messages should get forwarded because enough
+        // time has passed for them both to be sent given our current bandwidth.
+        router.tick({time: 800});
+        assertTableSize(testShard, 'logTable', 2);
+
+        // On this final tick, the third message should be sent
+        router.tick({time: 1200});
+        assertTableSize(testShard, 'logTable', 3);
       });
     });
   });

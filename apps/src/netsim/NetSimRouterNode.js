@@ -126,6 +126,15 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.simulateForSender_ = undefined;
 
   /**
+   * Local cache of the last tick time in the local simulation.
+   * Allows us to schedule/timestamp events that don't happen inside the
+   * tick event.
+   * @type {number}
+   * @private
+   */
+  this.simulationTime_ = 0;
+
+  /**
    * Packet format specification this router will use to parse, route, and log
    * packets that it receives.  Set on router that is simulated by client.
    *
@@ -213,21 +222,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {boolean}
    * @private
    */
-  this.isProcessing_ = false;
-
-  /**
-   * Message currently being processed.
-   * @type {NetSimMessage}
-   * @private
-   */
-  this.currentMessage_ = null;
-
-  /**
-   * Completion time for processing current message, on RunLoop clock.
-   * @type {number}
-   * @private
-   */
-  this.processingCompletionTime_ = undefined;
+  this.isRouterProcessing_ = false;
 
   /**
    * Local cache of message rows that need to be processed by (any simulation
@@ -235,10 +230,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {messageRow[]}
    * @private
    */
-  this.routerQueue_ = [];
+  this.routerQueueCache_ = [];
 
   /**
-   *
+   * Set of scheduled 'routing events'
+   * @type {Object[]}
+   * @private
+   */
+  this.localRoutingSchedule_ = [];
+
+  /**
    * @type {boolean}
    * @private
    */
@@ -348,20 +349,9 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterNode.prototype.tick = function (clock) {
+  this.simulationTime_ = clock.time;
   this.heartbeat_.tick(clock);
-
-  // Check whether we should start processing.
-  if (!this.isProcessing_) {
-    this.tickNotProcessing_(clock);
-  }
-
-  // Can have a processing tick on the same tick, if we
-  // started processing something.
-  if (this.isProcessing_) {
-    this.tickWhileProcessing_(clock);
-  }
-
-  // Give the auto-dns its own tick as well.
+  this.tickRouting_.call(this, clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
   }
@@ -371,62 +361,87 @@ NetSimRouterNode.prototype.tick = function (clock) {
  * @param {RunLoop.Clock} clock
  * @private
  */
-NetSimRouterNode.prototype.tickWhileProcessing_ = function (clock) {
-  var doneProcessingCurrentMessage =
-      this.currentMessage_ &&
-      this.processingCompletionTime_ !== undefined &&
-      clock.time >= this.processingCompletionTime_;
+NetSimRouterNode.prototype.tickRouting_ = function (clock) {
+  this.scheduleNewPackets();
 
-  if (doneProcessingCurrentMessage) {
-    this.finishRoutingCurrentMessage_();
+  if (this.isRouterProcessing_) {
+    return;
+  }
+
+  // Process requests that are at or past their scheduled time.
+  var dueForRouting = this.getAndUnscheduleMessagesDueForRouting(clock);
+  if (dueForRouting.length > 0) {
+    this.isRouterProcessing_ = true;
+    this.routeMessages_(dueForRouting, function () {
+      this.isRouterProcessing_ = false;
+    }.bind(this));
   }
 };
 
 /**
- * @param {RunLoop.Clock} clock
- * @private
+ * Destructive operation: Removes schedule entries that are at or past their
+ * scheduled time, generates the message objects for those schedule entries,
+ * and returns them.
+ * @param {RunLoop.clock} clock
+ * @returns {NetSimMessage[]}
  */
-NetSimRouterNode.prototype.tickNotProcessing_ = function (clock) {
-  var canProcessNextMessage = this.routerQueue_.length > 0 &&
-      this.localSimulationOwnsMessageRow_(this.routerQueue_[0]);
-
-  if (canProcessNextMessage) {
-    this.beginRoutingMessage_(
-        new NetSimMessage(this.shard_, this.routerQueue_[0]),
-        clock);
-  }
-};
-
-/**
- * @param {NetSimMessage} message
- * @param {RunLoop.Clock} clock
- * @private
- */
-NetSimRouterNode.prototype.beginRoutingMessage_ = function (message, clock) {
-  this.isProcessing_ = true;
-  this.currentMessage_ = message;
-  this.processingCompletionTime_ = clock.time +
-  this.calculateProcessingDurationForMessage_(message);
-};
-
-/**
- * @private
- */
-NetSimRouterNode.prototype.finishRoutingCurrentMessage_ = function () {
-  this.routeMessage_(this.currentMessage_, function (err) {
-    if (err) {
-      logger.error(err);
+NetSimRouterNode.prototype.getAndUnscheduleMessagesDueForRouting = function (clock) {
+  var dueForRouting = [];
+  this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (entry) {
+    if (clock.time >= entry.time) {
+      dueForRouting.push(new NetSimMessage(this.shard_, entry.row));
+      return false;
     }
-
-    // No matter what, we should clear our processing status so we can
-    // try again on the next packet.
-    this.isProcessing_ = false;
+    return true;
   }.bind(this));
+  return dueForRouting;
+};
 
-  // Clear the current message immediately so we don't try to route
-  // it more than once.
-  this.currentMessage_ = null;
-  this.processingCompletionTime_ = undefined;
+/**
+ * Examine the queue for anything that should be handled by the local
+ * simulation, that hasn't been added to the schedule yet.  Schedule it after
+ * everything that appears before it in the router queue.
+ */
+NetSimRouterNode.prototype.scheduleNewPackets = function () {
+  var row, belongsToLocalSim, notScheduled;
+  for (var i = 0; i < this.routerQueueCache_.length; i++) {
+    row = this.routerQueueCache_[i];
+    belongsToLocalSim = this.localSimulationOwnsMessageRow_(row);
+    notScheduled = !this.isScheduled(row);
+
+    if (belongsToLocalSim && notScheduled) {
+      // Add up send times of all packets in queue up to this one, and including
+      // this one, to get its send time.
+      var sendTime = this.routerQueueCache_
+          .slice(0, i + 1)
+          .reduce(function (prev, cur) {
+            return prev + this.calculateProcessingDurationForMessage_(cur);
+          }.bind(this), this.simulationTime_);
+      this.scheduleRouting(row, sendTime);
+    }
+  }
+};
+
+/**
+ * @param {messageRow} row
+ * @param {number} sendTime
+ */
+NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
+  this.localRoutingSchedule_.push({
+    row: row,
+    time: sendTime
+  });
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given row is represented in the local simulation
+ *          routing schedule.
+ */
+NetSimRouterNode.prototype.isScheduled = function (messageRow) {
+  return undefined !== _.find(this.localRoutingSchedule_, function (entry) {
+    return entry.row.id === messageRow.id;
+  });
 };
 
 /**
@@ -983,8 +998,8 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  */
 NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   var newQueue = rows.filter(this.isMessageToRouter_.bind(this));
-  if (!_.isEqual(this.routerQueue_, newQueue)) {
-    this.routerQueue_ = newQueue;
+  if (!_.isEqual(this.routerQueueCache_, newQueue)) {
+    this.routerQueueCache_ = newQueue;
 
     // TODO: Drop packets that exceed queue memory (IF not already processing?)
 
@@ -1006,6 +1021,22 @@ NetSimRouterNode.prototype.isMessageToRouter_ = function (messageRow) {
   }
 
   return messageRow.toNodeID === this.entityID;
+};
+
+NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  this.routeMessage_(messages[0], function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.routeMessages_(messages.slice(1), onComplete);
+  }.bind(this));
 };
 
 /**
