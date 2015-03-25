@@ -14,9 +14,11 @@
 
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
-var EncodingType = netsimConstants.EncodingType;
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
+
+var EncodingType = netsimConstants.EncodingType;
+var NodeType = netsimConstants.NodeType;
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node
@@ -29,9 +31,9 @@ var NetSimRouterNode = require('./NetSimRouterNode');
 exports.nodesFromRows = function (shard, rows) {
   return rows
       .map(function (row) {
-        if (row.type === NetSimClientNode.getNodeType()) {
+        if (row.type === NodeType.CLIENT) {
           return new NetSimClientNode(shard, row);
-        } else if (row.type == NetSimRouterNode.getNodeType()) {
+        } else if (row.type == NodeType.ROUTER) {
           return new NetSimRouterNode(shard, row);
         }
         // Oops!  We probably shouldn't ever get here.
