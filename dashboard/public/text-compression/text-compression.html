@@ -189,31 +189,24 @@
       var poemDisplay = poemText;
       poemCalc = poemText;
 
-      var poemDisplayHighlight = poemText;
-
       var dict = document.getElementById("dictionary").value.split("\n");
       // Go backwards through dict because self-referencing entries should go first.
       for (var i = dict.length - 1; i >= 0; i--) {
         if (dict[i] != "") {
           // First compute any self referencing -- this is the string we'll look for in the poem.
           var strToLookFor = fillOutSelfReference(dict[i], dict, i);
-
-          //NOTE: poemDisplayHighlight is a kludge fix needed to support entry of your own text.  Problem was previous version was
-          // embedding <mark> tags for highlighting, and then continuing to calculate on that version.  Notice that 'poemDisplay'
-          // and 'poemDisplay' highlight both operate on poemDisplay and just substitute slightly different things.  The working version
-          // of the poem for this computation is poemDisplay.
-          poemDisplayHighlight = poemDisplay.replace(new RegExp(escapeRegExp(strToLookFor), "gi"), "<mark>" + dictEntries[i] + "</mark>");
           poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(strToLookFor), "gi"), "" + dictEntries[i]);
           poemCalc = poemCalc.replace(new RegExp(strToLookFor, "gi"), "#");
         }
       }
+      var poemDisplayHighlight = poemDisplay.replace(new RegExp('(' + dictEntries.join('|') + ')', "g"), "<mark>$1</mark>");
       document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
       calculateData();
     }
   </script>
 </head>
 <body>
-<p><b>Directions:</b></p>
+<p><b>Instructions:</b></p>
 <ul>
   <li>Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right.
   <li>As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.
