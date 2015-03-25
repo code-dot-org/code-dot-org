@@ -14,7 +14,7 @@ class PropertiesApi < Sinatra::Base
     end
   end
 
-  PropertyType = CDO.use_dynamo_properties ? DynamoPropertyBag : PropertyBag 
+  PropertyType = CDO.use_dynamo_properties ? DynamoPropertyBag : PropertyBag
 
   #
   # GET /v3/(shared|user)-properties/<channel-id>

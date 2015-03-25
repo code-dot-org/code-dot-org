@@ -57,10 +57,10 @@ class TablesTest < Minitest::Unit::TestCase
     assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
     record = read_records.first
     assert_equal 8, record['age']
-    
+
     delete_record(record_id)
     assert read_records.first.nil?
-    
+
     self.delete_channel
   end
 
