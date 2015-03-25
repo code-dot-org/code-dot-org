@@ -488,7 +488,7 @@ th:
           title: แก้ไข Code
           description: ""
         events:
-          title: Events
+          title: เหตุการณ์
           description: ""
         builder:
           title: Builder
@@ -525,6 +525,7 @@ th:
   project:
     projects: Projects
     create: Create Project
+    create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
     save: บันทึก

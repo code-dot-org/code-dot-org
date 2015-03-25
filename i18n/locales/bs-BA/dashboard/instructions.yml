@@ -1,7 +1,6 @@
 bs:
   data:
     instructions:
-       (copy 1)_instruction: 'Pokušaj koristiti blok "ponavljanja" da bi koristio/la manje blokova...'
       10A_instruction: Dobro, hajmo da završimo ovaj zadatak sa Zelenim Kvadratom sa veličinom od 175 piksela.
       2-3 _instruction: Ljubičasti cvjetovi mogu imati 1 ili 0 za nektar. Obrati pažnju da ne sakupiš nektar iz ljubičastog cvijeta ako on ne sadrži nektar.
       2-3 Artist 1 new_instruction: Zdravo, ja sam umjetnik. Možeš napisati kod pomoću kojeg ću ja nacrtati skoro sve što želiš. Koristi nekoliko blokova da bih ja nacrtao sive linije u slici. (Svaka linija je 100 piksela duga)
@@ -418,17 +417,47 @@ bs:
       Big Game Booleans 4_instruction: Odlično! Sada kada imamo ove funkcije za provjeru lijeve i desne strane ekrana, promijeni na-ekranu? funkciju tako da provjerava sigurno-lijevo? I sigurno-desno?, isto kao što smo uradili sa Šišmiš Sem.
       Big Game Booleans 5_instruction: 'U ovom trenutku tvoje igre tvoja opasnost bi trebala da se kreće preko ekrana s desna na lijevo, i tvoja meta bi trebala trčati po ekranu s lijeva na desno. Oboje bi se trebali vratiti na suprotne strane. Provjeri na trenutak da li tvoja igra radi ono što ti želiš, i onda idi na "Završi" da nastaviš.'
       Big Game Collision 1 (copy 1)_instruction: 'Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.'
-      Big Game Collision 1_instruction: 'Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.'
+      Big Game Collision 1_instruction: |
+        At this point you've programmed a video
+        game with a moving target and danger, both of which return to the screen once
+        they've left, and a player that responds to keyboard input. Click run to
+        see how your game is currently working, and then we'll dig into the final
+        missing piece - collision detection!
       Big Game Collision 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers keypresses as numeric key codes - the up arrow is 38
-        and the down arrow is 40. You can lookup other key codes in your student workbook.
-      Big Game Collision 3_instruction: Naša meta, opasnost i igrač se sada mogu kretati. Jedino što je preostalo sada za dovršiti je odrediti kada se oni dodiruju da bismo mogli promijeniti rezultat. Prvo ćeš morati dovršiti funkciju za daljinu tako da možeš mjeriti dužinu između dvije tačke u ravni. Kao primjer smo ti dali funkciju za određivanje dužine linije.
-      Big Game Collision 4_instruction: 'Još malo pa gotovo! Sada kada možeš mjeriti razdaljinu između dvije tačke, još samo moraš odlučiti kada su te dvije tačke dovoljno blizu da bi se smatralo da se likovi dodiruju. Dovrši sudar? funkciju koja će provjeravati razdaljinu i vratiti "istinito" ako su dvije tačke dovoljno blizu da se smatra da se dodiruju (100 piksela razdaljina je dobra za početak).'
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Collision 3_instruction: |
+        In order to know if two of our sprites are
+        touching, we first need to measure the distance between their center points.
+        Use the Pythagorean Theorem to complete this distance function so that it
+        returns the distance between the player's center coordinates (px, py), and
+        the center coordinates of another character (cx, cy). We've provided a working
+        line-length function to help you out.
+      Big Game Collision 4_instruction: |
+        Now that you have a way to measure the distance
+        between two points, you just need to decide when those points are close enough
+        to be considered touching. Complete the 'collide?' function so that it checks
+        the distance function and returns true if the two points are close enough
+        to touch (100 pixels apart is a good place to start).
       Big Game Complete (copy 1)_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Complete_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Final_instruction: Uspjeo/la si! U ovom trenutku bi tvoja igrica trebala biti potpuno funkcionalna. Uživaj u svojoj igrici i napravi završne promjene. Kada si sretan/na sa svojim finalnim uradkom, klikni na Završi i onda možeš podijeliti link na tvoju igricu. Dobro odrađeno!
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you work on your game, you used booleans to make your Target and
+        Danger return to the screen once the've left. Click Run to see how your game
+        looks right now, and then we'll get to making your Player move up and down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so that if moves the player
+        up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Testing_instruction: 'Demo dovršenog projekta Velika Igra - Algebra pomoću računarstva'
       Big Game Vars 1 (copy 1)_instruction: 'Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.'
       Big Game Vars 1_instruction: 'Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.'
@@ -842,7 +871,11 @@ bs:
       Eval Design Recipe 1_instruction: 'Dobro. Sada imamo Ugovor širok-pravougaonik: Brojčani Niz Karaktera -> Slika. Napiši primjer. Nacrtaj puni zeleni pravougaonik visine 100 piksela.'
       Eval Design Recipe 2 (copy 1)_instruction: Hajde da napravimo još jedan primjer prije nego napišemo definiciju funkcije. Ovaj puta nacrta puni crveni pravougaonik visine 75 piksela.
       Eval Design Recipe 2_instruction: Hajde da napravimo još jedan primjer prije nego napišemo definiciju funkcije. Ovaj puta nacrta puni crveni pravougaonik visine 75 piksela.
-      Eval Design Recipe 3_instruction: 'Recept za crtež za "široki-pravougaonik" već ima ugovor i jedan primjet. Možeš li napisati drugi primjer i onda dovršiti definiciju. Funkcija "široki-pravougaonik" bi trebala nacrtati pravougaonik date boje koji je duplo širi nego što je visok.'
+      Eval Design Recipe 3_instruction: |
+        The design recipe for "wide-rect" already
+        has a contract and one example. Can you write a second example and then complete
+        the definition. The "wide-rect" function should produce a rectangle of given
+        color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: 'Upotrijebi Recept za Crtež za kreiranje funkcije "zvjezdana_eksplozija" koja uzima određeni broj tačaka i prečnik, i vraća žutu radijalnu zvijezdu sa datim brojem tačaka gdje je unutrašnji prečnik jednak polovici vanjskog prečnika.'
       Eval Design Recipe 5_instruction: 'Koristeći Recept za Crtež, napiši funkciju "prugasta-zvijezda" koja uzima dvije boje i pravi zastavu koja je 250 piksela široka, 150 piksela visoka, sa tri horizontalne pruge datih boja slijedećeg redoslijeda: boja2, boja1, boja2.'
       Eval Design Recipe 6_instruction: 'Koristeći Recept za Crtež, napiši funkciju "veliki-poligon" koja bi trebala dati poligon datih stranica i boje koji zauzima većinu prozora, bez obzira ne broj stranica. Da bi bio siguran/na da poligon nije prevelik pri povećanju broja stranica, dužina stranice bi trebala biti obrnuto proporcionalna broju stranica, sa dužinom od (800/broj stranica).'
@@ -873,7 +906,6 @@ bs:
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: Vrijeme za slobodno igranje! Istraži dostupe blokove da bi nacrtai/la nešto interesantno. Pobirni se da snimiš i podijeliš svoje omiljene slike.
       Examples 4_instruction: Funkcija za smanjivanje
-      freeplay_instruction: Službeno si postao/la majstor umjetnik! Napravi zimsku idilu i podijeli je sa prijateljima.
       frozen circle function (copy 1)_instruction: "Upotrijebi novu 'kreiraj krug' blok i napravi 10 preklapajućih blokova. Nemoj zaboraviti skočiti naprijed između krugova"
       frozen circle function in circle_instruction: Hajde sada da napravimo 20 preklapajućih krugova, okrećući za 18 stepeni između svakog kruga.
       frozen circle function with parameter_instruction: 'Evo "Napravi krug" blok koji može napraviti krugove različitih veličina. Možeš li ovo upotrijebiti da napraviš mali krug veličine 5 i veliki krug veličine 10?'
@@ -891,13 +923,10 @@ bs:
       frozen freeplay_instruction: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
       frozen line_instruction: Zdravo! Ja sam Elsa od Arendelle. Pomozi mi da napravim liniju.
       frozen perpendicular_instruction: 'Hajde sada da napravimo dvije linije koje zatvaraju ugao od 90 stepeni. Trebati ćeš koristiti "Okreni" i "Pokreni" blok.'
-      frozen snowflake base_instruction: Napravi ove tri linije koje su razmaknute za 45 stepeni
       frozen snowflake branch_instruction: 'Pokušaj upotrijebiti "Napravi granu pahulje" blok da bi se napravile tri grane koje počinju ličiti na pahuljice.'
       frozen snowflake full_instruction: Hajde da to ponovimo 8 puta da bismo napravili predivnu pahulju!
-      frozen snowflower pattern_instruction: Kakvi divni sniježni cvjetovi! Hajde da napravimo manje sniježne cvjetove da bismo pokrili čitavo klizalište. Ne zaboravi skočiti naprijed za 150 piksela između svakog od cvjetova.
       frozen snowflower_instruction: Zamršeni sniježni uzorci mogu biti napravljeni pomoću vrlo jednostavnih oblika. Možeš li napraviti uzorak ponavljajući 5 krugova veličine 5 i 5 krugova veličine 10?
       frozen square iterative_instruction: Izgleda da smo na pola puta za pravljenje kvadrata. Hajde da sastavimo 4 linije da bismo dobili kvadrat.
-      frozen square loop (copy 1)_instruction: Postoji više načina da se napravi kvadrat. Možeš li upotrijebiti blok Ponavljanja da bi ponovo napravio/la kvadrat, ali sada koristeći manje blokova? Koji uzorak možeš staviti unutar Ponavljaj bloka?
       frozen square loop 3x_instruction: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       frozen square loop_instruction: 'Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? '
       frozen square snowflake_instruction: 'Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?'
@@ -1082,7 +1111,8 @@ bs:
         their pizza toppings! But you still can't please everyone, and folks are
         coming in to order toppings that Luigi doesn't have. Instead of saying no
         to those people, could you update the "else" clause so that we charge them
-        a premium for toppings that we don't normally offer?
+        a premium for toppings that we don't normally offer? Let's charge $10,000
+        for a topping we don't carry.
       Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Uradi ovo!
       Maze screenshot Work_instruction: Test instructions

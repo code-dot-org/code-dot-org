@@ -54,6 +54,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.myRouter = null;
 
   /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = {};
+
+  /**
    * Widget where we will post sent messages.
    * @type {NetSimLogPanel}
    * @private
@@ -134,11 +140,13 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 /**
  * Configure this node controller to actively simulate, and to post sent and
  * received messages to the given log widgets.
+ * @param {!netsimLevelConfiguration} levelConfig
  * @param {!NetSimLogPanel} sentLog
  * @param {!NetSimLogPanel} receivedLog
  */
-NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
-    receivedLog) {
+NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
+    sentLog, receivedLog) {
+  this.levelConfig_ = levelConfig;
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
@@ -243,33 +251,33 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
       return;
     }
 
-    self.myRouter = router;
-    self.myRouter.initializeSimulation(self.entityID);
+    this.myRouter = router;
+    this.myRouter.initializeSimulation(this.entityID,
+        this.levelConfig_.routerExpectsPacketHeader);
 
-    router.requestAddress(wire, self.getHostname(), function (err) {
+    router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
         wire.destroy(function () {
           onComplete(err);
         });
-        self.myWire = null;
+        this.myWire = null;
         return;
       }
 
-      self.myRouter = router;
-      self.routerChange.notifyObservers(self.myWire, self.myRouter);
+      this.myRouter = router;
+      this.routerChange.notifyObservers(this.myWire, this.myRouter);
 
-      self.status_ = "Connected to " + router.getDisplayName() +
-      " with address " + wire.localAddress;
-      self.update(onComplete);
-    });
-  });
+      this.status_ = "Connected to " + router.getDisplayName() +
+          " with address " + wire.localAddress;
+      this.update(onComplete);
+    }.bind(this));
+  }.bind(this));
 };
 
 /**

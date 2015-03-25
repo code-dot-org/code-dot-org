@@ -3,15 +3,15 @@
   "emptyComputeBlock":"Bloğu \"hesapla\" bloğuna tutturmak zorundasınız.",
   "emptyFunctionalBlock":"Doldurulmamış bir giriş bloğunuz bulunuyor.",
   "equivalentExpression":"Tam olarak aynı ifade almak için argümanlar yeniden deneyin.",
-  "evaluate":"evaluate",
+  "evaluate":"değerlendirme",
   "extraTopBlocks":"Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
   "failedInput":"Fonksiyonunuz tüm değerler için doğru sonuca dönmüyor.",
-  "goal":"Amaç:",
+  "goal":"Hedef:\n",
   "levelIncompleteError":"Tanımın hedefle eşleşmiyor.",
   "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"İşte senin hesaplaman! Üzerinde çalışmaya devam et, yada sıradaki bulmacaya geç!",
   "yourExpression":"İfadeniz:",
   "wrongInput":"Fonksiyonunuzu yanlış değer ile çağırıyorsunuz.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expresison does not return the correct result."
+  "wrongResult":"İfadeniz doğru sonucu döndürmüyor"
 }

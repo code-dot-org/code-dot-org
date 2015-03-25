@@ -12,7 +12,7 @@ end
 %>
 to: '<%= format_email_address(affiliate[:email], affiliate[:name]) %>'
 from: "Code.org <info@code.org>"
-subject: "[Code.org] Workshop cancellation - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
+subject: "[Code.org] Workshop signup cancellation - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
 ---
 
 <%

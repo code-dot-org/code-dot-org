@@ -1,8 +1,10 @@
 {
   "a_and_b": "A/B",
+  "addPacket": "Add Packet",
   "ascii": "ASCII",
   "binary": "Δυαδικό",
   "bitCounter": "{x}/{y} bits",
+  "bits": "Bits",
   "clear": "Clear",
   "connected": "Connected",
   "decimal": "Decimal",
@@ -20,14 +22,19 @@
   "instructions": "Οδηγίες",
   "message": "Μήνυμα",
   "myDevice": "My Device",
+  "numBitsPerPacket": "{x} bits per packet",
   "_of_": " of ",
   "packet": "Packet",
+  "packetInfo": "Packet Info",
   "receivedMessageLog": "Received Message Log",
+  "removePacket": "Remove Packet",
   "router": "Router",
+  "routerX": "Router {x}",
   "send": "Send",
   "sendAMessage": "Send a Message",
   "sentMessageLog": "Sent Message Log",
   "to": "To",
+  "unlimited": "Unlimited",
   "workspaceHeader": "Προσομοιωτής Διαδικτύου",
-  "xOfY": "{x} of {y}"
+  "xOfYPackets": "{x} of {y}"
 }

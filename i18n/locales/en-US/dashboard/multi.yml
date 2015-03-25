@@ -140,6 +140,13 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: crwdns8565:0crwdne8565:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns35720:0crwdne35720:0
+        Blue colored blocks are associated with __________ ?: crwdns35721:0__________crwdne35721:0
+        a image: crwdns35722:0crwdne35722:0
+        a number: crwdns35723:0crwdne35723:0
+        a string: crwdns35724:0crwdne35724:0
+        boolean: crwdns35725:0crwdne35725:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -700,23 +707,18 @@ en:
         a secret password: crwdns35285:0crwdne35285:0
       Play Lab Rocket 6:
         Rocket Multiple Choice: crwdns34788:0crwdne34788:0
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: crwdns34789:0crwdne34789:0
         rocket-height(seconds) = seconds + 12: crwdns35286:0crwdne35286:0
         rocket-height(seconds) = seconds * 12: crwdns35287:0crwdne35287:0
         rocket-height(seconds) = 48 / seconds: crwdns35288:0crwdne35288:0
         rocket-height(seconds)  = seconds * 48: crwdns35289:0crwdne35289:0
       Play Lab Rocket 7:
         Rocket Multiple Choice: crwdns34794:0crwdne34794:0
-        0: crwdns34795:0crwdne34795:0
-        1: crwdns34796:0crwdne34796:0
         rocket-height(seconds) = seconds * 2: crwdns34797:0crwdne34797:0
         rocket-height(seconds) = seconds * seconds: crwdns34798:0crwdne34798:0
         rocket-height(seconds) = seconds * 4: crwdns34799:0crwdne34799:0
         rocket-height(seconds) = seconds * 16: crwdns34800:0crwdne34800:0
       Play Lab Rocket 8:
         Rocket Multiple Choice: crwdns34801:0crwdne34801:0
-        0: crwdns34802:0crwdne34802:0
-        1: crwdns34803:0crwdne34803:0
         rocket-height(seconds) = seconds * 7 + 10: crwdns34804:0crwdne34804:0
         rocket-height(seconds) = seconds * 10 + 7: crwdns34805:0crwdne34805:0
         rocket-height(seconds) = seconds * 7 + 3: crwdns34806:0crwdne34806:0

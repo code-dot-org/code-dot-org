@@ -506,41 +506,42 @@ ru:
     sign_out: 'Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}"> выйти</a>.'
   zendesk_too_young_message: 'Извини, но пользователи твоего возраста не могут авторизоваться на нашем сайте технической поддержки. Ты можешь зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: не начато
+    in_progress: в процессе
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
-    assessment: assessment
+    assessment: тест
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
     all_courses: Все курсы
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: Проекты
+    create: Создать проект
+    create_a_project: 'Создать новый проект:'
+    new: Создать новый
+    rename: Переименовать
     save: Сохранить
     delete: Удалить
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Вернуться к курсу
+    my_projects: Мои проекты
     share: Поделитесь
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Поделитесь вашим проектом
+    share_copy_link: 'Скопировать ссылку:'
+    close: Закрыть
     more: Ещё
     name: Имя
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Обновлено
+    project_type: Тип проекта
+    help_text: 'Нажмите кнопку <strong>Сделать приложение</strong> или <strong>Нарисовать что-то</strong> ниже, чтобы создать новый проект лаборатории игр или художника! <br/>Вы можете вернуться и работать над вашими проектами в любое время.'
+    need_help: Нужна помощь, чтобы начать работать?
     really_delete: Удалить?
     delete_yes: Да
     delete_no: Нет
-    saved: Saved
-    not_saved: Not saved
+    saved: Сохранено
+    not_saved: Не сохранено
     cancel: Отмена
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Вы уверены, что хотите удалить этот проект?
+    delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у них больше не будет доступа к этому проекту.
+    view_all: Посмотреть Мои проекты

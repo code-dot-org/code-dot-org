@@ -29,7 +29,7 @@ pt:
       placeholder: Código de Secção (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
-    placeholder: Por favor introduza a sua dica aqui
+    placeholder: Por favor, digite a sua pista aqui
     submit: Adicionar dica
   appname: Code.org
   stage: nível
@@ -92,10 +92,10 @@ pt:
     additional_information: Necessitamos de alguma informação adicional para continuar a inscrevê-lo(a).
   signin_form:
     title: Já tem uma conta? Entre
-    login: E-mail ou nome de utilizador
+    login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
-    submit: Entrar
+    submit: Iniciar sessão
   signin:
     try_heading: Quer experimentar trabalhar com código sem se inscrever?
     try_hoc: Tente Uma Hora de Código primeiro
@@ -139,7 +139,7 @@ pt:
       username_in_use: '%{username} já existe, por favor escolhe outro'
       no_teacher: "Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'. Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente"
       section_not_found: "Não foi possível encontrar uma secção com o código '%{section_code}'."
-      blank_code: Por favor, introduza um código de secção
+      blank_code: Por favor, digite um código de secção
       cant_join_own_section: Pedimos desculpa, mas não pode juntar a sua própria secção.
     mail:
       invite_student:
@@ -281,7 +281,7 @@ pt:
       add: Add section
       manage: Manage sections
       section: Section
-      students: Students
+      students: Alunos
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
@@ -460,15 +460,15 @@ pt:
     support: Get Help
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
+    wrong_title: Resposta incorreta
     wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -527,6 +527,7 @@ pt:
   project:
     projects: Projects
     create: Create Project
+    create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
     save: Guardar

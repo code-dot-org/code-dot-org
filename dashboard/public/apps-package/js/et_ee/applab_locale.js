@@ -41,6 +41,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Jätka"},
 "container":function(d){return "Loo konteiner"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Tubli! Sa lahendasid viimase mõistatuse."},
 "nextLevel":function(d){return "Palju õnne! See ülesanne on lahendatud."},
 "no":function(d){return "Ei"},

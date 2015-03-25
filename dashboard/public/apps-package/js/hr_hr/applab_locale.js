@@ -54,6 +54,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Nastavi"},
 "container":function(d){return "kreiraj sadržnik"},
 "containerTooltip":function(d){return "Kreira sadržnik odjeljka i postavlja njegov unutarnji HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Čestitamo ! Riješili ste posljednji zadatak."},
 "nextLevel":function(d){return "Čestitamo! Ovaj zadatak je riješen."},
 "no":function(d){return "Ne"},

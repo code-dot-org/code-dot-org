@@ -102,11 +102,6 @@
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Въведете аритметичния израз тук
-      Glossary O:
-        ? 'Example: Call out conditional statements. If you line up in for recess
-          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
-        : 'Example: Call out conditional statements. If you line up in for recess
-          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
         Open text response example: Open text response example
         I loved it because...: I loved it because...
@@ -190,6 +185,13 @@
         Create images with bits and bytes.: Създаване на изображения с битове и байтове.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: описание тук
+      CSPStudentLessonPlanTemplate:
+        title: Заглавие
+        description here: описание тук
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []
@@ -219,7 +221,7 @@
       PDK5 Teacher Dashboard 4:
         Course Progress: Course Progress
       PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Teacher Dashboard
+        Teacher Dashboard: Учителско табло
       PDK5 Unplugged Intro C:
         Unplugged intro: Unplugged intro
       PDK5 UVideo Overview C:

@@ -173,6 +173,16 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Zgjehdje e Shumëfishtë Artisti
         Which blocks draw a rectangle with a perimeter of 100?: Cili bllok vizaton
@@ -838,9 +848,6 @@
         a secret password: një password sekret
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Kush
-          funksion do të përshkruaj një raketë që do të arrij 24 metra në 2 sekonda,
-          60 metra në 5 sekonda, dhe 108 metra në 9 sekonda?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
           12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
@@ -850,10 +857,6 @@
           * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Cili funksion do të përshkruaj një raketë që arrin 4 metra në 2 sekonda,
-          16 metra në 4 sekonda, dhe 256 metra në 16 sekonda?'
-        1: ': Cili funksion do të përshkruajë një raketë që arrin 4 metra në 2 sekonda,
-          16 metra në 4 sekonda, dhe 256 metra në 16 sekonda?'
         rocket-height(seconds) = seconds * 2: lartësia-raketës (sekondat) = sekondat
           * 2
         rocket-height(seconds) = seconds * seconds: lartësia-raketës (sekondat) =
@@ -864,10 +867,6 @@
           * 16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Cili funksion do të përshkruajë një raketë që arrin 47 metra në 5 sekonda,
-          97 metra në 10 sekonda, dhe 147 metra në 15 sekonda?'
-        1: ': Cili funskion do të përshkruaj një raketë që arrin 47 metra në 5 sekonda,
-          97 metra në 10 sekonda, dhe 147 metra në 15 sekonda?'
         rocket-height(seconds) = seconds * 7 + 10: lartësia-raketës(sekondat) = sekondat
           * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds

@@ -140,6 +140,13 @@ fi:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 'Taitelija: monivalinta'
         Which blocks draw a rectangle with a perimeter of 100?: Mitkä lohkot piirtävät suorakaiteen, jonka ympärysmitta on 100?
@@ -700,23 +707,18 @@ fi:
         a secret password: salainen salasana
       Play Lab Rocket 6:
         Rocket Multiple Choice: Raketin monivalintakysymyksiä
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Mikä funktio voisi kuvata rakettia, joka nousee 24 metriin 2 sekunnissa, 60 metriin 5 sekunnissa ja 108 metriin 9 sekunnissa?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Raketin monivalintakysymyksiä
-        0: '? Mikä funktio voisi kuvata rakettia, joka nousee 4 metriin 2 sekunnissa, 16 metriin 4 sekunnissa ja 256 metriin 16 sekunnissa?'
-        1: ': Mikä funktio voisi kuvata rakettia, joka nousee 4 metriin 2 sekunnissa, 16 metriin 4 sekunnissa ja 256 metriin 16 sekunnissa?'
         rocket-height(seconds) = seconds * 2: 'raketti-korkeus(sekuntia) = sekunnit * 2'
         rocket-height(seconds) = seconds * seconds: 'Raketti-korkeus(sekuntia) = sekunnit * sekunnit'
         rocket-height(seconds) = seconds * 4: 'raketti-korkeus(sekuntia) = sekunnit * 4'
         rocket-height(seconds) = seconds * 16: 'raketti-korkeus(sekuntia) = sekunnit * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: Raketin monivalintakysymyksiä
-        0: '? Mikä funktio voisi kuvata rakettia, joka nousee 47 metriin 5 sekunnissa, 97 metriin 10 sekunnissa ja 147 metriin 15 sekunnissa?'
-        1: ': Mikä funktio voisi kuvata rakettia, joka nousee 47 metriin 5 sekunnissa, 97 metriin 10 sekunnissa ja 147 metriin 15 sekunnissa?'
         rocket-height(seconds) = seconds * 7 + 10: 'raketti-korkeus(sekuntia) = sekunnit * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'raketti-korkeus(sekuntia) = sekunnit * 10 + 7'
         rocket-height(seconds) = seconds * 7 + 3: 'raketti-korkeus(sekuntia) = sekunnit * 7 + 3'

@@ -2,17 +2,17 @@
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Artist Debugging Multiple Choice One: Artiste Débogage Choix multiple Un
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Why won't this circle go all the way around?: Pourquoi ce cercle ne fait-il
+        Why won't this circle go all the way around?: Pourquoi ce cercle ne fera-t-il
           pas tout le tour ?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Artiste Boucles Choix Multiple
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
         Which shape is made by this loop?: Quelle forme est faite par cette boucle
@@ -22,7 +22,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Artiste Boucles Choix Multiple
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
         Which shape is made by this program?: Quelle forme est faite par ce programme
@@ -32,7 +32,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
+        Artist Functions Multiple Choice One: Artiste Fonctions Choix multiple Un
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
         Pick the correct blocks to draw this image using the given functions: Choisis
@@ -41,14 +41,14 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
+        Bee Conditionals Multiple Choice One: Abeille Conditions Choix multiple Un
         Which comparison below is true?: Quelle comparaison ci-dessous est vrai ?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
       2-3 bee conditionals multi 2:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Abeille Conditions Choix multiple Deux
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500
         Choose the best blocks.: Choisissez les meilleurs blocs.
@@ -57,7 +57,7 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
       2-3 bee conditionals multi 3:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Abeille Conditions Choix multiple Deux
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
         Choose the best blocks: Choisis les meilleurs blocs
@@ -66,7 +66,7 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: Abeille Boucles Choix multiple Un
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
         Which blocks collect all of the nectar?: Quels blocs recueillent la totalité
@@ -76,7 +76,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: Labyrinthe Choix multiple Un
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Choose the best answer.: Choisir la meilleure réponse.
@@ -170,6 +170,16 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Questions à choix multiples de l'Artiste
         Which blocks draw a rectangle with a perimeter of 100?: Quels blocs permettent
@@ -196,7 +206,7 @@
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Artiste Boucles Choix Multiple
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
         Which blocks will create the design?: Quels blocs vont créer le design?
@@ -214,7 +224,7 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        Bee Conditionals Multiple Choice: Abeille Conditions Choix multiple
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: '? Une fleur pourpre peut avoir 1, 2 ou 3 nectar(s), mais vous ne savez
           pas combien. Quel bloc correspondant recueille l''ensemble du nectar de
@@ -228,7 +238,7 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
+        Bee Debug Multiple Choice: Abeille Debogage Choix multiple
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Which version of the function will work?: Quelle version de la fonction fonctionnera
@@ -238,7 +248,7 @@
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
+        Bee Loops Multiple Choice: Abeille Boucles Choix multiple
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: Quels blocs permettrons de résoudre le
           puzzle ?
@@ -247,7 +257,7 @@
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
+        Famer Loops Multiple Choice: Fermier Boucles Choix multiple
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500
         Which blocks solve the puzzle?: Quels blocs permettent de résoudre le puzzle
@@ -267,7 +277,7 @@
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: Labyrinthe Conditions Choix multiple
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
         Which blocks solve the puzzle?: Quels blocs permettent de résoudre le puzzle
@@ -379,7 +389,7 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
         Video game Coordinates: Coordonnées de jeu vidéo
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Ninjacat Demo Embed.level: Ninjacat Démo Embed.level
         Which answer most accurately describes the unicorn's movement?: Quelle réponse
           décrit de la manière la plus précise le mouvement de la licorne ?
         The unicorn moves across the screen: La licorne se déplace sur l'écran
@@ -666,7 +676,7 @@
         17: '17'
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        What should f(1) produce?: Que devrait produire f (1) ?
         x: x
         117: '117'
         17: '17'
@@ -678,7 +688,7 @@
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x-10?: What is the value of x-10?
+        What is the value of x-10?: Quelle est la valeur de x-10 ?
         a function: une fonction
         5: '5'
         x: x
@@ -688,42 +698,43 @@
         What is the value of x?: Quelle est la valeur de x ?
         3: '3'
         15: '15'
-        do not know: do not know
+        do not know: Ne sais pas
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
           600
-        What is the value of (p - x)?: What is the value of (p - x)?
+        What is the value of (p - x)?: Quelle est la valeur de (p - x) ?
         q: q
         3: '3'
         5: '5'
       msm variables multi 6:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
           600
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        What is the value of string-length(q)?: Quelle est la valeur de string-length(q)
+          ?
         1: '1'
         hello: salut
         5: '5'
       msm variables multi 7:
-        f(x) = x + 3: f(x) = x + 3
+        f(x) = x + 3: f (x) = x + 3
         What is the name of the function?: Quel est le nom de la fonction ?
         f: f
         x: x
         3: '3'
       msm variables multi 8:
-        f(x) = x + 3: f(x) = x + 3
+        f(x) = x + 3: f (x) = x + 3
         What is the name of the variable?: Quel est le nom de la variable ?
         f: f
         x: x
         3: '3'
       msm variables multi 9:
-        f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        f(x) = x + 3: f (x) = x + 3
+        What is f(2)?: Quelle est la valeur de f(2)?
         6: '6'
         5: '5'
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: Quel est le nom de cette fonction ?
         g: g
         y: true
         3: '3'
@@ -735,77 +746,79 @@
         3: '3'
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: Que doit retourner g(2) ?
         6: '6'
         5: '5'
         y: true
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
-          Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
+        Strings and Images Multiple Choice: Chaînes et Choix Multiple d'images
+        Multi Strings Images 1.blocks3.level: Multi chaînes Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Lequel de ces blocs
+          d'évaluation dessinera l'image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi chaînes Images
           1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi chaînes Images
           1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi chaînes Images
           1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi chaînes Images
           1.blocks4.start_blocks, 300, 100
       PDK5 Basic CS:
-        Video Follow-up Question: Video Follow-up Question
-        Answer this question based on the video you just watched.: Answer this question
-          based on the video you just watched.
-        'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a set of instructions you give a computer to execute: a set of instructions
-          you give a computer to execute
-        a secret password: a secret password
+        Video Follow-up Question: Question de suivi vidéo
+        Answer this question based on the video you just watched.: Répondez à cette
+          question, en vous basant sur la vidéo que vous venez de regarder.
+        'A computer program, or code, is:': 'Un programme d''ordinateur, ou un code,
+          est :'
+        a part inside of a computer: une partie à l'intérieur d'un ordinateur
+        a week-long course to learn about computers: un cours de semaine pour en savoir
+          plus sur les ordinateurs
+        a set of instructions you give a computer to execute: un ensemble d'instructions
+          à exécuter que vous donnez à un ordinateur
+        a secret password: un mot de passe secret
       PDK5 Beyond:
-        What do I do now?: What do I do now?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This
-          is the last piece of our online PD. Congratulations! Click Im finished when
-          you are ready!
-        Im finished: Im finished
+        What do I do now?: Que dois-je faire maintenant ?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Il
+          s'agit de la dernière pièce de nos DP en ligne. Félicitations ! Lorsque
+          vous êtes prêt, cliquez sur Jai terminé !
+        Im finished: Jai terminé
       PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
-        Are you ready to move on?: Are you ready to move on?
+        Writing your first computer program!: Écrire son premier programme informatique
+          !
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Classroom Culture:
         Classroom Culture: Culture de la Classe
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Course Maps:
         Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
-        Are you ready to move on?: Are you ready to move on?
+        Overview of K-5 Courses: Vue d'ensemble de cours de CM2
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Glossary:
         Glossary: Glossaire
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Intro:
-        Welcome!: Welcome!
-        Before now, have you ever participated in an online PD program?: Before now,
-          have you ever participated in an online PD program?
+        Welcome!: Bienvenue !
+        Before now, have you ever participated in an online PD program?: Jusqu'à maintenant,
+          avez-vous jamais participé à un programme en ligne de DP ?
         'Yes': Oui
         'No': Non
       PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle
-          to the left of the workspace is called the
-        toolbox: toolbox
-        shelf: shelf
-        bin: bin
-        dropdown: dropdown
+        More Sequencing: Plus de séquençage
+        The grey rectangle to the left of the workspace is called the: Le rectangle
+          gris à gauche de l'espace de travail est appelé le
+        toolbox: boîte à outils
+        shelf: étagère
+        bin: poubelle
+        dropdown: liste déroulante
       PDK5 Teacher Dashboard:
-        Teacher Dashboard: Teacher Dashboard
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Dashboard: Tableau de bord enseignant
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Test1:
         title: titre
@@ -814,85 +827,80 @@
         wrong answer: mauvaise réponse
         right answer: bonne réponse
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
-        Are you ready to move on?: Are you ready to move on?
+        What is an unplugged activity?: Qu'est-ce qu'une activité débranchée ?
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 UVideo Overview:
-        Teacher Guides to all our unplugged activities: Teacher Guides to all our
-          unplugged activities
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Guides to all our unplugged activities: Guides de l'enseignant à toutes
+          nos activités débranchées
+        Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Visual Languages:
-        Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based
-          on the video you saw before, please answer the question below.
-        Why are visual programming languages easier to learn than text-based programming languages?: Why
-          are visual programming languages easier to learn than text-based programming
-          languages?
-        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because
-          you dont have to worry about syntax as much, like where to put a semi-colon
-        Because you can focus on the logic of programming: Because you can focus on
-          the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because
-          the commands are available in a menu rather than having to remember them
-          yourself
-        All of the above: All of the above
+        Visual Programming Languages: Langages de programmation visuels
+        Based on the video you saw before, please answer the question below.: En vous
+          basant sur la vidéo que vous avez vu avant, veuillez répondre à la question
+          ci-dessous.
+        Why are visual programming languages easier to learn than text-based programming languages?: Pourquoi
+          est-ce que les langages de programmation visuels sont plus faciles à apprendre
+          que les langages de programmation textuels ?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Parce
+          que vous n'avez pas autant à vous soucier de la syntaxe, comme où mettre
+          un point-virgule
+        Because you can focus on the logic of programming: Parce que vous pouvez vous
+          concentrer sur la logique de programmation
+        Because the commands are available in a menu rather than having to remember them yourself: Parce
+          que les commandes sont disponibles dans un menu plutôt que de devoir se
+          souvenir d'elles
+        All of the above: Toutes ces réponses
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
-        'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a set of instructions a person gives a computer to execute: a set of instructions
-          a person gives a computer to execute
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a secret password: a secret password
+        What is Computer Science?: Qu'est-ce que l'informatique ?
+        'A computer program, or code, is:': 'Un programme d''ordinateur, ou un code,
+          est :'
+        a part inside of a computer: une partie à l'intérieur d'un ordinateur
+        a set of instructions a person gives a computer to execute: un ensemble d'instructions
+          qu'une personne fait exécuter par un ordinateur
+        a week-long course to learn about computers: un cours de semaine pour en savoir
+          plus sur les ordinateurs
+        a secret password: un mot de passe secret
       Play Lab Rocket 6:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
-          function would describe a rocket that reaches 24 meters at 2 seconds, 60
-          meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
-          12
-        rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
-          12
-        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
-        rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds
+        Rocket Multiple Choice: Fusée Choix Multiple
+        rocket-height(seconds) = seconds + 12: rocket-height(secondes) = secondes
+          + 12
+        rocket-height(seconds) = seconds * 12: rocket-height(secondes) = secondes
+          * 12
+        rocket-height(seconds) = 48 / seconds: rocket-height(secondes) = 48 / secondes
+        rocket-height(seconds)  = seconds * 48: rocket-height(secondes) = secondes
           * 48
       Play Lab Rocket 7:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
-        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
-          * seconds
-        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
-        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds *
-          16
+        Rocket Multiple Choice: Fusée Choix Multiple
+        rocket-height(seconds) = seconds * 2: rocket-height(secondes) = secondes *
+          2
+        rocket-height(seconds) = seconds * seconds: rocket-height(secondes) = secondes
+          * secondes
+        rocket-height(seconds) = seconds * 4: rocket-height(secondes) = secondes *
+          4
+        rocket-height(seconds) = seconds * 16: rocket-height(secondes) = secondes
+          * 16
       Play Lab Rocket 8:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
+        Rocket Multiple Choice: Fusée Choix Multiple
+        rocket-height(seconds) = seconds * 7 + 10: rocket-height(secondes) = secondes
           * 7 + 10
-        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 + 7: rocket-height(secondes) = secondes
           * 10 + 7
-        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 7 + 3: rocket-height(secondes) = secondes
           * 7 + 3
-        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 - 3: rocket-height(secondes) = secondes
           * 10 - 3
       test multi image:
-        Maze Multiple Choice Two: Maze Multiple Choice Two
+        Maze Multiple Choice Two: Labyrinthe Choix multiple Deux
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: Dans ce puzzle tu
           dois sélectionner les fleurs correctes.
         Instructions: Consignes
-        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Click
-          the right answer, then submit. And here are some longer instructions just
-          to test things more.  How's that word wrapping?
+        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Cliquez
+          sur la bonne réponse, puis soumettre. Et voici quelques instructions plus
+          longues juste pour tester des choses en plus.  Comment est-ce que ce mot
+          sous-entend ?
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Quelles fleurs sont jaunes?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -910,13 +918,13 @@
         George Washington: George Washington
         George Jetson: George Jetson
       Test 1:
-        This is a test: This is a test
-        whatever: whatever
-        this is a question?: this is a question?
+        This is a test: Ceci est un test
+        whatever: quelle que soit
+        this is a question?: Il s'agit d'une question ?
         wrong answer: mauvaise réponse
         right answer: bonne réponse
       unique level name here:
-        line1<br/>line2: line1<br/>line2
+        line1<br/>line2: ligne1 <br/> ligne2
         description here: description ici
         Question: Question
         wrong answer: mauvaise réponse

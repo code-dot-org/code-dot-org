@@ -140,6 +140,13 @@ tr:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Sanatçı çoktan seçmeli
         Which blocks draw a rectangle with a perimeter of 100?: Hangi bloklar çapı 100 olan bir dikdörtgen çizer?
@@ -700,23 +707,18 @@ tr:
         a secret password: Gizli bir şifre
       Play Lab Rocket 6:
         Rocket Multiple Choice: Roket Çoktan Seçmeli Soru
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Hangi fonksiyon, bir roketin 2 saniyede 24 metreye, 5 saniyede 60 metreye, 9 saniyede 108 metreye ulaşmasını açıklar?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Roket Çoktan Seçmeli Soru
-        0: '? Hangi fonksiyon, bir roketin 2 saniyede 4 metre, 4 saniyede 16 metre, 16 saniyede 256 metre gitmesini açıklar?'
-        1: ': Hangi fonksiyon, bir roketin 2 saniyede 4 metre, 4 saniyede 16 metre, 16 saniyede 256 metre gitmesini açıklar?'
         rocket-height(seconds) = seconds * 2: 'Roket yüksekliği (saniye) = saniye * 2'
         rocket-height(seconds) = seconds * seconds: 'Roket yüksekliği(saniye) = saniye * saniye'
         rocket-height(seconds) = seconds * 4: 'Roket yüksekliği (saniye) = saniye * 4'
         rocket-height(seconds) = seconds * 16: 'Roket yüksekliği (saniye) = saniye * 16'
       Play Lab Rocket 8:
         Rocket Multiple Choice: Roket Çoktan Seçmeli Soru
-        0: '? Hangi fonksiyon, bir roketin 5 saniyede 47 metre, 10 saniyede 97 metre, 15 saniyede 97 metre gitmesini açıklar?'
-        1: '? Hangi fonksiyon, bir roketin 5 saniyede 47 metre, 10 saniyede 97 metre, 15 saniyede 97 metre gitmesini açıklar?'
         rocket-height(seconds) = seconds * 7 + 10: 'Roket yüksekliği(saniye) = saniye * 7 + 10'
         rocket-height(seconds) = seconds * 10 + 7: 'Roket yüksekliği(saniye) = saniye * 10 + 7'
         rocket-height(seconds) = seconds * 7 + 3: 'Roket yüksekliği(saniye) = saniye * 7 + 3'

@@ -87,8 +87,6 @@ hu:
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Ide írd az arimetikai kifejezést
-      Glossary O:
-        "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.": 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
         Open text response example: Open text response example
         I loved it because...: I loved it because...
@@ -110,7 +108,7 @@ hu:
         Your thoughts here: Your thoughts here
       PDK5 Impact 1:
         Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Szerinted a diákok szórakoztatónak és érdekesnek fogják találni az alsó tagozatos tanfolyamaink online tevékenységeit? Miért vagy miért nem?
         Your thoughts here: Your thoughts here
       PDK5 Impact 2:
         Connections to other Subjects: Connections to other Subjects
@@ -149,6 +147,12 @@ hu:
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: a leírás itt található
+      CSPStudentLessonPlanTemplate:
+        title: cím
+        description here: a leírás itt található
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]
@@ -165,7 +169,7 @@ hu:
         Vocabulary: Vocabulary
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
-        Pair Programming: Párban programozás
+        Pair Programming: Páros programozás
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Teacher Dashboard 1:

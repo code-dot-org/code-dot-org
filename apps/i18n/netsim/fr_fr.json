@@ -1,8 +1,10 @@
 {
   "a_and_b": "A / B",
+  "addPacket": "Ajouter le paquet",
   "ascii": "ASCII",
   "binary": "Binaire",
   "bitCounter": "{x}/{y} bits",
+  "bits": "Bits",
   "clear": "Réinitialiser",
   "connected": "Connecté",
   "decimal": "Décimal",
@@ -20,14 +22,19 @@
   "instructions": "Consignes",
   "message": "Message",
   "myDevice": "Mon appareil",
+  "numBitsPerPacket": "{x} bits per packet",
   "_of_": " sur ",
   "packet": "Paquet",
+  "packetInfo": "Packet Info",
   "receivedMessageLog": "Journal des messages reçus",
+  "removePacket": "Supprimer le paquet",
   "router": "Routeur",
+  "routerX": "Router {x}",
   "send": "Envoyer",
   "sendAMessage": "Envoyer un Message",
   "sentMessageLog": "Envoyé le journal des messages",
   "to": "À",
+  "unlimited": "Unlimited",
   "workspaceHeader": "Simulateur d'Internet",
-  "xOfY": "{x} sur {y}"
+  "xOfYPackets": "{x} of {y}"
 }

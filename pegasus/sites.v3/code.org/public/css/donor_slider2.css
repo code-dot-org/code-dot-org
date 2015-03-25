@@ -32,14 +32,6 @@ h2 {
   border: 0px solid #7665a0;
 }
 
-a {
-  text-decoration: none;
-  color: #7665a0;
-}
-a:hover, a:active {
-  text-decoration: none;
-}
-
 .label {
   display: block;
   font-family: 'Gotham 4r', sans-serif;

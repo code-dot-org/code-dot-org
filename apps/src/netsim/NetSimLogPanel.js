@@ -12,7 +12,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var netsimMsg = require('../../locale/current/netsim');
+var i18n = require('../../locale/current/netsim');
 var markup = require('./NetSimLogPanel.html');
 var packetMarkup = require('./NetSimLogPacket.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -21,12 +21,20 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 /**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
- * @param {string} logTitle
- * @param {boolean} [isMinimized] defaults to FALSE
+ * @param {Object} options
+ * @param {string} options.logTitle
+ * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) {
+var NetSimLogPanel = module.exports = function (rootDiv, options) {
+  /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = options.packetSpec;
+
   /**
    * List of controllers for currently displayed packets.
    * @type {Array.<NetSimLogPacket>}
@@ -42,7 +50,7 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
   this.currentEncodings_ = [];
 
   /**
-   * Current chunk size (bytesize) for intepreting binary in the log.
+   * Current chunk size (bytesize) for interpreting binary in the log.
    * @type {number}
    * @private
    */
@@ -51,8 +59,8 @@ var NetSimLogPanel = module.exports = function (rootDiv, logTitle, isMinimized) 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
-    panelTitle: logTitle,
-    beginMinimized: isMinimized
+    panelTitle: options.logTitle,
+    beginMinimized: options.isMinimized
   });
 };
 NetSimLogPanel.inherits(NetSimPanel);
@@ -62,14 +70,11 @@ NetSimLogPanel.prototype.render = function () {
   NetSimLogPanel.superPrototype.render.call(this);
 
   // Add our own content markup
-  var newMarkup = $(markup({
-    logInstanceID: this.instanceID_,
-    logTitle: this.logTitle_
-  }));
+  var newMarkup = $(markup({}));
   this.getBody().html(newMarkup);
 
   // Add a clear button to the panel header
-  this.addButton(netsimMsg.clear(), this.onClearButtonPress_.bind(this));
+  this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
@@ -93,9 +98,11 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
       scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
       scrollArea.outerHeight();
 
-  var newPacket = new NetSimLogPacket(packetBinary,
-      this.currentEncodings_,
-      this.currentChunkSize_);
+  var newPacket = new NetSimLogPacket(packetBinary, {
+    packetSpec: this.packetSpec_,
+    encodings: this.currentEncodings_,
+    chunkSize: this.currentChunkSize_
+  });
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
 
@@ -131,12 +138,14 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
 /**
  * A component/controller for display of an individual packet in the log.
  * @param {string} packetBinary - raw packet data
- * @param {EncodingType[]} encodings - which display style to use initially
- * @param {number} chunkSize - (or bytesize) to use when interpreting and
+ * @param {Object} options
+ * @param {packetHeaderSpec} options.packetSpec
+ * @param {EncodingType[]} options.encodings - which display style to use initially
+ * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
+var NetSimLogPacket = function (packetBinary, options) {
   /**
    * @type {string}
    * @private
@@ -144,16 +153,22 @@ var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
   this.packetBinary_ = packetBinary;
 
   /**
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = options.packetSpec;
+
+  /**
    * @type {EncodingType[]}
    * @private
    */
-  this.encodings_ = encodings;
+  this.encodings_ = options.encodings;
 
   /**
    * @type {number}
    * @private
    */
-  this.chunkSize_ = chunkSize;
+  this.chunkSize_ = options.chunkSize;
 
   /**
    * Wrapper div that we create once, and fill repeatedly with render()
@@ -172,6 +187,7 @@ var NetSimLogPacket = function (packetBinary, encodings, chunkSize) {
 NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
+    packetSpec: this.packetSpec_,
     chunkSize: this.chunkSize_
   });
   var jQueryWrap = $(rawMarkup);

@@ -41,6 +41,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuer"},
 "container":function(d){return "Créer un conteneur"},
 "containerTooltip":function(d){return "Crée un conteneur de division et définit son HTML interne."},
+"designMode":function(d){return "Conception"},
 "finalLevel":function(d){return "Félicitations ! Vous avez résolu l'énigme finale."},
 "nextLevel":function(d){return "Félicitations ! Vous avez terminé cette énigme."},
 "no":function(d){return "Non"},

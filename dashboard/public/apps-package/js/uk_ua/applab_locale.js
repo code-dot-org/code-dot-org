@@ -165,6 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Далі"},
 "container":function(d){return "створити контейнер"},
 "containerTooltip":function(d){return "Створює контейнер поділ і встановлює її внутрішній HTML."},
+"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
 "nextLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
 "no":function(d){return "Ні"},

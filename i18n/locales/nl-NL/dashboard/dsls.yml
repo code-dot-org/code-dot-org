@@ -87,8 +87,6 @@ nl:
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1)))'
         Type the arithmetic expression here: Typ hier de rekenkundige expressie
-      Glossary O:
-        "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.": 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
         Open text response example: Open text response example
         I loved it because...: I loved it because...
@@ -149,6 +147,12 @@ nl:
         Create images with bits and bytes.: Maak afbeeldingen met bits en bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: beschrijving hier
+      CSPStudentLessonPlanTemplate:
+        title: titel
+        description here: beschrijving hier
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]

@@ -155,9 +155,11 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "a_and_b":function(d){return "A/B"},
+"addPacket":function(d){return "Add Packet"},
 "ascii":function(d){return "ASCII"},
 "binary":function(d){return "Binary"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" bits"},
+"bits":function(d){return "Bits"},
 "clear":function(d){return "Clear"},
 "connected":function(d){return "Connected"},
 "decimal":function(d){return "Decimal"},
@@ -175,13 +177,18 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "instructions":function(d){return "Pokyny"},
 "message":function(d){return "Zpráva"},
 "myDevice":function(d){return "My Device"},
+"numBitsPerPacket":function(d){return appLocale.v(d,"x")+" bits per packet"},
 "_of_":function(d){return " of "},
 "packet":function(d){return "Packet"},
+"packetInfo":function(d){return "Packet Info"},
 "receivedMessageLog":function(d){return "Received Message Log"},
+"removePacket":function(d){return "Remove Packet"},
 "router":function(d){return "Router"},
+"routerX":function(d){return "Router "+appLocale.v(d,"x")},
 "send":function(d){return "Send"},
 "sendAMessage":function(d){return "Send a Message"},
 "sentMessageLog":function(d){return "Sent Message Log"},
 "to":function(d){return "To"},
+"unlimited":function(d){return "Unlimited"},
 "workspaceHeader":function(d){return "Internet Simulator"},
-"xOfY":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")}};
+"xOfYPackets":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")}};

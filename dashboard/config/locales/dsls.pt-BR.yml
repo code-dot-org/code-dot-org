@@ -102,75 +102,73 @@
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Insira a expressão aritmética aqui
-      Glossary O:
-        ? 'Example: Call out conditional statements. If you line up in for recess
-          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
-        : 'Example: Call out conditional statements. If you line up in for recess
-          in under 1 minute, then we can spend 10 extra minutes out on the playground.'
       Open text response example:
-        Open text response example: Open text response example
-        I loved it because...: I loved it because...
+        Open text response example: Exemplo de resposta com texto aberto
+        I loved it because...: Eu amei porque...
       PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitating
-          a positive learning environment in your computer science classroom
-        0: '? Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
-        1: ': Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
-        In my classroom, I want to...: In my classroom, I want to...
+        Facilitating a positive learning environment in your computer science classroom: Facilitando
+          um ambiente de aprendizado positivo em sua sala de ciência da computação
+        0: '? Agora que você sabe mais sobre nosso currículo, quais práticas você
+          quer usar para promover uma atmosfera saudável em sua sala de ciência da
+          computação?'
+        1: ': Agora que você sabe mais sobre nosso currículo, quais práticas você
+          quer usar para promover uma atmosfera saudável em sua sala de ciência da
+          computação?'
+        In my classroom, I want to...: Em minha sala de aula, eu quero...
       PDK5 Course Descriptions:
-        Course Structure: Course Structure
-        I am going to start with Course...: I am going to start with Course...
+        Course Structure: Estrutura do curso
+        I am going to start with Course...: Eu vou começar com o curso...
       PDK5 Difficulty:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
-          programming as hard as you expected? Explain why or why not. How does this
-          impact your teaching of computer science?
-        Your thoughts here: Your thoughts here
+        Degree of Difficulty: Grau de dificuldade
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Programar
+          foi tão difícil quanto você esperava? Explique por que ou por que não. Como
+          isso impacta em seu ensino de ciência da computação?
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Foundation:
-        Computer Science as a Foundational Skill: Computer Science as a Foundational
-          Skill
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do
-          you see computer science as a foundational skill for your students? Why
-          or why not?
-        Your thoughts here: Your thoughts here
+        Computer Science as a Foundational Skill: Ciência da computação como uma habilidade
+          fundamental
+        Do you see computer science as a foundational skill for your students? Why or why not?: Você
+          vê a ciência da computação como uma habilidade fundamental para seus alunos?
+          Por que, ou por que não?
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 1:
-        Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
-          you think your students will find the online activities in the K-5 courses
-          fun and engaging? Why or Why not?
-        Your thoughts here: Your thoughts here
+        Impact for students: Impacto para os alunos
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Você
+          acha que seus alunos vão achar as atividades online dos cursos K-5 divertidas
+          e envolventes? Por que, ou por que não?
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
-          computer science connect to other topics or subjects your students are learning
-          about? Explain why or why not.
-        Your thoughts here: Your thoughts here
+        Connections to other Subjects: Conexões com outros assuntos
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: A
+          ciência da computação se conecta a outros tópicos ou assuntos que seus alunos
+          estão aprendendo? Explique por que, ou por que não.
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Aplicações do mundo real para os alunos
         0: '? Does learning about computer science help students grow into the kind
           of citizens you are preparing them to be? Explain why or why not.'
-        1: ': Does learning about computer science help students grow into the kind
-          of citizens you are preparing them to be? Explain why or why not.'
-        Your thoughts here: Your thoughts here
+        1: ': Aprender ciência da computação ajuda os alunos a se tornarem o tipo
+          de cidadão que você os está preparando para se tornarem? Explique por que
+          ou por que não.'
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Problem Solving:
-        Problem Solving Methods: Problem Solving Methods
-        I could integrate this in my classroom by...: I could integrate this in my
-          classroom by...
+        Problem Solving Methods: Métodos de resolução de problema
+        I could integrate this in my classroom by...: Eu poderia integrar isso em
+          minha sala de aula...
       PDK5 Promo Video:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
-          approved'
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: aluno testado,
+          professor aprovado'
       PDK5 Promo Video 2:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
-          approved'
-        My first impressions of Code Studio are...: My first impressions of Code Studio
-          are...
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: aluno testado,
+          professor aprovado'
+        My first impressions of Code Studio are...: Minhas primeiras impressões do
+          Code Studio são...
       PDK5 Strategies O:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer
-          Science
-        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
-          think teaching computer science will be different than teaching other subjects
-          in these ways: ...'
+        Strategies for Teaching Computer Science: Estratégias para o ensino de ciência
+          da computação
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'Eu
+          acho que ensinar ciência da computação será diferente de ensinar outras
+          matérias das seguintes formas: ...'
       Test Markdown level:
         Enter title here: Insira o título aqui
         Enter prompt here: Digite a mensagem aqui
@@ -189,44 +187,51 @@
         title: título
         Create images with bits and bytes.: Crie imagens com bits e bytes.
       CSP Lesson 14 encode letter A instructions:
-        'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+        'Instructions: Encode the Letter A': 'Instruções: codifique a letra A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: descrição aqui
+      CSPStudentLessonPlanTemplate:
+        title: título
+        description here: descrição aqui
       External level test (will):
-        first computer program: first computer program
+        first computer program: primeiro programa de computador
       Hour of Code test content: []
       Mixing Colors:
         title: título
         description here: descrição aqui
       PDK5 Beyond C:
-        Beyond: Beyond
+        Beyond: Além do
       PDK5 Classroom Culture C:
         Classroom Culture: Cultura de sala de aula
       PDK5 Course Maps C: []
       PDK5 Course Overview C: []
       PDK5 Glossary C:
-        Vocabulary: Vocabulary
+        Vocabulary: Vocabulário
       PDK5 Intro C: []
       PDK5 Pair Programming 1:
         Pair Programming: Programação em duplas
       PDK5 Strategies:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer
-          Science
+        Strategies for Teaching Computer Science: Estratégias para o ensino de ciência
+          da computação
       PDK5 Teacher Dashboard 1:
-        Dashboard 1: Dashboard 1
+        Dashboard 1: Painel de controle 1
       PDK5 Teacher Dashboard 2:
-        Dashboard 2: Dashboard 2
+        Dashboard 2: Painel de controle 2
       PDK5 Teacher Dashboard 3:
-        Course Progress: Course Progress
+        Course Progress: Progresso do curso
       PDK5 Teacher Dashboard 4:
-        Course Progress: Course Progress
+        Course Progress: Progresso do curso
       PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Teacher Dashboard
+        Teacher Dashboard: Painel de controle do professor
       PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
+        Unplugged intro: Introdução offline
       PDK5 UVideo Overview C:
-        Kiki video overview: Kiki video overview
+        Kiki video overview: Visão geral do vídeo de Kiki
       PDK5 Why K5 CS:
-        Why teach computer science in elementary school?: Why teach computer science
-          in elementary school?
+        Why teach computer science in elementary school?: Por que ensinar ciência
+          da computação no ensino fundamental?
       Pixelation 1:
         Pixelation 1: Pixelização 1
         Create images with bits and bytes.: Crie imagens com bits e bytes.
@@ -240,11 +245,11 @@
         title: título
         description here: descrição aqui
       Pixelation 4:
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
-          test of External level -- NOT REAL
+        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelização 4 - Teste
+          de Baker de nível externo - não é real
         Create images with bits and bytes.: Crie imagens com bits e bytes.
       Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+        Pixelation 4x4 Empty: Pixelização 4x4 vazia
         Create images with bits and bytes.: Crie imagens com bits e bytes.
       Pixelation Bee:
         title: título
@@ -253,19 +258,19 @@
         title: título
         description here: descrição aqui
       Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
-          offset
+        Pixelation - Lesson 14 - Fix bit offset: Pixelização - Lição 14 - arrumar
+          o deslocamento dos bits
       Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
-          bit offset v.2
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - arrumar
+          o deslocamento dos bits v.2
       Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix
-          bit offset v.2
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - arrumar
+          o deslocamento dos bits v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
-        Make your own B&W image: Make your own B&W image
+        Make your own B&W image: Crie sua própria imagem em preto e branco
         description here: descrição aqui
       Pixelation - Lesson 14 - Instructions one bit error:
-        'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
+        'Lesson 14 - Task 2: fix the error': 'Lição 14 - Tarefa 2: conserte o erro'
         description here: descrição aqui
       Pixelation - Lesson 14 - Make the Letter A:
         title: título
@@ -277,58 +282,60 @@
         title: título
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
-          Play
+        Pixelation - Lesson 15 - Color Free Play: Pixelização - Lição 15 - atividade
+          livre de colorir
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        Pixelation - Lesson 15 - Color Shades: Pixelização - Lição 15 - tonalidades
+          de cores
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
-          Shades 4x4
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelização - Lição 15 - tonalidades
+          de cores 4x4
         description here: descrição aqui
       Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
-          3-bit color
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelização - Lição 15 - complete
+          cores de 3 bits
         description here: descrição aqui
       Pixelation - Lesson 15 - Favicon Instructions:
-        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
-          Instructions
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelização - Lição 15 - instruções
+          de favicon
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 1 instructions:
-        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
-          1 instructions
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelização - Lição 15 - instruções
+          da Tarefa 1
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 2 instructions:
-        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
-          2 instructions
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelização - Lição 15 - instruções
+          da Tarefa 2
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 3 instructions:
-        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
-          3 instructions
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelização - Lição 15 - instruções
+          da Tarefa 3
         description here: descrição aqui
       Pixelation - Video - Color 1:
-        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        Pixelation - Video - Color 1: Pixelização - vídeo - cor 1
         description here: descrição aqui
       Pixelation - Video - Color 2:
-        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        Pixelation - Video - Color 2: Pixelização - vídeo - cor 2
         description here: descrição aqui
       Pixelation - Video - Color 3:
-        Pixelation - Video - Color 3: Pixelation - Video - Color 3
+        Pixelation - Video - Color 3: Pixelização - vídeo - cor 3
         description here: descrição aqui
       Pixelation - Video - Lesson 14 - B and W:
-        How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
+        How to use the B&W Pixelation Widget: Como usar o widget de pixelização em
+          preto e branco
       Pixelation - Video - Tips and Tricks:
-        Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        Pixelation - Video - Tips and Tricks: Pixelização - vídeo - dicas e truques
         description here: descrição aqui
       test demo level:
         demo title: demo title
         demo description: demo description
       Test discourse forum-comment level:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
-          programming as hard as you expected? Explain why or why not. How does this
-          impact your teaching of computer science?
+        Degree of Difficulty: Grau de dificuldade
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Programar
+          foi tão difícil quanto você esperava? Explique por que ou por que não. Como
+          isso impacta em seu ensino de ciência da computação?
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
@@ -341,98 +348,96 @@
         Write a contract for a big red triangle that is 100 pixels in size: Escreva
           um contrato para um grande triângulo vermelho tem 100 pixels de tamanho
         EXAMPLE 1.solution_blocks, 300: EXEMPLO 1.solution_blocks, 300
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        Big Triangle|Image|Number|String: Triângulo grande|Imagem|Número|String
       Creating Contracts From Examples 2:
         Square Contract: Contrato de quadrado
         Write a contract for a purple square that is 15 pixels in size.: Escreva um
           contrato para um quadrado roxo que tem 15 pixels de tamanho.
         Example 2.solution_blocks, 300: Exemplo 2.solution_blocks, 300
-        Square|Image|Number|String: Square|Image|Number|String
+        Square|Image|Number|String: Quadrado|Imagem|Número|String
       Creating Contracts From Examples 3A:
         Banner Contract: Contrato de banner
         Banner Function block: Bloco de função banner
         Examples 3.solution_blocks, 300: Exemplos 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: banner|Imagem|String
       Creating Contracts From Examples 4:
         Shrink Contract: Contrato de encolhimento
         Try using the "shrink" function.: Tente usar a função "encolher".
         Examples 4.solution_blocks, 300: Exemplos 4.solution_blocks, 300
-        shrink|Image|Image: shrink|Image|Image
+        shrink|Image|Image: encolher|Imagem|Imagem
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Receita de design 1 Contrato
         0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
         1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: wide-rect|Imagem|Número|String
       Enter name here:
         Enter title here: Insira o título aqui
         Enter prompt here: Digite a mensagem aqui
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
+        Contract Name|Number|Number|String: Nome do contrato|Número|Número|String
       Eval Contracts 1 B:
         Star Contract: Contrato de estrela
         Write a contract for the star function: Escrever um contrato para a função
           estrela
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Eval Contracts 1 A.solution_blocks, 300: Avaliar Contratos 1 A.solution_blocks,
           300
-        star|Image|String|Number|String: star|Image|String|Number|String
+        star|Image|String|Number|String: estrela|Imagem|String|Número|String
       Eval Contracts 2 B:
         Rotate Contract: Contrato de rotação
         Write a contract for the rotate function: Escreva um contrato para a função
           de rotação
         Eval Contracts 2 A.solution_blocks, 300: Avaliar Contratos 2 A.solution_blocks,
           300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: rotação|Imagem|Número|Imagem
       Eval Contracts 3 B:
         Text Contract: Contrato de texto
         Write a contract for the text function: Escreva um contrato para a função
           de texto
         Eval Contracts 3 A.solution_blocks, 300: Avaliar Contratos 3 A.solution_blocks,
           300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: texto|Imagem|String|Número|String
       Eval Contracts 4 B:
         Scale Contract: Contrato de escala
         Write a contract for the scale function: Escreva um contrato para a função
           de escala
         Eval Contracts 4 A.solution_blocks, 300: Avaliar Contratos 4 A.solution_blocks,
           300
-        scale|Image|Number|Image: scale|Image|Number|Image
+        scale|Image|Number|Image: escala|Imagem|Número|Imagem
       Eval Contracts B:
         Star Contract: Contrato de estrela
         Write a contract for the star function: Escrever um contrato para a função
           estrela
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Eval Contracts 1 A.solution_blocks, 300: Avaliar Contratos 1 A.solution_blocks,
           300
-        star|Image|Number|String|String: star|Image|Number|String|String
+        star|Image|Number|String|String: estrela|Imagem|Número|String|String
       Eval Contracts D:
         Rotate Contract: Contrato de rotação
         Write a contract for the rotate function: Escreva um contrato para a função
           de rotação
         Eval Contracts 2 A.solution_blocks, 300: Avaliar Contratos 2 A.solution_blocks,
           300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: rotação|Imagem|Número|Imagem
       Eval Contracts F:
         Text Contract: Contrato de texto
         Write a contract for the text function: Escreva um contrato para a função
           de texto
         Eval Contracts 3 A.solution_blocks, 300: Avaliar Contratos 3 A.solution_blocks,
           300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: texto|Imagem|String|Número|String
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Receita de design 1 Contrato
         0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
         1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: wide-rect|Imagem|Número|String
       Rocket Contract 1:
         Contract for rocket-height: Contrato para altura do foguete
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        rocket-height|Number|Number: rocket-height|Number|Number
+        0: '? Um foguete decola, viajando a 15 metros por segundo. Escreva um contrato
+          para a função altura-foguete que recebe o número de segundos que se passaram
+          desde a decolagem e que retorna a altura do foguete passado esse tempo.'
+        1: ': Um foguete decola, viajando a 15 metros por segundo. Escreva um contrato
+          para a função altura-foguete que recebe o número de segundos que se passaram
+          desde a decolagem e que retorna a altura do foguete passado esse tempo.'
+        rocket-height|Number|Number: altura-foguete|Número|Número

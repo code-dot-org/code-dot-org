@@ -9,24 +9,22 @@
   </div>
 </div>
 
-<% var instructions = function() { -%>
-  <div id="bubble" class="clearfix">
-    <table id="prompt-table">
-      <tr>
-        <td id="prompt-icon-cell">
-          <img id="prompt-icon"/>
-        </td>
-        <td id="prompt-cell">
-          <p id="prompt">
-          </p>
-        </td>
-      </tr>
-    </table>
-    <div id="ani-gif-preview-wrapper">
-      <div id="ani-gif-preview">
-        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
-      </div>
-    </div>
+<% var gameButtons = function() { -%>
+  <div id="gameButtons">
+    <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+      <div><%= msg.runProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+    </button>
+    <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+      <div><%= msg.resetProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+    </button>
+    <% if (data.controls) { %>
+    <%- data.controls %>
+    <% } %>
+    <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
+    <% } %>
   </div>
 <% }; -%>
 
@@ -37,24 +35,42 @@
 
   <div id="belowVisualization">
 
-    <div id="gameButtons">
-      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-        <div><%= msg.runProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-      </button>
-      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
-        <div><%= msg.resetProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-      </button>
-      <% if (data.controls) { %>
-      <%- data.controls %>
+    <% gameButtons() %>
+    <div id="bubble" class="clearfix">
+      <table id="prompt-table">
+        <tr>
+          <td id="prompt-icon-cell">
+            <img id="prompt-icon"/>
+          </td>
+          <td id="prompt-cell">
+            <p id="prompt">
+            </p>
+          </td>
+        </tr>
+      </table>
+      <% if (data.inputOutputTable) { %>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
       <% } %>
-      <% if (data.extraControlRows) { %>
-      <%- data.extraControlRows %>
-      <% } %>
+      <div id="ani-gif-preview-wrapper">
+        <div id="ani-gif-preview">
+          <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+        </div>
+      </div>
     </div>
-    <% instructions() %>
-    
+
     <% if (data.hasDesignMode) { %>
       <div id="designModeButtons" style="display:none;">
         <button id="codeModeButton" class="share">
@@ -98,6 +114,9 @@
     <div id="designModeBox" style="display:none;">
       Welcome to Design mode. Under construction.
     </div>
+  <% } %>
+  <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+  <%- data.extraControlRows %>
   <% } %>
 </div>
 

@@ -1,7 +1,7 @@
 "no":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Vennligst korriger følgende feil:'
   activerecord:
     errors:
       messages:
@@ -297,15 +297,15 @@
     student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
+    email_confirm_wrong_email: (Feil e-postadresse?)
     email_resend_confirm: Send bekreftelse på nytt
     new_password_hint: (la stå tomt hvis du ikke vil endre det)
     current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine endringer)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Slett kontoen
+    delete_text: Klikk på knappen under for å slette kontoen din.
+    delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer.'
+    delete_confirm: Er du sikker på at du vil slette denne kontoen?
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -481,7 +481,7 @@
           title: K-8 Introduksjon i informatikk (15-25 timer)
           description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Kodetimen 2013
           description: ""
         edit-code:
           title: Rediger kode
@@ -511,41 +511,42 @@
     sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: ikke påbegynt
+    in_progress: pågår
     completed_too_many_blocks: fullført, for mange blokker
     completed_perfect: Perfekt fulført
     furthest_level_attempted: fremste nivå forsøkt
-    assessment: assessment
+    assessment: vurdering
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurs du arbeider med
+    completed_courses: Gjennomførte kurs
+    all_courses: Alle kurs
   project:
-    projects: Projects
-    create: Create Project
-    new: Create New
-    rename: Rename
+    projects: Prosjekter
+    create: Opprett prosjekt
+    create_a_project: 'Create a new project:'
+    new: Opprett ny
+    rename: Gi nytt navn
     save: Lagre
     delete: Slett
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Tilbake til kurset
+    my_projects: Mine prosjekter
     share: Del
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Del prosjektet
+    share_copy_link: 'Kopier lenken:'
+    close: Lukk
     more: Mer
     name: Navn
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Oppdatert
+    project_type: Prosjekttype
+    help_text: 'Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor for å lage et nytt spill eller kunstprosjekt!<br/>Du kan komme tilbake og arbeide videre på prosjektene når som helst.'
+    need_help: Trenger du hjelp for å komme i gang?
     really_delete: Slette?
     delete_yes: Ja
     delete_no: Nei
-    saved: Saved
-    not_saved: Not saved
+    saved: Lagret
+    not_saved: Ikke lagret
     cancel: Avbryt
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
+    delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
+    view_all: Vis mine prosjekter

@@ -7,6 +7,18 @@
   "properties": {
     "skin": "netsim",
     "instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service to get a student's address.",
+    "router_expects_packet_header": [
+      { "key": "toAddress", "bits": 4 },
+      { "key": "fromAddress", "bits": 4 },
+      { "key": "packetIndex", "bits": 4 },
+      { "key": "packetCount", "bits": 4 }
+    ],
+    "client_initial_packet_header": [
+      { "key": "toAddress", "bits": 4 },
+      { "key": "fromAddress", "bits": 4 },
+      { "key": "packetIndex", "bits": 4 },
+      { "key": "packetCount", "bits": 4 }
+    ],
     "show_add_packet_button": "true",
     "show_packet_size_control": "true",
     "default_packet_size_limit": 512,

@@ -305,9 +305,6 @@ em strong {
 
 .header-wrapper {
   padding-top: 15px;
-  &.feedback-bug-links {
-    padding-top: 30px;
-  }
   min-height: 70px;
 }
 
@@ -319,10 +316,6 @@ em strong {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
-
-  #betainfo {
-    font-size: 11px;
-  }
 }
 
 .header.hide_on_mobile,
@@ -352,9 +345,9 @@ a.header_status_bar:hover {
 
 #betainfo {
   position: absolute;
-  font-size: 11px;
-  top: 5px;
-  right: 25px;
+  font-size: 10px;
+  top: -1px;
+  right: 33px;
 }
 
 .main {
@@ -842,7 +835,6 @@ input.header_input {
 
   .loading {
     height: 520px;
-    margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 
@@ -856,7 +848,7 @@ input.header_input {
 
 #codeApp.pin_bottom {
   position: absolute;
-  top: 95px;
+  top: 85px;
   left: 25px;
   right: 25px;
   bottom: 0px;

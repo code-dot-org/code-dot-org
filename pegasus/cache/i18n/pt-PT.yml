@@ -10,7 +10,7 @@
     text-decoration:underline; font-weight:bold">planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> És um professor CS? Vê outros recursos CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Arrisque uma</h1><h2>Hora do Código</h2><h3># served</h3>
+  n_have_learned_an_hoc: <h1>Experimente uma</h1><h2>Hora de Código</h2><h3># já experimentaram</h3>
   anybody_can_learn: Todos podem aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade
@@ -26,7 +26,7 @@
     verdadeira ciência computacional e conceitos de programação neste curso de acompanhamento.
   hoc2014_heading: Junte-se à <a href="http://hourofcode.com">Hora de Código</a><br/>8
     - 14 de Dezembro de 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: Alunos
   hoc2014_try: Experimentar
   hoc2014_teachers: Professores
   hoc2014_host: Apresenta-o
@@ -142,11 +142,11 @@
   studiobar_hoc_title: A Hora de Código
   studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Faça e compartilhe o seu próprio jogo Flappy
-  studiobar_teacher_title: Feito para professores
-  studiobar_teacher_body: Introduza o Code Studio na sua sala de aula
+  studiobar_flappy_body: Cria e partilha o teu próprio jogo "Flappy"
+  studiobar_teacher_title: Salas de aula únicas
+  studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
   studiobar_frozen_title: Hora de Código
-  studiobar_frozen_body: Criar das maravilhas do inverno com Anna e Elsa
+  studiobar_frozen_body: Cria obras de arte na neve com a Anna e com a Elsa
   studiobar_donate_title: Doar
   studiobar_donate_body: Uma criança aprende por cada dólar que você doar
   studiobar_shop_title: Comprar
@@ -157,6 +157,10 @@
     &ldquo;It's never too late
     to learn&rdquo;
     Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
@@ -170,6 +174,7 @@
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: ''
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   contact_form_topic_student: Sou um estudante
@@ -292,7 +297,7 @@
   dashboard_sections_table_secret: Tipo de início de sessão
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Nome da Seção
   dashboard_sections_choose_secret: Se você gostaria de prestar contas aos seus alunos,

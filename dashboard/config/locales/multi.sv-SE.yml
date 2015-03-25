@@ -168,6 +168,16 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Flerval
         Which blocks draw a rectangle with a perimeter of 100?: Vilket block ritar
@@ -826,9 +836,6 @@
         a secret password: a secret password
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
-          function would describe a rocket that reaches 24 meters at 2 seconds, 60
-          meters at 5 seconds, and 108 meters at 9 seconds?
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
           12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
@@ -838,10 +845,6 @@
           * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
         rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
         rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
           * seconds
@@ -850,10 +853,6 @@
           16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
           * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds

@@ -87,8 +87,6 @@ en:
         10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
         (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
         Type the arithmetic expression here: crwdns24897:0crwdne24897:0
-      Glossary O:
-        "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.": crwdns35672:0crwdne35672:0
       Open text response example:
         Open text response example: crwdns35069:0crwdne35069:0
         I loved it because...: crwdns35070:0crwdne35070:0
@@ -149,6 +147,12 @@ en:
         Create images with bits and bytes.: crwdns35098:0crwdne35098:0
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": crwdns35597:0crwdne35597:0
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: crwdns35716:0crwdne35716:0
+        description here: crwdns35717:0crwdne35717:0
+      CSPStudentLessonPlanTemplate:
+        title: crwdns35718:0crwdne35718:0
+        description here: crwdns35719:0crwdne35719:0
       External level test (will):
         first computer program: crwdns35598:0crwdne35598:0
       Hour of Code test content: [ ]

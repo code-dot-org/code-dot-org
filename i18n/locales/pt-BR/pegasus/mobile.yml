@@ -11,7 +11,7 @@ pt-BR:
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Participar # outros.'
   name: Nome
   email: E-mail
   zipcode: CEP ou país
@@ -91,7 +91,7 @@ pt-BR:
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -125,28 +125,33 @@ pt-BR:
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
+    &ldquo;Eu desafio garotas em todos os países
+    a aprender com a Hora do Código&rdquo; 
     Malala
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Nunca é tarde demais
+    para aprender&rdquo;
+    Susan, CEO do YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Compreender a ciência da computação
+    está se tornando cada vez mais essencial...&rdquo;
+    Sheryl, COO do Facebook
   homepage_slot_text_hoc: A Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_frozen: Frozen com Anna e Elsa
+  homepage_slot_text_teacher: Painel de controle do professor
+  homepage_slot_text_studio: Todos os nossos tutoriais
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ""
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Assista ao vídeo
+  homepage_action_text_teachervideo: Assista ao vídeo
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Assine a petição
+  homepage_signpetition_dropdown: 'Assine nossa petição &#x25BE;'
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -314,8 +319,8 @@ pt-BR:
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: nova senha
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: não iniciado
+  dashboard_progress_in_progress: em progresso
   dashboard_progress_not_completed: não concluído
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
   dashboard_progress_completed_perfect: concluído, perfeito
