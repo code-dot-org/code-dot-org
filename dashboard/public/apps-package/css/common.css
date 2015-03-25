@@ -53,7 +53,7 @@ html[dir='rtl'] #visualizationColumn {
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   overflow-y: hidden; }
 
 div.droplet-palette-group-header {
@@ -143,11 +143,12 @@ div.droplet-palette-group-header-selected.green {
   right: 0px;
   top: 40px;
   bottom: 0px;
-  font-size: 14px; }
+  font-size: 14px;
+  overflow: hidden; }
 
 #codeTextbox.pin_bottom {
-  bottom: 170px;
-  box-shadow: 7px 7px 10px #888; }
+  border: 1px solid #ddd;
+  bottom: 160px; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
@@ -160,16 +161,14 @@ html[dir='rtl'] #codeWorkspace {
   top: 0px;
   right: 0px;
   left: 400px;
-  bottom: 10px;
-  box-shadow: 7px 7px 10px #888;
+  bottom: 0;
   margin-left: 15px;
   border: 1px solid #ddd;
   overflow: hidden; }
 
 #codeWorkspace.pin_bottom {
-  box-shadow: none;
   border: none;
-  overflow: visible; }
+  border-top: 1px solid #ddd; }
 
 .ace_gutter-cell.ace_breakpoint {
   border-radius: 15px 0px 0px 15px;

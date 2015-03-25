@@ -2,6 +2,9 @@ div#visualization {
   height: 400px;
   width: 400px; }
 
+div#visualization.with_padding {
+  border: 1px solid #ddd; }
+
 /* Shrink the visualization area on small displays. */
 @media screen and (min-width: 1151px), screen and (min-height: 601px) {
   div#visualization.responsive {
@@ -10,6 +13,9 @@ div#visualization {
 
   div#visualizationColumn.responsive {
     max-width: 400px; }
+
+  div#visualizationColumn.responsive.with_padding {
+    max-width: 402px; }
 
   div#codeWorkspace {
     left: 400px; }
@@ -31,6 +37,9 @@ div#visualization {
   div#visualizationColumn.responsive {
     max-width: 350px; }
 
+  div#visualizationColumn.responsive.with_padding {
+    max-width: 352px; }
+
   div#codeWorkspace {
     left: 350px; }
 
@@ -50,6 +59,9 @@ div#visualization {
 
   div#visualizationColumn.responsive {
     max-width: 300px; }
+
+  div#visualizationColumn.responsive.with_padding {
+    max-width: 302px; }
 
   div#codeWorkspace {
     left: 300px; }
@@ -71,6 +83,9 @@ div#visualization {
   div#visualizationColumn.responsive {
     max-width: 250px; }
 
+  div#visualizationColumn.responsive.with_padding {
+    max-width: 252px; }
+
   div#codeWorkspace {
     left: 250px; }
 
@@ -90,6 +105,9 @@ div#visualization {
 
   div#visualizationColumn.responsive {
     max-width: 200px; }
+
+  div#visualizationColumn.responsive.with_padding {
+    max-width: 202px; }
 
   div#codeWorkspace {
     left: 200px; }
@@ -151,7 +169,7 @@ img#turtleImage {
 
 #debug-area {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   right: 0; }
 
@@ -159,7 +177,8 @@ img#turtleImage {
   margin-left: -15px; }
 
 .debug-console {
-  display: block; }
+  display: block;
+  border: 1px solid #ddd; }
 
 .debug-console * {
   font-family: monospace;
@@ -182,14 +201,23 @@ img#turtleImage {
   overflow: auto;
   background-color: white;
   line-height: normal;
-  cursor: text; }
+  cursor: text;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
 
 .debug-input {
   max-height: 14px;
   height: 14px;
   background-color: white;
   text-indent: 14.5px;
-  overflow: hidden;
   margin-top: -3px;
   padding-top: 6px; }
 

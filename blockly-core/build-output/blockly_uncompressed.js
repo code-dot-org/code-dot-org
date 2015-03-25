@@ -15470,6 +15470,20 @@ Blockly.Block.prototype.render = function() {
 Blockly.Block.prototype.getSvgRenderer = function() {
   return this.svg_
 };
+Blockly.Block.prototype.getRootBlock = function() {
+  var rootBlock;
+  var current = this;
+  while(current) {
+    rootBlock = current;
+    current = current.getParent()
+  }
+  return rootBlock
+};
+Blockly.Block.prototype.hasUnfilledInput = function() {
+  return this.inputList.some(function(input) {
+    return input.connection && !input.connection.targetBlock()
+  })
+};
 goog.provide("Blockly.Flyout");
 goog.require("Blockly.Block");
 goog.require("Blockly.Comment");
