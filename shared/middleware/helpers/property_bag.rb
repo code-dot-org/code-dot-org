@@ -78,8 +78,8 @@ class DynamoPropertyBag
   def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id, 
-      secret_access_key: CDO.s3_secret_access_key, 
+      access_key_id: CDO.s3_access_key_id,
+      secret_access_key: CDO.s3_secret_access_key,
     )
   end
 
@@ -122,7 +122,7 @@ class DynamoPropertyBag
 
   def to_hash()
     last_evaluated_key = nil
-    
+
     results = {}
     begin
       page = db.query(
@@ -146,10 +146,8 @@ class DynamoPropertyBag
     results
   end
 
- 
   def name_exists(id)
     { "name" => { value:id, comparison_operator:'EQ', } }
   end
 
 end
-

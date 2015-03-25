@@ -104,7 +104,7 @@ class DynamoTable
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
   end
 
-  def db()
+  def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
       access_key_id: CDO.s3_access_key_id,
@@ -184,7 +184,7 @@ class DynamoTable
       db.put_item(
         table_name:CDO.dynamo_tables_table,
         item:{
-          hash:@hash, 
+          hash:@hash,
           channel_id:@channel_id,
           table_name:@table_name,
           row_id:row_id,
@@ -283,8 +283,8 @@ class DynamoTable
   def self.table_names(channel_id)
     @dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id, 
-      secret_access_key: CDO.s3_secret_access_key, 
+      access_key_id: CDO.s3_access_key_id,
+      secret_access_key: CDO.s3_secret_access_key,
     )
     last_evaluated_key = nil
     results = {}
@@ -310,5 +310,5 @@ class DynamoTable
     end while last_evaluated_key
     results.keys
   end
-  
+
 end
