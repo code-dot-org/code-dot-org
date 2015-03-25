@@ -1204,3 +1204,100 @@ body.readonly #codeWorkspace>svg {
 body.readonly.embed-block #codeWorkspace .userHidden {
   display: none;
 }
+
+// Tooltipster overrides
+// TODO(bjordan): maybe refactor into new file
+// TODO(bjordan): remove extraneous variable defs, etc
+$purple-dark: #7665a0;
+$purple-light: #a69bc1;
+$purple-extra-light: #cfc9de;
+$light-gray: #e7e8ea;
+$orange-dark: #ffa400;
+$green-dark: #b9bf15;
+$yellow-dark: #ffb81d;
+$yellow-light: #ffdb74;
+$cyan-dark: #0094ca;
+$teal-dark: #00adbc;
+$teal-light: #59cad3;
+
+$gotham-regular: "Gotham 4r";
+$gotham-italics: "Gotham 4i";
+$gotham-bold: "Gotham 5r";
+$gotham-extra-bold: "Gotham 7r";
+
+$parameterColor: $yellow-light;
+$linkColor: #ffffff;
+$tooltipBackground: $cyan-dark; //$cyan-dark; //$light-gray;
+$text-color: #ffffff;
+$tooltip-border-radius: 14px;
+$tooltip-shadow-color: rgba(136,136,136,1);
+$see-examples-font-weight: bold;
+
+$code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+$tooltip-font: $gotham-regular;
+$function-name-font: $code-font;
+$examples-link-font: $gotham-extra-bold;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+
+$see-examples-underline-upper: $yellow-dark; // #006286; //#59cad3;
+$see-examples-underline-lower: $cyan-dark; //#0091C7;//#59cad3;
+
+.tooltip-example-link {
+  margin-top: 5px;
+  float: right;
+}
+
+.tooltip-example-link > #{$a-tags} {
+  // underline
+  border-bottom: 3px solid $see-examples-underline-upper;
+  box-shadow: inset 0 -5px 0 $see-examples-underline-lower;
+  color: inherit;
+  -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); // TODO(bjordan) remove?
+  transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); // TODO(bjordan) remove?
+  // end underline
+
+  color: white !important; //$yellow-light !important;
+  font-family: $gotham-bold !important;
+}
+
+.function-name {
+  font-family: $function-name-font !important;
+  font-size: 16px;
+  margin-top: 3px;
+  margin-bottom: 7px;
+}
+
+body {
+  font-size: 18px;
+  //  font-weight: ;
+  font-family: Arial, sans-serif;
+}
+
+a { text-decoration: none; }
+a:link, a:visited { color: green; }
+a:hover, a:active { color: orange; }
+
+/* This is the modified-for-code.org Tooltipster theme (which we will in implementation specify as a theme class instead: */
+.tooltipster-default {
+  border-radius: $tooltip-border-radius;
+  border: none; //2px solid #000;
+  background: $tooltipBackground;
+  color: $text-color;
+  -webkit-box-shadow: 5px 5px 5px 0px $tooltip-shadow-color;
+  -moz-box-shadow: 5px 5px 5px 0px $tooltip-shadow-color;
+  box-shadow: 5px 5px 5px 0px $tooltip-shadow-color;
+}
+
+.tooltip-current-parameter {
+  color: $parameterColor !important;
+}
+
+.tooltipster-default .tooltipster-content {
+  font-family: $tooltip-font;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+  overflow: hidden;
+  font-weight: normal;
+}
