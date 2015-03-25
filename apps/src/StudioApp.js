@@ -9,6 +9,7 @@ var dom = require('./dom');
 var constants = require('./constants.js');
 var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
+var DropletDocumentationManager = require('./blockTooltips/DropletDocumentationManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
 
@@ -55,6 +56,9 @@ var StudioApp = function () {
    */
   this.cdoSounds = null;
   this.Dialog = null;
+  /**
+   * @type {Droplet.Editor} TODO(bjordan): is this the right editor?
+   */
   this.editor = null;
 
   this.blockYCoordinateInterval = 200;
@@ -1128,11 +1132,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // (important because they can be different in our test environment)
     ace = window.ace;
 
+    var fullDropletPalette = dropletUtils.generateDropletPalette(
+      options.codeFunctions, options.dropletConfig);
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
-      palette: dropletUtils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig),
+      palette: fullDropletPalette,
       alwaysShowPalette: true
     });
 
@@ -1150,6 +1155,60 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    this.dropletDocumentationManager = new DropletDocumentationManager();
+    this.dropletDocumentationManager.registerBlocksFromPalette(fullDropletPalette);
+
+    this.editor.on('changepalette', function () {
+      setupVisibleBlockTooltips();
+    });
+
+    this.editor.on('toggledone', function () {
+      // TOOD(bjordan): this is in pencilcode, but relevant to code studio?
+      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+        setupVisibleBlockTooltips();
+      }
+    });
+
+    var self = this;
+
+    function setupVisibleBlockTooltips() { // TODO(bjordan): move elsewhere
+      var tooltipsterConfig = {
+        interactive: true,
+        speed: 150,
+        maxWidth: 450,
+        position: 'right',
+        contentAsHTML: true,
+        functionReady: function () {
+          console.log(this);
+          var $tooltipBase = $(".tooltipster-base").last();
+          var tooltipsterOffset = $tooltipBase.offset();
+          var $dropletToolboxArea = $('.droplet-palette-wrapper');
+          var rightSideOfToolbox = $dropletToolboxArea.offset().left +
+            $dropletToolboxArea.width();
+          var rightSideOfBlock = tooltipsterOffset.left;
+          tooltipsterOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox);
+          tooltipsterOffset.top -= 2; // Account for block notch height
+          $tooltipBase.offset(tooltipsterOffset);
+        }
+      };
+
+      $('.droplet-hover-div').each(function (_, blockHoverDiv) {
+        if (!$(blockHoverDiv).hasClass('tooltipstered')) {
+          var funcName = $(blockHoverDiv).attr('title');
+          $(blockHoverDiv).tooltipster($.extend({}, tooltipsterConfig, {
+            content: self.dropletDocumentationManager
+              .getDocumentation(funcName)
+              .getTooltipHTML()
+          }));
+        }
+      });
+    }
+
+    window.setTimeout(function () {
+      // TODO(bjordan): is there a better hook for this?
+      setupVisibleBlockTooltips();
+    }, 500);
 
     this.resizeToolboxHeader();
 

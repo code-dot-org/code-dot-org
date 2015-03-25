@@ -190,9 +190,14 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       }
       block += ")";
     }
+
+    /**
+     * Here we set the title attribute to the function shortname,
+     * this is later used as a key for function documentation and tooltips
+     */
     var blockPair = {
       block: block,
-      title: cf.title || cf.func
+      title: cf.func
     };
     mergedCategories[cf.category].blocks.push(blockPair);
   }
@@ -264,6 +269,12 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
   }
 }
 
+function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
+  Object.keys(modeOptions.functions).forEach(function (funcName) {
+    modeOptions.functions[funcName].title = funcName;
+  });
+}
+
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
@@ -276,6 +287,18 @@ exports.generateDropletModeOptions = function (dropletConfig) {
   populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
   populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
 
+  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+
   return modeOptions;
 };
 
+/**
+ * Returns a set of all blocks
+ * @param dropletConfig
+ * @returns {Object.<String, Object>}
+ */
+exports.getAllDropletBlocks = function (dropletConfig) {
+  return $.extend(exports.dropletGlobalConfigBlocks,
+    exports.dropletBuiltinConfigBlocks,
+    dropletConfig.blocks);
+};

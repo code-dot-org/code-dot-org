@@ -10,6 +10,9 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
+    -# TODO(bjordan)
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css'
     = csrf_meta_tags
     = yield :head
     = render partial: 'layouts/analytics'
