@@ -129,7 +129,7 @@ exports.getStudioAppSingleton = function () {
  * }
  */
 exports.generateArtistAnswer = function (generatedCode) {
-  var ArtistAPI = require(this.buildPath('turtle/api'));
+  var ArtistAPI = require('@cdo/apps/turtle/api');
   var api = new ArtistAPI();
 
   api.log = [];

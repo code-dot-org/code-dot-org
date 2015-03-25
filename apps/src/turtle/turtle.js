@@ -118,6 +118,7 @@ var Artist = function () {
   this.decorationAnimationWidth = 85;
   this.decorationAnimationHeight = 85;
   this.speedSlider = null;
+  this.skipAnimation = false;
 
   this.ctxAnswer = null;
   this.ctxImages = null;
@@ -229,6 +230,9 @@ Artist.prototype.afterInject_ = function (config) {
   // Change default speed (eg Speed up levels that have lots of steps).
   if (config.level.sliderSpeed) {
     this.speedSlider.setValue(config.level.sliderSpeed);
+    if(config.level.sliderSpeed == -1) {
+      this.skipAnimation = true;
+    }
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -871,7 +875,11 @@ Artist.prototype.animate = function() {
     }
   }
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  if(this.skipAnimation) {
+    this.animate();
+  } else {
+    this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  }
 };
 
 Artist.prototype.calculateSmoothAnimate = function(options, distance) {

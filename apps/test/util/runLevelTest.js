@@ -34,7 +34,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     level.scale = {};
   }
   level.scale.stepSpeed = 0;
-  level.sliderSpeed = 1;
+  level.sliderSpeed = -1;
 
   // studio tests depend on timing
   if (app === 'studio') {
@@ -49,9 +49,8 @@ module.exports = function(testCollection, testData, dataItem, done) {
     assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
     Object.keys(testData.expected).forEach(function (key) {
       if (report[key] !== testData.expected[key]) {
-        logError('Failure for key: ' + key);
-        logError('. Expected: ' + testData.expected[key]);
-        logError('. Got: ' + report[key] + '\n');
+        var failureMsg = 'Failure for key: ' + key + '. Expected: ' + testData.expected[key] + '. Got: ' + report[key] + '\n';
+        assert(false, failureMsg);
       }
     });
 
@@ -67,8 +66,9 @@ module.exports = function(testCollection, testData, dataItem, done) {
     //  we will have problems with the animating_ / waitingForReport_ states
     //  in the maze state machine)
     if (report.onComplete) {
-      report.onComplete();
-      //setTimeout(report.onComplete, 0);
+      var timeoutList = require('@cdo/apps/timeoutList');
+      timeoutList.clearTimeouts();
+      setTimeout(report.onComplete, 0);
     }
   };
 
