@@ -177,7 +177,7 @@ img#turtleImage {
 
 #debug-area {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   right: 0;
 }
@@ -188,6 +188,7 @@ img#turtleImage {
 
 .debug-console {
   display: block;
+  border: 1px solid #ddd;
 }
 
 .debug-console * {
@@ -215,6 +216,16 @@ img#turtleImage {
   background-color: white;
   line-height: normal;
   cursor: text;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .debug-input {
@@ -222,7 +233,6 @@ img#turtleImage {
   height: 14px;
   background-color: white;
   text-indent: 14.5px;
-  overflow: hidden;
   margin-top: -3px;
   padding-top: 6px;
 }
