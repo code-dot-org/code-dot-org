@@ -23,13 +23,13 @@ template: none
     %th.manage-th
       %a{'ng-click' => 'order = "location"'}
         Location
-    %th.manage-th
+    %th.manage-th{style:'width:200px'}
       %a{'ng-click' => 'order = "contact.ops_last_name"'}
         District Contact Name
     %th.manage-th
       %a{'ng-click' => 'order = "contact.email"'}
         District Contact Email
-    %th.manage-th{style:'width:169px'}
+    %th.manage-th
       Manage
   %tr{'ng-form' => 'form', 'ng-show' => 'district.creation'}
     %td
@@ -91,7 +91,9 @@ template: none
     cursor: pointer;
     text-decoration: none;
   }
-
+  th.manage-th {
+    width:180px;
+  }
 :scss
   .districts input.ng-invalid.ng-dirty {
     background-color: #EDD;

@@ -381,10 +381,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList[1].indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList[0] +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList[0] +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList[1] === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList[0] +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -396,10 +437,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -407,6 +449,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -424,6 +484,8 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
           for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
@@ -872,7 +934,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;

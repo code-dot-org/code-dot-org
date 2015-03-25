@@ -51,7 +51,11 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    data = JSON.parse(request.body.read)
+    begin
+      data = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
+    end
     bad_request unless data.is_a? Hash
 
     timestamp = Time.now
