@@ -490,7 +490,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      var val = userClone.getEquation(name).expression.getValue();
+      var val = userClone.getEquation(name).expression.evaluate().result;
       setConstantsToValue(val, index);
     });
 
@@ -974,7 +974,7 @@ function displayFeedback() {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
-    app: 'Calc',
+    app: 'calc',
     skin: skin.id,
     response: appState.response,
     level: level,

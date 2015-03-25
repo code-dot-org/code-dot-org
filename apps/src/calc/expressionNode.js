@@ -535,7 +535,7 @@ ExpressionNode.prototype.setValue = function (value) {
     throw new Error("Can't modify value");
   }
   if (type === ValueType.NUMBER) {
-    this.value_ = jsnums.makeFloat(value);
+    this.value_ = ensureJsnum(value);
   } else {
     this.value_ = value;
   }
