@@ -11,14 +11,16 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر
     را ببینید</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h2>ساعتِ کدنویسی</h2><h3>را امتحان کرده است</h3>
+  n_have_learned_an_hoc: <h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه
+    شده</h3>
   anybody_can_learn: هر کسی می تواند یاد بگیرند.
   learn_now: همین حالا یاد بگیرید
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
     باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
     پیوندید.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
+    #دیگران بپیوندید.'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -116,8 +118,9 @@
   learn_classes: پیدا کردن کلاس های محلی
   hoc_is_here: زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@
   just_did_hoc: من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم
+    این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید
+    تا بیشتر بیاموزید.
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -156,27 +159,32 @@
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_shop_title: فروشگاه
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;من دختران هر کشوری را به چالش
+    آموختن یک ساعت کد نویسی دعوت می کنم&rdquo;
+    مالالا
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;هیچ وقت برای یادگرفتن دیر نیست&rdquo;
+    سوزان، مدیرعامل یوتیوب
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo; درک علوم کامپیوتر به طور گسترده ای حیاتی می شود&rdquo;
+    شریل،مامور ارشد اجرایی فیسبوک
   homepage_slot_text_hoc: ساعتی با کدنویسی
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: تمام آموزش های ما
   homepage_slot_text_course4: دوره 4
   homepage_slot_text_shop: فروشگاه
   homepage_slot_text_flappy: کدنویسی Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: فیلم را تماشا کنید
+  homepage_action_text_teachervideo: فیلم را تماشا کنید
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: درخواست را امضا کنید
+  homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
   contact_form_topic_student: من یک دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -382,8 +390,8 @@
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
   dashboard_progress_not_completed: تکمیل نشده است
   dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
   dashboard_progress_completed_perfect: تکمیل, کامل

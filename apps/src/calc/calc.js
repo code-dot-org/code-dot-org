@@ -157,7 +157,8 @@ Calc.init = function(config) {
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: level.editCode,
-      blockCounterClass : 'block-counter-default'
+      blockCounterClass : 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -253,7 +254,8 @@ function displayGoal(targetSet) {
   }
 
   if (hasSingleFunction) {
-    tokenList = tokenList.concat(constructTokenList(' = ' + evaluation.result.toString()));
+    tokenList.push(new Token(' = ', false));
+    tokenList.push(new Token(evaluation.result, false));
   }
   displayEquation('answerExpression', computeEquation.signature, tokenList, nextRow);
 }
@@ -488,7 +490,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      var val = userClone.getEquation(name).expression.getValue();
+      var val = userClone.getEquation(name).expression.evaluate().result;
       setConstantsToValue(val, index);
     });
 
@@ -773,7 +775,7 @@ function displayComplexUserExpressions() {
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
-  if (appState.failedInput) {
+  if (appState.failedInput !== null) {
     var expression = computeEquation.expression.clone();
     for (var c = 0; c < expression.numChildren(); c++) {
       expression.setChildValue(c, appState.failedInput[c]);
@@ -786,11 +788,11 @@ function displayComplexUserExpressions() {
         throw evaluation.err;
       }
     }
-    result = evaluation.result.toFixnum().toString();
+    result = evaluation.result;
 
     tokenList = constructTokenList(expression)
-      .concat(constructTokenList(' = '))
-      .concat(constructTokenList(result, ' ')); // this should always be marked
+      .concat(new Token(' = ', false))
+      .concat(new Token(result, true)); // this should always be marked
     displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
   }
 }
@@ -972,7 +974,7 @@ function displayFeedback() {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
-    app: 'Calc',
+    app: 'calc',
     skin: skin.id,
     response: appState.response,
     level: level,

@@ -18,7 +18,8 @@
     d'apprendre l'informatique
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres
     participants.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Si vous nous soutenez, signez votre nom.  Rejoignez
+    #.'
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -117,8 +118,9 @@
   hoc_is_here: '#HourOfCode L''Heure de Code est là — jettes-y un œil ! @codeorg'
   just_did_hoc: 'Je viens de faire l''Heure de Code #HourOfCode — jettes-y un œil
     ! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique
+    ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/
+    pour en savoir plus.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Plus loin qu'Une Heure
   what_gender: Es-tu un garçon ou une fille ?
@@ -155,27 +157,28 @@
   studiobar_donate_body: Un enfant apprend pour chaque dollar donné
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_malala: "« Je mets au défi les filles dans chaque pays pour apprendre
+    une heure de Code » \nMalala\n"
+  homepage_hero_text_susan: "« Il est jamais trop tard pour apprendre » \nSusan, PDG
+    de YouTube\n"
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: "« Une compréhension de l'informatique est de plus en
+    plus indispensable... » \nSheryl, COO de Facebook\n"
   homepage_slot_text_hoc: L'Heure de Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
+  homepage_slot_text_teacher: Tableau de bord enseignant
+  homepage_slot_text_studio: Tous nos tutoriels
   homepage_slot_text_course4: Cours 4
   homepage_slot_text_shop: Boutique
   homepage_slot_text_flappy: Flappy l'oiseau
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Voir la vidéo
+  homepage_action_text_teachervideo: Voir la vidéo
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Signez la pétition
+  homepage_signpetition_dropdown: Signez notre pétition &#x25BE;
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur
@@ -384,8 +387,8 @@
   dashboard_login_picture: Image
   dashboard_login_none: E-mail
   dashboard_new_password: nouveau mot de passe
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: pas commencé
+  dashboard_progress_in_progress: en cours
   dashboard_progress_not_completed: pas terminé
   dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
   dashboard_progress_completed_perfect: terminé, parfait
@@ -423,8 +426,8 @@
   carousel_heading_domestic: Tutoriels disponibles en anglais
   carousel_heading_beginners: Tutoriels pour débutants
   carousel_heading_javascript: Tutoriels sur le langage JavaScript
-  carousel_heading_unplugged: Pas d'équipement ou de connexion à Internet ? Essaie
-    l'informatique « manuelle »
+  carousel_heading_unplugged: Pas d'équipement ou pas d'Internet ? Essayez l'informatique
+    'débranchée'
   carousel_heading_devices: Applications d'apprentissage pour téléphones et tablettes
   carousel_heading_languages: Tutoriels sur d'autres langages de programmation
   carousel_heading_apps_games: Créez vos propres applications ou jeux
@@ -528,7 +531,7 @@
   playlab_gradelevel: De 4 à 104 ans
   codeorg_platformtext: Navigateurs modernes, smartphones, tablettes
   codeintl_platformtext: Navigateurs modernes, smartphones, tablettes
-  thinkersmithspanish_platformtext: Déconnecté
+  thinkersmithspanish_platformtext: Débranché
   khan_platformtext: Navigateurs web récents
   khanes_platformtext: Navigateurs web récents
   khanpt_platformtext: Navigateurs web récents
@@ -538,7 +541,7 @@
   tynker_platformtext: Navigateurs web récents
   scratch_platformtext: Navigateurs pour ordinateur de bureau
   lightbot_platformtext: TOUS les navigateurs et iOS, Android, ou une console de jeu
-  thinkersmith_platformtext: Déconnecté
+  thinkersmith_platformtext: Débranché
   condcards_platformtext: Déconnecté
   lightbotintl_platformtext: iOS, Android (ou navigateur web)
   codehs_platformtext: Navigateurs récents. (Suivre le cours nécessite $$)
@@ -560,9 +563,9 @@
   touchdevelop_platformtext: Navigateurs récents, smartphones, pour tous les appareils
   appinventor_platformtext: Navigateurs récents + Android
   blockly_platformtext: Navigateurs récents seulement
-  thinkersmith2_platformtext: Déconnecté
-  kodableunplugged_platformtext: Déconnecté
-  projguts_platformtext: Déconnecté
+  thinkersmith2_platformtext: Débranché
+  kodableunplugged_platformtext: Débranché
+  projguts_platformtext: Débranché
   hourofcode_platformtext: Navigateurs modernes, smartphones, tablettes
   frozen_platformtext: Navigateurs récents + tablettes
   playlab_platformtext: Navigateurs modernes, smartphones, tablettes
@@ -773,7 +776,7 @@
     le fuzzFamily Frenzy est une introduction à la logique de la programmation pour
     les enfants de 5 ans et plus. Un enseignant expliquera le jeu et les étudiants
     programmeront ensuite un partenaire pour réaliser une course d''obstacles simple. '
-  projguts_longdescription: Cette activité "déconnectée" aide les étudiants à apprendre
+  projguts_longdescription: Cette activité "débranchée" aide les étudiants à apprendre
     comment fonctionnent la modélisation et la simulation en faisant jouer un groupe
     d'étudiants à différentes versions de pierre/papier/ciseaux et en observant les
     résultats comme différentes expériences de modélisation.
@@ -952,7 +955,7 @@
     et en sciences.
   codeorg_beyond_longdescription: Apprenez les bases de l'informatique grâce à la
     programmation de glisser-déposer. 3 cours complets, consistant chacun de 15-20
-    leçons qui mélangent des activités scolaires "déconnectées" à des tutoriels auto-dirigés,
+    leçons qui mélangent des activités scolaires "débranchées" à des tutoriels auto-dirigés,
     sous forme de jeux et comprenant des cours video par Bill Gates, Mark Zuckerberg,
     Angry Birds et Plants vs. Zombies. Apprenez les boucles, les conditionnels, les
     algorithmes basiques, les fonctions et les variables.

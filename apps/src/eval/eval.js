@@ -422,7 +422,7 @@ var displayFeedback = function(response) {
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
   var options = {
-    app: 'Eval',
+    app: 'eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
@@ -446,5 +446,9 @@ function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback(response);
+
+  // Add a short delay so that user gets to see their finished drawing.
+  setTimeout(function () {
+    displayFeedback(response);
+  }, 2000);
 }

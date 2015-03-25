@@ -22,4 +22,5 @@ Workshop attendees will also receive a bag of Code.org swag and printed curricul
 
 ## Become a Code.org affiliate
 
-Are you an experienced computer science educator with experience hosting professional development workshops? [Sign up](https://docs.google.com/a/code.org/forms/d/1Sz1L4KXT-1K56XL4ThmbFuvcJCoUkKy_Vjw-gmulcK8/viewform) to be a Code.org Affiliate to offer workshops for K-5 teachers in your region.
+Are you an experienced computer science educator with experience hosting professional development workshops? <a href="https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform"target="_blank">Apply</a>
+to become a Code.org Affiliate and host workshops for K-5 teachers in your region. We will notify you by **May 1, 2015** of your application status.
