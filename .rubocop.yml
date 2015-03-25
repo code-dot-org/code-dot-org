@@ -5,3 +5,4 @@ AllCops:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
   RunRailsCops: true
+  DisplayCopNames: true

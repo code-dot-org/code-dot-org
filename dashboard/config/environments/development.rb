@@ -53,7 +53,7 @@ Dashboard::Application.configure do
 #  CDO.disable_s3_image_uploads = false
 
   # Set to :debug to see everything in the log.
-  config.log_level = :debug
+  config.log_level = eval :debug
 
   # see stack traces around sql queries in the log
   # ActiveRecordQueryTrace.enabled = true

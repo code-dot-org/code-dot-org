@@ -2,7 +2,7 @@
 
 -encrypted_channel_id = request.splat_path_info[1..-1].split('/').first
 -channel_id = storage_decrypt_channel_id(encrypted_channel_id).last.to_s
--app_tables = DB[:app_tables].where(app_id:channel_id, storage_id:nil).group(:table_name)
+-TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
 %form#csp_tables
   %table
@@ -11,8 +11,7 @@
         Table name
       %td
         action
-    -app_tables.each do |app_table|
-      -table_name = app_table[:table_name]
+    -TableType.table_names(channel_id).each do |table_name|
       %tr
         %td
           #{table_name}
