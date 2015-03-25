@@ -69,8 +69,11 @@ exports.setupLocales = setupLocales;
 
 exports.setupBlocklyFrame = setupBlocklyFrame;
 function setupBlocklyFrame() {
+  var timeoutList = require('@cdo/apps/timeoutList');
+  timeoutList.clearTimeouts();
   require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
   setupLocales();
 
