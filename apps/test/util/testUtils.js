@@ -147,8 +147,10 @@ exports.runOnStudioTick = function (tick, fn) {
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }
+  var ran = false;
   Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick) {
+    if (Studio.tickCount === tick && !ran) {
+      ran = true;
       fn();
     }
     studioOnTick();
