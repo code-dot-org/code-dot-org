@@ -7,16 +7,24 @@ div#visualization {
   width: 400px;
 }
 
+div#visualization.with_padding {
+  border: 1px solid #ddd;
+}
+
 /* Shrink the visualization area on small displays. */
 
 @media screen and (min-width: 1151px) {
   $width: 400px;
+  $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $width;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
     max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
   }
   div#codeWorkspace {
     left: $width;
@@ -33,12 +41,16 @@ div#visualization {
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   $width: 350px;
+  $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $width;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
     max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
   }
   div#codeWorkspace {
     left: $width;
@@ -55,12 +67,16 @@ div#visualization {
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   $width: 300px;
+  $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $width;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
     max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
   }
   div#codeWorkspace {
     left: $width;
@@ -77,12 +93,16 @@ div#visualization {
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   $width: 250px;
+  $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $width;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
     max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
   }
   div#codeWorkspace {
     left: $width;
@@ -99,12 +119,16 @@ div#visualization {
 
 @media screen and (max-width: 1000px) {
   $width: 200px;
+  $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $width;
     max-width: $width;
   }
   div#visualizationColumn.responsive {
     max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
   }
   div#codeWorkspace {
     left: $width;
