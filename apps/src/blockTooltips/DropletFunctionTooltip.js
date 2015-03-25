@@ -2,15 +2,15 @@ var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
 var msg = require('../../locale/current/common');
 
 /**
- * @fileoverview Representation of a block's tooltip
+ * @fileoverview Representation of a droplet function/block's tooltip
  */
 'use strict';
 
 /**
- * Represents a block's tooltip
+ * Stores a block's tooltip information and helps render it
  * @constructor
  */
-var DropletFunctionDocumentation = function (functionName) {
+var DropletFunctionTooltip = function (functionName) {
   /** @type {String} */
   this.functionName = functionName;
 
@@ -33,22 +33,22 @@ var DropletFunctionDocumentation = function (functionName) {
 
 var DROPLET_DOC_I18N_PREFIX = "dropletBlock_";
 
-DropletFunctionDocumentation.prototype.descriptionKey = function () {
+DropletFunctionTooltip.prototype.descriptionKey = function () {
   return this.i18nPrefix() + "_description";
 };
 
-DropletFunctionDocumentation.prototype.parameterKey = function (paramIndex) {
+DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
   return this.i18nPrefix() + "_param" + paramIndex;
 };
 
-DropletFunctionDocumentation.prototype.i18nPrefix = function () {
+DropletFunctionTooltip.prototype.i18nPrefix = function () {
   return DROPLET_DOC_I18N_PREFIX + this.functionName;
 };
 
 /**
  * @returns {String} HTML for tooltip
  */
-DropletFunctionDocumentation.prototype.getTooltipHTML = function () {
+DropletFunctionTooltip.prototype.getTooltipHTML = function () {
   return DropletBlockTooltipMarkup({
     functionName: this.functionName,
     functionShortDescription: this.description,
@@ -56,4 +56,4 @@ DropletFunctionDocumentation.prototype.getTooltipHTML = function () {
   });
 };
 
-module.exports = DropletFunctionDocumentation;
+module.exports = DropletFunctionTooltip;
