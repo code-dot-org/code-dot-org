@@ -199,6 +199,7 @@ class LevelsController < ApplicationController
     @share = false
     @no_padding = true
     @skip_instructions_popup = true
+    @full_width = true
     render 'levels/show'
   end
 

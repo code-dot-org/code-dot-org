@@ -168,4 +168,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "yourExpression":function(d){return "Вашият израз:"},
 "wrongInput":function(d){return "Вие извикахте функция с грешна стойност."},
 "wrongOtherValuesX":function(d){return "Вашият резултат от израза води има грешна стойност ако ние варираме "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Вашият израз не връща правилния резултат."}};

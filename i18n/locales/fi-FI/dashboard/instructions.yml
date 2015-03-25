@@ -2259,9 +2259,6 @@ fi:
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: 'Käytä uutta "Luo ympyrä"-lohkoa luodaksesi 10 limittäistä ympyrää. Älä unohda hypätä eteenpäin ympyröiden välissä'
       frozen circle function in circle_instruction: Luodaanpa 20 osittain päällekkäistä ympyrää siten, että käännytään 18 astetta kunkin ympyrän jälkeen.
       frozen circle function with parameter_instruction: 'Tässä on "Luo ympyrä"-lohko joka tekee erikokoisia ympyröitä. Osaatko luoda sen avulla pienen ympyrän koko 5 ja suuremman ympyrän kokoa 10?'
@@ -2279,13 +2276,10 @@ fi:
       frozen freeplay_instruction: Olet nyt virallisesti mestaritaiteilija! Luo talven ihmemaa.
       frozen line_instruction: Hei! Olen Arendelin Elsa. Auta minua luomaan yksittäinen viiva.
       frozen perpendicular_instruction: 'Katsotaanpa voimmeko luoda kaksi viivaa, jotka ovat 90 asteen kulmassa toisiinsa nähden. Käytä sekä "käänny"-lohkoa että "liiku"-lohkoa.'
-      frozen snowflake base_instruction: Luo nämä 3 viivaa 45 asteen välein
       frozen snowflake branch_instruction: 'Kokeile käyttää "Luo lumihiutalehaara"-lohkoa kolmen haaran luomiseen, mikä alkaa näyttää lumihiutaleelta.'
       frozen snowflake full_instruction: Toista sitä nyt 8 kertaa tehdäksesi kauniin lumihiutaleen!
-      frozen snowflower pattern_instruction: Kuinka kauniita lumikukkia! Tehdäänpä pienempiä lumikukkia peittämään koko jääkenttä. Älä unohda hypätä 150 pikseliä eteenpäin lumikukkien välillä.
       frozen snowflower_instruction: Monimutkaisia lumikuvioita voi luoda hyvin yksinkertaisista muodoista. Osaatko tehdä kuvion toistamalla 5 ympyrää kokoa 5 ja 5 ympyrää kokoa 10?
       frozen square iterative_instruction: Näyttää siltä että olemme puolivälissä neliön piirtämisessä. Yhdistetäänpä 4 viivaa, niin muodostuu neliö.
-      frozen square loop (copy 1)_instruction: On enemmän kuin yksi tapa tehdä neliö. Osaatko käyttää toista-lohkoa luodaksesi uudestaan neliön, mutta käyttäen vähemmän lohkoja? Minkä toistuvan kuvion näet, jonka voit panna toista-lohkoon?
       frozen square loop 3x_instruction: Luodaanpa kolme neliötä, kääntyen kunkin neliön jälkeen. Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.
       frozen square loop_instruction: 'Hei, olen Arendellen Anna! Tehdäänpä neliö käyttäen "Toista"-lohkoa, jolloin tarvitaan vähemmän lohkoja. Kuinka monta kertaa (???) "Toista"-lohkossa olevat lohkot pitää toistaa?'
       frozen square snowflake_instruction: 'Osaatko luoda lumihiutaleen käyttäen "toista"-lohkoa 10 neliön tekemiseen ja "käänny"-lohkoa 36 asteen käännökseen neliöiden välillä?'

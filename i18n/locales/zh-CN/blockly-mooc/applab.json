@@ -8,9 +8,9 @@
   "catText":"文本",
   "catVariables":"变量",
   "continue":"继续",
-  "container":"create container",
-  "containerTooltip":"Creates a division container and sets its inner HTML.",
-  "designMode":"Design",
+  "container":"创建容器",
+  "containerTooltip":"创建一个主要容器，并设置其内部的 HTML。",
+  "designMode":"设计",
   "finalLevel":"恭喜你！你完成了最后一个谜题。",
   "nextLevel":"恭喜你！你解决了这个谜题。",
   "no":"不",
@@ -25,6 +25,6 @@
   "stepIn":"步入",
   "stepOver":"跨过",
   "stepOut":"步出",
-  "viewData":"View Data",
+  "viewData":"查看数据",
   "yes":"是"
 }

@@ -4,6 +4,7 @@
   "ascii":"Kodi ASCII",
   "binary":"Binare",
   "bitCounter":"{x}\/{y} bitet",
+  "bits":"Bits",
   "clear":"Pastro",
   "connected":"E lidhur",
   "decimal":"Dhjetor",
@@ -21,15 +22,19 @@
   "instructions":"Udhëzimet",
   "message":"Mesazhi",
   "myDevice":"Pajisja ime",
+  "numBitsPerPacket":"{x} bits per packet",
   "_of_":"i",
   "packet":"Paketë",
+  "packetInfo":"Packet Info",
   "receivedMessageLog":"Morëm Mesazhin Log",
   "removePacket":"Remove Packet",
   "router":"Router",
+  "routerX":"Router {x}",
   "send":"Dërgo",
   "sendAMessage":"Dërgo nje mesazh",
   "sentMessageLog":"Dërgo mesazh log",
   "to":"Tek",
+  "unlimited":"Unlimited",
   "workspaceHeader":"Imitues Interneti",
-  "xOfY":"{x} e {y}"
+  "xOfYPackets":"{x} of {y}"
 }

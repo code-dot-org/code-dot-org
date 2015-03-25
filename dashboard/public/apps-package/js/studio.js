@@ -3108,18 +3108,18 @@ var RocketHeightLogic = function (studio) {
 RocketHeightLogic.inherits(CustomGameLogic);
 
 RocketHeightLogic.prototype.onTick = function () {
-  
+
   // Update the rocket once a second
   if (Date.now() - this.last < 1000) {
     return;
   }
   this.last = Date.now();
   this.seconds++;
-  
+
   this.rocket = this.studio_.sprite[this.rocketIndex];
-  
+
   // Display the rocket height and time elapsed
-  this.height = this.rocket_height(this.seconds);
+  this.height = this.rocket_height(this.seconds) || 0;
   this.rocket.y = this.studio_.MAZE_HEIGHT - (this.height + this.rocket.height);
   this.rocket.dir = Direction.NONE;
   this.studio_.scoreText = 'Time: ' + this.seconds + ' | Height: ' + this.height;
@@ -5395,6 +5395,10 @@ var generateSetterCode = function (opts) {
     value = 'Studio.random([' + possibleValues + '])';
   }
 
+  if (opts.returnValue) {
+    return value;
+  }
+
   return 'Studio.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
     (opts.extraParams ? opts.extraParams + ', ' : '') + value + ');\n';
 };
@@ -7325,7 +7329,11 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.functional_background_dropdown = function () {
     // returns the sprite index
-    return this.getTitleValue('BACKGROUND');
+    return generateSetterCode({
+      value: this.getTitleValue('BACKGROUND'),
+      ctx: this,
+      returnValue: true
+    });
   };
 
   /**

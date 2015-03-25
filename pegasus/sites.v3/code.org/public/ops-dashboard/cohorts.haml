@@ -13,11 +13,19 @@ template: none
 
 %div{'ng-controller' => 'CohortsController'}
   %h1 Teacher cohorts
-  - if dashboard_user[:admin]
-    %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/teacher-cohorts/new"} Add teacher cohort
-    %br/
-    %br/
-
+  .row
+    .col-sm-5
+      - if dashboard_user[:admin]
+        %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/teacher-cohorts/new"} Add teacher cohort
+        %br/
+        %br/
+  .row{'ng-show' => 'cohorts.length > 0', style: "margin-bottom: 20px;"}
+    .col-sm-12
+      %form.form-inline
+        %label.control-label{for: "cohort-filter-program-type"} Filter by program type
+        %select#cohort-filter-program-type.form-control{"ng-model" => "search.program_type", "ng-options"=>"program_type.short_name for program_type in program_types"}
+        %label.control-label{for: "cohort-filter-district"} Filter by district
+        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts"}
   %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
     No cohorts are available.
 
@@ -32,7 +40,7 @@ template: none
           Districts
         %th.manage-th
           Manage
-      %tr{"ng-repeat" => "cohort in cohorts | orderBy:sortOrder", style: "vertical-align:top"}
+      %tr{"ng-repeat" => "cohort in cohorts | filter:search | orderBy:sortOrder", style: "vertical-align:top"}
         %td
           {{cohort.name}}
         %td

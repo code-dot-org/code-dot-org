@@ -66,6 +66,7 @@ levels.simple = {
 };
 
 levels.custom = {
+  'sliderSpeed': 0.95,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -195,7 +196,6 @@ levels.custom = {
 levels.ec_simple = utils.extend(levels.custom, {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
 });
@@ -381,10 +381,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList[1].indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList[0] +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList[0] +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList[1] === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList[0] +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -396,10 +437,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -407,6 +449,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -424,6 +484,8 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
           for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
@@ -872,20 +934,18 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
@@ -901,6 +961,7 @@ Applab.init = function(config) {
       idealBlockNumber: undefined,
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
+      pinWorkspaceToBottom: true,
       hasDesignMode: true
     }
   });
@@ -1492,8 +1553,8 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
-  var gameButtons =  document.getElementById('gameButtons');
-  gameButtons.style.display = enable ? 'none' : 'block';
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
   var designModeButtons = document.getElementById('designModeButtons');
   designModeButtons.style.display = enable ? 'block' : 'none';
 };
@@ -2862,7 +2923,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share" style="display:none;">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n    <button id="designModeButton" class="share">\n      ', escape((23,  applabMsg.designMode() )), '\n    </button>\n  </div>\n');26; } ; buf.push('\n\n');28; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');36; } ; buf.push('\n\n');38; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((41,  assetUrl('media/1x1.gif') )), '">', escape((41,  msg.finish() )), '\n    </button>\n  </div>\n');44; } ; buf.push('\n\n');46; if (debugButtons) { ; buf.push('\n</div>\n');48; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n      <button id="designModeButton" class="debugger_button">\n        ', escape((24,  applabMsg.designMode() )), '\n      </button>\n    </div>\n  </div>\n  ');28; } ; buf.push('\n\n  ');30; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');38; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3074,7 +3135,12 @@ AppStorage.getKeyValue = function(key, onSuccess, onError) {
 };
 
 var handleGetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onSuccess(undefined);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3102,7 +3168,8 @@ AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
 };
 
 var handleSetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3139,7 +3206,8 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleCreateRecord = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3177,7 +3245,8 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3226,7 +3295,8 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
@@ -3270,7 +3340,8 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
@@ -3936,7 +4007,7 @@ module.exports.blocks = [
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
   {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
   {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },

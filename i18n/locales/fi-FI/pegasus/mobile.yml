@@ -132,6 +132,10 @@ fi-FI:
     &ldquo;It's never too late
     to learn&rdquo;
     Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
@@ -144,7 +148,8 @@ fi-FI:
   homepage_slot_text_shop: Myymälä
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   contact_form_topic_student: Olen oppilas

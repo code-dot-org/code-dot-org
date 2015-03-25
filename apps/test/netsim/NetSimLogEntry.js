@@ -8,8 +8,7 @@ var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
-var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
-var PacketHeaderType = netsimConstants.PacketHeaderType;
+var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 
 describe("NetSimLogEntry", function () {
   var testShard;
@@ -36,9 +35,9 @@ describe("NetSimLogEntry", function () {
       assertEqual(row.nodeID, undefined);
     });
   
-    it ("packet (default empty string)", function () {
-      assertOwnProperty(row, 'packet');
-      assertEqual(row.packet, '');
+    it ("binary (default empty string)", function () {
+      assertOwnProperty(row, 'binary');
+      assertEqual(row.binary, '');
     });
 
     it ("timestamp (default Date.now())", function () {
@@ -51,14 +50,14 @@ describe("NetSimLogEntry", function () {
     var row = {
       id: 1,
       nodeID: 42,
-      packet: 'Non-default log text',
+      binary: 'Non-default log text',
       timestamp: 52000
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
     assertEqual(logEntry.entityID, 1);
     assertEqual(logEntry.nodeID, 42);
-    assertEqual(logEntry.packet, 'Non-default log text');
+    assertEqual(logEntry.binary, 'Non-default log text');
     assertEqual(logEntry.timestamp, 52000);
   });
 
@@ -73,14 +72,14 @@ describe("NetSimLogEntry", function () {
 
     it ("Puts row values in remote table", function () {
       var nodeID = 1;
-      var packet = 'xyzzy';
+      var binary = 'xyzzy';
 
-      NetSimLogEntry.create(testShard, nodeID, packet, function () {});
+      NetSimLogEntry.create(testShard, nodeID, binary, function () {});
 
       testShard.logTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
-        assertEqual(row.packet, packet);
+        assertEqual(row.binary, binary);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
@@ -111,19 +110,19 @@ describe("NetSimLogEntry", function () {
     assertTableSize(testShard, 'logTable', 0);
   });
 
-  it ("can extract packet data based on standard format", function () {
+  it ("can extract binary data based on standard format", function () {
     var logEntry = new NetSimLogEntry(null, {
-      packet: '0001 0010 0011 0100 01010110'
+      binary: '0001 0010 0011 0100 01010110'
     }, [
-      { key: PacketHeaderType.TO_ADDRESS, bits: 4 },
-      { key: PacketHeaderType.FROM_ADDRESS, bits: 4 },
-      { key: PacketHeaderType.PACKET_INDEX, bits: 4 },
-      { key: PacketHeaderType.PACKET_COUNT, bits: 4 }
+      { key: Packet.HeaderType.TO_ADDRESS, bits: 4 },
+      { key: Packet.HeaderType.FROM_ADDRESS, bits: 4 },
+      { key: Packet.HeaderType.PACKET_INDEX, bits: 4 },
+      { key: Packet.HeaderType.PACKET_COUNT, bits: 4 }
     ]);
-    assertEqual(1, logEntry.getHeaderField(PacketHeaderType.TO_ADDRESS));
-    assertEqual(2, logEntry.getHeaderField(PacketHeaderType.FROM_ADDRESS));
-    assertEqual(3, logEntry.getHeaderField(PacketHeaderType.PACKET_INDEX));
-    assertEqual(4, logEntry.getHeaderField(PacketHeaderType.PACKET_COUNT));
+    assertEqual(1, logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
+    assertEqual(2, logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
+    assertEqual(3, logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
+    assertEqual(4, logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
     assertEqual('01010110', logEntry.getMessageBinary());
   });
 

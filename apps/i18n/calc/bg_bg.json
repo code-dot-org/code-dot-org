@@ -13,5 +13,5 @@
   "yourExpression": "Вашият израз:",
   "wrongInput": "Вие извикахте функция с грешна стойност.",
   "wrongOtherValuesX": "Вашият резултат от израза води има грешна стойност ако ние варираме {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Вашият израз не връща правилния резултат."
 }

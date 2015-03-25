@@ -10,9 +10,7 @@ ru:
       2-3 Artist 2_instruction: 'У этого дома одна стена закончена только наполовину. Высота каждой стены 100 пикселей, но высота незаконченной стены всего лишь 50 пикселей. Дорисуйте стену. '
       2-3 Artist 3.4_instruction: Блок прыжок передвигает художника без рисования линии. Нарисуйте пунктирную линию используя блоки прыжок и рисовать.
       2-3 Artist 3_instruction: Высота этой шляпы 100 пикселей. Нарисуйте шляпу на 70 пикселей меньше.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: 'Высота красной шляпы 100 пикселей. Закончите рисование черной шляпы, чтобы она была на 70 пикселей короче. Ширина черной шляпы - 50 пикселей.'
       2-3 Artist 4_instruction: Помогите мне завершить дом для этого кота.
       2-3 Artist 5_instruction: 'Замените этот код блоком "повторить несколько раз", чтобы нарисовать такой же дом, используя всего 3 блока.'
       2-3 Artist 6_instruction: 'Этому дому нужна крыша! Нарисуйте треугольник. Подсказка: длина всех трёх сторон одинаковая.'
@@ -70,24 +68,12 @@ ru:
       2-3 Artist Match Rho Pic_instruction: 'Соответствие: Закончите недостающий код.'
       2-3 Artist Match Sq Pic_instruction: 'Соответствие: Закончите недостающий код'
       2-3 Artist Match Tri pic_instruction: 'Соответствие: Заполните недостающий код.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
+      2-3 Artist Nested Loops 1_instruction: "Ранее вы использовали циклы для рисования фигур, но знаете ли вы что вы можете использовать цикл внутри другого цикла?\r Зациклите весь этот блок кода 3 раза чтобы нарисовать узор."
+      2-3 Artist Nested Loops 10_instruction: Зациклите этот код 12 раз чтобы завершить узор.
+      2-3 Artist Nested Loops 11_instruction: Зациклите этот код 4 раза чтобы завершить узор и поворачивайте его на 90 градусов после завершения каждого цикла.
+      2-3 Artist Nested Loops 12_instruction: Зациклите этот код 12 раз для завершения завитков.
+      2-3 Artist Nested Loops 2_instruction: Теперь зациклите треугольник 6 раз. После каждого треугольника, Вам необходимо повернуть его на 60 градусов, прежде чем рисовать следующий.
+      2-3 Artist Nested Loops 3_instruction: Вам необходимо зациклить треугольник 12 раз, чтобы нарисовать узор. Поделите число градусов в круге (360) на число Ваших фигур (12) чтобы узнать на сколько градусов нужно повернуть каждую фигуру.
       2-3 Artist Nested Loops 4_instruction: |
         Loop this diamond 12 times to draw
         a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
@@ -2290,9 +2276,6 @@ ru:
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2353,19 +2336,12 @@ ru:
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
         block as well as the “Move” block.
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
       frozen snowflake full_instruction: |
         Now let's repeat it 8 times to make a
         beautiful snowflake!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: |
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
@@ -2373,11 +2349,6 @@ ru:
       frozen square iterative_instruction: |
         It seems like we're halfway to making
         a square. Let's put 4 lines together to create a square.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.

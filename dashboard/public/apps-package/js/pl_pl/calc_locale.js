@@ -158,7 +158,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "emptyComputeBlock":function(d){return "Musisz dołączyć blok do \"bloku obliczającego\"."},
 "emptyFunctionalBlock":function(d){return "Nie wprowadziłeś żadnej zawartości do swojego bloku."},
 "equivalentExpression":function(d){return "Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "Oceń"},
 "extraTopBlocks":function(d){return "Masz niezałączone bloki. Czy chciałeś je dołączyć do bloku obliczeniowego?"},
 "failedInput":function(d){return "Twoja funkcja nie zwraca prawidłowych wyników dla wszystkich wartości."},
 "goal":function(d){return "Cel:"},

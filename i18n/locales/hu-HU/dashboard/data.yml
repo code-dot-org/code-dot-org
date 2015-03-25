@@ -3,7 +3,7 @@ hu:
     script:
       name:
         20-hour:
-          desc: K-8 bevezető számítógép tudomány kurzushoz
+          desc: Bevezető számítógép-tudomány tanfolyam általános iskolásoknak
           Unplug1: 1. szakasz
           Maze: 2. szakasz
           Unplug2: 3. szakasz
@@ -84,14 +84,14 @@ hu:
         Farmer: A Farmer
         Unplug6: Feltételek
         Artist3: A művész 3
-        Unplug7: Dal írás
+        Unplug7: Dalírás
         Farmer2: A Farmer 2
         Unplug8: Változó
         Artist4: A művész 4
         Unplug9: Váltó programozás
         Farmer3: A Farmer 3
         Unplug10: Az internet
-        Artist5: A művész 5
+        Artist5: A Művész 5
         Unplug11: Összefoglaló
         MazeEC: A labirintus
         Bounce: Visszapattanós
@@ -215,7 +215,7 @@ hu:
         maze_karel_debug_if: Segíts! Javítsd ki a programot, hogy a mező teljesen lapos legyen.
         maze_karel_debug_if_else: Keresd meg a hibákat a programban, hogy feltöltsük a gödröket, és eltávolítsuk a halmokat.
         maze_karel_debug_function_1: Mit fogsz megváltoztatni ezen a programon, hogy segíts eltávolítani a földhalmokat?
-        maze_karel_debug_function_2: Ki tudnád javítani nekem ezt a programot úgy, hogy a területemet el tudjam egyengetni?
+        maze_karel_debug_function_2: Ki tudnád javítani nekem ezt a programot úgy, hogy a földemet el tudjam egyengetni?
         maze_karel_debug_function_3: 'Szerkeszd át a programot úgy, hogy eltüntessek minden földkupacot a földemről. '
         turtle_5_1: Próbálja meg futtatni ezt a programot, és változtassa meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár törölheti az egészet, és írhat helyette valami teljesen mást)
         turtle_5_2: Próbálja meg futtatni ezt a programot, és változtassa meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár törölheti az egészet, és írhat helyette valami teljesen mást)
@@ -299,21 +299,21 @@ hu:
         studio_c3_game_5: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_6: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
-        studio_playlab_1: 'Pingvin azt akarja mondani, hogy "hello" - tudsz segíteni neki ebben?'
-        studio_playlab_2: 'A Barlanglakó fiú (1. szereplő) és a Barlanglakó lány (2. szereplő) azt szeretnék mondani egymásnak, hogy "hello". Tudnál segíteni nekik, felhasználva kétszer a "mondani" blokkot?'
+        studio_playlab_1: 'Pingvin azt akarja mondani, hogy "helló" - tudsz segíteni neki ebben?'
+        studio_playlab_2: 'A Barlanglakó fiú (1. szereplő) és a Barlanglakó lány (2. szereplő) azt szeretnék mondani egymásnak, hogy "helló". Tudnál segíteni nekik, felhasználva kétszer a "szereplő mondja" blokkot?'
         studio_playlab_3: Segítesz a teniszező lánynak a zászlóhoz jutni?
         studio_playlab_4: Segítesz a Teniszező fiúnak (az 1. szereplőnek) a Teniszező lányhoz (a 2. szereplőhöz) jutni és lejátszani egy hangot, amikor ő odaér?
         studio_playlab_5: 'Tudsz segíteni az Űrrobotnak azt mondani, hogy "Üdvözlet Földlakók", amikor rákattintasz? Ne felejtsd el a kattintást a Futtatás gombra történő kattintás után!'
         studio_playlab_6: Tudsz segíteni a Boszorkánynak odajutni minden egyes tűzgolyóhoz a fel/le/jobbra/balra nyilakkal?
         studio_playlab_7: 'A "végtelen ismétlés" blokkal a kód folyamatosan futtatható. Be tudnál illeszteni blokkokat, hogy segíts a varázslónak folyamatosan jobbra-balra mozogni?'
         studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja, és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak? Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
-        studio_playlab_9: 'Állítsd be ennek az idegen inváziónak a hátterét, és segíts az ürrobotnak - a sebességének növelésével - , hogy gyorsabban eljuthasson az idegenekhez. Utána mozgasd a nyíl billentyűkkel hogy eljusson az űrrobothoz, és figyelmeztessen mindenkit'
+        studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_full_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_k1_2: Rá tudod bírni először a kutyát, ez után pedig a macskát is, hogy egymás után mondjanak valamit?
         studio_k1_3: Tudsz írni egy olyan programot, amely ráveszi a kutyát, hogy odamenjen a macskához?
-        studio_k1_4: 'Mozgasd a kutyát a macskához, majd amikor az odaért, mondja a macska azt, hogy "hello"!'
+        studio_k1_4: 'Mozgasd a kutyát a macskához, majd amikor az odaért, mondja a macska azt, hogy "helló".'
         studio_k1_5: Hozzáadnál egy blokkot, hogy boldoggá tedd a polipot?
         studio_k1_6: Hozz létre egy saját történetet! Mozgasd a macskát és a kutyát, mindeközben beszéltesd őket!
         maze_wordsearch_k_1: Mozgass engem úgy, hogy az EAST szót betűzzem
@@ -327,26 +327,26 @@ hu:
         maze_wordsearch_k_16: Mozgass engem egy irányba, majd egy másikba hogy a BELOW szót betűzzem
         maze_wordsearch_k_20: Ez egy próba! Mozgass engem egy irányba, majd egy másikba hogy a STORY szót betűzzem
         applab_ec_simple: Create your app by using the blocks in the toolbox.
-        turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc színedet úgy, hogy azt az új "penColor" blokkból veszed ki.'
-        turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit amit csak akarsz. Néhány szórakoztató ötlet: egy pálcikaember, hópehely, vagy spirál. Próbáld ki az új "penWidth" blokkot is. Jó szórakozást!'
+        turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: válaszd a kedvencedet az új "színbeállítások megadása" blokk színei közül.'
+        turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit, amit csak szeretnél. Néhány szórakoztató ötlet: pálcikaember, hópehely, vagy spirál. Próbáld ki az új "szélesség beállítása" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
     video:
       name:
-        maze_intro: Útvesztő ismertető
-        artist_intro: Művész Intro
-        farmer_intro: Farmer Intro
-        flappy_intro: Flappy intró
+        maze_intro: 'Labirintus - Bevezető'
+        artist_intro: 'Művész - Bevezető'
+        farmer_intro: 'Farmer - Bevezető'
+        flappy_intro: 'Flappy - Bevezető'
         loop_times: Ismétlés valahányszor blokk
         loop_until: Ismételd amíg, blokk
         if: Ha blokk
-        if_else: Ha/egyébként blokk
-        if_else_scrat: Ha/egyébként blokk
+        if_else: Ha/különben blokk
+        if_else_scrat: Ha/különben blokk
         function: Függvények
-        loop_while: Amig blokk
+        loop_while: Amíg blokk
         loop_for: Számláló blokk
-        parameters: Paraméterezett függvények
+        parameters: Paraméteres függvények
         hoc_wrapup: A kódolás órája összefoglaló
-        Unplug1: Mi a számítógép tudomány?
+        Unplug1: Mi a számítógép-tudomány?
         Unplug2: Számítógépes gondolkodás
         Unplug3: Grafikus programozás
         Unplug4: algoritmusok
@@ -357,30 +357,30 @@ hu:
         Unplug9: Váltó programozás
         Unplug10: Internet
         Unplug11: Összefoglaló
-        C1_happy_maps_unplugged: Boldog térképek
+        C1_happy_maps_unplugged: Vidám térképek
         C1_moveitmoveit_unplugged: Mozgás, mozgás
         C1_bigevent_unplugged: A nagy esemény
         C1_getting_loopy: Ciklikusság
-        C1_pair_programming: Párban programozás
-        C1_maze_intro_sequencing: Labirintus. Sorozat. Bevezető
+        C1_pair_programming: Páros programozás
+        C1_maze_intro_sequencing: 'Labirintus: sorozat - Bevezető'
         C1_maze_debugging: 'Labirintus: hibakeresés'
         C1_bee_level_intro: 'Méh - Bevezető'
         C1_artist_intro: Művész Intro
-        C1_spelling_bee_intro: Spelling Bee Bevezetés
+        C1_spelling_bee_intro: 'Betűző méh - Bevezető'
         C1_zuck_repeat_loop: 'Labirintus: ciklusok'
-        C1_bee_loops: Méh Ciklusok
+        C1_bee_loops: 'Méh: ciklusok'
         C1_maze_loops: 'Labirintus: ciklusok'
         C1_playlab_storytelling: 'Játéklabor - hozz létre egy történetet'
         C1_planting_seed: Magvetés
-        C1_building_foundation: Az alap megépítése
+        C1_building_foundation: Alapozás
         C1_going_places_safely: Biztonságos utazás
         C2_maze_intro: Labirintus Intro
         C2_artist_intro: Művész Intro
         C2_zuck_repeat_loop: 'Labirintus: ciklusok'
         C2_artist_loops: 'Művész: ciklusok'
         C2_artist_debugging: 'Művész: hibakeresés'
-        C2_bee_loops: Méh Ciklusok
-        C2_bee_debugging: Méh Hibakeresés
+        C2_bee_loops: 'Méh: ciklusok'
+        C2_bee_debugging: 'Méh: hibakeresés'
         C2_bee_conditionals: Méh Feltételes mód
         C2_playlab_createstory: 'Játéklabor - hozz létre egy történetet'
         C2_graph_paper: Grafikus programozás
@@ -399,14 +399,14 @@ hu:
         C3_artist_nested_loops: Egymásba ágyazott ciklusok
         C3_farmer_while: Elől tesztelős ciklusok
         C3_bee_nested_loops: Egymásba ágyazott ciklusok
-        C3_bee_debugging: Méh Hibakeresés
+        C3_bee_debugging: 'Méh: hibakeresés'
         C3_bounce: Ugrál
         C3_playlab_create_game: 'Játéklabor: Hozz létre egy játékot'
         C3_computational_thinking: Számítógépes gondolkodás
         C3_dice_race: Kocka verseny
         C3_internet: Internet
         C3_crowdsourcing: Csoportos megoldás
-        C3_functional_suncatchers: Funkcionális Dekor
+        C3_functional_suncatchers: Hasznos díszek
         C3_songwriting_with_parameters: Dalszerzés paraméterekkel
         C4_intro: Bevezető
         C4_bee_conditional: Méh Feltételes mód
@@ -416,11 +416,11 @@ hu:
         C4_math_artist: A művész programozása matematikával
         C4_function_edit: Függvények szerkesztése
         C4_function_create: Függvények létrehozása
-        C4_function_parameters: Paraméterezett függvények
+        C4_function_parameters: Paraméteres függvények
         C4_conditionals: Feltételek
         C4_unplugged_algorithms: Algoritmusok tangrammal
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Változók űrlapokban
+        C4_unplugged_variables: Borítékolt változók
         C4_unplugged_forloops: Számláló ciklusok
         C4_unplugged_parameters: Dalszerzés paraméterekkel
         C4_unplugged_binary: Bináris
@@ -442,14 +442,14 @@ hu:
         run: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat
         watch_again: 'Kattints ide, hogy újra megnézhesd a videót '
         gray_block_explanation: A szürke blokkok nem törölhetők. Így is meg tudod oldani a feladatot?
-        show_code_explanation: Kattints ide, hogy lásd a kódot amit írtál
+        show_code_explanation: Kattints ide, hogy lásd a kódot, amit írtál
         instructions_repeat_explanation: Az egyes feladványokhoz tartozó leírás itt jelenik meg újra
         category_explanation: Ugyan azok a blokkjaid vannak, de most ők most már kategóriákba vannak rendezve
-        set_sprite_image: 'Illeszd a "szereplő képének beállítása" blokkot az "amikor a történet elkezdődik" blokkhoz, hogy kiválaszd a szereplődet'
+        set_sprite_image: 'Illeszd a "szereplő beállítása" blokkot az "amikor a történet kezdődik" blokkhoz, hogy a szereplő része legyen a történetnek'
         studio_say_text: Írd idézőjelek közé a szereplő által mondani kívánt szöveget
         jigsaw_click: Kattints erre a blokkra!
-        move_elsa_forward: 'Húzd a "Mozgassa előre" blokkot és illeszd azt a "Futtatáskor" blokk alá ahhoz, hogy Elza előre lépjen'
-        turn_elsa: 'Használd a "Fordítsd" blokkot Elsa elfordításához. A legördülő menüben lévő szám határozza meg, hogy Elsa mennyire fordul el'
+        move_elsa_forward: 'Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor" blokk alá ahhoz, hogy Elsa előre lépjen'
+        turn_elsa: 'Használd a "fordítsd" blokkot Elsa elfordításához. A legördülő menüben lévő szám határozza meg, hogy Elsa mennyire fordul el'
         replace_questions: 'Használd a legördülő menüt hogy helyettesítsd a "???" egy számmal'
         replace_questions_degree: 'Használd a legördülő menüt hogy helyettesítsd a "???"-t a megfelelő fokszámmal a forduláshoz'
         repeat_blocks: 'Használd az "Ismételd" blokkot, és kerítsd körbe vele a munkaterületen lévő blokkokat'
@@ -464,23 +464,23 @@ hu:
         actions_category: 'Az eszközkészlet új külsőt kapott! Most már itt vannak a "Műveletek" blokkok is.'
         draw_square_hint: 'Tipp: Használd a négyzet ciklust, amit épp az utolsó feladványban készítettél.'
         edit_function: Kattints ide a függvényed szerkesztéséhez!
-        create_function: 'Kattints ide, a "Funkciók" felugró menü megnyitásához, majd kattints a "Hozz létre egy funkciót" gombra.'
-        house_hint: Rendben van ha kép még nem tűnik háznak. A következő feladványban kijavítjuk ezt.
-        edit_draw_square: Használd ezt a gombot a funkció szerkesztéséhez és a ciklus hozzáadásához.
+        create_function: 'Kattints ide a "Függvények" menü megnyitásához, majd kattints a "Függvény létrehozása" gombra.'
+        house_hint: Rendben van, ha kép még nem tűnik háznak. A következő feladványban kijavítjuk ezt.
+        edit_draw_square: Használd ezt a gombot a függvény szerkesztéséhez és a ciklus hozzáadásához.
         edit_get_nectar: 'Módosítsd e gomb segítségével a függvényt és változtasd meg az irányt: a méh irányt fog váltani, hogy begyűjtse a nektárt!'
-        logic_category: 'Nyisd meg a "Logika" posztert hogy megtaláld a "ha/különben" blokkot.'
+        logic_category: 'Nyisd meg a "Logika" menüt, hogy megtaláld a "ha/különben" blokkot.'
         length_parameter: 'Frissítenéd ezt a függvényt, hogy benne legyen a "hossza" paraméter?'
-        frozen_diamond_repeat: Használd az Ismétlő blokkot hogy létrehozd ezt a formát.
-        frozen_circle_function_in_circle_turn: Ne felejtsd el elfordulni az egyes körök létrehozása után.
-        frozen_circle_function_with_parameter_circle: 'Használd az "egy kör létrehozása" blokkot, és változtasd meg a méretét.'
-        frozen_snowflake_branch: 'Használd az "egy hópehely ág készítő" blokkot'
+        frozen_diamond_repeat: 'Használd az "Ismételd" blokkot, hogy létrehozd ezt a formát.'
+        frozen_circle_function_in_circle_turn: Ne felejts el fordulni az egyes körök létrehozása után.
+        frozen_circle_function_with_parameter_circle: 'Használd az "kör létrehozása" blokkot, és változtasd meg a méretét.'
+        frozen_snowflake_branch: 'Használd a "hozz létre egy hópehely ágat" blokkot'
         frozen_create_square: 'Csatolj több blokkot ide egy négyzet  létrehozásához'
-        playlab_drag_say: 'Húzzd ide a "mondani" blokkot, és írd be hogy "hello"'
+        playlab_drag_say: 'Húzd át a "szereplő mondja" blokkot, és írd be, hogy "helló"'
         playlab_use_twice: Használd kétszer ezt a blokkot, és ne feledd módosítani a szereplő számát
         playlab_move_girl: 'Használd a "jobbra mozgatás" blokkot a Tenisz lány mozgatásához'
         playlab_play_sound: 'Itt add hozzá a "hang lejátszása" blokkot!'
-        playlab_arrow_keys: Ne felejtsd el mozgatni a boszorkányt miután a Futtatásra kattintottál
-        playlab_add_move: 'Adj "menj" blokkot ebbe az ismétlés blokkba'
+        playlab_arrow_keys: Ne felejtsd el mozgatni a boszorkányt, miután a Futtatásra kattintottál
+        playlab_add_move: 'Rakj "menj" blokkokat az ismételd blokkba'
         playlab_add_score: Add hozzá a pontszám blokkokat itt!
         playlab_add_blocks: Add hozzá a blokkokat itt!
         set_variable: Húzz egy szám blokkot ide, hogy beállítsd a változódat
@@ -489,16 +489,16 @@ hu:
         place_counter_variable: Húzd a számláló változót a blokkba
         function_editor_draw_square: 'Ez itt a függvénydeklarációd. Ezek a blokkok lefutnak minden egyes alkalommal, amikor használod a "négyzet rajzolása" blokkot.'
         change_here: Végezd el a változtatásokat itt!
-        write_draw_square_function: Húzd át az eszközkészletből a blokkokat ide egy négyzet rajzolásához!
-        write_draw_triangle_function: Húzz ide blokkokat az eszköztárból, amelyek egy háromszöget rajzolnak
-        edit_add_parameter: Kattints a szerkesztésre hogy paramétert adj a függvényedhez
+        write_draw_square_function: Húzd át az eszköztárból a blokkokat ide egy négyzet rajzolásához
+        write_draw_triangle_function: Húzz ide olyan blokkokat az eszköztárból, amelyek egy háromszöget rajzolnak
+        edit_add_parameter: Kattints a szerkesztésre, hogy paramétert adj a függvényedhez
         add_and_drag_parameter: Írd be ide a paramétered nevét, kattints a hozzáadásra, majd húzd a függvényed leírásába
-        fill_in_actor: Tltsd ki a ???-t számokkal, amelyek megfelelnek az egyes szereplőknek (1, 2, és 3)
+        fill_in_actor: Írd be a ??? helyére a szereplőknek megfelelő számokat (1, 2, és 3)
         repeat: Tedd a blokkokat a ciklusok belsejébe a parancsok ismétléséhez!
         if_bee_nectar: 'Használd a "ha" blokkot, hogy eldöntsd hogy a méhnek kell-e nektárt kapnia'
-        if_else_bee: 'Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a virágból, és mézet csináljon, ha nem virág'
-        repeat_full_circle: Írd be a számát, hogy hányszor kell a zombinak mozognia hogy egy teljes kört csináljon
-        place_length_variable: Húzd a hossz változót ide a kérdőjelek helyére
+        if_else_bee: 'Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a virágból, és mézet csináljon, ha az nem virág'
+        repeat_full_circle: Írd be a számát, hogy hányszor kell a zombinak mozognia, hogy egy teljes kört leírjon
+        place_length_variable: Húzd a hossza változót ide a kérdőjelek helyére
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
         right_arrow_fireball: A jobbra nyíllal tudod kilőni a tűzgolyókat
         name_function: Írd be a függvény nevét ide

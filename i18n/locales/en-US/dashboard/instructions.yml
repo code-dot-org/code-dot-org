@@ -734,7 +734,6 @@ en:
       Eval Strings Images 8_instruction: crwdns35668:0crwdne35668:0
       Eval Strings Images Free Play_instruction: crwdns34500:0crwdne34500:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
-      freeplay_instruction: crwdns34501:0crwdne34501:0
       frozen circle function (copy 1)_instruction: crwdns34502:0crwdne34502:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
       frozen circle function with parameter_instruction: crwdns34504:0crwdne34504:0
@@ -752,13 +751,10 @@ en:
       frozen freeplay_instruction: crwdns34516:0crwdne34516:0
       frozen line_instruction: crwdns34517:0crwdne34517:0
       frozen perpendicular_instruction: crwdns34518:0crwdne34518:0
-      frozen snowflake base_instruction: crwdns34519:0crwdne34519:0
       frozen snowflake branch_instruction: crwdns34520:0crwdne34520:0
       frozen snowflake full_instruction: crwdns34521:0crwdne34521:0
-      frozen snowflower pattern_instruction: crwdns34522:0crwdne34522:0
       frozen snowflower_instruction: crwdns34523:0crwdne34523:0
       frozen square iterative_instruction: crwdns34524:0crwdne34524:0
-      frozen square loop (copy 1)_instruction: crwdns34525:0crwdne34525:0
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0

@@ -34,8 +34,8 @@
         tudod beállítani jelszavad.
       send_paranoid_instructions: Ha az e-mail címed létezik adatbázisunkban, néhány
         percen belül kapni fogsz egy jelszó-beállítási hivatkozást a e-mail címedre.
-      updated: A jelszót sikeresen megváltoztatta. Most bejelentkezett.
-      updated_not_active: A jelszót sikeresen megváltoztatta.
+      updated: A jelszót sikeresen megváltoztattad. Most be vagy jelentkezve.
+      updated_not_active: A jelszót sikeresen megváltoztattad.
     registrations:
       destroyed: Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan
         újra találkozunk.

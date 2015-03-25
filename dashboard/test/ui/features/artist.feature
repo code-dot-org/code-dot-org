@@ -3,6 +3,7 @@ Feature: Playing the Artist Game
 Background:
   Given I am on "http://learn.code.org/s/1/level/24?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#x-close"
   Then element ".dialog-title" has text "Puzzle 1 of 10"
   And I press "x-close"
   Then element "#runButton" is visible

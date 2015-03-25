@@ -140,6 +140,13 @@ ru:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 'Художник: Выбор варианта'
         Which blocks draw a rectangle with a perimeter of 100?: Какие блоки рисуют прямоугольник с периметром 100?
@@ -676,7 +683,7 @@ ru:
         wrong answer: неправильный ответ
         right answer: правильный ответ
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: Что такое урок без компьютера?
         Are you ready to move on?: Are you ready to move on?
         "Yes": Да
       PDK5 UVideo Overview:

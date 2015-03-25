@@ -226,7 +226,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareDrawing":function(d){return "แชร์รูปวาดของคุณ:"},
 "showMe":function(d){return "Show me"},
 "showTurtle":function(d){return "show artist"},
-"sizeParameter":function(d){return "size"},
+"sizeParameter":function(d){return "ขนาด"},
 "step":function(d){return "step"},
 "tooFewColours":function(d){return "คุณจำเป็นจะต้องใช้สีอย่างน้อย %1 สี ที่แตกต่างกันในปริศนานี้ ซึ่งตอนนี้คุณใช้แค่ %2 สี"},
 "turnLeft":function(d){return "turn left by"},
