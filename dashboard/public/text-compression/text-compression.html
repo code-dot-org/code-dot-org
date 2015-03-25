@@ -129,21 +129,24 @@
 
     function setupPoemWithText(text) {
       text = text.replace(/[ \n]/g, "_");
-      document.getElementById("dictEntries").innerHTML = "";
       document.getElementById("compressedPoem").innerHTML = text;
       poemCalc = text;
       poemText = text;
-      for (var i = 0; i < 16; i++) {
-        document.getElementById("dictEntries").innerHTML += dictEntries[i] + "\n";
-      }
       calculateData();
     }
 
     function calculateData() {
-      var dictSize = document.getElementById("dictionary").value.length + 1;
-      if (document.getElementById("dictionary").value.length == 0) {
+      var text = document.getElementById("dictionary").value;
+      var dictSize = text.length + 1;
+      if (text.length == 0) {
         dictSize = 0;
       }
+
+      var dictCount = (text.match(/\n/g) || []).length;
+      for (var i = 0, s = ""; i <= dictCount; i++) {
+        s += dictEntries[i] + "\n";
+      }
+      document.getElementById("dictEntries").innerHTML = s;
 
       var poemSize = poemCalc.length;
       var total = dictSize + poemSize;
@@ -227,7 +230,7 @@
 <div id="input">
   Dictionary:<br>
   <div id="dictEntries"></div>
-  <textarea id="dictionary" onkeyup="compress();" rows="16"></textarea>
+  <textarea id="dictionary" onkeyup="compress();" rows="16" wrap="off"></textarea>
 </div>
 <script>
   var poemSelect = document.getElementById("poemsList");
