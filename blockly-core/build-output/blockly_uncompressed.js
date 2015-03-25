@@ -14433,11 +14433,18 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
   this.moveConnections_(dx, dy)
 };
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
   try {
-    if(Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+    if(ie10OrOlder) {
+      initialStyle = this.getSvgRoot().style.display;
       this.getSvgRoot().style.display = "inline"
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox())
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+    if(ie10OrOlder) {
+      this.getSvgRoot().style.display = initialStyle
+    }
   }catch(e) {
     return{height:0, width:0}
   }
