@@ -3424,7 +3424,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3447,12 +3450,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3464,7 +3466,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**

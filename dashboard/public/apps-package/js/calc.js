@@ -504,7 +504,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      var val = userClone.getEquation(name).expression.getValue();
+      var val = userClone.getEquation(name).expression.evaluate().result;
       setConstantsToValue(val, index);
     });
 
@@ -2037,7 +2037,7 @@ ExpressionNode.prototype.setValue = function (value) {
     throw new Error("Can't modify value");
   }
   if (type === ValueType.NUMBER) {
-    this.value_ = jsnums.makeFloat(value);
+    this.value_ = ensureJsnum(value);
   } else {
     this.value_ = value;
   }
