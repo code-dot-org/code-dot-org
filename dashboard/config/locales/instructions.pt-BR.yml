@@ -2412,9 +2412,6 @@
         Atividade livre: explore os blocos disponíveis
         para desenhar algo interessante. Lembre-se de salvar e compartilhar suas imagens favoritas.
       Examples 4_instruction: Função de encolhimento
-      freeplay_instruction: |
-        Você se tornou oficialmente um artista mestre! Crie um
-        país das maravilhas de gelo e compartilhe com seus amigos.
       frozen circle function (copy 1)_instruction: |
         Use o novo bloco "crie um círculo"
         para criar 10 círculos sobrepostos. Não se esqueça de avançar entre os
@@ -2475,19 +2472,12 @@
         Agora, vamos ver se podemos criar duas retas
         que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
         e também o bloco "mova".
-      frozen snowflake base_instruction: |
-        Crie essas 3 retas que estão separadas por
-        45 graus
       frozen snowflake branch_instruction: |
         Tente usar o bloco "crie um floco de neve do tipo ramificado”
         para criar três ramificações, o que começa a parecer um floco de neve.
       frozen snowflake full_instruction: |
         Agora, vamos repetir isso 8 vezes para fazer um
         belo floco de neve!
-      frozen snowflower pattern_instruction: |
-        Que belas flores de neve! Vamos
-        criar pequenas flores de neve para cobrir todo o ringue de patinação. Não se esqueça de
-        avançar 150 pixels entre cada flor de neve.
       frozen snowflower_instruction: |
         Padrões de neve complexos podem ser criados com
         formas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho
@@ -2495,11 +2485,6 @@
       frozen square iterative_instruction: |
         Parece que estamos na metade do caminho para fazer
         um quadrado. Vamos juntar 4 retas para criar um quadrado.
-      frozen square loop (copy 1)_instruction: |
-        Há mais de uma forma de fazer um
-        quadrado. Você consegue usar o bloco repita para criar o quadrado novamente, mas com
-        menos blocos? Qual padrão se repete, para que você possa colocar dentro do
-        bloco repita?
       frozen square loop 3x_instruction: |
         Vamos criar três quadrados, virando depois
         de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.

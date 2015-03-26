@@ -4,6 +4,7 @@
   "ascii": "زبان AXCII",
   "binary": "Binary",
   "bitCounter": "بیت های {x}/{y}",
+  "bits": "Bits",
   "clear": "تمیز",
   "connected": "متصل",
   "decimal": "ده دهی",
@@ -21,15 +22,19 @@
   "instructions": "دستورالعمل ها",
   "message": "پیام",
   "myDevice": "دستگاه من",
+  "numBitsPerPacket": "{x} bits per packet",
   "_of_": " از ",
   "packet": "بسته",
+  "packetInfo": "Packet Info",
   "receivedMessageLog": "لیست پیام های دریافتی",
   "removePacket": "Remove Packet",
   "router": "روتر(مسیر یاب)",
+  "routerX": "Router {x}",
   "send": "بفرست",
   "sendAMessage": "یک پیام بفرست",
   "sentMessageLog": "لیست پیام های فرستاده شده",
   "to": "به",
+  "unlimited": "Unlimited",
   "workspaceHeader": "شبیه ساز اینترنت",
-  "xOfY": "{x} از {y}"
+  "xOfYPackets": "{x} of {y}"
 }

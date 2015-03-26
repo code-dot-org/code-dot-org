@@ -2,7 +2,7 @@
   "badColorStringError": "You used an invalid color string: {val}",
   "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "okrąg (promień, styl, kolor)",
-  "displayBlockTitle": "wyświetl",
+  "displayBlockTitle": "Oceń",
   "ellipseBlockTitle": "elipsa (szerokość, wysokość, styl, kolor)",
   "emptyFunctionalBlock": "Nie wprowadziłeś żadnej zawartości do swojego bloku.",
   "extraTopBlocks": "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?",

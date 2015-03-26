@@ -472,6 +472,54 @@ function customValidator(assert) {
     ]);
   });
 
+  displayComplexUserExpressionTest(assert, 'error when varying function input', function () {
+    // f(x) = x
+    // compute: f(5)
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [5])));
+
+    // f(x) = 5
+    // compute: f(5)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode(5)));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [5])));
+
+    setEquationSets(targetSet, userSet);
+
+    // Normally this would happen when we call Calc.generateResults_, but
+    // that replaces our userSet with workspace blocks, so we just manually
+    // hack the failedInput
+    Calc.__testonly__.appState.failedInput = [1];
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 3);
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['f(x) = ', null],
+      ['5', null]
+    ]);
+
+    validateTextElementContainer(userExpression.children[1], [
+      ['f', null],
+      ['(', null],
+      ['5', null],
+      [')', null],
+      [' = ', null],
+      ['5', null]
+    ]);
+
+    validateTextElementContainer(userExpression.children[2], [
+      ['f', null],
+      ['(', null],
+      ['1', null],
+      [')', null],
+      [' = ', null],
+      ['5', 'errorToken']
+    ]);
+  });
+
 
   return true;
 }

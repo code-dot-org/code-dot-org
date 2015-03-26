@@ -158,14 +158,14 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "emptyComputeBlock":function(d){return "Bloğu \"hesapla\" bloğuna tutturmak zorundasınız."},
 "emptyFunctionalBlock":function(d){return "Doldurulmamış bir giriş bloğunuz bulunuyor."},
 "equivalentExpression":function(d){return "Tam olarak aynı ifade almak için argümanlar yeniden deneyin."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "değerlendirme"},
 "extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"},
 "failedInput":function(d){return "Fonksiyonunuz tüm değerler için doğru sonuca dönmüyor."},
-"goal":function(d){return "Amaç:"},
+"goal":function(d){return "Hedef:\n"},
 "levelIncompleteError":function(d){return "Tanımın hedefle eşleşmiyor."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "İşte senin hesaplaman! Üzerinde çalışmaya devam et, yada sıradaki bulmacaya geç!"},
 "yourExpression":function(d){return "İfadeniz:"},
 "wrongInput":function(d){return "Fonksiyonunuzu yanlış değer ile çağırıyorsunuz."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "İfadeniz doğru sonucu döndürmüyor"}};

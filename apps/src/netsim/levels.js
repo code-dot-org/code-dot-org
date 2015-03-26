@@ -3,11 +3,11 @@
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
+var Packet = require('./Packet');
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 /**
  * A level configuration that can be used by NetSim
@@ -83,16 +83,16 @@ levels.default = {
 
   // Packet header specification
   routerExpectsPacketHeader: [
-    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
   clientInitialPacketHeader: [
-    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
 
   // Send widget configuration

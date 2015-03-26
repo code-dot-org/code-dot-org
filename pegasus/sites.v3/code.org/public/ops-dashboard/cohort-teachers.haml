@@ -67,6 +67,10 @@ theme: none
       %th.manage-th
         District
       %th.manage-th
+        School
+      %th.manage-th
+        Gender
+      %th.manage-th
         %a.btn.btn-primary{"ng-click" => "saveAll(cohort)", "ng-show" => "editingAny(cohort.teachers)", "ng-disabled" => "form.$invalid"} Save All
     %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top"}
       %td
@@ -89,6 +93,16 @@ theme: none
           {{teacher.district.name}}
         %div{"ng-show" => "teacher.editing"}
           %select.district-name.form-control{"ng-model" => "teacher.district.id", "ng-options"=>"district.id as district.name for district in cohort.districts", selectize: true}
+      %td
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.ops_school}}
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_school", placeholder: "School", style: "width: 100%", type: "text", required: "true"}/
+      %td
+        %div{"ng-hide" => "teacher.editing"}
+          {{teacher.ops_gender}}
+        %div{"ng-show" => "teacher.editing"}
+          %select.teacher-gender.form-control{"ng-model" => "teacher.ops_gender", "ng-options"=>"value for value in ['Female', 'Male']"}
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?

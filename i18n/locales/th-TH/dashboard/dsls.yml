@@ -143,15 +143,21 @@ th:
         Type the arithmetic expression here: Type the arithmetic expression here
     external:
       Code Logo v3:
-        title: title
+        title: ชื่อเรื่อง
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: description here
+      CSPStudentLessonPlanTemplate:
+        title: ชื่อเรื่อง
+        description here: description here
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]
       Mixing Colors:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       PDK5 Beyond C:
         Beyond: Beyond
@@ -192,7 +198,7 @@ th:
         Pixelation 3: Pixelation 3
         Create images with bits and bytes.: Create images with bits and bytes.
       Pixelation 3 Bit Colors:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation 4:
         Pixelation 4 - Baker test of External level -- NOT REAL: 'Pixelation 4 - Baker test of External level -- NOT REAL'
@@ -201,10 +207,10 @@ th:
         Pixelation 4x4 Empty: Pixelation 4x4 Empty
         Create images with bits and bytes.: Create images with bits and bytes.
       Pixelation Bee:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation Flappy:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: 'Pixelation - Lesson 14 - Fix bit offset'
@@ -219,13 +225,13 @@ th:
         "Lesson 14 - Task 2: fix the error": 'Lesson 14 - Task 2: fix the error'
         description here: description here
       Pixelation - Lesson 14 - Make the Letter A:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation - Lesson 14 - Make your own B and W Image:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation - Lesson 14 - Make your own B&W Image:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
       Pixelation - Lesson 15 - Color Free Play:
         Pixelation - Lesson 15 - Color Free Play: 'Pixelation - Lesson 15 - Color Free Play'
@@ -275,7 +281,7 @@ th:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
       unique level name here:
-        title: title
+        title: ชื่อเรื่อง
         description here: description here
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:

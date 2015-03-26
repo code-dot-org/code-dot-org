@@ -155,10 +155,11 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "a_and_b":function(d){return "А / B"},
-"addPacket":function(d){return "Add Packet"},
+"addPacket":function(d){return "Добавяне на пакет"},
 "ascii":function(d){return "ASCII"},
 "binary":function(d){return "Двоичен код"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" бита"},
+"bits":function(d){return "Bits"},
 "clear":function(d){return "Изчисти"},
 "connected":function(d){return "Има връзка"},
 "decimal":function(d){return "Десетичен знак"},
@@ -176,14 +177,18 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "instructions":function(d){return "Инструкции"},
 "message":function(d){return "Съобщение"},
 "myDevice":function(d){return "Моето устройство"},
+"numBitsPerPacket":function(d){return appLocale.v(d,"x")+" bits per packet"},
 "_of_":function(d){return " на "},
 "packet":function(d){return "Пакет"},
+"packetInfo":function(d){return "Packet Info"},
 "receivedMessageLog":function(d){return "Регистър на получените съобщения"},
-"removePacket":function(d){return "Remove Packet"},
+"removePacket":function(d){return "Премахване на пакет"},
 "router":function(d){return "Маршрутизатор"},
+"routerX":function(d){return "Router "+appLocale.v(d,"x")},
 "send":function(d){return "Изпрати"},
 "sendAMessage":function(d){return "Изпращане на съобщение"},
 "sentMessageLog":function(d){return "Изпратено в регистър на съобщения"},
 "to":function(d){return "Към"},
+"unlimited":function(d){return "Unlimited"},
 "workspaceHeader":function(d){return "Интернет симулатор"},
-"xOfY":function(d){return appLocale.v(d,"x")+" на "+appLocale.v(d,"y")}};
+"xOfYPackets":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")}};

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({88:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({89:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],184:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3424,7 +3424,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3447,12 +3450,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3464,7 +3466,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**
@@ -3569,7 +3571,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":236,"./utils":231}],216:[function(require,module,exports){
+},{"../locale/current/common":237,"./utils":232}],217:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3629,7 +3631,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],210:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3644,7 +3646,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (14,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((20,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((21,  msg.runProgram() )), '</div>\n        <img src="', escape((22,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((25,  msg.resetProgram() )), '</div>\n        <img src="', escape((26,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');28; if (data.controls) { ; buf.push('\n      ', (29,  data.controls ), '\n      ');30; } ; buf.push('\n      ');31; if (data.extraControlRows) { ; buf.push('\n      ', (32,  data.extraControlRows ), '\n      ');33; } ; buf.push('\n    </div>\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');47; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');54; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (56,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (57,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');59; } ; buf.push('\n        </table>\n      </div>\n      ');62; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((65,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');70; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeButtons" style="display:none;">\n        <button id="codeModeButton" class="share">\n          ', escape((73,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');76; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((81,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((83,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((85,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((87,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((89,  data.blockCounterClass )), '>\n            ', escape((90,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((93,  data.idealBlockNumber )), '</span>\n          <span> ', escape((94,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');98; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((101,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');104; } ; buf.push('\n  </div>\n  ');106; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');108; } ; buf.push('\n  ');109; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      Welcome to Design mode. Under construction.\n    </div>\n  ');113; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeButtons" style="display:none;">\n        <button id="codeModeButton" class="share">\n          ', escape((75,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');78; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((85,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((86,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((87,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((89,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((91,  data.blockCounterClass )), '>\n            ', escape((92,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((95,  data.idealBlockNumber )), '</span>\n          <span> ', escape((96,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');100; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((103,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');106; } ; buf.push('\n  </div>\n  ');108; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');110; } ; buf.push('\n  ');111; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      Welcome to Design mode. Under construction.\n    </div>\n  ');115; } ; buf.push('\n  ');116; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (117,  data.extraControlRows ), '\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3652,7 +3654,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],186:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],187:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3917,7 +3919,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":50}],185:[function(require,module,exports){
+},{"./dom":51}],186:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4068,7 +4070,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":20,"./dom":50,"./required_block_utils":183,"./utils":231}],183:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":21,"./dom":51,"./required_block_utils":184,"./utils":232}],184:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4346,7 +4348,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":236,"./block_utils":19,"./utils":231,"./xml":232}],20:[function(require,module,exports){
+},{"../locale/current/common":237,"./block_utils":20,"./utils":232,"./xml":233}],21:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4511,7 +4513,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":236}],4:[function(require,module,exports){
+},{"../locale/current/common":237}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4743,7 +4745,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
-        if (result.error) {
+        if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
@@ -4931,15 +4933,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
           var shareCell = document.getElementById('share-cell') ||
-          document.getElementById('right-button-cell');
+              document.getElementById('right-button-cell');
           if (shareCell) {
             shareCell.style.marginLeft = '10px';
             shareCell.style.marginRight = '10px';
@@ -5264,13 +5259,10 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (this.editor && this.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = categories.getBoundingClientRect().width;
-    }
+  if (this.editCode && this.editor) {
+    // If in the droplet editor, set toolboxWidth based on the block palette width:
+    var categories = document.querySelector('.droplet-palette-wrapper');
+    toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
@@ -5578,12 +5570,23 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
-    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
-      container.className = codeWorkspace.className + " pin_bottom";
+      document.body.style.overflow = "hidden";
+      container.className = container.className + " pin_bottom";
+      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
+      if (this.editCode) {
+        var codeTextbox = document.getElementById('codeTextbox');
+        codeTextbox.className = codeTextbox.className + " pin_bottom";
+      }
     } else {
+      visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.embed && config.hideSource) {
+    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5788,9 +5791,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
-
-  // Resize toolbox header so it will appear/disappear:
-  this.resizeToolboxHeader();
 };
 
 /**
@@ -5808,20 +5808,20 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
+ * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block.getRootBlock();
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    return block.hasUnfilledInput();
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
@@ -5875,7 +5875,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":236,"./ResizeSensor":2,"./block_utils":19,"./constants.js":49,"./dom":50,"./dropletUtils":51,"./feedback":70,"./templates/builder.html":204,"./templates/buttons.html":205,"./templates/instructions.html":207,"./templates/learn.html":208,"./templates/makeYourOwn.html":209,"./utils":231,"./xml":232,"url":251}],251:[function(require,module,exports){
+},{"../locale/current/common":237,"./ResizeSensor":2,"./block_utils":20,"./constants.js":50,"./dom":51,"./dropletUtils":52,"./feedback":71,"./templates/builder.html":205,"./templates/buttons.html":206,"./templates/instructions.html":208,"./templates/learn.html":209,"./templates/makeYourOwn.html":210,"./utils":232,"./xml":233,"url":252}],252:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6584,13 +6584,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":247,"querystring":250}],250:[function(require,module,exports){
+},{"punycode":248,"querystring":251}],251:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":248,"./encode":249}],249:[function(require,module,exports){
+},{"./decode":249,"./encode":250}],250:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6677,7 +6677,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],248:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6763,7 +6763,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],247:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7274,7 +7274,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],209:[function(require,module,exports){
+},{}],210:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7294,7 +7294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],208:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7316,7 +7316,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],207:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7336,7 +7336,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],204:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7356,7 +7356,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],70:[function(require,module,exports){
+},{"ejs":253}],71:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8567,7 +8567,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":236,"./codegen":47,"./constants":49,"./dom":50,"./feedbackBlocks":71,"./templates/buttons.html":205,"./templates/code.html":206,"./templates/shareFailure.html":212,"./templates/sharing.html":213,"./templates/showCode.html":214,"./templates/trophy.html":215,"./utils":231,"./xml":232}],215:[function(require,module,exports){
+},{"../locale/current/common":237,"./codegen":48,"./constants":50,"./dom":51,"./feedbackBlocks":72,"./templates/buttons.html":206,"./templates/code.html":207,"./templates/shareFailure.html":213,"./templates/sharing.html":214,"./templates/showCode.html":215,"./templates/trophy.html":216,"./utils":232,"./xml":233}],216:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8587,7 +8587,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],214:[function(require,module,exports){
+},{"ejs":253}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8607,7 +8607,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],213:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],214:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8627,7 +8627,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],212:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],213:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8647,7 +8647,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],206:[function(require,module,exports){
+},{"ejs":253}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8667,7 +8667,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],205:[function(require,module,exports){
+},{"ejs":253}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8687,9 +8687,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":236,"ejs":252}],236:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],237:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8818,7 +8818,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":49,"./templates/readonly.html":211}],211:[function(require,module,exports){
+},{"./constants":50,"./templates/readonly.html":212}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8839,7 +8839,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":252}],252:[function(require,module,exports){
+},{"ejs":253}],253:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9194,7 +9194,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":253,"./utils":254,"fs":244,"path":245}],254:[function(require,module,exports){
+},{"./filters":254,"./utils":255,"fs":245,"path":246}],255:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9218,7 +9218,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],253:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9417,7 +9417,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],245:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9645,7 +9645,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":246}],246:[function(require,module,exports){
+},{"_process":247}],247:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9704,9 +9704,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],244:[function(require,module,exports){
+},{}],245:[function(require,module,exports){
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10211,7 +10211,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":51}],51:[function(require,module,exports){
+},{"./dropletUtils":52}],52:[function(require,module,exports){
 var utils = require('./utils');
 
 exports.randomNumber = function (min, max) {
@@ -10494,7 +10494,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 };
 
 
-},{"./utils":231}],231:[function(require,module,exports){
+},{"./utils":232}],232:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10714,7 +10714,7 @@ exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":81,"./lodash":89,"./xml":232}],89:[function(require,module,exports){
+},{"./hammer":82,"./lodash":90,"./xml":233}],90:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14083,7 +14083,7 @@ exports.valueOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],81:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16247,7 +16247,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16354,7 +16354,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16432,7 +16432,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16730,7 +16730,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":232}],232:[function(require,module,exports){
+},{"./xml":233}],233:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

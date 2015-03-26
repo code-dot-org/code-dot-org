@@ -22,9 +22,9 @@
         teikna. Gerðu brotalínuna með því að nota bæði hoppa og færa kubbana.
       2-3 Artist 3_instruction: Þessi hattur er 100 dílar á hæð. Teiknaðu hatt sem
         er 70 dílum lægri.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: Rauði hatturinn er 100 díla hár. Ljúktu við að
+        teikna svartan hatt sem er 70 dílum styttri. Breidd svarta hattsins er 50
+        dílar.
       2-3 Artist 4_instruction: Hjálpaðu mér að ljúka húsinu fyrir þennan kött.
       2-3 Artist 5_instruction: Skiptu út þessum kóða fyrir "endurtaka" kubb og teiknaðu
         sama hús með aðeins 3 kubbum.
@@ -260,9 +260,8 @@
         úr blómunum á þessu túni.
       2-3 Bee Loops 12_instruction: Notaðu "meðan" lykkjur til að safna öllum blómasafanum
         úr blómunum á þessu túni.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+      2-3 Bee Loops 2_instruction: Notaðu lykkju tl að safna blómasafanum og búa til
+        hunangið.
       2-3 Bee Loops 3_instruction: Safnaðu blómasafa úr hverju blómi og búðu til hunang
         í hverju búi.
       2-3 Bee Loops 4_instruction: Notaðu svipaða lykkju og í síðustu þraut, en bættu
@@ -824,12 +823,11 @@
         eins og fallið "uppfæra-mark", nema hvað hættan á að færast frá hægri hlið
         yfir til vinstri. Ljúktu við fallið "uppfæra-hættu" svo að hættan fljúgi yfir
         skjáinn.
-      Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+      Big Game Animation 4_instruction: Á þessu stigi í leiknum ætti hættan að hreyfast
+        yfir skjáinn frá hægri til vinstri og markið ætti að hreyfast frá vinstri
+        til hægri. Eftir að hafa yfirgefið skjáinn koma þeir aldrei til baka, en við
+        leysum það síðar. Gakktu úr skugga um að leikurinn virki eins og þú vilt og
+        smelltu svo á ljúka til að halda áfram.
       Big Game Booleans 1_instruction: Síðast þegar við unnum með leikinn fóru mark-
         og hættukvikarnir yfir skjáinn, en þeir komu aldrei til baka. Smelltu á "Keyra"
         til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna
@@ -852,19 +850,17 @@
         fóru mark- og hættukvikarnir yfir skjáinn, en þeir komu aldrei til baka. Smelltu
         á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til
         að vinna að því að láta kvikana birtast aftur.
-      Big Game Collision 1_instruction: |
-        At this point you've programmed a video
-        game with a moving target and danger, both of which return to the screen once
-        they've left, and a player that responds to keyboard input. Click run to
-        see how your game is currently working, and then we'll dig into the final
-        missing piece - collision detection!
-      Big Game Collision 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Collision 1_instruction: Á þessu stigi hefur þú forritað tölvuleik
+        með hreyfanlegu marki og hættu, sem bæði snúa aftur á skjáinn eftir að hafa
+        yfirgefið hann, og leikmann sem bregst við inntaki frá lyklaborði. Smelltu
+        á keyra til að sjá hvernig leikurinn virkar nú. Síðan skulum við takast á
+        við síðasta hlutann sem enn vantar - skynjun árekstra!
+      Big Game Collision 2_instruction: Til að færa leikmanninn upp og niður, munum
+        við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast
+        við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil
+        upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu
+        "uppfæra leikmann" svo að það færi leikmanninn upp þegar ýtt er á örina upp
+        og niður þegar ýtt er á örina niður.
       Big Game Collision 3_instruction: |
         In order to know if two of our sprites are
         touching, we first need to measure the distance between their center points.
@@ -891,13 +887,12 @@
         Last time you work on your game, you used booleans to make your Target and
         Danger return to the screen once the've left. Click Run to see how your game
         looks right now, and then we'll get to making your Player move up and down.
-      Big Game Player 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Player 2_instruction: Til að færa leikmanninn upp og niður, munum við
+        þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast
+        við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil
+        upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu
+        "uppfæra leikmann" svo að það færi leikmanninn upp þegar ýtt er á örina upp
+        og niður þegar ýtt er á örina niður.
       Big Game Testing_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði
         í algebru
       Big Game Vars 1 (copy 1)_instruction: Byrjum nú á Stórleiknum þínum! Hér sérðu
@@ -1070,24 +1065,22 @@
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: 'Teiknaðu línuna. Hún er
         200 díla löng. '
-      Code Studio Puzzle Challenge 1 Artist1_instruction: "Draw the line. It is 200\npixels
-        long. \n"
+      Code Studio Puzzle Challenge 1 Artist1_instruction: 'Teiknaðu línuna. Hún er
+        200 díla löng. '
       Code Studio Puzzle Challenge 10 - Bee (copy 1)_instruction: |
         Move the Bee to
         the flower and get all of the nectar.
       Code Studio Puzzle Challenge 10 - Bee_instruction: Færðu býfluguna að blóminu
         og sæktu allan blómasafann.
-      Code Studio Puzzle Challenge 10b - Bee_instruction: |
-        Move the Bee to the flowers
-        and get all of the nectar at each.
-      Code Studio Puzzle Challenge 11 - Artist_instruction: |
-        Draw this line by using
-        the variable "length". Each line segment is 75 pixels long.
+      Code Studio Puzzle Challenge 10b - Bee_instruction: Færðu býfluguna til blómanna
+        og sæktu allan blómasafann úr hverju.
+      Code Studio Puzzle Challenge 11 - Artist_instruction: Teiknaðu þessa línu með
+        því að nota breytuna "lengd". Hver línubútur er 75 dílar á lengd.
       Code Studio Puzzle Challenge 11b - Artist_instruction: Teiknaðu ferning með
         því að nota gefnu breytuna "lengd".
-      Code Studio Puzzle Challenge 12 - Artist (copy 1)_instruction: |
-        The code provided
-        draws one triangle. Add to it to draw triangles in a hexagon pattern.
+      Code Studio Puzzle Challenge 12 - Artist (copy 1)_instruction: Gefni kóðinn
+        teiknar einn þríhyrning. Bættu við hann til að teikna þríhyrninga í sexhyrndu
+        mynstri.
       Code Studio Puzzle Challenge 12 - Artist_instruction: Gefni kóðinn teiknar einn
         þríhyrning. Bættu við hann til að mynda sexhyrning úr þrihyrningum.
       Code Studio Puzzle Challenge 12a - Artist_instruction: Gefni kóðinn teiknar
@@ -1122,17 +1115,16 @@
       Code Studio Puzzle Challenge 9 - Bee_instruction: Undir skýinu gæti verið blóm
         eða býflugnabú. Sæktu blómasafa aðeins úr blómum. Búðu til hunang aðeins í
         búum.
-      Code Studio Puzzle Challenge Artist Screencast (copy 1)_instruction: "Draw\nthe
-        line. Each segment is 100 pixels long. \n"
+      Code Studio Puzzle Challenge Artist Screencast (copy 1)_instruction: 'Teiknaðu
+        línuna. Hver hluti er 100 dílar á lengd. '
       Code Studio Puzzle Challenge Artist Screencast 2_instruction: "Complete the\ncode
         to draw the line. Each segment is 100 pixels long. \n"
       Code Studio Puzzle Challenge Artist Screencast_instruction: 'Teiknaðu línuna.
         Hver hluti er 100 dílar á lengd. '
       Code Studio Puzzle Challenge Bee Screencast_instruction: Færðu býfluguna að
         blóminu og sæktu allan blómasafann.
-      Code Studio Puzzle Challenge Square - Artist_instruction: |
-        Draw a square by
-        using the variable length provided.
+      Code Studio Puzzle Challenge Square - Artist_instruction: Teiknaðu ferning með
+        því að nota gefnu breytuna "lengd".
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
@@ -1694,16 +1686,15 @@
         Hafðu að minnsta kostar tvær tegundir matar til að gefa umsögn um, en þú mátt
         hafa fleiri ef þú vilt! Ekki gleyma að hafa \"annars\" hluta!\r\nÞú færð tilbúið
         eitt dæmi - og hluta af skilgreiningunni!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes
-        in the name of a shape and produces a solid green shape. Your function\nshould
-        work with at least “circle”, “star” and “rectangle”, but you can add\nother
-        shapes if you like. You can choose the size of each shape. Don’t forget\nto
-        add an “else” clause!\r\nOne example - and part of the definition -  has\nalready
-        been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave
-        your own business by 30. Write a function called life-goals, which takes\nin
-        an age and produces a string that describes your life goals by then. Don’t\nforget
-        to add an “else” clause!\r\n"
+      Eval Cond 7_instruction: "Frjáls æfing: Skrifaðu nýtt fall \"grænt-form\", sem
+        tekur inn heiti forms og býr formið til algrænt. Fallið ætti a.m.k. að ráða
+        við orðin \"hringur\", \"stjarna\" og \"rétthyrningur\", en þú getur bætt
+        við formum að vild. Þú mátt ráða stærð formanna. Ekki gleyma að hafa \"annars\"
+        hluta!\r\nÞú færð tilbúið eitt dæmi - og hluta af skilgreiningunni!\r\n"
+      Eval Cond 8_instruction: "Frjáls æfing: Segjum að þú viljir eiga bíl við 21
+        árs aldur, eða eiga eigið fyrirtæki 30 ára. Skrifaðu nýtt fall \"lífsmarkmið\",
+        sem tekur inn aldur og skilar streng, sem lýsir markmiðinu sem þú vilt hafa
+        náð þá. Ekki gleyma að hafa \"annars\" hluta!\r\n"
       Eval Contracts 1_instruction: Notaðu fallið "stjarna" til að búa til rauða stjörnu
         með 60 díla geisla
       Eval Contracts 10A_instruction: Nú skulum við leysa þessa þraut með grænum ferningi
@@ -1770,11 +1761,10 @@
       Eval Design Recipe 2_instruction: Búum til enn eitt dæmi áður en við skrifum
         skilgreiningu fallsins - í þetta sinn er dæmið að teikna alrauðan rétthyrning
         með hæðina 75 dílar.
-      Eval Design Recipe 3_instruction: |
-        The design recipe for "wide-rect" already
-        has a contract and one example. Can you write a second example and then complete
-        the definition. The "wide-rect" function should produce a rectangle of given
-        color that is twice as wide as it is high.
+      Eval Design Recipe 3_instruction: Hönnunaruppskriftin fyrir "breiður-rétth"
+        hefur þegar samning og eitt dæmi. Getur þú skrifað annað dæmi og síðan lokið
+        við skilgreininguna? Fallið "breiður-rétth" á að teikna rétthyrning í tilteknum
+        lit sem er tvöfalt breiðari en hann er hár.
       Eval Design Recipe 4_instruction: Notaðu hönnunaruppskriftina til að búa til
         fallið "geislastjarna", sem tekur inn fjölda arma og lengd geisla og skilar
         gulri stjörnu með þennan fjölda arma og innri geisla, sem er helmingur ytri
@@ -1806,11 +1796,10 @@
         color-coded to let you know which data type it returns and which types\nin
         needs for its parameters. The last parameter of the triangle function takes\na
         String that controls its color - try some different colors to see what works."
-      Eval Strings Images 3_instruction: |
-        Some functions can only take a specific
-        set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
-        block with a dropdown to make sure you only use valid styles.
+      Eval Strings Images 3_instruction: Sum föll taka aðeins inn tiltekna strengi.
+        Þannig er með annan stika þessa hringfalls, en hann stjórnar gerð hrings.
+        Teiknaðu útlínu þessa appelsínugula hrings. Notaðu sérstaka kubbinn með fellilistanum
+        til að tryggja að þú notir aðeins gerðir sem virka.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
         this solid red rectangle - it is 175 pixels wide and 100 pixels tall.
@@ -1822,16 +1811,13 @@
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
         triangle 80 pixels on the y axis.
-      Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
-        - it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+      Eval Strings Images 8_instruction: Hér er önnur tegund af stjörnukubb, sem nefnist
+        "geislastjarna". Með honum geturðu teiknað stjörnur með einhvern fjölda arma!
+        Notaðu hann til að búa til appelsínugula stjörnu með 75 díla innri radíus
+        og 175 díla ytri radíus.
       Eval Strings Images Free Play_instruction: 'Frjáls æfing: Reyndu að nota kubbana
         til að búa til eitthvað áhugavert. Mundu að vista og deila bestu myndunum.'
       Examples 4_instruction: Fallið "minnka"
-      freeplay_instruction: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til
-        ævintýralegt vetrarríki og deildu því með vinunum.
       frozen circle function (copy 1)_instruction: Notaðu nýja "búa til hring" kubbinn
         til að búa til 10 hringi sem skarast. Ekki gleyma að hoppa fram eftir hvern
         hring
@@ -1872,23 +1858,15 @@
       frozen perpendicular_instruction: Nú skulum við athuga hvort við getum búið
         til tvær línur með 90 gráðu horn á milli. Hér þarftu að nota kubbana "snúa"
         og "færa".
-      frozen snowflake base_instruction: Búðu til þessar 3 línur með 45 gráðu horn
-        á milli
       frozen snowflake branch_instruction: Reyndu að nota kubbinn "búa til grein snjókorns"
         til að búa til þrjár greinar, sem hluti af heilu snjókorni.
       frozen snowflake full_instruction: Endurtökum þetta nú 8 sinnum til að búa til
         fallegt snjókorn!
-      frozen snowflower pattern_instruction: En hvað snjóblómin eru falleg! Búum til
-        smærri blóm til að þekja svellið. Ekki gleyma að hoppa fram um 150 díla á
-        milli snjóblóma.
       frozen snowflower_instruction: Flókin mynstur geta verið búin til úr mjög einföldum
         formum. Getur þú búið mynstur með því að endurtaka 5 hringi í stærð 5 og 5
         hringi í stærð 10?
       frozen square iterative_instruction: Hér er búið að gera hálfan ferning. Setjum
         4 línur saman til að gera ferning.
-      frozen square loop (copy 1)_instruction: Það er til fleiri en ein aðferð að
-        búa til ferning. Getur þú notað "endurtaka" kubbinn til búa til ferning með
-        færri kubbum? Hvaða kubbar eru endurteknir, sem gætu farið í "endurtaka" kubbinn?
       frozen square loop 3x_instruction: Búum til þrjá ferninga með snúningi eftir
         hvern. Gættu þess að snúa um 120 gráður á milli ferninga.
       frozen square loop_instruction: Hæ, ég er Anna frá Arendelle! Búum til ferning
@@ -2021,12 +1999,14 @@
       K-1 Bee Loops 4_instruction: |
         Use loops to get the nectar, make honey, and
         to move!
-      K-1 Bee Loops 5_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 5_instruction: Notaðu lykkjur til að sækja blómasafann og búa
+        til hunang!
       K-1 Bee Loops 6_instruction: Notaðu lykkjur til að sækja blómasafann, búa til
         hunang og færa!
       K-1 Bee Loops 7_instruction: Notaðu lykkjur til að sækja blómasafann og búa
         til hunang!
-      K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 8_instruction: Notaðu lykkjur til að sækja blómasafann og búa
+        til hunang!
       K-1 Bee Loops 9_instruction: Notaðu lykkjur til að sækja blómasafann, búa til
         hunang og færa!
       K-1 Bee Loops Assessment 1_instruction: Sæktu blómasafa til að búa til hunang

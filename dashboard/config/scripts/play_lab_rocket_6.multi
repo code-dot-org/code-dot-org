@@ -1,6 +1,5 @@
 name 'Play Lab Rocket 6'
 title 'Rocket Multiple Choice'
-question ''
 
 markdown <<MARKDOWN
 ## Which function describes a rocket that reaches:

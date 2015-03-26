@@ -121,7 +121,7 @@ svg {
   #netsim #netsim_lobby_list li {
     background-color: #ffffff;
     padding: 0.3em; }
-  #netsim #netsim_lobby_list .own_row {
+  #netsim #netsim_lobby_list .own-row {
     font-weight: bold;
     background-color: #e0ffff; }
   #netsim #netsim_lobby_list .router-row {

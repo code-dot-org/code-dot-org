@@ -17,12 +17,11 @@ var netsimMsg = require('../../locale/current/netsim');
 var markup = require('./NetSimPacketEditor.html');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var PacketEncoder = require('./PacketEncoder');
+var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
 
 var EncodingType = netsimConstants.EncodingType;
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
@@ -281,10 +280,10 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var rootDiv = this.rootDiv_;
 
   var shortNumberFields = [
-    PacketHeaderType.TO_ADDRESS,
-    PacketHeaderType.FROM_ADDRESS,
-    PacketHeaderType.PACKET_INDEX,
-    PacketHeaderType.PACKET_COUNT
+    Packet.HeaderType.TO_ADDRESS,
+    Packet.HeaderType.FROM_ADDRESS,
+    Packet.HeaderType.PACKET_INDEX,
+    Packet.HeaderType.PACKET_COUNT
   ];
 
   /** @type {rowType[]} */
@@ -372,10 +371,10 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var liveFields = [];
 
   [
-    PacketHeaderType.TO_ADDRESS,
-    PacketHeaderType.FROM_ADDRESS,
-    PacketHeaderType.PACKET_INDEX,
-    PacketHeaderType.PACKET_COUNT
+    Packet.HeaderType.TO_ADDRESS,
+    Packet.HeaderType.FROM_ADDRESS,
+    Packet.HeaderType.PACKET_INDEX,
+    Packet.HeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
           inputElement: this.binaryUI[fieldName],
@@ -444,7 +443,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var encoder = new PacketEncoder(this.packetSpec_);
+  var encoder = new Packet.Encoder(this.packetSpec_);
   return encoder.concatenateBinary(
       encoder.makeBinaryHeaders({
         toAddress: this.toAddress,

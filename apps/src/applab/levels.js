@@ -28,6 +28,7 @@ levels.simple = {
 };
 
 levels.custom = {
+  'sliderSpeed': 0.95,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -74,7 +75,7 @@ levels.custom = {
     "setGreen": null,
     "setBlue": null,
     "setAlpha": null,
-    "setRGBA": null,
+    "setRGB": null,
 
     // Data
     "startWebRequest": null,
@@ -157,7 +158,6 @@ levels.custom = {
 levels.ec_simple = utils.extend(levels.custom, {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
 });

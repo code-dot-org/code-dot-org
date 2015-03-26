@@ -95,7 +95,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatDo":function(d){return "gjør"},
 "repeatForeverTooltip":function(d){return "Kjør handlingene i denne blokken flere ganger mens appen er i gang."},
 "shareApplabTwitter":function(d){return "Sjekk ut appen jeg lagde. Jeg skrev den selv med @codeorg"},
-"shareGame":function(d){return "Del din app:"},
+"shareGame":function(d){return "Del appen din:"},
 "stepIn":function(d){return "Gå inn i"},
 "stepOver":function(d){return "Gå over"},
 "stepOut":function(d){return "Gå ut av"},
