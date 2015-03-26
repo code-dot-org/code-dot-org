@@ -259,6 +259,9 @@ img#turtleImage {
   text-indent: 14.5px;
   margin-top: -3px;
   padding-top: 6px;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
 }
 
 /* Slider. */
