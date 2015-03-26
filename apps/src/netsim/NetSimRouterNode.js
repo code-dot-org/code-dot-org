@@ -14,6 +14,7 @@
 var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -26,6 +27,9 @@ var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 
 var _ = utils.getLodash();
+
+var serializeNumber = netsimUtils.serializeNumber;
+var deserializeNumber = netsimUtils.deserializeNumber;
 
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
@@ -102,8 +106,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = row.dnsMode !== undefined ?
-      row.dnsMode : DnsMode.NONE;
+  this.dnsMode = utils.valueOr(row.dnsMode, DnsMode.NONE);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -117,7 +120,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Speed at which messages are processed, in bits per second.
    * @type {number}
    */
-  this.bandwidth = Infinity;
+  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
 
   /**
    * Determines a subset of connection and message events that this
@@ -329,7 +332,17 @@ NetSimRouterNode.RouterStatus = {
 var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
+ * @typedef {Object} routerRow
+ * @property {number} bandwidth - Router max transmission/processing rate
+ *           in bits/second
+ * @property {DnsMode} dnsMode - Current DNS mode for the local network
+ * @property {number} dnsNodeID - Entity ID of the current DNS node in the
+ *           local network.
+ */
+
+/**
  * Build table row for this node.
+ * @returns {routerRow}
  * @private
  * @override
  */
@@ -337,10 +350,24 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        bandwidth: serializeNumber(this.bandwidth),
         dnsMode: this.dnsMode,
         dnsNodeID: this.dnsNodeID
       }
   );
+};
+
+/**
+ * Load state from remoteRow into local model, then notify anything observing
+ * us that we've changed.
+ * @param {routerRow} remoteRow
+ * @private
+ */
+NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.bandwidth = deserializeNumber(remoteRow.bandwidth);
+  this.dnsMode = remoteRow.dnsMode;
+  this.dnsNodeID = remoteRow.dnsNodeID;
+  this.stateChange.notifyObservers(this);
 };
 
 /**
@@ -890,12 +917,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   }
 };
 
-NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
-  this.dnsMode = remoteRow.dnsMode;
-  this.dnsNodeID = remoteRow.dnsNodeID;
-  this.stateChange.notifyObservers(this);
-};
-
 /**
  * When the wires table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
@@ -937,6 +958,7 @@ NetSimRouterNode.prototype.getLog = function () {
   }.bind(this));
 };
 
+// TODO: Remove this unused method
 NetSimRouterNode.prototype.canHandleMessage_ = function (message) {
   var fromNodeID, toNodeID, fromAddress, toAddress, simulateForNodeID,
       simulateForAddress, routerNodeID, autoDnsNodeID, autoDnsAddress, packet;

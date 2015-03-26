@@ -75,7 +75,7 @@ var NetSimBandwidthControl = module.exports = function (rootDiv,
    * @type {number}
    * @private
    */
-  this.bandwidth_ = Infinity;
+  this.bandwidth_ = this.sliderValueToBandwidth_(SLIDER_MAX_VALUE);
 
   this.render();
 };
@@ -85,17 +85,18 @@ var NetSimBandwidthControl = module.exports = function (rootDiv,
  */
 NetSimBandwidthControl.prototype.render = function () {
   var renderedMarkup = $(markup({
-    minValue: this.sliderValueToBandwidth_(SLIDER_MIN_VALUE)
+    minValue: this.getDisplayBandwidth_(this.sliderValueToBandwidth_(SLIDER_MIN_VALUE)),
+    maxValue: this.getDisplayBandwidth_(this.sliderValueToBandwidth_(SLIDER_MAX_VALUE))
   }));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.slider').slider({
-    value: SLIDER_MIN_VALUE,
+    value: this.bandwidthToSliderValue_(this.bandwidth_),
     min: SLIDER_MIN_VALUE,
     max: SLIDER_MAX_VALUE,
     step: 1,
     slide: this.onSliderValueChange_.bind(this)
   });
-  this.setBandwidth(this.bandwidth_);
+  this.setLabel_(this.bandwidth_);
 };
 
 NetSimBandwidthControl.prototype.bandwidthToSliderValue_ = function (bandwidth) {
@@ -123,7 +124,7 @@ NetSimBandwidthControl.prototype.sliderValueToBandwidth_ = function (sliderValue
  */
 NetSimBandwidthControl.prototype.onSliderValueChange_ = function (event, ui) {
   var newPacketSize = this.sliderValueToBandwidth_(ui.value);
-  this.setBandwidth(newPacketSize);
+  this.setLabel_(newPacketSize);
   this.bandwidthChangeCallback_(newPacketSize);
 };
 
@@ -132,18 +133,29 @@ NetSimBandwidthControl.prototype.onSliderValueChange_ = function (event, ui) {
  * @param {number} newBandwidth
  */
 NetSimBandwidthControl.prototype.setBandwidth = function (newBandwidth) {
-  var rootDiv = this.rootDiv_;
+  if (this.bandwidth_ === newBandwidth) {
+    return;
+  }
+
   this.bandwidth_ = newBandwidth;
-  rootDiv.find('.slider').slider('option', 'value',
-      this.bandwidthToSliderValue_(newBandwidth));
-  rootDiv.find('.packet_size_value').text(this.getDisplayBandwidth(newBandwidth));
+  var sliderValue = this.bandwidthToSliderValue_(newBandwidth);
+  this.rootDiv_.find('.slider').slider('option', 'value', sliderValue);
+  this.setLabel_(newBandwidth);
+};
+
+/**
+ * @param {number} newBandwidth
+ * @private
+ */
+NetSimBandwidthControl.prototype.setLabel_ = function (newBandwidth) {
+  this.rootDiv_.find('.packet_size_value').text(this.getDisplayBandwidth_(newBandwidth));
 };
 
 /**
  * @param {number} bandwidth in bits per second
  * @returns {string} localized, shortened and rounded representation: e.g. 2Kbps
  */
-NetSimBandwidthControl.prototype.getDisplayBandwidth = function (bandwidth) {
+NetSimBandwidthControl.prototype.getDisplayBandwidth_ = function (bandwidth) {
   if (bandwidth === Infinity) {
     return i18n.unlimited();
   }
