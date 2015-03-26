@@ -23551,6 +23551,9 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
   this.blockSpace.getTopBlocks(false).forEach(function(block) {
+    if(block.isCurrentlyHidden()) {
+      return
+    }
     var blockHW = block.getHeightWidth();
     if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
       return
