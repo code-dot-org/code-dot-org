@@ -71,13 +71,13 @@ html[dir='rtl'] #visualizationColumn {
   left: 0px;
 }
 
-#visualizationColumn.embed {
+#visualizationColumn.embed_hidesource {
   margin: 0 auto;
 }
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   overflow-y: hidden;
 }
 
@@ -192,11 +192,12 @@ div.droplet-palette-group-header-selected.green {
   top: $headers_height;
   bottom: 0px;
   font-size: 14px;
+  overflow: hidden;
 }
 
 #codeTextbox.pin_bottom {
-  bottom: 170px;
-  box-shadow: 7px 7px 10px #888;
+  border: 1px solid #ddd;
+  bottom: 160px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -211,17 +212,15 @@ html[dir='rtl'] #codeWorkspace {
   top: 0px;
   right: 0px;
   left: 400px;
-  bottom: 10px;
-  box-shadow: 7px 7px 10px #888;
+  bottom: 0;
   margin-left: 15px;
   border: 1px solid #ddd;
   overflow: hidden;
 }
 
 #codeWorkspace.pin_bottom {
-  box-shadow: none;
   border: none;
-  overflow: visible;
+  border-top: 1px solid #ddd;
 }
 
 .ace_gutter-cell.ace_breakpoint {

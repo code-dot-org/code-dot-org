@@ -3424,7 +3424,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3447,12 +3450,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3464,7 +3466,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**
@@ -3644,7 +3646,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeButtons" style="display:none;">\n        <button id="codeModeButton" class="share">\n          ', escape((75,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');78; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((85,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((86,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((87,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((89,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((91,  data.blockCounterClass )), '>\n            ', escape((92,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((95,  data.idealBlockNumber )), '</span>\n          <span> ', escape((96,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');100; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((103,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');106; } ; buf.push('\n  </div>\n  ');108; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');110; } ; buf.push('\n  ');111; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      Welcome to Design mode. Under construction.\n    </div>\n  ');115; } ; buf.push('\n  ');116; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (117,  data.extraControlRows ), '\n  ');118; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((74,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((77,  msg.codeMode() )), '\n      </button>\n    ');79; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((84,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((86,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((88,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((90,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((92,  data.blockCounterClass )), '>\n            ', escape((93,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((96,  data.idealBlockNumber )), '</span>\n          <span> ', escape((97,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');101; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((104,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');107; } ; buf.push('\n  </div>\n  ');109; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');111; } ; buf.push('\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      ');114; /* contains temporary unlocalized strings */ ; buf.push('\n      Welcome to Design mode. Under construction.<br>\n      <button id="designModeAddButton" class="share">Add Button</button><br>\n      <button id="designModeAddInput" class="share">Add Input</button><br>\n      <button id="designModeAddLabel" class="share">Add Label</button><br>\n      <button id="designModeClear" class="share">Clear</button><br>\n    </div>\n  ');121; } ; buf.push('\n  ');122; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (123,  data.extraControlRows ), '\n  ');124; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4931,15 +4933,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
           var shareCell = document.getElementById('share-cell') ||
-          document.getElementById('right-button-cell');
+              document.getElementById('right-button-cell');
           if (shareCell) {
             shareCell.style.marginLeft = '10px';
             shareCell.style.marginRight = '10px';
@@ -5590,8 +5585,8 @@ StudioApp.prototype.configureDom = function (config) {
     }
   }
 
-  if (config.embed) {
-    visualizationColumn.className = visualizationColumn.className + " embed";
+  if (config.embed && config.hideSource) {
+    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5813,20 +5808,20 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
+ * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block.getRootBlock();
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    return block.hasUnfilledInput();
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {

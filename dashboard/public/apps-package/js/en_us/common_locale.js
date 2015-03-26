@@ -174,6 +174,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeMode":function(d){return "Code"},
 "codeTooltip":function(d){return "See generated JavaScript code."},
 "continue":function(d){return "Continue"},
+"designMode":function(d){return "Design"},
 "designModeHeader":function(d){return "Design Mode"},
 "dialogCancel":function(d){return "Cancel"},
 "dialogOK":function(d){return "OK"},

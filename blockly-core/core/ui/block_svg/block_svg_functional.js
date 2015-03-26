@@ -111,7 +111,11 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
 Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function (inputName) {
   var blockSpace = this.block_.blockSpace;
   var parentBlock = this.block_;
-  goog.events.listen(this.inputClickTargets_[inputName], 'click', function (e) {
+  Blockly.bindEvent_(this.inputClickTargets_[inputName], 'mousedown', this, function (e) {
+    if (Blockly.isRightButton(e)) {
+      // Right-click.
+      return;
+    }
     var childType;
     var titleIndex;
     var input = parentBlock.getInput(inputName);

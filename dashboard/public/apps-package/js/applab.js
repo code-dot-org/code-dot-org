@@ -113,7 +113,7 @@ levels.custom = {
     "setGreen": null,
     "setBlue": null,
     "setAlpha": null,
-    "setRGBA": null,
+    "setRGB": null,
 
     // Data
     "startWebRequest": null,
@@ -393,23 +393,23 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
   if (mediaList.length === 2) {
     var lastHeightRuleIndex = defaultHeightRules.length - 1;
     for (var i = 0; i <= lastHeightRuleIndex; i++) {
-      if (-1 !== mediaList[1].indexOf("(min-height: " +
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
           (defaultHeightRules[i] + 1) + "px)")) {
         if (i === 0) {
           // Matched the first rule (no max height)
-          mediaList.mediaText = mediaList[0] +
+          mediaList.mediaText = mediaList.item(0) +
               ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
         } else {
           // Matched one of the middle rules with a min and a max height
-          mediaList.mediaText = mediaList[0] +
+          mediaList.mediaText = mediaList.item(0) +
               ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
               " and (max-height: " + newHeightRules[i - 1] + "px)";
         }
         break;
-      } else if (mediaList[1] === "screen and (max-height: " +
+      } else if (mediaList.item(1) === "screen and (max-height: " +
                  defaultHeightRules[lastHeightRuleIndex] + "px)") {
         // Matched the last rule (no min height)
-        mediaList.mediaText = mediaList[0] +
+        mediaList.mediaText = mediaList.item(0) +
             ", screen and (max-height: " +
             newHeightRules[lastHeightRuleIndex] + "px)";
         break;
@@ -488,7 +488,7 @@ function adjustAppSizeStyles(container) {
 
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -500,6 +500,11 @@ function adjustAppSizeStyles(container) {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#codeWorkspace") {
               // set the left for the codeWorkspace
@@ -536,12 +541,6 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function stepSpeedFromSliderSpeed(sliderSpeed) {
@@ -645,6 +644,10 @@ function handleExecutionError(err, lineNumber) {
 
 Applab.getCode = function () {
   return studioApp.editor.getValue();
+};
+
+Applab.getHtml = function () {
+  return Applab.levelHtml;
 };
 
 Applab.onTick = function() {
@@ -1032,7 +1035,25 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
+
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
 
   if (level.editCode) {
     // Initialize the slider.
@@ -1070,9 +1091,30 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
     var designModeButton = document.getElementById('designModeButton');
-    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
     var codeModeButton = document.getElementById('codeModeButton');
-    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
+    var designModeAddButton = document.getElementById('designModeAddButton');
+    if (designModeAddButton) {
+      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
+    }
+    var designModeAddInput = document.getElementById('designModeAddInput');
+    if (designModeAddInput) {
+      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
+    }
+    var designModeAddLabel = document.getElementById('designModeAddLabel');
+    if (designModeAddLabel) {
+      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
@@ -1142,6 +1184,11 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -1210,7 +1257,9 @@ studioApp.runButtonClick = function() {
 
   // Show view data button now that channel id is available.
   var viewDataButton = document.getElementById('viewDataButton');
-  viewDataButton.style.display = "inline-block";
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -1539,7 +1588,33 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
+  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeAddButton = function() {
+  Applab.levelHtml += "<button>Button</button>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddInput = function() {
+  Applab.levelHtml += "<input>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddLabel = function() {
+  Applab.levelHtml += "<label>text</label>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeClear = function() {
+  Applab.levelHtml = "";
+  Applab.updateLevelHtml();
+};
+
+Applab.updateLevelHtml = function() {
+  var divApplab = document.getElementById('divApplab');
+  divApplab.innerHTML = Applab.levelHtml;
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -1553,10 +1628,13 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-  var designModeButtons = document.getElementById('designModeButtons');
-  designModeButtons.style.display = enable ? 'block' : 'none';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1888,6 +1966,8 @@ Applab.dot = function (opts) {
       // If the pen is up and the color has been changed, use that color:
       ctx.strokeStyle = Applab.turtle.penUpColor;
     }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -1895,6 +1975,7 @@ Applab.dot = function (opts) {
       // If the pen is up, reset strokeStyle back to transparent:
       ctx.strokeStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1903,8 +1984,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1964,6 +2047,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
@@ -2923,7 +3007,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n      <button id="designModeButton" class="debugger_button">\n        ', escape((24,  applabMsg.designMode() )), '\n      </button>\n    </div>\n  </div>\n  ');28; } ; buf.push('\n\n  ');30; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');38; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2932,6 +3016,8 @@ return buf.join('');
   }
 }());
 },{"../../locale/current/applab":234,"../../locale/current/common":237,"ejs":253}],13:[function(require,module,exports){
+var Applab = require('./applab');
+
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 
@@ -2991,18 +3077,18 @@ exports.setAlpha = function (imageData, x, y, value) {
     imageData.properties.data.properties[pixelOffset + 3] = value;
   }
 };
-exports.setRGBA = function (imageData, x, y, r, g, b, a) {
+exports.setRGB = function (imageData, x, y, r, g, b, a) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = r;
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-        (typeof a === 'undefined') ? 255 : a;
+      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
   }
 };
 
-},{}],12:[function(require,module,exports){
+},{"./applab":10}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4001,13 +4087,13 @@ module.exports.blocks = [
   {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
   {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
   {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
   {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
