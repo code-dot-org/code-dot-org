@@ -1,6 +1,8 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
+testUtils.setupLocale('calc');
+var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
 
 var level = {
   // f(x, y) = x + y
@@ -243,6 +245,10 @@ module.exports = {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, calcMsg.missingFunctionError({functionName: 'f'}));
+        return true;
+      },
       xml: '<xml>' +
         '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
         '  <functional_input name="ARG1">' +
@@ -374,7 +380,7 @@ module.exports = {
     {
       // f(x,y) = x + 2
       // f(1)
-      description: "User function has one less input",
+      description: "User function has one fewer inputs",
       expected: {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
@@ -420,6 +426,5 @@ module.exports = {
         '</block>' +
       '</xml>',
     }
-
   ]
 };
