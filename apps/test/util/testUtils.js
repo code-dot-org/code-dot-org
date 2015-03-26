@@ -103,6 +103,7 @@ exports.setupTestBlockly = function() {
   };
   var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
+  studioApp.removeEventListeners();
   testBlockFactory.installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, "text_print block exists");

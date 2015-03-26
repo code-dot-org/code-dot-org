@@ -359,7 +359,11 @@ StudioApp.prototype.init = function(config) {
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
   }, this));
-  window.addEventListener('resize', _.bind(this.onResize, this));
+
+  if(!this.resizeHandler) {
+    this.resizeHandler = _.bind(this.onResize, this);
+    window.addEventListener('resize', this.resizeHandler);
+  }
 
   // Call initial onResize() asynchronously - need 10ms delay to work around
   // relayout which changes height on the left side to the proper value
@@ -402,6 +406,16 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+};
+
+/**
+ * Use this function to cleanup any leftover event listeners on the global scope.
+ * Currently removes the 'resize' listener for unit tests reusing the StudioApp singleton.
+ */
+StudioApp.prototype.removeEventListeners = function () {
+  if(!this.resizeHandler) return;
+  window.removeEventListener('resize', this.resizeHandler);
+  this.resizeHandler = null;
 };
 
 /**
