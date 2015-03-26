@@ -400,15 +400,13 @@ function customValidator(assert) {
       ['x',  null],
     ]);
 
-    // line 2: f((1 + 1)) = 2 // extra parens tracked by 90669534
+    // line 2: f(1 + 1) = 2
     validateTextElementContainer(userExpression.children[1], [
       ['f',  null],
-      ['(',  null],
       ['(',  null],
       ['1',  null],
       [' + ',  null],
       ['1',  null],
-      [')',  null],
       [')',  null],
       [' = ',  null],
       ['2',  null],

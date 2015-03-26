@@ -96,13 +96,7 @@ function constructTokenList(one, two, markDeepest) {
     tokenList = one.getTokenListDiff(two);
   }
 
-  // Strip outer parens
-  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
-      tokenList[tokenList.length - 1].isParenthesis()) {
-    tokenList.splice(-1);
-    tokenList.splice(0, 1);
-  }
-  return tokenList;
+  return ExpressionNode.stripOuterParensFromTokenList(tokenList);
 }
 
 /**
