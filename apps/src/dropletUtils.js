@@ -298,7 +298,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
  * @returns {Object.<String, Object>}
  */
 exports.getAllDropletBlocks = function (dropletConfig) {
-  return $.extend(exports.dropletGlobalConfigBlocks,
+  return $.extend({}, exports.dropletGlobalConfigBlocks,
     exports.dropletBuiltinConfigBlocks,
     dropletConfig.blocks);
 };
