@@ -19,6 +19,7 @@
 
 var page = require('./page.html');
 var i18n = require('../../locale/current/netsim');
+var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -132,7 +133,7 @@ NetSim.prototype.init = function(config) {
    * Configuration for the loaded level
    * @type {netsimLevelConfiguration}
    */
-  this.level = config.level;
+  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
