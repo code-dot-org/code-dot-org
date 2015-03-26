@@ -120,7 +120,7 @@ def fetch_metrics()
     'petition_signatures'=>0,
     'lines_of_code'=>0,
   }
-  metrics
+  metrics.merge({'lines_of_code'=>5694185271})
 end
 
 def fetch_hoc_metrics()
