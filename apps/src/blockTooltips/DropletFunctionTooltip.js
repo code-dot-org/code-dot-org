@@ -21,6 +21,10 @@ var DropletFunctionTooltip = function (functionName) {
     this.description = msg[this.descriptionKey()]();
   }
 
+  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
+    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  }
+
   /** @type {Array.<String>} */
   this.paramNames = [];
 
@@ -35,6 +39,10 @@ var DROPLET_DOC_I18N_PREFIX = "dropletBlock_";
 
 DropletFunctionTooltip.prototype.descriptionKey = function () {
   return this.i18nPrefix() + "_description";
+};
+
+DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
+  return this.i18nPrefix() + "_signatureOverride";
 };
 
 DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
@@ -52,7 +60,8 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
   return DropletBlockTooltipMarkup({
     functionName: this.functionName,
     functionShortDescription: this.description,
-    parameters: this.paramNames
+    parameters: this.paramNames,
+    signatureOverride: this.signatureOverride
   });
 };
 
