@@ -1,3 +1,5 @@
+var Applab = require('./applab');
+
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 
@@ -57,13 +59,13 @@ exports.setAlpha = function (imageData, x, y, value) {
     imageData.properties.data.properties[pixelOffset + 3] = value;
   }
 };
-exports.setRGBA = function (imageData, x, y, r, g, b, a) {
+exports.setRGB = function (imageData, x, y, r, g, b, a) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = r;
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-        (typeof a === 'undefined') ? 255 : a;
+      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
   }
 };
