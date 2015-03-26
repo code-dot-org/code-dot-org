@@ -123,7 +123,7 @@ var isExactlyNaN = function (val) {
  * @returns {number|string}
  */
 exports.serializeNumber = function (num) {
-  var rule = NUMBER_SERIALIZATION_RULES.find(function (rule) {
+  var rule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return rule.jsVal === num || (isExactlyNaN(rule.jsVal) && isExactlyNaN(num));
   });
   return rule ? rule.jsonVal : num;
@@ -137,7 +137,7 @@ exports.serializeNumber = function (num) {
  * @returns {number|NaN}
  */
 exports.deserializeNumber = function (storedNum) {
-  var rule = NUMBER_SERIALIZATION_RULES.find(function (rule) {
+  var rule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return rule.jsonVal === storedNum;
   });
   return rule ? rule.jsVal : storedNum;
