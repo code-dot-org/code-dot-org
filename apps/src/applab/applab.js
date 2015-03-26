@@ -351,7 +351,7 @@ Applab.getCode = function () {
 
 Applab.getHtml = function () {
   return Applab.levelHtml;
-}
+};
 
 Applab.onTick = function() {
   if (!Applab.running) {
@@ -1298,27 +1298,27 @@ Applab.onCodeModeButton = function() {
 Applab.onDesignModeAddButton = function() {
   Applab.levelHtml += "<button>Button</button>";
   Applab.updateLevelHtml();
-}
+};
 
 Applab.onDesignModeAddInput = function() {
   Applab.levelHtml += "<input>";
   Applab.updateLevelHtml();
-}
+};
 
 Applab.onDesignModeAddLabel = function() {
   Applab.levelHtml += "<label>text</label>";
   Applab.updateLevelHtml();
-}
+};
 
 Applab.onDesignModeClear = function() {
   Applab.levelHtml = "";
   Applab.updateLevelHtml();
-}
+};
 
 Applab.updateLevelHtml = function() {
   var divApplab = document.getElementById('divApplab');
   divApplab.innerHTML = Applab.levelHtml;
-}
+};
 
 Applab.toggleDesignMode = function(enable) {
   var codeModeHeaders = document.getElementById('codeModeHeaders');
