@@ -64,12 +64,16 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state.
  */
 NetSimRouterTab.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
-  this.bandwidthControl_ = new NetSimBandwidthControl(
-      this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+  if (this.levelConfig_.showRouterBandwidthControl) {
+    this.bandwidthControl_ = new NetSimBandwidthControl(
+        this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+  }
 };
 
 /**
@@ -83,5 +87,7 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
  * @param {number} newBandwidth in bits/second
  */
 NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
-  this.bandwidthControl_.setBandwidth(newBandwidth);
+  if (this.bandwidthControl_) {
+    this.bandwidthControl_.setBandwidth(newBandwidth);
+  }
 };

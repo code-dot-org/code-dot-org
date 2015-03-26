@@ -254,7 +254,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
-  // TODO: Set level-default router bandwidth
+  this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setDnsMode(this.level.defaultDnsMode);
   this.refresh_();
 };

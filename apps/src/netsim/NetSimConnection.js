@@ -272,7 +272,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err, router) {
-    // TODO: Create router with level-default bandwidth
+    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
     router.dnsMode = this.levelConfig_.defaultDnsMode;
     router.update(function () {
       this.statusChanges.notifyObservers();
