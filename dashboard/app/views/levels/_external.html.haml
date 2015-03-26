@@ -1,5 +1,5 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
-= stylesheet_link_tag    'editor/blockly_editor', media: 'all'
+= stylesheet_link_tag 'levels/external', media: 'all'
 = javascript_include_tag 'levels/external'
 :javascript
   var options = #{@level.properties['options'].to_json}
