@@ -1183,9 +1183,6 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       }
     });
 
-    // TODO(bjordan): is there a better hook for post-initial-load?
-    window.setTimeout(installTooltips, 500);
-
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
@@ -1194,6 +1191,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
+      installTooltips();
     }
   }, this));
 
