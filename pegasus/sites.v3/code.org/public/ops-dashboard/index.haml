@@ -216,6 +216,11 @@ title: "Ops Dashboard"
 
       $scope.districts = districtsService.query();
 
+      $scope.del = function (district) {
+        $scope.districts.splice($scope.districts.indexOf(district), 1); // remove from array
+        districtsService.remove({id: district.id}); // service call
+      }
+
       $scope.save = function (district) {
         if (district.id) {
           districtsService.update({id: district.id}, {district: district}).$promise.then(
