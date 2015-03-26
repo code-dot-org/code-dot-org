@@ -646,6 +646,10 @@ Applab.getCode = function () {
   return studioApp.editor.getValue();
 };
 
+Applab.getHtml = function () {
+  return Applab.levelHtml;
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -1031,6 +1035,8 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -1092,6 +1098,23 @@ Applab.init = function(config) {
     if (codeModeButton) {
       dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
     }
+    var designModeAddButton = document.getElementById('designModeAddButton');
+    if (designModeAddButton) {
+      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
+    }
+    var designModeAddInput = document.getElementById('designModeAddInput');
+    if (designModeAddInput) {
+      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
+    }
+    var designModeAddLabel = document.getElementById('designModeAddLabel');
+    if (designModeAddLabel) {
+      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
@@ -1160,6 +1183,11 @@ studioApp.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
 
   // Reset goal successState:
   if (level.goal) {
@@ -1560,7 +1588,33 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
+  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeAddButton = function() {
+  Applab.levelHtml += "<button>Button</button>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddInput = function() {
+  Applab.levelHtml += "<input>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddLabel = function() {
+  Applab.levelHtml += "<label>text</label>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeClear = function() {
+  Applab.levelHtml = "";
+  Applab.updateLevelHtml();
+};
+
+Applab.updateLevelHtml = function() {
+  var divApplab = document.getElementById('divApplab');
+  divApplab.innerHTML = Applab.levelHtml;
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -1574,10 +1628,13 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-  var designModeButtons = document.getElementById('designModeButtons');
-  designModeButtons.style.display = enable ? 'block' : 'none';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -2950,7 +3007,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n      <button id="designModeButton" class="debugger_button">\n        ', escape((24,  applabMsg.designMode() )), '\n      </button>\n    </div>\n  </div>\n  ');28; } ; buf.push('\n\n  ');30; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');38; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
