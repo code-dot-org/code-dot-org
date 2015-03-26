@@ -349,6 +349,10 @@ Applab.getCode = function () {
   return studioApp.editor.getValue();
 };
 
+Applab.getHtml = function () {
+  return Applab.levelHtml;
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -734,6 +738,8 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -795,6 +801,23 @@ Applab.init = function(config) {
     if (codeModeButton) {
       dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
     }
+    var designModeAddButton = document.getElementById('designModeAddButton');
+    if (designModeAddButton) {
+      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
+    }
+    var designModeAddInput = document.getElementById('designModeAddInput');
+    if (designModeAddInput) {
+      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
+    }
+    var designModeAddLabel = document.getElementById('designModeAddLabel');
+    if (designModeAddLabel) {
+      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
@@ -863,6 +886,11 @@ studioApp.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
 
   // Reset goal successState:
   if (level.goal) {
@@ -1263,7 +1291,33 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
+  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeAddButton = function() {
+  Applab.levelHtml += "<button>Button</button>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddInput = function() {
+  Applab.levelHtml += "<input>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeAddLabel = function() {
+  Applab.levelHtml += "<label>text</label>";
+  Applab.updateLevelHtml();
+};
+
+Applab.onDesignModeClear = function() {
+  Applab.levelHtml = "";
+  Applab.updateLevelHtml();
+};
+
+Applab.updateLevelHtml = function() {
+  var divApplab = document.getElementById('divApplab');
+  divApplab.innerHTML = Applab.levelHtml;
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -1277,10 +1331,13 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
-  var designModeButtons = document.getElementById('designModeButtons');
-  designModeButtons.style.display = enable ? 'block' : 'none';
 };
 
 Applab.onPuzzleComplete = function() {
