@@ -506,27 +506,24 @@ title: "Ops Dashboard"
         return 'N/A';
       }
 
-      $scope.save = function (workshop, segment) {
+      $scope.save = function (workshop) {
          if (workshop.id) {
            var newWorkshop = new workshopsService($scope.workshop);
            workshopsService.update({id: workshop.id}, workshop);
+           $('#save-confirmation').css('display', 'inline');
+           $('#save-confirmation').fadeOut(2500);
          } else {
            var newWorkshop = new workshopsService($scope.workshop);
            newWorkshop.$save().then(
              function(saved) {
                $scope.workshop = saved; /* just in case it has been modified on server */
                workshopsService.query().$promise.then(function (workshops) {
-                 if (segment) {
-                  $scope.saveSegment(segment);
-                 } else {
-                  $scope.workshops = workshops;
-                 }
+                 $scope.workshops = workshops;
+                 $('#save-confirmation').css('display', 'inline');
+                 $('#save-confirmation').fadeOut(2500);
                });
              }
            );
-         }
-         if (!segment) {
-          $location.path('/workshops');
          }
       }
 
@@ -541,7 +538,6 @@ title: "Ops Dashboard"
             });
           }
         );
-        $location.path('/workshops');
       }
     }
   ]);
