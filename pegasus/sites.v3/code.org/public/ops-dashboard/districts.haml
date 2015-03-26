@@ -75,7 +75,7 @@ template: none
       %button.btn.btn-danger{'ng-click' => 'district.confirmDelete = true', 'ng-hide' => 'district.editing || district.confirmDelete'} Delete
       %p{'ng-show' => 'district.confirmDelete'}
         Are you sure?
-      %button.btn.btn-danger{'ng-click' => 'district.$remove({id: district.id}) && districts.splice($index, 1);', 'ng-show' => 'district.confirmDelete'} Yes
+      %button.btn.btn-danger{'ng-click' => 'del(district)', 'ng-show' => 'district.confirmDelete'} Yes
       %button.btn.btn-white{'ng-click' => 'district.confirmDelete = false', 'ng-show' => 'district.confirmDelete'} No
       %button.btn.btn-white{'ng-click' => 'district.editing = false', 'ng-show' => 'district.editing'} Cancel
       %button.btn.btn-primary{'ng-click' => 'save(district)', 'ng-show' => 'district.editing', 'ng-disabled' => 'form.$invalid'} Save
