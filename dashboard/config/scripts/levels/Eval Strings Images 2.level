@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Free Play:  \r\nEvery Evaluation Block is color-coded to let you know which data type it returns and which types in needs for its parameters. The last parameter of the triangle function takes a String that controls its color - try some different colors to see what works.",
+    "instructions": "Free Play: Every Evaluation Block is color-coded to let you know which data type it returns and which types it needs for its parameters. The last parameter of the triangle function takes a String that controls its color - try some different colors to see what works.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
