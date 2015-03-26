@@ -491,13 +491,16 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
         return new NetSimMessage(this.shard_, row);
       }.bind(this));
 
-  // If there's anything we can process, kick off the processing.
-  if (localSimDnsRequests.length > 0) {
-    this.isAutoDnsProcessing_ = true;
-    this.processAutoDnsRequests_(localSimDnsRequests, function () {
-      this.isAutoDnsProcessing_ = false;
-    }.bind(this));
+  // If there's nothing we can process, we're done.
+  if (localSimDnsRequests.length === 0) {
+    return;
   }
+
+  // Process DNS requests
+  this.isAutoDnsProcessing_ = true;
+  this.processAutoDnsRequests_(localSimDnsRequests, function () {
+    this.isAutoDnsProcessing_ = false;
+  }.bind(this));
 };
 
 /**
@@ -971,15 +974,14 @@ NetSimRouterNode.prototype.getLog = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param rows
+ * @param {messageRow[]} rows
  * @private
+ * @throws if this method is called on a non-simulating router.
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   if (!this.simulateForSender_) {
-    // Not a simulating router, we can ignore these.
-    // Really should never hit this, since we don't hook up listeners
-    // unless simulating.
-    return;
+    // What?  Only simulating routers should be hooked up to message notifications.
+    throw new Error("Non-simulating router got message table change notifiction");
   }
 
   this.updateRouterQueue_(rows);
