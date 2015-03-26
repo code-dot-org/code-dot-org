@@ -61,28 +61,45 @@ var DropletFunctionTooltip = function (functionName) {
   this.paramNames = [];
 
   var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterKey(paramId))) {
-    this.paramNames.push(msg[this.parameterKey(paramId)]());
+  var paramKey = this.parameterKey(paramId);
+  while (msg.hasOwnProperty(paramKey)) {
+    this.paramNames.push(msg[paramKey]());
     paramId++;
   }
 };
 
+/**
+ * @returns {string}
+ */
 DropletFunctionTooltip.prototype.descriptionKey = function () {
   return this.i18nPrefix() + "_description";
 };
 
+/**
+ * @returns {string}
+ */
 DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
   return this.i18nPrefix() + "_signatureOverride";
 };
 
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
 DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
   return this.i18nPrefix() + "_param" + paramIndex;
 };
 
+/**
+ * @returns {string} i18n file prefix for this function
+ */
 DropletFunctionTooltip.prototype.i18nPrefix = function () {
   return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
 };
 
+/**
+ * @returns {string} URL for full doc about this function
+ */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
   return 'http://code.org/applab/docs/' + this.functionName;
 };
