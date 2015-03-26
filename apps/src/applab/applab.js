@@ -96,23 +96,23 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
   if (mediaList.length === 2) {
     var lastHeightRuleIndex = defaultHeightRules.length - 1;
     for (var i = 0; i <= lastHeightRuleIndex; i++) {
-      if (-1 !== mediaList[1].indexOf("(min-height: " +
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
           (defaultHeightRules[i] + 1) + "px)")) {
         if (i === 0) {
           // Matched the first rule (no max height)
-          mediaList.mediaText = mediaList[0] +
+          mediaList.mediaText = mediaList.item(0) +
               ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
         } else {
           // Matched one of the middle rules with a min and a max height
-          mediaList.mediaText = mediaList[0] +
+          mediaList.mediaText = mediaList.item(0) +
               ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
               " and (max-height: " + newHeightRules[i - 1] + "px)";
         }
         break;
-      } else if (mediaList[1] === "screen and (max-height: " +
+      } else if (mediaList.item(1) === "screen and (max-height: " +
                  defaultHeightRules[lastHeightRuleIndex] + "px)") {
         // Matched the last rule (no min height)
-        mediaList.mediaText = mediaList[0] +
+        mediaList.mediaText = mediaList.item(0) +
             ", screen and (max-height: " +
             newHeightRules[lastHeightRuleIndex] + "px)";
         break;
