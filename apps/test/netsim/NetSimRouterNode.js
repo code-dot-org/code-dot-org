@@ -4,6 +4,7 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
@@ -15,12 +16,10 @@ var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLo
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
-var PacketEncoder = testUtils.requireWithGlobalsCheckBuildFolder('netsim/PacketEncoder');
+var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
-var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -169,10 +168,10 @@ describe("NetSimRouterNode", function () {
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
       var packetHeaderSpec = [
-        {key: PacketHeaderType.FROM_ADDRESS, bits: 4},
-        {key: PacketHeaderType.TO_ADDRESS, bits: 4}
+        {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
+        {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
-      encoder = new PacketEncoder(packetHeaderSpec);
+      encoder = new Packet.Encoder(packetHeaderSpec);
 
       // Make router
       NetSimRouterNode.create(testShard, function (e, r) {
@@ -214,14 +213,6 @@ describe("NetSimRouterNode", function () {
       remoteA.address = addressTable[1].address;
     });
 
-    it ("picks up messages sent to itself from local client", function () {
-      var from = localClient.entityID;
-      var to = router.entityID;
-      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
-      assertTableSize(testShard, 'messageTable', 0);
-      assertTableSize(testShard, 'logTable', 1);
-    });
-
     it ("ignores messages sent to itself from other clients", function () {
       var from = remoteA.entityID;
       var to = router.entityID;
@@ -258,6 +249,8 @@ describe("NetSimRouterNode", function () {
     it ("does not forward malformed packets", function () {
       var from = localClient.entityID;
       var to = router.entityID;
+      // Here, the payload gets 'cleaned' down to empty string, then treated
+      // as zero when parsing the toAddress.
       NetSimMessage.send(testShard, from, to, 'garbage', function () {});
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);

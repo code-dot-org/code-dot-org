@@ -493,11 +493,24 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
  * @return {!Object} Object with height and width properties.
  */
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
+
   try {
-    if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
-      this.getSvgRoot().style.display = "inline";   /* reqd for IE */
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+
+    if (ie10OrOlder) {
+      // Required to set display to inline during calculation in IE <= 10
+      initialStyle = this.getSvgRoot().style.display;
+      this.getSvgRoot().style.display = "inline";
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    if (ie10OrOlder) {
+      // Reset to original display value
+      this.getSvgRoot().style.display = initialStyle;
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return {height: 0, width: 0};
@@ -2189,4 +2202,28 @@ Blockly.Block.prototype.render = function() {
  */
 Blockly.Block.prototype.getSvgRenderer = function () {
   return this.svg_;
+};
+
+/**
+ * Get the oldest ancestor of this block.
+ */
+Blockly.Block.prototype.getRootBlock = function () {
+  var rootBlock;
+  var current = this;
+  while (current) {
+    rootBlock = current;
+    current = current.getParent();
+  }
+
+  return rootBlock;
+};
+
+/**
+ * @returns True if any of this blocks inputs have a connection that is unfilled
+ */
+Blockly.Block.prototype.hasUnfilledInput = function () {
+  // Does this block have a connection without a block attached
+  return this.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
 };
