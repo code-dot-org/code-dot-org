@@ -377,48 +377,53 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
   this.heartbeat_.tick(clock);
-  this.tickRouting_.call(this, clock);
+  this.routeOverdueMessages_.call(this, clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
   }
 };
 
 /**
+ * This name is a bit of a misnomer, but it's memorable; we actually route
+ * all messages that are DUE or OVERDUE.
  * @param {RunLoop.Clock} clock
  * @private
  */
-NetSimRouterNode.prototype.tickRouting_ = function (clock) {
+NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
   if (this.isRouterProcessing_) {
     return;
   }
 
-  // Process requests that are at or past their scheduled time.
-  var dueForRouting = this.getAndUnscheduleMessagesDueForRouting(clock);
-  if (dueForRouting.length > 0) {
-    this.isRouterProcessing_ = true;
-    this.routeMessages_(dueForRouting, function () {
-      this.isRouterProcessing_ = false;
-    }.bind(this));
-  }
-};
-
-/**
- * Destructive operation: Removes schedule entries that are at or past their
- * scheduled time, generates the message objects for those schedule entries,
- * and returns them.
- * @param {RunLoop.clock} clock
- * @returns {NetSimMessage[]}
- */
-NetSimRouterNode.prototype.getAndUnscheduleMessagesDueForRouting = function (clock) {
-  var dueForRouting = [];
-  this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (entry) {
-    if (clock.time >= entry.time) {
-      dueForRouting.push(new NetSimMessage(this.shard_, entry.row));
-      return false;
+  // Separate out messages whose scheduled time has arrived or is past.
+  // Flag them so we can remove them later.
+  var readyScheduleItems = [];
+  this.localRoutingSchedule_.forEach(function (item) {
+    if (clock.time >= item.processingCompleteTime) {
+      item.beingRouted = true;
+      readyScheduleItems.push(item);
     }
-    return true;
+  });
+
+  // If no messages are ready, we're done.
+  if (readyScheduleItems.length === 0) {
+    return;
+  }
+
+  // Process the messages that are ready for routing
+  var readyMessages = readyScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
   }.bind(this));
-  return dueForRouting;
+
+  this.isRouterProcessing_ = true;
+  this.routeMessages_(readyMessages, function () {
+
+    // When done, remove the schedule entries that we flagged earlier
+    this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
+      return !item.beingRouted;
+    });
+    this.isRouterProcessing_ = false;
+
+  }.bind(this));
 };
 
 /**
@@ -453,7 +458,8 @@ NetSimRouterNode.prototype.scheduleNewPackets = function () {
 NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
   this.localRoutingSchedule_.push({
     row: row,
-    time: sendTime
+    processingCompleteTime: sendTime,
+    beingRouted: false
   });
 };
 
@@ -463,9 +469,9 @@ NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
  *          routing schedule.
  */
 NetSimRouterNode.prototype.isScheduled = function (messageRow) {
-  return undefined !== _.find(this.localRoutingSchedule_, function (entry) {
+  return _.find(this.localRoutingSchedule_, function (entry) {
     return entry.row.id === messageRow.id;
-  });
+  }) !== undefined;
 };
 
 /**
