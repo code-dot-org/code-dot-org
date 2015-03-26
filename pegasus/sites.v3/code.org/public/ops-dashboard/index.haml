@@ -510,6 +510,8 @@ title: "Ops Dashboard"
          if (workshop.id) {
            var newWorkshop = new workshopsService($scope.workshop);
            workshopsService.update({id: workshop.id}, workshop);
+           $('#save-confirmation').css('display', 'inline');
+           $('#save-confirmation').fadeOut(2500);
          } else {
            var newWorkshop = new workshopsService($scope.workshop);
            newWorkshop.$save().then(
@@ -517,11 +519,12 @@ title: "Ops Dashboard"
                $scope.workshop = saved; /* just in case it has been modified on server */
                workshopsService.query().$promise.then(function (workshops) {
                  $scope.workshops = workshops;
+                 $('#save-confirmation').css('display', 'inline');
+                 $('#save-confirmation').fadeOut(2500);
                });
              }
            );
          }
-         $location.path('/workshops');
       }
 
       $scope.saveSegment = function (segment) {
