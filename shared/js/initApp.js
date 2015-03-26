@@ -180,8 +180,8 @@ dashboard.saveProject = function(callback) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : Applab.getCode();
-  dashboard.currentApp.levelHtml = Applab.getHtml();
+      : window.Applab && Applab.getCode();
+  dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = window.location.pathname;
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
