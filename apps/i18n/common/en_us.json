@@ -20,6 +20,7 @@
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
   "continue": "Continue",
+  "designMode": "Design",
   "designModeHeader": "Design Mode",
   "dialogCancel": "Cancel",
   "dialogOK": "OK",

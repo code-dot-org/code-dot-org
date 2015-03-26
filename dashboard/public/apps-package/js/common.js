@@ -3424,7 +3424,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3447,12 +3450,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3464,7 +3466,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**
@@ -4931,15 +4933,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
           var shareCell = document.getElementById('share-cell') ||
-          document.getElementById('right-button-cell');
+              document.getElementById('right-button-cell');
           if (shareCell) {
             shareCell.style.marginLeft = '10px';
             shareCell.style.marginRight = '10px';
@@ -5813,20 +5808,20 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
+ * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block.getRootBlock();
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    return block.hasUnfilledInput();
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {

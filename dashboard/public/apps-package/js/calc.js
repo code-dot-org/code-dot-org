@@ -504,7 +504,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     // values from our userSet.
     targetConstants.forEach(function (item, index) {
       var name = item.name;
-      var val = userClone.getEquation(name).expression.getValue();
+      var val = userClone.getEquation(name).expression.evaluate().result;
       setConstantsToValue(val, index);
     });
 
@@ -2037,7 +2037,7 @@ ExpressionNode.prototype.setValue = function (value) {
     throw new Error("Can't modify value");
   }
   if (type === ValueType.NUMBER) {
-    this.value_ = jsnums.makeFloat(value);
+    this.value_ = ensureJsnum(value);
   } else {
     this.value_ = value;
   }
@@ -2136,7 +2136,14 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
   }
 
   element.appendChild(text);
-  textLength = text.getBoundingClientRect().width;
+
+  // FF doesnt have offsetWidth
+  // getBoundingClientRect undercalculates width on iPad
+  if (text.offsetWidth !== undefined) {
+    textLength = text.offsetWidth;
+  } else {
+    textLength = text.getBoundingClientRect().width;
+  }
 
   text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {

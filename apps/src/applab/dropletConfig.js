@@ -42,7 +42,7 @@ module.exports.blocks = [
   {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },

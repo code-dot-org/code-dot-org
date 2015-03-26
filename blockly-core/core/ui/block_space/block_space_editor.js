@@ -293,6 +293,9 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false).forEach(function (block) {
+    if (block.isCurrentlyHidden()) {
+      return;
+    }
     // Skip block if it doesn't fit in the view anyway.
     var blockHW = block.getHeightWidth();
     if (blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
@@ -421,8 +424,13 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
       parseInt(style.borderRightWidth, 10);
   }
   var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
+  // Subtract any pixels present above the svg element from the available height
+  // (only need to do this for mainBlockSpaceEditor's svg element, but fall back
+  // to this.svg_ during mainBlockSpaceEditor's creation)
+  var topSvgElement = Blockly.mainBlockSpaceEditor ?
+      Blockly.mainBlockSpaceEditor.svg_ : this.svg_;
+  var width = div.clientWidth - borderWidth;
+  var height = div.clientHeight - topSvgElement.offsetTop;
   if (svg.cachedWidth_ != width) {
     svg.setAttribute('width', width + 'px');
     svg.cachedWidth_ = width;
