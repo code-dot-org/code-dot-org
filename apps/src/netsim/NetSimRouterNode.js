@@ -114,6 +114,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.dnsNodeID = row.dnsNodeID;
 
   /**
+   * Speed at which messages are processed, in bits per second.
+   * @type {number}
+   */
+  this.bandwidth = Infinity;
+
+  /**
    * Determines a subset of connection and message events that this
    * router will respond to, only managing events from the given node ID,
    * to avoid conflicting with other clients also simulating this router.
@@ -208,13 +214,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
-
-  /**
-   * Speed at which messages are processed, in bits per second.
-   * @type {number}
-   * @private
-   */
-  this.bandwidthBitsPerSecond_ = 1000;
 
   /**
    * Whether router is in the middle of work.  Keeps router from picking up
@@ -616,6 +615,18 @@ NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsMode = newDnsMode;
+  this.update();
+};
+
+/**
+ * @param {number} newBandwidth in bits per second
+ */
+NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
+  if (this.bandwidth === newBandwidth) {
+    return;
+  }
+
+  this.bandwidth = newBandwidth;
   this.update();
 };
 
@@ -1166,10 +1177,10 @@ NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow
  * @private
  */
 NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (message) {
-  if (this.bandwidthBitsPerSecond_ === Infinity) {
+  if (this.bandwidth === Infinity) {
     return 0;
   }
-  return message.payload.length * 1000 / this.bandwidthBitsPerSecond_;
+  return message.payload.length * 1000 / this.bandwidth;
 };
 
 /**

@@ -13,6 +13,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterTab.html');
+var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 
 /**
@@ -41,6 +42,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
    */
   this.routerLogTable_ = null;
 
+  /**
+   * @type {NetSimBandwidthControl}
+   * @private
+   */
+  this.bandwidthControl_ = null;
+
   // Initial render
   this.render();
 };
@@ -53,6 +60,8 @@ NetSimRouterTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
+  this.bandwidthControl_ = new NetSimBandwidthControl(
+      this.rootDiv_.find('.bandwidth-control'), function () {});
 };
 
 /**

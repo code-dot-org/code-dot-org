@@ -338,7 +338,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("requires variable time to forward packets based on bandwidth", function () {
-        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
+        router.bandwidth = 1000; // 1 bit / ms
 
         // Router detects message immediately, but does not send it until
         // enough time has passed to send the message based on bandwidth
@@ -355,7 +355,7 @@ describe("NetSimRouterNode", function () {
 
       it ("respects bandwidth setting", function () {
         // 0.1 bit / ms, so 10ms / bit
-        router.bandwidthBitsPerSecond_ = 100;
+        router.bandwidth = 100;
 
         // This message should be sent at t=200
         sendMessageOfSize(20);
@@ -368,7 +368,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("routes packet on first tick if bandwidth is infinite", function () {
-        router.bandwidthBitsPerSecond_ = Infinity;
+        router.bandwidth = Infinity;
 
         // Message is detected immediately, though that's not obvious here.
         sendMessageOfSize(1008);
@@ -380,7 +380,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("routes 'batches' of packets when multiple packets fit in the bandwidth", function () {
-        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
+        router.bandwidth = 1000; // 1 bit / ms
 
         // Router should schedule these all as soon as they show up, for
         // 40, 80 and 120 ms respectively (due to the 0.1 bit per ms rate)
@@ -399,7 +399,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("is pessimistic when scheduling new packets", function () {
-        router.bandwidthBitsPerSecond_ = 1000; // 1 bit / ms
+        router.bandwidth = 1000; // 1 bit / ms
 
         // Router 'starts sending' this message now, expected to finish
         // at t=40
