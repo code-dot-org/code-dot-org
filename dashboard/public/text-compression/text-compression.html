@@ -278,6 +278,12 @@
       }
     });
     editor.on("change", compress);
+    editor.on("keypress", function (cm, e) {
+      if (e.keyCode === 32) {
+        CodeMirror.e_stop(e);
+        cm.replaceSelection('_');
+      }
+    });
     editor.setSize('100%', '100%');
     init();
   </script>
