@@ -20,9 +20,11 @@ var NetSimRouterLogTable = require('./NetSimRouterLogTable');
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
+ * @param {function} bandwidthChangeCallback
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
+    bandwidthChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -35,6 +37,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
    * @private
    */
   this.levelConfig_ = levelConfig;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.bandwidthChangeCallback_ = bandwidthChangeCallback;
 
   /**
    * @type {NetSimRouterLogTable}
@@ -61,7 +69,7 @@ NetSimRouterTab.prototype.render = function () {
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
   this.bandwidthControl_ = new NetSimBandwidthControl(
-      this.rootDiv_.find('.bandwidth-control'), function () {});
+      this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
 };
 
 /**
@@ -69,4 +77,11 @@ NetSimRouterTab.prototype.render = function () {
  */
 NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
+};
+
+/**
+ * @param {number} newBandwidth in bits/second
+ */
+NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
+  this.bandwidthControl_.setBandwidth(newBandwidth);
 };

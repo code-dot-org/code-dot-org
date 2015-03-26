@@ -18,8 +18,10 @@ var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
 var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
+var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
+var DnsMode = netsimConstants.DnsMode;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -28,6 +30,54 @@ describe("NetSimRouterNode", function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
 
     testShard = fakeShard();
+  });
+
+  describe("default row structure", function () {
+    var row;
+
+    beforeEach(function () {
+      var router = new NetSimRouterNode(testShard);
+      row = router.buildRow_();
+    });
+
+    it ("dnsMode (default DnsMode.NONE)", function () {
+      assertOwnProperty(row, 'dnsMode');
+      assertEqual(row.dnsMode, DnsMode.NONE);
+    });
+
+    it ("dnsNodeID (default undefined)", function () {
+      assertOwnProperty(row, 'dnsNodeID');
+      assertEqual(row.dnsNodeID, undefined);
+    });
+
+    it ("bandwidth (default 'Infinity')", function () {
+      assertOwnProperty(row, 'bandwidth');
+      assertEqual(row.bandwidth, 'Infinity');
+    });
+  });
+
+  describe("constructing from row", function () {
+    var router;
+
+    it ("dnsMode", function () {
+      router = new NetSimRouterNode(testShard, { dnsMode: DnsMode.AUTOMATIC });
+      assertEqual(DnsMode.AUTOMATIC, router.dnsMode);
+    });
+
+    it ("dnsNodeID", function () {
+      router = new NetSimRouterNode(testShard, { dnsNodeID: 42 });
+      assertEqual(42, router.dnsNodeID);
+    });
+
+    it ("bandwidth", function () {
+      router = new NetSimRouterNode(testShard, { bandwidth: 1024 });
+      assertEqual(1024, router.bandwidth);
+
+      // Special case: Bandwidth should be able to serialize in Infinity
+      // from the string 'Infinity' in the database.
+      router = new NetSimRouterNode(testShard, { bandwidth: 'Infinity' });
+      assertEqual(Infinity, router.bandwidth);
+    });
   });
 
   describe("static method get", function () {
