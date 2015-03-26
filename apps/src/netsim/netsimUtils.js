@@ -12,6 +12,7 @@
 /* global $ */
 'use strict';
 
+var _ = require('../utils').getLodash();
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
 
@@ -140,4 +141,24 @@ exports.deserializeNumber = function (storedNum) {
     return rule.jsonVal === storedNum;
   });
   return rule ? rule.jsVal : storedNum;
+};
+
+/**
+ * @param {netsimLevelConfiguration} levelConfig
+ * @returns {netsimLevelConfiguration} same thing, but with certain values
+ *          converted or cleaned.
+ * @private
+ */
+exports.scrubLevelConfiguration_ = function (levelConfig) {
+  var scrubbedLevel = _.clone(levelConfig, true);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
+      scrubbedLevel.defaultPacketSizeLimit);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultRouterBandwidth = exports.deserializeNumber(
+      scrubbedLevel.defaultRouterBandwidth);
+
+  return scrubbedLevel;
 };
