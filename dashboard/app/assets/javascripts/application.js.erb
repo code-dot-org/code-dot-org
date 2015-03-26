@@ -81,6 +81,8 @@ function cache_bust_only() {
 
 var CDOSounds = new Sounds();
 
-onURLBlocked('https://studio.code.org/favicon.ico', function() {
-  trackEvent("HTTPS Test", "blocked");
+$(window).load(function () {
+  onURLBlocked('https://studio.code.org/favicon.ico', function () {
+    trackEvent("HTTPS Test", "blocked");
+  });
 });
