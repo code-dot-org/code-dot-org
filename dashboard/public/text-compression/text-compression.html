@@ -189,16 +189,25 @@
       poemCalc = poemText;
 
       var dict = editor.getValue().split("\n");
+      var validRules = dict.map(function (rule, index) {
+        var line = editor.getLineHandle(index);
+        if (new RegExp('[\\u' + (FIRST_SYMBOL + index).toString(16) + '-\\u' + (FIRST_SYMBOL + MAX_DICT_ENTRIES).toString(16) + ']').test(rule)) {
+          editor.addLineClass(line, 'wrap', 'dict-error');
+          return '';
+        }
+        editor.removeLineClass(line, 'wrap', 'dict-error');
+        return rule;
+      });
       // Go backwards through dict because self-referencing entries should go first.
-      for (var i = dict.length - 1; i >= 0; i--) {
-        if (dict[i] != "") {
+      for (var i = validRules.length - 1; i >= 0; i--) {
+        if (validRules[i] != "") {
           // First compute any self referencing -- this is the string we'll look for in the poem.
-          var strToLookFor = fillOutSelfReference(dict[i], dict, i);
+          var strToLookFor = fillOutSelfReference(validRules[i], validRules, i);
           poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(strToLookFor), "gi"), "" + dictEntries[i]);
           poemCalc = poemCalc.replace(new RegExp(strToLookFor, "gi"), "#");
         }
       }
-      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + FIRST_SYMBOL.toString(16) + '-' + ']', "g"), "<mark>$&</mark>");
+      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + SYMBOL_REGEX + ']', "g"), "<mark>$&</mark>");
       document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
       calculateData();
     }
