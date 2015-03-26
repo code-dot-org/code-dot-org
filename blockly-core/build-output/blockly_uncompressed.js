@@ -13598,7 +13598,10 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
 Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function(inputName) {
   var blockSpace = this.block_.blockSpace;
   var parentBlock = this.block_;
-  goog.events.listen(this.inputClickTargets_[inputName], "click", function(e) {
+  Blockly.bindEvent_(this.inputClickTargets_[inputName], "mousedown", this, function(e) {
+    if(Blockly.isRightButton(e)) {
+      return
+    }
     var childType;
     var titleIndex;
     var input = parentBlock.getInput(inputName);
@@ -14433,11 +14436,18 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
   this.moveConnections_(dx, dy)
 };
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
   try {
-    if(Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+    if(ie10OrOlder) {
+      initialStyle = this.getSvgRoot().style.display;
       this.getSvgRoot().style.display = "inline"
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox())
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+    if(ie10OrOlder) {
+      this.getSvgRoot().style.display = initialStyle
+    }
   }catch(e) {
     return{height:0, width:0}
   }
@@ -15462,6 +15472,20 @@ Blockly.Block.prototype.render = function() {
 };
 Blockly.Block.prototype.getSvgRenderer = function() {
   return this.svg_
+};
+Blockly.Block.prototype.getRootBlock = function() {
+  var rootBlock;
+  var current = this;
+  while(current) {
+    rootBlock = current;
+    current = current.getParent()
+  }
+  return rootBlock
+};
+Blockly.Block.prototype.hasUnfilledInput = function() {
+  return this.inputList.some(function(input) {
+    return input.connection && !input.connection.targetBlock()
+  })
 };
 goog.provide("Blockly.Flyout");
 goog.require("Blockly.Block");
@@ -23527,6 +23551,9 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
   this.blockSpace.getTopBlocks(false).forEach(function(block) {
+    if(block.isCurrentlyHidden()) {
+      return
+    }
     var blockHW = block.getHeightWidth();
     if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
       return
@@ -23600,8 +23627,9 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
     borderWidth = parseInt(style.borderLeftWidth, 10) + parseInt(style.borderRightWidth, 10)
   }
   var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
+  var topSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : this.svg_;
+  var width = div.clientWidth - borderWidth;
+  var height = div.clientHeight - topSvgElement.offsetTop;
   if(svg.cachedWidth_ != width) {
     svg.setAttribute("width", width + "px");
     svg.cachedWidth_ = width
