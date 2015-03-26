@@ -4,6 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
@@ -801,26 +802,94 @@ Applab.init = function(config) {
     if (codeModeButton) {
       dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
     }
-    var designModeAddButton = document.getElementById('designModeAddButton');
-    if (designModeAddButton) {
-      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
-    }
-    var designModeAddInput = document.getElementById('designModeAddInput');
-    if (designModeAddInput) {
-      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
-    }
-    var designModeAddLabel = document.getElementById('designModeAddLabel');
-    if (designModeAddLabel) {
-      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
-    }
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
     }
 
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the levelHtml.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  for (var i = 1; i < 100; i++) {
+    var id = prefix + i;
+    if (divApplab.find("#" + id).length === 0) {
+      return id;
+    }
+  }
+  return prefix;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {string} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case 'button':
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case 'label':
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case 'input':
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
 };
 
 /**
@@ -1291,33 +1360,11 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
-  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
 };
 
-Applab.onDesignModeAddButton = function() {
-  Applab.levelHtml += "<button>Button</button>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddInput = function() {
-  Applab.levelHtml += "<input>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddLabel = function() {
-  Applab.levelHtml += "<label>text</label>";
-  Applab.updateLevelHtml();
-};
-
 Applab.onDesignModeClear = function() {
-  Applab.levelHtml = "";
-  Applab.updateLevelHtml();
-};
-
-Applab.updateLevelHtml = function() {
-  var divApplab = document.getElementById('divApplab');
-  divApplab.innerHTML = Applab.levelHtml;
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
 Applab.toggleDesignMode = function(enable) {
