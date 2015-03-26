@@ -50,7 +50,11 @@
     }
     .CodeMirror {
       font-size: 14pt;
+      line-height: 1.3em;
       border: 1px solid #ddd;
+    }
+    .dict-error {
+      background-color: #f99;
     }
     #selfEnteredPoem {
       box-sizing: border-box;
@@ -64,8 +68,13 @@
     }
   </style>
   <script type="text/javascript">
-    var dictEntries = [9788, 9730, 9731, 9732, 9733, 9734, 9742, 9774, 9775, 9786, 9745, 9762, 9851, 9824, 9827, 9829, 9830, 9746, 9789, 9758]
-        .map(function (c) { return String.fromCharCode(c); });
+    var FIRST_SYMBOL = 0x2600; // ☀
+    var MAX_DICT_ENTRIES = 255;
+    var SYMBOL_REGEX = '\\u' + FIRST_SYMBOL.toString(16) + '-\\u' + (FIRST_SYMBOL + MAX_DICT_ENTRIES).toString(16);
+    var dictEntries = [];
+    for (var i = FIRST_SYMBOL; i < FIRST_SYMBOL + MAX_DICT_ENTRIES; i++) {
+      dictEntries.push(String.fromCharCode(i));
+    }
     var poemsList = [
         "Pitter_patter_pitter_patter_listen_to_the_rain_pitter_patter_pitter_patter_on_the_window_pane",
         "A_tutor_who_tooted_the_flute_Tried_to_tutor_two_tooters_to_toot_Said_the_two_to_their_tutor,_\"Is_it_harder_to_toot_Or_to_tutor_two_tooters_to_toot?\"",
@@ -149,7 +158,7 @@
     // Recursively construct a self-referencing entry.
     function fillOutSelfReference(str, dict, maxIndex) {
 
-      var nonascii = str.replace(/[?0-9A-z_'\"?.,!;:]/gi, "");
+      var nonascii = str.replace(new RegExp('[^' + SYMBOL_REGEX + ']', 'g'), '');
       if (nonascii.length == 0) {
         return str;
       }
@@ -189,7 +198,7 @@
           poemCalc = poemCalc.replace(new RegExp(strToLookFor, "gi"), "#");
         }
       }
-      var poemDisplayHighlight = poemDisplay.replace(new RegExp('(' + dictEntries.join('|') + ')', "g"), "<mark>$1</mark>");
+      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + FIRST_SYMBOL.toString(16) + '-' + ']', "g"), "<mark>$&</mark>");
       document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
       calculateData();
     }
@@ -223,7 +232,7 @@
   var editor = CodeMirror.fromTextArea(document.getElementById('dictionary'), {
     lineNumbers: true,
     lineWrapping: true,
-    firstLineNumber: 9728,
+    firstLineNumber: FIRST_SYMBOL,
     lineNumberFormatter: function (line) {
       return String.fromCharCode(line);
     }
