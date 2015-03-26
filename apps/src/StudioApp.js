@@ -570,7 +570,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 *    defaults to the element with 'toolbox'.
 *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
 *    true.
-* @param {DomElement} div The parent div in which to insert Blockly.
+* @param {Element} div The parent div in which to insert Blockly.
 */
 StudioApp.prototype.inject = function(div, options) {
   var defaults = {
@@ -1169,7 +1169,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     });
 
     this.dropletTooltipManager = new DropletTooltipManager();
-    this.dropletTooltipManager.registerBlocksFromPalette(fullDropletPalette);
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
     var installTooltips = function () {
       this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
