@@ -1,4 +1,6 @@
 <div class="netsim-router-tab">
-  <div class="bandwidth-control"></div>
+  <% if (level.showRouterBandwidthControl) { %>
+    <div class="bandwidth-control"></div>
+  <% } %>
   <div class="router_log_table"></div>
 </div>
