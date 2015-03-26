@@ -113,7 +113,7 @@ levels.custom = {
     "setGreen": null,
     "setBlue": null,
     "setAlpha": null,
-    "setRGBA": null,
+    "setRGB": null,
 
     // Data
     "startWebRequest": null,
@@ -1909,6 +1909,8 @@ Applab.dot = function (opts) {
       // If the pen is up and the color has been changed, use that color:
       ctx.strokeStyle = Applab.turtle.penUpColor;
     }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -1916,6 +1918,7 @@ Applab.dot = function (opts) {
       // If the pen is up, reset strokeStyle back to transparent:
       ctx.strokeStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1924,8 +1927,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1985,6 +1990,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
@@ -2953,6 +2959,8 @@ return buf.join('');
   }
 }());
 },{"../../locale/current/applab":234,"../../locale/current/common":237,"ejs":253}],13:[function(require,module,exports){
+var Applab = require('./applab');
+
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 
@@ -3012,18 +3020,18 @@ exports.setAlpha = function (imageData, x, y, value) {
     imageData.properties.data.properties[pixelOffset + 3] = value;
   }
 };
-exports.setRGBA = function (imageData, x, y, r, g, b, a) {
+exports.setRGB = function (imageData, x, y, r, g, b, a) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = r;
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-        (typeof a === 'undefined') ? 255 : a;
+      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
   }
 };
 
-},{}],12:[function(require,module,exports){
+},{"./applab":10}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4022,7 +4030,7 @@ module.exports.blocks = [
   {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
   {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
 
   {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
   {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
