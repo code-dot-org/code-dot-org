@@ -94,4 +94,4 @@ function repositionLastTooltip() {
   var blockNotchHeight = 4;
   tooltipOffset.top -= blockNotchHeight / 2;
   tooltipBase.offset(tooltipOffset);
-};
+}
