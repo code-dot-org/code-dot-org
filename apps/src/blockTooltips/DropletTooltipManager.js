@@ -81,12 +81,14 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function () {
   var self = this;
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
-    if (!$(blockHoverDiv).hasClass('tooltipstered')) {
-      var funcName = $(blockHoverDiv).attr('title');
-      $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-        content: self.getDropletTooltip(funcName).getTooltipHTML()
-      }));
+    if ($(blockHoverDiv).hasClass('tooltipstered')) {
+      return;
     }
+
+    var funcName = $(blockHoverDiv).attr('title');
+    $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: self.getDropletTooltip(funcName).getTooltipHTML()
+    }));
   });
 };
 
