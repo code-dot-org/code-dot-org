@@ -72,11 +72,12 @@
     </div>
 
     <% if (data.hasDesignMode) { %>
-      <div id="designModeButtons" style="display:none;">
-        <button id="codeModeButton" class="share">
-          <%= msg.codeMode() %>
-        </button>
-      </div>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
     <% } %>
   </div>
 </div>
@@ -112,7 +113,12 @@
   <% } %>
   <% if (data.hasDesignMode) { %>
     <div id="designModeBox" style="display:none;">
-      Welcome to Design mode. Under construction.
+      <% /* contains temporary unlocalized strings */ %>
+      Welcome to Design mode. Under construction.<br>
+      <button id="designModeAddButton" class="share">Add Button</button><br>
+      <button id="designModeAddInput" class="share">Add Input</button><br>
+      <button id="designModeAddLabel" class="share">Add Label</button><br>
+      <button id="designModeClear" class="share">Clear</button><br>
     </div>
   <% } %>
   <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
