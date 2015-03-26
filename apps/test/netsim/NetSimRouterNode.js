@@ -32,50 +32,43 @@ describe("NetSimRouterNode", function () {
     testShard = fakeShard();
   });
 
-  describe("default row structure", function () {
-    var row;
+  it("has expected row structure and default values", function () {
+    var router = new NetSimRouterNode(testShard);
+    var row = router.buildRow_();
 
-    beforeEach(function () {
-      var router = new NetSimRouterNode(testShard);
-      row = router.buildRow_();
-    });
+    assertOwnProperty(row, 'dnsMode');
+    assertEqual(row.dnsMode, DnsMode.NONE);
 
-    it ("dnsMode (default DnsMode.NONE)", function () {
-      assertOwnProperty(row, 'dnsMode');
-      assertEqual(row.dnsMode, DnsMode.NONE);
-    });
+    assertOwnProperty(row, 'dnsNodeID');
+    assertEqual(row.dnsNodeID, undefined);
 
-    it ("dnsNodeID (default undefined)", function () {
-      assertOwnProperty(row, 'dnsNodeID');
-      assertEqual(row.dnsNodeID, undefined);
-    });
-
-    it ("bandwidth (default 'Infinity')", function () {
-      assertOwnProperty(row, 'bandwidth');
-      assertEqual(row.bandwidth, 'Infinity');
-    });
+    assertOwnProperty(row, 'bandwidth');
+    assertEqual(row.bandwidth, 'Infinity');
   });
 
-  describe("constructing from row", function () {
+  describe("constructing from a table row", function () {
     var router;
+    var makeRouter = function (row) {
+      return new NetSimRouterNode(testShard, row);
+    };
 
     it ("dnsMode", function () {
-      router = new NetSimRouterNode(testShard, { dnsMode: DnsMode.AUTOMATIC });
+      router = makeRouter({ dnsMode: DnsMode.AUTOMATIC });
       assertEqual(DnsMode.AUTOMATIC, router.dnsMode);
     });
 
     it ("dnsNodeID", function () {
-      router = new NetSimRouterNode(testShard, { dnsNodeID: 42 });
+      router = makeRouter({ dnsNodeID: 42 });
       assertEqual(42, router.dnsNodeID);
     });
 
     it ("bandwidth", function () {
-      router = new NetSimRouterNode(testShard, { bandwidth: 1024 });
+      router = makeRouter({ bandwidth: 1024 });
       assertEqual(1024, router.bandwidth);
 
       // Special case: Bandwidth should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
-      router = new NetSimRouterNode(testShard, { bandwidth: 'Infinity' });
+      router = makeRouter({ bandwidth: 'Infinity' });
       assertEqual(Infinity, router.bandwidth);
     });
   });
@@ -261,6 +254,9 @@ describe("NetSimRouterNode", function () {
       assertEqual(addressTable[0].isLocal, true);
       localClient.address = addressTable[0].address;
       remoteA.address = addressTable[1].address;
+
+      // Make sure router initial time is zero
+      router.tick({time: 0});
     });
 
     it ("ignores messages sent to itself from other clients", function () {
@@ -305,7 +301,6 @@ describe("NetSimRouterNode", function () {
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
-      router.tick({time: 0});
       router.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -325,7 +320,6 @@ describe("NetSimRouterNode", function () {
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
-      router.tick({time: 0});
       router.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -347,7 +341,6 @@ describe("NetSimRouterNode", function () {
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
-      router.tick({time: 0});
       router.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 1);
