@@ -3,7 +3,7 @@ title: Support Computer Science in Washington
 social:
   "og:title": "60 business and education leaders ask Washington to expand computer science"
   "og:description": "Washington CEOs, superintendents and nonprofit leaders unite around comprehensive legislation. In a letter, they urge Washington state to help schools catch up to 21st century demands."
-  "og:image": "http://code.org/images/wa-letter.png"
+  "og:image": "http://code.org/images/student-tatiana.jpg"
   "og:image:width": 1200
   "og:image:height": 628
   "og:video": ""
@@ -12,11 +12,17 @@ social:
   "og:video:type": ""
 ---
 
-# Letter to Representative Ross Hunter and Senator Andy Hill in support of HB 1813
+# 90% of Washingtonians support Computer Science bill but the Legislature won't pass it. Ask your representative why.
 
 <div style="float: left; margin-right: 15px;">
 <a href="http://www.congressweb.com/Code/11"><button style="margin-top: 10px;">Add your support</button></a>
 </div>
+
+
+## On March 4, 2015, 60 business and education leaders asked Washington to support computer science
+
+## Letter to Representative Ross Hunter and Senator Andy Hill in support of HB 1813
+
 <div style="float: left;">
 <% facebook = {:u=>'http://code.org/washington'} %>
 <% twitter = {:url=>'http://code.org/washington', :related=>'codeorg', :text=>'CEOs, educators and community leaders call on Washington state to expand computer science'} %>
