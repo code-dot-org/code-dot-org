@@ -1000,15 +1000,14 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  */
 NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   var newQueue = rows.filter(this.isMessageToRouter_.bind(this));
-  if (!_.isEqual(this.routerQueueCache_, newQueue)) {
-    this.routerQueueCache_ = newQueue;
-
-    // TODO: Drop packets that exceed queue memory (IF not already processing?)
-
-    this.scheduleNewPackets();
-
-    // Propagate notification of queue change (for stats, etc)
+  if (_.isEqual(this.routerQueueCache_, newQueue)) {
+    return;
   }
+
+  this.routerQueueCache_ = newQueue;
+  // TODO: Drop packets that exceed queue memory (IF not already processing?)
+  this.scheduleNewPackets();
+  // Propagate notification of queue change (for stats, etc)
 };
 
 /**
@@ -1183,13 +1182,13 @@ NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (me
  */
 NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
   var newQueue = rows.filter(this.isMessageToAutoDns_.bind(this));
-  if (!_.isEqual(this.autoDnsQueue_, newQueue)) {
-    this.autoDnsQueue_ = newQueue;
-
-    // Propagate notification of queue change?
-
-    // Work will proceed on next tick
+  if (_.isEqual(this.autoDnsQueue_, newQueue)) {
+    return;
   }
+
+  this.autoDnsQueue_ = newQueue;
+  // Propagate notification of queue change?
+  // Work will proceed on next tick
 };
 
 /**
