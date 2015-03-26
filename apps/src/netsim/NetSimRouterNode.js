@@ -952,51 +952,14 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
   }
 };
 
+/**
+ * Get list of log entries in this router's memory.
+ * @returns {NetSimLogEntry[]}
+ */
 NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
     return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
-};
-
-// TODO: Remove this unused method
-NetSimRouterNode.prototype.canHandleMessage_ = function (message) {
-  var fromNodeID, toNodeID, fromAddress, toAddress, simulateForNodeID,
-      simulateForAddress, routerNodeID, autoDnsNodeID, autoDnsAddress, packet;
-
-  fromNodeID = message.fromNodeID;
-  toNodeID = message.toNodeID;
-  simulateForNodeID = this.simulateForSender_;
-  routerNodeID = this.entityID;
-
-  // When auto-dns mode is enabled, we can handle some additional messages
-  // because the router IS the auto-dns
-  if (this.dnsMode === DnsMode.AUTOMATIC) {
-    packet = new Packet(this.packetSpec_, message.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
-    simulateForAddress = this.getAddressForNodeID_(simulateForNodeID);
-    autoDnsNodeID = routerNodeID;
-    autoDnsAddress = AUTO_DNS_RESERVED_ADDRESS;
-
-    // Handle all messages originating with client & from router to auto dns
-    if (fromAddress === simulateForAddress &&
-        toAddress === autoDnsAddress &&
-        fromNodeID === routerNodeID &&
-        toNodeID === autoDnsNodeID) {
-      return true;
-    }
-
-    // Handle all messages destined for client & to router from auto dns
-    if (fromAddress === autoDnsAddress &&
-        toAddress === simulateForAddress &&
-        fromNodeID === autoDnsNodeID &&
-        toNodeID === routerNodeID) {
-      return true;
-    }
-  }
-
-  // Default case: Handle all messages from client node to router node
-  return fromNodeID === simulateForNodeID && toNodeID === routerNodeID;
 };
 
 /**
