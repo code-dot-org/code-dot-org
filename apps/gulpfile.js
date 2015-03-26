@@ -172,18 +172,11 @@ gulp.task('lint', function() {
 
 gulp.task('test', ['lint', 'mochaTest']);
 
-var mocha = require('gulp-mocha');
 gulp.task('mochaTest', function() {
-  return gulp.src([
-    'test/*.js',
-    'test/calc/*.js',
-    'test/netsim/*.js'
-  ], { read: false })
-    .pipe(mocha({
-      reporter: 'spec',
-      timeout: 10000,
-      globals: {
-        $: require('jquery')
-      }
-    }));
+  var mochify = require('mochify');
+  mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
+    reporter : 'spec',
+    timeout: 10000,
+    phantomjs: "lib/phantomjs/phantomjs"
+  }).bundle();
 });

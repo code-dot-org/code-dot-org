@@ -121,7 +121,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
   var studioApp = require('@cdo/apps/StudioApp').singleton;
   setAppSpecificGlobals(app);
 
-  // Stub timers to speed up tests
+  // Stub timers to speed up tests depending on setTimeout/setInterval
   if(app == 'studio' || app == 'maze') {
     require('@cdo/apps/timeoutList').stubTimer(true);
   }

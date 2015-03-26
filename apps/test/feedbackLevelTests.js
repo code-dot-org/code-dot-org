@@ -11,11 +11,7 @@ describe("required blocks for specific levels", function () {
   });
 
   // Use globify transform to require a directory of files within the browserify bundle
-  var collections = require('./solutions/maze/*.js', {hash: 'path'});
-
-  // Extract the 'data.js' files containing app-specific require paths.
-  var data = Object.keys(collections).filter(function(key){return /data$/.test(key)});
-  var dataItem = collections[data];
+  var collections = require('./solutions/**/*.js', {hash: 'path'});
 
   Object.keys(collections).forEach(function (path) {
     describe(path, function () {
@@ -24,6 +20,7 @@ describe("required blocks for specific levels", function () {
         collection.tests.forEach(function (levelTest) {
           if (levelTest.missingBlocks) {
             it (levelTest.description, function () {
+              var dataItem = require('./util/data')(collection.app);
               validateMissingBlocksFromLevelTest(studioApp, collection, dataItem, levelTest);
             });
           }

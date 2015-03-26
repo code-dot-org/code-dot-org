@@ -101,6 +101,7 @@ exports.setupTestBlockly = function() {
   var options = {
     assetUrl: studioApp.assetUrl
   };
+  var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
   testBlockFactory.installTestBlocks(Blockly);
 

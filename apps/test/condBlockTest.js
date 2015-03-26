@@ -1,14 +1,5 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-//var canvas = require('canvas');
-
-//global.Image = canvas.Image;
-global.Turtle = {};
-
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
 
 describe('functional_cond', function () {
   var studioApp;
