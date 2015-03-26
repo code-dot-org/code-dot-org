@@ -242,14 +242,7 @@
 </head>
 <body>
   <div id="widgetTop">
-    <p><b>Instructions:</b></p>
-    <ul>
-      <li>Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right.
-      <li>As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.
-      <li>The dictionary is not case sensitive. Use _ for spaces.
-      <li>At the bottom you'll see how much the compression you've achieved.
-      <li>(NOTE: the dictionary only supports backwards self-referencing).
-    </ul>
+    <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
     <div>Choose a poem: <select id="poemsList" onChange="init();"></select></div>
     <div class="widgetLeftHeader">Compressed:</div>
     <div class="widgetRightHeader">Dictionary:</div>
@@ -268,8 +261,17 @@
     </div>
   </div>
   <script>
+    var $dictionary = $('#dictionary');
+    var options = window.options || {};
+
+    // Level builder settings
+    if (options.instructions) {
+      $('$widgetInstructions').text(options.instructions);
+    }
+    $dictionary.val(options.dictionary);
+
     var poemSelect = document.getElementById("poemsList");
-    var editor = CodeMirror.fromTextArea(document.getElementById('dictionary'), {
+    var editor = CodeMirror.fromTextArea($dictionary[0], {
       lineNumbers: true,
       lineWrapping: true,
       firstLineNumber: FIRST_SYMBOL,
