@@ -71,6 +71,7 @@ exports.setupBlocklyFrame = setupBlocklyFrame;
 function setupBlocklyFrame() {
   var timeoutList = require('@cdo/apps/timeoutList');
   timeoutList.clearTimeouts();
+  timeoutList.stubTimer(false);
   require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
@@ -80,6 +81,8 @@ function setupBlocklyFrame() {
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
   studioApp = require('@cdo/apps/StudioApp').singleton;
+  studioApp.reset = function(){};
+  studioApp.runButtonClick = function(){};
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

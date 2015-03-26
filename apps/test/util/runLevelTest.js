@@ -67,8 +67,10 @@ module.exports = function(testCollection, testData, dataItem, done) {
     //  in the maze state machine)
     if (report.onComplete) {
       var timeoutList = require('@cdo/apps/timeoutList');
-      timeoutList.clearTimeouts();
+      waitLong();
       setTimeout(report.onComplete, 0);
+      timeoutList.waitAll();
+      timeoutList.clearTimeouts();
     }
   };
 
@@ -110,6 +112,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/eval/main');
   require('@cdo/apps/studio/main');
   require('@cdo/apps/calc/main');
+  require('@cdo/apps/bounce/main');
 }
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
@@ -117,6 +120,11 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
   setAppSpecificGlobals(app);
+
+  // Stub timers to speed up tests
+  if(app == 'studio' || app == 'maze') {
+    require('@cdo/apps/timeoutList').stubTimer(true);
+  }
 
   var main = window[app + 'Main'];
   main({
@@ -131,9 +139,18 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
         beforeClick(assert);
       }
       studioApp.runButtonClick();
+      waitLong();
     },
     onAttempt: onAttempt
   });
+}
+
+function waitLong() {
+  try {
+    require('@cdo/apps/timeoutList').advance();
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function setAppSpecificGlobals (app) {

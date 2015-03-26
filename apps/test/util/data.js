@@ -34,6 +34,18 @@ module.exports = function (app) {
       levels: {levels: require('@cdo/apps/eval/levels')},
       blocks: require('@cdo/apps/eval/blocks')
     };};
+  } else if (app == 'bounce') {
+    appCache[app] = function() {return {
+      skins: require('@cdo/apps/bounce/skins'),
+      levels: {levels: require('@cdo/apps/bounce/levels')},
+      blocks: require('@cdo/apps/bounce/blocks')
+    };};
+  } else if (app == 'studio') {
+    appCache[app] = function() {return {
+      skins: require('@cdo/apps/studio/skins'),
+      levels: {levels: require('@cdo/apps/studio/levels')},
+      blocks: require('@cdo/apps/studio/blocks')
+    };};
   }
   if(appCache[app]) return appCache[app];
 };

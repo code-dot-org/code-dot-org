@@ -737,7 +737,7 @@ Artist.prototype.execute = function() {
   this.studioApp_.playAudio('start', {loop : true});
   // animate the transcript.
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  this.pid = require('../timeoutList').setTimeout(_.bind(this.animate, this), 100);
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -878,7 +878,7 @@ Artist.prototype.animate = function() {
   if(this.skipAnimation) {
     this.animate();
   } else {
-    this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+    this.pid = require('../timeoutList').setTimeout(_.bind(this.animate, this), stepSpeed);
   }
 };
 

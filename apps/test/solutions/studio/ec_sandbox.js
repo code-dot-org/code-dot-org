@@ -18,9 +18,11 @@ module.exports = {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1);
+        t.advance();
       },
       expected: {
         result: true,
@@ -37,9 +39,11 @@ module.exports = {
         "throwProjectile(0, 1, 'purple_fireball');",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1000);
+        t.advance();
       },
       expected: {
         result: true,

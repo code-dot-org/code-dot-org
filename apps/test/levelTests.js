@@ -31,8 +31,6 @@ describe('Level tests', function() {
 
 // Get all json files under directory path
 function getTestCollections () {
-  //var files = wrench.readdirSyncRecursive(directory);
-
   // require-globify transform
   var files = require('./solutions/**/*.js', {hash: 'path'});
   var testCollections = [];
@@ -52,6 +50,10 @@ function runTestCollection (item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
+      if(testData.editCode) {
+        console.log('Skipping editCode test: ' + testData.description);
+        return;
+      }
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
       // and our getMissingRequiredBlocks tests (and likely also other things

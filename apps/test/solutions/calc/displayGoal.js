@@ -109,8 +109,6 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    console.log('element count: ' + answerExpression.childElementCount);
-
     var g = answerExpression.firstElementChild;
     assert.equal(g.childNodes.length, 1);
     assert.equal(g.childNodes[0].textContent, "age_in_months");

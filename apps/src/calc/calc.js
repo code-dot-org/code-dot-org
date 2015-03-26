@@ -98,6 +98,7 @@ function getTokenList(one, two) {
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
 
   skin = config.skin;
   level = config.level;
@@ -225,7 +226,7 @@ function displayGoal(targetSet) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Calc.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;

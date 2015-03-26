@@ -59,6 +59,7 @@ Eval.answerObject = null;
  * Initialize Blockly and the Eval.  Called on page load.
  */
 Eval.init = function(config) {
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
 
   skin = config.skin;
   level = config.level;
@@ -145,7 +146,7 @@ Eval.init = function(config) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Eval.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;

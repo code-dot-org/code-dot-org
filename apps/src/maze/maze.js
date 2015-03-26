@@ -294,7 +294,7 @@ function drawMap () {
       var timePerFrame = 600; // timeForAnimation / numFrames;
       var idleAnimationFrame = 0;
 
-      setInterval(function() {
+      timeoutList.setInterval(function() {
         if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
           updatePegmanAnimation({
             idStr: 'idle',
@@ -507,6 +507,9 @@ function resetDirtImages(running) {
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function(config) {
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
+  studioApp.reset = require('lodash').bind(this.reset, this);
+
   var extraControlRows = null;
 
   skin = config.skin;
@@ -515,6 +518,8 @@ Maze.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
+
+  Maze.bee = null;
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
@@ -744,7 +749,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Maze.reset = function(first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -873,7 +878,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Maze.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -1165,9 +1170,13 @@ Maze.scheduleAnimations = function (singleStep) {
     }
 
     animateAction(actions[index], singleStep, timePerAction);
-    timeoutList.setTimeout(function() {
+    if(timePerAction === 0) {
       scheduleSingleAnimation(index + 1);
-    }, timePerAction);
+    } else {
+      timeoutList.setTimeout(function() {
+        scheduleSingleAnimation(index + 1);
+      }, timePerAction);
+    }
   }
 
   // Once animations are complete, we want to reenable the step button if we
@@ -1474,7 +1483,7 @@ Maze.scheduleFail = function(forward) {
         scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
-        setTimeout(function () {
+        timeoutList.setTimeout(function () {
           document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
         }, numFrames * timePerFrame);
       } else {
@@ -1743,7 +1752,7 @@ Maze.scheduleLook = function(d) {
 Maze.scheduleLookStep = function(path, delay) {
   timeoutList.setTimeout(function() {
     path.style.display = 'inline';
-    window.setTimeout(function() {
+    timeoutList.setTimeout(function() {
       path.style.display = 'none';
     }, stepSpeed * 2);
   }, delay);

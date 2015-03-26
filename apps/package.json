@@ -78,6 +78,8 @@
     "temp": "^0.8.1",
     "through": "~2.3.6",
     "through2": "^0.6.3",
+    "timers-browserify": "^1.4.0",
+    "timerstub": "^1.0.3",
     "uglify-js": "~2.4.16",
     "vinyl": "^0.4.6",
     "vinyl-buffer": "^1.0.0",

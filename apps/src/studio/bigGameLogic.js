@@ -67,7 +67,7 @@ BigGameLogic.prototype.onTick = function () {
       this.collide(playerSprite.x, playerSprite.y,
                    dangerSprite.x, dangerSprite.y)) {
     this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
-    setTimeout((function ()  {
+    require('../timeoutList').setTimeout((function ()  {
       this.studio_.setSprite({
         spriteIndex: this.playerSpriteIndex,
         value:"visible"
