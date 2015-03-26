@@ -47,6 +47,135 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>Image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">player</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown">
+              <title name="SPRITE_INDEX">ninja</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>Image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">danger</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown">
+              <title name="SPRITE_INDEX">dragon</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>Image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">target</title>
+          <functional_input name="STACK">
+            <block type="functional_sprite_dropdown">
+              <title name="SPRITE_INDEX">unicorn</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>Image</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">bg</title>
+          <functional_input name="STACK">
+            <block type="functional_background_dropdown">
+              <title name="BACKGROUND">"cloudy"</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>String</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">subtitle</title>
+          <functional_input name="STACK">
+            <block type="functional_string">
+              <title name="VAL">Catch the unicorn, avoid the dragon</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false">
+          <mutation>
+            <outputtype>String</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">title</title>
+          <functional_input name="STACK">
+            <block type="functional_string">
+              <title name="VAL">Ninja vs Dragon!</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_start_setFuncs" inline="false" deletable="false" movable="false" editable="false" id="game_funcs">
+          <functional_input name="title">
+            <block type="functional_call" deletable="false">
+              <mutation name="title"/>
+            </block>
+          </functional_input>
+          <functional_input name="subtitle">
+            <block type="functional_call" deletable="false">
+              <mutation name="subtitle"/>
+            </block>
+          </functional_input>
+          <functional_input name="background">
+            <block type="functional_call" deletable="false">
+              <mutation name="bg"/>
+            </block>
+          </functional_input>
+          <functional_input name="target">
+            <block type="functional_call" deletable="false">
+              <mutation name="target"/>
+            </block>
+          </functional_input>
+          <functional_input name="danger">
+            <block type="functional_call" deletable="false">
+              <mutation name="danger"/>
+            </block>
+          </functional_input>
+          <functional_input name="player">
+            <block type="functional_call" deletable="false">
+              <mutation name="player"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-target">
+            <block type="functional_pass">
+              <mutation name="update-target"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-danger">
+            <block type="functional_pass">
+              <mutation name="update-danger"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-player">
+            <block type="functional_pass">
+              <mutation name="update-player"/>
+            </block>
+          </functional_input>
+          <functional_input name="collide?">
+            <block type="functional_pass">
+              <mutation name="collide?"/>
+            </block>
+          </functional_input>
+          <functional_input name="on-screen?">
+            <block type="functional_pass">
+              <mutation name="onscreen?"/>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_example" inline="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false">
@@ -983,63 +1112,6 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_start_setFuncs" inline="false" deletable="false" movable="false" editable="false" id="game_funcs">
-          <functional_input name="title">
-            <block type="functional_call" deletable="false">
-              <mutation name="subtitle"/>
-            </block>
-          </functional_input>
-          <functional_input name="subtitle">
-            <block type="functional_call" deletable="false">
-              <mutation name="title"/>
-            </block>
-          </functional_input>
-          <functional_input name="background">
-            <block type="functional_call" deletable="false">
-              <mutation name="bg"/>
-            </block>
-          </functional_input>
-          <functional_input name="target">
-            <block type="functional_call" deletable="false">
-              <mutation name="target"/>
-            </block>
-          </functional_input>
-          <functional_input name="danger">
-            <block type="functional_call" deletable="false">
-              <mutation name="danger"/>
-            </block>
-          </functional_input>
-          <functional_input name="player">
-            <block type="functional_call" deletable="false">
-              <mutation name="player"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-target">
-            <block type="functional_pass">
-              <mutation name="update-target"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-danger">
-            <block type="functional_pass">
-              <mutation name="update-danger"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-player">
-            <block type="functional_pass">
-              <mutation name="update-player"/>
-            </block>
-          </functional_input>
-          <functional_input name="collide?">
-            <block type="functional_pass">
-              <mutation name="collide?"/>
-            </block>
-          </functional_input>
-          <functional_input name="on-screen?">
-            <block type="functional_pass">
-              <mutation name="onscreen?"/>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
@@ -1227,84 +1299,12 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">bg</title>
-          <functional_input name="STACK">
-            <block type="functional_background_dropdown" uservisible="false">
-              <title name="BACKGROUND">"rainbow"</title>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="update-danger">
                 <arg name="x" type="Number"/>
               </mutation>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">danger</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">soccergirl</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>String</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">title</title>
-          <functional_input name="STACK">
-            <block type="functional_string" uservisible="false">
-              <title name="VAL">My Game</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">target</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">bat</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Image</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">player</title>
-          <functional_input name="STACK">
-            <block type="functional_sprite_dropdown" uservisible="false">
-              <title name="SPRITE_INDEX">cat</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>String</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">subtitle</title>
-          <functional_input name="STACK">
-            <block type="functional_string" uservisible="false">
-              <title name="VAL">Is so cool</title>
             </block>
           </functional_input>
         </block>
