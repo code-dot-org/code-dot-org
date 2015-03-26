@@ -719,22 +719,9 @@ function displayComplexUserExpressions() {
     return;
   }
 
-  // in single function/variable mode, we're only going to highlight the differences
-  // in the evaluated result
-  var highlightErrors = !appState.targetSet.hasSingleFunction() &&
-    !appState.targetSet.computesSingleVariable();
-
-  var nextRow = 0;
-  var tokenList;
-  appState.userSet.sortedEquations().forEach(function (userEquation) {
-    var expectedEquation = highlightErrors ?
-      appState.targetSet.getEquation(userEquation.name) : null;
-
-    tokenList = constructTokenList(userEquation, expectedEquation);
-
-    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
-      'errorToken');
-  });
+  // get the tokens for our user equations
+  var tokenList = tokenListForNonComputeEquations_();
+  var nextRow = appState.userSet.sortedEquations().length;
 
   if (appState.userSet.computesSingleConstant()) {
     // In this case the compute equation + evaluation will be exactly the same
@@ -750,6 +737,40 @@ function displayComplexUserExpressions() {
   tokenList = constructTokenList(computeEquation, targetEquation);
 
   var evaluation = appState.userSet.evaluate();
+
+  tokenList = tokenList.concat(tokenListForEvaluation_(evaluation));
+
+  displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+
+  tokenList = tokenListForFailedFunctionInput_();
+  if (tokenList && tokenList.length) {
+    displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+  }
+}
+
+function tokenListForNonComputeEquations_() {
+  // in single function/variable mode, we're only going to highlight the differences
+  // in the evaluated result
+  var highlightAllErrors = !appState.targetSet.hasSingleFunction() &&
+    !appState.targetSet.computesSingleVariable();
+
+  var nextRow = 0;
+  var tokenList;
+  appState.userSet.sortedEquations().forEach(function (userEquation) {
+    var expectedEquation = highlightAllErrors ?
+      appState.targetSet.getEquation(userEquation.name) : null;
+
+    tokenList = constructTokenList(userEquation, expectedEquation);
+
+    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
+      'errorToken');
+  });
+
+  return tokenList;
+}
+
+function tokenListForEvaluation_(evaluation) {
+  // Check for div zero
   var divZeroInUserSet = false;
   if (evaluation.err) {
     if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
@@ -758,43 +779,48 @@ function displayComplexUserExpressions() {
       throw evaluation.err;
     }
   }
-  if (!divZeroInUserSet) {
-    result = evaluation.result;
-    var expectedResult = result;
-    // Note: we could make singleVariable case smarter and evaluate target using
-    // user constant value
-    if (appState.targetSet.computeEquation() !== null &&
-        !appState.targetSet.computesSingleVariable()) {
-      expectedResult = appState.targetSet.evaluate().result;
-    }
 
-    // add a tokenList diffing our results
-    tokenList = tokenList.concat(constructTokenList(' = '),
-      constructTokenList(result, expectedResult));
+  if (divZeroInUserSet) {
+    return [];
   }
 
-  displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
-
-  if (appState.failedInput !== null) {
-    var expression = computeEquation.expression.clone();
-    for (var c = 0; c < expression.numChildren(); c++) {
-      expression.setChildValue(c, appState.failedInput[c]);
-    }
-    evaluation = appState.userSet.evaluateWithExpression(expression);
-    if (evaluation.err) {
-      if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-        evaluation.result = ''; // result will not be used in this case
-      } else {
-        throw evaluation.err;
-      }
-    }
-    result = evaluation.result;
-
-    tokenList = constructTokenList(expression)
-      .concat(new Token(' = ', false))
-      .concat(new Token(result, true)); // this should always be marked
-    displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+  var result = evaluation.result;
+  var expectedResult = result;
+  // Note: we could make singleVariable case smarter and evaluate target using
+  // user constant value
+  if (appState.targetSet.computeEquation() !== null &&
+      !appState.targetSet.computesSingleVariable()) {
+    expectedResult = appState.targetSet.evaluate().result;
   }
+
+  // add a tokenList diffing our results
+  return constructTokenList(' = ').concat(
+    constructTokenList(result, expectedResult));
+}
+
+function tokenListForFailedFunctionInput_() {
+  if (appState.failedInput === null) {
+    return [];
+  }
+
+  var computeEquation = appState.userSet.computeEquation();
+  var expression = computeEquation.expression.clone();
+  for (var c = 0; c < expression.numChildren(); c++) {
+    expression.setChildValue(c, appState.failedInput[c]);
+  }
+  var evaluation = appState.userSet.evaluateWithExpression(expression);
+  if (evaluation.err) {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+      evaluation.result = ''; // result will not be used in this case
+    } else {
+      throw evaluation.err;
+    }
+  }
+  var result = evaluation.result;
+
+  return constructTokenList(expression)
+    .concat(new Token(' = ', false))
+    .concat(new Token(result, true)); // this should always be marked
 }
 
 function stopAnimatingAndDisplayFeedback() {
