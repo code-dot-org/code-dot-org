@@ -1,5 +1,21 @@
 var utils = require('./utils');
 
+/**
+ * @name DropletBlock
+ * @description Definition of a block to be used in Droplet
+ * @property {String} func identifying the function this block runs
+ * @property {Object} parent object within which this function is defined as a property, keyed by the func name
+ * @property {String} category category within which to place the block
+ * @property {String} type type of the block (e.g. value)
+ */
+
+/**
+ * @name DropletConfig
+ * @description Configuration information for Droplet
+ * @property {DropletBlock[]} blocks list of blocks
+ * @property {Object} categories configuration of categories within which to place blocks
+ */
+
 exports.randomNumber = function (min, max) {
   if (typeof max === 'undefined') {
     // If only one parameter is specified, use it as the max with zero as min:
@@ -14,12 +30,18 @@ exports.getTime = function() {
   return (new Date()).getTime();
 };
 
+/**
+ * @type {DropletBlock[]}
+ */
 exports.dropletGlobalConfigBlocks = [
   {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
 ];
 
+/**
+ * @type {DropletBlock[]}
+ */
 exports.dropletBuiltinConfigBlocks = [
   {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
   {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
@@ -27,6 +49,9 @@ exports.dropletBuiltinConfigBlocks = [
   {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
 ];
 
+/**
+ * @type {DropletConfig|*}}
+ */
 var standardConfig = {};
 
 standardConfig.blocks = [
@@ -93,7 +118,11 @@ standardConfig.categories = {
   },
 };
 
-
+/**
+ * @param codeFunctions
+ * @param {DropletConfig} dropletConfig
+ * @returns {Array}
+ */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
@@ -142,6 +171,10 @@ function mergeCategoriesWithConfig(dropletConfig) {
 
 /**
  * Generate code aliases in Javascript based on some level data.
+ * @param {DropletConfig} dropletConfig
+ * @param {String} parentObjName string reference to object upon which func is
+ *  a property
+ * @returns {String} code
  */
 exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   var code = '';
@@ -294,11 +327,15 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 
 /**
  * Returns a set of all blocks
- * @param dropletConfig
- * @returns {Object.<String, Object>}
+ * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @returns {DropletBlock[]} a list of all available Droplet blocks,
+ *      including the given config's blocks
  */
-exports.getAllDropletBlocks = function (dropletConfig) {
-  return $.extend({}, exports.dropletGlobalConfigBlocks,
-    exports.dropletBuiltinConfigBlocks,
-    dropletConfig.blocks);
+exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+  var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
+  var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  return exports.dropletGlobalConfigBlocks
+    .concat(exports.dropletBuiltinConfigBlocks)
+    .concat(standardConfig.blocks)
+    .concat(configuredBlocks);
 };

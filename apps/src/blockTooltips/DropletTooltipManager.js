@@ -30,19 +30,6 @@ var DropletTooltipManager = module.exports = function () {
   this.blockTypeToTooltip = {};
 };
 
-var repositionLastTooltip = function () {
-  var tooltipBase = $(".tooltipster-base").last();
-  var tooltipsterOffset = tooltipBase.offset();
-  var dropletToolboxArea = $('.droplet-palette-wrapper');
-  var rightSideOfToolbox = dropletToolboxArea.offset().left +
-    dropletToolboxArea.width();
-  var rightSideOfBlock = tooltipsterOffset.left;
-  var tipWidth = 8;
-  tooltipsterOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
-  tooltipsterOffset.top -= 2; // Account for block notch height
-  tooltipBase.offset(tooltipsterOffset);
-};
-
 var DEFAULT_TOOLTIP_CONFIG = {
   interactive: true,
   speed: 150,
@@ -55,14 +42,13 @@ var DEFAULT_TOOLTIP_CONFIG = {
 };
 
 /**
- * @param {Array.<Object>} dropletPalette array of Droplet category definitions
+ * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
+ *    which to register documentation
  */
-DropletTooltipManager.prototype.registerBlocksFromPalette = function (dropletPalette) {
-  dropletPalette.forEach(function (dropletCategory) {
-    dropletCategory.blocks.forEach(function (dropletCategoryBlockPair) {
-      this.blockTypeToTooltip[dropletCategoryBlockPair.title] =
-        new DropletFunctionTooltip(dropletCategoryBlockPair.title);
-    }, this);
+DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
+  dropletBlocks.forEach(function (dropletBlockDefinition) {
+    this.blockTypeToTooltip[dropletBlockDefinition.func] =
+      new DropletFunctionTooltip(dropletBlockDefinition.func);
   }, this);
 };
 
@@ -79,6 +65,10 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 };
 
 DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
   var self = this;
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
@@ -92,3 +82,16 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
   });
 };
 
+function repositionLastTooltip() {
+  var tooltipBase = $(".tooltipster-base").last();
+  var tooltipOffset = tooltipBase.offset();
+  var dropletToolboxArea = $('.droplet-palette-wrapper');
+  var rightSideOfToolbox = dropletToolboxArea.offset().left +
+    dropletToolboxArea.width();
+  var rightSideOfBlock = tooltipOffset.left;
+  var tipWidth = 8;
+  tooltipOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
+  var blockNotchHeight = 4;
+  tooltipOffset.top -= blockNotchHeight / 2;
+  tooltipBase.offset(tooltipOffset);
+};
