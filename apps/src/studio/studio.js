@@ -2895,21 +2895,24 @@ Studio.allGoalsVisited = function() {
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
+//  return Studio.playerScore >= 6;
+
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+
+  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var achievedGoals = Studio.allGoalsVisited();
+  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+      !hasGoals && achievedRequiredSuccessCondition) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
-    return true;
-  }
-
-  if (Studio.allGoalsVisited()) {
-    Studio.result = ResultType.SUCCESS;
     return true;
   }
 
