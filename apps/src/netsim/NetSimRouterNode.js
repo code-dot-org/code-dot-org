@@ -79,6 +79,15 @@ var AUTO_DNS_HOSTNAME = 'dns';
 var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
 
 /**
+ * Maximum packet lifetime in the router queue, sort of a primitive Time-To-Live
+ * system that helps prevent a queue from being indefinitely blocked by a very
+ * large packet.  Packets that exceed this time will silently fail delivery.
+ * @type {number}
+ * @readonly
+ */
+var PACKET_MAX_LIFETIME_MS = 600000;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -397,32 +406,44 @@ NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
   // Separate out messages whose scheduled time has arrived or is past.
   // Flag them so we can remove them later.
   var readyScheduleItems = [];
+  var expiredScheduleItems = [];
   this.localRoutingSchedule_.forEach(function (item) {
     if (clock.time >= item.processingCompleteTime) {
       item.beingRouted = true;
       readyScheduleItems.push(item);
+    } else if (clock.time >= item.expirationTime) {
+      item.beingRouted = true;
+      expiredScheduleItems.push(item);
     }
   });
 
   // If no messages are ready, we're done.
-  if (readyScheduleItems.length === 0) {
+  if (readyScheduleItems.length + expiredScheduleItems.length === 0) {
     return;
   }
 
-  // Process the messages that are ready for routing
+  var expiredMessages = expiredScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
+  }.bind(this));
+
   var readyMessages = readyScheduleItems.map(function (item) {
     return new NetSimMessage(this.shard_, item.row);
   }.bind(this));
 
+  // First, remove the expired items.  They just silently vanish
   this.isRouterProcessing_ = true;
-  this.routeMessages_(readyMessages, function () {
+  NetSimEntity.destroyEntities(expiredMessages, function (err) {
 
-    // When done, remove the schedule entries that we flagged earlier
-    this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
-      return !item.beingRouted;
-    });
-    this.isRouterProcessing_ = false;
+    // Next, process the messages that are ready for routing
+    this.routeMessages_(readyMessages, function () {
 
+      // Finally, remove all the schedule entries that we flagged earlier
+      this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
+        return !item.beingRouted;
+      });
+      this.isRouterProcessing_ = false;
+
+    }.bind(this));
   }.bind(this));
 };
 
@@ -446,19 +467,24 @@ NetSimRouterNode.prototype.scheduleNewPackets = function () {
           .reduce(function (prev, cur) {
             return prev + this.calculateProcessingDurationForMessage_(cur);
           }.bind(this), this.simulationTime_);
-      this.scheduleRouting(row, sendTime);
+      // Regardless of send time, all messages will expire after a very long
+      // time in the queue to prevent infini-queue.
+      var expireTime = this.simulationTime_ + PACKET_MAX_LIFETIME_MS;
+      this.scheduleRouting(row, sendTime, expireTime);
     }
   }
 };
 
 /**
  * @param {messageRow} row
- * @param {number} sendTime
+ * @param {number} sendTime - in simulation time
+ * @param {number} expireTime - in simulation time
  */
-NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
+NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime, expireTime) {
   this.localRoutingSchedule_.push({
     row: row,
     processingCompleteTime: sendTime,
+    expirationTime: expireTime,
     beingRouted: false
   });
 };
