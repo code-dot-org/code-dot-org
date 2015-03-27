@@ -116,6 +116,7 @@ Eval.init = function(config) {
           lastLabel: 100,
           increment: 100
         });
+      background.setAttribute('visibility', 'visible');
     }
 
     if (level.solutionBlocks) {
