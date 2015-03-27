@@ -10,14 +10,14 @@ class Table
     channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
     @table_name = table_name
-  
+
     @table = PEGASUS_DB[:app_tables]
   end
-  
+
   def items()
     @items ||= @table.where(app_id:@channel_id, storage_id:@storage_id, table_name:@table_name)
   end
-  
+
   def delete(id)
     delete_count = items.where(row_id:id).delete
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless delete_count > 0
@@ -33,7 +33,7 @@ class Table
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
     JSON.load(row[:value]).merge(id:row[:row_id])
   end
-  
+
   def insert(value, ip_address)
     row = {
       app_id:@channel_id,
@@ -55,7 +55,7 @@ class Table
 
     JSON.load(row[:value]).merge(id:row[:row_id])
   end
-  
+
   def next_id()
     items.max(:row_id).to_i + 1
   end
@@ -71,10 +71,16 @@ class Table
 
     JSON.load(row[:value]).merge(id:id)
   end
-  
+
   def to_a()
     items.map do |row|
       JSON.load(row[:value]).merge(id:row[:row_id])
+    end
+  end
+
+  def self.table_names(channel_id)
+    PEGASUS_DB[:app_tables].where(app_id:channel_id, storage_id:nil).group(:table_name).map do |row|
+      row[:table_name]
     end
   end
 
@@ -86,7 +92,7 @@ require 'aws-sdk'
 # DynamoTable
 #
 class DynamoTable
-  
+
   class NotFound < Sinatra::NotFound
   end
 
@@ -94,22 +100,22 @@ class DynamoTable
     channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
     @table_name = table_name
-  
+
     @hash = "#{@channel_id}:#{@table_name}:#{@storage_id}"
   end
-  
-  def db()
+
+  def db
     @@dynamo_db ||= Aws::DynamoDB::Client.new(
       region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id, 
-      secret_access_key: CDO.s3_secret_access_key, 
+      access_key_id: CDO.s3_access_key_id,
+      secret_access_key: CDO.s3_secret_access_key,
     )
   end
-  
+
   def delete(id)
     begin
       db.delete_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         key:{'hash'=>@hash, 'row_id'=>id},
         expected:row_id_exists(id),
       )
@@ -124,7 +130,7 @@ class DynamoTable
     unless ids.empty?
       db.batch_write_item(
         request_items:{
-          CDO.dynamo_table_name => ids.map do |id|
+          CDO.dynamo_tables_table => ids.map do |id|
             { delete_request: { key:{'hash'=>@hash, 'row_id'=>id}, } }
           end
         }
@@ -135,21 +141,21 @@ class DynamoTable
 
   def fetch(id)
     row = db.get_item(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key:{'hash'=>@hash, 'row_id'=>id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
-    
+
     value_from_row(row)
   end
-  
+
   def ids_to_a()
     last_evaluated_key = nil
-    
+
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -167,7 +173,7 @@ class DynamoTable
         last_evaluated_key = page[:last_evaluated_key]
       end while last_evaluated_key
     end
-  end  
+  end
 
   def insert(value, ip_address)
     retries = 5
@@ -176,9 +182,11 @@ class DynamoTable
       row_id = next_id
 
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
-          hash:@hash, 
+          hash:@hash,
+          channel_id:@channel_id,
+          table_name:@table_name,
           row_id:row_id,
           updated_at:DateTime.now.to_s,
           updated_ip:ip_address,
@@ -194,10 +202,10 @@ class DynamoTable
 
     value.merge(id:row_id)
   end
-  
+
   def next_id()
     page = db.query(
-      table_name:CDO.dynamo_table_name,
+      table_name:CDO.dynamo_tables_table,
       key_conditions: {
         "hash" => {
           attribute_value_list: [@hash],
@@ -218,7 +226,7 @@ class DynamoTable
   def row_id_exists(id)
     { "row_id" => { value:id, comparison_operator:'EQ', } }
   end
-  
+
   def row_id_doesnt_exist(id)
     { "row_id" => { value:id, comparison_operator:'NE', } }
   end
@@ -226,9 +234,9 @@ class DynamoTable
   def update(id, value, ip_address)
     begin
       db.put_item(
-        table_name:CDO.dynamo_table_name,
+        table_name:CDO.dynamo_tables_table,
         item:{
-          hash:@hash, 
+          hash:@hash,
           row_id:id,
           updated_at:DateTime.now.to_s,
           updated_ip:ip_address,
@@ -239,17 +247,17 @@ class DynamoTable
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
-    
+
     value.merge(id:id)
   end
 
   def to_a()
     last_evaluated_key = nil
-    
+
     [].tap do |results|
       begin
         page = db.query(
-          table_name:CDO.dynamo_table_name,
+          table_name:CDO.dynamo_tables_table,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],
@@ -267,9 +275,40 @@ class DynamoTable
       end while last_evaluated_key
     end
   end
-  
+
   def value_from_row(row)
     JSON.load(row['value']).merge(id:row['row_id'].to_i)
   end
-  
+
+  def self.table_names(channel_id)
+    @dynamo_db ||= Aws::DynamoDB::Client.new(
+      region: 'us-east-1',
+      access_key_id: CDO.s3_access_key_id,
+      secret_access_key: CDO.s3_secret_access_key,
+    )
+    last_evaluated_key = nil
+    results = {}
+    begin
+      page = @dynamo_db.query(
+        table_name:CDO.dynamo_tables_table,
+        index_name:CDO.dynamo_tables_index,
+        key_conditions: {
+          "channel_id" => {
+            attribute_value_list: [channel_id.to_i],
+            comparison_operator: "EQ",
+          },
+        },
+        attributes_to_get:['table_name'],
+        exclusive_start_key:last_evaluated_key,
+      ).first
+
+      page[:items].each do |item|
+        results[item['table_name']] = true
+      end
+
+      last_evaluated_key = page[:last_evaluated_key]
+    end while last_evaluated_key
+    results.keys
+  end
+
 end

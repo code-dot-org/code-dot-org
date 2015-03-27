@@ -9,24 +9,22 @@
   </div>
 </div>
 
-<% var instructions = function() { -%>
-  <div id="bubble" class="clearfix">
-    <table id="prompt-table">
-      <tr>
-        <td id="prompt-icon-cell">
-          <img id="prompt-icon"/>
-        </td>
-        <td id="prompt-cell">
-          <p id="prompt">
-          </p>
-        </td>
-      </tr>
-    </table>
-    <div id="ani-gif-preview-wrapper">
-      <div id="ani-gif-preview">
-        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
-      </div>
-    </div>
+<% var gameButtons = function() { -%>
+  <div id="gameButtons">
+    <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+      <div><%= msg.runProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+    </button>
+    <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+      <div><%= msg.resetProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+    </button>
+    <% if (data.controls) { %>
+    <%- data.controls %>
+    <% } %>
+    <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
+    <% } %>
   </div>
 <% }; -%>
 
@@ -37,47 +35,94 @@
 
   <div id="belowVisualization">
 
-    <div id="gameButtons">
-      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-        <div><%= msg.runProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-      </button>
-      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
-        <div><%= msg.resetProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-      </button>
-      <% if (data.controls) { %>
-      <%- data.controls %>
+    <% gameButtons() %>
+    <div id="bubble" class="clearfix">
+      <table id="prompt-table">
+        <tr>
+          <td id="prompt-icon-cell">
+            <img id="prompt-icon"/>
+          </td>
+          <td id="prompt-cell">
+            <p id="prompt">
+            </p>
+          </td>
+        </tr>
+      </table>
+      <% if (data.inputOutputTable) { %>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
       <% } %>
-      <% if (data.extraControlRows) { %>
-      <%- data.extraControlRows %>
-      <% } %>
+      <div id="ani-gif-preview-wrapper">
+        <div id="ani-gif-preview">
+          <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+        </div>
+      </div>
     </div>
-    <% instructions() %>
+
+    <% if (data.hasDesignMode) { %>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
+    <% } %>
   </div>
 </div>
 
 <div id="codeWorkspace">
   <div id="headers" dir="<%= data.localeDirection %>">
-    <div id="toolbox-header" class="workspace-header"><span><%= msg.toolboxHeader() %></span></div>
-    <div id="workspace-header" class="workspace-header">
-      <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
-      <div id="blockCounter">
-        <div id="blockUsed" class=<%= data.blockCounterClass %>>
-          <%= data.blockUsed %>
+    <div id="codeModeHeaders">
+      <div id="toolbox-header" class="workspace-header"><span><%= msg.toolboxHeader() %></span></div>
+      <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
+      <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
+      <div id="workspace-header" class="workspace-header">
+        <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
+        <div id="blockCounter">
+          <div id="blockUsed" class=<%= data.blockCounterClass %>>
+            <%= data.blockUsed %>
+          </div>
+          <span>/</span>
+          <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
+          <span> <%= msg.blocks() %></span>
         </div>
-        <span>&nbsp;/</span>
-        <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
-        <span> <%= msg.blocks() %></span>
       </div>
     </div>
-    <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
-    <% if (!data.editCode) { %>
-      <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
+    <% if (data.hasDesignMode) { %>
+      <div id="designModeHeaders" style="display:none;">
+        <div id="design-header" class="workspace-header">
+          <span><%= msg.designModeHeader() %></span>
+        </div>
+      </div>
     <% } %>
   </div>
   <% if (data.editCode) { %>
     <div id="codeTextbox"></div>
+  <% } %>
+  <% if (data.hasDesignMode) { %>
+    <div id="designModeBox" style="display:none;">
+      <% /* contains temporary unlocalized strings */ %>
+      Welcome to Design mode. Under construction.<br>
+      <button id="designModeAddButton" class="share">Add Button</button><br>
+      <button id="designModeAddInput" class="share">Add Input</button><br>
+      <button id="designModeAddLabel" class="share">Add Label</button><br>
+      <button id="designModeClear" class="share">Clear</button><br>
+    </div>
+  <% } %>
+  <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+  <%- data.extraControlRows %>
   <% } %>
 </div>
 

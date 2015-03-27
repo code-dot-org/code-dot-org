@@ -8,7 +8,6 @@ Given(/^block "([^"]*)" is at a location "([^"]*)"$/) do |block, identifier|
 end
 
 When(/^I click block "([^"]*)"$/) do |block|
-  block_id = get_block_id(block)
   @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
@@ -123,6 +122,11 @@ And /^I've initialized the workspace with an auto\-positioned flappy puzzle with
   blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
+end
+
+And /^I've initialized the workspace with the solution blocks$/ do
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  @browser.execute_script("__TestInterface.loadBlocks(appOptions.level.solutionBlocks);")
 end
 
 And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|

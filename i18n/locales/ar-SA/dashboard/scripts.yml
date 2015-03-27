@@ -237,31 +237,9 @@ ar:
           Artist Binary: Artist Binary
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
+          title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'المتاهة : التسلسل'
-          "Artist: Sequence": 'الرسام : التسلسل'
-          "Artist: Loops": 'الرسام : الحلقات'
-          "Bee: Conditionals": 'النحلة: الجمل الشرطية'
-          "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
-          "Farmer: While Loops": 'المزارع : حلقات بينما'
-          "Bee: Nested Loops": 'النحلة : الحلقات المتداخلة'
-          "Artist: Functions": 'الرسام : المهام'
-          "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'المتاهة : التسلسل'
-          "Artist: Sequence": 'الرسام : التسلسل'
-          "Artist: Loops": 'الرسام : الحلقات'
-          "Bee: Conditionals": 'النحلة: الجمل الشرطية'
-          "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
-          "Farmer: While Loops": 'المزارع : حلقات بينما'
-          "Bee: Nested Loops": 'النحلة : الحلقات المتداخلة'
-          "Artist: Functions": 'الرسام : المهام'
-          "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           "Maze: Sequence": 'المتاهة : التسلسل'
           "Artist: Sequence": 'الرسام : التسلسل'
@@ -294,6 +272,9 @@ ar:
           Special: Special
           Binary: ثنائي
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: كتل للرياضيات
@@ -308,31 +289,34 @@ ar:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'موصول: ألعاب الفيديو وتنسيق طائرات'
-          "Calc: Evaluation Blocks": 'احسب: كتل التقييم'
-          "Eval: Strings and Images": 'Eval: سلاسل والصور'
-          "Unplugged: Contracts": 'موصول: العقود'
-          "Eval: Writing Contracts": 'Eval: كتابة العقود'
-          "Calc: Defining Variables": 'احسب: تعريف المتغيرات'
-          "Play Lab: Defining Variables (Big Game)": 'مختبر اللعب: تعريف المتغيرات (اللعبة الكبرى)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strings and Images
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
           "Unplugged: The Design Recipe": 'موصول: الوصفة التصميم'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'مختبر اللعب: الرسوم المتحركة (اللعبة الكبرى)'
-          "Unplugged: Booleans": 'موصول: القيم المنطقية'
-          "Eval: Boolean Operators": 'Eval: عوامل التشغيل المنطقية'
-          "Play Lab: Booleans": 'تشغيل مختبر: القيم المنطقية'
-          "Play Lab: Boolean (Big Game)": 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'موصول: الشرطية ووظائف Piecewise'
-          "Eval: Conditionals": 'Eval: الجمل الشرطية'
-          "Unplugged: Collision Detection and the Distance Formula": 'موصول: الكشف عن التصادم وصيغة المسافة'
-          "Play Lab: Collision Detection (Big Game)": 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
+          "Eval: Conditionals": الجمل الشرطية
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: مختبر اللعب
-          description_short: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
-          description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: مختبر اللعب
+          Infinity: ما لانهاية
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
@@ -341,6 +325,9 @@ ar:
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: وصفه التصميم
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
           Blockly Basics: Blockly Basics
           Writing computer programs: Writing computer programs
@@ -348,22 +335,35 @@ ar:
           Unplugged lessons: Unplugged lessons
           Classroom Culture: Classroom Culture
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ""
           description: ""
           Internet Simulator: Internet Simulator
+          Unit 1: الوحدة الأولى
+          Unit 2: الوحدة الثانية
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         Infinity:
           title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Infinity: ما لانهاية
         pixelation:
           title: Pixelation
-          description: Create images with bits and bytes.
+          description: 'انشئ  صور مع ال bits و bytes.'
           Pixelation: Pixelation
         20-hour:
-          title: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
+          title: 20-Hour Intro Course
           description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
           Introduction to Computer Science: مقدمة في علوم الكمبيوتر
           The Maze: المتاهة
@@ -385,3 +385,140 @@ ar:
           The Internet: الانترنت
           The Artist 5: الرسام 5
           Wrap-up: الجلسة الختامية
+        edit-code:
+          title: تعديل كود البرنامج
+          description: ""
+          The Maze: المتاهة
+          Applab: Applab
+          The Artist: الاعب
+          Play Lab: مختبر اللعب
+        events:
+          title: الأحداث
+          description: ""
+          Bounce: الارتداد
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: رمز لعبة flappy
+          description: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy التعليمية الخاصة بنا!
+          Flappy Code: رمز لعبة flappy
+        jigsaw:
+          title: بانوراما
+          description: ""
+          Jigsaw: بانوراما
+        step:
+          title: الخطوة
+          description: ""
+          Step: الخطوة
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ""
+          Hour of Code 2013: Hour of Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Course 4 Prerequisite
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          "Maze: Sequence": 'المتاهة : التسلسل'
+          "Artist: Sequence": 'الرسام : التسلسل'
+          "Artist: Loops": 'الرسام : الحلقات'
+          "Bee: Conditionals": 'النحلة: الجمل الشرطية'
+          "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
+          "Farmer: While Loops": 'المزارع : حلقات بينما'
+          "Bee: Nested Loops": 'النحلة : الحلقات المتداخلة'
+          "Artist: Functions": 'الرسام : المهام'
+          "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
+        cspunit1:
+          title: CSP Unit 1
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'موصول: ألعاب الفيديو وتنسيق طائرات'
+          "Calc: Evaluation Blocks": 'احسب: كتل التقييم'
+          "Eval: Strings and Images": 'Eval: سلاسل والصور'
+          "Unplugged: Contracts": 'موصول: العقود'
+          "Eval: Writing Contracts": 'Eval: كتابة العقود'
+          "Calc: Defining Variables": 'احسب: تعريف المتغيرات'
+          "Play Lab: Defining Variables (Big Game)": 'مختبر اللعب: تعريف المتغيرات (اللعبة الكبرى)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'موصول: الوصفة التصميم'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'مختبر اللعب: الرسوم المتحركة (اللعبة الكبرى)'
+          "Unplugged: Booleans": 'موصول: القيم المنطقية'
+          "Eval: Boolean Operators": 'Eval: عوامل التشغيل المنطقية'
+          "Play Lab: Booleans": 'تشغيل مختبر: القيم المنطقية'
+          "Play Lab: Boolean (Big Game)": 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+          "Unplugged: Conditionals and Piecewise Functions": 'موصول: الشرطية ووظائف Piecewise'
+          "Eval: Conditionals": 'Eval: الجمل الشرطية'
+          "Unplugged: Collision Detection and the Distance Formula": 'موصول: الكشف عن التصادم وصيغة المسافة'
+          "Play Lab: Collision Detection (Big Game)": 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: العقود
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: وصفه التصميم
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: القيم المنطقية
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: الجمل الشرطية ووظائف Piecewise
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: القيم المنطقية
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'

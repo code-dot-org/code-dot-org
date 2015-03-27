@@ -5,12 +5,24 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
-    "showTabs": [
+    "skin": "netsim",
+    "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
+    "router_expects_packet_header": [
+      { "key": "toAddress", "bits": 4 },
+      { "key": "fromAddress", "bits": 4 }
+    ],
+    "client_initial_packet_header": [
+      { "key": "toAddress", "bits": 4 },
+      { "key": "fromAddress", "bits": 4 }
+    ],
+    "show_add_packet_button": "false",
+    "show_packet_size_control": "false",
+    "show_tabs": [
       "instructions",
       "my_device",
       "dns"
     ],
-    "defaultDnsMode": "manual"
+    "default_dns_mode": "manual"
   }
 }]]></config>
 </NetSim>

@@ -168,7 +168,6 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.equal(outcome.failedInput, null);
   });
 
-  // TODO (brent) - reenable these once variables are fixed
   it('succeeds when user/target both have multiple variables and are identical', function () {
     // x = 1
     // y = x + 1

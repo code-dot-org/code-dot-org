@@ -154,7 +154,7 @@ it:
         turtle_1_5: Ora, per fare esercizio, disegna un triangolo e poi un quadrato in modo da riprodurre una busta.
         turtle_1_6: 'Riesci a capire come disegnare il triangolo e il quadrato? Suggerimento: disegna prima il triangolo, poi cerca di capire di quanto devi girare prima di iniziare a disegnare il quadrato.'
         turtle_1_7: "Ok, ora è un po' più difficile: vedi se riesci a disegnare questi occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!"
-        turtle_1_8: 'Ok, cerca di immaginare cosa succede se si esegue questo codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
+        turtle_1_8: 'Cerca di immaginare cosa succede se si esegue questo codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi per disegnare un cerchio?
         turtle_1_10: |-
           Ce l'hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune idee divertenti: una figura stilizzata, un fiocco di neve o una spirale. Prova anche il nuovo blocco "imposta la larghezza". Buon divertimento!
@@ -219,8 +219,7 @@ it:
         turtle_3_6: 'Usando "disegna un quadrato" come esempio, aggiungi un parametro chiamato "lunghezza" alla funzione "disegna un triangolo" in modo da ottenere una funzione in grado di disegnare triangoli di diverse dimensioni. Suggerimento: fai clic sulla stella per aggiungere un parametro ad una funzione.'
         turtle_3_7: |-
           Aggiungi un parametro chiamato "lunghezza" alla funzione "disegna una casa" e costruisci una casa grande per l'elefante (con lati lunghi 150 pixel)
-        turtle_3_8: |-
-          Qui ci sono tutti i blocchi dell'esercizio precedente.  Modifica "disegna una casa" in modo che finisca all'angolo inferiore destro dopo aver disegnato una nuova casa. Utilizza la funzione così modificata per disegnare tre case.
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Riesci a ricreare la funzione "disegna una casa" senza aiuto? Provaci e poi disegna una fila di case.'
         turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco di neve stravagante.
         maze_karel_debug_seq_1: Benvenuto alla correzione del codice (debug)! Il mio codice non funziona correttamente. Riesci ad individuare il problema e a risolverlo in modo da livellare il campo e prepararlo per la semina?
@@ -455,6 +454,12 @@ it:
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Blocchi di Valutazione
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabili
+        msm_7_functions: Funzioni
     callout:
       text:
         drag_blocks: |-

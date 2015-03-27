@@ -157,7 +157,7 @@ Detailed instructions are provided on the [Collision Worksheet](../docs/workshee
 ## Assessment 
 ### <a name="Assessment"></a>4) Collision Detection Assessment
 
-Visit [MSM Stage 19](http://studio.code.org/s/algebra/stage/19/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 19](http://studio.code.org/s/algebra/stage/19/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

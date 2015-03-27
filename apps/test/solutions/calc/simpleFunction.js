@@ -163,7 +163,7 @@ module.exports = {
           assert(failedInputGroup.childNodes.length === 6);
           var equalSign = failedInputGroup.childNodes[4];
           assert(equalSign.className.baseVal === '', 'actual: ' + equalSign.className);
-          assert(equalSign.textContent === " = ", 'actual: ' + equalSign.textContent.replace(/ /g, "_"));
+          assert(equalSign.textContent === "\u00A0\u00A0=\u00A0\u00A0", 'actual: ' + equalSign.textContent.replace(/ /g, "_"));
           var failureText = failedInputGroup.childNodes[5];
           assert(failureText.className.baseVal === 'errorToken');
           assert(failureText.textContent === "3");

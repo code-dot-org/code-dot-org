@@ -1,6 +1,6 @@
 <%
   var DnsMode = require('./netsimConstants').DnsMode;
-  var netsimMsg = window.blockly.netsim_locale;
+  var i18n = window.blockly.netsim_locale;
 
   /**
    * @param {exports.DnsMode} mode
@@ -18,9 +18,9 @@
     <%
   }
 %>
-<div class="dns_mode_control">
-  <h1><%= netsimMsg.dnsMode() %></h1>
-  <% makeRadio(DnsMode.NONE, netsimMsg.dnsMode_NONE()); %>
-  <% makeRadio(DnsMode.MANUAL, netsimMsg.dnsMode_MANUAL()); %>
-  <% makeRadio(DnsMode.AUTOMATIC, netsimMsg.dnsMode_AUTOMATIC()); %>
+<div class="dns-mode-control">
+  <h1><%= i18n.dnsMode() %></h1>
+  <% makeRadio(DnsMode.NONE, i18n.dnsMode_NONE()); %>
+  <% makeRadio(DnsMode.MANUAL, i18n.dnsMode_MANUAL()); %>
+  <% makeRadio(DnsMode.AUTOMATIC, i18n.dnsMode_AUTOMATIC()); %>
 </div>

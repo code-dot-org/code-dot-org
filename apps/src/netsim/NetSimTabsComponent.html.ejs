@@ -1,5 +1,5 @@
 <%
-  var netsimMsg = window.blockly.netsim_locale;
+  var i18n = window.blockly.netsim_locale;
 
   var shouldShowTab = require('./netsimUtils').shouldShowTab;
   var NetSimTabType = require('./netsimConstants').NetSimTabType;
@@ -8,33 +8,26 @@
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
   var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
+
+  var instructionsContent = level.instructions || '';
 %>
-<div class="netsim_tabs">
+<div class="netsim-tabs">
   <ul>
     <% if (showInstructions) { %>
-    <li><a href="#tab_instructions"><%= netsimMsg.instructions() %></a></li>
+    <li><a href="#tab_instructions"><%= i18n.instructions() %></a></li>
     <% } %>
     <% if (showMyDevice) { %>
-      <li><a href="#tab_my_device"><%= netsimMsg.myDevice() %></a></li>
+      <li><a href="#tab_my_device"><%= i18n.myDevice() %></a></li>
     <% } %>
     <% if (showRouter) { %>
-      <li><a href="#tab_router"><%= netsimMsg.router() %></a></li>
+      <li><a href="#tab_router"><%= i18n.router() %></a></li>
     <% } %>
     <% if (showDns) { %>
-      <li><a href="#tab_dns"><%= netsimMsg.dns() %></a></li>
+      <li><a href="#tab_dns"><%= i18n.dns() %></a></li>
     <% } %>
   </ul>
   <% if (showInstructions) { %>
-    <div id="tab_instructions">
-      <p>In this activity, you and your group will still be acting as
-      nodes connected to a router.  But this time, the addresses of the
-      nodes are not visible to you.  Pick one member of your group to be
-      the DNS node.  To get the addresses of the other nodes, you must
-      send a message to the DNS node asking for the address of a particular
-      hostname.</p>
-      <p>If you are the DNS node: Go to the DNS tab and click "Take over
-      as DNS."</p>
-    </div>
+    <div id="tab_instructions"><p><%= instructionsContent %></p></div>
   <% } %>
   <% if (showMyDevice) { %>
     <div id="tab_my_device"></div>

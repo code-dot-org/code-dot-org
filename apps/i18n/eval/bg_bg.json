@@ -1,16 +1,17 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Вие сте използвали невалиден цвят за низа: {val}",
+  "badStyleStringError": "Вие сте използвали невалиден стил за низ: {val}",
   "circleBlockTitle": "кръг (радиус, стил, цвят)",
-  "displayBlockTitle": "дисплей",
+  "displayBlockTitle": "Оценка",
   "ellipseBlockTitle": "елипса (ширина, височина, стил, цвят)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Имате блок с незапълнено поле.",
   "extraTopBlocks": "Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?",
+  "infiniteRecursionError": "Вашата функция се стартира сама. Ние я спряхме, в противен случай щеше да продължи да се стартира безброй пъти.",
   "overlayBlockTitle": "наслагване (отгоре, отдолу)",
   "placeImageBlockTitle": "място-изображение (x, y, изображение)",
   "offsetBlockTitle": "изместване (x, y, изображение)",
   "rectangleBlockTitle": "правоъгълник (ширина, височина, стил, цвят)",
-  "reinfFeedbackMsg": "Можете да натиснете бутона \"Опитайте отново\", ако искате да редактирате вашата рисунка.",
+  "reinfFeedbackMsg": "Можете да натиснете бутона \"Продължете да  играете\", за да редактирате вашата рисунка.",
   "rotateImageBlockTitle": "завъртане (градуси, изображение)",
   "scaleImageBlockTitle": "скала (фактор, изображение)",
   "squareBlockTitle": "квадрат (размер, стил, цвят)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "подложка (отдолу, отгоре)",
   "outline": "контур",
   "solid": "твърд",
-  "string": "поредица"
+  "string": "поредица",
+  "stringMismatchError": "Имате стринг с грешен капитализация.",
+  "userCodeException": "Възникна грешка при изпълнение на вашия код."
 }

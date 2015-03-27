@@ -114,7 +114,7 @@ pt-BR:
       description:
         sequence: Sequência
         if: 'Bloco "se"'
-        if_else: Bloco se-senão
+        if_else: 'Bloco "se" - "se não"'
         loop_times: 'Bloco "Repetir Vezes"'
         loop_until: 'Bloco "Repita até que"'
         loop_while: 'Bloco "Enquanto"'
@@ -203,7 +203,7 @@ pt-BR:
         turtle_3_5: 'Agora, crie uma nova função "desenhe uma casa" e use-a para abrigar dois gatos. Dica: crie uma nova função usando o bloco "faça alguma coisa" e nomeie o bloco como quiser.'
         turtle_3_6: 'Usando "desenhe um quadrado" como exemplo, adicione uma entrada denominada "comprimento" para "desenhe um triângulo". Em seguida, desenhe triângulos de tamanhos diferentes. (Dica: clique na estrela para adicionar uma entrada a uma função)'
         turtle_3_7: 'Coloque uma entrada "comprimento" em "desenhe uma casa" e construa uma casa grande para o elefante (com bordas de 150 pixels de comprimento)'
-        turtle_3_8: 'Estes são todos os blocos do desafio anterior. Modifique "desenhe uma casa" de forma que eu acabe no canto inferior direito após desenhar uma nova casa. Use essa função modificada para desenhar três casas.'
+        turtle_3_8: 'Modifique "desenhe uma casa" para que eu termine de desenhar uma nova casa no canto inferior direito. Use essa função modificada para desenhar três casas.'
         turtle_3_9: 'Você pode recriar a função "desenhe uma casa" sem ajuda? Tente, e em seguida desenhe uma fileira de casas.'
         turtle_3_10: Você aprendeu muito! Agora, use seu conhecimento para desenhar o que quiser. Tente desenhar uma estrela, ou uma espiral, ou um floco de neve.
         maze_karel_debug_seq_1: Bem-vindo à depuração! Meu código não está funcionando bem. Você pode achar o problema e corrigi-lo para que eu possa deixar meu terreno pronto para o plantio?
@@ -341,8 +341,8 @@ pt-BR:
         loop_times: Bloco repita
         loop_until: Bloco repita até
         if: Bloco se
-        if_else: Bloco se/senão
-        if_else_scrat: Bloco se/senão
+        if_else: Bloco se/se não
+        if_else_scrat: Bloco se/se não
         function: Funções
         loop_while: Bloco enquanto
         loop_for: Bloco contador
@@ -432,6 +432,12 @@ pt-BR:
         playlab_intro: Introdução ao Laboratório
         playlab_events: Eventos do Laboratório
         playlab_repeat_forever: 'Laboratório: repetir infinitamente'
+        tutorial_puzzle_challenge: Desafio tutorial
+        msm_1_intro: 'Capítulo 1 - introdução à ciência da computação em álgebra'
+        msm_2_eval_block: Blocos de cálculo
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variáveis
+        msm_7_functions: Funções
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'

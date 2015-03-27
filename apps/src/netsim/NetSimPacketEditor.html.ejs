@@ -1,0 +1,71 @@
+<%
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var EncodingType = netsimConstants.EncodingType;
+  var Packet = require('./Packet');
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var netsimUtils = require('./netsimUtils');
+  var getEncodingLabel = netsimUtils.getEncodingLabel;
+  var forEachEnumValue = netsimUtils.forEachEnumValue;
+
+  /** @type {Packet.HeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ */
+  function editorRow(encodingType) {
+    %>
+      <tr class="<%= encodingType %>">
+        <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+        <% if (showToAddress) { %>
+        <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><input type="text" class="<%= Packet.HeaderType.TO_ADDRESS %>" /></td>
+        <% } %>
+        <% if (showFromAddress) { %>
+        <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><input type="text" readonly class="<%= Packet.HeaderType.FROM_ADDRESS %>" /></td>
+        <% } %>
+        <% if (showPacketInfo) { %>
+        <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><input type="text" readonly class="<%= Packet.HeaderType.PACKET_INDEX %>" /><%= i18n._of_() %><input type="text" readonly class="<%= Packet.HeaderType.PACKET_COUNT %>" /></td>
+        <% } %>
+        <td class="<%= PacketUIColumnType.MESSAGE %>"><div><textarea class="message"></textarea></div></td>
+      </tr>
+    <%
+  }
+%>
+<table>
+  <thead>
+  <tr>
+    <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+    <% if (showToAddress) { %>
+      <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+    <% } %>
+    <% if (showFromAddress) { %>
+      <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+    <% } %>
+    <% if (showPacketInfo) { %>
+      <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+    <% } %>
+    <th class="<%= PacketUIColumnType.MESSAGE %>">
+      <%= i18n.message() %>
+      <div class="packet-controls">
+        <span class="netsim-button remove-packet-button" title="<%= i18n.removePacket() %>"><i class="fa fa-times"></i></span>
+      </div>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <%
+    forEachEnumValue(EncodingType, function (encodingType) {
+      editorRow(encodingType);
+    });
+  %>
+  </tbody>
+</table>
+<div class="bit-counter"></div>

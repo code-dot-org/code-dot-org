@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({85:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({89:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],40:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],177:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3424,7 +3424,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3447,12 +3450,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3464,7 +3466,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**
@@ -3569,7 +3571,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":229,"./utils":224}],209:[function(require,module,exports){
+},{"../locale/current/common":237,"./utils":232}],217:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3629,7 +3631,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],203:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3644,7 +3646,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (33,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((39,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((40,  msg.runProgram() )), '</div>\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((44,  msg.resetProgram() )), '</div>\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');47; if (data.controls) { ; buf.push('\n      ', (48,  data.controls ), '\n      ');49; } ; buf.push('\n      ');50; if (data.extraControlRows) { ; buf.push('\n      ', (51,  data.extraControlRows ), '\n      ');52; } ; buf.push('\n    </div>\n    ');54; instructions() ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((59,  data.localeDirection )), '">\n    <div id="toolbox-header" class="workspace-header"><span>', escape((60,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="workspace-header">\n      <span id="workspace-header-span">', escape((62,  msg.workspaceHeaderShort())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((64,  data.blockCounterClass )), '>\n          ', escape((65,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((68,  data.idealBlockNumber )), '</span>\n        <span> ', escape((69,  msg.blocks() )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="workspace-header"><span>', escape((72,  msg.showCodeHeader() )), '</span></div>\n    ');73; if (!data.editCode) { ; buf.push('\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((74,  msg.clearPuzzle() )), '</span></div>\n    ');75; } ; buf.push('\n  </div>\n  ');77; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');79; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((74,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((77,  msg.codeMode() )), '\n      </button>\n    ');79; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((84,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((86,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((88,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((90,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((92,  data.blockCounterClass )), '>\n            ', escape((93,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((96,  data.idealBlockNumber )), '</span>\n          <span> ', escape((97,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');101; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((104,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');107; } ; buf.push('\n  </div>\n  ');109; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');111; } ; buf.push('\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    <div id="designModeBox" style="display:none;">\n      ');114; /* contains temporary unlocalized strings */ ; buf.push('\n      Welcome to Design mode. Under construction.<br>\n      <button id="designModeAddButton" class="share">Add Button</button><br>\n      <button id="designModeAddInput" class="share">Add Input</button><br>\n      <button id="designModeAddLabel" class="share">Add Label</button><br>\n      <button id="designModeClear" class="share">Clear</button><br>\n    </div>\n  ');121; } ; buf.push('\n  ');122; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (123,  data.extraControlRows ), '\n  ');124; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3652,7 +3654,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],179:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],187:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3917,7 +3919,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":47}],178:[function(require,module,exports){
+},{"./dom":51}],186:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4068,7 +4070,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":19,"./dom":47,"./required_block_utils":176,"./utils":224}],176:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":21,"./dom":51,"./required_block_utils":184,"./utils":232}],184:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4346,7 +4348,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":229,"./block_utils":18,"./utils":224,"./xml":225}],19:[function(require,module,exports){
+},{"../locale/current/common":237,"./block_utils":20,"./utils":232,"./xml":233}],21:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4511,7 +4513,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":229}],4:[function(require,module,exports){
+},{"../locale/current/common":237}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4743,7 +4745,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
-        if (result.error) {
+        if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
@@ -4866,26 +4868,7 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
-  // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', _.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-  }, this));
   window.addEventListener('resize', _.bind(this.onResize, this));
-
-  // Call initial onResize() asynchronously - need 10ms delay to work around
-  // relayout which changes height on the left side to the proper value
-  window.setTimeout(_.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-    if (this.isUsingBlockly()) {
-      Blockly.mainBlockSpace.fireChangeEvent();
-    }
-  }, this), 10);
 
   this.reset(true);
 
@@ -4908,11 +4891,15 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (Blockly.functionEditor) {
-          Blockly.functionEditor.hideIfOpen();
+        if (this.isUsingBlockly()) {
+          if (Blockly.functionEditor) {
+            Blockly.functionEditor.hideIfOpen();
+          }
+          Blockly.mainBlockSpace.clear();
+          this.setStartBlocks_(config, false);
+        } else {
+          this.editor.setValue(config.level.startBlocks || '');
         }
-        Blockly.mainBlockSpace.clear();
-        this.setStartBlocks_(config, false);
       }).bind(this));
     }).bind(this));
   }
@@ -4946,15 +4933,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
           var shareCell = document.getElementById('share-cell') ||
-          document.getElementById('right-button-cell');
+              document.getElementById('right-button-cell');
           if (shareCell) {
             shareCell.style.marginLeft = '10px';
             shareCell.style.marginRight = '10px';
@@ -5196,7 +5176,9 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
     if (xmlBlock.getAttribute) {
       userVisible = xmlBlock.getAttribute('uservisible');
       var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type && Blockly.Blocks[type].hideInMainBlockSpace;
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
     }
 
     if (currentlyHidden || userVisible === 'false') {
@@ -5254,73 +5236,37 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-  // First, grab the main app container
-  var div = document.getElementById('codeWorkspace');
-  var divParent = div.parentNode;
-  var parentStyle = window.getComputedStyle(divParent);
-
-  var parentWidth = parseInt(parentStyle.width, 10);
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
   // Keep blocks static relative to the right edge in RTL mode
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
+  if (this.isUsingBlockly() && Blockly.RTL) {
+    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+        topBlock.moveBy(blockOffset, 0);
+      });
+    }
   }
+  this.lastWorkspaceWidth = workspaceWidth;
 
-  this.resizeHeaders(fullWorkspaceWidth);
+  // Droplet toolbox width varies as the window size changes, so refresh:
+  this.resizeToolboxHeader();
 };
 
-// |          toolbox-header          | workspace-header  | show-code-header |
-// |
-// |           toolboxWidth           |
-// |                 |         <--------- workspaceWidth ---------->         |
-// |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+/**
+*  Updates the width of the toolbox-header to match the width of the toolbox
+*  or palette in the workspace below the header.
+*/
+StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  var showCodeWidth = 0;
-
-  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
-  var clearPuzzleWidth = clearPuzzleHeader ?
-      clearPuzzleHeader.getBoundingClientRect().width : 0;
-
-  var toolboxHeader = document.getElementById('toolbox-header');
-  if (toolboxHeader) {
-    if (this.editCode) {
-      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor && this.editor.currentlyUsingBlocks) {
-        // Set toolboxWidth based on the block palette width:
-        var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = categories.getBoundingClientRect().width;
-      }
-    } else if (this.isUsingBlockly()) {
-      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-    }
-    toolboxHeader.style.width = toolboxWidth + 'px';
+  if (this.editCode && this.editor) {
+    // If in the droplet editor, set toolboxWidth based on the block palette width:
+    var categories = document.querySelector('.droplet-palette-wrapper');
+    toolboxWidth = categories.getBoundingClientRect().width;
+  } else if (this.isUsingBlockly()) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-
-  var showCodeHeader = document.getElementById('show-code-header');
-  if (showCodeHeader) {
-    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
-    if (this.enableShowCode &&
-        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = showCodeHeader.getBoundingClientRect().width;
-      showCodeHeader.style.display = "";
-    } else {
-      showCodeHeader.style.display = "none";
-    }
-  }
-
-  var workspaceHeader = document.getElementById('workspace-header');
-  if (workspaceHeader) {
-    workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - clearPuzzleWidth - showCodeWidth) + 'px';
-  }
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
 
 /**
@@ -5582,12 +5528,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  if (!this.enableShowCode) {
+    document.getElementById('show-code-header').style.display = 'none';
+  }
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var throttledRunClick = _.debounce(function () {
-    if (window.jQuery) {
+    if (window.$) {
       $(window).trigger('run_button_pressed');
     }
     this.runButtonClick();
@@ -5605,12 +5554,7 @@ StudioApp.prototype.configureDom = function (config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
 
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
-  }
-
-  if (!config.hideSource) {
+  if (!config.hideSource || config.embed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
@@ -5626,12 +5570,23 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
-    visualizationColumn.style.minHeight = vizHeight + 'px';
     if (config.pinWorkspaceToBottom) {
-      container.className = codeWorkspace.className + " pin_bottom";
+      document.body.style.overflow = "hidden";
+      container.className = container.className + " pin_bottom";
+      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
+      if (this.editCode) {
+        var codeTextbox = document.getElementById('codeTextbox');
+        codeTextbox.className = codeTextbox.className + " pin_bottom";
+      }
     } else {
+      visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.embed && config.hideSource) {
+    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5694,10 +5649,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: dropletUtils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig)
+        options.dropletConfig),
+      alwaysShowPalette: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
@@ -5710,6 +5667,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    this.resizeToolboxHeader();
 
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
@@ -5804,6 +5763,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
       }
     });
   this.inject(div, options);
+  this.onResize();
 
   if (config.afterInject) {
     config.afterInject();
@@ -5819,7 +5779,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
+  showCodeHeader.firstChild.textContent = newButtonTitle;
 
   var workspaceHeaderSpan = document.getElementById('workspace-header-span');
   newButtonTitle = usingBlocks ? msg.workspaceHeader() :
@@ -5831,9 +5791,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
-
-  // Resize (including headers), so the category header will appear/disappear:
-  this.onResize();
 };
 
 /**
@@ -5851,20 +5808,20 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
- */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
+ * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block.getRootBlock();
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    return block.hasUnfilledInput();
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
@@ -5918,7 +5875,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":229,"./ResizeSensor":2,"./block_utils":18,"./constants.js":46,"./dom":47,"./dropletUtils":48,"./feedback":67,"./templates/builder.html":197,"./templates/buttons.html":198,"./templates/instructions.html":200,"./templates/learn.html":201,"./templates/makeYourOwn.html":202,"./utils":224,"./xml":225,"url":244}],244:[function(require,module,exports){
+},{"../locale/current/common":237,"./ResizeSensor":2,"./block_utils":20,"./constants.js":50,"./dom":51,"./dropletUtils":52,"./feedback":71,"./templates/builder.html":205,"./templates/buttons.html":206,"./templates/instructions.html":208,"./templates/learn.html":209,"./templates/makeYourOwn.html":210,"./utils":232,"./xml":233,"url":252}],252:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6627,13 +6584,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":240,"querystring":243}],243:[function(require,module,exports){
+},{"punycode":248,"querystring":251}],251:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":241,"./encode":242}],242:[function(require,module,exports){
+},{"./decode":249,"./encode":250}],250:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6720,7 +6677,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],241:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6806,7 +6763,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],240:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7317,7 +7274,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],202:[function(require,module,exports){
+},{}],210:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7337,7 +7294,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],201:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7359,7 +7316,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],200:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7379,7 +7336,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],197:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],205:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7399,7 +7356,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":245}],67:[function(require,module,exports){
+},{"ejs":253}],71:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8610,7 +8567,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":229,"./codegen":44,"./constants":46,"./dom":47,"./feedbackBlocks":68,"./templates/buttons.html":198,"./templates/code.html":199,"./templates/shareFailure.html":205,"./templates/sharing.html":206,"./templates/showCode.html":207,"./templates/trophy.html":208,"./utils":224,"./xml":225}],208:[function(require,module,exports){
+},{"../locale/current/common":237,"./codegen":48,"./constants":50,"./dom":51,"./feedbackBlocks":72,"./templates/buttons.html":206,"./templates/code.html":207,"./templates/shareFailure.html":213,"./templates/sharing.html":214,"./templates/showCode.html":215,"./templates/trophy.html":216,"./utils":232,"./xml":233}],216:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8630,7 +8587,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":245}],207:[function(require,module,exports){
+},{"ejs":253}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8650,7 +8607,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],206:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],214:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8670,7 +8627,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],205:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],213:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8690,7 +8647,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":245}],199:[function(require,module,exports){
+},{"ejs":253}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8710,7 +8667,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":245}],198:[function(require,module,exports){
+},{"ejs":253}],206:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8730,9 +8687,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":229,"ejs":245}],229:[function(require,module,exports){
+},{"../../locale/current/common":237,"ejs":253}],237:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],68:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8861,7 +8818,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":46,"./templates/readonly.html":204}],204:[function(require,module,exports){
+},{"./constants":50,"./templates/readonly.html":212}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8882,7 +8839,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":245}],245:[function(require,module,exports){
+},{"ejs":253}],253:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9237,7 +9194,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":246,"./utils":247,"fs":237,"path":238}],247:[function(require,module,exports){
+},{"./filters":254,"./utils":255,"fs":245,"path":246}],255:[function(require,module,exports){
 
 /*!
  * EJS
@@ -9261,7 +9218,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],246:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -9460,7 +9417,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],238:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9688,7 +9645,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":239}],239:[function(require,module,exports){
+},{"_process":247}],247:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9747,9 +9704,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],237:[function(require,module,exports){
+},{}],245:[function(require,module,exports){
 
-},{}],44:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10254,7 +10211,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":48}],48:[function(require,module,exports){
+},{"./dropletUtils":52}],52:[function(require,module,exports){
 var utils = require('./utils');
 
 exports.randomNumber = function (min, max) {
@@ -10267,7 +10224,12 @@ exports.randomNumber = function (min, max) {
   return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
 };
 
+exports.getTime = function() {
+  return (new Date()).getTime();
+};
+
 exports.dropletGlobalConfigBlocks = [
+  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
 ];
@@ -10287,6 +10249,7 @@ standardConfig.blocks = [
   {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'title': 'Do something only if a condition is true', 'category': 'Control' },
   {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'title': 'Do something if a condition is true, otherwise do something else', 'category': 'Control' },
   {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'title': 'Repeat something while a condition is true', 'category': 'Control' },
+  {'func': 'getTime', 'block': 'getTime()', 'title': 'Get the current time in milliseconds', 'category': 'Control', type: 'value' },
 
   // Math
   {'func': 'addOperator', 'block': '__ + __', 'title': 'Add two numbers', 'category': 'Math' },
@@ -10318,23 +10281,28 @@ standardConfig.blocks = [
   {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
   {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
   {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
+  {'func': 'return', 'block': 'return __;', 'title': 'Return a value from a function', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
   'Control': {
-    'color': 'orange',
+    'color': 'blue',
+    'rgb': '#19C3E1',
     'blocks': []
   },
   'Math': {
-    'color': 'green',
+    'color': 'deeppurple',
+    'rgb': '#A38BC3',
     'blocks': []
   },
   'Variables': {
-    'color': 'blue',
+    'color': 'purple',
+    'rgb': '#B159AB',
     'blocks': []
   },
   'Functions': {
-    'color': 'violet',
+    'color': 'green',
+    'rgb': '#48D882',
     'blocks': []
   },
 };
@@ -10526,7 +10494,7 @@ exports.generateDropletModeOptions = function (dropletConfig) {
 };
 
 
-},{"./utils":224}],224:[function(require,module,exports){
+},{"./utils":232}],232:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10746,7 +10714,7 @@ exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":78,"./lodash":86,"./xml":225}],86:[function(require,module,exports){
+},{"./hammer":82,"./lodash":90,"./xml":233}],90:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14115,7 +14083,7 @@ exports.valueOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],78:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16279,7 +16247,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],47:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16386,7 +16354,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16464,7 +16432,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],18:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16762,7 +16730,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":225}],225:[function(require,module,exports){
+},{"./xml":233}],233:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();

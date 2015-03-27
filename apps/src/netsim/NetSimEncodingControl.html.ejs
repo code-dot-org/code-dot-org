@@ -1,6 +1,6 @@
 <%
   var EncodingType = require('./netsimConstants').EncodingType;
-  var netsimMsg = window.blockly.netsim_locale;
+  var i18n = window.blockly.netsim_locale;
 
   /**
    * @param {EncodingType} encodingType
@@ -9,7 +9,7 @@
   function makeCheckbox(encodingType, encodingLabel) {
     var divClasses = ['encoding_checkboxes_' + encodingType];
     if (level.showEncodingControls.indexOf(encodingType) === -1) {
-      divClasses.push('hiddenControl');
+      divClasses.push('hidden-control');
     }
     %>
     <div class="<%= divClasses.join(' ') %>">
@@ -23,11 +23,11 @@
     <%
   }
 %>
-<div class="netsim_encoding_selector">
-  <h1><%= netsimMsg.encoding() %></h1>
-  <% makeCheckbox(EncodingType.ASCII, netsimMsg.ascii()); %>
-  <% makeCheckbox(EncodingType.DECIMAL, netsimMsg.decimal()); %>
-  <% makeCheckbox(EncodingType.HEXADECIMAL, netsimMsg.hexadecimal()); %>
-  <% makeCheckbox(EncodingType.BINARY, netsimMsg.binary()); %>
-  <% makeCheckbox(EncodingType.A_AND_B, netsimMsg.a_and_b()); %>
+<div class="netsim-encoding-selector">
+  <h1><%= i18n.encoding() %></h1>
+  <% makeCheckbox(EncodingType.ASCII, i18n.ascii()); %>
+  <% makeCheckbox(EncodingType.DECIMAL, i18n.decimal()); %>
+  <% makeCheckbox(EncodingType.HEXADECIMAL, i18n.hexadecimal()); %>
+  <% makeCheckbox(EncodingType.BINARY, i18n.binary()); %>
+  <% makeCheckbox(EncodingType.A_AND_B, i18n.a_and_b()); %>
 </div>

@@ -137,7 +137,7 @@ Fill in the rest of the reverse-engineering table, identifying what is changing 
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
 Use the [game planning template](../docs/worksheets/game_planning.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
-To start, your game will have with four things in it:
+To start, your game will have four things in it:
 
 - A Background, such as a forest, a city, space, etc.
 - A Player, who can move when the user hits a key.
@@ -160,7 +160,7 @@ The structure of your students' games will very closely resemble the demo they'v
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

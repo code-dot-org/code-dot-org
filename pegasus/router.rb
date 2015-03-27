@@ -84,8 +84,8 @@ class Documents < Sinatra::Base
       end
     end
 
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', 
-                 '/teacher-dashboard', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
+                 '/teacher-dashboard',
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
                  '/teacher-dashboard/section_manage',
@@ -107,11 +107,12 @@ class Documents < Sinatra::Base
       headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
     end
 
+    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
     locale = 'pt-BR' if request.site == 'br.code.org'
-    I18n.locale = request.locale
+    I18n.locale = locale
 
     @config = settings.configs[request.site]
     @header = {}
@@ -165,7 +166,7 @@ class Documents < Sinatra::Base
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
     end
-    
+
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '@2x'
 
@@ -182,7 +183,7 @@ class Documents < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
-    
+
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
@@ -190,7 +191,7 @@ class Documents < Sinatra::Base
       send_file(path)
     else
       image = Magick::Image.read(path).first
-      
+
       mode = :resize
 
       if manipulation
@@ -207,7 +208,7 @@ class Documents < Sinatra::Base
       else
         width = image.columns
         height = image.rows
-        
+
         # Retina sources need to be downsampled for non-retina output
         if retina_in && !retina_out
           width /= 2
@@ -251,7 +252,9 @@ class Documents < Sinatra::Base
     Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
   end
 
+  # rubocop:disable Lint/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
 
   # Documents
   get_head_or_post '*' do |uri|
@@ -300,7 +303,7 @@ class Documents < Sinatra::Base
       end
       line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
-      
+
       if @header['require_https'] && rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'

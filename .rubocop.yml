@@ -1,0 +1,11 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'apps/**/*'
+    - 'dashboard/scripts/**/*'
+  RunRailsCops: true
+  DisplayCopNames: true
+
+Style/ExtraSpacing:
+  Enabled: false

@@ -1057,14 +1057,15 @@ Studio.init = function(config) {
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
+  var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine
+    finishButton: finishButtonFirstLine && showFinishButton
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine
+    finishButton: !finishButtonFirstLine && showFinishButton
   });
 
   config.html = page({
@@ -1154,7 +1155,9 @@ Studio.init = function(config) {
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  }
 
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
@@ -1370,7 +1373,8 @@ Studio.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!studioApp.hideSource || level.showFinish)) {
+  if (level.freePlay && !level.isProjectLevel &&
+      (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }

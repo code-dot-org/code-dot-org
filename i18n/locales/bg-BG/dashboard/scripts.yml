@@ -237,31 +237,9 @@ bg:
           Artist Binary: Художник Бинарен код
           description_audience: Възраст 10 + (след курс 3)
         Course4pre:
+          title: Курс 4 предпоставка (необходимо условие)
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
-          Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
-          "Maze: Sequence": 'Лабиринт: последователност'
-          "Artist: Sequence": 'Художник: последователност'
-          "Artist: Loops": 'Художник - цикли'
-          "Bee: Conditionals": 'Пчела: условия'
-          "Artist: Nested Loops": 'Художник: въвеждане на цикли'
-          "Farmer: While Loops": 'Фермер: повторения "докато"'
-          "Bee: Nested Loops": 'Пчела:  въвеждане на цикли'
-          "Artist: Functions": 'Художник: функции'
-          "Bee: Debugging": 'Пчела: отстраняване на грешки'
-        course4pre:
-          description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
-          Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
-          "Maze: Sequence": 'Лабиринт: последователност'
-          "Artist: Sequence": 'Художник: последователност'
-          "Artist: Loops": 'Художник - цикли'
-          "Bee: Conditionals": 'Пчела: условия'
-          "Artist: Nested Loops": 'Художник: въвеждане на цикли'
-          "Farmer: While Loops": 'Фермер: повторения "докато"'
-          "Bee: Nested Loops": 'Пчела:  въвеждане на цикли'
-          "Artist: Functions": 'Художник: функции'
-          "Bee: Debugging": 'Пчела: отстраняване на грешки'
-        Course4pre (Case Conflict):
-          description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
+          description: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
           Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
           "Maze: Sequence": 'Лабиринт: последователност'
           "Artist: Sequence": 'Художник: последователност'
@@ -294,6 +272,9 @@ bg:
           Special: Специален
           Binary: Двоичен код
         usabilitymsm:
+          title: Използване в средното училище на математика
+          description_short: Използване на тестване в средното училище по математика
+          description: Използване на тестване в средното училище по математика
           Usability testing for MSM: Тестиране за ползваемост за MSM
           Evaluation Blocks: Блокове за оценка
           Blocks to Math: Блокове за математика
@@ -305,6 +286,192 @@ bg:
           Conditionals: Условия
           Free Play: Свободна игра
         algebra:
+          title: Компютърни науки в алгебрата
+          description: Научете функционално програмиране чрез алгебра
+          "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
+          "Calc: Evaluation Blocks": Блокове за оценка и аритметични изрази
+          "Eval: Strings and Images": Стрингове и изображения
+          "Unplugged: Contracts": 'Ънплъгд: Договори, домейн и обхват'
+          "Eval: Writing Contracts": Писане на Договори
+          "Calc: Defining Variables": Определяне на променливи и заместване
+          "Play Lab: Defining Variables (Big Game)": 'Голямата игра - променливи'
+          "Eval: Defining Functions": Композитни функции
+          "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
+          "Play Lab: Defining Functions": Ракетна височина
+          "Eval: Functions": Решаване на проблеми с дизайна рецепта
+          "Play Lab: Animation (Big Game)": 'Голямата игра - анимация'
+          "Unplugged: Booleans": 'Ънплъгд: Booleans и логика'
+          "Eval: Boolean Operators": Booleans оператори
+          "Play Lab: Booleans": Сам прилепа
+          "Play Lab: Boolean (Big Game)": 'Голямата игра - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
+          "Eval: Conditionals": Условия
+          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и Питагорова теорема'
+          "Play Lab: Collision Detection (Big Game)": 'Голямата игра - Collision Detection'
+        infinity:
+          title: Театрална лаборатория
+          description_short: Използвайте Игрална Лаборатория за да създадете история или игра с участието на Дисни Инфинити героите.
+          description: Използвайте Игрална Лаборатория за да създадете история или игра с участието на Дисни Инфинити героите.
+          Play Lab: Театрална лаборатория
+          Infinity: Безкрайност
+        algebrademo:
+          title: Алгебра демо
+          description_short: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
+          description: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
+          Algebra Demo: Алгебра демо
+          Evaluation Blocks: Блокове за оценка
+          Making Pictures: Правене на снимки
+          Defining Variables: Дефиниране на променливите
+          Defining Simple Functions: Дефиниране на прости функции
+          The Design Recipe: Рецепта за дизайн
+        K5PD:
+          title: K5 Професионално развитие
+          description: Професионално развитие за K5 курсове
+          description_short: Професионално развитие за K5 курсове
+          Introduction to PD: Въведение в PD
+          Blockly Basics: Основи на Blockly
+          Writing computer programs: Писане на компютърни програми
+          Navigating the teacher dashboard: Навигиране към учителското табло
+          Unplugged lessons: Уроци без компютър
+          Classroom Culture: Култура на класната стая
+          Ways to go beyond Courses 1, 2, and 3: Начини да се образовате след курсове 1, 2 и 3
+          K-5 Courses: Курсове за K-5
+          Writing computer programs in Blockly: Писане компютърни програми в Blockly
+          Teacher Dashboard: Учителско табло
+          Personal Reflection: Лична рефлексия
+          Next Steps: Следващи стъпки
+          Computer Science Pedagogy: Педагогика на Компютърните науки
+        netsim:
+          title: Интернет симулатор
+          description_short: ""
+          description: ""
+          Internet Simulator: Интернет симулатор
+          Unit 1: Част 1
+          Unit 2: Част 2
+          Sending Bits: Изпращане на битове
+          Routing and DNS: Маршрутизиране и DNS
+          "Unit 1: Sending Bits": 'Урок 1: Изпращане на битове'
+          "Unit 2: Routing and DNS": 'Раздел 2: Маршрут и DNS'
+          Internet Simulator Templates: Интернет симулатор шаблони
+        Infinity:
+          title: Безкрайност Игрална лаборатория
+          description_short: Използвайте Игрална Лаборатория за да създадете история или игра с участието на Дисни Инфинити героите.
+          description: Използвайте Игрална Лаборатория за да създадете история или игра с участието на Дисни Инфинити героите.
+          Infinity: Безкрайност
+        pixelation:
+          title: Пикселизация
+          description: Създаване на изображения с битове и байтове.
+          Pixelation: Пикселизация
+        20-hour:
+          title: 20-часов въвеждащ курс
+          description: Този 20-часов курс, представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
+          Introduction to Computer Science: Въведение в компютърните науки
+          The Maze: Лабиринтът
+          Computational Thinking: Изчислително мислене
+          Graph Paper Programming: Програмиране на милиметрова хартия
+          The Artist: Художникът
+          Algorithms: Алгоритми
+          The Artist 2: Художникът 2
+          Functions: Функции
+          The Farmer: Фермерът
+          Conditionals: Условия
+          The Artist 3: Художникът 3
+          Song Writing: Писане на песен
+          The Farmer 2: Фермерът 2
+          Abstraction: Абстракция
+          The Artist 4: Художникът 4
+          Relay Programming: Щафетно програмиране
+          The Farmer 3: Фермерът 3
+          The Internet: Интернет
+          The Artist 5: Художникът 5
+          Wrap-up: Изводи
+        edit-code:
+          title: Редактиране на кода
+          description: ""
+          The Maze: Лабиринтът
+          Applab: Лаборатория за приложения
+          The Artist: Художникът
+          Play Lab: Театрална лаборатория
+        events:
+          title: Събития
+          description: ""
+          Bounce: Bounce
+          Studio: Студио
+          Calc: Calc
+          Eval: Оценяване
+        flappy:
+          title: Flappy код
+          description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
+          Flappy Code: Flappy код
+        jigsaw:
+          title: Мозайка
+          description: ""
+          Jigsaw: Мозайка
+        step:
+          title: Стъпка
+          description: ""
+          Step: Стъпка
+        Hour of Code:
+          title: Час на кодирането 2013
+          description: ""
+          Hour of Code 2013: Час на кодирането 2013
+        Code Studio Puzzle Challenge:
+          title: Код студио пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        CodeStudioPuzzleChallenge:
+          title: Код студио пъзел предизвикателство
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        Test - Code Studio Puzzle Challenge:
+          title: 'Тествай  пъзел предизвикателството на Студиото по кодиране'
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        How to do the Code Studio Puzzle Challenge:
+          title: 'Тествай  пъзел предизвикателството на Студиото по кодиране'
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Урок - Студио по кодиране пъзел предизвикателство'
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Урок - Студио по кодиране пъзел предизвикателство'
+          description_short: Предизвикай себе си!
+          description: Опитайте тези забавни пъзели за кодиране. Направете всичко възможно!
+          Puzzles: Пъзели
+        course4pre:
+          title: Курс 4 предпоставка (необходимо условие)
+          description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
+          description: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
+          Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
+          "Maze: Sequence": 'Лабиринт: последователност'
+          "Artist: Sequence": 'Художник: последователност'
+          "Artist: Loops": 'Художник - цикли'
+          "Bee: Conditionals": 'Пчела: условия'
+          "Artist: Nested Loops": 'Художник: въвеждане на цикли'
+          "Farmer: While Loops": 'Фермер: повторения "докато"'
+          "Bee: Nested Loops": 'Пчела:  въвеждане на цикли'
+          "Artist: Functions": 'Художник: функции'
+          "Bee: Debugging": 'Пчела: отстраняване на грешки'
+        cspunit1:
+          title: CSP блок 1
+          description: CSP единица 1 етапи
+          Lesson14: Урок14
+          Lesson 14: Урок 14
+          Lesson 14 v2: Урок 14 v2
+          Lesson 15: Урок 15
+          description_short: Направи черно-бели изображения с инструмента за пикселизация
+          Lesson 8: Урок 8
+          Lesson 5: Урок 5
+          Lesson 3: Урок 3
+          Lesson 4: Урок 4
+        algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
           "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
@@ -327,61 +494,31 @@ bg:
           "Eval: Conditionals": 'Оценка: Условия'
           "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
           "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
-        infinity:
-          title: Театрална лаборатория
-          description_short: Създайте история или направете игра с Театрална лаборатория!
-          description: Създайте история или направете игра с Театрална лаборатория!
-          Play Lab: Театрална лаборатория
-        algebrademo:
-          description: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
-          Algebra Demo: Алгебра демо
           Evaluation Blocks: Блокове за оценка
-          Making Pictures: Правене на снимки
-          Defining Variables: Дефиниране на променливите
-          Defining Simple Functions: Дефиниране на прости функции
+          Strings and Images: Стрингове и изображения
+          Contracts: Договори
+          Your Game - Defining Variables: 'Вашата игра - дефиниране на променливи'
+          Simple Function Definition: Дефиниция на Проста функция
           The Design Recipe: Рецепта за дизайн
-        K5PD:
-          Introduction to PD: Въведение в PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
-        netsim:
-          title: Интернет симулатор
-          description_short: ""
-          description: ""
-          Internet Simulator: Интернет симулатор
-        Infinity:
-          title: Безкрайност Игрална лаборатория
-          description_short: Създайте история или направете игра без край в лабораторията!!
-          description: Създайте история или направете игра без край в лабораторията!
-          Infinity: Безкрайност
-        pixelation:
-          title: Pixelation
-          description: Create images with bits and bytes.
-          Pixelation: Pixelation
-        20-hour:
-          title: K-8 представяне на курс по компютърни науки (15-25 часа)
-          description: Този 20-часов курс, представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
-          Introduction to Computer Science: Въведение в компютърните науки
-          The Maze: Лабиринтът
-          Computational Thinking: Изчислително мислене
-          Graph Paper Programming: Програмиране на милиметрова хартия
-          The Artist: Художникът
-          Algorithms: Алгоритми
-          The Artist 2: Художникът 2
-          Functions: Функции
-          The Farmer: Фермерът
-          Conditionals: Условия
-          The Artist 3: Художникът 3
-          Song Writing: Писане на песен
-          The Farmer 2: Фермерът 2
-          Abstraction: Абстракция
-          The Artist 4: Художникът 4
-          Relay Programming: Щафетно програмиране
-          The Farmer 3: Фермерът 3
-          The Internet: Интернет
-          The Artist 5: Художникът 5
-          Wrap-up: Изводи
+          Your Game - Animation: 'Вашата игра - анимация'
+          Booleans: Booleans
+          Sam the Bat: Сам прилепа
+          Your Game - Booleans: 'Вашата игра - Booleans'
+          Conditionals and Piecewise Functions: Условни и линейни функции
+          Rocket-Height: Ракетна височина
+          Design Recipe Practice: 'Дизайн на рецепта - практика'
+        algPDmiami:
+          title: Компютърни науки в алгебрата
+          description: Научи алгебра чрез функционално програмиране
+          Evaluation Blocks: Блокове за оценка
+          Strings and Images: Стрингове и изображения
+          Rocket-Height: Ракетна височина
+          Design Recipe Practice: 'Дизайн на рецепта - практика'
+          Your Game - Animation: 'Вашата игра - анимация'
+          Booleans: Booleans
+          Sam the Bat: Сам прилепа
+          Your Game - Booleans: 'Вашата игра - Booleans'
+          Luigi's Pizza: Луиджи пица
+          "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
+          Your Game - Player Movement: 'Вашата игра - движение на героя'
+          Your Game - Collision Detection: 'Вашата игра - Collision Detection'

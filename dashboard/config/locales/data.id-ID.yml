@@ -694,6 +694,12 @@
         playlab_intro: Pengantar Lab Permainan
         playlab_events: 'Lab Permainan Event '
         playlab_repeat_forever: Lab Permainan Ulangi Selamanya
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabel
+        msm_7_functions: Fungsi
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

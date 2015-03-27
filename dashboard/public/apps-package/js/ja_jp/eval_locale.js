@@ -161,6 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "楕円 (幅、高さ、スタイル、色)"},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "使っていないブロックがあります。\"表示\"ブロックにつなごうと思っていましたか？"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "上に重ねる (上、下)"},
 "placeImageBlockTitle":function(d){return "画像を配置 (縦座標、横座標、画像)"},
 "offsetBlockTitle":function(d){return "ずらす (縦座標、横座標、画像)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "下に重ねる (上、下)"},
 "outline":function(d){return "縁"},
 "solid":function(d){return "単色"},
-"string":function(d){return "文字列"}};
+"string":function(d){return "文字列"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

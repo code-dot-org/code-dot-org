@@ -1,6 +1,6 @@
 module Ops
   class CohortsController < OpsControllerBase
-    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, only: [:create, :update]
+    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
     load_and_authorize_resource
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
@@ -45,10 +45,11 @@ module Ops
       params.require(:cohort).permit(
           :name,
           :program_type,
+          :cutoff_date,
           :district_ids => [],
           :district_names => [],
           :districts => [:id, :max_teachers, :_destroy],
-          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id] # permit array of objects with specified keys
+          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender] # permit array of objects with specified keys
       )
     end
 
@@ -58,7 +59,7 @@ module Ops
       district_params_list = params[:cohort].delete :districts
       return unless district_params_list
       params[:cohort][:cohorts_districts_attributes] = district_params_list.map do |district_params|
-        {district_id: district_params[:id], 
+        {district_id: district_params[:id],
          max_teachers: district_params[:max_teachers],
          _destroy: district_params[:_destroy]}.tap do |cohorts_districts_attrs|
           if params[:id] && existing = CohortsDistrict.find_by(district_id: district_params[:id], cohort_id: params[:id])
@@ -73,13 +74,20 @@ module Ops
       teacher_param_list = params[:cohort].delete :teachers
       return unless teacher_param_list
 
-      params[:cohort][:teachers] =
-        teacher_param_list.map do |teacher_params|
-          if teacher_params[:district] && teacher_params[:district].is_a?(String)
-            teacher_params[:district] = District.find_by!(name: teacher_params[:district])
-          end
-          User.find_or_create_teacher(teacher_params)
+      params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
+        if teacher_params[:district] && teacher_params[:district].is_a?(String)
+          teacher_params[:district] = District.find_by!(name: teacher_params[:district])
+        end
+        User.find_or_create_teacher(teacher_params)
       end
+    end
+
+    def timestamp_cutoff_date
+      return unless params[:cohort]
+      cutoff_date = params[:cohort].delete :cutoff_date
+      return unless cutoff_date
+
+      params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end
   end
 end

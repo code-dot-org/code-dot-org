@@ -11,11 +11,13 @@
 'use strict';
 
 require('../utils');
+var netsimConstants = require('./netsimConstants');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var DnsMode = require('./netsimConstants').DnsMode;
 var tweens = require('./tweens');
+
+var DnsMode = netsimConstants.DnsMode;
+var NodeType = netsimConstants.NodeType;
 
 /**
  * @param {NetSimNode} sourceNode
@@ -121,10 +123,9 @@ NetSimVizNode.inherits(NetSimVizEntity);
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   this.displayName_.text(sourceNode.getDisplayName());
-
   this.nodeID = sourceNode.entityID;
 
-  if (sourceNode.getNodeType() === NetSimRouterNode.getNodeType()) {
+  if (sourceNode.getNodeType() === NodeType.ROUTER) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
   }
@@ -159,7 +160,7 @@ NetSimVizNode.prototype.tick = function (clock) {
  */
 NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
-  this.tweens_ = [];
+  this.tweens_.length = 0;
   if (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);
   } else {

@@ -5,12 +5,21 @@
   "level_num": "variant3",
   "user_id": 1,
   "properties": {
-    "showTabs": [
+    "skin": "netsim",
+    "instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
+    "router_expects_packet_header": [
+      { "key": "toAddress", "bits": 4 },
+      { "key": "fromAddress", "bits": 4 }
+    ],
+    "client_initial_packet_header": [],
+    "show_add_packet_button": "false",
+    "show_packet_size_control": "false",
+    "show_tabs": [
       "instructions",
       "my_device",
       "router"
     ],
-    "defaultDnsMode": "none"
+    "default_dns_mode": "none"
   }
 }]]></config>
 </NetSim>

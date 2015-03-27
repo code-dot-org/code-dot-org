@@ -22,6 +22,7 @@ th:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
+  submit: เสนอ
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -487,7 +488,7 @@ th:
           title: แก้ไข Code
           description: ""
         events:
-          title: Events
+          title: เหตุการณ์
           description: ""
         builder:
           title: Builder
@@ -511,11 +512,42 @@ th:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: บันทึก
+    delete: ลบ
+    exit: Return to Course
+    my_projects: My Projects
+    share: แบ่งปัน
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: เพิ่มเติม
+    name: ชื่อ
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: ลบหรือไม่?
+    delete_yes: ใช่
+    delete_no: ไม่ใช่
+    saved: Saved
+    not_saved: Not saved
+    cancel: ยกเลิก
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects

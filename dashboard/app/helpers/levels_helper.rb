@@ -32,6 +32,10 @@ module LevelsHelper
       @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
+
+      @code_functions ||=
+        @level.try(:project_template_level).try(:code_functions) ||
+        @level.code_functions
     end
   end
 
@@ -219,6 +223,21 @@ module LevelsHelper
       last_attempt
       is_project_level
       failure_message_override
+      show_clients_in_lobby
+      show_routers_in_lobby
+      show_add_router_button
+      router_expects_packet_header
+      client_initial_packet_header
+      show_add_packet_button
+      show_packet_size_control
+      default_packet_size_limit
+      show_tabs
+      default_tab_index
+      show_encoding_controls
+      default_enabled_encodings
+      show_dns_mode_control
+      default_dns_mode
+      input_output_table
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -239,7 +258,10 @@ module LevelsHelper
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
     # Blockly requires these fields to be objects not strings
-    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
+    (
+      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
+      .concat NetSim.json_object_attrs
+    ).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
     end
 
@@ -345,11 +367,12 @@ module LevelsHelper
 
   def level_title
     if @script_level
-      script = if @script_level.script.flappy?
-        data_t 'game.name', @game.name
-      else
-        data_t_suffix 'script.name', @script_level.script.name, 'title'
-      end
+      script =
+        if @script_level.script.flappy?
+          data_t 'game.name', @game.name
+        else
+          data_t_suffix 'script.name', @script_level.script.name, 'title'
+        end
       stage = @script_level.name
       position = @script_level.position
       if @script_level.script.stages.many?

@@ -24,13 +24,13 @@ class ChannelsApi < Sinatra::Base
       })
     end
   end
-  
+
   #
   #
   # CHANNELS
   #
   #
-  
+
   #
   # GET /v3/channels
   #
@@ -51,7 +51,11 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    data = JSON.load(request.body.read)
+    begin
+      data = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
+    end
     bad_request unless data.is_a? Hash
 
     timestamp = Time.now
@@ -59,7 +63,7 @@ class ChannelsApi < Sinatra::Base
 
     redirect "/v3/channels/#{id}", 301
   end
-  
+
   #
   # GET /v3/channels/<channel-id>
   #
@@ -94,7 +98,7 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = JSON.load(request.body.read)
+    value = JSON.parse(request.body.read)
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 

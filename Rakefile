@@ -26,6 +26,9 @@ def with_retries(count=5)
   end
 end
 
+task :lint do
+  RakeUtils.system 'rubocop'
+end
 
 ##################################################################################################
 ##

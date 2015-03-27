@@ -18,7 +18,7 @@
 'use strict';
 
 var page = require('./page.html.ejs');
-var netsimMsg = window.blockly.netsim_locale;
+var i18n = window.blockly.netsim_locale;
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -41,7 +41,7 @@ var NetSim = module.exports = function () {
   this.skin = null;
 
   /**
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = {};
 
@@ -106,7 +106,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * Called on page load.
  * @param {Object} config
  * @param {Object} config.skin
- * @param {NetSimLevelConfiguration} config.level
+ * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
@@ -123,7 +123,7 @@ NetSim.prototype.init = function(config) {
 
   /**
    * Configuration for the loaded level
-   * @type {NetSimLevelConfiguration}
+   * @type {netsimLevelConfiguration}
    */
   this.level = config.level;
 
@@ -195,11 +195,17 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel(
-      $('#netsim_received'), netsimMsg.receivedMessageLog(), false);
+  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim_received'), {
+    logTitle: i18n.receivedMessageLog(),
+    isMinimized: false,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
-  this.sentMessageLog_ = new NetSimLogPanel(
-      $('#netsim_sent'), netsimMsg.sentMessageLog(), true);
+  this.sentMessageLog_ = new NetSimLogPanel($('#netsim_sent'), {
+    logTitle: i18n.sentMessageLog(),
+    isMinimized: true,
+    packetSpec: this.level.clientInitialPacketHeader
+  });
 
   this.connection_ = new NetSimConnection({
     window: window,
@@ -233,7 +239,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
         this.becomeDnsNode.bind(this));
   }
 
-  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.connection_);
+  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
+      this.connection_);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
@@ -419,7 +426,7 @@ NetSim.prototype.render = function () {
       shareLink;
 
   isConnected = false;
-  clientStatus = netsimMsg.disconnected();
+  clientStatus = i18n.disconnected();
   if (this.connection_ && this.connection_.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.connection_.myNode.getHostname();
@@ -430,7 +437,7 @@ NetSim.prototype.render = function () {
 
   if (this.myConnectedRouter_) {
     isConnected = true;
-    clientStatus = netsimMsg.connected();
+    clientStatus = i18n.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 

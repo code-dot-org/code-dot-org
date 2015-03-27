@@ -28,14 +28,7 @@ levels.simple = {
 };
 
 levels.custom = {
-};
-
-levels.ec_simple = {
-  'freePlay': true,
-  'editCode': true,
   'sliderSpeed': 0.95,
-  'appWidth': 320,
-  'appHeight': 480,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -82,7 +75,7 @@ levels.ec_simple = {
     "setGreen": null,
     "setBlue": null,
     "setAlpha": null,
-    "setRGBA": null,
+    "setRGB": null,
 
     // Data
     "startWebRequest": null,
@@ -125,6 +118,7 @@ levels.ec_simple = {
     "clearTimeout": null,
     "setInterval": null,
     "clearInterval": null,
+    "getTime": null,
 
     // Math
     "addOperator": null,
@@ -157,8 +151,16 @@ levels.ec_simple = {
     "functionParams_n": null,
     "callMyFunction": null,
     "callMyFunction_n": null,
+    "return": null,
   },
 };
+
+levels.ec_simple = utils.extend(levels.custom, {
+  'freePlay': true,
+  'editCode': true,
+  'appWidth': 320,
+  'appHeight': 480,
+});
 
 // Functions in Advanced category currently disabled in all levels:
 /*

@@ -18,15 +18,22 @@ var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 /**
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
+ * @param {netsimLevelConfiguration} levelConfig
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {NetSimRouterLogTable}
@@ -45,7 +52,7 @@ NetSimRouterTab.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
-      this.rootDiv_.find('.router_log_table'));
+      this.rootDiv_.find('.router_log_table'), this.levelConfig_);
 };
 
 /**

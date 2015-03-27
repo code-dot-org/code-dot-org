@@ -8,7 +8,7 @@
         blank: je neophodno
     attributes:
       user:
-        name: Ime za prikaz
+        name: Ime za Prikaz
         email: Email
         username: Korisničko ime
         password: Šifra
@@ -21,11 +21,12 @@
         error:
           future: ne može biti u budućnosti
   hello: Pozdrav svijete
-  welcome_back: Dobrodošao natrag, %{name}
+  welcome_back: Dobrodošao/la natrag, %{name}
+  submit: Potvrdi
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
-      placeholder: Šifra odjeljenja (ABCDEF)
+      placeholder: Šifra Odjeljenja (ABCDEF)
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -41,21 +42,20 @@
   less: MANJE
   beta: beta
   try_hoc: 'Isprobaj Sat Kodiranja, klikni ovdje >> '
-  try_k8intro: Ili isprobaj naš informatički kurs za djecu u osnovnoj školi (15-25
-    sati)
+  try_k8intro: Isprobaj naš informatički kurs za djecu u osnovnoj školi (15-25 sati)
   k8intro: Uvod u informatiku za osnovnu školu (15-25 sati)
-  already_started: 'Već si započeo? Nastavi ovdje >> '
-  demos: 'Administrator: Svi Demoi'
+  already_started: 'Već si započeo/la? Nastavi ovdje >> '
+  demos: 'Administrator: Sva Dema'
   continue: Nastavi
   prize: nagrada
   more_info: Više informacija
   auth:
     sign_in_with: Prijavi se sa %{provider}
-    signed_in: Prijavljen!
+    signed_in: Prijavljen/a!
     signed_out: Odjavili ste se iz<a href="%{url}">Code.org</a>.
     sign_out_of: Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite
       ovdje</a> da biste se odjavili %{provider}.
-    already_signedup: Jesi li već prijavljen/a?
+    already_signedup: Jeste li već prijavljeni?
     notyet_signedup: Još se nisi pridružio/la?
     google_oauth2: Google Račun
     twitter: Twitter
@@ -67,7 +67,7 @@
   signup_form:
     overview_student: Prijavi se za račun kako bi mogao/la pratiti svoj napredak.
       Tvoj e-mail se koristi prvenstveno kako bismo ti omogućili prijavu i ponovno
-      dobijanje lozinke. Za više informacija pogledaj naša <a href="http://code.org/privacy">Pravila
+      dobijanje šifre. Za više informacija pogledaj naša <a href="http://code.org/privacy">Pravila
       privatnosti</a>.
     overview_teacher: Podučavajte informatiku u svom razredu tako što ćete se prijaviti
       za korisnički račun.<p/>Moći ćete dodati svoje učenike i pratiti njihov napredak.
@@ -591,11 +591,46 @@
     bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
     tebe.
   progress:
-    not_completed: nije dovršeno
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: dovršeno, previše blokova
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
+    assessment: assessment
   studio:
     courses_working_on: Kursevi na kojima radite
     completed_courses: Kompletirani kursevi
     all_courses: Svi kursevi
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Snimi
+    delete: Izbriši
+    exit: Return to Course
+    my_projects: My Projects
+    share: Podijeli
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Više
+    name: Ime
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Izbrisati?
+    delete_yes: Da
+    delete_no: Ne
+    saved: Saved
+    not_saved: Not saved
+    cancel: Poništi
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects

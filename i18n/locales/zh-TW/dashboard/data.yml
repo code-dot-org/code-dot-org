@@ -206,7 +206,7 @@ zh:
         turtle_3_5: '現在建立一個新的"繪製房子"函數，並使用它來圍住兩隻貓咪。提示：使用"執行...."程式積木來建立函數，並且記得替它命名。'
         turtle_3_6: '使用"畫正方形"當範例，替"畫三角形"函數新增一個名為"長度"的輸入變數。然後使用它來畫幾個不同大小的三角形。(提示：按下"函數"程式積木上的星星來新增輸入變數。)'
         turtle_3_7: '替"繪製房子"新增一個名叫"長度"的輸入變數，然後用它來替大象蓋間房子吧。(房子的長度為150像素)'
-        turtle_3_8: '這些是前一個關卡的程式積木。修改"繪製房子"函數讓我在畫完房子後停在右下角。最後使用這個修改過的函數畫出三間房子。'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: '你可以在沒人幫助的情況下重新建立"繪製房子"的函數嗎？試著自己完成它，然後用它畫出一排房子。'
         turtle_3_10: 你已經學了好多東西！現在你可以隨意畫些你想畫的東西，畫個星星或是一個螺旋，或是更炫一點的畫個雪花吧。
         maze_karel_debug_seq_1: 歡迎來除錯 ！我的程式不能正常運行。你可以發現問題並修復它，這樣我的田地會是平坦的並能即刻種植作物嗎？
@@ -435,6 +435,12 @@ zh:
         playlab_intro: 遊戲實驗室的介紹
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: 變數類別
+        msm_7_functions: 函數類別
     callout:
       text:
         drag_blocks: '拖住一個"移動"積木，把它黏到其他積木下面'

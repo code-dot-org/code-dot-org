@@ -71,8 +71,23 @@ html[dir='rtl'] #visualizationColumn {
   left: 0px;
 }
 
+#visualizationColumn.embed_hidesource {
+  margin: 0 auto;
+}
+
+#visualizationColumn.pin_bottom {
+  position: absolute;
+  bottom: 0px;
+  overflow-y: hidden;
+}
+
 div.droplet-palette-group-header {
   @include font;
+  line-height: 24px;
+}
+
+div.droplet-palette-header-row {
+  height: 24px;
 }
 
 div.droplet-palette-group-header:active {
@@ -84,28 +99,68 @@ div.droplet-palette-group-header-selected {
   color: #000;
 }
 
-.droplet-palette-group-header.yellow {
+div.droplet-palette-group-header.yellow {
   border-left:10px solid rgb(255, 213, 79);
 }
 
-.droplet-palette-group-header-selected.yellow {
+div.droplet-palette-group-header-selected.yellow {
   background-color: rgb(255, 213, 79);
 }
 
-.droplet-palette-group-header.red {
+div.droplet-palette-group-header.red {
   border-left:10px solid rgb(248, 116, 119);
 }
 
-.droplet-palette-group-header-selected.red {
+div.droplet-palette-group-header-selected.red {
   background-color: rgb(248, 116, 119);
 }
 
-.droplet-palette-group-header.cyan {
+div.droplet-palette-group-header.cyan {
   border-left:10px solid rgb(0, 210, 226);
 }
 
-.droplet-palette-group-header-selected.cyan {
+div.droplet-palette-group-header-selected.cyan {
   background-color: rgb(0, 210, 226);
+}
+
+div.droplet-palette-group-header.lightgreen {
+  border-left:10px solid rgb(211, 233, 101);
+}
+
+div.droplet-palette-group-header-selected.lightgreen {
+  background-color: rgb(211, 233, 101);
+}
+
+div.droplet-palette-group-header.purple {
+  border-left:10px solid rgb(177, 89, 171);
+}
+
+div.droplet-palette-group-header-selected.purple {
+  background-color: rgb(177, 89, 171);
+}
+
+div.droplet-palette-group-header.deeppurple {
+  border-left:10px solid rgb(163, 139, 195);
+}
+
+div.droplet-palette-group-header-selected.deeppurple {
+  background-color: rgb(163, 139, 195);
+}
+
+div.droplet-palette-group-header.blue {
+  border-left:10px solid rgb(25, 195, 225);
+}
+
+div.droplet-palette-group-header-selected.blue {
+  background-color: rgb(25, 195, 225);
+}
+
+div.droplet-palette-group-header.green {
+  border-left:10px solid rgb(72, 216, 130);
+}
+
+div.droplet-palette-group-header-selected.green {
+  background-color: rgb(72, 216, 130);
 }
 
 .droplet-wrapper-div {
@@ -137,6 +192,12 @@ div.droplet-palette-group-header-selected {
   top: $headers_height;
   bottom: 0px;
   font-size: 14px;
+  overflow: hidden;
+}
+
+#codeTextbox.pin_bottom {
+  border: 1px solid #ddd;
+  bottom: 160px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -151,11 +212,15 @@ html[dir='rtl'] #codeWorkspace {
   top: 0px;
   right: 0px;
   left: 400px;
-  bottom: 10px;
-  box-shadow: 7px 7px 10px #888;
+  bottom: 0;
   margin-left: 15px;
   border: 1px solid #ddd;
   overflow: hidden;
+}
+
+#codeWorkspace.pin_bottom {
+  border: none;
+  border-top: 1px solid #ddd;
 }
 
 .ace_gutter-cell.ace_breakpoint {
@@ -469,13 +534,14 @@ input[type="radio"] {
 }
 
 #gameButtons:after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 0;
-    font-size:0;
-    line-height:0;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  font-size:0;
+  line-height:0;
 }
+
 #slider-cell {
   display: inline-block;
   vertical-align: top;
@@ -641,10 +707,11 @@ $aniGifPreviewHeight: 60px;
 #headers {
   height: $headers_height;
   background-color: $purple;
-  div {
-    display: inline-block;
-    margin-right: -4px;
-  }
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   .workspace-header {
     text-align: center;
     white-space: nowrap;
@@ -656,10 +723,16 @@ $aniGifPreviewHeight: 60px;
     }
   }
   #toolbox-header {
+    width: 270px;
     border-right: 1px solid gray;
+    float: left;
+  }
+  #blockCounter, #blockUsed {
+    display: inline-block;
   }
   #clear-puzzle-header, #show-code-header {
     cursor: pointer;
+    float: right;
     border-left: 1px solid gray;
     &:hover {
       background-color: $cyan;
@@ -682,15 +755,16 @@ $aniGifPreviewHeight: 60px;
 #headers[dir=rtl] {
   div {
     margin-right: 0;
-    margin-left: -4px;
   }
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
+    float: right;
   }
   #clear-puzzle-header, #show-code-header {
     border-left: 0;
     border-right: 1px solid gray;
+    float: left;
   }
 }
 

@@ -8,12 +8,12 @@ template: none
   Dashboard
 >
 %span{href:'/ops-dashboard/workshops'}
-  Workshops
+  PD Workshops
 
-%h1 Workshops
+%h1 PD Workshops
 - if dashboard_user[:admin]
   %a.btn.btn-white{href:'#/workshops/new'}
-    Create New Workshop
+    Create New PD Workshop
 
 %form{style:'display:inline; float:right;'}
   From:
@@ -25,7 +25,7 @@ template: none
   %tr
     %th.manage-th
       %a{'ng-click' => 'order = "name"'}
-        Workshops Name
+        Workshop Name
     %th.manage-th
       %a{'ng-click' => 'order = "program_types[workshop.program_type].short_name"'}
         Program Type
@@ -33,8 +33,7 @@ template: none
       %a{'ng-click' => 'order = "cohortName(workshop.cohort_id)"'}
         Teacher Cohort
     %th.manage-th
-      %a{'ng-click' => 'order = "workshop.segments"'}
-        Dates
+      Dates
     %th.manage-th
       %a{'ng-click' => 'order = "location"'}
         Address
@@ -55,11 +54,10 @@ template: none
         {{cohortName(workshop.cohort_id)}}
     %td
       %div{'ng-repeat' => 'segment in workshop.segments'}
-        {{segment.start | utc | date:'longDate'}}
-        %br
-        {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
-        %br
-        %br
+        %p
+          {{segment.start | utc | date:'longDate'}}
+          %br
+          {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
     %td
       %span
         {{workshop.location}}
