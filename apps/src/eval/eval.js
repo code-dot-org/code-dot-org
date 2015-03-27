@@ -320,9 +320,9 @@ Eval.haveCaseMismatch_ = function (object1, object2) {
 /**
  * Note: is unable to distinguish from true/false generated from string blocks
  *   vs. from boolean blocks
- * @returns True if two eval objects are both booleans, but have different values.
+ * @returns {boolean} True if two eval objects are both booleans, but have different values.
  */
-Eval.haveWrongBoolean_ = function (object1, object2) {
+Eval.haveBooleanMismatch_ = function (object1, object2) {
   var strs1 = Eval.getTextStringsFromObject_(object1);
   var strs2 = Eval.getTextStringsFromObject_(object2);
 
@@ -371,7 +371,7 @@ Eval.execute = function() {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
       Eval.message = evalMsg.stringMismatchError();
-    } else if (Eval.haveWrongBoolean_(userObject, Eval.answerObject)) {
+    } else if (Eval.haveBooleanMismatch_(userObject, Eval.answerObject)) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
       Eval.message = evalMsg.wrongBooleanError();
