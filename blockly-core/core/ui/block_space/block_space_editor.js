@@ -433,9 +433,8 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement)
     - goog.style.getPageOffsetTop(containerDiv);
 
-  var divSize = goog.style.getSize(containerDiv);
-  var svgWidth = divSize.width - svgBorderWidth;
-  var svgHeight = divSize.height - headerHeight;
+  var svgWidth = containerDiv.clientWidth - svgBorderWidth;
+  var svgHeight = containerDiv.clientHeight - headerHeight;
 
   if (svg.cachedWidth_ != svgWidth) {
     svg.setAttribute('width', svgWidth + 'px');
