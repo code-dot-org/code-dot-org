@@ -462,16 +462,49 @@ describe("NetSimRouterNode", function () {
         router.tick({time: 30});
         sendMessageOfSize(40);
 
-        // At t=40, the first message is sent
-        router.tick({time: 39});
-        assertTableSize(testShard, 'logTable', 0);
-        router.tick({time: 40});
+        // Jumping to t=80, we see that only one message is sent.  If we'd
+        // been using optimistic scheduling, we would have sent both.})
+        router.tick({time: 80});
         assertTableSize(testShard, 'logTable', 1);
+
+        // At this point the simulation considers rescheduling the next message.
+        // Its new pessimistic estimate is t=120 (80{now} + 40{size}) but
+        // we go with the previous estimate of t=110 since it was better.
 
         // At t=110, the second message is sent
         router.tick({time: 109});
         assertTableSize(testShard, 'logTable', 1);
         router.tick({time: 110});
+        assertTableSize(testShard, 'logTable', 2);
+      });
+
+      it ("normally corrects pessimistic estimates with rescheduling", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Router 'starts sending' this message now, expected to finish
+        // at t=40
+        sendMessageOfSize(40);
+
+        // Again, at t=30, we schedule another message
+        // We schedule pessimistically, for t=110
+        router.tick({time: 30});
+        sendMessageOfSize(40);
+
+        // Unlike the last test, we tick at exactly t=40 and send the first
+        // message right on schedule.
+        router.tick({time: 39});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 40});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // This triggers a reschedule for the previous message;
+        // its new pessimistic estimate says that it can be sent at t=80,
+        // which is better than the previous t=110 estimate.
+
+        // At t=80, the second message is sent
+        router.tick({time: 79});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 80});
         assertTableSize(testShard, 'logTable', 2);
       });
 
@@ -526,6 +559,47 @@ describe("NetSimRouterNode", function () {
 
         // At exactly ten minutes, messages two and three are expired and deleted.
         router.tick({time: 10 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("removing expired packets allows packets further down the queue to be processed sooner", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var oneMinuteInMillis = 60000;
+
+        // These messages will both expire, since before processing of the
+        // first one completes they will both be over 10 minutes old.
+        sendMessageOfSize(12 * oneMinuteInMillis);
+        sendMessageOfSize(3 * oneMinuteInMillis);
+        assertTableSize(testShard, 'messageTable', 2);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Advance to 9 minutes.  Nothing has happened yet.
+        router.tick({time: 9 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 2);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Here we add a 1-minute message.  Since the others still exist,
+        // and we use pessimistic scheduling, this one is initially scheduled
+        // to finish at (9 + 12 + 3 + 1) = 25 minutes, meaning it would expire
+        // as well.
+        sendMessageOfSize(oneMinuteInMillis);
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At 10 minutes, the first two messages expire.
+        router.tick({time: 10 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 10 * oneMinuteInMillis + 1});
+
+        // This SHOULD allow the third message to complete at 11 minutes
+        // instead of at 25.
+        router.tick({time: 11 * oneMinuteInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        router.tick({time: 11 * oneMinuteInMillis});
         assertTableSize(testShard, 'messageTable', 1);
         assertTableSize(testShard, 'logTable', 1);
       });
