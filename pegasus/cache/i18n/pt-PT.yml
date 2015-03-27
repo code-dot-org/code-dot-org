@@ -10,7 +10,7 @@
     text-decoration:underline; font-weight:bold">planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> És um professor CS? Vê outros recursos CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Experimente uma</h1><h2>Hora de Código</h2><h3># já experimentaram</h3>
+  n_have_learned_an_hoc: <h1>Experimenta uma</h1><h2>Hora de Código</h2><h3># já experimentaram</h3>
   anybody_can_learn: Todos podem aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade
@@ -90,7 +90,7 @@
   beyond_an_hour: Ver outras atividades além da Hora de Código
   get_started: Começar
   i_agree: Concordar
-  participant_select: Selecione
+  participant_select: Seleciona
   participant_student: Aluno
   participant_parent: Encarregado de educação
   participant_educator: Educador
@@ -138,7 +138,7 @@
     - Michael Clark, Professor
   studiobar_title: Explora o <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos elementares
-  studiobar_elementary_body: Os nossos três cursos para alunos do 3.º Ciclo
+  studiobar_elementary_body: Os nossos três cursos para alunos do 1.º Ciclo
   studiobar_hoc_title: A Hora de Código
   studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Flappy Code
@@ -177,6 +177,30 @@
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_slot_text_title_hoc: Hora de Código
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Exprimenta a Hora do Código
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Alunos
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Doar
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um encarregado de educação
   contact_form_topic_teacher: Sou um professor/educador
@@ -233,7 +257,7 @@
     Estudante de Universidade (ou investigador)
   volunteer_engineer_submission_experience_software_professional: Professional de
     software
-  petition_age: Idade
+  petition_age:  Idade 
   dashboard_landing_title: Página inicial do professor
   dashboard_landing_welcome: Bem-vindo(a) ao novo e melhorado painel de professores.
   dashboard_landing_video: Vê este vídeo
