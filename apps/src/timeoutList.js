@@ -1,6 +1,16 @@
+// This module wraps setTimeout/setInterval calls to provide two additional features:
+// 1. Track all timeout/interval IDs, so they can be cleared all at once with clearTimeouts/clearIntervals.
+// 2. Stub the default timer implementations in test runs for faster execution.
+
 var timeoutList = [];
 var stubTimer = false;
-window.setImmediate = require('timers-browserify').setImmediate;
+// Polyfill setImmediate in Browserify
+window.setImmediate = window.setImmediate || require('timers-browserify').setImmediate;
+
+// Only use stubbed timer functions when explicitly set by stubTimer(true)
+function getTimer() {
+  return stubTimer ? require('timerstub') : window;
+}
 
 exports.getStubTimer = function() {
   return stubTimer;
@@ -21,10 +31,11 @@ exports.stubTimer = function (bool) {
  */
 exports.setTimeout = function (fn, time) {
   log('setting timeout, stubTimer = ' + stubTimer);
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   var timeoutId = t.setTimeout.apply(window, [fn, time]);
   timeoutList.push(timeoutId);
   log('set timeout ' + timeoutId);
+  exports.advance();
   return timeoutId;
 };
 
@@ -33,7 +44,7 @@ exports.setTimeout = function (fn, time) {
  */
 exports.clearTimeouts = function () {
   log('clear timeouts');
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   timeoutList.forEach(t.clearTimeout, window);
   timeoutList = [];
   if(stubTimer) t.clearAll();
@@ -44,7 +55,7 @@ exports.clearTimeouts = function () {
  */
 exports.clearTimeout = function (id) {
   log('clear timeout:' + id);
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   t.clearTimeout(id);
   // List removal requires IE9+
   var index = timeoutList.indexOf(id);
@@ -59,7 +70,7 @@ var intervalList = [];
  * call setInterval and track the returned id
  */
 exports.setInterval = function (fn, time) {
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   var intervalId = t.setInterval.apply(window, [fn, time]);
   log('Setting interval ' + intervalId);
   intervalList.push(intervalId);
@@ -71,7 +82,7 @@ exports.setInterval = function (fn, time) {
  */
 exports.clearIntervals = function () {
   log('clear intervals');
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   intervalList.forEach(t.clearInterval, window);
   intervalList = [];
   if(stubTimer) t.clearAll();
@@ -83,7 +94,7 @@ exports.clearIntervals = function () {
 exports.clearInterval = function (id) {
   log('clear interval:' + id);
 
-  var t = stubTimer ? require('timerstub') : window;
+  var t = getTimer();
   t.clearInterval(id);
   // List removal requires IE9+
   var index = intervalList.indexOf(id);
@@ -93,12 +104,17 @@ exports.clearInterval = function (id) {
 };
 
 exports.advance = function() {
-  var t = stubTimer ? require('timerstub') : window;
-  if(stubTimer) t.wait(50000);
-  if(stubTimer) t.waitAll();
+  log('advance');
+  if(stubTimer) {
+    var t = getTimer();
+    if(stubTimer) t.wait(50000);
+    if(stubTimer) t.waitAll();
+  }
 };
 
 exports.waitAll = function(done) {
-  var t = stubTimer ? require('timerstub') : window;
-  if(stubTimer) t.waitAll(done);
+  log('WaitAll');
+  if(stubTimer) {
+    if(stubTimer) getTimer().waitAll(done);
+  }
 };
