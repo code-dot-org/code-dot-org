@@ -147,9 +147,7 @@ gulp.task('lint', function() {
       'lib/gulp/*.js',
       'src/**/*.js',
       'test/**/*.js',
-      '!src/hammer.js',
-      '!src/lodash.js',
-      '!src/lodash.min.js',
+      '!src/node_modules/**/*',
       '!src/canvg/*.js'
     ]
   )
