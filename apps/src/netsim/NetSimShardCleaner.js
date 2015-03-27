@@ -15,6 +15,8 @@ var utils = require('../utils');
 var commands = require('../commands');
 var Command = commands.Command;
 var CommandSequence = commands.CommandSequence;
+var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimNode = require('./NetSimNode');
@@ -23,6 +25,8 @@ var NetSimMessage = require('./NetSimMessage');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 
+var _ = utils.getLodash();
+var NodeType = netsimConstants.NodeType;
 var logger = NetSimLogger.getSingleton();
 
 /**
@@ -538,9 +542,23 @@ CleanMessages.prototype.onBegin_ = function () {
   var nodeRows = this.cleaner_.getTableCache('node');
   var messageRows = this.cleaner_.getTableCache('message');
   this.commandList_ = messageRows.filter(function (messageRow) {
-    return nodeRows.every(function (nodeRow) {
-      return nodeRow.id !== messageRow.toNodeID;
+
+    var simulatingNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.simulatedBy;
     });
+
+    // A message not being simulated by any client can be cleaned up.
+    if (!simulatingNodeRow) {
+      return true;
+    }
+
+    var destinationNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.toNodeID;
+    });
+
+    // Messages with an invalid destination should also be cleaned up.
+    return !destinationNodeRow;
+
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));
