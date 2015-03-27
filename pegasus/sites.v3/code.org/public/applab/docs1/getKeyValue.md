@@ -79,7 +79,7 @@ var random = randomNumber(1, 100); //Generate a random number
 getKeyValue("biggestNum", function (value) {
   console.log("random: " + random + " biggestNumber: " + value);
   if ((value === undefined) || (random > value)) { //Check if 'value' is undefined or smaller than random
-    setKeyValue("biggestNumber", random, function () { //If so, update 'biggestNum' to 'random'
+    setKeyValue("biggestNum", random, function () { //If so, update 'biggestNum' to 'random'
       console.log(random + " is bigger than " + value + ". Updated biggestNumber");
     });
   }
