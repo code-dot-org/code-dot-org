@@ -164,6 +164,7 @@
           if (console && console.log)
             console.log("Recording facebook like", "http://#{request.host + request.path}");
           ga('send', 'social', 'facebook', 'like', "http://#{request.host + request.path}");
+          ga('send','event','button','click',{eventLabel:'facebook_like'});
         });
       }
     } catch(e) {}

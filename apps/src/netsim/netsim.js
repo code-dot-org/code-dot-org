@@ -19,6 +19,7 @@
 
 var page = require('./page.html');
 var i18n = require('../../locale/current/netsim');
+var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -87,6 +88,13 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
+   * Current router maximum (optimistic) bandwidth (bits/second)
+   * @type {number}
+   * @private
+   */
+  this.routerBandwidth_ = Infinity;
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -125,7 +133,7 @@ NetSim.prototype.init = function(config) {
    * Configuration for the loaded level
    * @type {netsimLevelConfiguration}
    */
-  this.level = config.level;
+  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
@@ -233,17 +241,21 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim_tabs'),
         this.level,
-        this.setChunkSize.bind(this),
-        this.changeEncodings.bind(this),
-        this.changeRemoteDnsMode.bind(this),
-        this.becomeDnsNode.bind(this));
-  }
+        {
+          chunkSizeChangeCallback: this.setChunkSize.bind(this),
+          encodingChangeCallback: this.changeEncodings.bind(this),
+          routerBandwidthChangeCallback: this.changeRemoteRouterBandwidth.bind(this),
+          dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
+          becomeDnsCallback: this.becomeDnsNode.bind(this)
+        });
+}
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
       this.connection_);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
+  this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setDnsMode(this.level.defaultDnsMode);
   this.refresh_();
 };
@@ -266,7 +278,7 @@ NetSim.prototype.refresh_ = function () {
 /**
  * Update encoding-view setting across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -284,7 +296,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
 /**
  * Update chunk-size/bytesize setting across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -301,9 +313,37 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
+ * Update router bandwidth across the app.
+ *
+ * Propagates the change down into relevant child components, possibly including
+ * the control that initiated the change; in that case, re-setting the value
+ * should be a no-op and safe to do.
+ *
+ * @param {number} newBandwidth in bits/second
+ */
+NetSim.prototype.setRouterBandwidth = function (newBandwidth) {
+  this.routerBandwidth_ = newBandwidth;
+  if (this.tabs_) {
+    this.tabs_.setRouterBandwidth(newBandwidth);
+  }
+};
+
+/**
+ * Sets router bandwidth across the simulation, proagating the change to other
+ * clients.
+ * @param {number} newBandwidth in bits/second
+ */
+NetSim.prototype.changeRemoteRouterBandwidth = function (newBandwidth) {
+  this.setRouterBandwidth(newBandwidth);
+  if (this.myConnectedRouter_) {
+    this.myConnectedRouter_.setBandwidth(newBandwidth);
+  }
+};
+
+/**
  * Update DNS mode across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -497,8 +537,8 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
 
   // Hook up new handlers
   if (router) {
-    // Propagate change
-    this.setDnsMode(router.dnsMode);
+    // Propagate changes
+    this.onRouterStateChange_(router);
 
     // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
@@ -522,6 +562,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
     myNode = this.connection_.myNode;
   }
 
+  this.setRouterBandwidth(router.bandwidth);
   this.setDnsMode(router.dnsMode);
   this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&

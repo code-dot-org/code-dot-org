@@ -4,12 +4,32 @@ $charcoal: #5b6770;
 $orange: #ffa400;
 $purple: #7665a0;
 $green: #b9bf15;
+
+$purple-dark: #7665a0;
+$purple-light: #a69bc1;
+$purple-extra-light: #cfc9de;
+$light-gray: #e7e8ea;
+$orange-dark: #ffa400;
+$green-dark: #b9bf15;
+$yellow-dark: #ffb81d;
+$yellow-light: #ffdb74;
+$cyan-dark: #0094ca;
+$teal-dark: #00adbc;
+$teal-light: #59cad3;
+
+$gotham-regular: "Gotham 4r";
+$gotham-italics: "Gotham 4i";
+$gotham-bold: "Gotham 5r";
+$gotham-extra-bold: "Gotham 7r";
+$gotham-extra-bold-italics: "Gotham 7i";
+$code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+
 @mixin fill-container {
   height: 100%;
   width: auto;
 }
 @mixin font {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular, sans-serif;
   font-weight: normal;
 }
 $headers_height: 40px;
@@ -21,12 +41,12 @@ body {
   margin-top: 0;
 }
 h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold, sans-serif;
   font-weight: normal;
   font-size: 140%;
 }
 h2 {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold, sans-serif;
   font-weight: normal;
 }
 a {
@@ -37,18 +57,18 @@ a {
   }
 }
 strong {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold, sans-serif;
   font-weight: normal;
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
+  font-family: $gotham-italics, sans-serif;
   font-style: normal;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: $gotham-extra-bold-italics, sans-serif;
 }
 .farSide {
   text-align: right;
@@ -77,7 +97,7 @@ html[dir='rtl'] #visualizationColumn {
 
 #visualizationColumn.pin_bottom {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   overflow-y: hidden;
 }
 
@@ -192,11 +212,12 @@ div.droplet-palette-group-header-selected.green {
   top: $headers_height;
   bottom: 0px;
   font-size: 14px;
+  overflow: hidden;
 }
 
 #codeTextbox.pin_bottom {
-  bottom: 170px;
-  box-shadow: 7px 7px 10px #888;
+  border: 1px solid #ddd;
+  bottom: 160px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -211,17 +232,15 @@ html[dir='rtl'] #codeWorkspace {
   top: 0px;
   right: 0px;
   left: 400px;
-  bottom: 10px;
-  box-shadow: 7px 7px 10px #888;
+  bottom: 0;
   margin-left: 15px;
   border: 1px solid #ddd;
   overflow: hidden;
 }
 
 #codeWorkspace.pin_bottom {
-  box-shadow: none;
   border: none;
-  overflow: visible;
+  border-top: 1px solid #ddd;
 }
 
 .ace_gutter-cell.ace_breakpoint {
@@ -1234,4 +1253,59 @@ body.readonly #codeWorkspace>svg {
 
 body.readonly.embed-block #codeWorkspace .userHidden {
   display: none;
+}
+
+// Droplet block tooltips configuration
+$parameterColor: $yellow-light;
+$linkColor: #ffffff;
+$tooltipBackground: $cyan-dark;
+$text-color: #ffffff;
+$tooltip-border-radius: 14px;
+$tooltip-shadow-color: rgba(136,136,136,1);
+$see-examples-font-weight: bold;
+
+$tooltip-font: $gotham-regular;
+$function-name-font: $code-font;
+$examples-link-font: $gotham-extra-bold;
+
+$see-examples-thick-underline-color: $yellow-dark;
+
+.tooltip-example-link {
+  margin-top: 5px;
+  float: right;
+}
+
+.tooltip-example-link > a {
+  &:hover, &:link, &:active, &:visited {
+    border-bottom: 3px solid $see-examples-thick-underline-color;
+    color: white;
+    font-family: $gotham-bold;
+  }
+}
+
+.function-name {
+  font-family: $function-name-font;
+  font-size: 16px;
+  margin-top: 3px;
+  margin-bottom: 7px;
+}
+
+// Tooltipster theme class
+.droplet-block-tooltipster {
+  border-radius: $tooltip-border-radius;
+  border: none;
+  background: $tooltipBackground;
+  color: $text-color;
+  -webkit-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
+  -moz-box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
+  box-shadow: 5px 5px 5px 0 $tooltip-shadow-color;
+}
+
+.droplet-block-tooltipster .tooltipster-content {
+  font-family: $tooltip-font;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+  overflow: hidden;
+  font-weight: normal;
 }
