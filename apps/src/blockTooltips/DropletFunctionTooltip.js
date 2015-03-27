@@ -4,7 +4,6 @@ var msg = require('../../locale/current/common');
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
  */
-'use strict';
 
 var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 
