@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "ฟังค์ชั่นของคุณไม่สามารถส่งผลลัพท์ที่ถูกต้องคืนมาได้ สำหรับทุกค่า."},
 "goal":function(d){return "เป้าหมาย:"},
 "levelIncompleteError":function(d){return "Expression ของคุณไม่ตรงกับเป้าหมาย."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Expression ของคุณขาด variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "นี่คือการคำนวณของคุณ! ทำงานต่อไป, หรือไปทำปริศนาอันต่อไป!"},
 "yourExpression":function(d){return "Expression ของคุณ:"},

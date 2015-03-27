@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند."},
 "goal":function(d){return "هدف:"},
 "levelIncompleteError":function(d){return "معادله ی شما با هدف تطابق ندارد."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "معادله شما فاقد متغیر است"+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!"},
 "yourExpression":function(d){return "عبارت شما:"},

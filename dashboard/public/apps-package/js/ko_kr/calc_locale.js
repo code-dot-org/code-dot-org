@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "함수가 모든 값에 대해서 올바른 결과를 리턴하지 않습니다."},
 "goal":function(d){return "목표값:"},
 "levelIncompleteError":function(d){return "네 계산식은 올바른 답이 아닙니다."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!"},
 "yourExpression":function(d){return "계산식:"},

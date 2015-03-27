@@ -56,7 +56,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Prosegui"},
 "container":function(d){return "crea il contenitore"},
 "containerTooltip":function(d){return "Crea un contenitore separato e imposta il suo HTML interno."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Complimenti! Hai risolto l'esercizio finale."},
 "nextLevel":function(d){return "Complimenti! Hai completato questo esercizio."},
 "no":function(d){return "No"},

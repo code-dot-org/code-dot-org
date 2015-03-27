@@ -275,7 +275,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileIce":function(d){return "ice"},
 "projectileDuck":function(d){return "duck"},
 "reinfFeedbackMsg":function(d){return "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz."},
-"repeatForever":function(d){return "végtelen ismétlés"},
+"repeatForever":function(d){return "ismételd végtelenszer"},
 "repeatDo":function(d){return "csináld"},
 "repeatForeverTooltip":function(d){return "Hajtsd vége a műveleteket a blokkban ismételve miközben a történet zajlik."},
 "saySprite":function(d){return "mondd"},

@@ -98,7 +98,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuar"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Parabéns! Resolveste o enigma final."},
 "nextLevel":function(d){return "Parabéns! Completaste este puzzle."},
 "no":function(d){return "Não"},

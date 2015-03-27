@@ -139,7 +139,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Nadaljuj"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Čestitke! Rešil/a si zadnjo uganko."},
 "nextLevel":function(d){return "Čestitke! Zaključil/a si to uganko."},
 "no":function(d){return "Ne"},

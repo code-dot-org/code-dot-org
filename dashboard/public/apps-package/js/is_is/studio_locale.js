@@ -452,7 +452,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint":function(d){return "stigaskor"},
 "soundWinPoint2":function(d){return "stigaskor 2"},
 "soundWood":function(d){return "viður"},
-"speed":function(d){return "hraði"},
+"speed":function(d){return "hraða"},
 "startSetValue":function(d){return "byrja (fall)"},
 "startSetVars":function(d){return "leik_breytur (titill, bakgrunnur, mark, hætta, leikmaður)"},
 "startSetFuncs":function(d){return "leik_föll (uppfærsla-mark, uppfærsla-hætta, uppfærsla-leikmaður, árekstur?, á-skjá?)"},
