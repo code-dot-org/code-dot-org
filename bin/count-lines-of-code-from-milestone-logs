@@ -44,7 +44,7 @@ def main
   total = 0
 
   while true
-    objects = AWS::S3::Bucket.objects('cdo-logs', marker:marker)
+    objects = AWS::S3::Bucket.objects('cdo-logs', marker:marker, prefix:'hosts')
     break if objects.size == 0
 
     objects.each do |i|
