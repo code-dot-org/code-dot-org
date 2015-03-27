@@ -859,20 +859,27 @@ var ElementType = {
 Applab.ElementType = ElementType;
 
 /**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
  * Returns an element id with the given prefix which is unused within
- * the levelHtml.
+ * the applab app's DOM.
  * @param {string} prefix
  * @returns {string}
  */
 Applab.getUnusedElementId = function (prefix) {
   var divApplab = $('#divApplab');
-  for (var i = 1; i < 100; i++) {
-    var id = prefix + i;
-    if (divApplab.find("#" + id).length === 0) {
-      return id;
-    }
+  for (var i = Applab.nextElementIdMap[prefix] || 1;
+       divApplab.find("#" + prefix + i).length !== 0;
+       i++) {
+    // repeat until we find an unused id
   }
-  return prefix;
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
 };
 
 /**
@@ -954,7 +961,7 @@ Applab.clearProperties = function () {
   designPropertiesEl.innerHTML = require('./designProperties.html')({
     tagName: null
   });
-}
+};
 
 Applab.isValidElementType = function (type) {
   for (var prop in Applab.ElementType) {
@@ -979,7 +986,7 @@ Applab.onDeletePropertiesButton = function(el, event) {
   el.parentNode.removeChild(el);
   Applab.levelHtml = document.getElementById('divApplab').innerHTML;
   Applab.clearProperties();
-}
+};
 
 /**
  * Clear the event handlers and stop the onTick timer.
