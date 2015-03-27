@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 5,
  maxstatements: 200
  */
 'use strict';
