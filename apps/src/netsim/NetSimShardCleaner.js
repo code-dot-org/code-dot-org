@@ -15,8 +15,6 @@ var utils = require('../utils');
 var commands = require('../commands');
 var Command = commands.Command;
 var CommandSequence = commands.CommandSequence;
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimNode = require('./NetSimNode');
@@ -26,7 +24,6 @@ var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 
 var _ = utils.getLodash();
-var NodeType = netsimConstants.NodeType;
 var logger = NetSimLogger.getSingleton();
 
 /**
