@@ -21,29 +21,19 @@ describe("NetSimLogEntry", function () {
     var logEntry = new NetSimLogEntry(testShard);
     assert(logEntry.getTable_() === testShard.logTable, "Using wrong table");
   });
-  
-  describe("default row structure", function () {
-    var row;
-  
-    beforeEach(function () {
-      var logEntry = new NetSimLogEntry(testShard);
-      row = logEntry.buildRow_();
-    });
-  
-    it ("nodeID (default undefined)", function () {
-      assertOwnProperty(row, 'nodeID');
-      assertEqual(row.nodeID, undefined);
-    });
-  
-    it ("binary (default empty string)", function () {
-      assertOwnProperty(row, 'binary');
-      assertEqual(row.binary, '');
-    });
 
-    it ("timestamp (default Date.now())", function () {
-      assertOwnProperty(row, 'timestamp');
-      assertWithinRange(row.timestamp, Date.now(), 10);
-    });
+  it ("has expected row structure and default values", function () {
+    var logEntry = new NetSimLogEntry(testShard);
+    var row = logEntry.buildRow_();
+
+    assertOwnProperty(row, 'nodeID');
+    assertEqual(row.nodeID, undefined);
+
+    assertOwnProperty(row, 'binary');
+    assertEqual(row.binary, '');
+
+    assertOwnProperty(row, 'timestamp');
+    assertWithinRange(row.timestamp, Date.now(), 10);
   });
 
   it ("initializes from row", function () {

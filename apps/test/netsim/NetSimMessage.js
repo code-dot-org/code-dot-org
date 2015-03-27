@@ -22,28 +22,18 @@ describe("NetSimMessage", function () {
     assert(message.getTable_() === testShard.messageTable);
   });
 
-  describe("default row structure", function () {
-    var row;
+  it ("has expected row structure and default values", function () {
+    var message = new NetSimMessage(testShard);
+    var row = message.buildRow_();
 
-    beforeEach(function () {
-      var message = new NetSimMessage(testShard);
-      row = message.buildRow_();
-    });
+    assertOwnProperty(row, 'fromNodeID');
+    assertEqual(row.fromNodeID, undefined);
 
-    it ("fromNodeID (default undefined)", function () {
-      assertOwnProperty(row, 'fromNodeID');
-      assertEqual(row.fromNodeID, undefined);
-    });
+    assertOwnProperty(row, 'toNodeID');
+    assertEqual(row.toNodeID, undefined);
 
-    it ("toNodeID (default undefined)", function () {
-      assertOwnProperty(row, 'toNodeID');
-      assertEqual(row.toNodeID, undefined);
-    });
-
-    it ("payload (default undefined)", function () {
-      assertOwnProperty(row, 'payload');
-      assertEqual(row.payload, undefined);
-    });
+    assertOwnProperty(row, 'payload');
+    assertEqual(row.payload, undefined);
   });
 
   describe("static method send", function () {

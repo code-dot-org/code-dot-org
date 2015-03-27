@@ -9,6 +9,7 @@ var dom = require('./dom');
 var constants = require('./constants.js');
 var msg = window.blockly.locale;
 var blockUtils = require('./block_utils');
+var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
 
@@ -55,7 +56,14 @@ var StudioApp = function () {
    */
   this.cdoSounds = null;
   this.Dialog = null;
+  /**
+   * @type {?Droplet.Editor}
+   */
   this.editor = null;
+  /**
+   * @type {?DropletTooltipManager}
+   */
+  this.dropletTooltipManager = null;
 
   this.blockYCoordinateInterval = 200;
 
@@ -568,7 +576,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 *    defaults to the element with 'toolbox'.
 *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
 *    true.
-* @param {DomElement} div The parent div in which to insert Blockly.
+* @param {Element} div The parent div in which to insert Blockly.
 */
 StudioApp.prototype.inject = function(div, options) {
   var defaults = {
@@ -1142,11 +1150,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // (important because they can be different in our test environment)
     ace = window.ace;
 
+    var fullDropletPalette = dropletUtils.generateDropletPalette(
+      options.codeFunctions, options.dropletConfig);
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
-      palette: dropletUtils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig),
+      palette: fullDropletPalette,
       alwaysShowPalette: true
     });
 
@@ -1165,6 +1174,22 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
+    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
+    var installTooltips = function () {
+      this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
+    }.bind(this);
+
+    this.editor.on('changepalette', installTooltips);
+
+    this.editor.on('toggledone', function () {
+      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+        installTooltips();
+      }
+    });
+
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
@@ -1173,6 +1198,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
+      installTooltips();
     }
   }, this));
 

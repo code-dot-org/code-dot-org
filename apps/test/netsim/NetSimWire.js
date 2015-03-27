@@ -21,43 +21,27 @@ describe("NetSimWire", function () {
     assert(wire.getTable_() === testShard.wireTable);
   });
 
-  describe("default row structure", function () {
-    var row;
+  it ("has expected row structure and default values", function () {
+    var wire = new NetSimWire(testShard);
+    var row = wire.buildRow_();
 
-    beforeEach(function () {
-      var wire = new NetSimWire(testShard);
-      row = wire.buildRow_();
-    });
+    assertOwnProperty(row, 'localNodeID');
+    assertEqual(row.localNodeID, undefined);
 
-    it ("localNodeID (default undefined)", function () {
-      assertOwnProperty(row, 'localNodeID');
-      assertEqual(row.localNodeID, undefined);
-    });
+    assertOwnProperty(row, 'remoteNodeID');
+    assertEqual(row.remoteNodeID, undefined);
 
-    it ("remoteNodeID (default undefined)", function () {
-      assertOwnProperty(row, 'remoteNodeID');
-      assertEqual(row.remoteNodeID, undefined);
-    });
+    assertOwnProperty(row, 'localAddress');
+    assertEqual(row.localAddress, undefined);
 
-    it ("localAddress (default undefined)", function () {
-      assertOwnProperty(row, 'localAddress');
-      assertEqual(row.localAddress, undefined);
-    });
+    assertOwnProperty(row, 'remoteAddress');
+    assertEqual(row.remoteAddress, undefined);
 
-    it ("remoteAddress (default undefined)", function () {
-      assertOwnProperty(row, 'remoteAddress');
-      assertEqual(row.remoteAddress, undefined);
-    });
+    assertOwnProperty(row, 'localHostname');
+    assertEqual(row.localHostname, undefined);
 
-    it ("localHostname (default undefined)", function () {
-      assertOwnProperty(row, 'localHostname');
-      assertEqual(row.localHostname, undefined);
-    });
-
-    it ("remoteHostname (default undefined)", function () {
-      assertOwnProperty(row, 'remoteHostname');
-      assertEqual(row.remoteHostname, undefined);
-    });
+    assertOwnProperty(row, 'remoteHostname');
+    assertEqual(row.remoteHostname, undefined);
   });
 
   describe("static method create", function () {

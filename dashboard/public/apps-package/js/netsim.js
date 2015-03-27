@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({177:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({182:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":176,"./netsim":178,"./skins":182}],182:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":181,"./netsim":183,"./skins":188}],188:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":186}],178:[function(require,module,exports){
+},{"../skins":192}],183:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -45,6 +45,7 @@ exports.load = function (assetUrl, id) {
 
 var page = require('./page.html');
 var i18n = require('../../locale/current/netsim');
+var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
@@ -113,6 +114,13 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
+   * Current router maximum (optimistic) bandwidth (bits/second)
+   * @type {number}
+   * @private
+   */
+  this.routerBandwidth_ = Infinity;
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -151,7 +159,7 @@ NetSim.prototype.init = function(config) {
    * Configuration for the loaded level
    * @type {netsimLevelConfiguration}
    */
-  this.level = config.level;
+  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
@@ -259,17 +267,21 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim_tabs'),
         this.level,
-        this.setChunkSize.bind(this),
-        this.changeEncodings.bind(this),
-        this.changeRemoteDnsMode.bind(this),
-        this.becomeDnsNode.bind(this));
-  }
+        {
+          chunkSizeChangeCallback: this.setChunkSize.bind(this),
+          encodingChangeCallback: this.changeEncodings.bind(this),
+          routerBandwidthChangeCallback: this.changeRemoteRouterBandwidth.bind(this),
+          dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
+          becomeDnsCallback: this.becomeDnsNode.bind(this)
+        });
+}
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
       this.connection_);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
+  this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setDnsMode(this.level.defaultDnsMode);
   this.refresh_();
 };
@@ -292,7 +304,7 @@ NetSim.prototype.refresh_ = function () {
 /**
  * Update encoding-view setting across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -310,7 +322,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
 /**
  * Update chunk-size/bytesize setting across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -327,9 +339,37 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
+ * Update router bandwidth across the app.
+ *
+ * Propagates the change down into relevant child components, possibly including
+ * the control that initiated the change; in that case, re-setting the value
+ * should be a no-op and safe to do.
+ *
+ * @param {number} newBandwidth in bits/second
+ */
+NetSim.prototype.setRouterBandwidth = function (newBandwidth) {
+  this.routerBandwidth_ = newBandwidth;
+  if (this.tabs_) {
+    this.tabs_.setRouterBandwidth(newBandwidth);
+  }
+};
+
+/**
+ * Sets router bandwidth across the simulation, proagating the change to other
+ * clients.
+ * @param {number} newBandwidth in bits/second
+ */
+NetSim.prototype.changeRemoteRouterBandwidth = function (newBandwidth) {
+  this.setRouterBandwidth(newBandwidth);
+  if (this.myConnectedRouter_) {
+    this.myConnectedRouter_.setBandwidth(newBandwidth);
+  }
+};
+
+/**
  * Update DNS mode across the whole app.
  *
- * Propogates the change down into relevant child components, possibly
+ * Propagates the change down into relevant child components, possibly
  * including the control that initiated the change; in that case, re-setting
  * the value should be a no-op and safe to do.
  *
@@ -523,8 +563,8 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
 
   // Hook up new handlers
   if (router) {
-    // Propagate change
-    this.setDnsMode(router.dnsMode);
+    // Propagate changes
+    this.onRouterStateChange_(router);
 
     // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
@@ -548,6 +588,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
     myNode = this.connection_.myNode;
   }
 
+  this.setRouterBandwidth(router.bandwidth);
   this.setDnsMode(router.dnsMode);
   this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
@@ -565,7 +606,7 @@ NetSim.prototype.onRouterLogChange_ = function () {
     this.setRouterLogData(this.myConnectedRouter_.getLog());
   }
 };
-},{"../../locale/current/netsim":242,"../RunLoop":3,"./DashboardUser":119,"./NetSimConnection":123,"./NetSimLobby":137,"./NetSimLogPanel":142,"./NetSimSendPanel":160,"./NetSimStatusPanel":164,"./NetSimTabsComponent":167,"./NetSimVisualization":168,"./controls.html":174,"./netsimConstants":179,"./page.html":181}],181:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../RunLoop":3,"./DashboardUser":122,"./NetSimConnection":128,"./NetSimLobby":142,"./NetSimLogPanel":147,"./NetSimSendPanel":165,"./NetSimStatusPanel":169,"./NetSimTabsComponent":172,"./NetSimVisualization":173,"./controls.html":179,"./netsimConstants":184,"./netsimUtils":186,"./page.html":187}],187:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -587,7 +628,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":237,"ejs":253}],176:[function(require,module,exports){
+},{"../../locale/current/common":243,"ejs":259}],181:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/netsim');
@@ -645,6 +686,13 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           be enabled on page load.  Note: An encoding enabled here but not
  *           included in the visible controls will be enabled and cannot be
  *           disabled by the student.
+ *
+ * @property {boolean} showRouterBandwidthControl - Whether students should be
+ *           able to see and manipulate the slider that adjusts the router's
+ *           max throughput speed.
+ *
+ * @property {number} defaultRouterBandwidth - How fast the router should be
+ *           able to process packets, on initial level load.
  *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
@@ -717,7 +765,8 @@ levels.default = {
   ],
 
   // Router tab and its controls
-  // Nothing here yet!
+  showRouterBandwidthControl: true,
+  defaultRouterBandwidth: Infinity,
 
   // DNS tab and its controls
   showDnsModeControl: true,
@@ -779,7 +828,7 @@ levels.variant3 = utils.extend(levels.default, {
   defaultDnsMode: DnsMode.AUTOMATIC
 });
 
-},{"../../locale/current/netsim":242,"../utils":232,"./Packet":173,"./netsimConstants":179}],174:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../utils":238,"./Packet":178,"./netsimConstants":184}],179:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -799,7 +848,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],168:[function(require,module,exports){
+},{"ejs":259}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -815,10 +864,10 @@ return buf.join('');
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
-var netsimUtils = require('./netsimUtils');
 var tweens = require('./tweens');
 
 /**
@@ -1017,7 +1066,7 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
  */
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
@@ -1308,7 +1357,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   });
 };
 
-},{"../utils":232,"./NetSimVizNode":170,"./NetSimVizWire":171,"./NetSimWire":172,"./netsimUtils":180,"./tweens":183}],171:[function(require,module,exports){
+},{"../utils":238,"./NetSimVizNode":175,"./NetSimVizWire":176,"./NetSimWire":177,"./netsimNodeFactory":185,"./tweens":189}],176:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1394,7 +1443,7 @@ NetSimVizWire.prototype.kill = function () {
   this.remoteVizNode = null;
 };
 
-},{"../utils":232,"./NetSimVizEntity":169,"./NetSimVizNode":170,"./netsimUtils":180}],170:[function(require,module,exports){
+},{"../utils":238,"./NetSimVizEntity":174,"./NetSimVizNode":175,"./netsimUtils":186}],175:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1602,7 +1651,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   }
 };
 
-},{"../utils":232,"./NetSimVizEntity":169,"./netsimConstants":179,"./netsimUtils":180,"./tweens":183}],169:[function(require,module,exports){
+},{"../utils":238,"./NetSimVizEntity":174,"./netsimConstants":184,"./netsimUtils":186,"./tweens":189}],174:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1825,7 +1874,7 @@ NetSimVizEntity.prototype.snapToScale = function (newScale) {
   this.tweenToScale(newScale, 0);
 };
 
-},{"./netsimUtils":180,"./tweens":183}],183:[function(require,module,exports){
+},{"./netsimUtils":186,"./tweens":189}],189:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2005,7 +2054,7 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
-},{"../utils":232}],167:[function(require,module,exports){
+},{"../utils":238}],172:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2030,15 +2079,16 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {function} chunkSizeChangeCallback
- * @param {function} encodingChangeCallback
- * @param {function} dnsModeChangeCallback
- * @param {function} becomeDnsCallback
+ * @param {Object} callbacks
+ * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.encodingChangeCallback
+ * @param {function} callbacks.routerBandwidthChangeCallback
+ * @param {function} callbacks.dnsModeChangeCallback
+ * @param {function} callbacks.becomeDnsCallback
  * @constructor
  */
 var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
-    chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
-    becomeDnsCallback) {
+    callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -2056,25 +2106,31 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+  this.chunkSizeChangeCallback_ = callbacks.chunkSizeChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.encodingChangeCallback_ = encodingChangeCallback;
+  this.encodingChangeCallback_ = callbacks.encodingChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.dnsModeChangeCallback_ = dnsModeChangeCallback;
+  this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.becomeDnsCallback_ = becomeDnsCallback;
+  this.dnsModeChangeCallback_ = callbacks.dnsModeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.becomeDnsCallback_ = callbacks.becomeDnsCallback;
 
   /**
    * @type {NetSimRouterTab}
@@ -2122,7 +2178,8 @@ NetSimTabsComponent.prototype.render = function () {
   if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
-        this.levelConfig_);
+        this.levelConfig_,
+        this.routerBandwidthChangeCallback_);
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
@@ -2134,61 +2191,56 @@ NetSimTabsComponent.prototype.render = function () {
   }
 };
 
-/**
- * @param {number} newChunkSize
- */
+/** @param {number} newChunkSize */
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
   if (this.myDeviceTab_) {
     this.myDeviceTab_.setChunkSize(newChunkSize);
   }
 };
 
-/**
- * @param {EncodingType[]} newEncodings
- */
+/** @param {EncodingType[]} newEncodings */
 NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
   if (this.myDeviceTab_) {
     this.myDeviceTab_.setEncodings(newEncodings);
   }
 };
 
-/**
- * @param {string} newDnsMode
- */
+/** @param {number} newBandwidth in bits/second */
+NetSimTabsComponent.prototype.setRouterBandwidth = function (newBandwidth) {
+  if (this.routerTab_) {
+    this.routerTab_.setBandwidth(newBandwidth);
+  }
+};
+
+/** @param {string} newDnsMode */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
   if (this.dnsTab_) {
     this.dnsTab_.setDnsMode(newDnsMode);
   }
 };
 
-/**
- * @param {boolean} isDnsNode
- */
+/** @param {boolean} isDnsNode */
 NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.dnsTab_) {
     this.dnsTab_.setIsDnsNode(isDnsNode);
   }
 };
 
-/**
- * @param {Array} tableContents
- */
+/** @param {Array} tableContents */
 NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
   if (this.dnsTab_) {
     this.dnsTab_.setDnsTableContents(tableContents);
   }
 };
 
-/**
- * @param {Array} logData
- */
+/** @param {Array} logData */
 NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
   if (this.routerTab_) {
     this.routerTab_.setRouterLogData(logData);
   }
 };
 
-},{"./NetSimDnsTab":129,"./NetSimMyDeviceTab":146,"./NetSimRouterTab":158,"./NetSimTabsComponent.html":166,"./netsimConstants":179,"./netsimUtils":180}],166:[function(require,module,exports){
+},{"./NetSimDnsTab":134,"./NetSimMyDeviceTab":151,"./NetSimRouterTab":163,"./NetSimTabsComponent.html":171,"./netsimConstants":184,"./netsimUtils":186}],171:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2220,7 +2272,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],164:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./netsimConstants":184,"./netsimUtils":186,"ejs":259}],169:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2297,7 +2349,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 };
 
-},{"../utils":232,"./NetSimPanel.js":153,"./NetSimStatusPanel.html":163}],163:[function(require,module,exports){
+},{"../utils":238,"./NetSimPanel.js":158,"./NetSimStatusPanel.html":168}],168:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2317,7 +2369,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],160:[function(require,module,exports){
+},{"ejs":259}],165:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2623,7 +2675,7 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   });
 };
 
-},{"../../locale/current/netsim":242,"../utils":232,"./NetSimPacketEditor":149,"./NetSimPacketSizeControl":151,"./NetSimPanel":153,"./NetSimSendPanel.html":159,"./Packet":173,"./netsimConstants":179}],159:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../utils":238,"./NetSimPacketEditor":154,"./NetSimPacketSizeControl":156,"./NetSimPanel":158,"./NetSimSendPanel.html":164,"./Packet":178,"./netsimConstants":184}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2643,7 +2695,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"ejs":253}],158:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"ejs":259}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2659,15 +2711,18 @@ return buf.join('');
 'use strict';
 
 var markup = require('./NetSimRouterTab.html');
+var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 
 /**
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
+ * @param {function} bandwidthChangeCallback
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
+    bandwidthChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -2682,10 +2737,22 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
   this.levelConfig_ = levelConfig;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.bandwidthChangeCallback_ = bandwidthChangeCallback;
+
+  /**
    * @type {NetSimRouterLogTable}
    * @private
    */
   this.routerLogTable_ = null;
+
+  /**
+   * @type {NetSimBandwidthControl}
+   * @private
+   */
+  this.bandwidthControl_ = null;
 
   // Initial render
   this.render();
@@ -2695,10 +2762,16 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig) {
  * Fill the root div with new elements reflecting the current state.
  */
 NetSimRouterTab.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
+  if (this.levelConfig_.showRouterBandwidthControl) {
+    this.bandwidthControl_ = new NetSimBandwidthControl(
+        this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+  }
 };
 
 /**
@@ -2708,7 +2781,16 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
 };
 
-},{"./NetSimRouterLogTable":155,"./NetSimRouterTab.html":157}],157:[function(require,module,exports){
+/**
+ * @param {number} newBandwidth in bits/second
+ */
+NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
+  if (this.bandwidthControl_) {
+    this.bandwidthControl_.setBandwidth(newBandwidth);
+  }
+};
+
+},{"./NetSimBandwidthControl":124,"./NetSimRouterLogTable":160,"./NetSimRouterTab.html":162}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2720,7 +2802,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="netsim-router-tab">\n  <div class="router_log_table"></div>\n</div>\n'); })();
+ buf.push('<div class="netsim-router-tab">\n  ');2; if (level.showRouterBandwidthControl) { ; buf.push('\n    <div class="bandwidth-control"></div>\n  ');4; } ; buf.push('\n  <div class="router_log_table"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2728,7 +2810,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],155:[function(require,module,exports){
+},{"ejs":259}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2794,7 +2876,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
   this.render();
 };
 
-},{"./NetSimRouterLogTable.html":154}],154:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html":159}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2842,7 +2924,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./Packet":173,"./netsimConstants":179,"ejs":253}],151:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./Packet":178,"./netsimConstants":184,"ejs":259}],156:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2916,7 +2998,8 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
  */
 NetSimPacketSizeControl.prototype.render = function () {
   var renderedMarkup = $(markup({
-    minValue: this.minimumPacketSize_
+    minValue: this.minimumPacketSize_,
+    maxValue: i18n.unlimited()
   }));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.packet-size-slider').slider({
@@ -2929,6 +3012,11 @@ NetSimPacketSizeControl.prototype.render = function () {
   this.setPacketSize(this.maxPacketSize_);
 };
 
+/**
+ * @param {number} packetSize - up to Infinity
+ * @returns {number} a value the slider can handle
+ * @private
+ */
 NetSimPacketSizeControl.prototype.packetSizeToSliderValue_ = function (packetSize) {
   if (packetSize === Infinity) {
     return SLIDER_INFINITY_VALUE;
@@ -2936,6 +3024,11 @@ NetSimPacketSizeControl.prototype.packetSizeToSliderValue_ = function (packetSiz
   return packetSize;
 };
 
+/**
+ * @param {number} sliderValue - value from the slider control
+ * @returns {number} the packet size it maps to, up to Infinity
+ * @private
+ */
 NetSimPacketSizeControl.prototype.sliderValueToPacketSize_ = function (sliderValue) {
   if (sliderValue === SLIDER_INFINITY_VALUE) {
     return Infinity;
@@ -2967,12 +3060,22 @@ NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
-  rootDiv.find('.packet_size_value').text(i18n.numBitsPerPacket({
-    x: newPacketSize
-  }));
+  rootDiv.find('.packet_size_value').text(this.getPacketSizeText(newPacketSize));
 };
 
-},{"../../locale/current/netsim":242,"./NetSimPacketSizeControl.html":150}],150:[function(require,module,exports){
+/**
+ * Get localized packet size description for the given packet size.
+ * @param {number} packetSize
+ * @returns {string}
+ */
+NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
+  if (packetSize === Infinity) {
+    return i18n.unlimited();
+  }
+  return i18n.numBitsPerPacket({ x: packetSize });
+};
+
+},{"../../locale/current/netsim":248,"./NetSimPacketSizeControl.html":155}],155:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2986,7 +3089,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var i18n = require('../../locale/current/netsim');
-; buf.push('\n<div class="netsim_packet_size_control">\n  <div class="slider-inline-wrap">\n    <div class="packet-size-slider"></div>\n    <div class="slider-labels">\n      <div class="max-value">', escape((8,  i18n.unlimited() )), '</div>\n      <div class="min-value">', escape((9,  minValue )), '</div>\n      <div class="current-value">\n        <label for="packet-size-slider"><span class="packet_size_value"></span></label>\n      </div>\n    </div>\n  </div>\n</div>\n'); })();
+; buf.push('\n<div class="netsim_packet_size_control">\n  <div class="slider-inline-wrap">\n    <div class="packet-size-slider"></div>\n    <div class="slider-labels">\n      <div class="max-value">', escape((8,  maxValue )), '</div>\n      <div class="min-value">', escape((9,  minValue )), '</div>\n      <div class="current-value">\n        <label for="packet-size-slider"><span class="packet_size_value"></span></label>\n      </div>\n    </div>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2994,7 +3097,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"ejs":253}],149:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"ejs":259}],154:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3521,7 +3624,7 @@ NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
   this.removePacketCallback_(this);
 };
 
-},{"../../locale/current/netsim":242,"../constants":50,"../utils":232,"./NetSimEncodingControl":133,"./NetSimPacketEditor.html":148,"./Packet":173,"./dataConverters":175,"./netsimConstants":179}],148:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../constants":53,"../utils":238,"./NetSimEncodingControl":138,"./NetSimPacketEditor.html":153,"./Packet":178,"./dataConverters":180,"./netsimConstants":184}],153:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3571,7 +3674,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./Packet":173,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],146:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./Packet":178,"./netsimConstants":184,"./netsimUtils":186,"ejs":259}],151:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3674,7 +3777,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   }
   this.chunkSizeControl_.setEncodings(newEncodings);
 };
-},{"./NetSimChunkSizeControl":121,"./NetSimEncodingControl":133,"./NetSimMyDeviceTab.html":145}],145:[function(require,module,exports){
+},{"./NetSimChunkSizeControl":126,"./NetSimEncodingControl":138,"./NetSimMyDeviceTab.html":150}],150:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3694,7 +3797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],142:[function(require,module,exports){
+},{"ejs":259}],147:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3919,7 +4022,7 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
-},{"../../locale/current/netsim":242,"../utils":232,"./NetSimEncodingControl":133,"./NetSimLogPacket.html":140,"./NetSimLogPanel.html":141,"./NetSimPanel":153}],153:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../utils":238,"./NetSimEncodingControl":138,"./NetSimLogPacket.html":145,"./NetSimLogPanel.html":146,"./NetSimPanel":158}],158:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4076,7 +4179,7 @@ NetSimPanel.prototype.getBody = function () {
   return this.rootDiv_.find('.panel-body');
 };
 
-},{"./NetSimPanel.html":152}],152:[function(require,module,exports){
+},{"./NetSimPanel.html":157}],157:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4096,7 +4199,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],141:[function(require,module,exports){
+},{"ejs":259}],146:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4116,7 +4219,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],140:[function(require,module,exports){
+},{"ejs":259}],145:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4216,7 +4319,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./Packet":173,"./dataConverters":175,"./netsimConstants":179,"./netsimUtils":180,"ejs":253}],137:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./Packet":178,"./dataConverters":180,"./netsimConstants":184,"./netsimUtils":186,"ejs":259}],142:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4231,7 +4334,7 @@ return buf.join('');
 'use strict';
 
 var utils = require('../utils');
-var netsimUtils = require('./netsimUtils');
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimLogger = require('./NetSimLogger');
 var markup = require('./NetSimLobby.html');
 var NodeType = require('./netsimConstants').NodeType;
@@ -4400,7 +4503,7 @@ NetSimLobby.prototype.onShardChange_= function (newShard) {
  */
 NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
   // Refresh lobby listing.
-  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
   this.refreshLobbyList_(nodes);
 };
 
@@ -4696,7 +4799,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
   });
 };
 
-},{"../utils":232,"./NetSimLobby.html":136,"./NetSimLogger":143,"./netsimConstants":179,"./netsimUtils":180}],180:[function(require,module,exports){
+},{"../utils":238,"./NetSimLobby.html":141,"./NetSimLogger":148,"./netsimConstants":184,"./netsimNodeFactory":185}],185:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4708,112 +4811,37 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 
-var EncodingType = netsimConstants.EncodingType;
 var NodeType = netsimConstants.NodeType;
+
+var netsimNodeFactory = module.exports;
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node
  * controllers (of appropriate types).
  * @param {!NetSimShard} shard
- * @param {!Array.<Object>} rows
+ * @param {!Array.<Object>} nodeRows
  * @throws when a row doesn't have a mappable node type.
  * @return {Array.<NetSimNode>} nodes for the rows
  */
-exports.nodesFromRows = function (shard, rows) {
-  return rows
-      .map(function (row) {
-        if (row.type === NodeType.CLIENT) {
-          return new NetSimClientNode(shard, row);
-        } else if (row.type == NodeType.ROUTER) {
-          return new NetSimRouterNode(shard, row);
-        }
-        // Oops!  We probably shouldn't ever get here.
-        throw new Error("Unable to map row to node.");
-      });
-};
-
-/**
- * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
- * object for (semi-)easy manipulation.
- * @param {string} type - the tagname for the svg element.
- * @returns {jQuery}
- */
-exports.jQuerySvgElement = function (type) {
-  var newElement = $(document.createElementNS('http://www.w3.org/2000/svg', type));
-
-  /**
-   * Override addClass since jQuery addClass doesn't work on svg.
-   * @param {string} className
-   */
-  newElement.addClass = function (className) {
-    var oldClasses = newElement.attr('class');
-    if (!oldClasses) {
-      newElement.attr('class', className);
-    } else if (!oldClasses.split(/\s+/g).some(function (existingClass) {
-          return existingClass === className;
-        })) {
-      newElement.attr('class', oldClasses + ' ' + className);
+netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
+  return nodeRows.map(function (row) {
+    if (row.type === NodeType.CLIENT) {
+      return new NetSimClientNode(shard, row);
+    } else if (row.type == NodeType.ROUTER) {
+      return new NetSimRouterNode(shard, row);
     }
-    // Return element for chaining
-    return newElement;
-  };
-
-  return newElement;
+    // Oops!  We probably shouldn't ever get here.
+    throw new Error("Unable to map row to node.");
+  });
 };
 
-/**
- * Checks configuration against tab type to decide whether tab
- * of type should be shown.
- * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimTabType} tabType
- */
-exports.shouldShowTab = function (levelConfig, tabType) {
-  return levelConfig.showTabs.indexOf(tabType) > -1;
-};
-
-/**
- * Get the localized string for the given encoding type.
- * @param {EncodingType} encodingType
- * @returns {string} localized encoding name
- */
-exports.getEncodingLabel = function (encodingType) {
-  if (encodingType === EncodingType.ASCII) {
-    return i18n.ascii();
-  } else if (encodingType === EncodingType.DECIMAL) {
-    return i18n.decimal();
-  } else if (encodingType === EncodingType.HEXADECIMAL) {
-    return i18n.hex();
-  } else if (encodingType === EncodingType.BINARY) {
-    return i18n.binary();
-  } else if (encodingType === EncodingType.A_AND_B) {
-    return i18n.a_and_b();
-  }
-  return '';
-};
-
-/**
- * @param {Object} enumObj - Technically any object, but should be used with
- *        an enum like those found in netsimConstants
- * @param {function} func - A function to call for each value in the enum,
- *        which gets passed the enum value.
- */
-exports.forEachEnumValue = function (enumObj, func) {
-  for (var enumKey in enumObj) {
-    if (enumObj.hasOwnProperty(enumKey)) {
-      func(enumObj[enumKey]);
-    }
-  }
-};
-
-},{"../../locale/current/netsim":242,"./NetSimClientNode":122,"./NetSimRouterNode":156,"./netsimConstants":179}],136:[function(require,module,exports){
+},{"./NetSimClientNode":127,"./NetSimRouterNode":161,"./netsimConstants":184}],141:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4833,7 +4861,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],133:[function(require,module,exports){
+},{"ejs":259}],138:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4956,7 +4984,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
 
-},{"./NetSimEncodingControl.html":132,"./netsimConstants":179}],132:[function(require,module,exports){
+},{"./NetSimEncodingControl.html":137,"./netsimConstants":184}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4991,7 +5019,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./netsimConstants":179,"ejs":253}],129:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./netsimConstants":184,"ejs":259}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5117,7 +5145,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };
 
-},{"./NetSimDnsManualControl":125,"./NetSimDnsModeControl":127,"./NetSimDnsTab.html":128,"./NetSimDnsTable":131,"./netsimConstants":179}],131:[function(require,module,exports){
+},{"./NetSimDnsManualControl":130,"./NetSimDnsModeControl":132,"./NetSimDnsTab.html":133,"./NetSimDnsTable":136,"./netsimConstants":184}],136:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5191,7 +5219,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
   this.render();
 };
 
-},{"./NetSimDnsTable.html":130,"./netsimConstants":179}],130:[function(require,module,exports){
+},{"./NetSimDnsTable.html":135,"./netsimConstants":184}],135:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5234,7 +5262,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":179,"ejs":253}],128:[function(require,module,exports){
+},{"./netsimConstants":184,"ejs":259}],133:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5254,7 +5282,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],127:[function(require,module,exports){
+},{"ejs":259}],132:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5340,7 +5368,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
       .prop('checked', true);
 };
 
-},{"./NetSimDnsModeControl.html":126,"./netsimConstants":179}],126:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html":131,"./netsimConstants":184}],131:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5371,7 +5399,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":242,"./netsimConstants":179,"ejs":253}],125:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"./netsimConstants":184,"ejs":259}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5436,7 +5464,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };
 
-},{"./NetSimDnsManualControl.html":124}],124:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html":129}],129:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5456,7 +5484,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],123:[function(require,module,exports){
+},{"ejs":259}],128:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5731,6 +5759,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
     router.dnsMode = this.levelConfig_.defaultDnsMode;
     router.update(function () {
       this.statusChanges.notifyObservers();
@@ -5789,7 +5818,7 @@ NetSimConnection.prototype.disconnectFromRouter = function () {
     self.statusChanges.notifyObservers();
   });
 };
-},{"../ObservableEvent":1,"./NetSimClientNode":122,"./NetSimLocalClientNode":138,"./NetSimLogger":143,"./NetSimRouterNode":156,"./NetSimShard":161,"./NetSimShardCleaner":162,"./netsimConstants":179}],162:[function(require,module,exports){
+},{"../ObservableEvent":1,"./NetSimClientNode":127,"./NetSimLocalClientNode":143,"./NetSimLogger":148,"./NetSimRouterNode":161,"./NetSimShard":166,"./NetSimShardCleaner":167,"./netsimConstants":184}],167:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6369,7 +6398,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":49,"../utils":232,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogEntry":139,"./NetSimLogger":143,"./NetSimMessage":144,"./NetSimNode":147,"./NetSimWire":172}],161:[function(require,module,exports){
+},{"../commands":52,"../utils":238,"./NetSimEntity":139,"./NetSimHeartbeat":140,"./NetSimLogEntry":144,"./NetSimLogger":148,"./NetSimMessage":149,"./NetSimNode":152,"./NetSimWire":177}],166:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6449,7 +6478,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.logTable.tick(clock);
 };
 
-},{"../clientApi":47,"./NetSimTable":165}],165:[function(require,module,exports){
+},{"../clientApi":50,"./NetSimTable":170}],170:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6676,7 +6705,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":232}],156:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":238}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6693,6 +6722,7 @@ NetSimTable.prototype.tick = function () {
 var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -6705,6 +6735,9 @@ var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 
 var _ = utils.getLodash();
+
+var serializeNumber = netsimUtils.serializeNumber;
+var deserializeNumber = netsimUtils.deserializeNumber;
 
 var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
@@ -6781,8 +6814,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = row.dnsMode !== undefined ?
-      row.dnsMode : DnsMode.NONE;
+  this.dnsMode = utils.valueOr(row.dnsMode, DnsMode.NONE);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -6791,6 +6823,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.dnsNodeID = row.dnsNodeID;
+
+  /**
+   * Speed at which messages are processed, in bits per second.
+   * @type {number}
+   */
+  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
 
   /**
    * Determines a subset of connection and message events that this
@@ -6803,6 +6841,15 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
+
+  /**
+   * Local cache of the last tick time in the local simulation.
+   * Allows us to schedule/timestamp events that don't happen inside the
+   * tick event.
+   * @type {number}
+   * @private
+   */
+  this.simulationTime_ = 0;
 
   /**
    * Packet format specification this router will use to parse, route, and log
@@ -6878,6 +6925,43 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
+
+  /**
+   * Whether router is in the middle of work.  Keeps router from picking up
+   * its own change notifications or interrupting its own processes.
+   * @type {boolean}
+   * @private
+   */
+  this.isRouterProcessing_ = false;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the router.  Used for tracking router memory, throughput, etc.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.routerQueueCache_ = [];
+
+  /**
+   * Set of scheduled 'routing events'
+   * @type {Object[]}
+   * @private
+   */
+  this.localRoutingSchedule_ = [];
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isAutoDnsProcessing_ = false;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the auto-DNS. Used for stats and limiting.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.autoDnsQueue_ = [];
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -6956,7 +7040,17 @@ NetSimRouterNode.RouterStatus = {
 var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
+ * @typedef {Object} routerRow
+ * @property {number} bandwidth - Router max transmission/processing rate
+ *           in bits/second
+ * @property {DnsMode} dnsMode - Current DNS mode for the local network
+ * @property {number} dnsNodeID - Entity ID of the current DNS node in the
+ *           local network.
+ */
+
+/**
  * Build table row for this node.
+ * @returns {routerRow}
  * @private
  * @override
  */
@@ -6964,6 +7058,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        bandwidth: serializeNumber(this.bandwidth),
         dnsMode: this.dnsMode,
         dnsNodeID: this.dnsNodeID
       }
@@ -6971,11 +7066,149 @@ NetSimRouterNode.prototype.buildRow_ = function () {
 };
 
 /**
+ * Load state from remoteRow into local model, then notify anything observing
+ * us that we've changed.
+ * @param {routerRow} remoteRow
+ * @private
+ */
+NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.bandwidth = deserializeNumber(remoteRow.bandwidth);
+  this.dnsMode = remoteRow.dnsMode;
+  this.dnsNodeID = remoteRow.dnsNodeID;
+  this.stateChange.notifyObservers(this);
+};
+
+/**
  * Ticks heartbeat, telling the network that router is in use.
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterNode.prototype.tick = function (clock) {
+  this.simulationTime_ = clock.time;
   this.heartbeat_.tick(clock);
+  this.routeOverdueMessages_.call(this, clock);
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.tickAutoDns_(clock);
+  }
+};
+
+/**
+ * This name is a bit of a misnomer, but it's memorable; we actually route
+ * all messages that are DUE or OVERDUE.
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
+  if (this.isRouterProcessing_) {
+    return;
+  }
+
+  // Separate out messages whose scheduled time has arrived or is past.
+  // Flag them so we can remove them later.
+  var readyScheduleItems = [];
+  this.localRoutingSchedule_.forEach(function (item) {
+    if (clock.time >= item.processingCompleteTime) {
+      item.beingRouted = true;
+      readyScheduleItems.push(item);
+    }
+  });
+
+  // If no messages are ready, we're done.
+  if (readyScheduleItems.length === 0) {
+    return;
+  }
+
+  // Process the messages that are ready for routing
+  var readyMessages = readyScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
+  }.bind(this));
+
+  this.isRouterProcessing_ = true;
+  this.routeMessages_(readyMessages, function () {
+
+    // When done, remove the schedule entries that we flagged earlier
+    this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
+      return !item.beingRouted;
+    });
+    this.isRouterProcessing_ = false;
+
+  }.bind(this));
+};
+
+/**
+ * Examine the queue for anything that should be handled by the local
+ * simulation, that hasn't been added to the schedule yet.  Schedule it after
+ * everything that appears before it in the router queue.
+ */
+NetSimRouterNode.prototype.scheduleNewPackets = function () {
+  var row, belongsToLocalSim, notScheduled;
+  for (var i = 0; i < this.routerQueueCache_.length; i++) {
+    row = this.routerQueueCache_[i];
+    belongsToLocalSim = this.localSimulationOwnsMessageRow_(row);
+    notScheduled = !this.isScheduled(row);
+
+    if (belongsToLocalSim && notScheduled) {
+      // Add up send times of all packets in queue up to this one, and including
+      // this one, to get its send time.
+      var sendTime = this.routerQueueCache_
+          .slice(0, i + 1)
+          .reduce(function (prev, cur) {
+            return prev + this.calculateProcessingDurationForMessage_(cur);
+          }.bind(this), this.simulationTime_);
+      this.scheduleRouting(row, sendTime);
+    }
+  }
+};
+
+/**
+ * @param {messageRow} row
+ * @param {number} sendTime
+ */
+NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
+  this.localRoutingSchedule_.push({
+    row: row,
+    processingCompleteTime: sendTime,
+    beingRouted: false
+  });
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given row is represented in the local simulation
+ *          routing schedule.
+ */
+NetSimRouterNode.prototype.isScheduled = function (messageRow) {
+  return _.find(this.localRoutingSchedule_, function (entry) {
+    return entry.row.id === messageRow.id;
+  }) !== undefined;
+};
+
+/**
+ * Lets the auto-DNS part of the router simulation handle its requests.
+ * For now, auto-DNS can do "batch" processing, no throughput limits.
+ * @private
+ */
+NetSimRouterNode.prototype.tickAutoDns_ = function () {
+  if (this.isAutoDnsProcessing_) {
+    return;
+  }
+
+  // Filter DNS queue down to requests the local simulation should handle.
+  var localSimDnsRequests = this.autoDnsQueue_
+      .filter(this.localSimulationOwnsMessageRow_.bind(this))
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this));
+
+  // If there's nothing we can process, we're done.
+  if (localSimDnsRequests.length === 0) {
+    return;
+  }
+
+  // Process DNS requests
+  this.isAutoDnsProcessing_ = true;
+  this.processAutoDnsRequests_(localSimDnsRequests, function () {
+    this.isAutoDnsProcessing_ = false;
+  }.bind(this));
 };
 
 /**
@@ -7126,6 +7359,18 @@ NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
   }
 
   this.dnsMode = newDnsMode;
+  this.update();
+};
+
+/**
+ * @param {number} newBandwidth in bits per second
+ */
+NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
+  if (this.bandwidth === newBandwidth) {
+    return;
+  }
+
+  this.bandwidth = newBandwidth;
   this.update();
 };
 
@@ -7389,12 +7634,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   }
 };
 
-NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
-  this.dnsMode = remoteRow.dnsMode;
-  this.dnsNodeID = remoteRow.dnsNodeID;
-  this.stateChange.notifyObservers(this);
-};
-
 /**
  * When the wires table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
@@ -7430,118 +7669,69 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
   }
 };
 
+/**
+ * Get list of log entries in this router's memory.
+ * @returns {NetSimLogEntry[]}
+ */
 NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
     return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
 };
 
-NetSimRouterNode.prototype.canHandleMessage_ = function (message) {
-  var fromNodeID, toNodeID, fromAddress, toAddress, simulateForNodeID,
-      simulateForAddress, routerNodeID, autoDnsNodeID, autoDnsAddress, packet;
-
-  fromNodeID = message.fromNodeID;
-  toNodeID = message.toNodeID;
-  simulateForNodeID = this.simulateForSender_;
-  routerNodeID = this.entityID;
-
-  // When auto-dns mode is enabled, we can handle some additional messages
-  // because the router IS the auto-dns
-  if (this.dnsMode === DnsMode.AUTOMATIC) {
-    packet = new Packet(this.packetSpec_, message.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
-    simulateForAddress = this.getAddressForNodeID_(simulateForNodeID);
-    autoDnsNodeID = routerNodeID;
-    autoDnsAddress = AUTO_DNS_RESERVED_ADDRESS;
-
-    // Handle all messages originating with client & from router to auto dns
-    if (fromAddress === simulateForAddress &&
-        toAddress === autoDnsAddress &&
-        fromNodeID === routerNodeID &&
-        toNodeID === autoDnsNodeID) {
-      return true;
-    }
-
-    // Handle all messages destined for client & to router from auto dns
-    if (fromAddress === autoDnsAddress &&
-        toAddress === simulateForAddress &&
-        fromNodeID === autoDnsNodeID &&
-        toNodeID === routerNodeID) {
-      return true;
-    }
-  }
-
-  // Default case: Handle all messages from client node to router node
-  return fromNodeID === simulateForNodeID && toNodeID === routerNodeID;
-};
-
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param rows
+ * @param {messageRow[]} rows
  * @private
+ * @throws if this method is called on a non-simulating router.
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   if (!this.simulateForSender_) {
-    // Not configured to handle anything yet; don't process messages.
+    // What?  Only simulating routers should be hooked up to message notifications.
+    throw new Error("Non-simulating router got message table change notifiction");
+  }
+
+  this.updateRouterQueue_(rows);
+
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.updateAutoDnsQueue_(rows);
+  }
+};
+
+
+/**
+ * Updates our cache of all messages that are going to the router (regardless
+ * of which simulation will handle them), so we can use it for stats and rate
+ * limiting.
+ * @param {messageRow[]} rows - message table rows
+ */
+NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToRouter_.bind(this));
+  if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }
 
-  if (this.isProcessingMessages_) {
-    // We're already in this method, getting called recursively because
-    // we are making changes to the table.  Ignore this call.
-    return;
-  }
-
-  var messages = rows
-      .map(function (row) {
-        return new NetSimMessage(this.shard_, row);
-      }.bind(this))
-      .filter(this.canHandleMessage_.bind(this));
-
-  if (messages.length === 0) {
-    // No messages for us, no work to do.
-    return;
-  }
-
-  // Setup (sync): Set processing flag
-  logger.info("Router received " + messages.length + " messages");
-  this.isProcessingMessages_ = true;
-
-  // Step 1 (async): Pull all our messages out of storage.
-  NetSimEntity.destroyEntities(messages, function (err) {
-    if (err) {
-      logger.error("Error pulling message off the wire for routing; " + err.message);
-      this.isProcessingMessages_ = false;
-      return;
-    }
-
-    // Step 2 (async): Fetch our connection info, which we will need for routing
-    // This request caches the info, so we don't need the result.
-    this.getConnections(function (err) {
-      if (err) {
-        logger.error("Error retrieving router connection info");
-        this.isProcessingMessages_ = false;
-        return;
-      }
-
-      // Step 3 (async): Route all messages to destinations
-      this.routeMessages_(messages, function () {
-        // Cleanup (sync): Clear "processing" flag
-        logger.info("Router finished processing " + messages.length + " messages");
-        this.isProcessingMessages_ = false;
-      }.bind(this));
-    }.bind(this));
-  }.bind(this));
+  this.routerQueueCache_ = newQueue;
+  // TODO: Drop packets that exceed queue memory (IF not already processing?)
+  this.scheduleNewPackets();
+  // Propagate notification of queue change (for stats, etc)
 };
 
 /**
- * Routes all messages (to remote storage) asynchronously, and calls
- * onComplete when all messages have been routed and/or an error occurs.
- * @param {NetSimMessage[]} messages
- * @param {!NodeStyleCallback} onComplete
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if this message is destined for the router (not the
+ *          auto-DNS part though!) and FALSE if destined anywhere else.
+ * @private
  */
+NetSimRouterNode.prototype.isMessageToRouter_ = function (messageRow) {
+  if (this.dnsMode === DnsMode.AUTOMATIC && this.isMessageToAutoDns_(messageRow)) {
+    return false;
+  }
+
+  return messageRow.toNodeID === this.entityID;
+};
+
 NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
   if (messages.length === 0) {
     onComplete(null);
@@ -7559,6 +7749,26 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
 };
 
 /**
+ *
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
+  logger.info("Destroying message...");
+  message.destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    logger.info("Message destroyed.");
+
+    this.forwardMessageToRecipient_(message, onComplete);
+  }.bind(this));
+};
+
+/**
  * Read the given message to find its destination address, try and map that
  * address to one of our connections, and send the message payload to
  * the new address.
@@ -7567,10 +7777,10 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
  * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
+NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onComplete) {
+  logger.info("Forwarding message...");
   var toAddress;
   var routerNodeID = this.entityID;
-  var autoDnsNodeID = this.entityID;
 
   // Find a connection to route this message to.
   try {
@@ -7587,18 +7797,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
     // This packet has reached its destination, it's done.
     logger.warn("Packet stopped at router.");
     this.log(message.payload);
-    onComplete(null);
-    return;
-  }
-
-  // Automatic DNS: Requests to the reserved auto-DNS address that are coming
-  // FROM the router node are handled by the auto-dns node logic
-  if (this.dnsMode === DnsMode.AUTOMATIC &&
-      message.fromNodeID === routerNodeID &&
-      message.toNodeID === autoDnsNodeID &&
-      toAddress === AUTO_DNS_RESERVED_ADDRESS) {
-    logger.warn("Packet passed to auto-DNS");
-    this.generateDnsResponse_(message);
     onComplete(null);
     return;
   }
@@ -7627,10 +7825,149 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
 };
 
 /**
- * @param {NetSimMessage} message
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given row should be operated on by the local
+ *          simulation, FALSE if another user's simulation should handle it.
  * @private
  */
-NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
+NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
+  // Local simulation can't handle anything if it's not initialized.
+  if (!this.simulateForSender_) {
+    return false;
+  }
+
+  var packet, fromAddress, toAddress, simulateForAddress;
+  var routerNodeID = this.entityID;
+
+  // One extra responsibility in auto-DNS mode: Should handle messages from the
+  // auto-DNS to the router IF they are addressed to the local client.
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+
+    // Gather address info to confirm this packet's destination
+    packet = new Packet(this.packetSpec_, messageRow.payload);
+    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+    simulateForAddress = this.getAddressForNodeID_(this.simulateForSender_);
+
+    var isOnRouterLoopback = messageRow.fromNodeID === routerNodeID &&
+        messageRow.toNodeID === routerNodeID;
+
+    var isBetweenLocalAndDns = (
+        fromAddress === simulateForAddress &&
+        toAddress === AUTO_DNS_RESERVED_ADDRESS
+        ) || (
+        fromAddress === AUTO_DNS_RESERVED_ADDRESS &&
+        toAddress === simulateForAddress
+        );
+
+    if (isOnRouterLoopback && isBetweenLocalAndDns) {
+      return true;
+    }
+  }
+
+  // Local simulation of router normally handles only the messages from the
+  // local client to the router.
+  return messageRow.fromNodeID === this.simulateForSender_ &&
+      messageRow.toNodeID === routerNodeID;
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @returns {number} time required to process this message, in milliseconds.
+ * @private
+ */
+NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (message) {
+  if (this.bandwidth === Infinity) {
+    return 0;
+  }
+  return message.payload.length * 1000 / this.bandwidth;
+};
+
+/**
+ * Update queue of all auto-dns messages, which can be used for stats or limiting.
+ * @param {messageRow[]} rows
+ * @private
+ */
+NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToAutoDns_.bind(this));
+  if (_.isEqual(this.autoDnsQueue_, newQueue)) {
+    return;
+  }
+
+  this.autoDnsQueue_ = newQueue;
+  // Propagate notification of queue change?
+  // Work will proceed on next tick
+};
+
+/**
+ *
+ * @param {messageRow} messageRow
+ */
+NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
+  var packet, toAddress;
+  try {
+    packet = new Packet(this.packetSpec_, messageRow.payload);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+  } catch (error) {
+    logger.warn("Packet not readable by auto-DNS: " + error);
+    return false;
+  }
+
+  // Messages to the auto-dns are both to and from the router node, and
+  // addressed to the DNS.
+  return messageRow.toNodeID === this.entityID &&
+      messageRow.fromNodeID === this.entityID &&
+      toAddress === AUTO_DNS_RESERVED_ADDRESS;
+};
+
+/**
+ * Batch-process DNS requests, generating responses wherever possible.
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.processAutoDnsRequests_ = function (messages, onComplete) {
+  // 1. Remove the requests from the wire
+  NetSimEntity.destroyEntities(messages, function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // 2. Generate all responses, asynchronously.
+    this.generateDnsResponses_(messages, onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponses_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  // Process head
+  this.generateDnsResponse_(messages[0], function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // Process tail
+    this.generateDnsResponses_(messages.slice(1), onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete) {
   var packet, fromAddress, query, responseHeaders, responseBody, responseBinary;
   var routerNodeID = this.entityID;
   var autoDnsNodeID = this.entityID;
@@ -7642,6 +7979,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
     query = packet.getBodyAsAscii(BITS_PER_BYTE);
   } catch (error) {
     // Malformed packet, ignore
+    onComplete(error);
     return;
   }
 
@@ -7678,12 +8016,176 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message) {
       autoDnsNodeID,
       routerNodeID,
       responseBinary,
-      function() {});
+      onComplete);
 };
 
-},{"../../locale/current/netsim":242,"../ObservableEvent":1,"../utils":232,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogEntry":139,"./NetSimLogger":143,"./NetSimMessage":144,"./NetSimNode":147,"./NetSimWire":172,"./Packet":173,"./dataConverters":175,"./netsimConstants":179}],242:[function(require,module,exports){
-/*netsim*/ module.exports = window.blockly.appLocale;
-},{}],139:[function(require,module,exports){
+},{"../../locale/current/netsim":248,"../ObservableEvent":1,"../utils":238,"./NetSimEntity":139,"./NetSimHeartbeat":140,"./NetSimLogEntry":144,"./NetSimLogger":148,"./NetSimMessage":149,"./NetSimNode":152,"./NetSimWire":177,"./Packet":178,"./dataConverters":180,"./netsimConstants":184,"./netsimUtils":186}],186:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+var _ = require('../utils').getLodash();
+var i18n = require('../../locale/current/netsim');
+var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
+
+/**
+ * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
+ * object for (semi-)easy manipulation.
+ * @param {string} type - the tagname for the svg element.
+ * @returns {jQuery}
+ */
+exports.jQuerySvgElement = function (type) {
+  var newElement = $(document.createElementNS('http://www.w3.org/2000/svg', type));
+
+  /**
+   * Override addClass since jQuery addClass doesn't work on svg.
+   * @param {string} className
+   */
+  newElement.addClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    if (!oldClasses) {
+      newElement.attr('class', className);
+    } else if (!oldClasses.split(/\s+/g).some(function (existingClass) {
+          return existingClass === className;
+        })) {
+      newElement.attr('class', oldClasses + ' ' + className);
+    }
+    // Return element for chaining
+    return newElement;
+  };
+
+  return newElement;
+};
+
+/**
+ * Checks configuration against tab type to decide whether tab
+ * of type should be shown.
+ * @param {netsimLevelConfiguration} levelConfig
+ * @param {NetSimTabType} tabType
+ */
+exports.shouldShowTab = function (levelConfig, tabType) {
+  return levelConfig.showTabs.indexOf(tabType) > -1;
+};
+
+/**
+ * Get the localized string for the given encoding type.
+ * @param {EncodingType} encodingType
+ * @returns {string} localized encoding name
+ */
+exports.getEncodingLabel = function (encodingType) {
+  if (encodingType === EncodingType.ASCII) {
+    return i18n.ascii();
+  } else if (encodingType === EncodingType.DECIMAL) {
+    return i18n.decimal();
+  } else if (encodingType === EncodingType.HEXADECIMAL) {
+    return i18n.hex();
+  } else if (encodingType === EncodingType.BINARY) {
+    return i18n.binary();
+  } else if (encodingType === EncodingType.A_AND_B) {
+    return i18n.a_and_b();
+  }
+  return '';
+};
+
+/**
+ * @param {Object} enumObj - Technically any object, but should be used with
+ *        an enum like those found in netsimConstants
+ * @param {function} func - A function to call for each value in the enum,
+ *        which gets passed the enum value.
+ */
+exports.forEachEnumValue = function (enumObj, func) {
+  for (var enumKey in enumObj) {
+    if (enumObj.hasOwnProperty(enumKey)) {
+      func(enumObj[enumKey]);
+    }
+  }
+};
+
+/**
+ * Rules used by serializeNumber and deserializeNumber to map unsupported
+ * JavaScript values into JSON and back.
+ * @type {{jsVal: number, jsonVal: string}[]}
+ * @readonly
+ */
+var NUMBER_SERIALIZATION_RULES = [
+  { jsVal: Infinity, jsonVal: 'Infinity' },
+  { jsVal: -Infinity, jsonVal: '-Infinity' },
+  { jsVal: NaN, jsonVal: 'NaN' },
+  { jsVal: undefined, jsonVal: 'undefined' }
+];
+
+/**
+ * Checks that the provided value is actually the special value NaN, unlike
+ * standard isNaN which returns true for anything that's not a number.
+ * @param {*} val - any value
+ * @returns {boolean}
+ */
+var isExactlyNaN = function (val) {
+  // NaN is the only value in JavaScript that is not exactly equal to itself.
+  // Therefore, if val !== val, then val must be NaN.
+  return val !== val;
+};
+
+/**
+ * Because JSON doesn't support the values Infinity, NaN, or undefined, you can
+ * use this method to store those values in JSON as strings.
+ * @param {number|NaN} num
+ * @returns {number|string}
+ */
+exports.serializeNumber = function (num) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
+    return rule.jsVal === num || (isExactlyNaN(rule.jsVal) && isExactlyNaN(num));
+  });
+  return applicableRule ? applicableRule.jsonVal : num;
+};
+
+/**
+ * Because JSON doesn't support the values Infinity, NaN, or undefined, you can
+ * use this method to retrieve a value from JSON that is either a number or one
+ * of those values.
+ * @param {number|string} storedNum
+ * @returns {number|NaN}
+ */
+exports.deserializeNumber = function (storedNum) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
+    return rule.jsonVal === storedNum;
+  });
+  return applicableRule ? applicableRule.jsVal : storedNum;
+};
+
+/**
+ * @param {netsimLevelConfiguration} levelConfig
+ * @returns {netsimLevelConfiguration} same thing, but with certain values
+ *          converted or cleaned.
+ * @private
+ */
+exports.scrubLevelConfiguration_ = function (levelConfig) {
+  var scrubbedLevel = _.clone(levelConfig, true);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
+      scrubbedLevel.defaultPacketSizeLimit);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultRouterBandwidth = exports.deserializeNumber(
+      scrubbedLevel.defaultRouterBandwidth);
+
+  return scrubbedLevel;
+};
+
+},{"../../locale/current/netsim":248,"../utils":238,"./netsimConstants":184}],144:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7816,7 +8318,7 @@ NetSimLogEntry.prototype.getMessageBinary = function () {
 NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
 };
-},{"../utils":232,"./NetSimEntity":134,"./Packet":173,"./dataConverters":175}],173:[function(require,module,exports){
+},{"../utils":238,"./NetSimEntity":139,"./Packet":178,"./dataConverters":180}],178:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8090,7 +8592,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
   return parts.join('');
 };
 
-},{"./dataConverters":175}],175:[function(require,module,exports){
+},{"./dataConverters":180}],180:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8381,7 +8883,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
-},{"../utils":232}],138:[function(require,module,exports){
+},{"../utils":238}],143:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8801,7 +9303,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
     this.receivedLog_.log(message.payload);
   }
 };
-},{"../ObservableEvent":1,"../utils":232,"./NetSimClientNode":122,"./NetSimEntity":134,"./NetSimHeartbeat":135,"./NetSimLogger":143,"./NetSimMessage":144}],144:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":238,"./NetSimClientNode":127,"./NetSimEntity":139,"./NetSimHeartbeat":140,"./NetSimLogger":148,"./NetSimMessage":149}],149:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8884,7 +9386,18 @@ NetSimMessage.prototype.getTable_ = function () {
   return this.shard_.messageTable;
 };
 
-/** Build own row for the message table  */
+/**
+ * @typedef {Object} messageRow
+ * @property {number} fromNodeID - this message in-flight-from node
+ * @property {number} toNodeID - this message in-flight-to node
+ * @property {string} payload - binary message content, all of which can be
+ *           exposed to the student.  May contain headers of its own.
+ */
+
+/**
+ * Build own row for the message table
+ * @returns {messageRow}
+ */
 NetSimMessage.prototype.buildRow_ = function () {
   return {
     fromNodeID: this.fromNodeID,
@@ -8893,7 +9406,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":232,"./NetSimEntity":134}],143:[function(require,module,exports){
+},{"../utils":238,"./NetSimEntity":139}],148:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9045,7 +9558,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],135:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9230,7 +9743,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":232,"./NetSimEntity":134}],122:[function(require,module,exports){
+},{"../utils":238,"./NetSimEntity":139}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9278,7 +9791,7 @@ NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
 };
 
-},{"../utils":232,"./NetSimNode":147,"./netsimConstants":179}],147:[function(require,module,exports){
+},{"../utils":238,"./NetSimNode":152,"./netsimConstants":184}],152:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9438,7 +9951,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
-},{"../utils":232,"./NetSimEntity":134,"./NetSimWire":172}],172:[function(require,module,exports){
+},{"../utils":238,"./NetSimEntity":139,"./NetSimWire":177}],177:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9537,7 +10050,7 @@ NetSimWire.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":232,"./NetSimEntity":134}],134:[function(require,module,exports){
+},{"../utils":238,"./NetSimEntity":139}],139:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9673,7 +10186,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
   }.bind(this));
 };
 
-},{}],121:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9791,7 +10304,7 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
   this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
 };
 
-},{"./NetSimChunkSizeControl.html":120,"./netsimConstants":179}],179:[function(require,module,exports){
+},{"./NetSimChunkSizeControl.html":125,"./netsimConstants":184}],184:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9895,7 +10408,7 @@ exports.PacketUIColumnType = {
   MESSAGE: 'message'
 };
 
-},{}],120:[function(require,module,exports){
+},{}],125:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9915,7 +10428,212 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],119:[function(require,module,exports){
+},{"ejs":259}],124:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+var markup = require('./NetSimBandwidthControl.html');
+var i18n = require('../../locale/current/netsim');
+
+/**
+ * Min value of 2 is 2^2 or 4bps
+ * @type {number}
+ * @const
+ */
+var SLIDER_MIN_VALUE = 2;
+
+/**
+ * Slider value is used as the exponent,
+ * so max value of 18 here is actually 2^18 or 256Kbps
+ * Since the top value is treated as Infinity, that means the max values are:
+ *   ---64Kbps----128Kbps----Infinity-|
+ * @type {number}
+ * @const
+ */
+var SLIDER_MAX_VALUE = 18;
+
+/**
+ * @type {number}
+ * @const
+ */
+var BITS_PER_KILOBIT = 1024;
+
+/**
+ * @type {number}
+ * @const
+ */
+var BITS_PER_MEGABIT = 1024 * BITS_PER_KILOBIT;
+
+/**
+ * @type {number}
+ * @const
+ */
+var BITS_PER_GIGABIT = 1024 * BITS_PER_MEGABIT;
+
+/**
+ * Generator and controller for packet size slider/selector
+ * @param {jQuery} rootDiv
+ * @param {function} bandwidthChangeCallback
+ * @constructor
+ */
+var NetSimBandwidthControl = module.exports = function (rootDiv,
+    bandwidthChangeCallback) {
+  /**
+   * Component root, which we fill whenever we call render()
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.bandwidthChangeCallback_ = bandwidthChangeCallback;
+
+  /**
+   * Internal state
+   * @type {number}
+   * @private
+   */
+  this.bandwidth_ = this.sliderValueToBandwidth_(SLIDER_MAX_VALUE);
+
+  this.render();
+};
+
+/**
+ * Fill the root div with new elements reflecting the current state
+ */
+NetSimBandwidthControl.prototype.render = function () {
+  var renderedMarkup = $(markup({
+    minValue: this.getDisplayBandwidth_(this.sliderValueToBandwidth_(SLIDER_MIN_VALUE)),
+    maxValue: this.getDisplayBandwidth_(this.sliderValueToBandwidth_(SLIDER_MAX_VALUE))
+  }));
+  this.rootDiv_.html(renderedMarkup);
+  this.rootDiv_.find('.slider').slider({
+    value: this.bandwidthToSliderValue_(this.bandwidth_),
+    min: SLIDER_MIN_VALUE,
+    max: SLIDER_MAX_VALUE,
+    step: 1,
+    slide: this.onSliderValueChange_.bind(this)
+  });
+  this.setLabel_(this.bandwidth_);
+};
+
+NetSimBandwidthControl.prototype.bandwidthToSliderValue_ = function (bandwidth) {
+  if (bandwidth === Infinity) {
+    return SLIDER_MAX_VALUE;
+  }
+  return Math.floor(Math.log(bandwidth) / Math.LN2);
+};
+
+NetSimBandwidthControl.prototype.sliderValueToBandwidth_ = function (sliderValue) {
+  if (sliderValue === SLIDER_MAX_VALUE) {
+    return Infinity;
+  }
+  return Math.pow(2, sliderValue);
+};
+
+/**
+ * Change handler for jQueryUI slider control.
+ * @param {Event} event
+ * @param {Object} ui
+ * @param {jQuery} ui.handle - The jQuery object representing the handle that
+ *        was changed.
+ * @param {number} ui.value - The current value of the slider.
+ * @private
+ */
+NetSimBandwidthControl.prototype.onSliderValueChange_ = function (event, ui) {
+  var newPacketSize = this.sliderValueToBandwidth_(ui.value);
+  this.setLabel_(newPacketSize);
+  this.bandwidthChangeCallback_(newPacketSize);
+};
+
+/**
+ * Update the slider and its label to display the provided value.
+ * @param {number} newBandwidth
+ */
+NetSimBandwidthControl.prototype.setBandwidth = function (newBandwidth) {
+  if (this.bandwidth_ === newBandwidth) {
+    return;
+  }
+
+  this.bandwidth_ = newBandwidth;
+  var sliderValue = this.bandwidthToSliderValue_(newBandwidth);
+  this.rootDiv_.find('.slider').slider('option', 'value', sliderValue);
+  this.setLabel_(newBandwidth);
+};
+
+/**
+ * @param {number} newBandwidth
+ * @private
+ */
+NetSimBandwidthControl.prototype.setLabel_ = function (newBandwidth) {
+  this.rootDiv_.find('.packet_size_value').text(this.getDisplayBandwidth_(newBandwidth));
+};
+
+/**
+ * @param {number} bandwidth in bits per second
+ * @returns {string} localized, shortened and rounded representation: e.g. 2Kbps
+ */
+NetSimBandwidthControl.prototype.getDisplayBandwidth_ = function (bandwidth) {
+  if (bandwidth === Infinity) {
+    return i18n.unlimited();
+  }
+
+  var gbps = Math.floor(bandwidth / BITS_PER_GIGABIT);
+  if (gbps > 0) {
+    return i18n.x_Gbps({ x: gbps });
+  }
+
+  var mbps = Math.floor(bandwidth / BITS_PER_MEGABIT);
+  if (mbps > 0) {
+    return i18n.x_Mbps({ x: mbps });
+  }
+
+  var kbps = Math.floor(bandwidth / BITS_PER_KILOBIT);
+  if (kbps > 0) {
+    return i18n.x_Kbps({ x: kbps });
+  }
+
+  return i18n.x_bps({ x: bandwidth });
+};
+
+},{"../../locale/current/netsim":248,"./NetSimBandwidthControl.html":123}],123:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1;
+var i18n = require('../../locale/current/netsim');
+; buf.push('\n<div class="netsim-bandwidth-control netsim-slider">\n  <div class="slider-inline-wrap">\n    <div class="slider"></div>\n    <div class="slider-labels">\n      <div class="max-value">', escape((8,  maxValue )), '</div>\n      <div class="min-value">', escape((9,  minValue )), '</div>\n      <div class="current-value">\n        <label for="packet-size-slider"><span class="packet_size_value"></span></label>\n      </div>\n    </div>\n  </div>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/current/netsim":248,"ejs":259}],248:[function(require,module,exports){
+/*netsim*/ module.exports = window.blockly.appLocale;
+},{}],122:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -10031,7 +10749,7 @@ DashboardUser.prototype.whenReady = function (callback) {
     this.whenReadyCallbacks_.push(callback);
   }
 };
-},{}],49:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10255,7 +10973,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":232}],47:[function(require,module,exports){
+},{"./utils":238}],50:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -10531,7 +11249,7 @@ clientApi.UserPropertyBag = function (channel_publickey) {
 };
 clientApi.UserPropertyBag.inherits(clientApi.PropertyBag);
 
-},{"./utils":232}],3:[function(require,module,exports){
+},{"./utils":238}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10739,4 +11457,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[177]);
+},{}]},{},[182]);

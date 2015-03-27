@@ -56,6 +56,13 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           included in the visible controls will be enabled and cannot be
  *           disabled by the student.
  *
+ * @property {boolean} showRouterBandwidthControl - Whether students should be
+ *           able to see and manipulate the slider that adjusts the router's
+ *           max throughput speed.
+ *
+ * @property {number} defaultRouterBandwidth - How fast the router should be
+ *           able to process packets, on initial level load.
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -127,7 +134,8 @@ levels.default = {
   ],
 
   // Router tab and its controls
-  // Nothing here yet!
+  showRouterBandwidthControl: true,
+  defaultRouterBandwidth: Infinity,
 
   // DNS tab and its controls
   showDnsModeControl: true,
