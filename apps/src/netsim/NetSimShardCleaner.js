@@ -542,28 +542,23 @@ CleanMessages.prototype.onBegin_ = function () {
   var nodeRows = this.cleaner_.getTableCache('node');
   var messageRows = this.cleaner_.getTableCache('message');
   this.commandList_ = messageRows.filter(function (messageRow) {
+
+    var simulatingNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.simulatedBy;
+    });
+
+    // A message not being simulated by any client can be cleaned up.
+    if (!simulatingNodeRow) {
+      return true;
+    }
+
     var destinationNodeRow = _.find(nodeRows, function (nodeRow) {
       return nodeRow.id === messageRow.toNodeID;
     });
 
-    // Messages with an invalid destination should be cleaned up.
-    if (!destinationNodeRow) {
-      return true;
-    }
+    // Messages with an invalid destination should also be cleaned up.
+    return !destinationNodeRow;
 
-    var goingToRouter = destinationNodeRow.type === NodeType.ROUTER;
-    var sourceNodeRow = _.find(nodeRows, function (nodeRow) {
-      return nodeRow.id === messageRow.fromNodeID;
-    });
-
-
-    // Messages to a router with an invalid source should be cleaned up,
-    // because there's probably nobody available to simulate the router.
-    if (goingToRouter && !sourceNodeRow) {
-      return true;
-    }
-
-    return false;
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));

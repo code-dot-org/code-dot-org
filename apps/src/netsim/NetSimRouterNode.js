@@ -1103,11 +1103,20 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
+  // Normally the recipient simulates a message.
+  // If this message is on loopback (i.e. to or from auto-dns) then
+  // the simulator of the original message has to simulate this one too.
+  var simulatingNode = destinationNodeID;
+  if (destinationNodeID === this.entityID) {
+    simulatingNode = message.simulatedBy;
+  }
+
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
       routerNodeID,
       destinationNodeID,
+      simulatingNode,
       message.payload,
       function (err, result) {
         this.log(message.payload);
@@ -1123,44 +1132,8 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
  * @private
  */
 NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
-  // Local simulation can't handle anything if it's not initialized.
-  if (!this.simulateForSender_) {
-    return false;
-  }
-
-  var packet, fromAddress, toAddress, simulateForAddress;
-  var routerNodeID = this.entityID;
-
-  // One extra responsibility in auto-DNS mode: Should handle messages from the
-  // auto-DNS to the router IF they are addressed to the local client.
-  if (this.dnsMode === DnsMode.AUTOMATIC) {
-
-    // Gather address info to confirm this packet's destination
-    packet = new Packet(this.packetSpec_, messageRow.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
-    simulateForAddress = this.getAddressForNodeID_(this.simulateForSender_);
-
-    var isOnRouterLoopback = messageRow.fromNodeID === routerNodeID &&
-        messageRow.toNodeID === routerNodeID;
-
-    var isBetweenLocalAndDns = (
-        fromAddress === simulateForAddress &&
-        toAddress === AUTO_DNS_RESERVED_ADDRESS
-        ) || (
-        fromAddress === AUTO_DNS_RESERVED_ADDRESS &&
-        toAddress === simulateForAddress
-        );
-
-    if (isOnRouterLoopback && isBetweenLocalAndDns) {
-      return true;
-    }
-  }
-
-  // Local simulation of router normally handles only the messages from the
-  // local client to the router.
-  return messageRow.fromNodeID === this.simulateForSender_ &&
-      messageRow.toNodeID === routerNodeID;
+  return this.simulateForSender_ &&
+      messageRow.simulatedBy === this.simulateForSender_;
 };
 
 /**
@@ -1307,6 +1280,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
       this.shard_,
       autoDnsNodeID,
       routerNodeID,
+      message.simulatedBy,
       responseBinary,
       onComplete);
 };

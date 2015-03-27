@@ -225,11 +225,15 @@ describe("NetSimShardCleaner", function () {
     var invalidNodeID = makeNodeWithExpiredHeartbeat(testShard);
 
     testShard.messageTable.create({
-      toNodeID: validNodeID
+      toNodeID: validNodeID,
+      fromNodeID: invalidNodeID,
+      simulatedBy: validNodeID
     }, function () {});
 
     testShard.messageTable.create({
-      toNodeID: invalidNodeID
+      toNodeID: invalidNodeID,
+      fromNodeID: validNodeID,
+      simulatedBy: validNodeID
     }, function () {});
 
     assertTableSize(testShard, 'heartbeatTable', 2);
@@ -249,19 +253,21 @@ describe("NetSimShardCleaner", function () {
     });
   });
 
-  it ("deletes messages headed to a router that are not from a valid client", function () {
+  it ("deletes messages that don't have a valid simulating client node", function () {
     var validNodeID = makeNodeWithHeartbeat(testShard);
     var invalidNodeID = makeNodeWithExpiredHeartbeat(testShard);
     var routerID = makeRouterWithHeartbeat(testShard);
 
     testShard.messageTable.create({
       toNodeID: routerID,
-      fromNodeID: validNodeID
+      fromNodeID: validNodeID,
+      simulatedBy: validNodeID
     }, function () {});
 
     testShard.messageTable.create({
       toNodeID: routerID,
-      fromNodeID: invalidNodeID
+      fromNodeID: invalidNodeID,
+      simulatedBy: invalidNodeID
     }, function () {});
 
     assertTableSize(testShard, 'heartbeatTable', 3);
