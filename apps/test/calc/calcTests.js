@@ -139,7 +139,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
 
     // compute: 1 + 2
     var userSet = new EquationSet();
-    userSet.addEquation_(new EquationSet(null, new ExpressionNode('+', [1, 2])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
