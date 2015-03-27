@@ -729,21 +729,18 @@ en:
         a secret password: a secret password
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        ' ': ' '
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds * 12
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        ' ': ' '
         rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
         rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds * seconds
         rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
         rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds * 16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        ' ': ' '
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds * 10 + 7
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
