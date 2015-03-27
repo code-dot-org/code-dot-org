@@ -9,10 +9,21 @@ var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
+var NodeType = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants').NodeType;
 
 var makeNode = function (shard) {
   var newNodeID;
   shard.nodeTable.create({}, function (err, node) {
+    newNodeID = node.id;
+  });
+  return newNodeID;
+};
+
+var makeRouter = function (shard) {
+  var newNodeID;
+  shard.nodeTable.create({
+    type: NodeType.ROUTER
+  }, function (err, node) {
     newNodeID = node.id;
   });
   return newNodeID;
@@ -41,6 +52,12 @@ var makeNodeWithHeartbeat = function (shard) {
 var makeNodeWithExpiredHeartbeat = function (shard) {
   var newNodeID = makeNode(shard);
   makeExpiredHeartbeat(shard, newNodeID);
+  return newNodeID;
+};
+
+var makeRouterWithHeartbeat = function (shard) {
+  var newNodeID = makeRouter(shard);
+  makeHeartbeat(shard, newNodeID);
   return newNodeID;
 };
 
@@ -229,6 +246,39 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'messageTable', 1);
     testShard.messageTable.readAll(function (err, rows) {
       assertEqual(rows[0].toNodeID, validNodeID);
+    });
+  });
+
+  it ("deletes messages headed to a router that are not from a valid client", function () {
+    var validNodeID = makeNodeWithHeartbeat(testShard);
+    var invalidNodeID = makeNodeWithExpiredHeartbeat(testShard);
+    var routerID = makeRouterWithHeartbeat(testShard);
+
+    testShard.messageTable.create({
+      toNodeID: routerID,
+      fromNodeID: validNodeID
+    }, function () {});
+
+    testShard.messageTable.create({
+      toNodeID: routerID,
+      fromNodeID: invalidNodeID
+    }, function () {});
+
+    assertTableSize(testShard, 'heartbeatTable', 3);
+    assertTableSize(testShard, 'nodeTable', 3);
+    assertTableSize(testShard, 'messageTable', 2);
+
+    cleaner.tick(); // First tick triggers cleaning and starts it
+    cleaner.tick(); // Second tick runs heartbeat cleanup
+    cleaner.tick(); // Third tick runs node cleanup
+    cleaner.tick(); // Fourth tick runs message cleanup
+
+    assertTableSize(testShard, 'heartbeatTable', 2);
+    assertTableSize(testShard, 'nodeTable', 2);
+    assertTableSize(testShard, 'messageTable', 1);
+    testShard.messageTable.readAll(function (err, rows) {
+      assertEqual(rows[0].toNodeID, routerID);
+      assertEqual(rows[0].fromNodeID, validNodeID);
     });
   });
 
