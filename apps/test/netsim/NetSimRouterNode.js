@@ -18,8 +18,10 @@ var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
 var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimMessage');
+var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
+var DnsMode = netsimConstants.DnsMode;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -28,6 +30,47 @@ describe("NetSimRouterNode", function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
 
     testShard = fakeShard();
+  });
+
+  it("has expected row structure and default values", function () {
+    var router = new NetSimRouterNode(testShard);
+    var row = router.buildRow_();
+
+    assertOwnProperty(row, 'dnsMode');
+    assertEqual(row.dnsMode, DnsMode.NONE);
+
+    assertOwnProperty(row, 'dnsNodeID');
+    assertEqual(row.dnsNodeID, undefined);
+
+    assertOwnProperty(row, 'bandwidth');
+    assertEqual(row.bandwidth, 'Infinity');
+  });
+
+  describe("constructing from a table row", function () {
+    var router;
+    var makeRouter = function (row) {
+      return new NetSimRouterNode(testShard, row);
+    };
+
+    it ("dnsMode", function () {
+      router = makeRouter({ dnsMode: DnsMode.AUTOMATIC });
+      assertEqual(DnsMode.AUTOMATIC, router.dnsMode);
+    });
+
+    it ("dnsNodeID", function () {
+      router = makeRouter({ dnsNodeID: 42 });
+      assertEqual(42, router.dnsNodeID);
+    });
+
+    it ("bandwidth", function () {
+      router = makeRouter({ bandwidth: 1024 });
+      assertEqual(1024, router.bandwidth);
+
+      // Special case: Bandwidth should be able to serialize in Infinity
+      // from the string 'Infinity' in the database.
+      router = makeRouter({ bandwidth: 'Infinity' });
+      assertEqual(Infinity, router.bandwidth);
+    });
   });
 
   describe("static method get", function () {
@@ -211,6 +254,9 @@ describe("NetSimRouterNode", function () {
       assertEqual(addressTable[0].isLocal, true);
       localClient.address = addressTable[0].address;
       remoteA.address = addressTable[1].address;
+
+      // Make sure router initial time is zero
+      router.tick({time: 0});
     });
 
     it ("ignores messages sent to itself from other clients", function () {
@@ -252,6 +298,11 @@ describe("NetSimRouterNode", function () {
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
       NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -266,6 +317,11 @@ describe("NetSimRouterNode", function () {
       }, 'messageBody');
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 0);
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -282,6 +338,11 @@ describe("NetSimRouterNode", function () {
       }, 'messageBody');
 
       NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+
+      // Router must tick to process messages; 1000ms is sufficient time for
+      // a short packet.
+      router.tick({time: 1000});
+
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 1);
 
@@ -294,6 +355,118 @@ describe("NetSimRouterNode", function () {
       });
       assertEqual(messages[0].fromNodeID, router.entityID);
       assertEqual(messages[0].toNodeID, remoteA.entityID);
+    });
+
+    describe("Router bandwidth limits", function () {
+      var fromNodeID, toNodeID, fromAddress, toAddress;
+
+      var sendMessageOfSize = function (messageSizeBits) {
+        var payload = encoder.concatenateBinary({
+          toAddress: intToBinary(toAddress, 4),
+          fromAddress: intToBinary(fromAddress, 4)
+        }, '0'.repeat(messageSizeBits - 8));
+
+        NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      };
+
+      beforeEach(function () {
+        fromNodeID = localClient.entityID;
+        toNodeID = router.entityID;
+        fromAddress = localClient.address;
+        toAddress = remoteA.address;
+
+        // Establish time baseline of zero
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 0);
+      });
+
+      it ("requires variable time to forward packets based on bandwidth", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Router detects message immediately, but does not send it until
+        // enough time has passed to send the message based on bandwidth
+        sendMessageOfSize(1008);
+
+        // Message still has not been sent at 1007ms
+        router.tick({time: 1007});
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At 1000bps, it should take 1008ms to send 1008 bits
+        router.tick({time: 1008});
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("respects bandwidth setting", function () {
+        // 0.1 bit / ms, so 10ms / bit
+        router.bandwidth = 100;
+
+        // This message should be sent at t=200
+        sendMessageOfSize(20);
+
+        // Message is sent at t=200
+        router.tick({time: 199});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 200});
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("routes packet on first tick if bandwidth is infinite", function () {
+        router.bandwidth = Infinity;
+
+        // Message is detected immediately, though that's not obvious here.
+        sendMessageOfSize(1008);
+
+        // At infinite bandwidth, router forwards message even though zero
+        // time has passed.
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("routes 'batches' of packets when multiple packets fit in the bandwidth", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Router should schedule these all as soon as they show up, for
+        // 40, 80 and 120 ms respectively (due to the 0.1 bit per ms rate)
+        sendMessageOfSize(40);
+        sendMessageOfSize(40);
+        sendMessageOfSize(40);
+
+        // On this tick, two messages should get forwarded because enough
+        // time has passed for them both to be sent given our current bandwidth.
+        router.tick({time: 80});
+        assertTableSize(testShard, 'logTable', 2);
+
+        // On this final tick, the third message should be sent
+        router.tick({time: 120});
+        assertTableSize(testShard, 'logTable', 3);
+      });
+
+      it ("is pessimistic when scheduling new packets", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Router 'starts sending' this message now, expected to finish
+        // at t=40
+        sendMessageOfSize(40);
+
+        // At t=30, we do schedule another message
+        // You might think this one is scheduled for t=80, but because
+        // we can't see partial progress from other clients we assume the
+        // worst and schedule it for t=110 (30 + 40 + 40)
+        router.tick({time: 30});
+        sendMessageOfSize(40);
+
+        // At t=40, the first message is sent
+        router.tick({time: 39});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 40});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // At t=110, the second message is sent
+        router.tick({time: 109});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 110});
+        assertTableSize(testShard, 'logTable', 2);
+      });
     });
   });
 

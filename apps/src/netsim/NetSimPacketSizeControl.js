@@ -71,7 +71,8 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
  */
 NetSimPacketSizeControl.prototype.render = function () {
   var renderedMarkup = $(markup({
-    minValue: this.minimumPacketSize_
+    minValue: this.minimumPacketSize_,
+    maxValue: i18n.unlimited()
   }));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_.find('.packet-size-slider').slider({
@@ -84,6 +85,11 @@ NetSimPacketSizeControl.prototype.render = function () {
   this.setPacketSize(this.maxPacketSize_);
 };
 
+/**
+ * @param {number} packetSize - up to Infinity
+ * @returns {number} a value the slider can handle
+ * @private
+ */
 NetSimPacketSizeControl.prototype.packetSizeToSliderValue_ = function (packetSize) {
   if (packetSize === Infinity) {
     return SLIDER_INFINITY_VALUE;
@@ -91,6 +97,11 @@ NetSimPacketSizeControl.prototype.packetSizeToSliderValue_ = function (packetSiz
   return packetSize;
 };
 
+/**
+ * @param {number} sliderValue - value from the slider control
+ * @returns {number} the packet size it maps to, up to Infinity
+ * @private
+ */
 NetSimPacketSizeControl.prototype.sliderValueToPacketSize_ = function (sliderValue) {
   if (sliderValue === SLIDER_INFINITY_VALUE) {
     return Infinity;
@@ -122,7 +133,17 @@ NetSimPacketSizeControl.prototype.setPacketSize = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
   rootDiv.find('.packet-size-slider').slider('option', 'value',
       this.packetSizeToSliderValue_(newPacketSize));
-  rootDiv.find('.packet_size_value').text(i18n.numBitsPerPacket({
-    x: newPacketSize
-  }));
+  rootDiv.find('.packet_size_value').text(this.getPacketSizeText(newPacketSize));
+};
+
+/**
+ * Get localized packet size description for the given packet size.
+ * @param {number} packetSize
+ * @returns {string}
+ */
+NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
+  if (packetSize === Infinity) {
+    return i18n.unlimited();
+  }
+  return i18n.numBitsPerPacket({ x: packetSize });
 };
