@@ -23,7 +23,7 @@ module Ops
         if current_user.try(:admin?)
           Cohort.all
         elsif current_user.try(:district_contact?)
-          current_user.districts_as_contact.collect(&:cohorts).flatten
+          current_user.districts_as_contact.map(&:cohorts).flatten
         else
           []
         end
