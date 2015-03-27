@@ -200,30 +200,6 @@
       document.getElementById("data").innerHTML += "    compression: " + compression + "%\n";
     }
 
-    // Recursively construct a self-referencing entry.
-    function fillOutSelfReference(str, dict, maxIndex) {
-
-      var nonascii = str.replace(new RegExp('[^' + SYMBOL_REGEX + ']', 'g'), '');
-      if (nonascii.length == 0) {
-        return str;
-      }
-
-      // For every nonascii character.
-      for (var i = 0; i < nonascii.length; i++) {
-        // Look it up in the dictionary.
-        var dictIndex = dictEntries.indexOf(nonascii.charAt(i));
-        if (dictIndex < maxIndex) {
-          // Replace the first occurrence of it in the string.
-          str = str.replace(nonascii.charAt(i), dict[dictIndex]);
-        }
-        else {
-          return str;
-        }
-      }
-      str = fillOutSelfReference(str, dict, maxIndex);
-      return str;
-    }
-
     function escapeRegExp(str) {
       return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     }
@@ -242,11 +218,10 @@
         editor.removeLineClass(line, 'wrap', 'dict-error');
         return rule;
       });
-      // Go backwards through dict because self-referencing entries should go first.
-      for (var i = validRules.length - 1; i >= 0; i--) {
+      for (var i = 0; i < validRules.length; i++) {
         if (validRules[i] != "") {
           // First compute any self referencing -- this is the string we'll look for in the poem.
-          var regex = new RegExp(escapeRegExp(fillOutSelfReference(validRules[i], validRules, i)), "gi");
+          var regex = new RegExp(escapeRegExp(validRules[i]), "gi");
           poemDisplay = poemDisplay.replace(regex, "" + dictEntries[i]);
         }
       }
