@@ -77,6 +77,7 @@
     }
     .CodeMirror-linenumber {
       color: #000;
+      text-align: center;
     }
     .CodeMirror {
       font-size: 14pt;
@@ -96,11 +97,26 @@
   </style>
   <script type="text/javascript">
     var FIRST_SYMBOL = 0x2600; // ☀
-    var MAX_DICT_ENTRIES = 255;
-    var SYMBOL_REGEX = '\\u' + FIRST_SYMBOL.toString(16) + '-\\u' + (FIRST_SYMBOL + MAX_DICT_ENTRIES).toString(16);
+    var LAST_SYMBOL = 0x3000;
+    var MAX_DICT_ENTRIES = 112;
+    var SYMBOL_REGEX = '\\u' + FIRST_SYMBOL.toString(16) + '-\\u' + LAST_SYMBOL.toString(16);
     var dictEntries = [];
+    var missingSymbolsMap = {
+      0x2614: 0x2702,
+      0x2615: 0x2706,
+      0x2618: 0x2708,
+      0x2619: 0x2709,
+      0x2626: 0x270c,
+      0x2627: 0x270e,
+      0x2628: 0x2714,
+      0x2629: 0x2718,
+      0x262a: 0x2747,
+      0x262b: 0x2749,
+      0x262c: 0x2756,
+      0x262d: 0x2761
+    };
     for (var i = FIRST_SYMBOL; i < FIRST_SYMBOL + MAX_DICT_ENTRIES; i++) {
-      dictEntries.push(String.fromCharCode(i));
+      dictEntries.push(String.fromCharCode(missingSymbolsMap[i] || i));
     }
     var poemsList = [
         "Pitter_patter_pitter_patter_listen_to_the_rain_pitter_patter_pitter_patter_on_the_window_pane",
@@ -219,7 +235,7 @@
       var dict = editor.getValue().split("\n");
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
-        if (new RegExp('[\\u' + (FIRST_SYMBOL + index).toString(16) + '-\\u' + (FIRST_SYMBOL + MAX_DICT_ENTRIES).toString(16) + ']').test(rule)) {
+        if (new RegExp('[\\u' + (FIRST_SYMBOL + index).toString(16) + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
           editor.addLineClass(line, 'wrap', 'dict-error');
           return '';
         }
@@ -235,7 +251,7 @@
           poemCalc = poemCalc.replace(new RegExp(strToLookFor, "gi"), "#");
         }
       }
-      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + SYMBOL_REGEX + ']', "g"), "<mark>$&</mark>");
+      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
       document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
       calculateData();
     }
@@ -285,7 +301,7 @@
       lineWrapping: true,
       firstLineNumber: FIRST_SYMBOL,
       lineNumberFormatter: function (line) {
-        return String.fromCharCode(line);
+        return String.fromCharCode(missingSymbolsMap[line] || line);
       }
     });
     editor.on("change", compress);
