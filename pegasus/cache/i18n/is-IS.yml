@@ -18,7 +18,8 @@
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra
     tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Styddu okkar með því að skrá nafn þitt. Slástu í
+    hóp með # öðrum.'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -116,8 +117,9 @@
   learn_classes: Finna námskeið nálægt þér
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt
+    úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast
+    nánar.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Eftir Klukkustund kóðunar
   what_gender: Ertu stelpa eða strákur?
@@ -154,32 +156,53 @@
   studiobar_donate_body: Eitt barn lærir fyrir hvern dollar sem þú gefur
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að
+    læra Klukkustund kóðunar&rdquo; \nMalala\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Það er aldrei of seint að læra&rdquo;
+    Susan, aðalframkvæmdastjóri YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
+    Barack Obama, forseti Bandaríkjanna
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Skilningur á tölvunarfræði er að verða sífellt nauðsynlegri...&rdquo;
+    Sheryl, framkvæmdastjóri hjá Facebook
   homepage_slot_text_hoc: Klukkustund kóðunar
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Allt kennsluefni okkar
   homepage_slot_text_course4: Námskeið 4
   homepage_slot_text_shop: Verslun
   homepage_slot_text_flappy: Flappy kóði
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Horfa á myndskeiðið
+  homepage_action_text_teachervideo: Horfa á myndskeiðið
+  homepage_action_text_learn: Byrjaðu að læra í dag
+  homepage_action_text_signpetition: Skrifa undir áskorunina
+  homepage_signpetition_dropdown: Skrifa undir áskorun okkar &#x25BE;
+  homepage_slot_text_title_hoc: Klukkustund kóðunar
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Nemendur
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Styrkja
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -382,8 +405,8 @@
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: ekki byrjað
+  dashboard_progress_in_progress: í vinnslu
   dashboard_progress_not_completed: ólokið
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið

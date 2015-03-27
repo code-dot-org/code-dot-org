@@ -23444,6 +23444,7 @@ Blockly.CodeGenerator.prototype.addReservedWords = function(words) {
 goog.provide("Blockly.BlockSpaceEditor");
 goog.require("Blockly.BlockSpace");
 goog.require("goog.array");
+goog.require("goog.style");
 Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   if(opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics
@@ -23621,21 +23622,23 @@ Blockly.BlockSpaceEditor.prototype.svgSize = function() {
 };
 Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if(style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) + parseInt(style.borderRightWidth, 10)
+  var svgStyle = window.getComputedStyle(svg);
+  var svgBorderWidth = 0;
+  if(svgStyle) {
+    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) + parseInt(svgStyle.borderRightWidth, 10)
   }
-  var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
-  if(svg.cachedWidth_ != width) {
-    svg.setAttribute("width", width + "px");
-    svg.cachedWidth_ = width
+  var containerDiv = svg.parentNode;
+  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
+  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement) - goog.style.getPageOffsetTop(containerDiv);
+  var svgWidth = containerDiv.clientWidth - svgBorderWidth;
+  var svgHeight = containerDiv.clientHeight - headerHeight;
+  if(svg.cachedWidth_ != svgWidth) {
+    svg.setAttribute("width", svgWidth + "px");
+    svg.cachedWidth_ = svgWidth
   }
-  if(svg.cachedHeight_ != height) {
-    svg.setAttribute("height", height + "px");
-    svg.cachedHeight_ = height
+  if(svg.cachedHeight_ != svgHeight) {
+    svg.setAttribute("height", svgHeight + "px");
+    svg.cachedHeight_ = svgHeight
   }
   if(this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize()
