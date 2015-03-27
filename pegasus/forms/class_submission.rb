@@ -149,7 +149,7 @@ class ClassSubmission
     data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
 
     # Create a case-insensitive version of the name for sorting.
-    data['school_name_sort_s'] = data['school_name_sort_s'].downcase
+    data['school_name_sort_s'] = data['school_name_s'].downcase
 
     data
   end
