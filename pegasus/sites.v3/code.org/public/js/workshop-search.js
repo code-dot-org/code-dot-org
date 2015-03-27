@@ -104,7 +104,7 @@ function addGeocomplete() {
       var bounds = gmap.getBounds();
       var marker_found = false;
 
-      while ((!marker_found || gmap.getZoom() > 11) && gmap.getZoom() > 4) {
+      while (!marker_found && gmap.getZoom() > 4) {
         $.each(markers, function(index, marker) {
           if( bounds.contains(marker.getPosition()) ){
             marker_found = true;
