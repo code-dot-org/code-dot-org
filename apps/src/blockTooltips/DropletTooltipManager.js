@@ -4,20 +4,6 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
  * @fileoverview Manages a store of known blocks and tooltips
  */
 
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-/* global $ */
-'use strict';
-
 /**
  * Store for finding tooltips for blocks
  * @constructor
@@ -38,7 +24,10 @@ var DEFAULT_TOOLTIP_CONFIG = {
   contentAsHTML: true,
   functionReady: repositionLastTooltip,
   theme: 'droplet-block-tooltipster'
-  // hideOnClick: true // Does not work with the droplet hover overlay (passing through click events?)
+  /**
+   * hideOnClick does not work with the droplet hover overlay
+   * (passing through click events?)
+   */
 };
 
 /**
