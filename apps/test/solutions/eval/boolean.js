@@ -43,6 +43,18 @@ module.exports = {
         ARG1: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 }),
         ARG2: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 2 })
       }, null),
+    },
+    {
+      description: "question marks",
+      expected: {
+        result: false,
+        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
+      },
+      // 1 > ???
+      xml: blockUtils.mathBlockXml('functional_greater_than', {
+        ARG1: blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1 }),
+        ARG2: blockUtils.mathBlockXml('functional_math_number', null, { NUM: '???' })
+      }, null),
     }
   ]
 };
