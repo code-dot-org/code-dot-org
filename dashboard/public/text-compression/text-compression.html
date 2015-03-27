@@ -235,7 +235,7 @@
       var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
-        if (new RegExp('[\\u' + (FIRST_SYMBOL + index).toString(16) + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
+        if (new RegExp('[' + dictEntries[index] + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
           editor.addLineClass(line, 'wrap', 'dict-error');
           return '';
         }
