@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({198:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({206:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":190,"./levels":197,"./skins":202,"./studio":203}],203:[function(require,module,exports){
+},{"../appMain":5,"./blocks":198,"./levels":205,"./skins":210,"./studio":211}],211:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -2940,7 +2940,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":237,"../../locale/current/studio":243,"../StudioApp":4,"../canvg/StackBlur.js":43,"../canvg/canvg.js":44,"../canvg/rgbcolor.js":45,"../canvg/svg_todataurl":46,"../codegen":48,"../constants":50,"../dom":51,"../dropletUtils":52,"../skins":186,"../templates/page.html":211,"../utils":232,"../xml":233,"./api":188,"./bigGameLogic":189,"./blocks":190,"./collidable":191,"./constants":192,"./controls.html":193,"./dropletConfig":195,"./extraControlRows.html":196,"./projectile":199,"./rocketHeightLogic":200,"./samBatLogic":201,"./visualization.html":204}],204:[function(require,module,exports){
+},{"../../locale/current/common":245,"../../locale/current/studio":251,"../StudioApp":4,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":194,"../templates/page.html":219,"../utils":240,"../xml":241,"./api":196,"./bigGameLogic":197,"./blocks":198,"./collidable":199,"./constants":200,"./controls.html":201,"./dropletConfig":203,"./extraControlRows.html":204,"./projectile":207,"./rocketHeightLogic":208,"./samBatLogic":209,"./visualization.html":212}],212:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2960,7 +2960,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],201:[function(require,module,exports){
+},{"ejs":261}],209:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3084,7 +3084,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":48,"../constants":50,"./api":188,"./constants":192,"./customGameLogic":194}],200:[function(require,module,exports){
+},{"../codegen":53,"../constants":55,"./api":196,"./constants":200,"./customGameLogic":202}],208:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3137,7 +3137,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 
 module.exports = RocketHeightLogic;
 
-},{"../codegen":48,"./api":188,"./constants":192,"./customGameLogic":194}],199:[function(require,module,exports){
+},{"../codegen":53,"./api":196,"./constants":200,"./customGameLogic":202}],207:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3311,7 +3311,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":191,"./constants":192}],202:[function(require,module,exports){
+},{"./collidable":199,"./constants":200}],210:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3680,7 +3680,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":243,"../skins":186,"./constants":192}],197:[function(require,module,exports){
+},{"../../locale/current/studio":251,"../skins":194,"./constants":200}],205:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5187,7 +5187,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":243,"../block_utils":20,"../utils":232,"./constants":192}],196:[function(require,module,exports){
+},{"../../locale/current/studio":251,"../block_utils":25,"../utils":240,"./constants":200}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5207,21 +5207,21 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":237,"ejs":253}],195:[function(require,module,exports){
+},{"../../locale/current/common":245,"ejs":261}],203:[function(require,module,exports){
 var msg = require('../../locale/current/studio');
 
 module.exports.blocks = [
-  {'func': 'setSprite', 'title': msg.setSpriteTooltip(), 'category': 'Play Lab', 'params': ["0", "'cat'"] },
-  {'func': 'setBackground', 'title': msg.setBackgroundTooltip(), 'category': 'Play Lab', 'params': ["'night'"] },
-  {'func': 'move', 'title': msg.moveTooltip(), 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'playSound', 'title': msg.playSoundTooltip(), 'category': 'Play Lab', 'params': ["'slap'"] },
-  {'func': 'changeScore', 'title': msg.changeScoreTooltip(), 'category': 'Play Lab', 'params': ["1"] },
-  {'func': 'setSpritePosition', 'title': msg.setSpritePositionTooltip(), 'category': 'Play Lab', 'params': ["0", "7"] },
-  {'func': 'setSpriteSpeed', 'title': msg.setSpriteSpeedTooltip(), 'category': 'Play Lab', 'params': ["0", "8"] },
-  {'func': 'setSpriteEmotion', 'title': msg.setSpriteEmotionTooltip(), 'category': 'Play Lab', 'params': ["0", "1"] },
-  {'func': 'throwProjectile', 'title': msg.throwTooltip(), 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
-  {'func': 'vanish', 'title': msg.vanishTooltip(), 'category': 'Play Lab', 'params': ["0"] },
-  {'func': 'onEvent', 'title': msg.onEventTooltip(), 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
+  {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
+  {'func': 'setBackground', 'category': 'Play Lab', 'params': ["'night'"] },
+  {'func': 'move', 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'playSound', 'category': 'Play Lab', 'params': ["'slap'"] },
+  {'func': 'changeScore', 'category': 'Play Lab', 'params': ["1"] },
+  {'func': 'setSpritePosition', 'category': 'Play Lab', 'params': ["0", "7"] },
+  {'func': 'setSpriteSpeed', 'category': 'Play Lab', 'params': ["0", "8"] },
+  {'func': 'setSpriteEmotion', 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'throwProjectile', 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
+  {'func': 'vanish', 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'onEvent', 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
 ];
 
 module.exports.categories = {
@@ -5231,7 +5231,7 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/studio":243}],193:[function(require,module,exports){
+},{"../../locale/current/studio":251}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5251,7 +5251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":237,"ejs":253}],191:[function(require,module,exports){
+},{"../../locale/current/common":245,"ejs":261}],199:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5357,7 +5357,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":192}],190:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":200}],198:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7382,9 +7382,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":237,"../../locale/current/studio":243,"../StudioApp":4,"../codegen":48,"../sharedFunctionalBlocks":185,"../utils":232,"./constants":192}],243:[function(require,module,exports){
+},{"../../locale/current/common":245,"../../locale/current/studio":251,"../StudioApp":4,"../codegen":53,"../sharedFunctionalBlocks":193,"../utils":240,"./constants":200}],251:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],189:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7603,7 +7603,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":48,"./api":188,"./constants":192,"./customGameLogic":194}],194:[function(require,module,exports){
+},{"../codegen":53,"./api":196,"./constants":200,"./customGameLogic":202}],202:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7672,7 +7672,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":48,"./api":188,"./constants":192}],188:[function(require,module,exports){
+},{"../codegen":53,"./api":196,"./constants":200}],196:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7836,7 +7836,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":192}],192:[function(require,module,exports){
+},{"./constants":200}],200:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8013,7 +8013,7 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],46:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -8236,7 +8236,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],45:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -8526,7 +8526,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],43:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -9138,4 +9138,4 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}]},{},[198]);
+},{}]},{},[206]);

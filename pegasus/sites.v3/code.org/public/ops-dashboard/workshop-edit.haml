@@ -33,6 +33,10 @@ template: none
 %select.form-control{'ng-model' => 'workshop.cohort_id', 'ng-disabled' => '!workshop.program_type'}
   %option{'ng-repeat' => 'cohort in cohorts | matchingProgramType:workshop.program_type', 'value' => '{{cohort.id}}'}
     {{cohort.name}}
+%br
+%button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
+%p#save-confirmation{style:'display:none'}
+  Saved!
 %hr
 %h2{'ng-hide' => 'workshopSegments.length <= 0'}
   Workshop segments
@@ -46,14 +50,15 @@ template: none
   %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);'}
     Delete Segment
   %hr
-%h2
-  Add a new segment
-%div
-  Segment Start
-  %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-  Segment End
-  %input{type:'datetime-local', 'ng-model' => 'segment.end'}
-  %br
-  %br
-%button{'ng-click' => 'save(workshop, segment)'}
-  Save Workshop
+%div{'ng-show' => 'workshop.id'}
+  %h2
+    Add a new segment
+  %div
+    Segment Start
+    %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    Segment End
+    %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %br
+    %br
+  %button{'ng-click' => 'saveSegment(segment)'}
+    Save Segment

@@ -4,6 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
@@ -655,6 +656,10 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
+  });
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -668,7 +673,8 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
@@ -801,26 +807,185 @@ Applab.init = function(config) {
     if (codeModeButton) {
       dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
     }
-    var designModeAddButton = document.getElementById('designModeAddButton');
-    if (designModeAddButton) {
-      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
-    }
-    var designModeAddInput = document.getElementById('designModeAddInput');
-    if (designModeAddInput) {
-      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
-    }
-    var designModeAddLabel = document.getElementById('designModeAddLabel');
-    if (designModeAddLabel) {
-      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
-    }
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
     }
 
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  for (var i = Applab.nextElementIdMap[prefix] || 1;
+       divApplab.find("#" + prefix + i).length !== 0;
+       i++) {
+    // repeat until we find an unused id
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -891,6 +1056,8 @@ studioApp.reset = function(first) {
   if (Applab.levelHtml) {
     divApplab.innerHTML = Applab.levelHtml;
   }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
 
   // Reset goal successState:
   if (level.goal) {
@@ -1291,33 +1458,11 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
-  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
 };
 
-Applab.onDesignModeAddButton = function() {
-  Applab.levelHtml += "<button>Button</button>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddInput = function() {
-  Applab.levelHtml += "<input>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddLabel = function() {
-  Applab.levelHtml += "<label>text</label>";
-  Applab.updateLevelHtml();
-};
-
 Applab.onDesignModeClear = function() {
-  Applab.levelHtml = "";
-  Applab.updateLevelHtml();
-};
-
-Applab.updateLevelHtml = function() {
-  var divApplab = document.getElementById('divApplab');
-  divApplab.innerHTML = Applab.levelHtml;
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
 Applab.toggleDesignMode = function(enable) {

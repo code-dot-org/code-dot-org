@@ -1,6 +1,6 @@
 ---
-title: Cohort 2 Locations
-nav: pd3_nav
+title: 2015-2016 Professional Development Locations
+nav: pd2_nav
 ---
 <a id="top"></a>
 
@@ -8,9 +8,9 @@ nav: pd3_nav
 
 ## Click on your location for more information. ##
 
-[Atlanta, GA](/educate/pd/2/atlanta)
-<br />
-[Baltimore, MD](/educate/pd/2/baltimore)
+
+
+[Atlanta, GA](/educate/pd/15-16/atlanta)
 <br />
 [Boston, MA](/educate/pd/2/boston)
 <br />
