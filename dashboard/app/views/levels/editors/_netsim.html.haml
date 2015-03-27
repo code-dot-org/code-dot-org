@@ -75,6 +75,18 @@
   :javascript
       codeMirror('default_enabled_encodings', 'javascript');
 
+%h3 Router Tab
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_router_bandwidth_control
+      %td= f.label :show_router_bandwidth_control, 'Show router bandwidth control'
+      %td Whether the student can change the max bandwidth of the router in the simulation.
+.field
+  = f.label :default_router_bandwidth
+  %p The initial maximum bandwidth of the router, given in bits per second.  The control on the router tab snaps to powers of two, so it's probably ideal to give a power of two here.  Can also use "Infinity".
+  = f.text_field :default_router_bandwidth, placeholder: 'Bandwidth in bits per second, e.g. "1024" or "Infinity".'
+
 %h3 DNS Tab
 .field
   %table.checkboxes

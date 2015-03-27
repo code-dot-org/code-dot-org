@@ -1,0 +1,31 @@
+<div id="designModeBox" width="100%" style="display:none;">
+  <% /* contains temporary unlocalized strings */ %>
+  Welcome to Design mode! Under construction.<br>
+  Drag the elements below into your app, then press 'Run' to save. Press 'Clear' to start over.<br>
+  <table>
+    <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+    <tr>
+      <td><h3>Elements</h3></td>
+      <td><h3>Properties</h3></td>
+    </tr>
+    <tr>
+      <td>
+        <div id="design-elements">
+          <div data-element-type="button" class="new-design-element">button</div>
+          <div data-element-type="label" class="new-design-element">label</div>
+          <div data-element-type="input" class="new-design-element">input</div>
+          <button id="designModeClear" class="share">Clear</button><br>
+        </div>
+      </td>
+      <td>
+        <div id="design-properties">
+          <%- designProperties %>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>

@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var netsimUtils = require('./netsimUtils');
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimLogger = require('./NetSimLogger');
 var markup = require('./NetSimLobby.html');
 var NodeType = require('./netsimConstants').NodeType;
@@ -181,7 +181,7 @@ NetSimLobby.prototype.onShardChange_= function (newShard) {
  */
 NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
   // Refresh lobby listing.
-  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
   this.refreshLobbyList_(nodes);
 };
 

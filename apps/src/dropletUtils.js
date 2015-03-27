@@ -1,5 +1,21 @@
 var utils = require('./utils');
 
+/**
+ * @name DropletBlock
+ * @description Definition of a block to be used in Droplet
+ * @property {String} func identifying the function this block runs
+ * @property {Object} parent object within which this function is defined as a property, keyed by the func name
+ * @property {String} category category within which to place the block
+ * @property {String} type type of the block (e.g. value)
+ */
+
+/**
+ * @name DropletConfig
+ * @description Configuration information for Droplet
+ * @property {DropletBlock[]} blocks list of blocks
+ * @property {Object} categories configuration of categories within which to place blocks
+ */
+
 exports.randomNumber = function (min, max) {
   if (typeof max === 'undefined') {
     // If only one parameter is specified, use it as the max with zero as min:
@@ -14,12 +30,18 @@ exports.getTime = function() {
   return (new Date()).getTime();
 };
 
+/**
+ * @type {DropletBlock[]}
+ */
 exports.dropletGlobalConfigBlocks = [
   {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
 ];
 
+/**
+ * @type {DropletBlock[]}
+ */
 exports.dropletBuiltinConfigBlocks = [
   {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
   {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
@@ -27,47 +49,50 @@ exports.dropletBuiltinConfigBlocks = [
   {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
 ];
 
+/**
+ * @type {DropletConfig|*}}
+ */
 var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'title': 'Do something multiple times', 'category': 'Control' },
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'title': 'Do something only if a condition is true', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'title': 'Do something if a condition is true, otherwise do something else', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'title': 'Repeat something while a condition is true', 'category': 'Control' },
-  {'func': 'getTime', 'block': 'getTime()', 'title': 'Get the current time in milliseconds', 'category': 'Control', type: 'value' },
+  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
 
   // Math
-  {'func': 'addOperator', 'block': '__ + __', 'title': 'Add two numbers', 'category': 'Math' },
-  {'func': 'subtractOperator', 'block': '__ - __', 'title': 'Subtract two numbers', 'category': 'Math' },
-  {'func': 'multiplyOperator', 'block': '__ * __', 'title': 'Multiply two numbers', 'category': 'Math' },
-  {'func': 'divideOperator', 'block': '__ / __', 'title': 'Divide two numbers', 'category': 'Math' },
-  {'func': 'equalityOperator', 'block': '__ == __', 'title': 'Test for equality', 'category': 'Math' },
-  {'func': 'inequalityOperator', 'block': '__ != __', 'title': 'Test for inequality', 'category': 'Math' },
-  {'func': 'greaterThanOperator', 'block': '__ > __', 'title': 'Compare two numbers', 'category': 'Math' },
-  {'func': 'lessThanOperator', 'block': '__ < __', 'title': 'Compare two numbers', 'category': 'Math' },
-  {'func': 'andOperator', 'block': '__ && __', 'title': 'Logical AND of two booleans', 'category': 'Math' },
-  {'func': 'orOperator', 'block': '__ || __', 'title': 'Logical OR of two booleans', 'category': 'Math' },
-  {'func': 'notOperator', 'block': '!__', 'title': 'Logical NOT of a boolean', 'category': 'Math' },
-  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'title': 'Get a random number between 0 and the specified maximum value', 'category': 'Math' },
-  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'title': 'Get a random number between the specified minimum and maximum values', 'category': 'Math' },
-  {'func': 'mathRound', 'block': 'Math.round(__)', 'title': 'Round to the nearest integer', 'category': 'Math' },
-  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'title': 'Absolute value', 'category': 'Math' },
-  {'func': 'mathMax', 'block': 'Math.max(__)', 'title': 'Maximum value', 'category': 'Math' },
-  {'func': 'mathMin', 'block': 'Math.min(__)', 'title': 'Minimum value', 'category': 'Math' },
+  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
+  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
+  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
+  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
+  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
+  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
+  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
+  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
+  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
+  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
+  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
+  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
+  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
+  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
+  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
+  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
+  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
 
   // Variables
-  {'func': 'declareAssign_x', 'block': 'var x = __;', 'title': 'Create a variable for the first time', 'category': 'Variables' },
-  {'func': 'assign_x', 'block': 'x = __;', 'title': 'Reassign a variable', 'category': 'Variables' },
-  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'title': 'Create a variable and initialize it as an array', 'category': 'Variables' },
-  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'title': 'Create a variable and assign it a value by displaying a prompt', 'category': 'Variables' },
+  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
+  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
+  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
+  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
 
   // Functions
-  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'title': 'Create a function without an argument', 'category': 'Functions' },
-  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'title': 'Create a function with an argument', 'category': 'Functions' },
-  {'func': 'callMyFunction', 'block': 'myFunction()', 'title': 'Use a function without an argument', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'title': 'Use a function with argument', 'category': 'Functions' },
-  {'func': 'return', 'block': 'return __;', 'title': 'Return a value from a function', 'category': 'Functions' },
+  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
+  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
+  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
+  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
 ];
 
 standardConfig.categories = {
@@ -93,7 +118,11 @@ standardConfig.categories = {
   },
 };
 
-
+/**
+ * @param codeFunctions
+ * @param {DropletConfig} dropletConfig
+ * @returns {Array}
+ */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
   var merged = [];
 
@@ -142,6 +171,10 @@ function mergeCategoriesWithConfig(dropletConfig) {
 
 /**
  * Generate code aliases in Javascript based on some level data.
+ * @param {DropletConfig} dropletConfig
+ * @param {String} parentObjName string reference to object upon which func is
+ *  a property
+ * @returns {String} code
  */
 exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   var code = '';
@@ -190,9 +223,14 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
       }
       block += ")";
     }
+
+    /**
+     * Here we set the title attribute to the function shortname,
+     * this is later used as a key for function documentation and tooltips
+     */
     var blockPair = {
       block: block,
-      title: cf.title || cf.func
+      title: cf.func
     };
     mergedCategories[cf.category].blocks.push(blockPair);
   }
@@ -264,6 +302,12 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
   }
 }
 
+function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
+  Object.keys(modeOptions.functions).forEach(function (funcName) {
+    modeOptions.functions[funcName].title = funcName;
+  });
+}
+
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
@@ -276,6 +320,22 @@ exports.generateDropletModeOptions = function (dropletConfig) {
   populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
   populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
 
+  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+
   return modeOptions;
 };
 
+/**
+ * Returns a set of all blocks
+ * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @returns {DropletBlock[]} a list of all available Droplet blocks,
+ *      including the given config's blocks
+ */
+exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+  var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
+  var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  return exports.dropletGlobalConfigBlocks
+    .concat(exports.dropletBuiltinConfigBlocks)
+    .concat(standardConfig.blocks)
+    .concat(configuredBlocks);
+};
