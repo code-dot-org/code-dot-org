@@ -173,10 +173,11 @@ gulp.task('lint', function() {
 gulp.task('test', ['lint', 'mochaTest']);
 
 gulp.task('mochaTest', function() {
+  var which = require('npm-which')(__dirname).sync;
   var mochify = require('mochify');
   mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
     reporter : 'spec',
     timeout: 10000,
-    phantomjs: "lib/phantomjs/phantomjs"
+    phantomjs: which('phantomjs')
   }).bundle();
 });
