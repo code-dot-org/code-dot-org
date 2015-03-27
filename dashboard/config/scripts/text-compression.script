@@ -2,4 +2,5 @@ title 'Text Compression'
 description "Compress text by identifying repeated patterns."
 
 stage 'Text Compression'
+level 'Text Compression Peter Piper'
 level 'Text Compression 1'

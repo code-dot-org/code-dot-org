@@ -148,6 +148,7 @@
         selectedPoem = poemSelect.selectedIndex;
         setupPoemWithText(poemsList[selectedPoem]);
       }
+      compress();
     }
 
     function addOption(text) {
@@ -243,7 +244,7 @@
 <body>
   <div id="widgetTop">
     <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
-    <div>Choose a poem: <select id="poemsList" onChange="init();"></select></div>
+    <div id="choosePoem">Choose a poem: <select id="poemsList" onChange="init();"></select></div>
     <div class="widgetLeftHeader">Compressed:</div>
     <div class="widgetRightHeader">Dictionary:</div>
   </div>
@@ -266,7 +267,15 @@
 
     // Level builder settings
     if (options.instructions) {
-      $('$widgetInstructions').text(options.instructions);
+      $('#widgetInstructions').text(options.instructions);
+    }
+    if (options.poems) {
+      try {
+        poemsList = JSON.parse(options.poems);
+      } catch (e) { }
+    }
+    if (poemsList.length === 1) {
+      $('#choosePoem').hide();
     }
     $dictionary.val(options.dictionary);
 
