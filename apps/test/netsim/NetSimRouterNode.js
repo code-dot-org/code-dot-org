@@ -11,6 +11,7 @@ var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
+var _ = require(testUtils.buildPath('lodash'));
 
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
@@ -21,7 +22,9 @@ var NetSimMessage = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimM
 var netsimConstants = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants');
 var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataConverters');
 var intToBinary = dataConverters.intToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -206,11 +209,30 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("message routing rules", function () {
-    var router, localClient, remoteA, encoder;
+    var packetHeaderSpec, router, localClient, remoteA, encoder;
+
+    var getRows = function (shard, table) {
+      var rows;
+      testShard.messageTable.readAll(function (err, result) {
+        rows = result;
+      });
+      return rows;
+    };
+
+    var assertFirstMessageProperty = function (propertyName, expectedValue) {
+      var messages = getRows(testShard, 'messageTable');
+      if (messages.length === 0) {
+        throw new Error("No rows in message table, unable to check first message.");
+      }
+
+      assert(_.isEqual(messages[0][propertyName], expectedValue),
+          "Expected first message." + propertyName + " to be " +
+          expectedValue + ", but got " + messages[0][propertyName]);
+    };
 
     beforeEach(function () {
       // Spec reversed in test vs production to show that it's flexible
-      var packetHeaderSpec = [
+      packetHeaderSpec = [
         {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
         {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
@@ -238,6 +260,7 @@ describe("NetSimRouterNode", function () {
       NetSimWire.create(testShard, localClient.entityID, router.entityID, function(e, w) {
         wire = w;
       });
+      wire.localHostname = localClient.getHostname();
       wire.localAddress = 1;
       wire.remoteAddress = 0;
       wire.update();
@@ -245,6 +268,7 @@ describe("NetSimRouterNode", function () {
       NetSimWire.create(testShard, remoteA.entityID, router.entityID, function (e, w) {
         wire = w;
       });
+      wire.localHostname = remoteA.getHostname();
       wire.localAddress = 2;
       wire.remoteAddress = 0;
       wire.update();
@@ -262,34 +286,20 @@ describe("NetSimRouterNode", function () {
     it ("ignores messages sent to itself from other clients", function () {
       var from = remoteA.entityID;
       var to = router.entityID;
-      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
       assertTableSize(testShard, 'logTable', 0);
-
-      var messages;
-      testShard.messageTable.readAll(function (err, rows) {
-        messages = rows.map(function (row) {
-          return new NetSimMessage(testShard, row);
-        });
-      });
-      assertEqual(messages[0].fromNodeID, from);
-      assertEqual(messages[0].toNodeID, to);
+      assertFirstMessageProperty('fromNodeID', from);
+      assertFirstMessageProperty('toNodeID', to);
     });
 
     it ("ignores messages sent to others", function () {
       var from = localClient.entityID;
       var to = remoteA.entityID;
-      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
       assertTableSize(testShard, 'messageTable', 1);
       assertTableSize(testShard, 'logTable', 0);
-
-      var messages;
-      testShard.messageTable.readAll(function (err, rows) {
-        messages = rows.map(function (row) {
-          return new NetSimMessage(testShard, row);
-        });
-      });
-      assertEqual(messages[0].fromNodeID, from);
-      assertEqual(messages[0].toNodeID, to);
+      assertFirstMessageProperty('fromNodeID', from);
+      assertFirstMessageProperty('toNodeID', to);
     });
 
     it ("does not forward malformed packets", function () {
@@ -297,7 +307,7 @@ describe("NetSimRouterNode", function () {
       var to = router.entityID;
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      NetSimMessage.send(testShard, from, to, 'garbage', function () {});
+      NetSimMessage.send(testShard, from, to, from, 'garbage', function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
@@ -316,7 +326,8 @@ describe("NetSimRouterNode", function () {
         fromAddress: '1111'
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+          function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
@@ -337,7 +348,8 @@ describe("NetSimRouterNode", function () {
         fromAddress: intToBinary(fromAddress, 4)
       }, 'messageBody');
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      NetSimMessage.send(testShard, fromNodeID, toNodeID,fromNodeID, payload,
+          function () {});
 
       // Router must tick to process messages; 1000ms is sufficient time for
       // a short packet.
@@ -347,14 +359,8 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 1);
 
       // Verify that message from/to node IDs are correct
-      var messages;
-      testShard.messageTable.readAll(function (err, rows) {
-        messages = rows.map(function (row) {
-          return new NetSimMessage(testShard, row);
-        });
-      });
-      assertEqual(messages[0].fromNodeID, router.entityID);
-      assertEqual(messages[0].toNodeID, remoteA.entityID);
+      assertFirstMessageProperty('fromNodeID', router.entityID);
+      assertFirstMessageProperty('toNodeID', remoteA.entityID);
     });
 
     describe("Router bandwidth limits", function () {
@@ -366,7 +372,8 @@ describe("NetSimRouterNode", function () {
           fromAddress: intToBinary(fromAddress, 4)
         }, '0'.repeat(messageSizeBits - 8));
 
-        NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+        NetSimMessage.send(testShard, fromNodeID, toNodeID, fromNodeID, payload,
+            function () {});
       };
 
       beforeEach(function () {
@@ -468,6 +475,185 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 2);
       });
     });
-  });
 
+    describe("Auto-DNS behavior", function () {
+      // Reserved auto-dns address, for now.
+      var autoDnsAddress = 15;
+
+      var assertFirstMessageHeader = function (headerType, expectedValue) {
+        var messages = getRows(testShard, 'messageTable');
+        if (messages.length === 0) {
+          throw new Error("No rows in message table, unable to check first message.");
+        }
+
+        var headerValue = encoder.getHeaderAsInt(headerType, messages[0].payload);
+
+        assert(_.isEqual(headerValue, expectedValue), "Expected first message " +
+            headerType + " header to be " + expectedValue + ", but got " +
+            headerValue);
+      };
+
+      var assertFirstMessageAsciiBody = function (expectedValue) {
+        var messages = getRows(testShard, 'messageTable');
+        if (messages.length === 0) {
+          throw new Error("No rows in message table, unable to check first message.");
+        }
+
+        var bodyAscii = encoder.getBodyAsAscii(messages[0].payload, BITS_PER_BYTE);
+
+        assert(_.isEqual(bodyAscii, expectedValue), "Expected first message " +
+            "body to be '" + expectedValue + "', but got '" + bodyAscii + "'");
+      };
+
+      var sendToAutoDns = function (fromNode, asciiPayload) {
+        var payload = encoder.concatenateBinary({
+          toAddress: intToBinary(autoDnsAddress, 4),
+          fromAddress: intToBinary(fromNode.address, 4)
+        },  asciiToBinary(asciiPayload, BITS_PER_BYTE));
+        NetSimMessage.send(testShard, fromNode.entityID, router.entityID,
+            fromNode.entityID, payload, function () {});
+      };
+
+      beforeEach(function () {
+        router.setDnsMode(DnsMode.AUTOMATIC);
+        router.tick({time: 0});
+      });
+
+      it ("can round-trip to auto-DNS service and back",function () {
+        sendToAutoDns(localClient, '');
+
+        // No routing has occurred yet; our original message is still in the table.
+        assertTableSize(testShard, 'logTable', 0);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageProperty('fromNodeID', localClient.entityID);
+        assertFirstMessageProperty('toNodeID', router.entityID);
+        assertFirstMessageProperty('simulatedBy', localClient.entityID);
+        assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, autoDnsAddress);
+        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, localClient.address);
+
+        // On first tick (at infinite bandwidth) message should be routed to
+        // auto-DNS service.
+        router.tick({time: 1});
+        // That message should look like this:
+        //   fromNodeID   : router.entityID
+        //   toNodeID     : router.entityID
+        //   simulatedBy  : localClient.entityID
+        //   TO_ADDRESS   : autoDnsAddress
+        //   FROM_ADDRESS : localClient.address
+        // But on the same tick, the auto-DNS immediately picks up that message
+        // and generates a response:
+        assertTableSize(testShard, 'logTable', 1);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageProperty('fromNodeID', router.entityID);
+        assertFirstMessageProperty('toNodeID', router.entityID);
+        assertFirstMessageProperty('simulatedBy', localClient.entityID);
+        assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, localClient.address);
+        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, autoDnsAddress);
+
+        // On second tick, router forwards DNS response back to client
+        router.tick({time: 2});
+        assertTableSize(testShard, 'logTable', 2);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageProperty('fromNodeID', router.entityID);
+        assertFirstMessageProperty('toNodeID', localClient.entityID);
+        assertFirstMessageProperty('simulatedBy', localClient.entityID);
+        assertFirstMessageHeader(Packet.HeaderType.TO_ADDRESS, localClient.address);
+        assertFirstMessageHeader(Packet.HeaderType.FROM_ADDRESS, autoDnsAddress);
+      });
+
+      it ("ignores auto-DNS messages from remote clients", function () {
+        sendToAutoDns(remoteA, '');
+
+        // No routing has occurred yet; our original message is still in the table.
+        assertTableSize(testShard, 'logTable', 0);
+        assertTableSize(testShard, 'messageTable', 1);
+        var originalMessages = getRows(testShard, 'messageTable');
+
+        router.tick({time: 1});
+
+        // Still, no routing has occurred
+        assertTableSize(testShard, 'logTable', 0);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertEqual(originalMessages, getRows(testShard, 'messageTable'));
+
+        router.tick({time: 2});
+
+        // Nothing happens when remote node is not being simulated
+        assertTableSize(testShard, 'logTable', 0);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertEqual(originalMessages, getRows(testShard, 'messageTable'));
+      });
+
+      it ("produces a usage message for any badly-formed request", function () {
+        sendToAutoDns(localClient, 'Would you tea for stay like to?');
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody("Automatic DNS Node" +
+            "\nUsage: GET hostname [hostname [hostname ...]]");
+      });
+
+      it ("responds with NOT_FOUND when it can't find the requested hostname", function () {
+        sendToAutoDns(localClient, 'GET wagner14');
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody("wagner14:NOT_FOUND");
+      });
+
+      it ("responds to well-formed requests with a matching number of responses", function () {
+        sendToAutoDns(localClient, 'GET bert ernie');
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody("bert:NOT_FOUND ernie:NOT_FOUND");
+      });
+
+      it ("knows its own hostname and address", function () {
+        sendToAutoDns(localClient, 'GET dns');
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody("dns:15");
+      });
+
+      it ("knows the router hostname and address", function () {
+        sendToAutoDns(localClient, 'GET ' + router.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(router.getHostname() + ':0');
+      });
+
+      it ("can look up the client addresses by hostname", function () {
+        sendToAutoDns(localClient, 'GET ' +
+            localClient.getHostname() + ' ' +
+            remoteA.getHostname());
+
+        // Allow time for the response to be generated and routed.
+        router.tick({time: 1});
+        router.tick({time: 2});
+
+        assertTableSize(testShard, 'messageTable', 1);
+        assertFirstMessageAsciiBody(
+            localClient.getHostname() + ':' + localClient.address + ' ' +
+            remoteA.getHostname() + ':' + remoteA.address);
+      });
+    });
+  });
 });
