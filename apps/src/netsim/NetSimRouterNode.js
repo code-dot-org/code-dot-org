@@ -454,35 +454,48 @@ NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
  * scheduled completion time is too far in the future, we should move it up.
  */
 NetSimRouterNode.prototype.recalculateSchedule = function () {
-  var queuedRow, scheduleItem;
+  var queuedRow;
   var pessimisticCompletionTime = this.simulationTime_;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
     queuedRow = this.routerQueueCache_[i];
     pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedRow);
     if (this.localSimulationOwnsMessageRow_(queuedRow)) {
-
-      scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
-        return item.row.id === queuedRow.id;
-      });
-
-      if (scheduleItem) {
-        // When our pessimistic time is better than our scheduled time we
-        // should update the scheduled time.  This can happen when rows
-        // earlier in the queue expire, or are otherwise removed earlier than
-        // their size led us to expect.
-        if (pessimisticCompletionTime < scheduleItem.completionTime) {
-          scheduleItem.completionTime = pessimisticCompletionTime;
-        }
-      } else {
-        // If the item doesn't have a schedule entry at all, add it
-        this.localRoutingSchedule_.push({
-          row: queuedRow,
-          completionTime: pessimisticCompletionTime,
-          expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
-          beingRouted: false
-        });
-      }
+      this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
     }
+  }
+};
+
+/**
+ * Checks the schedule for the queued row.  If no schedule entry exists, adds
+ * a new one with the provided pessimistic completion time.  If it's already
+ * scheduled and the pessimistic time given is BETTER than the previously
+ * scheduled completion time, will update the schedule entry with the better
+ * time.
+ * @param {messageRow} queuedRow
+ * @param {number} pessimisticCompletionTime - in local simulation time
+ */
+NetSimRouterNode.prototype.scheduleRoutingForRow = function (queuedRow,
+    pessimisticCompletionTime) {
+  var scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
+    return item.row.id === queuedRow.id;
+  });
+
+  if (scheduleItem) {
+    // When our pessimistic time is better than our scheduled time we
+    // should update the scheduled time.  This can happen when rows
+    // earlier in the queue expire, or are otherwise removed earlier than
+    // their size led us to expect.
+    if (pessimisticCompletionTime < scheduleItem.completionTime) {
+      scheduleItem.completionTime = pessimisticCompletionTime;
+    }
+  } else {
+    // If the item doesn't have a schedule entry at all, add it
+    this.localRoutingSchedule_.push({
+      row: queuedRow,
+      completionTime: pessimisticCompletionTime,
+      expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
+      beingRouted: false
+    });
   }
 };
 
