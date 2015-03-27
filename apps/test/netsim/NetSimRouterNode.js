@@ -474,6 +474,61 @@ describe("NetSimRouterNode", function () {
         router.tick({time: 110});
         assertTableSize(testShard, 'logTable', 2);
       });
+
+      it ("drops packets after ten minutes in the router queue", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var tenMinutesInMillis = 600000;
+
+        // Send a message that will take ten minutes + 1 millisecond to process.
+        sendMessageOfSize(tenMinutesInMillis + 1);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At almost ten minutes, the message should still be present
+        router.tick({time: tenMinutesInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At exactly ten minutes, the message should expire and be removed
+        // and no related logging occurs
+        router.tick({time: tenMinutesInMillis});
+        assertTableSize(testShard, 'messageTable', 0);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Thus, just after ten minutes, no message is routed.
+        router.tick({time: tenMinutesInMillis + 1});
+        assertTableSize(testShard, 'messageTable', 0);
+        assertTableSize(testShard, 'logTable', 0);
+      });
+
+      it ("smaller packets can expire if backed up behind large ones", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var oneMinuteInMillis = 60000;
+
+        // This message should take nine minutes to process, so it will be sent.
+        sendMessageOfSize(9 * oneMinuteInMillis);
+        // This one only takes two minutes to process, but because it's behind
+        // the nine-minute one it will expire
+        sendMessageOfSize(2 * oneMinuteInMillis);
+        // This one is tiny and should take a fraction of a second, but it will
+        // also expire since it's after the first two.
+        sendMessageOfSize(16);
+
+        // Initially, all three messages are in the queue
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At almost ten minutes the first message has been forwarded, and
+        // the other two are still enqueued.
+        router.tick({time: 10 * oneMinuteInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 1);
+
+        // At exactly ten minutes, messages two and three are expired and deleted.
+        router.tick({time: 10 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 1);
+      });
     });
 
     describe("Auto-DNS behavior", function () {
