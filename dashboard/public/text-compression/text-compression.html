@@ -136,7 +136,7 @@
 
       if (poemSelect.length == 0) {
         poemsList.forEach(function (poem) {
-          addOption(poem);
+          addOptionToPoemSelect(poem);
         })
       }
 
@@ -156,7 +156,7 @@
         $('#enter-your-own #continue-button').click(function() {
           var newPoemText = document.getElementById('selfEnteredPoem').value;
           poemsList.push(newPoemText);
-          addOption('Custom: ' + newPoemText);
+          addOptionToPoemSelect('Custom: ' + newPoemText);
           selectedPoem = poemSelect.selectedIndex = poemSelect.length - 1;
           setupPoemWithText(poemsList[selectedPoem]);
           dialog.hide();
@@ -168,7 +168,7 @@
       compress();
     }
 
-    function addOption(text) {
+    function addOptionToPoemSelect(text) {
       var option = document.createElement("option");
       option.text = text.substring(0, 37).replace(/_/g, " ") + "...";
       poemSelect.add(option, null);
@@ -185,7 +185,7 @@
     function calculateData() {
       var text = editor.getValue();
       var dictSize = text.length + 1;
-      if (text.length == 0) {
+      if (text.length === 0) {
         dictSize = 0;
       }
 
@@ -200,15 +200,15 @@
       document.getElementById("data").innerHTML += "    compression: " + compression + "%\n";
     }
 
+    // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
     function escapeRegExp(str) {
-      return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+      return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
 
     function compress() {
-
       var poemDisplay = poemText;
-
       var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
+
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
         if (new RegExp('[' + dictEntries[index] + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
@@ -218,16 +218,16 @@
         editor.removeLineClass(line, 'wrap', 'dict-error');
         return rule;
       });
-      for (var i = 0; i < validRules.length; i++) {
-        if (validRules[i] != "") {
-          // First compute any self referencing -- this is the string we'll look for in the poem.
-          var regex = new RegExp(escapeRegExp(validRules[i]), "gi");
-          poemDisplay = poemDisplay.replace(regex, "" + dictEntries[i]);
+
+      validRules.forEach(function (rule, i) {
+        if (rule !== "") {
+          poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(rule), "gi"), dictEntries[i]);
         }
-      }
+      });
+
       poemCalc = poemDisplay;
-      var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
-      document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
+      document.getElementById("compressedPoem").innerHTML = poemDisplay.replace(
+          new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
       calculateData();
     }
   </script>
