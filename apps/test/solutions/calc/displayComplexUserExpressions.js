@@ -150,14 +150,21 @@ function customValidator(assert) {
       new ExpressionNode('*', [17, 12])));
     setEquationSets(targetSet, userSet);
 
+    // Normally this would happen when we call Calc.generateResults_, but
+    // that replaces our userSet with workspace blocks, so we just manually
+    // hack the failedInput
+    Calc.__testonly__.appState.failedInput = [1];
+
     displayComplexUserExpressions();
+
+    Calc.__testonly__.appState.failedInput = null;
 
     assert.equal(userExpression.children.length, 3);
 
-    // line 1: age = 17
+    // line 1: age = 1
     validateTextElementContainer(userExpression.children[0], [
       ['age = ',  null],
-      ['17',  null]
+      ['1',  null]
     ]);
 
     // line 2: age_in_months = 17 * 12
@@ -168,11 +175,11 @@ function customValidator(assert) {
       ['12',  null]
     ]);
 
-    // line 3: age_in_months = 120
+    // line 3: age_in_months = 204
     validateTextElementContainer(userExpression.children[2], [
       ['age_in_months',  null],
       [' = ',  null],
-      ['204',  null],
+      ['204',  'errorToken'],
     ]);
   });
 
@@ -493,6 +500,8 @@ function customValidator(assert) {
     Calc.__testonly__.appState.failedInput = [1];
 
     displayComplexUserExpressions();
+
+    Calc.__testonly__.appState.failedInput = null;
 
     assert.equal(userExpression.children.length, 3);
 
