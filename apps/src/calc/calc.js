@@ -335,6 +335,14 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     !userSet.hasSingleFunction()) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+
+    var targetFunctionName = expression.getValue();
+    if (!userSet.getEquation(targetFunctionName)) {
+      outcome.message = calcMsg.missingFunctionError({
+        functionName: targetFunctionName
+      });
+    }
+
     return outcome;
   }
 
