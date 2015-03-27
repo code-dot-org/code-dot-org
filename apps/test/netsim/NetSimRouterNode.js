@@ -448,6 +448,23 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 3);
       });
 
+      // This test and the one below it are an interesting case. It may seem
+      // silly to test skipping the tick to 80, or having it happen at 40, but
+      // this is exactly what could happen with a very low framerate and/or a
+      // very high bandwidth.
+      //
+      // We use pessimistic estimates so that when we are batching messages we
+      // are looking at "the very latest this message would be finished
+      // sending" and we can grab all the messages we are SURE are done.
+      // Here, we're modeling an expected error; the second message could be
+      // done at t=80, but it also might not be, so we don't send it yet.
+      // We only have enough information to be sure it will be done by t=110.
+      //
+      // In the next test case, sending the first message at t=40 introduces
+      // information that reduces our pessimistic estimate for the second
+      // message to t=80. You might argue that same information exists in
+      // this first test case, and it does - but it wouldn't if the first
+      // message was being simulated by a remote client.
       it ("is pessimistic when scheduling new packets", function () {
         router.bandwidth = 1000; // 1 bit / ms
 

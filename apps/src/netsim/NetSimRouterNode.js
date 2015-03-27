@@ -85,7 +85,7 @@ var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
  * @type {number}
  * @readonly
  */
-var PACKET_MAX_LIFETIME_MS = 600000;
+var PACKET_MAX_LIFETIME_MS = 10 * 60 * 1000;
 
 /**
  * Client model of simulated router
@@ -448,14 +448,35 @@ NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
 };
 
 /**
- * Examine the queue, and add/adjust schedule entries that for packets that
+ * Examine the queue, and add/adjust schedule entries for packets that
  * should be handled by the local simulation.  If a packet has no entry,
  * it should be added to the schedule.  If it does and we can see that its
  * scheduled completion time is too far in the future, we should move it up.
  */
 NetSimRouterNode.prototype.recalculateSchedule = function () {
-  var queuedRow;
+  // To calculate our schedule, we keep a rolling "Pessimistic completion time"
+  // as we walk down the queue.  This "pessimistic time" is when the packet
+  // would finish processing, assuming all of the packets ahead of it in the
+  // queue must be processed first and the first packet in the queue is just
+  // starting to process now.  We do this because the first packet might be
+  // owned by a remote client, so we won't have partial progress information
+  // on it.
+  //
+  // Thus, the pessimistic time is the _latest_ we would expect the router
+  // to be done processing the packet given the current bandwidth setting,
+  // if the router was an actual hardware device.
+  //
+  // The estimate is actually _optimistic_ in the sense that it doesn't wait
+  // for notification that a remotely-simulated packet is done before
+  // processing a locally-simulated one.  We're making our best guess about
+  // how the packets would be timed with no latency introducing gaps between
+  // packets.
+  //
+  // If the client simulating the packet at the head of the queue disconnects
+  // it won't block other packets from being sent, but it will increase their
+  // "pessimistic estimates" until that orphaned packet gets cleaned up.
   var pessimisticCompletionTime = this.simulationTime_;
+  var queuedRow;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
     queuedRow = this.routerQueueCache_[i];
     pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedRow);
