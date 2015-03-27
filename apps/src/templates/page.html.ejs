@@ -112,14 +112,7 @@
     <div id="codeTextbox"></div>
   <% } %>
   <% if (data.hasDesignMode) { %>
-    <div id="designModeBox" style="display:none;">
-      <% /* contains temporary unlocalized strings */ %>
-      Welcome to Design mode. Under construction.<br>
-      <button id="designModeAddButton" class="share">Add Button</button><br>
-      <button id="designModeAddInput" class="share">Add Input</button><br>
-      <button id="designModeAddLabel" class="share">Add Label</button><br>
-      <button id="designModeClear" class="share">Clear</button><br>
-    </div>
+    <%- data.designModeBox %>
   <% } %>
   <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
   <%- data.extraControlRows %>
