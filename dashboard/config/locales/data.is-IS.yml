@@ -315,9 +315,8 @@
           (Vísbending: Smelltu á stjörnuna til að bæta inntaki við fall)'
         turtle_3_7: Bættu inntakinu "lengd" við "teikna hús" og byggðu svo nægilega
           stórt hús fyrir fílinn (með 150 pixla langar hliðar)
-        turtle_3_8: Hér eru allir kubbarnir úr síðustu þraut. Breyttu "teikna hús"
-          svo ég endi niðri í hægra horni eftir að nýtt hús hefur verið teiknað. Notaðu
-          þetta breytta fall til að teikna þrjú hús.
+        turtle_3_8: Breyttu "teikna hús" svo ég endi við hornið neðst til hægri eftir
+          að ég teikna nýtt hús. Notaðu þetta breytta fall til að teikna þrjú hús.
         turtle_3_9: Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu
           það og teiknaðu svo röð af húsum.
         turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
@@ -653,8 +652,8 @@
         playlab_intro: Kynning á Leikjasmiðju
         playlab_events: Leikjasmiðja, atvik
         playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Þrautaáskorun
+        msm_1_intro: Tölvunarfræði með algebru - Kafli 1 Inngangur
         msm_2_eval_block: Matskubbar
         msm_3_pemdas: PEMDAS
         msm_6_variables: Breytur

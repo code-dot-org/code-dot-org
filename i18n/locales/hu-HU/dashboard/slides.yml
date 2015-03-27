@@ -39,7 +39,7 @@ hu:
         text: Ha egy már lefutott programot szeretnél javítani és újra lefuttatni, akkor nyomd meg a „Visszaállítás” gombot.
       13:
         image: notes/hoc1_13.jpg
-        text: Gyerünk kapjuk el azokat a disznókat!
+        text: Gyerünk, kapjuk el azokat a disznókat!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -103,10 +103,10 @@ hu:
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Helló, Márk vagyok! Gyere tanuljuk meg a ciklusok használatát. A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg.
+        text: Helló, Mark vagyok. Gyere, tanuljuk meg a ciklusok használatát! A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg.
       2:
         image: notes/hoc2_2.jpg
-        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre hogy elérjen a malachoz.
+        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy elérjen a malachoz.
       3:
         image: notes/hoc2_3.jpg
         text: A feladat megoldásához használhatjuk a új „Ismétlés” blokkot.
@@ -125,29 +125,29 @@ hu:
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere próbáljuk ki az új „ismételd amíg” blokkot.
+        text: Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam a Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere, próbáljuk ki az új „ismételd amíg” blokkot.
       2:
         image: notes/hoc3_2.jpg
-        text: Mi van, ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?
+        text: Mi van, ha nem tudjuk, milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?
       3:
         image: notes/hoc3_3.jpg
-        text: 'Ha az "előrelépés" blokkot az "ismételd amíg" blokkba helyezzük, akkor a madár addig fog előre haladni AMÍG eléri a malacot (vagy a falnak ütközik).'
+        text: 'Ha a "lépj előre" blokkot az "ismételd amíg" blokkba helyezzük, akkor a madár addig fog előre haladni, AMÍG eléri a malacot (vagy a falnak ütközik).'
       4:
         image: notes/hoc3_4.jpg
-        text: 'Fontos: akárcsak az ismétlő blokkba az „ismételd amíg” blokkba is több utasítást helyezhetsz.'
+        text: 'Fontos: akárcsak az ismételd blokkba, az „ismételd amíg” blokkba is több utasítást helyezhetsz, és mindegyiket ismételni fogja a program.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: Szia, Bill vagyok! Tanuljunk meg egy új alapvető koncepciót a „ha” feltételt. A számítógépek ezt felhasználva hoznak döntéseket.
+        text: Szia, Bill vagyok! Tanuljunk meg egy új alapvető fogalmat, a „ha” feltételt. A számítógépek ezt felhasználva hoznak döntéseket.
       2:
         image: notes/hoc4_2.jpg
-        text: A „ha” állítást Te is naponta használod. Minden reggel mielőtt elmennél, azt mondod HA esik az eső fel kell vennem a kabátom.
+        text: 'A „ha” állítást Te is naponta használod. Minden reggel, mielőtt elindulnál, azt mondod: HA esik az eső, fel kell vennem a kabátom.'
       3:
         image: notes/hoc4_3.jpg
-        text: Megmondhatjuk egy zombinak HA van út balra és ha megtalálja az utat, akkor forduljon abba az irányba.
+        text: 'Megmondhatjuk egy zombinak: HA van út balra és ha megtalálja az utat, akkor forduljon abba az irányba.'
       4:
         image: notes/hoc4_4.jpg
-        text: Ahhoz hogy megírjuk azt a kódot húzzuk ki a „ha” blokkot, és helyezzük a „balra fordul” blokkot a belsejébe.
+        text: Ahhoz, hogy megírjuk ezt a kódot húzzuk ki a „ha” blokkot, és helyezzük a „fordulj balra” blokkot a belsejébe.
       5:
         image: notes/hoc4_5.jpg
         text: Most ha az „előrelépés” blokkot föléje és az „ismétlés” blokkot a kód köré helyezzük, akkor a zombi minden lépésnél ellenőrzi, hogy létezik-e út balra. Ha igen, akkor arra fordul. A ismétlő parancs fontos, mivel minden lépésnél ellenőriznie kell, hogy létezik-e út.
@@ -182,7 +182,7 @@ hu:
         text: 'Ez egy döntéshozás, és a két utasítás közül az egyiket fogja végrehajtani a döntés alapján. És csakúgy, mint a "ha" blokkokat, a "ha-különben" blokkokat is beleteheted "ismételd" blokkokba.'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Most segítsünk Motkánynak a mókusnak kap, hogy megszerezze a makkot!
+        text: Most segítsünk Motkánynak a mókusnak, hogy megszerezze a makkot!
     function:
       1:
         image: notes/stage13_1.jpg

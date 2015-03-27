@@ -2,7 +2,7 @@
   "badColorStringError":"Je gebruikt een ongeldige kleuren tekenreeks: {val}",
   "badStyleStringError":"Je gebruikt een ongeldige stijl tekenreeks: {val}",
   "circleBlockTitle":"cirkel (straal, stijl, kleur)",
-  "displayBlockTitle":"evaluate",
+  "displayBlockTitle":"evalueren",
   "ellipseBlockTitle":"ellips (breedte, hoogte, stijl, kleur)",
   "emptyFunctionalBlock":"Je hebt een blok zonder waarde.",
   "extraTopBlocks":"U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",

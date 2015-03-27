@@ -4,8 +4,9 @@ en:
       Blocks to Bools 1:
         Convert Blocks to Math: crwdns24832:0crwdne24832:0
         Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
-        /script_assets/msm/unit6/blockstomath1.png: crwdns24834:0crwdne24834:0
+        bools to math 1.blocks.start_blocks: crwdns35735:0crwdne35735:0
         (4+5) > 9: crwdns24835:0crwdne24835:0
+        ((4+5) > 9): crwdns35736:0crwdne35736:0
         Type the arithmetic expression here: crwdns24836:0crwdne24836:0
       Blocks to Bools 2:
         Convert Blocks to Math: crwdns24837:0crwdne24837:0

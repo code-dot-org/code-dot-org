@@ -8,6 +8,7 @@
   "failedInput": "Funksjonen returnerer ikke riktig resultat for alle verdier.",
   "goal": "Mål:",
   "levelIncompleteError": "Uttrykket ditt stemmer ikke med målet.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Uttrykket mangler variabel {var}.",
   "reinfFeedbackMsg": "Her er utregningen din! Fortsett å jobbe på den eller gå videre til neste oppgave!",
   "yourExpression": "Uttrykket ditt:",

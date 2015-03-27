@@ -5,8 +5,9 @@
         Convert Blocks to Math: Convertir els blocs a les matemàtiques
         Type out the arithmetic expression that matches this code: Escriu l'expressió
           aritmètica que correspon a aquest codi
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: 9 > (4 + 5)
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Escriviu l'expressió aritmètica aquí
       Blocks to Bools 2:
         Convert Blocks to Math: Convertir els blocs a les matemàtiques

@@ -169,6 +169,27 @@
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 예술가 객관식
         Which blocks draw a rectangle with a perimeter of 100?: 둘레의 길이가 100인 사각형을
@@ -355,8 +376,6 @@
       Coordinates Multi 1:
         Video game Coordinates: 비디오 게임 화면의 좌표
         Ninjacat Demo Embed.level: 닌자 고양이 실행예시.레벨
-        Which answer most accurately describes the unicorn's movement?: Which answer
-          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: 유니콘이 화면을 가로질러 움직인다.
         The unicorn's y value changes: 유니콘의 y좌표 값이 바뀐다.
         The unicorn moves to the left: 유니콘이 왼쪽으로 이동한다.
@@ -599,7 +618,6 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (사각형 (+ 8 2)(- 7 5) "채움" "빨강")
         (rectangle (+ 8 2) (- 7 5) solid red): (사각형 (+ 8 2)(- 7 5) 채움 빨강)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         15: '15'

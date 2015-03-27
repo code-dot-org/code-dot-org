@@ -120,7 +120,7 @@
   "projectileIce":"ice",
   "projectileDuck":"duck",
   "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to go back to playing your story.",
-  "repeatForever":"végtelen ismétlés",
+  "repeatForever":"ismételd végtelenszer",
   "repeatDo":"csináld",
   "repeatForeverTooltip":"Hajtsd vége a műveleteket a blokkban ismételve miközben a történet zajlik.",
   "saySprite":"mondd",

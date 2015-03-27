@@ -8,6 +8,7 @@
   "failedInput": "Ваша функція не повертає правильний результат для всіх значень.",
   "goal": "Мета:",
   "levelIncompleteError": "Вираз не відповідають цілі.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Ось ваші обчислення! Продовжити працювати з ними, або перейти до наступної загадки!",
   "yourExpression": "Ваш вираз:",
