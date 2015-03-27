@@ -525,6 +525,68 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 2);
       });
 
+      it ("adjusts routing schedule when router bandwidth changes", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Five 100-bit messages, scheduled for t=100-500 respectively.
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+
+        // First message processed at t=100
+        router.tick({time: 99});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 100});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // Advance halfway through processing the second message
+        router.tick({time: 150});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // Increase the router bandwidth
+        router.setBandwidth(10000); // 10 bits / ms
+
+        // This triggers a reschedule; since NOW is 150 and each message now
+        // takes 10 ms to process, the new schedule is:
+        // 2: 160
+        // 3: 170
+        // 4: 180
+        // 5: 190
+
+        // Message 2 processed at t=160
+        router.tick({time: 159});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 160});
+        assertTableSize(testShard, 'logTable', 2);
+
+        // Message 3 processed at t=170
+        router.tick({time: 169});
+        assertTableSize(testShard, 'logTable', 2);
+        router.tick({time: 170});
+        assertTableSize(testShard, 'logTable', 3);
+
+        // Increase the bandwidth again
+        router.setBandwidth(100000); // 100 bits / ms
+
+        // New schedule (NOW=170, 1ms per message)
+        // 4: 171
+        // 5: 172
+
+        // Message 4 processed at t=171
+        router.tick({time: 170.9});
+        assertTableSize(testShard, 'logTable', 3);
+        router.tick({time: 171.0});
+        assertTableSize(testShard, 'logTable', 4);
+
+        // Message 5 processed at t=172
+        router.tick({time: 171.9});
+        assertTableSize(testShard, 'logTable', 4);
+        router.tick({time: 172.0});
+        assertTableSize(testShard, 'logTable', 5);
+      });
+
       it ("drops packets after ten minutes in the router queue", function () {
         router.bandwidth = 1000; // 1 bit / ms
         var tenMinutesInMillis = 600000;
