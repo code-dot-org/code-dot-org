@@ -13,8 +13,8 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var netsimMsg = require('../../locale/current/netsim');
-var markup = require('./NetSimPacketEditor.html');
+var netsimMsg = window.blockly.netsim_locale;
+var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var Packet = require('./Packet');

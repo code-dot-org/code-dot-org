@@ -24,9 +24,6 @@
       "exports": "Blockly"
     }
   },
-  "optionalDependencies": {
-    "canvas": "~1.1.6"
-  },
   "devDependencies": {
     "@cdo/apps": "0.0.1",
     "browserify": "^9.0.2",

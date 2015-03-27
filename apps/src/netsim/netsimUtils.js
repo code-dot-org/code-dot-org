@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-var i18n = require('../../locale/current/netsim');
+var i18n = window.blockly.netsim_locale;
 var netsimConstants = require('./netsimConstants');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');

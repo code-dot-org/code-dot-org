@@ -74,23 +74,23 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.children.length, 1);
+    assert.equal(answerExpression.childNodes.length, 1);
 
     // f(5) = 5
-    var g = answerExpression.children[0];
-    // assert.equal(g.children.length, 1);
-    assert.equal(g.children[0].textContent, "f");
-    assert.equal(g.children[0].getAttribute('class'), null);
-    assert.equal(g.children[1].textContent, "(");
-    assert.equal(g.children[1].getAttribute('class'), null);
-    assert.equal(g.children[2].textContent, "5");
-    assert.equal(g.children[2].getAttribute('class'), null);
-    assert.equal(g.children[3].textContent, ")");
-    assert.equal(g.children[3].getAttribute('class'), null);
-    assert.equal(g.children[4].textContent, replaceSpaces(" = "));
-    assert.equal(g.children[4].getAttribute('class'), null);
-    assert.equal(g.children[5].textContent, replaceSpaces("5"));
-    assert.equal(g.children[5].getAttribute('class'), null);
+    var g = answerExpression.childNodes[0];
+    // assert.equal(g.childNodes.length, 1);
+    assert.equal(g.childNodes[0].textContent, "f");
+    assert.equal(g.childNodes[0].getAttribute('class'), null);
+    assert.equal(g.childNodes[1].textContent, "(");
+    assert.equal(g.childNodes[1].getAttribute('class'), null);
+    assert.equal(g.childNodes[2].textContent, "5");
+    assert.equal(g.childNodes[2].getAttribute('class'), null);
+    assert.equal(g.childNodes[3].textContent, ")");
+    assert.equal(g.childNodes[3].getAttribute('class'), null);
+    assert.equal(g.childNodes[4].textContent, replaceSpaces(" = "));
+    assert.equal(g.childNodes[4].getAttribute('class'), null);
+    assert.equal(g.childNodes[5].textContent, replaceSpaces("5"));
+    assert.equal(g.childNodes[5].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'multiple functions', function () {
@@ -192,7 +192,7 @@ function displayGoalTest(assert, description, fn) {
   while (answerExpression.firstChild) {
     answerExpression.removeChild(answerExpression.firstChild);
   }
-  answerExpression.innerHTML = ''; // clear children
+  answerExpression.innerHTML = ''; // clear childNodes
 
   fn();
 }

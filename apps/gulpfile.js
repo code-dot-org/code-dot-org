@@ -148,7 +148,8 @@ gulp.task('lint', function() {
       'src/**/*.js',
       'test/**/*.js',
       '!src/node_modules/**/*',
-      '!src/canvg/*.js'
+      '!src/canvg/*.js',
+      '!src/calc/js-numbers/js-numbers.js'
     ]
   )
     .pipe(jshint({

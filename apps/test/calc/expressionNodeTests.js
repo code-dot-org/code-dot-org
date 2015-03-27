@@ -5,7 +5,7 @@ var assert = chai.assert;
 var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var Token = require('@cdo/apps/calc/calc/token');
+var Token = require('@cdo/apps/calc/token');
 var jsnums = require('@cdo/apps/calc/js-numbers/js-numbers');
 
 function isJsNumber(val) {

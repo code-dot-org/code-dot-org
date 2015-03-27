@@ -11,8 +11,8 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimPacketSizeControl.html');
-var i18n = require('../../locale/current/netsim');
+var markup = require('./NetSimPacketSizeControl.html.ejs');
+var i18n = window.blockly.netsim_locale;
 
 /**
  * @type {number}
