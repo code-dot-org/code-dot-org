@@ -61,9 +61,8 @@ var DropletFunctionTooltip = function (functionName) {
   this.paramNames = [];
 
   var paramId = 0;
-  var paramKey = this.parameterKey(paramId);
-  while (msg.hasOwnProperty(paramKey)) {
-    this.paramNames.push(msg[paramKey]());
+  while (msg.hasOwnProperty(this.parameterKey(paramId))) {
+    this.paramNames.push(msg[this.parameterKey(paramId)]());
     paramId++;
   }
 };
