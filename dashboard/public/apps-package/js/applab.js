@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":186}],16:[function(require,module,exports){
+},{"../skins":189}],16:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":234,"../block_utils":20,"../utils":232}],10:[function(require,module,exports){
+},{"../../locale/current/applab":237,"../block_utils":20,"../utils":235}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2975,7 +2975,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":234,"../../locale/current/common":237,"../StudioApp":4,"../codegen":48,"../constants":50,"../dom":51,"../dropletUtils":52,"../skins":186,"../slider":187,"../templates/page.html":211,"../timeoutList":217,"../utils":232,"../xml":233,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./dontMarshalApi":13,"./dropletConfig":14,"./extraControlRows.html":15,"./visualization.html":19}],19:[function(require,module,exports){
+},{"../../locale/current/applab":237,"../../locale/current/common":240,"../StudioApp":4,"../codegen":48,"../constants":50,"../dom":51,"../dropletUtils":52,"../skins":189,"../slider":190,"../templates/page.html":214,"../timeoutList":220,"../utils":235,"../xml":236,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./dontMarshalApi":13,"./dropletConfig":14,"./extraControlRows.html":15,"./visualization.html":19}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2995,7 +2995,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],15:[function(require,module,exports){
+},{"ejs":256}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3015,7 +3015,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":234,"../../locale/current/common":237,"ejs":253}],13:[function(require,module,exports){
+},{"../../locale/current/applab":237,"../../locale/current/common":240,"ejs":256}],13:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3108,7 +3108,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":237,"ejs":253}],11:[function(require,module,exports){
+},{"../../locale/current/common":240,"ejs":256}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3181,7 +3181,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":234,"../../locale/current/common":237,"../codegen":48,"../utils":232}],234:[function(require,module,exports){
+},{"../../locale/current/applab":237,"../../locale/current/common":240,"../codegen":48,"../utils":235}],237:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],9:[function(require,module,exports){
 'use strict';
