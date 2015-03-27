@@ -33,7 +33,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "أستمر"},
 "container":function(d){return "إنشاء حاوية"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "تصميم"},
 "finalLevel":function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."},
 "nextLevel":function(d){return "تهانينا ! لقد تم الانتهاء من اللغز."},
 "no":function(d){return "لا"},

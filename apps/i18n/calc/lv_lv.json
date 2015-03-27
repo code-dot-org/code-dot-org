@@ -8,6 +8,7 @@
   "failedInput": "Jūsu funkcija neatgriež pareizos rezultātus priekš visām vērtībām.",
   "goal": "Mērķis:",
   "levelIncompleteError": "Jūsu izteiksme neatbilst mērķim.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Jūsu izteiksmei trūkst mainīgā {var}.",
   "reinfFeedbackMsg": "Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!",
   "yourExpression": "Jūsu izteiksme:",

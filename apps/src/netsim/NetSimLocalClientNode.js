@@ -316,8 +316,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   var localNodeID = this.myWire.localNodeID;
   var remoteNodeID = this.myWire.remoteNodeID;
+
+  // Who simulates?  Normally the receiving node
+  var simulatingNodeID = remoteNodeID;
+  // If sending to a router, we will do our own simulation
+  if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+    simulatingNodeID = localNodeID;
+  }
+
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
+      payload,
       function (err) {
         if (err) {
           logger.error('Failed to send message; ' + err.message + ': ' +
@@ -375,7 +384,8 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this))
       .filter(function (message) {
-        return message.toNodeID === this.entityID;
+        return message.toNodeID === this.entityID &&
+            message.simulatedBy === this.entityID;
       }.bind(this));
 
   if (messages.length === 0) {

@@ -182,7 +182,7 @@ zh:
         title: The Design Recipe
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
       Booleans:
-        title: Booleans and Logic
+        title: 布林值和邏輯
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions

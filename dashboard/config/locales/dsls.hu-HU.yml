@@ -5,8 +5,9 @@
         Convert Blocks to Math: Konvertáld a blokkot matekre
         Type out the arithmetic expression that matches this code: Írd le azt az aritmetikai
           kifejezést, ami megfelel ennek a kódnak
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Ide írd az arimetikai kifejezést
       Blocks to Bools 2:
         Convert Blocks to Math: Konvertáld a blokkot matekre
@@ -223,7 +224,7 @@
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Teacher Dashboard
       PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
+        Unplugged intro: Offline bevezető
       PDK5 UVideo Overview C:
         Kiki video overview: Kiki video overview
       PDK5 Why K5 CS:

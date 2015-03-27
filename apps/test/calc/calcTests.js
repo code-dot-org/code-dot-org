@@ -264,7 +264,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     assert.equal(outcome.result, ResultType.FAILURE);
     assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
     assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
-    assert.equal(outcome.failedInput, null);
+    assert.deepEqual(outcome.failedInput, [1]);
   });
 
   it('when user has age variable, but wrong expression', function () {
@@ -301,7 +301,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     assert.equal(outcome.result, ResultType.FAILURE);
     assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
     assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
-    assert.equal(outcome.failedInput, null);
+    assert.deepEqual(outcome.failedInput, [1]);
   });
 
   it('when user has the wrong compute expression', function () {

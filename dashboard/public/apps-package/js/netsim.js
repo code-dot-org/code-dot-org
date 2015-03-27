@@ -5844,6 +5844,7 @@ var NetSimMessage = require('./NetSimMessage');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 
+var _ = utils.getLodash();
 var logger = NetSimLogger.getSingleton();
 
 /**
@@ -6359,9 +6360,23 @@ CleanMessages.prototype.onBegin_ = function () {
   var nodeRows = this.cleaner_.getTableCache('node');
   var messageRows = this.cleaner_.getTableCache('message');
   this.commandList_ = messageRows.filter(function (messageRow) {
-    return nodeRows.every(function (nodeRow) {
-      return nodeRow.id !== messageRow.toNodeID;
+
+    var simulatingNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.simulatedBy;
     });
+
+    // A message not being simulated by any client can be cleaned up.
+    if (!simulatingNodeRow) {
+      return true;
+    }
+
+    var destinationNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.toNodeID;
+    });
+
+    // Messages with an invalid destination should also be cleaned up.
+    return !destinationNodeRow;
+
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));
@@ -7811,11 +7826,20 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
+  // Normally the recipient simulates a message.
+  // If this message is on loopback (i.e. to or from auto-dns) then
+  // the simulator of the original message has to simulate this one too.
+  var simulatingNode = destinationNodeID;
+  if (destinationNodeID === this.entityID) {
+    simulatingNode = message.simulatedBy;
+  }
+
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
       routerNodeID,
       destinationNodeID,
+      simulatingNode,
       message.payload,
       function (err, result) {
         this.log(message.payload);
@@ -7831,44 +7855,8 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
  * @private
  */
 NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
-  // Local simulation can't handle anything if it's not initialized.
-  if (!this.simulateForSender_) {
-    return false;
-  }
-
-  var packet, fromAddress, toAddress, simulateForAddress;
-  var routerNodeID = this.entityID;
-
-  // One extra responsibility in auto-DNS mode: Should handle messages from the
-  // auto-DNS to the router IF they are addressed to the local client.
-  if (this.dnsMode === DnsMode.AUTOMATIC) {
-
-    // Gather address info to confirm this packet's destination
-    packet = new Packet(this.packetSpec_, messageRow.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
-    simulateForAddress = this.getAddressForNodeID_(this.simulateForSender_);
-
-    var isOnRouterLoopback = messageRow.fromNodeID === routerNodeID &&
-        messageRow.toNodeID === routerNodeID;
-
-    var isBetweenLocalAndDns = (
-        fromAddress === simulateForAddress &&
-        toAddress === AUTO_DNS_RESERVED_ADDRESS
-        ) || (
-        fromAddress === AUTO_DNS_RESERVED_ADDRESS &&
-        toAddress === simulateForAddress
-        );
-
-    if (isOnRouterLoopback && isBetweenLocalAndDns) {
-      return true;
-    }
-  }
-
-  // Local simulation of router normally handles only the messages from the
-  // local client to the router.
-  return messageRow.fromNodeID === this.simulateForSender_ &&
-      messageRow.toNodeID === routerNodeID;
+  return this.simulateForSender_ &&
+      messageRow.simulatedBy === this.simulateForSender_;
 };
 
 /**
@@ -8015,6 +8003,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
       this.shard_,
       autoDnsNodeID,
       routerNodeID,
+      message.simulatedBy,
       responseBinary,
       onComplete);
 };
@@ -9202,8 +9191,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   var localNodeID = this.myWire.localNodeID;
   var remoteNodeID = this.myWire.remoteNodeID;
+
+  // Who simulates?  Normally the receiving node
+  var simulatingNodeID = remoteNodeID;
+  // If sending to a router, we will do our own simulation
+  if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+    simulatingNodeID = localNodeID;
+  }
+
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
+      payload,
       function (err) {
         if (err) {
           logger.error('Failed to send message; ' + err.message + ': ' +
@@ -9261,7 +9259,8 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this))
       .filter(function (message) {
-        return message.toNodeID === this.entityID;
+        return message.toNodeID === this.entityID &&
+            message.simulatedBy === this.entityID;
       }.bind(this));
 
   if (messages.length === 0) {
@@ -9312,7 +9311,6 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
  unused: true,
 
  maxlen: 90,
- maxparams: 5,
  maxstatements: 200
  */
 'use strict';
@@ -9354,6 +9352,12 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
   this.toNodeID = messageRow.toNodeID;
 
   /**
+   * ID of the node responsible for operations on this message.
+   * @type {number}
+   */
+  this.simulatedBy = messageRow.simulatedBy;
+
+  /**
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
@@ -9367,13 +9371,16 @@ NetSimMessage.inherits(NetSimEntity);
  * @param {!NetSimShard} shard
  * @param {!number} fromNodeID - sender node ID
  * @param {!number} toNodeID - destination node ID
+ * @param {!number} simulatedBy - node ID of client simulating message
  * @param {*} payload - message content
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
+NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
+    payload, onComplete) {
   var entity = new NetSimMessage(shard);
   entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
+  entity.simulatedBy = simulatedBy;
   entity.payload = payload;
   entity.getTable_().create(entity.buildRow_(), onComplete);
 };
@@ -9390,6 +9397,8 @@ NetSimMessage.prototype.getTable_ = function () {
  * @typedef {Object} messageRow
  * @property {number} fromNodeID - this message in-flight-from node
  * @property {number} toNodeID - this message in-flight-to node
+ * @property {number} simulatedBy - Node ID of the client responsible for
+ *           all operations involving this message.
  * @property {string} payload - binary message content, all of which can be
  *           exposed to the student.  May contain headers of its own.
  */
@@ -9402,6 +9411,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
+    simulatedBy: this.simulatedBy,
     payload: this.payload
   };
 };

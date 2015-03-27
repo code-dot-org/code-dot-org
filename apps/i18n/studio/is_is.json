@@ -297,7 +297,7 @@
   "soundWinPoint": "stigaskor",
   "soundWinPoint2": "stigaskor 2",
   "soundWood": "viður",
-  "speed": "hraði",
+  "speed": "hraða",
   "startSetValue": "byrja (fall)",
   "startSetVars": "leik_breytur (titill, bakgrunnur, mark, hætta, leikmaður)",
   "startSetFuncs": "leik_föll (uppfærsla-mark, uppfærsla-hætta, uppfærsla-leikmaður, árekstur?, á-skjá?)",

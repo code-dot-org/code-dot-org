@@ -161,12 +161,12 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ellipseBlockTitle":function(d){return "elipse (anchura, altura, estilo, color)"},
 "emptyFunctionalBlock":function(d){return "Tienes un bloque con una entrada vacía."},
 "extraTopBlocks":function(d){return "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"infiniteRecursionError":function(d){return "La función hace referencia hacia si misma. Nosotros paramos la ejecución, de otro modo hubiera seguido llamandose asimisma infinitamente."},
 "overlayBlockTitle":function(d){return "superposición (arriba, abajo)"},
 "placeImageBlockTitle":function(d){return "lugar-imagen (x, y, imagen)"},
 "offsetBlockTitle":function(d){return "offset (x, y, imagen)"},
 "rectangleBlockTitle":function(d){return "rectángulo (anchura, altura, estilo, color)"},
-"reinfFeedbackMsg":function(d){return "Presiona el botón \"reintentar \" para editar tu dibujo."},
+"reinfFeedbackMsg":function(d){return "Presionar el Boton \"Seguir jugando\" para editar el dibujo."},
 "rotateImageBlockTitle":function(d){return "Girar (grados, imagen)"},
 "scaleImageBlockTitle":function(d){return "escala (factor, imagen)"},
 "squareBlockTitle":function(d){return "cuadrado (tamaño, estilo, color)"},
@@ -181,5 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "outline":function(d){return "contorno"},
 "solid":function(d){return "sólido"},
 "string":function(d){return "cadena"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"stringMismatchError":function(d){return "La cadena de caracteres tiene una o mas letras capitales de forma erronea."},
+"userCodeException":function(d){return "Ocurrio un error mientras se ejecutaba el codigo."}};

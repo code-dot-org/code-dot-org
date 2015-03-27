@@ -152,7 +152,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Настави"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Честитамо! Решили сте финалну слагалицу."},
 "nextLevel":function(d){return "Честитке! Завршили сте пузлу."},
 "no":function(d){return "не"},

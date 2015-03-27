@@ -2,6 +2,7 @@
   "a_and_b":"crwdns35483:0crwdne35483:0",
   "addPacket":"crwdns35713:0crwdne35713:0",
   "ascii":"crwdns35484:0crwdne35484:0",
+  "autoDnsUsageMessage":"crwdns35931:0crwdne35931:0",
   "binary":"crwdns35485:0crwdne35485:0",
   "bitCounter":"crwdns35486:0{x}crwdnd35486:0{y}crwdne35486:0",
   "bits":"crwdns35729:0crwdne35729:0",
@@ -36,5 +37,9 @@
   "to":"crwdns35511:0crwdne35511:0",
   "unlimited":"crwdns35733:0crwdne35733:0",
   "workspaceHeader":"crwdns29006:0crwdne29006:0",
-  "xOfYPackets":"crwdns35734:0{x}crwdnd35734:0{y}crwdne35734:0"
+  "xOfYPackets":"crwdns35734:0{x}crwdnd35734:0{y}crwdne35734:0",
+  "x_Gbps":"crwdns35932:0{x}crwdne35932:0",
+  "x_Mbps":"crwdns35933:0{x}crwdne35933:0",
+  "x_Kbps":"crwdns35934:0{x}crwdne35934:0",
+  "x_bps":"crwdns35935:0{x}crwdne35935:0"
 }

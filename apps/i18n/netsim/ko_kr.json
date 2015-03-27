@@ -2,6 +2,7 @@
   "a_and_b": "A 나누기 B",
   "addPacket": "Add Packet",
   "ascii": "아스키",
+  "autoDnsUsageMessage": "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
   "binary": "2진",
   "bitCounter": "{x}/{y} bits",
   "bits": "Bits",
@@ -36,5 +37,9 @@
   "to": "To",
   "unlimited": "Unlimited",
   "workspaceHeader": "인터넷 시뮬레이터",
-  "xOfYPackets": "{x} of {y}"
+  "xOfYPackets": "{x} of {y}",
+  "x_Gbps": "{x}Gbps",
+  "x_Mbps": "{x}Mbps",
+  "x_Kbps": "{x}Kbps",
+  "x_bps": "{x}bps"
 }

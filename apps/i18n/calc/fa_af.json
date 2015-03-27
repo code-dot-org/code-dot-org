@@ -8,6 +8,7 @@
   "failedInput": "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند.",
   "goal": "هدف:",
   "levelIncompleteError": "معادله ی شما با هدف تطابق ندارد.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "معادله شما فاقد متغیر است{var}.",
   "reinfFeedbackMsg": "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!",
   "yourExpression": "عبارت شما:",

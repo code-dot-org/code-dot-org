@@ -34,7 +34,9 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   }
   if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-    $('.freeplay_links').show();
+    if (stageData.show_freeplay_links) {
+      $('.freeplay_links').show();
+    }
   }
   if (progressData.trophies) {
     $('.header_trophy_link').show();

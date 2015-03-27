@@ -65,7 +65,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Tęsti"},
 "container":function(d){return "sukurkite talpyklą"},
 "containerTooltip":function(d){return "sukuria padalintą talpyklą bet nustato jos vidinį HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."},
 "nextLevel":function(d){return "Sveikinu! Išsprendei šią užduotį."},
 "no":function(d){return "Ne"},

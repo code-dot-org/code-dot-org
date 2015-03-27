@@ -73,7 +73,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Turpināt"},
 "container":function(d){return "izveidot konteineru"},
 "containerTooltip":function(d){return "Izveidot nodalītu konteineru un uzstādīt tā iekšējo HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
 "nextLevel":function(d){return "Apsveicu! Jūs pabeidzāt šo puzli."},
 "no":function(d){return "Nē"},

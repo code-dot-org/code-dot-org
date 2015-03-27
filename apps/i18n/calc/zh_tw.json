@@ -8,6 +8,7 @@
   "failedInput": "你的程式回傳的結果不完全正確。",
   "goal": "目標：",
   "levelIncompleteError": "你的運算式不符合目標。",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "你的運算式少了變數{var}。",
   "reinfFeedbackMsg": "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！",
   "yourExpression": "您的運算式：",

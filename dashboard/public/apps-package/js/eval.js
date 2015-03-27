@@ -333,6 +333,30 @@ Eval.haveCaseMismatch_ = function (object1, object2) {
 };
 
 /**
+ * Note: is unable to distinguish from true/false generated from string blocks
+ *   vs. from boolean blocks
+ * @returns {boolean} True if two eval objects are both booleans, but have different values.
+ */
+Eval.haveBooleanMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== 1 || strs2.length !== 1) {
+    return false;
+  }
+
+  var text1 = strs1[0];
+  var text2 = strs2[0];
+
+  if ((text1 === "true" && text2 === "false") ||
+      (text1 === "false" && text2 === "true")) {
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
@@ -344,6 +368,9 @@ Eval.execute = function() {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     Eval.message = evalMsg.emptyFunctionalBlock();
+  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
@@ -354,13 +381,15 @@ Eval.execute = function() {
     if (userObject instanceof CustomEvalError) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = userObject.feedbackMessage;
     } else if (Eval.haveCaseMismatch_(userObject, Eval.answerObject)) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = evalMsg.stringMismatchError();
+    } else if (Eval.haveBooleanMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+      Eval.message = evalMsg.wrongBooleanError();
     } else {
       // We got an EvalImage back, compare it to our target
       Eval.result = evaluateAnswer();
