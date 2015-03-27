@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({17:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({19:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":16,"./skins":18}],18:[function(require,module,exports){
+},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":20}],20:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":192}],16:[function(require,module,exports){
+},{"../skins":194}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,13 +294,14 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":240,"../block_utils":23,"../utils":238}],10:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../block_utils":25,"../utils":240}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
@@ -952,6 +953,10 @@ Applab.init = function(config) {
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
+  });
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -965,7 +970,8 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
@@ -1098,26 +1104,185 @@ Applab.init = function(config) {
     if (codeModeButton) {
       dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
     }
-    var designModeAddButton = document.getElementById('designModeAddButton');
-    if (designModeAddButton) {
-      dom.addClickTouchEvent(designModeAddButton, Applab.onDesignModeAddButton);
-    }
-    var designModeAddInput = document.getElementById('designModeAddInput');
-    if (designModeAddInput) {
-      dom.addClickTouchEvent(designModeAddInput, Applab.onDesignModeAddInput);
-    }
-    var designModeAddLabel = document.getElementById('designModeAddLabel');
-    if (designModeAddLabel) {
-      dom.addClickTouchEvent(designModeAddLabel, Applab.onDesignModeAddLabel);
-    }
     var designModeClear = document.getElementById('designModeClear');
     if (designModeClear) {
       dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
     }
 
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  for (var i = Applab.nextElementIdMap[prefix] || 1;
+       divApplab.find("#" + prefix + i).length !== 0;
+       i++) {
+    // repeat until we find an unused id
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -1188,6 +1353,8 @@ studioApp.reset = function(first) {
   if (Applab.levelHtml) {
     divApplab.innerHTML = Applab.levelHtml;
   }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
 
   // Reset goal successState:
   if (level.goal) {
@@ -1588,33 +1755,11 @@ Applab.onDesignModeButton = function() {
 };
 
 Applab.onCodeModeButton = function() {
-  // TODO(dave): save HTML
   Applab.toggleDesignMode(false);
 };
 
-Applab.onDesignModeAddButton = function() {
-  Applab.levelHtml += "<button>Button</button>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddInput = function() {
-  Applab.levelHtml += "<input>";
-  Applab.updateLevelHtml();
-};
-
-Applab.onDesignModeAddLabel = function() {
-  Applab.levelHtml += "<label>text</label>";
-  Applab.updateLevelHtml();
-};
-
 Applab.onDesignModeClear = function() {
-  Applab.levelHtml = "";
-  Applab.updateLevelHtml();
-};
-
-Applab.updateLevelHtml = function() {
-  var divApplab = document.getElementById('divApplab');
-  divApplab.innerHTML = Applab.levelHtml;
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -2975,7 +3120,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":240,"../../locale/current/common":243,"../StudioApp":4,"../codegen":51,"../constants":53,"../dom":54,"../dropletUtils":55,"../skins":192,"../slider":193,"../templates/page.html":217,"../timeoutList":223,"../utils":238,"../xml":239,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./dontMarshalApi":13,"./dropletConfig":14,"./extraControlRows.html":15,"./visualization.html":19}],19:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"../StudioApp":4,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":194,"../slider":195,"../templates/page.html":219,"../timeoutList":225,"../utils":240,"../xml":241,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./visualization.html":21}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2995,7 +3140,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":259}],15:[function(require,module,exports){
+},{"ejs":261}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3015,7 +3160,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":240,"../../locale/current/common":243,"ejs":259}],13:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"ejs":261}],15:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3088,7 +3233,47 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
   }
 };
 
-},{"./applab":10}],12:[function(require,module,exports){
+},{"./applab":10}],14:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":261}],13:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="designModeBox" width="100%" style="display:none;">\n  ');2; /* contains temporary unlocalized strings */ ; buf.push('\n  Welcome to Design mode! Under construction.<br>\n  Drag the elements below into your app, then press \'Run\' to save. Press \'Clear\' to start over.<br>\n  <table>\n    <colgroup>\n      <col width="50%">\n      <col width="50%">\n    </colgroup>\n    <tr>\n      <td><h3>Elements</h3></td>\n      <td><h3>Properties</h3></td>\n    </tr>\n    <tr>\n      <td>\n        <div id="design-elements">\n          <div data-element-type="button" class="new-design-element">button</div>\n          <div data-element-type="label" class="new-design-element">label</div>\n          <div data-element-type="input" class="new-design-element">input</div>\n          <button id="designModeClear" class="share">Clear</button><br>\n        </div>\n      </td>\n      <td>\n        <div id="design-properties">\n          ', (25,  designProperties ), '\n        </div>\n      </td>\n    </tr>\n  </table>\n\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":261}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3108,7 +3293,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":243,"ejs":259}],11:[function(require,module,exports){
+},{"../../locale/current/common":245,"ejs":261}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3181,7 +3366,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":240,"../../locale/current/common":243,"../codegen":51,"../utils":238}],240:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"../codegen":53,"../utils":240}],242:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],9:[function(require,module,exports){
 'use strict';
@@ -4042,7 +4227,7 @@ oop.inherits(Mode, JavaScriptMode);
 exports.Mode = Mode;
 });
 
-},{"../dropletConfig":14,"./errorMapper":6}],14:[function(require,module,exports){
+},{"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -4196,4 +4381,4 @@ module.exports.processResults = function (results) {
   });
 };
 
-},{}]},{},[17]);
+},{}]},{},[19]);
