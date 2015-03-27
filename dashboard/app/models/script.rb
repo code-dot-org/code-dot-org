@@ -169,6 +169,10 @@ class Script < ActiveRecord::Base
     k5_course? || %w(msm algebra).include?(self.name)
   end
 
+  def show_freeplay_links?
+    name != 'algebra'
+  end
+
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
