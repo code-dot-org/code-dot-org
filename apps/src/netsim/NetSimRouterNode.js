@@ -709,6 +709,7 @@ NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
   }
 
   this.bandwidth = newBandwidth;
+  this.recalculateSchedule();
   this.update();
 };
 
