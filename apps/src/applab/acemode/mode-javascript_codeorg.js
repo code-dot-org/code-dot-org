@@ -1,4 +1,5 @@
 var dropletConfig = require('../dropletConfig');
+var dropletUtils = require('../../dropletUtils');
 var errorMapper = require('./errorMapper');
 
 // define ourselves for ace, so that it knows where to get us
@@ -70,7 +71,7 @@ oop.inherits(Mode, JavaScriptMode);
     };
     // Mark all of our blocks as predefined so that linter doesnt complain about
     // using undefined variables
-    dropletConfig.blocks.forEach(function (block) {
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
       newOptions.predef[block.func] = false;
     });
 
