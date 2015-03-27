@@ -376,12 +376,14 @@ loadStyle(appOptions.app);
 var promise;
 if (appOptions.droplet) {
   loadStyle('droplet/droplet.min');
+  loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full'));
+      .then(loadSource('droplet/droplet-full'))
+      .then(loadSource('tooltipster/jquery.tooltipster'));
   promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()
