@@ -353,6 +353,9 @@ Eval.execute = function() {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     Eval.message = evalMsg.emptyFunctionalBlock();
+  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
