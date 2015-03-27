@@ -25,6 +25,7 @@
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
 goog.require('goog.array');
+goog.require('goog.style');
 
 /**
  * Class for a top-level block editing blockSpace.
@@ -417,23 +418,34 @@ Blockly.BlockSpaceEditor.prototype.svgSize = function() {
  */
 Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if (style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) +
-      parseInt(style.borderRightWidth, 10);
+  var svgStyle = window.getComputedStyle(svg);
+  var svgBorderWidth = 0;
+  if (svgStyle) {
+    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) +
+      parseInt(svgStyle.borderRightWidth, 10);
   }
-  var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
-  if (svg.cachedWidth_ != width) {
-    svg.setAttribute('width', width + 'px');
-    svg.cachedWidth_ = width;
+
+  // Subtract any pixels present above the svg element from the available height
+  // (only need to do this for mainBlockSpaceEditor's svg element, but fall back
+  // to this.svg_ during mainBlockSpaceEditor's creation)
+  var containerDiv = svg.parentNode;
+  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
+  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement)
+    - goog.style.getPageOffsetTop(containerDiv);
+
+  var divSize = goog.style.getSize(containerDiv);
+  var svgWidth = divSize.width - svgBorderWidth;
+  var svgHeight = divSize.height - headerHeight;
+
+  if (svg.cachedWidth_ != svgWidth) {
+    svg.setAttribute('width', svgWidth + 'px');
+    svg.cachedWidth_ = svgWidth;
   }
-  if (svg.cachedHeight_ != height) {
-    svg.setAttribute('height', height + 'px');
-    svg.cachedHeight_ = height;
+  if (svg.cachedHeight_ != svgHeight) {
+    svg.setAttribute('height', svgHeight + 'px');
+    svg.cachedHeight_ = svgHeight;
   }
+
   // Update the scrollbars (if they exist).
   if (this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize();
