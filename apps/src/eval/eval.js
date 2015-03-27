@@ -449,7 +449,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
 
   // Add a short delay so that user gets to see their finished drawing.
-  setTimeout(function () {
+  require('../timeoutList').setTimeout(function () {
     displayFeedback(response);
   }, 2000);
 }
