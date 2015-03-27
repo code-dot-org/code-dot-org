@@ -80,7 +80,18 @@ NetSimMessage.prototype.getTable_ = function () {
   return this.shard_.messageTable;
 };
 
-/** Build own row for the message table  */
+/**
+ * @typedef {Object} messageRow
+ * @property {number} fromNodeID - this message in-flight-from node
+ * @property {number} toNodeID - this message in-flight-to node
+ * @property {string} payload - binary message content, all of which can be
+ *           exposed to the student.  May contain headers of its own.
+ */
+
+/**
+ * Build own row for the message table
+ * @returns {messageRow}
+ */
 NetSimMessage.prototype.buildRow_ = function () {
   return {
     fromNodeID: this.fromNodeID,
