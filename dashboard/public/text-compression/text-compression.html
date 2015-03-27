@@ -118,6 +118,7 @@
     for (var i = FIRST_SYMBOL; i < FIRST_SYMBOL + MAX_DICT_ENTRIES; i++) {
       dictEntries.push(String.fromCharCode(missingSymbolsMap[i] || i));
     }
+    dictEntries = dictEntries.sort();
     var poemsList = [
         "Pitter_patter_pitter_patter_listen_to_the_rain_pitter_patter_pitter_patter_on_the_window_pane",
         "A_tutor_who_tooted_the_flute_Tried_to_tutor_two_tooters_to_toot_Said_the_two_to_their_tutor,_\"Is_it_harder_to_toot_Or_to_tutor_two_tooters_to_toot?\"",
@@ -230,9 +231,8 @@
     function compress() {
 
       var poemDisplay = poemText;
-      poemCalc = poemText;
 
-      var dict = editor.getValue().split("\n");
+      var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
         if (new RegExp('[\\u' + (FIRST_SYMBOL + index).toString(16) + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
@@ -246,11 +246,11 @@
       for (var i = validRules.length - 1; i >= 0; i--) {
         if (validRules[i] != "") {
           // First compute any self referencing -- this is the string we'll look for in the poem.
-          var strToLookFor = fillOutSelfReference(validRules[i], validRules, i);
-          poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(strToLookFor), "gi"), "" + dictEntries[i]);
-          poemCalc = poemCalc.replace(new RegExp(strToLookFor, "gi"), "#");
+          var regex = new RegExp(escapeRegExp(fillOutSelfReference(validRules[i], validRules, i)), "gi");
+          poemDisplay = poemDisplay.replace(regex, "" + dictEntries[i]);
         }
       }
+      poemCalc = poemDisplay;
       var poemDisplayHighlight = poemDisplay.replace(new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
       document.getElementById("compressedPoem").innerHTML = poemDisplayHighlight;
       calculateData();
@@ -299,9 +299,9 @@
     var editor = CodeMirror.fromTextArea($dictionary[0], {
       lineNumbers: true,
       lineWrapping: true,
-      firstLineNumber: FIRST_SYMBOL,
+      firstLineNumber: 0,
       lineNumberFormatter: function (line) {
-        return String.fromCharCode(missingSymbolsMap[line] || line);
+        return dictEntries[line] || '';
       }
     });
     editor.on("change", compress);
