@@ -1,11 +1,17 @@
 {
   "name": "@cdo/apps",
   "version": "0.0.1",
-  "description": "Workaround for browserify relative paths problem",
+  "description": "Code Studio module package",
   "private": true,
   "browserify": {
     "transform": [
       "ejsify"
     ]
+  },
+  "devDependencies": {
+    "ejsify": "^1.0.0",
+    "hammerjs": "^2.0.4",
+    "timers-browserify": "^1.4.0",
+    "timerstub": "^1.0.3"
   }
 }

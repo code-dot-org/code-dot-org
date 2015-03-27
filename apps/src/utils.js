@@ -9,7 +9,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 }
 
 // get lodash
-var _ = require('./lodash');
+var _ = require('lodash');
 var Hammer = require('./hammer');
 
 // undo hackery

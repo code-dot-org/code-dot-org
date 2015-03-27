@@ -301,9 +301,6 @@ describe("mazeUtils", function () {
 });
 
 describe('forceInsertTopBlock', function () {
-  global.DOMParser = require('xmldom').DOMParser;
-  global.XMLSerializer = require('xmldom').XMLSerializer;
-
   it("no blocks", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '';

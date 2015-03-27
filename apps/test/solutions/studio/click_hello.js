@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var _ = require('@cdo/apps/lodash');
+var _ = require('lodash');
 
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 

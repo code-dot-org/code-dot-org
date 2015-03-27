@@ -4,7 +4,6 @@ var config = require('./pipeline-config.json');
 var es = require('event-stream');
 var gulp = require('gulp');
 var newer = require('gulp-newer');
-var insert = require('gulp-insert');
 var rename = require("gulp-rename");
 
 gulp.task('clean', function (cb) {
@@ -172,7 +171,7 @@ gulp.task('lint', function() {
 
 gulp.task('test', ['lint', 'mochaTest']);
 
-gulp.task('mochaTest', function() {
+gulp.task('mochaTest', ['build'], function() {
   var which = require('npm-which')(__dirname).sync;
   var mochify = require('mochify');
   mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
