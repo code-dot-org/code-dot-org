@@ -8,49 +8,39 @@ nav: pd2_nav
 
 ## Click on your location for more information. ##
 
-
-
-[Atlanta, GA](/educate/pd/15-16/atlanta)
+[CA - Los Angeles (LAUSD only)](/educate/pd/15-16/la)
 <br />
-[Boston, MA](/educate/pd/2/boston)
+[CA - Orange County](/educate/pd/15-16/orange)
 <br />
-[Broward County, FL](/educate/pd/2/broward)
+[FL - Broward](/educate/pd/15-16/broward)
 <br />
-[Charles County, MD](/educate/pd/2/charles)
+[FL - Miami](/educate/pd/15-16/miami)
 <br />
-[Chicago, IL](/educate/pd/2/chicago)
+[GA - Atlanta](/educate/pd/15-16/atlanta)
 <br />
-[Durham, NC](/educate/pd/2/durham)
+[ID - Boise](/educate/pd/15-16/idaho)
 <br />
-[Frederick, MD](/educate/pd/2/frederick)
+[IL - Chicago](/educate/pd/15-16/chicago)
 <br />
-[Houston](/educate/pd/2/houston)
+[MD - Frederick](/educate/pd/15-16/frederick)
 <br />
-[Howard, MD](/educate/pd/2/howard)
+[MD - Howard](/educate/pd/15-16/howard)
 <br />
-[Idaho](/educate/pd/2/idaho)
+[MD - Prince Geroge's County](/educate/pd/15-16/pg)
 <br />
-[Las Vegas](/educate/pd/2/las-vegas)
+[NC - Durham](/educate/pd/15-16/durham)
 <br />
-[Los Angeles](/educate/pd/2/los-angeles)
+[NV - Las Vegas](/educate/pd/15-16/las-vegas)
 <br />
-[Miami-Dade, FL](/educate/pd/2/miami)
+[NY - New York City](/educate/pd/15-16/nyc)
 <br />
-[Montgomery County, MD](/educate/pd/2/moco)
+[OH - Columbus](/educate/pd/15-16/ohio)
 <br />
-[New York City](/educate/pd/2/nyc)
+[TX - Houston](/educate/pd/15-16/houston)
 <br />
-[Ohio](/educate/pd/2/ohio)
+[WA - Seattle](/educate/pd/15-16/seattle)
 <br />
-[Prince Geroge's County, MD](/educate/pd/2/pg)
-<br />
-[Seattle](/educate/pd/2/seattle)
-<br />
-[South Florida](/educate/pd/2/south-florida)
-<br />
-[Spokane](/educate/pd/2/spokane)
-<br />
-[Utah](/educate/pd/2/utah)
+[WA - Spokane](/educate/pd/15-16/spokane)
 <br />
 
 ----------
