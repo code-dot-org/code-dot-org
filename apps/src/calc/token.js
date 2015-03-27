@@ -83,11 +83,9 @@ Token.prototype.setStringRepresentation_ = function () {
     return;
   }
 
-  // use toLocaleString so that we get commas per thousands
-
   // at this point we know we have a jsnumber
   if (this.val_.isInteger()) {
-    this.nonRepeated_ = this.val_.toFixnum().toLocaleString('en-US');
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
@@ -96,10 +94,21 @@ Token.prototype.setStringRepresentation_ = function () {
   var repeater = jsnums.toRepeatingDecimal(this.val_.numerator(),
     this.val_.denominator());
   if (!repeater[2] || repeater[2] === '0') {
-    this.nonRepeated_ = this.val_.toFixnum().toLocaleString('en-US');
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
-  this.nonRepeated_ = repeater[0].toLocaleString('en-US') + '.' + repeater[1];
+  this.nonRepeated_ = Token.numberWithCommas_(repeater[0]) + '.' + repeater[1];
   this.repeated_ = repeater[2];
+};
+
+/**
+ * From http://stackoverflow.com/a/2901298/2506748
+ * @param {number} x
+ * @returns {string} the number with commas inserted in thousandth's place
+ */
+Token.numberWithCommas_ = function (x) {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 };
