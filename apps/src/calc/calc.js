@@ -32,7 +32,7 @@ var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -911,6 +911,7 @@ function animateUserExpression (maxNumSteps) {
  *   centered.
  */
 function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) {
+  tokenList = _.flattenDeep(tokenList);
   var parent = document.getElementById(parentId);
 
   var g = document.createElementNS(Blockly.SVG_NS, 'g');

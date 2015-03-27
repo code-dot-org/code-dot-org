@@ -55,10 +55,10 @@ function customValidator(assert) {
   var validateTextElementContainer = function (element, items) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
-      assert.equal(element.children[i].textContent, expectedTextContent);
-      assert.equal(element.children[i].getAttribute('class'), items[i][1]);
+      assert.equal(element.childNodes[i].textContent, expectedTextContent);
+      assert.equal(element.childNodes[i].getAttribute('class'), items[i][1]);
     }
-    assert.equal(element.children.length, i);
+    assert.equal(element.childNodes.length, i);
   };
 
 
