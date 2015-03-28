@@ -70,8 +70,12 @@ class Ability
       end
 
       if user.district_contact?
-        can :teachers, District
         can [:cohort, :teacher], WorkshopAttendance
+        can :manage, Cohort do |cohort| # if the cohort has the district contact's district
+          cohort.districts.any? do |district|
+            district.contact_id == user.id
+          end
+        end
       end
     end
 
