@@ -50,10 +50,62 @@ module Ops
       # Test index + CRUD controller actions
 
     test 'Ops team can list all cohorts' do
+      cohorts = [create(:cohort), create(:cohort), create(:cohort)]
       assert_routing({ path: "#{API}/cohorts", method: :get }, { controller: 'ops/cohorts', action: 'index' })
 
       get :index
       assert_response :success
+
+      assert_equal cohorts.count + 1, assigns(:cohorts).count # cohorts created in this test + cohort created in setup
+    end
+
+    test 'district contact can list their districts cohorts' do
+      cohort = create :cohort
+      cohort = cohort.reload
+
+      # 2nd that we will add the same district as the 1st
+      cohort2 = create :cohort
+      cohort2 = cohort2.reload
+      cohort2.districts << cohort.districts.first
+      cohort2.save!
+
+      dc = cohort.districts.first.contact
+      assert dc
+
+      sign_in dc
+
+      get :index
+      assert_response :success
+      assert_equal [cohort, cohort2], assigns(:cohorts) # only the cohorts for this district
+    end
+
+    test 'district contact can show their districts cohorts' do
+      cohort = create :cohort
+      cohort = cohort.reload
+
+      dc = cohort.districts.first.contact
+      assert dc
+
+      sign_in dc
+
+      get :show, id: cohort.id
+      assert_response :success
+      assert_equal cohort, assigns(:cohort)
+    end
+
+    test 'district contact cannot show cohorts without their district' do
+      create :cohort # this one is not accessible
+
+      cohort = create :cohort
+      cohort = cohort.reload
+
+      dc = cohort.districts.first.contact
+      assert dc
+
+      sign_in dc
+
+      get :show, id: @cohort.id # not accessible
+      assert_response :forbidden
     end
 
     test 'Anonymous users cannot affect cohorts' do
