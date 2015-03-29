@@ -56,6 +56,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
   end
 
+
+  test "annoying page number redirects to first page" do
+    get :index, app: Game::PLAYLAB, page: 100000
+
+    assert_redirected_to '/gallery'
+  end
+
   test "should show index if gallery activity belongs to deleted user" do
     u = @playlab_gallery_activity.user
     u.destroy

@@ -180,7 +180,8 @@ dashboard.saveProject = function(callback) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : Applab.getCode();
+      : window.Applab && Applab.getCode();
+  dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = window.location.pathname;
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
@@ -264,6 +265,10 @@ function initApp() {
         location.reload();
       }
     });
+
+    if (dashboard.currentApp && dashboard.currentApp.levelHtml) {
+      appOptions.level.levelHtml = dashboard.currentApp.levelHtml;
+    }
 
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
@@ -371,12 +376,14 @@ loadStyle(appOptions.app);
 var promise;
 if (appOptions.droplet) {
   loadStyle('droplet/droplet.min');
+  loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full'));
+      .then(loadSource('droplet/droplet-full'))
+      .then(loadSource('tooltipster/jquery.tooltipster'));
   promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()

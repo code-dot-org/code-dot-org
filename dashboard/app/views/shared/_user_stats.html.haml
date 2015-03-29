@@ -26,7 +26,8 @@
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a.level_link{href: "/s/#{script_summary[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}", class: status}
+              - link = url_from_path("/s/#{script_summary[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}")
+              %a.level_link{href: link, class: status}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = level[:title]

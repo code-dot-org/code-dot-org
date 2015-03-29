@@ -9,6 +9,25 @@
   </div>
 </div>
 
+<% var gameButtons = function() { -%>
+  <div id="gameButtons">
+    <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+      <div><%= msg.runProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+    </button>
+    <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+      <div><%= msg.resetProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+    </button>
+    <% if (data.controls) { %>
+    <%- data.controls %>
+    <% } %>
+    <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
+    <% } %>
+  </div>
+<% }; -%>
+
 <div id="visualizationColumn">
   <div id="visualization">
     <%- data.visualization %>
@@ -16,22 +35,7 @@
 
   <div id="belowVisualization">
 
-    <div id="gameButtons">
-      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-        <div><%= msg.runProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-      </button>
-      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
-        <div><%= msg.resetProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-      </button>
-      <% if (data.controls) { %>
-      <%- data.controls %>
-      <% } %>
-      <% if (data.extraControlRows) { %>
-      <%- data.extraControlRows %>
-      <% } %>
-    </div>
+    <% gameButtons() %>
     <div id="bubble" class="clearfix">
       <table id="prompt-table">
         <tr>
@@ -68,11 +72,12 @@
     </div>
 
     <% if (data.hasDesignMode) { %>
-      <div id="designModeButtons" style="display:none;">
-        <button id="codeModeButton" class="share">
-          <%= msg.codeMode() %>
-        </button>
-      </div>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
     <% } %>
   </div>
 </div>
@@ -107,9 +112,10 @@
     <div id="codeTextbox"></div>
   <% } %>
   <% if (data.hasDesignMode) { %>
-    <div id="designModeBox" style="display:none;">
-      Welcome to Design mode. Under construction.
-    </div>
+    <%- data.designModeBox %>
+  <% } %>
+  <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+  <%- data.extraControlRows %>
   <% } %>
 </div>
 

@@ -10,6 +10,7 @@
  */
 'use strict';
 
+var NodeType = require('./netsimConstants').NodeType;
 var NetSimLogger = require('./NetSimLogger');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
@@ -255,9 +256,9 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     }
 
     var nodes = rows.map(function (row) {
-      if (row.type === NetSimClientNode.getNodeType()) {
+      if (row.type === NodeType.CLIENT) {
         return new NetSimClientNode(self.shard_, row);
-      } else if (row.type === NetSimRouterNode.getNodeType()) {
+      } else if (row.type === NodeType.ROUTER) {
         return new NetSimRouterNode(self.shard_, row);
       }
     }).filter(function (node) {
@@ -271,6 +272,7 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
 /** Adds a row to the lobby for a new router node. */
 NetSimConnection.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err, router) {
+    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
     router.dnsMode = this.levelConfig_.defaultDnsMode;
     router.update(function () {
       this.statusChanges.notifyObservers();

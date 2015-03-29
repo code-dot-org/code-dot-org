@@ -82,7 +82,7 @@ end
 get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
 
   def send_receipts(kind, form)
-    templates = ['workshop_cancel_receipt','workshop_cancel_notice']
+    templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
     recipient = Poste2.create_recipient(form[:email], name:form[:name], ip_address:form[:updated_ip])
     templates.each do |template|
       Poste2.send_message(template, recipient, form_id:form[:id])

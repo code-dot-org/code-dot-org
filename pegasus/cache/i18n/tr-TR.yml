@@ -17,7 +17,8 @@
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için
     fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek
+    # ile bize katılabilirsiniz.'
   name: İsim
   email: e-posta
   zipcode: Posta kodu ya da ülke
@@ -115,8 +116,8 @@
   learn_classes: Yerel sınıfları bulun
   hoc_is_here: '#HourOfCode burada. @codeorg u kontrol edin'
   just_did_hoc: '#HourOfCode yeni yaptım - @codeorg u kontrol edin'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Neden daha çok okul bilgisayar bilimlerini öğretmiyor? Bunu biz
+    çözebiliriz Daha fazla bilgi almak için http://youtu.be/nKIu9yen5nc .
   learn_hoc: Bir Saat Kodu öğrenin
   beyond_hoc: Bir saat boyunca
   what_gender: Cinsiyetiniz nedir?
@@ -153,27 +154,54 @@
   studiobar_donate_body: Bağış yapacağın her dolar ile bir çocuk daha öğrenecek
   studiobar_shop_title: Mağaza
   studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: '&ldquo;lHer ülkede kızlar kod saati öğrenmek için can
+    atıyor&rdquo; '
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;öğrenmenin yaşı yoktur&rdquo;
+    Susan,  YouTube Seo'su
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Bilgisayar bilimi anlayışı giderek önemli bir hale geliyor...&rdquo;
+    Sheryl, Facebook kurucusu
   homepage_slot_text_hoc: Kod Saati
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Tümü bizim öğrenme süreçlerimiz
   homepage_slot_text_course4: Ders 4
   homepage_slot_text_shop: Mağaza
   homepage_slot_text_flappy: Flappy Kod
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Videoyu izle
+  homepage_action_text_teachervideo: Videoyu izle
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Üye dilekçesi
+  homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
+  homepage_slot_text_title_hoc: Saat Kodu
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Öğrenciler
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Bağışla
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -375,8 +403,8 @@
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
   dashboard_new_password: yeni şifre
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: Başlatılmadı
+  dashboard_progress_in_progress: İşlem devam ediyor
   dashboard_progress_not_completed: tamamlanmadı
   dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
   dashboard_progress_completed_perfect: tamamlandı, harika
@@ -781,7 +809,7 @@
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino ile Sparkfun
-  processing_beyond_name: Program with Processing
+  processing_beyond_name: İşleme programı
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: 4-104 Yaş

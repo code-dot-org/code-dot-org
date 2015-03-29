@@ -214,12 +214,12 @@ svg {
       padding: 0.3em;
     }
 
-    .own_row {
+    .own-row {
       font-weight: bold;
       background-color: $own-node-background-color;
     }
 
-    .user_row {
+    .user-row {
 
     }
 
@@ -526,6 +526,50 @@ svg {
       .packet-size-slider {
         clear: both;
       }
+    }
+  }
+
+  .netsim-slider {
+    label {
+      display: inline-block;
+    }
+
+    .slider-inline-wrap {
+      display: inline-block;
+      margin-top: 3.5px;
+      width: 300px;
+
+      .slider-labels {
+        margin-bottom: 1px;
+
+        .max-value {
+          float: right;
+          text-align: right;
+          width: 5em;
+        }
+
+        .min-value {
+          float: left;
+          text-align: left;
+          width: 5em;
+        }
+
+        .current-value {
+          text-align: center;
+        }
+      }
+
+      .slider {
+        clear: both;
+      }
+    }
+  }
+
+  .netsim-bandwidth-control {
+    text-align: center;
+    .slider-inline-wrap {
+      width: 95%;
+      margin-right: 0.5em;
     }
   }
 

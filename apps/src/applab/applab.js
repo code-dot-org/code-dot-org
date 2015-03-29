@@ -4,9 +4,10 @@
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
-require('./mode-javascript_codeorg');
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
@@ -84,10 +85,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList.item(1) === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList.item(0) +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -99,10 +141,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -110,6 +153,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -127,9 +188,11 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 5; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -141,6 +204,11 @@ function adjustAppSizeStyles() {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#codeWorkspace") {
               // set the left for the codeWorkspace
@@ -177,12 +245,6 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function stepSpeedFromSliderSpeed(sliderSpeed) {
@@ -286,6 +348,10 @@ function handleExecutionError(err, lineNumber) {
 
 Applab.getCode = function () {
   return studioApp.editor.getValue();
+};
+
+Applab.getHtml = function () {
+  return Applab.levelHtml;
 };
 
 Applab.onTick = function() {
@@ -575,22 +641,24 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
+  });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
   });
 
   config.html = page({
@@ -604,7 +672,9 @@ Applab.init = function(config) {
       idealBlockNumber: undefined,
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
-      hasDesignMode: true
+      pinWorkspaceToBottom: true,
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
@@ -674,7 +744,25 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
+
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
 
   if (level.editCode) {
     // Initialize the slider.
@@ -712,12 +800,192 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
     var designModeButton = document.getElementById('designModeButton');
-    dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
     var codeModeButton = document.getElementById('codeModeButton');
-    dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  for (var i = Applab.nextElementIdMap[prefix] || 1;
+       divApplab.find("#" + prefix + i).length !== 0;
+       i++) {
+    // repeat until we find an unused id
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -783,6 +1051,13 @@ studioApp.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
 
   // Reset goal successState:
   if (level.goal) {
@@ -852,7 +1127,9 @@ studioApp.runButtonClick = function() {
 
   // Show view data button now that channel id is available.
   var viewDataButton = document.getElementById('viewDataButton');
-  viewDataButton.style.display = "inline-block";
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -1184,6 +1461,10 @@ Applab.onCodeModeButton = function() {
   Applab.toggleDesignMode(false);
 };
 
+Applab.onDesignModeClear = function() {
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
 Applab.toggleDesignMode = function(enable) {
   var codeModeHeaders = document.getElementById('codeModeHeaders');
   codeModeHeaders.style.display = enable ? 'none' : 'block';
@@ -1195,10 +1476,13 @@ Applab.toggleDesignMode = function(enable) {
   var designModeBox = document.getElementById('designModeBox');
   designModeBox.style.display = enable ? 'block' : 'none';
 
-  var gameButtons =  document.getElementById('gameButtons');
-  gameButtons.style.display = enable ? 'none' : 'block';
-  var designModeButtons = document.getElementById('designModeButtons');
-  designModeButtons.style.display = enable ? 'block' : 'none';
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1530,6 +1814,8 @@ Applab.dot = function (opts) {
       // If the pen is up and the color has been changed, use that color:
       ctx.strokeStyle = Applab.turtle.penUpColor;
     }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -1537,6 +1823,7 @@ Applab.dot = function (opts) {
       // If the pen is up, reset strokeStyle back to transparent:
       ctx.strokeStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1545,8 +1832,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1606,6 +1895,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,

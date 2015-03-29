@@ -1,6 +1,6 @@
 ---
-title: Cohort 2 Locations
-nav: pd3_nav
+title: 2015-2016 Professional Development Locations
+nav: pd2_nav
 ---
 <a id="top"></a>
 
@@ -8,49 +8,39 @@ nav: pd3_nav
 
 ## Click on your location for more information. ##
 
-[Atlanta, GA](/educate/pd/2/atlanta)
+[CA - Los Angeles (LAUSD only)](/educate/pd/15-16/la)
 <br />
-[Baltimore, MD](/educate/pd/2/baltimore)
+[CA - Orange County](/educate/pd/15-16/orange)
 <br />
-[Boston, MA](/educate/pd/2/boston)
+[FL - Broward](/educate/pd/15-16/broward)
 <br />
-[Broward County, FL](/educate/pd/2/broward)
+[FL - Miami](/educate/pd/15-16/miami)
 <br />
-[Charles County, MD](/educate/pd/2/charles)
+[GA - Atlanta](/educate/pd/15-16/atlanta)
 <br />
-[Chicago, IL](/educate/pd/2/chicago)
+[ID - Boise](/educate/pd/15-16/idaho)
 <br />
-[Durham, NC](/educate/pd/2/durham)
+[IL - Chicago](/educate/pd/15-16/chicago)
 <br />
-[Frederick, MD](/educate/pd/2/frederick)
+[MD - Frederick](/educate/pd/15-16/frederick)
 <br />
-[Houston](/educate/pd/2/houston)
+[MD - Howard](/educate/pd/15-16/howard)
 <br />
-[Howard, MD](/educate/pd/2/howard)
+[MD - Prince Geroge's County](/educate/pd/15-16/pg)
 <br />
-[Idaho](/educate/pd/2/idaho)
+[NC - Durham](/educate/pd/15-16/durham)
 <br />
-[Las Vegas](/educate/pd/2/las-vegas)
+[NV - Las Vegas](/educate/pd/15-16/las-vegas)
 <br />
-[Los Angeles](/educate/pd/2/los-angeles)
+[NY - New York City](/educate/pd/15-16/nyc)
 <br />
-[Miami-Dade, FL](/educate/pd/2/miami)
+[OH - Columbus](/educate/pd/15-16/ohio)
 <br />
-[Montgomery County, MD](/educate/pd/2/moco)
+[TX - Houston](/educate/pd/15-16/houston)
 <br />
-[New York City](/educate/pd/2/nyc)
+[WA - Seattle](/educate/pd/15-16/seattle)
 <br />
-[Ohio](/educate/pd/2/ohio)
-<br />
-[Prince Geroge's County, MD](/educate/pd/2/pg)
-<br />
-[Seattle](/educate/pd/2/seattle)
-<br />
-[South Florida](/educate/pd/2/south-florida)
-<br />
-[Spokane](/educate/pd/2/spokane)
-<br />
-[Utah](/educate/pd/2/utah)
+[WA - Spokane](/educate/pd/15-16/spokane)
 <br />
 
 ----------
