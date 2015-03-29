@@ -3,11 +3,11 @@
 var msg = require('../../locale/current/netsim');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
+var Packet = require('./Packet');
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
-var PacketHeaderType = netsimConstants.PacketHeaderType;
 
 /**
  * A level configuration that can be used by NetSim
@@ -56,6 +56,13 @@ var PacketHeaderType = netsimConstants.PacketHeaderType;
  *           included in the visible controls will be enabled and cannot be
  *           disabled by the student.
  *
+ * @property {boolean} showRouterBandwidthControl - Whether students should be
+ *           able to see and manipulate the slider that adjusts the router's
+ *           max throughput speed.
+ *
+ * @property {number} defaultRouterBandwidth - How fast the router should be
+ *           able to process packets, on initial level load.
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -83,16 +90,16 @@ levels.default = {
 
   // Packet header specification
   routerExpectsPacketHeader: [
-    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
   clientInitialPacketHeader: [
-    { key: PacketHeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: PacketHeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
+    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
+    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
   ],
 
   // Send widget configuration
@@ -127,7 +134,8 @@ levels.default = {
   ],
 
   // Router tab and its controls
-  // Nothing here yet!
+  showRouterBandwidthControl: true,
+  defaultRouterBandwidth: Infinity,
 
   // DNS tab and its controls
   showDnsModeControl: true,

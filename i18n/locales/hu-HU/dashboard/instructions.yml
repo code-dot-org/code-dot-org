@@ -1,49 +1,24 @@
 hu:
   data:
     instructions:
-      10A_instruction: |
-        Alright let's complete this puzzle with a Green Square that
-        is 175 pixels in size.
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      10A_instruction: Rendben, fejezzük be ezt a puzzle-t egy 175 pixeles zöld négyzettel.
+      2-3 _instruction: A lila virágoknak 1 vagy 0 nektárjuk lehet. Légy óvatos, és ne gyűjts nektárt a lila virágokról, ha nincs nektárjuk!
+      2-3 Artist 1 new_instruction: Szia, én egy művész vagyok. Kódot írhatsz nekem, hogy szinte bármit megcsináljak. Néhány blokk felhasználásával rajzoltass velem a képen látható szürke vonalakon. (Minden vonal 100 pixel hosszú.)
+      2-3 Artist 11_instruction: 'Készítsd el a stoptábla keretét egy olyan nyolcszög megrajzolásával, aminek minden oldala 100 pixel hosszú. Hány fokot kell fordulnod? (Tipp: mennyi 360 osztva 8-cal?)'
+      2-3 Artist 12_instruction: 'Állítsd be az "ismételd...alkalommal" blokkot, úgy, hogy rajzoljon egy kört a szemgolyó befejezéséhez. Ha minden lépés egy fokkal jobbra fordul, hányszor kell ismételni a teljes kör befejezéséhez? 180? 360? 500?'
+      2-3 Artist 2 new_instruction: 'Ennek a háznak csak félig van kész az egyik fala. Minden oldal 100 hosszúságú, de a félkész csak 50-es. Fejezd be a falat! '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
       2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
+        Az "ugorj" blokk vonalhúzás nélkül mozgatja a művészt.
+        Rajzolj szaggatott vonalat az "ugorj" és a "rajzolj" blokkok segítségével.
+      2-3 Artist 3_instruction: Ez a kalap 100 pixel magas. Rajzolj egy 70 pixellel kisebb kalapot.
+      2-3 Artist 3new_instruction: A vörös kalap 100 pixel magas, Fejezd be a rajzot egy fekete kalappal, ami 70 pixellel rövidebb. A fekete kalap szélessége 50 pixel.
+      2-3 Artist 4_instruction: Segíts befejezni a cica házát!
+      2-3 Artist 5_instruction: 'Helyettesítsd ezt a kódot egy "ismételd...alkalommal" blokkal, hogy ugyanazt a házat mindössze 3 blokk felhasználásával rajzold meg.'
+      2-3 Artist 6_instruction: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget. Tipp: Mind a három oldal egyforma hosszú.'
+      2-3 Artist 7_instruction: 'Segíts megrajzolni az utolsó ablak jobb felét. Az ablak minden négyszögének 25 pixel hosszú az oldala. '
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
@@ -162,7 +137,7 @@ hu:
       2-3 Artist Loops 7_instruction: |
         We can use loops to make all kinds of polygons.  Can
         you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
+      2-3 Artist Loops 8_instruction: Legyen mindkét elem a hurok belsejében.
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
       2-3 Artist Loops New 1_instruction: |
         Let's draw this robot's head! Can you
@@ -433,9 +408,7 @@ hu:
         TNT or feathers will fly!
       2-3 Maze 4_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
       2-3 Maze 5_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-      2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként lehet, hogy dühös leszek!
       2-3 Maze 7_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
       2-3 Maze 8_instruction: Get me to the pig!
       2-3 Maze 9_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
@@ -468,9 +441,7 @@ hu:
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
       2-3 Maze sq3_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze sq4_instruction: Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként lehet, hogy dühös leszek!
       2-3 Maze sq5_instruction: |
         Get me to the pig! How many times do you have to
         repeat a block?
@@ -828,18 +799,10 @@ hu:
       4-5 Maze 3_instruction: Must... get... to sunflower.
       4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 5 (copy 1)_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
+      4-5 Maze 5_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
+      4-5 Maze 6 (copy 1)_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
+      4-5 Maze 6_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
       4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
       4-5 Maze 8_instruction: |
         Use the "repeat" block to get the zombie to the
@@ -849,10 +812,7 @@ hu:
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
+      4-5 Maze Conditionals 10_instruction: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat be tudok járni annak hosszától függetlenül.
       4-5 Maze Conditionals 2_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -870,16 +830,12 @@ hu:
       4-5 Maze Conditionals 6_instruction: |
         Me want sunflower! Use an "if" block
         to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
+      4-5 Maze Conditionals 7_instruction: 'Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a húsevő növényekre!'
       4-5 Maze Conditionals 8_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
+      4-5 Maze Conditionals 9_instruction: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
       4-5 Maze Conditionals Assessment 1_instruction: |
         Use a "repeat until" and
         an "if-else" block to get me to the sunflower in as few blocks as possible.
@@ -1223,9 +1179,9 @@ hu:
         at this point to make your game look like you'd like it to. Click 'finish'
         when you're done.
       Big Game Vars 4_instruction: |
-        Awesome, now you can update the variables for
+        Awesome! Now you can update the variables for
         your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click 'finish'
+        at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
       BowShoot1_instruction: Use the repeat block to collect all the nectar!
       Brendan Artist work_instruction: none
@@ -1299,8 +1255,8 @@ hu:
         of evaluation.
       Calc Circles of Eval 2_instruction: |
         Each Evaluation Block has a function at
-        the top, With the inputs to that function written below. Each of those arguments
-        can be a value, or another Block.
+        the top, with the inputs to that function written below. Each of those arguments
+        can be a value, or another block.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1349,19 +1305,20 @@ hu:
         use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "sqr" - this function should have a domain of Number and
-        range of Number. Make sure to write two example cases! When you're done,
-        use your new function to calculate 7 squared.
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `cookie-sales` which
+        takes in the number of cookies sold, and produces the amount of money customers
+        spent to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `cookie-profit`, which takes in the number of cookies you sold,
+        and gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1371,19 +1328,19 @@ hu:
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 - can
-        you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years
+        - can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        called "age" - set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
+        of another variable! Here's a new variable called "age-in-months" - use
+        the expression you came up with in the last puzzle to set "age-in-months"
         to the number of months in "age"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
@@ -1994,12 +1951,8 @@ hu:
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
+      Course 4 Maze 6_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -2206,8 +2159,8 @@ hu:
         the x variable so that this expression returns true.
       Eval Booleans 5_instruction: |
         This OR block returns true if either of its parameters
-        is true, and otherwise returns false. Set the y variable to a value that will
-        cause this expression to return false.
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: |
         Here's one more boolean block called NOT. This
         block flips true to false, or false to true. If you wrap this block of code
@@ -2310,10 +2263,6 @@ hu:
         of Image. The body of the function is broken though, it always draws a circle
         of 50 pixel radius instead of using the radius parameter. Replace the current
         Number with the "radius" block from the domain. 
-      Eval Define Funcs 4 (copy 1)_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
       Eval Define Funcs 4_instruction: |
         Create a new function called "aqua-star"
         that has a Domain of a single Number for radius and returns an aqua star of
@@ -2324,7 +2273,7 @@ hu:
         have radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
-        that fills your screen with my-shape. Change my-shape to see what patterns
+        that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
@@ -2354,8 +2303,9 @@ hu:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that takes a number of points and a radius, and returns a yellow
-        radial star with given points where the inner radius is half the outer radius.
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         "striped-flag" that takes two colors and produces a flag that is 250 pixels
@@ -2386,11 +2336,15 @@ hu:
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -2415,9 +2369,6 @@ hu:
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2478,19 +2429,12 @@ hu:
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
         block as well as the “Move” block.
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
       frozen snowflake full_instruction: |
         Now let's repeat it 8 times to make a
         beautiful snowflake!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: |
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
@@ -2498,11 +2442,6 @@ hu:
       frozen square iterative_instruction: |
         It seems like we're halfway to making
         a square. Let's put 4 lines together to create a square.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.
@@ -3083,7 +3022,8 @@ hu:
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
@@ -3222,32 +3162,21 @@ hu:
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: 'Makk! Makk! Makk! Használd a "ha"blokkot, hogy eljuttass hozzájuk a lehető legkevesebb blokk felhasználásával.'
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: 'Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a falra!'
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: 'A "ha-különben" blokk ellenőriz egy feltételt, és az alapján végzi el az egyik VAGY a másik utasítást. Próbáld használni azt az új blokkot, hogy eljuttass a makkhoz.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 19_instruction: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
+      scrat 20_instruction: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat be tudok járni annak hosszától függetlenül. Siess! Olvad a jég!
       shrink_instruction: |
         Can you complete this puzzle by writing out "Hello World!"
         in solid red text that is 40 pixels in size?

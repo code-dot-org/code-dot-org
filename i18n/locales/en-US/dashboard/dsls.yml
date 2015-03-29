@@ -4,8 +4,9 @@ en:
       Blocks to Bools 1:
         Convert Blocks to Math: crwdns24832:0crwdne24832:0
         Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
-        /script_assets/msm/unit6/blockstomath1.png: crwdns24834:0crwdne24834:0
+        bools to math 1.blocks.start_blocks: crwdns35735:0crwdne35735:0
         (4+5) > 9: crwdns24835:0crwdne24835:0
+        ((4+5) > 9): crwdns35736:0crwdne35736:0
         Type the arithmetic expression here: crwdns24836:0crwdne24836:0
       Blocks to Bools 2:
         Convert Blocks to Math: crwdns24837:0crwdne24837:0
@@ -147,6 +148,12 @@ en:
         Create images with bits and bytes.: crwdns35098:0crwdne35098:0
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": crwdns35597:0crwdne35597:0
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: crwdns35716:0crwdne35716:0
+        description here: crwdns35717:0crwdne35717:0
+      CSPStudentLessonPlanTemplate:
+        title: crwdns35718:0crwdne35718:0
+        description here: crwdns35719:0crwdne35719:0
       External level test (will):
         first computer program: crwdns35598:0crwdne35598:0
       Hour of Code test content: [ ]

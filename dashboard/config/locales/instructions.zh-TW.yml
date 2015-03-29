@@ -1,33 +1,21 @@
 "zh":
   data:
     instructions:
-      10A_instruction: |
-        Alright let's complete this puzzle with a Green Square that
-        is 175 pixels in size.
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
+      10A_instruction: 好吧，讓我們畫一個邊長為175像素的綠色正方形來完成這個問題
+      2-3 _instruction: 紫色的花可能有 1 或 0 的花蜜。注意不要從一朵沒有任何花蜜的紫色花中採集花蜜。
       2-3 Artist 1 new_instruction: |
         Hi, I'm an artist. You can write code to make
         me draw almost anything. Use a few blocks to make me draw over the grey lines
         in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon\nwith
-        8 sides, each 100 pixels long. How many degrees should you turn? (Hint:\nWhat
-        is 360 divided by 8?) \n"
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
-        100, but the half-finished wall is only 50. Complete the wall. \n"
+      2-3 Artist 11_instruction: 幫這個八邊形畫上8個邊，每邊長100像素。你應該轉多少度？(提示：360除以8是多少?)
+      2-3 Artist 12_instruction: 設定"重複次數"程式積木來製造一個圓作為眼球。如果每一次動作都向右轉1度，你需要重複多少次來完成這個圓?180?360?500?
+      2-3 Artist 2 new_instruction: '這房子有個半完成的牆。兩邊都是 100，但是半完成的牆是只有 50。完成這個牆。 '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: |
         The jump block moves the artist without drawing.
         Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
+      2-3 Artist 3_instruction: 這頂帽子有100像數高。繪畫一個少70像數的帽子。
       2-3 Artist 3new_instruction: |
         The red hat is 100 pixels tall. Finish drawing
         a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
@@ -44,13 +32,11 @@
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
+      2-3 Artist 9_instruction: 完成這個風箏
       2-3 Artist Assessment 1_instruction: |
         Assessment: Finish drawing the last tooth,
         25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
+      2-3 Artist Debugging 1_instruction: 你可以做一個帽頂長100的帽子嗎?
       2-3 Artist Debugging 10_instruction: |
         The direction pad on my game controller
         is too narrow. Hint: Make it wider by 10 pixels
@@ -60,20 +46,13 @@
       2-3 Artist Debugging 12_instruction: |
         I'm supposed to add an ocean wave to
         this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
+      2-3 Artist Debugging 2_instruction: 這段程式是用來畫3個鬍鬚的，但他是錯的。提示：每個鬍鬚為75像素長。修改這段程式來畫這些鬍鬚。
+      2-3 Artist Debugging 3_instruction: 我的小船上有個洞 ！您可以通過更改線的角度修復它嗎？提示： 最後一個角多開了 15
+        度。
       2-3 Artist Debugging 4_instruction: |
         What is the image that we're trying to
         draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
+      2-3 Artist Debugging 5_instruction: 畫腿和腳的程式碼是錯誤的。提示：腳太長了，我們可能需要刪除一個步驟。
       2-3 Artist Debugging 6_instruction: |
         Looks like I'm sitting on a chair that’s
         missing a leg. Edit blocks to draw the leg.
@@ -161,9 +140,7 @@
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
         we're going to add some distance between them.\r\nUse the same code as\nbefore,
         but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
+      2-3 Artist Loops New 1_instruction: 讓我們來畫這顆機器人的頭吧！你能做出一個邊長為100像素的四邊形嗎?
       2-3 Artist Loops New 10_instruction: |
         Now let's connect a bunch of V's together,
         drawing them in a loop.
@@ -177,9 +154,7 @@
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
       2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
+      2-3 Artist Loops New 2_instruction: 這裡有一部份你用來繪製正方形的程式碼。如果你用"重複次數"程式積木來執行這段程式碼4次，會發生什麼事呢？
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
@@ -279,40 +254,17 @@
         Assessment: Collect all the
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
         have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: "These blocks are really bugging me. Fix the\nerror(s)
-        to collect all of the nectar and make all of the honey. \n"
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+      2-3 Bee Debugging 1_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 10_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 2_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 3_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 4_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 5_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。你現在可以使用"執行"和"下一步"。
+      2-3 Bee Debugging 6_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 7_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 8_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging 9_instruction: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。
+      2-3 Bee Debugging Assessment 1_instruction: '評估: 這些程式積木煩惱著我。改正錯誤並收集全部的花蜜來製造蜂蜜。'
       2-3 Bee Functions 1_instruction: |
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
@@ -479,8 +431,7 @@
         block when I need it?)
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
       2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
+      4-5 Artist 1_instruction: '請幫我畫完我的箱子。(每一條線的長度是 300 像素) '
       4-5 Artist 10_instruction: |
         Press "Run" to try the code. Then, repeat it
         enough times to complete the drawing. The colors will be different every time.
@@ -488,16 +439,11 @@
         Complete the green lines. The lines are 300 pixels
         long and 15 pixels apart.
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+      4-5 Artist 3.5_instruction: 好，現在試著搞清楚如果你執行這段程式碼會發生什麼事(或直接按"執行"試試看)。然後重複它夠多次來完成繪圖。每次的顏色(可能)會不同。
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
+      4-5 Artist 4_instruction: 一個圓有多少度？藉由迴圈來創造一個有顏色的圓。
       4-5 Artist 5_instruction: What angle do you use?
       4-5 Artist 6_instruction: |
         This equilateral triangle has angles of 60, 60,
@@ -1209,9 +1155,9 @@
         at this point to make your game look like you'd like it to. Click 'finish'
         when you're done.
       Big Game Vars 4_instruction: |
-        Awesome, now you can update the variables for
+        Awesome! Now you can update the variables for
         your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click 'finish'
+        at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
       BowShoot1_instruction: Use the repeat block to collect all the nectar!
       Brendan Artist work_instruction: none
@@ -1285,8 +1231,8 @@
         of evaluation.
       Calc Circles of Eval 2_instruction: |
         Each Evaluation Block has a function at
-        the top, With the inputs to that function written below. Each of those arguments
-        can be a value, or another Block.
+        the top, with the inputs to that function written below. Each of those arguments
+        can be a value, or another block.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1335,9 +1281,10 @@
         use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "sqr" - this function should have a domain of Number and
-        range of Number. Make sure to write two example cases! When you're done,
-        use your new function to calculate 7 squared.
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
         are in charge of writing computer programs to track the cost of making\neach
         treat, the money customers give you, and the total profit from selling\nthem.
@@ -1346,14 +1293,14 @@
         sell, and gives you back the amount of money it would cost to produce that\nnumber
         of cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `cookie-sales` which
+        takes in the number of cookies sold, and produces the amount of money customers
+        spent to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `cookie-profit`, which takes in the number of cookies you sold,
+        and gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1371,19 +1318,19 @@
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 - can
-        you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years
+        - can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        called "age" - set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
+        of another variable! Here's a new variable called "age-in-months" - use
+        the expression you came up with in the last puzzle to set "age-in-months"
         to the number of months in "age"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
@@ -1520,17 +1467,11 @@
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "Help me finish drawing my box. (Each line is\n300
-        pixels long) \n"
+      Course 4 Artist 1_instruction: '請幫我畫完我的箱子。(每一條線的長度是 300 像素) '
       Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
         would like. \n"
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
-      Course 4 Artist 3_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing.
+      Course 4 Artist 2_instruction: 你可以用迴圈包住這段程式碼，來繪製外層灰色的正方形嗎？
+      Course 4 Artist 3_instruction: 好，現在試著搞清楚如果你執行這段程式碼會發生什麼事(或直接按"執行"試試看)。然後重複它夠多次來完成繪圖。
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
         the repeat block with that number to create a circle of colors.
@@ -2179,8 +2120,8 @@
         the x variable so that this expression returns true.
       Eval Booleans 5_instruction: |
         This OR block returns true if either of its parameters
-        is true, and otherwise returns false. Set the y variable to a value that will
-        cause this expression to return false.
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: |
         Here's one more boolean block called NOT. This
         block flips true to false, or false to true. If you wrap this block of code
@@ -2294,10 +2235,6 @@
         Image. The body of the function is broken though, it always draws a circle\nof
         50 pixel radius instead of using the radius parameter. Replace the current\nNumber
         with the \"radius\" block from the domain. \n"
-      Eval Define Funcs 4 (copy 1)_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
       Eval Define Funcs 4_instruction: |
         Create a new function called "aqua-star"
         that has a Domain of a single Number for radius and returns an aqua star of
@@ -2308,7 +2245,7 @@
         have radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
-        that fills your screen with my-shape. Change my-shape to see what patterns
+        that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
@@ -2338,8 +2275,9 @@
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that takes a number of points and a radius, and returns a yellow
-        radial star with given points where the inner radius is half the outer radius.
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         "striped-flag" that takes two colors and produces a flag that is 250 pixels
@@ -2370,14 +2308,15 @@
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis
-        color-coded to let you know which data type it returns and which types\nin
-        needs for its parameters. The last parameter of the triangle function takes\na
-        String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -2402,9 +2341,6 @@
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2465,19 +2401,12 @@
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
         block as well as the “Move” block.
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
       frozen snowflake full_instruction: |
         Now let's repeat it 8 times to make a
         beautiful snowflake!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: |
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
@@ -2485,11 +2414,6 @@
       frozen square iterative_instruction: |
         It seems like we're halfway to making
         a square. Let's put 4 lines together to create a square.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.
@@ -2725,7 +2649,7 @@
       k1_Artist2_3_instruction: Draw a long square ABOVE the other square
       k1_Artist2_6_instruction: Draw a rectangle to complete the bridge!
       k1_Artist2_7_instruction: Draw a rectangle to complete the bridge supports!
-      line_instruction: 您好！我是艾倫戴爾王國的艾莎。請幫助我畫出一條線。
+      line_instruction: 您好！我是艾倫戴爾王國的艾莎。請幫我畫出一條線。
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the "cost" function, and we'll return the
@@ -3061,7 +2985,8 @@
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90

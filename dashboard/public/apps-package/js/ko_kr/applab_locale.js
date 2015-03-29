@@ -56,7 +56,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "계속하기"},
 "container":function(d){return "컨테이너 만들기"},
 "containerTooltip":function(d){return "분리된 컨테이너를 만들고 내부 HTML을 설정합니다."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."},
 "nextLevel":function(d){return "축하합니다! 퍼즐을 해결했습니다."},
 "no":function(d){return "아니요"},

@@ -510,42 +510,42 @@ tr:
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: Başlatılmadı
+    in_progress: İşlem devam ediyor
     completed_too_many_blocks: tamamlanmadı, fazla blok var
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
-    assessment: assessment
+    assessment: değerlendirme
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler
     all_courses: Tüm dersler
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projeler
+    create: Proje Oluştur
+    create_a_project: 'Yeni bir proje oluşturun:'
+    new: Yeni oluştur
+    rename: Yeniden adlandır
     save: Kaydet
     delete: Sil
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Kursa dön
+    my_projects: Projelerim
     share: Paylaş
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Projenizi paylaşın
+    share_copy_link: 'Bağlantıyı kopyala:'
+    close: Kapat
     more: Daha Fazla
     name: İsim
-    updated: Updated
-    project_type: Project Type
+    updated: Güncellendi
+    project_type: Proje türü
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Başlarken yardıma mı ihtiyacınız var?
     really_delete: Silinsin mi?
     delete_yes: Evet
     delete_no: Hayır
-    saved: Saved
+    saved: Kaydedildi
     not_saved: Not saved
     cancel: İptal
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
+    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır. Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
+    view_all: Projelerimi görüntüle

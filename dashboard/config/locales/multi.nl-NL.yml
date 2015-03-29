@@ -170,6 +170,37 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Kunstenaar Meerkeuze
         Which blocks draw a rectangle with a perimeter of 100?: Welk blokken tekenen
@@ -373,8 +404,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Video game coördinaten
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Welk antwoord
-          beschrijft het beste de bewegingen van de eenhoorn?
         The unicorn moves across the screen: De Eenhoorn beweegt over het scherm
         The unicorn's y value changes: De Eenhoorn zijn y waarde wordt gewijzigd
         The unicorn moves to the left: De Eenhoorn beweegt naar links
@@ -629,7 +658,6 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (rechthoek (+ 8 2) (-7 5) "geheel"
           "rood")
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: Wat is de waarde van x?
         a function: een functie
         15: '15'
@@ -711,7 +739,7 @@
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: Wat is de naam van deze functie?
         g: g
         y: true
         3: '3'
@@ -723,7 +751,7 @@
         3: '3'
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: Wat moet g(2) teruggeven?
         6: '6'
         5: '5'
         y: true
@@ -802,7 +830,7 @@
         wrong answer: verkeerd antwoord
         right answer: juist antwoord
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: Wat is een ontkoppelde activiteit?
         Are you ready to move on?: Are you ready to move on?
         'Yes': Ja
       PDK5 UVideo Overview:

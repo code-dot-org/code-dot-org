@@ -5,8 +5,9 @@
         Convert Blocks to Math: Konverter blokker til matematikk
         Type out the arithmetic expression that matches this code: Skrive ut det aritmetiske
           uttrykket som tilsvarer denne koden
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Skriv det aritmetiske uttrykket her
       Blocks to Bools 2:
         Convert Blocks to Math: Konverter blokker til matematikk
@@ -186,6 +187,13 @@
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: beskrivelse her
+      CSPStudentLessonPlanTemplate:
+        title: tittel
+        description here: beskrivelse her
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []

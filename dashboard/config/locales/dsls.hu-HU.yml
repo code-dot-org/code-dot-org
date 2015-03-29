@@ -5,8 +5,9 @@
         Convert Blocks to Math: Konvertáld a blokkot matekre
         Type out the arithmetic expression that matches this code: Írd le azt az aritmetikai
           kifejezést, ami megfelel ennek a kódnak
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Ide írd az arimetikai kifejezést
       Blocks to Bools 2:
         Convert Blocks to Math: Konvertáld a blokkot matekre
@@ -131,9 +132,9 @@
         Your thoughts here: Your thoughts here
       PDK5 Impact 1:
         Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
-          you think your students will find the online activities in the K-5 courses
-          fun and engaging? Why or Why not?
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Szerinted
+          a diákok szórakoztatónak és érdekesnek fogják találni az alsó tagozatos
+          tanfolyamaink online tevékenységeit? Miért vagy miért nem?
         Your thoughts here: Your thoughts here
       PDK5 Impact 2:
         Connections to other Subjects: Connections to other Subjects
@@ -185,6 +186,13 @@
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: a leírás itt található
+      CSPStudentLessonPlanTemplate:
+        title: cím
+        description here: a leírás itt található
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []
@@ -201,7 +209,7 @@
         Vocabulary: Vocabulary
       PDK5 Intro C: []
       PDK5 Pair Programming 1:
-        Pair Programming: Párban programozás
+        Pair Programming: Páros programozás
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer
           Science
@@ -216,7 +224,7 @@
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Teacher Dashboard
       PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
+        Unplugged intro: Offline bevezető
       PDK5 UVideo Overview C:
         Kiki video overview: Kiki video overview
       PDK5 Why K5 CS:

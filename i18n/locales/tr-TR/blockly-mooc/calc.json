@@ -1,17 +1,18 @@
 {
   "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"Bloğu \"hesapla\" bloğuna tutturmak zorundasınız.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "emptyFunctionalBlock":"Doldurulmamış bir giriş bloğunuz bulunuyor.",
   "equivalentExpression":"Tam olarak aynı ifade almak için argümanlar yeniden deneyin.",
-  "evaluate":"evaluate",
-  "extraTopBlocks":"Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
+  "evaluate":"değerlendirme",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Fonksiyonunuz tüm değerler için doğru sonuca dönmüyor.",
-  "goal":"Amaç:",
+  "goal":"Hedef:\n",
   "levelIncompleteError":"Tanımın hedefle eşleşmiyor.",
+  "missingFunctionError":"You must define a function named {functionName}.",
   "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"İşte senin hesaplaman! Üzerinde çalışmaya devam et, yada sıradaki bulmacaya geç!",
   "yourExpression":"İfadeniz:",
   "wrongInput":"Fonksiyonunuzu yanlış değer ile çağırıyorsunuz.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongResult":"İfadeniz doğru sonucu döndürmüyor"
 }

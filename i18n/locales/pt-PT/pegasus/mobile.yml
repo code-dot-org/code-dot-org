@@ -6,7 +6,7 @@ pt-PT:
   csedweek_dates: De 8 a 14 de dezembro de 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Código</a> está a chegar. Relembramos todos os professores e organizadores de que devem <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> És um professor CS? Vê outros recursos CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Arrisque uma</h1><h2>Hora do Código</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Experimenta uma</h1><h2>Hora de Código</h2><h3># já experimentaram</h3>'
   anybody_can_learn: Todos podem aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade de ter uma disciplina de informática
@@ -69,7 +69,7 @@ pt-PT:
   beyond_an_hour: Ver outras atividades além da Hora de Código
   get_started: Começar
   i_agree: Concordar
-  participant_select: Selecione
+  participant_select: Seleciona
   participant_student: Aluno
   participant_parent: Encarregado de educação
   participant_educator: Educador
@@ -111,15 +111,15 @@ pt-PT:
   stats_michael: 'Eu <b>nunca</b> vi os meus estudantes tão entusiasmados para aprender." - Michael Clark, Professor'
   studiobar_title: "Explora o <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursos elementares
-  studiobar_elementary_body: Os nossos três cursos para alunos do 3.º Ciclo
+  studiobar_elementary_body: Os nossos três cursos para alunos do 1.º Ciclo
   studiobar_hoc_title: A Hora de Código
   studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Faça e compartilhe o seu próprio jogo Flappy
-  studiobar_teacher_title: Feito para professores
-  studiobar_teacher_body: Introduza o Code Studio na sua sala de aula
+  studiobar_flappy_body: 'Cria e partilha o teu próprio jogo "Flappy"'
+  studiobar_teacher_title: Salas de aula únicas
+  studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
   studiobar_frozen_title: Hora de Código
-  studiobar_frozen_body: Criar das maravilhas do inverno com Anna e Elsa
+  studiobar_frozen_body: Cria obras de arte na neve com a Anna e com a Elsa
   studiobar_donate_title: Doar
   studiobar_donate_body: Uma criança aprende por cada dólar que você doar
   studiobar_shop_title: Comprar
@@ -132,6 +132,10 @@ pt-PT:
     &ldquo;It's never too late
     to learn&rdquo;
     Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;An understanding of computer science
     is becoming increasingly essential...&rdquo;
@@ -144,9 +148,34 @@ pt-PT:
   homepage_slot_text_shop: Comprar
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Hora de Código
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Exprimenta a Hora do Código
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Alunos
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Doar
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um encarregado de educação
   contact_form_topic_teacher: Sou um professor/educador
@@ -196,7 +225,7 @@ pt-PT:
   volunteer_engineer_submission_experience_unspecified: Não especificado
   volunteer_engineer_submission_experience_university_student_or_researcher: Actual Estudante de Universidade (ou investigador)
   volunteer_engineer_submission_experience_software_professional: Professional de software
-  petition_age: Idade
+  petition_age:  Idade 
   dashboard_landing_title: Página inicial do professor
   dashboard_landing_welcome: Bem-vindo(a) ao novo e melhorado painel de professores.
   dashboard_landing_video: Vê este vídeo

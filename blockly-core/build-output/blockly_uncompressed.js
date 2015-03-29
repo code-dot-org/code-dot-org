@@ -13598,7 +13598,10 @@ Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
 Blockly.BlockSvgFunctional.prototype.addInputClickListener_ = function(inputName) {
   var blockSpace = this.block_.blockSpace;
   var parentBlock = this.block_;
-  goog.events.listen(this.inputClickTargets_[inputName], "click", function(e) {
+  Blockly.bindEvent_(this.inputClickTargets_[inputName], "mousedown", this, function(e) {
+    if(Blockly.isRightButton(e)) {
+      return
+    }
     var childType;
     var titleIndex;
     var input = parentBlock.getInput(inputName);
@@ -14433,11 +14436,18 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
   this.moveConnections_(dx, dy)
 };
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
   try {
-    if(Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+    if(ie10OrOlder) {
+      initialStyle = this.getSvgRoot().style.display;
       this.getSvgRoot().style.display = "inline"
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox())
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+    if(ie10OrOlder) {
+      this.getSvgRoot().style.display = initialStyle
+    }
   }catch(e) {
     return{height:0, width:0}
   }
@@ -15462,6 +15472,20 @@ Blockly.Block.prototype.render = function() {
 };
 Blockly.Block.prototype.getSvgRenderer = function() {
   return this.svg_
+};
+Blockly.Block.prototype.getRootBlock = function() {
+  var rootBlock;
+  var current = this;
+  while(current) {
+    rootBlock = current;
+    current = current.getParent()
+  }
+  return rootBlock
+};
+Blockly.Block.prototype.hasUnfilledInput = function() {
+  return this.inputList.some(function(input) {
+    return input.connection && !input.connection.targetBlock()
+  })
 };
 goog.provide("Blockly.Flyout");
 goog.require("Blockly.Block");
@@ -23420,6 +23444,7 @@ Blockly.CodeGenerator.prototype.addReservedWords = function(words) {
 goog.provide("Blockly.BlockSpaceEditor");
 goog.require("Blockly.BlockSpace");
 goog.require("goog.array");
+goog.require("goog.style");
 Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   if(opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics
@@ -23527,6 +23552,9 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
   this.blockSpace.getTopBlocks(false).forEach(function(block) {
+    if(block.isCurrentlyHidden()) {
+      return
+    }
     var blockHW = block.getHeightWidth();
     if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
       return
@@ -23594,21 +23622,23 @@ Blockly.BlockSpaceEditor.prototype.svgSize = function() {
 };
 Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if(style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) + parseInt(style.borderRightWidth, 10)
+  var svgStyle = window.getComputedStyle(svg);
+  var svgBorderWidth = 0;
+  if(svgStyle) {
+    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) + parseInt(svgStyle.borderRightWidth, 10)
   }
-  var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
-  if(svg.cachedWidth_ != width) {
-    svg.setAttribute("width", width + "px");
-    svg.cachedWidth_ = width
+  var containerDiv = svg.parentNode;
+  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
+  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement) - goog.style.getPageOffsetTop(containerDiv);
+  var svgWidth = containerDiv.clientWidth - svgBorderWidth;
+  var svgHeight = containerDiv.clientHeight - headerHeight;
+  if(svg.cachedWidth_ != svgWidth) {
+    svg.setAttribute("width", svgWidth + "px");
+    svg.cachedWidth_ = svgWidth
   }
-  if(svg.cachedHeight_ != height) {
-    svg.setAttribute("height", height + "px");
-    svg.cachedHeight_ = height
+  if(svg.cachedHeight_ != svgHeight) {
+    svg.setAttribute("height", svgHeight + "px");
+    svg.cachedHeight_ = svgHeight
   }
   if(this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize()

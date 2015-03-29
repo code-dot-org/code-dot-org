@@ -163,9 +163,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Sua função não retorna o resultado correto para todos os valores."},
 "goal":function(d){return "Objetivo:"},
 "levelIncompleteError":function(d){return "Sua expressão não corresponde ao objetivo."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Está faltando a variável "+appLocale.v(d,"var")+" na sua expressão."},
 "reinfFeedbackMsg":function(d){return "Aqui está seu cálculo! Continue trabalhando nele, ou vá para o próximo desafio!"},
 "yourExpression":function(d){return "Sua expressão:"},
 "wrongInput":function(d){return "Você está chamando sua função com o valor errado."},
 "wrongOtherValuesX":function(d){return "Sua expressão resulta no valor errado se variarmos "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Sua expressão não retorna o resultado correto."}};

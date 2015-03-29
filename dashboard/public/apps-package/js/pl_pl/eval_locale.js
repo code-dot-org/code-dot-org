@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "okrąg (promień, styl, kolor)"},
-"displayBlockTitle":function(d){return "wyświetl"},
+"displayBlockTitle":function(d){return "Oceń"},
 "ellipseBlockTitle":function(d){return "elipsa (szerokość, wysokość, styl, kolor)"},
 "emptyFunctionalBlock":function(d){return "Nie wprowadziłeś żadnej zawartości do swojego bloku."},
 "extraTopBlocks":function(d){return "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?"},

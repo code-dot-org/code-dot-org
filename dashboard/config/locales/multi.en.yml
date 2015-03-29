@@ -330,7 +330,7 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Which answer most accurately describes the unicorn's movement?
+        ' ': ' '
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
@@ -548,7 +548,6 @@ en:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         '15': '15'
@@ -730,21 +729,18 @@ en:
         a secret password: a secret password
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        '': ''
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
         rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds * 12
         rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        '': ''
         rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
         rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds * seconds
         rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
         rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds * 16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        '': ''
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds * 10 + 7
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3

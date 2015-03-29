@@ -4,8 +4,9 @@ pt-BR:
       Blocks to Bools 1:
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão aritmética que corresponde a esse código
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: '(4+5) > 9'
+        ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       Blocks to Bools 2:
         Convert Blocks to Math: Converta os blocos em matemática
@@ -147,6 +148,12 @@ pt-BR:
         Create images with bits and bytes.: Crie imagens com bits e bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instruções: codifique a letra A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Plano de Estudo - U1L5 - Enviando Bits no mundo real'
+        description here: descrição aqui
+      CSPStudentLessonPlanTemplate:
+        title: título
+        description here: descrição aqui
       External level test (will):
         first computer program: primeiro programa de computador
       Hour of Code test content: [ ]

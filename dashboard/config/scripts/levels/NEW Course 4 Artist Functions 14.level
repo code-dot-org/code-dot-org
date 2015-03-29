@@ -20,8 +20,16 @@
     "free_play": "true",
     "impressive": "false",
     "disable_sharing": "false",
-    "slider_speed": ".5"
-  }
+    "slider_speed": ".5",
+    "min_workspace_height": "1200",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
+  },
+  "md5": "15ef4df4be64914f87bb029f781914e2"
 }]]></config>
   <blocks>
     <start_blocks>

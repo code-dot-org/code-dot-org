@@ -1,7 +1,7 @@
 module Ops
   class CohortsController < OpsControllerBase
-    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, only: [:create, :update]
-    load_and_authorize_resource
+    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
+    load_and_authorize_resource except: [:index]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
     def destroy_teacher
@@ -18,6 +18,15 @@ module Ops
 
     # GET /ops/cohorts
     def index
+      authorize! :manage, Cohort
+      @cohorts =
+        if current_user.try(:admin?)
+          Cohort.all
+        elsif current_user.try(:district_contact?)
+          current_user.districts_as_contact.map(&:cohorts).flatten
+        else
+          []
+        end
       respond_with @cohorts
     end
 
@@ -45,10 +54,11 @@ module Ops
       params.require(:cohort).permit(
           :name,
           :program_type,
+          :cutoff_date,
           :district_ids => [],
           :district_names => [],
           :districts => [:id, :max_teachers, :_destroy],
-          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id] # permit array of objects with specified keys
+          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender] # permit array of objects with specified keys
       )
     end
 
@@ -79,6 +89,14 @@ module Ops
         end
         User.find_or_create_teacher(teacher_params)
       end
+    end
+
+    def timestamp_cutoff_date
+      return unless params[:cohort]
+      cutoff_date = params[:cohort].delete :cutoff_date
+      return unless cutoff_date
+
+      params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end
   end
 end

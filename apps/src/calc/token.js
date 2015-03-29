@@ -57,7 +57,14 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
   }
 
   element.appendChild(text);
-  textLength = text.getBoundingClientRect().width;
+
+  // FF doesnt have offsetWidth
+  // getBoundingClientRect undercalculates width on iPad
+  if (text.offsetWidth !== undefined) {
+    textLength = text.offsetWidth;
+  } else {
+    textLength = text.getBoundingClientRect().width;
+  }
 
   text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {
@@ -78,7 +85,7 @@ Token.prototype.setStringRepresentation_ = function () {
 
   // at this point we know we have a jsnumber
   if (this.val_.isInteger()) {
-    this.nonRepeated_ = this.val_.toFixnum().toString();
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
@@ -87,10 +94,21 @@ Token.prototype.setStringRepresentation_ = function () {
   var repeater = jsnums.toRepeatingDecimal(this.val_.numerator(),
     this.val_.denominator());
   if (!repeater[2] || repeater[2] === '0') {
-    this.nonRepeated_ = this.val_.toFixnum().toString();
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
-  this.nonRepeated_ = repeater[0] + '.' + repeater[1];
+  this.nonRepeated_ = Token.numberWithCommas_(repeater[0]) + '.' + repeater[1];
   this.repeated_ = repeater[2];
+};
+
+/**
+ * From http://stackoverflow.com/a/2901298/2506748
+ * @param {number} x
+ * @returns {string} the number with commas inserted in thousandth's place
+ */
+Token.numberWithCommas_ = function (x) {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 };

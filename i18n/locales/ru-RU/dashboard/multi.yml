@@ -140,6 +140,31 @@ ru:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 'Художник: Выбор варианта'
         Which blocks draw a rectangle with a perimeter of 100?: Какие блоки рисуют прямоугольник с периметром 100?
@@ -300,7 +325,6 @@ ru:
       Coordinates Multi 1:
         Video game Coordinates: Видеоигра Координаты
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Какой ответ наиболее точно описывает движение единорога?
         The unicorn moves across the screen: Единорог двигается по экрану
         The unicorn's y value changes: У единорога изменяется значение координаты Y
         The unicorn moves to the left: Единорог двигается влево
@@ -518,7 +542,6 @@ ru:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(прямоугольник (+ 8 2) (- 7 5) "сплошной" "красный")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(прямоугольник (+ 8 2) (- 7 5) сплошной красный)'
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
         What is the value of x?: Какое значение переменной x?
         a function: функция
         15: "15"
@@ -676,7 +699,7 @@ ru:
         wrong answer: неправильный ответ
         right answer: правильный ответ
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: Что такое урок без компьютера?
         Are you ready to move on?: Are you ready to move on?
         "Yes": Да
       PDK5 UVideo Overview:

@@ -262,7 +262,7 @@
         title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: 布林值
+        title: 布林值和邏輯
         desc: 布林值課程說明
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions

@@ -120,7 +120,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Продолжить"},
 "container":function(d){return "создайте контейнер"},
 "containerTooltip":function(d){return "Создает контейнер деления и устанавливает HTML код внутри."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Поздравляю! Последняя головоломка решена."},
 "nextLevel":function(d){return "Поздравляю! Головоломка решена."},
 "no":function(d){return "Нет"},

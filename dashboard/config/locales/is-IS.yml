@@ -603,46 +603,46 @@
     að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir
     þig.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: ekki byrjað
+    in_progress: í vinnslu
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
-    assessment: assessment
+    assessment: mat
   studio:
     courses_working_on: Námskeið sem þú ert að fást við
     completed_courses: Námskeið sem þú hefur lokið
     all_courses: Öll námskeið
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Verkefni
+    create: Stofna verkefni
+    create_a_project: 'Byrja með nýtt verkefni:'
+    new: Stofna nýtt
+    rename: Endurnefna
     save: Vista
     delete: Eyða
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Til baka í námskeið
+    my_projects: Verkefni mín
     share: Deila leik
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Deila verkefninu
+    share_copy_link: 'Afrita tengilinn:'
+    close: Loka
     more: Meira
     name: Nafn
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Uppfært
+    project_type: Tegund verkefnis
+    help_text: Smelltu á <strong>Búa til App</strong> eða <strong>Teikna eitthvað</strong>
+      hér fyrir neðan til að búa til nýtt verkefni í Leikjasmiðju eða með Listamanni!<br/>Þú
+      getur komið hingað og unnið að verkefnum þínum hvenær sem er.
+    need_help: Þarftu hjálp til að byrja?
     really_delete: Eyða?
     delete_yes: Já
     delete_no: Nei
-    saved: Saved
-    not_saved: Not saved
+    saved: Vistað
+    not_saved: Ekki vistað
     cancel: Hætta við
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Ertu viss um að þú viljir eyða þessu verkefni?
+    delete_confirm_text: Ef þú eyðir verkefninu, verður það endanlega fjarlægt úr
+      listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
+      lengur sjá það.
+    view_all: Sýna verkefnin mín

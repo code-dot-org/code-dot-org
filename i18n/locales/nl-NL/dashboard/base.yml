@@ -397,7 +397,7 @@ nl:
   view_lesson_plan: Lesplan bekijken
   pdf_download: PDF downloaden
   download_coming_soon: Downloadbare activiteit weldra beschikbaar.
-  video_coming_soon: Video weldra beschikbaar!
+  video_coming_soon: Video binnenkort beschikbaar!
   share_code:
     title: "Klik op 'Uitvoeren' om mijn programma te draaien"
     bounce_og_title: Bekijk mijn Stuiterspel
@@ -512,42 +512,42 @@ nl:
     sign_out: 'Als je je leeftijd niet wilt geven kun je <a href="%{url}">uitloggen</a>.'
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: niet gestart
+    in_progress: wordt uitgevoerd
     completed_too_many_blocks: voltooid, teveel blokken
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
-    assessment: assessment
+    assessment: beoordeling
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen
     all_courses: Alle cursussen
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projecten
+    create: Project aanmaken
+    create_a_project: 'Maak een nieuw project aan:'
+    new: Nieuwe maken
+    rename: Hernoemen
     save: Opslaan
     delete: Verwijderen
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Terug naar de Cursus
+    my_projects: Mijn Projecten
     share: Delen
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Deel je project
+    share_copy_link: 'Kopieer de link:'
+    close: Afsluiten
     more: Meer
     name: naam
-    updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    updated: Bijgewerkt
+    project_type: Projecttype
+    help_text: 'Klik hieronder op <strong>Maak een app</strong> of <strong>Teken iets</strong> om een nieuw Play Lab of Kunstenaar project te maken!<br/>Je kunt op elk gewenst moment terugkomen om aan je projecten te werken.'
+    need_help: Hulp nodig om aan de slag te gaan?
     really_delete: Verwijderen?
     delete_yes: Ja
     delete_no: Nee
-    saved: Saved
-    not_saved: Not saved
+    saved: Opgeslagen
+    not_saved: Niet opgeslagen
     cancel: Annuleren
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Weet je zeker dat je dit project wilt verwijderen?
+    delete_confirm_text: Bij het verwijderen van je project verdwijnt deze definitief uit jouw Mijn Projecten-lijst. Iedereen met wie je de link naar het project gedeeld hebt, zal niet langer je project kunnen bekijken.
+    view_all: Mijn Projecten Bekijken

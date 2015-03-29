@@ -8,6 +8,7 @@
   "failedInput": "הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים.",
   "goal": "מטרה:",
   "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!",
   "yourExpression": "הביטוי שלך:",

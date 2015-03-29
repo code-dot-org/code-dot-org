@@ -6,7 +6,7 @@ pt-BR:
   csedweek_dates: De 8 a 14 de dezembro de 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planejem sua Hora do Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação</a>'
-  n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>'
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação
@@ -69,7 +69,7 @@ pt-BR:
   beyond_an_hour: Além da Hora do Código
   get_started: Começar
   i_agree: Aceito
-  participant_select: '- Selecionar -'
+  participant_select: Selecione
   participant_student: Estudante
   participant_parent: Pai / Mãe
   participant_educator: Educador
@@ -91,7 +91,7 @@ pt-BR:
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
+  twitter_teach_cs: Por que muitas escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -132,9 +132,13 @@ pt-BR:
     &ldquo;Nunca é tarde demais
     para aprender&rdquo;
     Susan, CEO do YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Não apenas jogue em seu telefone,
+    mas também programe nele.&rdquo;
+    Presidente Barack Obama
   homepage_hero_text_sheryl: |
     &ldquo;Compreender a ciência da computação
-    está se tornando cada vez mais essencial...&rdquo;
+    está se tornando cada vez mais fundamental...&rdquo;
     Sheryl, COO do Facebook
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
@@ -144,9 +148,34 @@ pt-BR:
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_codevideo: Assista ao vídeo
-  homepage_action_text_teachervideo: ""
-  homepage_action_text_signpetition: Assine a petição
-  homepage_signpetition_dropdown: 'Assine nossa petição &#x25BE;'
+  homepage_action_text_teachervideo: Assista ao vídeo
+  homepage_action_text_learn: Começe a aprender hoje
+  homepage_action_text_signpetition: Assinar a petição
+  homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
+  homepage_slot_text_title_hoc: Hora do Código
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Tente a Hora do Código
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Alunos
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Faça uma doação
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador

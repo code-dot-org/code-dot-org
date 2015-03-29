@@ -8,6 +8,7 @@
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "குறிக்கோள்:",
   "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "இதோ உங்கள் கதை! அதில் தொடர், அல்லது அடுத்த புதிருக்கு நகர்!",
   "yourExpression": "உங்கள் வெளிப்பாடு:",

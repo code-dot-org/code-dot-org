@@ -33,7 +33,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "চালিয়ে যান"},
 "container":function(d){return "কনটেইনার তৈরি করুন"},
 "containerTooltip":function(d){return "ডিভিশন কনটেইনার তৈরি করে এর মাঝে এইচটিএমএল কোড নির্ধারণ করে।"},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "nextLevel":function(d){return "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।"},
 "no":function(d){return "না"},

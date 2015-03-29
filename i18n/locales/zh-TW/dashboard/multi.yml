@@ -12,7 +12,7 @@ zh:
       2-3 artist loops multi 1:
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Which shape is made by this loop?: 這個形狀是因為哪個迴圈所形成的?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -34,7 +34,7 @@ zh:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
         Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
-        Which comparison below is true?: Which comparison below is true?
+        Which comparison below is true?: 下列的比較何者為真?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
@@ -100,7 +100,7 @@ zh:
       2-3 Binary Multi 1:
         Multiple Choice: 多選
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: 這個圖片是哪段程式產生出來的
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
@@ -123,7 +123,7 @@ zh:
       2-3 Graph Paper Multi 1:
         Multiple Choice: 多選
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: 這個圖片是哪段程式產生出來的
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
@@ -140,6 +140,31 @@ zh:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: 一個圖像
+        a number: 一個數字
+        a string: 一個字串
+        boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: 一個圖像
+        a number: 一個數字
+        a string: 一個字串
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: 一個圖像
+        a number: 一個數字
+        a string: 一個字串
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: 一個圖像
+        a number: 一個數字
+        a string: 一個字串
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Multiple Choice
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
@@ -300,7 +325,6 @@ zh:
       Coordinates Multi 1:
         Video game Coordinates: 電玩座標
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: "Which answer most accurately describes the unicorn's movement?"
         The unicorn moves across the screen: 獨角獸在螢幕上走過
         The unicorn's y value changes: 獨角獸的 y 值改變了
         The unicorn moves to the left: 獨角獸走到左邊了
@@ -518,98 +542,97 @@ zh:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x?: What is the value of x?
+        What is the value of x?: X 的值是什麼？
         a function: a function
         15: "15"
         x: x
       msm variables multi 10:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: 這個函數的名稱是什麼？
         f: f
         x: x
         17: "17"
       msm variables multi 11:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: 這個參數的名稱是什麼？
         f: f
         x: x
         17: "17"
       msm variables multi 12:
         (define (f x) (*x 17)): '(define (f x) (*x 17))'
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: 這個變數的名字是什麼？
         f: f
         x: x
         17: "17"
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        What should f(1) produce?: F(1) 應該輸出什麼？
         x: x
         117: "117"
         17: "17"
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
-        What is the value of a + b?: What is the value of a + b?
+        What is the value of a + b?: a+b的值是多少?
         8: "8"
-        function: function
+        function: 函數
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x-10?: What is the value of x-10?
+        What is the value of x-10?: x-10的值是多少?
         a function: a function
         5: "5"
         x: x
       msm variables multi 4:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of x?: What is the value of x?
+        What is the value of x?: X 的值是什麼？
         3: "3"
         15: "15"
         do not know: do not know
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of (p - x)?: 'What is the value of (p - x)?'
+        What is the value of (p - x)?: (p-x) 的值是多少?
         q: q
         3: "3"
         5: "5"
       msm variables multi 6:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        What is the value of string-length(q)?: string-length(q) 的值是什麼？
         1: "1"
         hello: 你好
         5: "5"
       msm variables multi 7:
-        f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        f(x) = x + 3: f (x) = x + 3
+        What is the name of the function?: 這個函數的名稱是什麼？
         f: f
         x: x
         3: "3"
       msm variables multi 8:
-        f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        f(x) = x + 3: f (x) = x + 3
+        What is the name of the variable?: 這個變數的名字是什麼？
         f: f
         x: x
         3: "3"
       msm variables multi 9:
-        f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        f(x) = x + 3: f (x) = x + 3
+        What is f(2)?: f(2)的意義是什麼?
         6: "6"
         5: "5"
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: 這個函數的名稱是什麼？
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: 這個參數的名稱是什麼？
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: g(2) 應該回傳什麼呢？
         6: "6"
         5: "5"
         "y": true
@@ -690,9 +713,9 @@ zh:
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on the logic of programming
         Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
-        All of the above: All of the above
+        All of the above: 以上皆是
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
+        What is Computer Science?: 資訊科學是什麼？
         "A computer program, or code, is:": 'A computer program, or code, is:'
         a part inside of a computer: a part inside of a computer
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute

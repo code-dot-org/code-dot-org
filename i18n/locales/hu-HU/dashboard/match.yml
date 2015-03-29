@@ -49,7 +49,7 @@ hu:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Labirintus Feleletválasztás egy
+        Maze Match One: Labirintus, párosítás
         Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
@@ -58,7 +58,7 @@ hu:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Labirintus Feleletválasztás
+        Maze Match: Labirintus, párosítás
         Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
         Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
@@ -112,7 +112,7 @@ hu:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Labirintus Feleletválasztás
+        Maze Match: Labirintus, párosítás
         Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
         Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
@@ -330,17 +330,17 @@ hu:
         "find-price: string -> number": 'keresés-ár: karakterlánc-> szám'
       PDK5 Pair programming match:
         Pair programming match: Pair programming match
-        Match the definitions to the words you were introduced to in the last video.: Match the definitions to the words you were introduced to in the last video.
+        Match the definitions to the words you were introduced to in the last video.: Párosítsd a meghatározásokat azokkal a szavakkal, amelyekkel megismerkedtél a legutóbbi videóban.
         Pair programming: Pair programming
-        Driver: Driver
+        Driver: Vezető
         Navigator: Navigator
-        When two students work at one computer to write a program together: When two students work at one computer to write a program together
-        The student who controls the keyboard, mouse, or touch screen: The student who controls the keyboard, mouse, or touch screen
+        When two students work at one computer to write a program together: Amikor két tanuló dolgozik egy számítógépen, hogy közösen írjanak egy programot
+        The student who controls the keyboard, mouse, or touch screen: A tanuló, aki a billentyűzetet, egeret vagy az érintőképernyőt kezeli
         The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
       PDK5 What is unplugged:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: 'Mi az a "gép-néküli" tevékenység?'
         Question: Kérdés
-        Answer 1: Answer 1
+        Answer 1: Válasz 1
       test matching image:
         Matching Images Two: Képek összeillesztése. Második rész
         Match up all the flowers by colour!: Párosítsd a virágokat a színekkel!

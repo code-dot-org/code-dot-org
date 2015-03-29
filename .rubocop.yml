@@ -5,3 +5,7 @@ AllCops:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
   RunRailsCops: true
+  DisplayCopNames: true
+
+Style/ExtraSpacing:
+  Enabled: false

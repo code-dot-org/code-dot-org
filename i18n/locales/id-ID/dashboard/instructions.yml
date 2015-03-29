@@ -1223,9 +1223,9 @@ id:
         at this point to make your game look like you'd like it to. Click 'finish'
         when you're done.
       Big Game Vars 4_instruction: |
-        Awesome, now you can update the variables for
+        Awesome! Now you can update the variables for
         your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click 'finish'
+        at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
       BowShoot1_instruction: Use the repeat block to collect all the nectar!
       Brendan Artist work_instruction: none
@@ -1299,8 +1299,8 @@ id:
         of evaluation.
       Calc Circles of Eval 2_instruction: |
         Each Evaluation Block has a function at
-        the top, With the inputs to that function written below. Each of those arguments
-        can be a value, or another Block.
+        the top, with the inputs to that function written below. Each of those arguments
+        can be a value, or another block.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1349,19 +1349,20 @@ id:
         use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "sqr" - this function should have a domain of Number and
-        range of Number. Make sure to write two example cases! When you're done,
-        use your new function to calculate 7 squared.
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `cookie-sales` which
+        takes in the number of cookies sold, and produces the amount of money customers
+        spent to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `cookie-profit`, which takes in the number of cookies you sold,
+        and gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1371,19 +1372,19 @@ id:
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 - can
-        you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years
+        - can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        called "age" - set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
+        of another variable! Here's a new variable called "age-in-months" - use
+        the expression you came up with in the last puzzle to set "age-in-months"
         to the number of months in "age"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
@@ -2206,8 +2207,8 @@ id:
         the x variable so that this expression returns true.
       Eval Booleans 5_instruction: |
         This OR block returns true if either of its parameters
-        is true, and otherwise returns false. Set the y variable to a value that will
-        cause this expression to return false.
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: |
         Here's one more boolean block called NOT. This
         block flips true to false, or false to true. If you wrap this block of code
@@ -2310,10 +2311,6 @@ id:
         of Image. The body of the function is broken though, it always draws a circle
         of 50 pixel radius instead of using the radius parameter. Replace the current
         Number with the "radius" block from the domain. 
-      Eval Define Funcs 4 (copy 1)_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
       Eval Define Funcs 4_instruction: |
         Create a new function called "aqua-star"
         that has a Domain of a single Number for radius and returns an aqua star of
@@ -2324,7 +2321,7 @@ id:
         have radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
-        that fills your screen with my-shape. Change my-shape to see what patterns
+        that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
@@ -2354,8 +2351,9 @@ id:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that takes a number of points and a radius, and returns a yellow
-        radial star with given points where the inner radius is half the outer radius.
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         "striped-flag" that takes two colors and produces a flag that is 250 pixels
@@ -2386,11 +2384,15 @@ id:
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -2415,9 +2417,6 @@ id:
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      freeplay_instruction: |
-        You've officially become a master artist! Create a
-        winter wonderland and share with your friends.
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
@@ -2478,19 +2477,12 @@ id:
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
         block as well as the “Move” block.
-      frozen snowflake base_instruction: |
-        Create these 3 lines that are 45 degrees
-        apart
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
       frozen snowflake full_instruction: |
         Now let's repeat it 8 times to make a
         beautiful snowflake!
-      frozen snowflower pattern_instruction: |
-        What beautiful snowflowers! Let's
-        make smaller snowflowers to cover the entire ice rink. Don't forget to jump
-        forward 150 pixels between each snowflower.
       frozen snowflower_instruction: |
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
@@ -2498,11 +2490,6 @@ id:
       frozen square iterative_instruction: |
         It seems like we're halfway to making
         a square. Let's put 4 lines together to create a square.
-      frozen square loop (copy 1)_instruction: |
-        There is more than one way to make
-        a square. Can you use the Repeat block to create the square again, but with
-        fewer blocks? What pattern do you see repeating, that you can put inside the
-        Repeat block?
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.
@@ -3083,7 +3070,8 @@ id:
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90

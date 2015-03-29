@@ -27,5 +27,5 @@
   "solid":"sólido",
   "string":"string",
   "stringMismatchError":"Você tem uma string com a capitalização errada.",
-  "userCodeException":"Um erro ocorreu durante a execução do seu código."
+  "userCodeException":"Ocorreu um erro durante a execução do seu código."
 }

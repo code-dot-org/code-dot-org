@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Magpatuloy"},
 "container":function(d){return "lumikha ng container"},
 "containerTooltip":function(d){return "Lumilikha ng dibisyon na container at itakda nito ang panloob na HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."},
 "nextLevel":function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."},
 "no":function(d){return "Hindi"},

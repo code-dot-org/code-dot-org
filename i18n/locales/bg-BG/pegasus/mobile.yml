@@ -126,6 +126,7 @@ bg-BG:
   studiobar_shop_body: Разбий стереотипите. Носи логото ни с гордост.
   homepage_hero_text_malala: '&ldquo;"Предизвиквам момичета във всяка страна да учат един Час кодиране"&rdquo; Malala'
   homepage_hero_text_susan: '&ldquo;"Никога не е късно да учите"&rdquo; Сюзън, изпълнителен директор на YouTube'
+  homepage_hero_text_fistbump: '&ldquo;"Не само играйте на телефона, програмирайте за него."&rdquo; президент Барак Обама'
   homepage_hero_text_sheryl: '&ldquo;"Разбирането на компютърните науки се превръща все по-съществено..."&rdquo; Шерил, главен оперативен директор на Facebook'
   homepage_slot_text_hoc: Час по кодиране
   homepage_slot_text_frozen: Frozen с Анна и Елза
@@ -135,9 +136,34 @@ bg-BG:
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Flappy код
   homepage_action_text_codevideo: Гледайте видеото
-  homepage_action_text_teachervideo: ""
+  homepage_action_text_teachervideo: Гледайте видеото
+  homepage_action_text_learn: Започнете да учите днес
   homepage_action_text_signpetition: Подпишете петицията
   homepage_signpetition_dropdown: 'Регистрирайте се в подкрепа на нашата петиция &#x25BE;'
+  homepage_slot_text_title_hoc: Час на Кодирането
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Опитайте Часа на Кодирането
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Ученици
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Дарения
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител

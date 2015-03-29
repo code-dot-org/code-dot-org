@@ -4,8 +4,9 @@ uk:
       Blocks to Bools 1:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
         Type out the arithmetic expression that matches this code: Запишіть арифметичний вираз, котрий відповідає поданому коду
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: '(4+5) > 9'
+        ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
       Blocks to Bools 2:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
@@ -147,6 +148,12 @@ uk:
         Create images with bits and bytes.: Створити зображення з біти і байти.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: опис тут
+      CSPStudentLessonPlanTemplate:
+        title: назва
+        description here: опис тут
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]

@@ -140,6 +140,31 @@ bs:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Umjetnik Višestruki Izbor
         Which blocks draw a rectangle with a perimeter of 100?: 'Koji  blokovi crtaju pravougaonik sa obimom od 100?'
@@ -300,7 +325,6 @@ bs:
       Coordinates Multi 1:
         Video game Coordinates: Koordinate video igre
         Ninjacat Demo Embed.level: Ninja Mačak Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Koji odgovor najtačnije opisuje kretanje jednoroga?
         The unicorn moves across the screen: Jednorog se kreče preko ekrana
         The unicorn's y value changes: Jednorogova y vrijednost se mijenja
         The unicorn moves to the left: Jednorog se kreće ulijevo
@@ -518,7 +542,6 @@ bs:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
         What is the value of x?: Koju vrijednost ima x?
         a function: funkcija
         15: "15"

@@ -8,6 +8,7 @@
   "failedInput": "الدالة الخاص بك لا تقوم بإرجاع النتيجة الصحيحة لكافة القيم.",
   "goal": "الهدف:",
   "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "هنا عملية الحساب الخاص بك! لمواصلة العمل على ذلك، أو الانتقال إلى اللغز القادم!",
   "yourExpression": "التعبير الخاص بك:",

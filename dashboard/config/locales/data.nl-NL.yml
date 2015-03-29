@@ -326,9 +326,9 @@
           aan een functie toe te voegen)'
         turtle_3_7: Voeg een input met de naam "lengte" toe aan "teken een huis" en
           teken een groot huis voor de olifant (met randen van 150 pixels lang)
-        turtle_3_8: Hier zijn alle blokken van de vorige puzzel. Bewerk "teken een
-          huis" zodat ik rechts onderin eindig na het tekenen van een nieuw huis.
-          Gebruik deze bewerkte functie om drie huizen te tekenen.
+        turtle_3_8: Pas "teken een huis" aan zodat ik in de hoek linksonder beland
+          na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie
+          huizen te tekenen.
         turtle_3_9: Kan je deze "teken een huis" functie namaken zonder hulp? Probeer
           het, en teken daarna een rijtje huizen.
         turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te
@@ -677,8 +677,8 @@
         playlab_intro: Inleiding tot Play Lab
         playlab_events: Play Lab evenenementen
         playlab_repeat_forever: Play Lab Herhaal voor altijd
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        msm_1_intro: Informatica in de Wiskunde Hoofdstuk 1 Inleiding
         msm_2_eval_block: evaluatie blokken
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variabelen

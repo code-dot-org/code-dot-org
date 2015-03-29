@@ -13,7 +13,7 @@
 
 require('../utils');
 var NetSimEntity = require('./NetSimEntity');
-var PacketEncoder = require('./PacketEncoder');
+var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
 
@@ -49,16 +49,16 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
   this.nodeID = row.nodeID;
 
   /**
-   * Text of the log entry.  Defaults to empty string.
+   * Binary content of the log entry.  Defaults to empty string.
    * @type {string}
    */
-  this.packet = (row.packet !== undefined) ? row.packet : '';
+  this.binary = (row.binary !== undefined) ? row.binary : '';
 
   /**
-   * @type {PacketEncoder}
+   * @type {Packet}
    * @private
    */
-  this.encoder_ = new PacketEncoder(packetSpec ? packetSpec : []);
+  this.packet_ = new Packet(packetSpec ? packetSpec : [], this.binary);
 
   /**
    * Unix timestamp (local) of log creation time.
@@ -80,7 +80,7 @@ NetSimLogEntry.prototype.getTable_ = function () {
 NetSimLogEntry.prototype.buildRow_ = function () {
   return {
     nodeID: this.nodeID,
-    packet: this.packet,
+    binary: this.binary,
     timestamp: this.timestamp
   };
 };
@@ -90,13 +90,13 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
- * @param {!string} packet - log contents
+ * @param {!string} binary - log contents
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
+NetSimLogEntry.create = function (shard, nodeID, binary, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
-  entity.packet = packet;
+  entity.binary = binary;
   entity.timestamp = Date.now();
   entity.getTable_().create(entity.buildRow_(), function (err, result) {
     if (err !== null) {
@@ -110,12 +110,12 @@ NetSimLogEntry.create = function (shard, nodeID, packet, onComplete) {
 /**
  * Get requested packet header field as a number.  Returns empty string
  * if the requested field is not in the current packet format.
- * @param {PacketHeaderType} field
+ * @param {Packet.HeaderType} field
  * @returns {number|string}
  */
 NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
-    return this.encoder_.getHeaderAsInt(field, this.packet);
+    return this.packet_.getHeaderAsInt(field);
   } catch (e) {
     return '';
   }
@@ -123,10 +123,10 @@ NetSimLogEntry.prototype.getHeaderField = function (field) {
 
 /** Get packet message as binary. */
 NetSimLogEntry.prototype.getMessageBinary = function () {
-  return formatBinary(this.encoder_.getBody(this.packet), BITS_PER_BYTE);
+  return formatBinary(this.packet_.getBodyAsBinary(), BITS_PER_BYTE);
 };
 
 /** Get packet message as ASCII */
 NetSimLogEntry.prototype.getMessageAscii = function () {
-  return this.encoder_.getBodyAsAscii(this.packet, BITS_PER_BYTE);
+  return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
 };

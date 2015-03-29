@@ -466,7 +466,11 @@ bs:
       Big Game Vars 3 (copy 1)_instruction: "Hajde da postavimo pozadinu za tvoju novu igricu. Uredi 'bg' varijablu i selektuj novu pozadinsku Sliku iz padajućeg menija."
       Big Game Vars 3_instruction: "Hajde da postavimo pozadinu za tvoju novu igricu. Uredi 'bg' varijablu i selektuj novu pozadinsku Sliku iz padajućeg menija."
       Big Game Vars 4 (copy 1)_instruction: "Super! Sada možeš promijeniti varijable za tvog Igrača, Metu i Opasnost. Probaj se igrati se sa svim varijablama u ovom trenutku da bi učinio svoju igricu onako kako ti to želiš. Klikni na 'završi' kada završiš."
-      Big Game Vars 4_instruction: "Super! Sada možeš promijeniti varijable za tvog Igrača, Metu i Opasnost. Probaj se igrati se sa svim varijablama u ovom trenutku da bi učinio svoju igricu onako kako ti to želiš. Klikni na 'završi' kada završiš."
+      Big Game Vars 4_instruction: |
+        Awesome! Now you can update the variables for
+        your Player, Target, and Danger. Feel free to play with all of the variables
+        at this point to make your game look like you'd like it to. Click "Finish"
+        when you're done.
       BowShoot1_instruction: 'Upotrijebi blok "ponavljanja" da bi se sakupio sav nektar!'
       Brendan Artist work_instruction: none
       Brendan Test Maze 1_instruction: Ovo je moj prvi labirint.
@@ -491,7 +495,10 @@ bs:
       Calc Circles of Eval 1 (copy 1)_instruction: 'Pretvori ovaj izraz u <some_shape> izvršenje.'
       Calc Circles of Eval 1_instruction: 'Svaki matematički operator (+, -, *, /, i tako dalje) se može predstaviti za Blokom Izvršenja u kodu. Promijeni Blok Izvršenja da bi odgovarao izrazu.'
       Calc Circles of Eval 2 (copy 1)_instruction: 'Pretvori ovaj izraz u <some_shape> izvršenje.'
-      Calc Circles of Eval 2_instruction: Svaki Blok Izvršenja ima funkciju na vrhu sa ulaznim argumentima te funkcije napisanim ispod. Svaki od ovih argumenata može biti vrijednost ili neki drugi Blok.
+      Calc Circles of Eval 2_instruction: |
+        Each Evaluation Block has a function at
+        the top, with the inputs to that function written below. Each of those arguments
+        can be a value, or another block.
       Calc Circles of Eval 3_instruction: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 4_instruction: 'Ovom kodu nedostaje nekoliko Blokova Izvršenja - pobrini se da staviš sve u pravilnom redu.'
       Calc Circles of Eval 5_instruction: Dovrši Blok Izvršenja da ogovara ovom izrazu.
@@ -515,31 +522,38 @@ bs:
         Write a function called 'half' that takes
         a number 'x' and returns half that number. Once you've written the function,
         use it to calculate half(21)
-      Calc Design Recipe 1_instruction: 'Hajde da upotrijebimo Recept za Crtanje da napravimo funkciju pod nazivom "sqr" kojoj je domen i kodomen Broj. Napiši dva primjera! Kada završiš upotrijebi svoju novu funkcije da izračunaš 7 na kvadrat.'
+      Calc Design Recipe 1_instruction: |
+        Let's use the Design Recipe to create a
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `cookie-sales` which
+        takes in the number of cookies sold, and produces the amount of money customers
+        spent to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `cookie-profit`, which takes in the number of cookies you sold,
+        and gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: 'Vrijeme za slobodno igranje: Napiši funkcije i algorithme po tvom vlastitom izboru!'
       Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 1_instruction: "U posljednjem zadatku si napisao/la ugovor za funkciju \"visina-rakete\" koja ima Brojeve kao kodomenu i domenu, i koja vraća visinu rakete koja ide brzinom od 15 m/s nakon datog broja sekundi. Hajde sada da napišemo primjer za visinu rakete u trećoj sekundi.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n "
       Calc Rocket 2_instruction: Odlično! Hadje da uradimo još jedan primjer prije nego napišemo funkciju. Koju visinu bi raketa trebala imati nakon 30 sekundi?
-      Calc Vars 1.1_instruction: 'Ovdje smo postavili varijablu "dob" na 17. Možeš li napisati izraz koji će izračunati "dob" izraženu u danima?'
+      Calc Vars 1.1_instruction: |
+        Here we've set the "age" variable to 17 years
+        - can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        called "age" - set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: 'Ovdje smo postavili varijablu "dob" na 17. Možeš li napisati izraz koji računa "dob" izraženu u mjesecima?'
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
+        of another variable! Here's a new variable called "age-in-months" - use
+        the expression you came up with in the last puzzle to set "age-in-months"
         to the number of months in "age"
       Calc Vars 2_instruction: 'Možeš li napisati izraz koji računa "dob" izraženu u godinama?'
       Calc Vars 3 (copy 1)_instruction: 'Možeš li nadopuniti ovaj kod tako da može računati koliko sati ima u "dob" godina?'
@@ -832,7 +846,10 @@ bs:
       Eval Booleans 2_instruction: 'Možeš li postaviti vrijednosti tako da ovaj izraz vraća vrijednost "istinito"?'
       Eval Booleans 3_instruction: 'Funkcija "dužina-niza-karaktera" vraća broj karaktera u nizu karaktera (uključujući i razmake!). Napravi da ovaj kod vraća vrijednost "istinito".'
       Eval Booleans 4_instruction: Evo Blok Izvršenja naziva I. Ovaj blok vraća istinito ako su obja parametra istinita, inače vraća neistinito. Uredi x varijablu tako da izraz vraća istinito.
-      Eval Booleans 5_instruction: Ovaj ILI blok vraća istinito ako je bilo koji od parametara istinit, a inače vraća neistinito. Postavi y varijablu na vrijednost koja će učiniti da izraz bude neistinit.
+      Eval Booleans 5_instruction: |
+        This OR block returns true if either of its parameters
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: Evo još jedan booleov blok naziva NE. Ovaj blok mijenja vrijednost sa istinito na neistinito, ili sa neistinito na istinito. Ako staviš ovaj blok koda u NE blok, trebao bi vratiti istinito (jer tražimo da ova dva izraza NE daju istu vrijednost).
       Eval Booleans_instruction: 'Booleovi operatori nam omogućuju da poredimo različite vrijednosti, te vraćaju "istinito" ako su jednaki ili "neistinito" ako nisu. Šta misliš koji rezultat će vratiti ovaj kod?'
       Eval Cond 1_instruction: 'Uslovni blok provjerava booleove izraze u lijevoj koloni, i čim nađe jedan koji vraća "istinito" izvršava odgovarajući kod u desnoj koloni. Ako nijedan od izraza ne dobije vrijednost "istinito", onda se vraća na dno bloka. Promijeni varijablu "temperatura" tako da ovaj blok vraća "Taman je".'
@@ -862,10 +879,12 @@ bs:
       Eval Define Funcs 1_instruction: 'Evo nove funkcije pod nazivom "zeleni-trokut" koja uzima jedan Broj za veličinu i daje zeleni trokut. Upotrijebi novu funkciju za pravljenje zelenog trokuta od 125 piksela'
       Eval Define Funcs 2_instruction: 'Hajde da pogledamo unutar ove "zeleni-trokut" funkcije da vidimo kakoradi. Možeš li je promijeniti tako da "zeleni-trokut" funkcija uvijek crta zeleni trokut sa konturom?'
       Eval Define Funcs 3_instruction: 'Evo početka nove funkcije pod nazivom "ljubičasti-krug" sa domenom od jednog Broja (prečnik) i Slikom kao kodomenom. Tijelo funkcije ne radi dobro, jer uvijek crta krug prečnika od 50 piksela umjesto što koristi parametar za prečnik. Zamijeni trenutni Broj sa "prečnik" blokom iz domene. '
-      Eval Define Funcs 4 (copy 1)_instruction: 'Napravi novu funkciju pod nazivom "morska-zvijezda" koja ima Broj (prečnik) kao Domenu i vraća morsku zvijezdu datog prečnika. Pokreni svoju novu funkciju sa prečnikom od 75.'
       Eval Define Funcs 4_instruction: 'Napravi novu funkciju pod nazivom "morska-zvijezda" koja ima Broj (prečnik) kao Domenu i vraća morsku zvijezdu datog prečnika. Pokreni svoju novu funkciju sa prečnikom od 75.'
       Eval Define Funcs 5_instruction: 'Hajde da upotrijebimo "morska-zvijezda" funkciju koja pravi red zvijezda različitih veličina. S lijeva na desno, zvijezde bi trebale imati prečnike od 25, 50 i 75.'
-      Eval Defining Vars Free Play 1_instruction: Vrijeme za slobodno igranje! Dali smo ti funkciju koja popunjava tvoj ekran sa mojim-oblicima. Promijeni moj-oblik da vidiš koje uzorke možeš napraviti.
+      Eval Defining Vars Free Play 1_instruction: |
+        Free Play: We've provided a function
+        that fills your screen with my-image. Change my-image to see what patterns
+        you can make.
       Eval Design Recipe .1_instruction: 'Evo Recept za Crtež za funkciju pod nazivom "kvadrat-krug" sa domenom od Brojčanog Niza Karaktera i Slikom kao kodomene. Pogledaj ova dva primjera koja smo ti dali i napiši definiciju funkcije.'
       Eval Design Recipe 1 (copy 1)_instruction: Napisati ćemo funkciju koja crta puni pravougaonik bilo koje boje koji je dva puta širi nego što je visok. Počni sa primjerom. Nacrtaj puni zeleni pravougaonik koji ima visinu od 100 piksela.
       Eval Design Recipe 1_instruction: 'Dobro. Sada imamo Ugovor širok-pravougaonik: Brojčani Niz Karaktera -> Slika. Napiši primjer. Nacrtaj puni zeleni pravougaonik visine 100 piksela.'
@@ -876,7 +895,11 @@ bs:
         has a contract and one example. Can you write a second example and then complete
         the definition. The "wide-rect" function should produce a rectangle of given
         color that is twice as wide as it is high.
-      Eval Design Recipe 4_instruction: 'Upotrijebi Recept za Crtež za kreiranje funkcije "zvjezdana_eksplozija" koja uzima određeni broj tačaka i prečnik, i vraća žutu radijalnu zvijezdu sa datim brojem tačaka gdje je unutrašnji prečnik jednak polovici vanjskog prečnika.'
+      Eval Design Recipe 4_instruction: |
+        Use the Design Recipe to create a function
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: 'Koristeći Recept za Crtež, napiši funkciju "prugasta-zvijezda" koja uzima dvije boje i pravi zastavu koja je 250 piksela široka, 150 piksela visoka, sa tri horizontalne pruge datih boja slijedećeg redoslijeda: boja2, boja1, boja2.'
       Eval Design Recipe 6_instruction: 'Koristeći Recept za Crtež, napiši funkciju "veliki-poligon" koja bi trebala dati poligon datih stranica i boje koji zauzima većinu prozora, bez obzira ne broj stranica. Da bi bio siguran/na da poligon nije prevelik pri povećanju broja stranica, dužina stranice bi trebala biti obrnuto proporcionalna broju stranica, sa dužinom od (800/broj stranica).'
       Eval Design Recipe Free Play_instruction: Vrijeme za slobodno igranje! Upotrijevi recept za crtež da napraviš vlastitu funkciju po svom izboru
@@ -884,11 +907,15 @@ bs:
       Eval Strings Images .1_instruction: 'Do sada smo se samo bavili sa jednom vrstom podataka, Brojevima. Drugi tip podataka je Niz Karaktera, koji je kombinacija slova, brojeva ili ostalih karaktera koji su pod navodnicima. Pokreni Niz Karaktera "Zdravo svijete!" da vidiš šta se dešava.'
       Eval Strings Images .2_instruction: 'Funkcija "nanodaj_na_niz_karaktera" uzima dva Niza karaktera i vraća jedan kombinovani niz karaktera. Dodaj Niz karaktera "Svemir" na drugi argument "nanodaj_na_niz_karaktera".'
       Eval Strings Images 1_instruction: 'Treći tip podataka koji ćemo koristiti je Slika. Ova "zvijezda" funkcija uzima Broj i dva Niza karaktera, i daje Sliku. Upotrijebi ovu funkciju da napraviš popunjenu crvenu zvijezdu sa prečnikom od 100.'
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis color-coded to let you know which data type it returns and which types\nin needs for its parameters. The last parameter of the triangle function takes\na String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -906,7 +933,6 @@ bs:
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: Vrijeme za slobodno igranje! Istraži dostupe blokove da bi nacrtai/la nešto interesantno. Pobirni se da snimiš i podijeliš svoje omiljene slike.
       Examples 4_instruction: Funkcija za smanjivanje
-      freeplay_instruction: Službeno si postao/la majstor umjetnik! Napravi zimsku idilu i podijeli je sa prijateljima.
       frozen circle function (copy 1)_instruction: "Upotrijebi novu 'kreiraj krug' blok i napravi 10 preklapajućih blokova. Nemoj zaboraviti skočiti naprijed između krugova"
       frozen circle function in circle_instruction: Hajde sada da napravimo 20 preklapajućih krugova, okrećući za 18 stepeni između svakog kruga.
       frozen circle function with parameter_instruction: 'Evo "Napravi krug" blok koji može napraviti krugove različitih veličina. Možeš li ovo upotrijebiti da napraviš mali krug veličine 5 i veliki krug veličine 10?'
@@ -924,13 +950,10 @@ bs:
       frozen freeplay_instruction: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
       frozen line_instruction: Zdravo! Ja sam Elsa od Arendelle. Pomozi mi da napravim liniju.
       frozen perpendicular_instruction: 'Hajde sada da napravimo dvije linije koje zatvaraju ugao od 90 stepeni. Trebati ćeš koristiti "Okreni" i "Pokreni" blok.'
-      frozen snowflake base_instruction: Napravi ove tri linije koje su razmaknute za 45 stepeni
       frozen snowflake branch_instruction: 'Pokušaj upotrijebiti "Napravi granu pahulje" blok da bi se napravile tri grane koje počinju ličiti na pahuljice.'
       frozen snowflake full_instruction: Hajde da to ponovimo 8 puta da bismo napravili predivnu pahulju!
-      frozen snowflower pattern_instruction: Kakvi divni sniježni cvjetovi! Hajde da napravimo manje sniježne cvjetove da bismo pokrili čitavo klizalište. Ne zaboravi skočiti naprijed za 150 piksela između svakog od cvjetova.
       frozen snowflower_instruction: Zamršeni sniježni uzorci mogu biti napravljeni pomoću vrlo jednostavnih oblika. Možeš li napraviti uzorak ponavljajući 5 krugova veličine 5 i 5 krugova veličine 10?
       frozen square iterative_instruction: Izgleda da smo na pola puta za pravljenje kvadrata. Hajde da sastavimo 4 linije da bismo dobili kvadrat.
-      frozen square loop (copy 1)_instruction: Postoji više načina da se napravi kvadrat. Možeš li upotrijebiti blok Ponavljanja da bi ponovo napravio/la kvadrat, ali sada koristeći manje blokova? Koji uzorak možeš staviti unutar Ponavljaj bloka?
       frozen square loop 3x_instruction: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       frozen square loop_instruction: 'Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? '
       frozen square snowflake_instruction: 'Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?'
@@ -1274,7 +1297,11 @@ bs:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Vrijeme je za slobodno igranje. Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
       New Play Lab Project_instruction: Napravi svoju vlastitu priču ili igru! Tvoj kod je spremljen kao projekat i možeš mu se vratiti u bilo koje vrijeme.
       Ninjacat Demo B (copy 1)_instruction: "\r\nHajde da počnemo istraživati jednostavnu video igricu, i da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\r\n\r\n\r\n\r\n  \r\n\r\n"
-      Ninjacat Demo B_instruction: Hajde da počnemo istraživati jednostavnu video igricu i onda da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!
+      Ninjacat Demo B_instruction: |
+        Let’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       perpendicular_instruction: Hajde sada da vidimo da li možemo napraviti dvije okomite linije. Okomite linije su dvije linije koje se presijecaju pod pravim uglom (90 stepeni).
       Play Lab Rocket 1 (copy 1)_instruction: 'Raketa je poletjela i leti brzinom od 15 metara u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.'
       Play Lab Rocket 1 (copy 2)_instruction: 'Raketa je poletjela i leti brzinom od 15 metara u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.'

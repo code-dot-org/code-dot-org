@@ -8,9 +8,8 @@
   "catText":"yazı",
   "catVariables":"Değişkenler",
   "continue":"Devam",
-  "container":"Bir tanım komutu oluşturun",
+  "container":"Bir konteyner oluşturun",
   "containerTooltip":"HTML içerisinde bir bölme oluşturur.",
-  "designMode":"Design",
   "finalLevel":"Tebrikler! Son bulmacayı da çözdünüz.",
   "nextLevel":"Tebrikler! Bu bulmacayı tamamladınız.",
   "no":"Hayır",
@@ -24,7 +23,7 @@
   "shareGame":"Uygulamanı paylaş:",
   "stepIn":"İçeri gel",
   "stepOver":"Adım",
-  "stepOut":"Dışarı adım",
+  "stepOut":"dışarı çıkmak",
   "viewData":"Verileri görüntüle",
   "yes":"Evet"
 }

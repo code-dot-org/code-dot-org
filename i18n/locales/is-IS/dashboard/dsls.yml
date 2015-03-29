@@ -4,8 +4,9 @@ is:
       Blocks to Bools 1:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: '(4+5) > 9'
+        ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Bools 2:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
@@ -88,48 +89,48 @@ is:
         (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Open text response example:
-        Open text response example: Open text response example
-        I loved it because...: I loved it because...
+        Open text response example: Opna dæmi um textasvar
+        I loved it because...: Mér líkaði það vegna ...
       PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
-        0: '? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
-        1: ': Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
-        In my classroom, I want to...: In my classroom, I want to...
+        Facilitating a positive learning environment in your computer science classroom: Stuðlar að jákvæðu námsumhverfi í tölvunarfræðitímum
+        0: '? Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú kennir?'
+        1: ': Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú kennir?'
+        In my classroom, I want to...: Í kennslutímum mínum vil ég ...
       PDK5 Course Descriptions:
-        Course Structure: Course Structure
-        I am going to start with Course...: I am going to start with Course...
+        Course Structure: Skipulag námskeiðs
+        I am going to start with Course...: Ég ætla að byrja á námskeiði...
       PDK5 Difficulty:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-        Your thoughts here: Your thoughts here
+        Degree of Difficulty: Erfiðleikastig
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða áhrif hefur það á kennslu þína í tölvunarfræði?
+        Your thoughts here: Hugsanir þínar hér
       PDK5 Foundation:
-        Computer Science as a Foundational Skill: Computer Science as a Foundational Skill
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do you see computer science as a foundational skill for your students? Why or why not?
-        Your thoughts here: Your thoughts here
+        Computer Science as a Foundational Skill: Tölvunarfræði sem grunnfærni
+        Do you see computer science as a foundational skill for your students? Why or why not?: Álítur þú að tölvunarfræði eigi að vera grundvallarfærni fyrir nemendur þína? Hvers vegna (ekki)?
+        Your thoughts here: Hugsanir þínar hér
       PDK5 Impact 1:
-        Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?
-        Your thoughts here: Your thoughts here
+        Impact for students: Áhrif fyrir nemendur
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Álítur þú að nemendur þínir muni finnast netverkefnin á K-5 námskeiðunum skemmtileg og grípandi? Hvers vegna (ekki)?
+        Your thoughts here: Hugsanir þínar hér
       PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.
-        Your thoughts here: Your thoughts here
+        Connections to other Subjects: Tengsl við önnur fög
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Tengist tölvunarfræði öðru efni eða fögum sem nemendur þínir eru að læra? Útskýrðu hvers vegna (ekki).
+        Your thoughts here: Hugsanir þínar hér
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Gagnsemi fyrir raunheiminn
         0: '? Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.'
-        1: ': Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.'
-        Your thoughts here: Your thoughts here
+        1: ': Hjálpar það að læra um tölvunarfræði nemendum að verða að þeim þjóðfélagsþegnum sem þú ert að undirbúa þá fyrir að verða? Útskýrðu hvers vegna (ekki).'
+        Your thoughts here: Hugsanir þínar hér
       PDK5 Problem Solving:
-        Problem Solving Methods: Problem Solving Methods
-        I could integrate this in my classroom by...: I could integrate this in my classroom by...
+        Problem Solving Methods: Aðferðir við lausn verkefna
+        I could integrate this in my classroom by...: Ég gæti samþætt þetta kennslu minni með því að...
       PDK5 Promo Video:
-        "Code Studio: Kid tested, Teacher approved": 'Code Studio: Kid tested, Teacher approved'
+        "Code Studio: Kid tested, Teacher approved": 'Kóðastúdíó: Krakkaprófað, kennaravottað'
       PDK5 Promo Video 2:
-        "Code Studio: Kid tested, Teacher approved": 'Code Studio: Kid tested, Teacher approved'
-        My first impressions of Code Studio are...: My first impressions of Code Studio are...
+        "Code Studio: Kid tested, Teacher approved": 'Kóðastúdíó: Krakkaprófað, kennaravottað'
+        My first impressions of Code Studio are...: Fyrstu viðbrögð mín við Kóðastúdíói eru...
       PDK5 Strategies O:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
-        "I think teaching computer science will be different than teaching other subjects in these ways: ...": 'I think teaching computer science will be different than teaching other subjects in these ways: ...'
+        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
+        "I think teaching computer science will be different than teaching other subjects in these ways: ...": 'Ég álít að kennsla tölvunarfræði verði ólík kennslu annarra faga á eftirfarandi hátt: ...'
       Test Markdown level:
         Enter title here: Skráðu titil hér
         Enter prompt here: Skráðu kvaðningu hér
@@ -146,42 +147,48 @@ is:
         title: titill
         Create images with bits and bytes.: Búa til myndir með bitum og bætum.
       CSP Lesson 14 encode letter A instructions:
-        "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+        "Instructions: Encode the Letter A": 'Leiðbeingar: Umkóðun stafsins A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP námsáætlun - E1K5 - Sending bita í raunheiminum'
+        description here: lýsing hér
+      CSPStudentLessonPlanTemplate:
+        title: titill
+        description here: lýsing hér
       External level test (will):
-        first computer program: first computer program
+        first computer program: fyrsta tölvuforrit
       Hour of Code test content: [ ]
       Mixing Colors:
         title: titill
         description here: lýsing hér
       PDK5 Beyond C:
-        Beyond: Beyond
+        Beyond: Áframhald
       PDK5 Classroom Culture C:
         Classroom Culture: Bekkjarmenning
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
       PDK5 Glossary C:
-        Vocabulary: Vocabulary
+        Vocabulary: Orðaforði
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: Félagaforritun
       PDK5 Strategies:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
+        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
       PDK5 Teacher Dashboard 1:
-        Dashboard 1: Dashboard 1
+        Dashboard 1: Stjórnborð 1
       PDK5 Teacher Dashboard 2:
-        Dashboard 2: Dashboard 2
+        Dashboard 2: Stjórnborð 2
       PDK5 Teacher Dashboard 3:
-        Course Progress: Course Progress
+        Course Progress: Framvinda námskeiðs
       PDK5 Teacher Dashboard 4:
-        Course Progress: Course Progress
+        Course Progress: Framvinda námskeiðs
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Teacher Dashboard
       PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
+        Unplugged intro: Kynning án tölvu
       PDK5 UVideo Overview C:
-        Kiki video overview: Kiki video overview
+        Kiki video overview: Kiki myndskeiðsyfirlit
       PDK5 Why K5 CS:
-        Why teach computer science in elementary school?: Why teach computer science in elementary school?
+        Why teach computer science in elementary school?: Hvers vegna kenna tölvunarfræði í grunnskóla?
       Pixelation 1:
         Pixelation 1: Dílamynstur 1
         Create images with bits and bytes.: Búa til myndir með bitum og bætum.
@@ -195,10 +202,10 @@ is:
         title: titill
         description here: lýsing hér
       Pixelation 4:
-        Pixelation 4 - Baker test of External level -- NOT REAL: 'Pixelation 4 - Baker test of External level -- NOT REAL'
+        Pixelation 4 - Baker test of External level -- NOT REAL: 'Dílamynstur 4 - Baker mæling á ytri stöðu -- SÝNDAR'
         Create images with bits and bytes.: Búa til myndir með bitum og bætum.
       Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+        Pixelation 4x4 Empty: Dílamynstur 4x4 tómt
         Create images with bits and bytes.: Búa til myndir með bitum og bætum.
       Pixelation Bee:
         title: titill
@@ -207,16 +214,16 @@ is:
         title: titill
         description here: lýsing hér
       Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: 'Pixelation - Lesson 14 - Fix bit offset'
+        Pixelation - Lesson 14 - Fix bit offset: 'Dílamynstur - Námseining 14 - Hliðrun fix bita'
       Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: 'Pixelation - Lesson 14 - Fix bit offset v.2'
+        Pixelation - Lesson 14 - Fix bit offset v.2: 'Dílamynstur - Námseining 14 - Hliðrun fix bita útg.2'
       Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: 'Pixelation - Lesson 14 - Fix bit offset v.2'
+        Pixelation - Lesson 14 - Fix bit offset v.2: 'Dílamynstur - Námseining 14 - Hliðrun fix bita útg.2'
       Pixelation - Lesson 14 - Instructions Make Your Own:
-        Make your own B&W image: 'Make your own B&W image'
+        Make your own B&W image: Búa til þína eigin S/H mynd
         description here: lýsing hér
       Pixelation - Lesson 14 - Instructions one bit error:
-        "Lesson 14 - Task 2: fix the error": 'Lesson 14 - Task 2: fix the error'
+        "Lesson 14 - Task 2: fix the error": 'Námseining 14 - Verk 2: leiðréttu villuna'
         description here: lýsing hér
       Pixelation - Lesson 14 - Make the Letter A:
         title: titill
@@ -228,49 +235,49 @@ is:
         title: titill
         description here: lýsing hér
       Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: 'Pixelation - Lesson 15 - Color Free Play'
+        Pixelation - Lesson 15 - Color Free Play: 'Dílamynstur - Námseining 15 - Litir, frjálst'
         description here: lýsing hér
       Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: 'Pixelation - Lesson 15 - Color Shades'
+        Pixelation - Lesson 15 - Color Shades: 'Dílamynstur - Námseining 15 - Litir'
         description here: lýsing hér
       Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: 'Pixelation - Lesson 15 - Color Shades 4x4'
+        Pixelation - Lesson 15 - Color Shades 4x4: 'Dílamynstur - Námseining 15 - Litir 4x4'
         description here: lýsing hér
       Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: 'Pixelation - Lesson 15 - Complete 3-bit color'
+        Pixelation - Lesson 15 - Complete 3-bit color: 'Dílamynstur - Námseining 15 - 3-bita litir'
         description here: lýsing hér
       Pixelation - Lesson 15 - Favicon Instructions:
-        Pixelation - Lesson 15 - Favicon Instructions: 'Pixelation - Lesson 15 - Favicon Instructions'
+        Pixelation - Lesson 15 - Favicon Instructions: 'Dílamynstur - Námseining 15 - Favicon leiðbeiningar'
         description here: lýsing hér
       Pixelation - Lesson 15 - Task 1 instructions:
-        Pixelation - Lesson 15 - Task 1 instructions: 'Pixelation - Lesson 15 - Task 1 instructions'
+        Pixelation - Lesson 15 - Task 1 instructions: 'Dílamynstur - Námseining 15 - Verk 1 leiðbeiningar'
         description here: lýsing hér
       Pixelation - Lesson 15 - Task 2 instructions:
-        Pixelation - Lesson 15 - Task 2 instructions: 'Pixelation - Lesson 15 - Task 2 instructions'
+        Pixelation - Lesson 15 - Task 2 instructions: 'Dílamynstur - Námseining 15 - Verk 2 leiðbeiningar'
         description here: lýsing hér
       Pixelation - Lesson 15 - Task 3 instructions:
-        Pixelation - Lesson 15 - Task 3 instructions: 'Pixelation - Lesson 15 - Task 3 instructions'
+        Pixelation - Lesson 15 - Task 3 instructions: 'Dílamynstur - Námseining 15 - Verk 3 leiðbeiningar'
         description here: lýsing hér
       Pixelation - Video - Color 1:
-        Pixelation - Video - Color 1: 'Pixelation - Video - Color 1'
+        Pixelation - Video - Color 1: 'Dílamynstur - Myndskeið - Litur 1'
         description here: lýsing hér
       Pixelation - Video - Color 2:
-        Pixelation - Video - Color 2: 'Pixelation - Video - Color 2'
+        Pixelation - Video - Color 2: 'Dílamynstur - Myndskeið - Litur 2'
         description here: lýsing hér
       Pixelation - Video - Color 3:
-        Pixelation - Video - Color 3: 'Pixelation - Video - Color 3'
+        Pixelation - Video - Color 3: 'Dílamynstur - Myndskeið - Litur 3'
         description here: lýsing hér
       Pixelation - Video - Lesson 14 - B and W:
-        How to use the B&W Pixelation Widget: 'How to use the B&W Pixelation Widget'
+        How to use the B&W Pixelation Widget: Um notkun S/H Dílamynstursgræjunnar
       Pixelation - Video - Tips and Tricks:
-        Pixelation - Video - Tips and Tricks: 'Pixelation - Video - Tips and Tricks'
+        Pixelation - Video - Tips and Tricks: 'Dílamynstur - Myndskeið - Ráð og refabrögð'
         description here: lýsing hér
       test demo level:
         demo title: demo title
         demo description: demo description
       Test discourse forum-comment level:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+        Degree of Difficulty: Erfiðleikastig
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða áhrif hefur það á kennslu þína í tölvunarfræði?
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
@@ -282,73 +289,73 @@ is:
         Big Triangle: Stór þríhyrningur
         Write a contract for a big red triangle that is 100 pixels in size: Skrifa samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
         EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        Big Triangle|Image|Number|String: stór þríhyrningur | mynd | tala | strengur
       Creating Contracts From Examples 2:
         Square Contract: Samningur fallsins ferningur
         Write a contract for a purple square that is 15 pixels in size.: Skrifa samning fyrir fjólubláan ferning sem er 15 dílar á stærð.
         Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
-        Square|Image|Number|String: Square|Image|Number|String
+        Square|Image|Number|String: ferningur | mynd | tala | strengur
       Creating Contracts From Examples 3A:
         Banner Contract: Samningur fallsins borði
         Banner Function block: 'Kubbur fallsins "Borði"'
         Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: borði | mynd | strengur
       Creating Contracts From Examples 4:
         Shrink Contract: Samningur fallsins minnka
         Try using the "shrink" function.: 'Prófaðu að nota fallið "minnka".'
         Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
-        shrink|Image|Image: shrink|Image|Image
+        shrink|Image|Image: minnka | mynd | mynd
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
         0: '? Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
         1: ': Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
       Enter name here:
         Enter title here: Skráðu titil hér
         Enter prompt here: Skráðu kvaðningu hér
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
+        Contract Name|Number|Number|String: heiti samnings | tala | tala | strengur
       Eval Contracts 1 B:
         Star Contract: 'Samningur fyrir "stjarna"'
         Write a contract for the star function: 'Skrifaðu samning fyrir fallið "stjarna"'
         Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks, 300
-        star|Image|String|Number|String: star|Image|String|Number|String
+        star|Image|String|Number|String: stjarna | mynd | strengur | tala | strengur
       Eval Contracts 2 B:
         Rotate Contract: 'Samningur fyrir "snúa"'
         Write a contract for the rotate function: 'Skrifaðu samning fyrir fallið "snúa"'
         Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks, 300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
       Eval Contracts 3 B:
         Text Contract: 'Samningur fyrir "texti"'
         Write a contract for the text function: 'Skrifaðu samning fyrir fallið "texti"'
         Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks, 300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
       Eval Contracts 4 B:
         Scale Contract: 'Samningur fyrir "kvarði"'
         Write a contract for the scale function: 'Skrifaðu samning fyrir fallið "kvarði"'
         Eval Contracts 4 A.solution_blocks, 300: Mat Samningar 4 A.solution_blocks, 300
-        scale|Image|Number|Image: scale|Image|Number|Image
+        scale|Image|Number|Image: kvarða | mynd | tala | mynd
       Eval Contracts B:
         Star Contract: 'Samningur fyrir "stjarna"'
         Write a contract for the star function: 'Skrifaðu samning fyrir fallið "stjarna"'
         Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks, 300
-        star|Image|Number|String|String: star|Image|Number|String|String
+        star|Image|Number|String|String: stjarna | mynd | tala | strengur | strengur
       Eval Contracts D:
         Rotate Contract: 'Samningur fyrir "snúa"'
         Write a contract for the rotate function: 'Skrifaðu samning fyrir fallið "snúa"'
         Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks, 300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
       Eval Contracts F:
         Text Contract: 'Samningur fyrir "texti"'
         Write a contract for the text function: 'Skrifaðu samning fyrir fallið "texti"'
         Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks, 300
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
         0: '? Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
         1: ': Skrifaðu samning fyrir fallið "breiður-rétth" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
       Rocket Contract 1:
         Contract for rocket-height: 'Samningur fyrir "flaugarhæð"'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
-        rocket-height|Number|Number: rocket-height|Number|Number
+        0: '? Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
+        1: ': Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
+        rocket-height|Number|Number: hæð-flaugar | tala | tala

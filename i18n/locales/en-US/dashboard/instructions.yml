@@ -401,7 +401,7 @@ en:
       Big Game Vars 3 (copy 1)_instruction: crwdns34955:0crwdne34955:0
       Big Game Vars 3_instruction: crwdns34956:0crwdne34956:0
       Big Game Vars 4 (copy 1)_instruction: crwdns34957:0crwdne34957:0
-      Big Game Vars 4_instruction: crwdns34958:0crwdne34958:0
+      Big Game Vars 4_instruction: crwdns35737:0crwdne35737:0
       BowShoot1_instruction: crwdns30613:0crwdne30613:0
       Brendan Artist work_instruction: crwdns30614:0crwdne30614:0
       Brendan Test Maze 1_instruction: crwdns30615:0crwdne30615:0
@@ -426,7 +426,7 @@ en:
       Calc Circles of Eval 1 (copy 1)_instruction: crwdns34241:0crwdne34241:0
       Calc Circles of Eval 1_instruction: crwdns34242:0crwdne34242:0
       Calc Circles of Eval 2 (copy 1)_instruction: crwdns34243:0crwdne34243:0
-      Calc Circles of Eval 2_instruction: crwdns34244:0crwdne34244:0
+      Calc Circles of Eval 2_instruction: crwdns35738:0crwdne35738:0
       Calc Circles of Eval 3_instruction: crwdns34245:0crwdne34245:0
       Calc Circles of Eval 4_instruction: crwdns34246:0crwdne34246:0
       Calc Circles of Eval 5_instruction: crwdns34247:0crwdne34247:0
@@ -440,18 +440,18 @@ en:
       Calc Define Funcs 2_instruction: crwdns34255:0crwdne34255:0
       Calc Define Funcs 3_instruction: crwdns35661:0crwdne35661:0
       Calc Define Funcs 4_instruction: crwdns35662:0crwdne35662:0
-      Calc Design Recipe 1_instruction: crwdns34258:0crwdne34258:0
+      Calc Design Recipe 1_instruction: crwdns35739:0crwdne35739:0
       Calc Design Recipe 2_instruction: crwdns35133:0crwdne35133:0
-      Calc Design Recipe 3_instruction: crwdns35134:0crwdne35134:0
-      Calc Design Recipe 4_instruction: crwdns35135:0crwdne35135:0
+      Calc Design Recipe 3_instruction: crwdns35740:0crwdne35740:0
+      Calc Design Recipe 4_instruction: crwdns35741:0crwdne35741:0
       Calc Free Play_instruction: crwdns34262:0crwdne34262:0
       Calc Rocket 1 (copy 1)_instruction: crwdns35136:0crwdne35136:0
       Calc Rocket 1_instruction: crwdns34264:0crwdne34264:0
       Calc Rocket 2_instruction: crwdns34265:0crwdne34265:0
-      Calc Vars 1.1_instruction: crwdns34266:0crwdne34266:0
-      Calc Vars 1_instruction: crwdns35137:0crwdne35137:0
+      Calc Vars 1.1_instruction: crwdns35742:0crwdne35742:0
+      Calc Vars 1_instruction: crwdns35743:0crwdne35743:0
       Calc Vars 2 (copy 1)_instruction: crwdns34268:0crwdne34268:0
-      Calc Vars 2.1_instruction: crwdns35138:0crwdne35138:0
+      Calc Vars 2.1_instruction: crwdns35744:0crwdne35744:0
       Calc Vars 2_instruction: crwdns34270:0crwdne34270:0
       Calc Vars 3 (copy 1)_instruction: crwdns34271:0crwdne34271:0
       Calc Vars 3_instruction: crwdns35139:0crwdne35139:0
@@ -679,7 +679,7 @@ en:
       Eval Booleans 2_instruction: crwdns34454:0crwdne34454:0
       Eval Booleans 3_instruction: crwdns34455:0crwdne34455:0
       Eval Booleans 4_instruction: crwdns34456:0crwdne34456:0
-      Eval Booleans 5_instruction: crwdns34457:0crwdne34457:0
+      Eval Booleans 5_instruction: crwdns35745:0crwdne35745:0
       Eval Booleans 6_instruction: crwdns34458:0crwdne34458:0
       Eval Booleans_instruction: crwdns34459:0crwdne34459:0
       Eval Cond 1_instruction: crwdns34461:0crwdne34461:0
@@ -707,17 +707,16 @@ en:
       Eval Define Funcs 1_instruction: crwdns34473:0crwdne34473:0
       Eval Define Funcs 2_instruction: crwdns34474:0crwdne34474:0
       Eval Define Funcs 3_instruction: crwdns34475:0crwdne34475:0
-      Eval Define Funcs 4 (copy 1)_instruction: crwdns34476:0crwdne34476:0
       Eval Define Funcs 4_instruction: crwdns34477:0crwdne34477:0
       Eval Define Funcs 5_instruction: crwdns34478:0crwdne34478:0
-      Eval Defining Vars Free Play 1_instruction: crwdns34479:0crwdne34479:0
+      Eval Defining Vars Free Play 1_instruction: crwdns35746:0crwdne35746:0
       Eval Design Recipe .1_instruction: crwdns34480:0crwdne34480:0
       Eval Design Recipe 1 (copy 1)_instruction: crwdns34481:0crwdne34481:0
       Eval Design Recipe 1_instruction: crwdns34482:0crwdne34482:0
       Eval Design Recipe 2 (copy 1)_instruction: crwdns34483:0crwdne34483:0
       Eval Design Recipe 2_instruction: crwdns34484:0crwdne34484:0
       Eval Design Recipe 3_instruction: crwdns35683:0crwdne35683:0
-      Eval Design Recipe 4_instruction: crwdns34486:0crwdne34486:0
+      Eval Design Recipe 4_instruction: crwdns35747:0crwdne35747:0
       Eval Design Recipe 5_instruction: crwdns34487:0crwdne34487:0
       Eval Design Recipe 6_instruction: crwdns34488:0crwdne34488:0
       Eval Design Recipe Free Play_instruction: crwdns34489:0crwdne34489:0
@@ -725,8 +724,8 @@ en:
       Eval Strings Images .1_instruction: crwdns34490:0crwdne34490:0
       Eval Strings Images .2_instruction: crwdns34491:0crwdne34491:0
       Eval Strings Images 1_instruction: crwdns34492:0crwdne34492:0
-      Eval Strings Images 2_instruction: crwdns35664:0crwdne35664:0
-      Eval Strings Images 3_instruction: crwdns35665:0crwdne35665:0
+      Eval Strings Images 2_instruction: crwdns35748:0crwdne35748:0
+      Eval Strings Images 3_instruction: crwdns35749:0crwdne35749:0
       Eval Strings Images 4_instruction: crwdns35666:0crwdne35666:0
       Eval Strings Images 5_instruction: crwdns34496:0crwdne34496:0
       Eval Strings Images 6_instruction: crwdns34497:0crwdne34497:0
@@ -734,7 +733,6 @@ en:
       Eval Strings Images 8_instruction: crwdns35668:0crwdne35668:0
       Eval Strings Images Free Play_instruction: crwdns34500:0crwdne34500:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
-      freeplay_instruction: crwdns34501:0crwdne34501:0
       frozen circle function (copy 1)_instruction: crwdns34502:0crwdne34502:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
       frozen circle function with parameter_instruction: crwdns34504:0crwdne34504:0
@@ -752,13 +750,10 @@ en:
       frozen freeplay_instruction: crwdns34516:0crwdne34516:0
       frozen line_instruction: crwdns34517:0crwdne34517:0
       frozen perpendicular_instruction: crwdns34518:0crwdne34518:0
-      frozen snowflake base_instruction: crwdns34519:0crwdne34519:0
       frozen snowflake branch_instruction: crwdns34520:0crwdne34520:0
       frozen snowflake full_instruction: crwdns34521:0crwdne34521:0
-      frozen snowflower pattern_instruction: crwdns34522:0crwdne34522:0
       frozen snowflower_instruction: crwdns34523:0crwdne34523:0
       frozen square iterative_instruction: crwdns34524:0crwdne34524:0
-      frozen square loop (copy 1)_instruction: crwdns34525:0crwdne34525:0
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
@@ -993,7 +988,7 @@ en:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: crwdns34646:0crwdne34646:0
       New Play Lab Project_instruction: crwdns35010:0crwdne35010:0
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
-      Ninjacat Demo B_instruction: crwdns34648:0crwdne34648:0
+      Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       perpendicular_instruction: crwdns34649:0crwdne34649:0
       Play Lab Rocket 1 (copy 1)_instruction: crwdns34650:0crwdne34650:0
       Play Lab Rocket 1 (copy 2)_instruction: crwdns34651:0crwdne34651:0

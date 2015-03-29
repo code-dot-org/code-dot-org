@@ -4,8 +4,9 @@ ru:
       Blocks to Bools 1:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое выражение, которое соответствует этому коду
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: '(4 + 5) > 9'
+        ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Введите арифметическое выражение
       Blocks to Bools 2:
         Convert Blocks to Math: Преобразование блоков в математические выражения
@@ -89,7 +90,7 @@ ru:
         Type the arithmetic expression here: Введите арифметическое выражение
       Open text response example:
         Open text response example: Open text response example
-        I loved it because...: I loved it because...
+        I loved it because...: Я люблю это, потому что...
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
         0: '? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
@@ -147,6 +148,12 @@ ru:
         Create images with bits and bytes.: Создавайте картинки при помощи битов и байтов.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
+        description here: Описание здесь
+      CSPStudentLessonPlanTemplate:
+        title: название
+        description here: Описание здесь
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: [ ]
@@ -167,13 +174,13 @@ ru:
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Teacher Dashboard 1:
-        Dashboard 1: Dashboard 1
+        Dashboard 1: Панель 1
       PDK5 Teacher Dashboard 2:
-        Dashboard 2: Dashboard 2
+        Dashboard 2: Панель 2
       PDK5 Teacher Dashboard 3:
-        Course Progress: Course Progress
+        Course Progress: Прогресс курса
       PDK5 Teacher Dashboard 4:
-        Course Progress: Course Progress
+        Course Progress: Прогресс курса
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Teacher Dashboard
       PDK5 Unplugged Intro C:

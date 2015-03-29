@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Ваша функція не повертає правильний результат для всіх значень."},
 "goal":function(d){return "Мета:"},
 "levelIncompleteError":function(d){return "Вираз не відповідають цілі."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Ось ваші обчислення! Продовжити працювати з ними, або перейти до наступної загадки!"},
 "yourExpression":function(d){return "Ваш вираз:"},

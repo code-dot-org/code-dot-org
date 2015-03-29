@@ -16,35 +16,20 @@ describe("NetSimHeartbeat", function () {
     testShard = fakeShard();
   });
 
-  describe("default row structure", function () {
-    var row;
+  it ("has expected row structure and default values", function () {
+    var heartbeat = new NetSimHeartbeat(testShard);
+    var row = heartbeat.buildRow_();
 
-    beforeEach(function () {
-      var heartbeat = new NetSimHeartbeat(testShard);
-      row = heartbeat.buildRow_();
-    });
+    assertOwnProperty(row, 'nodeID');
+    assertEqual(row.fromNodeID, undefined);
 
-    it ("nodeID (default undefined)", function () {
-      assertOwnProperty(row, 'nodeID');
-      assertEqual(row.fromNodeID, undefined);
-    });
-
-    it ("time (default Date.now())", function () {
-      assertOwnProperty(row, 'time');
-      assertWithinRange(row.time, Date.now(), 10);
-    });
+    assertOwnProperty(row, 'time');
+    assertWithinRange(row.time, Date.now(), 10);
   });
 
   it ("Implements getTable_ pointing to the heartbeat table", function () {
     var heartbeat = new NetSimHeartbeat(testShard, undefined);
     assert(heartbeat.getTable_() === testShard.heartbeatTable);
-  });
-
-  it ("buildRow_ method includes needed fields", function () {
-    var entity = new NetSimHeartbeat(testShard, undefined);
-    var row = entity.buildRow_();
-    assert(row.hasOwnProperty('nodeID'), "Row has no nodeID field");
-    assert(row.hasOwnProperty('time'), "Row has no time field");
   });
 
   describe("static method getOrCreate", function () {
