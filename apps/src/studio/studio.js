@@ -2895,8 +2895,6 @@ Studio.allGoalsVisited = function() {
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
-//  return Studio.playerScore >= 6;
-
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
