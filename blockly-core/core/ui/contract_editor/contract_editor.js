@@ -13,6 +13,7 @@ goog.require('Blockly.BlockValueType');
 goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
 goog.require('Blockly.SvgHeader');
+goog.require('Blockly.SvgTextButton');
 goog.require('Blockly.SvgHighlightBox');
 goog.require('Blockly.DomainEditor');
 goog.require('Blockly.TypeDropdown');
@@ -141,6 +142,11 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
+  this.addExampleButton = new Blockly.SvgTextButton(canvasToDrawOn, "Add Example", function () {
+    console.log("Add example now");
+    // TODO(bjordan): Render in view, hide/show
+  });
+
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       headerText: "2. Examples", // TODO(bjordan): i18n
