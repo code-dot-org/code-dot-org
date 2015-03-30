@@ -12,14 +12,15 @@ goog.provide('Blockly.SvgTextButton');
  * @constructor
  */
 Blockly.SvgTextButton = function (parent, text, onMouseDown) {
-  this.svgGroup_ = Blockly.createSvgElement('g', {
+  var button = Blockly.createSvgElement('g', {
     'id': 'addExampleButton'
   }, parent);
   var padding = 7;
+  var purpleFillColor = '#7665a0';
   this.buttonRect = Blockly.createSvgElement('rect', {
     'rx': 12,
     'ry': 12,
-    'fill': options.backgroundColor,
+    'fill': purpleFillColor,
     'stroke': 'white',
     'stroke-width': '2.5'
   }, button);
@@ -34,16 +35,21 @@ Blockly.SvgTextButton = function (parent, text, onMouseDown) {
   this.buttonRect.setAttribute('height', bounds.height + padding);
   this.buttonRect.setAttribute('y', -bounds.height + padding - 1);
 
-  Blockly.bindEvent_(this.svgGroup_, 'click', null, onMouseDown);
+  Blockly.bindEvent_(button, 'click', null, onMouseDown);
+
+  this.svgGroup_ = button;
 };
 
 /**
+ * @param xOffset {Number}
  * @param yOffset {Number}
  * @return {Number} y offset to continue rendering at
  */
-Blockly.SvgTextButton.prototype.renderAt = function (yOffset) {
-  var hardcodedButtonHeight = 20;
-  this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
+Blockly.SvgTextButton.prototype.renderAt = function (xOffset, yOffset) {
+  var hardcodedButtonHeight = 29;
+  var topToYBasePosition = 14;
+  var transformYPosition = topToYBasePosition + yOffset;
+  this.svgGroup_.setAttribute('transform', 'translate(' + xOffset + ',' + transformYPosition + ')');
   return yOffset + hardcodedButtonHeight;
 };
 
