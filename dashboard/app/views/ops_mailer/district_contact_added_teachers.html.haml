@@ -13,5 +13,3 @@ added #{@added_teachers.count} teachers to
         District: #{teacher.district.try(:name)}
       - if teacher.ops_school.present?
         School: #{teacher.ops_school}
-
-= "[ops notification] #{@district_contact.ops_first_name} #{@district_contact.ops_last_name} added #{@added_teachers.count} teachers to #{@cohort.name}"
