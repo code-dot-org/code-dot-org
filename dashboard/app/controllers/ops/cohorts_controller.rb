@@ -1,6 +1,8 @@
 module Ops
   class CohortsController < OpsControllerBase
     before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
+    after_filter :notify_district_contact_added_teachers, only: [:update]
+
     load_and_authorize_resource except: [:index]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
@@ -37,6 +39,10 @@ module Ops
 
     # PATCH/PUT /ops/cohorts/1
     def update
+      if params[:cohort][:teachers]
+        @added_teachers = params[:cohort][:teachers] - @cohort.teachers
+      end
+
       @cohort.update!(params[:cohort])
       respond_with @cohort
     end
@@ -100,6 +106,13 @@ module Ops
       return unless cutoff_date
 
       params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
+    end
+
+    def notify_district_contact_added_teachers
+      # notification to ops team that a district contact added teachers
+      if @added_teachers.present? && current_user.district_contact?
+        OpsMailer.district_contact_added_teachers(current_user, @cohort, @added_teachers).deliver
+      end
     end
   end
 end
