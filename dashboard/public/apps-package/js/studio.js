@@ -1828,6 +1828,16 @@ Studio.displaySprite = function(i, isWalking) {
   var xOffset, yOffset;
 
   if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+
+    // One exception: don't show the walk sprite if we're already playing an explosion animation for
+    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
+    // but this is not a common case for now and this keeps the change small.)
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
+      spriteWalkIcon.setAttribute('visibility', 'hidden');
+      return;
+    }
+
     // Show walk sprite, and hide regular sprite.
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
@@ -2089,8 +2099,13 @@ Studio.callCmd = function (cmd) {
 
 Studio.vanishActor = function (opts) {
   var svg = document.getElementById('svgStudio');
+
   var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  if (!sprite || sprite.getAttribute('visibility') === 'hidden') {
+  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
+  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
+  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+
+  if (!spriteShowing && !spriteWalkShowing) {
     return;
   }
 
@@ -2915,20 +2930,30 @@ Studio.allGoalsVisited = function() {
 };
 
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+
+  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var achievedGoals = Studio.allGoalsVisited();
+  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  // Levels with goals (usually images that need to be touched) can have an optional success
+  // condition that can explicitly return false to prevent the level from completing.
+  // In very rare cases, a level might have goals but not care whether they're touched or not
+  // to succeed, relying instead solely on the success function.  In such a case, the level should
+  // have completeOnSuccessConditionNotGoals set to true.
+  // In the remainder of levels which do not have goals, they simply require a success condition
+  // that returns true.
+
+  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
+      (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
-    return true;
-  }
-
-  if (Studio.allGoalsVisited()) {
-    Studio.result = ResultType.SUCCESS;
     return true;
   }
 
@@ -4000,11 +4025,6 @@ levels.playlab_3 = {
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
   toolbox:
     tb(
       '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
