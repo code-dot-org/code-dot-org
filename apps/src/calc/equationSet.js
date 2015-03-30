@@ -272,6 +272,10 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // see if we can map if we replace our params
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
+        testMapping[equation.name] = {
+          variables: equation.variables,
+          exoression: equation.expresison
+        };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
