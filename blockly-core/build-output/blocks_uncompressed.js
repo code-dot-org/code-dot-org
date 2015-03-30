@@ -808,7 +808,9 @@ Blockly.Blocks.procedures_defnoreturn = {shouldHideIfInMainBlockSpace:function()
   for(e = 0;e < this.parameterNames_.length;e++) {
     b = {enabled:!0}, c = this.parameterNames_[e], b.text = Blockly.Msg.VARIABLES_SET_CREATE_GET.replace("%1", c), d = goog.dom.createDom("title", null, c), d.setAttribute("name", "VAR"), d = goog.dom.createDom("block", null, d), d.setAttribute("type", "variables_get"), b.callback = Blockly.ContextMenu.callbackFactory(this, d), a.push(b)
   }
-}, userCreated:!1, callType_:"procedures_callnoreturn"};
+}, userCreated:!1, shouldBeGrayedOut:function() {
+  return!1
+}, callType_:"procedures_callnoreturn"};
 Blockly.Blocks.procedures_defreturn = {shouldHideIfInMainBlockSpace:function() {
   return Blockly.useModalFunctionEditor
 }, init:function() {
@@ -825,7 +827,7 @@ Blockly.Blocks.procedures_defreturn = {shouldHideIfInMainBlockSpace:function() {
 }, updateParams_:Blockly.Blocks.procedures_defnoreturn.updateParams_, updateCallerParams_:Blockly.Blocks.procedures_defnoreturn.updateCallerParams_, updateParamsFromArrays:Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays, mutationToDom:Blockly.Blocks.procedures_defnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation, decompose:Blockly.Blocks.procedures_defnoreturn.decompose, compose:Blockly.Blocks.procedures_defnoreturn.compose, dispose:Blockly.Blocks.procedures_defnoreturn.dispose, 
 getProcedureInfo:function() {
   return{name:this.getTitleValue("NAME"), parameterNames:this.parameterNames_, parameterIDs:this.paramIds_, type:this.type, callType:this.callType_}
-}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated, callType_:"procedures_callreturn"};
+}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated, shouldBeGrayedOut:Blockly.Blocks.procedures_defnoreturn.shouldBeGrayedOut, callType_:"procedures_callreturn"};
 Blockly.Blocks.procedures_mutatorcontainer = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE);
@@ -1343,6 +1345,8 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
     Blockly.Names.equals(a, this.parameterNames_[d]) && (this.parameterTypes_[d] = b, c = !0)
   }
   c && (this.updateParams_(), this.updateCallerParams_())
+}, shouldBeGrayedOut:function() {
+  return!1
 }, callType_:"functional_call"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
@@ -1463,6 +1467,8 @@ Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callret
 Blockly.Blocks.functionalExamples = {};
 Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
   return!0
+}, isCopyable:function() {
+  return!1
 }, init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
