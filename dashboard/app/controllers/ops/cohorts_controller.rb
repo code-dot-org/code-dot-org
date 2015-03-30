@@ -84,8 +84,11 @@ module Ops
       return unless teacher_param_list
 
       params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
-        if teacher_params[:district] && teacher_params[:district].is_a?(String)
-          teacher_params[:district] = District.find_by!(name: teacher_params[:district])
+        district_params = teacher_params.delete :district
+        if district_params.is_a?(String)
+          teacher_params[:district_id] = District.find_by!(name: district_params).id
+        elsif district_params.is_a?(Hash) && district_params[:id]
+          teacher_params[:district_id] = district_params[:id]
         end
         User.find_or_create_teacher(teacher_params)
       end
