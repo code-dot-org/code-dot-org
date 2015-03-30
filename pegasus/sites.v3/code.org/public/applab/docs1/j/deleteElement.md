@@ -1,17 +1,19 @@
+works across all UI controls, including canvas
+
 ---
 title: App Lab Docs
 ---
 
 [name]
 
-## matto(x, y, width, height)
+## rect(x, y, width, height)
 
 [/name]
 
 
 [category]
 
-Category: Fun
+Category: Canvas
 
 [/category]
 

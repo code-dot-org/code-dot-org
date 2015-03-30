@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## penWidth(x)
+## onEvent(id, type, function)
 
 [/name]
 
 
 [category]
 
-Category: Turtle
+Category: UI controls
 
 [/category]
 
@@ -19,10 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Changes the thickness of the line the turtle leaves behind as it moves on the screen.
+Execute code in response to an event for the specified element.
 
 [/short_description]
 
+**Note:** A UI control must exist before the onEvent function can be used.
 
 [/description]
 
@@ -32,19 +33,10 @@ ____________________________________________________
 [example]
 
 <pre>
-
+setTimeout(function() {
+  console.log("1000 milliseconds have elapsed"); //When the code runs, print a message to the debugging console
+}, 1000); //Set the delay to 1000 milliseconds
 </pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-<pre>
-
-</pre>
-
 
 [/example]
 
@@ -54,7 +46,9 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-penWidth(x);
+onEvent(id, type, function() {
+  Code to execute
+});
 </pre>
 
 [/syntax]
@@ -65,23 +59,22 @@ penWidth(x);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The thickness of the line drawn as the turtle moves  |
-
-Note: A number less than or equal to zero will result in a thickness of 1
+| id | string | Yes | The ID of the UI control to which this function applies.  |
+| type | string | Yes | The type of event to respond to.  |
+| function | function | Yes | A function to execute.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value.
 
 [/returns]
 
 [tips]
 
 ### Tips
-
 
 [/tips]
 

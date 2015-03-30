@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## button(id, text)
+## textInput(id, text)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a button that you can click on.  
+Creates a text field for entering values.
 
 [/short_description]
 
@@ -31,7 +31,7 @@ ____________________________________________________
 [example]
 
 <pre>
-button("demo","Click Me!"); // Create a button "Click Me"
+textInput("demo","Type Here"); // Create a text input with the initial value "Type Here"
 </pre>
 
 [/example]
@@ -41,8 +41,7 @@ ____________________________________________________
 [example]
 
 **Interactive Turtle**
-A button is often used with a click event. The click event is where you write code to execute when the button is clicked.
-In this example, we allow you to interact with the turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
+A textInput field is used to get input from your users.
 
 <pre>
 // Display Label
@@ -89,8 +88,8 @@ button("uniqueIdentifier","Text Label")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers. |
-| text | string | yes | The text displayed within the button. |
+| id | string | yes | A unique identifier for the text input. The id is used for referencing the created text input. For example, to assign event handlers. |
+| text | string | yes | The initial value to display in the text input. |
 [/parameters]
 
 [returns]
@@ -103,6 +102,7 @@ No Return Value
 [tips]
 
 ### Tips
+You should associate a textLabel with your textInput to describe the purpose of the text field.
 
 [/tips]
 

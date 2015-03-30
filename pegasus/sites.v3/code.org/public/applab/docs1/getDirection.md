@@ -19,7 +19,7 @@ Category: Canvas
 
 [short_description]
 
-Gets the current direction that the turtle is facing.
+Returns (gets) the current direction that the turtle is facing.
 
 [/short_description]
 
