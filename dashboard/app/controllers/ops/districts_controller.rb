@@ -2,11 +2,6 @@ module Ops
   class DistrictsController < OpsControllerBase
     load_and_authorize_resource
 
-    # get /ops/districts/1/teachers
-    def teachers
-      respond_with @district.users, each_serializer: TeacherSerializer
-    end
-
     # POST /ops/districts
     def create
       @district.save!
