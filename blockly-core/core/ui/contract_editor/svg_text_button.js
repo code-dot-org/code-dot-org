@@ -2,8 +2,6 @@
 
 goog.provide('Blockly.SvgTextButton');
 
-/** @const */ var TEXT_PADDING_LEFT = '10'; // px
-
 /**
  * A clickable SVG button with text on it
  * @param {!SVGElement} parent
@@ -32,8 +30,10 @@ Blockly.SvgTextButton = function (parent, text, onMouseDown) {
   textElement.textContent = text;
   var bounds = textElement.getBoundingClientRect();
   this.buttonRect.setAttribute('width', bounds.width + 2 * padding);
-  this.buttonRect.setAttribute('height', bounds.height + padding);
-  this.buttonRect.setAttribute('y', -bounds.height + padding - 1);
+  this.buttonRectHeight = bounds.height + padding;
+  this.buttonRect.setAttribute('height', this.buttonRectHeight);
+  this.buttonRectYOffset = -bounds.height + padding - 1;
+  this.buttonRect.setAttribute('y', this.buttonRectYOffset);
 
   Blockly.bindEvent_(button, 'click', null, onMouseDown);
 
@@ -46,11 +46,9 @@ Blockly.SvgTextButton = function (parent, text, onMouseDown) {
  * @return {Number} y offset to continue rendering at
  */
 Blockly.SvgTextButton.prototype.renderAt = function (xOffset, yOffset) {
-  var hardcodedButtonHeight = 29;
-  var topToYBasePosition = 14;
-  var transformYPosition = topToYBasePosition + yOffset;
+  var transformYPosition = yOffset - this.buttonRectYOffset;
   this.svgGroup_.setAttribute('transform', 'translate(' + xOffset + ',' + transformYPosition + ')');
-  return yOffset + hardcodedButtonHeight;
+  return yOffset + this.buttonRectHeight;
 };
 
 Blockly.SvgTextButton.prototype.setVisible = function (visible) {
