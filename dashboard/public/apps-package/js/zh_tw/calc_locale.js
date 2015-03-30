@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "你的程式回傳的結果不完全正確。"},
 "goal":function(d){return "目標："},
 "levelIncompleteError":function(d){return "你的運算式不符合目標。"},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "你的運算式少了變數"+appLocale.v(d,"var")+"。"},
 "reinfFeedbackMsg":function(d){return "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！"},
 "yourExpression":function(d){return "您的運算式："},

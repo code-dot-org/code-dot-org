@@ -154,18 +154,19 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "Your program results in division by zero."},
+"divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
 "emptyComputeBlock":function(d){return "Στο μπλοκ πρέπει να εισάγετε ένα εμφωλευμένο μπλόκ (ένα υπό-μπλόκ)."},
 "emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "υπολογισμός"},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";"},
 "failedInput":function(d){return "Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές."},
 "goal":function(d){return "Στόχος:"},
 "levelIncompleteError":function(d){return "Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου."},
-"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!"},
 "yourExpression":function(d){return "Η έκφρασή σας:"},
 "wrongInput":function(d){return "Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή."},
 "wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."}};

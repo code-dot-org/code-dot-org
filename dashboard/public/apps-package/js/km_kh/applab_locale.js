@@ -56,7 +56,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "បន្ត"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។"},
 "nextLevel":function(d){return "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។"},
 "no":function(d){return "ទេ"},

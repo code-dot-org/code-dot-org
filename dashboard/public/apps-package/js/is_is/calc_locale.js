@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
 "goal":function(d){return "Markmið:"},
 "levelIncompleteError":function(d){return "Formúlan þín samsvarar ekki markmiðinu."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Það vantar breytuna "+appLocale.v(d,"var")+" í formúluna þína."},
 "reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
 "yourExpression":function(d){return "Formúlan þín:"},

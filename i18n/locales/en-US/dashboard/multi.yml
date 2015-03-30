@@ -147,6 +147,24 @@ en:
         a number: crwdns35723:0crwdne35723:0
         a string: crwdns35724:0crwdne35724:0
         boolean: crwdns35725:0crwdne35725:0
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: crwdns35751:0__________crwdne35751:0
+        a image: crwdns35752:0crwdne35752:0
+        a number: crwdns35753:0crwdne35753:0
+        a string: crwdns35754:0crwdne35754:0
+        boolean: crwdns35755:0crwdne35755:0
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: crwdns35756:0__________crwdne35756:0
+        a image: crwdns35757:0crwdne35757:0
+        a number: crwdns35758:0crwdne35758:0
+        a string: crwdns35759:0crwdne35759:0
+        boolean: crwdns35760:0crwdne35760:0
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: crwdns35761:0__________crwdne35761:0
+        a image: crwdns35762:0crwdne35762:0
+        a number: crwdns35763:0crwdne35763:0
+        a string: crwdns35764:0crwdne35764:0
+        boolean: crwdns35765:0crwdne35765:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -307,7 +325,6 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: crwdns24898:0crwdne24898:0
         Ninjacat Demo Embed.level: crwdns24899:0crwdne24899:0
-        Which answer most accurately describes the unicorn's movement?: crwdns27929:0crwdne27929:0
         The unicorn moves across the screen: crwdns24901:0crwdne24901:0
         The unicorn's y value changes: crwdns24902:0crwdne24902:0
         The unicorn moves to the left: crwdns24903:0crwdne24903:0
@@ -525,7 +542,6 @@ en:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): crwdns7426:0crwdne7426:0
         (rectangle (+ 8 2) (- 7 5) solid red): crwdns7427:0crwdne7427:0
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: crwdns34704:0crwdne34704:0
         What is the value of x?: crwdns34705:0crwdne34705:0
         a function: crwdns34706:0crwdne34706:0
         15: crwdns34707:0crwdne34707:0

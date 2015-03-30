@@ -54,7 +54,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Lanjutkan"},
 "container":function(d){return "membuat kontener"},
 "containerTooltip":function(d){return "Membuat sebagian kontainer dan mengatur di dalam HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Horee! Anda telah memecahkan teka-teki akhir."},
 "nextLevel":function(d){return "Horee! Anda telah menyelesaikan teka-teki ini."},
 "no":function(d){return "Tidak"},

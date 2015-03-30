@@ -3,7 +3,7 @@ hu:
     unplugged:
       Unplug1:
         title: Bevezetés a számítógép tudományába
-        desc: Ez a lecke bevezet a számítástechnikába és elmagyarázza mit csinál egy számítógéptudós. Emellett lehetőséget ad a diákoknak belekóstoljanak a szakmába. A program végén minden diák kap egy kis emlékeztetőt arról, amit tanult. Lehet, hogy kísértést érzel rá, hogy ne taníts a gyerekeknek a következő leckékben található szakkifejezéseket, de ezek vidám és játékos megismertetése most, sokkal jobb, mint haladóbb szintre hagyni őket.
+        desc: Ez a lecke bevezet a számítógép-tudományba és elmagyarázza, mit csinál egy számítógéptudós. Emellett lehetőséget ad a diákoknak, hogy belekóstoljanak a szakmába. A program végén minden diák kap egy kis emlékeztetőt arról, amit megtanult. Lehet, hogy kísértést érzel rá, hogy ne tanítsd meg a gyerekeknek a következő leckékben található szakkifejezéseket, de ezek vidám és játékos megismertetése ebben a fázisban sokkal hatékonyabb, mintha későbbre hagynád őket.
         pdfs:
           - unplug1
         video: Unplug1

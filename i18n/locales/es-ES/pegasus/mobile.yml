@@ -6,7 +6,7 @@ es-ES:
   csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planifica tu Hora del Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Prueba una </h1><h2>Hora de Código</h2><h3>#served</h3>'
+  n_have_learned_an_hoc: '<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>'
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender Informática
@@ -69,7 +69,7 @@ es-ES:
   beyond_an_hour: Más allá de una Hora del Código
   get_started: Inicio
   i_agree: De acuerdo
-  participant_select: -Seleccionar-
+  participant_select: Seleccionar
   participant_student: estudiante
   participant_parent: Padre/madre
   participant_educator: Educador
@@ -152,6 +152,30 @@ es-ES:
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Hora del código
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Prueba la Hora del Código
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Alumnos
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Dona
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -320,7 +344,7 @@ es-ES:
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
   dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: En progreso
   dashboard_progress_not_completed: No completado
   dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados bloques
   dashboard_progress_completed_perfect: completado, perfecto

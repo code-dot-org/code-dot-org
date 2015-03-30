@@ -8,6 +8,7 @@
   "failedInput": "함수가 모든 값에 대해서 올바른 결과를 리턴하지 않습니다.",
   "goal": "목표값:",
   "levelIncompleteError": "네 계산식은 올바른 답이 아닙니다.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!",
   "yourExpression": "계산식:",

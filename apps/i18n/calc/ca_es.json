@@ -8,6 +8,7 @@
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Objectiu:",
   "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!",
   "yourExpression": "La teva expressió:",

@@ -10,7 +10,6 @@
   "continue": "Продолжи",
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
-  "designMode": "Design",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",

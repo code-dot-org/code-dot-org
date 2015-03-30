@@ -250,6 +250,9 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
   },
   userCreated: false,
+  shouldBeGrayedOut: function () {
+    return false;
+  },
   callType_: 'procedures_callnoreturn'
 };
 
@@ -301,6 +304,7 @@ Blockly.Blocks.procedures_defreturn = {
   renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar,
   customContextMenu: Blockly.Blocks.procedures_defnoreturn.customContextMenu,
   userCreated: Blockly.Blocks.procedures_defnoreturn.userCreated,
+  shouldBeGrayedOut: Blockly.Blocks.procedures_defnoreturn.shouldBeGrayedOut,
   callType_: 'procedures_callreturn'
 };
 

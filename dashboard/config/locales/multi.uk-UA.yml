@@ -177,6 +177,27 @@
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Художник - вибір
         Which blocks draw a rectangle with a perimeter of 100?: Які блоки намалюють
@@ -373,8 +394,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Координати у відео-іграх
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Яка відповідь
-          найбільш точно описує рух єдиноріга?
         The unicorn moves across the screen: Єдиноріг рухається по екрану
         The unicorn's y value changes: У Єдинорога змінюється значення координати
           y
@@ -628,7 +647,6 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (прямокутник (+ 8 2) (- 7 5) суцільний
           червоний)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15 <br/> муніципалітет = 2 <br>b = 6
         What is the value of x?: Що таке значення x?
         a function: функція
         15: '15'

@@ -107,7 +107,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Continuă"},
 "container":function(d){return "creează container"},
 "containerTooltip":function(d){return "Creează un container despărţitor și setează HTML-ul său intern."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Felicitări! Ai rezolvat puzzle-ul final."},
 "nextLevel":function(d){return "Felicitări! Ai finalizat acest puzzle."},
 "no":function(d){return "Nu"},

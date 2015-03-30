@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Fortsæt"},
 "container":function(d){return "Opret container"},
 "containerTooltip":function(d){return "Opretter en divisionscontainer og angiver dens interne HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Tillykke! Du har løst det sidste puslespil."},
 "nextLevel":function(d){return "Tillykke! Du har fuldført denne opgave."},
 "no":function(d){return "Nej"},

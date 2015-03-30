@@ -8,6 +8,7 @@
   "failedInput": "Deine Funktion gibt nicht die richtigen Werte für alle Variablen zurück.",
   "goal": "Ziel:",
   "levelIncompleteError": "Dein Ausdruck erfüllt nicht das Ziel.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!",
   "yourExpression": "Dein Ausdruck:",

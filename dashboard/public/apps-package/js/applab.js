@@ -4133,6 +4133,7 @@ exports.penColor = function (blockId, color) {
 
 },{}],7:[function(require,module,exports){
 var dropletConfig = require('../dropletConfig');
+var dropletUtils = require('../../dropletUtils');
 var errorMapper = require('./errorMapper');
 
 // define ourselves for ace, so that it knows where to get us
@@ -4204,7 +4205,7 @@ oop.inherits(Mode, JavaScriptMode);
     };
     // Mark all of our blocks as predefined so that linter doesnt complain about
     // using undefined variables
-    dropletConfig.blocks.forEach(function (block) {
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
       newOptions.predef[block.func] = false;
     });
 
@@ -4227,7 +4228,7 @@ oop.inherits(Mode, JavaScriptMode);
 exports.Mode = Mode;
 });
 
-},{"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+},{"../../dropletUtils":57,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },

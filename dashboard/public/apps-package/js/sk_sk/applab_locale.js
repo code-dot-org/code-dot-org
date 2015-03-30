@@ -128,7 +128,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Pokračovať"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Gratulujem! Vyriešili ste posledné puzzle."},
 "nextLevel":function(d){return "Gratulujem! Vyriešil si hádanku."},
 "no":function(d){return "Nie"},

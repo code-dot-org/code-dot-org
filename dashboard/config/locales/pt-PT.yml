@@ -86,7 +86,7 @@
     address_placeholder: morada, cidade, estado, código postal
     gender: Género (opcional)
     birthday: Aniversário (opcional)
-    age:  Idade 
+    age: Idade
     user_type: É um estudante ou um professor?
     submit: Criar conta
     teacher: És um professor?

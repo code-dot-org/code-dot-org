@@ -187,6 +187,27 @@
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Καλλιτέχνης Πολλαπλή Επιλογή
         Which blocks draw a rectangle with a perimeter of 100?: Ποια μπλοκ σχεδιάζουν
@@ -388,8 +409,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Βιντεοπαιχνίδι Συντεταγμένες
         Ninjacat Demo Embed.level: Ενσωματωμένο Επίπεδο Επίδειξης Γάτου Νίντζα
-        Which answer most accurately describes the unicorn's movement?: Which answer
-          most accurately describes the unicorn's movement?
         The unicorn moves across the screen: Ο μονόκερως κινείται σε όλη την οθόνη
         The unicorn's y value changes: Η τιμή y του μονόκερου αλλάζει
         The unicorn moves to the left: Ο μονόκερως κινείται προς τα αριστερά
@@ -650,7 +669,6 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (ορθογώνιο (+ 8 2) (-7 5) μονόχρωμο
           κόκκινο)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         15: '15'

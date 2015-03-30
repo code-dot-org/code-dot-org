@@ -2,6 +2,7 @@
   "a_and_b":"A \/ B",
   "addPacket":"Добавить пакет",
   "ascii":"ASCII",
+  "autoDnsUsageMessage":"Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
   "binary":"Двоичный",
   "bitCounter":"{x}\/{y} бит",
   "bits":"Bits",
@@ -36,5 +37,9 @@
   "to":"Кому",
   "unlimited":"Unlimited",
   "workspaceHeader":"Интернет симулятор",
-  "xOfYPackets":"{x} of {y}"
+  "xOfYPackets":"{x} of {y}",
+  "x_Gbps":"{x}Gbps",
+  "x_Mbps":"{x}Mbps",
+  "x_Kbps":"{x}Kbps",
+  "x_bps":"{x}bps"
 }

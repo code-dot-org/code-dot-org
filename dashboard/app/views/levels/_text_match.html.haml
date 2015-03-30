@@ -22,6 +22,7 @@
       var result = answers.some(function(element) {
         return response == element.replace(/\s+/g, '');
       });
+      response = encodeURIComponent(response);
       return {
         response: response,
         result: result
