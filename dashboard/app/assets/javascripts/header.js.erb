@@ -117,6 +117,24 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   }
 };
 
+function remixProject() {
+  delete dashboard.currentApp.id;
+  dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
+  $('.project_name').text(dashboard.currentApp.name);
+  dashboard.saveProject();
+}
+
+dashboard.showMinimalProjectHeader = function () {
+  var projectName = $('<div class="project_name_wrapper header_text">')
+      .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
+      .append($('<div class="project_updated_at header_text">').text("<%= I18n.t('project.click_to_remix') %>"));
+
+  $('.project_info')
+      .append(projectName)
+      .append($('<div class="project_remix header_button">').text('<%= I18n.t('project.remix') %>'));
+  $('.project_remix').click(remixProject);
+};
+
 dashboard.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
@@ -260,12 +278,7 @@ dashboard.showProjectHeader = function () {
     });
   });
 
-  $('.project_remix').click(function () {
-    delete dashboard.currentApp.id;
-    dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
-    $('.project_name').text(dashboard.currentApp.name);
-    dashboard.saveProject();
-  });
+  $('.project_remix').click(remixProject);
 
   var $projectMorePopup = $('.project_more_popup');
   function hideProjectMore() {

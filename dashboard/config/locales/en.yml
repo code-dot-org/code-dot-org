@@ -577,3 +577,4 @@ en:
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'
     remix: 'Remix'
+    click_to_remix: "Click 'Remix' to spin-off your own version!"
