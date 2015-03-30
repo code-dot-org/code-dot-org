@@ -3,7 +3,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -25,10 +25,6 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
-
-  # TODO: this way of associating districts with users is not really what we want
-  has_one :districts_users
-  has_one :district, through: :districts_users
 
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
@@ -63,6 +59,10 @@ class User < ActiveRecord::Base
 
   def district_contact?
     districts_as_contact.any?
+  end
+
+  def district
+    District.find(district_id) if district_id
   end
 
   def User.find_or_create_district_contact(params)

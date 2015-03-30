@@ -5,7 +5,7 @@ theme: none
 ---
 
 %div{style: "padding-left:20px"}
- 
+
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
       = I18n.t('dashboard_students_add_multiple')
@@ -84,7 +84,7 @@ theme: none
           = I18n.t('dashboard_action_remove_confirm')
           %button.btn.btn-danger{"ng-click"=>'del(student)'}= I18n.t('dashboard_action_delete_yes')
           %button.btn.btn-white{"ng-click"=>'student.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
-        %span{"ng-hide" => "student.confirmDelete"}          
+        %span{"ng-hide" => "student.confirmDelete"}
           %button.btn.btn-white{"ng-click" => "edit(student)", "ng-hide" => "student.editing"}= I18n.t('dashboard_action_edit')
           %button.btn.btn-primary{"ng-click" => "save(student)", "ng-show" => "student.editing", "ng-disabled" => "form.$invalid"}= I18n.t('dashboard_action_save')
           %button.btn.btn-white{"ng-click" => "cancel(student)", "ng-show" => "student.editing"}= I18n.t('dashboard_action_cancel')
@@ -123,4 +123,3 @@ theme: none
         http:#{CDO.studio_url('/join/{{section.code}}')}
     %p
       = I18n.t('dashboard_students_no_email')
-
