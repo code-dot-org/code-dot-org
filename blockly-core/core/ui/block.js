@@ -126,6 +126,16 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
       this.blockSpace === Blockly.mainBlockSpace) {
     this.setCurrentlyHidden(true);
   }
+
+  /** @type {goog.events.EventTarget} */
+  this.blockEvents = new goog.events.EventTarget();
+};
+
+/**
+ * @enum {string}
+ */
+Blockly.Block.EVENTS = {
+  AFTER_DISPOSED: 'afterDisposed'
 };
 
 /**
@@ -333,6 +343,15 @@ Blockly.Block.prototype.unselect = function() {
 };
 
 /**
+ * Whether this block can be copied, cut, and pasted.
+ * Can be overridden by individual block types.
+ * @returns {boolean}
+ */
+Blockly.Block.prototype.isCopyable = function() {
+  return true;
+};
+
+/**
  * Dispose of this block.
  * @param {boolean} healStack If true, then try to heal any gap by connecting
  *     the next statement with the previous statement.  Otherwise, dispose of
@@ -400,6 +419,8 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.dispose();
     this.svg_ = null;
   }
+
+  this.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DISPOSED);
 };
 
 /**
@@ -1279,7 +1300,18 @@ Blockly.Block.prototype.isDeletable = function() {
  */
 Blockly.Block.prototype.setDeletable = function(deletable) {
   this.deletable_ = deletable;
-  this.svg_ && this.svg_.updateGrayOutCSS();
+  if (this.svg_) {
+    this.svg_.grayOut(this.shouldBeGrayedOut());
+  }
+};
+
+/**
+ * @returns {boolean} whether this block should be rendered as grayed out
+ */
+Blockly.Block.prototype.shouldBeGrayedOut = function() {
+  return Blockly.grayOutUndeletableBlocks
+    && !this.isDeletable()
+    && !Blockly.readOnly;
 };
 
 /**
