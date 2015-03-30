@@ -109,10 +109,11 @@ Blockly.BlockSvg.prototype.updateMovable = function() {
 };
 
 /**
- * Add or remove the UI indicating if this block is deletable or not.
+ * Add or remove the UI indicating if this block is deletable or not
+ * @param {boolean} shouldBeGray
  */
-Blockly.BlockSvg.prototype.updateGrayOutCSS = function() {
-  if (this.shouldBeGrayedOut()) {
+Blockly.BlockSvg.prototype.grayOut = function(shouldBeGray) {
+  if (shouldBeGray) {
     Blockly.addClass_(this.svgGroup_, 'blocklyUndeletable');
     Blockly.removeClass_(this.svgGroup_, 'blocklyDeletable');
   } else {
@@ -442,7 +443,7 @@ Blockly.BlockSvg.prototype.updateColour = function() {
 
   var hexColour;
 
-  if (this.shouldBeGrayedOut()) {
+  if (this.block_.shouldBeGrayedOut()) {
     hexColour = BS.DISABLED_COLOUR;
   } else {
     hexColour = this.block_.getHexColour();
@@ -484,11 +485,6 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
     child.svg_.updateDisabled();
   }
 };
-
-Blockly.BlockSvg.prototype.shouldBeGrayedOut = function() {
-  return Blockly.grayOutUndeletableBlocks && !this.block_.isDeletable() && !Blockly.readOnly &&
-    this.block_.type !== 'when_run';
-}
 
 /**
  * Select this block.  Highlight it visually.  Move to top of the stack.

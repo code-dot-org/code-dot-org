@@ -79,6 +79,15 @@ var AUTO_DNS_HOSTNAME = 'dns';
 var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
 
 /**
+ * Maximum packet lifetime in the router queue, sort of a primitive Time-To-Live
+ * system that helps prevent a queue from being indefinitely blocked by a very
+ * large packet.  Packets that exceed this time will silently fail delivery.
+ * @type {number}
+ * @readonly
+ */
+var PACKET_MAX_LIFETIME_MS = 10 * 60 * 1000;
+
+/**
  * Client model of simulated router
  *
  * Represents the client's view of a given router, provides methods for
@@ -397,81 +406,118 @@ NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
   // Separate out messages whose scheduled time has arrived or is past.
   // Flag them so we can remove them later.
   var readyScheduleItems = [];
+  var expiredScheduleItems = [];
   this.localRoutingSchedule_.forEach(function (item) {
-    if (clock.time >= item.processingCompleteTime) {
+    if (clock.time >= item.completionTime) {
       item.beingRouted = true;
       readyScheduleItems.push(item);
+    } else if (clock.time >= item.expirationTime) {
+      item.beingRouted = true;
+      expiredScheduleItems.push(item);
     }
   });
 
   // If no messages are ready, we're done.
-  if (readyScheduleItems.length === 0) {
+  if (readyScheduleItems.length + expiredScheduleItems.length === 0) {
     return;
   }
 
-  // Process the messages that are ready for routing
+  var expiredMessages = expiredScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
+  }.bind(this));
+
   var readyMessages = readyScheduleItems.map(function (item) {
     return new NetSimMessage(this.shard_, item.row);
   }.bind(this));
 
+  // First, remove the expired items.  They just silently vanish
   this.isRouterProcessing_ = true;
-  this.routeMessages_(readyMessages, function () {
+  NetSimEntity.destroyEntities(expiredMessages, function () {
 
-    // When done, remove the schedule entries that we flagged earlier
-    this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
-      return !item.beingRouted;
-    });
-    this.isRouterProcessing_ = false;
+    // Next, process the messages that are ready for routing
+    this.routeMessages_(readyMessages, function () {
 
+      // Finally, remove all the schedule entries that we flagged earlier
+      this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
+        return !item.beingRouted;
+      });
+      this.isRouterProcessing_ = false;
+
+    }.bind(this));
   }.bind(this));
 };
 
 /**
- * Examine the queue for anything that should be handled by the local
- * simulation, that hasn't been added to the schedule yet.  Schedule it after
- * everything that appears before it in the router queue.
+ * Examine the queue, and add/adjust schedule entries for packets that
+ * should be handled by the local simulation.  If a packet has no entry,
+ * it should be added to the schedule.  If it does and we can see that its
+ * scheduled completion time is too far in the future, we should move it up.
  */
-NetSimRouterNode.prototype.scheduleNewPackets = function () {
-  var row, belongsToLocalSim, notScheduled;
+NetSimRouterNode.prototype.recalculateSchedule = function () {
+  // To calculate our schedule, we keep a rolling "Pessimistic completion time"
+  // as we walk down the queue.  This "pessimistic time" is when the packet
+  // would finish processing, assuming all of the packets ahead of it in the
+  // queue must be processed first and the first packet in the queue is just
+  // starting to process now.  We do this because the first packet might be
+  // owned by a remote client, so we won't have partial progress information
+  // on it.
+  //
+  // Thus, the pessimistic time is the _latest_ we would expect the router
+  // to be done processing the packet given the current bandwidth setting,
+  // if the router was an actual hardware device.
+  //
+  // The estimate is actually _optimistic_ in the sense that it doesn't wait
+  // for notification that a remotely-simulated packet is done before
+  // processing a locally-simulated one.  We're making our best guess about
+  // how the packets would be timed with no latency introducing gaps between
+  // packets.
+  //
+  // If the client simulating the packet at the head of the queue disconnects
+  // it won't block other packets from being sent, but it will increase their
+  // "pessimistic estimates" until that orphaned packet gets cleaned up.
+  var pessimisticCompletionTime = this.simulationTime_;
+  var queuedRow;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
-    row = this.routerQueueCache_[i];
-    belongsToLocalSim = this.localSimulationOwnsMessageRow_(row);
-    notScheduled = !this.isScheduled(row);
-
-    if (belongsToLocalSim && notScheduled) {
-      // Add up send times of all packets in queue up to this one, and including
-      // this one, to get its send time.
-      var sendTime = this.routerQueueCache_
-          .slice(0, i + 1)
-          .reduce(function (prev, cur) {
-            return prev + this.calculateProcessingDurationForMessage_(cur);
-          }.bind(this), this.simulationTime_);
-      this.scheduleRouting(row, sendTime);
+    queuedRow = this.routerQueueCache_[i];
+    pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedRow);
+    if (this.localSimulationOwnsMessageRow_(queuedRow)) {
+      this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
     }
   }
 };
 
 /**
- * @param {messageRow} row
- * @param {number} sendTime
+ * Checks the schedule for the queued row.  If no schedule entry exists, adds
+ * a new one with the provided pessimistic completion time.  If it's already
+ * scheduled and the pessimistic time given is BETTER than the previously
+ * scheduled completion time, will update the schedule entry with the better
+ * time.
+ * @param {messageRow} queuedRow
+ * @param {number} pessimisticCompletionTime - in local simulation time
  */
-NetSimRouterNode.prototype.scheduleRouting = function (row, sendTime) {
-  this.localRoutingSchedule_.push({
-    row: row,
-    processingCompleteTime: sendTime,
-    beingRouted: false
+NetSimRouterNode.prototype.scheduleRoutingForRow = function (queuedRow,
+    pessimisticCompletionTime) {
+  var scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
+    return item.row.id === queuedRow.id;
   });
-};
 
-/**
- * @param {messageRow} messageRow
- * @returns {boolean} TRUE if the given row is represented in the local simulation
- *          routing schedule.
- */
-NetSimRouterNode.prototype.isScheduled = function (messageRow) {
-  return _.find(this.localRoutingSchedule_, function (entry) {
-    return entry.row.id === messageRow.id;
-  }) !== undefined;
+  if (scheduleItem) {
+    // When our pessimistic time is better than our scheduled time we
+    // should update the scheduled time.  This can happen when rows
+    // earlier in the queue expire, or are otherwise removed earlier than
+    // their size led us to expect.
+    if (pessimisticCompletionTime < scheduleItem.completionTime) {
+      scheduleItem.completionTime = pessimisticCompletionTime;
+    }
+  } else {
+    // If the item doesn't have a schedule entry at all, add it
+    this.localRoutingSchedule_.push({
+      row: queuedRow,
+      completionTime: pessimisticCompletionTime,
+      expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
+      beingRouted: false
+    });
+  }
 };
 
 /**
@@ -663,6 +709,7 @@ NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
   }
 
   this.bandwidth = newBandwidth;
+  this.recalculateSchedule();
   this.update();
 };
 
@@ -956,7 +1003,6 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
 
   if (!_.isEqual(this.myLogRowCache_, myLogRows)) {
     this.myLogRowCache_ = myLogRows;
-    logger.info("Router logs changed.");
     this.logChange.notifyObservers();
   }
 };
@@ -1006,7 +1052,7 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
 
   this.routerQueueCache_ = newQueue;
   // TODO: Drop packets that exceed queue memory (IF not already processing?)
-  this.scheduleNewPackets();
+  this.recalculateSchedule();
   // Propagate notification of queue change (for stats, etc)
 };
 
@@ -1047,14 +1093,11 @@ NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
  * @private
  */
 NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
-  logger.info("Destroying message...");
   message.destroy(function (err, result) {
     if (err) {
       onComplete(err, result);
       return;
     }
-
-    logger.info("Message destroyed.");
 
     this.forwardMessageToRecipient_(message, onComplete);
   }.bind(this));
@@ -1070,7 +1113,6 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
  * @private
  */
 NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onComplete) {
-  logger.info("Forwarding message...");
   var toAddress;
   var routerNodeID = this.entityID;
 
@@ -1103,11 +1145,20 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
+  // Normally the recipient simulates a message.
+  // If this message is on loopback (i.e. to or from auto-dns) then
+  // the simulator of the original message has to simulate this one too.
+  var simulatingNode = destinationNodeID;
+  if (destinationNodeID === this.entityID) {
+    simulatingNode = message.simulatedBy;
+  }
+
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
       routerNodeID,
       destinationNodeID,
+      simulatingNode,
       message.payload,
       function (err, result) {
         this.log(message.payload);
@@ -1123,44 +1174,8 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
  * @private
  */
 NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
-  // Local simulation can't handle anything if it's not initialized.
-  if (!this.simulateForSender_) {
-    return false;
-  }
-
-  var packet, fromAddress, toAddress, simulateForAddress;
-  var routerNodeID = this.entityID;
-
-  // One extra responsibility in auto-DNS mode: Should handle messages from the
-  // auto-DNS to the router IF they are addressed to the local client.
-  if (this.dnsMode === DnsMode.AUTOMATIC) {
-
-    // Gather address info to confirm this packet's destination
-    packet = new Packet(this.packetSpec_, messageRow.payload);
-    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
-    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
-    simulateForAddress = this.getAddressForNodeID_(this.simulateForSender_);
-
-    var isOnRouterLoopback = messageRow.fromNodeID === routerNodeID &&
-        messageRow.toNodeID === routerNodeID;
-
-    var isBetweenLocalAndDns = (
-        fromAddress === simulateForAddress &&
-        toAddress === AUTO_DNS_RESERVED_ADDRESS
-        ) || (
-        fromAddress === AUTO_DNS_RESERVED_ADDRESS &&
-        toAddress === simulateForAddress
-        );
-
-    if (isOnRouterLoopback && isBetweenLocalAndDns) {
-      return true;
-    }
-  }
-
-  // Local simulation of router normally handles only the messages from the
-  // local client to the router.
-  return messageRow.fromNodeID === this.simulateForSender_ &&
-      messageRow.toNodeID === routerNodeID;
+  return this.simulateForSender_ &&
+      messageRow.simulatedBy === this.simulateForSender_;
 };
 
 /**
@@ -1307,6 +1322,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
       this.shard_,
       autoDnsNodeID,
       routerNodeID,
+      message.simulatedBy,
       responseBinary,
       onComplete);
 };

@@ -15,8 +15,17 @@
     "use_contract_editor": "true",
     "open_function_definition": "green triangle",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "callout_json": "[]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "6026accc3c1eda636947909a4321f0bc"
 }]]></config>
   <blocks>
     <start_blocks>
