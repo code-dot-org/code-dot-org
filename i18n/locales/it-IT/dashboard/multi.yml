@@ -147,6 +147,24 @@ it:
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Esercizio di Verifica (Risposte Multiple)
         Which blocks draw a rectangle with a perimeter of 100?: Quali blocchi disegnano un rettangolo con un perimetro lungo 100?
@@ -309,7 +327,6 @@ it:
       Coordinates Multi 1:
         Video game Coordinates: Coordinate del Videogioco
         Ninjacat Demo Embed.level: Livello della versione demo del Gatto Ninja
-        Which answer most accurately describes the unicorn's movement?: "Quale risposta descrive nel modo più accurato possibile lo spostamento dell'unicorno?"
         The unicorn moves across the screen: "L'unicorno si muove sullo schermo"
         The unicorn's y value changes: "Il valore y dell'unicorno cambia"
         The unicorn moves to the left: "L'unicorno si muove verso sinistra"
@@ -527,7 +544,6 @@ it:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rettangolo (+ 2 8) (-5 7) "solido", "rosso")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rettangolo (+ 2 8) (-5 7) "solido", "rosso")'
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
         What is the value of x?: Qual è il valore di x?
         a function: una funzione
         15: "15"

@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Jatka"},
 "container":function(d){return "luo säiliö"},
 "containerTooltip":function(d){return "Luo div-säiliön ja asettaa sen sisäisen HTML:n."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Onneksi olkoon! Olet suorittanut viimeisen tehtävän."},
 "nextLevel":function(d){return "Onneksi olkoon! Olet suorittanut tämän tehtävän."},
 "no":function(d){return "Ei"},

@@ -157,6 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "a_and_b":function(d){return "A/B"},
 "addPacket":function(d){return "Add Packet"},
 "ascii":function(d){return "ASCII"},
+"autoDnsUsageMessage":function(d){return "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]"},
 "binary":function(d){return "Binary"},
 "bitCounter":function(d){return appLocale.v(d,"x")+"/"+appLocale.v(d,"y")+" bits"},
 "bits":function(d){return "Bits"},
@@ -191,4 +192,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "to":function(d){return "An"},
 "unlimited":function(d){return "Unlimited"},
 "workspaceHeader":function(d){return "Internet-Simulator"},
-"xOfYPackets":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")}};
+"xOfYPackets":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")},
+"x_Gbps":function(d){return appLocale.v(d,"x")+"Gbps"},
+"x_Mbps":function(d){return appLocale.v(d,"x")+"Mbps"},
+"x_Kbps":function(d){return appLocale.v(d,"x")+"Kbps"},
+"x_bps":function(d){return appLocale.v(d,"x")+"bps"}};

@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Funcția ta nu returnează rezultatul corect pentru toate valorile."},
 "goal":function(d){return "Obiectiv:"},
 "levelIncompleteError":function(d){return "Expresia nu se potriveşte obiectivului."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!"},
 "yourExpression":function(d){return "Expresia dvs.:"},

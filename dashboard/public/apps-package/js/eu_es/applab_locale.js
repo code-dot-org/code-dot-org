@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Jarraitu"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Zorionak! Amaierako puzlea ebatzi duzu."},
 "nextLevel":function(d){return "Zorionak! Puzle hau osatu duzu."},
 "no":function(d){return "Ez"},

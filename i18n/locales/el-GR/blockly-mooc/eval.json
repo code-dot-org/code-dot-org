@@ -2,7 +2,7 @@
   "badColorStringError":"You used an invalid color string: {val}",
   "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"κύκλος (ακτίνα, στυλ, χρώμα)",
-  "displayBlockTitle":"evaluate",
+  "displayBlockTitle":"υπολογισμός",
   "ellipseBlockTitle":"έλλειψη (πλάτος, ύψος, στυλ, χρώμα)",
   "emptyFunctionalBlock":"Έχετε ένα μπλόκ με κενό περιεχόμενο.",
   "extraTopBlocks":"Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;",

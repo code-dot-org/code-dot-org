@@ -239,6 +239,9 @@ Blockly.Blocks.functional_definition = {
       this.updateCallerParams_();
     }
   },
+  shouldBeGrayedOut: function () {
+    return false;
+  },
   callType_: 'functional_call'
 };
 

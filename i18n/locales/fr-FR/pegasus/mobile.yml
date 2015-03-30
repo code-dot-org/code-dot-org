@@ -135,9 +135,8 @@ fr-FR:
     « Il est jamais trop tard pour apprendre » 
     Susan, PDG de YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo; Ne joue pas juste sur votre téléphone, programme-le. &rdquo; 
+    Président Barack Obama
   homepage_hero_text_sheryl: |
     « Une compréhension de l'informatique est de plus en plus indispensable... » 
     Sheryl, COO de Facebook
@@ -150,9 +149,33 @@ fr-FR:
   homepage_slot_text_flappy: "Flappy l'oiseau"
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: "Commence à apprendre aujourd'hui"
   homepage_action_text_signpetition: Signez la pétition
   homepage_signpetition_dropdown: 'Signez notre pétition &#x25BE;'
+  homepage_slot_text_title_hoc: Heure de Code
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: "Essayez l'Heure de Code"
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Élèves
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Faire un don
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur

@@ -318,22 +318,20 @@
       2-3 Bee Loops 9_instruction: La boucle "Tant que" peut exécuter la même action
         qu'une instruction "if" dans une boucle. Ajouter une boucle "Tant que" à ce
         code pour effectuer la même tâche.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a\ncouple
-        of \"move forward\" blocks together and press \"Run\". \n"
+      2-3 Bee Loops Assessment 1_instruction: Évaluation - utilise une boucle Tant
+        Que pour recueillir l'ensemble du nectar de cette fleur.
+      2-3 Maze 1_instruction: 'Peux-tu m''aider à attraper le cochon vilain ? Empile
+        un ensemble de blocs « avancer » et appuie sur « Démarrer ». '
       2-3 Maze 10_instruction: Guide-moi jusqu'à cette maudite créature verte ! (Fais
         attention aux explosifs…)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze 11_instruction: Amène-moi à la fleur, j'ai faim ! Combien de fois dois-tu
+        répéter un bloc ?
+      2-3 Maze 12 (copy 1)_instruction: 'Peux-tu remplacer la réponse précédente avec
+        seulement deux blocs ? (Astuce : crée une boucle à l''aide d''un bloc « répéter
+        N fois ».)'
+      2-3 Maze 12 (copy 2)_instruction: 'Peux-tu remplacer la réponse précédente avec
+        seulement deux blocs ? (Astuce : crée une boucle à l''aide d''un bloc « répéter
+        N fois ».)'
       2-3 Maze 12 (old)_instruction: |
         Get me to the pig, now with the Repeat times
         block!
@@ -408,7 +406,8 @@
         Get me to the pig! (Where is that "repeat times"
         block when I need it?)
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: Aide l'oiseau à attraper le cochon en le déplaçant vers
+        l'avant
       4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
         long) \n"
       4-5 Artist 10_instruction: |
@@ -638,17 +637,16 @@
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: L'abeille ne peut pas dire si c'est une
+        fleur ou un nid d'abeilles. Ne recueille le nectar qu'à partir de fleurs,
+        mais vérifie d'abord si c'est une fleur ou un nid d'abeilles.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Remember,
-        not all objects are flowers, so check to gather nectar only at flowers.
+      4-5 Bee Conditionals 2_instruction: L'abeille veut du nectar dès maintenant.
+        N'oublie pas, tous les objets ne sont pas des fleurs, donc vérifie pour ne
+        recueillir le nectar que sur les fleurs.
       4-5 Bee Conditionals 3_instruction: |
         Now the bee just wants to make honey.
         Check to make honey only at honeycombs.
@@ -674,14 +672,12 @@
         2, or 1 nectar. Here an if-else block is combined with another if-else block
         to create an if, else-if, else block. Complete the solution to collect the
         unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
+      4-5 Bee Conditionals 7_instruction: N'oublie pas que les fleurs violettes peuvent
+        avoir 1, 2 ou 3 doses de nectar. Remplis la fonction de « vérifier la fleur
+        violette » et utilise-la pour recueillir le nectar de toutes les fleurs.
+      4-5 Bee Conditionals 8_instruction: Écris une fonction dans le bloc « vérifier
+        fleur et faire miel ». Ta fonction doit vérifier combien de nectar contient
+        la fleur pourpre, le recueillir, aller de l'avant et faire du miel.
       4-5 Bee Conditionals Assessment 1_instruction: |
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
@@ -795,10 +791,9 @@
       4-5 Maze Conditionals 7_instruction: |
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
+      4-5 Maze Conditionals 8_instruction: Le bloc "Si-sinon" vérifie une condition
+        et puis fait une chose OU une autre. Pour m'amener au tournesol essaie d'utiliser
+        ce nouveau bloc.
       4-5 Maze Conditionals 9_instruction: |
         One more practice of the "if-else"
         block, can you get it right on your first try?
@@ -831,12 +826,11 @@
       Alpha Course 3 Artist Nested Loops 4_instruction: |
         Replace the blocks with
         a nested loop.
-      Alpha Course 3 Bee Conditionals 10_instruction: "Create a function that will\ncheck
-        if something is a purple flower and collect all of the nectar or if\nit is
-        a honeycomb and make honey.  \n"
-      Alpha Course 3 Bee Conditionals 9_instruction: |
-        Collect nectar using the 'check
-        purple flower' function.
+      Alpha Course 3 Bee Conditionals 10_instruction: 'Crée une fonction qui va vérifier
+        si quelque chose est une fleur violette et recueillir l''ensemble du nectar,
+        ou bien qui va faire du miel  si c''est un nid d''abeilles.  '
+      Alpha Course 3 Bee Conditionals 9_instruction: Butine en utilisant la fonction
+        « vérifier la fleur pourpre ».
       Arbitrary_instruction: Make a line
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
@@ -1139,9 +1133,9 @@
         at this point to make your game look like you'd like it to. Click 'finish'
         when you're done.
       Big Game Vars 4_instruction: |
-        Awesome, now you can update the variables for
+        Awesome! Now you can update the variables for
         your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click 'finish'
+        at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
       BowShoot1_instruction: Use the repeat block to collect all the nectar!
       Brendan Artist work_instruction: none
@@ -1215,8 +1209,8 @@
         of evaluation.
       Calc Circles of Eval 2_instruction: |
         Each Evaluation Block has a function at
-        the top, With the inputs to that function written below. Each of those arguments
-        can be a value, or another Block.
+        the top, with the inputs to that function written below. Each of those arguments
+        can be a value, or another block.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1265,9 +1259,10 @@
         use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "sqr" - this function should have a domain of Number and
-        range of Number. Make sure to write two example cases! When you're done,
-        use your new function to calculate 7 squared.
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
         are in charge of writing computer programs to track the cost of making\neach
         treat, the money customers give you, and the total profit from selling\nthem.
@@ -1276,14 +1271,14 @@
         sell, and gives you back the amount of money it would cost to produce that\nnumber
         of cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `cookie-sales` which
+        takes in the number of cookies sold, and produces the amount of money customers
+        spent to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `cookie-profit`, which takes in the number of cookies you sold,
+        and gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1301,19 +1296,19 @@
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 - can
-        you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years
+        - can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
         then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        called "age" - set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
+        of another variable! Here's a new variable called "age-in-months" - use
+        the expression you came up with in the last puzzle to set "age-in-months"
         to the number of months in "age"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
@@ -1447,9 +1442,9 @@
         and 0's and instructs the artist to turn on the go from left to right, top
         to bottom, turning on the squares where the number has a zero. Run this code
         to see how the artist uses binary to draw this pattern.
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
+      Course 4 2_instruction: L'abeille veut du nectar dès maintenant. N'oublie pas,
+        tous les objets ne sont pas des fleurs, donc vérifie pour ne recueillir le
+        nectar que sur les fleurs.
       Course 4 Artist 1_instruction: "Help me finish drawing my box. (Each line is\n300
         pixels long) \n"
       Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
@@ -1540,15 +1535,15 @@
         and adds one side at a time until it draws a decagon (10 sides). Each side
         should be 100 pixels long. Hint: 360 divided by the number of sides a shape
         has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
-        like to draw each shape next to the last one. This time each side is\n20 pixels.
-        Use a jump block to jump forward 40 pixels after each shape. \n"
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
+      Course 4 Artist For Loops 12_instruction: 'Ça avait l''air assez cool, mais
+        maintenant je voudrais dessiner chaque forme à côté de la précédente. Cette
+        fois chaque côté est de 20 pixels. Utilise un bloc de saut pour sauter en
+        avant de 40 pixels après chaque forme. '
+      Course 4 Artist For Loops 13_instruction: Hmmm, ces formes grossissent à chaque
+        fois ! N'as pas déjà résolu ce problème avec des variables ? Comment pouvons-nous
+        utiliser la variable de compteur pour rendre les parties plus petits quand
+        nous en avons de plus en plus ? Au lieu d'avancer sur une longueur fixe, essaie
+        de te déplacer de (100 / compteur) pixels vers l'avant.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try turning
@@ -1714,11 +1709,11 @@
         Here's the same algorithm that we came
         up with for the last puzzle - what should you set the "sides" variable to
         in order to draw this picture of squares?
-      Course 4 Artist Vars 12_instruction: |
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+      Course 4 Artist Vars 12_instruction: Maintenant affectons la variable « côtés
+        » à la valeur 5. Plus nous ajoutons de côtés à cet algorithme, plus le motif
+        global devient grand ! Nous allons ajouter une nouvelle variable appelée «
+        longueur » et l'utiliser partout où tu utilises un « avancer ». Affecte la
+        variable « longueur » à 75 pour cette forme.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1730,10 +1725,9 @@
         Free Play: Check it out, now your algorithm
         is nested within one more loop. Experiment with changing the values of the
         your two variables to draw cool patterns.
-      Course 4 Artist Vars 2_instruction: |
-        Instead of "moving forward by 100,"
-        the "move" block is now referencing the variable "length." Can you set
-        "length" to 150 to draw this new triangle?
+      Course 4 Artist Vars 2_instruction: Au lieu de « avancer de 100 », le bloc «
+        avancer » fait maintenant référence à la variable "longueur". Peux-tu affecter
+        « longueur » à 150 pour dessiner ce nouveau triangle ?
       Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
         missing. Can you fix it so that it uses the variable \"length\"\nto figure
         out how long each side should be? \n"
@@ -1762,12 +1756,11 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Replace the number
         3 with the "sides" variable, and use the "set sides to" block.
-      Course 4 Bee 1_instruction: "The bee can't tell if this is a flower or a honeycomb.\nCheck
-        first if it is a flower or a honeycomb, and then only gather nectar\nfrom
-        it if it is a flower. \n"
-      Course 4 Bee 2_instruction: |
-        Check each of the objects to see if it's a flower
-        - if it is, collect nectar.
+      Course 4 Bee 1_instruction: 'L''abeille ne peut pas dire si c''est une fleur
+        ou un nid d''abeilles. Vérifie d''abord si c''est une fleur ou un nid d''abeilles,
+        puis recueille le nectar si c''est une fleur. '
+      Course 4 Bee 2_instruction: Vérifie chacun des objets pour voir si c'est une
+        fleur - si c'est le cas, recueille le nectar.
       Course 4 Bee 3_instruction: |
         The unknown object is either a flower or a honeycomb.
         Use the if/else block to collect nectar if it is a flower, else make honey
@@ -2109,8 +2102,8 @@
         the x variable so that this expression returns true.
       Eval Booleans 5_instruction: |
         This OR block returns true if either of its parameters
-        is true, and otherwise returns false. Set the y variable to a value that will
-        cause this expression to return false.
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: |
         Here's one more boolean block called NOT. This
         block flips true to false, or false to true. If you wrap this block of code
@@ -2224,10 +2217,6 @@
         Image. The body of the function is broken though, it always draws a circle\nof
         50 pixel radius instead of using the radius parameter. Replace the current\nNumber
         with the \"radius\" block from the domain. \n"
-      Eval Define Funcs 4 (copy 1)_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
       Eval Define Funcs 4_instruction: |
         Create a new function called "aqua-star"
         that has a Domain of a single Number for radius and returns an aqua star of
@@ -2238,7 +2227,7 @@
         have radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
-        that fills your screen with my-shape. Change my-shape to see what patterns
+        that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
@@ -2268,8 +2257,9 @@
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that takes a number of points and a radius, and returns a yellow
-        radial star with given points where the inner radius is half the outer radius.
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         "striped-flag" that takes two colors and produces a flag that is 250 pixels
@@ -2300,14 +2290,15 @@
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis
-        color-coded to let you know which data type it returns and which types\nin
-        needs for its parameters. The last parameter of the triangle function takes\na
-        String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -2332,10 +2323,9 @@
         Free Play: Explore the blocks available
         to draw something interesting. Make sure to save and share your favorite images.
       Examples 4_instruction: Shrink function
-      frozen circle function (copy 1)_instruction: |
-        Use the new 'create a circle'
-        block to create 10 overlapping circles. Don't forget to jump forward between
-        circles
+      frozen circle function (copy 1)_instruction: Utilise le nouveau bloc « créer
+        un cercle » pour créer 10 cercles superposés. N'oublie pas d'aller vers l'avant
+        entre les cercles
       frozen circle function in circle_instruction: |
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
@@ -2343,9 +2333,9 @@
         Here's a ”Create circle”
         block that can make circles of different sizes. Can you use this to create
         a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
+      frozen circle function_instruction: Utilise le nouveau bloc « créer un cercle
+        » pour créer 10 cercles superposés. N'oublie pas d'aller vers l'avant entre
+        les cercles.
       frozen circle_instruction: |
         A circle is a special shape. Can you figure out
         what number to replace the question marks with to draw a circle?
@@ -2358,9 +2348,8 @@
       frozen cross rotate_instruction: |
         Now try repeating it 10 times. How many degrees
         do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
+      frozen cross_instruction: Utilise le bloc « Répéter » pour créer un signe plus.
+        As-tu remarqué qu'Elsa peut se déplacer vers l'avant et vers l'arrière ?
       frozen diamond mini snowflake_instruction: |
         Did you know every snowflake is
         a different shape? Let's create a new snowflake by using the “Repeat" block
@@ -2799,10 +2788,9 @@
       NEW Course 4 Artist Functions 12_instruction: |
         Use the "draw a line of squares"
         function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: you may have to move forward
-        60 pixels and  turn 144 degrees
+      NEW Course 4 Artist Functions 13_instruction: 'Peux-tu dessiner une étoile à
+        l''aide de la fonction « tracer une ligne de carrés » ? Remarque : tu devras
+        peut-être te déplacer de 60 pixels et tourner de 144 degrés'
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
@@ -2976,7 +2964,8 @@
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
@@ -3169,10 +3158,9 @@
         a square, you can use it to draw beautiful snow flakes. Can you create a snowflake
         using the repeat block to draw a square 10 times, turning 36 degrees between
         each square?
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_1_instruction: Bienvenue à l'artiste ! Tout d'abord, nous
+        allons essayer de faire un simple carré à l'aide du bloc tourner à droite
+        et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long.
       Standalone_Artist_2_instruction: |
         Draw this diamond with 120 and 60 degree
         angles and 150 pixel long sides.
@@ -3209,10 +3197,9 @@
         Now go ahead and make whatever picture you'd
         like! You've even got an empty function that you can make do whatever you
         want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_v2_instruction: Bienvenue à l'artiste ! Tout d'abord, nous
+        allons essayer de faire un simple carré à l'aide du bloc tourner à droite
+        et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long.
       temp_for_ross_instruction: |
         This pig is ruffling my feathers. Help me find
         him!

@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Je gebruikt een ongeldige kleuren tekenreeks: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Je gebruikt een ongeldige stijl tekenreeks: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cirkel (straal, stijl, kleur)"},
-"displayBlockTitle":function(d){return "weergeven"},
+"displayBlockTitle":function(d){return "evalueren"},
 "ellipseBlockTitle":function(d){return "ellips (breedte, hoogte, stijl, kleur)"},
 "emptyFunctionalBlock":function(d){return "Je hebt een blok zonder waarde."},
 "extraTopBlocks":function(d){return "U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?"},

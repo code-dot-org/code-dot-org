@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "जारी रखें"},
 "container":function(d){return "कंटेनर बनाएँ"},
 "containerTooltip":function(d){return "एक प्रभाग कंटेनर बनाता है और इसकी भीतरी HTML सेट करता है।"},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
 "no":function(d){return "No"},

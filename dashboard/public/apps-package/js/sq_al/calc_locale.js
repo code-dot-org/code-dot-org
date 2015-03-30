@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Funksioni juaj nuk kthen rezultatet e duhura për të gjitha vlerat."},
 "goal":function(d){return "Qëllimi:"},
 "levelIncompleteError":function(d){return "Shprehja juaj nuk shkon me qëllimin."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Frazës tuaj i mungon variabla "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Ja ku është llogaritja juaj! Vazhdoni të punoni me të, ose shko tek puzzle tjetër!"},
 "yourExpression":function(d){return "Thënia jote:"},

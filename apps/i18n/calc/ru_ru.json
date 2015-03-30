@@ -8,6 +8,7 @@
   "failedInput": "Ваша процедура возвращает неверный результат для некоторых значений.",
   "goal": "Цель:",
   "levelIncompleteError": "Ваше выражение не соответствует цели.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "В вашем выражении не хватает переменной {var}.",
   "reinfFeedbackMsg": "Вот ваши вычисления! Продолжай работать над этим, или переходи к следующей задаче!",
   "yourExpression": "Ваше выражение:",

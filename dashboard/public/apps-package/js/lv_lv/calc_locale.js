@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Jūsu funkcija neatgriež pareizos rezultātus priekš visām vērtībām."},
 "goal":function(d){return "Mērķis:"},
 "levelIncompleteError":function(d){return "Jūsu izteiksme neatbilst mērķim."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Jūsu izteiksmei trūkst mainīgā "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!"},
 "yourExpression":function(d){return "Jūsu izteiksme:"},

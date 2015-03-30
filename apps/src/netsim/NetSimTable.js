@@ -73,10 +73,10 @@ var NetSimTable = module.exports = function (storageTable) {
  */
 NetSimTable.prototype.readAll = function (callback) {
   this.remoteTable_.readAll(function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
@@ -86,10 +86,10 @@ NetSimTable.prototype.readAll = function (callback) {
  */
 NetSimTable.prototype.read = function (id, callback) {
   this.remoteTable_.read(id, function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
@@ -99,10 +99,10 @@ NetSimTable.prototype.read = function (id, callback) {
  */
 NetSimTable.prototype.create = function (value, callback) {
   this.remoteTable_.create(value, function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.addRowToCache_(data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
@@ -113,10 +113,10 @@ NetSimTable.prototype.create = function (value, callback) {
  */
 NetSimTable.prototype.update = function (id, value, callback) {
   this.remoteTable_.update(id, value, function (err, success) {
-    callback(err, success);
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
+    callback(err, success);
   }.bind(this));
 };
 
@@ -126,10 +126,10 @@ NetSimTable.prototype.update = function (id, value, callback) {
  */
 NetSimTable.prototype.delete = function (id, callback) {
   this.remoteTable_.delete(id, function (err, success) {
-    callback(err, success);
     if (err === null) {
       this.removeRowFromCache_(id);
     }
+    callback(err, success);
   }.bind(this));
 };
 

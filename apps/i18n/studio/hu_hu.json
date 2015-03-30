@@ -120,7 +120,7 @@
   "projectileIce": "ice",
   "projectileDuck": "duck",
   "reinfFeedbackMsg": "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz.",
-  "repeatForever": "végtelen ismétlés",
+  "repeatForever": "ismételd végtelenszer",
   "repeatDo": "csináld",
   "repeatForeverTooltip": "Hajtsd vége a műveleteket a blokkban ismételve miközben a történet zajlik.",
   "saySprite": "mondd",

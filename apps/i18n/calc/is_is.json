@@ -8,6 +8,7 @@
   "failedInput": "Fallið þitt gefur stundum ekki rétta útkomu.",
   "goal": "Markmið:",
   "levelIncompleteError": "Formúlan þín samsvarar ekki markmiðinu.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Það vantar breytuna {var} í formúluna þína.",
   "reinfFeedbackMsg": "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!",
   "yourExpression": "Formúlan þín:",

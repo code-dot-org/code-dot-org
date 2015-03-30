@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "লক্ষ্য:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !"},
 "yourExpression":function(d){return "তোমার অভিব্যাক্তি:"},
