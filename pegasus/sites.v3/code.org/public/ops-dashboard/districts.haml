@@ -15,7 +15,13 @@ template: none
   Create New District
 %a.btn.btn-white{'ng-click' => 'district.creation = false', 'ng-show' => 'district.creation'}
   Cancel
-%table.districts{style:'width:100%; margin-top:20px;'}
+%table.districts{style:'width:970px;'}
+  %colgroup
+    %col
+    %col
+    %col{style:'width:200px;'}
+    %col{style:'width:200px;'}
+    %col{style:'width:200px;'}
   %tr
     %th.manage-th
       %a{'ng-click' => 'order = "name"'}
@@ -23,7 +29,7 @@ template: none
     %th.manage-th
       %a{'ng-click' => 'order = "location"'}
         Location
-    %th.manage-th{style:'width:200px'}
+    %th.manage-th
       %a{'ng-click' => 'order = "contact.ops_last_name"'}
         District Contact Name
     %th.manage-th
@@ -90,9 +96,6 @@ template: none
   a:hover {
     cursor: pointer;
     text-decoration: none;
-  }
-  th.manage-th {
-    width:180px;
   }
 :scss
   .districts input.ng-invalid.ng-dirty {
