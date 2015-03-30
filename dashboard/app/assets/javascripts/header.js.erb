@@ -143,6 +143,7 @@ dashboard.showProjectHeader = function () {
   $('.project_info').append(nameAndUpdated)
       .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
       .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
+      .append($('<div class="project_remix header_button">').text('<%= I18n.t('project.remix') %>'))
       .append($('<div class="project_more header_button" style="position: relative;">').html(moreButton));
 
   projectNameShow();
@@ -257,6 +258,13 @@ dashboard.showProjectHeader = function () {
         dialog.hide();
       });
     });
+  });
+
+  $('.project_remix').click(function () {
+    delete dashboard.currentApp.id;
+    dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
+    $('.project_name').text(dashboard.currentApp.name);
+    dashboard.saveProject();
   });
 
   var $projectMorePopup = $('.project_more_popup');
