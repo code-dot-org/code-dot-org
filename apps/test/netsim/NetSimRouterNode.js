@@ -448,6 +448,23 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 3);
       });
 
+      // This test and the one below it are an interesting case. It may seem
+      // silly to test skipping the tick to 80, or having it happen at 40, but
+      // this is exactly what could happen with a very low framerate and/or a
+      // very high bandwidth.
+      //
+      // We use pessimistic estimates so that when we are batching messages we
+      // are looking at "the very latest this message would be finished
+      // sending" and we can grab all the messages we are SURE are done.
+      // Here, we're modeling an expected error; the second message could be
+      // done at t=80, but it also might not be, so we don't send it yet.
+      // We only have enough information to be sure it will be done by t=110.
+      //
+      // In the next test case, sending the first message at t=40 introduces
+      // information that reduces our pessimistic estimate for the second
+      // message to t=80. You might argue that same information exists in
+      // this first test case, and it does - but it wouldn't if the first
+      // message was being simulated by a remote client.
       it ("is pessimistic when scheduling new packets", function () {
         router.bandwidth = 1000; // 1 bit / ms
 
@@ -462,17 +479,208 @@ describe("NetSimRouterNode", function () {
         router.tick({time: 30});
         sendMessageOfSize(40);
 
-        // At t=40, the first message is sent
-        router.tick({time: 39});
-        assertTableSize(testShard, 'logTable', 0);
-        router.tick({time: 40});
+        // Jumping to t=80, we see that only one message is sent.  If we'd
+        // been using optimistic scheduling, we would have sent both.})
+        router.tick({time: 80});
         assertTableSize(testShard, 'logTable', 1);
+
+        // At this point the simulation considers rescheduling the next message.
+        // Its new pessimistic estimate is t=120 (80{now} + 40{size}) but
+        // we go with the previous estimate of t=110 since it was better.
 
         // At t=110, the second message is sent
         router.tick({time: 109});
         assertTableSize(testShard, 'logTable', 1);
         router.tick({time: 110});
         assertTableSize(testShard, 'logTable', 2);
+      });
+
+      it ("normally corrects pessimistic estimates with rescheduling", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Router 'starts sending' this message now, expected to finish
+        // at t=40
+        sendMessageOfSize(40);
+
+        // Again, at t=30, we schedule another message
+        // We schedule pessimistically, for t=110
+        router.tick({time: 30});
+        sendMessageOfSize(40);
+
+        // Unlike the last test, we tick at exactly t=40 and send the first
+        // message right on schedule.
+        router.tick({time: 39});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 40});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // This triggers a reschedule for the previous message;
+        // its new pessimistic estimate says that it can be sent at t=80,
+        // which is better than the previous t=110 estimate.
+
+        // At t=80, the second message is sent
+        router.tick({time: 79});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 80});
+        assertTableSize(testShard, 'logTable', 2);
+      });
+
+      it ("adjusts routing schedule when router bandwidth changes", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+
+        // Five 100-bit messages, scheduled for t=100-500 respectively.
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+        sendMessageOfSize(100);
+
+        // First message processed at t=100
+        router.tick({time: 99});
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 100});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // Advance halfway through processing the second message
+        router.tick({time: 150});
+        assertTableSize(testShard, 'logTable', 1);
+
+        // Increase the router bandwidth
+        router.setBandwidth(10000); // 10 bits / ms
+
+        // This triggers a reschedule; since NOW is 150 and each message now
+        // takes 10 ms to process, the new schedule is:
+        // 2: 160
+        // 3: 170
+        // 4: 180
+        // 5: 190
+
+        // Message 2 processed at t=160
+        router.tick({time: 159});
+        assertTableSize(testShard, 'logTable', 1);
+        router.tick({time: 160});
+        assertTableSize(testShard, 'logTable', 2);
+
+        // Message 3 processed at t=170
+        router.tick({time: 169});
+        assertTableSize(testShard, 'logTable', 2);
+        router.tick({time: 170});
+        assertTableSize(testShard, 'logTable', 3);
+
+        // Increase the bandwidth again
+        router.setBandwidth(100000); // 100 bits / ms
+
+        // New schedule (NOW=170, 1ms per message)
+        // 4: 171
+        // 5: 172
+
+        // Message 4 processed at t=171
+        router.tick({time: 170.9});
+        assertTableSize(testShard, 'logTable', 3);
+        router.tick({time: 171.0});
+        assertTableSize(testShard, 'logTable', 4);
+
+        // Message 5 processed at t=172
+        router.tick({time: 171.9});
+        assertTableSize(testShard, 'logTable', 4);
+        router.tick({time: 172.0});
+        assertTableSize(testShard, 'logTable', 5);
+      });
+
+      it ("drops packets after ten minutes in the router queue", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var tenMinutesInMillis = 600000;
+
+        // Send a message that will take ten minutes + 1 millisecond to process.
+        sendMessageOfSize(tenMinutesInMillis + 1);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At almost ten minutes, the message should still be present
+        router.tick({time: tenMinutesInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At exactly ten minutes, the message should expire and be removed
+        // and no related logging occurs
+        router.tick({time: tenMinutesInMillis});
+        assertTableSize(testShard, 'messageTable', 0);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Thus, just after ten minutes, no message is routed.
+        router.tick({time: tenMinutesInMillis + 1});
+        assertTableSize(testShard, 'messageTable', 0);
+        assertTableSize(testShard, 'logTable', 0);
+      });
+
+      it ("smaller packets can expire if backed up behind large ones", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var oneMinuteInMillis = 60000;
+
+        // This message should take nine minutes to process, so it will be sent.
+        sendMessageOfSize(9 * oneMinuteInMillis);
+        // This one only takes two minutes to process, but because it's behind
+        // the nine-minute one it will expire
+        sendMessageOfSize(2 * oneMinuteInMillis);
+        // This one is tiny and should take a fraction of a second, but it will
+        // also expire since it's after the first two.
+        sendMessageOfSize(16);
+
+        // Initially, all three messages are in the queue
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At almost ten minutes the first message has been forwarded, and
+        // the other two are still enqueued.
+        router.tick({time: 10 * oneMinuteInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 1);
+
+        // At exactly ten minutes, messages two and three are expired and deleted.
+        router.tick({time: 10 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 1);
+      });
+
+      it ("removing expired packets allows packets further down the queue to be processed sooner", function () {
+        router.bandwidth = 1000; // 1 bit / ms
+        var oneMinuteInMillis = 60000;
+
+        // These messages will both expire, since before processing of the
+        // first one completes they will both be over 10 minutes old.
+        sendMessageOfSize(12 * oneMinuteInMillis);
+        sendMessageOfSize(3 * oneMinuteInMillis);
+        assertTableSize(testShard, 'messageTable', 2);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Advance to 9 minutes.  Nothing has happened yet.
+        router.tick({time: 9 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 2);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // Here we add a 1-minute message.  Since the others still exist,
+        // and we use pessimistic scheduling, this one is initially scheduled
+        // to finish at (9 + 12 + 3 + 1) = 25 minutes, meaning it would expire
+        // as well.
+        sendMessageOfSize(oneMinuteInMillis);
+        assertTableSize(testShard, 'messageTable', 3);
+        assertTableSize(testShard, 'logTable', 0);
+
+        // At 10 minutes, the first two messages expire.
+        router.tick({time: 10 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+        router.tick({time: 10 * oneMinuteInMillis + 1});
+
+        // This SHOULD allow the third message to complete at 11 minutes
+        // instead of at 25.
+        router.tick({time: 11 * oneMinuteInMillis - 1});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 0);
+
+        router.tick({time: 11 * oneMinuteInMillis});
+        assertTableSize(testShard, 'messageTable', 1);
+        assertTableSize(testShard, 'logTable', 1);
       });
     });
 

@@ -524,3 +524,7 @@ en:
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression

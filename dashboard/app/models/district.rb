@@ -6,5 +6,5 @@ class District < ActiveRecord::Base
 
   # A Cohort is associated with one or more Districts
   has_many :cohorts_districts, inverse_of: :district
-  has_many :districts, through: :cohorts_districts
+  has_many :cohorts, through: :cohorts_districts
 end

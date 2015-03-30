@@ -57,7 +57,7 @@ function customValidator(assert) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
       assert.equal(element.children[i].textContent, expectedTextContent);
-      assert.equal(element.children[i].getAttribute('class'), items[i][1]);
+      assert.equal(element.children[i].getAttribute('class'), items[i][1], 'token #' + i);
     }
     assert.equal(element.children.length, i);
   };
@@ -526,6 +526,66 @@ function customValidator(assert) {
       [')', null],
       [' = ', null],
       ['5', 'errorToken']
+    ]);
+  });
+
+  displayComplexUserExpressionTest(assert, 'simple target, hasSingleFunction user expression', function () {
+    // compute: 1 + 2
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
+
+    // f(x) = x
+    // compute: f(3)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [3])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 2);
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['f(x) = ', null],
+      ['x', null]
+    ]);
+
+    validateTextElementContainer(userExpression.children[1], [
+      ['f', 'errorToken'],
+      ['(', 'errorToken'],
+      ['3', 'errorToken'],
+      [')', 'errorToken'],
+      [' = ', null],
+      ['3', null]
+    ]);
+  });
+
+
+  displayComplexUserExpressionTest(assert, 'target hasVariablesOrFunctions and user does not', function () {
+    // x = 1
+    // y = 2
+    // compute: x + y
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', [], new ExpressionNode(2)));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', ['x', 'y'])));
+
+    // compute: 1 + 2
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+    validateTextElementContainer(userExpression.children[0], [
+      ['1', 'errorToken'],
+      [' + ', null],
+      ['2', 'errorToken'],
+      [' = ', null],
+      ['3', null]
     ]);
   });
 

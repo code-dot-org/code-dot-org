@@ -36,4 +36,18 @@ describe('Token', function () {
     validate(7, 3, '2.', '3');
     validate(1, 0.9, '1.', '1');
   });
+
+  it('can convert a number to a string with commas', function () {
+    assert.equal(Token.numberWithCommas_(1), "1");
+    assert.equal(Token.numberWithCommas_(100), "100");
+    assert.equal(Token.numberWithCommas_(1000), "1,000");
+    assert.equal(Token.numberWithCommas_(10000), "10,000");
+    assert.equal(Token.numberWithCommas_(1000000), "1,000,000");
+
+    assert.equal(Token.numberWithCommas_(1.123), "1.123");
+    assert.equal(Token.numberWithCommas_(100.123), "100.123");
+    assert.equal(Token.numberWithCommas_(1000.123), "1,000.123");
+    assert.equal(Token.numberWithCommas_(10000.123), "10,000.123");
+    assert.equal(Token.numberWithCommas_(1000000.123), "1,000,000.123");
+  });
 });
