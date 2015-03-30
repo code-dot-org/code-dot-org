@@ -17,6 +17,7 @@ class Studio < Grid
     generate_function_pass_blocks
     timeout_after_when_run
     custom_game_type
+    complete_on_success_condition_not_goals
   )
 
   def self.create_from_level_builder(params, level_params)

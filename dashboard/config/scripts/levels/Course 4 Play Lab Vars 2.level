@@ -17,6 +17,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
+    "complete_on_success_condition_not_goals": "true",
     "soft_buttons": [
       "downButton",
       "upButton"

@@ -2919,7 +2919,8 @@ var checkFinished = function () {
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
 
   if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
-      !hasGoals && achievedRequiredSuccessCondition) {
+      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
+      (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
