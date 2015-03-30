@@ -83,7 +83,7 @@ module Ops
       cohort = @attendance.segment.workshop.cohort
       cohort.teachers << teacher
       cohort.save!
-      
+
       post :batch, segment_id: segment.id, attendance: [[teacher.id, 'tardy']]
       assert_response :success
     end

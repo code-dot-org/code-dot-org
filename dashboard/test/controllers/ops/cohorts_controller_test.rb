@@ -38,7 +38,7 @@ module Ops
 
       @cohort.teachers << create(:teacher)
       @cohort.save!
-      
+
       assert_difference ->{@cohort.teachers.count}, -1 do
         delete :destroy_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
       end
