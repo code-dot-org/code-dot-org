@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## penColor(x)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Turtle
 
 [/category]
 
@@ -19,11 +19,10 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Sets the color of the line drawn behind the turtle as it moves
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
 
 [/description]
 
@@ -33,8 +32,8 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+penColor("cyan");   // sets the color of the turtles trail to cyan
+moveForward(100);   // moves the turtle forward by 100 pixels
 </pre>
 
 [/example]
@@ -44,9 +43,9 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+var c = (prompt("Enter a color"));  // prompts the user for a color
+penColor(c);                        // sets the color of the turtles trail to the color the user entered
+moveForward(100);                   // moves the turtle forward by 100 pixels
 </pre>
 
 
@@ -54,11 +53,34 @@ rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the scr
 
 ____________________________________________________
 
+[example]
+
+<pre>
+/*  This program draws a circle figure out of lines. It cycles
+    through the colors every time it turns. Here we use <b>4</b> colors, so we say penColor(colors[i%<b>4</b>]).
+*/
+
+var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
+for (var i = 0; i < 360; i++) {                     // loops 360 times
+  penColor(colors[i%4]);                            // sets the color of the turtles line
+                                                    // to a color from the array
+  moveForward(100);                                 // moves the turtle forward by 100 pixels
+  moveBackward(100);                                // moves the turtle backward by 100 pixels
+  turnRight(1);                                     // turns the turtle 1 pixel to the right
+}
+</pre>
+
+
+[/example]
+
+____________________________________________________
+
+
 [syntax]
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+penColor(x);
 </pre>
 
 [/syntax]
@@ -69,10 +91,23 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| x | String | Yes | The color of the line left behind the turtle as it moves  |
+
+
+Some example color options are listed below
+<pre>
+penColor("black")
+penColor("gray")
+penColor("red")
+penColor("pink")
+penColor("magenta")
+penColor("green")
+penColor("blue")
+penColor("cyan")
+penColor("purple")
+penColor("yellow")
+penColor("orange")
+</pre>
 
 [/parameters]
 
@@ -86,8 +121,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+
 
 [/tips]
 

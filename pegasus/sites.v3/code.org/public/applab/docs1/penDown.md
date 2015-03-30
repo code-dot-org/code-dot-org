@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## penDown()
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Turtle
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+penDown creates a line as the turtle moves
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+**Note**: - [penUp()](/applab/docs/penUp) is often used with penDown
 
 [/description]
 
@@ -33,8 +33,7 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+
 </pre>
 
 [/example]
@@ -44,9 +43,19 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+hide();             // hide the turtle
+arcRight(360, 25);  // draw a 25 pixel radius circle (eye)
+penUp();            // lift the pen up to stop leaving a trail
+move(25, 10);       // move inside the circle (eye)
+penDown();          // put the pen back down to leave a trail
+dot(10);            // draw a 10 pixel dot (pupil)
+penUp();            // life the pen up to stop leaving a trail
+move(-100, -10);    // move into position for the second eye
+penDown();          // put the pen back down to leave a trail
+arcRight(360, 25);  // draw the second eye, a 25 pixel radius circle
+penUp();            // life the pen up to stop leaving a trail
+move(25, 10);       // move into place
+dot(10);            // draw the second pupil
 </pre>
 
 
@@ -58,7 +67,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+penUp();
 </pre>
 
 [/syntax]
@@ -67,12 +76,8 @@ rect(x, y, width, height);
 
 ### Parameters
 
-| Name  | Type | Required? | Description |
-|-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+
+None.
 
 [/parameters]
 
@@ -86,8 +91,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- [penUp()](/applab/docs/penUp) is often used with penDown
 
 [/tips]
 

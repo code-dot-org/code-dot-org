@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## penWidth(x)
+## move(pixels)
 
 [/name]
 
@@ -19,10 +19,9 @@ Category: Turtle
 
 [short_description]
 
-Changes the thickness of the line the turtle leaves behind as it moves on the screen.
+Moves the turtle from its current location, ignoring which way the turtle is facing.
 
 [/short_description]
-
 
 [/description]
 
@@ -32,7 +31,7 @@ ____________________________________________________
 [example]
 
 <pre>
-
+move(50, 50);	// Move the turtle down and to the right
 </pre>
 
 [/example]
@@ -42,9 +41,24 @@ ____________________________________________________
 [example]
 
 <pre>
-
+turnRight(90);	// turn the turtle right
+move(50, 50);	// Still moves down and to the right
 </pre>
 
+[/example]
+
+____________________________________________________
+
+[example]
+
+<pre>
+// Draw a arrow pointing up from where the turtle is
+penDown();
+move(0, -100);
+move(-25, 50);
+move(50, 0);
+move(-25, -50);
+</pre>
 
 [/example]
 
@@ -54,7 +68,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-penWidth(x);
+move(x, y);
 </pre>
 
 [/syntax]
@@ -65,9 +79,8 @@ penWidth(x);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The thickness of the line drawn as the turtle moves  |
-
-Note: A number less than or equal to zero will result in a thickness of 1
+| x | number | Yes | The number of pixels to move the turtle right.  |
+| y | number | Yes | The number of pixels to move the turtle down.  |
 
 [/parameters]
 
@@ -81,7 +94,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-
+- Use [penUp()](/applab/docs/penUp) before calling moveBackward() to have the turtle not draw as it moves.
 
 [/tips]
 

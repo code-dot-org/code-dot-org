@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## createRecord(tableName, record, callbackFunction)
+## readRecords(tableName, searchTerms, callbackFunction)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, creates a record in the table name provided, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, reads the records from the provided `tableName` that match the `searchTerms`. When the call is completed, the `callbackFunction` is called and is passed the array of records. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -58,16 +58,21 @@ ____________________________________________________
 
 [example]
 
-**Add a record to a table** Continuing the example above, we can add a row with values
- for the 3 columns named "name", "age", and "food". When the record is created in the table,
- it is automatically given a unique id. Click 'View Data' in App Lab to see the stored data.
+**Read all records from a table** Continuing the example above, after creating a record in the table, we can read all records back from the table and display the column values to the screen. Click 'View Data' in App Lab to see the stored data.
 
 <pre>
-createRecord("Fav Foods", {name:'Sally', age: 15, food:"avocado"}, function() {
-  console.log("I'm executed after the record is created");
+//Create a single record in the table
+createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
+
+  //After the record is created, get all the records back from the table
+  readRecords("fav_foods", {}, function(records) {
+    for (var i =0; i < records.length; i++) {
+      write("id: " + records[i].id + " Age:" + records[i].age + " Food: " + records[i].food);
+    }
+  });
+
 });
 
-console.log("I'm executed immediately after");
 </pre>
 
 [/example]
@@ -76,26 +81,19 @@ ____________________________________________________
 
 [example]
 
-**Simple survey** In this example, the app asks the user for their name, age,
- and favorite food. When the submit button is pressed, the values from the 3 input fields are
-  grabbed using [getText()](/applab/docs/getText) and the values are used to create a record in the table.
-  Click 'View Data' in App Lab to see the stored data.
+**Search for records** Similar the example above, we can request a subset of records to be returned using the `searchTerms` parameter. Click 'View Data' in App Lab to see the stored data.
 
 <pre>
-//Set up the input boxes and submit button
-textInput("nameInput", "What is your name?");
-textInput("ageInput", "What is your age?");
-textInput("foodInput", "What is your favorite food?");
-button("submitButton", "Submit");
+//Create a single record in the table
+createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
-//When the button is clicked, get the text from the 3 input boxes and create a record in the table
-onEvent("submitButton", "click", function() {
-  var myName = (getText("nameInput"));
-  var myAge = (getText("ageInput"));
-  var myFood = (getText("foodInput"));
-  createRecord("fav_foods", {name:myName, age: myAge, food:myFood}, function() {
-    console.log("Record created!");
+  //After the record is created, search for records where the food matches "avocado".
+  readRecords("fav_foods", {food:"avocado"}, function(records) {
+    for (var i =0; i < records.length; i++) {
+      write("id: " + records[i].id + " Age:" + records[i].age + " Food: " + records[i].food);
+    }
   });
+
 });
 
 </pre>
