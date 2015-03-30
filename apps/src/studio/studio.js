@@ -2918,6 +2918,14 @@ var checkFinished = function () {
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
 
+  // Levels with goals (usually images that need to be touched) can have an optional success
+  // condition that can explicitly return false to prevent the level from completing.
+  // In very rare cases, a level might have goals but not care whether they're touched or not
+  // to succeed, relying instead solely on the success function.  In such a case, the level should
+  // have completeOnSuccessConditionNotGoals set to true.
+  // In the remainder of levels which do not have goals, they simply require a success condition
+  // that returns true.
+
   if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
