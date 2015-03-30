@@ -20,8 +20,8 @@ module Ops
 
       teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
       teacher_params += [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district_name: @district.name},
-                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district_name: @district.name}
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
+                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district: @district.name, ops_school: 'Jefferson Middle School', ops_gender: 'Male'}
                         ]
 
       assert_difference('@cohort.reload.teachers.count', 2) do
@@ -31,6 +31,10 @@ module Ops
       end
 
       assert_response :success
+
+      last_user = User.last
+      assert_equal 'Male', last_user.ops_gender
+      assert_equal 'Jefferson Middle School', last_user.ops_school
     end
 
     test 'District Contact can drop teachers in their district from a cohort' do
