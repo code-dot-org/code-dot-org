@@ -1,7 +1,7 @@
 #{@district_contact.ops_first_name} #{@district_contact.ops_last_name}
 from #{@district_contact.districts_as_contact.first.try(:name)}
 added #{@added_teachers.count} teachers to
-%a{href: "cohort"} #{@cohort.name}:
+%a{href: "http:" + CDO.code_org_url("/ops-dashboard#/teacher-cohorts/#{@cohort.id}/teachers")} #{@cohort.name}:
 
 %ul
   - @added_teachers.each do |teacher|
