@@ -6,14 +6,13 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## showElement(id)
 
 [/name]
 
-
 [category]
 
-Category: Canvas
+Category: UI Controls
 
 [/category]
 
@@ -21,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Show the element with the specified id.
 
 [/short_description]
 

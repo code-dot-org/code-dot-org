@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## getImageURL(imageId)
+## getImageURL(id)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI Controls
 
 [short_description]
 
-Returns an image's url provided the image's id.
+Get the URL associated with an image element id.
 
 [/short_description]
 

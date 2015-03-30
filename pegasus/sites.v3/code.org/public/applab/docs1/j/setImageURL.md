@@ -6,7 +6,7 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## setImageURL(id, url)
 
 [/name]
 
@@ -21,7 +21,7 @@ Category: UI Controls
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Set the URL for the specified image element id.
 
 [/short_description]
 

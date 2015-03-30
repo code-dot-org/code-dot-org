@@ -14,7 +14,7 @@ title: App Lab Docs
 
 [name]
 
-## image(imageId, imageURL)
+## image(id, url)
 
 [/name]
 
@@ -28,7 +28,7 @@ Category: UI Controls
 
 [short_description]
 
-Inserts an image from a URL.
+Create an image and assign it an element id.
 
 [/short_description]
 

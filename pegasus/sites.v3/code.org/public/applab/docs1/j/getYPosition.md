@@ -6,14 +6,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## getYPosition(id)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: UI Controls
 
 [/category]
 
@@ -21,11 +21,10 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Get the element's y position.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
 
 [/description]
 
