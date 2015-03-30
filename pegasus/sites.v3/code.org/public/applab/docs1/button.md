@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a clickable button.
+Creates a button that you can click on.  
 
 [/short_description]
 
@@ -40,8 +40,9 @@ ____________________________________________________
 
 [example]
 
-Interactive Turtle
-In this example, we allow you to interact with the turtle. You can change turtles direction and move it a specified number of pixels.
+**Interactive Turtle**
+A button is often used with a click event. The click event is where you write code to execute when the button is clicked.
+In this example, we allow you to interact with the turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
 
 <pre>
 // Display Label

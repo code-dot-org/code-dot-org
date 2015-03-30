@@ -1006,6 +1006,14 @@ describe("ExpressionNode", function () {
       var node = new ExpressionNode('/', [3, 0]);
       assert(node.isDivZero() === true);
     });
+
+    it('returns false when right child is not a number', function () {
+      var node = new ExpressionNode('/', [
+        3,
+        new ExpressionNode('-', [1, 1])
+      ]);
+      assert(node.isDivZero() === false);
+    });
   });
 
   it('hasSameValue_', function () {

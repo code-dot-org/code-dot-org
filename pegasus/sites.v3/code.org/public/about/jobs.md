@@ -90,7 +90,7 @@ Responsibilities of this position include:
 - Managing partner commitments
 - Managing prize fulfillment, guiding winners through the fulfillment process
 - Helping plan special events and maintain a database of key Hour of Code events
-- Supporting our community and field questions about the Hour of Code in a timely manner
+- Supporting our community and fielding questions about the Hour of Code in a timely manner
 - Tracking social media and press coverage related to the campaign 
 - Special projects (perform research, prepare documentation, develop templates, etc.)
 

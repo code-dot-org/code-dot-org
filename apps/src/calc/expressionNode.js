@@ -117,7 +117,9 @@ ExpressionNode.prototype.isExponential = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
+  var rightChild = this.getChildValue(1);
+  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0);
 };
 
 /**
@@ -545,6 +547,9 @@ ExpressionNode.prototype.setValue = function (value) {
  * Get the value of the child at index
  */
 ExpressionNode.prototype.getChildValue = function (index) {
+  if (this.children_[index] === undefined) {
+    return undefined;
+  }
   return this.children_[index].value_;
 };
 
