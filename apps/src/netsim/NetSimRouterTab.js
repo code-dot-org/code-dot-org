@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 /* global $ */
@@ -14,6 +13,7 @@
 
 var markup = require('./NetSimRouterTab.html');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
+var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 
 /**
@@ -21,10 +21,11 @@ var NetSimRouterLogTable = require('./NetSimRouterLogTable');
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
  * @param {function} bandwidthChangeCallback
+ * @param {function} memoryChangeCallback
  * @constructor
  */
 var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
-    bandwidthChangeCallback) {
+    bandwidthChangeCallback, memoryChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -45,6 +46,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
   this.bandwidthChangeCallback_ = bandwidthChangeCallback;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.memoryChangeCallback_ = memoryChangeCallback;
+
+  /**
    * @type {NetSimRouterLogTable}
    * @private
    */
@@ -55,6 +62,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.bandwidthControl_ = null;
+
+  /**
+   * @type {NetSimMemoryControl}
+   * @private
+   */
+  this.memoryControl_ = null;
 
   // Initial render
   this.render();
@@ -73,6 +86,10 @@ NetSimRouterTab.prototype.render = function () {
   if (this.levelConfig_.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
         this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+  }
+  if (this.levelConfig_.showRouterMemoryControl) {
+    this.memoryControl_ = new NetSimMemoryControl(
+        this.rootDiv_.find('.memory-control'), this.memoryChangeCallback_);
   }
 };
 
@@ -95,6 +112,8 @@ NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
 /**
  * @param {number} newMemory in bits/second
  */
-NetSimRouterTab.prototype.setMemory = function (/*newMemory*/) {
-  // TODO
+NetSimRouterTab.prototype.setMemory = function (newMemory) {
+  if (this.memoryControl_) {
+    this.memoryControl_.setValue(newMemory);
+  }
 };
