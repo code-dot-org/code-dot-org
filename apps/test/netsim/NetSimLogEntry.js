@@ -32,6 +32,9 @@ describe("NetSimLogEntry", function () {
     assertOwnProperty(row, 'binary');
     assertEqual(row.binary, '');
 
+    assertOwnProperty(row, 'status');
+    assertEqual(row.status, NetSimLogEntry.LogStatus.SUCCESS);
+
     assertOwnProperty(row, 'timestamp');
     assertWithinRange(row.timestamp, Date.now(), 10);
   });
@@ -41,6 +44,7 @@ describe("NetSimLogEntry", function () {
       id: 1,
       nodeID: 42,
       binary: 'Non-default log text',
+      status: NetSimLogEntry.LogStatus.DROPPED,
       timestamp: 52000
     };
     var logEntry = new NetSimLogEntry(testShard, row);
@@ -48,6 +52,7 @@ describe("NetSimLogEntry", function () {
     assertEqual(logEntry.entityID, 1);
     assertEqual(logEntry.nodeID, 42);
     assertEqual(logEntry.binary, 'Non-default log text');
+    assertEqual(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
     assertEqual(logEntry.timestamp, 52000);
   });
 
@@ -55,7 +60,7 @@ describe("NetSimLogEntry", function () {
     it ("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
-      NetSimLogEntry.create(testShard, null, null, function () {});
+      NetSimLogEntry.create(testShard, null, null, null, function () {});
 
       assertTableSize(testShard, 'logTable', 1);
     });
@@ -63,19 +68,21 @@ describe("NetSimLogEntry", function () {
     it ("Puts row values in remote table", function () {
       var nodeID = 1;
       var binary = 'xyzzy';
+      var status = NetSimLogEntry.LogStatus.SUCCESS;
 
-      NetSimLogEntry.create(testShard, nodeID, binary, function () {});
+      NetSimLogEntry.create(testShard, nodeID, binary, status, function () {});
 
       testShard.logTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.nodeID, nodeID);
         assertEqual(row.binary, binary);
+        assertEqual(row.status, status);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
 
     it ("Returns log and no error on success", function () {
-      NetSimLogEntry.create(testShard, null, null, function (err, result) {
+      NetSimLogEntry.create(testShard, null, null, null, function (err, result) {
         assert(err === null, "Error is null on success");
         assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
       });

@@ -126,10 +126,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.dnsNodeID = row.dnsNodeID;
 
   /**
-   * Speed at which messages are processed, in bits per second.
+   * Speed (in bits per second) at which messages are processed.
    * @type {number}
    */
   this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
+
+  /**
+   * Amount of data (in bits) that the router queue can hold before it starts
+   * dropping packets.
+   * @type {number}
+   */
+  this.memory = utils.valueOr(deserializeNumber(row.memory), Infinity);
 
   /**
    * Determines a subset of connection and message events that this
@@ -344,6 +351,7 @@ var RouterStatus = NetSimRouterNode.RouterStatus;
  * @typedef {Object} routerRow
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
+ * @property {number} memory - Router max queue capacity in bits
  * @property {DnsMode} dnsMode - Current DNS mode for the local network
  * @property {number} dnsNodeID - Entity ID of the current DNS node in the
  *           local network.
@@ -360,6 +368,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
         bandwidth: serializeNumber(this.bandwidth),
+        memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
         dnsNodeID: this.dnsNodeID
       }
@@ -374,6 +383,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
   this.bandwidth = deserializeNumber(remoteRow.bandwidth);
+  this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
   this.dnsNodeID = remoteRow.dnsNodeID;
   this.stateChange.notifyObservers(this);
@@ -386,7 +396,7 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
   this.heartbeat_.tick(clock);
-  this.routeOverdueMessages_.call(this, clock);
+  this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
   }
@@ -475,13 +485,19 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
   // If the client simulating the packet at the head of the queue disconnects
   // it won't block other packets from being sent, but it will increase their
   // "pessimistic estimates" until that orphaned packet gets cleaned up.
+
+  var queueSizeInBits = 0;
   var pessimisticCompletionTime = this.simulationTime_;
   var queuedRow;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
     queuedRow = this.routerQueueCache_[i];
+    queueSizeInBits += queuedRow.payload.length;
     pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedRow);
-    if (this.localSimulationOwnsMessageRow_(queuedRow)) {
-      this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
+
+    // Don't schedule beyond memory capacity; we're going to drop those packets
+    if (this.localSimulationOwnsMessageRow_(queuedRow) &&
+        queueSizeInBits <= this.memory) {
+        this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
     }
   }
 };
@@ -511,13 +527,59 @@ NetSimRouterNode.prototype.scheduleRoutingForRow = function (queuedRow,
     }
   } else {
     // If the item doesn't have a schedule entry at all, add it
-    this.localRoutingSchedule_.push({
-      row: queuedRow,
-      completionTime: pessimisticCompletionTime,
-      expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
-      beingRouted: false
-    });
+    this.addRowToSchedule_(queuedRow, pessimisticCompletionTime);
   }
+};
+
+/**
+ * Adds a new entry to the routing schedule, with a default expiration time.
+ * @param {messageRow} queuedRow - message to route
+ * @param {number} completionTime - in simulation time
+ * @private
+ */
+NetSimRouterNode.prototype.addRowToSchedule_ = function (queuedRow,
+    completionTime) {
+  this.localRoutingSchedule_.push({
+    row: queuedRow,
+    completionTime: completionTime,
+    expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
+    beingRouted: false
+  });
+};
+
+/**
+ * Takes a message row out of the routing schedule.  Modifies the schedule,
+ * should not be called while iterating through the schedule!
+ * Does nothing if the row isn't present in the schedule.
+ * @param {messageRow} queuedRow
+ * @private
+ */
+NetSimRouterNode.prototype.removeRowFromSchedule_ = function (queuedRow) {
+  var scheduleIdx;
+  for (var i = 0; i < this.localRoutingSchedule_.length; i++) {
+    if (this.localRoutingSchedule_[scheduleIdx].row.id === queuedRow.id) {
+      scheduleIdx = i;
+    }
+  }
+  if (scheduleIdx !== undefined) {
+    this.localRoutingSchedule_.splice(scheduleIdx, 1);
+  }
+};
+
+NetSimRouterNode.prototype.dropPacket = function (queuedRow) {
+  // Begin by tearing out any existing schedule entry
+  this.removeRowFromSchedule_(queuedRow);
+
+  // 1. Remove the message from the queue
+  var message = new NetSimMessage(this.shard_, queuedRow);
+  message.destroy(function (err) {
+    if (err) {
+      return;
+    }
+
+    // 2. Log the packet-drop event
+    this.log(queuedRow.payload, NetSimLogEntry.LogStatus.DROPPED);
+  }.bind(this));
 };
 
 /**
@@ -714,6 +776,18 @@ NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
 };
 
 /**
+ * @param {number} newMemory in bits
+ */
+NetSimRouterNode.prototype.setMemory = function (newMemory) {
+  if (this.memory === newMemory) {
+    return;
+  }
+
+  this.memory = newMemory;
+  this.update();
+};
+
+/**
  * Query the wires table and pass the callback a list of wire table rows,
  * where all of the rows are wires attached to this router.
  * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
@@ -754,11 +828,17 @@ NetSimRouterNode.prototype.countConnections = function (onComplete) {
   });
 };
 
-NetSimRouterNode.prototype.log = function (packet) {
+/**
+ * Add a router log entry (not development logging, this is user-facing!)
+ * @param {string} packet - binary log payload
+ * @param {NetSimLogEntry.LogStatus} status
+ */
+NetSimRouterNode.prototype.log = function (packet, status) {
   NetSimLogEntry.create(
       this.shard_,
       this.entityID,
       packet,
+      status,
       function () {});
 };
 
@@ -1051,9 +1131,44 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   }
 
   this.routerQueueCache_ = newQueue;
-  // TODO: Drop packets that exceed queue memory (IF not already processing?)
   this.recalculateSchedule();
+  this.enforceMemoryLimit_();
+
   // Propagate notification of queue change (for stats, etc)
+};
+
+NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
+  // Just drop the first packet that we can simulate that's beyond the memory
+  // limit
+  var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
+  if (droppablePacket) {
+    var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
+    droppableMessage.destroy(function (err) {
+      if (err) {
+        return;
+      }
+
+      this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
+    }.bind(this));
+  }
+};
+
+/**
+ * Walk the router queue, and return the first packet we find beyond the router's
+ * memory capacity that the local simulation controls and is able to drop.
+ * @returns {messageRow|undefined} undefined if no such message is found.
+ */
+NetSimRouterNode.prototype.findFirstLocallySimulatedPacketOverMemoryLimit = function () {
+  var packet;
+  var usedMemory = 0;
+  for (var i = 0; i < this.routerQueueCache_.length; i++) {
+    packet = this.routerQueueCache_[i];
+    usedMemory += packet.payload.length;
+    if (usedMemory > this.memory && this.localSimulationOwnsMessageRow_(packet)) {
+      return packet;
+    }
+  }
+  return undefined;
 };
 
 /**
@@ -1122,7 +1237,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
     toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
     logger.warn("Packet not readable by router");
-    this.log(message.payload);
+    this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
     onComplete(null);
     return;
   }
@@ -1130,7 +1245,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   if (toAddress === ROUTER_LOCAL_ADDRESS) {
     // This packet has reached its destination, it's done.
     logger.warn("Packet stopped at router.");
-    this.log(message.payload);
+    this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(null);
     return;
   }
@@ -1138,7 +1253,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
   var destinationNodeID = this.getNodeIDForAddress_(toAddress);
   if (destinationNodeID === undefined) {
     logger.warn("Destination address not in local network");
-    this.log(message.payload);
+    this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
     onComplete(null);
     return;
   }
@@ -1161,7 +1276,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
       simulatingNode,
       message.payload,
       function (err, result) {
-        this.log(message.payload);
+        this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
         onComplete(err, result);
       }.bind(this)
   );

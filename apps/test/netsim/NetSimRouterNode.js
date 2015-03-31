@@ -15,6 +15,7 @@ var _ = require(testUtils.buildPath('lodash'));
 
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
+var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
 var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
 var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
 var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
@@ -213,7 +214,7 @@ describe("NetSimRouterNode", function () {
 
     var getRows = function (shard, table) {
       var rows;
-      testShard.messageTable.readAll(function (err, result) {
+      shard[table].readAll(function (err, result) {
         rows = result;
       });
       return rows;
@@ -681,6 +682,116 @@ describe("NetSimRouterNode", function () {
         router.tick({time: 11 * oneMinuteInMillis});
         assertTableSize(testShard, 'messageTable', 1);
         assertTableSize(testShard, 'logTable', 1);
+      });
+    });
+
+    describe("Router memory limits", function () {
+      var sendMessageOfSize = function (messageSizeBits) {
+        var payload = encoder.concatenateBinary({
+          toAddress: intToBinary(remoteA.address, 4),
+          fromAddress: intToBinary(localClient.address, 4)
+        }, '0'.repeat(messageSizeBits - 8));
+
+        NetSimMessage.send(testShard, localClient.entityID, router.entityID,
+            localClient.entityID, payload, function () {});
+      };
+
+      var assertRouterQueueSize = function (expectedQueueSizeBits) {
+        var queueSize = getRows(testShard, 'messageTable').filter(function (m) {
+          return m.toNodeID === router.entityID;
+        }).map(function (m) {
+          return m.payload.length;
+        }).reduce(function (p, c) {
+          return p + c;
+        }, 0);
+        assert(expectedQueueSizeBits === queueSize, "Expected router queue to " +
+            "contain " + expectedQueueSizeBits + " bits, but it contained " +
+            queueSize + " bits");
+      };
+
+      var assertHowManyDropped = function (expectedDropCount) {
+        var droppedPackets = getRows(testShard, 'logTable').map(function (l) {
+          return l.status === NetSimLogEntry.LogStatus.DROPPED ? 1 : 0;
+        }).reduce(function (p, c) {
+          return p + c;
+        }, 0);
+        assert(droppedPackets === expectedDropCount, "Expected that " +
+            expectedDropCount + " packets would be dropped, " +
+            "but logs only report " + droppedPackets + "dropped packets");
+      };
+
+      beforeEach(function () {
+        // Establish time baseline of zero
+        router.tick({time: 0});
+        assertTableSize(testShard, 'logTable', 0);
+      });
+
+      it ("allows messages that fit in router memory", function () {
+        router.bandwidth = Infinity;
+        router.memory = 64 * 8; // 64 bytes
+
+        // Exact fit is okay
+        // Log table is empty because routing is not complete
+        sendMessageOfSize(64 * 8);
+        assertTableSize(testShard, 'messageTable', 1);
+        assertRouterQueueSize(64 * 8);
+        assertHowManyDropped(0);
+      });
+
+      it ("rejects messages that exceed router memory", function () {
+        router.memory = 64 * 8; // 64 bytes
+
+        // Over by one bit gets dropped!
+        // Adds a log entry with a "dropped" status, or some such.
+        sendMessageOfSize(64 * 8 + 1);
+        assertTableSize(testShard, 'messageTable', 0);
+        assertRouterQueueSize(0);
+        assertHowManyDropped(1);
+      });
+
+      it ("rejects messages when they would put queue over its limit", function () {
+        router.memory = 64 * 8; // 64 bytes
+
+        // Three messages: 62 bytes, 2 bytes, 4 bytes
+        sendMessageOfSize(62 * 8);
+        sendMessageOfSize(2 * 8);
+        sendMessageOfSize(4 * 8);
+
+        // The second message should JUST fit, the third message should drop
+        assertTableSize(testShard, 'messageTable', 2);
+        assertRouterQueueSize(64 * 8);
+        assertHowManyDropped(1);
+      });
+
+      it ("accepts messages queued beyond memory limit if clearing packets ahead" +
+          "of them allows them to fit in memory", function () {
+        router.memory = 64 * 8; // 64 bytes
+
+        // Three messages: 4 bytes, 64 bytes, 2 bytes
+        sendMessageOfSize(4 * 8);
+        sendMessageOfSize(62 * 8);
+        sendMessageOfSize(2 * 8);
+
+        // The second message should drop, but the third message should fit
+        // because the second message was dropped.
+        assertTableSize(testShard, 'messageTable', 2);
+        assertRouterQueueSize(6 * 8);
+        assertHowManyDropped(1);
+      });
+
+      it ("can drop multiple packets queued beyond memory limit", function () {
+        router.memory = 64 * 8; // 64 bytes
+
+        sendMessageOfSize(63 * 8);
+        sendMessageOfSize(2 * 8);
+        sendMessageOfSize(4 * 8);
+        sendMessageOfSize(8 * 8);
+        sendMessageOfSize(16 * 8);
+
+        // Only the first message should stay, all the others should drop
+        assertTableSize(testShard, 'messageTable', 1);
+        assertRouterQueueSize(63 * 8);
+        assertHowManyDropped(4);
       });
     });
 
