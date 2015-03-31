@@ -226,3 +226,80 @@ NetSimSlider.prototype.valueToLabel = function (val) {
   return val;
 };
 
+/**
+ * Default minimum of zero is useless to a logarithmic scale
+ * @type {number}
+ * @const
+ */
+var LOGARITHMIC_DEFAULT_MIN_VALUE = 1;
+
+/**
+ * @param rootDiv
+ * @param options
+ * @constructor
+ * @augments NetSimSlider
+ */
+NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
+  options.min = utils.valueOr(options.min, LOGARITHMIC_DEFAULT_MIN_VALUE);
+  NetSimSlider.call(this, rootDiv, options);
+  this.calculateSliderBounds_();
+};
+NetSimSlider.LogarithmicSlider.inherits(NetSimSlider);
+
+NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function () {
+  // Pick boundary slider values
+  this.maxSliderPosition = Math.floor(Math.log(this.maxValue_) / Math.LN2);
+  // Add a step if we don't already land exactly on a step, to
+  // compensate for the floor() operation
+  if (Math.pow(2, this.maxSliderPosition) !== this.maxValue_) {
+    this.maxSliderPosition += this.step_;
+  }
+  this.minSliderPosition = Math.floor(Math.log(this.minValue_) / Math.LN2);
+
+  // Pick infinity slider values
+  this.infinitySliderPosition = this.maxSliderPosition + this.step_;
+  this.negInfinitySliderPosition = this.minSliderPosition - this.step_;
+};
+
+/**
+ * Converts the given value into an internal value we can pass to the
+ * jQueryUI slider control.
+ * @param {number} val - external-facing value
+ * @returns {number} - internal slider value
+ * @override
+ */
+NetSimSlider.LogarithmicSlider.prototype.valueToSliderPosition = function (val) {
+  if (val > this.maxValue_) {
+    return this.isUpperBoundInfinite_ ?
+        this.infinitySliderPosition : this.maxSliderPosition;
+  } else if (val === this.maxValue_) {
+    return  this.maxSliderPosition;
+  } else if (val < this.minValue_) {
+    return this.isLowerBoundInfinite_ ?
+        this.negInfinitySliderPosition : this.minSliderPosition
+  } else if (val === this.minValue_) {
+    return this.minSliderPosition;
+  }
+  return Math.max(this.minSliderPosition, Math.floor(Math.log(val) / Math.LN2));
+};
+
+/**
+ * Converts the internal jQueryUI slider value into an external-facing
+ * value for this control.
+ * Should be an inverse of valueToSliderPosition
+ * @param {number} pos - internal slider value
+ * @returns {number} - external-facing value
+ * @override
+ */
+NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) {
+  if (pos > this.maxSliderPosition) {
+    return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
+  } else if (pos === this.maxSliderPosition) {
+    return this.maxValue_;
+  } else if (pos < this.minSliderPosition) {
+    return this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
+  } else if (pos === this.minSliderPosition) {
+    return this.minValue_;
+  }
+  return Math.pow(2, pos);
+};
