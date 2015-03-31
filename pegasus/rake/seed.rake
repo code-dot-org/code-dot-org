@@ -161,7 +161,9 @@ class GSheetToCsv
     end
 
     begin
-      buf = @file.spreadsheet.worksheets.first.export_as_string
+      csv_uri = @file.raw_file.export_links['application/pdf'].gsub(/pdf$/,'csv')
+      buf = @@gdrive.raw_session.execute!(uri: csv_uri).body
+#      buf = @file.spreadsheet.worksheets.first.export_as_string
     rescue GoogleDrive::Error => e
       puts "Error on file: #{@gsheet_path}, #{e}"
       throw e
