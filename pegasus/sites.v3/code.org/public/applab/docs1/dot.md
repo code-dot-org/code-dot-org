@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## move(x, y)
+## dot(radius)
 
 [/name]
 
@@ -19,11 +19,9 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle from its current location.
+Draws a dot under the turtle with the given radius.
 
 [/short_description]
-
-Adds x to the turtle's x position and y to the turtle's y position. Unlike moveForward(pixels), the turtle's direction does not change how the turtle is moved. The turtle's direction in not changed.
 
 [/description]
 
@@ -33,7 +31,8 @@ ____________________________________________________
 [example]
 
 <pre>
-move(50, 50);	// Move the turtle down and to the right
+dot(5);     //  Draws a radius 5 pixel dot
+hide();     // Hide the turtle so we can actually see the dot
 </pre>
 
 [/example]
@@ -43,8 +42,7 @@ ____________________________________________________
 [example]
 
 <pre>
-turnRight(90);	// turn the turtle right
-move(50, 50);	// Still moves down and to the right
+dot(150);   // Draws a really big dot
 </pre>
 
 [/example]
@@ -54,12 +52,12 @@ ____________________________________________________
 [example]
 
 <pre>
-// Draw a arrow pointing up from where the turtle is
-penDown();
-move(0, -100);
-move(-25, 50);
-move(50, 0);
-move(-25, -50);
+// Draw a lot of random dots!
+penUp();        // We only want dots, no lines
+while (true) {  // Loop forever
+  moveTo(randomNumber(320), randomNumber(480)); // Jump to a random position on the display
+  dot(randomNumber(1, 10));                     // draw a random sized dot there
+}
 </pre>
 
 [/example]
@@ -70,7 +68,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-move(x, y);
+dot(radius);
 </pre>
 
 [/syntax]
@@ -81,8 +79,7 @@ move(x, y);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The number of pixels to move the turtle right.  |
-| y | number | Yes | The number of pixels to move the turtle down.  |
+| radius | number | Yes | The radius of the dot to draw  |
 
 [/parameters]
 
@@ -96,7 +93,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Use [penUp()](/applab/docs/penUp) before calling moveBackward() to have the turtle not draw as it moves.
+- When drawing small dots, make sure you move or hide the turtle so you can actually see them.
 
 [/tips]
 

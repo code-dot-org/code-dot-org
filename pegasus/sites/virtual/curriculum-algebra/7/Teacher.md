@@ -41,7 +41,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Teaching Notes on the Big Game
 
-The students will create a mod of an existing game.   As they make changes to the game, it is possible that they will add code that will either “break” the code (cause nothing to happen) or to act in an un-expected way.  If either of these conditions exist, they will need to troubleshoot or debug the code to determine how to get it working in the proper way.  **If things go terribly awry and finding a problem is too frustrating, the Clear Puzzle button in the upper right can come to the rescue.**  This button will clear your game back to its initial state, so it should only be used as a last resort.
+The students will create a mod of an existing game.   As they make changes to the game, it is possible that they will add code that will either “break” the code (cause nothing to happen) or to act in an unexpected way.  If either of these conditions exist, they will need to troubleshoot or debug the code to determine how to get it working in the proper way.  **If things go terribly awry and finding a problem is too frustrating, the Clear Puzzle button in the upper right can come to the rescue.**  This button will clear your game back to its initial state, so it should only be used as a last resort.
 
 This exercise is a simplified version of a very common real world programming task.  Programmers often create mods of programs about which they know very little.  They slowly unravel which pieces require further understanding in order to make the mod work the way they want and leave other parts of the program completely unexplored.
 
@@ -49,7 +49,7 @@ Many programs and functions are customizable through their arguments (also calle
 
 In this lesson, we are creating the mod by setting the variables inside the code.  The student has access to the game code and is changing the initial value of the Title, Subtitle, Player, Danger, and Target.  As a reminder, the **ultimate** goal of this game will be to manipulate the player through pressing keys, to avoid the danger, and to make contact with the target.  The **current** lesson has no motion or interactivity. It only changes the look of the game.  The motion and interactivity function stubs, such as “update-target” and “danger?”, will be completed in later lessons.
 
-The blocks menu displays a few new items (Boolean, Cond(itional), and Functions) which will be examined in more detail in future lessons.  The students should be encouraged to explore each of the sub-menus.  However **the only navigation required for this level is editing the five color blocks at the top of the function:** Title, subtitle, bg (background), player, target, and danger.  The difference between the color and black blocks will also be explained in a future lesson.
+The blocks menu displays a few new items (Boolean, Cond, and Functions) which will be examined in more detail in future lessons.  The students should be encouraged to explore each of the sub-menus.  However **the only navigation required for this level is editing the five color blocks at the top of the function:** Title, subtitle, bg (background), player, target, and danger.  The difference between the color and black blocks will also be explained in a future lesson.
 
 [/together]
 
