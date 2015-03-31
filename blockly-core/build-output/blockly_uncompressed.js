@@ -19260,8 +19260,6 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   this.modalBlockSpace.clear()
 };
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
   this.moveToMainBlockSpace_(this.functionDefinitionBlock);
   this.functionDefinitionBlock = null;
   goog.dom.getElement("functionNameText").value = "";
@@ -19269,6 +19267,8 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   if(goog.dom.getElement("paramAddText")) {
     goog.dom.getElement("paramAddText").value = ""
   }
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, "function_editor_closed")
 };
@@ -19397,6 +19397,9 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER
 };
 Blockly.FunctionEditor.prototype.position_ = function() {
+  if(!this.isOpen()) {
+    return
+  }
   var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
