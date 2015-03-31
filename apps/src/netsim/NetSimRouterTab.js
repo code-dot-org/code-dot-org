@@ -88,7 +88,7 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
  */
 NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
   if (this.bandwidthControl_) {
-    this.bandwidthControl_.setBandwidth(newBandwidth);
+    this.bandwidthControl_.setValue(newBandwidth);
   }
 };
 

@@ -209,4 +209,54 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(Infinity, roundTrip(Infinity));
     });
   });
+
+  describe("with base-10", function () {
+    beforeEach(function () {
+      // Configuration gives the slider the following positions:
+      // 8-10-100-1000-1024
+      slider = new LogarithmicSlider(null, {
+        logBase: 10,
+        min: 8,
+        max: 1024
+      });
+    });
+
+    it ("value round-trip is identity for 10^x values within slider range", function () {
+      assertEqual(10, roundTrip(10));
+      assertEqual(100, roundTrip(100));
+      assertEqual(1000, roundTrip(1000));
+    });
+
+    it ("value round-trip rounds down to nearest 10^x value or minimum", function () {
+      assertEqual(8, roundTrip(9));
+      assertEqual(10, roundTrip(99));
+      assertEqual(100, roundTrip(999));
+    });
+
+    it ("value round-trip is identity for min and max values", function () {
+      assertEqual(8, roundTrip(8));
+      assertEqual(1024, roundTrip(1024));
+    });
+
+    it ("clamps values to range", function () {
+      assertEqual(8, roundTrip(7));
+      assertEqual(8, roundTrip(-100));
+      assertEqual(8, roundTrip(-Infinity));
+
+      assertEqual(1024, roundTrip(1025));
+      assertEqual(1024, roundTrip(5000));
+      assertEqual(1024, roundTrip(Infinity));
+    });
+
+    it ("values are powers of ten of the slider positions", function () {
+      assertEqual(10, slider.sliderPositionToValue(1));
+      assertEqual(100, slider.sliderPositionToValue(2));
+      assertEqual(1000, slider.sliderPositionToValue(3));
+    });
+
+    it ("values are clamped at extreme slider positions", function () {
+      assertEqual(8, slider.sliderPositionToValue(0));
+      assertEqual(1024, slider.sliderPositionToValue(4));
+    });
+  });
 });

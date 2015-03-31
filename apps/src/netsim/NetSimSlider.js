@@ -62,13 +62,6 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
   this.rootDiv_ = rootDiv;
 
   /**
-   * Reference to the jQuery slider we create internally.
-   * @type {jQuery}
-   * @private
-   */
-  this.jQuerySlider_ = null;
-
-  /**
    * A function invoked whenever the slider-value is changed by the student.
    * Passed the new value (not slider position) as an argument.
    * @type function
@@ -127,22 +120,23 @@ NetSimSlider.uniqueIDCounter = 0;
  * Fill the root div with new elements reflecting the current state
  */
 NetSimSlider.prototype.render = function () {
+  var minValue = this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
+  var maxValue = this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
+  var minPosition = this.valueToSliderPosition(minValue);
+  var maxPosition = this.valueToSliderPosition(maxValue);
+
   var renderedMarkup = $(markup({
     instanceID: this.instanceID_,
-    minValue: this.valueToLabel(this.minValue_),
-    maxValue: this.valueToLabel(this.maxValue_)
+    minValue: this.valueToLabel(minValue),
+    maxValue: this.valueToLabel(maxValue)
   }));
   this.rootDiv_.html(renderedMarkup);
 
-  var sliderMinimum = this.valueToSliderPosition(
-      this.isLowerBoundInfinite_ ? -Infinity : this.minValue_);
-  var sliderMaximum = this.valueToSliderPosition(
-      this.isUpperBoundInfinite_ ? Infinity : this.maxValue_);
   this.rootDiv_.find('.slider')
       .slider({
         value: this.valueToSliderPosition(this.value_),
-        min: sliderMinimum,
-        max: sliderMaximum,
+        min: minPosition,
+        max: maxPosition,
         step: this.step_,
         slide: this.onSliderValueChange_.bind(this)
       });
@@ -159,7 +153,8 @@ NetSimSlider.prototype.setValue = function (newValue) {
   }
 
   this.value_ = newValue;
-  this.jQuerySlider_.slider('option', 'value', this.valueToSliderPosition(newValue));
+  this.rootDiv_.find('.slider').slider('option', 'value',
+      this.valueToSliderPosition(newValue));
   this.setLabelFromValue_(newValue);
 };
 
@@ -234,31 +229,60 @@ NetSimSlider.prototype.valueToLabel = function (val) {
 var LOGARITHMIC_DEFAULT_MIN_VALUE = 1;
 
 /**
- * @param rootDiv
- * @param options
+ * By default, a logarithmic scale slider increases by a factor of 2
+ * every step.
+ * @type {number}
+ */
+var LOGARITHMIC_DEFAULT_BASE = 2;
+
+/**
+ * @param {jQuery} rootDiv
+ * @param {Object} options - takes NetSimSlider options, and:
+ * @param {number} options.logBase - factor by which the value increases
+ *        with every slider step.  Default base 2.
  * @constructor
  * @augments NetSimSlider
  */
 NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
   options.min = utils.valueOr(options.min, LOGARITHMIC_DEFAULT_MIN_VALUE);
   NetSimSlider.call(this, rootDiv, options);
+
+  /**
+   * Factor by which the value increases with every slider step.
+   * @type {number}
+   * @private
+   */
+  this.logBase_ = utils.valueOr(options.logBase, LOGARITHMIC_DEFAULT_BASE);
+
+  /**
+   * Precalculate natural log of our base value, because we'll use it a lot.
+   * @type {number}
+   * @private
+   */
+  this.lnLogBase_ = Math.log(this.logBase_);
+
   this.calculateSliderBounds_();
 };
 NetSimSlider.LogarithmicSlider.inherits(NetSimSlider);
 
 NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function () {
   // Pick boundary slider values
-  this.maxSliderPosition = Math.floor(Math.log(this.maxValue_) / Math.LN2);
+  this.maxSliderPosition = this.logFloor_(this.maxValue_);
   // Add a step if we don't already land exactly on a step, to
   // compensate for the floor() operation
-  if (Math.pow(2, this.maxSliderPosition) !== this.maxValue_) {
+  if (Math.pow(this.logBase_, this.maxSliderPosition) !== this.maxValue_) {
     this.maxSliderPosition += this.step_;
   }
-  this.minSliderPosition = Math.floor(Math.log(this.minValue_) / Math.LN2);
+  this.minSliderPosition = this.logFloor_(this.minValue_);
 
   // Pick infinity slider values
   this.infinitySliderPosition = this.maxSliderPosition + this.step_;
   this.negInfinitySliderPosition = this.minSliderPosition - this.step_;
+};
+
+NetSimSlider.LogarithmicSlider.prototype.logFloor_ = function (val) {
+  var ceilThreshold = 0.0000001;
+  return Math.floor(ceilThreshold + (Math.log(val) / this.lnLogBase_));
 };
 
 /**
@@ -276,11 +300,11 @@ NetSimSlider.LogarithmicSlider.prototype.valueToSliderPosition = function (val) 
     return  this.maxSliderPosition;
   } else if (val < this.minValue_) {
     return this.isLowerBoundInfinite_ ?
-        this.negInfinitySliderPosition : this.minSliderPosition
+        this.negInfinitySliderPosition : this.minSliderPosition;
   } else if (val === this.minValue_) {
     return this.minSliderPosition;
   }
-  return Math.max(this.minSliderPosition, Math.floor(Math.log(val) / Math.LN2));
+  return Math.max(this.minSliderPosition, this.logFloor_(val));
 };
 
 /**
@@ -301,5 +325,5 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
   } else if (pos === this.minSliderPosition) {
     return this.minValue_;
   }
-  return Math.pow(2, pos);
+  return Math.pow(this.logBase_, pos);
 };
