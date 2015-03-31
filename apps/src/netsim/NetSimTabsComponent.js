@@ -155,6 +155,13 @@ NetSimTabsComponent.prototype.setRouterBandwidth = function (newBandwidth) {
   }
 };
 
+/** @param {number} newMemory in bits */
+NetSimTabsComponent.prototype.setRouterMemory = function (newMemory) {
+  if (this.routerTab_) {
+    this.routerTab_.setMemory(newMemory);
+  }
+};
+
 /** @param {string} newDnsMode */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
   if (this.dnsTab_) {
