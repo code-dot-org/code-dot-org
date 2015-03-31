@@ -2,6 +2,51 @@
   = stylesheet_link_tag 'editor/blockly_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
 
+.field
+  = f.label 'concepts'
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
+:javascript
+  function make_selection_handler(flag) {
+    return function (e) {
+      e.preventDefault();
+      $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
+    }
+  }
+  $('.select_all').click(make_selection_handler(true));
+  $('.select_none').click(make_selection_handler(false));
+
+.field
+  = f.label :video_key, 'Level Video'
+  %p Ask an engineer to add new videos to the videos.csv and data.en.yml files.
+  = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
+  .video-preview{style: 'display: block'}
+
+- video_infos = {}
+- Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
+:javascript
+  $(document).ready(function() {
+    var videoInfos = #{video_infos.to_json};
+
+    function updateVideoPreview() {
+      var selectionValue = $('.video-dropdown')[0].value;
+      if (selectionValue) {
+        var videoInfo = videoInfos[selectionValue];
+        $('.video-preview').html(createVideoWithFallback(videoInfo, 400, 400));
+        $('.video-preview').show();
+      } else {
+        $('.video-preview').hide();
+      }
+    }
+    $('.video-dropdown').change(updateVideoPreview);
+    updateVideoPreview();
+  });
+
 .field.callouteditor
   %div{id: 'callout_template', style: 'display: none;'}
     %div{class: 'callout_space'}
@@ -66,12 +111,10 @@
       %hr
   %div{id: 'all_callouts_editor'}
   %button{id: 'add_callout', type: 'button'} Add a callout
-
 .field
   = f.label :callout_json
   %div{style: '-webkit-user-select: text'}
   = f.text_area :callout_json, rows: 4
-
 :javascript
   // <![CDATA[
     var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
