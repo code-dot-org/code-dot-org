@@ -21504,6 +21504,31 @@ goog.ui.Select.prototype.setOpen = function(open, opt_e) {
 goog.ui.registry.setDecoratorByClassName(goog.getCssName("goog-select"), function() {
   return new goog.ui.Select(null)
 });
+goog.provide("Blockly.SvgTextButton");
+Blockly.SvgTextButton = function(parent, text, onMouseDown) {
+  var button = Blockly.createSvgElement("g", {"id":"addExampleButton"}, parent);
+  var padding = 7;
+  var purpleFillColor = "#7665a0";
+  this.buttonRect = Blockly.createSvgElement("rect", {"rx":12, "ry":12, "fill":purpleFillColor, "stroke":"white", "stroke-width":"2.5"}, button);
+  var textElement = Blockly.createSvgElement("text", {"x":padding, "y":padding, "class":"blocklyText"}, button);
+  textElement.textContent = text;
+  var bounds = textElement.getBoundingClientRect();
+  this.buttonRect.setAttribute("width", bounds.width + 2 * padding);
+  this.buttonRectHeight = bounds.height + padding;
+  this.buttonRect.setAttribute("height", this.buttonRectHeight);
+  this.buttonRectYOffset = -bounds.height + padding - 1;
+  this.buttonRect.setAttribute("y", this.buttonRectYOffset);
+  Blockly.bindEvent_(button, "click", null, onMouseDown);
+  this.svgGroup_ = button
+};
+Blockly.SvgTextButton.prototype.renderAt = function(xOffset, yOffset) {
+  var transformYPosition = yOffset - this.buttonRectYOffset;
+  this.svgGroup_.setAttribute("transform", "translate(" + xOffset + "," + transformYPosition + ")");
+  return yOffset + this.buttonRectHeight
+};
+Blockly.SvgTextButton.prototype.setVisible = function(visible) {
+  goog.style.showElement(this.svgGroup_, visible)
+};
 goog.provide("goog.ui.FlatButtonRenderer");
 goog.require("goog.a11y.aria.Role");
 goog.require("goog.dom.classlist");
@@ -21609,6 +21634,7 @@ goog.require("Blockly.BlockValueType");
 goog.require("Blockly.FunctionalTypeColors");
 goog.require("Blockly.ContractEditorSectionView");
 goog.require("Blockly.SvgHeader");
+goog.require("Blockly.SvgTextButton");
 goog.require("Blockly.SvgHighlightBox");
 goog.require("Blockly.DomainEditor");
 goog.require("Blockly.TypeDropdown");
@@ -21665,23 +21691,21 @@ Blockly.ContractEditor.prototype.create_ = function() {
     return currentY + this.getContractDivHeight()
   }, this), highlightBox:sharedHighlightBox, headerText:"1. Contract and Purpose Statement"});
   this.hiddenExampleBlocks_ = [];
+  this.addExampleButton = new Blockly.SvgTextButton(canvasToDrawOn, "Add Example", this.addNewExampleBlock_.bind(this));
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {headerText:"2. Examples", placeContentCallback:goog.bind(function(currentY) {
-    if(this.exampleBlocks.length === 0) {
-      return currentY
-    }
     var newY = currentY;
     newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
-    this.exampleBlocks.forEach(function(block, i) {
-      if(i !== 0) {
-        newY += EXAMPLE_BLOCK_MARGIN_BELOW
-      }
+    this.exampleBlocks.forEach(function(block) {
       block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
-      newY += block.getHeightWidth().height
+      newY += block.getHeightWidth().height;
+      newY += EXAMPLE_BLOCK_MARGIN_BELOW
     }, this);
+    newY = this.addExampleButton.renderAt(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
     newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
     return newY
   }, this), highlightBox:sharedHighlightBox, onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInExampleArea, this), this.hiddenExampleBlocks_);
+    this.addExampleButton.setVisible(!isNowCollapsed);
     this.position_()
   }, this)});
   this.hiddenDefinitionBlocks_ = [];
@@ -21782,13 +21806,21 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
     this.levelConfigForFirstOpen_ = null
   }
 };
+Blockly.ContractEditor.prototype.addNewExampleBlock_ = function() {
+  var createdExampleBlock = this.createExampleBlock_(this.functionDefinitionBlock);
+  this.addExampleBlockFromMainBlockSpace(createdExampleBlock);
+  this.position_()
+};
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function(functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
-    var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
-    this.exampleBlocks.push(movedExampleBlock);
-    movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
+    this.addExampleBlockFromMainBlockSpace(exampleBlock)
   }, this)
+};
+Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
+  var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+  this.exampleBlocks.push(movedExampleBlock);
+  movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
 };
 Blockly.ContractEditor.prototype.removeExampleBlock_ = function(block) {
   goog.array.remove(this.exampleBlocks, block);
@@ -21801,12 +21833,12 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   if(opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock)
   }
-  if(!tempFunctionDefinitionBlock.isVariable()) {
+  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue("NAME"));
+  if(!this.functionDefinitionBlock.isVariable()) {
     for(var i = 0;i < Blockly.defaultNumExampleBlocks;i++) {
-      this.createExampleBlock_(tempFunctionDefinitionBlock)
+      this.addNewExampleBlock_()
     }
   }
-  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue("NAME"))
 };
 Blockly.ContractEditor.prototype.createExampleBlock_ = function(functionDefinitionBlock) {
   var temporaryExampleBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
