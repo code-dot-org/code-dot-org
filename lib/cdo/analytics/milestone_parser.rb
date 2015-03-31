@@ -26,14 +26,18 @@ class MilestoneParser
   end
 
   def self.count
-    self.new.count
+    # Load v2 cache
+    cache_file = MILESTONE_CACHE_V2
+    File.copy(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
+    cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
+    parser = self.new(cache, AWS::S3::connect_v2!)
+    parser.count.tap{|_|IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 
-  def initialize
-    # Load v2 cache if available
-    input_file = File.file?(MILESTONE_CACHE_V2) ? MILESTONE_CACHE_V2 : MILESTONE_CACHE
-    @cache = File.file?(input_file) ? JSON.parse(IO.read(input_file)) : {}
-    @s3_client, @s3_resource = AWS::S3::connect_v2!
+  def initialize(cache, s3_client)
+    @cache = cache
+    @s3_client = s3_client
+    @s3_resource = Aws::S3::Resource.new(client: s3_client)
   end
 
   # Parses all milestone logs in s3://cdo-logs/hosts/**/dashboard/milestone.log*
@@ -55,7 +59,6 @@ class MilestoneParser
       (cache[log.key] = count_lines_of_code(log))['count']
     end
     total = counts.reduce(:+)
-    IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(cache)
     debug "Finished processing (#{(Time.now - start_time).round(2)}s), total count: #{total}"
     total
   end
@@ -78,16 +81,16 @@ class MilestoneParser
     if (cached = cache[key]).is_a?(Hash)
       return cached if etag == cached['etag']
       if cached['md5']
-        debug "#{key} modified, comparing starting contents.."
-        compare_bytes = [COMPARE_BYTE_LENGTH, length].min
+        compare_bytes = [COMPARE_BYTE_LENGTH, length, cached['length']].min
+        debug "#{key} modified, comparing starting #{compare_bytes} bytes.."
         check_value = log.get(range: "bytes=0-#{compare_bytes - 1}").body.read
         md5 = Digest::MD5.hexdigest(check_value)
         if cached['md5'] == md5
-          debug 'Starting content match, downloading remainder'
           partial_count = cached['count']
           cached_length = cached['length']
           fetch_bytes = (length - cached_length)
           fetch_params.merge!(range: "bytes=#{cached_length}-")
+          debug "Starting content match, downloading remaining #{fetch_bytes} bytes.."
         end
       end
     else
@@ -97,6 +100,7 @@ class MilestoneParser
 
     debug "Downloading #{key}, #{fetch_bytes} bytes.."
     log.get fetch_params
+    stub_fetch(key, path, fetch_bytes)
     debug "Processing #{key}.."
     # Sum up all values in the 10th tab-delimited column
     count = partial_count + `#{ext == '.gz' ? 'gunzip -c' : 'cat'} #{path} | cut -f10 | awk '{s+=$1} END {print s}'`.to_i
@@ -109,4 +113,6 @@ class MilestoneParser
     debug "Count: #{count}"
     response
   end
+
+  def stub_fetch(key, path, bytes); end
 end
