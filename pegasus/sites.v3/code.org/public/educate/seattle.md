@@ -9,8 +9,7 @@ title: Bring Computer Science to Your School (Seattle)
 Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students lead in virtually any career  from architecture to zoology.
 
 ## Professional development — at no cost to schools
-
-### Participating teachers consistently call our professional development, "The best professional development I've ever had!"
+Participating teachers consistently call our professional development, "The best professional development I've ever had!" Training for next school year begins in May.
 
 <%= view :testimonials %>
 
@@ -31,7 +30,7 @@ Code.org has partnered with 12 Seattle-area districts. We're looking for more lo
 - Eatonville Public Schools
 - Bethel Public Schools
 
-### Grades K-5
+### Grades K-5 (open to open to all elementary school teachers, in any district)
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all.
 
@@ -57,8 +56,7 @@ Learn more about curriculum for [Computer Science in Science](/curriculum/mss) a
 [<button>Sign up</button>](http://www.jotformpro.com/form/50198109848969)
 
 ### High School
-
-Schools and teachers can [sign up now](https://bit.ly/ApplyToCode) to offer [Exploring Computer Science](exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
+Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer [Exploring Computer Science](http://exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
 
 - No prior computer science experience is required!
 - Per-session stipends to teachers are paid by Code.org
