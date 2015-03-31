@@ -1,3 +1,4 @@
+@skip
 Feature: Editing examples in the contract editor
 
 Background: Testing example add and removal
