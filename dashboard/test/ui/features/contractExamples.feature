@@ -1,4 +1,3 @@
-@skip
 Feature: Editing examples in the contract editor
 
 Background: Testing example add and removal
@@ -12,12 +11,9 @@ Background: Testing example add and removal
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"
 
-  And "first example" refers to block "118"
-  And "first example call" refers to block "119"
-  And "second example" refers to block "120"
-  And "second example call" refers to block "121"
-
-  And "function definition" refers to block "117"
+  When "first example" refers to the open contract editor example 0
+  When "second example" refers to the open contract editor example 1
+  When "function definition" refers to the open contract editor function definition
 
 @no_ie
 Scenario: Dragging an example to delete it
