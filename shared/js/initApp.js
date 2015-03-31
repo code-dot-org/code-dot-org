@@ -175,6 +175,12 @@ dashboard.updateTimestamp = function() {
   }
 };
 
+var appToProjectUrl = {
+  turtle: '/p/artist',
+  studio: '/p/playlab',
+  applab: '/p/applab'
+};
+
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var channelId = dashboard.currentApp.id;
@@ -182,7 +188,7 @@ dashboard.saveProject = function(callback) {
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : window.Applab && Applab.getCode();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.currentApp.level = window.location.pathname;
+  dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
@@ -197,7 +203,7 @@ dashboard.saveProject = function(callback) {
     channels().create(dashboard.currentApp, function(data) {
       if (data) {
         dashboard.currentApp = data;
-        location.hash = dashboard.currentApp.id + '/edit';
+        location.href = dashboard.currentApp.level + '#' + dashboard.currentApp.id + '/edit';
         dashboard.updateTimestamp();
         callbackSafe(callback, data);
       } else {
@@ -291,6 +297,11 @@ function initApp() {
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
+  } else if (appOptions.isLegacyShare) {
+    dashboard.currentApp = {
+      name: 'Untitled Project'
+    };
+    dashboard.showMinimalProjectHeader();
   }
   window[appOptions.app + 'Main'](appOptions);
 }
