@@ -113,24 +113,19 @@
           %td Callout text
         %tr
           %td
-            %input{class: "remove_callout", type: 'button', value: 'Remove'}
-          %td
             %input{class: "element_id", type: 'text', placeholder: '#runButton'}
           %td
             %input{class: "localization_key", type: 'text', placeholder: 'level_name_callout1'}
           %td{colspan: 4}
             %input{class: "callout_text", type: 'text', placeholder: 'Text of callout', style: "width: 100%"}
         %tr
-          %td Classes
           %td Qtip on callout
           %td Qtip points to Element
           %td Show when
           %td X distance
           %td Y distance
-          %td Show when
-        %tr    
-          %td
-            %input{class: "classes", type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
+          %td Classes
+        %tr
           %td
             %select{class: "my"}
               %option{value: 'top left'} Top left
@@ -166,8 +161,8 @@
           %td
             %input{class: "y", type: 'number', style: 'width: 80px;'}
           %td
-            %input{class: "qtip_hide", type: 'checkbox'}
-      %button{id: "remove_callout", type: 'button'} X Remove callout
+            %input{class: "classes", type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
+      %button{class: "remove_callout", type: 'button'} X Remove callout
       %hr
   %div{id: "all_callouts_editor"}
   %button{id: "add_callout", type: 'button'} + Add a callout
@@ -252,10 +247,9 @@
     // Create callout spaces for each callout in the original JSON
     if (calloutJSON.length > 0) {
       var callouts_to_update = JSON.parse(callout_editor.getValue());
-      $.each(callouts_to_update, function (callout) {
+      $.each(callouts_to_update, function (index, callout) {
         updateTemplate(callout, $createNewCalloutSpace());
       });
-      updateCalloutJSON();
     }
 
     /**
@@ -265,7 +259,7 @@
      */
     function updateTemplate(model, $template) {
       $.each(model, function (key, value) {
-        if (typeof value === 'object') {
+        if (value && typeof value === 'object') {
           updateTemplate(value, $template);
         } else {
           $template.find('.' + key).val(model[key]);
@@ -283,7 +277,8 @@
         if (typeof value === 'object') {
           updateModel(value, $template);
         } else {
-          model[key] = $template.find('.' + key).val();
+          var value = $template.find('.' + key).val();
+          model[key] = typeof model[key] === 'number' ? +value : value;
         }
       });
     }
@@ -291,7 +286,7 @@
     function updateCalloutJSON() {
       var updated_callouts = [];
       $('#all_callouts_editor .callout_space').each(function () {
-        var model = $.extend({}, calloutModel);
+        var model = $.extend(true, {}, calloutModel);
         updateModel(model, $(this));
         updated_callouts.push(model);
       });
@@ -314,7 +309,7 @@
       updateCalloutJSON();
     });
 
-    $(document).on("change", ".callouteditor input, .callouteditor select", function () {
+    $(".callouteditor").on("input", function () {
       updateCalloutJSON();
     });
   // ]]>
