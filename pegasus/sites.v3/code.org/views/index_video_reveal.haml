@@ -12,4 +12,7 @@
       %a{href: "http://s3.amazonaws.com/cdo-videos/#{download_filename}"}
         %img{style: "width: 44px; padding-top: 5px;", src: "/images/download.png"}
 
-
+  - unless download_path.nil_or_empty?
+    %div{style: "float:right"}
+      %a{href: download_path}
+        %img{style: "width: 44px; padding-top: 5px;", src: "/images/download.png"}
