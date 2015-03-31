@@ -23,7 +23,10 @@ template: none
     .col-sm-12
       %form.form-inline
         %label.control-label{for: "cohort-filter-program-type"} Filter by program type
-        %select#cohort-filter-program-type.form-control{"ng-model" => "search.program_type", "ng-options"=>"program_type.short_name for program_type in program_types"}
+        %select.form-control{'ng-model' => 'search.program_type'}
+          %option.placeholder{value:'', label:'--Show All Programs--'}
+          %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
+            {{program_type.long_name}}
         %label.control-label{for: "cohort-filter-district"} Filter by district
         %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts"}
           %option.placeholder{value:'', label:'--Show All Districts--'}
@@ -41,7 +44,7 @@ template: none
           Districts
         %th.manage-th
           Manage
-      %tr{"ng-repeat" => "cohort in cohorts | specificDistrict:search.district | orderBy:sortOrder", style: "vertical-align:top"}
+      %tr{"ng-repeat" => "cohort in cohorts | specificDistrict:search.district | matchingProgramType:search.program_type | orderBy:sortOrder", style: "vertical-align:top"}
         %td
           {{cohort.name}}
         %td
