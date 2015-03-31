@@ -175,6 +175,6 @@ PARENTS = {}.tap do |results|
 end
 puts "#{PARENTS.count} parents loaded."
 
-export_contacts_to_csv ADMINS, 'houston-admins.csv'
-export_contacts_to_csv TEACHERS, 'houston-teachers.csv'
-export_contacts_to_csv PARENTS, 'houston-parents.csv'
+export_contacts_to_csv ADMINS, "${key}-admins.csv"
+export_contacts_to_csv TEACHERS, "${key}-teachers.csv"
+export_contacts_to_csv PARENTS, "${key}-parents.csv"
