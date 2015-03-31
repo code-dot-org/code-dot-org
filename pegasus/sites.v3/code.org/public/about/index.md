@@ -52,7 +52,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
+Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 

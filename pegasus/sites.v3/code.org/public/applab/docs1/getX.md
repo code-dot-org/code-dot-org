@@ -23,6 +23,8 @@ Returns the current x coordinate in pixels of the turtle.
 
 [/short_description]
 
+The x coordinate is the distance from the turtle to the left of the screen.
+
 [/description]
 
 ### Examples

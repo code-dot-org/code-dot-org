@@ -6,13 +6,7 @@ title: Bring Computer Science to Your School (Seattle)
 
 ## Why computer science?
 
-Computer science opens more doors for students than any other discipline in today’s world.
-
-Learning even the basics will help students lead in virtually any career  from architecture to zoology.  Just as we teach students multiplication and division, or how electricity works, it’s important for every 21st century student to have a chance to “dissect an app,” or learn how the Internet works.
-
-<br />
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students lead in virtually any career  from architecture to zoology.
 
 ## Professional development — at no cost to schools
 
@@ -20,9 +14,9 @@ Learning even the basics will help students lead in virtually any career  from a
 
 <%= view :testimonials %>
 
-## Seattle-area teachers:
+## Puget Sound-area teachers:
 
-Code.org has partnered with
+Code.org has partnered with 12 Seattle-area districts. We're looking for more local teachers — in these districts and beyond — to join professional development programs. 
 
 - Seattle Public Schools
 - Bainbridge Island Public Schools
@@ -51,14 +45,16 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 ### Middle School
 
-Code.org is delivering a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss](/curriculum/mss).
+Code.org is delivering a middle school science program consisting of instructional modules and professional development for the introduction of computer science concepts into math and science classrooms.
+
+Learn more about curriculum for [Computer Science in Science](/curriculum/mss) and [Computer Science in Algebra](/curriculum/msm).
 
 - There is no cost for schools to apply
 - Per-session stipends to teachers are paid by Code.org
-- This program is open to all Seattle-area middle schools<br />
+- This program is open to all public Seattle-area middle schools<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](https://bit.ly/ApplyToCode)
+[<button>Sign up</button>](http://www.jotformpro.com/form/50198109848969)
 
 ### High School
 
@@ -70,18 +66,24 @@ Schools and teachers can [sign up now](https://bit.ly/ApplyToCode) to offer [Exp
 - This program is open to all Seattle-area high schools.<br />
 [Learn more](/educate/professional-development)
 
-[<button>Sign up</button>](https://bit.ly/ApplyToCode)
+[<button>Sign up</button>](http://www.jotformpro.com/form/50198109848969)
 
-## Seattle Parents
 
-Help Code.org bring computer science courses to Seattle-area schools:
+## Join us for an info session - Tuesday, April 14
 
-* Share this page with your teacher or principal (see [sample letter](/promote/nycletter))
+See demos, learn more about curriculum and talk with Code.org's founder Hadi Partovi during our upcoming professional development kickoff on Tuesday, April 14 from 6-8pm.
+
+[<button>Reserve a spot</button>](https://www.eventbrite.com/e/codeorgs-puget-sound-kickoff-tickets-16403153273)
+
+
+## Puget Sound-area parents
+
+Help Code.org bring computer science courses to your child's school:
+
+* Share this page with your child's teacher or principal. Ask them to get involved.
 * Make a [generous donation to Code.org](/donate)
 * See [other ways to help](/help)
 
-
-## Questions? 
+## More questions?
 
 Get in touch with us [here](http://support.code.org/).
-

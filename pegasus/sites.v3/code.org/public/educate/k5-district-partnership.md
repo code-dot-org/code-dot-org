@@ -11,7 +11,8 @@ Ideal partnerships are with school districts interested in bringing computer sci
 [<button>Appy Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
 <br />
 <br />
-**Unable to partner?** Teachers in your district can attend a K-5 workshop hosted by a Code.org Affiliate near you. 
+
+**Unable to partner?** Teachers in your district can attend a [K-5 workshop](/professional-development-workshops) hosted by a local Code.org Affiliate. 
 
 [<button>Find a K-5 Workshop</button>](/professional-development-workshops)
 
@@ -45,6 +46,8 @@ Ideal partnerships are with school districts interested in bringing computer sci
 This is a significant enough commitment from Code.org that we can only support a limited number of districts, and therefore would like to understand <a href="https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform" target="_blank">your intentions</a> as a school district to incorporate computer science into the district curriculum and teacher professional development. 
 
 [<button>K-5 District Application</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)
+
+We will review applications on a rolling basis until June 2015. After that we will review applications once every 3 months. **This program is currently only operated in the US.**
 
 ## Encourage your school district to apply
 

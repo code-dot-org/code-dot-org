@@ -63,8 +63,7 @@ getDirection()
 [parameters]
 
 ### Parameters
-
-None.
+`getDirection()` does not take any parameters.
 
 [/parameters]
 
