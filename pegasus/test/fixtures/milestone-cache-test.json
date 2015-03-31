@@ -1,0 +1,32 @@
+{
+  "hosts/folder_1/dashboard/milestone.log": {
+    "count": 15,
+    "etag": "x",
+    "length": 1253,
+    "md5": "23531526f8570b5e84eed12dad5be016"
+  },
+  "hosts/folder_1/dashboard/milestone.log.gz": {
+    "count": 15,
+    "etag": "y"
+  },
+  "hosts/folder_2/dashboard/milestone.log": {
+    "count": 15,
+    "etag": "x",
+    "length": 1253,
+    "md5": "23531526f8570b5e84eed12dad5be016"
+  },
+  "hosts/folder_2/dashboard/milestone.log.gz": {
+    "count": 15,
+    "etag": "y"
+  },
+  "hosts/folder_3/dashboard/milestone.log": {
+    "count": 15,
+    "etag": "x",
+    "length": 1253,
+    "md5": "23531526f8570b5e84eed12dad5be016"
+  },
+  "hosts/folder_3/dashboard/milestone.log.gz": {
+    "count": 15,
+    "etag": "y"
+  }
+}
