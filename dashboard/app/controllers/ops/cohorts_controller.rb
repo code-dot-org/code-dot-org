@@ -90,7 +90,7 @@ module Ops
         elsif district_params.is_a?(Hash) && district_params[:id]
           teacher_params[:district_id] = district_params[:id]
         end
-        User.find_or_create_teacher(teacher_params)
+        User.find_or_create_teacher(teacher_params, current_user)
       end
     end
 
