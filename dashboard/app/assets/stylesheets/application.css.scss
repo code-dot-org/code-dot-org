@@ -967,6 +967,15 @@ input.header_input {
     width: $startWidth + $growth;
     height: $startHeight + $growth;
   }
+
+  html[dir=rtl] & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
 }
 
 .x-close {
@@ -1001,7 +1010,6 @@ html[dir=rtl] .qtip-content {
 
 .cdo-qtips {
   z-index: 1;
-
 
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
