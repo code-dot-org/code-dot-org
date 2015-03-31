@@ -127,8 +127,8 @@ NetSimSlider.prototype.render = function () {
 
   var renderedMarkup = $(markup({
     instanceID: this.instanceID_,
-    minValue: this.valueToLabel(minValue),
-    maxValue: this.valueToLabel(maxValue)
+    minValue: this.valueToShortLabel(minValue),
+    maxValue: this.valueToShortLabel(maxValue)
   }));
   this.rootDiv_.html(renderedMarkup);
 
@@ -219,6 +219,15 @@ NetSimSlider.prototype.valueToLabel = function (val) {
     return i18n.unlimited();
   }
   return val;
+};
+
+/**
+ * Alternate label converter, used for slider end labels.
+ * @param {number} val - numeric value of the control
+ * @returns {string} - localized string representation of value
+ */
+NetSimSlider.prototype.valueToShortLabel = function (val) {
+  return this.valueToLabel(val);
 };
 
 /**
