@@ -69,6 +69,11 @@ module Ops
       assert dc.teacher?
       assert dc.district_contact?
       assert_equal [district], dc.districts_as_contact
+      assert dc.invitation_token
+      assert dc.teacher?
+      assert_equal 'New', dc.ops_first_name
+      assert_equal 'user', dc.ops_last_name
+      assert dc.invited_by == @admin
 
       # new district knows about the contact
       assert_equal dc, district.contact
