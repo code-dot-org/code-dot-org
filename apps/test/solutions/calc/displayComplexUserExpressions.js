@@ -527,7 +527,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'simple target, hasSingleFunction user expression', function () {
+  displayComplexUserExpressionTest(assert, 'simple target, computesFunctionCall user expression', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
     targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
