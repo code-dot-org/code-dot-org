@@ -155,16 +155,12 @@ Blockly.ContractEditor.prototype.create_ = function() {
       placeContentCallback: goog.bind(function (currentY) {
         var newY = currentY;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
-        if (this.exampleBlocks.length !== 0) {
-          this.exampleBlocks.forEach(function (block, i) {
-            if (i !== 0) {
-              newY += EXAMPLE_BLOCK_MARGIN_BELOW;
-            }
-            block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
-            newY += block.getHeightWidth().height;
-          }, this);
-          newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
-        }
+
+        this.exampleBlocks.forEach(function (block) {
+          block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
+          newY += block.getHeightWidth().height;
+          newY += EXAMPLE_BLOCK_MARGIN_BELOW;
+        }, this);
 
         newY = this.addExampleButton.renderAt(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
