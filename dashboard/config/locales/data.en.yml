@@ -454,6 +454,8 @@ en:
         'infinity_playlab_intro' : 'Play Lab - Introduction'
         'infinity_playlab_events' : 'Play Lab - Events'
         'infinity_playlab_repeat_forever' : 'Play Lab - Repeat Forever'
+        'msm_8_coordinates' : 'Coordinate Planes'
+        'msm_9_pythagorean' : 'Pythagorean Theorem
     callout:
       text:
         # Keyed by #{callout.localization_key}
