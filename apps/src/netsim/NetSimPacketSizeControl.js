@@ -8,7 +8,6 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var i18n = require('../../locale/current/netsim');

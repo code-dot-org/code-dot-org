@@ -26,6 +26,7 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {function} callbacks.chunkSizeChangeCallback
  * @param {function} callbacks.encodingChangeCallback
  * @param {function} callbacks.routerBandwidthChangeCallback
+ * @param {function} callbacks.routerMemoryChangeCallback
  * @param {function} callbacks.dnsModeChangeCallback
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
@@ -62,6 +63,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemoryChangeCallback_ = callbacks.routerMemoryChangeCallback;
 
   /**
    * @type {function}
@@ -122,7 +129,8 @@ NetSimTabsComponent.prototype.render = function () {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
         this.levelConfig_,
-        this.routerBandwidthChangeCallback_);
+        this.routerBandwidthChangeCallback_,
+        this.routerMemoryChangeCallback_);
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {

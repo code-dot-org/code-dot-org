@@ -245,6 +245,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           chunkSizeChangeCallback: this.setChunkSize.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
           routerBandwidthChangeCallback: this.changeRemoteRouterBandwidth.bind(this),
+          routerMemoryChangeCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
