@@ -14,7 +14,20 @@
     "skip_instructions_popup": "false",
     "ideal": "8",
     "slider_speed": "0.4",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   },
   "md5": "a06688ca8847b5e4bd95c13375a7fea9"
 }]]></config>
@@ -101,6 +114,37 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#228b22</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">200</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">40</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">80</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">130</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="draw_colour" inline="true">
@@ -112,7 +156,7 @@
               <next>
                 <block type="draw_turn_by_constant">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE">30</title>
+                  <title name="VALUE">90</title>
                   <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
@@ -131,47 +175,6 @@
                                   <title name="VALUE">130</title>
                                 </block>
                               </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </required_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#228b22</title>
-            </block>
-          </value>
-          <next>
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE">90</title>
-              <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">200</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">40</title>
-                      <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">80</title>
-                          <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">130</title>
                             </block>
                           </next>
                         </block>
