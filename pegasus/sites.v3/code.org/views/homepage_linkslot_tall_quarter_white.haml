@@ -6,7 +6,10 @@
         .header.underscorehover{style: "font-family: 'Gotham 7r', sans-serif"}
           = I18n.t(entry[:text1_s])
         .sentence{style: "font-size:14px; opacity:0.9"}
-          = I18n.t(entry[:param1_s])
+          - unless entry[:param1_s].nil_or_empty?
+            = I18n.t(entry[:param1_s])
+          - else
+            &nbsp;
     .thelinks{style: "background-color: rgb(#{entry[:param3_s]}); padding:5px; padding-top:20px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;"}
       - entry[:links].each do |link|
         - if link[:language_supported_s].nil_or_empty? || (link[:language_supported_s] == "en" && request.language == "en") || (link[:language_supported_s] == "not en" && request.language != "en")
