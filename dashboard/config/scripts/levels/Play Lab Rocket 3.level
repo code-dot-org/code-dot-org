@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n  \tif (this.studio_.tickCount === 1) {\r\n      this.seconds = 0;\r\n      this.height = 0;\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.time = this.seconds;\r\n    Studio.Globals.succeeded = ((this.seconds == 8 && this.height == 320) && (this.rocket_height(4) == 160));\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
-    "failure_condition": "function () {\r\n  return (Studio.Globals.time > 8 && !Studio.Globals.succeeded);\r\n }",
+    "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  var SECONDS_TO_RUN = Studio.customLogic.SECONDS_TO_RUN;\r\n  var targetHeight = SECONDS_TO_RUN * 40;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(4) === 4 * 40;\r\n}",
+    "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > Studio.customLogic.SECONDS_TO_RUN;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Awesome, now can you update that function so that our rocket moves more quickly? Make sure to update the purpose statement, examples, and function definition to launch a rocket at 40 meters per second.",
     "is_k1": "false",

@@ -70,17 +70,18 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| id | string | Yes | The id of the element.  |
+| x | number | No | The x position in pixels of the upper left corner of the element.  |
+| y | number | No | The y position in pixels of the upper left corner of the element.  |
+| width | number | No | The horizontal width in pixels of the element.  |
+| height | number | No | The vertical height in pixels of the element.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+Boolean value true / false
 
 [/returns]
 
@@ -88,7 +89,6 @@ No return value. Outputs to the display only.
 
 ### Tips
 - Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
 
 [/tips]
 

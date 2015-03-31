@@ -13,6 +13,7 @@ goog.require('Blockly.BlockValueType');
 goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
 goog.require('Blockly.SvgHeader');
+goog.require('Blockly.SvgTextButton');
 goog.require('Blockly.SvgHighlightBox');
 goog.require('Blockly.DomainEditor');
 goog.require('Blockly.TypeDropdown');
@@ -141,22 +142,27 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
+  /** @type {Blockly.SvgTextButton} */
+  this.addExampleButton = new Blockly.SvgTextButton(
+    canvasToDrawOn,
+    "Add Example", // TODO(bjordan): i18n
+    this.addNewExampleBlock_.bind(this)
+  );
+
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       headerText: "2. Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
-        if (this.exampleBlocks.length === 0) {
-          return currentY;
-        }
         var newY = currentY;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
-        this.exampleBlocks.forEach(function(block, i) {
-          if (i !== 0) {
-            newY += EXAMPLE_BLOCK_MARGIN_BELOW;
-          }
+
+        this.exampleBlocks.forEach(function (block) {
           block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
           newY += block.getHeightWidth().height;
+          newY += EXAMPLE_BLOCK_MARGIN_BELOW;
         }, this);
+
+        newY = this.addExampleButton.renderAt(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
         return newY;
       }, this),
@@ -165,7 +171,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInExampleArea, this),
           this.hiddenExampleBlocks_);
-
+        this.addExampleButton.setVisible(!isNowCollapsed);
         this.position_();
       }, this)
     });
@@ -312,6 +318,16 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 };
 
 /**
+ * Adds a new example block to the editor for the given function definition
+ * @private
+ */
+Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
+  var createdExampleBlock = this.createExampleBlock_(this.functionDefinitionBlock);
+  this.addExampleBlockFromMainBlockSpace(createdExampleBlock);
+  this.position_();
+};
+
+/**
  * @param {!String} functionName function which will have its examples moved to
  *    the editor
  * @private
@@ -319,11 +335,15 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
-    var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
-    this.exampleBlocks.push(movedExampleBlock);
-    movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
-      this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
+    this.addExampleBlockFromMainBlockSpace(exampleBlock)
   }, this);
+};
+
+Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
+  var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+  this.exampleBlocks.push(movedExampleBlock);
+  movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
+    this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
 };
 
 /**
@@ -347,13 +367,13 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     opt_blockCreationCallback(tempFunctionDefinitionBlock);
   }
 
-  if (!tempFunctionDefinitionBlock.isVariable()) {
+  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
+
+  if (!this.functionDefinitionBlock.isVariable()) {
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-      this.createExampleBlock_(tempFunctionDefinitionBlock);
+      this.addNewExampleBlock_();
     }
   }
-
-  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
 };
 
 /**
