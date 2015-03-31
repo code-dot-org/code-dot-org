@@ -1,4 +1,4 @@
-%select{:onchange=>"setLanguageCookie(this.value); location.reload(true);" }
+%select{:onchange=>"setLanguageCookie(this.value); location.reload(true);", :style=>'color: black'}
   -DB[:cdo_languages].all.each do |i|
     -selected = request.language == i[:code_s]
     %option{value:i[:code_s], selected:selected}= i[:name_s]

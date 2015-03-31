@@ -115,10 +115,6 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Comece
           com um quadrado<br/>Coloque um triângulo abaixo do quadrado<br/>Coloque
           um paralelogramo à direita do triângulo
-        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Múltipla Escolha
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Comece
@@ -176,6 +172,37 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          bloco <br> - bloco <br> / bloco <br> * bloco <br> 0 # bloco <br> ??? # bloco
+          <br> bloco de tamanho'
+        Blue colored blocks are associated with __________ ?: Blocos de cor azul estão
+          associados com __________ ?
+        a image: uma imagem
+        a number: um número
+        a string: uma string
+        boolean: booleano
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: uma imagem
+        a number: um número
+        a string: uma string
+        boolean: booleano
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: uma imagem
+        a number: um número
+        a string: uma string
+        boolean: booleano
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: uma imagem
+        a number: um número
+        a string: uma string
+        boolean: booleano
       4-5 artist multi 1:
         Artist Multiple Choice: O Artista - Múltipla escolha
         Which blocks draw a rectangle with a perimeter of 100?: Quais blocos desenham
@@ -233,12 +260,6 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
-        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
-        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Depuração da abelha - Múltipla escolha
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -304,10 +325,6 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ é uma cidade _____.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ é _____ uma _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene é uma cidade _____.</h4>
-        ? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
-        : Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Múltipla Escolha
         Which of these pictures best represents crowdsourcing?: Qual dessas figuras
@@ -362,34 +379,18 @@
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou, <br/>Lou,
           Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.
-        2: '? Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
-          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
-          na manteiga, <br/>Xô, mosca, xô,'
-        3: ': Lou, Lou, venha para o meu Lou, <br/>Lou, Lou, venha para o meu Lou,
-          <br/>Lou, Lou, venha para o meu Lou, <br/>Venha para o meu Lou, minha querida.<br/><br/><p>Moscas
-          na manteiga, <br/>Xô, mosca, xô,'
-        4: '? Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
-          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
-          o meu Lou, minha querida.'
-        5: ': Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Moscas na manteiga, <br/>Xô,
-          mosca, xô, <br/>Moscas na manteiga, <br/>Xô, mosca, xô, <br/>Venha para
-          o meu Lou, minha querida.'
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        4: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
+        5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
       4-5 Suncatchers Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -402,8 +403,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Qual resposta
-          descreve mais precisamente o movimento do unicórnio?
         The unicorn moves across the screen: O unicórnio se movimenta pela tela
         The unicorn's y value changes: O valor de y do unicórnio muda
         The unicorn moves to the left: O unicórnio se move para a esquerda
@@ -602,10 +601,6 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Código Racket para expressões matemáticas
         0: '? Escolha o código Racket que corresponde à expressão matemática dada.
@@ -620,10 +615,6 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Programação usando Racket
         Select the best answer to the question.: Selecione a melhor resposta para
@@ -643,7 +634,6 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Contratos válidos
         Pick the best answer to the question.: Escolha a melhor resposta para a pergunta.
@@ -666,101 +656,100 @@
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x?: What is the value of x?
-        a function: a function
+        What is the value of x?: Qual é o valor de x?
+        a function: uma função
         15: '15'
         x: x
       msm variables multi 10:
-        f(x) = x * 17: f(x) = x * 17
-        What is the name of the function?: What is the name of the function?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the function?: Qual é o nome da função?
         f: f
         x: x
         17: '17'
       msm variables multi 11:
-        f(x) = x * 17: f(x) = x * 17
-        What is the name of the parameter?: What is the name of the parameter?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the parameter?: Qual é o nome do parâmetro?
         f: f
         x: x
         17: '17'
       msm variables multi 12:
-        (define (f x) (*x 17)): (define (f x) (*x 17))
-        What is the name of the variable?: What is the name of the variable?
+        (define (f x) (*x 17)): (defina (f x) (*x 17))
+        What is the name of the variable?: Qual é o nome da variável?
         f: f
         x: x
         17: '17'
       msm variables multi 13:
-        f(x) = x * 17: f(x) = x * 17
-        What is f(1)?: What is f(1)?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What should f(1) produce?: O que f(1) deve produzir?
         x: x
         117: '117'
         17: '17'
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
-        What is the value of a + b?: What is the value of a + b?
+        What is the value of a + b?: Qual é o valor de a + b?
         8: '8'
-        function: function
+        function: função
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x-10?: What is the value of x-10?
-        a function: a function
+        What is the value of x-10?: Qual é o valor de x-10?
+        a function: uma função
         5: '5'
         x: x
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of x?: What is the value of x?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of x?: Qual é o valor de x?
         3: '3'
         15: '15'
-        do not know: do not know
+        do not know: não sei
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of (p - x)?: What is the value of (p - x)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of (p - x)?: Qual é o valor de (p - x)?
         q: q
         3: '3'
         5: '5'
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of string-length(q)?: Qual é o valor de comprimento-string(q)?
         1: '1'
         hello: olá
         5: '5'
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: Qual é o nome da função?
         f: f
         x: x
         3: '3'
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Qual é o nome da variável?
         f: f
         x: x
         3: '3'
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        What is f(2)?: Quanto é f(2)?
         6: '6'
         5: '5'
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: Qual é o nome dessa função?
         g: g
         y: true
         3: '3'
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: Qual é o nome do parâmetro?
         g: g
         y: true
         3: '3'
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: O que g(2) deve retornar?
         6: '6'
         5: '5'
         y: true
@@ -778,53 +767,131 @@
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Imagens multi strings
           1.blocks4.start_blocks, 300, 100
       PDK5 Basic CS:
-        Video Follow-up Question: Video Follow-up Question
-        Answer this question based on the video you just watched.: Answer this question
-          based on the video you just watched.
-        'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a set of instructions you give a computer to execute: a set of instructions
-          you give a computer to execute
-        a secret password: a secret password
+        Video Follow-up Question: Questões sobre o vídeo
+        Answer this question based on the video you just watched.: Responda a essa
+          pergunta com base no vídeo que você acabou de assistir.
+        'A computer program, or code, is:': 'Um programa de computador, ou código,
+          é:'
+        a part inside of a computer: uma parte dentro de um computador
+        a week-long course to learn about computers: um curso de uma semana para aprender
+          sobre computadores
+        a set of instructions you give a computer to execute: um conjunto de instruções
+          que você dá a um computador para que ele as execute
+        a secret password: uma senha secreta
+      PDK5 Beyond:
+        What do I do now?: O que é que faço agora?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Essa
+          é a última peça do nosso PD online. Parabéns! Clique em "Terminei" quando
+          você estiver pronto!
+        Im finished: Terminei
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Escrevendo seu primeiro programa de
+          computador!
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Classroom Culture:
+        Classroom Culture: Cultura de sala de aula
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Cursos de navegação 1, 2 e 3
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Visão geral dos cursos K-5
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Glossary:
+        Glossary: Glossário
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Intro:
+        Welcome!: Bem-vindo(a)!
+        Before now, have you ever participated in an online PD program?: Você já participou
+          alguma vez de um programa PD online?
+        'Yes': Sim
+        'No': Não
+      PDK5 Sequence2:
+        More Sequencing: Mais sequenciamento
+        The grey rectangle to the left of the workspace is called the: O retângulo
+          cinza à esquerda da área de trabalho é chamado de
+        toolbox: caixa de ferramentas
+        shelf: estante
+        bin: lixo
+        dropdown: menu suspenso
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Painel de controle do professor
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Test1:
+        title: título
+        description here: descrição aqui
+        Question: Pergunta
+        wrong answer: resposta errada
+        right answer: resposta certa
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: O que é uma atividade offline?
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Guias do professor para todas
+          as nossas atividades offline
+        Are you ready to move on?: Você está pronto para seguir adiante?
+        'Yes': Sim
+      PDK5 Visual Languages:
+        Visual Programming Languages: Linguagens de programação visual
+        Based on the video you saw before, please answer the question below.: Com
+          base no vídeo que você viu anteriormente, responda às questões abaixo.
+        Why are visual programming languages easier to learn than text-based programming languages?: Por
+          que as linguagens de programação visual são mais fáceis de aprender se comparadas
+          às linguagens de programação escritas?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Porque
+          você não precisa se preocupar tanto com a sintaxe, como por exemplo onde
+          colocar um ponto e vírgula
+        Because you can focus on the logic of programming: Porque você pode se concentrar
+          na lógica de programação
+        Because the commands are available in a menu rather than having to remember them yourself: Porque
+          os comandos estão disponíveis em um menu e você não precisa se lembrar de
+          todos eles
+        All of the above: Todas as anteriores
+      PDK5 What is CS:
+        What is Computer Science?: O que é ciência da computação?
+        'A computer program, or code, is:': 'Um programa de computador, ou código,
+          é:'
+        a part inside of a computer: uma parte dentro de um computador
+        a set of instructions a person gives a computer to execute: Um conjunto de
+          instruções que uma pessoa dá a um computador para que ele as execute
+        a week-long course to learn about computers: um curso de uma semana para aprender
+          sobre computadores
+        a secret password: uma senha secreta
       Play Lab Rocket 6:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
-          function would describe a rocket that reaches 24 meters at 2 seconds, 60
-          meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds
+        Rocket Multiple Choice: Foguete - Múltipla escolha
+        rocket-height(seconds) = seconds + 12: altura-foguete(segundos) = segundos
           + 12
-        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds
+        rocket-height(seconds) = seconds * 12: altura-foguete(segundos) = segundos
           * 12
-        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
-        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds
+        rocket-height(seconds) = 48 / seconds: altura-foguete(segundos) = 48 / segundos
+        rocket-height(seconds)  = seconds * 48: altura-foguete(segundos) = segundos
           * 48
       Play Lab Rocket 7:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
-        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
-          * seconds
-        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
-        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds *
-          16
+        Rocket Multiple Choice: Foguete - Múltipla escolha
+        rocket-height(seconds) = seconds * 2: altura-foguete(segundos) = segundos
+          * 2
+        rocket-height(seconds) = seconds * seconds: altura-foguete(segundos) = segundos
+          * segundos
+        rocket-height(seconds) = seconds * 4: altura-foguete(segundos) = segundos
+          * 4
+        rocket-height(seconds) = seconds * 16: altura-foguete(segundos) = segundos
+          * 16
       Play Lab Rocket 8:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
+        Rocket Multiple Choice: Foguete - Múltipla escolha
+        rocket-height(seconds) = seconds * 7 + 10: altura-foguete(segundos) = segundos
           * 7 + 10
-        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 + 7: altura-foguete(segundos) = segundos
           * 10 + 7
-        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 7 + 3: altura-foguete(segundos) = segundos
           * 7 + 3
-        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 - 3: altura-foguete(segundos) = segundos
           * 10 - 3
       test multi image:
         Maze Multiple Choice Two: Labirinto de Múltipla Escolha Dois
@@ -852,9 +919,9 @@
         George Washington: Marechal Deodoro da Fonseca
         George Jetson: Marechal Rondon
       Test 1:
-        This is a test: This is a test
-        whatever: whatever
-        this is a question?: this is a question?
+        This is a test: Isso é um teste
+        whatever: seja o que for
+        this is a question?: isso é uma pergunta?
         wrong answer: resposta errada
         right answer: resposta certa
       unique level name here:

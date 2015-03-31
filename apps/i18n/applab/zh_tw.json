@@ -8,7 +8,7 @@
   "catText": "文本",
   "catVariables": "變數類別",
   "continue": "繼續 ",
-  "container": "create container",
+  "container": "建立容器",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
   "finalLevel": "恭喜！你已經完成最後的關卡。",
   "nextLevel": "恭喜！你已經完成這個關卡。",

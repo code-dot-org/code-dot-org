@@ -8,8 +8,11 @@ module Ops
       @request.headers['Accept'] = 'application/json'
       @admin = create(:admin)
       sign_in @admin
-      @cohort = create(:cohort)
-      @workshop = @cohort.workshops.first
+      @workshop = create(:workshop)
+      @cohort = @workshop.cohort
+      @cohort_district = create(:cohorts_district, cohort: @cohort)
+      @cohort = @cohort.reload
+      @district = @cohort_district.district
       @facilitator = create(:facilitator)
     end
 
@@ -41,7 +44,7 @@ module Ops
     test 'District contacts can view all workshops in all cohorts in their district' do
       #87054994 (part 1)
       sign_out @admin
-      sign_in @workshop.districts.first.contact
+      sign_in @district.contact
       get :index
       assert_response :success
       assert_equal 1, JSON.parse(@response.body).length
@@ -61,7 +64,7 @@ module Ops
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       assert_difference 'Workshop.count' do
-        post :create, workshop: {name: 'test workshop', program_type: 'CSP', cohort_id: @cohort, facilitator_ids: [@facilitator]}
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitator_ids: [@facilitator]}
       end
       assert_response :success
     end

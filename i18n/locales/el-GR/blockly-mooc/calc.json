@@ -1,13 +1,18 @@
 {
-  "compute":"υπολόγισε",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "emptyFunctionalBlock":"Έχετε ένα μπλόκ με κενό περιεχόμενο.",
   "equivalentExpression":"Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση.",
-  "extraTopBlocks":"Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"υπολογισμός",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές.",
   "goal":"Στόχος:",
-  "levelIncompleteError":"Your expression does not match the goal.",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
+  "levelIncompleteError":"Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Η έκφρασή σας δεν περιέχει την μεταβλητή {var}.",
+  "reinfFeedbackMsg":"Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!",
   "yourExpression":"Η έκφρασή σας:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."
 }

@@ -38,14 +38,13 @@
     display: none;
   }
 
-
 #pageheader-wrapper
-  - pageheader_class = request.path_info == "/index2" ? "pageheader_translucent" : ""
+  - pageheader_class = ["/index2", "/index3", "/index4"].any? { |path| request.path_info.include? path } ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left
         %a{:href=>"/"}
-          %img#logo{:src=>'/images/logo.png'}
+          %img#logo{:src=>'/images/logo.png', :style=>'margin-left:5px'}
 
       #right
         #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}

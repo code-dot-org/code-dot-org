@@ -13,7 +13,7 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'google_drive', '~> 0.3.10'
+gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 
 group :development do
@@ -93,11 +93,11 @@ gem 'nokogiri', '1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger'
+gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
+
+gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.1.1'
-
-gem 'newrelic_rpm'
 
 gem 'geocoder'
 
@@ -137,3 +137,6 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 gem 'react-rails'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
+gem 'aws-sdk', '~> 2'
+
+gem 'rubocop', require: false, group: [:development, :staging]

@@ -330,7 +330,6 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Which answer most accurately describes the unicorn's movement?
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
@@ -548,7 +547,6 @@ en:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         '15': '15'
@@ -573,7 +571,7 @@ en:
         '17': '17'
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is f(1)?: What is f(1)?
+        What should f(1) produce?: What should f(1) produce?
         x: x
         '117': '117'
         '17': '17'
@@ -730,23 +728,18 @@ en:
         a secret password: a secret password
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds + 12
-        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds * 12
-        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
-        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds * 48
+        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
+        rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds * 12
+        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
+        rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
       Play Lab Rocket 7:
         Rocket Multiple Choice: Rocket Multiple Choice
-        ? Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?
-        : Which function would describe a rocket that reaches 4 meters at 2 seconds, 16 meters at 4 seconds, and  256 meters at 16 seconds?
         rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
         rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds * seconds
         rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
         rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds * 16
       Play Lab Rocket 8:
         Rocket Multiple Choice: Rocket Multiple Choice
-        ? Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?
-        : Which function would describe a rocket that reaches 47 meters at 5 seconds, 97 meters at 10 seconds, and 147 meters at 15 seconds?
         rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds * 7 + 10
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds * 10 + 7
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3

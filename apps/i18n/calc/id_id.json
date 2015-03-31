@@ -1,16 +1,18 @@
 {
-  "compute": "hitung",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "divideByZeroError": "Program Anda menghasilkan pembagian dengan nol.",
+  "emptyComputeBlock": "Kamu harus melampirkan blok ke blok \"menghitung\".",
+  "emptyFunctionalBlock": "Kamu memiliki blok dengan masukan yang tidak terisi.",
   "equivalentExpression": "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis.",
+  "evaluate": "evaluasi",
   "extraTopBlocks": "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?",
-  "failedInput": "Fungsi and tidak memberikan hasil yang tepat bagi semua nilai.",
+  "failedInput": "Fungsi Kamu tidak memberikan hasil yang tepat bagi semua nilai.",
   "goal": "Tujuan:",
-  "levelIncompleteError": "Your expression does not match the goal.",
+  "levelIncompleteError": "Ekspresi Kamu tidak cocok dengan tujuan.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Ekspresi Anda kehilangan variabel {var}.",
   "reinfFeedbackMsg": "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!",
   "yourExpression": "Ekspresimu:",
-  "wrongInput": "You are calling your function with the wrong value.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "Anda memanggil fungsi milik sendiri dengan nilai yang salah.",
+  "wrongOtherValuesX": "Ekspresi Anda menghasilkan nilai yang salah jika kami menvariasikan {var}.",
+  "wrongResult": "Ekspresi Anda tidak mengembalikan hasil yang benar."
 }

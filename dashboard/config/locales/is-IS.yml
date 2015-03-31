@@ -22,6 +22,7 @@
           future: má ekki vera í framtíð
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
+  submit: Senda
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'
@@ -347,8 +348,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
+    email_confirm_wrong_email: (Rangt netfang?)
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
     new_password_hint: (hafðu autt ef þú vilt ekki breyta því)
     current_password_hint: (við þurfum að fá núverandi lykilorð þitt til að staðfesta
@@ -565,7 +566,7 @@
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
             13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
         Hour of Code:
-          title: Klukkustund kóðunar
+          title: Klukkustund kóðunar 2013
           description: ''
         edit-code:
           title: Breyta kóða
@@ -602,11 +603,46 @@
     að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir
     þig.
   progress:
-    not_completed: ólokið
+    not_started: ekki byrjað
+    in_progress: í vinnslu
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
+    assessment: mat
   studio:
     courses_working_on: Námskeið sem þú ert að fást við
     completed_courses: Námskeið sem þú hefur lokið
     all_courses: Öll námskeið
+  project:
+    projects: Verkefni
+    create: Stofna verkefni
+    create_a_project: 'Byrja með nýtt verkefni:'
+    new: Stofna nýtt
+    rename: Endurnefna
+    save: Vista
+    delete: Eyða
+    exit: Til baka í námskeið
+    my_projects: Verkefni mín
+    share: Deila leik
+    share_title: Deila verkefninu
+    share_copy_link: 'Afrita tengilinn:'
+    close: Loka
+    more: Meira
+    name: Nafn
+    updated: Uppfært
+    project_type: Tegund verkefnis
+    help_text: Smelltu á <strong>Búa til App</strong> eða <strong>Teikna eitthvað</strong>
+      hér fyrir neðan til að búa til nýtt verkefni í Leikjasmiðju eða með Listamanni!<br/>Þú
+      getur komið hingað og unnið að verkefnum þínum hvenær sem er.
+    need_help: Þarftu hjálp til að byrja?
+    really_delete: Eyða?
+    delete_yes: Já
+    delete_no: Nei
+    saved: Vistað
+    not_saved: Ekki vistað
+    cancel: Hætta við
+    delete_confirm_title: Ertu viss um að þú viljir eyða þessu verkefni?
+    delete_confirm_text: Ef þú eyðir verkefninu, verður það endanlega fjarlægt úr
+      listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
+      lengur sjá það.
+    view_all: Sýna verkefnin mín

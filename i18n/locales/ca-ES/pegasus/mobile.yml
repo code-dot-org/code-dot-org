@@ -13,6 +13,7 @@ ca-ES:
   learn_now: Aprèn ara
   petition_message: "Cada alumne en cada escola ha de tenir l'oportunitat d'aprendre informàtica"
   petition_sign_message: "Si estàs d'acord, signa amb el teu nom.  Uneix-te als altres #."
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nom
   email: Correu electrònic
   zipcode: Codi postal o país
@@ -92,6 +93,7 @@ ca-ES:
   learn_classes: Troba classes locals
   hoc_is_here: 'La #HourOfCode és aquí - prova-ho! @codeorg'
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Aprendre una hora del codi
   beyond_hoc: "Més enllà d'una hora"
   what_gender: Quin gènere ets?
@@ -106,9 +108,9 @@ ca-ES:
   students_and_lines: "%{students} alumnes han fet l'hora de codi i han escrit %{lines} línies de codi."
   start_hoc: "Comenceu l'Hora del Codi ara"
   contact_form_topic_press: Premsa/mitjans de comunicació (entrevista)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explora el <a href='http://studio.code.org'> Code Studio</a>"
   studiobar_elementary_title: Cursos elementals
   studiobar_elementary_body: 'Els nostres tres cursos nous per cicle&#8209;superior de primària'
@@ -124,6 +126,58 @@ ca-ES:
   studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: "L'Hora de Codi"
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Curs 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Codi Flappy
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Hora del codi
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Alumnes
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Fes una donació
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
   contact_form_topic_teacher: Sóc professor/educador
@@ -291,6 +345,8 @@ ca-ES:
   dashboard_login_picture: Imatge
   dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: no finalitzat
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte

@@ -22,6 +22,7 @@
           future: gelecekte olması mümkün değil
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
+  submit: Gönder
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'
@@ -338,8 +339,8 @@
       olmaktan kaldırıldı'
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
+    email_confirm_wrong_email: (Yanlış e-posta adresi?)
     email_resend_confirm: Onay yönergelerini yeniden gönder
     new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
     current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
@@ -556,7 +557,7 @@
             tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama
             her yaştan öğrenmek için eğlencelidir.
         Hour of Code:
-          title: Saat Kodu
+          title: Kodlama Saati 2013
           description: ''
         edit-code:
           title: Kodu Düzenle
@@ -593,11 +594,45 @@
     <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan
     kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.
   progress:
-    not_completed: tamamlanmadı
+    not_started: Başlatılmadı
+    in_progress: İşlem devam ediyor
     completed_too_many_blocks: tamamlanmadı, fazla blok var
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
+    assessment: değerlendirme
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler
     all_courses: Tüm dersler
+  project:
+    projects: Projeler
+    create: Proje Oluştur
+    create_a_project: 'Yeni bir proje oluşturun:'
+    new: Yeni oluştur
+    rename: Yeniden adlandır
+    save: Kaydet
+    delete: Sil
+    exit: Kursa dön
+    my_projects: Projelerim
+    share: Paylaş
+    share_title: Projenizi paylaşın
+    share_copy_link: 'Bağlantıyı kopyala:'
+    close: Kapat
+    more: Daha Fazla
+    name: İsim
+    updated: Güncellendi
+    project_type: Proje türü
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Başlarken yardıma mı ihtiyacınız var?
+    really_delete: Silinsin mi?
+    delete_yes: Evet
+    delete_no: Hayır
+    saved: Kaydedildi
+    not_saved: Not saved
+    cancel: İptal
+    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
+    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.
+      Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
+    view_all: Projelerimi görüntüle

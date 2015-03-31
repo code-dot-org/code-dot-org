@@ -125,8 +125,8 @@ nl:
       instructions:
         maze_2_2: 'Kun je me helpen het ondeugende biggetje te pakken? Stapel een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten komen. '
         maze_2_1: Het biggetje werkt me op mijn zenuwen. Help me het te vinden!
-        maze_2_2_5: Volg het pad en breng me bij het stomme biggetje. Vermijd dynamiet of er zullen veertjes dwarrelen!
-        maze_2_3: Breng me naar de groene naarling! (Pas op voor dynamiet)
+        maze_2_2_5: Volg het pad en breng me bij het gekke biggetje. Blijf weg bij de TNT of er zullen veertjes dwarrelen!
+        maze_2_3: Breng me naar de groene slechterik! (Pas op voor TNT)
         maze_2_4: Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!
         maze_2_5: Er is een manier om bij het biggetje te komen met maar 2 blokken. Lukt het jou?
         maze_2_6: Breng me naar de groene indringer door maar drie blokken te gebruiken.
@@ -203,7 +203,7 @@ nl:
         turtle_3_5: 'Maak nu een "teken een huis" functie en gebruik hem om deze 2 katten een huis te geven. Hint: maak een nieuwe functie met behulp van het "doe iets" blok, en typ je eigen naam om het blok een naam te geven.'
         turtle_3_6: 'Gebruik "teken een vierkant" als een voorbeeld om een invoer genaamd "lengte" toe te voegen om "teken een driehoek" te maken. Maak vervolgens driehoeken in verschillende groottes. (Hint: klik op de ster om een invoer aan een functie toe te voegen)'
         turtle_3_7: 'Voeg een input met de naam "lengte" toe aan "teken een huis" en teken een groot huis voor de olifant (met randen van 150 pixels lang)'
-        turtle_3_8: 'Hier zijn alle blokken van de vorige puzzel. Bewerk "teken een huis" zodat ik rechts onderin eindig na het tekenen van een nieuw huis. Gebruik deze bewerkte functie om drie huizen te tekenen.'
+        turtle_3_8: 'Pas "teken een huis" aan zodat ik in de hoek linksonder beland na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.'
         turtle_3_9: 'Kan je deze "teken een huis" functie namaken zonder hulp? Probeer het, en teken daarna een rijtje huizen.'
         turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te tekenen wat je maar wilt. Probeer bijvoorbeeld eens om een ster, spiraal of coole sneeuwvlok te tekenen.
         maze_karel_debug_seq_1: Welkom bij foutopsporing! Mijn code doet het niet helemaal goed. Kan jij het probleem vinden en oplossen zodat ik mijn veld vlak kan maken voor het verbouwen?
@@ -320,16 +320,16 @@ nl:
         studio_k1_4: Maak een programma dat de hond naar de kat laat verplaatst en de kat hallo laat zeggen als hij aankomt.
         studio_k1_5: Kan je een blok toevoegen zodat de octopus blij wordt?
         studio_k1_6: Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
-        maze_wordsearch_k_1: Verplaats me zodat het woord OOST gespeld wordt
-        maze_wordsearch_k_2: Verplaats me zodat het woord ZUID gespeld wordt
+        maze_wordsearch_k_1: Verplaats me zodat het woord EAST (oost) gespeld wordt
+        maze_wordsearch_k_2: Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
         maze_wordsearch_k_3: Verplaats me zodat het woord WEST gespeld wordt
-        maze_wordsearch_k_4: Verplaats me zodat het woord NOORD gespeld wordt
-        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord SPRING gespeld wordt
+        maze_wordsearch_k_4: Verplaats me zodat het woord NORTH (noord) gespeld wordt
+        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord JUMP (spring) gespeld wordt
         maze_wordsearch_k_9: Verplaats me in een richting, dan in een andere richting zodat CODE gespeld wordt
         maze_wordsearch_k_13: Verplaats me in een richting, dan in een andere richting zodat DEBUG gespeld wordt
-        maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting zodat BOVEN gespeld wordt
-        maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting zodat BENEDEN gespeld wordt
-        maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in een andere richting zodat VERHAAL gespeld wordt
+        maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting zodat ABOVE (boven) gespeld wordt
+        maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting zodat BELOW (onder) gespeld wordt
+        maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in een andere richting zodat STORY (verhaal) gespeld wordt
         applab_ec_simple: Maak jouw app door de blokken in de gereedschapskist te gebruiken.
         turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur door deze te kiezen in het nieuwe "Penkleur" blok.'
         turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën: een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth" block. Veel plezier!'
@@ -434,6 +434,12 @@ nl:
         playlab_intro: Inleiding tot Play Lab
         playlab_events: Play Lab evenenementen
         playlab_repeat_forever: Play Lab Herhaal voor altijd
+        tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        msm_1_intro: Informatica in de Wiskunde Hoofdstuk 1 Inleiding
+        msm_2_eval_block: evaluatie blokken
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabelen
+        msm_7_functions: Functies
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'

@@ -22,6 +22,7 @@ es:
           future: No puede ser en el futuro
   hello: Hola mundo
   welcome_back: 'Bienvenido, %{name}'
+  submit: Enviar
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -296,8 +297,8 @@ es:
     student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor de %{student_name}'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
+    email_confirm_wrong_email: (Dirección de correo electrónico equivocada?)
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
@@ -480,7 +481,7 @@ es:
           title: K-8 Introducción al Curso de Ciencias de la Computación (15-25 horas)
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
         Hour of Code:
-          title: Hour of Code 2013
+          title: Hora del código 2013
           description: ""
         edit-code:
           title: Editar el código
@@ -510,11 +511,42 @@ es:
     sign_out: 'Si no quieres proporcionar tu edad puedes <a heref="%{url}">finalizar tu sesión</a>.'
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.'
   progress:
-    not_completed: No completado
+    not_started: not started
+    in_progress: En progreso
     completed_too_many_blocks: completado, pero tiene demasiados bloques
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
+    assessment: assessment
   studio:
     courses_working_on: Cursos en los que estás participando
     completed_courses: Cursos finalizados
     all_courses: Todos los cursos
+  project:
+    projects: Projects
+    create: Crear Proyecto
+    create_a_project: 'Create a new project:'
+    new: Crear Nuevo
+    rename: Renombrar
+    save: Guardar
+    delete: Borrar
+    exit: Retornar al Curso
+    my_projects: Mis Proyectos
+    share: Compartir
+    share_title: Compartir su Proyecto
+    share_copy_link: 'Copiar el Enlace:'
+    close: Cerrar
+    more: Más
+    name: Nombre
+    updated: Actualizado
+    project_type: Tipo de Proyecto
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Requiere ayuda para empezar ?
+    really_delete: ¿Borrar?
+    delete_yes: Sí
+    delete_no: 'No'
+    saved: Guardado
+    not_saved: No se guardo
+    cancel: Cancelar
+    delete_confirm_title: Esta seguro de querer eliminar este proyecto?
+    delete_confirm_text: Eliminado su proyecto hará que se retire permanentemente de su lista de proyectos. Cualquiera que tenga un enlace compartido por usted no podrá seguir viendo el proyecto.
+    view_all: Ver Mis Proyectos

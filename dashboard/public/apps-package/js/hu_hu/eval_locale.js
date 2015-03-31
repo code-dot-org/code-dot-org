@@ -157,10 +157,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "kör (sugár, stílus, szín)"},
-"displayBlockTitle":function(d){return "megjelenítés"},
+"displayBlockTitle":function(d){return "kiértékel"},
 "ellipseBlockTitle":function(d){return "ellipszis (szélesség, magasság, stílus, szín)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "Van egy blokkod kitöltetlen bemenettel."},
 "extraTopBlocks":function(d){return "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "borítás (felső, alsó)"},
 "placeImageBlockTitle":function(d){return "kép elhelyezése (x, y, kép)"},
 "offsetBlockTitle":function(d){return "eltolás (x, y, kép)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "aljzat (alsó, felső)"},
 "outline":function(d){return "körvonal"},
 "solid":function(d){return "teli"},
-"string":function(d){return "szöveg"}};
+"string":function(d){return "szöveg"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

@@ -220,7 +220,7 @@ ja:
         turtle_3_5: さあ、新しい「家を描く」機能を作って、猫の家を描いてみましょう。ヒント：「何かをする」ブロックを使い、新しい機能を作成する。ブロックに自分でつけた名前をテキスト入力します
         turtle_3_6: 「四角形を描く」を手本として、「三角形を描く」という機能を作ってください。「長さ」という名前の入力を追加します。その後、様々なサイズの三角形を描画して見てくださ。 （ヒント：関数に入力を追加するには、星をクリックしてください）
         turtle_3_7: 「家を描く」に「長さ」という入力名を追加します。(エッジ 150 ピクセルの長さ) の大きな象の家を建てましょう
-        turtle_3_8: パズルからのブロック、すべてがあります。「家を描く」を修正し、新しい家を描いた後は右下隅で終了するようにしています。この修正機能を使い、3 つの家を描いてみます
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: ひとりで「家を描く」機能を作れますか。試してみて、住宅の列を作ります
         turtle_3_10: あなたはたくさんのことを学びました！星、スパイイラル、または派手なスノーフレークなど自由に描きましょう
         maze_karel_debug_seq_1: デバッグのせかいへようこそ ！プログラムがただしくうごいてくれません。じめんをたいらにしてたねまきができるように、まちがっているところをみつけて、なおしてもらえませんか？
@@ -447,6 +447,12 @@ ja:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: 変数
+        msm_7_functions: 機能
     callout:
       text:
         drag_blocks: 「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。

@@ -205,7 +205,7 @@ he:
         turtle_3_5: 'עכשיו צור פונקצית "צייר בית" חדשה והשתמש בה ליצור בית לשתי חתולים. רמז: כדי ליצור פונקציה חדשה, השתמש בבלוק "עשה משהו", ושנה את שם הלוק על-ידי כתיבת הטקסט שלך שם.'
         turtle_3_6: 'בשימוש ב"צייר ריבוע" כדוגמה, הוסף קלט בשם "אורך" ל"צייר משולש". אחר-כך, צייר משולשים בגדלים שונים. (רמז: לחץ על הכוכב כדי להוסיף קלט לפונקציה)'
         turtle_3_7: 'הוסף קלט בשם "אורך" ל"צייר בית" ובנה בית גדול לפיל (עם צדדים באורך 150 פיקסלים)'
-        turtle_3_8: 'להלן כל הבלוקים של החידה הקודמת.  שנה את "צייר בית" כך שאני אסיים בפינה הימנית התחתונה לאחר ציור בית חדש. השתמש בפונקציה ששונתה כדי לצייר שלושה בתים.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'האם תוכל ליצור מחדש את פונקציית "צייר בית" ללא עזרה? נסה את זה ולאחר מכן צייר שורת בתים.'
         turtle_3_10: למדת הרבה! עתה השתמש בזה כדי לצייר את מה שאתה רוצה. נסה לצייר כוכב, או ספירלה, או פתית שלג מהודר.
         maze_karel_debug_seq_1: ברוך הבא לניפוי! הקוד שלי לא עובד כמו שצריך. האם אתה יכול למצוא את התקלה ולתקן אותה כדי שאני אוכל ליישר את השדה שלי ולהכין אותו לשתילה?
@@ -436,6 +436,12 @@ he:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: משתנים
+        msm_7_functions: פונקציות
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

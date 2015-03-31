@@ -99,12 +99,12 @@ lv:
         Jigsaw: Puzle
         MazeStep: Labirinta soļa režīms
         Wordsearch: Vārdu meklēšana
-        Webapp: App Lab
+        Webapp: Aplikāciju laborotorija
         ArtistEC: Mākslinieks
         TextMatch: Teksta atbilstība
         StudioEC: Spēles laboratorija
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Aplikāciju laborotorija
+        NetSim: Interneta simulators
     trophy:
       name:
         Bronze: Bronzas
@@ -203,7 +203,7 @@ lv:
         turtle_3_5: 'Tagad izveido jaunu "zīmēt māju" funkciju un izmanto to lai izveidotu māju abiem kaķiem. Padoms: Izveido jaunu funkciju izmantojot "dari kaut ko" programmas bloku un ievadi pats savu tekstu lai nosauktu bloku.'
         turtle_3_6: 'Izmantojot "zīmēt kvadrātu" kā piemēru, pievieno ievadi ar nosaukumu "garums" pie "zīmē trīsstūri". Tad uzzīmē trīsstūrus ar dažādiem izmēriem. (Padoms: uzklikšķini uz zvaigznes, lai pievienotu ievadi funkcijai)'
         turtle_3_7: 'Pievieno ievadi ar nosaukumu "garums" funkcijai "zīmēt māju" un uzzīmē lielu māju zilonim (malu garums 150 pikseļi)'
-        turtle_3_8: 'Šeit ir visi bloki no iepriekšējā uzdevuma. Izmaini "zīmēt māju" tā, lai es atrastos apakšējajā labajā stūrī, kad tiks uzzīmēta jauna māja. Izmanto izmainīto funkciju, lai uzzīmētu rīs mājas.'
+        turtle_3_8: "Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā, lejējā stūrī pēc jaunas mājas zīmēšanas. Lieto šo modificēto fukciju, lai uzzīmētu māju kokā."
         turtle_3_9: |
           Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
           
@@ -247,7 +247,7 @@ lv:
         flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.
         flappy_7: 'Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.'
         flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Lai pamainītu lietas, tā vietā, lai tad, kad atduries pret ščērsli beigtu spēli, iestati punktu skaitu atpakaļ uz 0.
         flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
         flappy_k1_1: Spēlēt Flappy spēli
         flappy_k1_2: 'Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.'
@@ -327,7 +327,7 @@ lv:
         maze_wordsearch_k_15: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu BELOW
         maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad citu, lai pateiktu STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Izveido savu aplikāciju lietojot rīkus, kas atrodas instrumentu kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu, lietojot jauno "pildspalvas krāsa" bloku.'
         turtle_ec_1_10: 'Tu to paveici! Tagad uzzīmē ko vēlies. Dažas idejas: vienkāršs cilvēciņš, sniegpārsla vai spirāle. Izmēģini arī jauno bloku "pildspalvas platums". Lai jautri!'
         studio_ec_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
@@ -431,6 +431,12 @@ lv:
         playlab_intro: Ievads spēļu laboratorijā
         playlab_events: Spēļu laboratorijas notikumi
         playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
+        tutorial_puzzle_challenge: Apmācība Mīklas Izaicinājumā
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Mainīgie
+        msm_7_functions: Funkcijas
     callout:
       text:
         drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'

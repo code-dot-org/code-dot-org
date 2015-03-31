@@ -203,7 +203,7 @@ da:
         turtle_3_5: 'Nu skal du oprette en ny "tegne et hus" funktion og bruge den til at give to katte et hus. Tip: Opret en ny funktion ved hjælp af "gøre noget" blokken, og skrive din egen tekst til at navngive blokken.'
         turtle_3_6: 'Ved hjælp af "tegne en firkant" som et eksempel, tilføje et input kaldet "længde" til "tegn en trekant". Derefter skal du tegne trekanter i forskellige størrelser. (Top: Klik på stjernen for at tilføje en indgang til en funktion)'
         turtle_3_7: 'Tilføj et input kaldet "længde" til "tegne et hus" og byg et stort hus til elefanterne (med kanter, der er 150 pixels lange)'
-        turtle_3_8: 'Her er alle blokkene fra den tidligere opgave.  Lav om på funktionen "tegn et hus", så jeg ender i nederste højre hjørne efter at have tegnet et nyt hus. Brug denne ændrede funktion til at tegne tre huse.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det, og derefter tegn en række huse.'
         turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes er sjovt. Prøv at tegne en stjerne eller en spiral eller et flot snefnug.
         maze_karel_debug_seq_1: Velkommen til fejlfinding! Min kode virker ikke. Kan du få øje på problemet og løse det, så jeg kan få min jord flad og klar til beplantning?
@@ -432,6 +432,12 @@ da:
         playlab_intro: Introduktion til Play Lab
         playlab_events: Play Lab begivenheder
         playlab_repeat_forever: Play Lab gentag for evigt
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evalueringsblokke
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabler
+        msm_7_functions: Funktioner
     callout:
       text:
         drag_blocks: 'Træk i en "flyt fremad" blok og fastgør den under den anden blok'

@@ -1,10 +1,23 @@
 ---
 theme: angular
+angular: opsApp
+title: "Ops Dashboard"
 ---
+- authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/shared/js/PapaParse-4.1.0/papaparse.min.js"}
+%script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
+%link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
+
+%script{type: "text/javascript", src: "/js/angular-selectize.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%div{'ng-view' => ''}
 :javascript
   'use strict';
 
@@ -24,9 +37,10 @@ theme: angular
     $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
-    $routeProvider.when('/cohorts',                                   {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
-    $routeProvider.when('/cohorts/new',                               {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
-    $routeProvider.when('/cohorts/:id/edit',                          {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
+    $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
+    $routeProvider.when('/teacher-cohorts/:id/teachers',              {templateUrl: '/ops-dashboard/cohort-teachers', controller: 'CohortTeachersController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]).config(['$httpProvider', function($httpProvider) {
     // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -151,6 +165,46 @@ theme: angular
     };
   });
 
+  filters.filter('withinDateRange', function() {
+    return function(workshops, dateRangeStart, dateRangeEnd) {
+      if (dateRangeStart || dateRangeEnd) {
+        var filtered = [];
+        workshops.forEach(function (workshop) {
+          for (var i = 0; i < workshop.segments.length; i++) {
+            if (
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && workshop.segments[i].end.split('T')[0] >= this.dateRangeStart) ||
+                (workshop.segments[i].start.split('T')[0] <= this.dateRangeEnd && !this.dateRangeStart) ||
+                (workshop.segments[i].end.split('T')[0] >= this.dateRangeStart && !this.dateRangeEnd)
+               )
+            {
+              filtered.push(workshop);
+              break;
+            }
+          }
+        }, this);
+        return filtered;
+      } else {
+        return workshops;
+      }
+    };
+  });
+
+  filters.filter('matchingProgramType', function() {
+    return function(cohorts, workshopProgramType) {
+      if (workshopProgramType) {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          if (cohort.program_type == workshopProgramType) {
+            filtered.push(cohort);
+          }
+        }, this);
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -162,10 +216,14 @@ theme: angular
 
       $scope.districts = districtsService.query();
 
+      $scope.del = function (district) {
+        $scope.districts.splice($scope.districts.indexOf(district), 1); // remove from array
+        districtsService.remove({id: district.id}); // service call
+      }
+
       $scope.save = function (district) {
         if (district.id) {
-          var newDistrict = new districtsService($scope.district);
-          districtsService.update({id: district.id}, district).$promise.then(
+          districtsService.update({id: district.id}, {district: district}).$promise.then(
             function(result_district) {
               $scope.districts[$scope.districts.indexOf(district)] = result_district;
                 districtsService.query().$promise.then(function (districts) {
@@ -174,8 +232,7 @@ theme: angular
             }
           ).catch($scope.genericError);
         } else {
-          var newDistrict = new districtsService($scope.district);
-          newDistrict.$save().then(
+          districtsService.save({district: district}).$promise.then(
             function(saved) {
               $scope.district = null; /* just in case it has been modified on server */
               districtsService.query().$promise.then(function (districts) {
@@ -214,29 +271,16 @@ theme: angular
         return "N/A";
       }
 
-      //$scope.save = function (workshop) {
-      //  if (workshop.id) {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    workshopsService.update({id: workshop.id}, workshop).$promise.then(
-      //      function(result_workshop) {
-      //        $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
-      //          workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    ).catch($scope.genericError);
-      //  } else {
-      //    var newWorkshop = new workshopsService($scope.workshop);
-      //    newWorkshop.$save().then(
-      //      function(saved) {
-      //        $scope.workshop = saved; /* just in case it has been modified on server */
-      //        workshopsService.query().$promise.then(function (workshops) {
-      //          $scope.workshops = workshops;
-      //        });
-      //      }
-      //    );
-      //  }
-      //}
+      $scope.load = function() {
+        $('.date').on('focus click', function() {
+          $(this).datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            pickTime: false
+
+          });
+        });
+      }
     }
   ]);
 
@@ -248,7 +292,6 @@ theme: angular
       $scope.districts = districtsService.query();
       $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
       $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
-      //$scope.workshopTeacherSegmentAttendance = teachersService.query({id: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -261,14 +304,17 @@ theme: angular
       }
   }]);
 
-  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService',
-    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService) {
+  controllers.controller('CohortsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
       $scope.hasCohorts = false;
       $scope.cohorts = cohortsService.query();
+      $scope.program_types = programTypesService;
 
       $scope.cohorts.$promise.then(function(cohorts) {
         $scope.hasCohorts = true;
       });
+
+      $scope.districts = districtsService.query();
 
       $scope.confirm_delete = function(cohort) {
         cohort.confirmDelete = true;
@@ -279,24 +325,35 @@ theme: angular
         cohortsService.remove({id: cohort.id}); // service call
         cohort.confirmDelete = false;
       };
+
+      $scope.setSortOrder = function(new_sort, current_sort) {
+        return (new_sort == current_sort) ? '-' + current_sort : new_sort;
+      }
     }
   ]);
 
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-      if ($routeParams.id) {
-        $scope.cohort = cohortsService.get({id: $routeParams.id});
-      } else {
-        $scope.cohort = {};
-      }
 
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',
+          max_teachers: ''
         });
       };
 
-      if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+      if ($routeParams.id) {
+        $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+        $scope.cohort.$promise.then(function(cohort){
+          cohort.program_type_disabled = cohort.program_type ? true : false;
+          if (!$scope.cohort.districts || $scope.cohort.districts.length < 1) {
+            $scope.cohort.districts = [];
+            $scope.newDistrict();
+          }
+        });
+      } else {
+        $scope.cohort = {};
         $scope.cohort.districts = [];
         $scope.newDistrict();
       }
@@ -307,20 +364,129 @@ theme: angular
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
           cohort =
-            cohortsService.update({id: cohort.id}, cohort, function() {
-              $location.path("/cohorts");
+            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
+              $location.path("/teacher-cohorts");
             });
         } else { // new
           cohort =
-            cohortsService.save(cohort, function() {
-              $location.path("/cohorts");
+            cohortsService.save({cohort: cohort}, function() {
+              $location.path("/teacher-cohorts");
             });
         }
       };
 
       $scope.cancel_edit = function() {
-        $location.path("/cohorts");
+        $location.path("/teacher-cohorts");
       };
+    }
+  ]);
+
+  controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
+    function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
+
+      $scope.teachers_bulk_import = {uploading: false};
+
+      // error handling
+      $scope.genericError = function(result) {
+        $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+      };
+
+      $scope.cohort = cohortsService.get({id: $routeParams.id});
+
+      $scope.cohort.$promise.then(function(cohort) {
+      });
+
+      // This depends on HTML5 File object so does not work in IE9. This
+      // particular feature is only used by the ops team who all use Chrome.
+      $scope.onFileSelect = function(input) {
+        var files = input.files; // FileList object
+
+        // files is a FileList of File objects. List some properties.
+        if (files && files.length > 0) {
+          Papa.parse(files[0], {
+            header: true,
+            complete: function(results) {
+              if (results.data) {
+                for (var i = 0; i < results.data.length; i++) {
+                  results.data[i].editing = true;
+                }
+                $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
+                $scope.$apply();
+              }
+            }
+          });
+        }
+      };
+
+      $scope.editingAny = function(things) {
+        if (!things) {
+          return false;
+        }
+        for (var i = 0; i < things.length; i++) {
+          if (things[i].editing) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      $scope.edit = function(teacher) {
+        teacher.editing = true;
+      };
+
+      $scope.confirm_delete = function(teacher) {
+       teacher.confirmDelete = true;
+      };
+
+      $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
+        //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
+        //  function() {
+            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+        //  }
+        //).catch($scope.genericError);
+      };
+
+      $scope.cancel = function(teacher) {
+        if (teacher.id) {
+          teacher.editing = false;
+        } else {
+          $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+        }
+      };
+
+      $scope.new_teacher = function() {
+        $scope.cohort.teachers.unshift({editing: true});
+      };
+
+      $scope.saveAll = function(cohort) {
+        for (var i = 0; i < cohort.teachers.length; i++) {
+          if (typeof cohort.teachers[i].district == 'undefined') {
+            cohort.teachers[i].district_id = null;
+          }
+          else {
+            cohort.teachers[i].district_id = cohort.teachers[i].district.id;
+          }
+        }
+
+        cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
+          function() {
+            $scope.cohort = cohortsService.get({id: $routeParams.id});
+          }
+        ).catch($scope.genericError);
+      };
+
+      $scope.countTeachersFromDistrict = function(district) {
+        var count = 0;
+        if (district && district.id) {
+          for (var i = 0; i < $scope.cohort.teachers.length; i++) {
+            if ($scope.cohort.teachers[i].district &&
+                $scope.cohort.teachers[i].district.id === district.id) {
+              count++;
+            }
+          }
+        }
+        return count;
+      }
     }
   ]);
 
@@ -349,6 +515,8 @@ theme: angular
          if (workshop.id) {
            var newWorkshop = new workshopsService($scope.workshop);
            workshopsService.update({id: workshop.id}, workshop);
+           $('#save-confirmation').css('display', 'inline');
+           $('#save-confirmation').fadeOut(2500);
          } else {
            var newWorkshop = new workshopsService($scope.workshop);
            newWorkshop.$save().then(
@@ -356,11 +524,12 @@ theme: angular
                $scope.workshop = saved; /* just in case it has been modified on server */
                workshopsService.query().$promise.then(function (workshops) {
                  $scope.workshops = workshops;
+                 $('#save-confirmation').css('display', 'inline');
+                 $('#save-confirmation').fadeOut(2500);
                });
              }
            );
          }
-         $location.path('/workshops');
       }
 
       $scope.saveSegment = function (segment) {
@@ -370,6 +539,7 @@ theme: angular
             $scope.segment = null;
             segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
               $scope.workshopSegments = segments;
+              $scope.workshops = workshops;
             });
           }
         );
@@ -377,6 +547,3 @@ theme: angular
     }
   ]);
 
-%script{type: "text/javascript", src: "/js/angular-selectize.js"}
-%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
-%div{'ng-app' => 'opsApp', 'ng-view' => ''}

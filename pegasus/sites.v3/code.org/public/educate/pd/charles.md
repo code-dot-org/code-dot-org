@@ -34,7 +34,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### January 31st Location ####
+#### April 25th Location ####
 
 North Point High School
 <br />
@@ -57,6 +57,13 @@ Laptop
 #### Save the Dates:
 
 7/27/15 - 7/29/15
+
+#### Location
+College of Southern Maryland
+<br />
+8730 Mitchell Road
+<br />
+La Plata, MD 20646
 
 <br/>
 [**Back to the top**](#top)

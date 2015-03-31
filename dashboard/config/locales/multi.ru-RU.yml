@@ -116,10 +116,6 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Начни
           с квадрата <br/> Помести треугольник ниже квадрата<br/> Помести параллелограмм
           справа от треугольника
-        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Выбор варианта
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Начать
@@ -178,6 +174,37 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
+        Blue colored blocks are associated with __________ ?: Blue colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 'Художник: Выбор варианта'
         Which blocks draw a rectangle with a perimeter of 100?: Какие блоки рисуют
@@ -235,12 +262,6 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
-        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
-        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: 'Пчела: Отладка: Выбор варианта'
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -306,10 +327,6 @@
         <h4>_____ is a _____ city.</h4>: <h4>_____ - это город _____ величины.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ - это _____ _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Тында — это _____ город.</h4>
-        ? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
-        : Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Выбор варианта
         Which of these pictures best represents crowdsourcing?: Какая из этих картинок
@@ -374,22 +391,6 @@
         5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.'
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
@@ -402,8 +403,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Видеоигра Координаты
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Какой ответ
-          наиболее точно описывает движение единорога?
         The unicorn moves across the screen: Единорог двигается по экрану
         The unicorn's y value changes: У единорога изменяется значение координаты
           Y
@@ -605,10 +604,6 @@
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Math to Code 2:
         Racket Code for Math Expressions: Ракета с кодом для математических выражений
         0: '? Выберите Ракету с кодом, который соответствует заданному математическому
@@ -623,10 +618,6 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Warmup questions:
         Coding in Racket: Программирование в ракете
         Select the best answer to the question.: Выберите лучший ответ на вопрос.
@@ -645,7 +636,6 @@
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
         Valid Contracts: Действующие определения
         Pick the best answer to the question.: Выберите лучший ответ на вопрос.
@@ -667,101 +657,100 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (прямоугольник (+ 8 2) (- 7 5) сплошной
           красный)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x?: What is the value of x?
-        a function: a function
+        What is the value of x?: Какое значение переменной x?
+        a function: функция
         15: '15'
         x: x
       msm variables multi 10:
-        f(x) = x * 17: f(x) = x * 17
-        What is the name of the function?: What is the name of the function?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the function?: Какое имя у этой функции?
         f: f
         x: x
         17: '17'
       msm variables multi 11:
-        f(x) = x * 17: f(x) = x * 17
-        What is the name of the parameter?: What is the name of the parameter?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the parameter?: Какое имя у этого параметра?
         f: f
         x: x
         17: '17'
       msm variables multi 12:
-        (define (f x) (*x 17)): (define (f x) (*x 17))
-        What is the name of the variable?: What is the name of the variable?
+        (define (f x) (*x 17)): (определите (f x) (*x 17))
+        What is the name of the variable?: Какое имя у этой переменной?
         f: f
         x: x
         17: '17'
       msm variables multi 13:
-        f(x) = x * 17: f(x) = x * 17
-        What is f(1)?: What is f(1)?
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What should f(1) produce?: What should f(1) produce?
         x: x
         117: '117'
         17: '17'
       msm variables multi 2:
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
-        What is the value of a + b?: What is the value of a + b?
+        What is the value of a + b?: Какое значение a + b?
         8: '8'
-        function: function
+        function: функция
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
-        What is the value of x-10?: What is the value of x-10?
-        a function: a function
+        What is the value of x-10?: Какое значение x-10?
+        a function: функция
         5: '5'
         x: x
       msm variables multi 4:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of x?: What is the value of x?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of x?: Какое значение переменной x?
         3: '3'
         15: '15'
-        do not know: do not know
+        do not know: не знаю
       msm variables multi 5:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of (p - x)?: What is the value of (p - x)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of (p - x)?: какое значение (p - x)?
         q: q
         3: '3'
         5: '5'
       msm variables multi 6:
-        define x 3<br>define p 8<br>define q hello: define x 3<br>define p 8<br>define
-          q hello
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of string-length(q)?: Какое значение string-length(q)?
         1: '1'
         hello: привет
         5: '5'
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: Какое имя у этой функции?
         f: f
         x: x
         3: '3'
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Какое имя у этой переменной?
         f: f
         x: x
         3: '3'
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        What is f(2)?: Какое значение f(2)?
         6: '6'
         5: '5'
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: Какое имя у этой функции?
         g: g
         y: true
         3: '3'
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: Какое имя у этого параметра?
         g: g
         y: true
         3: '3'
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: Какое значение вернет функция g(2)?
         6: '6'
         5: '5'
         y: true
@@ -779,53 +768,122 @@
         Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
           1.blocks4.start_blocks, 300, 100
       PDK5 Basic CS:
-        Video Follow-up Question: Video Follow-up Question
-        Answer this question based on the video you just watched.: Answer this question
-          based on the video you just watched.
-        'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a set of instructions you give a computer to execute: a set of instructions
-          you give a computer to execute
-        a secret password: a secret password
+        Video Follow-up Question: Видео вопрос
+        Answer this question based on the video you just watched.: Ответьте на этот
+          вопрос, основываясь на видео, которое вы только что посмотрели.
+        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
+        a part inside of a computer: часть внутри компьютера
+        a week-long course to learn about computers: недельный курс обучения компьютеру
+        a set of instructions you give a computer to execute: набор инструкций, которые
+          даются компьютеру для исполнения
+        a secret password: секретный пароль
+      PDK5 Beyond:
+        What do I do now?: What do I do now?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This
+          is the last piece of our online PD. Congratulations! Click Im finished when
+          you are ready!
+        Im finished: Im finished
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Writing your first computer program!
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Classroom Culture:
+        Classroom Culture: Культура в классе
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Overview of K-5 Courses
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Glossary:
+        Glossary: Словарь терминов
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Intro:
+        Welcome!: Welcome!
+        Before now, have you ever participated in an online PD program?: Before now,
+          have you ever participated in an online PD program?
+        'Yes': Да
+        'No': Нет
+      PDK5 Sequence2:
+        More Sequencing: More Sequencing
+        The grey rectangle to the left of the workspace is called the: The grey rectangle
+          to the left of the workspace is called the
+        toolbox: toolbox
+        shelf: shelf
+        bin: bin
+        dropdown: dropdown
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Teacher Dashboard
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Test1:
+        title: название
+        description here: Описание здесь
+        Question: Вопрос
+        wrong answer: неправильный ответ
+        right answer: правильный ответ
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: Что такое урок без компьютера?
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Teacher Guides to all our
+          unplugged activities
+        Are you ready to move on?: Are you ready to move on?
+        'Yes': Да
+      PDK5 Visual Languages:
+        Visual Programming Languages: Visual Programming Languages
+        Based on the video you saw before, please answer the question below.: Based
+          on the video you saw before, please answer the question below.
+        Why are visual programming languages easier to learn than text-based programming languages?: Why
+          are visual programming languages easier to learn than text-based programming
+          languages?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because
+          you dont have to worry about syntax as much, like where to put a semi-colon
+        Because you can focus on the logic of programming: Because you can focus on
+          the logic of programming
+        Because the commands are available in a menu rather than having to remember them yourself: Because
+          the commands are available in a menu rather than having to remember them
+          yourself
+        All of the above: All of the above
+      PDK5 What is CS:
+        What is Computer Science?: What is Computer Science?
+        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
+        a part inside of a computer: часть внутри компьютера
+        a set of instructions a person gives a computer to execute: a set of instructions
+          a person gives a computer to execute
+        a week-long course to learn about computers: недельный курс обучения компьютеру
+        a secret password: секретный пароль
       Play Lab Rocket 6:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        Which function would describe a rocket that reaches 24 meters at 2 seconds, 60 meters at 5 seconds, and 108 meters at 9 seconds?: Which
-          function would describe a rocket that reaches 24 meters at 2 seconds, 60
-          meters at 5 seconds, and 108 meters at 9 seconds?
-        rocket-height (seconds) = seconds + 12: rocket-height (seconds) = seconds
-          + 12
-        rocket-height (seconds) = seconds * 12: rocket-height (seconds) = seconds
-          * 12
-        rocket-height (seconds) = 48 / seconds: rocket-height (seconds) = 48 / seconds
-        rocket-height (seconds)  = seconds * 48: rocket-height (seconds)  = seconds
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
+          12
+        rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
+          12
+        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
+        rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds
           * 48
       Play Lab Rocket 7:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        1: ': Which function would describe a rocket that reaches 4 meters at 2 seconds,
-          16 meters at 4 seconds, and  256 meters at 16 seconds?'
-        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
-        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds
-          * seconds
-        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
-        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds *
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds * 2: высота ракеты(секунды) = секунды * 2
+        rocket-height(seconds) = seconds * seconds: высота ракеты(секунды) = секунды
+          * секунды
+        rocket-height(seconds) = seconds * 4: высота ракеты(секунды) = секунды * 4
+        rocket-height(seconds) = seconds * 16: высота ракеты(секунды) = секунды *
           16
       Play Lab Rocket 8:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        0: '? Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        1: ': Which function would describe a rocket that reaches 47 meters at 5 seconds,
-          97 meters at 10 seconds, and 147 meters at 15 seconds?'
-        rocket-height(seconds) = seconds * 7 + 10: rocket-height(seconds) = seconds
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds * 7 + 10: высота ракеты(секунды) = секунды
           * 7 + 10
-        rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds
-          * 10 + 7
-        rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 + 7: высота_ракеты(секунды) = секунды*10+7
+        rocket-height(seconds) = seconds * 7 + 3: высота ракеты(секунды) = секунды
           * 7 + 3
-        rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds
+        rocket-height(seconds) = seconds * 10 - 3: высота ракеты(секунды) = секунды
           * 10 - 3
       test multi image:
         Maze Multiple Choice Two: 'Лабиринт: Выбор варианта - 2'
@@ -852,13 +910,13 @@
         George Washington: Джордж Вашингтон
         George Jetson: Джордж Джетсон
       Test 1:
-        This is a test: This is a test
-        whatever: whatever
-        this is a question?: this is a question?
+        This is a test: Это тест
+        whatever: неважно
+        this is a question?: Это вопрос?
         wrong answer: неправильный ответ
         right answer: правильный ответ
       unique level name here:
-        line1<br/>line2: line1<br/>line2
+        line1<br/>line2: линия1<br/>линия2
         description here: Описание здесь
         Question: Вопрос
         wrong answer: неправильный ответ

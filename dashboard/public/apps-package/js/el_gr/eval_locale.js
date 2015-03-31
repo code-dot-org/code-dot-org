@@ -157,10 +157,11 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"},
-"displayBlockTitle":function(d){return "εμφάνιση"},
+"displayBlockTitle":function(d){return "υπολογισμός"},
 "ellipseBlockTitle":function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "επικάλυμμα (επάνω, κάτω)"},
 "placeImageBlockTitle":function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"},
 "offsetBlockTitle":function(d){return "μετατόπιση (x, y, εικόνα)"},
@@ -179,4 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "υπόστρωμα (κάτω, κορυφή)"},
 "outline":function(d){return "περίγραμμα"},
 "solid":function(d){return "συμπαγής"},
-"string":function(d){return "συμβολοσειρά"}};
+"string":function(d){return "συμβολοσειρά"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."}};

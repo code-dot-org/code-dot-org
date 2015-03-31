@@ -86,7 +86,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 
 Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
 
-This game is made up of characters, each of which has its own behavior. The unicorn moves from the right to the left, as does the dragon. The ninja only moves when you hit the arrow keys, and can move left, right, up and down. We can figure out how the game works by first understanding how each character works.
+This game is made up of characters, each of which has its own behavior. The unicorn moves from the left to the right, while the dragon moves in the opposite direction. The ninja only moves when you hit the arrow keys, and can move up and down. We can figure out how the game works by first understanding how each character works.
 
 **Directions:**
 
@@ -136,8 +136,8 @@ Fill in the rest of the reverse-engineering table, identifying what is changing 
 ## Wrap-up
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-Use the [game planning template](needatemplate.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
-To start, your game will have with four things in it:
+Use the [game planning template](../docs/worksheets/game_planning.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
+To start, your game will have four things in it:
 
 - A Background, such as a forest, a city, space, etc.
 - A Player, who can move when the user hits a key.
@@ -160,7 +160,7 @@ The structure of your students' games will very closely resemble the demo they'v
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

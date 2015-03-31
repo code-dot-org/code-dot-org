@@ -69,6 +69,13 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
+    'use_dynamo_tables'           => [:staging, :test, :production].include?(rack_env),
+    'use_dynamo_properties'       => [:staging, :test, :production].include?(rack_env),
+    'dynamo_tables_table'         => "#{rack_env}_tables",
+    'dynamo_tables_index'         => "channel_id-table_name-index",
+    'use_dynamo_properties'       => false,
+    'dynamo_properties_table'     => "#{rack_env}_properties",
+    'lint'                        => rack_env == :staging || rack_env == :development
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -79,7 +86,7 @@ def load_configuration()
     config.merge! global_config
     config.merge! local_config
 
-    config['apps_api_secret']     ||= config['poste_secret']
+    config['channels_api_secret']     ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']

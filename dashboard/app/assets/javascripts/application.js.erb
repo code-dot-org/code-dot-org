@@ -72,7 +72,7 @@ $(document).keydown(function(e) {
 });
 
 setTimeout(function() {
-  $('#blocklyApp .slow_load').show();
+  $('#codeApp .slow_load').show();
 }, 10000);
 
 function cache_bust_only() {
@@ -80,3 +80,9 @@ function cache_bust_only() {
 }
 
 var CDOSounds = new Sounds();
+
+$(window).load(function () {
+  onURLBlocked('https://studio.code.org/test-image.png', function () {
+    trackEvent("HTTPS Test", "blocked");
+  });
+});

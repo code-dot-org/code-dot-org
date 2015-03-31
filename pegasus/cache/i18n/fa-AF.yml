@@ -11,13 +11,16 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر
     را ببینید</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h2>ساعتِ کدنویسی</h2><h3>را امتحان کرده است</h3>
+  n_have_learned_an_hoc: <h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه
+    شده</h3>
   anybody_can_learn: هر کسی می تواند یاد بگیرند.
   learn_now: همین حالا یاد بگیرید
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
     باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
     پیوندید.'
+  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
+    #دیگران بپیوندید.'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -115,6 +118,9 @@
   learn_classes: پیدا کردن کلاس های محلی
   hoc_is_here: زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@
   just_did_hoc: من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@
+  twitter_teach_cs: چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم
+    این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید
+    تا بیشتر بیاموزید.
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -131,12 +137,12 @@
     خط کد نوشته شده است.'
   start_hoc: هم اکنون ساعتِ کدنویسی را آغاز کنید
   contact_form_topic_press: انتشارات/ رسانه ها (مصاحبه یا گپ زدن)
-  stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد
-    هیجان زده ندیده ام." از میشل کلارک، معلم'
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; مشارکت صد در صدی." - نینا نیکولز
     پيري، معلم'
   stats_student: '"من می دانستم که این يك فرصت <b> تكرار نشدني</b> است." - ماریانا
     الزيت، كلاس پنجمي'
+  stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد
+    هیجان زده ندیده ام." از میشل کلارک، معلم'
   studiobar_title: ' <a href=''http://studio.code.org''>استودیوی برنامه نویسی</a>
     ما را کشف کنید'
   studiobar_elementary_title: دوره‌های مقدماتی
@@ -153,6 +159,56 @@
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_shop_title: فروشگاه
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
+  homepage_hero_text_malala: |
+    &ldquo;من دختران هر کشوری را به چالش
+    آموختن یک ساعت کد نویسی دعوت می کنم&rdquo;
+    مالالا
+  homepage_hero_text_susan: |
+    &ldquo;هیچ وقت برای یادگرفتن دیر نیست&rdquo;
+    سوزان، مدیرعامل یوتیوب
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo; درک علوم کامپیوتر به طور گسترده ای حیاتی می شود&rdquo;
+    شریل،مامور ارشد اجرایی فیسبوک
+  homepage_slot_text_hoc: ساعتی با کدنویسی
+  homepage_slot_text_frozen: کارتون Frozen با آنا و السا
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: تمام آموزش های ما
+  homepage_slot_text_course4: دوره 4
+  homepage_slot_text_shop: فروشگاه
+  homepage_slot_text_flappy: کدنویسی Flappy
+  homepage_action_text_codevideo: فیلم را تماشا کنید
+  homepage_action_text_teachervideo: فیلم را تماشا کنید
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: درخواست را امضا کنید
+  homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
+  homepage_slot_text_title_hoc: ساعتی با کد
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: دانش آموزان
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: کمک مالی بدهید
   contact_form_topic_student: من یک دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -358,6 +414,8 @@
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
   dashboard_progress_not_completed: تکمیل نشده است
   dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
   dashboard_progress_completed_perfect: تکمیل, کامل
@@ -1075,27 +1133,3 @@
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

@@ -37,8 +37,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "custom_game_type": "Big Game"
-  }
+    "custom_game_type": "Big Game",
+    "maze_data": null
+  },
+  "md5": "c237ce9aabcfcc79fc9c6a35e26b334b"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -356,7 +358,7 @@
           <mutation>
             <arg name="key" type="Number"/>
             <arg name="y" type="Number"/>
-            <description>Given the player's y coordinate and a keycode for direction, return the new y</description>
+            <description>Given a keycode for direction and the player's y coordinate, return the new y</description>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">update-player</title>
@@ -583,6 +585,8 @@
           <block type="functional_times" inline="false"/>
           <block type="functional_dividedby" inline="false"/>
           <block type="functional_sqrt" inline="false"/>
+          <block type="functional_squared" inline="false"/>
+          <block type="functional_pow" inline="false"/>
           <block type="functional_math_number">
             <title name="NUM">0</title>
           </block>

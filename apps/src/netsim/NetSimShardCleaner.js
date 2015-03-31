@@ -23,6 +23,7 @@ var NetSimMessage = require('./NetSimMessage');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 
+var _ = utils.getLodash();
 var logger = NetSimLogger.getSingleton();
 
 /**
@@ -333,7 +334,6 @@ CacheTable.inherits(Command);
  * @private
  */
 CacheTable.prototype.onBegin_ = function () {
-  logger.info('Begin CacheTable[' + this.key_ + ']');
   this.table_.readAll(function (err, rows) {
     this.cleaner_.cacheTable(this.key_, rows);
     this.succeed();
@@ -363,8 +363,6 @@ DestroyEntity.inherits(Command);
  * @private
  */
 DestroyEntity.prototype.onBegin_ = function () {
-
-  logger.info('Begin DestroyEntity[' + this.entity_.entityID + ']');
   this.entity_.destroy(function (err) {
     if (err) {
       this.fail();
@@ -398,7 +396,6 @@ ReleaseCleaningLock.inherits(Command);
  * @private
  */
 ReleaseCleaningLock.prototype.onBegin_ = function () {
-  logger.info('Begin ReleaseCleaningLock');
   this.cleaner_.releaseCleaningLock(function (success) {
     if (success) {
       this.succeed();
@@ -432,7 +429,6 @@ CleanHeartbeats.inherits(CommandSequence);
  * @override
  */
 CleanHeartbeats.prototype.onBegin_ = function () {
-  logger.info('Begin CleanHeartbeats');
   var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
   this.commandList_ = heartbeatRows.filter(function (row) {
     return Date.now() - row.time > HEARTBEAT_TIMEOUT_MS;
@@ -466,7 +462,6 @@ CleanNodes.inherits(CommandSequence);
  * @override
  */
 CleanNodes.prototype.onBegin_ = function () {
-  logger.info('Begin CleanNodes');
   var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
   var nodeRows = this.cleaner_.getTableCache('node');
   this.commandList_ = nodeRows.filter(function (row) {
@@ -503,7 +498,6 @@ CleanWires.inherits(CommandSequence);
  * @override
  */
 CleanWires.prototype.onBegin_ = function () {
-  logger.info('Begin CleanWires');
   var nodeRows = this.cleaner_.getTableCache('node');
   var wireRows = this.cleaner_.getTableCache('wire');
   this.commandList_ = wireRows.filter(function (wireRow) {
@@ -542,13 +536,26 @@ CleanMessages.inherits(CommandSequence);
  * @override
  */
 CleanMessages.prototype.onBegin_ = function () {
-  logger.info('Begin CleanMessages');
   var nodeRows = this.cleaner_.getTableCache('node');
   var messageRows = this.cleaner_.getTableCache('message');
   this.commandList_ = messageRows.filter(function (messageRow) {
-    return nodeRows.every(function (nodeRow) {
-      return nodeRow.id !== messageRow.toNodeID;
+
+    var simulatingNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.simulatedBy;
     });
+
+    // A message not being simulated by any client can be cleaned up.
+    if (!simulatingNodeRow) {
+      return true;
+    }
+
+    var destinationNodeRow = _.find(nodeRows, function (nodeRow) {
+      return nodeRow.id === messageRow.toNodeID;
+    });
+
+    // Messages with an invalid destination should also be cleaned up.
+    return !destinationNodeRow;
+
   }).map(function (row) {
     return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
   }.bind(this));
@@ -573,7 +580,6 @@ CleanLogs.inherits(CommandSequence);
  * @override
  */
 CleanLogs.prototype.onBegin_ = function () {
-  logger.info('Begin CleanLogs');
   var nodeRows = this.cleaner_.getTableCache('node');
   var logRows = this.cleaner_.getTableCache('log');
   this.commandList_ = logRows.filter(function (logRow) {

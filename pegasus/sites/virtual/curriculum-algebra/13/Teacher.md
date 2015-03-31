@@ -129,7 +129,7 @@ And how does this all connect with our game?  Is the target too far left or too 
 ## Assessment 
 ### <a name="Assessment"></a>4) Booleans Assessment
 
-Visit [MSM Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

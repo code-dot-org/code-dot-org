@@ -22,6 +22,7 @@ ca:
           future: no pot ser en el futur
   hello: Hola Món
   welcome_back: 'Benvingut de nou, %{name}'
+  submit: Envia
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -517,11 +518,42 @@ ca:
     sign_out: 'Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.'
   zendesk_too_young_message: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
   progress:
-    not_completed: no finalitzat
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completat, massa blocs
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
+    assessment: assessment
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats
     all_courses: Tots els cursos
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Desa
+    delete: Elimina
+    exit: Return to Course
+    my_projects: My Projects
+    share: Comparteix
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Més
+    name: Nom
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Vols suprimir?
+    delete_yes: Sí
+    delete_no: 'No'
+    saved: Saved
+    not_saved: Not saved
+    cancel: Cancel·lar
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects

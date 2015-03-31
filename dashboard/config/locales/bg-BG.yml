@@ -22,6 +22,7 @@
           future: не може да бъде в бъдеще
   hello: Здравей, свят
   welcome_back: Добре дошли отново, %{name}
+  submit: Изпрати
   add_teacher_form:
     code:
       label: 'Добавете учител:'
@@ -343,8 +344,8 @@
     student_teacher_disassociated: '%{teacher_name} е премахнат като учител на %{student_name}'
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
+    email_confirm_wrong_email: (Грешен имейл адрес?)
     email_resend_confirm: Повторно изпращане на инструкции
     new_password_hint: (Оставете празно, ако не искате да го промените)
     current_password_hint: (нуждаем се от вашата текуща парола, за да потвърдим вашите
@@ -564,7 +565,7 @@
             и термини в програмирането. Курсът е предназначен най-вече за използване
             в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
         Hour of Code:
-          title: Час на Кодирането
+          title: Час на кодирането 2013
           description: ''
         edit-code:
           title: Редактиране на кода
@@ -602,11 +603,46 @@
     support.code.org</a> без регистрация или попитайте вашия родител или учител да
     се свърже с нас за вас.
   progress:
-    not_completed: не е завършено
+    not_started: не стартира
+    in_progress: в ход
     completed_too_many_blocks: завършено, но с повече блокове
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
+    assessment: Оценка
   studio:
     courses_working_on: Курсове, върху който работите
     completed_courses: Завършени курсове
     all_courses: Всички курсове
+  project:
+    projects: Проекти
+    create: Създаване на проект
+    create_a_project: 'Създаване на нов проект:'
+    new: Създаване на нов
+    rename: Преименуване
+    save: Запазване
+    delete: Изтриване
+    exit: Връщане към курса
+    my_projects: Моите проекти
+    share: Сподели
+    share_title: Споделяне на вашия проект
+    share_copy_link: 'Копиране на връзката:'
+    close: Затваряне
+    more: Повече
+    name: Име
+    updated: Актуализиран
+    project_type: Тип проект
+    help_text: Щракнете върху <strong>направи приложение</strong> или <strong>Начертайте
+      нещо</strong> по-долу за да направите нов проект в Игрална Лаборатория или проект
+      с художника! <br/>Можете да се върне към работа по проектите си по всяко време.
+    need_help: Нужда от помощ за да започнете?
+    really_delete: Да се изтрие ли?
+    delete_yes: Да
+    delete_no: Не
+    saved: Запазено
+    not_saved: Не е запазено
+    cancel: Отмяна
+    delete_confirm_title: Наистина ли искате да изтриете този проект?
+    delete_confirm_text: Изтриването на вашия проект ще го премахне завинаги от списъка
+      ви с проекти. Всеки, с който сте споделили връзката към проект или проекти няма
+      да може да ги вижда.
+    view_all: Покажи моите проекти

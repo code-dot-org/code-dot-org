@@ -6,11 +6,12 @@ bg-BG:
   csedweek_dates: 8-14 декември 2014 г.
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> да планират техния Час на кодирането</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по ИТ или  информатика  сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Опитайте</h1><h2>Часът на кодирането</h2><h3># served</h3>'
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
   petition_message: Всеки ученик във всяко училище трябва да има възможност да учи компютърни науки
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # всички останали.'
+  petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се # към другите.'
   name: Име
   email: Имейл
   zipcode: Пощенски код или държава
@@ -90,6 +91,7 @@ bg-BG:
   learn_classes: Намерете местни класове
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
   just_did_hoc: 'Току-що завърших #HourOfCode - вижте го! @codeorg'
+  twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/ за да научите повече.
   learn_hoc: 'Научете се да програмирате с "Часът на кодирането"'
   beyond_hoc: След един час
   what_gender: Какъв пол сте?
@@ -104,9 +106,9 @@ bg-BG:
   students_and_lines: '%{students} ученици са приключили "Часът на кодирането" и са написали %{lines} реда код.'
   start_hoc: 'Започнете "Часът на кодиране" сега'
   contact_form_topic_press: Преса/медии (интервю или гласово включване)
-  stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. "-Майкъл Кларк, учител'
   stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина Никълс Пири, учител'
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана Алзейт, 5-ти клас'
+  stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. "-Майкъл Кларк, учител'
   studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за кодиране</a>"
   studiobar_elementary_title: Начални курсове
   studiobar_elementary_body: 'Нашите три нови курсове за K &#8209; 5'
@@ -122,6 +124,46 @@ bg-BG:
   studiobar_donate_body: Едно дете учи за всеки долар, който си дарил
   studiobar_shop_title: Магазин
   studiobar_shop_body: Разбий стереотипите. Носи логото ни с гордост.
+  homepage_hero_text_malala: '&ldquo;"Предизвиквам момичета във всяка страна да учат един Час кодиране"&rdquo; Malala'
+  homepage_hero_text_susan: '&ldquo;"Никога не е късно да учите"&rdquo; Сюзън, изпълнителен директор на YouTube'
+  homepage_hero_text_fistbump: '&ldquo;"Не само играйте на телефона, програмирайте за него."&rdquo; президент Барак Обама'
+  homepage_hero_text_sheryl: '&ldquo;"Разбирането на компютърните науки се превръща все по-съществено..."&rdquo; Шерил, главен оперативен директор на Facebook'
+  homepage_slot_text_hoc: Час по кодиране
+  homepage_slot_text_frozen: Frozen с Анна и Елза
+  homepage_slot_text_teacher: Учителско табло
+  homepage_slot_text_studio: Всички от нашите уроци
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Flappy код
+  homepage_action_text_codevideo: Гледайте видеото
+  homepage_action_text_teachervideo: Гледайте видеото
+  homepage_action_text_learn: Започнете да учите днес
+  homepage_action_text_signpetition: Подпишете петицията
+  homepage_signpetition_dropdown: 'Регистрирайте се в подкрепа на нашата петиция &#x25BE;'
+  homepage_slot_text_title_hoc: Час на Кодирането
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Опитайте Часа на Кодирането
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Ученици
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Дарения
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -289,6 +331,8 @@ bg-BG:
   dashboard_login_picture: Картина
   dashboard_login_none: Имейл
   dashboard_new_password: нова парола
+  dashboard_progress_not_started: не стартира
+  dashboard_progress_in_progress: в ход
   dashboard_progress_not_completed: не е завършено
   dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
   dashboard_progress_completed_perfect: завършено, перфектно

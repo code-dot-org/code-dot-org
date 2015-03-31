@@ -1,16 +1,17 @@
 {
-  "badColorStringError": "You used an invalid color string: {val}",
-  "badStyleStringError": "You used an invalid style string: {val}",
+  "badColorStringError": "Utilizaste una cadena de color no válido: {val}",
+  "badStyleStringError": "Utilizaste una cadena estilo válido: {val}",
   "circleBlockTitle": "círculo (radio, estilo, color)",
-  "displayBlockTitle": "mostrar",
+  "displayBlockTitle": "evaluar",
   "ellipseBlockTitle": "elipse (anchura, altura, estilo, color)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Tienes un bloque con una entrada vacía.",
   "extraTopBlocks": "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?",
+  "infiniteRecursionError": "La función hace referencia hacia si misma. Nosotros paramos la ejecución, de otro modo hubiera seguido llamandose asimisma infinitamente.",
   "overlayBlockTitle": "superposición (arriba, abajo)",
   "placeImageBlockTitle": "lugar-imagen (x, y, imagen)",
   "offsetBlockTitle": "offset (x, y, imagen)",
   "rectangleBlockTitle": "rectángulo (anchura, altura, estilo, color)",
-  "reinfFeedbackMsg": "Presiona el botón \"reintentar \" para editar tu dibujo.",
+  "reinfFeedbackMsg": "Presionar el Boton \"Seguir jugando\" para editar el dibujo.",
   "rotateImageBlockTitle": "Girar (grados, imagen)",
   "scaleImageBlockTitle": "escala (factor, imagen)",
   "squareBlockTitle": "cuadrado (tamaño, estilo, color)",
@@ -24,5 +25,7 @@
   "underlayBlockTitle": "poner debajo (inferior, superior)",
   "outline": "contorno",
   "solid": "sólido",
-  "string": "cadena"
+  "string": "cadena",
+  "stringMismatchError": "La cadena de caracteres tiene una o mas letras capitales de forma erronea.",
+  "userCodeException": "Ocurrio un error mientras se ejecutaba el codigo."
 }

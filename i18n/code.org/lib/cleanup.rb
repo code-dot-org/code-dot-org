@@ -2,17 +2,14 @@
 require 'fileutils'
 
 dashboard_files = [
-  'contract_match',
   'data',
   'devise',
   'dsls',
-  'external',
   'instructions',
   'match',
   'multi',
   'scripts',
   'slides',
-  'text_match',
   'unplugged'
 ]
 
@@ -34,4 +31,3 @@ end
 # rebuild blockly js files
 `./../../blockly-core/i18n/codeorg-messages.sh`
 FileUtils.cp_r '../../blockly-core/msg/js/.', '../../apps/lib/blockly/'
-

@@ -494,9 +494,9 @@
         image: notes/playlab_intro_1.png
         text: Aiomme luoda pelejä käyttäen Play Lab:ia. Hyvissä peleissä on tarina
           ja jokaisessa tarinassa on hahmoja. Me opimme, kuinka voimme saada hahmojemme,
-          kuten noitiemme tai muukalaistemme puhumaan, liikkumaan ja vaikuttamaan
-          toisiinsa. Tämän opetusohjelman loppuun mennessä voit rakentaa pelin tyhjästä
-          ja voit jakaa sen ystäviesi kanssa.
+          kuten noidat tai avaruusoliot puhumaan, liikkumaan ja vaikuttamaan toisiinsa.
+          Tämän opetusohjelman loppuun mennessä osaat rakentaa pelin tyhjästä ja voit
+          jakaa sen ystäviesi kanssa.
       2:
         image: notes/playlab_intro_2.png
         text: Näyttösi on jaettu 3 osaan. Vasemmalla on pelin tila, jossa ohjelmasi

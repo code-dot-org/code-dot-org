@@ -22,6 +22,7 @@
           future: não pode estar no futuro
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
+  submit: Enviar
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -351,8 +352,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
+    email_confirm_wrong_email: (Endereço de e-mail errado?)
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixe em branco se não quiser fazer alteração)
     current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
@@ -575,7 +576,7 @@
             de programação. O curso é projetado para uso em salas de aula para o Ensino
             Fundamental, mas é divertido de aprender em todas as idades.
         Hour of Code:
-          title: Hora do Código
+          title: Hora do Código 2013
           description: ''
         edit-code:
           title: Editar o código
@@ -612,11 +613,46 @@
     sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em
     contato conosco.
   progress:
-    not_completed: não concluído
+    not_started: não iniciado
+    in_progress: em progresso
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
+    assessment: avaliação
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos
     all_courses: Todos os cursos
+  project:
+    projects: Projetos
+    create: Criar projeto
+    create_a_project: 'Crie um novo projeto:'
+    new: Criar novo
+    rename: Renomear
+    save: Salvar
+    delete: Excluir
+    exit: Voltar ao curso
+    my_projects: Meus projetos
+    share: Compartilhar
+    share_title: Compartilhar seu projeto
+    share_copy_link: 'Copie o link:'
+    close: Fechar
+    more: Mais
+    name: Nome
+    updated: Atualizado
+    project_type: Tipo do projeto
+    help_text: Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma
+      coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você
+      pode voltar a trabalhar nos seus projetos a qualquer hora.
+    need_help: Precisa de ajuda para começar?
+    really_delete: Excluir?
+    delete_yes: Sim
+    delete_no: Não
+    saved: Salvo
+    not_saved: Não salvo
+    cancel: Cancelar
+    delete_confirm_title: Tem certeza que deseja excluir esse projeto?
+    delete_confirm_text: Excluir seu projeto vai removê-lo permanentemente da sua
+      lista "Meus projetos". As pessoas com quem você compartilhou o link não vão
+      mais poder visualizar seu projeto.
+    view_all: Visualizar meus projetos

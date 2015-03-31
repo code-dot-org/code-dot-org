@@ -43,10 +43,10 @@ de:
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hallo, ich heiße JR! Jedes Autorennteam braucht ComputerspezialistInnen, um erfolgreich zu sein. Sie analysieren Messdaten des Autos, um es noch schneller zu machen.
+        text: Hi, ich bin JR! Jedes Autorennteam braucht Computerspezialisten, um zu gewinnen. Sie analysieren die Messdaten des Autos, um es noch schneller zu machen.
       2:
         image: notes/stage5_2.jpg
-        text: In diesen Rätseln sind Sie ein Künstler, der eine Linie hinter sich zeichnet, überall da, wo er hin geht.
+        text: In diesen Rätseln bist du ein Künstler, der überall wo er hin geht, eine Linie hinter sich zeichnet.
       3:
         image: notes/stage5_3.jpg
         text: 'Dieser Baustein sagt "Bewege dich 100 Pixel nach vorne". Pixel sind sehr kleine Punkte auf dem Bildschirm.'
@@ -189,7 +189,7 @@ de:
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hi, bin ich Brina, Ingenieur bei Instagram. Eine Funktion ist eine Zusammenfassung bestimmter Codezeilen, die Du immer und immer wieder verwenden möchtest, statt den Code jedesmal auszuschreiben, kannst du einfach einen Baustein verwenden.
+        text: Hi, bin ich Brina, Ingenieur bei Instagram. Eine Funktion ist eine Reihe bestimmter Codezeilen, die du immer wieder verwenden möchtest. Anstatt diese Zeilen jedesmal wieder zu schreiben, kannst du einfach einen Baustein verwenden.
       2:
         image: notes/stage13_2.jpg
         text: Wir lernen jetzt, wie man Funktionen definiert. Funktionsdefinitionen haben einen Stern in der Ecke. Der Name der Funktion ist in der obersten Zeile geschrieben.
@@ -241,7 +241,7 @@ de:
         text: 'Um dies zu tun, klicke auf den blauen Stern der "Zeichne ein Dreieck"-Funktionsdefinition. Ziehe dann "Name eingeben" in den "Eingeben"-Baustein.'
       5:
         image: notes/stage15_5.jpg
-        text: 'Schreibe dann "Länge" and sie Stelle, wo "x" steht, drücke "Enter" und du erstellst eine Längeneingabe für deine Funktion.'
+        text: 'Wenn du nun "Länge" an die Stelle schreibst, wo "x" steht, und dann "Enter" drückst, erstellst du eine Längeneingabe für deine Funktion.'
       6:
         image: notes/stage15_6.jpg
         text: 'Dann klicke auf den Stern. Jetzt klickst du auf die "Variablen"-Kategorie und ziehst den "Länge"-Baustein in den "vorwärts bewegen"-Baustein deiner Funktionsdefinition. Ziehe den alten Nummernblock weg.'
@@ -292,13 +292,13 @@ de:
         text: 'Die weiße Fläche auf der rechten Seite ist unser Arbeitsbereich. Dort werden wir unser Programm erstellen. Um die Eisfläche zu verschieben, brauchst du den "Bewege vorwärts"-Baustein.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Hier, der Baustein "vorwärts bewegen" besagt, "bewege um 100 Pixel vorwärts". Wenn wir "ausführen" drücken, was passiert? Elsa bewegt sich um eine bestimmte Länge vorwärts, und zwar genau 100 Pixel. Pixel sind im Grunde sehr kleine Quadrate auf dem Bildschirm deines Computers.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'Der andere Baustein in diesem Puzzle sagt "nach rechts um 90 Grad drehen." Und wenn wir diesen "Nach rechts drehen"-Baustein benutzen, dann dreht sich Elsa um eine bestimmte Weite. Du kannst selber ausprobieren, wie weit du Elsa drehen willst. Der Winkel basiert auf dem Pfad, der direkt vor Elsa liegt. Also ist das eine 90-Grad-Drehung. Und das ist eine 120-Grad-Drehung.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Denk dran, du kannst die Anzahl der Pixel und die Weite der Drehung ändern, indem du auf die Pfeile direkt daneben drückst.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg

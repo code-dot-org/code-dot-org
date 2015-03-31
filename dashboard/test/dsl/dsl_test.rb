@@ -62,7 +62,7 @@ wrong 'w3'
 name 'name1'
 title nil
 DSL
-    output, i18n = MultiDSL.parse(input_dsl, 'test')
+    _, i18n = MultiDSL.parse(input_dsl, 'test')
     i18n_expected = {'en' => {'data' => {'multi' => {'name1' => {}}}}}
     assert_equal i18n_expected, i18n
   end

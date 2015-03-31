@@ -1,13 +1,18 @@
 {
-  "compute":"изчисляване",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Резултатът от Вашата програма за делене на нула.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "emptyFunctionalBlock":"Имате блок с незапълнено поле.",
   "equivalentExpression":"Опитайте пренареждане на аргументите, за да получите точно един и същи израз.",
-  "extraTopBlocks":"Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?",
+  "evaluate":"Оценка",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Вашата функция не връща правилният резултат за всички стойности.",
   "goal":"Цел:",
-  "levelIncompleteError":"Your expression does not match the goal.",
+  "levelIncompleteError":"Вашият израз не съответства на целта.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Във Вашият израз липсва променлива {var}.",
   "reinfFeedbackMsg":"Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!",
   "yourExpression":"Вашият израз:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Вие извикахте функция с грешна стойност.",
+  "wrongOtherValuesX":"Вашият резултат от израза води има грешна стойност ако ние варираме {var}.",
+  "wrongResult":"Вашият израз не връща правилния резултат."
 }

@@ -1,17 +1,10 @@
 module Ops
   class CohortsController < OpsControllerBase
-    before_filter :convert_teacher_info, :convert_district_names, only: [:create, :update]
-    load_and_authorize_resource
-
-    # POST /ops/cohorts/1/teachers/:teacher_id
-    def add_teacher
-      @cohort.teachers << User.find(params[:teacher_id])
-      @cohort.save!
-      respond_with :ops, @cohort
-    end
+    before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
+    load_and_authorize_resource except: [:index]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
-    def drop_teacher
+    def destroy_teacher
       @cohort.teachers.delete User.find(params[:teacher_id])
       @cohort.save!
       respond_with @cohort
@@ -25,6 +18,15 @@ module Ops
 
     # GET /ops/cohorts
     def index
+      authorize! :manage, Cohort
+      @cohorts =
+        if current_user.try(:admin?)
+          Cohort.all
+        elsif current_user.try(:district_contact?)
+          current_user.districts_as_contact.map(&:cohorts).flatten
+        else
+          []
+        end
       respond_with @cohorts
     end
 
@@ -34,7 +36,6 @@ module Ops
     end
 
     # PATCH/PUT /ops/cohorts/1
-    # todo: Use this route to batch-update the teacher list in a cohort?
     def update
       @cohort.update!(params[:cohort])
       respond_with @cohort
@@ -53,48 +54,52 @@ module Ops
       params.require(:cohort).permit(
           :name,
           :program_type,
+          :cutoff_date,
           :district_ids => [],
           :district_names => [],
-          :districts => [],
-          :teachers => [],
-          :teacher_ids => [], # permit array of scalar values
-          :teacher_info => [:name, :email, :district] # permit array of objects with specified keys
+          :districts => [:id, :max_teachers, :_destroy],
+          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender] # permit array of objects with specified keys
       )
     end
 
     # Support district_names in the API
-    def convert_district_names
+    def convert_districts_to_cohorts_districts_attributes
       return unless params[:cohort]
-      district_names_list = params[:cohort].delete :district_names
-      if district_names_list
-        params[:cohort][:districts] = district_names_list.map do |district_name|
-          District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
+      district_params_list = params[:cohort].delete :districts
+      return unless district_params_list
+      params[:cohort][:cohorts_districts_attributes] = district_params_list.map do |district_params|
+        {district_id: district_params[:id],
+         max_teachers: district_params[:max_teachers],
+         _destroy: district_params[:_destroy]}.tap do |cohorts_districts_attrs|
+          if params[:id] && existing = CohortsDistrict.find_by(district_id: district_params[:id], cohort_id: params[:id])
+            cohorts_districts_attrs[:id] = existing.id
+          end
         end
       end
     end
 
-    # Uses a teacher_info object to batch-create new Teacher accounts,
-    # matching existing accounts by email.
-    def convert_teacher_info
+    def convert_teachers
       return unless params[:cohort]
-      teacher_info_list = params[:cohort].delete :teacher_info
-      if teacher_info_list
-        params[:cohort][:teachers] = teacher_info_list.map do |info|
-          district_name = info.delete 'district'
-          district = District.find_by(name: district_name) || raise("Invalid District: '#{district_name}'")
-          info['district'] = district
-          email = info.delete 'email'
-          teacher = User.create_with({
-            user_type: 'teacher',
-            age: '21+',
-            password: 'changeit' # todo: send password-reset email
-          }.merge(info)).find_or_create_by(
-            email: email
-          )
-          teacher.update(info) # Update existing teacher accounts with specified info
-          teacher
+      teacher_param_list = params[:cohort].delete :teachers
+      return unless teacher_param_list
+
+      params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
+        district_params = teacher_params.delete :district
+        if district_params.is_a?(String)
+          teacher_params[:district_id] = District.find_by!(name: district_params).id
+        elsif district_params.is_a?(Hash) && district_params[:id]
+          teacher_params[:district_id] = district_params[:id]
         end
+        User.find_or_create_teacher(teacher_params)
       end
+    end
+
+    def timestamp_cutoff_date
+      return unless params[:cohort]
+      cutoff_date = params[:cohort].delete :cutoff_date
+      return unless cutoff_date
+
+      params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end
   end
 end

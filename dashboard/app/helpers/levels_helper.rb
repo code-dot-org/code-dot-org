@@ -32,6 +32,10 @@ module LevelsHelper
       @start_blocks ||=
         @level.try(:project_template_level).try(:start_blocks) ||
         @level.start_blocks
+
+      @code_functions ||=
+        @level.try(:project_template_level).try(:code_functions) ||
+        @level.code_functions
     end
   end
 
@@ -53,7 +57,7 @@ module LevelsHelper
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    video_info(autoplay_video) unless params[:noautoplay]
+    autoplay_video.summarize unless params[:noautoplay]
   end
 
   def available_callouts
@@ -219,6 +223,24 @@ module LevelsHelper
       last_attempt
       is_project_level
       failure_message_override
+      show_clients_in_lobby
+      show_routers_in_lobby
+      show_add_router_button
+      router_expects_packet_header
+      client_initial_packet_header
+      show_add_packet_button
+      show_packet_size_control
+      default_packet_size_limit
+      show_tabs
+      default_tab_index
+      show_encoding_controls
+      default_enabled_encodings
+      show_router_bandwidth_control
+      default_router_bandwidth
+      show_dns_mode_control
+      default_dns_mode
+      input_output_table
+      complete_on_success_condition_not_goals
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -239,7 +261,10 @@ module LevelsHelper
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
     # Blockly requires these fields to be objects not strings
-    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
+    (
+      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
+      .concat NetSim.json_object_attrs
+    ).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
     end
 
@@ -290,6 +315,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
+    app_options[:isLegacyShare] = true if @is_legacy_share
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|
@@ -345,11 +371,12 @@ module LevelsHelper
 
   def level_title
     if @script_level
-      script = if @script_level.script.flappy?
-        data_t 'game.name', @game.name
-      else
-        data_t_suffix 'script.name', @script_level.script.name, 'title'
-      end
+      script =
+        if @script_level.script.flappy?
+          data_t 'game.name', @game.name
+        else
+          data_t_suffix 'script.name', @script_level.script.name, 'title'
+        end
       stage = @script_level.name
       position = @script_level.position
       if @script_level.script.stages.many?
@@ -398,8 +425,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an applab app.
   def applab_user_id
-    app_id = "1337" # Stub value, until storage for app_id's is available.
+    channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
-    Digest::SHA1.base64digest("#{app_id}:#{user_id}").tr('=', '')
+    Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
   end
 end

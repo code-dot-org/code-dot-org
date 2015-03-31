@@ -99,12 +99,12 @@ es:
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: App Lab
+        Webapp: Laboratorio de aplicaciones
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Laboratorio de aplicaciones
+        NetSim: Simulador de internet
     trophy:
       name:
         Bronze: Bronce
@@ -203,7 +203,7 @@ es:
         turtle_3_5: 'Ahora crea una nueva función "dibujar una casa" y úsala para albergar dos gatos. Sugerencia: crea una nueva función usando el bloque "hacer algo" y escribe tu propio texto para nombrar el bloque.'
         turtle_3_6: 'Usando "dibujar un cuadrado" como ejemplo, agrega una entrada llamada "longitud" a "dibujar un triángulo". Luego, dibuja triángulos de diferentes tamaños. (Sugerencia: haz clic en la estrella para agregar una entrada a una función)'
         turtle_3_7: 'Agrega una entrada denominada "longitud" a "dibujar una casa" y construye una casa grande para el elefante (con bordes de 150 píxeles de largo)'
-        turtle_3_8: 'Aquí están todos los bloques del puzzle anterior.  Modifica "dibujar una casa" así termino en la esquina inferior derecha después de dibujar una nueva casa. Utiliza esta función modificada para dibujar tres casas.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: '¿Puedes volver a crear la función "dibujar una casa" sin ayuda? Pruébalo y luego dibuja una hilera de casas.'
         turtle_3_10: ¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras. Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado.
         maze_karel_debug_seq_1: ¡Bienvenido a la depuración! Mi código no funciona bien. ¿Puedes detectar el problema y arreglarlo para que pueda aplanar mi campo y dejarlo listo para la siembra?
@@ -246,7 +246,7 @@ es:
         flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido o más lento.
         flappy_7: 'A continuación, trata de cambiar el fondo adjuntando otro bloque al bloque "cuando ejecute".'
         flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando comience el juego. Intenta establecer una escena AL AZAR cuando sucedan otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar el juego intente ajustar el marcador de nuevo a 0.
         flappy_11: Crea tu propio juego Flappy, Puedes cambiar todos los efectos visuales y las reglas, hasta la gravedad. Cuando finalices haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
         flappy_k1_1: Jugar Flappy
         flappy_k1_2: 'Adjunta un bloque a "cuando se haga clic en el bloque", entonces presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.'
@@ -328,7 +328,7 @@ es:
         maze_wordsearch_k_15: Mueveme en una dirección, y luego en otra para deletrear la palabra SOBRE
         maze_wordsearch_k_16: Mueveme en una dirección, y luego en otra para deletrear la palabra DEBAJO
         maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego en otra para deletrear la palabra HISTORIA
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Crea tu aplicación usando los bloques en la caja de herramientas.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo en el nuevo bloque "Color De Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras. Algunas ideas divertidas: una de palotes, copos de nieve o espirales. Prueba también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
         studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
@@ -432,6 +432,12 @@ es:
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Bloques de evaluación
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variables
+        msm_7_functions: Funciones
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'

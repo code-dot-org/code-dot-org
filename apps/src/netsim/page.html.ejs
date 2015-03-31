@@ -1,6 +1,5 @@
 <%
   var msg = require('../../locale/current/common');
-  var netsimMsg = require('../../locale/current/netsim');
 %>
 
 <div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
@@ -30,21 +29,26 @@
   </div>
 <% }; -%>
 
-<% // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { -%>
-  <% if (html) { -%>
-    <div id="helpArea">
-      <%- html %>
-    </div>
-  <% } -%>
-<% }; -%>
-
 <div id="appcontainer">
-  <div id="netsim">
+  <!-- Should disable spell-check on all netsim elements -->
+  <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
     <div id="netsim_rightcol">
       <div id="netsim_status"></div>
       <div id="netsim_vizualization">
-        <img src="<%= assetUrl('media/netsim/netsim_viz_mock.png') %>" />
+        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+
+          <filter id="backgroundBlur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+            <feComponentTransfer>
+              <feFuncA slope="0.5" type="linear"></feFuncA>
+            </feComponentTransfer>
+          </filter>
+
+          <g id="centered_group" transform="translate(150,150)">
+            <g id="background_group" filter="url(#backgroundBlur)"></g>
+            <g id="foreground_group"></g>
+          </g>
+        </svg>
       </div>
       <div id="netsim_tabs"></div>
     </div>
@@ -61,7 +65,6 @@ var helpArea = function(html) { -%>
   </div>
   <div id="footers" dir="<%= data.localeDirection %>">
     <% instructions() %>
-    <% helpArea(data.helpHtml) %>
   </div>
 </div>
 

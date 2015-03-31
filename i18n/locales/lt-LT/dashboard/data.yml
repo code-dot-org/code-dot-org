@@ -207,7 +207,7 @@ lt:
           Sufleris: tiks blokelis „nauja komandą“, tik įrašyk norimą komandos pavadinimą.
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti dydį „n“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris: kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
         turtle_3_7: Komandai „namas“ pridėk dydžio parametrą „n“ ir nupiešk didelį namą drambliui (jo kraštinės turi būti 150 pikselių)
-        turtle_3_8: 'Sukurk komandą „namas“ pagal nurodytą dydį "n".  Nupiešk tris skirtingo dydžio namus panaudodamas šią komandą. Pagalvok, kaip kiekvienam namui nueiti į pradinę jo piešimo vietą.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: Ar sugebėsi sukurti komandą „namas“ dar kartą? Pamėgink, o po to nupiešk iš eilės tris didėjančius namus.
         turtle_3_10: Jau daug visko išmokai! Dabar gali panaudoti šiuos blokelius, kad nupieštum tai, ką nori. Pamėgink nupiešti žvaigždę, spiralę ar gražią snaigę.
         maze_karel_debug_seq_1: Sveikas atvykęs į klaidų ieškojimą! Mano kodas neveikia teisingai. Ar surasi problemą ir ištaisysi ją, kad galėčiau paruošti lauką sodinimui?
@@ -432,6 +432,12 @@ lt:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Kintamieji
+        msm_7_functions: Komandų kūrimas
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu

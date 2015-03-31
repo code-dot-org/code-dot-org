@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({15:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({19:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":8,"./blocks":9,"./levels":14,"./skins":16}],16:[function(require,module,exports){
+},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":20}],20:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":173}],14:[function(require,module,exports){
+},{"../skins":194}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -66,14 +66,7 @@ levels.simple = {
 };
 
 levels.custom = {
-};
-
-levels.ec_simple = {
-  'freePlay': true,
-  'editCode': true,
   'sliderSpeed': 0.95,
-  'appWidth': 320,
-  'appHeight': 480,
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -120,7 +113,7 @@ levels.ec_simple = {
     "setGreen": null,
     "setBlue": null,
     "setAlpha": null,
-    "setRGBA": null,
+    "setRGB": null,
 
     // Data
     "startWebRequest": null,
@@ -163,6 +156,7 @@ levels.ec_simple = {
     "clearTimeout": null,
     "setInterval": null,
     "clearInterval": null,
+    "getTime": null,
 
     // Math
     "addOperator": null,
@@ -195,8 +189,16 @@ levels.ec_simple = {
     "functionParams_n": null,
     "callMyFunction": null,
     "callMyFunction_n": null,
+    "return": null,
   },
 };
+
+levels.ec_simple = utils.extend(levels.custom, {
+  'freePlay': true,
+  'editCode': true,
+  'appWidth': 320,
+  'appHeight': 480,
+});
 
 // Functions in Advanced category currently disabled in all levels:
 /*
@@ -292,16 +294,17 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":221,"../block_utils":19,"../utils":219}],8:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../block_utils":25,"../utils":240}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
-
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
@@ -379,10 +382,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList.item(1) === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList.item(0) +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -394,10 +438,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -405,6 +450,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -422,9 +485,11 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -435,6 +500,21 @@ function adjustAppSizeStyles() {
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+              // set the left for the codeWorkspace
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+              // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
@@ -462,12 +542,6 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
 
 function stepSpeedFromSliderSpeed(sliderSpeed) {
@@ -568,6 +642,14 @@ function handleExecutionError(err, lineNumber) {
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
+
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
+Applab.getHtml = function () {
+  return Applab.levelHtml;
+};
 
 Applab.onTick = function() {
   if (!Applab.running) {
@@ -856,22 +938,24 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
+  });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
   });
 
   config.html = page({
@@ -884,7 +968,10 @@ Applab.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      pinWorkspaceToBottom: true,
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
@@ -928,7 +1015,7 @@ Applab.init = function(config) {
         e.stop();
       });
     }
-    
+
     if (studioApp.share) {
       // automatically run in share mode:
       window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
@@ -946,6 +1033,7 @@ Applab.init = function(config) {
   config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
+  config.pinWorkspaceToBottom = true;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -953,7 +1041,25 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
+
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
 
   if (level.editCode) {
     // Initialize the slider.
@@ -990,9 +1096,193 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
+    var designModeButton = document.getElementById('designModeButton');
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
+    var codeModeButton = document.getElementById('codeModeButton');
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
 
   user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  for (var i = Applab.nextElementIdMap[prefix] || 1;
+       divApplab.find("#" + prefix + i).length !== 0;
+       i++) {
+    // repeat until we find an unused id
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -1059,6 +1349,13 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -1124,6 +1421,12 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
+
+  // Show view data button now that channel id is available.
+  var viewDataButton = document.getElementById('viewDataButton');
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -1442,8 +1745,41 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
+};
+
+Applab.onDesignModeButton = function() {
+  studioApp.resetButtonClick();
+  Applab.toggleDesignMode(true);
+};
+
+Applab.onCodeModeButton = function() {
+  Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeClear = function() {
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDesignMode = function(enable) {
+  var codeModeHeaders = document.getElementById('codeModeHeaders');
+  codeModeHeaders.style.display = enable ? 'none' : 'block';
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
+  var codeTextbox = document.getElementById('codeTextbox');
+  codeTextbox.style.display = enable ? 'none' : 'block';
+  var designModeBox = document.getElementById('designModeBox');
+  designModeBox.style.display = enable ? 'block' : 'none';
+
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1775,6 +2111,8 @@ Applab.dot = function (opts) {
       // If the pen is up and the color has been changed, use that color:
       ctx.strokeStyle = Applab.turtle.penUpColor;
     }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
@@ -1782,6 +2120,7 @@ Applab.dot = function (opts) {
       // If the pen is up, reset strokeStyle back to transparent:
       ctx.strokeStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1790,8 +2129,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1851,6 +2192,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
@@ -2778,7 +3120,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"../StudioApp":4,"../codegen":45,"../constants":47,"../dom":48,"../dropletUtils":49,"../skins":173,"../slider":174,"../templates/page.html":198,"../timeoutList":204,"../utils":219,"../xml":220,"./api":6,"./appStorage":7,"./blocks":9,"./controls.html":10,"./dontMarshalApi":11,"./dropletConfig":12,"./extraControlRows.html":13,"./visualization.html":17}],17:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"../StudioApp":4,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":194,"../slider":195,"../templates/page.html":219,"../timeoutList":225,"../utils":240,"../xml":241,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./visualization.html":21}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2798,7 +3140,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":240}],13:[function(require,module,exports){
+},{"ejs":261}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2810,7 +3152,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2818,123 +3160,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"ejs":240}],12:[function(require,module,exports){
-module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
-  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
-  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
-  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
-  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false"] },
-  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
-  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ['"id"', "true"] },
-  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
-  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
-  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ['"id"'] },
-  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
-  {'func': 'write', 'title': 'Create a block of text', 'category': 'UI controls', 'params': ['"html"'] },
-  {'func': 'getXPosition', 'title': "Get the element's x position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
-  {'func': 'getYPosition', 'title': "Get the element's y position", 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"ejs":261}],15:[function(require,module,exports){
+var Applab = require('./applab');
 
-  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
-  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ['"id"'] },
-  {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
-  {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
-  {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
-  {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ['"red"'] },
-  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ['"yellow"'] },
-  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
-  {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
-  {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
-  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
-  {'func': 'setRGBA', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
-
-  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
-  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'title': 'getUserId(); Gets a unique identifier for the current user of this app.', 'category': 'Data', 'params': [] },
-
-  {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
-  {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
-  {'func': 'dot', 'title': "Draw a dot in the turtle's location with the specified radius", 'category': 'Turtle', 'params': ["5"] },
-  {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnTo', 'title': 'Turn the turtle to the specified direction (0 degrees is pointing up)', 'category': 'Turtle', 'params': ["0"] },
-  {'func': 'arcRight', 'title': 'Move the turtle in a clockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'arcLeft', 'title': 'Move the turtle in a counterclockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'getX', 'title': "Get the turtle's x position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getY', 'title': "Get the turtle's y position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getDirection', 'title': "Get the turtle's direction (0 degrees is pointing up)", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
-  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ['"red"'] },
-  {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
-  {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
-  {'func': 'speed', 'title': "Change the execution speed of the program to the specified percentage value", 'category': 'Turtle', 'params': ["50"] },
-
-  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
-  {'func': 'setInterval', 'title': 'Continue to execute code each time the specified number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearInterval', 'title': 'Clear an existing interval timer by passing in the value returned from setInterval()', 'category': 'Control', 'params': ["0"] },
-
-  {'func': 'console.log', 'title': 'Log a message or variable to the output window', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
-
-  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
-  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
-  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
-  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
-  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
-  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
-];
-
-module.exports.categories = {
-  'UI controls': {
-    'color': 'red',
-    'blocks': []
-  },
-  'Canvas': {
-    'color': 'yellow',
-    'blocks': []
-  },
-  'Data': {
-    'color': 'orange',
-    'blocks': []
-  },
-  'Turtle': {
-    'color': 'yellow',
-    'blocks': []
-  },
-  'Advanced': {
-    'color': 'blue',
-    'blocks': []
-  },
-};
-
-},{}],11:[function(require,module,exports){
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 
@@ -2994,18 +3222,58 @@ exports.setAlpha = function (imageData, x, y, value) {
     imageData.properties.data.properties[pixelOffset + 3] = value;
   }
 };
-exports.setRGBA = function (imageData, x, y, r, g, b, a) {
+exports.setRGB = function (imageData, x, y, r, g, b, a) {
   if (imageData.properties.data && imageData.properties.width) {
     var pixelOffset = y * imageData.properties.width * 4 + x * 4;
     imageData.properties.data.properties[pixelOffset] = r;
     imageData.properties.data.properties[pixelOffset + 1] = g;
     imageData.properties.data.properties[pixelOffset + 2] = b;
     imageData.properties.data.properties[pixelOffset + 3] =
-        (typeof a === 'undefined') ? 255 : a;
+      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
   }
 };
 
-},{}],10:[function(require,module,exports){
+},{"./applab":10}],14:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":261}],13:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="designModeBox" width="100%" style="display:none;">\n  ');2; /* contains temporary unlocalized strings */ ; buf.push('\n  Welcome to Design mode! Under construction.<br>\n  Drag the elements below into your app, then press \'Run\' to save. Press \'Clear\' to start over.<br>\n  <table>\n    <colgroup>\n      <col width="50%">\n      <col width="50%">\n    </colgroup>\n    <tr>\n      <td><h3>Elements</h3></td>\n      <td><h3>Properties</h3></td>\n    </tr>\n    <tr>\n      <td>\n        <div id="design-elements">\n          <div data-element-type="button" class="new-design-element">button</div>\n          <div data-element-type="label" class="new-design-element">label</div>\n          <div data-element-type="input" class="new-design-element">input</div>\n          <button id="designModeClear" class="share">Clear</button><br>\n        </div>\n      </td>\n      <td>\n        <div id="design-properties">\n          ', (25,  designProperties ), '\n        </div>\n      </td>\n    </tr>\n  </table>\n\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":261}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3025,7 +3293,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":224,"ejs":240}],9:[function(require,module,exports){
+},{"../../locale/current/common":245,"ejs":261}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3098,20 +3366,29 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":221,"../../locale/current/common":224,"../codegen":45,"../utils":219}],221:[function(require,module,exports){
+},{"../../locale/current/applab":242,"../../locale/current/common":245,"../codegen":53,"../utils":240}],242:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
+
+/* global dashboard */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
 
-// TODO(dave): remove once we can store ids for each app.
-AppStorage.tempEncryptedAppId =
+// TODO(dave): remove once all applab data levels are associated with
+// a project.
+AppStorage.tempChannelId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+AppStorage.getChannelId = function() {
+  // TODO(dave): pull channel id directly from appOptions once available.
+  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  return id || AppStorage.tempChannelId;
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -3123,13 +3400,18 @@ AppStorage.tempEncryptedAppId =
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
 
 var handleGetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onSuccess(undefined);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3150,14 +3432,15 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
 };
 
 var handleSetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3187,14 +3470,15 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
 var handleCreateRecord = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3225,14 +3509,15 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3273,7 +3558,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -3281,7 +3566,8 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
@@ -3317,7 +3603,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -3325,7 +3611,8 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
@@ -3340,7 +3627,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -3844,4 +4131,255 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[15]);
+},{}],7:[function(require,module,exports){
+var dropletConfig = require('../dropletConfig');
+var dropletUtils = require('../../dropletUtils');
+var errorMapper = require('./errorMapper');
+
+// define ourselves for ace, so that it knows where to get us
+ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
+
+var oop = acerequire("ace/lib/oop");
+var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
+var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
+var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
+var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
+var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
+
+var Mode = function() {
+    this.HighlightRules = JavaScriptHighlightRules;
+    this.$outdent = new MatchingBraceOutdent();
+    this.$behaviour = new CstyleBehaviour();
+    this.foldingRules = new CStyleFoldMode();
+};
+oop.inherits(Mode, JavaScriptMode);
+
+(function() {
+
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
+    }
+  }, this);
+
+  this.createWorker = function(session) {
+    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
+    worker.attachToDocument(session.getDocument());
+    var newOptions = {
+      unused: true,
+      undef: true,
+      predef: {
+      }
+    };
+    // Mark all of our blocks as predefined so that linter doesnt complain about
+    // using undefined variables
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
+      newOptions.predef[block.func] = false;
+    });
+
+    worker.send("changeOptions", [newOptions]);
+
+    worker.on("jslint", function(results) {
+      errorMapper.processResults(results);
+
+      session.setAnnotations(results.data);
+    });
+
+    worker.on("terminate", function() {
+      session.clearAnnotations();
+    });
+
+    return worker;
+  };
+}).call(Mode.prototype);
+
+exports.Mode = Mode;
+});
+
+},{"../../dropletUtils":57,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+module.exports.blocks = [
+  {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
+  {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
+  {'func': 'dropdown', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'category': 'UI controls', 'params': ['"id"', "false"] },
+  {'func': 'radioButton', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
+  {'func': 'getChecked', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'category': 'UI controls', 'params': ['"id"', "true"] },
+  {'func': 'image', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'hideElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'deleteElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'setPosition', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'category': 'UI controls', 'params': ['"html"'] },
+  {'func': 'getXPosition', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+
+  {'func': 'createCanvas', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'category': 'Canvas', 'params': ['"id"'] },
+  {'func': 'line', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'category': 'Canvas', 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'category': 'Canvas', 'params': ["3"] },
+  {'func': 'setStrokeColor', 'category': 'Canvas', 'params': ['"red"'] },
+  {'func': 'setFillColor', 'category': 'Canvas', 'params': ['"yellow"'] },
+  {'func': 'drawImage', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
+  {'func': 'getImageData', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
+  {'func': 'clearCanvas', 'category': 'Canvas', },
+  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+
+  {'func': 'startWebRequest', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'category': 'Data', 'params': [] },
+
+  {'func': 'moveForward', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'moveBackward', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'move', 'category': 'Turtle', 'params': ["25", "25"] },
+  {'func': 'moveTo', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'dot', 'category': 'Turtle', 'params': ["5"] },
+  {'func': 'turnRight', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnLeft', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnTo', 'category': 'Turtle', 'params': ["0"] },
+  {'func': 'arcRight', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'arcLeft', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'getX', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getY', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getDirection', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'penUp', 'category': 'Turtle' },
+  {'func': 'penDown', 'category': 'Turtle' },
+  {'func': 'penWidth', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'penColor', 'category': 'Turtle', 'params': ['"red"'] },
+  {'func': 'show', 'category': 'Turtle' },
+  {'func': 'hide', 'category': 'Turtle' },
+  {'func': 'speed', 'category': 'Turtle', 'params': ["50"] },
+
+  {'func': 'setTimeout', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'category': 'Control', 'params': ["0"] },
+  {'func': 'setInterval', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'category': 'Control', 'params': ["0"] },
+
+  {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
+
+  {'func': 'imageUploadButton', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
+  {'func': 'container', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'innerHTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'setParent', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
+  {'func': 'setStyle', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
+  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
+];
+
+module.exports.categories = {
+  'UI controls': {
+    'color': 'yellow',
+    'rgb': '#FFD54F',
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'red',
+    'rgb': '#F87477',
+    'blocks': []
+  },
+  'Data': {
+    'color': 'lightgreen',
+    'rgb': '#D3E965',
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'cyan',
+    'rgb': '#00D2E2',
+    'blocks': []
+  },
+  'Advanced': {
+    'color': 'blue',
+    'rgb': '#19C3E1',
+    'blocks': []
+  },
+};
+
+},{}],6:[function(require,module,exports){
+var errorMap = [
+  {
+    original: /Assignment in conditional expression/,
+    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+  },
+  {
+    original: /(.*)\sis defined but never used./,
+    replacement: "$1 is defined, but it's not called in your program."
+  },
+  {
+    original: /(.*)\sis not defined./,
+    replacement: "$1 hasn't been declared yet."
+  }
+];
+
+/**
+ * Takes the results of a JSLint pass, and modifies the error text according to
+ * our mapping. Note this makes changes in place to the passed in results
+ * object.
+ */
+module.exports.processResults = function (results) {
+  results.data.forEach(function (item) {
+    errorMap.forEach(function (errorMapping) {
+      if (!errorMapping.original.test(item.text)) {
+        return;
+      }
+
+      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+    });
+  });
+};
+
+},{}]},{},[19]);

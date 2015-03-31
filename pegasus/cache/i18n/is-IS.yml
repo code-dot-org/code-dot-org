@@ -11,12 +11,15 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í
     boði í tilefni CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>hafa prófað</h3><h2>Klukkustund kóðunar</h2>
+  n_have_learned_an_hoc: <h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3># hafa gert
+    það</h3>
   anybody_can_learn: Allir geta lært.
   learn_now: Læra núna
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra
     tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
+  petition_sign_message_support: 'Styddu okkar með því að skrá nafn þitt. Slástu í
+    hóp með # öðrum.'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -114,6 +117,9 @@
   learn_classes: Finna námskeið nálægt þér
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
+  twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt
+    úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast
+    nánar.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Eftir Klukkustund kóðunar
   what_gender: Ertu stelpa eða strákur?
@@ -129,12 +135,12 @@
     %{lines} línur af kóða.'
   start_hoc: Byrjaðu núna Klukkustund kóðunar
   contact_form_topic_press: Fjölmiðlar (viðtal eða erindi)
-  stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra."
-    - Michael Clark, kennari'
   stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni."
     - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana
     Alzate, 5. bekk'
+  stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra."
+    - Michael Clark, kennari'
   studiobar_title: Prófa <a href='http://studio.code.org'>Kóðastúdíóið</a>
   studiobar_elementary_title: Grunnskólanámskeið
   studiobar_elementary_body: Þrjú ný námskeið okkar fyrir 11 - 12 ára (K&#8209;5)
@@ -150,6 +156,53 @@
   studiobar_donate_body: Eitt barn lærir fyrir hvern dollar sem þú gefur
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
+  homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að
+    læra Klukkustund kóðunar&rdquo; \nMalala\n"
+  homepage_hero_text_susan: |
+    &ldquo;Það er aldrei of seint að læra&rdquo;
+    Susan, aðalframkvæmdastjóri YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
+    Barack Obama, forseti Bandaríkjanna
+  homepage_hero_text_sheryl: |
+    &ldquo;Skilningur á tölvunarfræði er að verða sífellt nauðsynlegri...&rdquo;
+    Sheryl, framkvæmdastjóri hjá Facebook
+  homepage_slot_text_hoc: Klukkustund kóðunar
+  homepage_slot_text_frozen: Frozen með Önnu og Elsu
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: Allt kennsluefni okkar
+  homepage_slot_text_course4: Námskeið 4
+  homepage_slot_text_shop: Verslun
+  homepage_slot_text_flappy: Flappy kóði
+  homepage_action_text_codevideo: Horfa á myndskeiðið
+  homepage_action_text_teachervideo: Horfa á myndskeiðið
+  homepage_action_text_learn: Byrjaðu að læra í dag
+  homepage_action_text_signpetition: Skrifa undir áskorunina
+  homepage_signpetition_dropdown: Skrifa undir áskorun okkar &#x25BE;
+  homepage_slot_text_title_hoc: Klukkustund kóðunar
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Nemendur
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Styrkja
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -352,6 +405,8 @@
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
+  dashboard_progress_not_started: ekki byrjað
+  dashboard_progress_in_progress: í vinnslu
   dashboard_progress_not_completed: ólokið
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
@@ -1035,27 +1090,3 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

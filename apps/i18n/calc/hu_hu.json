@@ -1,16 +1,18 @@
 {
-  "compute": "számítás",
+  "divideByZeroError": "A programod nullával való osztást eredményezett.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyFunctionalBlock": "Van egy blokkod kitöltetlen bemenettel.",
   "equivalentExpression": "Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd.",
+  "evaluate": "kiértékel",
   "extraTopBlocks": "Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "A függvényed nem ad vissza minden változóhoz helyes eredményt.",
   "goal": "Cél:",
-  "levelIncompleteError": "Your expression does not match the goal.",
-  "reinfFeedbackMsg": "Itt a történeted! Dolgozz rajta tovább, vagy menj a következő feladványra!",
+  "levelIncompleteError": "A kifejezésed nem a célt eredményezi.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "A kifejezésből hiányzik a {var} változó.",
+  "reinfFeedbackMsg": "Íme a számításod! Folytathatod vele a munkát, vagy menj a következő blokkra.",
   "yourExpression": "A kifejezésed:",
-  "wrongInput": "You are calling your function with the wrong value.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "Rossz értékkel hívtad meg a függvényedet.",
+  "wrongOtherValuesX": "A kifejezés rossz értéket eredményez, ha {var}-t megváltoztatjuk.",
+  "wrongResult": "A kifejezés nem ad vissza helyes eredményt."
 }

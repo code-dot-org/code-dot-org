@@ -2,19 +2,30 @@
 layout: none
 template: none
 ---
+- authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+
 %a{href:'/ops-dashboard'}
   Dashboard
 >
 %span
-  Cohorts
+  Teacher cohorts
 
 %div{'ng-controller' => 'CohortsController'}
-  %h1 Cohorts
-
-  %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/cohorts/new"} Add cohort
-  %br/
-  %br/
-
+  %h1 Teacher cohorts
+  .row
+    .col-sm-5
+      - if dashboard_user[:admin]
+        %a.btn.btn-default{style: 'color: #333;', "ng-href" => "#/teacher-cohorts/new"} Add teacher cohort
+        %br/
+        %br/
+  .row{'ng-show' => 'cohorts.length > 0', style: "margin-bottom: 20px;"}
+    .col-sm-12
+      %form.form-inline
+        %label.control-label{for: "cohort-filter-program-type"} Filter by program type
+        %select#cohort-filter-program-type.form-control{"ng-model" => "search.program_type", "ng-options"=>"program_type.short_name for program_type in program_types"}
+        %label.control-label{for: "cohort-filter-district"} Filter by district
+        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts"}
   %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
     No cohorts are available.
 
@@ -22,16 +33,36 @@ template: none
     %table{style: "width:950px; table-layout:fixed;"}
       %tr
         %th.manage-th
-          Name
+          %a{href: "", "ng-click" => "sortOrder = setSortOrder('name', sortOrder)"} Name
+        %th
+          %a{href: "", "ng-click" => "sortOrder = setSortOrder('program_type', sortOrder)"} Program Type
+        %th
+          Districts
         %th.manage-th
-      %tr{"ng-repeat" => "cohort in cohorts | orderBy:'cohort.name'", style: "vertical-align:top"}
+          Manage
+      %tr{"ng-repeat" => "cohort in cohorts | filter:search | orderBy:sortOrder", style: "vertical-align:top"}
         %td
           {{cohort.name}}
+        %td
+          {{program_types[cohort.program_type].short_name}}
+        %td
+          %ul
+            %li{"ng-repeat" => "district in cohort.districts"}
+              {{district.name}}
         %td{nowrap: true, style: 'white-space: nowrap;'}
-          %span{"ng-show" => "cohort.confirmDelete"}
-            %span Delete?
-            %a.btn.btn-danger.btn-xs{"ng-click"=>'del(cohort)'} Yes
-            %a.btn.btn-success.btn-xs{"ng-click"=>'cohort.confirmDelete = false'} No
+          - if dashboard_user[:admin]
+            %span{"ng-show" => "cohort.confirmDelete"}
+              %span Delete?
+              %a.btn.btn-danger.btn-xs{"ng-click"=>'del(cohort)'} Yes
+              %a.btn.btn-success.btn-xs{"ng-click"=>'cohort.confirmDelete = false'} No
           %span{"ng-hide" => "cohort.confirmDelete"}
-            %a.btn.btn-white.btn-xs{"ng-href" => "#/cohorts/{{cohort.id}}/edit"} Edit
-            %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/teachers"} Teachers
+            - if dashboard_user[:admin]
+              %a.btn.btn-white.btn-xs{"ng-href" => "#/teacher-cohorts/{{cohort.id}}/edit"} Edit
+              %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(cohort)"} Delete
+
+:css
+  ul {
+    margin: 0;
+    padding: 0;
+  }

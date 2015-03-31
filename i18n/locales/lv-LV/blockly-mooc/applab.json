@@ -8,8 +8,8 @@
   "catText":"Teksts",
   "catVariables":"Mainīgie",
   "continue":"Turpināt",
-  "container":"create container",
-  "containerTooltip":"Creates a division container and sets its inner HTML.",
+  "container":"izveidot konteineru",
+  "containerTooltip":"Izveidot nodalītu konteineru un uzstādīt tā iekšējo HTML.",
   "finalLevel":"Apsveicu! Jūs esat atrisinājis pēdējo puzli.",
   "nextLevel":"Apsveicu! Jūs pabeidzāt šo puzli.",
   "no":"Nē",
@@ -24,6 +24,6 @@
   "stepIn":"iesaistīties",
   "stepOver":"pārkāpt",
   "stepOut":"izstāties",
-  "viewData":"View Data",
+  "viewData":"Skatīt datus",
   "yes":"Jā"
 }

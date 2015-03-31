@@ -5,7 +5,9 @@ require 'rails/all'
 
 require 'cdo/geocoder'
 require 'varnish_environment'
-require 'apps_api'
+require 'channels_api'
+require 'properties_api'
+require 'tables_api'
 require 'shared_resources'
 
 require 'bootstrap-sass'
@@ -17,13 +19,14 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
-    config.middleware.use VarnishEnvironment
-    config.middleware.use AppsApi
-    config.middleware.use SharedResources
-
+    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
+    config.middleware.insert_after VarnishEnvironment, ChannelsApi
+    config.middleware.insert_after ChannelsApi, PropertiesApi
+    config.middleware.insert_after PropertiesApi, TablesApi
+    config.middleware.insert_after TablesApi, SharedResources
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.use PegasusSites
+      config.middleware.insert_after SharedResources, PegasusSites
     end
 
     config.encoding = 'utf-8'
@@ -79,5 +82,6 @@ module Dashboard
     )
     config.react.variant = :development
     config.react.addons = true
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

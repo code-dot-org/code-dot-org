@@ -1,28 +1,30 @@
 <% var msg = require('../../locale/current/common') %>
 <% var applabMsg = require('../../locale/current/applab') %>
 
-<% if (debugButtons) { %>
-<div>
-  <div id="debug-buttons" style="display:inline;">
-    <button id="pauseButton" class="share">
-      <%= applabMsg.pause() %>
-    </button>
-    <button id="stepInButton" class="share">
-      <%= applabMsg.stepIn() %>
-    </button>
-    <button id="stepOverButton" class="share">
-      <%= applabMsg.stepOver() %>
-    </button>
-    <button id="stepOutButton" class="share">
-      <%= applabMsg.stepOut() %>
-    </button>
-    <button id="viewDataButton" class="share">
-      <%= applabMsg.viewData() %>
-    </button>
+<div id="debug-area">
+  <% if (debugButtons) { %>
+  <div>
+    <div id="debug-buttons" style="display:inline;">
+      <button id="pauseButton" class="debugger_button">
+        <%= applabMsg.pause() %>
+      </button>
+      <button id="stepInButton" class="debugger_button">
+        <%= applabMsg.stepIn() %>
+      </button>
+      <button id="stepOverButton" class="debugger_button">
+        <%= applabMsg.stepOver() %>
+      </button>
+      <button id="stepOutButton" class="debugger_button">
+        <%= applabMsg.stepOut() %>
+      </button>
+      <button id="viewDataButton" class="debugger_button" style="display:none;">
+        <%= applabMsg.viewData() %>
+      </button>
+    </div>
   </div>
-<% } %>
+  <% } %>
 
-<% if (debugConsole) { %>
+  <% if (debugConsole) { %>
   <div id="debug-console" class="debug-console">
     <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>
     <span class="debug-input-prompt">
@@ -30,16 +32,5 @@
     </span>
     <div contenteditable id="debug-input" class="debug-input"></div>
   </div>
-<% } %>
-
-<% if (finishButton) { %>
-  <div id="share-cell" class="share-cell-none">
-    <button id="finishButton" class="share">
-      <img src="<%= assetUrl('media/1x1.gif') %>"><%= msg.finish() %>
-    </button>
-  </div>
-<% } %>
-
-<% if (debugButtons) { %>
+  <% } %>
 </div>
-<% } %>

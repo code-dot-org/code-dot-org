@@ -6,11 +6,12 @@ uk-UA:
   csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Спробувати на</h1><h2>Година коду</h2><h3># служив</h3>'
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: "Якщо ви згодні, то напишіть своє ім'я.  Приєднайтеся до # інших."
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -90,6 +91,7 @@ uk-UA:
   learn_classes: Знайти місцеві класи
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Більше Однієї Години
   what_gender: Якої ви статі?
@@ -104,9 +106,9 @@ uk-UA:
   students_and_lines: '%{students} учнів пройшли Годину коду і написали  %{lines} рядків коду.'
   start_hoc: Почати Годину коду
   contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
-  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
   stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
   stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
+  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
   studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: 'Три нові курси для K&#8209;5'
@@ -122,6 +124,58 @@ uk-UA:
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: Година Коду
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Код Пурха
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Година Коду
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Спробуйте годину коду
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Учні
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Підтримати
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
   contact_form_topic_teacher: Я вчитель/педагог
@@ -289,6 +343,8 @@ uk-UA:
   dashboard_login_picture: Зображення
   dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: не завершено
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально

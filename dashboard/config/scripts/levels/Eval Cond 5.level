@@ -18,7 +18,8 @@
     "open_function_definition": "red shape",
     "free_play": "false",
     "default_num_example_blocks": "2"
-  }
+  },
+  "md5": "425f147f8dbb7c822d52af961a7962cc"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -170,7 +171,7 @@
           <mutation>
             <arg name="shape" type="String"/>
             <arg name="size" type="Number"/>
-            <description>Given a string "shape," return a matching red shape of given size</description>
+            <description>Given a string "shape," and number for size, return a matching red shape of given size</description>
             <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">red shape</title>
@@ -356,6 +357,7 @@
           <block type="functional_triangle" inline="false"/>
           <block type="functional_square" inline="false"/>
           <block type="functional_rectangle" inline="false"/>
+          <block type="functional_star" inline="false"/>
         </category>
         <category name="Boolean">
           <block type="functional_string_equals" inline="false"/>
@@ -363,13 +365,7 @@
         <category name="Cond">
           <block type="functional_cond" inline="false"/>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="functional_call" inline="false">
-            <mutation name="red shape">
-              <arg name="shape" type="String"/>
-            </mutation>
-          </block>
-        </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

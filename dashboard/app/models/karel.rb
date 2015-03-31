@@ -44,7 +44,7 @@ class Karel < Maze
   end
 
   def self.unparse_maze(contents)
-    maze, initial_dirt, final_dirt = %w(maze initial_dirt final_dirt).map do |x|
+    maze, initial_dirt = %w(maze initial_dirt).map do |x|
       data = contents[x]
       data = JSON.parse(data) if data.is_a?(String)
       data

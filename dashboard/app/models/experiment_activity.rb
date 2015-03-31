@@ -109,7 +109,7 @@ class ExperimentActivity < ActiveRecord::Base
 
   # Return the penultimate section of an ip address, as an int, to use as a hash value.
   # This returns nil if the parameter is not in the form 'n.n.n.n', where each n
-  # is a possibly distinct integer.  We don't use the last section, since we 
+  # is a possibly distinct integer.  We don't use the last section, since we
   # want everyone in the same classroom to have the same hash value.
   def self.ip_to_hash_value(ip)
     return nil unless ip

@@ -12,7 +12,9 @@
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
+var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -21,16 +23,69 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
-var PacketEncoder = require('./PacketEncoder');
+var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+var _ = utils.getLodash();
+
+var serializeNumber = netsimUtils.serializeNumber;
+var deserializeNumber = netsimUtils.deserializeNumber;
+
+var intToBinary = dataConverters.intToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
+
+var DnsMode = netsimConstants.DnsMode;
+var NodeType = netsimConstants.NodeType;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
+
+var logger = NetSimLogger.getSingleton();
 
 /**
  * @type {number}
  * @readonly
  */
 var MAX_CLIENT_CONNECTIONS = 6;
+
+/**
+ * Conveniently, a router's address in its local network is always zero.
+ * @type {number}
+ * @readonly
+ */
+var ROUTER_LOCAL_ADDRESS = 0;
+
+/**
+ * Address that can only be used for the auto-dns node.
+ * May eventually be replaced with a dynamically assigned address.
+ * @type {number}
+ * @readonly
+ */
+var AUTO_DNS_RESERVED_ADDRESS = 15;
+
+/**
+ * Hostname assigned to the automatic dns 'node' in the local network.
+ * There will only be one of these, so it can be simple.
+ * @type {string}
+ * @readonly
+ */
+var AUTO_DNS_HOSTNAME = 'dns';
+
+/**
+ * Value the auto-DNS will return instead of an address when it can't
+ * locate a node with the given hostname in the local network.
+ * @type {string}
+ * @readonly
+ */
+var AUTO_DNS_NOT_FOUND = 'NOT_FOUND';
+
+/**
+ * Maximum packet lifetime in the router queue, sort of a primitive Time-To-Live
+ * system that helps prevent a queue from being indefinitely blocked by a very
+ * large packet.  Packets that exceed this time will silently fail delivery.
+ * @type {number}
+ * @readonly
+ */
+var PACKET_MAX_LIFETIME_MS = 10 * 60 * 1000;
 
 /**
  * Client model of simulated router
@@ -60,8 +115,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = row.dnsMode !== undefined ?
-      row.dnsMode : NetSimRouterNode.DnsMode.NONE;
+  this.dnsMode = utils.valueOr(row.dnsMode, DnsMode.NONE);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -70,6 +124,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.dnsNodeID = row.dnsNodeID;
+
+  /**
+   * Speed at which messages are processed, in bits per second.
+   * @type {number}
+   */
+  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
 
   /**
    * Determines a subset of connection and message events that this
@@ -82,6 +142,26 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.simulateForSender_ = undefined;
+
+  /**
+   * Local cache of the last tick time in the local simulation.
+   * Allows us to schedule/timestamp events that don't happen inside the
+   * tick event.
+   * @type {number}
+   * @private
+   */
+  this.simulationTime_ = 0;
+
+  /**
+   * Packet format specification this router will use to parse, route, and log
+   * packets that it receives.  Set on router that is simulated by client.
+   *
+   * Not persisted on server.
+   *
+   * @type {packetHeaderSpec}
+   * @private
+   */
+  this.packetSpec_ = [];
 
   /**
    * If ticked, tells the network that this router is being used.
@@ -146,18 +226,45 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
+
+  /**
+   * Whether router is in the middle of work.  Keeps router from picking up
+   * its own change notifications or interrupting its own processes.
+   * @type {boolean}
+   * @private
+   */
+  this.isRouterProcessing_ = false;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the router.  Used for tracking router memory, throughput, etc.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.routerQueueCache_ = [];
+
+  /**
+   * Set of scheduled 'routing events'
+   * @type {Object[]}
+   * @private
+   */
+  this.localRoutingSchedule_ = [];
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.isAutoDnsProcessing_ = false;
+
+  /**
+   * Local cache of message rows that need to be processed by (any simulation
+   * of) the auto-DNS. Used for stats and limiting.
+   * @type {messageRow[]}
+   * @private
+   */
+  this.autoDnsQueue_ = [];
 };
 NetSimRouterNode.inherits(NetSimNode);
-
-/**
- * @enum {string}
- */
-var DnsMode = {
-  NONE: 'none',
-  MANUAL: 'manual',
-  AUTOMATIC: 'automatic'
-};
-NetSimRouterNode.DnsMode = DnsMode;
 
 /**
  * Static async creation method. See NetSimEntity.create().
@@ -234,7 +341,17 @@ NetSimRouterNode.RouterStatus = {
 var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
+ * @typedef {Object} routerRow
+ * @property {number} bandwidth - Router max transmission/processing rate
+ *           in bits/second
+ * @property {DnsMode} dnsMode - Current DNS mode for the local network
+ * @property {number} dnsNodeID - Entity ID of the current DNS node in the
+ *           local network.
+ */
+
+/**
  * Build table row for this node.
+ * @returns {routerRow}
  * @private
  * @override
  */
@@ -242,6 +359,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        bandwidth: serializeNumber(this.bandwidth),
         dnsMode: this.dnsMode,
         dnsNodeID: this.dnsNodeID
       }
@@ -249,11 +367,186 @@ NetSimRouterNode.prototype.buildRow_ = function () {
 };
 
 /**
+ * Load state from remoteRow into local model, then notify anything observing
+ * us that we've changed.
+ * @param {routerRow} remoteRow
+ * @private
+ */
+NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.bandwidth = deserializeNumber(remoteRow.bandwidth);
+  this.dnsMode = remoteRow.dnsMode;
+  this.dnsNodeID = remoteRow.dnsNodeID;
+  this.stateChange.notifyObservers(this);
+};
+
+/**
  * Ticks heartbeat, telling the network that router is in use.
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterNode.prototype.tick = function (clock) {
+  this.simulationTime_ = clock.time;
   this.heartbeat_.tick(clock);
+  this.routeOverdueMessages_.call(this, clock);
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.tickAutoDns_(clock);
+  }
+};
+
+/**
+ * This name is a bit of a misnomer, but it's memorable; we actually route
+ * all messages that are DUE or OVERDUE.
+ * @param {RunLoop.Clock} clock
+ * @private
+ */
+NetSimRouterNode.prototype.routeOverdueMessages_ = function (clock) {
+  if (this.isRouterProcessing_) {
+    return;
+  }
+
+  // Separate out messages whose scheduled time has arrived or is past.
+  // Flag them so we can remove them later.
+  var readyScheduleItems = [];
+  var expiredScheduleItems = [];
+  this.localRoutingSchedule_.forEach(function (item) {
+    if (clock.time >= item.completionTime) {
+      item.beingRouted = true;
+      readyScheduleItems.push(item);
+    } else if (clock.time >= item.expirationTime) {
+      item.beingRouted = true;
+      expiredScheduleItems.push(item);
+    }
+  });
+
+  // If no messages are ready, we're done.
+  if (readyScheduleItems.length + expiredScheduleItems.length === 0) {
+    return;
+  }
+
+  var expiredMessages = expiredScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
+  }.bind(this));
+
+  var readyMessages = readyScheduleItems.map(function (item) {
+    return new NetSimMessage(this.shard_, item.row);
+  }.bind(this));
+
+  // First, remove the expired items.  They just silently vanish
+  this.isRouterProcessing_ = true;
+  NetSimEntity.destroyEntities(expiredMessages, function () {
+
+    // Next, process the messages that are ready for routing
+    this.routeMessages_(readyMessages, function () {
+
+      // Finally, remove all the schedule entries that we flagged earlier
+      this.localRoutingSchedule_ = this.localRoutingSchedule_.filter(function (item) {
+        return !item.beingRouted;
+      });
+      this.isRouterProcessing_ = false;
+
+    }.bind(this));
+  }.bind(this));
+};
+
+/**
+ * Examine the queue, and add/adjust schedule entries for packets that
+ * should be handled by the local simulation.  If a packet has no entry,
+ * it should be added to the schedule.  If it does and we can see that its
+ * scheduled completion time is too far in the future, we should move it up.
+ */
+NetSimRouterNode.prototype.recalculateSchedule = function () {
+  // To calculate our schedule, we keep a rolling "Pessimistic completion time"
+  // as we walk down the queue.  This "pessimistic time" is when the packet
+  // would finish processing, assuming all of the packets ahead of it in the
+  // queue must be processed first and the first packet in the queue is just
+  // starting to process now.  We do this because the first packet might be
+  // owned by a remote client, so we won't have partial progress information
+  // on it.
+  //
+  // Thus, the pessimistic time is the _latest_ we would expect the router
+  // to be done processing the packet given the current bandwidth setting,
+  // if the router was an actual hardware device.
+  //
+  // The estimate is actually _optimistic_ in the sense that it doesn't wait
+  // for notification that a remotely-simulated packet is done before
+  // processing a locally-simulated one.  We're making our best guess about
+  // how the packets would be timed with no latency introducing gaps between
+  // packets.
+  //
+  // If the client simulating the packet at the head of the queue disconnects
+  // it won't block other packets from being sent, but it will increase their
+  // "pessimistic estimates" until that orphaned packet gets cleaned up.
+  var pessimisticCompletionTime = this.simulationTime_;
+  var queuedRow;
+  for (var i = 0; i < this.routerQueueCache_.length; i++) {
+    queuedRow = this.routerQueueCache_[i];
+    pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedRow);
+    if (this.localSimulationOwnsMessageRow_(queuedRow)) {
+      this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
+    }
+  }
+};
+
+/**
+ * Checks the schedule for the queued row.  If no schedule entry exists, adds
+ * a new one with the provided pessimistic completion time.  If it's already
+ * scheduled and the pessimistic time given is BETTER than the previously
+ * scheduled completion time, will update the schedule entry with the better
+ * time.
+ * @param {messageRow} queuedRow
+ * @param {number} pessimisticCompletionTime - in local simulation time
+ */
+NetSimRouterNode.prototype.scheduleRoutingForRow = function (queuedRow,
+    pessimisticCompletionTime) {
+  var scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
+    return item.row.id === queuedRow.id;
+  });
+
+  if (scheduleItem) {
+    // When our pessimistic time is better than our scheduled time we
+    // should update the scheduled time.  This can happen when rows
+    // earlier in the queue expire, or are otherwise removed earlier than
+    // their size led us to expect.
+    if (pessimisticCompletionTime < scheduleItem.completionTime) {
+      scheduleItem.completionTime = pessimisticCompletionTime;
+    }
+  } else {
+    // If the item doesn't have a schedule entry at all, add it
+    this.localRoutingSchedule_.push({
+      row: queuedRow,
+      completionTime: pessimisticCompletionTime,
+      expirationTime: this.simulationTime_ + PACKET_MAX_LIFETIME_MS,
+      beingRouted: false
+    });
+  }
+};
+
+/**
+ * Lets the auto-DNS part of the router simulation handle its requests.
+ * For now, auto-DNS can do "batch" processing, no throughput limits.
+ * @private
+ */
+NetSimRouterNode.prototype.tickAutoDns_ = function () {
+  if (this.isAutoDnsProcessing_) {
+    return;
+  }
+
+  // Filter DNS queue down to requests the local simulation should handle.
+  var localSimDnsRequests = this.autoDnsQueue_
+      .filter(this.localSimulationOwnsMessageRow_.bind(this))
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this));
+
+  // If there's nothing we can process, we're done.
+  if (localSimDnsRequests.length === 0) {
+    return;
+  }
+
+  // Process DNS requests
+  this.isAutoDnsProcessing_ = true;
+  this.processAutoDnsRequests_(localSimDnsRequests, function () {
+    this.isAutoDnsProcessing_ = false;
+  }.bind(this));
 };
 
 /**
@@ -275,24 +568,61 @@ NetSimRouterNode.prototype.update = function (onComplete) {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
-  return "Router " + this.entityID;
+  return i18n.routerX({
+    x: this.entityID
+  });
+};
+
+/**
+ * Get node's hostname, a modified version of its display name.
+ * @returns {string}
+ * @override
+ */
+NetSimRouterNode.prototype.getHostname = function () {
+  // Use regex to strip anything that's not a word-character or a digit
+  // from the node's display name.  For routers, we don't append the node ID
+  // because it's already part of the display name.
+  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase();
 };
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getNodeType = function () {
-  return NetSimRouterNode.getNodeType();
+  return NodeType.ROUTER;
 };
-NetSimRouterNode.getNodeType = function () {
-  return 'router';
+
+/**
+ * Makes sure that the given specification contains the fields that this
+ * router needs to do its job.
+ * @param {packetHeaderSpec} packetSpec
+ * @private
+ */
+NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
+  // Require TO_ADDRESS for routing
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === Packet.HeaderType.TO_ADDRESS;
+      })) {
+    logger.error("Packet specification does not have a toAddress field.");
+  }
+
+  // Require FROM_ADDRESS for auto-DNS tasks
+  if (!packetSpec.some(function (headerField) {
+        return headerField.key === Packet.HeaderType.FROM_ADDRESS;
+      })) {
+    logger.error("Packet specification does not have a fromAddress field.");
+  }
 };
 
 /**
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
+ * @param {packetHeaderSpec} packetSpec
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) {
   this.simulateForSender_ = nodeID;
+  this.packetSpec_ = packetSpec;
+  this.validatePacketSpec_(packetSpec);
+
   if (nodeID !== undefined) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
@@ -348,6 +678,39 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     this.newMessageEventKey_ = undefined;
     logger.info("Router unregistered from messageTable tableChange");
   }
+};
+
+/**
+ * Puts the router into the given DNS mode, triggers a remote update,
+ * and creates/destroys the network's automatic DNS node.
+ * @param {DnsMode} newDnsMode
+ */
+NetSimRouterNode.prototype.setDnsMode = function (newDnsMode) {
+  if (this.dnsMode === newDnsMode) {
+    return;
+  }
+
+  if (this.dnsMode === DnsMode.NONE) {
+    this.dnsNodeID = undefined;
+  } else if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.dnsNodeID = AUTO_DNS_RESERVED_ADDRESS;
+  }
+
+  this.dnsMode = newDnsMode;
+  this.update();
+};
+
+/**
+ * @param {number} newBandwidth in bits per second
+ */
+NetSimRouterNode.prototype.setBandwidth = function (newBandwidth) {
+  if (this.bandwidth === newBandwidth) {
+    return;
+  }
+
+  this.bandwidth = newBandwidth;
+  this.recalculateSchedule();
+  this.update();
 };
 
 /**
@@ -451,7 +814,6 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
   onComplete = onComplete || function () {};
 
-
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
   var self = this;
@@ -476,7 +838,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
     wire.localAddress = newAddress;
     wire.localHostname = hostname;
-    wire.remoteAddress = 0; // Always 0 for routers
+    wire.remoteAddress = ROUTER_LOCAL_ADDRESS;
     wire.remoteHostname = self.getHostname();
     wire.update(onComplete);
     // TODO: Fix possibility of two routers getting addresses by verifying
@@ -490,7 +852,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
  *          whether they are the current DNS node for the network.
  */
 NetSimRouterNode.prototype.getAddressTable = function () {
-  return this.myWireRowCache_.map(function (row) {
+  var addressTable = this.myWireRowCache_.map(function (row) {
     return {
       hostname: row.localHostname,
       address: row.localAddress,
@@ -498,6 +860,94 @@ NetSimRouterNode.prototype.getAddressTable = function () {
       isDnsNode: (row.localNodeID === this.dnsNodeID)
     };
   }.bind(this));
+
+  // Special case: In auto-dns mode we add the DNS entry to the address table
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    addressTable.push({
+      hostname: AUTO_DNS_HOSTNAME,
+      address: AUTO_DNS_RESERVED_ADDRESS,
+      isLocal: false,
+      isDnsNode: true
+    });
+  }
+
+  return addressTable;
+};
+
+/**
+ * Given a node ID, finds the local network address of that node.  Cannot
+ * be used to find the address of the router or auto-dns node (since their
+ * node IDs are not unique).  Will return undefined if the node ID is not
+ * found.
+ *
+ * @param {number} nodeID
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getAddressForNodeID_ = function (nodeID) {
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localNodeID === nodeID;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localAddress;
+  }
+  return undefined;
+};
+
+/**
+ * Given a hostname, finds the local network address of the node with that
+ * hostname.  Will return undefined if no node with that hostname is found.
+ *
+ * @param {string} hostname
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
+  if (hostname === this.getHostname()) {
+    return ROUTER_LOCAL_ADDRESS;
+  }
+
+  if (this.dnsMode === DnsMode.AUTOMATIC && hostname === AUTO_DNS_HOSTNAME) {
+    return AUTO_DNS_RESERVED_ADDRESS;
+  }
+
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localHostname === hostname;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localAddress;
+  }
+  return undefined;
+};
+
+/**
+ * Given a local network address, finds the node ID of the node at that
+ * address.  Will return undefined if no node is found at the given address.
+ *
+ * @param {number} address
+ * @returns {number|undefined}
+ * @private
+ */
+NetSimRouterNode.prototype.getNodeIDForAddress_ = function (address) {
+  if (address === ROUTER_LOCAL_ADDRESS) {
+    return this.entityID;
+  }
+
+  if (this.dnsMode === DnsMode.AUTOMATIC &&
+      address === AUTO_DNS_RESERVED_ADDRESS) {
+    return this.entityID;
+  }
+
+  var wireRow = _.find(this.myWireRowCache_, function (row) {
+    return row.localAddress === address;
+  });
+
+  if (wireRow !== undefined) {
+    return wireRow.localNodeID;
+  }
+  return undefined;
 };
 
 /**
@@ -523,12 +973,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
   }
 };
 
-NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
-  this.dnsMode = remoteRow.dnsMode;
-  this.dnsNodeID = remoteRow.dnsNodeID;
-  this.stateChange.notifyObservers(this);
-};
-
 /**
  * When the wires table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
@@ -542,7 +986,6 @@ NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
 
   if (!_.isEqual(this.myWireRowCache_, myWireRows)) {
     this.myWireRowCache_ = myWireRows;
-    logger.info("Router wires changed.");
     this.wiresChange.notifyObservers();
   }
 };
@@ -560,65 +1003,104 @@ NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
 
   if (!_.isEqual(this.myLogRowCache_, myLogRows)) {
     this.myLogRowCache_ = myLogRows;
-    logger.info("Router logs changed.");
     this.logChange.notifyObservers();
   }
 };
 
+/**
+ * Get list of log entries in this router's memory.
+ * @returns {NetSimLogEntry[]}
+ */
 NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
-    return new NetSimLogEntry(this.shard_, row);
+    return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
 };
 
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param rows
+ * @param {messageRow[]} rows
  * @private
+ * @throws if this method is called on a non-simulating router.
  */
 NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
-
   if (!this.simulateForSender_) {
-    // Not configured to handle anything yet; don't process messages.
+    // What?  Only simulating routers should be hooked up to message notifications.
+    throw new Error("Non-simulating router got message table change notifiction");
+  }
+
+  this.updateRouterQueue_(rows);
+
+  if (this.dnsMode === DnsMode.AUTOMATIC) {
+    this.updateAutoDnsQueue_(rows);
+  }
+};
+
+
+/**
+ * Updates our cache of all messages that are going to the router (regardless
+ * of which simulation will handle them), so we can use it for stats and rate
+ * limiting.
+ * @param {messageRow[]} rows - message table rows
+ */
+NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToRouter_.bind(this));
+  if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }
 
-  if (this.isProcessingMessages_) {
-    // We're already in this method, getting called recursively because
-    // we are making changes to the table.  Ignore this call.
+  this.routerQueueCache_ = newQueue;
+  // TODO: Drop packets that exceed queue memory (IF not already processing?)
+  this.recalculateSchedule();
+  // Propagate notification of queue change (for stats, etc)
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if this message is destined for the router (not the
+ *          auto-DNS part though!) and FALSE if destined anywhere else.
+ * @private
+ */
+NetSimRouterNode.prototype.isMessageToRouter_ = function (messageRow) {
+  if (this.dnsMode === DnsMode.AUTOMATIC && this.isMessageToAutoDns_(messageRow)) {
+    return false;
+  }
+
+  return messageRow.toNodeID === this.entityID;
+};
+
+NetSimRouterNode.prototype.routeMessages_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
     return;
   }
 
-  var self = this;
-  var messages = rows.map(function (row) {
-    return new NetSimMessage(self.shard_, row);
-  }).filter(function (message) {
-    return message.fromNodeID === self.simulateForSender_ &&
-        message.toNodeID === self.entityID;
-  });
+  this.routeMessage_(messages[0], function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
 
-  // If any messages are for us, get our routing table and process messages.
-  if (messages.length > 0) {
-    this.isProcessingMessages_ = true;
-    this.getConnections(function (err, wires) {
-      messages.forEach(function (message) {
+    this.routeMessages_(messages.slice(1), onComplete);
+  }.bind(this));
+};
 
-        // Pull the message off the wire, and hold it in-memory until we route it.
-        // We'll create a new one with the same payload if we have to send it on.
-        message.destroy(function (err) {
-          if (err) {
-            logger.error("Error pulling message off the wire for routing; " +
-                err.message);
-            return;
-          }
-          self.routeMessage_(message, wires);
-        });
+/**
+ *
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
+  message.destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
 
-      });
-      self.isProcessingMessages_ = false;
-    });
-  }
+    this.forwardMessageToRecipient_(message, onComplete);
+  }.bind(this));
 };
 
 /**
@@ -627,42 +1109,220 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  * the new address.
  *
  * @param {NetSimMessage} message
- * @param {Array.<NetSimWire>} myWires
+ * @param {!NodeStyleCallback} onComplete
  * @private
  */
-NetSimRouterNode.prototype.routeMessage_ = function (message, myWires) {
+NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onComplete) {
   var toAddress;
+  var routerNodeID = this.entityID;
 
   // Find a connection to route this message to.
   try {
-    toAddress = dataConverters.binaryToInt(
-        PacketEncoder.defaultPacketEncoder.getField('toAddress', message.payload));
+    var packet = new Packet(this.packetSpec_, message.payload);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
   } catch (error) {
+    logger.warn("Packet not readable by router");
     this.log(message.payload);
+    onComplete(null);
     return;
   }
 
-  var destWires = myWires.filter(function (wire) {
-    return wire.localAddress === toAddress;
-  });
-  if (destWires.length === 0) {
-    // Destination address not in local network.
+  if (toAddress === ROUTER_LOCAL_ADDRESS) {
+    // This packet has reached its destination, it's done.
+    logger.warn("Packet stopped at router.");
     this.log(message.payload);
+    onComplete(null);
+    return;
+  }
+
+  var destinationNodeID = this.getNodeIDForAddress_(toAddress);
+  if (destinationNodeID === undefined) {
+    logger.warn("Destination address not in local network");
+    this.log(message.payload);
+    onComplete(null);
     return;
   }
 
   // TODO: Handle bad state where more than one wire matches dest address?
 
-  var destWire = destWires[0];
+  // Normally the recipient simulates a message.
+  // If this message is on loopback (i.e. to or from auto-dns) then
+  // the simulator of the original message has to simulate this one too.
+  var simulatingNode = destinationNodeID;
+  if (destinationNodeID === this.entityID) {
+    simulatingNode = message.simulatedBy;
+  }
 
   // Create a new message with a new payload.
   NetSimMessage.send(
       this.shard_,
-      destWire.remoteNodeID,
-      destWire.localNodeID,
+      routerNodeID,
+      destinationNodeID,
+      simulatingNode,
       message.payload,
-      function () {
+      function (err, result) {
         this.log(message.payload);
+        onComplete(err, result);
       }.bind(this)
   );
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given row should be operated on by the local
+ *          simulation, FALSE if another user's simulation should handle it.
+ * @private
+ */
+NetSimRouterNode.prototype.localSimulationOwnsMessageRow_ = function (messageRow) {
+  return this.simulateForSender_ &&
+      messageRow.simulatedBy === this.simulateForSender_;
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @returns {number} time required to process this message, in milliseconds.
+ * @private
+ */
+NetSimRouterNode.prototype.calculateProcessingDurationForMessage_ = function (message) {
+  if (this.bandwidth === Infinity) {
+    return 0;
+  }
+  return message.payload.length * 1000 / this.bandwidth;
+};
+
+/**
+ * Update queue of all auto-dns messages, which can be used for stats or limiting.
+ * @param {messageRow[]} rows
+ * @private
+ */
+NetSimRouterNode.prototype.updateAutoDnsQueue_ = function (rows) {
+  var newQueue = rows.filter(this.isMessageToAutoDns_.bind(this));
+  if (_.isEqual(this.autoDnsQueue_, newQueue)) {
+    return;
+  }
+
+  this.autoDnsQueue_ = newQueue;
+  // Propagate notification of queue change?
+  // Work will proceed on next tick
+};
+
+/**
+ *
+ * @param {messageRow} messageRow
+ */
+NetSimRouterNode.prototype.isMessageToAutoDns_ = function (messageRow) {
+  var packet, toAddress;
+  try {
+    packet = new Packet(this.packetSpec_, messageRow.payload);
+    toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+  } catch (error) {
+    logger.warn("Packet not readable by auto-DNS: " + error);
+    return false;
+  }
+
+  // Messages to the auto-dns are both to and from the router node, and
+  // addressed to the DNS.
+  return messageRow.toNodeID === this.entityID &&
+      messageRow.fromNodeID === this.entityID &&
+      toAddress === AUTO_DNS_RESERVED_ADDRESS;
+};
+
+/**
+ * Batch-process DNS requests, generating responses wherever possible.
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.processAutoDnsRequests_ = function (messages, onComplete) {
+  // 1. Remove the requests from the wire
+  NetSimEntity.destroyEntities(messages, function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // 2. Generate all responses, asynchronously.
+    this.generateDnsResponses_(messages, onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage[]} messages
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponses_ = function (messages, onComplete) {
+  if (messages.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  // Process head
+  this.generateDnsResponse_(messages[0], function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    // Process tail
+    this.generateDnsResponses_(messages.slice(1), onComplete);
+  }.bind(this));
+};
+
+/**
+ * @param {NetSimMessage} message
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete) {
+  var packet, fromAddress, query, responseHeaders, responseBody, responseBinary;
+  var routerNodeID = this.entityID;
+  var autoDnsNodeID = this.entityID;
+
+  // Extract message contents
+  try {
+    packet = new Packet(this.packetSpec_, message.payload);
+    fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+    query = packet.getBodyAsAscii(BITS_PER_BYTE);
+  } catch (error) {
+    // Malformed packet, ignore
+    onComplete(error);
+    return;
+  }
+
+  // Check that the query is well-formed
+  // Regex match "GET [hostnames...]"
+  // Then below, we'll split the hostnames on whitespace to process them.
+  var requestMatch = query.match(/GET\s+(\S.*)/);
+  if (requestMatch !== null) {
+    // Good request, look up all addresses and build up response
+    // Skipping first match, which is the full regex
+    var responses = requestMatch[1].split(/\s+/).map(function (queryHostname) {
+      var address = this.getAddressForHostname_(queryHostname);
+      return queryHostname + ':' + utils.valueOr(address, AUTO_DNS_NOT_FOUND);
+    }.bind(this));
+    responseBody = responses.join(' ');
+  } else {
+    // Malformed request, send back instructions
+    responseBody = i18n.autoDnsUsageMessage();
+  }
+
+  responseHeaders = {
+    fromAddress: intToBinary(AUTO_DNS_RESERVED_ADDRESS, BITS_PER_NIBBLE),
+    toAddress: intToBinary(fromAddress, BITS_PER_NIBBLE),
+    packetIndex: intToBinary(1, BITS_PER_NIBBLE),
+    packetCount: intToBinary(1, BITS_PER_NIBBLE)
+  };
+
+  responseBinary = packet.encoder.concatenateBinary(
+      responseHeaders,
+      asciiToBinary(responseBody, BITS_PER_BYTE));
+
+  NetSimMessage.send(
+      this.shard_,
+      autoDnsNodeID,
+      routerNodeID,
+      message.simulatedBy,
+      responseBinary,
+      onComplete);
 };

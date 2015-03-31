@@ -1,13 +1,18 @@
 {
-  "compute":"계산",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "emptyFunctionalBlock":"입력이 없는 블럭이 있습니다.",
   "equivalentExpression":"같은 계산결과가 나올 수 있도록 다시 배치하세요.",
-  "extraTopBlocks":"붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"함수가 모든 값에 대해서 올바른 결과를 리턴하지 않습니다.",
   "goal":"목표값:",
-  "levelIncompleteError":"Your expression does not match the goal.",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
+  "levelIncompleteError":"네 계산식은 올바른 답이 아닙니다.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!",
   "yourExpression":"계산식:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"잘못된 값을 가지고 함수를 호출하였습니다.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

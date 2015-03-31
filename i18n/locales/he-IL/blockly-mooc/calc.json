@@ -1,13 +1,18 @@
 {
-  "compute":"חשב",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "equivalentExpression":"נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי.",
-  "extraTopBlocks":"יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים.",
   "goal":"מטרה:",
   "levelIncompleteError":"Your expression does not match the goal.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!",
   "yourExpression":"הביטוי שלך:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"You are calling your function with the wrong value.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

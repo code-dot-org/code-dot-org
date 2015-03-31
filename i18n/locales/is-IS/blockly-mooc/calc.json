@@ -1,13 +1,18 @@
 {
-  "compute":"reikna",
-  "emptyComputeBlock":"You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
+  "divideByZeroError":"Forritið þitt leiðir til deilingar með núlli.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "emptyFunctionalBlock":"Það er kubbur með óútfyllt inntak.",
   "equivalentExpression":"Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi.",
-  "extraTopBlocks":"Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?",
+  "evaluate":"meta",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Fallið þitt gefur stundum ekki rétta útkomu.",
   "goal":"Markmið:",
-  "levelIncompleteError":"Your expression does not match the goal.",
+  "levelIncompleteError":"Formúlan þín samsvarar ekki markmiðinu.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Það vantar breytuna {var} í formúluna þína.",
   "reinfFeedbackMsg":"Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!",
   "yourExpression":"Formúlan þín:",
-  "wrongInput":"You are calling your function with the wrong value."
+  "wrongInput":"Þú ert að kalla á fallið þitt með röngu gildi.",
+  "wrongOtherValuesX":"Formúlan þín gefur rangt gildi ef breytunni {var} er breytt.",
+  "wrongResult":"Formúlan þín gefur ekki rétta niðurstöðu."
 }
