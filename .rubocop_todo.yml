@@ -430,20 +430,10 @@ Style/NegatedIf:
 Style/Next:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/NilComparison:
-  Enabled: false
-
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: IncludeSemanticChanges.
 Style/NonNilCheck:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Not:
   Enabled: false
 
 # Offense count: 46
@@ -546,11 +536,6 @@ Style/SpaceAfterComma:
 Style/SpaceAfterControlKeyword:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/SpaceAfterNot:
-  Enabled: false
-
 # Offense count: 17
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
@@ -572,11 +557,6 @@ Style/SpaceAroundOperators:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/SpaceBeforeBlockBraces:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/SpaceBeforeComma:
   Enabled: false
 
 # Offense count: 5
@@ -643,10 +623,6 @@ Style/TrailingComma:
 # Cop supports --auto-correct.
 # Configuration parameters: ExactNameMatch, AllowPredicates, AllowDSLWriters, Whitelist.
 Style/TrivialAccessors:
-  Enabled: false
-
-# Offense count: 1
-Style/UnlessElse:
   Enabled: false
 
 # Offense count: 3

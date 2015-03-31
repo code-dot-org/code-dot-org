@@ -41,10 +41,10 @@ module BlocklyHelpers
   # Get the block ID for a given alias
   # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if not @blockAliases.nil? and @blockAliases.has_key?(alias_or_id) then
+    if @blockAliases && @blockAliases.has_key?(alias_or_id)
       return @blockAliases[alias_or_id]
     end
-    return alias_or_id
+    alias_or_id
   end
 end
 
