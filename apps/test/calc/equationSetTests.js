@@ -82,45 +82,6 @@ describe('EquationSet', function () {
     });
   });
 
-  describe('hasSingleFunction', function () {
-    it('returns false if we have no functions or variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have no functions, but do have variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('x', [], new ExpressionNode(1)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have multiple functions', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
-      set.addEquation_(new Equation('g', ['x'], new ExpressionNode('+', ['x', 1])));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have one function and one or more variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
-      set.addEquation_(new Equation('y', [], new ExpressionNode(1)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns true if we have exactly one function and no variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      var functionEquation = new Equation('f', ['x'], new ExpressionNode('+', ['x', 1]));
-      set.addEquation_(functionEquation);
-      assert.equal(set.hasSingleFunction(), true);
-    });
-  });
-
   describe('isIdenticalTo', function () {
     var computeExpression = new ExpressionNode(0);
     var expression1 = new ExpressionNode(1);

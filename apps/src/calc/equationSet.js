@@ -85,17 +85,17 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * @returns {boolean} True if the EquationSet has exactly one function and no
- * variables. If we have multiple functions or one function and some variables,
- * returns false.
+ * @returns {boolean} True if our compute expression is jsut a funciton call
  */
-EquationSet.prototype.hasSingleFunction = function () {
-   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-     return true;
-   }
+EquationSet.prototype.computesFunctionCall = function () {
+  if (!this.compute_) {
+    return false;
+  }
 
-   return false;
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isFunctionCall();
 };
+
 
 /**
  * @returns {boolean} True if our compute expression is just a variable, which
