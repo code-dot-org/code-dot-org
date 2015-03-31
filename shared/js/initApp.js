@@ -297,7 +297,7 @@ function initApp() {
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
-  } else if (appOptions.isLegacyShare) {
+  } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
     dashboard.currentApp = {
       name: 'Untitled Project'
     };
