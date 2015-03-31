@@ -21,11 +21,11 @@ def main()
   end
 
   if permission_name == 'teacher'
-    unless user[:user_type] == 'teacher'
-      USERS.where(email:email).update(user_type:'teacher')
-      puts "#{email} is now a teacher."
-    else
+    if user[:user_type] == 'teacher'
       puts "#{email} is already a teacher."
+    else
+      USERS.where(email: email).update(user_type: 'teacher')
+      puts "#{email} is now a teacher."
     end
     exit 0
   end
@@ -35,7 +35,7 @@ def main()
     exit 1
   end
 
-  if permission = PERMISSIONS.where(id:user[:id], permission:permission_name).first
+  if PERMISSIONS.where(id:user[:id], permission:permission_name).first
     puts "#{email} already has '#{permission_name}'"
     exit 0
   end
