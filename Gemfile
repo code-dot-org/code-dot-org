@@ -77,6 +77,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
+gem 'devise_invitable', '~> 1.3.4'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
