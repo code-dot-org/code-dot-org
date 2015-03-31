@@ -11,7 +11,7 @@ title: K-5 Introduction Materials
 
 [YouTube](http://youtu.be/KHXvOO8cVDE)
 
-## How do I use the teacher dashboard?
+## How do I use Code.org's teacher dashboard?
 
 <iframe width="640" height="390" src="//www.youtube.com/embed/E9Psq6wBBQA" frameborder="0" allowfullscreen></iframe>
 
