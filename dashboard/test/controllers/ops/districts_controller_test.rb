@@ -11,21 +11,6 @@ module Ops
       @district = create(:district)
     end
 
-
-    test 'District contact can view all teachers in their district' do
-      #87054980
-      assert_routing({ path: "#{API}/districts/1/teachers", method: :get }, { controller: 'ops/districts', action: 'teachers', id: '1' })
-      sign_out @admin
-      sign_in @district.contact
-      teacher = create(:teacher)
-      @district.users << teacher
-      get :teachers, id: @district.id
-      assert_response :success
-      assert_equal teacher.email, JSON.parse(@response.body).first['email']
-    end
-
-    # Test index + CRUD controller actions
-
     test 'Ops team can list all districts' do
       assert_routing({ path: "#{API}/districts", method: :get }, { controller: 'ops/districts', action: 'index' })
 

@@ -4504,6 +4504,9 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
+    },
+    shouldBeGrayedOut: function () {
+      return false;
     }
   };
 

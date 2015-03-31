@@ -77,22 +77,22 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
-    background: skin.assetUrl('background_leafy.png')
+    background: skin.assetUrl('background_leafy.jpg')
   };
   skin.grassy = {
-    background: skin.assetUrl('background_grassy.png')
+    background: skin.assetUrl('background_grassy.jpg')
   };
   skin.flower = {
-    background: skin.assetUrl('background_flower.png')
+    background: skin.assetUrl('background_flower.jpg')
   };
   skin.tile = {
-    background: skin.assetUrl('background_tile.png')
+    background: skin.assetUrl('background_tile.jpg')
   };
   skin.icy = {
-    background: skin.assetUrl('background_icy.png')
+    background: skin.assetUrl('background_icy.jpg')
   };
   skin.snowy = {
-    background: skin.assetUrl('background_snowy.png')
+    background: skin.assetUrl('background_snowy.jpg')
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins

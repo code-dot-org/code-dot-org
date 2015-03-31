@@ -20,6 +20,9 @@ To ensure all students have access to computer science education, **please use t
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
+
 Dear Administrator, 
 
 I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district, and communicate the change to all students. 

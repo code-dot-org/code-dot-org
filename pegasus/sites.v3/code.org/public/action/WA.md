@@ -7,9 +7,9 @@ title: Help AP Computer Science count for graduation in YOUR school in Washingto
 
 The College Board, Code.org, CSTA, and a coalition of partners spent the last year helping states revise or enact policies to allow computer science to count towards high school math or science graduation requirements. Research has shown that students are more likely to try computer science when it is part of the academic pathway rather than an elective. And CS teachers have told us their work is valued more as well when it’s categorized this way. 
 
-Passing the Washington State Legislature in 2013, <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a> allows Advanced Placement computer science courses to count as a mathematics or science graduation requirement. 
+Passing the Washington State Legislature in 2013, <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a> allows Advanced Placement computer science courses to count as a mathematics or science graduation requirement. This law indicates that districts can and should count AP Computer Science towards the required mathematics or science graduation standards. 
 
-This law indicates that districts can and should count AP Computer Science towards the required mathematics or science graduation standards. To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
+To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
 
 
 ## Resources with more information
@@ -20,6 +20,9 @@ This law indicates that districts can and should count AP Computer Science towar
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
+
 Dear Administrator, 
 
 I’m writing to urge you to implement a district-wide change to allow computer science to count as a mathematics or science graduation requirement in our district, and communicate the change to all students. 
@@ -28,7 +31,7 @@ Computer science drives job growth and innovation throughout our economy and soc
 
 To make computer science more accessible for all students, the Washington State Legislature passed <a href="http://lawfilesext.leg.wa.gov/biennium/2013-14/Pdf/Bills/House%20Passed%20Legislature/1472-S.PL.pdf" target="_blank">HB 1472</a> unanimously in 2013 to direct school districts to allow Advanced Placement computer science courses to count towards high school math or science graduation requirements. This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 
-Thank you for making our district a leader in computer science education by fully implementing HB 1472 to allow AP Computer Science A to count as mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
+Thank you for making our district a leader in computer science education by fully implementing HB 1472 to allow AP Computer Science A as mathematics or science graduation requirement. Your efforts surrounding this matter will help prepare students for the 21st century workforce.  
 
 Sincerely, 
 
