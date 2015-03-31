@@ -530,6 +530,8 @@ svg {
   }
 
   .netsim-slider {
+    text-align: center;
+
     label {
       display: inline-block;
     }
@@ -537,7 +539,8 @@ svg {
     .slider-inline-wrap {
       display: inline-block;
       margin-top: 3.5px;
-      width: 300px;
+      width: 95%;
+      margin-right: 0.5em;
 
       .slider-labels {
         margin-bottom: 1px;
@@ -562,14 +565,6 @@ svg {
       .slider {
         clear: both;
       }
-    }
-  }
-
-  .netsim-bandwidth-control {
-    text-align: center;
-    .slider-inline-wrap {
-      width: 95%;
-      margin-right: 0.5em;
     }
   }
 
