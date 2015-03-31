@@ -6,7 +6,7 @@ title: Help AP Computer Science count for graduation in YOUR school in DC Public
 
 The College Board, Code.org, CSTA, and a coalition of partners spent the last year helping states revise or enact policies to allow computer science to count towards high school math or science graduation requirements. Research has shown that students are more likely to try computer science when it is part of the academic pathway rather than an elective. And CS teachers have told us their work is valued more as well when it’s categorized this way.
 
-To receive a <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734873/QwZKobXUYV7HiW7/hsdiploma_v071405.pdf"_blank">DCPS diploma</a>, students must take four mathematics credits classes. Computer Science classes can count as a fourth math credit as an “Upper Level” course. This policy indicates that districts can and should count computer science towards a mathematics graduation requirement. 
+To receive a <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734873/QwZKobXUYV7HiW7/hsdiploma_v071405.pdf"_blank">DCPS diploma</a>, students must take four mathematics credits. Computer Science classes can count as a fourth math credit as an “Upper Level” course. This policy indicates that districts can and should count computer science towards a mathematics graduation requirement. 
 
 To ensure all students have access to computer science education, **please use the sample letter text below to urge your principal or district superintendent to implement this change.**
 
@@ -19,13 +19,16 @@ To ensure all students have access to computer science education, **please use t
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
+
 Dear Administrator, 
 
 I’m writing to urge you to implement a district-wide change to allow computer science to count as a graduation requirement in our district, and communicate the change to all students. 
 
 Computer science drives job growth and innovation throughout our economy and society. More than half of projected jobs in STEM fields are in computing occupations; computing occupations dominate “help wanted” ads; and computer science is one of the most in-demand degrees for new college graduates. However, computer science education is offered sparingly and underrepresented groups --especially girls and students of color-- report barriers to entry in the field and in accessing academic courses.   
 
-To make computer science more accessible for all students, computer Science classes can count as a fourth math credit as part of the <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734873/QwZKobXUYV7HiW7/hsdiploma_v071405.pdf"_blank">DCPS graduation requirements</a>. Districts can and should count computer science towards a mathematics graduation requirement. 
+To make computer science more accessible for all students, computer science  can count as a fourth math credit as part of the <a href="https://s3.amazonaws.com/uploads.hipchat.com/65395/734873/QwZKobXUYV7HiW7/hsdiploma_v071405.pdf"_blank">DCPS graduation requirements</a>. Districts can and should count computer science towards a mathematics graduation requirement. 
 
 This policy does not require students to study computer science; it simply allows students who choose to take computer science courses to satisfy a requirement that already exists. Research shows that students are more likely to try computer science when it is part of the academic pathway rather than an elective. Also, teachers are more likely to seek certification in the computer science pathway or professional development opportunities when structured this way. 
 

@@ -20,6 +20,8 @@ This law and Board-approved standards indicate that districts can and should cou
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
 
 Dear Administrator, 
 

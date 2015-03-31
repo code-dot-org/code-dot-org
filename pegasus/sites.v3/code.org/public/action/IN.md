@@ -25,6 +25,9 @@ Districts can and should count AP Computer Science A towards the Core 40 graduat
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
+
 Dear Administrator, 
 
 I’m writing to urge you to implement a district-wide change to allow computer science to count as a graduation credit under Indian's Core 40, and communicate the change to all students. 
