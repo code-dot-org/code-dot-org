@@ -1,17 +1,17 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
-subject: "Bring computer science to your Seattle-area classroom"
+subject: "Bring computer science to your Seattle-area school"
 litmus_tracking_id: "y8czo8o9"
 ---
 
-Dear Seattle-area teacher, 
+Dear Seattle-area administrator, 
 
 Code.org has partnered with districts arounds the Puget Sound to bring computer science to your students, at all levels — kindergarten through high school. Give your students the chance to learn these foundational 21st-century skills.
 
 
 ### Start with high-quality professional development — at no cost to you or your school
 
-Participating teachers consistently call our professional development, "The best professional development I've ever had!"
+Incorporate computer science into elementary and middle school, or offer a year-long course in high school. Participating teachers consistently call our professional development, "The best professional development I've ever had!"
 
 **For elementary schools:**
 
@@ -25,17 +25,17 @@ Participating teachers consistently call our professional development, "The best
 - Integrate computer science into any algebra or science class
 - Per-session stipends to teachers are paid by Code.org!
 - Open to all Puget Sound-area middle school math science teachers & no cost to apply<br />
-[Sign up](https://code.org/educate/seattle/)
+[Sign up your school](https://code.org/educate/seattle/)
 
 **For high schools:**
 
 - Offer an inclusive, year-long introductory computer science course at your school
 - Research-based professional development is open to all Puget Sound-area high school teachers
 - Per-session stipends to teachers are paid by Code.org!<br />
-[Sign up](https://code.org/educate/seattle/)
+[Sign up your school](https://code.org/educate/seattle/)
 
 ### Join us for an info session - April 14, 6-8pm 
-Please join me for an information session on April 14 at Amazon in Seattle. See demos, learn about the curriculum and professional development and meet our staff and other participating teachers. [Reserve your spot](https://www.eventbrite.com/e/codeorgs-puget-sound-kickoff-tickets-16403153273)
+Please join me for an information session on April 14 at Amazon in Seattle. See demos, learn about the curriculum and professional development and meet our staff and participating teachers. [Reserve your spot](https://www.eventbrite.com/e/codeorgs-puget-sound-kickoff-tickets-16403153273)
 
 ### Computer science opens more doors for students than any other discipline in today’s world
 
