@@ -91,8 +91,9 @@ Token.prototype.setStringRepresentation_ = function () {
 
   // Gives us three values: Number before decimal, non-repeating portion,
   // repeating portion. If we don't have the last bit, there's no repitition.
-  var repeater = jsnums.toRepeatingDecimal(this.val_.numerator(),
-    this.val_.denominator());
+  var numerator = jsnums.toExact(this.val_.numerator());
+  var denominator = jsnums.toExact(this.val_.denominator());
+  var repeater = jsnums.toRepeatingDecimal(numerator, denominator);
   if (!repeater[2] || repeater[2] === '0') {
     this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
