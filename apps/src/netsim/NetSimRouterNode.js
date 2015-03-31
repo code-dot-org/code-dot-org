@@ -784,6 +784,7 @@ NetSimRouterNode.prototype.setMemory = function (newMemory) {
   }
 
   this.memory = newMemory;
+  this.enforceMemoryLimit_();
   this.update();
 };
 
@@ -1138,17 +1139,23 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
 };
 
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
+  if (this.enforcingMemoryLimit_) {
+    return;
+  }
   // Just drop the first packet that we can simulate that's beyond the memory
   // limit
   var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
   if (droppablePacket) {
+    this.enforcingMemoryLimit_ = true;
     var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
     droppableMessage.destroy(function (err) {
       if (err) {
+        this.enforcingMemoryLimit_ = false;
         return;
       }
 
       this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
+      this.enforcingMemoryLimit_ = false;
     }.bind(this));
   }
 };
