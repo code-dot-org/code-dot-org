@@ -22,9 +22,7 @@ module Google
       end
 
       def mtime()
-        attrs = @file.document_feed_entry.children
-        mtime = attrs.at('updated') || attrs.at('published')
-        Time.parse(mtime)
+        @file.api_file.modifiedDate
       end
 
       def spreadsheet()

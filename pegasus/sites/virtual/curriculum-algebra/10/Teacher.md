@@ -48,7 +48,7 @@ Putting these images together, we arrive at an animation of the bat turning arou
 <img src="function_pass.png" style="float:right; margin 0 0 40px 20px; max-width: 33%; min-width: 250px;"/>
 In the online puzzles, students will find a black block for each function they create, in addition to colored blocks they are used to. The black function box, which has no parameter inputs, represents the function as a Type of data. This allows you to pass your function into the 'start' function, where it can be used to control the rocket animation.
 
-Another curiousity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
+Another curiosity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
 
 [tip]
 
