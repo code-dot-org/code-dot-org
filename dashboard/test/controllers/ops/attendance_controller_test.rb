@@ -9,9 +9,11 @@ module Ops
       @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
-      @cohort = create(:cohort)
+
+      @attendance = create(:attendance)
+      @cohort = @attendance.segment.workshop.cohort
+      @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
-      @attendance = @cohort.workshops.first.segments.first.attendances.first
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
@@ -23,10 +25,10 @@ module Ops
       district = cohort.districts.first
       sign_in district.contact
 
-      get :cohort, cohort_id: cohort.id
+      get :cohort, cohort_id: @attendance.segment.workshop.cohort.id
       assert_response :success
       response = JSON.parse(@response.body)
-      assert_equal 'present', response['workshops'].first['segments'].first['attendances'].first['status']
+      assert_equal 'present', response['workshops'].first['segments'].last['attendances'].first['status']
     end
 
     test 'District Contact can view attendance per teacher in their district' do
@@ -76,7 +78,12 @@ module Ops
       assert_routing({ path: "#{API}/segments/1/attendance/batch", method: :post }, { controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
 
       segment = @attendance.segment
-      teacher = segment.workshop.teachers.first
+
+      teacher = create(:teacher)
+      cohort = @attendance.segment.workshop.cohort
+      cohort.teachers << teacher
+      cohort.save!
+
       post :batch, segment_id: segment.id, attendance: [[teacher.id, 'tardy']]
       assert_response :success
     end
@@ -118,8 +125,12 @@ module Ops
       assert_routing({ path: "#{API}/segments/1/attendance", method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
 
       assert_difference 'WorkshopAttendance.count' do
-        workshop_teacher = @attendance.segment.workshop.teachers.first.id
-        post :create, segment_id: @attendance.segment.id, workshop_attendance: {teacher_id: workshop_teacher, status: 'present'}
+        teacher = create(:teacher)
+        cohort = @attendance.segment.workshop.cohort
+        cohort.teachers << teacher
+        cohort.save!
+
+        post :create, segment_id: @attendance.segment.id, workshop_attendance: {teacher_id: teacher, status: 'present'}
       end
       assert_response :success
     end

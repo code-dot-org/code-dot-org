@@ -1,0 +1,13 @@
+name 'Text Compression Peter Piper'
+title 'Text Compression Peter Piper'
+description 'Compress text by identifying repeated patterns.'
+href 'text-compression/text-compression.html'
+
+instructions 'This poem has been compressed by replacing two common phrases with symbols in the dictionary. Can you identify another common pattern to compress the poem further?'
+poems <<-TEXT.strip_heredoc.chomp.gsub /\n/, ' '
+  ["Peter Piper picked a peck of pickled peppers.
+  A peck of pickled peppers Peter Piper picked.
+  If Peter Piper picked a peck of pickled peppers,
+  Where's the peck of pickled peppers that Peter Piper picked?"]
+TEXT
+dictionary "peter_piper_picked\npeck_of_pickled_peppers"

@@ -1,7 +1,7 @@
 module Ops
   class CohortsController < OpsControllerBase
     before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
-    load_and_authorize_resource
+    load_and_authorize_resource except: [:index]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
     def destroy_teacher
@@ -18,6 +18,15 @@ module Ops
 
     # GET /ops/cohorts
     def index
+      authorize! :manage, Cohort
+      @cohorts =
+        if current_user.try(:admin?)
+          Cohort.all
+        elsif current_user.try(:district_contact?)
+          current_user.districts_as_contact.map(&:cohorts).flatten
+        else
+          []
+        end
       respond_with @cohorts
     end
 
@@ -75,8 +84,11 @@ module Ops
       return unless teacher_param_list
 
       params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
-        if teacher_params[:district] && teacher_params[:district].is_a?(String)
-          teacher_params[:district] = District.find_by!(name: teacher_params[:district])
+        district_params = teacher_params.delete :district
+        if district_params.is_a?(String)
+          teacher_params[:district_id] = District.find_by!(name: district_params).id
+        elsif district_params.is_a?(Hash) && district_params[:id]
+          teacher_params[:district_id] = district_params[:id]
         end
         User.find_or_create_teacher(teacher_params)
       end

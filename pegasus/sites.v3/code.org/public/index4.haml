@@ -194,9 +194,6 @@ social:
             %img{style: "float:left; width:50%", src:"/shared/images/gallery/artist_gallery_thumbnails.png"}
             %img{style: "float:left; width:50%", src:"/shared/images/gallery/playlab_gallery_thumbnails.png"}
 
-  %script{:src=>"/js/jquery.placeholder.js"}
-
-
   -if request.site != 'csedweek.org'
     = view :donor_slider2
 
@@ -226,42 +223,6 @@ social:
     = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, facebook:facebook, twitter:twitter
 
 
-:javascript
-  var petition;
-
-  $(document).ready()
-  {
-    petition = new Petition();
-  }
-  
-  $(document).ready()
-  {
-    showQuote(null, 0);
-  }
-
-  function showQuote(lastImage, nextImage)
-  {
-    if (lastImage !== null)
-    {
-      var lastImageId = "#captionarea" + lastImage;
-      //console.log("hiding", lastImageId);
-      $(lastImageId + " .caption1").animate({left: "50px", opacity:0}, { duration: 2000 });
-      $(lastImageId + " .caption2").animate({left: "30px", opacity:0}, { duration: 2000 });
-      $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
-    }
-
-    if (nextImageId !== null) 
-    {
-      var nextImageId = "#captionarea" + nextImage;
-      //console.log("showing", nextImageId);
-      $(nextImageId + " .caption1").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
-      $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
-      $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
-    }
-
-    $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
-  }
-
 - if request.site == 'code.org'
   :javascript
     $(document).ready(function() {
@@ -275,35 +236,3 @@ social:
         }
       });
     });
-
-:javascript
-
-  function adjustScroll(destination)
-  {
-    $('html, body').animate({
-      scrollTop: $("#" + destination).offset().top
-    }, 1000);
-  }
-
-  var currentImage = 0;
-  var timerId;
-  var videoStarted = false;
-
-  function cycleImage()
-  {
-    var numWideHeroes = $(".widehero").length;
-
-    var lastImage = currentImage;
-    var nextImage = (currentImage + 1) % numWideHeroes;
-    $("#fullwidth" + currentImage).fadeTo(4000, 0);
-    $("#fullwidth" + nextImage).fadeTo(4000, videoStarted ? 0.3 : 1);
-    currentImage = nextImage;
-
-    showQuote(lastImage, currentImage);
-  }
-
-  $.ready()
-  {
-    timerId = setInterval(cycleImage, 13000);
-  }
-

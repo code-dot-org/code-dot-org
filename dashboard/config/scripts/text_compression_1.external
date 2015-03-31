@@ -1,0 +1,4 @@
+name 'Text Compression 1'
+title 'Text Compression 1'
+description 'Compress text by identifying repeated patterns.'
+href 'text-compression/text-compression.html'
