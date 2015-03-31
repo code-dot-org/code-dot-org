@@ -48,6 +48,9 @@ describe("NetSimRouterNode", function () {
 
     assertOwnProperty(row, 'bandwidth');
     assertEqual(row.bandwidth, 'Infinity');
+
+    assertOwnProperty(row, 'memory');
+    assertEqual(row.memory, 'Infinity');
   });
 
   describe("constructing from a table row", function () {
@@ -74,6 +77,16 @@ describe("NetSimRouterNode", function () {
       // from the string 'Infinity' in the database.
       router = makeRouter({ bandwidth: 'Infinity' });
       assertEqual(Infinity, router.bandwidth);
+    });
+
+    it ("memory", function () {
+      router = makeRouter({ memory: 1024 });
+      assertEqual(1024, router.memory);
+
+      // Special case: Memory should be able to serialize in Infinity
+      // from the string 'Infinity' in the database.
+      router = makeRouter({ memory: 'Infinity' });
+      assertEqual(Infinity, router.memory);
     });
   });
 

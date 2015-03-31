@@ -593,6 +593,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   }
 
   this.setRouterBandwidth(router.bandwidth);
+  this.setRouterMemory(router.memory);
   this.setDnsMode(router.dnsMode);
   this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
