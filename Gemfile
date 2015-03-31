@@ -13,7 +13,7 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'google_drive', '~> 0.3.10'
+gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 
 group :development do
