@@ -155,10 +155,10 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
   // Read string "Infinity" as Infinity
   scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
       scrubbedLevel.defaultPacketSizeLimit);
-
-  // Read string "Infinity" as Infinity
   scrubbedLevel.defaultRouterBandwidth = exports.deserializeNumber(
       scrubbedLevel.defaultRouterBandwidth);
+  scrubbedLevel.defaultRouterMemory = exports.deserializeNumber(
+      scrubbedLevel.defaultRouterMemory);
 
   return scrubbedLevel;
 };

@@ -91,3 +91,10 @@ NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
     this.bandwidthControl_.setBandwidth(newBandwidth);
   }
 };
+
+/**
+ * @param {number} newMemory in bits/second
+ */
+NetSimRouterTab.prototype.setMemory = function (/*newMemory*/) {
+  // TODO
+};
