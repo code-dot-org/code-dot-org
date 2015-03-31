@@ -67,7 +67,9 @@ template: none
         %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);'} Delete
 
 :css
-
+  td .btn {
+    width: 48%;
+  }
   a {
     color: white;
   }
