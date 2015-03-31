@@ -7,7 +7,7 @@
   "properties": {
     "skin": "eval",
     "use_contract_editor": "true",
-    "embed": "false",
+    "embed": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
