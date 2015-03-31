@@ -308,11 +308,6 @@ levels.playlab_3 = {
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
   toolbox:
     tb(
       '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +

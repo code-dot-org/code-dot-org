@@ -4,12 +4,7 @@ nav: pd_nav
 ---
 <a id="top"></a>
 
-# Professional Development - Greater DC
-
-- [I'm attending High School PD...](#hs)
-- [I'm attending Administrator / Counselor PD...](#admin)
-
-<a id="hs"></a>
+# Professional Development - Montgomery County
 
 ## High School Professional Development
 
@@ -33,25 +28,36 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 Breakfast and lunch will be served. 
 
 #### March 28th Location ####
-Howard University
-<br />
-LK Downing Engineering Building 
-<br />
-Classroom 2114
-<br />
-2300 Sixth St. NW
-<br />
-Washington, DC 20059
+Poolesville High School
+<br/>
+Room 8
+<br/>
+17501 W Willard Rd
+<br/>
+Poolesville, MD 20837
 
 #### What do I bring to Phase 3 PD? ####
+
+1 Lego EV3 robot kit with charged battery
+<br />
+Laptop w/ the lego EV3 software installed
+<br />
 Exploring Computer Science binder with curriculum
 <br />
 Green Code.org journal
-<br />
-Laptop
 
 ### Phase 4: Post Year Development
-Coming Summer 2015 
+
+#### Save the Dates:
+
+7/27/15 - 7/29/15
+
+#### Location
+College of Southern Maryland
+<br />
+8730 Mitchell Road
+<br />
+La Plata, MD 20646
 
 <br/>
 [**Back to the top**](#top)

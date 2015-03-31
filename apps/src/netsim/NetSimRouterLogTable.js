@@ -18,15 +18,22 @@ var markup = require('./NetSimRouterLogTable.html');
  * Shows different amounts of information depending on the DNS mode.
  *
  * @param {jQuery} rootDiv
+ * @param {netsimLevelConfiguration} levelConfig
  * @constructor
  */
-var NetSimRouterLogTable = module.exports = function (rootDiv) {
+var NetSimRouterLogTable = module.exports = function (rootDiv, levelConfig) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {Array}
@@ -42,6 +49,7 @@ var NetSimRouterLogTable = module.exports = function (rootDiv) {
  */
 NetSimRouterLogTable.prototype.render = function () {
   var renderedMarkup = $(markup({
+    level: this.levelConfig_,
     tableData: this.routerLogData_
   }));
   this.rootDiv_.html(renderedMarkup);

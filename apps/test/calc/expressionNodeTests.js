@@ -5,6 +5,15 @@ var assert = chai.assert;
 var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
+var Token = require(testUtils.buildPath('/calc/token'));
+var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
+
+function isJsNumber(val) {
+  return (val instanceof jsnums.Rational ||
+      val instanceof jsnums.FloatPoint ||
+      val instanceof jsnums.Complex ||
+      val instanceof jsnums.BigInteger);
+}
 
 describe("debug output of an ExpressionNode tree", function () {
   it("works in some simple cases", function () {
@@ -82,14 +91,11 @@ describe("ExpressionNode", function () {
 
       // throw if we have the wrong number of operands
       assert.throws(function () {
-        nodne = new ExpressionNode('-', [1, 2, 3]);
-      }, Error);
-      assert.throws(function () {
-        nodne = new ExpressionNode('-', [1]);
+        node = new ExpressionNode('-', [1, 2, 3]);
       }, Error);
       // or forget to put them in an array
       assert.throws(function () {
-        nodne = new ExpressionNode('-', 1, 2);
+        node = new ExpressionNode('-', 1, 2);
       }, Error);
     });
 
@@ -141,19 +147,47 @@ describe("ExpressionNode", function () {
     assert.notEqual(clone.children_[0].children_[1].value_, node.children_[0].children_[1].value_);
   });
 
-  describe("evaluate/canEvaluate", function () {
-    var node;
+  describe("evaluate", function () {
+    var node, evaluation;
 
     it("can evaluate a single number", function () {
       node = new ExpressionNode(1);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 1);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it("can evaluate a simple expression", function () {
       node = new ExpressionNode('+', [1, 2]);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 3);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
+    });
+
+    it('can evaluate a pow', function () {
+      node = new ExpressionNode('pow', [2, 3]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 8));
+    });
+
+    it('can evaluate a sqr', function () {
+      node = new ExpressionNode('sqr', [2]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert.equal(evaluation.result.toExact(), 4);
+    });
+
+    it('can evaluate a sqrt', function () {
+      node = new ExpressionNode('sqrt', [4]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert.equal(evaluation.result.toExact(), 2);
     });
 
     it("can evaluate a more complex expression", function () {
@@ -161,44 +195,52 @@ describe("ExpressionNode", function () {
         new ExpressionNode('-', [5, 3]),
         new ExpressionNode('/', [8, 4])
       ]);
-      assert.equal(node.canEvaluate({}), true);
-      assert.equal(node.evaluate(), 4);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 4));
     });
 
     it("can evaluate a variable with a proper mapping", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate({x: 1}), true);
-      assert.equal(node.evaluate({x: 1}), 1);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate({x: jsnums.makeFloat(1)});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it ("can evaluate an expression with variables", function () {
       node = new ExpressionNode('+', ['x', 'y']);
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate({x: 1, y: 2}), true);
-      assert.equal(node.evaluate({x: 1, y: 2}), 3);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate({x: jsnums.makeFloat(1), y: jsnums.makeFloat(2)});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("cant evaluate a variable with no mapping", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.canEvaluate({}), false);
-      assert.throws(function () {
-        node.evaluate();
-      }, Error);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
     });
 
     it("doesnt change the node when evaluating", function () {
       node = new ExpressionNode('x');
-      assert.equal(node.evaluate({x: 1}), 1);
+      evaluation = node.evaluate({x: jsnums.makeFloat(1)});
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
       assert.equal(node.value_, 'x');
     });
 
     it("cant evaluate a function with no mapping", function () {
       node = new ExpressionNode('f', [1, 2]);
-      assert.equal(node.canEvaluate({}), false);
-      assert.throws(function () {
-        node.evaluate();
-      }, Error);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
     });
 
     it("can evaluate a function call", function () {
@@ -209,9 +251,13 @@ describe("ExpressionNode", function () {
         variables: ['x', 'y'],
         expression: new ExpressionNode('+', ['x', 'y'])
       };
-      assert.equal(node.canEvaluate({}), false);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 3);
+      evaluation = node.evaluate({});
+      assert(evaluation.err);
+
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("can evaluate a function call when param name collides with global var", function () {
@@ -224,8 +270,10 @@ describe("ExpressionNode", function () {
         variables: ['x'],
         expression: new ExpressionNode('x')
       };
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 1);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 1));
     });
 
     it("can evaluate nested functions", function () {
@@ -242,8 +290,10 @@ describe("ExpressionNode", function () {
         variables: ['x'],
         expression: new ExpressionNode('g', ['x'])
       };
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 2);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 2));
     });
 
     it("can handle transitioning back to global var", function () {
@@ -251,7 +301,7 @@ describe("ExpressionNode", function () {
       // x = 1
       // g(y) = y + x; // should use global x here
       // f(x) = g(x); // should use local x here
-      mapping.x = 1;
+      mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
         expression: new ExpressionNode('+', ['x', 'y'])
@@ -263,8 +313,10 @@ describe("ExpressionNode", function () {
 
       // compute f(2)
       node = new ExpressionNode('f', [2]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 3);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 3));
     });
 
     it("can handle transitioning back to global var with more complexity", function () {
@@ -272,7 +324,7 @@ describe("ExpressionNode", function () {
       // x = 1
       // g(y) = y + x; // should use global x here
       // f(x) = g(x) + x; // should use local x here
-      mapping.x = 1;
+      mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
         expression: new ExpressionNode('+', ['x', 'y'])
@@ -289,8 +341,10 @@ describe("ExpressionNode", function () {
       // f(2) = g(2) + 2
       // f(2) = 3 + 2 = 5
       node = new ExpressionNode('f', [2]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 5);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 5));
     });
 
     it('can handle functions having the same param name', function () {
@@ -312,11 +366,13 @@ describe("ExpressionNode", function () {
         new ExpressionNode('f', [1]),
         new ExpressionNode('g', [2])
       ]);
-      assert.equal(node.canEvaluate(mapping), true);
-      assert.equal(node.evaluate(mapping), 6);
+      evaluation = node.evaluate(mapping);
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert(jsnums.equals(evaluation.result, 6));
     });
 
-    it('throws? on recursion', function () {
+    it('generates error on infinite recursion', function () {
       // f(x) = f(x) + 1
       var mapping = {
         f: {
@@ -329,16 +385,24 @@ describe("ExpressionNode", function () {
       };
 
       node = new ExpressionNode('f', [1]);
-      assert.equal(node.canEvaluate(mapping), false);
-      assert.throws(function () {
-        // pivotal # 87579626
-        // what it throws is Maximum callstack exceeded. i wonder if i
-        // can/should get it to fail earlier
-        // maybe when evaluating, remove self from mapping?
-        node.evaluate(mapping);
-      });
+      evaluation = node.evaluate(mapping);
+
+      // pivotal # 87579626
+      // what it throws is Maximum callstack exceeded. i wonder if i
+      // can/should get it to fail earlier
+      // maybe when evaluating, remove self from mapping?
+      assert(evaluation.err);
     });
 
+    it('cant evaluate an expression that becomes a div zero', function () {
+      var node = new ExpressionNode('/', [
+        new ExpressionNode(6),
+        new ExpressionNode('-', [5, 5])
+      ]);
+      evaluation = node.evaluate();
+      assert(evaluation.err);
+      assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
+    });
   });
 
   it("depth", function () {
@@ -443,7 +507,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(1);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '1', marked: false}
+          new Token(jsnums.makeFloat(1), false)
         ]);
       });
 
@@ -451,7 +515,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(2);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '2', marked: true}
+          new Token(jsnums.makeFloat(2), true)
         ]);
       });
 
@@ -459,11 +523,11 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode('+', [1, 2]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  marked: true},
-          { str: '1',  marked: true},
-          { str:' + ', marked: true},
-          { str: '2',  marked: true},
-          { str: ')',  marked: true}
+          new Token('(', true),
+          new Token(jsnums.makeFloat(1), true),
+          new Token(' + ', true),
+          new Token(jsnums.makeFloat(2), true),
+          new Token(')', true)
         ]);
       });
     });
@@ -475,7 +539,7 @@ describe("ExpressionNode", function () {
         var node = expected.clone();
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'var', marked: false}
+          new Token('var', false)
         ]);
       });
 
@@ -483,7 +547,7 @@ describe("ExpressionNode", function () {
         var node = new ExpressionNode('different_var', []);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'different_var', marked: true}
+          new Token('different_var', true)
         ]);
       });
 
@@ -491,12 +555,12 @@ describe("ExpressionNode", function () {
         var node = new ExpressionNode('f', ['x', 'y']);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'f', marked: true},
-          { str: '(', marked: true},
-          { str: 'x', marked: true},
-          { str: ',', marked: true},
-          { str: 'y', marked: true},
-          { str: ')', marked: true}
+          new Token('f', true),
+          new Token('(', true),
+          new Token('x', true),
+          new Token(',', true),
+          new Token('y', true),
+          new Token(')', true)
         ]);
       });
     });
@@ -508,11 +572,11 @@ describe("ExpressionNode", function () {
         node = expected.clone();
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',   marked: false},
-          { str: '1',   marked: false},
-          { str: ' + ', marked: false},
-          { str: '2',   marked: false},
-          { str: ')',   marked: false}
+          new Token('(', false),
+          new Token(jsnums.makeFloat(1), false),
+          new Token(' + ', false),
+          new Token(jsnums.makeFloat(2), false),
+          new Token(')', false)
         ]);
       });
 
@@ -521,37 +585,37 @@ describe("ExpressionNode", function () {
         node.value_ = '-';
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  marked: true},
-          { str: '1',  marked: true},
-          { str:' - ', marked: true},
-          { str: '2',  marked: true},
-          { str: ')',  marked: true}
+          new Token('(', true),
+          new Token(jsnums.makeFloat(1), true),
+          new Token(' - ', true),
+          new Token(jsnums.makeFloat(2), true),
+          new Token(')', true)
         ]);
       });
 
       it('differs in child 1', function () {
         node = expected.clone();
-        node.children_[0].value_ = 2;
+        node.children_[0].value_ = jsnums.makeFloat(2);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  marked: false},
-          { str: '2',  marked: true},
-          { str:' + ', marked: false},
-          { str: '2',  marked: false},
-          { str: ')',  marked: false}
+          new Token('(', false),
+          new Token(jsnums.makeFloat(2), true),
+          new Token(' + ', false),
+          new Token(jsnums.makeFloat(2), false),
+          new Token(')', false)
         ]);
       });
 
       it('differs in child 2', function () {
         node = expected.clone();
-        node.children_[1].value_ = 3;
+        node.children_[1].value_ = jsnums.makeFloat(3);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  marked: false},
-          { str: '1',  marked: false},
-          { str:' + ', marked: false},
-          { str: '3',  marked: true},
-          { str: ')',  marked: false}
+          new Token('(', false),
+          new Token(jsnums.makeFloat(1), false),
+          new Token(' + ', false),
+          new Token(jsnums.makeFloat(3), true),
+          new Token(')', false)
         ]);
       });
     });
@@ -566,127 +630,178 @@ describe("ExpressionNode", function () {
 
       var tokenList = node.getTokenListDiff(original);
       assert.deepEqual(tokenList, [
-        { str: '(',  marked: false},
-        { str: '3',  marked: true},
-        { str:' * ', marked: false},
-        { str: '(',  marked: false},
-        { str: '3',  marked: false},
-        { str:' + ', marked: false},
-        { str: '4',  marked: false},
-        { str: ')',  marked: false},
-        { str: ')',  marked: false}
+        new Token('(', false),
+        new Token(jsnums.makeFloat(3), true),
+        new Token(' * ', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(3), false),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(4), false),
+        new Token(')', false),
+        new Token(')', false)
       ]);
     });
 
     describe("function calls", function () {
       var node, tokenList;
-      var expected = new ExpressionNode('f', ['1', '2', '3']);
+      var expected = new ExpressionNode('f', [
+        new ExpressionNode(1),
+        new ExpressionNode(2),
+        new ExpressionNode(3)
+      ]);
 
       it("marks nothing when calls are identical", function () {
         node = expected.clone();
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'f',  marked: false},
-          { str: '(',  marked: false},
-          { str: '1',  marked: false},
-          { str: ',',  marked: false},
-          { str: '2',  marked: false},
-          { str: ',',  marked: false},
-          { str: '3',  marked: false},
-          { str: ')',  marked: false},
+          new Token('f', false),
+          new Token('(', false),
+          new Token(jsnums.makeFloat(1), false),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(2), false),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(3), false),
+          new Token(')', false),
         ]);
       });
 
       it("marks everything when calling function of wrong name", function () {
-        node = new ExpressionNode('g', ['1', '2', '3']);
+        node = new ExpressionNode('g', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(3)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'g',  marked: true},
-          { str: '(',  marked: true},
-          { str: '1',  marked: true},
-          { str: ',',  marked: true},
-          { str: '2',  marked: true},
-          { str: ',',  marked: true},
-          { str: '3',  marked: true},
-          { str: ')',  marked: true},
+          new Token('g', true),
+          new Token('(', true),
+          new Token(jsnums.makeFloat(1), true),
+          new Token(',', true),
+          new Token(jsnums.makeFloat(2), true),
+          new Token(',', true),
+          new Token(jsnums.makeFloat(3), true),
+          new Token(')', true),
         ]);
       });
 
       it ("marks only one param when one param is wrong", function () {
-        node = new ExpressionNode('f', ['1', '2', '4']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(4)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'f',  marked: false},
-          { str: '(',  marked: false},
-          { str: '1',  marked: false},
-          { str: ',',  marked: false},
-          { str: '2',  marked: false},
-          { str: ',',  marked: false},
-          { str: '4',  marked: true},
-          { str: ')',  marked: false},
+          new Token('f', false),
+          new Token('(', false),
+          new Token(jsnums.makeFloat(1), false),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(2), false),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(4), true),
+          new Token(')', false),
         ]);
       });
 
       it ("marks all params when all are wrong", function () {
-        node = new ExpressionNode('f', ['4', '5', '6']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(4),
+          new ExpressionNode(5),
+          new ExpressionNode(6)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'f',  marked: false},
-          { str: '(',  marked: false},
-          { str: '4',  marked: true},
-          { str: ',',  marked: false},
-          { str: '5',  marked: true},
-          { str: ',',  marked: false},
-          { str: '6',  marked: true},
-          { str: ')',  marked: false},
+          new Token('f', false),
+          new Token('(', false),
+          new Token(jsnums.makeFloat(4), true),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(5), true),
+          new Token(',', false),
+          new Token(jsnums.makeFloat(6), true),
+          new Token(')', false),
         ]);
       });
 
       it ("marks everything but the function when wrong number of params", function () {
-        node = new ExpressionNode('f', ['1', '2', '3', '4']);
+        node = new ExpressionNode('f', [
+          new ExpressionNode(1),
+          new ExpressionNode(2),
+          new ExpressionNode(3),
+          new ExpressionNode(4)
+        ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: 'f',  marked: false},
-          { str: '(',  marked: true},
-          { str: '1',  marked: true},
-          { str: ',',  marked: true},
-          { str: '2',  marked: true},
-          { str: ',',  marked: true},
-          { str: '3',  marked: true},
-          { str: ',',  marked: true},
-          { str: '4',  marked: true},
-          { str: ')',  marked: true},
+          new Token('f', false),
+          new Token('(', true),
+          new Token(jsnums.makeFloat(1), true),
+          new Token(',', true),
+          new Token(jsnums.makeFloat(2), true),
+          new Token(',', true),
+          new Token(jsnums.makeFloat(3), true),
+          new Token(',', true),
+          new Token(jsnums.makeFloat(4), true),
+          new Token(')', true),
         ]);
       });
     });
+
+    it('diff repeaters that are the same', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      assert(node.collapse());
+      var expected = node.clone();
+      var tokenList = node.getTokenListDiff(expected);
+
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
+    });
+
+    it('diff repeaters with something different', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      assert(node.collapse());
+      var expected = new ExpressionNode(0.1);
+      var tokenList = node.getTokenListDiff(expected);
+
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, true)
+      ]);
+    });
+
+
   });
 
   describe("getTokenList", function () {
     it("single value", function () {
       var node = new ExpressionNode(1);
       assert.deepEqual(node.getTokenList(false), [
-        { str: '1', marked: false }
+        new Token(jsnums.makeFloat(1), false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
-        { str: '1', marked: true }
+        new Token(jsnums.makeFloat(1), true)
       ]);
     });
 
     it("single operation", function () {
       var node = new ExpressionNode('+', [1, 2]);
       assert.deepEqual(node.getTokenList(false), [
-        { str: '(', marked: false },
-        { str: '1', marked: false },
-        { str:' + ',marked: false },
-        { str: '2', marked: false },
-        { str: ')', marked: false }
+        new Token('(', false),
+        new Token(jsnums.makeFloat(1), false),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(2), false),
+        new Token(')', false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
-        { str: '(', marked: true },
-        { str: '1', marked: true },
-        { str:' + ',marked: true },
-        { str: '2', marked: true },
-        { str: ')', marked: true }
+        new Token('(', true),
+        new Token(jsnums.makeFloat(1), true),
+        new Token(' + ', true),
+        new Token(jsnums.makeFloat(2), true),
+        new Token(')', true)
       ]);
     });
 
@@ -696,26 +811,81 @@ describe("ExpressionNode", function () {
         3
       ]);
       assert.deepEqual(node.getTokenList(false), [
-        { str: '(', marked: false },
-        { str: '(', marked: false },
-        { str: '1', marked: false },
-        { str:' * ',marked: false },
-        { str: '2', marked: false },
-        { str: ')', marked: false },
-        { str:' + ',marked: false },
-        { str: '3', marked: false },
-        { str: ')', marked: false }
+        new Token('(', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(1), false),
+        new Token(' * ', false),
+        new Token(jsnums.makeFloat(2), false),
+        new Token(')', false),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(3), false),
+        new Token(')', false)
       ]);
       assert.deepEqual(node.getTokenList(true), [
-        { str: '(', marked: false },
-        { str: '(', marked: true },
-        { str: '1', marked: true },
-        { str:' * ',marked: true },
-        { str: '2', marked: true },
-        { str: ')', marked: true },
-        { str:' + ',marked: false },
-        { str: '3', marked: false },
-        { str: ')', marked: false }
+        new Token('(', false),
+        new Token('(', true),
+        new Token(jsnums.makeFloat(1), true),
+        new Token(' * ', true),
+        new Token(jsnums.makeFloat(2), true),
+        new Token(')', true),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(3), false),
+        new Token(')', false)
+      ]);
+    });
+
+    it("non repeating fraction", function () {
+      var node = new ExpressionNode('/', [1, 4]);
+      node.collapse();
+      assert.deepEqual(node.getTokenList(false), [
+        new Token(jsnums.makeFloat('0.25').toExact(), false)
+      ]);
+    });
+
+    it('repeating fraction', function () {
+      var node = new ExpressionNode('/', [1, 9]);
+      assert(node.collapse());
+      var tokenList = node.getTokenList(false);
+
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
+    });
+
+    it('repeating fraction after multiple collapses', function () {
+      var node = new ExpressionNode('*', [
+        1,
+        new ExpressionNode('/', [1, 9])
+      ]);
+      assert(node.collapse());
+      assert(node.collapse());
+
+      var tokenList = node.getTokenList(false);
+      var jsnumber = jsnums.divide(jsnums.makeFloat(1).toExact(),
+        jsnums.makeFloat(9).toExact());
+
+      assert.deepEqual(tokenList, [
+        new Token(jsnumber, false)
+      ]);
+    });
+
+    it("diffs function calls that are passed expressions", function () {
+      // f(1 + 2)
+      node = new ExpressionNode('f', [
+        new ExpressionNode('+', [1, 2])
+      ]);
+
+      tokenList = node.getTokenList(false);
+      assert.deepEqual(tokenList, [
+        new Token('f', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(1), false),
+        new Token(' + ', false),
+        new Token(jsnums.makeFloat(2), false),
+        new Token(')', false)
       ]);
     });
   });
@@ -823,4 +993,54 @@ describe("ExpressionNode", function () {
     });
   });
 
+  describe('isDivZero', function () {
+    it('returns false when not a div zero', function () {
+      var node = new ExpressionNode('/', [3,3]);
+      assert(node.isDivZero() === false);
+    });
+
+    it('returns true when node is a div zero', function () {
+      var node = new ExpressionNode('/', [3, 0]);
+      assert(node.isDivZero() === true);
+    });
+
+    it('returns false when right child is not a number', function () {
+      var node = new ExpressionNode('/', [
+        3,
+        new ExpressionNode('-', [1, 1])
+      ]);
+      assert(node.isDivZero() === false);
+    });
+  });
+
+  it('hasSameValue_', function () {
+    var node, other;
+
+    // no other
+    node = new ExpressionNode(1);
+    other = null;
+    assert.equal(node.hasSameValue_(other), false);
+
+    // numbers
+    node = new ExpressionNode(1);
+    other = new ExpressionNode(1);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode(1);
+    other = new ExpressionNode(2);
+    assert.equal(node.hasSameValue_(other), false);
+
+    // strings
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('+', [1, 2]);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('+', [3, 4]);
+    assert.equal(node.hasSameValue_(other), true);
+
+    node = new ExpressionNode('+', [1, 2]);
+    other = new ExpressionNode('-', [3, 4]);
+    assert.equal(node.hasSameValue_(other), false);
+  });
 });

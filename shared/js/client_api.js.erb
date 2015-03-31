@@ -1,0 +1,11 @@
+<% Dir.glob(CDO.dir('shared', 'js', 'client_api', '*.js')).sort.each do |path| %>
+/*
+** BEGIN: <%= File.basename(path) %>
+*/
+
+<%= IO.read(path) %>
+
+/*
+** END: <%= File.basename(path) %>
+*/
+<% end %>

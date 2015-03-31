@@ -15,19 +15,23 @@ var buildMarkup = require('./NetSimTabsComponent.html');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
+var NetSimTabType = require('./netsimConstants').NetSimTabType;
+var shouldShowTab = require('./netsimUtils').shouldShowTab;
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
- * @param {function} chunkSizeChangeCallback
- * @param {function} encodingChangeCallback
- * @param {function} dnsModeChangeCallback
- * @param {function} becomeDnsCallback
+ * @param {netsimLevelConfiguration} levelConfig
+ * @param {Object} callbacks
+ * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.encodingChangeCallback
+ * @param {function} callbacks.routerBandwidthChangeCallback
+ * @param {function} callbacks.dnsModeChangeCallback
+ * @param {function} callbacks.becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv,
-    chunkSizeChangeCallback, encodingChangeCallback, dnsModeChangeCallback,
-    becomeDnsCallback) {
+var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
+    callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -36,28 +40,40 @@ var NetSimTabsComponent = module.exports = function (rootDiv,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {function}
+   * @type {netsimLevelConfiguration}
    * @private
    */
-  this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
    * @private
    */
-  this.encodingChangeCallback_ = encodingChangeCallback;
+  this.chunkSizeChangeCallback_ = callbacks.chunkSizeChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.dnsModeChangeCallback_ = dnsModeChangeCallback;
+  this.encodingChangeCallback_ = callbacks.encodingChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.becomeDnsCallback_ = becomeDnsCallback;
+  this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.dnsModeChangeCallback_ = callbacks.dnsModeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.becomeDnsCallback_ = callbacks.becomeDnsCallback;
 
   /**
    * @type {NetSimRouterTab}
@@ -85,63 +101,84 @@ var NetSimTabsComponent = module.exports = function (rootDiv,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
-  var rawMarkup = buildMarkup({});
+  var rawMarkup = buildMarkup({
+    level: this.levelConfig_
+  });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.netsim_tabs').tabs();
+  this.rootDiv_.find('.netsim-tabs').tabs({
+    active: this.levelConfig_.defaultTabIndex
+  });
 
-  this.routerTab_ = new NetSimRouterTab(
-      this.rootDiv_.find('#tab_router'));
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.MY_DEVICE)) {
+    this.myDeviceTab_ = new NetSimMyDeviceTab(
+        this.rootDiv_.find('#tab_my_device'),
+        this.levelConfig_,
+        this.chunkSizeChangeCallback_,
+        this.encodingChangeCallback_);
+  }
 
-  this.myDeviceTab_ = new NetSimMyDeviceTab(
-      this.rootDiv_.find('#tab_my_device'),
-      this.chunkSizeChangeCallback_,
-      this.encodingChangeCallback_);
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
+    this.routerTab_ = new NetSimRouterTab(
+        this.rootDiv_.find('#tab_router'),
+        this.levelConfig_,
+        this.routerBandwidthChangeCallback_);
+  }
 
-  this.dnsTab_ = new NetSimDnsTab(
-      this.rootDiv_.find('#tab_dns'),
-      this.dnsModeChangeCallback_,
-      this.becomeDnsCallback_);
+  if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
+    this.dnsTab_ = new NetSimDnsTab(
+        this.rootDiv_.find('#tab_dns'),
+        this.levelConfig_,
+        this.dnsModeChangeCallback_,
+        this.becomeDnsCallback_);
+  }
 };
 
-/**
- * @param {number} newChunkSize
- */
+/** @param {number} newChunkSize */
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
-  this.myDeviceTab_.setChunkSize(newChunkSize);
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setChunkSize(newChunkSize);
+  }
 };
 
-/**
- * @param {string} newEncoding
- */
-NetSimTabsComponent.prototype.setEncoding = function (newEncoding) {
-  this.myDeviceTab_.setEncoding(newEncoding);
+/** @param {EncodingType[]} newEncodings */
+NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setEncodings(newEncodings);
+  }
 };
 
-/**
- * @param {string} newDnsMode
- */
+/** @param {number} newBandwidth in bits/second */
+NetSimTabsComponent.prototype.setRouterBandwidth = function (newBandwidth) {
+  if (this.routerTab_) {
+    this.routerTab_.setBandwidth(newBandwidth);
+  }
+};
+
+/** @param {string} newDnsMode */
 NetSimTabsComponent.prototype.setDnsMode = function (newDnsMode) {
-  this.dnsTab_.setDnsMode(newDnsMode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsMode(newDnsMode);
+  }
 };
 
-/**
- * @param {boolean} isDnsNode
- */
+/** @param {boolean} isDnsNode */
 NetSimTabsComponent.prototype.setIsDnsNode = function (isDnsNode) {
-  this.dnsTab_.setIsDnsNode(isDnsNode);
+  if (this.dnsTab_) {
+    this.dnsTab_.setIsDnsNode(isDnsNode);
+  }
 };
 
-/**
- * @param {Array} tableContents
- */
+/** @param {Array} tableContents */
 NetSimTabsComponent.prototype.setDnsTableContents = function (tableContents) {
-  this.dnsTab_.setDnsTableContents(tableContents);
+  if (this.dnsTab_) {
+    this.dnsTab_.setDnsTableContents(tableContents);
+  }
 };
 
-/**
- * @param {Array} logData
- */
+/** @param {Array} logData */
 NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
-  this.routerTab_.setRouterLogData(logData);
+  if (this.routerTab_) {
+    this.routerTab_.setRouterLogData(logData);
+  }
 };

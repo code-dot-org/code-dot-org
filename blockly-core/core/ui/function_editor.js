@@ -92,6 +92,16 @@ Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConf
   }
 };
 
+/**
+ * @param {Blockly.Block} procedureBlock procedure block which has a title value 'NAME'
+ */
+Blockly.FunctionEditor.prototype.openEditorForCallBlock_ = function(procedureBlock) {
+  var functionName = procedureBlock.getTitleValue('NAME');
+  procedureBlock.blockSpace.blockSpaceEditor.hideChaff();
+  this.hideIfOpen();
+  this.openAndEditFunction(functionName);
+};
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -101,7 +111,9 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
-  this.functionDefinitionBlock = this.moveToModalBlockSpace_(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock.setMovable(false);
+  this.functionDefinitionBlock.setDeletable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
 
@@ -178,7 +190,7 @@ Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
   if (!Blockly.disableParamEditing && paramAddTextElement && paramAddButton) {
-    Blockly.bindEvent_(paramAddButton, 'mousedown', this,
+    Blockly.bindEvent_(paramAddButton, 'click', this,
         goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
     Blockly.bindEvent_(paramAddTextElement, 'keydown', this, function(e) {
       if (e.keyCode === goog.events.KeyCodes.ENTER) {
@@ -353,6 +365,7 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
  */
 Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
   blockToMove.setMovable(true);
+  blockToMove.setDeletable(true);
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, dom);
@@ -360,12 +373,13 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
 };
 
 /**
- * Moves an existing block to this modal BlockSpace.
+ * Moves an existing block to this modal BlockSpace
  * Note: destroys the existing Block object in the process
  * @param {Blockly.Block} blockToMove
  * @returns {Blockly.Block} copy of block in modal BlockSpace
+ * @protected
  */
-Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) {
+Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   var dom = Blockly.Xml.blockToDom(blockToMove);
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
@@ -373,7 +387,7 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace_ = function(blockToMove) 
     ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
-  newCopyOfBlock.setUserVisible(true);
+  newCopyOfBlock.setUserVisible(true, true);
   return newCopyOfBlock;
 };
 
@@ -384,7 +398,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
-  goog.dom.getElement('blockly').appendChild(this.container_);
+  goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
         goog.bind(this.calculateMetrics_, this));
@@ -499,10 +513,21 @@ Blockly.FunctionEditor.prototype.getContractDivHeight = function () {
     : 0;
 };
 
+/**
+ * @returns {boolean} whether the function editor is open and ready for display
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.readyToBeLaidOut_ = function () {
+  return this.functionDefinitionBlock &&
+    this.functionDefinitionBlock.svgInitialized() &&
+    this.isOpen();
+};
+
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
-  if (!this.functionDefinitionBlock || !this.isOpen()) {
+  if (!this.readyToBeLaidOut_()) {
     return;
   }
+
   var currentX = Blockly.RTL ?
     this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
     FRAME_MARGIN_SIDE;

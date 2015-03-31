@@ -1,5 +1,35 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
+var Token = require('./token');
+var jsnums = require('./js-numbers/js-numbers');
+
+var ValueType = {
+  ARITHMETIC: 1,
+  FUNCTION_CALL: 2,
+  VARIABLE: 3,
+  NUMBER: 4,
+  EXPONENTIAL: 5
+};
+
+function DivideByZeroError(message) {
+  this.message = message || '';
+}
+
+/**
+ * Converts numbers to jsnumber representations. This is needed because some
+ * jsnumber methods will return a number or jsnumber depending on their values,
+ * for example:
+ * jsnums.sqrt(jsnums.makeFloat(4).toExact()) = 4
+ * jsnums.sqrt(jsnums.makeFloat(5).toExact()) = jsnumber
+ * @param {number|jsnumber} val
+ * @returns {jsnumber}
+ */
+function ensureJsnum(val) {
+  if (typeof(val) === 'number') {
+    return jsnums.makeFloat(val);
+  }
+  return val;
+}
 
 /**
  * A node consisting of an value, and potentially a set of operands.
@@ -8,15 +38,9 @@ var _ = utils.getLodash();
  * If args are not ExpressionNode, we convert them to be so, assuming any string
  * represents a variable
  */
-var ValueType = {
-  ARITHMETIC: 1,
-  FUNCTION_CALL: 2,
-  VARIABLE: 3,
-  NUMBER: 4
-};
-
 var ExpressionNode = function (val, args, blockId) {
-  this.value_ = val;
+  this.value_ = ensureJsnum(val);
+
   this.blockId_ = blockId;
   if (args === undefined) {
     args = [];
@@ -42,6 +66,7 @@ var ExpressionNode = function (val, args, blockId) {
   }
 };
 module.exports = ExpressionNode;
+ExpressionNode.DivideByZeroError = DivideByZeroError;
 
 /**
  * What type of expression node is this?
@@ -51,6 +76,10 @@ ExpressionNode.prototype.getType_ = function () {
     return ValueType.ARITHMETIC;
   }
 
+  if (["pow", "sqrt", "sqr"].indexOf(this.value_) !== -1) {
+    return ValueType.EXPONENTIAL;
+  }
+
   if (typeof(this.value_) === 'string') {
     if (this.children_.length === 0) {
       return ValueType.VARIABLE;
@@ -58,7 +87,7 @@ ExpressionNode.prototype.getType_ = function () {
     return ValueType.FUNCTION_CALL;
   }
 
-  if (typeof(this.value_) === 'number') {
+  if (jsnums.isSchemeNumber(this.value_)) {
     return ValueType.NUMBER;
   }
 };
@@ -66,14 +95,31 @@ ExpressionNode.prototype.getType_ = function () {
 ExpressionNode.prototype.isArithmetic = function () {
   return this.getType_() === ValueType.ARITHMETIC;
 };
+
 ExpressionNode.prototype.isFunctionCall = function () {
   return this.getType_() === ValueType.FUNCTION_CALL;
 };
+
 ExpressionNode.prototype.isVariable = function () {
   return this.getType_() === ValueType.VARIABLE;
 };
+
 ExpressionNode.prototype.isNumber = function () {
   return this.getType_() === ValueType.NUMBER;
+};
+
+ExpressionNode.prototype.isExponential = function () {
+  return this.getType_() === ValueType.EXPONENTIAL;
+};
+
+/**
+ * @returns {boolean} true if the root expression node is a divide by zero. Does
+ *   not account for div zeros in descendants
+ */
+ExpressionNode.prototype.isDivZero = function () {
+  var rightChild = this.getChildValue(1);
+  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0);
 };
 
 /**
@@ -87,89 +133,126 @@ ExpressionNode.prototype.clone = function () {
 };
 
 /**
- * See if we can evaluate this node by trying to do so and catching exceptions.
- * @returns Whether we can evaluate.
- */
-ExpressionNode.prototype.canEvaluate = function (mapping, localMapping) {
-  try {
-    this.evaluate(mapping, localMapping);
-  } catch (err) {
-    return false;
-  }
-  return true;
-};
-
-/**
  * Evaluate the expression, returning the result.
  * @param {Object<string, number|object>} globalMapping Global mapping of
  *   variables and functions
  * @param {Object<string, number|object>} localMapping Mapping of
  *   variables/functions local to scope of this function.
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {jsnumber?} evaluation.result
  */
-ExpressionNode.prototype.evaluate = function (gloablMapping, localMapping) {
-  gloablMapping = gloablMapping || {};
-  localMapping = localMapping || {};
+ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
+  try {
+    globalMapping = globalMapping || {};
+    localMapping = localMapping || {};
 
-  var type = this.getType_();
+    var type = this.getType_();
+    // @type {number|jsnumber}
+    var val;
 
-  if (type === ValueType.VARIABLE) {
-    var mappedVal = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (mappedVal === undefined) {
-      throw new Error('No mapping for variable during evaluation');
+    if (type === ValueType.VARIABLE) {
+      var mappedVal = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (mappedVal === undefined) {
+        throw new Error('No mapping for variable during evaluation');
+      }
+
+      var clone = this.clone();
+      clone.setValue(mappedVal);
+      return clone.evaluate(globalMapping);
     }
 
-    var clone = this.clone();
-    clone.setValue(mappedVal);
-    return clone.evaluate(gloablMapping);
+    if (type === ValueType.FUNCTION_CALL) {
+      var functionDef = utils.valueOr(localMapping[this.value_],
+        globalMapping[this.value_]);
+      if (functionDef === undefined) {
+        throw new Error('No mapping for function during evaluation');
+      }
+
+      if (!functionDef.variables || !functionDef.expression) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+      if (functionDef.variables.length !== this.children_.length) {
+        throw new Error('Bad mapping for: ' + this.value_);
+      }
+
+      // We're calling a new function, so it gets a new local scope.
+      var newLocalMapping = {};
+      functionDef.variables.forEach(function (variable, index) {
+        var evaluation = this.children_[index].evaluate(globalMapping, localMapping);
+        if (evaluation.err) {
+          throw evaluation.err;
+        }
+        var childVal = evaluation.result;
+        newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
+      }, this);
+      return functionDef.expression.evaluate(globalMapping, newLocalMapping);
+    }
+
+    if (type === ValueType.NUMBER) {
+      return { result: this.value_ };
+    }
+
+    if (type !== ValueType.ARITHMETIC && type !== ValueType.EXPONENTIAL) {
+      throw new Error('Unexpected');
+    }
+
+    var left = this.children_[0].evaluate(globalMapping, localMapping);
+    if (left.err) {
+      throw left.err;
+    }
+    left = left.result.toExact();
+
+    if (this.children_.length === 1) {
+      switch (this.value_) {
+        case 'sqrt':
+          val = jsnums.sqrt(left);
+          break;
+        case 'sqr':
+          val = jsnums.sqr(left);
+          break;
+        default:
+          throw new Error('Unknown operator: ' + this.value_);
+      }
+      return { result: ensureJsnum(val) };
+    }
+
+    var right = this.children_[1].evaluate(globalMapping, localMapping);
+    if (right.err) {
+      throw right.err;
+    }
+    right = right.result.toExact();
+
+    switch (this.value_) {
+      case '+':
+        val = jsnums.add(left, right);
+        break;
+      case '-':
+        val = jsnums.subtract(left, right);
+        break;
+      case '*':
+        val = jsnums.multiply(left, right);
+        break;
+      case '/':
+        if (jsnums.equals(right, 0)) {
+          throw new DivideByZeroError();
+        }
+        val = jsnums.divide(left, right);
+        break;
+      case 'pow':
+        val = jsnums.expt(left, right);
+        break;
+      default:
+        throw new Error('Unknown operator: ' + this.value_);
+    }
+    // When calling jsnums methods, they will sometimes return a jsnumber and
+    // sometimes a native JavaScript number. We want to make sure to convert
+    // to a jsnumber before we return.
+    return { result: ensureJsnum(val) };
+  } catch (err) {
+    return { err: err };
   }
-
-  if (type === ValueType.FUNCTION_CALL) {
-    var functionDef = utils.valueOr(localMapping[this.value_],
-      gloablMapping[this.value_]);
-    if (functionDef === undefined) {
-      throw new Error('No mapping for function during evaluation');
-    }
-
-    if (!functionDef.variables || !functionDef.expression) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-    if (functionDef.variables.length !== this.children_.length) {
-      throw new Error('Bad mapping for: ' + this.value_);
-    }
-
-    // We're calling a new function, so it gets a new local scope.
-    var newLocalMapping = {};
-    functionDef.variables.forEach(function (variable, index) {
-      var childVal = this.getChildValue(index);
-      newLocalMapping[variable] = utils.valueOr(localMapping[childVal], childVal);
-    }, this);
-    return functionDef.expression.evaluate(gloablMapping, newLocalMapping);
-  }
-
-  if (type === ValueType.NUMBER) {
-    return this.value_;
-  }
-
-  if (type !== ValueType.ARITHMETIC) {
-    throw new Error('Unexpected error');
-  }
-
-  var left = this.children_[0].evaluate(gloablMapping, localMapping);
-  var right = this.children_[1].evaluate(gloablMapping, localMapping);
-
-  switch (this.value_) {
-    case '+':
-      return left + right;
-    case '-':
-      return left - right;
-    case '*':
-      return left * right;
-    case '/':
-      return left / right;
-    default:
-      throw new Error('Unknown operator: ' + this.value_);
-    }
 };
 
 /**
@@ -212,7 +295,8 @@ ExpressionNode.prototype.getDeepestOperation = function () {
 
 /**
  * Collapses the next descendant in place. Next is defined as deepest, then
- * furthest left. Returns whether collapse was successful.
+ * furthest left.
+ * @returns {boolea} true if collapse was successful.
  */
 ExpressionNode.prototype.collapse = function () {
   var deepest = this.getDeepestOperation();
@@ -222,7 +306,11 @@ ExpressionNode.prototype.collapse = function () {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    this.value_ = this.evaluate();
+    var evaluation = this.evaluate();
+    if (evaluation.err) {
+      return false;
+    }
+    this.value_ = evaluation.result;
     this.children_ = [];
     return true;
   } else {
@@ -237,48 +325,72 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   var tokens;
-  var nodesMatch = other && (this.value_ === other.value_) &&
+  var nodesMatch = other && this.hasSameValue_(other) &&
     (this.children_.length === other.children_.length);
   var type = this.getType_();
 
-  // Empty function calls look slightly different, i.e. foo() instead of foo
   if (this.children_.length === 0) {
-    return [new Token(this.value_.toString(), !nodesMatch)];
+    return [new Token(this.value_, !nodesMatch)];
   }
+
+  var tokensForChild = function (childIndex) {
+    return this.children_[childIndex].getTokenListDiff(nodesMatch &&
+      other.children_[childIndex]);
+  }.bind(this);
 
   if (type === ValueType.ARITHMETIC) {
     // Deal with arithmetic, which is always in the form (child0 operator child1)
     tokens = [new Token('(', !nodesMatch)];
-    if (this.children_.length > 0) {
-      tokens.push([
-        this.children_[0].getTokenListDiff(nodesMatch && other.children_[0]),
-        new Token(" " + this.value_ + " ", !nodesMatch),
-        this.children_[1].getTokenListDiff(nodesMatch && other.children_[1])
-      ]);
-    }
+    tokens.push([
+      tokensForChild(0),
+      new Token(" " + this.value_ + " ", !nodesMatch),
+      tokensForChild(1)
+    ]);
     tokens.push(new Token(')', !nodesMatch));
 
-  } else if (type === ValueType.FUNCTION_CALL) {
-    // Deal with a function call which will generate something like: foo(1, 2, 3)
-    tokens = [
-      new Token(this.value_, this.value_ !== other.value_),
-      new Token('(', !nodesMatch)
-    ];
-
-    for (var i = 0; i < this.children_.length; i++) {
-      if (i > 0) {
-        tokens.push(new Token(',', !nodesMatch));
-      }
-      tokens.push(this.children_[i].getTokenListDiff(nodesMatch && other.children_[i]));
-    }
-
-    tokens.push(new Token(")", !nodesMatch));
-  } else if (this.getType_() === ValueType.VARIABLE) {
-
+    return _.flatten(tokens);
   }
+
+  if (this.value_ === 'sqr') {
+    return _.flatten([
+      new Token('(', !nodesMatch),
+      tokensForChild(0),
+      new Token(' ^ 2', !nodesMatch),
+      new Token(')', !nodesMatch)
+    ]);
+  } else if (this.value_ === 'pow') {
+    return _.flatten([
+      new Token('(', !nodesMatch),
+      tokensForChild(0),
+      new Token(' ^ ', !nodesMatch),
+      tokensForChild(1),
+      new Token(')', !nodesMatch)
+    ]);
+  }
+
+  // We either have a function call, or an arithmetic node that we want to
+  // treat like a function (i.e. sqrt(4))
+  // A function call will generate something like: foo(1, 2, 3)
+  tokens = [
+    new Token(this.value_, other && this.value_ !== other.value_),
+    new Token('(', !nodesMatch)
+  ];
+
+  var numChildren = this.children_.length;
+  for (var i = 0; i < numChildren; i++) {
+    if (i > 0) {
+      tokens.push(new Token(',', !nodesMatch));
+    }
+    var childTokens = tokensForChild(i);
+    if (numChildren === 1) {
+      ExpressionNode.stripOuterParensFromTokenList(childTokens);
+    }
+    tokens.push(childTokens);
+  }
+
+  tokens.push(new Token(")", !nodesMatch));
   return _.flatten(tokens);
 };
-
 
 /**
  * Get a tokenList for this expression, potentially marking those tokens
@@ -286,9 +398,12 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
  * @param {boolean} markDeepest Mark tokens in the deepest descendant
  */
 ExpressionNode.prototype.getTokenList = function (markDeepest) {
-  var depth = this.depth();
-  if (depth <= 1) {
-    return this.getTokenListDiff(markDeepest ? null : this);
+  if (!markDeepest) {
+    // diff against this so that nothing is marked
+    return this.getTokenListDiff(this);
+  } else if (this.depth() <= 1) {
+    // markDeepest is true. diff against null so that everything is marked
+    return this.getTokenListDiff(null);
   }
 
   if (this.getType_() !== ValueType.ARITHMETIC) {
@@ -296,23 +411,48 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     throw new Error("Unsupported");
   }
 
-  var rightDeeper = this.children_[1].depth() > this.children_[0].depth();
+  var rightDeeper = false;
+  if (this.children_.length === 2) {
+    rightDeeper = this.children_[1].depth() > this.children_[0].depth();
+  }
 
-  return _.flatten([
+  var tokens = [
     new Token('(', false),
     this.children_[0].getTokenList(markDeepest && !rightDeeper),
-    new Token(" " + this.value_ + " ", false),
-    this.children_[1].getTokenList(markDeepest && rightDeeper),
-    new Token(')', false)
-  ]);
+  ];
+  if (this.children_.length > 1) {
+    tokens.push([
+      new Token(" " + this.value_ + " ", false),
+      this.children_[1].getTokenList(markDeepest && rightDeeper)
+    ]);
+  }
+  tokens.push(new Token(')', false));
+  return _.flatten(tokens);
+};
+
+/**
+ * Looks to see if two nodes have the same value, using jsnum.equals in the
+ * case of numbers
+ * @param {ExpressionNode} other ExpresisonNode to compare to
+ * @returns {boolean} True if both nodes have the same value.
+ */
+ExpressionNode.prototype.hasSameValue_ = function (other) {
+  if (!other) {
+    return false;
+  }
+
+  if (this.isNumber()) {
+    return jsnums.equals(this.value_, other.value_);
+  }
+
+  return this.value_ === other.value_;
 };
 
 /**
  * Is other exactly the same as this ExpressionNode tree.
  */
 ExpressionNode.prototype.isIdenticalTo = function (other) {
-  if (!other || this.value_ !== other.value_ ||
-      this.children_.length !== other.children_.length) {
+  if (!other || !this.hasSameValue_(other) || this.children_.length !== other.children_.length) {
     return false;
   }
 
@@ -386,9 +526,10 @@ ExpressionNode.prototype.numChildren = function () {
 
 /**
  * Get the value
+ * @returns {string} String representation of this node's value.
  */
 ExpressionNode.prototype.getValue = function () {
-  return this.value_;
+  return this.value_.toString();
 };
 
 
@@ -400,13 +541,20 @@ ExpressionNode.prototype.setValue = function (value) {
   if (type !== ValueType.VARIABLE && type !== ValueType.NUMBER) {
     throw new Error("Can't modify value");
   }
-  this.value_ = value;
+  if (type === ValueType.NUMBER) {
+    this.value_ = ensureJsnum(value);
+  } else {
+    this.value_ = value;
+  }
 };
 
 /**
  * Get the value of the child at index
  */
 ExpressionNode.prototype.getChildValue = function (index) {
+  if (this.children_[index] === undefined) {
+    return undefined;
+  }
   return this.children_[index].value_;
 };
 
@@ -420,10 +568,15 @@ ExpressionNode.prototype.setChildValue = function (index, value) {
 /**
  * Get a string representation of the tree
  * Note: This is only used by test code, but is also generally useful to debug
+ * @returns {string}
  */
 ExpressionNode.prototype.debug = function () {
   if (this.children_.length === 0) {
-    return this.value_;
+    if (this.isNumber()) {
+      return this.value_.toFixnum().toString();
+    } else {
+      return this.value_.toString();
+    }
   }
   return "(" + this.value_ + " " +
     this.children_.map(function (c) {
@@ -432,14 +585,14 @@ ExpressionNode.prototype.debug = function () {
 };
 
 /**
- * A token is essentially just a string that may or may not be "marked". Marking
- * is done for two different reasons.
- * (1) We're comparing two expressions and want to mark where they differ.
- * (2) We're looking at a single expression and want to mark the deepest
- *     subexpression.
+ * Given a token list, if the first and last items are parens, removes them
+ * from the list
  */
-var Token = function (str, marked) {
-  this.str = str;
-  this.marked = marked;
+ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
 };
-ExpressionNode.Token = Token;

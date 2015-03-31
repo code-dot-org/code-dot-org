@@ -116,6 +116,7 @@ Eval.init = function(config) {
           lastLabel: 100,
           increment: 100
         });
+      background.setAttribute('visibility', 'visible');
     }
 
     if (level.solutionBlocks) {
@@ -183,21 +184,54 @@ function evalCode (code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      if (console && console.log) {
-        console.log(e);
-      }
+    if (isInfiniteRecursionError(e)) {
+      return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
+
+    // call window.onerror so that we get new relic collection.  prepend with
+    // UserCode so that it's clear this is in eval'ed code.
+    if (window.onerror) {
+      window.onerror("UserCode:" + e.message, document.URL, 0);
+    }
+    if (console && console.log) {
+      console.log(e);
+    }
+
+    return new CustomEvalError(CustomEvalError.Type.UserCodeException, null);
   }
+}
+
+/**
+ * Attempts to analyze whether or not err represents infinite recursion having
+ * occurred. This error differs per browser, and it's possible that we don't
+ * properly discover all cases.
+ * Note: Other languages probably have localized messages, meaning we won't
+ * catch them.
+ */
+function isInfiniteRecursionError(err) {
+  // Chrome/Safari: message ends in a period in Safari, not in Chrome
+  if (err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)) {
+    return true;
+  }
+
+  // Firefox
+  /* jshint ignore:start */
+  // Linter doesn't like our use of InternalError, even though we gate on its
+  // existence.
+  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
+      err.message === 'too much recursion') {
+    return true;
+  }
+  /* jshint ignore:end */
+
+  // IE
+  if (err instanceof Error &&
+      err.message === 'Out of stack space') {
+    return true;
+  }
+
+  return false;
 }
 
 /**
@@ -284,6 +318,30 @@ Eval.haveCaseMismatch_ = function (object1, object2) {
 };
 
 /**
+ * Note: is unable to distinguish from true/false generated from string blocks
+ *   vs. from boolean blocks
+ * @returns {boolean} True if two eval objects are both booleans, but have different values.
+ */
+Eval.haveBooleanMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== 1 || strs2.length !== 1) {
+    return false;
+  }
+
+  var text1 = strs1[0];
+  var text2 = strs2[0];
+
+  if ((text1 === "true" && text2 === "false") ||
+      (text1 === "false" && text2 === "true")) {
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
@@ -295,6 +353,9 @@ Eval.execute = function() {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     Eval.message = evalMsg.emptyFunctionalBlock();
+  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
@@ -305,22 +366,24 @@ Eval.execute = function() {
     if (userObject instanceof CustomEvalError) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = userObject.feedbackMessage;
     } else if (Eval.haveCaseMismatch_(userObject, Eval.answerObject)) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = evalMsg.stringMismatchError();
+    } else if (Eval.haveBooleanMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+      Eval.message = evalMsg.wrongBooleanError();
     } else {
       // We got an EvalImage back, compare it to our target
       Eval.result = evaluateAnswer();
       Eval.testResults = studioApp.getTestResults(Eval.result);
-    }
 
-    if (level.freePlay) {
-      Eval.result = true;
-      Eval.testResults = TestResults.FREE_PLAY;
+      if (level.freePlay) {
+        Eval.result = true;
+        Eval.testResults = TestResults.FREE_PLAY;
+      }
     }
   }
 
@@ -389,11 +452,12 @@ var displayFeedback = function(response) {
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
   var options = {
-    app: 'Eval',
+    app: 'eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
     level: level,
+    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
@@ -412,5 +476,9 @@ function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback(response);
+
+  // Add a short delay so that user gets to see their finished drawing.
+  setTimeout(function () {
+    displayFeedback(response);
+  }, 2000);
 }

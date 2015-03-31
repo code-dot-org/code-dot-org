@@ -83,9 +83,9 @@
   var userAgent = '#{request.env['HTTP_USER_AGENT']}';
   formLink.fillFieldEncoded('browser', userAgent);
 
-  var videoInfo = #{video_info(Video.first).to_json};
+  var videoInfo = #{Video.first.summarize.to_json};
   videoInfo['enable_fallback'] = true;
-  videoInfo['src'] = videoInfo['src'].replace('#{youtube_base_url}', 'https://www.youtube.com');
+  videoInfo['src'] = videoInfo['src'].replace('#{Video.youtube_base_url}', 'https://www.youtube.com');
 
   $('#video-container').append(createVideoWithFallback(videoInfo, 600, 400));
 

@@ -1052,14 +1052,15 @@ Studio.init = function(config) {
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
+  var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine
+    finishButton: finishButtonFirstLine && showFinishButton
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine
+    finishButton: !finishButtonFirstLine && showFinishButton
   });
 
   config.html = page({
@@ -1149,7 +1150,9 @@ Studio.init = function(config) {
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  }
 
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
@@ -1365,7 +1368,8 @@ studioApp.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!studioApp.hideSource || level.showFinish)) {
+  if (level.freePlay && !level.isProjectLevel &&
+      (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1385,6 +1389,7 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && (level.freePlay),
@@ -1804,6 +1809,16 @@ Studio.displaySprite = function(i, isWalking) {
   var xOffset, yOffset;
 
   if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+
+    // One exception: don't show the walk sprite if we're already playing an explosion animation for
+    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
+    // but this is not a common case for now and this keeps the change small.)
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
+      spriteWalkIcon.setAttribute('visibility', 'hidden');
+      return;
+    }
+
     // Show walk sprite, and hide regular sprite.
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
@@ -2065,8 +2080,13 @@ Studio.callCmd = function (cmd) {
 
 Studio.vanishActor = function (opts) {
   var svg = document.getElementById('svgStudio');
+
   var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  if (!sprite || sprite.getAttribute('visibility') === 'hidden') {
+  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
+  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
+  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+
+  if (!spriteShowing && !spriteWalkShowing) {
     return;
   }
 
@@ -2891,20 +2911,30 @@ Studio.allGoalsVisited = function() {
 };
 
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+
+  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var achievedGoals = Studio.allGoalsVisited();
+  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  // Levels with goals (usually images that need to be touched) can have an optional success
+  // condition that can explicitly return false to prevent the level from completing.
+  // In very rare cases, a level might have goals but not care whether they're touched or not
+  // to succeed, relying instead solely on the success function.  In such a case, the level should
+  // have completeOnSuccessConditionNotGoals set to true.
+  // In the remainder of levels which do not have goals, they simply require a success condition
+  // that returns true.
+
+  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
+      (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
-    return true;
-  }
-
-  if (Studio.allGoalsVisited()) {
-    Studio.result = ResultType.SUCCESS;
     return true;
   }
 

@@ -54,6 +54,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.myRouter = null;
 
   /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = {};
+
+  /**
    * Widget where we will post sent messages.
    * @type {NetSimLogPanel}
    * @private
@@ -134,11 +140,13 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 /**
  * Configure this node controller to actively simulate, and to post sent and
  * received messages to the given log widgets.
+ * @param {!netsimLevelConfiguration} levelConfig
  * @param {!NetSimLogPanel} sentLog
  * @param {!NetSimLogPanel} receivedLog
  */
-NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
-    receivedLog) {
+NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
+    sentLog, receivedLog) {
+  this.levelConfig_ = levelConfig;
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
@@ -221,40 +229,55 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 };
 
 /**
+ * Connect to a remote node.
+ * @param {NetSimNode} otherNode
+ * @param {!NodeStyleCallback} onComplete
+ * @override
+ */
+NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete) {
+  NetSimLocalClientNode.superPrototype.connectToNode.call(this, otherNode,
+      function (err, wire) {
+        if (!err) {
+          this.myWire = wire;
+        }
+        onComplete(err, wire);
+      }.bind(this));
+};
+
+/**
  * @param {!NetSimRouterNode} router
  * @param {NodeStyleCallback} onComplete
  */
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
       return;
     }
 
-    self.myWire = wire;
-    self.myRouter = router;
-    self.myRouter.initializeSimulation(self.entityID);
+    this.myRouter = router;
+    this.myRouter.initializeSimulation(this.entityID,
+        this.levelConfig_.routerExpectsPacketHeader);
 
-    router.requestAddress(wire, self.getHostname(), function (err) {
+    router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
         wire.destroy(function () {
           onComplete(err);
         });
+        this.myWire = null;
         return;
       }
 
-      self.myWire = wire;
-      self.myRouter = router;
-      self.routerChange.notifyObservers(self.myWire, self.myRouter);
+      this.myRouter = router;
+      this.routerChange.notifyObservers(this.myWire, this.myRouter);
 
-      self.status_ = "Connected to " + router.getDisplayName() +
-      " with address " + wire.localAddress;
-      self.update(onComplete);
-    });
-  });
+      this.status_ = "Connected to " + router.getDisplayName() +
+          " with address " + wire.localAddress;
+      this.update(onComplete);
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -293,8 +316,17 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   var localNodeID = this.myWire.localNodeID;
   var remoteNodeID = this.myWire.remoteNodeID;
+
+  // Who simulates?  Normally the receiving node
+  var simulatingNodeID = remoteNodeID;
+  // If sending to a router, we will do our own simulation
+  if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+    simulatingNodeID = localNodeID;
+  }
+
   var self = this;
-  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, payload,
+  NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
+      payload,
       function (err) {
         if (err) {
           logger.error('Failed to send message; ' + err.message + ': ' +
@@ -303,13 +335,35 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
           return;
         }
 
-        logger.info('Local node sent message: ' + JSON.stringify(payload));
+        logger.info('Local node sent message');
         if (self.sentLog_) {
           self.sentLog_.log(payload);
         }
         onComplete(null);
       }
   );
+};
+
+/**
+ * Sequentially puts a list of messages onto the outgoing wire, to whatever
+ * we are connected to at the moment.
+ * @param {string[]} payloads
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
+  if (payloads.length === 0) {
+    onComplete(null);
+    return;
+  }
+
+  this.sendMessage(payloads[0], function (err, result) {
+    if (err !== null) {
+      onComplete(err, result);
+      return;
+    }
+
+    this.sendMessages(payloads.slice(1), onComplete);
+  }.bind(this));
 };
 
 /**
@@ -325,31 +379,41 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
-  var self = this;
-  var messages = rows.map(function (row) {
-    return new NetSimMessage(self.shard_, row);
-  }).filter(function (message) {
-    return message.toNodeID === self.entityID;
-  });
+  var messages = rows
+      .map(function (row) {
+        return new NetSimMessage(this.shard_, row);
+      }.bind(this))
+      .filter(function (message) {
+        return message.toNodeID === this.entityID &&
+            message.simulatedBy === this.entityID;
+      }.bind(this));
 
-  // If any messages are for us, get our routing table and process messages.
-  if (messages.length > 0) {
-    this.isProcessingMessages_ = true;
-    messages.forEach(function (message) {
-
-      // Pull the message off the wire, and hold it in-memory until we route it.
-      // We'll create a new one with the same payload if we have to send it on.
-      message.destroy(function (err) {
-        if (err) {
-          logger.error('Error pulling message off the wire: ' + err.message);
-          return;
-        }
-        self.handleMessage_(message);
-      });
-
-    });
-    this.isProcessingMessages_ = false;
+  if (messages.length === 0) {
+    // No messages for us, no work to do
+    return;
   }
+
+  // Setup (sync): Set processing flag
+  logger.info("Local node received " + messages.length + " messages");
+  this.isProcessingMessages_ = true;
+
+  // Step 1 (async): Pull all our messages out of storage
+  NetSimEntity.destroyEntities(messages, function (err) {
+    if (err) {
+      logger.error('Error pulling message off the wire: ' + err.message);
+      this.isProcessingMessages_ = false;
+      return;
+    }
+
+    // Step 2 (sync): Handle all messages
+    messages.forEach(function (message) {
+      this.handleMessage_(message);
+    }, this);
+
+    // Cleanup (sync): Clear processing flag
+    logger.info("Local node finished processing " + messages.length + " messages");
+    this.isProcessingMessages_ = false;
+  }.bind(this));
 };
 
 /**

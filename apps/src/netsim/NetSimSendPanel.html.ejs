@@ -1,49 +1,11 @@
-<div class="netsim_packet">
-  <table>
-    <thead>
-    <tr>
-      <th nowrap class="encodingLabel"></th>
-      <th nowrap class="toAddress">To</th>
-      <th nowrap class="fromAddress">From</th>
-      <th nowrap class="packetInfo">Packet</th>
-      <th class="message">Message</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="ascii">
-      <th nowrap class="encodingLabel">ASCII</th>
-      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
-      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
-      <td class="message"><div><textarea class="message"></textarea></div></td>
-    </tr>
-    <tr class="decimal">
-      <th nowrap class="encodingLabel">Decimal</th>
-      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
-      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
-      <td class="message"><div><textarea class="message"></textarea></div></td>
-    </tr>
-    <tr class="hexadecimal">
-      <th nowrap class="encodingLabel">Hex</th>
-      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
-      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
-      <td class="message"><div><textarea class="message"></textarea></div></td>
-    </tr>
-    <tr class="binary">
-      <th nowrap class="encodingLabel">Binary</th>
-      <td nowrap class="toAddress"><input type="text" class="toAddress" /></td>
-      <td nowrap class="fromAddress"><input type="text" readonly class="fromAddress" /></td>
-      <td nowrap class="packetInfo"><input type="text" readonly class="packetIndex" /> of <input type="text" readonly class="packetCount" /></td>
-      <td class="message"><div><textarea class="message"></textarea></div></td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="bit_counter"></div>
-</div>
+<% var i18n = require('../../locale/current/netsim'); %>
+<div class="send-widget-packets"></div>
 <div class="send_widget_footer">
-  <!-- Packet size slider -->
-  <!-- Add packet button -->
-  <span class="netsim_button" id="send_button">Send</span>
+  <div class="right-side-controls">
+    <% if (level.showAddPacketButton) { %>
+      <span class="netsim-button" id="add_packet_button"><%= i18n.addPacket() %></span>
+    <% } %>
+    <span class="netsim-button" id="send_button"><%= i18n.send() %></span>
+  </div>
+  <div class="packet_size"></div>
 </div>

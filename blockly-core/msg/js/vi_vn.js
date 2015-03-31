@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.vi_vn');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ACTUAL = "Gọi hàm";
 Blockly.Msg.ADD = "Thêm";
 Blockly.Msg.ADD_COMMENT = "Thêm bình luận";
 Blockly.Msg.ADD_PARAMETER = "Thêm tham số";
@@ -75,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Ví dụ";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Xác định một ví dụ với hành vi thực tế dự đoán trước được";
 Blockly.Msg.EXPAND_ALL = "Mở rộng các khối";
 Blockly.Msg.EXPAND_BLOCK = "Mở rộng khối";
-Blockly.Msg.EXPECTED = "dự kiến";
+Blockly.Msg.EXPECTED = "Kết quả trả về";
 Blockly.Msg.EXTERNAL_INPUTS = "Chỗ Gắn Bên Ngoài";
 Blockly.Msg.FUNCTION_CREATE = "Tạo một Hàm";
 Blockly.Msg.FUNCTION_EDIT = "edit";

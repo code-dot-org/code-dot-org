@@ -1,0 +1,14 @@
+name 'Pixelation - Lesson 15 - Complete 3-bit color'
+title 'Pixelation - Lesson 15 - Complete 3-bit color'
+description 'description here'
+href 'pixelation/pixelation.html'
+version '3'
+format 'raw'
+data ‘000001000000001000000011000111100010001110’
+markdown <<MARKDOWN
+# Color Pixelation: Task 1
+**Directions:**
+
+* We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. 
+* Finish off the image by figuring out which two colors are missing and encode them.
+MARKDOWN

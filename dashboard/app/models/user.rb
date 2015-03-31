@@ -2,6 +2,9 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
+  include SerializedProperties
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
@@ -11,7 +14,7 @@ class User < ActiveRecord::Base
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
+  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
 
@@ -23,14 +26,23 @@ class User < ActiveRecord::Base
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
 
-  has_one :districts_users
-  has_one :district, through: :districts_users
-
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
-  # all Teachers in a Cohort (are supposed to) attend all Workshops associated with a Cohort
+
+  # workshops that I am attending
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
+
+  # you can be associated with a district if you are the district contact
+  has_many :districts_as_contact, class_name: 'District', foreign_key: 'contact_id'
+
+  # TODO: I think we actually want to do this
+  # you can be associated with distrits through cohorts
+#   has_many :districts, through: :cohorts
+
+  def facilitator?
+    permission? UserPermission::FACILITATOR
+  end
 
   def delete_permission(permission)
     permission = permissions.find_by(permission: permission)
@@ -46,8 +58,45 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
-    permission?('district_contact') || district.try(:contact) == self
+    districts_as_contact.any?
   end
+
+  def district
+    District.find(district_id) if district_id
+  end
+
+  def User.find_or_create_district_contact(params)
+    user = User.find_by_email_or_hashed_email(params[:email])
+    unless user
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
+      # TODO send invitation email
+    end
+
+    user.update!(params)
+
+    user.permission = UserPermission::DISTRICT_CONTACT
+    user.save!
+    user
+  end
+
+  def User.find_or_create_teacher(params)
+    user = User.find_by_email_or_hashed_email(params[:email])
+    unless user
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+
+      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
+      # TODO send invitation email
+    end
+
+    user.update!(params)
+    user
+  end
+
 
   # a district contact can see the teachers from their district that are part of a cohort
   def district_teachers(cohort = nil)
@@ -85,7 +134,7 @@ class User < ActiveRecord::Base
 
   belongs_to :secret_picture
   before_create :generate_secret_picture
-  
+
   before_create :generate_secret_words
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
@@ -115,7 +164,7 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
-  
+
   after_create :codeorg_admin unless Rails.env.production?
   def codeorg_admin
     require 'mail'
@@ -295,8 +344,6 @@ class User < ActiveRecord::Base
     #broze id: 1, silver id: 2 and gold id: 3
     User.connection.select_one(<<SQL)
 select
-  count(case when ul.best_result >= #{Activity::MINIMUM_PASS_RESULT} then 1 else null end) as current_levels,
-  count(*) as max_levels,
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
@@ -375,7 +422,7 @@ SQL
   end
 
   def confirmation_required?
-    (self.teacher? || self.students.length > 0) && !self.confirmed?
+    self.teacher? && !self.confirmed?
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -469,7 +516,7 @@ SQL
     end
     user
   end
-  
+
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
 
@@ -504,13 +551,13 @@ SQL
   def working_on_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    scripts.where('user_scripts.completed_at is null')
+    scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   def completed_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    scripts.where('user_scripts.completed_at is not null')
+    scripts.where('user_scripts.completed_at is not null').map(&:cached)
   end
 
   def working_on_user_scripts
@@ -526,7 +573,7 @@ SQL
   end
 
   def primary_script
-    working_on_scripts.first
+    working_on_scripts.first.try(:cached)
   end
 
   def needs_to_backfill_user_scripts?
@@ -538,7 +585,7 @@ SQL
     followeds.each do |follower|
       script = follower.section && follower.section.script
       next unless script
-        
+
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
@@ -588,7 +635,7 @@ SQL
 
       update = {}
       update[:started_at] = time_now unless user_script.started_at
-      update[:last_progress_at] = time_now 
+      update[:last_progress_at] = time_now
 
       if !user_script.completed_at && user_script.check_completed?
         update[:completed_at] = time_now
@@ -656,7 +703,7 @@ SQL
       test_result = rand(100)
 
       Activity.create!(user: self, level: sl.level, test_result: test_result)
-      
+
       if test_result > 10 # < 10 will be not attempted
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           user_level = UserLevel.where(user: self, level: sl.level).first_or_create
@@ -669,5 +716,5 @@ SQL
     end
     track_script_progress(script)
   end
-  
+
 end

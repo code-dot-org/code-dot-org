@@ -1,5 +1,5 @@
 !!! 5
-- show_footer = !(@share && browser.mobile?) && !@embed
+- show_footer = !@no_footer_puzzle && !(@share && browser.mobile?) && !@embed
 %html{dir: locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
@@ -9,7 +9,6 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
     = csrf_meta_tags
     = yield :head
     = render partial: 'layouts/analytics'

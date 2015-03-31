@@ -1,13 +1,13 @@
 Then /^ensure Flappy gameState is ([^\s]*)$/ do |value|
-	states = { 'WAITING' => 0, 'ACTIVE' => 1, 'ENDING' => 2, 'OVER' => 3 }
+  states = { 'WAITING' => 0, 'ACTIVE' => 1, 'ENDING' => 2, 'OVER' => 3 }
 
-	gameState = @browser.execute_script("return Flappy.gameState;")
-	gameState.should eq states[value]
+  gameState = @browser.execute_script("return Flappy.gameState;")
+  gameState.should eq states[value]
 end
 
 Then /^ensure Flappy tickCount is positive$/ do
-	tickCount = @browser.execute_script("return Flappy.tickCount;")
-	tickCount.should be > 0
+  tickCount = @browser.execute_script("return Flappy.tickCount;")
+  tickCount.should be > 0
 end
 
 Then /^I simulate a mousedown on the svg$/ do

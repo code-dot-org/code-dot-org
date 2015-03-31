@@ -122,9 +122,20 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
     this.init();
   }
 
-  if (this.hideInMainBlockSpace && this.blockSpace === Blockly.mainBlockSpace) {
+  if (this.shouldHideIfInMainBlockSpace && this.shouldHideIfInMainBlockSpace() &&
+      this.blockSpace === Blockly.mainBlockSpace) {
     this.setCurrentlyHidden(true);
   }
+
+  /** @type {goog.events.EventTarget} */
+  this.blockEvents = new goog.events.EventTarget();
+};
+
+/**
+ * @enum {string}
+ */
+Blockly.Block.EVENTS = {
+  AFTER_DISPOSED: 'afterDisposed'
 };
 
 /**
@@ -332,6 +343,15 @@ Blockly.Block.prototype.unselect = function() {
 };
 
 /**
+ * Whether this block can be copied, cut, and pasted.
+ * Can be overridden by individual block types.
+ * @returns {boolean}
+ */
+Blockly.Block.prototype.isCopyable = function() {
+  return true;
+};
+
+/**
  * Dispose of this block.
  * @param {boolean} healStack If true, then try to heal any gap by connecting
  *     the next statement with the previous statement.  Otherwise, dispose of
@@ -399,6 +419,8 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.dispose();
     this.svg_ = null;
   }
+
+  this.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DISPOSED);
 };
 
 /**
@@ -454,7 +476,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
     var element = this.svg_.getRootElement();
     do {
       // Loop through this block and every parent.
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
@@ -492,11 +514,24 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
  * @return {!Object} Object with height and width properties.
  */
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
+
   try {
-    if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
-      this.getSvgRoot().style.display = "inline";   /* reqd for IE */
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+
+    if (ie10OrOlder) {
+      // Required to set display to inline during calculation in IE <= 10
+      initialStyle = this.getSvgRoot().style.display;
+      this.getSvgRoot().style.display = "inline";
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    if (ie10OrOlder) {
+      // Reset to original display value
+      this.getSvgRoot().style.display = initialStyle;
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return {height: 0, width: 0};
@@ -538,8 +573,17 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Update Blockly's knowledge of its own location.
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  this.select();
+
+  // Calling select changes the order of some of our DOM elements. Doing so
+  // appears to cause IE to stop propogating the event. We don't want this to
+  // happen when we're clicking on an input target, and dont really want
+  // to select in that case anyways.
+  var targetClass = e.target.getAttribute && e.target.getAttribute('class');
+  if (targetClass !== 'inputClickTarget') {
+    this.select();
+  }
   this.blockSpace.blockSpaceEditor.hideChaff();
+
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
@@ -1256,7 +1300,18 @@ Blockly.Block.prototype.isDeletable = function() {
  */
 Blockly.Block.prototype.setDeletable = function(deletable) {
   this.deletable_ = deletable;
-  this.svg_ && this.svg_.updateGrayOutCSS();
+  if (this.svg_) {
+    this.svg_.grayOut(this.shouldBeGrayedOut());
+  }
+};
+
+/**
+ * @returns {boolean} whether this block should be rendered as grayed out
+ */
+Blockly.Block.prototype.shouldBeGrayedOut = function() {
+  return Blockly.grayOutUndeletableBlocks
+    && !this.isDeletable()
+    && !Blockly.readOnly;
 };
 
 /**
@@ -1315,8 +1370,9 @@ Blockly.Block.prototype.isUserVisible = function() {
 /**
  * Set whether this block is visible to the user.
  * @param {boolean} userVisible True if visible to user.
+ * @param {boolean} opt_renderAfterVisible True if should render once if set to visible
  */
-Blockly.Block.prototype.setUserVisible = function(userVisible) {
+Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVisible) {
   this.userVisible_ = userVisible;
   if (userVisible) {
     this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, 'userHidden');
@@ -1325,8 +1381,13 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   }
   // Apply to all children recursively
   this.childBlocks_.forEach(function (child) {
-    child.setUserVisible(userVisible);
+    child.setUserVisible(userVisible, opt_renderAfterVisible);
   });
+
+  if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
+    // At leaf node blocks, renders up through the root
+    this.svg_ && this.render();
+  }
 };
 
 /**
@@ -2153,6 +2214,10 @@ Blockly.Block.prototype.setWarningText = function(text) {
   }
 };
 
+Blockly.Block.prototype.svgInitialized = function() {
+  return !!this.svg_;
+};
+
 /**
  * Render the block.
  * Lays out and reflows a block based on its contents and settings.
@@ -2169,4 +2234,28 @@ Blockly.Block.prototype.render = function() {
  */
 Blockly.Block.prototype.getSvgRenderer = function () {
   return this.svg_;
+};
+
+/**
+ * Get the oldest ancestor of this block.
+ */
+Blockly.Block.prototype.getRootBlock = function () {
+  var rootBlock;
+  var current = this;
+  while (current) {
+    rootBlock = current;
+    current = current.getParent();
+  }
+
+  return rootBlock;
+};
+
+/**
+ * @returns True if any of this blocks inputs have a connection that is unfilled
+ */
+Blockly.Block.prototype.hasUnfilledInput = function () {
+  // Does this block have a connection without a block attached
+  return this.inputList.some(function (input) {
+    return input.connection && !input.connection.targetBlock();
+  });
 };

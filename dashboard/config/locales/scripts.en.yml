@@ -311,7 +311,7 @@ en:
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Pythagorean Theorem'
           'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
         infinity:
-          title: Play Lab
+          title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Play Lab
@@ -342,16 +342,19 @@ en:
           Teacher Dashboard: Teacher Dashboard
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Infinity: Infinity
+          Unit 1: Unit 1
+          Unit 2: Unit 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -461,6 +464,10 @@ en:
           Lesson 14 v2: Lesson 14 v2
           Lesson 15: Lesson 15
           description_short: Make Black and White Images with the pixelation tool
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -484,3 +491,35 @@ en:
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: The Design Recipe
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression

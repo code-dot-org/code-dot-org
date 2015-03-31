@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = this.stopped.left && this.sam.x < 0;\r\n  }\r\n  console.log(Studio.Globals.succeeded);\r\n  return Studio.Globals.succeeded;\r\n}",
+    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = this.stopped.left && this.sam.x < 0;\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
     "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -100);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -34,7 +34,7 @@
     "protaganist_sprite_index": "0",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1500",
     "generate_function_pass_blocks": "true",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -43,7 +43,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
-    "custom_game_type": "Sam the Bat"
+    "custom_game_type": "Sam the Bat",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -118,38 +119,28 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Math">
+        <category name="Number">
+          <block type="functional_plus" inline="false"/>
+          <block type="functional_minus" inline="false"/>
+          <block type="functional_times" inline="false"/>
+          <block type="functional_dividedby" inline="false"/>
+          <block type="functional_sqrt" inline="false"/>
           <block type="functional_math_number">
             <title name="NUM">0</title>
           </block>
         </category>
-        <category name="Logic">
+        <category name="Boolean">
           <block type="functional_greater_than" inline="false"/>
           <block type="functional_less_than" inline="false"/>
           <block type="functional_number_equals" inline="false"/>
+          <block type="functional_logical_and" inline="false"/>
+          <block type="functional_logical_or" inline="false"/>
+          <block type="functional_logical_not" inline="false"/>
           <block type="functional_boolean">
             <title name="VAL">true</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="functional_call" inline="false">
-            <mutation name="safe-left?">
-              <arg name="x-coordinate"/>
-            </mutation>
-          </block>
-          <block type="functional_definition" inline="false" uservisible="false">
-            <mutation>
-              <arg name="x-coordinate"/>
-              <outputtype>Boolean</outputtype>
-            </mutation>
-            <title name="NAME">safe-left?</title>
-            <functional_input name="STACK">
-              <block type="functional_boolean" uservisible="false">
-                <title name="VAL">true</title>
-              </block>
-            </functional_input>
-          </block>
-        </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
   </blocks>

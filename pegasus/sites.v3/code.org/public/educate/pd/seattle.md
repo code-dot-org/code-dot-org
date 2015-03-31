@@ -33,7 +33,13 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 Breakfast and lunch will be served. 
 
 #### April 18th Location 
-TBD
+Rainier Tower
+<br />
+1333 Fifth Ave. 
+<br />
+30th Floor Conference Room
+<br />
+Seattle, WA 98101
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -45,7 +51,7 @@ Laptop
 ### Phase 4: Post Year Development
 
 #### Save the Dates
-6/9/2015 - 7/1/2015
+6/29/2015 - 7/1/2015
 
 [**Back to the top**](#top)
 

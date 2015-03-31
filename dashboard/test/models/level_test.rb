@@ -91,8 +91,9 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get custom levels" do
-    assert Level.custom_levels.include?(@custom_level)
-    assert_not Level.custom_levels.include?(@level)
+    custom_levels = Level.custom_levels
+    assert custom_levels.include?(@custom_level)
+    assert_not custom_levels.include?(@level)
   end
 
   test "create turtle level of correct subclass" do
@@ -184,7 +185,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = Level.load_custom_level('K-1 Bee 2')
+    level = LevelLoader.load_custom_level(LevelLoader.level_file_path 'K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
@@ -222,7 +223,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'updating ContractMatch level updates it' do
     File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
-     
+
     name = 'contract match test'
     dsl_text = <<EOS
 name 'Eval Contracts 1 B'
@@ -242,7 +243,7 @@ EOS
     assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
     assert_equal 'Write a contract for the bar function', cm.properties['content1']
   end
-  
+
   test 'delete removed level properties on import' do
     level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
 
@@ -258,7 +259,7 @@ EOS
     level_xml = n.to_xml
 
     # Import level XML
-    level.load_level_xml level_xml
+    LevelLoader.load_custom_level_xml level_xml, level
 
     assert_nil level.embed
   end

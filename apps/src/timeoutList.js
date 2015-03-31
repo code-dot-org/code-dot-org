@@ -4,7 +4,9 @@ var timeoutList = [];
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  timeoutList.push(window.setTimeout.apply(window, arguments));
+  var timeout = window.setTimeout.apply(window, arguments);
+  timeoutList.push(timeout);
+  return timeout;
 };
 
 /**
@@ -33,7 +35,9 @@ var intervalList = [];
  * call setInterval and track the returned id
  */
 exports.setInterval = function (fn, time) {
-  intervalList.push(window.setInterval.apply(window, arguments));
+  var interval = window.setInterval.apply(window, arguments);
+  intervalList.push(interval);
+  return interval;
 };
 
 /**

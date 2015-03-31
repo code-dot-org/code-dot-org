@@ -18,11 +18,15 @@ Milestone Complete!
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice. 
 
-#### Save The Date:
+#### Save The Date
 4/11/2015
 
-#### April 11th Location: ####
-TBD
+#### April 11th Location ####
+Education Development Center
+<br />
+43 Foundry Avenue
+<br />
+Waltham, MA 02453
 
 8:30am - 3:30pm
 <br />
@@ -39,9 +43,7 @@ Laptop
 
 #### Save The Date:
 
-Option 1: 6/22/15 - 6/24/15
-<br />
-Option 2: 6/29/15 - 7/1/15
+6/29/15 - 7/1/15
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

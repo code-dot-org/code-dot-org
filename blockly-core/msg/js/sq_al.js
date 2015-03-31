@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.sq_al');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "telefono";
+Blockly.Msg.ACTUAL = "therrit";
 Blockly.Msg.ADD = "Shto";
 Blockly.Msg.ADD_COMMENT = "Vendos nje Koment";
 Blockly.Msg.ADD_PARAMETER = "Shto parametrin";

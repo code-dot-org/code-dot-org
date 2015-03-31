@@ -1,6 +1,6 @@
 "ro-RO":
   hello: Salutare lume
-  select_language: Vă rugăm să selectaţi limba dvs.
+  select_language: Vă rugăm selectaţi limba dvs
   computer_science: Informatică
   computer_science_edweek: Săptămâna Informaticii
   csedweek_dates: 8-14 decembrie 2014
@@ -11,13 +11,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Sunteți profesor de informatică ? Vedeți alte resurse
     CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>a încercat o</h3><h2>Oră de Cod</h2>
+  n_have_learned_an_hoc: <h1>Încercaţi o</h1><h2>Ora de cod</h2><h3># servit</h3>
   anybody_can_learn: Oricine poate învăța.
   learn_now: Învaţă Acum
   petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea
     de a învăța tehnologia computerelor
   petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora
     #.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nume
   email: Email
   zipcode: Cod poştal sau ţară
@@ -33,7 +34,7 @@
   hoc2014_host: Găzduiți
   hoc2014_everyone: Toată lumea
   hoc2014_support: Susțineți
-  hoc2014_whatishoc: Care este ora de cod?
+  hoc2014_whatishoc: Ce este Ora de Cod?
   twentyhours_trynow: Încearcă acum
   california_heading: Cere şcolii tale să te învețe tehnologia computerelor
   california_text: Orice profesor poate preda <a href='http://studio.code.org/'>cursuri
@@ -115,6 +116,8 @@
   learn_classes: Găsește clase local
   hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -130,12 +133,12 @@
     de linii de cod.'
   start_hoc: Începe Ora de Cod acum
   contact_form_topic_press: Presă/media (interviu sau angajamentul vorbit)
-  stats_michael: Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
-    să învețe."- Michael Clark, Profesor
   stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% pasiune."- Nina
     Nichols Peery, Profesor'
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana
     Alzate, elev de clasa a cincea'
+  stats_michael: Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
+    să învețe."- Michael Clark, Profesor
   studiobar_title: Explorează <a href='http://studio.code.org'>Studio-ul Code</a>
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: Cele trei cursuri noi pentru K&#8209;5
@@ -151,6 +154,56 @@
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
   studiobar_shop_title: Magazin
   studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_susan: |
+    &ldquo;It's never too late
+    to learn&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;An understanding of computer science
+    is becoming increasingly essential...&rdquo;
+    Sheryl, COO of Facebook
+  homepage_slot_text_hoc: Ora de Programare
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Curs 4
+  homepage_slot_text_shop: Magazin
+  homepage_slot_text_flappy: Codul Flappy
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: '[șir gol]'
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_slot_text_title_hoc: Oră de Cod
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Încearcă Ora de Cod
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Elevi
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Donează
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -163,11 +216,11 @@
   contact_form_label_message: Mesaj
   contact_form_label_submit: Trimite Mesaj
   class_submission_in_school: În şcoală
-  class_submission_in_school_daily_programming_course: Curs de programare zilnic
+  class_submission_in_school_daily_programming_course: Curs zilnic de programare
   class_submission_in_school_ap_computer_science: AP ştiinţa calculatoarelor
   class_submission_in_school_full_university_cs_curriculum: Curriculum-ul universitar
     CS complet
-  class_submission_in_school_robotics_club: Club de Robotică
+  class_submission_in_school_robotics_club: Club de robotică
   class_submission_in_school_programming_integrated_in_other_classes: Programarea
     integrată în alte cursuri (matematică, știinte, etc.)
   class_submission_in_school_summer_school_cs_program: Programul şcolii de vară CS
@@ -359,6 +412,8 @@
   dashboard_login_picture: Poză
   dashboard_login_none: E-mail
   dashboard_new_password: Parolă nouă
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: nefinalizat
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
@@ -1069,27 +1124,3 @@
   sphero_beyond_longdescription: Fie că sunteţi un educator sau un părinte, lecțiile
     SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților,
     în timp ce își formează abilităţi în matematică şi ştiinţă.
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala"
-  homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
-  homepage_watchvideo: Watch the video
-  homepage_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress

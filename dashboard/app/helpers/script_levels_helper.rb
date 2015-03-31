@@ -42,14 +42,14 @@ module ScriptLevelsHelper
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
+    video_info_response = wrapup_video.summarize
     video_info_response[:redirect] = redirect
     video_info_response
   end
 
   def script_completion_redirect(script)
     if script.hoc?
-      hoc_finish_url(script)
+      script.hoc_finish_url
     else
       root_path
     end
@@ -69,52 +69,5 @@ module ScriptLevelsHelper
     else
       CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
-  end
-
-  def hoc_finish_url(script)
-    if script.name == Script::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
-    else
-      CDO.code_org_url "/api/hour/finish/#{script.name}"
-    end
-  end
-
-  def header_progress(script_level)
-    script = script_level.script
-    stage = script_level.stage
-
-    game_levels =
-      if current_user
-        current_user.levels_from_script(script, stage)
-      else
-        script.script_levels.to_a.select{|sl| sl.stage_id == script_level.stage_id}
-      end
-
-    script_data = {
-      title: stage_title(script, script_level.stage),
-      currentLevelIndex: script_level.position - 1,
-      scriptId: script.id,
-      scriptLevelId: script_level.try(:level_id),
-      statsPath: header_stats_path,
-      showStageLinks: script.twenty_hour? || script.stages.to_a.count > 1,
-      levels: game_levels.map do |sl|
-        completion_status, link = level_info(current_user, sl)
-        {
-          displayText: sl.level_display_text,
-          status: completion_status,
-          link: link,
-          unplugged: !!sl.level.unplugged?,
-          assessment: !!sl.assessment
-        }
-      end
-    }
-    script_data[:linesOfCodeText] = t('nav.popup.lines', lines: current_user.total_lines) unless current_user.nil?
-    script_data[:finishLink] = {text: t('nav.header.finished_hoc'), href: hoc_finish_url(script)} if script.hoc?
-    if script.trophies && current_user
-      progress = current_user.progress(script)
-      script_data[:trophies] = {current: progress['current_trophies'], of: t(:of), max: progress['max_trophies']}
-    end
-
-    script_data
   end
 end

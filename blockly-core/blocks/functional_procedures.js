@@ -31,7 +31,9 @@ goog.require('Blockly.Blocks');
  * Definition block for a custom functional block
  */
 Blockly.Blocks.functional_definition = {
-  hideInMainBlockSpace: true,
+  shouldHideIfInMainBlockSpace: function () {
+    return true;
+  },
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
@@ -237,6 +239,9 @@ Blockly.Blocks.functional_definition = {
       this.updateCallerParams_();
     }
   },
+  shouldBeGrayedOut: function () {
+    return false;
+  },
   callType_: 'functional_call'
 };
 
@@ -314,8 +319,9 @@ Blockly.Blocks.functional_call = {
     this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
       this.updateAttributesFromDefinition_, false, this);
   },
-  openEditor: function() {
-    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+  openEditor: function (e) {
+    e.stopPropagation();
+    Blockly.functionEditor.openEditorForCallBlock_(this);
   },
   getCallName: function() {
     return this.getTitleValue('NAME');
@@ -473,8 +479,9 @@ Blockly.Blocks.functional_pass = {
 
     this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION);
   },
-  openEditor: function() {
-    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+  openEditor: function(e) {
+    e.stopPropagation();
+    Blockly.functionEditor.openEditorForCallBlock_(this);
   },
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {

@@ -4,6 +4,7 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
@@ -24,7 +25,10 @@ describe("NetSimConnection", function () {
     testWindow = {
       addEventListener: function () {}
     };
-    connection = new NetSimConnection(testWindow, null, null, false);
+    connection = new NetSimConnection({
+      window: testWindow,
+      enableCleanup: false
+    });
   });
 
   describe("getAllNodes", function () {

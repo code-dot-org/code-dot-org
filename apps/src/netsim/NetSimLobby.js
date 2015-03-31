@@ -6,18 +6,16 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
 'use strict';
 
 var utils = require('../utils');
-var netsimUtils = require('./netsimUtils');
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 var markup = require('./NetSimLobby.html');
+var NodeType = require('./netsimConstants').NodeType;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
@@ -32,13 +30,21 @@ var SELECTOR_NONE_VALUE = 'none';
 /**
  * Generator and controller for shard lobby/connection controls.
  *
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {DashboardUser} user - The current user, logged in or not.
  * @param {string} [shardID]
  * @constructor
  */
-var NetSimLobby = module.exports = function (connection, user, shardID) {
+var NetSimLobby = module.exports = function (levelConfig, connection, user,
+    shardID) {
+
+  /**
+   * @type {netsimLevelConfiguration}
+   * @private
+   */
+  this.levelConfig_ = levelConfig;
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -92,6 +98,7 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * its markup within the provided element and returning
  * the controller object.
  * @param {HTMLElement} element The container for the lobby markup
+ * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection The connection manager to use
  * @param {DashboardUser} user The current user info
  * @param {string} [shardID] A particular shard ID to use, can be omitted which
@@ -100,10 +107,12 @@ var NetSimLobby = module.exports = function (connection, user, shardID) {
  * @return {NetSimLobby} A new controller for the generated lobby
  * @static
  */
-NetSimLobby.createWithin = function (element, connection, user, shardID) {
+NetSimLobby.createWithin = function (element, levelConfig, connection, user, shardID) {
   // Create a new NetSimLobby
-  var controller = new NetSimLobby(connection, user, shardID);
-  element.innerHTML = markup({});
+  var controller = new NetSimLobby(levelConfig, connection, user, shardID);
+  element.innerHTML = markup({
+    level: levelConfig
+  });
   controller.bindElements_();
   controller.refresh_();
   return controller;
@@ -172,7 +181,7 @@ NetSimLobby.prototype.onShardChange_= function (newShard) {
  */
 NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
   // Refresh lobby listing.
-  var nodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  var nodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
   this.refreshLobbyList_(nodes);
 };
 
@@ -275,7 +284,7 @@ NetSimLobby.prototype.refreshShardList_ = function () {
     });
 
     self.onShardSelectorChange_();
-  });
+  }.bind(this));
 };
 
 /** Generates a new random shard ID and immediately selects it. */
@@ -309,17 +318,15 @@ NetSimLobby.prototype.buildShareLink = function (shardID) {
   return baseLocation + '?s=' + shardID;
 };
 
-NetSimLobby.prototype.refresh_ = function () {
-  if (!this.connection_.isConnectedToRouter()) {
-    this.refreshOpenLobby_();
-  }
-};
-
 /**
  * Show preconnect controls (name, shard-select) and actual lobby listing.
  * @private
  */
-NetSimLobby.prototype.refreshOpenLobby_ = function () {
+NetSimLobby.prototype.refresh_ = function () {
+  if (this.connection_.isConnectedToRouter()) {
+    return;
+  }
+
   this.openRoot_.show();
 
   // Do we have a name yet?
@@ -366,8 +373,12 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 
   // TODO: Filter based on level configuration
   var filteredLobbyData = lobbyData.filter(function (simNode) {
-    return simNode.getNodeType() === NetSimRouterNode.getNodeType();
-  });
+    var showClients = this.levelConfig_.showClientsInLobby;
+    var showRouters = this.levelConfig_.showRoutersInLobby;
+    var nodeType = simNode.getNodeType();
+    return (nodeType === NodeType.CLIENT && showClients) ||
+        (nodeType === NodeType.ROUTER && showRouters);
+  }.bind(this));
 
   filteredLobbyData.sort(function (a, b) {
     // TODO (bbuchanan): Make this sort localization-friendly.
@@ -385,18 +396,18 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
         simNode.getStatusDetail());
 
     // Style rows by row type.
-    if (simNode.getNodeType() === NetSimRouterNode.getNodeType()) {
-      item.addClass('router_row');
+    if (simNode.getNodeType() === NodeType.ROUTER) {
+      item.addClass('router-row');
     } else {
-      item.addClass('user_row');
+      item.addClass('user-row');
       if (simNode.entityID === this.connection_.myNode.entityID) {
-        item.addClass('own_row');
+        item.addClass('own-row');
       }
     }
 
     // Preserve selected item across refresh.
     if (simNode.entityID === this.selectedID_) {
-      item.addClass('selected_row');
+      item.addClass('selected-row');
       this.selectedListItem_ = item;
     }
 
@@ -413,7 +424,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   // Can't select user rows (for now)
-  if (NetSimClientNode.getNodeType() === connectionTarget.getNodeType()) {
+  if (NodeType.CLIENT === connectionTarget.getNodeType()) {
     return;
   }
 
@@ -422,7 +433,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
 
   // Deselect old row
   if (oldSelectedListItem) {
-    oldSelectedListItem.removeClass('selected_row');
+    oldSelectedListItem.removeClass('selected-row');
   }
   this.selectedID_ = undefined;
   this.selectedListItem_ = undefined;
@@ -431,7 +442,7 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   if (connectionTarget.entityID !== oldSelectedID) {
     this.selectedID_ = connectionTarget.entityID;
     this.selectedListItem_ = listItem;
-    this.selectedListItem_.addClass('selected_row');
+    this.selectedListItem_.addClass('selected-row');
   }
 
   this.onSelectionChange();

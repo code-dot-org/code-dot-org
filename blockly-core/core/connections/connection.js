@@ -470,7 +470,7 @@ Blockly.Connection.prototype.tighten_ = function() {
     if (!svgRoot) {
       throw 'block is not rendered.';
     }
-    var xy = Blockly.getRelativeXY_(svgRoot);
+    var xy = Blockly.getRelativeXY(svgRoot);
     block.getSvgRoot().setAttribute('transform',
         'translate(' + (xy.x - dx) + ', ' + (xy.y - dy) + ')');
     block.moveConnections_(-dx, -dy);
@@ -608,7 +608,7 @@ Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnect
   }
   // Find any intersection in the check lists.
   for (var x = 0; x < this.check_.length; x++) {
-    if (otherConnection.acceptsType_(this.check_[x])) {
+    if (otherConnection.acceptsType(this.check_[x])) {
       return true;
     }
   }
@@ -621,16 +621,15 @@ Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnect
  * @returns {boolean}
  */
 Blockly.Connection.prototype.acceptsAnyType = function() {
-  return !this.check_ || this.acceptsType_(Blockly.BlockValueType.NONE);
+  return !this.check_ || this.acceptsType(Blockly.BlockValueType.NONE);
 };
 
 /**
  * Returns whether this connection is compatible with a given type
  * @param type
  * @returns {boolean}
- * @private
  */
-Blockly.Connection.prototype.acceptsType_ = function(type) {
+Blockly.Connection.prototype.acceptsType = function(type) {
   return !this.check_ || goog.array.contains(this.check_, type);
 };
 

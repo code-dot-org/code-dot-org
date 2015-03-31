@@ -23,6 +23,9 @@ exports.install = function(blockly, generator, gensym) {
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
   installCond(blockly, generator);
+  installSqrt(blockly, generator);
+  installPow(blockly, generator);
+  installSquared(blockly, generator);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -315,6 +318,56 @@ function installString(blockly, generator) {
   };
 }
 
+function installSqrt(blockly, generator) {
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ')';
+  };
+}
+
+function installPow(blockly, generator) {
+  blockly.Blocks.functional_pow = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'pow', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_pow = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return 'Math.pow(' + arg1 + ', ' + arg2 + ')';
+  };
+}
+
+function installSquared(blockly, generator) {
+  blockly.Blocks.functional_squared = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqr', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_squared = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return arg1 + ' * ' + arg1;
+  };
+}
+
 /**
  * Implements the cond block. numPairs represents the number of
  * condition-value pairs before the default value.
@@ -343,7 +396,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -366,12 +422,11 @@ function installCond(blockly, generator) {
       var cond = this.appendFunctionalInput('COND' + id);
       cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -383,7 +438,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**

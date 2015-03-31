@@ -8,14 +8,22 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "This OR block returns true if either of its parameters is true, and otherwise returns false. Set the y variable to a value that will cause this expression to return false.",
+    "instructions": "This OR block returns true if either of its parameters is true. Otherwise, if both parameters are false it will return false. Set the y variable to a value that will cause this expression to return false.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "a20fbd14db20dc096e24b24b263ba152"
 }]]></config>
   <blocks>
     <start_blocks>

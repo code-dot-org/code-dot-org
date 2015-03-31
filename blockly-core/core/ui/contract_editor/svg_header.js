@@ -31,7 +31,7 @@ Blockly.SvgHeader = function (parent, opt_options) {
     this.textElement_.textContent = options.headerText;
   }
   if (options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, 'mousedown', null, options.onMouseDown);
+    Blockly.bindEvent_(this.svgGroup_, 'click', null, options.onMouseDown);
   }
 };
 
