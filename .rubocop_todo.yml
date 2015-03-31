@@ -107,7 +107,7 @@ Metrics/ParameterLists:
 
 # Offense count: 63
 Metrics/PerceivedComplexity:
-  Max: 37
+  Max: 50
 
 # Offense count: 6
 # Configuration parameters: Include.
