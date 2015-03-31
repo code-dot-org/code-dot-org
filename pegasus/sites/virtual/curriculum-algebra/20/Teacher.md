@@ -28,7 +28,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Line-length Design Recipe](../docs/worksheets/line_length.pdf) (in the student workbook)
 - [Distance Design Recipe](../docs/worksheets/distance.pdf) (in the student workbook)

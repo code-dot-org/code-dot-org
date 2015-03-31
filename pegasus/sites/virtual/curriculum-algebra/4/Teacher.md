@@ -44,7 +44,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Contract Log](../docs/worksheets/contract_log.pdf)
 
