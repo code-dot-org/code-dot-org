@@ -103,10 +103,13 @@ NetSimRouterTab.prototype.render = function () {
 };
 
 /**
- * @param {Array} logData
+ * @param {NetSimLogEntry[]} logData
  */
 NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterLogData(logData);
+  }
 };
 
 /**
