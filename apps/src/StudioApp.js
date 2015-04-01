@@ -1098,7 +1098,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.visibility = 'hidden';
+  workspaceDiv.style.display = 'none';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -1121,7 +1121,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.visibility = 'visible';
+      // workspaceDiv.style.display = '';
       location.href += '/edit';
     });
 
