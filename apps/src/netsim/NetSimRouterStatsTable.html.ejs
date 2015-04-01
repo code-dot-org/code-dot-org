@@ -1,35 +1,38 @@
 <%
-var netsimUtils = require('./netsimUtils');
+  var utils = require('../utils');
+  var netsimUtils = require('./netsimUtils');
+
+/**
+ * Write a stats row that displays a fraction and also its percentage form.
+ * @param {string} title - localized name of the statistic (the header column contents)
+ * @param {number} partValue - numerator of the stat
+ * @param {number} totalValue - denominator of the stat
+ * @param {function} [toStringFunction] method for converting numerator and denominator to display format
+ */
+  var fractionStatsRow = function (title, partValue, totalValue, toStringFunction) {
+    toStringFunction = utils.valueOr(toStringFunction, function (x) { return x; });
+    %>
+      <tr>
+        <th><%= title %></th>
+        <td>
+          <%= toStringFunction(partValue) %>
+          / <%= toStringFunction(totalValue) %>
+          <% if (totalValue > 0 && totalValue < Infinity) { %>
+            (<%= Math.round(100 * partValue / totalValue) %>%)
+          <% } %>
+        </td>
+      </tr>
+    <%
+  };
 %>
 <table>
   <tbody>
-    <tr>
-      <th>Data transferred</th>
-      <td>900B / 1000B (90%)</td>
-    </tr>
-    <tr>
-      <th>Packets</th>
-      <td>
-        <%= successfulPackets %>
-        / <%= totalPackets %>
-        <% if (totalPackets > 0) { %>
-          (<%= Math.round(100 * successfulPackets / totalPackets) %>%)
-        <% } %>
-      </td>
-    </tr>
+    <% fractionStatsRow('Packets', successfulPackets, totalPackets); %>
+    <% fractionStatsRow('Data', successfulData, totalData, netsimUtils.bitsToLocalizedRoundedBytesize); %>
     <tr>
       <th>Data rate</th>
       <td>1Kbps</td>
     </tr>
-    <tr>
-      <th>Memory</th>
-      <td>
-        <%= netsimUtils.bitsToLocalizedRoundedBytesize(usedMemory) %>
-        / <%= netsimUtils.bitsToLocalizedRoundedBytesize(totalMemory) %>
-        <% if (totalMemory > 0 && totalMemory < Infinity) { %>
-          (<%= Math.round(100 * usedMemory / totalMemory) %>%)
-        <% } %>
-      </td>
-    </tr>
+    <% fractionStatsRow('Memory', usedMemory, totalMemory, netsimUtils.bitsToLocalizedRoundedBytesize); %>
   </tbody>
 </table>

@@ -45,6 +45,20 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.successfulPackets_ = 0;
 
   /**
+   * Total size of all packets received by this router, in bits.
+   * @type {number}
+   * @private
+   */
+  this.totalData_ = 0;
+
+  /**
+   * Total size of all packets successfully processed by this router, in bits.
+   * @type {number}
+   * @private
+   */
+  this.successfulData_ = 0;
+
+  /**
    * Router's total memory capacity, in bits.
    * @type {number}
    * @private
@@ -68,6 +82,8 @@ NetSimRouterStatsTable.prototype.render = function () {
   var renderedMarkup = $(markup({
     totalPackets: this.totalPackets_,
     successfulPackets: this.successfulPackets_,
+    totalData: this.totalData_,
+    successfulData: this.successfulData_,
     totalMemory: this.totalMemory_,
     usedMemory: this.usedMemory_
   }));
@@ -78,10 +94,19 @@ NetSimRouterStatsTable.prototype.render = function () {
  * @param {NetSimLogEntry[]} logData
  */
 NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
-  this.totalPackets_ = logData.length;
-  this.successfulPackets_ = logData.filter(function (logEntry) {
+  var successLogs = logData.filter(function (logEntry) {
     return logEntry.status === NetSimLogEntry.LogStatus.SUCCESS;
-  }).length;
+  });
+
+  this.totalPackets_ = logData.length;
+  this.successfulPackets_ = successLogs.length;
+
+  var sumDataSize = function (prev, cur) {
+    return prev + cur.binary.length;
+  };
+  this.totalData_ = logData.reduce(sumDataSize, 0);
+  this.successfulData_ = successLogs.reduce(sumDataSize, 0);
+
   this.render();
 };
 
