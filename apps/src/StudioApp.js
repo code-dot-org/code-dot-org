@@ -743,7 +743,7 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor && this.editor.showingPalette) {
+  if (this.editCode && this.editor && this.editor.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
@@ -1134,7 +1134,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: dropletUtils.generateDropletPalette(options.codeFunctions,
         options.dropletConfig),
-      willShowPaletteWithText: true
+      showPaletteInTextMode: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
@@ -1160,9 +1160,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       hideToolboxLink.style.display = 'inline-block';
       var handleTogglePalette = (function() {
         if (this.editor) {
-          this.editor.showPalette(!this.editor.showingPalette);
+          this.editor.enablePalette(!this.editor.paletteEnabled);
           showToolboxHeader.style.display =
-              this.editor.showingPalette ? 'none' : 'inline-block';
+              this.editor.paletteEnabled ? 'none' : 'inline-block';
           this.resizeToolboxHeader();
         }
       }).bind(this);

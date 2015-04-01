@@ -10172,8 +10172,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.wrapperElement = wrapperElement;
         this.options = options;
         this.paletteGroups = this.options.palette;
-        this.willShowPaletteWithText = (ref1 = this.options.willShowPaletteWithText) != null ? ref1 : false;
-        this.showingPalette = (ref2 = this.options.showPaletteAtStart) != null ? ref2 : true;
+        this.showPaletteInTextMode = (ref1 = this.options.showPaletteInTextMode) != null ? ref1 : false;
+        this.paletteEnabled = (ref2 = this.options.enablePaletteAtStart) != null ? ref2 : true;
         this.options.mode = this.options.mode.replace(/$\/ace\/mode\//, '');
         if (this.options.mode in modes) {
           this.mode = new modes[this.options.mode](this.options.modeOptions);
@@ -10341,7 +10341,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       Editor.prototype.resizeBlockMode = function() {
         this.resizeTextMode();
         this.dropletElement.style.height = this.wrapperElement.offsetHeight + "px";
-        if (this.showingPalette) {
+        if (this.paletteEnabled) {
           this.dropletElement.style.left = this.paletteElement.offsetWidth + "px";
           this.dropletElement.style.width = (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
         } else {
@@ -11534,7 +11534,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.resizeAceElement = function() {
       var width;
       width = this.wrapperElement.offsetWidth;
-      if (this.willShowPaletteWithText && this.showingPalette) {
+      if (this.showPaletteInTextMode && this.paletteEnabled) {
         width -= this.paletteElement.offsetWidth;
       }
       this.aceElement.style.width = width + "px";
@@ -12798,7 +12798,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.lineNumberWrapper.style.display = 'none';
         this.mainCanvas.style.transition = this.highlightCanvas.style.transition = this.cursorCanvas.style.opacity = "opacity " + fadeTime + "ms linear";
         this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = this.cursorCanvas.style.opacity = 0;
-        paletteDisappearingWithMelt = this.showingPalette && !this.willShowPaletteWithText;
+        paletteDisappearingWithMelt = this.paletteEnabled && !this.showPaletteInTextMode;
         if (paletteDisappearingWithMelt) {
           this.paletteHeader.style.zIndex = 0;
           setTimeout(((function(_this) {
@@ -12814,7 +12814,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             var l, len1;
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
             _this.aceElement.style.top = '0px';
-            if (_this.willShowPaletteWithText && _this.showingPalette) {
+            if (_this.showPaletteInTextMode && _this.paletteEnabled) {
               _this.aceElement.style.left = _this.paletteWrapper.style.width;
             } else {
               _this.aceElement.style.left = '0px';
@@ -12883,14 +12883,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.currentlyAnimating_suppressRedraw = true;
             _this.aceElement.style.top = "-9999px";
             _this.aceElement.style.left = "-9999px";
-            paletteAppearingWithFreeze = _this.showingPalette && !_this.willShowPaletteWithText;
+            paletteAppearingWithFreeze = _this.paletteEnabled && !_this.showPaletteInTextMode;
             if (paletteAppearingWithFreeze) {
               _this.paletteWrapper.style.top = '0px';
               _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
               _this.paletteHeader.style.zIndex = 0;
             }
             _this.dropletElement.style.top = "0px";
-            if (_this.showingPalette) {
+            if (_this.paletteEnabled) {
               _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
             } else {
               _this.dropletElement.style.left = "0px";
@@ -12999,17 +12999,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         };
       }
     };
-    Editor.prototype.showPalette = function(visible) {
+    Editor.prototype.enablePalette = function(enabled) {
       var activeElement;
-      if (!this.currentlyAnimating && this.showingPalette !== visible) {
-        this.showingPalette = visible;
+      if (!this.currentlyAnimating && this.paletteEnabled !== enabled) {
+        this.paletteEnabled = enabled;
         this.currentlyAnimating = true;
         if (this.currentlyUsingBlocks) {
           activeElement = this.dropletElement;
         } else {
           activeElement = this.aceElement;
         }
-        if (!this.showingPalette) {
+        if (!this.paletteEnabled) {
           activeElement.style.transition = this.paletteWrapper.style.transition = "left 500ms";
           activeElement.style.left = '0px';
           this.paletteWrapper.style.left = (-this.paletteWrapper.offsetWidth) + "px";
