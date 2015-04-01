@@ -110,13 +110,7 @@ function constructTokenList(one, two, markDeepest) {
     tokenList = one.getTokenListDiff(two);
   }
 
-  // Strip outer parens
-  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
-      tokenList[tokenList.length - 1].isParenthesis()) {
-    tokenList.splice(-1);
-    tokenList.splice(0, 1);
-  }
-  return tokenList;
+  return ExpressionNode.stripOuterParensFromTokenList(tokenList);
 }
 
 /**
@@ -247,8 +241,8 @@ function displayGoal(targetSet) {
   // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  var hasSingleFunction = targetSet.hasSingleFunction();
-  if (!hasSingleFunction && !targetSet.computesSingleVariable()) {
+  var computesFunction = targetSet.computesFunctionCall();
+  if (!computesFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       if (equation.isFunction() && sortedEquations.length > 1) {
@@ -267,7 +261,7 @@ function displayGoal(targetSet) {
     throw evaluation.err;
   }
 
-  if (hasSingleFunction) {
+  if (computesFunction) {
     tokenList.push(new Token(' = ', false));
     tokenList.push(new Token(evaluation.result, false));
   }
@@ -346,7 +340,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var userEquation = userSet.computeEquation();
   var userExpression = userEquation && userEquation.expression;
   if (!expression.hasSameSignature(userExpression) ||
-    !userSet.hasSingleFunction()) {
+    !userSet.computesFunctionCall()) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
 
@@ -570,13 +564,14 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     failedInput: null
   };
 
-  if (targetSet.hasSingleFunction()) {
+  if (targetSet.computesFunctionCall()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
   } else if (targetSet.computesSingleVariable()) {
     return Calc.evaluateSingleVariable_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions() ||
       targetSet.hasVariablesOrFunctions()) {
+
     // We have multiple expressions. Either our set of expressions are equal,
     // or they're not.
     if (targetSet.isIdenticalTo(userSet)) {
@@ -780,7 +775,7 @@ function displayComplexUserExpressions() {
 function displayNonComputeEquations_(userSet, targetSet) {
   // in single function/variable mode, we're only going to highlight the differences
   // in the evaluated result
-  var highlightAllErrors = !targetSet.hasSingleFunction() &&
+  var highlightAllErrors = !targetSet.computesFunctionCall() &&
     !targetSet.computesSingleVariable();
 
   if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
@@ -854,7 +849,7 @@ function tokenListForEvaluation_(userSet, targetSet) {
  * @returns {Token[]}
  */
 function tokenListForFailedFunctionInput_(userSet, targetSet) {
-  if (appState.failedInput === null || !targetSet.hasSingleFunction()) {
+  if (appState.failedInput === null || !targetSet.computesFunctionCall()) {
     return [];
   }
 
@@ -1296,17 +1291,17 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * @returns {boolean} True if the EquationSet has exactly one function and no
- * variables. If we have multiple functions or one function and some variables,
- * returns false.
+ * @returns {boolean} True if our compute expression is jsut a funciton call
  */
-EquationSet.prototype.hasSingleFunction = function () {
-   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-     return true;
-   }
+EquationSet.prototype.computesFunctionCall = function () {
+  if (!this.compute_) {
+    return false;
+  }
 
-   return false;
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isFunctionCall();
 };
+
 
 /**
  * @returns {boolean} True if our compute expression is just a variable, which
@@ -1686,7 +1681,9 @@ ExpressionNode.prototype.isExponential = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
+  var rightChild = this.getChildValue(1);
+  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0);
 };
 
 /**
@@ -1943,11 +1940,16 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     new Token('(', !nodesMatch)
   ];
 
-  for (var i = 0; i < this.children_.length; i++) {
+  var numChildren = this.children_.length;
+  for (var i = 0; i < numChildren; i++) {
     if (i > 0) {
       tokens.push(new Token(',', !nodesMatch));
     }
-    tokens.push(tokensForChild(i));
+    var childTokens = tokensForChild(i);
+    if (numChildren === 1) {
+      ExpressionNode.stripOuterParensFromTokenList(childTokens);
+    }
+    tokens.push(childTokens);
   }
 
   tokens.push(new Token(")", !nodesMatch));
@@ -2114,6 +2116,9 @@ ExpressionNode.prototype.setValue = function (value) {
  * Get the value of the child at index
  */
 ExpressionNode.prototype.getChildValue = function (index) {
+  if (this.children_[index] === undefined) {
+    return undefined;
+  }
   return this.children_[index].value_;
 };
 
@@ -2141,6 +2146,19 @@ ExpressionNode.prototype.debug = function () {
     this.children_.map(function (c) {
       return c.debug();
     }).join(' ') + ")";
+};
+
+/**
+ * Given a token list, if the first and last items are parens, removes them
+ * from the list
+ */
+ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
 };
 
 },{"../utils":240,"./js-numbers/js-numbers":43,"./token":46}],46:[function(require,module,exports){
@@ -2237,8 +2255,9 @@ Token.prototype.setStringRepresentation_ = function () {
 
   // Gives us three values: Number before decimal, non-repeating portion,
   // repeating portion. If we don't have the last bit, there's no repitition.
-  var repeater = jsnums.toRepeatingDecimal(this.val_.numerator(),
-    this.val_.denominator());
+  var numerator = jsnums.toExact(this.val_.numerator());
+  var denominator = jsnums.toExact(this.val_.denominator());
+  var repeater = jsnums.toRepeatingDecimal(numerator, denominator);
   if (!repeater[2] || repeater[2] === '0') {
     this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;

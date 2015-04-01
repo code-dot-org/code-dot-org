@@ -878,16 +878,13 @@ describe("ExpressionNode", function () {
         new ExpressionNode('+', [1, 2])
       ]);
 
-      // TODO extra set of parens. tracked by #90669534
       tokenList = node.getTokenList(false);
       assert.deepEqual(tokenList, [
         new Token('f', false),
         new Token('(', false),
-        new Token('(', false),
         new Token(jsnums.makeFloat(1), false),
         new Token(' + ', false),
         new Token(jsnums.makeFloat(2), false),
-        new Token(')', false),
         new Token(')', false)
       ]);
     });
@@ -1005,6 +1002,14 @@ describe("ExpressionNode", function () {
     it('returns true when node is a div zero', function () {
       var node = new ExpressionNode('/', [3, 0]);
       assert(node.isDivZero() === true);
+    });
+
+    it('returns false when right child is not a number', function () {
+      var node = new ExpressionNode('/', [
+        3,
+        new ExpressionNode('-', [1, 1])
+      ]);
+      assert(node.isDivZero() === false);
     });
   });
 

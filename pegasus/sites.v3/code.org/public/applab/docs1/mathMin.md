@@ -19,9 +19,11 @@ Category: Math
 
 [short_description]
 
-Minimum value.
+Takes the minimum value among one or more values n1, n2, ..., nX.
 
 [/short_description]
+
+**Note**: You can call this function with zero, one or more parameters, depending on how many numbers you want to compare.
 
 [/description]
 
@@ -31,7 +33,7 @@ ____________________________________________________
 [example]
 
 <pre>
-var a = Math.min(5, 0, 21.5, 13, -2); //Get the minimum of five values and store it in variable a
+var a = Math.min(5, -2); //Get the smaller of two values and store it in variable a
 console.log(a); //Display the result, in this case "-2"
 </pre>
 
@@ -41,13 +43,25 @@ ____________________________________________________
 
 [example]
 
-In this more advanced example, we generate random values and keep track of the lowest of them.
+We can also use `Math.min` with multiple parameters.
+<pre>
+var a = Math.min(5, 0, 21.5, 13, -2); //Get the minimum of five values and store it in variable a
+console.log(a); //Print the value of variable a to the debugging console, in this case "-2"
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+In this more advanced example, we generate random values between 0 and 100 and keep track of the lowest of them.
 <pre>
 var minimum = 100; //Initialize the minimum at the highest possible value
 for (var i = 0; i < 4; i++) { //Generate four random values
-  var x = (randomNumber(0, 100)); //Get a random number between 0 and 100 and store it in variable x
-  console.log(x); //Print the value of x to the debugging console
-  minimum = Math.min(minimum, x); //If the random number is smaller than our current minimum, it's the new minimum
+  var y = randomNumber(0, 100); //Get a random number between 0 and 100 and store it in variable y
+  console.log(y); //Print the value of y to the debugging console
+  minimum = Math.min(minimum, y); //If the number is smaller than our current minimum, it's the new minimum
   console.log("The current minimum is " + minimum); //Print the value of minimum to the debugging console
 }
 </pre>
@@ -86,7 +100,7 @@ A number representing the lowest of the values given as parameters, or Infinity 
 [tips]
 
 ### Tips
-This function is identical to the native JavaScript [min Method](http://www.w3schools.com/jsref/jsref_min.asp).
+- This function is identical to the native JavaScript [min Method](http://www.w3schools.com/jsref/jsref_min.asp).
 
 [/tips]
 

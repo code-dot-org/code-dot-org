@@ -130,10 +130,10 @@ class ClassSubmission
   end
 
   def self.process(data)
-    sleep 0.10
-    {
-      'location_p' => data['location_p'] || geocode_address(data['school_address_s'])
-    }
+    {}.tap do |results|
+      location = search_for_address(data['school_address_s'])
+      results.merge! location.to_solr if location
+    end
   end
 
   def self.index(data)

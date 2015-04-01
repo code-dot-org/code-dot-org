@@ -184,15 +184,6 @@ FactoryGirl.define do
 
   factory :cohort do
     name 'Test Cohort'
-    teachers {[create(:teacher, district: districts.first)]}
-
-    before :create do |cohort, _|
-      cohort.cohorts_districts << create(:cohorts_district, cohort: cohort)
-    end
-
-    after :create do |cohort, _|
-      create_list :workshop, 1, cohort: cohort
-    end
   end
 
   factory :district do
@@ -209,20 +200,22 @@ FactoryGirl.define do
     facilitators {[
       create(:facilitator).tap{|f| f.permission = 'facilitator'}
     ]}
+    cohort
     after :create do |workshop, _|
       create_list :segment, 1, workshop: workshop
     end
   end
 
   factory :segment do
+    workshop
     start DateTime.now
     self.send(:end, DateTime.now + 1.day)
-    after :create do |segment, _|
-      create_list :attendance, 1, segment: segment, teacher:segment.workshop.cohort.teachers.first
-    end
   end
 
   factory :attendance, class: WorkshopAttendance do
+    segment
+    teacher {create :teacher}
+
     status 'present'
   end
 end

@@ -20,6 +20,8 @@ This policy indicates that districts can count computer science towards graduati
 
 ## A letter to share with your school board, or district/school administrator
 
+* Please use your personal email accounts and send the email on your own time.
+* Please note that you may be sending this communication to your employer.
 
 Dear Administrator, 
 

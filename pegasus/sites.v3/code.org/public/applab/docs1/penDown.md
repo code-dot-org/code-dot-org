@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## penDown()
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Turtle
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+penDown will cause a line to be drawn behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+**Note**: [penUp()](/applab/docs/penUp) is often used with penDown
 
 [/description]
 
@@ -33,8 +33,11 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+/*  Example 1
+*/
+
+penDown();            // creates a line behind the turtle as it moves
+moveForward(100);     // moves the turtle forward 100 pixels
 </pre>
 
 [/example]
@@ -44,21 +47,59 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+/*  Example 2
+
+    This example uses penUp and penDown to draw a dotted line
+*/
+
+penWidth(3);                  // sets the pen's thickness to 3 pixels
+penUp();                      // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(-125, 25);               // moves the turtle to its starting location
+turnRight(90);                // turns the turtle 90 degrees so that it is facing to the right
+for (var i = 0; i < 5; i++) { // repeats the code 5 times, drawing 5 lines separated by white space
+  penDown();                  // puts the pen down so the turtle leaves a line behind it as it moves
+  moveForward(25);            // moves the turtle froward 25 pixels
+  penUp();                    // lifts the pen up so the turtle does not leave a line behind it as it moves
+  moveForward(25);            // moves the turtle forward 25 pixels
+}
+
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+<pre>
+/*  Example 3
+
+    This example uses penUp and penDown to draw a pair of eyes
+*/
+
+hide();             // hides the turtle
+penDown();          // puts the pen down so the turtle leaves a line behind it as it moves
+arcRight(360, 25);  // draws a circle with a 25 pixel diameter (eye)
+penUp();            // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(25, 10);       // moves the turtle inside the circle (eye)
+dot(10);            // draws a 10 pixel dot (pupil)
+move(-100, -10);    // moves the turtle into position for the second eye
+penDown();          // puts the pen back down so the turtle leaves a line behind it as it moves
+arcRight(360, 25);  // draws the second eye, a circle with a 25 pixel diameter
+penUp();            // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(25, 10);       // moves the turtle inside the circle (eye)
+dot(10);            // draws a 10 pixel dot (pupil)
 </pre>
 
 
 [/example]
-
 ____________________________________________________
 
 [syntax]
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+penDown();
 </pre>
 
 [/syntax]
@@ -66,13 +107,7 @@ rect(x, y, width, height);
 [parameters]
 
 ### Parameters
-
-| Name  | Type | Required? | Description |
-|-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+`penDown()` does not take any parameters.
 
 [/parameters]
 
@@ -86,8 +121,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- [penUp()](/applab/docs/penUp) is often used with penDown
 
 [/tips]
 

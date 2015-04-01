@@ -19,25 +19,35 @@ Category: Data
 
 [short_description]
 
-Creates a record in the table name provided, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, creates a record in the table name provided, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 
-Consider a simple table that you might make with pen and paper, or with a spreadsheet app. The table has a list of column names, and then each row that is added to the table fills in one or more of the columns. For example:
+**About App Lab's table data storage:**  
+App Lab's table data storage enables persistent data storage
+ for an app. Whereas [setKeyValue()](/applab/docs/getKeyValue) and [getKeyValue()](/applab/docs/getKeyValue) can be used to store multiple independent key/value pairs, table data storage allows you to store similar data together in a table format.
 
-| Name  | Age | Favorite food
+ As a simple example, let's say you are building an app that
+  collects information about a person's name,
+   age, and favorite food so you can figure out if food
+    preferences are correlated with age.
+
+If you were storing this data on a piece of paper, or with a spreadsheet app, you might format the data like this:
+
+| Name  | Age | Food
 |-----------------|------|-----------|
 | Abby  | 17 | Ravioli |
 | Kamara  | 15 | Sushi |
 | Rachel  | 16 | Salad |
-
-Tables in App Lab Data Storage can be represented visually the same way, and there are simple functions to let you read, create, delete, and update rows (called records), right from your app.
+<br>
+The table has a row of column names, and then each row that is added to the table fills in one or more
+ of the columns. App Lab's table data storage let you store similarly formatted data, and provides simple
+  functions to [read](/applab/docs/readRecords), [create](/applab/docs/createRecords), [delete](/applab/docs/deleteRecord), and [update](/applab/docs/updateRecord) records (rows) in a table, right from your app.
 
 _Definitions:_  
-**Table:** A collection of records with shared column names  
-**Record:** A "row" of the table  
+_Table:_ A collection of records with shared column names  
+_Record:_ A "row" of the table  
 
-App Lab's table data storage enables persistent data storage for an app. Continuing our example, let's say you wanted to build an app that collects information about a person's name, age, and favorite food so you can figure out if food preferences are correlated with age. If that data is just stored locally in an array in the app, then it will not exist when the app is refreshed. There would also not be a central location where the data across users could be collected and analyzed. By storing this data with App Lab's table data storage, the data can be collected, viewed, and analyzed.
 
 **Note:** View your app's table data by clicking 'View data' in App Lab and clicking the table name you want to view.
 
@@ -48,11 +58,16 @@ ____________________________________________________
 
 [example]
 
+**Add a record to a table** Continuing the example above, we can add a row with values
+ for the 3 columns named "name", "age", and "food". When the record is created in the table,
+ it is automatically given a unique id. Click 'View Data' in App Lab to see the stored data.
+
 <pre>
-//Stores "highScore": 100 in the app's key/value data storage
-setKeyValue('highScore', 100, function(){     console.log("I execute asynchronously when key/value is stored.  Click View Data to see the data.");
+createRecord("Fav Foods", {name:'Sally', age: 15, food:"avocado"}, function() {
+  console.log("I'm executed after the record is created");
 });
-console.log("I execute immediately after");
+
+console.log("I'm executed immediately after");
 </pre>
 
 [/example]
@@ -61,35 +76,26 @@ ____________________________________________________
 
 [example]
 
-<pre>
-setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app's key/value data storage
-  console.log("highScore stored");
+**Simple survey** In this example, the app asks the user for their name, age,
+ and favorite food. When the submit button is pressed, the values from the 3 input fields are
+  grabbed using [getText()](/applab/docs/getText) and the values are used to create a record in the table.
+  Click 'View Data' in App Lab to see the stored data.
 
-  getKeyValue("highScore", function (value) { //When the data is successfully stored, fetch it again
-    console.log("high score is: " + value); //Log "highScore", which will be 100.
+<pre>
+//Set up the input boxes and submit button
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submitButton", "Submit");
+
+//When the button is clicked, get the text from the 3 input boxes and create a record in the table
+onEvent("submitButton", "click", function() {
+  var myName = (getText("nameInput"));
+  var myAge = (getText("ageInput"));
+  var myFood = (getText("foodInput"));
+  createRecord("fav_foods", {name:myName, age: myAge, food:myFood}, function() {
+    console.log("Record created!");
   });
-
-});
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-In this more detailed example, a random number between 1 and 100 is generated every time the app runs. The program checks whether the random number that was generated is bigger than the value stored in persistent key/value storage. If it is, then it updates the saved value. Try running this example multiple times and view the key/value data to see `biggestNumber` update.
-
-<pre>
-var random = randomNumber(1, 100); //Generate a random number
-/*Get current value of "biggestNum". The data comes back asynchronously and is stored in 'value' */
-getKeyValue("biggestNum", function (value) {
-  console.log("random: " + random + " biggestNumber: " + value);
-  if ((value === undefined) || (random > value)) { //Check if 'value' is undefined or smaller than random
-    setKeyValue("biggestNum", random, function () { //If so, update 'biggestNum' to 'random'
-      console.log(random + " is bigger than " + value + ". Updated biggestNumber");
-    });
-  }
 });
 
 </pre>
@@ -102,7 +108,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-setKeyValue(key, value, function(){
+createRecord(tableName, record, function(){
     //callback function code goes here
   });
 </pre>
@@ -115,16 +121,16 @@ setKeyValue(key, value, function(){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| key | string | Yes | The name of the key to be stored.  |
-| value | string, number, array, or object | Yes | The data to be stored.  |
-| callbackFunction | function | No | A function that is asynchronously called when the call to setKeyValue is finished.  |
+| tableName | string | Yes | The name of the table the record should be added to. `tableName` gets created if it doesn't exist.  |
+| record | object | Yes | The data to be stored. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {column1:"a string", column2:10, column3:[1,2,3,4]}.  |
+| callbackFunction | function | No | A function that is asynchronously called when the call to createRecord() is finished.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When `setKeyValue` is finished executing, `callbackFunction` is automatically called.
+When `createRecord()` is finished executing, `callbackFunction` is automatically called.
 
 [/returns]
 
@@ -132,7 +138,7 @@ When `setKeyValue` is finished executing, `callbackFunction` is automatically ca
 
 ### Tips
 - This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
-- Use with [getKeyValue()](/applab/docs/getKeyValue)
+- Use with [readRecords()](/applab/docs/readRecords), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to view, delete, and update records in a table.
 
 [/tips]
 

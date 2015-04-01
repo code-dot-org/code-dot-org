@@ -96,13 +96,7 @@ function constructTokenList(one, two, markDeepest) {
     tokenList = one.getTokenListDiff(two);
   }
 
-  // Strip outer parens
-  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
-      tokenList[tokenList.length - 1].isParenthesis()) {
-    tokenList.splice(-1);
-    tokenList.splice(0, 1);
-  }
-  return tokenList;
+  return ExpressionNode.stripOuterParensFromTokenList(tokenList);
 }
 
 /**
@@ -233,8 +227,8 @@ function displayGoal(targetSet) {
   // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  var hasSingleFunction = targetSet.hasSingleFunction();
-  if (!hasSingleFunction && !targetSet.computesSingleVariable()) {
+  var computesFunction = targetSet.computesFunctionCall();
+  if (!computesFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       if (equation.isFunction() && sortedEquations.length > 1) {
@@ -253,7 +247,7 @@ function displayGoal(targetSet) {
     throw evaluation.err;
   }
 
-  if (hasSingleFunction) {
+  if (computesFunction) {
     tokenList.push(new Token(' = ', false));
     tokenList.push(new Token(evaluation.result, false));
   }
@@ -332,7 +326,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var userEquation = userSet.computeEquation();
   var userExpression = userEquation && userEquation.expression;
   if (!expression.hasSameSignature(userExpression) ||
-    !userSet.hasSingleFunction()) {
+    !userSet.computesFunctionCall()) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
 
@@ -556,13 +550,14 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     failedInput: null
   };
 
-  if (targetSet.hasSingleFunction()) {
+  if (targetSet.computesFunctionCall()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
   } else if (targetSet.computesSingleVariable()) {
     return Calc.evaluateSingleVariable_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions() ||
       targetSet.hasVariablesOrFunctions()) {
+
     // We have multiple expressions. Either our set of expressions are equal,
     // or they're not.
     if (targetSet.isIdenticalTo(userSet)) {
@@ -766,7 +761,7 @@ function displayComplexUserExpressions() {
 function displayNonComputeEquations_(userSet, targetSet) {
   // in single function/variable mode, we're only going to highlight the differences
   // in the evaluated result
-  var highlightAllErrors = !targetSet.hasSingleFunction() &&
+  var highlightAllErrors = !targetSet.computesFunctionCall() &&
     !targetSet.computesSingleVariable();
 
   if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
@@ -840,7 +835,7 @@ function tokenListForEvaluation_(userSet, targetSet) {
  * @returns {Token[]}
  */
 function tokenListForFailedFunctionInput_(userSet, targetSet) {
-  if (appState.failedInput === null || !targetSet.hasSingleFunction()) {
+  if (appState.failedInput === null || !targetSet.computesFunctionCall()) {
     return [];
   }
 

@@ -205,6 +205,25 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('specificDistrict', function() {
+    return function(cohorts, searchDistrict) {
+      if (searchDistrict && searchDistrict !== '') {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          for (var i = 0; i < cohort.districts.length; i++) {
+            if (searchDistrict.id === cohort.districts[i].id) {
+              filtered.push(cohort);
+              break;
+            }
+          };
+        });
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).

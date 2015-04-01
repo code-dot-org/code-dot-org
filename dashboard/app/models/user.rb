@@ -3,12 +3,12 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
          :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
@@ -26,10 +26,6 @@ class User < ActiveRecord::Base
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
 
-  # TODO: this way of associating districts with users is not really what we want
-  has_one :districts_users
-  has_one :district, through: :districts_users
-
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
 
@@ -39,6 +35,8 @@ class User < ActiveRecord::Base
 
   # you can be associated with a district if you are the district contact
   has_many :districts_as_contact, class_name: 'District', foreign_key: 'contact_id'
+
+  belongs_to :invited_by, :polymorphic => true
 
   # TODO: I think we actually want to do this
   # you can be associated with distrits through cohorts
@@ -65,14 +63,19 @@ class User < ActiveRecord::Base
     districts_as_contact.any?
   end
 
-  def User.find_or_create_district_contact(params)
+  def district
+    District.find(district_id) if district_id
+  end
+
+  def User.find_or_create_district_contact(params, invited_by_user)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
-      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
-      # TODO send invitation email
+      user = User.invite!(email: params[:email],
+                          user_type: TYPE_TEACHER, age: 21)
+      user.invited_by = invited_by_user
     end
 
     user.update!(params)
@@ -82,15 +85,15 @@ class User < ActiveRecord::Base
     user
   end
 
-  def User.find_or_create_teacher(params)
+  def User.find_or_create_teacher(params, invited_by_user)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
 
-      user = User.create! params.merge(user_type: TYPE_TEACHER, password: SecureRandom.base64, age: 21)
-      # TODO send invitation email
+      user = User.invite! params.merge(user_type: TYPE_TEACHER, age: 21)
+      user.invited_by = invited_by_user
     end
 
     user.update!(params)
