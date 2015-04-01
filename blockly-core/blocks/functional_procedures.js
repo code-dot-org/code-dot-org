@@ -326,6 +326,9 @@ Blockly.Blocks.functional_call = {
   getCallName: function() {
     return this.getTitleValue('NAME');
   },
+  getParamTypes: function () {
+    return this.currentParameterTypes_;
+  },
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
       this.setTitleValue(newName, 'NAME');
