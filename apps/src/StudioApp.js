@@ -751,7 +751,7 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor) {
+  if (this.editCode && this.editor && this.editor.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
@@ -1143,7 +1143,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
-      alwaysShowPalette: true
+      showPaletteInTextMode: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
@@ -1160,6 +1160,24 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    // Bind listener to palette/toolbox 'Hide' and 'Show' links
+    var hideToolboxLink = document.getElementById('hide-toolbox');
+    var showToolboxLink = document.getElementById('show-toolbox');
+    var showToolboxHeader = document.getElementById('show-toolbox-header');
+    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
+      hideToolboxLink.style.display = 'inline-block';
+      var handleTogglePalette = (function() {
+        if (this.editor) {
+          this.editor.enablePalette(!this.editor.paletteEnabled);
+          showToolboxHeader.style.display =
+              this.editor.paletteEnabled ? 'none' : 'inline-block';
+          this.resizeToolboxHeader();
+        }
+      }).bind(this);
+      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+    }
 
     this.dropletTooltipManager = new DropletTooltipManager();
     this.dropletTooltipManager.registerBlocksFromList(
@@ -1282,7 +1300,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Modify the workspace header after a droplet blocks/code or palette toggle
  */
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
@@ -1290,11 +1308,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
   showCodeHeader.firstChild.textContent = newButtonTitle;
-
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-    msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
