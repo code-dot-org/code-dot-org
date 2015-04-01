@@ -268,15 +268,15 @@ Blockly.ContractEditor.prototype.setBlockSubsetVisibility = function(isVisible, 
   return nowHidden;
 };
 
-Blockly.ContractEditor.prototype.isBlockInFunctionArea = function(block) {
-  return block === this.functionDefinitionBlock ||
-    (this.isVisibleInEditor_(block) && !this.isBlockInExampleArea(block));
+Blockly.ContractEditor.prototype.isBlockInFunctionArea = function (block) {
+  return this.isVisibleInEditor_(block) && !this.isBlockInExampleArea(block);
 };
 
-Blockly.ContractEditor.prototype.isBlockInExampleArea = function(block) {
+Blockly.ContractEditor.prototype.isBlockInExampleArea = function (block) {
   return this.isAnExampleBlockInEditor_(block) ||
-    (this.isVisibleInEditor_(block) &&
-    block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition());
+    (block !== this.functionDefinitionBlock &&
+      this.isVisibleInEditor_(block) &&
+      block.getRelativeToSurfaceXY().y < this.getFlyoutTopPosition());
 };
 
 Blockly.ContractEditor.prototype.isVisibleInEditor_ = function (block) {

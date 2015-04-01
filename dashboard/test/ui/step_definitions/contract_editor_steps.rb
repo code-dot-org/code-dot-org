@@ -32,13 +32,31 @@ And(/^the "([^"]*)" contract editor header (?:isn't |is not |is in)visible$/) do
 end
 
 And(/^there are no visible examples$/) do
-  are_any_examples_visible.should eq false
+  any_examples_visible?.should eq false
 end
 
 And(/^examples are visible$/) do
-  are_any_examples_visible.should eq true
+  any_examples_visible?.should eq true
 end
 
-def are_any_examples_visible
+And(/^the function editor definition block is visible$/) do
+  function_definition_block_visible?.should eq true
+end
+
+And(/^the function editor definition block is not visible$/) do
+  function_definition_block_visible?.should eq false
+end
+
+And(/^only one functional definition block is visible$/) do
+  code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + ((b.type === 'functional_definition' && b.isVisible()) ? 1 : 0) }, 0)"
+  num_visible_blocks = @browser.execute_script(code)
+  num_visible_blocks.to_i.should eq 1
+end
+
+def function_definition_block_visible?
+  @browser.execute_script('return Blockly.functionEditor.functionDefinitionBlock.isVisible()')
+end
+
+def any_examples_visible?
   @browser.execute_script('return Blockly.contractEditor.exampleBlocks.some(function(block) {return block.isVisible()});')
 end
