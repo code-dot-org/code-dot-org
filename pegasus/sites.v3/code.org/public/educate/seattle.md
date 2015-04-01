@@ -49,7 +49,7 @@ Code.org is delivering a middle school science program consisting of instruction
 Learn more about curriculum for [Computer Science in Science](/curriculum/mss) and [Computer Science in Algebra](/curriculum/msm).
 
 - There is no cost for schools to apply
-- Per-session stipends to teachers are paid by Code.org
+- Stipends to teachers are paid by Code.org
 - This program is open to all public Seattle-area middle schools<br />
 [Learn more](/educate/professional-development)
 
@@ -59,7 +59,7 @@ Learn more about curriculum for [Computer Science in Science](/curriculum/mss) a
 Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer [Exploring Computer Science](http://exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
 
 - No prior computer science experience is required!
-- Per-session stipends to teachers are paid by Code.org
+- Stipends to teachers are paid by Code.org
 - Teachers undergo research-based professional development starting in spring 2015
 - This program is open to all Seattle-area high schools.<br />
 [Learn more](/educate/professional-development)
