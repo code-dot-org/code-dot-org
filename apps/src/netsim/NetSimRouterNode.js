@@ -497,7 +497,7 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
     // Don't schedule beyond memory capacity; we're going to drop those packets
     if (this.localSimulationOwnsMessageRow_(queuedRow) &&
         queueSizeInBits <= this.memory) {
-        this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
+      this.scheduleRoutingForRow(queuedRow, pessimisticCompletionTime);
     }
   }
 };
@@ -1123,26 +1123,28 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
 };
 
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
-  if (this.enforcingMemoryLimit_) {
+  if (this.currentlyEnforcingMemoryLimit_) {
     return;
   }
-  // Just drop the first packet that we can simulate that's beyond the memory
-  // limit
-  var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
-  if (droppablePacket) {
-    this.enforcingMemoryLimit_ = true;
-    this.removeRowFromSchedule_(droppablePacket);
-    var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
-    droppableMessage.destroy(function (err) {
-      if (err) {
-        this.enforcingMemoryLimit_ = false;
-        return;
-      }
 
-      this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
-      this.enforcingMemoryLimit_ = false;
-    }.bind(this));
+  // Only proceed if a packet we simulate exists beyond the memory limit
+  var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
+  if (!droppablePacket) {
+    return;
   }
+
+  this.currentlyEnforcingMemoryLimit_ = true;
+  this.removeRowFromSchedule_(droppablePacket);
+  var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
+  droppableMessage.destroy(function (err) {
+    if (err) {
+      this.currentlyEnforcingMemoryLimit_ = false;
+      return;
+    }
+
+    this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
+    this.currentlyEnforcingMemoryLimit_ = false;
+  }.bind(this));
 };
 
 /**
