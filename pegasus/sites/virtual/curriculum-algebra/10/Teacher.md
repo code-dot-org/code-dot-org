@@ -28,7 +28,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Rocket-Height Design Recipe](../docs/worksheets/rocket_height.pdf) (in the student workbook)
 

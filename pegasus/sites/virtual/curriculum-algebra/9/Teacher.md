@@ -34,7 +34,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 
 ### For the Student
 - [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf)
@@ -118,7 +118,7 @@ Put students into groups of 3 - each member of the group will represent one step
 2. Examples
 3. Function
 
-Each group will work through a set of word problems using the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). We recommend that you pull word problems from your own curriculum so that students can see how the Design Recipe can be used outside of programming. Make sure that group member should stay true to their role and that they work through the steps in the right order.
+Each group will work through a set of word problems using the [Fast Functions Sheet](../docs/worksheets/fast_functions.pdf). We recommend that you pull word problems from your own curriculum so that students can see how the Design Recipe can be used outside of programming. Make sure that group member should stay true to their role and that they work through the steps in the right order. If you don't have problems to use from your curriculum, there are a number of examples available in this lesson's slide deck.
 
 [tip]
 

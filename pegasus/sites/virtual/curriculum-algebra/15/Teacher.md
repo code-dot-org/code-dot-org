@@ -28,7 +28,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Safe-left? Design Recipe](../docs/worksheets/safe_left.pdf) (in the student workbook)
 - [Safe-right? Design Recipe](../docs/worksheets/safe_right.pdf) (in the student workbook)
