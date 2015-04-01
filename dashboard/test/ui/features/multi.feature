@@ -1,4 +1,3 @@
-@pegasus_db_access
 Feature: Playing multi levels
 
 Background:
@@ -29,12 +28,3 @@ Scenario: Submitting an incorrect option
   And element ".modal .dialog-title" contains text "Incorrect answer"
   And I press ".modal #ok-button" using jQuery
   And I wait until element ".item-cross" is visible
-
-Scenario: Loading previously-submitted answer
-  Given I am logged in
-  And I press "input[correct=true]" using jQuery
-  And I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  Then I reload the page
-  And I wait to see ".input"
-  Then I see jquery selector input[correct=true]:checked
