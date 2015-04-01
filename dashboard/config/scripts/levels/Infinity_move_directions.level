@@ -7,7 +7,7 @@
   "properties": {
     "skin": "infinity",
     "background": "tile",
-    "success_condition": "function () {\r\n\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted || ! window.actorHit) {\r\n    successTime = false;\r\n    window.actorHit = [false, false];\r\n  }\r\n  \r\n  // Let's wait half a second before indicating the success.\r\n  if (window.successTime)\r\n  {\r\n    return successTime + 2000 < currentTime;\r\n  }\r\n  \r\n  Studio.levelRestarted = false;\r\n  \r\n  var heroSprite = Studio.sprite[1];\r\n  \r\n  var hitCount = 0;\r\n  \r\n  var otherIndexes = [0,2];\r\n  var heroIndex = 1;\r\n  \r\n  for (var i = 0; i < 2; i++) {\r\n    \r\n    actorIndex = otherIndexes[i];\r\n    \r\n    if (! window.actorHit[actorIndex] && Studio.sprite[actorIndex].isCollidingWith(heroIndex)) {\r\n      //Studio.sprite[actorIndex].dir = 1;\r\n      Studio.vanishActor({spriteIndex: actorIndex});\r\n      window.actorHit[actorIndex] = true;\r\n  \t}\r\n    \r\n    if (window.actorHit[actorIndex]) {\r\n      hitCount ++;\r\n    }\r\n  }\r\n  \r\n  var success = hitCount >= 2;\r\n  \r\n  if (! window.successTime && success)\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
+    "success_condition": "function () {\r\n\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted || ! window.actorHit) {\r\n    successTime = false;\r\n    window.actorHit = [false, false];\r\n  }\r\n  \r\n  // Let's wait half a second before indicating the success.\r\n  if (window.successTime)\r\n  {\r\n    return successTime + 500 < currentTime;\r\n  }\r\n  \r\n  Studio.levelRestarted = false;\r\n  \r\n  var heroSprite = Studio.sprite[1];\r\n  \r\n  var hitCount = 0;\r\n  \r\n  var otherIndexes = [0,2];\r\n  var heroIndex = 1;\r\n  \r\n  for (var i = 0; i < 2; i++) {\r\n    \r\n    actorIndex = otherIndexes[i];\r\n    \r\n    if (! window.actorHit[actorIndex] && Studio.sprite[actorIndex].isCollidingWith(heroIndex)) {\r\n      Studio.sprite[actorIndex].dir = 1;\r\n      window.actorHit[actorIndex] = true;\r\n  \t}\r\n    \r\n    if (window.actorHit[actorIndex]) {\r\n      hitCount ++;\r\n    }\r\n  }\r\n  \r\n  var success = hitCount >= 2;\r\n  \r\n  if (! window.successTime && success)\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
@@ -42,6 +42,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "timeout_failure_tick": "300",
+    "video_key": "infinity_playlab_events",
     "maze_data": null
   },
   "md5": "253363f0ccc04b1f021864a12a611626"
