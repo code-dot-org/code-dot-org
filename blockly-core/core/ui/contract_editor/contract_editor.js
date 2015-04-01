@@ -156,7 +156,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.addExampleButton = new Blockly.SvgTextButton(
     canvasToDrawOn,
     "Add Example", // TODO(bjordan): i18n
-    this.addNewExampleBlock_.bind(this, null)
+    this.addNewExampleBlock_.bind(this)
   );
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
@@ -326,12 +326,15 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
   viewToHighlight.setHighlighted(true);
 };
 
+Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
+  this.addNewExampleBlockForFunction_(this.functionDefinitionBlock);
+};
+
 /**
  * Adds a new example block to the editor for the given function definition
  * @private
  */
-Blockly.ContractEditor.prototype.addNewExampleBlock_ = function (opt_functionDefinitionBlock) {
-  var functionDefinitionBlock = opt_functionDefinitionBlock || this.functionDefinitionBlock;
+Blockly.ContractEditor.prototype.addNewExampleBlockForFunction_ = function (functionDefinitionBlock) {
   var createdExampleBlock = this.createExampleBlock_(functionDefinitionBlock);
   this.addExampleBlockFromMainBlockSpace(createdExampleBlock);
   this.position_();
@@ -379,7 +382,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 
   if (!tempFunctionDefinitionBlock.isVariable()) {
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-      this.addNewExampleBlock_(tempFunctionDefinitionBlock);
+      this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock);
     }
   }
 
@@ -548,7 +551,10 @@ Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (autoOpenC
       sectionView.setCollapsed(shouldCollapse);
     } else {
       sectionView.setHighlighted(false);
+      sectionView.setHidden(false);
+      sectionView.setHeaderVisible(true);
       var previousOpenCollapseState = sectionView.isCollapsed();
+      // Cycle of collapsed callbacks
       sectionView.setCollapsed(!previousOpenCollapseState);
       sectionView.setCollapsed(previousOpenCollapseState);
     }
