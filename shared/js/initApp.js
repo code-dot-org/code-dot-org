@@ -7,19 +7,41 @@ var baseOptions = {
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
-    this.createCallouts();
+    this.createCallouts(this.callouts);
     if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
       wrapExistingClipPaths();
       handleClipPathChanges();
     }
     $(document).trigger('appInitialized');
   },
-  createCallouts: function() {
+  createCallouts: function(callouts) {
+    if (!callouts) {
+      return;
+    }
+
+    // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+    $(window).on('function_editor_closed', function() {
+      $('.cdo-qtips').qtip('hide');
+    });
+
+    function reverseCallout(position) {
+      position = position.split(/\s+/);
+      return reverseDirection(position[0]) + ' ' + reverseDirection(position[1]);
+    }
+
+    function reverseDirection(token) {
+      switch (token) {
+        case 'left': return 'right';
+        case 'right': return 'left';
+        default: return token;
+      }
+    }
+
     $.fn.qtip.zindex = 500;
-    this.callouts && this.callouts.every(function(callout) {
+    callouts.forEach(function(callout) {
       var selector = callout.element_id; // jquery selector.
       if ($(selector).length === 0 && !callout.on) {
-        return true;
+        return;
       }
 
       var defaultConfig = {
@@ -69,8 +91,6 @@ var baseOptions = {
       } else {
         $(selector).qtip(config).qtip('show');
       }
-
-      return true;
     });
   },
   onAttempt: function(report) {
@@ -121,24 +141,6 @@ var baseOptions = {
 };
 $.extend(appOptions, baseOptions);
 
-function reverseDirection(token) {
-  if (/left/i.test(token)) {
-    token = 'right';
-  } else if (/right/i.test(token)) {
-    token = 'left';
-  }
-  return token;
-}
-function reverseCallout(position) {
-  position = position.split(/\s+/);
-  var a = position[0];
-  var b = position[1];
-  return reverseDirection(a) + reverseDirection(b);
-}
-// Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-$(window).on('function_editor_closed', function() {
-  $('.cdo-qtips').qtip('hide');
-});
 // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
 // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
 (function fixUpFunctions(node) {
