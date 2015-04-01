@@ -30,12 +30,12 @@ Code.org has partnered with 12 Seattle-area districts. We're looking for more lo
 - Eatonville Public Schools
 - Bethel Public Schools
 
-### Grades K-5 (open to open to all elementary school teachers, in any district)
+### Grades K-5 (open to all elementary school teachers, in any district)
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all.
 
 - One-day professional development workshops prepare teachers to start teaching each of our courses
-- Each course consists of 20 lessons that can be incoproated into any classroom at any pace
+- Each course consists of 20 lessons that can be incorporated into any classroom at any pace
 - Even kindergarten-aged pre-readers can participate<br />
 [Learn more](/k5)
 
@@ -56,7 +56,7 @@ Learn more about curriculum for [Computer Science in Science](/curriculum/mss) a
 [<button>Sign up</button>](http://www.jotformpro.com/form/50198109848969)
 
 ### High School
-Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer [Exploring Computer Science](http://exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the 15-16 school year.
+Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer [Exploring Computer Science](http://exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the '15-'16 school year.
 
 - No prior computer science experience is required!
 - Per-session stipends to teachers are paid by Code.org
