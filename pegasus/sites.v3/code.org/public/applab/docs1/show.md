@@ -4,14 +4,13 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
-
+## show()
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Turtle
 
 [/category]
 
@@ -19,11 +18,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Shows the turtle on the screen, by making it visible at its current location.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+**Note**: [hide()](/applab/docs/hide) is often used with show
 
 [/description]
 
@@ -33,8 +32,11 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+/*  Example 1
+*/
+
+shows();              // shows the turtle so that it is visible on the screen at its current location
+moveForward(100);     // moves the turtle forward 100 pixels
 </pre>
 
 [/example]
@@ -44,11 +46,20 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
-</pre>
+/*  Example 2
 
+    This example creates two buttons that allow you to switch between showing and hiding the turtle
+*/
+
+button("hide-turtle", "hide");                  // creates a hide button
+button("show-turtle", "show");                  // creates a show button
+onEvent("hide-turtle", "click", function(event) {  // when the hide button is clicked the turtle will hide
+  hide();
+});
+onEvent("show-turtle", "click", function(event) {  // when the show button is clicked the turtle will show
+  show();
+});
+</pre>
 
 [/example]
 
@@ -58,7 +69,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+show();
 </pre>
 
 [/syntax]
@@ -66,13 +77,7 @@ rect(x, y, width, height);
 [parameters]
 
 ### Parameters
-
-| Name  | Type | Required? | Description |
-|-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+`show()` does not take any parameters.
 
 [/parameters]
 
@@ -86,8 +91,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- [hide()](/applab/docs/hide) is often used with show
 
 [/tips]
 

@@ -7,6 +7,9 @@ AllCops:
   RunRailsCops: true
   DisplayCopNames: true
 
+Style/BarePercentLiterals:
+  Enabled: false
+
 # The following rules are disabled in Rubocop by default, but must be explicitly specified for Hound CI.
 # https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
 

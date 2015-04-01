@@ -13912,6 +13912,7 @@ Blockly.FieldLabel = function(text, customOptions) {
   this.textElement_ = Blockly.createSvgElement("text", {"class":"blocklyText"}, null);
   var loadingSize = {width:0, height:25};
   this.forceSize_ = customOptions.hasOwnProperty("fixedSize");
+  this.forceZeroWidth_ = customOptions.fixedSize && customOptions.fixedSize.width === 0;
   this.fontSize_ = customOptions.fontSize;
   this.size_ = this.forceSize_ ? customOptions.fixedSize : loadingSize;
   this.setText(text)
@@ -13928,7 +13929,7 @@ Blockly.FieldLabel.prototype.init = function(block) {
   Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
 };
 Blockly.FieldLabel.prototype.getSize = function() {
-  if(!this.size_.width && !(this.forceSize_ && this.size_.width === 0)) {
+  if(!this.size_.width && !this.forceZeroWidth_) {
     this.updateWidth_()
   }
   return this.size_
@@ -19260,8 +19261,6 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   this.modalBlockSpace.clear()
 };
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
   this.moveToMainBlockSpace_(this.functionDefinitionBlock);
   this.functionDefinitionBlock = null;
   goog.dom.getElement("functionNameText").value = "";
@@ -19269,6 +19268,8 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   if(goog.dom.getElement("paramAddText")) {
     goog.dom.getElement("paramAddText").value = ""
   }
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, "function_editor_closed")
 };
@@ -19397,6 +19398,9 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER
 };
 Blockly.FunctionEditor.prototype.position_ = function() {
+  if(!this.isOpen()) {
+    return
+  }
   var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;

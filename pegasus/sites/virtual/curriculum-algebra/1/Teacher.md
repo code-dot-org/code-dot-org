@@ -38,7 +38,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) (in the student workbook)
 - [Videogame Design Template](../docs/worksheets/game_planning.pdf) (in the student workbook)
@@ -84,7 +84,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 ## Activities:
 ### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
-Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/stage/1/puzzle/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
 
 This game is made up of characters, each of which has its own behavior. The unicorn moves from the left to the right, while the dragon moves in the opposite direction. The ninja only moves when you hit the arrow keys, and can move up and down. We can figure out how the game works by first understanding how each character works.
 

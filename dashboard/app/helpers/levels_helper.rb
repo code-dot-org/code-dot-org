@@ -237,6 +237,8 @@ module LevelsHelper
       default_enabled_encodings
       show_router_bandwidth_control
       default_router_bandwidth
+      show_router_memory_control
+      default_router_memory
       show_dns_mode_control
       default_dns_mode
       input_output_table
@@ -315,6 +317,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
+    app_options[:isLegacyShare] = true if @is_legacy_share
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|
