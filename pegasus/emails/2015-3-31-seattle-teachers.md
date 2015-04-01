@@ -23,7 +23,7 @@ Participating teachers consistently call our professional development, "The best
 **For middle schools:**
 
 - Integrate computer science into any algebra or science class
-- Per-session stipends to teachers are paid by Code.org!
+- Stipends to teachers are paid by Code.org!
 - Open to all Puget Sound-area middle school math science teachers & no cost to apply<br />
 [Sign up](https://code.org/educate/seattle/)
 
@@ -31,7 +31,7 @@ Participating teachers consistently call our professional development, "The best
 
 - Offer an inclusive, year-long introductory computer science course at your school
 - Research-based professional development is open to all Puget Sound-area high school teachers
-- Per-session stipends to teachers are paid by Code.org!<br />
+- Stipends to teachers are paid by Code.org!<br />
 [Sign up](https://code.org/educate/seattle/)
 
 ### Join us for an info session - April 14, 6-8pm 
