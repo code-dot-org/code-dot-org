@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   has_many :segments, through: :workshops
 
   # you can be associated with a district if you are the district contact
-  has_many :districts_as_contact, class_name: 'District', foreign_key: 'contact_id'
+  has_one :district_as_contact, class_name: 'District', foreign_key: 'contact_id'
 
   belongs_to :invited_by, :polymorphic => true
 
@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
-    districts_as_contact.any?
+    district_as_contact.present?
   end
 
   def district
@@ -92,7 +92,8 @@ class User < ActiveRecord::Base
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
 
-      user = User.invite! params.merge(user_type: TYPE_TEACHER, age: 21)
+      user = User.invite!(email: params[:email],
+                           user_type: TYPE_TEACHER, age: 21)
       user.invited_by = invited_by_user
     end
 
