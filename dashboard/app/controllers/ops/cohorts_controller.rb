@@ -25,7 +25,7 @@ module Ops
         if current_user.try(:admin?)
           Cohort.all
         elsif current_user.try(:district_contact?)
-          current_user.districts_as_contact.map(&:cohorts).flatten
+          current_user.district_as_contact.cohorts
         else
           []
         end
@@ -34,6 +34,13 @@ module Ops
 
     # GET /ops/cohorts/1
     def show
+      # filter cohort info for current user.
+      # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
+      unless current_user.admin?
+        @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+        @cohort.cohorts_districts = @cohort.cohorts_districts.where(district_id: current_user.district_as_contact.id)
+      end
+
       respond_with @cohort
     end
 
