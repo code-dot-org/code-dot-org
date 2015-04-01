@@ -133,6 +133,13 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.totalMemory_ = 0;
 
   /**
+   * Number of packets in the router's queue.
+   * @type {number}
+   * @private
+   */
+  this.queuedPackets_ = 0;
+
+  /**
    * Current size of the router's packet queue, in bits.
    * @type {number}
    * @private
@@ -160,7 +167,7 @@ NetSimRouterStatsTable.prototype.render = function (clock) {
 
   var renderedMarkup = $(markup({
     uptime: this.getLocalizedUptime(),
-    queuedPackets: 0,
+    queuedPackets: this.queuedPackets_,
     totalPackets: this.totalPackets_,
     successfulPackets: this.successfulPackets_,
     totalData: this.totalData_,
@@ -255,6 +262,15 @@ NetSimRouterStatsTable.prototype.setBandwidth = function (newBandwidth) {
 /** @param {number} totalMemoryInBits */
 NetSimRouterStatsTable.prototype.setTotalMemory = function (totalMemoryInBits) {
   this.totalMemory_ = totalMemoryInBits;
+  this.setNeedsRender();
+};
+
+/**
+ * @param {number} queuedPacketCount
+ */
+NetSimRouterStatsTable.prototype.setRouterQueuedPacketCount = function (
+    queuedPacketCount) {
+  this.queuedPackets_ = queuedPacketCount;
   this.setNeedsRender();
 };
 

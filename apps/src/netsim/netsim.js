@@ -462,6 +462,16 @@ NetSim.prototype.setRouterLogData = function (logData) {
 };
 
 /**
+ * @param {number} queuedPacketCount
+ * @private
+ */
+NetSim.prototype.setRouterQueuedPacketCount_ = function (queuedPacketCount) {
+  if (this.tabs_) {
+    this.tabs_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
+/**
  * @param {number} usedMemoryInBits
  * @private
  */
@@ -641,6 +651,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
 };
 
 NetSim.prototype.onRouterStatsChange_ = function (router) {
+  this.setRouterQueuedPacketCount_(router.getQueuedPacketCount());
   this.setRouterMemoryInUse_(router.getMemoryInUse());
   this.setRouterDataRate_(router.getCurrentDataRate());
 };
