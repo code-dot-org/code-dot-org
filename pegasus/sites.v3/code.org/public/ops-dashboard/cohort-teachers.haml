@@ -25,7 +25,7 @@ theme: none
     %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
-  %h3 Example format:
+  %h3 Example format (please include the heading line in your uploaded file):
   %pre
     = preserve do
       ops_first_name,ops_last_name,email,district,ops_school,ops_gender
