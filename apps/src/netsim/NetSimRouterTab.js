@@ -15,6 +15,7 @@ var markup = require('./NetSimRouterTab.html');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
+var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
 
 /**
  * Generator and controller for router information view.
@@ -58,6 +59,12 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
   this.routerLogTable_ = null;
 
   /**
+   * @type {NetSimRouterStatsTable}
+   * @private
+   */
+  this.routerStatsTable_ = null;
+
+  /**
    * @type {NetSimBandwidthControl}
    * @private
    */
@@ -83,6 +90,8 @@ NetSimRouterTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
+  this.routerStatsTable_ = new NetSimRouterStatsTable(
+      this.rootDiv_.find('.router-stats'));
   if (this.levelConfig_.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
         this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
