@@ -817,6 +817,31 @@ describe("NetSimRouterNode", function () {
         assertRouterQueueSize(32 * 8);
         assertHowManyDropped(1);
       });
+
+      it ("getMemoryInUse() reports correct memory usage", function () {
+        router.setMemory(Infinity);
+        assertRouterQueueSize(0);
+        assertEqual(0, router.getMemoryInUse());
+
+        sendMessageOfSize(64 * 8);
+        assertRouterQueueSize(64 * 8);
+        assertEqual(64 * 8, router.getMemoryInUse());
+
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        assertRouterQueueSize(70 * 8);
+        assertEqual(70 * 8, router.getMemoryInUse());
+
+        router.setMemory(32 * 8);
+        assertHowManyDropped(1);
+        assertRouterQueueSize(6 * 8);
+        assertEqual(6 * 8, router.getMemoryInUse());
+      });
+
     });
 
     describe("Auto-DNS behavior", function () {
