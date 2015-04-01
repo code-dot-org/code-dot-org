@@ -165,7 +165,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "继续"},
 "container":function(d){return "创建容器"},
 "containerTooltip":function(d){return "创建一个主要容器，并设置其内部的 HTML。"},
-"designMode":function(d){return "设计"},
 "finalLevel":function(d){return "恭喜你！你完成了最后一个谜题。"},
 "nextLevel":function(d){return "恭喜你！你解决了这个谜题。"},
 "no":function(d){return "不"},

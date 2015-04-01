@@ -4,8 +4,9 @@ ko:
       Blocks to Bools 1:
         Convert Blocks to Math: 블럭을 계산식으로 변환
         Type out the arithmetic expression that matches this code: 이 코드를 수학적 계산식으로 작성하세요.
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: '(4+5) > 9'
+        ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: 수학 계산식을 여기에 입력하세요.
       Blocks to Bools 2:
         Convert Blocks to Math: 블럭을 계산식으로 변환

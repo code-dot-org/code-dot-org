@@ -6,12 +6,12 @@
   "ellipseBlockTitle": "elipse (anchura, altura, estilo, color)",
   "emptyFunctionalBlock": "Tienes un bloque con una entrada vacía.",
   "extraTopBlocks": "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?",
-  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
+  "infiniteRecursionError": "La función hace referencia hacia si misma. Nosotros paramos la ejecución, de otro modo hubiera seguido llamandose asimisma infinitamente.",
   "overlayBlockTitle": "superposición (arriba, abajo)",
   "placeImageBlockTitle": "lugar-imagen (x, y, imagen)",
   "offsetBlockTitle": "offset (x, y, imagen)",
   "rectangleBlockTitle": "rectángulo (anchura, altura, estilo, color)",
-  "reinfFeedbackMsg": "Presiona el botón \"reintentar \" para editar tu dibujo.",
+  "reinfFeedbackMsg": "Presionar el Boton \"Seguir jugando\" para editar el dibujo.",
   "rotateImageBlockTitle": "Girar (grados, imagen)",
   "scaleImageBlockTitle": "escala (factor, imagen)",
   "squareBlockTitle": "cuadrado (tamaño, estilo, color)",
@@ -26,6 +26,6 @@
   "outline": "contorno",
   "solid": "sólido",
   "string": "cadena",
-  "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "stringMismatchError": "La cadena de caracteres tiene una o mas letras capitales de forma erronea.",
+  "userCodeException": "Ocurrio un error mientras se ejecutaba el codigo."
 }

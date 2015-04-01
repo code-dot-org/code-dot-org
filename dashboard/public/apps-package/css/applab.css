@@ -219,7 +219,10 @@ img#turtleImage {
   background-color: white;
   text-indent: 14.5px;
   margin-top: -3px;
-  padding-top: 6px; }
+  padding-top: 6px;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text; }
 
 /* Slider. */
 .sliderContainer {
@@ -325,3 +328,15 @@ button.arrow:focus {
   vertical-align: top; }
   #share-cell.share-cell-none {
     display: none; }
+
+.new-design-element {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px; }

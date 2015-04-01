@@ -171,15 +171,36 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
-          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
-          <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' bloc
+          +<br>bloc -<br>bloc / <br>bloc * <br> bloc #0 <br>bloc  # ??? <br> bloc
+          de taille'
+        Blue colored blocks are associated with __________ ?: Les blocs de couleur
+          bleue sont associés avec __________ ?
+        a image: une image
+        a number: un nombre
+        a string: une chaîne de caractères
+        boolean: un boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        a image: une image
+        a number: un nombre
+        a string: une chaîne de caractères
+        boolean: un boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: une image
+        a number: un nombre
+        a string: une chaîne de caractères
+        boolean: un boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: une image
+        a number: un nombre
+        a string: une chaîne de caractères
+        boolean: un boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Questions à choix multiples de l'Artiste
         Which blocks draw a rectangle with a perimeter of 100?: Quels blocs permettent
@@ -390,8 +411,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Coordonnées de jeu vidéo
         Ninjacat Demo Embed.level: Ninjacat Démo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Quelle réponse
-          décrit de la manière la plus précise le mouvement de la licorne ?
         The unicorn moves across the screen: La licorne se déplace sur l'écran
         The unicorn's y value changes: La coordonnée y de la licorne change
         The unicorn moves to the left: La licorne bouge vers la gauche
@@ -651,7 +670,6 @@
           "rouge")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solide rouge)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: Quelle est la valeur de x ?
         a function: une fonction
         15: '15'

@@ -283,7 +283,7 @@ Blockly.ContractEditor.prototype.isAnExampleBlockInEditor_ = function (block) {
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
-  this.exampleBlocks.forEach(function(exampleBlock) {
+  goog.array.clone(this.exampleBlocks).forEach(function(exampleBlock) {
     this.moveToMainBlockSpace_(exampleBlock);
   }, this);
   goog.array.clear(this.exampleBlocks);
@@ -301,6 +301,7 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.addRangeEditor_();
   this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
+  this.functionDefinitionBlock.setDeletable(false);
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
 
@@ -311,27 +312,28 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 };
 
 /**
- * @param {!String} functionName name of function being edited
+ * @param {!String} functionName function which will have its examples moved to
+ *    the editor
  * @private
  */
 Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionName) {
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
     var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
-    var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-    exampleCall.setMovable(false);
-    exampleCall.setDeletable(false);
     this.exampleBlocks.push(movedExampleBlock);
+    movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
+      this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
   }, this);
 };
 
 /**
- * @override
+ * Removes the given example block from the example block list
+ * @param block
+ * @private
  */
-Blockly.ContractEditor.prototype.moveToModalBlockSpace = function (block) {
-  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace.call(this, block);
-  newBlock.setDeletable(false);
-  return newBlock;
+Blockly.ContractEditor.prototype.removeExampleBlock_ = function(block) {
+  goog.array.remove(this.exampleBlocks, block);
+  this.position_();
 };
 
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {

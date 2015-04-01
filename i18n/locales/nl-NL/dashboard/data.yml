@@ -203,7 +203,7 @@ nl:
         turtle_3_5: 'Maak nu een "teken een huis" functie en gebruik hem om deze 2 katten een huis te geven. Hint: maak een nieuwe functie met behulp van het "doe iets" blok, en typ je eigen naam om het blok een naam te geven.'
         turtle_3_6: 'Gebruik "teken een vierkant" als een voorbeeld om een invoer genaamd "lengte" toe te voegen om "teken een driehoek" te maken. Maak vervolgens driehoeken in verschillende groottes. (Hint: klik op de ster om een invoer aan een functie toe te voegen)'
         turtle_3_7: 'Voeg een input met de naam "lengte" toe aan "teken een huis" en teken een groot huis voor de olifant (met randen van 150 pixels lang)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Pas "teken een huis" aan zodat ik in de hoek linksonder beland na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.'
         turtle_3_9: 'Kan je deze "teken een huis" functie namaken zonder hulp? Probeer het, en teken daarna een rijtje huizen.'
         turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te tekenen wat je maar wilt. Probeer bijvoorbeeld eens om een ster, spiraal of coole sneeuwvlok te tekenen.
         maze_karel_debug_seq_1: Welkom bij foutopsporing! Mijn code doet het niet helemaal goed. Kan jij het probleem vinden en oplossen zodat ik mijn veld vlak kan maken voor het verbouwen?
@@ -434,8 +434,8 @@ nl:
         playlab_intro: Inleiding tot Play Lab
         playlab_events: Play Lab evenenementen
         playlab_repeat_forever: Play Lab Herhaal voor altijd
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        msm_1_intro: Informatica in de Wiskunde Hoofdstuk 1 Inleiding
         msm_2_eval_block: evaluatie blokken
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variabelen

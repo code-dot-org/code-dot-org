@@ -72,11 +72,12 @@
     </div>
 
     <% if (data.hasDesignMode) { %>
-      <div id="designModeButtons" style="display:none;">
-        <button id="codeModeButton" class="share">
-          <%= msg.codeMode() %>
-        </button>
-      </div>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
     <% } %>
   </div>
 </div>
@@ -115,9 +116,7 @@
     <div id="codeTextbox"></div>
   <% } %>
   <% if (data.hasDesignMode) { %>
-    <div id="designModeBox" style="display:none;">
-      Welcome to Design mode. Under construction.
-    </div>
+    <%- data.designModeBox %>
   <% } %>
   <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
   <%- data.extraControlRows %>

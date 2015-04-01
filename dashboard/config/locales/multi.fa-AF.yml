@@ -178,6 +178,27 @@
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: چندگزینه ای هنرمند
         Which blocks draw a rectangle with a perimeter of 100?: چه بلوکهایی مستطیلی
@@ -376,8 +397,6 @@
       Coordinates Multi 1:
         Video game Coordinates: مختصات بازی ویدیویی
         Ninjacat Demo Embed.level: نسخه ی نمایشی گربۀ نینجا مرحله ی جاسازی
-        Which answer most accurately describes the unicorn's movement?: کدام پاسخ
-          حرکت اسب شاخدار را دقیقتر توصیف میکند؟
         The unicorn moves across the screen: اسب شاخدار در سراسر صفحه نمایش حرکت میکند
         The unicorn's y value changes: مقدار y اسب شاخدار تغییر می کند
         The unicorn moves to the left: اسب شاخدار به چپ حرکت میکند
@@ -631,7 +650,6 @@
           "یکدست")
         (rectangle (+ 8 2) (- 7 5) solid red): (مستطیل (5 7 -) (2 8 +) قرمز یکدست)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         15: '15'

@@ -2,11 +2,6 @@ module Ops
   class DistrictsController < OpsControllerBase
     load_and_authorize_resource
 
-    # get /ops/districts/1/teachers
-    def teachers
-      respond_with @district.users, each_serializer: TeacherSerializer
-    end
-
     # POST /ops/districts
     def create
       @district.save!
@@ -52,7 +47,7 @@ module Ops
           params[:district][:contact][:email] != @district.try(:contact).try(:email)
         # adding/changing district contact
         params[:district][:contact_id] =
-          User.find_or_create_district_contact(contact_params(params[:district].delete(:contact))).id
+          User.find_or_create_district_contact(contact_params(params[:district].delete(:contact)), current_user).id
         # TODO do we need to remove the districtcontact permission from the old user?
       end
 

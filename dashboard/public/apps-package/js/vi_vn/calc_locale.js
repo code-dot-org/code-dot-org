@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Chức năng của bạn không đưa ra kết quả phù hợp cho tất cả các giá trị."},
 "goal":function(d){return "Mục tiêu:"},
 "levelIncompleteError":function(d){return "Cách diễn tả của bạn không phù hợp với mục tiêu. \n"},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Đây là sự tính toán của bạn! Tiếp tục làm việc với nó, hoặc chuyển sang câu đố tiếp theo!"},
 "yourExpression":function(d){return "Cách diễn tả của bạn:"},

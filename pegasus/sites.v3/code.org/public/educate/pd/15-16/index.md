@@ -1,11 +1,20 @@
 ---
-title: Code.org Phase 1
-nav: pd3_nav
+title: PD General Information
+nav: pd2_nav
 ---
 
+# Welcome to Code.org Professional Development
 
-# Welome to Code.org Professional Development
-
+**Click below to find your program-specific welcome kit!**
+<br/>
+<br/>
+[Computer Science Principles](code.org/welcome-csp)
+<br/>
+[Exploring Computer Science](code.org/welcome-ecs)
+<br/>
+[Computer Science in Algebra](code.org/welcome-algebra)
+<br/>
+[Computer Science in Science](code.org/welcome-science)
 
 ## Phase 1: Online Introduction ##
 

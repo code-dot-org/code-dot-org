@@ -112,6 +112,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock.setMovable(false);
+  this.functionDefinitionBlock.setDeletable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
 
@@ -339,9 +341,6 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
-
   this.moveToMainBlockSpace_(this.functionDefinitionBlock);
   this.functionDefinitionBlock = null;
 
@@ -350,6 +349,9 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   if (goog.dom.getElement('paramAddText')) {
     goog.dom.getElement('paramAddText').value = '';
   }
+
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
 
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, 'function_editor_closed');
@@ -371,7 +373,7 @@ Blockly.FunctionEditor.prototype.moveToMainBlockSpace_ = function(blockToMove) {
 };
 
 /**
- * Moves an existing block to this modal BlockSpace and makes them immovable
+ * Moves an existing block to this modal BlockSpace
  * Note: destroys the existing Block object in the process
  * @param {Blockly.Block} blockToMove
  * @returns {Blockly.Block} copy of block in modal BlockSpace
@@ -386,7 +388,6 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
     : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
   newCopyOfBlock.setUserVisible(true, true);
-  newCopyOfBlock.setMovable(false);
   return newCopyOfBlock;
 };
 
@@ -608,6 +609,10 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+
   var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;

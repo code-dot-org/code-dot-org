@@ -183,6 +183,27 @@
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Künstler Multiple-Choice
         Which blocks draw a rectangle with a perimeter of 100?: Welche Blöcke zeichnen
@@ -384,8 +405,6 @@
       Coordinates Multi 1:
         Video game Coordinates: Videospiel-Koordinaten
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Welche Antwort
-          beschreibt die Bewegung des Einhorns am genauesten?
         The unicorn moves across the screen: Das Einhorn bewegt sich über den Bildschirm
         The unicorn's y value changes: Der y-Wert des Einhorns ändert sich
         The unicorn moves to the left: Das Einhorn bewegt sich nach links
@@ -639,7 +658,6 @@
           "rot")
         (rectangle (+ 8 2) (- 7 5) solid red): (Rechteck (+ 8 2) (-7 5) "solid" "rot")
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: Was ist der Wert von x?
         a function: eine Funktion
         15: '15'

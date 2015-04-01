@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({40:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({45:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":186,"./blocks":31,"./calc":32,"./levels":39}],32:[function(require,module,exports){
+},{"../appMain":5,"../skins":194,"./blocks":36,"./calc":37,"./levels":44}],37:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -110,13 +110,7 @@ function constructTokenList(one, two, markDeepest) {
     tokenList = one.getTokenListDiff(two);
   }
 
-  // Strip outer parens
-  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
-      tokenList[tokenList.length - 1].isParenthesis()) {
-    tokenList.splice(-1);
-    tokenList.splice(0, 1);
-  }
-  return tokenList;
+  return ExpressionNode.stripOuterParensFromTokenList(tokenList);
 }
 
 /**
@@ -247,8 +241,8 @@ function displayGoal(targetSet) {
   // (i.e. compute expression). Otherwise show all equations.
   var tokenList;
   var nextRow = 0;
-  var hasSingleFunction = targetSet.hasSingleFunction();
-  if (!hasSingleFunction && !targetSet.computesSingleVariable()) {
+  var computesFunction = targetSet.computesFunctionCall();
+  if (!computesFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
     sortedEquations.forEach(function (equation) {
       if (equation.isFunction() && sortedEquations.length > 1) {
@@ -267,7 +261,7 @@ function displayGoal(targetSet) {
     throw evaluation.err;
   }
 
-  if (hasSingleFunction) {
+  if (computesFunction) {
     tokenList.push(new Token(' = ', false));
     tokenList.push(new Token(evaluation.result, false));
   }
@@ -346,9 +340,17 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var userEquation = userSet.computeEquation();
   var userExpression = userEquation && userEquation.expression;
   if (!expression.hasSameSignature(userExpression) ||
-    !userSet.hasSingleFunction()) {
+    !userSet.computesFunctionCall()) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
+
+    var targetFunctionName = expression.getValue();
+    if (!userSet.getEquation(targetFunctionName)) {
+      outcome.message = calcMsg.missingFunctionError({
+        functionName: targetFunctionName
+      });
+    }
+
     return outcome;
   }
 
@@ -541,7 +543,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
   if (outcome.failedInput) {
     var message = calcMsg.wrongOtherValuesX({var: targetConstants[0].name});
-    return appSpecificFailureOutcome(message);
+    return appSpecificFailureOutcome(message, outcome.failedInput);
   }
 
   outcome.result = ResultType.SUCCESS;
@@ -562,13 +564,14 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     failedInput: null
   };
 
-  if (targetSet.hasSingleFunction()) {
+  if (targetSet.computesFunctionCall()) {
     // Evaluate function by testing it with a series of inputs
     return Calc.evaluateFunction_(targetSet, userSet);
   } else if (targetSet.computesSingleVariable()) {
     return Calc.evaluateSingleVariable_(targetSet, userSet);
   } else if (userSet.hasVariablesOrFunctions() ||
       targetSet.hasVariablesOrFunctions()) {
+
     // We have multiple expressions. Either our set of expressions are equal,
     // or they're not.
     if (targetSet.isIdenticalTo(userSet)) {
@@ -728,42 +731,87 @@ function displayComplexUserExpressions() {
   var result;
   clearSvgUserExpression();
 
-  var computeEquation = appState.userSet.computeEquation();
+  // Clone userSet, and we might make small changes to them (i.e. if we need to
+  // vary variables)
+  var userSet = appState.userSet.clone();
+  var targetSet = appState.targetSet;
+
+  var computeEquation = userSet.computeEquation();
   if (computeEquation === null || computeEquation.expression === null) {
     return;
   }
 
-  // in single function/variable mode, we're only going to highlight the differences
-  // in the evaluated result
-  var highlightErrors = !appState.targetSet.hasSingleFunction() &&
-    !appState.targetSet.computesSingleVariable();
+  // get the tokens for our user equations
+  var nextRow = displayNonComputeEquations_(userSet, targetSet);
 
-  var nextRow = 0;
-  var tokenList;
-  appState.userSet.sortedEquations().forEach(function (userEquation) {
-    var expectedEquation = highlightErrors ?
-      appState.targetSet.getEquation(userEquation.name) : null;
-
-    tokenList = constructTokenList(userEquation, expectedEquation);
-
-    displayEquation('userExpression', userEquation.signature, tokenList, nextRow++,
-      'errorToken');
-  });
-
-  if (appState.userSet.computesSingleConstant()) {
+  if (userSet.computesSingleConstant()) {
     // In this case the compute equation + evaluation will be exactly the same
     // as what we've already shown, so don't show it.
     return;
   }
 
   // Now display our compute equation and the result of evaluating it
-  var targetEquation = appState.targetSet && appState.targetSet.computeEquation();
+  var targetEquation = targetSet && targetSet.computeEquation();
 
   // We're either a variable or a function call. Generate a tokenList (since
   // we could actually be different than the goal)
-  tokenList = constructTokenList(computeEquation, targetEquation);
+  var tokenList = constructTokenList(computeEquation, targetEquation).concat(
+    tokenListForEvaluation_(userSet, targetSet));
 
-  var evaluation = appState.userSet.evaluate();
+  displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+
+  tokenList = tokenListForFailedFunctionInput_(userSet, targetSet);
+  if (tokenList && tokenList.length) {
+    displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+  }
+}
+
+/**
+ * Display equations other than our compute equation.
+ * Note: In one case (single variable compute, failed input) we also modify
+ * our userSet here
+ * @returns {number} How many rows we display equations on.
+ */
+function displayNonComputeEquations_(userSet, targetSet) {
+  // in single function/variable mode, we're only going to highlight the differences
+  // in the evaluated result
+  var highlightAllErrors = !targetSet.computesFunctionCall() &&
+    !targetSet.computesSingleVariable();
+
+  if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
+    var userConstants = userSet.getConstants();
+    var targetConstants = targetSet.getConstants();
+    // replace constants with failed inputs in the user set.
+    targetConstants.forEach(function (targetEquation, index) {
+      var name = targetEquation.name;
+      var userEquation = userSet.getEquation(name);
+      userEquation.expression.setValue(appState.failedInput[index]);
+    });
+  }
+
+  var numRows = 0;
+  var tokenList;
+  userSet.sortedEquations().forEach(function (userEquation) {
+    var expectedEquation = highlightAllErrors ?
+      targetSet.getEquation(userEquation.name) : null;
+
+    tokenList = constructTokenList(userEquation, expectedEquation);
+
+    displayEquation('userExpression', userEquation.signature, tokenList, numRows++,
+      'errorToken');
+  });
+
+  return numRows;
+}
+
+/**
+ * @returns {Token[]} token list comparing the evluation of the user and target
+ *   sets. Includes equals sign.
+ */
+function tokenListForEvaluation_(userSet, targetSet) {
+  var evaluation = userSet.evaluate();
+
+  // Check for div zero
   var divZeroInUserSet = false;
   if (evaluation.err) {
     if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
@@ -772,43 +820,57 @@ function displayComplexUserExpressions() {
       throw evaluation.err;
     }
   }
-  if (!divZeroInUserSet) {
-    result = evaluation.result;
-    var expectedResult = result;
-    // Note: we could make singleVariable case smarter and evaluate target using
-    // user constant value
-    if (appState.targetSet.computeEquation() !== null &&
-        !appState.targetSet.computesSingleVariable()) {
-      expectedResult = appState.targetSet.evaluate().result;
-    }
 
-    // add a tokenList diffing our results
-    tokenList = tokenList.concat(constructTokenList(' = '),
-      constructTokenList(result, expectedResult));
+  if (divZeroInUserSet) {
+    return [];
   }
 
-  displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
-
-  if (appState.failedInput !== null) {
-    var expression = computeEquation.expression.clone();
-    for (var c = 0; c < expression.numChildren(); c++) {
-      expression.setChildValue(c, appState.failedInput[c]);
-    }
-    evaluation = appState.userSet.evaluateWithExpression(expression);
-    if (evaluation.err) {
-      if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-        evaluation.result = ''; // result will not be used in this case
-      } else {
-        throw evaluation.err;
-      }
-    }
-    result = evaluation.result;
-
-    tokenList = constructTokenList(expression)
-      .concat(new Token(' = ', false))
-      .concat(new Token(result, true)); // this should always be marked
-    displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
+  var result = evaluation.result;
+  var expectedResult = result;
+  if (targetSet.computesSingleVariable()) {
+    // If we have a failed input, make sure the result gets marked
+    return [
+      new Token(' = ', false),
+      new Token(result, appState.failedInput)
+    ];
+  } else if (targetSet.computeEquation() !== null) {
+    expectedResult = targetSet.evaluate().result;
   }
+
+  // add a tokenList diffing our results
+  return constructTokenList(' = ').concat(
+    constructTokenList(result, expectedResult));
+}
+
+/**
+ * For cases where we have a single function, and failure occured only after
+ * we varied the inputs, we want to display a final line that shows the varied
+ * input and result. This method generates that token list
+ * @returns {Token[]}
+ */
+function tokenListForFailedFunctionInput_(userSet, targetSet) {
+  if (appState.failedInput === null || !targetSet.computesFunctionCall()) {
+    return [];
+  }
+
+  var computeEquation = userSet.computeEquation();
+  var expression = computeEquation.expression.clone();
+  for (var c = 0; c < expression.numChildren(); c++) {
+    expression.setChildValue(c, appState.failedInput[c]);
+  }
+  var evaluation = userSet.evaluateWithExpression(expression);
+  if (evaluation.err) {
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+      evaluation.result = ''; // result will not be used in this case
+    } else {
+      throw evaluation.err;
+    }
+  }
+  var result = evaluation.result;
+
+  return constructTokenList(expression)
+    .concat(new Token(' = ', false))
+    .concat(new Token(result, true)); // this should always be marked
 }
 
 function stopAnimatingAndDisplayFeedback() {
@@ -1028,7 +1090,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":236,"../../locale/current/common":237,"../StudioApp":4,"../block_utils":20,"../dom":51,"../skins":186,"../templates/page.html":211,"../timeoutList":217,"../utils":232,"./controls.html":33,"./equation":34,"./equationSet":35,"./expressionNode":36,"./inputIterator":37,"./js-numbers/js-numbers.js":38,"./levels":39,"./token":41,"./visualization.html":42}],42:[function(require,module,exports){
+},{"../../locale/current/calc":244,"../../locale/current/common":245,"../StudioApp":4,"../block_utils":25,"../dom":56,"../skins":194,"../templates/page.html":219,"../timeoutList":225,"../utils":240,"./controls.html":38,"./equation":39,"./equationSet":40,"./expressionNode":41,"./inputIterator":42,"./js-numbers/js-numbers.js":43,"./levels":44,"./token":46,"./visualization.html":47}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1048,7 +1110,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":236,"ejs":253}],39:[function(require,module,exports){
+},{"../../locale/current/calc":244,"ejs":261}],44:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1087,7 +1149,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":236,"../block_utils":20}],37:[function(require,module,exports){
+},{"../../locale/current/calc":244,"../block_utils":25}],42:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1141,7 +1203,7 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],35:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -1229,17 +1291,17 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * @returns {boolean} True if the EquationSet has exactly one function and no
- * variables. If we have multiple functions or one function and some variables,
- * returns false.
+ * @returns {boolean} True if our compute expression is jsut a funciton call
  */
-EquationSet.prototype.hasSingleFunction = function () {
-   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-     return true;
-   }
+EquationSet.prototype.computesFunctionCall = function () {
+  if (!this.compute_) {
+    return false;
+  }
 
-   return false;
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isFunctionCall();
 };
+
 
 /**
  * @returns {boolean} True if our compute expression is just a variable, which
@@ -1499,7 +1561,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":232,"./equation":34,"./expressionNode":36,"./js-numbers/js-numbers":38}],36:[function(require,module,exports){
+},{"../utils":240,"./equation":39,"./expressionNode":41,"./js-numbers/js-numbers":43}],41:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -1619,7 +1681,9 @@ ExpressionNode.prototype.isExponential = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
+  var rightChild = this.getChildValue(1);
+  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0);
 };
 
 /**
@@ -1876,11 +1940,16 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     new Token('(', !nodesMatch)
   ];
 
-  for (var i = 0; i < this.children_.length; i++) {
+  var numChildren = this.children_.length;
+  for (var i = 0; i < numChildren; i++) {
     if (i > 0) {
       tokens.push(new Token(',', !nodesMatch));
     }
-    tokens.push(tokensForChild(i));
+    var childTokens = tokensForChild(i);
+    if (numChildren === 1) {
+      ExpressionNode.stripOuterParensFromTokenList(childTokens);
+    }
+    tokens.push(childTokens);
   }
 
   tokens.push(new Token(")", !nodesMatch));
@@ -2047,6 +2116,9 @@ ExpressionNode.prototype.setValue = function (value) {
  * Get the value of the child at index
  */
 ExpressionNode.prototype.getChildValue = function (index) {
+  if (this.children_[index] === undefined) {
+    return undefined;
+  }
   return this.children_[index].value_;
 };
 
@@ -2076,7 +2148,20 @@ ExpressionNode.prototype.debug = function () {
     }).join(' ') + ")";
 };
 
-},{"../utils":232,"./js-numbers/js-numbers":38,"./token":41}],41:[function(require,module,exports){
+/**
+ * Given a token list, if the first and last items are parens, removes them
+ * from the list
+ */
+ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
+};
+
+},{"../utils":240,"./js-numbers/js-numbers":43,"./token":46}],46:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -2164,24 +2249,36 @@ Token.prototype.setStringRepresentation_ = function () {
 
   // at this point we know we have a jsnumber
   if (this.val_.isInteger()) {
-    this.nonRepeated_ = this.val_.toFixnum().toString();
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
   // Gives us three values: Number before decimal, non-repeating portion,
   // repeating portion. If we don't have the last bit, there's no repitition.
-  var repeater = jsnums.toRepeatingDecimal(this.val_.numerator(),
-    this.val_.denominator());
+  var numerator = jsnums.toExact(this.val_.numerator());
+  var denominator = jsnums.toExact(this.val_.denominator());
+  var repeater = jsnums.toRepeatingDecimal(numerator, denominator);
   if (!repeater[2] || repeater[2] === '0') {
-    this.nonRepeated_ = this.val_.toFixnum().toString();
+    this.nonRepeated_ = Token.numberWithCommas_(this.val_.toFixnum());
     return;
   }
 
-  this.nonRepeated_ = repeater[0] + '.' + repeater[1];
+  this.nonRepeated_ = Token.numberWithCommas_(repeater[0]) + '.' + repeater[1];
   this.repeated_ = repeater[2];
 };
 
-},{"./js-numbers/js-numbers":38}],38:[function(require,module,exports){
+/**
+ * From http://stackoverflow.com/a/2901298/2506748
+ * @param {number} x
+ * @returns {string} the number with commas inserted in thousandth's place
+ */
+Token.numberWithCommas_ = function (x) {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+};
+
+},{"./js-numbers/js-numbers":43}],43:[function(require,module,exports){
 // Scheme numbers.
 
 // NOTE: This top bit differs from the version at https://github.com/bootstrapworld/js-numbers/blob/master/src/js-numbers.js
@@ -6513,7 +6610,7 @@ module.exports = jsnums;
 
 })();
 
-},{}],34:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -6553,7 +6650,7 @@ Equation.prototype.clone = function () {
   return new Equation(this.name, this.params.slice(), this.expression.clone());
 };
 
-},{}],33:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6576,7 +6673,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":236,"../../locale/current/common":237,"ejs":253}],31:[function(require,module,exports){
+},{"../../locale/current/calc":244,"../../locale/current/common":245,"ejs":261}],36:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6641,6 +6738,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":236,"../../locale/current/common":237,"../sharedFunctionalBlocks":185}],236:[function(require,module,exports){
+},{"../../locale/current/calc":244,"../../locale/current/common":245,"../sharedFunctionalBlocks":193}],244:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}]},{},[40]);
+},{}]},{},[45]);

@@ -324,30 +324,30 @@
           'Calc: Evaluation Blocks': 'Reiknir: Greiningarkubbar'
           'Eval: Strings and Images': Strengir og myndir
           'Unplugged: Contracts': 'Verkefni án tölvu: Samningar'
-          'Eval: Writing Contracts': 'Greining: Ritun samninga'
-          'Calc: Defining Variables': 'Reiknir: Skilgreining breytna'
-          'Play Lab: Defining Variables (Big Game)': 'Leikjasmiðjan: Skilgreina breytur
-            (Stórleikur)'
-          'Eval: Defining Functions': 'Mat: Skilgreining falla'
+          'Eval: Writing Contracts': Ritun samninga
+          'Calc: Defining Variables': Skilgreining breytna og notkun
+          'Play Lab: Defining Variables (Big Game)': Stórleikur - Breytur
+          'Eval: Defining Functions': Samsett föll
           'Unplugged: The Design Recipe': 'Verkefni án tölvu: Hönnunaruppskriftin'
-          'Play Lab: Defining Functions': 'Leikjasmiðja: Skilgreining falla'
-          'Eval: Functions': 'Mat: Föll'
-          'Play Lab: Animation (Big Game)': 'Leikjasmiðjan: Hreyfing (Stórleikur)'
-          'Unplugged: Booleans': 'Verkefni án tölvu: Boolean gildi'
-          'Eval: Boolean Operators': 'Greining: Boolean virkjar'
-          'Play Lab: Booleans': 'Leikjasmiðjan: Boolean gildi'
-          'Play Lab: Boolean (Big Game)': 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          'Play Lab: Defining Functions': Hæð eldflaugar
+          'Eval: Functions': Orðaþrautir leystar með hönnunaruppskriftinni
+          'Play Lab: Animation (Big Game)': Stórleikur - Hreyfimyndir
+          'Unplugged: Booleans': 'Án tölvu: Boole virkjar og rökvísi'
+          'Eval: Boolean Operators': Boole virkjar
+          'Play Lab: Booleans': Leðurblakan Sammi
+          'Play Lab: Boolean (Big Game)': Stórleikur - Boole virkjar
           'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
             og Piecewise föll'
           'Eval: Conditionals': Skilyrði
-          'Unplugged: Collision Detection and the Distance Formula': 'Verkefni án
-            tölvu: Skynjun árekstra og fjarlægðarformúlan'
-          'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
-            (Stórleikur)'
+          'Unplugged: Collision Detection and the Distance Formula': 'Án tölvu: Skynjun
+            árekstra og regla Pýþagórasar'
+          'Play Lab: Collision Detection (Big Game)': Stórleikur - Skynjun árekstra
         infinity:
           title: Leikjasmiðja
-          description_short: Búðu til sögu eða leik með Leikjasmiðju!
-          description: Búðu til sögu eða leik með Leikjasmiðju!
+          description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með
+            Disney Infinity persónum.
+          description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney
+            Infinity persónum.
           Play Lab: Leikjasmiðja
           Infinity: Óendanleiki
         algebrademo:
@@ -375,11 +375,11 @@
           Ways to go beyond Courses 1, 2, and 3: Valkostir eftir námskeið 1, 2 og
             3
           K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Writing computer programs in Blockly: Ritun tölvuforrita með Blockly
           Teacher Dashboard: Teacher Dashboard
           Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          Next Steps: Næstu skref
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
         netsim:
           title: Internet hermir
           description_short: ''
@@ -387,22 +387,24 @@
           Internet Simulator: Internet hermir
           Unit 1: 1. eining
           Unit 2: 2. eining
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
-          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Sending Bits: Sending bita
+          Routing and DNS: Beinun og DNS
+          'Unit 1: Sending Bits': 'Eining 1: Sending bita'
+          'Unit 2: Routing and DNS': 'Eining 2: Beinun og DNS'
+          Internet Simulator Templates: Sniðmát Internet-hermis
         Infinity:
           title: Infinity leikjasmiðja
-          description_short: Semja sögu eða búa til leik með Infinity leikjasmiðju!!
-          description: Semja sögu eða búa til leik með Infinity leikjasmiðju!
+          description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með
+            Disney Infinity persónum.
+          description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney
+            Infinity persónum.
           Infinity: Óendanleiki
         pixelation:
           title: Dílamynstur
           description: Búa til myndir með bitum og bætum.
           Pixelation: Dílamynstur
         20-hour:
-          title: Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)
+          title: 20 klst. kynningarnámskeið
           description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
             13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
@@ -430,14 +432,14 @@
           title: Breyta kóða
           description: ''
           The Maze: Völundarhúsið
-          Applab: Applab
+          Applab: App-smiðjan
           The Artist: Listamaðurinn
           Play Lab: Leikjasmiðja
         events:
           title: Atvik
           description: ''
           Bounce: Skopp
-          Studio: Studio
+          Studio: Stúdíó
           Calc: Calc
           Eval: Eval
         flappy:
@@ -461,32 +463,32 @@
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         Test - Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         How to do the Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         Tutorial - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Þrautir
         course4pre:
           title: Forkröfur Námskeiðs 4
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
@@ -551,7 +553,7 @@
           The Design Recipe: Hönnunaruppskriftin
           Your Game - Animation: Your Game - Animation
           Booleans: Boolean gildi
-          Sam the Bat: Sam the Bat
+          Sam the Bat: Leðurblakan Sammi
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
           Rocket-Height: Rocket-Height
@@ -565,7 +567,7 @@
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
           Booleans: Boolean gildi
-          Sam the Bat: Sam the Bat
+          Sam the Bat: Leðurblakan Sammi
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra

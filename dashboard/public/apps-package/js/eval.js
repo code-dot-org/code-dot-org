@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({69:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({74:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":5,"../skins":186,"./blocks":54,"./eval":56,"./levels":68}],56:[function(require,module,exports){
+},{"../appMain":5,"../skins":194,"./blocks":59,"./eval":61,"./levels":73}],61:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -131,6 +131,7 @@ Eval.init = function(config) {
           lastLabel: 100,
           increment: 100
         });
+      background.setAttribute('visibility', 'visible');
     }
 
     if (level.solutionBlocks) {
@@ -332,6 +333,30 @@ Eval.haveCaseMismatch_ = function (object1, object2) {
 };
 
 /**
+ * Note: is unable to distinguish from true/false generated from string blocks
+ *   vs. from boolean blocks
+ * @returns {boolean} True if two eval objects are both booleans, but have different values.
+ */
+Eval.haveBooleanMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== 1 || strs2.length !== 1) {
+    return false;
+  }
+
+  var text1 = strs1[0];
+  var text2 = strs2[0];
+
+  if ((text1 === "true" && text2 === "false") ||
+      (text1 === "false" && text2 === "true")) {
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
@@ -343,6 +368,9 @@ Eval.execute = function() {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
     Eval.message = evalMsg.emptyFunctionalBlock();
+  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
@@ -353,13 +381,15 @@ Eval.execute = function() {
     if (userObject instanceof CustomEvalError) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = userObject.feedbackMessage;
     } else if (Eval.haveCaseMismatch_(userObject, Eval.answerObject)) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = evalMsg.stringMismatchError();
+    } else if (Eval.haveBooleanMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+      Eval.message = evalMsg.wrongBooleanError();
     } else {
       // We got an EvalImage back, compare it to our target
       Eval.result = evaluateAnswer();
@@ -469,7 +499,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":237,"../../locale/current/eval":238,"../StudioApp":4,"../block_utils":20,"../canvg/canvg.js":44,"../codegen":48,"../dom":51,"../skins":186,"../templates/page.html":211,"./api":53,"./controls.html":55,"./evalError":59,"./evalText":65,"./levels":68,"./visualization.html":70}],70:[function(require,module,exports){
+},{"../../locale/current/common":245,"../../locale/current/eval":246,"../StudioApp":4,"../block_utils":25,"../canvg/canvg.js":49,"../codegen":53,"../dom":56,"../skins":194,"../templates/page.html":219,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -481,7 +511,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <image id="background" height="400" width="400" x="0" y="0"></image>\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <image id="background" visibility="hidden" height="400" width="400" x="0" y="0" ></image>\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -489,7 +519,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":253}],68:[function(require,module,exports){
+},{"ejs":261}],73:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -557,7 +587,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":238,"../block_utils":20}],55:[function(require,module,exports){
+},{"../../locale/current/eval":246,"../block_utils":25}],60:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -580,7 +610,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":237,"../../locale/current/eval":238,"ejs":253}],54:[function(require,module,exports){
+},{"../../locale/current/common":245,"../../locale/current/eval":246,"ejs":261}],59:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -875,7 +905,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":237,"../../locale/current/eval":238,"../sharedFunctionalBlocks":185,"./evalUtils":67}],53:[function(require,module,exports){
+},{"../../locale/current/common":245,"../../locale/current/eval":246,"../sharedFunctionalBlocks":193,"./evalUtils":72}],58:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -996,7 +1026,7 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":57,"./evalEllipse":58,"./evalImage":60,"./evalMulti":61,"./evalPolygon":62,"./evalRect":63,"./evalStar":64,"./evalText":65,"./evalTriangle":66,"./evalUtils":67}],66:[function(require,module,exports){
+},{"./evalCircle":62,"./evalEllipse":63,"./evalImage":65,"./evalMulti":66,"./evalPolygon":67,"./evalRect":68,"./evalStar":69,"./evalText":70,"./evalTriangle":71,"./evalUtils":72}],71:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1047,7 +1077,7 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":60,"./evalUtils":67}],65:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],70:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1086,7 +1116,7 @@ EvalText.prototype.getText = function () {
   return this.text_;
 };
 
-},{"./evalImage":60,"./evalUtils":67}],64:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],69:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1133,7 +1163,7 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":60,"./evalUtils":67}],63:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],68:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1168,7 +1198,7 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":60,"./evalUtils":67}],62:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],67:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1207,7 +1237,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":60,"./evalUtils":67}],61:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],66:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1254,7 +1284,7 @@ EvalImage.prototype.getChildren = function () {
   return [this.image1_, this.image2_];
 };
 
-},{"./evalImage":60,"./evalUtils":67}],58:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],63:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1287,7 +1317,7 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":60,"./evalUtils":67}],57:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],62:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1322,7 +1352,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":60,"./evalUtils":67}],60:[function(require,module,exports){
+},{"./evalImage":65,"./evalUtils":72}],65:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1390,7 +1420,7 @@ EvalImage.prototype.getChildren = function () {
   return [];
 };
 
-},{"./evalUtils":67}],67:[function(require,module,exports){
+},{"./evalUtils":72}],72:[function(require,module,exports){
 var CustomEvalError = require('./evalError');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1488,7 +1518,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":232,"./evalError":59}],59:[function(require,module,exports){
+},{"../utils":240,"./evalError":64}],64:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1526,6 +1556,6 @@ CustomEvalError.Type = {
   UserCodeException: 3
 };
 
-},{"../../locale/current/eval":238}],238:[function(require,module,exports){
+},{"../../locale/current/eval":246}],246:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
-},{}]},{},[69]);
+},{}]},{},[74]);

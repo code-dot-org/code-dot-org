@@ -205,6 +205,25 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('specificDistrict', function() {
+    return function(cohorts, searchDistrict) {
+      if (searchDistrict && searchDistrict !== '') {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          for (var i = 0; i < cohort.districts.length; i++) {
+            if (searchDistrict.id === cohort.districts[i].id) {
+              filtered.push(cohort);
+              break;
+            }
+          };
+        });
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   // CONTROLLERS
 
   var controllers = angular.module('opsApp.controllers', []).
@@ -215,6 +234,11 @@ title: "Ops Dashboard"
       $scope.districtsLoaded = false;
 
       $scope.districts = districtsService.query();
+
+      $scope.del = function (district) {
+        $scope.districts.splice($scope.districts.indexOf(district), 1); // remove from array
+        districtsService.remove({id: district.id}); // service call
+      }
 
       $scope.save = function (district) {
         if (district.id) {
@@ -403,7 +427,17 @@ title: "Ops Dashboard"
             complete: function(results) {
               if (results.data) {
                 for (var i = 0; i < results.data.length; i++) {
+                  // turn on editing
                   results.data[i].editing = true;
+                  // look up the district by name
+                  var district_name = results.data[i].district;
+                  delete results.data[i].district;
+
+                  for (var j = 0; j < $scope.cohort.districts.length; j++) {
+                    if ($scope.cohort.districts[j].name == district_name) {
+                      results.data[i].district = $scope.cohort.districts[j];
+                    }
+                  }
                 }
                 $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
                 $scope.$apply();
@@ -506,27 +540,24 @@ title: "Ops Dashboard"
         return 'N/A';
       }
 
-      $scope.save = function (workshop, segment) {
+      $scope.save = function (workshop) {
          if (workshop.id) {
            var newWorkshop = new workshopsService($scope.workshop);
            workshopsService.update({id: workshop.id}, workshop);
+           $('#save-confirmation').css('display', 'inline');
+           $('#save-confirmation').fadeOut(2500);
          } else {
            var newWorkshop = new workshopsService($scope.workshop);
            newWorkshop.$save().then(
              function(saved) {
                $scope.workshop = saved; /* just in case it has been modified on server */
                workshopsService.query().$promise.then(function (workshops) {
-                 if (segment) {
-                  $scope.saveSegment(segment);
-                 } else {
-                  $scope.workshops = workshops;
-                 }
+                 $scope.workshops = workshops;
+                 $('#save-confirmation').css('display', 'inline');
+                 $('#save-confirmation').fadeOut(2500);
                });
              }
            );
-         }
-         if (!segment) {
-          $location.path('/workshops');
          }
       }
 
@@ -541,8 +572,6 @@ title: "Ops Dashboard"
             });
           }
         );
-        $location.path('/workshops');
       }
     }
   ]);
-

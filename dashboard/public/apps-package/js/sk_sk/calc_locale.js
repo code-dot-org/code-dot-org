@@ -163,6 +163,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Cieľ:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Tu je tvoj príbeh! Pokračuj v práci, alebo choď na ďalšiu úlohu!"},
 "yourExpression":function(d){return "Tvoj výraz:"},

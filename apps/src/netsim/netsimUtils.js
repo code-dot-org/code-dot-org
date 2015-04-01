@@ -12,34 +12,11 @@
 /* global $ */
 'use strict';
 
+var _ = require('../utils').getLodash();
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 
 var EncodingType = netsimConstants.EncodingType;
-var NodeType = netsimConstants.NodeType;
-
-/**
- * Given a set of rows from the node table on a shard, gives back a set of node
- * controllers (of appropriate types).
- * @param {!NetSimShard} shard
- * @param {!Array.<Object>} rows
- * @throws when a row doesn't have a mappable node type.
- * @return {Array.<NetSimNode>} nodes for the rows
- */
-exports.nodesFromRows = function (shard, rows) {
-  return rows
-      .map(function (row) {
-        if (row.type === NodeType.CLIENT) {
-          return new NetSimClientNode(shard, row);
-        } else if (row.type == NodeType.ROUTER) {
-          return new NetSimRouterNode(shard, row);
-        }
-        // Oops!  We probably shouldn't ever get here.
-        throw new Error("Unable to map row to node.");
-      });
-};
 
 /**
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
@@ -112,4 +89,76 @@ exports.forEachEnumValue = function (enumObj, func) {
       func(enumObj[enumKey]);
     }
   }
+};
+
+/**
+ * Rules used by serializeNumber and deserializeNumber to map unsupported
+ * JavaScript values into JSON and back.
+ * @type {{jsVal: number, jsonVal: string}[]}
+ * @readonly
+ */
+var NUMBER_SERIALIZATION_RULES = [
+  { jsVal: Infinity, jsonVal: 'Infinity' },
+  { jsVal: -Infinity, jsonVal: '-Infinity' },
+  { jsVal: NaN, jsonVal: 'NaN' },
+  { jsVal: undefined, jsonVal: 'undefined' }
+];
+
+/**
+ * Checks that the provided value is actually the special value NaN, unlike
+ * standard isNaN which returns true for anything that's not a number.
+ * @param {*} val - any value
+ * @returns {boolean}
+ */
+var isExactlyNaN = function (val) {
+  // NaN is the only value in JavaScript that is not exactly equal to itself.
+  // Therefore, if val !== val, then val must be NaN.
+  return val !== val;
+};
+
+/**
+ * Because JSON doesn't support the values Infinity, NaN, or undefined, you can
+ * use this method to store those values in JSON as strings.
+ * @param {number|NaN} num
+ * @returns {number|string}
+ */
+exports.serializeNumber = function (num) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
+    return rule.jsVal === num || (isExactlyNaN(rule.jsVal) && isExactlyNaN(num));
+  });
+  return applicableRule ? applicableRule.jsonVal : num;
+};
+
+/**
+ * Because JSON doesn't support the values Infinity, NaN, or undefined, you can
+ * use this method to retrieve a value from JSON that is either a number or one
+ * of those values.
+ * @param {number|string} storedNum
+ * @returns {number|NaN}
+ */
+exports.deserializeNumber = function (storedNum) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
+    return rule.jsonVal === storedNum;
+  });
+  return applicableRule ? applicableRule.jsVal : storedNum;
+};
+
+/**
+ * @param {netsimLevelConfiguration} levelConfig
+ * @returns {netsimLevelConfiguration} same thing, but with certain values
+ *          converted or cleaned.
+ * @private
+ */
+exports.scrubLevelConfiguration_ = function (levelConfig) {
+  var scrubbedLevel = _.clone(levelConfig, true);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
+      scrubbedLevel.defaultPacketSizeLimit);
+
+  // Read string "Infinity" as Infinity
+  scrubbedLevel.defaultRouterBandwidth = exports.deserializeNumber(
+      scrubbedLevel.defaultRouterBandwidth);
+
+  return scrubbedLevel;
 };

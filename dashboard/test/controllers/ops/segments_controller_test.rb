@@ -8,8 +8,8 @@ module Ops
       @request.headers['Accept'] = 'application/json'
       @admin = create(:admin)
       sign_in @admin
-      @workshop = create(:cohort).workshops.first
-      @segment = @workshop.segments.first
+      @segment = create(:segment)
+      @workshop = @segment.workshop
     end
 
     # Test index + CRUD controller actions

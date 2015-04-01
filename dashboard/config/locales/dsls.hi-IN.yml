@@ -5,8 +5,9 @@
         Convert Blocks to Math: खंड गणित करने हेतु परिवर्तित करे
         Type out the arithmetic expression that matches this code: कोड से मेल खाती
           हुई गणितीय अभिव्यक्ति प्रविष्ट करे
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: अपनी अंकगणितीय अभिव्यक्ति ,यहाँ पे टाइप
           करें
       Blocks to Bools 2:

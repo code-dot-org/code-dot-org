@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ادامه بده"},
 "container":function(d){return "فضا سازی کنید"},
 "containerTooltip":function(d){return "یک فضای جداسازی می سازد و داخلش را HTML قرار می دهد."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "تبریک! شما پازل نهایی را حل کردید."},
 "nextLevel":function(d){return "تبریک! شما این پازل را به اتمام رساندید."},
 "no":function(d){return "نه"},

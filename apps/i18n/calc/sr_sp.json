@@ -8,6 +8,7 @@
   "failedInput": "Ваша функција не враћа прави резултат за све вредности.",
   "goal": "Циљ:",
   "levelIncompleteError": "Твој израз се не подудара са задатком.",
+  "missingFunctionError": "You must define a function named {functionName}.",
   "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Ево вашег прорачуна! Наставите да радите на њему, или пређите на следећу пузлу!",
   "yourExpression": "Ваш израз:",

@@ -1,3 +1,5 @@
+= view 'popup_window.js'
+
 .share-buttons.clear
   - unless facebook.nil_or_empty?
     %a.window-popup{:href=>"https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}<

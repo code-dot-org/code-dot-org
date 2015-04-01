@@ -147,6 +147,24 @@ ar:
         a number: a number
         a string: a string
         boolean: boolean
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        a image: a image
+        a number: a number
+        a string: a string
+        boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: 'فنان - الاختيار المتعدد'
         Which blocks draw a rectangle with a perimeter of 100?: أي القطع يمكنه رسم مستطيل محيطه 100 ؟
@@ -307,7 +325,6 @@ ar:
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: "Which answer most accurately describes the unicorn's movement?"
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: "The unicorn's y value changes"
         The unicorn moves to the left: The unicorn moves to the left
@@ -525,7 +542,6 @@ ar:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(المستطيل (+ 8 2) (-7 5) "الصلبة" "الأحمر")'
         (rectangle (+ 8 2) (- 7 5) solid red): (المستطيل (+ 8 2) (-7 5) الأحمر الصلبة)
       msm variables multi 1:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
         What is the value of x?: What is the value of x?
         a function: a function
         15: "15"

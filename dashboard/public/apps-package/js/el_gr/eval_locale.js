@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"},
-"displayBlockTitle":function(d){return "εμφάνιση"},
+"displayBlockTitle":function(d){return "υπολογισμός"},
 "ellipseBlockTitle":function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"},
 "emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"},

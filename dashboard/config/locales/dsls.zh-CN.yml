@@ -4,8 +4,9 @@
       Blocks to Bools 1:
         Convert Blocks to Math: 将语句块转化成数学语言
         Type out the arithmetic expression that matches this code: 输入与此代码相符的算术表达式
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Bools 2:
         Convert Blocks to Math: 将语句块转化成数学语言
@@ -54,8 +55,8 @@
         Convert Blocks to Math: 将语句块转化成数学语言
         Type out the arithmetic expression that matches this code: 输入与此代码相符的算术表达式
         Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
-        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
-        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        (2 * 3) - (1 + 0): (2 * 3)-(1 + 0)
+        2 * 3 - (1 + 0): 2 * 3-(1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
         Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 4:
@@ -93,7 +94,7 @@
         Type the arithmetic expression here: 在这里键入算术表达式
       Open text response example:
         Open text response example: Open text response example
-        I loved it because...: I loved it because...
+        I loved it because...: 我喜欢它是因为......
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Facilitating
           a positive learning environment in your computer science classroom

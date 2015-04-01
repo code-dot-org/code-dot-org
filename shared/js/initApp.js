@@ -175,13 +175,20 @@ dashboard.updateTimestamp = function() {
   }
 };
 
+var appToProjectUrl = {
+  turtle: '/p/artist',
+  studio: '/p/playlab',
+  applab: '/p/applab'
+};
+
 dashboard.saveProject = function(callback) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : Applab.getCode();
-  dashboard.currentApp.level = window.location.pathname;
+      : window.Applab && Applab.getCode();
+  dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
+  dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
@@ -196,7 +203,7 @@ dashboard.saveProject = function(callback) {
     channels().create(dashboard.currentApp, function(data) {
       if (data) {
         dashboard.currentApp = data;
-        location.hash = dashboard.currentApp.id + '/edit';
+        location.href = dashboard.currentApp.level + '#' + dashboard.currentApp.id + '/edit';
         dashboard.updateTimestamp();
         callbackSafe(callback, data);
       } else {
@@ -265,6 +272,10 @@ function initApp() {
       }
     });
 
+    if (dashboard.currentApp && dashboard.currentApp.levelHtml) {
+      appOptions.level.levelHtml = dashboard.currentApp.levelHtml;
+    }
+
     if (dashboard.isEditingProject) {
       if (dashboard.currentApp) {
         if (dashboard.currentApp.levelSource) {
@@ -286,6 +297,11 @@ function initApp() {
       appOptions.hideSource = true;
       appOptions.callouts = [];
     }
+  } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
+    dashboard.currentApp = {
+      name: 'Untitled Project'
+    };
+    dashboard.showMinimalProjectHeader();
   }
   window[appOptions.app + 'Main'](appOptions);
 }
@@ -371,12 +387,14 @@ loadStyle(appOptions.app);
 var promise;
 if (appOptions.droplet) {
   loadStyle('droplet/droplet.min');
+  loadStyle('tooltipster/tooltipster.min');
   promise = loadSource('jsinterpreter/acorn_interpreter')()
       .then(loadSource('requirejs/require'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full'));
+      .then(loadSource('droplet/droplet-full'))
+      .then(loadSource('tooltipster/jquery.tooltipster'));
   promise = loadProject(promise);
 } else {
   promise = loadSource('blockly')()

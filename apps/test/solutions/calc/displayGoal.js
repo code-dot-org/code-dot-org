@@ -126,7 +126,34 @@ function displayGoalCustomValidator(assert) {
     assert.throws(function () {
       displayGoal(targetSet);
     });
+  });
 
+  displayGoalTest(assert, 'function that calls another function', function () {
+    // f(x) = x
+    // g(y) = f(y)
+    // compute: g(1)
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    targetSet.addEquation_(new Equation('g', ['y'], new ExpressionNode('f', ['y'])));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('g', [1])));
+
+    displayGoal(targetSet);
+
+    // Line 1: g(1) = 1
+    var g = answerExpression.children[0];
+    // assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "g");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "(");
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, "1");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children[3].textContent, ")");
+    assert.equal(g.children[3].getAttribute('class'), null);
+    assert.equal(g.children[4].textContent, replaceSpaces(" = "));
+    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children[5].textContent, replaceSpaces("1"));
+    assert.equal(g.children[5].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'single variable in compute', function () {

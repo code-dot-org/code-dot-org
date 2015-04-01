@@ -13,10 +13,10 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
-var netsimUtils = require('./netsimUtils');
 var tweens = require('./tweens');
 
 /**
@@ -215,7 +215,7 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
  */
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableNodes = netsimUtils.nodesFromRows(this.shard_, rows);
+  var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {

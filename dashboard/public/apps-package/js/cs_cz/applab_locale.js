@@ -41,7 +41,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Pokračovat"},
 "container":function(d){return "create container"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
-"designMode":function(d){return "Design"},
 "finalLevel":function(d){return "Dobrá práce! Vyřešil si poslední hádanku."},
 "nextLevel":function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."},
 "no":function(d){return "Ne"},
