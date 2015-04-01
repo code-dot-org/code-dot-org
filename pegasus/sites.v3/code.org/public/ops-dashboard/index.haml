@@ -382,15 +382,13 @@ title: "Ops Dashboard"
 
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
-          cohort =
-            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
-              $location.path("/teacher-cohorts");
-            });
+          cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
+            $location.path("/teacher-cohorts");
+          });
         } else { // new
-          cohort =
-            cohortsService.save({cohort: cohort}, function() {
-              $location.path("/teacher-cohorts");
-            });
+          cohortsService.save({cohort: cohort}, function() {
+            $location.path("/teacher-cohorts");
+          });
         }
       };
 
