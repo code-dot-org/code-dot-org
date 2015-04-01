@@ -1,6 +1,6 @@
 module OPS
-  API = 'api'
-  DASHBOARDAPI = 'dashboardapi'
+  API = 'api' if !defined? API
+  DASHBOARDAPI = 'dashboardapi' if !defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
