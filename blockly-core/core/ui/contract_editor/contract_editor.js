@@ -241,7 +241,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
  */
 Blockly.ContractEditor.prototype.autoOpenWithLevelConfiguration = function (configuration) {
   this.autoOpenConfig_ = configuration;
-  Blockly.ContractEditor.superClass_.autoOpenWithLevelConfiguration.call(this, configuration.autoOpenFunction);
+  Blockly.ContractEditor.superClass_.autoOpenWithLevelConfiguration.call(this, configuration);
 };
 
 /**
