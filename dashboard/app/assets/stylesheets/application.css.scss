@@ -461,7 +461,12 @@ html, body {
 }
 
 .dash_modal_body {
-  padding-right: 25px;
+  html:not([dir=rtl]) & {
+    padding-right: 25px;
+  }
+  html[dir=rtl] & {
+    padding-left: 25px;
+  }
 }
 
 .btn#dataConfirmOK:hover {
@@ -1734,6 +1739,10 @@ $modal-image-margin-gap: 10px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1802,6 +1811,12 @@ $modal-image-margin-gap: 10px;
   height: auto;
   margin-top: -60px;
   float: left;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 .modal-header {
   border: none;
