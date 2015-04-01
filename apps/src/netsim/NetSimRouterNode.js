@@ -1150,7 +1150,7 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
 /**
  * Walk the router queue, and return the first packet we find beyond the router's
  * memory capacity that the local simulation controls and is able to drop.
- * @returns {messageRow|undefined} undefined if no such message is found.
+ * @returns {messageRow|null} null if no such message is found.
  */
 NetSimRouterNode.prototype.findFirstLocallySimulatedPacketOverMemoryLimit = function () {
   var packet;
@@ -1162,7 +1162,7 @@ NetSimRouterNode.prototype.findFirstLocallySimulatedPacketOverMemoryLimit = func
       return packet;
     }
   }
-  return undefined;
+  return null;
 };
 
 /**

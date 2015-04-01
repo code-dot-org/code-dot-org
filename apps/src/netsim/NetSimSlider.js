@@ -274,6 +274,11 @@ NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
 };
 NetSimSlider.LogarithmicSlider.inherits(NetSimSlider);
 
+/**
+ * For the logarithmic slider, it's easiest to calculate the slider
+ * boundary values once and use them later.
+ * @private
+ */
 NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function () {
   // Pick boundary slider values
   this.maxSliderPosition = this.logFloor_(this.maxValue_);
@@ -289,7 +294,26 @@ NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function () {
   this.negInfinitySliderPosition = this.minSliderPosition - this.step_;
 };
 
+/**
+ * Cheater "floor(log_base_n(x))" method with a hacky workaround for
+ * floating-point errors.  Uses the logarithmic base factor that the slider
+ * is configured for (this.logBase_). Good enough for the slider.
+ * @param {number} val
+ * @returns {number}
+ * @private
+ */
 NetSimSlider.LogarithmicSlider.prototype.logFloor_ = function (val) {
+  // JavaScript floating-point math causes this logarithm calculation to
+  // sometimes return slightly imprecise values. For example:
+  // log(1000) / log(10) === 2.9999999999999996
+  // Although we usually want to floor noninteger values, the above calculation
+  // is supposed to come out as exactly 3.
+  // The fudge factor below gives a threshold at which we will ceil() a result
+  // rather than floor() it, to account for this imprecision.
+  // The _right_ way to fix this is to use a better number type like BigDecimal,
+  // but it's not really worth it for this use case.  Six digits is more than
+  // enough precision for the slider when we're trying to work with whole
+  // numbers anyway.
   var ceilThreshold = 0.0000001;
   return Math.floor(ceilThreshold + (Math.log(val) / this.lnLogBase_));
 };
