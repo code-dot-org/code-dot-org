@@ -189,7 +189,7 @@ module Ops
       # no notification to the ops team
       assert ActionMailer::Base.deliveries.collect(&:subject).none? {|subject| subject.include? '[ops notification]'}
       # all account confirmation instructions
-      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject == 'Code.org confirmation instructions'}
+      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject =~ /instructions/}
     end
 
     test 'Create Cohort with districts' do
