@@ -12,7 +12,45 @@
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html');
+var netsimUtils = require('./netsimUtils');
 var NetSimLogEntry = require('./NetSimLogEntry');
+
+/**
+ * Render every half-second, minimum.
+ * @type {number}
+ * @const
+ */
+var MAX_RENDER_DELAY_MS = 500;
+
+/**
+ * @type {number}
+ * @const
+ */
+var MILLIS_PER_SECOND = 1000;
+
+/**
+ * @type {number}
+ * @const
+ */
+var SECONDS_PER_MINUTE = 60;
+
+/**
+ * @type {number}
+ * @const
+ */
+var MILLIS_PER_MINUTE = MILLIS_PER_SECOND * SECONDS_PER_MINUTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+var MINUTES_PER_HOUR = 60;
+
+/**
+ * @type {number}
+ * @const
+ */
+var MILLIS_PER_HOUR = MILLIS_PER_MINUTE * MINUTES_PER_HOUR;
 
 /**
  * Generator and controller for DNS network lookup table component.
@@ -31,13 +69,18 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.rootDiv_ = rootDiv;
 
   /**
-   * If true, will re-render stats on next frame.  Lets us set lots of
-   * properties within a single frame without rendering for each property
-   * set.
-   * @type {boolean}
+   * Last render time, in simulation-time.
+   * @type {number}
    * @private
    */
-  this.needsRender_ = true;
+  this.lastRenderTime_ = null;
+
+  /**
+   * Unix timestamp (local) of router creation time
+   * @type {number}
+   * @private
+   */
+  this.routerCreationTime_ = 0;
 
   /**
    * Total count of packets this router has received.
@@ -96,7 +139,7 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
    */
   this.usedMemory_ = 0;
 
-  this.render();
+  this.render({});
 };
 
 /**
@@ -108,13 +151,16 @@ NetSimRouterStatsTable.prototype.attachToRunLoop = function (runLoop) {
 
 /**
  * Fill the root div with new elements reflecting the current state
+ * @param {RunLoop.Clock} clock
  */
-NetSimRouterStatsTable.prototype.render = function () {
-  if (!this.needsRender_) {
+NetSimRouterStatsTable.prototype.render = function (clock) {
+  if (!this.needsRender(clock)) {
     return;
   }
 
   var renderedMarkup = $(markup({
+    uptime: this.getLocalizedUptime(),
+    queuedPackets: 0,
     totalPackets: this.totalPackets_,
     successfulPackets: this.successfulPackets_,
     totalData: this.totalData_,
@@ -125,7 +171,45 @@ NetSimRouterStatsTable.prototype.render = function () {
     usedMemory: this.usedMemory_
   }));
   this.rootDiv_.html(renderedMarkup);
-  this.needsRender_ = false;
+  this.lastRenderTime_ = clock.time;
+};
+
+/**
+ * @param {RunLoop.Clock} clock
+ * @returns {boolean} whether a render operation is needed.
+ */
+NetSimRouterStatsTable.prototype.needsRender = function (clock) {
+  return (!this.lastRenderTime_ ||
+      clock.time - this.lastRenderTime_ > MAX_RENDER_DELAY_MS);
+};
+
+/**
+ * Mark the router log data dirty, so that it will re-render on the
+ * next frame.
+ */
+NetSimRouterStatsTable.prototype.setNeedsRender = function () {
+  this.lastRenderTime_ = null;
+};
+
+/**
+ * Get a duration string for the current router uptime.
+ * @returns {string}
+ */
+NetSimRouterStatsTable.prototype.getLocalizedUptime = function () {
+  var hoursUptime = 0;
+  var minutesUptime = 0;
+  var secondsUptime = 0;
+  if (this.routerCreationTime_ > 0) {
+    var millisecondsUptime = Date.now() - this.routerCreationTime_;
+    hoursUptime = Math.floor(millisecondsUptime / MILLIS_PER_HOUR);
+    millisecondsUptime -= hoursUptime * MILLIS_PER_HOUR;
+    minutesUptime = Math.floor(millisecondsUptime / MILLIS_PER_MINUTE);
+    millisecondsUptime -= minutesUptime * MILLIS_PER_MINUTE;
+    secondsUptime = Math.floor(millisecondsUptime / MILLIS_PER_SECOND);
+  }
+  return hoursUptime.toString() +
+      ':' + netsimUtils.zeroPadLeft(minutesUptime, 2) +
+      ':' + netsimUtils.zeroPadLeft(secondsUptime, 2);
 };
 
 /**
@@ -153,28 +237,35 @@ NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
   this.totalData_ = totalSizeOfPackets(logData);
   this.successfulData_ = totalSizeOfPackets(successLogs);
 
-  this.needsRender_ = true;
+  this.setNeedsRender();
+};
+
+/** @param {number} creationTimestampMs */
+NetSimRouterStatsTable.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  this.routerCreationTime_ = creationTimestampMs;
+  this.setNeedsRender();
 };
 
 /** @param {number} newBandwidth in bits per second */
 NetSimRouterStatsTable.prototype.setBandwidth = function (newBandwidth) {
   this.bandwidthLimit_ = newBandwidth;
+  this.setNeedsRender();
 };
 
 /** @param {number} totalMemoryInBits */
 NetSimRouterStatsTable.prototype.setTotalMemory = function (totalMemoryInBits) {
   this.totalMemory_ = totalMemoryInBits;
-  this.needsRender_ = true;
+  this.setNeedsRender();
 };
 
 /** @param {number} usedMemoryInBits */
 NetSimRouterStatsTable.prototype.setMemoryInUse = function (usedMemoryInBits) {
   this.usedMemory_ = usedMemoryInBits;
-  this.needsRender_ = true;
+  this.setNeedsRender();
 };
 
 /** @param {number} dataRateBitsPerSecond */
 NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) {
   this.dataRate_ = dataRateBitsPerSecond;
-  this.needsRender_ = true;
+  this.setNeedsRender();
 };

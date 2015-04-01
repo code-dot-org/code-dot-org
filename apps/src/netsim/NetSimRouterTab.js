@@ -121,6 +121,13 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   }
 };
 
+/** @param {number} creationTimestampMs */
+NetSimRouterTab.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterCreationTime(creationTimestampMs);
+  }
+};
+
 /**
  * @param {number} newBandwidth in bits/second
  */

@@ -110,6 +110,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   NetSimNode.call(this, shard, row);
 
   /**
+   * Unix timestamp (local) of router creation time.
+   * @type {number}
+   */
+  this.creationTime = utils.valueOr(row.creationTime, Date.now());
+
+  /**
    * Sets current DNS mode for the router's local network.
    * This value is manipulated by all clients.
    * @type {DnsMode}
@@ -357,6 +363,7 @@ var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
  * @typedef {Object} routerRow
+ * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
  * @property {number} memory - Router max queue capacity in bits
@@ -375,6 +382,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
@@ -390,6 +398,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.creationTime = remoteRow.creationTime;
   this.bandwidth = deserializeNumber(remoteRow.bandwidth);
   this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
@@ -1041,7 +1050,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
 
   if (!_.isEqual(this.stateCache_, myRow)) {
     this.stateCache_ = myRow;
-    logger.info("Router state changed.");
     this.onMyStateChange_(myRow);
   }
 };
@@ -1088,6 +1096,13 @@ NetSimRouterNode.prototype.getLog = function () {
   return this.myLogRowCache_.map(function (row) {
     return new NetSimLogEntry(this.shard_, row, this.packetSpec_);
   }.bind(this));
+};
+
+/**
+ * @returns {number} the number of packets in the router queue
+ */
+NetSimRouterNode.prototype.getQueuedPacketCount = function () {
+  return this.routerQueueCache_.length;
 };
 
 /**
