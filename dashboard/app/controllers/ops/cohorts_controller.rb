@@ -84,6 +84,8 @@ module Ops
       return unless teacher_param_list
 
       params[:cohort][:teachers] = teacher_param_list.map do |teacher_params|
+        next if teacher_params[:email].blank?
+
         district_params = teacher_params.delete :district
         if district_params.is_a?(String)
           teacher_params[:district_id] = District.find_by!(name: district_params).id
