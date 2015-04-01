@@ -11,32 +11,9 @@
 'use strict';
 
 require('../utils');
-var i18n = require('../../locale/current/netsim');
+var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_BYTE = 8;
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_KILOBYTE = 1024 * BITS_PER_BYTE;
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_MEGABYTE = 1024 * BITS_PER_KILOBYTE;
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_GIGABYTE = 1024 * BITS_PER_MEGABYTE;
 
 /**
  * Generator and controller for packet size slider/selector
@@ -48,8 +25,8 @@ var NetSimMemoryControl = module.exports = function (rootDiv, changeCallback) {
   NetSimSlider.LogarithmicSlider.call(this, rootDiv, {
     onChange: changeCallback,
     value: Infinity,
-    min: BITS_PER_BYTE,
-    max: BITS_PER_MEGABYTE,
+    min: netsimConstants.BITS_PER_BYTE,
+    max: netsimConstants.BITS_PER_MEGABYTE,
     upperBoundInfinite: true
   });
 
@@ -66,30 +43,5 @@ NetSimMemoryControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimMemoryControl.prototype.valueToLabel = function (val) {
-  if (val === Infinity) {
-    return i18n.unlimited();
-  }
-
-  var gbytes = Math.floor(val / BITS_PER_GIGABYTE);
-  if (gbytes > 0) {
-    return i18n.x_GBytes({ x: gbytes });
-  }
-
-  var mbytes = Math.floor(val / BITS_PER_MEGABYTE);
-  if (mbytes > 0) {
-    return i18n.x_MBytes({ x: mbytes });
-  }
-
-  var kbytes = Math.floor(val / BITS_PER_KILOBYTE);
-  if (kbytes > 0) {
-    return i18n.x_KBytes({ x: kbytes });
-  }
-
-  var bytes = Math.floor(val / BITS_PER_BYTE);
-  if (bytes > 0) {
-    return i18n.x_Bytes({ x: bytes });
-  }
-
-  return i18n.x_bits({ x: val });
+  return netsimUtils.bitsToLocalizedRoundedBytesize(val);
 };
-

@@ -557,29 +557,13 @@ NetSimRouterNode.prototype.addRowToSchedule_ = function (queuedRow,
 NetSimRouterNode.prototype.removeRowFromSchedule_ = function (queuedRow) {
   var scheduleIdx;
   for (var i = 0; i < this.localRoutingSchedule_.length; i++) {
-    if (this.localRoutingSchedule_[scheduleIdx].row.id === queuedRow.id) {
+    if (this.localRoutingSchedule_[i].row.id === queuedRow.id) {
       scheduleIdx = i;
     }
   }
   if (scheduleIdx !== undefined) {
     this.localRoutingSchedule_.splice(scheduleIdx, 1);
   }
-};
-
-NetSimRouterNode.prototype.dropPacket = function (queuedRow) {
-  // Begin by tearing out any existing schedule entry
-  this.removeRowFromSchedule_(queuedRow);
-
-  // 1. Remove the message from the queue
-  var message = new NetSimMessage(this.shard_, queuedRow);
-  message.destroy(function (err) {
-    if (err) {
-      return;
-    }
-
-    // 2. Log the packet-drop event
-    this.log(queuedRow.payload, NetSimLogEntry.LogStatus.DROPPED);
-  }.bind(this));
 };
 
 /**
@@ -1147,6 +1131,7 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
   var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
   if (droppablePacket) {
     this.enforcingMemoryLimit_ = true;
+    this.removeRowFromSchedule_(droppablePacket);
     var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
     droppableMessage.destroy(function (err) {
       if (err) {
@@ -1283,7 +1268,7 @@ NetSimRouterNode.prototype.forwardMessageToRecipient_ = function (message, onCom
       simulatingNode,
       message.payload,
       function (err, result) {
-        this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
+        this.log(message.payload, NetSimLogEntry.LogStatus.SUCCESS);
         onComplete(err, result);
       }.bind(this)
   );
