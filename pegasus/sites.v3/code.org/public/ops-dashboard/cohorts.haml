@@ -22,7 +22,7 @@ template: none
   .row{'ng-show' => 'cohorts.length > 0', style: "margin-bottom: 20px;"}
     .col-sm-12
       %form.form-inline
-        %input{'ng-model' => 'filterQuery', placeholder:'Filter by Name'}
+        %input.form-control{'ng-model' => 'filterQuery', placeholder:'Filter by Name'}
         %select.form-control{'ng-model' => 'search.program_type'}
           %option{value:'', label:'--Filter by program type--'}
           %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
