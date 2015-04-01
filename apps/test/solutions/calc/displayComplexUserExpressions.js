@@ -57,7 +57,7 @@ function customValidator(assert) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
       assert.equal(element.children[i].textContent, expectedTextContent);
-      assert.equal(element.children[i].getAttribute('class'), items[i][1]);
+      assert.equal(element.children[i].getAttribute('class'), items[i][1], 'token #' + i);
     }
     assert.equal(element.children.length, i);
   };
@@ -150,14 +150,21 @@ function customValidator(assert) {
       new ExpressionNode('*', [17, 12])));
     setEquationSets(targetSet, userSet);
 
+    // Normally this would happen when we call Calc.generateResults_, but
+    // that replaces our userSet with workspace blocks, so we just manually
+    // hack the failedInput
+    Calc.__testonly__.appState.failedInput = [1];
+
     displayComplexUserExpressions();
+
+    Calc.__testonly__.appState.failedInput = null;
 
     assert.equal(userExpression.children.length, 3);
 
-    // line 1: age = 17
+    // line 1: age = 1
     validateTextElementContainer(userExpression.children[0], [
       ['age = ',  null],
-      ['17',  null]
+      ['1',  null]
     ]);
 
     // line 2: age_in_months = 17 * 12
@@ -168,11 +175,11 @@ function customValidator(assert) {
       ['12',  null]
     ]);
 
-    // line 3: age_in_months = 120
+    // line 3: age_in_months = 204
     validateTextElementContainer(userExpression.children[2], [
       ['age_in_months',  null],
       [' = ',  null],
-      ['204',  null],
+      ['204',  'errorToken'],
     ]);
   });
 
@@ -400,15 +407,13 @@ function customValidator(assert) {
       ['x',  null],
     ]);
 
-    // line 2: f((1 + 1)) = 2 // extra parens tracked by 90669534
+    // line 2: f(1 + 1) = 2
     validateTextElementContainer(userExpression.children[1], [
       ['f',  null],
-      ['(',  null],
       ['(',  null],
       ['1',  null],
       [' + ',  null],
       ['1',  null],
-      [')',  null],
       [')',  null],
       [' = ',  null],
       ['2',  null],
@@ -494,6 +499,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
+    Calc.__testonly__.appState.failedInput = null;
+
     assert.equal(userExpression.children.length, 3);
 
     validateTextElementContainer(userExpression.children[0], [
@@ -517,6 +524,66 @@ function customValidator(assert) {
       [')', null],
       [' = ', null],
       ['5', 'errorToken']
+    ]);
+  });
+
+  displayComplexUserExpressionTest(assert, 'simple target, computesFunctionCall user expression', function () {
+    // compute: 1 + 2
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
+
+    // f(x) = x
+    // compute: f(3)
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('x')));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [3])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 2);
+
+    validateTextElementContainer(userExpression.children[0], [
+      ['f(x) = ', null],
+      ['x', null]
+    ]);
+
+    validateTextElementContainer(userExpression.children[1], [
+      ['f', 'errorToken'],
+      ['(', 'errorToken'],
+      ['3', 'errorToken'],
+      [')', 'errorToken'],
+      [' = ', null],
+      ['3', null]
+    ]);
+  });
+
+
+  displayComplexUserExpressionTest(assert, 'target hasVariablesOrFunctions and user does not', function () {
+    // x = 1
+    // y = 2
+    // compute: x + y
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation('x', [], new ExpressionNode(1)));
+    targetSet.addEquation_(new Equation('y', [], new ExpressionNode(2)));
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', ['x', 'y'])));
+
+    // compute: 1 + 2
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+    validateTextElementContainer(userExpression.children[0], [
+      ['1', 'errorToken'],
+      [' + ', null],
+      ['2', 'errorToken'],
+      [' = ', null],
+      ['3', null]
     ]);
   });
 

@@ -1201,8 +1201,8 @@ Blockly.BlockSvg.prototype.updateMovable = function() {
   }
   this.updateColour()
 };
-Blockly.BlockSvg.prototype.updateGrayOutCSS = function() {
-  if(this.shouldBeGrayedOut()) {
+Blockly.BlockSvg.prototype.grayOut = function(shouldBeGray) {
+  if(shouldBeGray) {
     Blockly.addClass_(this.svgGroup_, "blocklyUndeletable");
     Blockly.removeClass_(this.svgGroup_, "blocklyDeletable")
   }else {
@@ -1324,7 +1324,7 @@ Blockly.BlockSvg.prototype.updateColour = function() {
     return
   }
   var hexColour;
-  if(this.shouldBeGrayedOut()) {
+  if(this.block_.shouldBeGrayedOut()) {
     hexColour = BS.DISABLED_COLOUR
   }else {
     hexColour = this.block_.getHexColour()
@@ -1355,9 +1355,6 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
   for(var x = 0, child;child = children[x];x++) {
     child.svg_.updateDisabled()
   }
-};
-Blockly.BlockSvg.prototype.shouldBeGrayedOut = function() {
-  return Blockly.grayOutUndeletableBlocks && (!this.block_.isDeletable() && (!Blockly.readOnly && this.block_.type !== "when_run"))
 };
 Blockly.BlockSvg.prototype.addSelect = function() {
   Blockly.addClass_(this.svgGroup_, "blocklySelected");
@@ -14237,7 +14234,9 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   if(this.shouldHideIfInMainBlockSpace && (this.shouldHideIfInMainBlockSpace() && this.blockSpace === Blockly.mainBlockSpace)) {
     this.setCurrentlyHidden(true)
   }
+  this.blockEvents = new goog.events.EventTarget
 };
+Blockly.Block.EVENTS = {AFTER_DISPOSED:"afterDisposed"};
 Blockly.Block.prototype.svg_ = null;
 Blockly.Block.prototype.mutator = null;
 Blockly.Block.prototype.comment = null;
@@ -14342,6 +14341,9 @@ Blockly.Block.prototype.unselect = function() {
   this.svg_.removeSpotlight();
   Blockly.fireUiEvent(this.blockSpace.getCanvas(), "blocklySelectChange")
 };
+Blockly.Block.prototype.isCopyable = function() {
+  return true
+};
 Blockly.Block.prototype.dispose = function(healStack, animate) {
   if(goog.isFunction(this.beforeDispose)) {
     this.beforeDispose()
@@ -14383,6 +14385,7 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.dispose();
     this.svg_ = null
   }
+  this.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DISPOSED)
 };
 Blockly.Block.prototype.unplug = function(healStack, bump) {
   bump = bump && !!this.getParent();
@@ -14916,7 +14919,12 @@ Blockly.Block.prototype.isDeletable = function() {
 };
 Blockly.Block.prototype.setDeletable = function(deletable) {
   this.deletable_ = deletable;
-  this.svg_ && this.svg_.updateGrayOutCSS()
+  if(this.svg_) {
+    this.svg_.grayOut(this.shouldBeGrayedOut())
+  }
+};
+Blockly.Block.prototype.shouldBeGrayedOut = function() {
+  return Blockly.grayOutUndeletableBlocks && (!this.isDeletable() && !Blockly.readOnly)
 };
 Blockly.Block.prototype.isMovable = function() {
   return this.movable_ && !Blockly.readOnly
@@ -19092,6 +19100,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.show();
   this.setupUIForBlock_(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
+  this.functionDefinitionBlock.setMovable(false);
+  this.functionDefinitionBlock.setDeletable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;
@@ -19250,8 +19260,6 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   this.modalBlockSpace.clear()
 };
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
   this.moveToMainBlockSpace_(this.functionDefinitionBlock);
   this.functionDefinitionBlock = null;
   goog.dom.getElement("functionNameText").value = "";
@@ -19259,6 +19267,8 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   if(goog.dom.getElement("paramAddText")) {
     goog.dom.getElement("paramAddText").value = ""
   }
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, "function_editor_closed")
 };
@@ -19277,7 +19287,6 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   newCopyOfBlock.moveTo(Blockly.RTL ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   newCopyOfBlock.setCurrentlyHidden(false);
   newCopyOfBlock.setUserVisible(true, true);
-  newCopyOfBlock.setMovable(false);
   return newCopyOfBlock
 };
 Blockly.FunctionEditor.prototype.create_ = function() {
@@ -19388,6 +19397,9 @@ Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER
 };
 Blockly.FunctionEditor.prototype.position_ = function() {
+  if(!this.isOpen()) {
+    return
+  }
   var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
@@ -21750,7 +21762,7 @@ Blockly.ContractEditor.prototype.isAnExampleBlockInEditor_ = function(block) {
 };
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
-  this.exampleBlocks.forEach(function(exampleBlock) {
+  goog.array.clone(this.exampleBlocks).forEach(function(exampleBlock) {
     this.moveToMainBlockSpace_(exampleBlock)
   }, this);
   goog.array.clear(this.exampleBlocks);
@@ -21765,6 +21777,7 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
   this.addRangeEditor_();
   this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
+  this.functionDefinitionBlock.setDeletable(false);
   this.moveExampleBlocksToModal_(functionName);
   this.position_();
   if(this.levelConfigForFirstOpen_) {
@@ -21776,16 +21789,13 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function(functionNa
   var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
   exampleBlocks.forEach(function(exampleBlock) {
     var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
-    var exampleCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-    exampleCall.setMovable(false);
-    exampleCall.setDeletable(false);
-    this.exampleBlocks.push(movedExampleBlock)
+    this.exampleBlocks.push(movedExampleBlock);
+    movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
   }, this)
 };
-Blockly.ContractEditor.prototype.moveToModalBlockSpace = function(block) {
-  var newBlock = Blockly.ContractEditor.superClass_.moveToModalBlockSpace.call(this, block);
-  newBlock.setDeletable(false);
-  return newBlock
+Blockly.ContractEditor.prototype.removeExampleBlock_ = function(block) {
+  goog.array.remove(this.exampleBlocks, block);
+  this.position_()
 };
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
@@ -23444,6 +23454,7 @@ Blockly.CodeGenerator.prototype.addReservedWords = function(words) {
 goog.provide("Blockly.BlockSpaceEditor");
 goog.require("Blockly.BlockSpace");
 goog.require("goog.array");
+goog.require("goog.style");
 Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   if(opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics
@@ -23551,6 +23562,9 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
   this.blockSpace.getTopBlocks(false).forEach(function(block) {
+    if(block.isCurrentlyHidden()) {
+      return
+    }
     var blockHW = block.getHeightWidth();
     if(blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
       return
@@ -23618,22 +23632,23 @@ Blockly.BlockSpaceEditor.prototype.svgSize = function() {
 };
 Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if(style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) + parseInt(style.borderRightWidth, 10)
+  var svgStyle = window.getComputedStyle(svg);
+  var svgBorderWidth = 0;
+  if(svgStyle) {
+    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) + parseInt(svgStyle.borderRightWidth, 10)
   }
-  var div = svg.parentNode;
-  var topSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : this.svg_;
-  var width = div.clientWidth - borderWidth;
-  var height = div.clientHeight - topSvgElement.offsetTop;
-  if(svg.cachedWidth_ != width) {
-    svg.setAttribute("width", width + "px");
-    svg.cachedWidth_ = width
+  var containerDiv = svg.parentNode;
+  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
+  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement) - goog.style.getPageOffsetTop(containerDiv);
+  var svgWidth = containerDiv.clientWidth - svgBorderWidth;
+  var svgHeight = containerDiv.clientHeight - headerHeight;
+  if(svg.cachedWidth_ != svgWidth) {
+    svg.setAttribute("width", svgWidth + "px");
+    svg.cachedWidth_ = svgWidth
   }
-  if(svg.cachedHeight_ != height) {
-    svg.setAttribute("height", height + "px");
-    svg.cachedHeight_ = height
+  if(svg.cachedHeight_ != svgHeight) {
+    svg.setAttribute("height", svgHeight + "px");
+    svg.cachedHeight_ = svgHeight
   }
   if(this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize()
@@ -23720,7 +23735,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
       }
     }else {
       if(e.altKey || (e.ctrlKey || e.metaKey)) {
-        if(Blockly.selected && Blockly.selected.isDeletable()) {
+        if(Blockly.selected && (Blockly.selected.isDeletable() && Blockly.selected.isCopyable())) {
           this.hideChaff();
           if(e.keyCode == 67) {
             Blockly.BlockSpaceEditor.copy_(Blockly.selected)

@@ -25,16 +25,13 @@ theme: none
     %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
-  %h3 Example format:
+  %h3 Example format (please include the heading line in your uploaded file):
   %pre
     = preserve do
-      ops_first_name,ops_last_name,email,district
-      Bob,Smith,bob.smith@example.com,Los Angeles Unified School District
-      Mary,Jones,mary.jones@example.com,Broward County Public Schools
+      ops_first_name,ops_last_name,email,district,ops_school,ops_gender
+      Bob,Smith,bob.smith@example.com,Los Angeles Unified School District,Pine Tree Elementary,Female
+      Mary,Jones,mary.jones@example.com,Broward County Public Schools,Washington Middle School,Male
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
-  %h3 Debug
-  %pre
-    {{cohort.teachers | json}}
 
 %div{'ng-show' => 'cohort.districts.length > 0'}
   %h3 Cohort capacity
@@ -57,6 +54,14 @@ theme: none
 
 %div{'ng-show' => 'cohort.teachers.length > 0'}
   %table{style: "width:950px; table-layout:fixed;"}
+    %colgroup
+      %col{width: "130"}/
+      %col{width: "130"}/
+      %col{width: "155"}/
+      %col
+      %col{width: "175"}/
+      %col{width: "115"}/
+      %col{width: "120"}/
     %tr
       %th.manage-th
         First name

@@ -4,11 +4,11 @@ nav: about_nav
 ---
 
 # Job Openings at Code.org	
-- [Technology Product Manager](#Tech-PM)
+- [Technical Product Manager](#Tech-PM)
 - [K-5 Affiliate Program Manager](#K-5-PM)
+- [Hour of Code Campaign Coordinator](#HOC-Temp)
 - [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
-- [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
 - [Policy Research Analyst](#advocacy-researcher)
@@ -16,7 +16,7 @@ nav: about_nav
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
 
-## <a name="Tech-PM"href="#Tech-PM">Technology Product Manager (Seattle,WA)</a>
+## <a name="Tech-PM"href="#Tech-PM">Technical Product Manager (Seattle,WA)</a>
 **Job Summary:**
 
 Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. Responsibilities of the position include:
@@ -76,6 +76,31 @@ Responsibilities of the position include:
 - Ability to work in a fast-paced, team-based environment with a geographically dispersed team
 - Must be a U.S. Citizen or Permanent Resident
 - Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="HOC-Temp"href="#HOC-Temp">Hour of Code Campaign Manager (Temp) (Seattle,WA)</a>
+**Job Summary:**
+
+The Hour of Code initiative is a yearly campaign to encourage students to try computer science during Computer Science Education Week (Dec. 7-13). Since 2013, it has reached over 100M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting temporary staff to assist the Marketing team in the planning and execution of December’s global Hour of Code campaign. Full-time, June-December contract position.
+
+Responsibilities of this position include:
+
+- Assisting overall marketing efforts for the Hour of Code campaign
+- Managing partner commitments
+- Managing prize fulfillment, guiding winners through the fulfillment process
+- Helping plan special events and maintain a database of key Hour of Code events
+- Supporting our community and fielding questions about the Hour of Code in a timely manner
+- Tracking social media and press coverage related to the campaign 
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Qualifications:**
+
+- Degree in Marketing, Communications or related field
+- Must be a self-starter, multi-tasker and excel in a fast-paced environment
+- Excellent writing skills, with an interest in social media platforms and trends
+- Demonstrated experience with Google Drive (spreadsheets), Google Hangouts, Skype 
+- Passion for technology and inspiring new students to try computer science
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -140,30 +165,7 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="K8-PM" href="#K8-PM">K-8 Program Manager (Seattle, WA preferred)</a>
-**Job Summary:**
 
-Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
-
-- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.
-- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.
-- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors
-- Aligning middle school efforts with elementary and high school efforts
-- Collaborating with Product Team to develop curriculum-specific technology tools 
-- Refining specs with Product Team for teacher dashboard
-- Working with video team to create/integrate educational videos in curriculum
-- Transition between elementary and middle school programs, as needed
-- Collaborating with remote Education team members
-
-**Qualifications:**
-
-The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
-
-Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="HS-PM" href="#HS-PM">High School Program Manager (Seattle, WA preferred)</a> 
 **Job Summary:**

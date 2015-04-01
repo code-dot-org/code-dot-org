@@ -12,6 +12,7 @@ class LevelSourcesController < ApplicationController
 
   def show
     @hide_source = true
+    @is_legacy_share = true
     if params[:embed]
       @embed = true
       @share = false

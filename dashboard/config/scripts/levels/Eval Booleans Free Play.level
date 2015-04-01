@@ -20,8 +20,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "free_play": "false",
-    "coordinate_grid_background": "false"
-  }
+    "coordinate_grid_background": "false",
+    "instructions": "Free Play: Try out some creations of your own using Booleans."
+  },
+  "md5": "db47d839037a1e43ac1b906167d2279e"
 }]]></config>
   <blocks>
     <toolbox_blocks>
