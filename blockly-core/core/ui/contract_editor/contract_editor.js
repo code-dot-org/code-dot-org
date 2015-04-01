@@ -231,7 +231,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
  * String configuration parameters are either "true" or "false"
  * @param {Object} configuration - configuration for the auto-opened editor
  * @param {string} configuration.autoOpenFunction - function to auto-open
- * @param {string} configuration.contractCollapse - auto-collapse contract section,
+ * @param {string} configuration.contractCollapse - auto-collapse contract section
  * @param {string} configuration.contractHighlight - auto-highlight contract section
  * @param {string} configuration.examplesCollapse - auto-collapse examples section
  * @param {string} configuration.examplesHighlight - auto-highlight examples section
