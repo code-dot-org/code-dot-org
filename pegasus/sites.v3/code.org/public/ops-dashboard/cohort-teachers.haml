@@ -97,7 +97,7 @@ theme: none
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.district.name}}
         %div{"ng-show" => "teacher.editing"}
-          %select.district-name.form-control{"ng-model" => "teacher.district.id", "ng-options"=>"district.id as district.name for district in cohort.districts", selectize: true}
+          %select.district-name.form-control{"ng-model" => "teacher.district.id", "ng-options"=>"district.id as district.name for district in cohort.districts | orderBy:'name'", selectize: true}
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.ops_school}}
