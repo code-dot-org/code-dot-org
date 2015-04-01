@@ -727,6 +727,11 @@ $aniGifPreviewHeight: 60px;
     border-right: 1px solid gray;
     float: left;
   }
+  #show-toolbox-header {
+    border: 0;
+    float: left;
+    padding: 0 10px;
+  }
   #blockCounter, #blockUsed {
     display: inline-block;
   }
@@ -744,6 +749,12 @@ $aniGifPreviewHeight: 60px;
   #clear-puzzle-header:hover {
     background-color: #c00;
   }
+  #hide-toolbox, #show-toolbox {
+    cursor: pointer;
+    &:hover {
+      color: #ffb81d;
+    }
+  }
   .block-counter-default {
     color: white;
   }
@@ -759,6 +770,9 @@ $aniGifPreviewHeight: 60px;
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
+    float: right;
+  }
+  #show-toolbox-header {
     float: right;
   }
   #clear-puzzle-header, #show-code-header {
