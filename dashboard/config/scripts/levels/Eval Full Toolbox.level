@@ -1,29 +1,13 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2015-03-10T22:18:42.000Z",
+  "created_at": "2015-03-31T16:23:18.167Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "use_contract_editor": "true",
-    "embed": "false",
-    "is_k1": "false",
-    "skip_instructions_popup": "false",
-    "disable_param_editing": "true",
-    "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
-    "contract_highlight": "false",
-    "contract_collapse": "false",
-    "examples_highlight": "false",
-    "examples_collapse": "false",
-    "definition_highlight": "false",
-    "definition_collapse": "false",
-    "free_play": "false",
-    "coordinate_grid_background": "false",
-    "instructions": "Free Play: Try out some creations of your own using Booleans."
-  },
-  "md5": "db47d839037a1e43ac1b906167d2279e"
+    "use_contract_editor": true
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -33,10 +17,13 @@
           <block type="functional_minus"/>
           <block type="functional_times"/>
           <block type="functional_dividedby"/>
+          <block type="functional_math_number"/>
+          <block type="functional_math_number_dropdown">
+            <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+          </block>
           <block type="functional_sqrt"/>
           <block type="functional_squared"/>
           <block type="functional_pow"/>
-          <block type="functional_math_number"/>
         </category>
         <category name="String">
           <block type="functional_string"/>
@@ -70,6 +57,9 @@
           <block type="functional_logical_or"/>
           <block type="functional_logical_not"/>
           <block type="functional_boolean"/>
+        </category>
+        <category name="Cond">
+          <block type="functional_cond"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>

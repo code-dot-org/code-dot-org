@@ -41,9 +41,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
-    "min_workspace_height": "1250"
-  }
+    "min_workspace_height": "1250",
+    "maze_data": null
+  },
+  "md5": "8625801c74d54f66de9edfd9989e7c51"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -229,6 +230,14 @@
             <title name="SPRITE">0</title>
             <title name="VALUE">0</title>
           </block>
+          <block type="studio_vanishSprite">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_changeScore"/>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">

@@ -70,7 +70,7 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_start_setValue" inline="false">
+        <block type="functional_start_setValue" inline="false" movable="false" editable="false" deletable="false">
           <functional_input name="VALUE">
             <block type="functional_pass">
               <mutation name="rocket-height"/>
