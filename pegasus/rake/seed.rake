@@ -160,7 +160,14 @@ class GSheetToCsv
       return
     end
 
-    buf = @file.spreadsheet.export_as_string('csv')
+    begin
+      csv_uri = @file.raw_file.export_links['application/pdf'].gsub(/pdf$/,'csv')
+      buf = @@gdrive.raw_session.execute!(uri: csv_uri).body
+#      buf = @file.spreadsheet.worksheets.first.export_as_string
+    rescue GoogleDrive::Error => e
+      puts "Error on file: #{@gsheet_path}, #{e}"
+      throw e
+    end
     if @exclude_columns.empty?
       IO.write(@csv_path, buf)
     else

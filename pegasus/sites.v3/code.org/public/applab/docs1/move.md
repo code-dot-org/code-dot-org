@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## move(pixels)
+## move(x, y)
 
 [/name]
 
@@ -19,9 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle from its current location, ignoring which way the turtle is facing.
+Moves the turtle from its current location.
 
 [/short_description]
+
+Adds x to the turtle's x position and y to the turtle's y position. Unlike moveForward(pixels), the turtle's direction does not change how the turtle is moved. The turtle's direction in not changed.
 
 [/description]
 

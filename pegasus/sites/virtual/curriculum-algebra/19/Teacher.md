@@ -35,7 +35,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Collision Worksheets](../docs/worksheets/collision.pdf)
 - [Safe-right? Design Recipe](../docs/worksheets/safe_right.pdf) (in the student workbook)
@@ -107,16 +107,16 @@ In a right triangle, the side opposite the 90-degree angle is called the hypoten
 ## Activities:
 ### <a name="Activity1"></a> 3) Proving Pythagoras
 
-If your students are new to the Pythagorean Theorem, or are in need of a refresher, this activity is an opportunity to get strenghten their understanding in a hands-on fashtion.
+If your students are new to the Pythagorean Theorem, or are in need of a refresher, this activity is an opportunity to get strengthen their understanding in a hands-on fashion.
 
-Oranize students into small groups of 2-3
+Organize students into small groups of 2-3
 
 <img src="proof1.png" style="float:right; margin: 0 0 20px 20px;"/>
 
 - Pass out Pythagorean Proof materials ( [1](pythag1.png), [2](pythag2.png) ) to each group.
 - Have students cut out the four triangles and one square on first sheet.
 - Explain that, for any right triangle, it is possible to draw a picture where the hypoteneuse is used for all four sides of a square.
-- Have students lay out their grey traingles onto the white square, as show in this diagram.
+- Have students lay out their grey triangles onto the white square, as show in this diagram.
 - Point out that the square itself has four identical sides of length C, which are the hypoteneuses for the triangles. If the area of a square is expressed by _side ∗ side_, then the area of the white space is C2.
 - Have students measure the inner square formed by the four hypotenuses (C)
 
