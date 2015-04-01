@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html');
+var NetSimLogEntry = require('./NetSimLogEntry');
 
 /**
  * Generator and controller for DNS network lookup table component.
@@ -30,6 +31,20 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.rootDiv_ = rootDiv;
 
   /**
+   * Total count of packets this router has received.
+   * @type {number}
+   * @private
+   */
+  this.totalPackets_ = 0;
+
+  /**
+   * Total count of packets this router has successfully processed.
+   * @type {number}
+   * @private
+   */
+  this.successfulPackets_ = 0;
+
+  /**
    * Router's total memory capacity, in bits.
    * @type {number}
    * @private
@@ -43,12 +58,6 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
    */
   this.usedMemory_ = 0;
 
-  /**
-   * @type {Array}
-   * @private
-   */
-  this.routerLogData_ = [];
-
   this.render();
 };
 
@@ -57,6 +66,8 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
  */
 NetSimRouterStatsTable.prototype.render = function () {
   var renderedMarkup = $(markup({
+    totalPackets: this.totalPackets_,
+    successfulPackets: this.successfulPackets_,
     totalMemory: this.totalMemory_,
     usedMemory: this.usedMemory_
   }));
@@ -64,10 +75,13 @@ NetSimRouterStatsTable.prototype.render = function () {
 };
 
 /**
- * @param {Array} logData
+ * @param {NetSimLogEntry[]} logData
  */
 NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
-  this.routerLogData_ = logData;
+  this.totalPackets_ = logData.length;
+  this.successfulPackets_ = logData.filter(function (logEntry) {
+    return logEntry.status === NetSimLogEntry.LogStatus.SUCCESS;
+  }).length;
   this.render();
 };
 
