@@ -28,7 +28,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1hWgXUeeBMh_ah8GUTBshhy_5GAbiIwNj87M-8MkVJH4/edit#slide=id.g63497456e_010/)

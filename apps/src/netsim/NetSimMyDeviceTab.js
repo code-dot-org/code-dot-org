@@ -88,7 +88,7 @@ NetSimMyDeviceTab.prototype.render = function () {
  * @param {number} newChunkSize
  */
 NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
-  this.chunkSizeControl_.setChunkSize(newChunkSize);
+  this.chunkSizeControl_.setValue(newChunkSize);
 };
 
 /**
