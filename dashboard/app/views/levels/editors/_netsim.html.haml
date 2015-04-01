@@ -82,10 +82,18 @@
       %td= boolean_check_box f, :show_router_bandwidth_control
       %td= f.label :show_router_bandwidth_control, 'Show router bandwidth control'
       %td Whether the student can change the max bandwidth of the router in the simulation.
+    %tr
+      %td= boolean_check_box f, :show_router_memory_control
+      %td= f.label :show_router_memory_control, 'Show router memory control'
+      %td Whether the student can change the maximum queue memory of the router in the simulation.
 .field
   = f.label :default_router_bandwidth
   %p The initial maximum bandwidth of the router, given in bits per second.  The control on the router tab snaps to powers of two, so it's probably ideal to give a power of two here.  Can also use "Infinity".
   = f.text_field :default_router_bandwidth, placeholder: 'Bandwidth in bits per second, e.g. "1024" or "Infinity".'
+.field
+  = f.label :default_router_memory
+  %p The initial maximum queue memory of the router, given in bits.  Once the total size of messages queued for the router exceeds this value, incoming packets will be dropped.  The control on the router tab snaps to powers of two, so it's probably ideal to give a power of two here.  Can also use "Infinity".
+  = f.text_field :default_router_memory, placeholder: 'Memory in bits, e.g. "1024" or "Infinity".'
 
 %h3 DNS Tab
 .field

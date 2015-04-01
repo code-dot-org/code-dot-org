@@ -131,7 +131,7 @@ NetSimSendPanel.prototype.render = function () {
           minimumPacketSize: Packet.Encoder.getHeaderLength(this.packetSpec_),
           sliderStepValue: 1
         });
-    this.packetSizeControl_.setPacketSize(this.maxPacketSize_);
+    this.packetSizeControl_.setValue(this.maxPacketSize_);
   }
 
   // Bind useful elements and add handlers
