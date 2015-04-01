@@ -150,6 +150,15 @@ NetSimRouterTab.prototype.setMemory = function (newMemory) {
   }
 };
 
+/**
+ * @param {number} queuedPacketCount
+ */
+NetSimRouterTab.prototype.setRouterQueuedPacketCount = function (queuedPacketCount) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
 /** @param {number} usedMemoryInBits */
 NetSimRouterTab.prototype.setMemoryInUse = function (usedMemoryInBits) {
   if (this.routerStatsTable_) {

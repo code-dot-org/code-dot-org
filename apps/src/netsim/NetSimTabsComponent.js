@@ -186,6 +186,15 @@ NetSimTabsComponent.prototype.setRouterMemory = function (newMemory) {
   }
 };
 
+/**
+ * @param {number} queuedPacketCount
+ */
+NetSimTabsComponent.prototype.setRouterQueuedPacketCount = function (queuedPacketCount) {
+  if (this.routerTab_) {
+    this.routerTab_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
 /** @param {number} usedMemoryInBits */
 NetSimTabsComponent.prototype.setRouterMemoryInUse = function (usedMemoryInBits) {
   if (this.routerTab_) {
