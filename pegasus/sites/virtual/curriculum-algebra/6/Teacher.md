@@ -45,12 +45,12 @@ Suppose we want to make an image with fifty identical, solid red triangles. To d
 
 Even worse, if you decided you wanted fifty blue triangles instead, you'd have to go through and change each and every block. There must be a better way!
 
-We can store that red triangle Evaluation Block in a Variable, let's call it "red-triangle." That name "red-triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition!
+We can store that red triangle Evaluation Block in a Variable, let's call it "red-triangle." That name "red-triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition.
 
 [tip]
 
 # Lesson Tip
- If students have used variables in other programming languages, it's essential to note that in functional programming, as in math, variables are considered immutable - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
+ If students have used variables in other programming languages, it's essential to note that in functional programming, as in math, variables are considered **immutable** - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
 
 [/together]
 
