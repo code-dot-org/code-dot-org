@@ -41,7 +41,7 @@ This lesson has four new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Introduction
 
-In the previous stage, students only worked with a single type of value - Numbers. In this next stage they'll get a chance to write programs with new data types to output text (Strings) and pictures (Images).
+In the previous stage, students only worked with a single type of value - Numbers. In this next stage they will get a chance to write programs with new data types to output text (Strings) and pictures (Images).
 
 <img src="purplestar.png" class="right-img" />
 
