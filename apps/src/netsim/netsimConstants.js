@@ -24,6 +24,42 @@ exports.BITS_PER_NIBBLE = 4;
 exports.BITS_PER_BYTE = 8;
 
 /**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_KILOBYTE = 1024 * exports.BITS_PER_BYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_MEGABYTE = 1024 * exports.BITS_PER_KILOBYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_GIGABYTE = 1024 * exports.BITS_PER_MEGABYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_KILOBIT = 1024;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_MEGABIT = 1024 * exports.BITS_PER_KILOBIT;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_GIGABIT = 1024 * exports.BITS_PER_MEGABIT;
+
+/**
  * Types of nodes that can show up in the simulation.
  * @enum {string}
  */

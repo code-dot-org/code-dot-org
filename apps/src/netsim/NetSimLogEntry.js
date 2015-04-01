@@ -12,6 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
+var i18n = require('../../locale/current/netsim');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
@@ -154,4 +155,13 @@ NetSimLogEntry.prototype.getMessageBinary = function () {
 /** Get packet message as ASCII */
 NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
+};
+
+NetSimLogEntry.prototype.getLocalizedStatus = function () {
+  if (this.status === NetSimLogEntry.LogStatus.SUCCESS) {
+    return i18n.logStatus_success();
+  } else if (this.status === NetSimLogEntry.LogStatus.DROPPED) {
+    return i18n.logStatus_dropped();
+  }
+  return '';
 };

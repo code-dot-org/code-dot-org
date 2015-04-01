@@ -11,26 +11,9 @@
 'use strict';
 
 require('../utils');
-var i18n = require('../../locale/current/netsim');
+var netsimConstants = require('./netsimConstants');
+var netsimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_KILOBIT = 1024;
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_MEGABIT = 1024 * BITS_PER_KILOBIT;
-
-/**
- * @type {number}
- * @const
- */
-var BITS_PER_GIGABIT = 1024 * BITS_PER_MEGABIT;
 
 /**
  * Generator and controller for packet size slider/selector
@@ -43,7 +26,7 @@ var NetSimBandwidthControl = module.exports = function (rootDiv, changeCallback)
     onChange: changeCallback,
     value: Infinity,
     min: 4,
-    max: 128 * BITS_PER_KILOBIT,
+    max: 128 * netsimConstants.BITS_PER_KILOBIT,
     upperBoundInfinite: true
   });
 
@@ -60,24 +43,5 @@ NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimBandwidthControl.prototype.valueToLabel = function (val) {
-  if (val === Infinity) {
-    return i18n.unlimited();
-  }
-
-  var gbps = Math.floor(val / BITS_PER_GIGABIT);
-  if (gbps > 0) {
-    return i18n.x_Gbps({ x: gbps });
-  }
-
-  var mbps = Math.floor(val / BITS_PER_MEGABIT);
-  if (mbps > 0) {
-    return i18n.x_Mbps({ x: mbps });
-  }
-
-  var kbps = Math.floor(val / BITS_PER_KILOBIT);
-  if (kbps > 0) {
-    return i18n.x_Kbps({ x: kbps });
-  }
-
-  return i18n.x_bps({ x: val });
+  return netsimUtils.bitsToLocalizedRoundedBitrate(val);
 };
