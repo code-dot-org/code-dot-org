@@ -47,17 +47,25 @@ goog.require('goog.array');
 /** @const */ var CONTRACT_SECTION_NAME = 'contract';
 /** @const */ var EXAMPLES_SECTION_NAME = 'examples';
 /** @const */ var DEFINITION_SECTION_NAME = 'definition';
-/** @const */ var HIGHLIGHT_CONFIG_SUFFIX = '_highlight';
-/** @const */ var COLLAPSE_CONFIG_SUFFIX = '_collapse';
-/** @const */ var TRUE_CONFIG_VALUE = 'true';
-/** @const */ var DISABLE_EXAMPLES_CONFIG_NAME = 'disable_examples';
+/** @const */ var HIGHLIGHT_CONFIG_SUFFIX = 'Highlight';
+/** @const */ var COLLAPSE_CONFIG_SUFFIX = 'Collapse';
+/** @const */ var DISABLE_EXAMPLES_CONFIG_NAME = 'disableExamples';
 
 /**
  * Class for a functional block-specific contract editor.
+ * @param {Object} configuration - configuration parameters
+ * @param {string} configuration.disableExamples - whether to never show examples
  * @constructor
  */
-Blockly.ContractEditor = function() {
+Blockly.ContractEditor = function(configuration) {
   Blockly.ContractEditor.superClass_.constructor.call(this);
+
+  /**
+   * Whether examples should be hidden for the lifetime of this editor
+   * @type {boolean}
+   * @private
+   */
+  this.disableExamples_ = configuration[DISABLE_EXAMPLES_CONFIG_NAME];
 
   /** @type {Blockly.TypeDropdown} */
   this.outputTypeSelector = null;
@@ -103,8 +111,7 @@ Blockly.ContractEditor = function() {
    * @type {Object}
    * @private
    */
-  this.levelConfig_ = null;
-  this.isFirstOpen_ = false;
+  this.autoOpenConfig_ = null;
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -219,11 +226,22 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.allSections_.set(DEFINITION_SECTION_NAME, this.definitionSectionView_);
 };
 
-/** @override */
-Blockly.ContractEditor.prototype.openWithLevelConfiguration = function (levelConfig) {
-  this.isFirstOpen_ = true;
-  this.levelConfig_ = levelConfig;
-  Blockly.ContractEditor.superClass_.openWithLevelConfiguration.call(this, levelConfig);
+/**
+ * Auto-opens a function editor
+ * String configuration parameters are either "true" or "false"
+ * @param {Object} configuration - configuration for the auto-opened editor
+ * @param {string} configuration.autoOpenFunction - function to auto-open
+ * @param {string} configuration.contractCollapse - auto-collapse contract section,
+ * @param {string} configuration.contractHighlight - auto-highlight contract section
+ * @param {string} configuration.examplesCollapse - auto-collapse examples section
+ * @param {string} configuration.examplesHighlight - auto-highlight examples section
+ * @param {string} configuration.definitionCollapse - auto-collapse definition section
+ * @param {string} configuration.definitionHighlight - auto-highlight definition section
+ * @override
+ */
+Blockly.ContractEditor.prototype.autoOpenWithLevelConfiguration = function (configuration) {
+  this.autoOpenConfig_ = configuration;
+  Blockly.ContractEditor.superClass_.autoOpenWithLevelConfiguration.call(this, configuration.autoOpenFunction);
 };
 
 /**
@@ -499,14 +517,14 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
   var isEditingVariable = this.functionDefinitionBlock.isVariable();
-  var isFirstOpen = this.isFirstOpen_;
-  this.isFirstOpen_ = false;
 
   if (isEditingVariable) {
     this.setupSectionsForVariable_();
   } else {
-    this.setupSectionsForContract_(isFirstOpen);
+    this.setupSectionsForContract_(this.autoOpenConfig_);
   }
+
+  this.autoOpenConfig_ = null;
 };
 
 Blockly.ContractEditor.prototype.setupSectionsForVariable_ = function () {
@@ -519,15 +537,15 @@ Blockly.ContractEditor.prototype.setupSectionsForVariable_ = function () {
   this.definitionSectionView_.setHeaderVisible(false);
 };
 
-Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (isFirstOpen) {
+Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (autoOpenConfig) {
   this.allSections_.forEach(function (sectionView, sectionName) {
-    if (isFirstOpen) {
-      var highlight = this.levelConfig_[sectionName + HIGHLIGHT_CONFIG_SUFFIX];
-      if (highlight === TRUE_CONFIG_VALUE) {
+    if (autoOpenConfig) {
+      var shouldHighlight = autoOpenConfig[sectionName + HIGHLIGHT_CONFIG_SUFFIX];
+      if (shouldHighlight) {
         this.setSectionHighlighted(sectionView);
       }
-      var collapse = this.levelConfig_[sectionName + COLLAPSE_CONFIG_SUFFIX];
-      sectionView.setCollapsed(collapse === TRUE_CONFIG_VALUE);
+      var shouldCollapse = autoOpenConfig[sectionName + COLLAPSE_CONFIG_SUFFIX];
+      sectionView.setCollapsed(shouldCollapse);
     } else {
       sectionView.setHighlighted(false);
       var previousOpenCollapseState = sectionView.isCollapsed();
@@ -536,8 +554,7 @@ Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (isFirstOp
     }
   }, this);
 
-  var disableExamples = this.levelConfig_[DISABLE_EXAMPLES_CONFIG_NAME] === TRUE_CONFIG_VALUE;
-  if (disableExamples) {
+  if (this.disableExamples_) {
     this.contractSectionView_.removeSectionNumber();
     this.definitionSectionView_.removeSectionNumber();
     this.examplesSectionView_.setHidden(true);
