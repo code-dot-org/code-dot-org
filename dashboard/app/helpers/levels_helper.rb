@@ -202,6 +202,13 @@ module LevelsHelper
       coordinate_grid_background
       use_modal_function_editor
       use_contract_editor
+      contract_highlight
+      contract_collapse
+      examples_highlight
+      examples_collapse
+      definition_highlight
+      definition_collapse
+      disable_examples
       default_num_example_blocks
       impressive
       open_function_definition
