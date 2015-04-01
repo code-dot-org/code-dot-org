@@ -6,11 +6,6 @@ var gulp = require('gulp');
 var newer = require('gulp-newer');
 var rename = require("gulp-rename");
 
-gulp.task('clean', function (cb) {
-  var rm = require('rimraf');
-  rm('./build', cb);
-});
-
 var outputDir = './build/package/js/';
 
 var appFilesSrc = [];

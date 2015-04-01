@@ -1,15 +1,15 @@
 {
-  "name": "blockly-mooc",
+  "name": "@cdo/cdo",
   "version": "0.0.161",
   "repository": "https://github.com/code-dot-org/blockly.git",
   "engines": {
     "node": "~0.10.18"
   },
   "scripts": {
-    "gulp": "gulp",
-    "clean": "gulp clean",
-    "test": "gulp test",
-    "dev": "gulp dev"
+    "gulp": "FORCE_COLOR=true gulp",
+    "clean": "rimraf ./build",
+    "test": "npm run gulp -- test",
+    "start": "npm run gulp -- dev"
   },
   "browserify": {
     "transform": [
@@ -31,6 +31,7 @@
     "browserify": "^9.0.2",
     "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
+    "chalk": "^1.0.0",
     "concat-stream": "^1.4.7",
     "connect-livereload": "~0.5.2",
     "event-stream": "^3.1.7",

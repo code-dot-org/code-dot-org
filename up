@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+# Self-contained wrapper script to run foreman on our project's processes
+
+proc = <<Procfile
+dashboard: bin/dashboard-server
+apps: cd apps && npm --silent start
+Procfile
+
+require 'tempfile'
+procfile = Tempfile.new 'procfile'
+procfile.write(proc)
+procfile.close
+
+def load_gem(name, require = nil)
+  begin
+    gem name
+  rescue LoadError
+    system("gem install #{name}")
+    Gem.clear_paths
+    retry
+  end
+  require require || name
+end
+
+load_gem 'foreman'
+system "foreman start -f #{procfile.path} -d #{__dir__}"
