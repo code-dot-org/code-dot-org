@@ -931,6 +931,10 @@ input.header_input {
           outline: 0;
         }
       }
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     li.ui-state-active {
@@ -1017,7 +1021,6 @@ html[dir=rtl] .qtip-content {
 }
 
 a.download-video {
-  float: left;
   z-index: 1;
   cursor: pointer;
   width: 40px;
