@@ -30,11 +30,14 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -1680,7 +1683,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {
