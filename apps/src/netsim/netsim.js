@@ -315,6 +315,13 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.sendWidget_.setChunkSize(newChunkSize);
 };
 
+/** @param {number} creationTimestampMs */
+NetSim.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.tabs_) {
+    this.tabs_.setRouterCreationTime(creationTimestampMs);
+  }
+};
+
 /**
  * Update router bandwidth across the app.
  *
@@ -624,6 +631,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
     myNode = this.connection_.myNode;
   }
 
+  this.setRouterCreationTime(router.creationTime);
   this.setRouterBandwidth(router.bandwidth);
   this.setRouterMemory(router.memory);
   this.setDnsMode(router.dnsMode);

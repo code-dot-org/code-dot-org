@@ -34,10 +34,11 @@
 %>
 <table>
   <tbody>
-    <% writeStatRow('Uptime', '0d0h0m0s'); %>
-    <% fractionStatRow('Packets', successfulPackets, totalPackets); %>
-    <% fractionStatRow('Total Data', successfulData, totalData, netsimUtils.bitsToLocalizedRoundedBytesize); %>
-    <% fractionStatRow('Data rate', dataRate, bandwidthLimit, netsimUtils.bitrateToLocalizedRoundedBitrate); %>
-    <% fractionStatRow('Memory', usedMemory, totalMemory, netsimUtils.bitsToLocalizedRoundedBytesize); %>
+    <% writeStatRow('Uptime', uptime); %>
+    <% writeStatRow('Queued Packets', queuedPackets); %>
+    <% fractionStatRow('Memory Use', usedMemory, totalMemory, netsimUtils.bitsToLocalizedRoundedBytesize); %>
+    <% fractionStatRow('Throughput', dataRate, bandwidthLimit, netsimUtils.bitrateToLocalizedRoundedBitrate); %>
+    <% fractionStatRow('Routed Packets', successfulPackets, totalPackets); %>
+    <% fractionStatRow('Routed Data', successfulData, totalData, netsimUtils.bitsToLocalizedRoundedBytesize); %>
   </tbody>
 </table>

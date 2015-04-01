@@ -165,6 +165,13 @@ NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
   }
 };
 
+/** @param {number} creationTimestampMs */
+NetSimTabsComponent.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.routerTab_) {
+    this.routerTab_.setRouterCreationTime(creationTimestampMs);
+  }
+};
+
 /** @param {number} newBandwidth in bits/second */
 NetSimTabsComponent.prototype.setRouterBandwidth = function (newBandwidth) {
   if (this.routerTab_) {

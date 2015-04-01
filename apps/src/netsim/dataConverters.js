@@ -12,6 +12,7 @@
 'use strict';
 
 require('../utils'); // For String.prototype.repeat polyfill
+var netsimUtils = require('./netsimUtils');
 
 /**
  * Converts a binary string into its most compact string representation.
@@ -129,21 +130,11 @@ exports.binaryToInt = function (binaryString) {
   return parseInt(exports.minifyBinary(binaryString), 2);
 };
 
-exports.zeroPadLeft = function (string, desiredWidth) {
-  var padding = '0'.repeat(desiredWidth);
-  return (padding + string).slice(-desiredWidth);
-};
-
-exports.zeroPadRight = function (string, desiredWidth) {
-  var padding = '0'.repeat(desiredWidth);
-  return (string + padding).substr(0, desiredWidth);
-};
-
 var intToString = function (int, base, width) {
   if (width <= 0) {
     throw new RangeError("Output width must be greater than zero");
   }
-  return exports.zeroPadLeft(int.toString(base), width);
+  return netsimUtils.zeroPadLeft(int.toString(base), width);
 };
 
 /**
@@ -205,7 +196,8 @@ exports.binaryToHex = function (binaryString) {
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    currentNibble = exports.zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
+    currentNibble = netsimUtils.zeroPadRight(
+        uglyBinary.substr(i, nibbleWidth), nibbleWidth);
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
   return chars.join('');
@@ -243,7 +235,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -282,7 +274,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');

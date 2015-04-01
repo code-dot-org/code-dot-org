@@ -225,3 +225,14 @@ exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
 
   return i18n.x_bps({ x: bitsPerSecond });
 };
+
+exports.zeroPadLeft = function (string, desiredWidth) {
+  var padding = '0'.repeat(desiredWidth);
+  return (padding + string).slice(-desiredWidth);
+};
+
+exports.zeroPadRight = function (string, desiredWidth) {
+  var padding = '0'.repeat(desiredWidth);
+  return (string + padding).substr(0, desiredWidth);
+};
+
