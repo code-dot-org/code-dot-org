@@ -50,6 +50,7 @@ goog.require('goog.array');
 /** @const */ var HIGHLIGHT_CONFIG_SUFFIX = '_highlight';
 /** @const */ var COLLAPSE_CONFIG_SUFFIX = '_collapse';
 /** @const */ var TRUE_CONFIG_VALUE = 'true';
+/** @const */ var DISABLE_EXAMPLES_CONFIG_NAME = 'disable_examples';
 
 /**
  * Class for a functional block-specific contract editor.
@@ -102,7 +103,8 @@ Blockly.ContractEditor = function() {
    * @type {Object}
    * @private
    */
-  this.levelConfigForFirstOpen_ = null;
+  this.levelConfig_ = null;
+  this.isFirstOpen_ = false;
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -127,6 +129,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn,
     {
+      sectionNumber: 1,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         // goog.ui.showElement toggles between "hidden" and "hidden" due to
         // inherited properties, so set display directly instead
@@ -137,7 +140,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         return currentY + this.getContractDivHeight();
       }, this),
       highlightBox: sharedHighlightBox,
-      headerText: "1. Contract and Purpose Statement" // TODO(bjordan): i18n,
+      headerText: "Contract and Purpose Statement" // TODO(bjordan): i18n,
     }
   );
 
@@ -146,12 +149,13 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.addExampleButton = new Blockly.SvgTextButton(
     canvasToDrawOn,
     "Add Example", // TODO(bjordan): i18n
-    this.addNewExampleBlock_.bind(this)
+    this.addNewExampleBlock_.bind(this, null)
   );
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
-      headerText: "2. Examples", // TODO(bjordan): i18n
+      sectionNumber: 2,
+      headerText: "Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
         var newY = currentY;
         newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
@@ -179,7 +183,8 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.hiddenDefinitionBlocks_ = [];
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
-      headerText: "3. Definition", /** TODO(bjordan) i18n */
+      sectionNumber: 3,
+      headerText: "Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
@@ -214,29 +219,11 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.allSections_.set(DEFINITION_SECTION_NAME, this.definitionSectionView_);
 };
 
-Blockly.ContractEditor.prototype.firstOpenLevelConfig_ = function (levelConfig) {
-  this.allSections_.forEach(function (sectionView, sectionName) {
-    var highlight = levelConfig[sectionName + HIGHLIGHT_CONFIG_SUFFIX];
-    if (highlight === TRUE_CONFIG_VALUE) {
-      this.setSectionHighlighted(sectionView);
-    }
-    var collapse = levelConfig[sectionName + COLLAPSE_CONFIG_SUFFIX];
-    sectionView.setCollapsed_(collapse === TRUE_CONFIG_VALUE);
-  }, this);
-};
-
-
 /** @override */
 Blockly.ContractEditor.prototype.openWithLevelConfiguration = function (levelConfig) {
-  this.levelConfigForFirstOpen_ = levelConfig;
+  this.isFirstOpen_ = true;
+  this.levelConfig_ = levelConfig;
   Blockly.ContractEditor.superClass_.openWithLevelConfiguration.call(this, levelConfig);
-};
-
-Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlight) {
-  this.allSections_.forEach(function (view) {
-    view.setHighlighted(false);
-  }, this);
-  viewToHighlight.setHighlighted(true);
 };
 
 /**
@@ -309,20 +296,25 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   this.updateFrameColorForType_(this.functionDefinitionBlock.getOutputType());
   this.functionDefinitionBlock.setDeletable(false);
   this.moveExampleBlocksToModal_(functionName);
-  this.position_();
+  this.setupAfterExampleBlocksAdded_();
 
-  if (this.levelConfigForFirstOpen_) {
-    this.firstOpenLevelConfig_(this.levelConfigForFirstOpen_);
-    this.levelConfigForFirstOpen_ = null;
-  }
+  this.position_();
+};
+
+Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlight) {
+  this.allSections_.forEach(function (view) {
+    view.setHighlighted(false);
+  }, this);
+  viewToHighlight.setHighlighted(true);
 };
 
 /**
  * Adds a new example block to the editor for the given function definition
  * @private
  */
-Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
-  var createdExampleBlock = this.createExampleBlock_(this.functionDefinitionBlock);
+Blockly.ContractEditor.prototype.addNewExampleBlock_ = function (opt_functionDefinitionBlock) {
+  var functionDefinitionBlock = opt_functionDefinitionBlock || this.functionDefinitionBlock;
+  var createdExampleBlock = this.createExampleBlock_(functionDefinitionBlock);
   this.addExampleBlockFromMainBlockSpace(createdExampleBlock);
   this.position_();
 };
@@ -367,13 +359,13 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     opt_blockCreationCallback(tempFunctionDefinitionBlock);
   }
 
-  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
-
-  if (!this.functionDefinitionBlock.isVariable()) {
+  if (!tempFunctionDefinitionBlock.isVariable()) {
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-      this.addNewExampleBlock_();
+      this.addNewExampleBlock_(tempFunctionDefinitionBlock);
     }
   }
+
+  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
 };
 
 /**
@@ -501,20 +493,55 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
-  if (isEditingVariable) {
-    this.contractSectionView_.setHeaderVisible(false);
-    this.examplesSectionView_.hideCompletely();
-    this.definitionSectionView_.setHeaderVisible(false);
-  } else {
-    this.expandAllSections_();
-  }
+
   Blockly.ContractEditor.superClass_.show.call(this);
 };
 
-Blockly.ContractEditor.prototype.expandAllSections_ = function () {
-  this.contractSectionView_.showHeaderAndExpand();
-  this.examplesSectionView_.showHeaderAndExpand();
-  this.definitionSectionView_.showHeaderAndExpand();
+Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
+  var isEditingVariable = this.functionDefinitionBlock.isVariable();
+  var isFirstOpen = this.isFirstOpen_;
+  this.isFirstOpen_ = false;
+
+  if (isEditingVariable) {
+    this.setupSectionsForVariable_();
+  } else {
+    this.setupSectionsForContract_(isFirstOpen);
+  }
+};
+
+Blockly.ContractEditor.prototype.setupSectionsForVariable_ = function () {
+  this.contractSectionView_.setHidden(false);
+  this.contractSectionView_.setHeaderVisible(false);
+
+  this.examplesSectionView_.hideCompletely();
+
+  this.definitionSectionView_.setHidden(false);
+  this.definitionSectionView_.setHeaderVisible(false);
+};
+
+Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (isFirstOpen) {
+  this.allSections_.forEach(function (sectionView, sectionName) {
+    if (isFirstOpen) {
+      var highlight = this.levelConfig_[sectionName + HIGHLIGHT_CONFIG_SUFFIX];
+      if (highlight === TRUE_CONFIG_VALUE) {
+        this.setSectionHighlighted(sectionView);
+      }
+      var collapse = this.levelConfig_[sectionName + COLLAPSE_CONFIG_SUFFIX];
+      sectionView.setCollapsed(collapse === TRUE_CONFIG_VALUE);
+    } else {
+      sectionView.setHighlighted(false);
+      var previousOpenCollapseState = sectionView.isCollapsed();
+      sectionView.setCollapsed(!previousOpenCollapseState);
+      sectionView.setCollapsed(previousOpenCollapseState);
+    }
+  }, this);
+
+  var disableExamples = this.levelConfig_[DISABLE_EXAMPLES_CONFIG_NAME] === TRUE_CONFIG_VALUE;
+  if (disableExamples) {
+    this.contractSectionView_.removeSectionNumber();
+    this.definitionSectionView_.removeSectionNumber();
+    this.examplesSectionView_.setHidden(true);
+  }
 };
 
 Blockly.ContractEditor.prototype.isShowingHeaders_ = function () {
