@@ -461,12 +461,7 @@ html, body {
 }
 
 .dash_modal_body {
-  html:not([dir=rtl]) & {
-    padding-right: 25px;
-  }
-  html[dir=rtl] & {
-    padding-left: 25px;
-  }
+  padding-right: 25px;
 }
 
 .btn#dataConfirmOK:hover {
