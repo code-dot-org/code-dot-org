@@ -240,6 +240,7 @@ module LevelsHelper
       show_dns_mode_control
       default_dns_mode
       input_output_table
+      complete_on_success_condition_not_goals
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -314,6 +315,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
+    app_options[:isLegacyShare] = true if @is_legacy_share
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|

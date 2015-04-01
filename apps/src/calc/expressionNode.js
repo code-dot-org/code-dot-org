@@ -117,7 +117,9 @@ ExpressionNode.prototype.isExponential = function () {
  *   not account for div zeros in descendants
  */
 ExpressionNode.prototype.isDivZero = function () {
-  return this.getValue() === '/' && jsnums.equals(this.getChildValue(1), 0);
+  var rightChild = this.getChildValue(1);
+  return this.getValue() === '/' && jsnums.isSchemeNumber(rightChild) &&
+    jsnums.equals(rightChild, 0);
 };
 
 /**
@@ -374,11 +376,16 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     new Token('(', !nodesMatch)
   ];
 
-  for (var i = 0; i < this.children_.length; i++) {
+  var numChildren = this.children_.length;
+  for (var i = 0; i < numChildren; i++) {
     if (i > 0) {
       tokens.push(new Token(',', !nodesMatch));
     }
-    tokens.push(tokensForChild(i));
+    var childTokens = tokensForChild(i);
+    if (numChildren === 1) {
+      ExpressionNode.stripOuterParensFromTokenList(childTokens);
+    }
+    tokens.push(childTokens);
   }
 
   tokens.push(new Token(")", !nodesMatch));
@@ -545,6 +552,9 @@ ExpressionNode.prototype.setValue = function (value) {
  * Get the value of the child at index
  */
 ExpressionNode.prototype.getChildValue = function (index) {
+  if (this.children_[index] === undefined) {
+    return undefined;
+  }
   return this.children_[index].value_;
 };
 
@@ -572,4 +582,17 @@ ExpressionNode.prototype.debug = function () {
     this.children_.map(function (c) {
       return c.debug();
     }).join(' ') + ")";
+};
+
+/**
+ * Given a token list, if the first and last items are parens, removes them
+ * from the list
+ */
+ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
+  if (tokenList.length >= 2 && tokenList[0].isParenthesis() &&
+      tokenList[tokenList.length - 1].isParenthesis()) {
+    tokenList.splice(-1);
+    tokenList.splice(0, 1);
+  }
+  return tokenList;
 };

@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## getRed(image, x, y)
+## getRed(imageData, x, y)
 
 [/name]
 
@@ -41,7 +41,7 @@ ____________________________________________________
 createCanvas('canvas1', 320, 480); //Make a canvas element with the name 'canvas1' and size 320x480 pixels
 setFillColor('red'); //Set the fill color of future drawn shapes
 rect(0, 0, 100, 200); //Draw a 100x200 pixel rectangle at x:0 y:0 on the screen
-var imageData = getImageData(0,0,320,480); //Get image data of the canvas (from x:0 y:0 to x:320 y:480)
+var imageData = getImageData(0, 0, 320, 480); //Get image data of the canvas (from x:0 y:0 to x:320 y:480)
 
 //Get red value of pixel at x:50 y:50 from input imageData and store it in variable 'redValue'
 var redValue = getRed(imageData, 50, 50);
@@ -63,12 +63,12 @@ ____________________________________________________
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
 rect(0, 0, 100, 200);
-var imageData = getImageData(0,0,320,480);
+var imageData = getImageData(0, 0, 320, 480);
 
 //Print red value of pixel at x:50 y:50 in imageData to the debugging console. Again we will see 255.
 console.log(getRed(imageData, 50, 50));
 
-//First modify the red value at x:50 y:50 in the image data then update the canvas
+//First change the red value of a pixel in the image data then update the canvas
 setRed(imageData, 50, 50, 0); //Set the red value of pixel at x:50 y:50 in imageData to zero
 putImageData(imageData, 0, 0); //Update the canvas with modified image data starting at x:0 y:0
 
@@ -89,7 +89,7 @@ ____________________________________________________
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
 rect(0, 0, 100, 200);
-var imageData = getImageData(0,0,320,480);
+var imageData = getImageData(0, 0, 320, 480);
 
 //Divide the red value of pixel at x:50 y:50 in imageData by 2 and store as 'newRed'
 var newRed = (getRed(imageData, 50, 50) / 2);
@@ -124,7 +124,7 @@ function removeRed(thisImageData){
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
 rect(0, 0, 100, 200);
-var imageData = getImageData(0,0,320,480);
+var imageData = getImageData(0, 0, 320, 480);
 
 //Then we will call our function to remove all red from the canvas one pixel at a time
 removeRed(imageData);

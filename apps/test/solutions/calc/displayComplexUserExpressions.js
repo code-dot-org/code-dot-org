@@ -407,15 +407,13 @@ function customValidator(assert) {
       ['x',  null],
     ]);
 
-    // line 2: f((1 + 1)) = 2 // extra parens tracked by 90669534
+    // line 2: f(1 + 1) = 2
     validateTextElementContainer(userExpression.children[1], [
       ['f',  null],
-      ['(',  null],
       ['(',  null],
       ['1',  null],
       [' + ',  null],
       ['1',  null],
-      [')',  null],
       [')',  null],
       [' = ',  null],
       ['2',  null],
@@ -529,7 +527,7 @@ function customValidator(assert) {
     ]);
   });
 
-  displayComplexUserExpressionTest(assert, 'simple target, hasSingleFunction user expression', function () {
+  displayComplexUserExpressionTest(assert, 'simple target, computesFunctionCall user expression', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
     targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
