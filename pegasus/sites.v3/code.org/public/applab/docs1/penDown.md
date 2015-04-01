@@ -19,11 +19,11 @@ Category: Turtle
 
 [short_description]
 
-penDown creates a line as the turtle moves
+penDown will cause a line to be drawn behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: - [penUp()](/applab/docs/penUp) is often used with penDown
+**Note**: [penUp()](/applab/docs/penUp) is often used with penDown
 
 [/description]
 
@@ -33,6 +33,35 @@ ____________________________________________________
 [example]
 
 <pre>
+/*  Example 1
+*/
+
+penDown();            // creates a line behind the turtle as it moves
+moveForward(100);     // moves the turtle forward 100 pixels
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+<pre>
+/*  Example 2
+
+    This example uses penUp and penDown to draw a dotted line
+*/
+
+penWidth(3);                  // sets the pen's thickness to 3 pixels
+penUp();                      // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(-125, 25);               // moves the turtle to its starting location
+turnRight(90);                // turns the turtle 90 degrees so that it is facing to the right
+for (var i = 0; i < 5; i++) { // repeats the code 5 times, drawing 5 lines separated by white space
+  penDown();                  // puts the pen down so the turtle leaves a line behind it as it moves
+  moveForward(25);            // moves the turtle froward 25 pixels
+  penUp();                    // lifts the pen up so the turtle does not leave a line behind it as it moves
+  moveForward(25);            // moves the turtle forward 25 pixels
+}
 
 </pre>
 
@@ -43,31 +72,34 @@ ____________________________________________________
 [example]
 
 <pre>
-hide();             // hide the turtle
-arcRight(360, 25);  // draw a 25 pixel radius circle (eye)
-penUp();            // lift the pen up to stop leaving a trail
-move(25, 10);       // move inside the circle (eye)
-penDown();          // put the pen back down to leave a trail
-dot(10);            // draw a 10 pixel dot (pupil)
-penUp();            // life the pen up to stop leaving a trail
-move(-100, -10);    // move into position for the second eye
-penDown();          // put the pen back down to leave a trail
-arcRight(360, 25);  // draw the second eye, a 25 pixel radius circle
-penUp();            // life the pen up to stop leaving a trail
-move(25, 10);       // move into place
-dot(10);            // draw the second pupil
+/*  Example 3
+
+    This example uses penUp and penDown to draw a pair of eyes
+*/
+
+hide();             // hides the turtle
+penDown();          // puts the pen down so the turtle leaves a line behind it as it moves
+arcRight(360, 25);  // draws a circle with a 25 pixel diameter (eye)
+penUp();            // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(25, 10);       // moves the turtle inside the circle (eye)
+dot(10);            // draws a 10 pixel dot (pupil)
+move(-100, -10);    // moves the turtle into position for the second eye
+penDown();          // puts the pen back down so the turtle leaves a line behind it as it moves
+arcRight(360, 25);  // draws the second eye, a circle with a 25 pixel diameter
+penUp();            // lifts the pen up so the turtle does not leave a line behind it as it moves
+move(25, 10);       // moves the turtle inside the circle (eye)
+dot(10);            // draws a 10 pixel dot (pupil)
 </pre>
 
 
 [/example]
-
 ____________________________________________________
 
 [syntax]
 
 ### Syntax
 <pre>
-penUp();
+penDown();
 </pre>
 
 [/syntax]
@@ -75,9 +107,7 @@ penUp();
 [parameters]
 
 ### Parameters
-
-
-None.
+`penDown()` does not take any parameters.
 
 [/parameters]
 

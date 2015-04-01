@@ -63,6 +63,13 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {number} defaultRouterBandwidth - How fast the router should be
  *           able to process packets, on initial level load.
  *
+ * @property {boolean} showRouterMemoryControl - Whether students should be
+ *           able to see and manipulate the slider that adjusts the router's
+ *           maximum queue memory.
+ *
+ * @property {number} defaultRouterMemory - How much data the router packet
+ *           queue is able to hold before it starts dropping packets, in bits.
+ *
  * @property {boolean} showDnsModeControl - Whether the DNS mode controls will
  *           be available to the student.
  *
@@ -136,6 +143,8 @@ levels.default = {
   // Router tab and its controls
   showRouterBandwidthControl: true,
   defaultRouterBandwidth: Infinity,
+  showRouterMemoryControl: true,
+  defaultRouterMemory: Infinity,
 
   // DNS tab and its controls
   showDnsModeControl: true,

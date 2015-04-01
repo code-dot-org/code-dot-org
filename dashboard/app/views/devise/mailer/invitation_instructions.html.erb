@@ -1,0 +1,12 @@
+<p>Welcome <%= @resource.email %>!</p>
+
+<p>A Code Studio account has been created for you. Please click on the link below to confirm your account details and begin using it.</p>
+
+<p><%= link_to 'Confirm your account', accept_invitation_url(@resource, :invitation_token => @token) %></p>
+
+<p>If you have any questions, do not hesitate to contact <%= mail_to 'pd@code.org' %>.</p>
+
+<p>
+Thanks,<br/>
+The Code.org PD Team
+</p>
