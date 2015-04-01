@@ -10,6 +10,7 @@
  */
 'use strict';
 
+// Utils required only for Function.prototype.inherits()
 require('../utils');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
