@@ -1716,8 +1716,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
-/* moved over from apps */
-
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 
@@ -1759,6 +1757,40 @@ $modal-image-margin-gap: 10px;
   .feedback-links {
     margin-top: 15px;
   }
+
+  .feedback-callout {
+    border: solid;
+    border-radius: 10px;
+    border-color: red;
+
+    p {
+      margin: 15px;
+      color: red;
+      padding-right: 20%;
+    }
+
+    .congrats {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .hint-header {
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
+    }
+
+    .hint-image {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .lines-of-code-message {
+    font-size: 20px;
+    line-height: normal;
+    color: $charcoal;
+    margin: 0 0 8px;
+  }
 }
 
 .dialog-title {
@@ -1768,6 +1800,7 @@ $modal-image-margin-gap: 10px;
 
 #ok-button {
   background-color: $orange;
+  border: 1px solid $orange;
   color: white;
   min-width: 100px;
 }
@@ -1806,10 +1839,17 @@ $modal-image-margin-gap: 10px;
   border: none;
 }
 
-/* also moved over from apps */
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 
 .farSide {
   text-align: right;
+  html[dir=rtl] & {
+    text-align: left;
+  }
 }
 
 /* Buttons from apps */
