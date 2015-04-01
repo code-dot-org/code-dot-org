@@ -413,9 +413,13 @@ Eval.execute = function() {
     image: Eval.encodedFeedbackImage
   };
 
+<<<<<<< HEAD
   // don't try it if function is not defined, which should probably only be
   // true in our test environment
   if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
+=======
+  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') { // don't try it if function is not defined
+>>>>>>> support sharing for Eval
     studioApp.report(reportData);
   } else {
     document.getElementById('svgEval').toDataURL("image/png", {
