@@ -81,6 +81,15 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
 };
 
 /**
+ * @param {RunLoop} runLoop
+ */
+NetSimRouterTab.prototype.attachToRunLoop = function (runLoop) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.attachToRunLoop(runLoop);
+  }
+};
+
+/**
  * Fill the root div with new elements reflecting the current state.
  */
 NetSimRouterTab.prototype.render = function () {
@@ -119,6 +128,9 @@ NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
   if (this.bandwidthControl_) {
     this.bandwidthControl_.setValue(newBandwidth);
   }
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setBandwidth(newBandwidth);
+  }
 };
 
 /** @param {number} newMemory in bits/second */
@@ -135,5 +147,12 @@ NetSimRouterTab.prototype.setMemory = function (newMemory) {
 NetSimRouterTab.prototype.setMemoryInUse = function (usedMemoryInBits) {
   if (this.routerStatsTable_) {
     this.routerStatsTable_.setMemoryInUse(usedMemoryInBits);
+  }
+};
+
+/** @param {number} dataRateBitsPerSecond */
+NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setDataRate(dataRateBitsPerSecond);
   }
 };
