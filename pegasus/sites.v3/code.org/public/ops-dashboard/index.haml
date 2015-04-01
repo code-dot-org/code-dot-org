@@ -427,7 +427,17 @@ title: "Ops Dashboard"
             complete: function(results) {
               if (results.data) {
                 for (var i = 0; i < results.data.length; i++) {
+                  // turn on editing
                   results.data[i].editing = true;
+                  // look up the district by name
+                  var district_name = results.data[i].district;
+                  delete results.data[i].district;
+
+                  for (var j = 0; j < $scope.cohort.districts.length; j++) {
+                    if ($scope.cohort.districts[j].name == district_name) {
+                      results.data[i].district = $scope.cohort.districts[j];
+                    }
+                  }
                 }
                 $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
                 $scope.$apply();
@@ -565,4 +575,3 @@ title: "Ops Dashboard"
       }
     }
   ]);
-
