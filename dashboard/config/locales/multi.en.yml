@@ -645,10 +645,10 @@ en:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
