@@ -553,10 +553,7 @@ Blockly.ContractEditor.prototype.setupSectionsForContract_ = function (autoOpenC
       sectionView.setHighlighted(false);
       sectionView.setHidden(false);
       sectionView.setHeaderVisible(true);
-      var previousOpenCollapseState = sectionView.isCollapsed();
-      // Cycle of collapsed callbacks
-      sectionView.setCollapsed(!previousOpenCollapseState);
-      sectionView.setCollapsed(previousOpenCollapseState);
+      sectionView.setCollapsed(sectionView.isCollapsed()); // refresh
     }
   }, this);
 
