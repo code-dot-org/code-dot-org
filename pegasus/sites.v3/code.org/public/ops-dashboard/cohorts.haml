@@ -28,7 +28,7 @@ template: none
           %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
             {{program_type.long_name}}
         %label.control-label{for: "cohort-filter-district"} Filter by district
-        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts"}
+        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts | orderBy:'name'"}
           %option{value:'', label:'--Show All Districts--'}
   %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
     No cohorts are available.
