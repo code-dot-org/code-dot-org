@@ -13,7 +13,7 @@
     "netsim"
   ],
   "javascripts": {
-    "./test.js": "./build/test.js"
+    "./test.js": "../dashboard/public/test.js"
   },
   "stylesheets": {
     "./style/*.scss": "./build/package/css"

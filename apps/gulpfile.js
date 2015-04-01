@@ -21,7 +21,7 @@ config.apps.forEach(function (app) {
 });
 var appsBrowserifyConfig = {src: appFilesSrc, dest: outputDir + 'common.js', factorBundleDest: appFilesDest};
 
-gulp.task('browserify', ['vendor'], function() {
+gulp.task('browserify', ['npm-install', 'vendor'], function() {
   var browserify = require('./lib/gulp/gulp-browserify');
   var browserifyConfigs = [appsBrowserifyConfig].concat(config.javascripts);
   return es.merge(browserifyConfigs.map(function(config) {
@@ -119,6 +119,12 @@ gulp.task('build', ['browserify', 'media', 'sass', 'messages']);
 // Call 'package' for maximum compression of all .js files
 gulp.task('package', ['compress', 'media', 'sass', 'messages']);
 
+gulp.task('npm-install', function() {
+  var install = require("gulp-install");
+  return gulp.src(['./src/package.json'])
+    .pipe(install());
+});
+
 // watch-mode incremental builds for dev environment
 gulp.task('dev', ['vendor', 'messages', 'media', 'sass'], function() {
   gulp.watch(MESSAGES_PATH, ['messages']);
@@ -126,11 +132,11 @@ gulp.task('dev', ['vendor', 'messages', 'media', 'sass'], function() {
   gulp.watch(Object.keys(config.stylesheets), ['sass']);
 
   var extend = require('util')._extend;
-  appsBrowserifyConfig = extend(appsBrowserifyConfig, {watch: true});
   var browserify = require('./lib/gulp/gulp-browserify');
   var javascripts = Object.keys(config.javascripts).map(function(src) {
     return {src: src, dest: config.javascripts[src]};
   });
+  appsBrowserifyConfig = extend(appsBrowserifyConfig, {watch: true});
   var browserifyConfigs = [appsBrowserifyConfig].concat(javascripts);
   return es.merge(browserifyConfigs.map(function(config) {
     config = extend(config, {watch: true});

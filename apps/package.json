@@ -8,7 +8,8 @@
   "scripts": {
     "gulp": "gulp",
     "clean": "gulp clean",
-    "test": "gulp test"
+    "test": "gulp test",
+    "dev": "gulp dev"
   },
   "browserify": {
     "transform": [
@@ -37,6 +38,7 @@
     "factor-bundle": "^2.3.3",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.5.2",
+    "gulp-install": "^0.4.0",
     "gulp-jshint": "^1.9.0",
     "gulp-mocha": "^2.0.0",
     "gulp-newer": "^0.5.0",
