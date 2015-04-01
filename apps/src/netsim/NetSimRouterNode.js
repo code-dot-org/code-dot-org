@@ -1094,11 +1094,20 @@ NetSimRouterNode.prototype.getLog = function () {
  * @returns {number} router memory currently in use, in bits
  */
 NetSimRouterNode.prototype.getMemoryInUse = function () {
-  return this.routerQueueCache_.map(function (row) {
-    return row.payload.length;
-  }).reduce(function (prev, cur) {
-    return prev + cur;
+  return this.routerQueueCache_.reduce(function (prev, cur) {
+    return prev + cur.payload.length;
   }, 0);
+};
+
+/**
+ * @returns {number} expected router data rate (in bits per second) over the
+ *          next second
+ */
+NetSimRouterNode.prototype.getCurrentDataRate = function () {
+  // For simplicity, we're defining the 'curent data rate' as how many bits
+  // we expect to get processed in the next second; which is our queue size,
+  // capped at our bandwidth.
+  return Math.min(this.getMemoryInUse(), this.bandwidth);
 };
 
 /**

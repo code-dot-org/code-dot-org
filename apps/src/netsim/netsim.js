@@ -249,6 +249,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
+    this.tabs_.attachToRunLoop(this.runLoop_);
 }
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
@@ -464,6 +465,16 @@ NetSim.prototype.setRouterMemoryInUse_ = function (usedMemoryInBits) {
 };
 
 /**
+ * @param {number} dataRateBitsPerSecond
+ * @private
+ */
+NetSim.prototype.setRouterDataRate_ = function (dataRateBitsPerSecond) {
+  if (this.tabs_) {
+    this.tabs_.setRouterDataRate(dataRateBitsPerSecond);
+  }
+};
+
+/**
  * Load audio assets for this app
  * TODO (bbuchanan): Ought to pull this into an audio management module
  * @private
@@ -623,6 +634,7 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
 
 NetSim.prototype.onRouterStatsChange_ = function (router) {
   this.setRouterMemoryInUse_(router.getMemoryInUse());
+  this.setRouterDataRate_(router.getCurrentDataRate());
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {

@@ -203,7 +203,7 @@ exports.bitsToLocalizedRoundedBytesize = function (bits) {
  * @param {number} bitsPerSecond
  * @returns {string} - localized string representation of speed in bits
  */
-exports.bitsToLocalizedRoundedBitrate = function (bitsPerSecond) {
+exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
   if (bitsPerSecond === Infinity) {
     return i18n.unlimited();
   }

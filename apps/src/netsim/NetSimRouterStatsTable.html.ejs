@@ -37,7 +37,7 @@
     <% writeStatRow('Uptime', '0d0h0m0s'); %>
     <% fractionStatRow('Packets', successfulPackets, totalPackets); %>
     <% fractionStatRow('Total Data', successfulData, totalData, netsimUtils.bitsToLocalizedRoundedBytesize); %>
-    <% writeStatRow('Data rate', '1Kbps'); %>
+    <% fractionStatRow('Data rate', dataRate, bandwidthLimit, netsimUtils.bitrateToLocalizedRoundedBitrate); %>
     <% fractionStatRow('Memory', usedMemory, totalMemory, netsimUtils.bitsToLocalizedRoundedBytesize); %>
   </tbody>
 </table>
