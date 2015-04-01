@@ -302,16 +302,6 @@ def log_in_as(user)
   @browser.manage.add_cookie params
 end
 
-Given(/^I am logged in$/) do
-  student = User.find_or_create_by!(email: 'student@testing.xx') do |student|
-    student.name = "Test student"
-    student.password = SecureRandom.base64
-    student.user_type = 'student'
-    student.age = 8
-  end
-  log_in_as(student)
-end
-
 Given(/^I am a teacher$/) do
   @teacher = User.find_or_create_by!(email: 'teacher@testing.xx') do |teacher|
     teacher.name = "Test teacher"
