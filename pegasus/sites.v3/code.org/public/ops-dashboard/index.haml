@@ -529,7 +529,22 @@ title: "Ops Dashboard"
           }
         }
         return count;
-      }
+      };
+
+      $scope.isTooManyTeachers = function() {
+        if (!$scope.cohort.districts) {
+          return false;
+        }
+
+        for (var i = 0; i < $scope.cohort.districts.length; i++) {
+          var district = $scope.cohort.districts[i];
+          if ($scope.countTeachersFromDistrict(district) > district.max_teachers) {
+            return true;
+          }
+        }
+        return false;
+      };
+
     }
   ]);
 
