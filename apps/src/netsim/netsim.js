@@ -454,6 +454,16 @@ NetSim.prototype.setRouterLogData = function (logData) {
 };
 
 /**
+ * @param {number} usedMemoryInBits
+ * @private
+ */
+NetSim.prototype.setRouterMemoryInUse_ = function (usedMemoryInBits) {
+  if (this.tabs_) {
+    this.tabs_.setRouterMemoryInUse(usedMemoryInBits);
+  }
+};
+
+/**
  * Load audio assets for this app
  * TODO (bbuchanan): Ought to pull this into an audio management module
  * @private
@@ -552,6 +562,11 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
     this.routerStateChangeKey = undefined;
   }
 
+  if (this.routerStatsChangeKey !== undefined) {
+    this.myConnectedRouter_.statsChange.unregister(this.routerStatsChangeKey);
+    this.routerStatsChangeKey = undefined;
+  }
+
   if (this.routerWireChangeKey !== undefined) {
     this.myConnectedRouter_.wiresChange.unregister(this.routerWireChangeKey);
     this.routerWireChangeKey = undefined;
@@ -569,10 +584,14 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
   if (router) {
     // Propagate changes
     this.onRouterStateChange_(router);
+    this.onRouterStatsChange_(router);
 
     // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
         this.onRouterStateChange_.bind(this));
+
+    this.routerStatsChangeKey = router.statsChange.register(
+        this.onRouterStatsChange_.bind(this));
 
     this.routerWireChangeKey = router.wiresChange.register(
         this.onRouterWiresChange_.bind(this));
@@ -583,6 +602,8 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
 };
 
 /**
+ * Local response to router state changing, which may have been triggered
+ * locally or remotely.
  * @param {NetSimRouterNode} router
  * @private
  */
@@ -598,6 +619,10 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
   this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
+};
+
+NetSim.prototype.onRouterStatsChange_ = function (router) {
+  this.setRouterMemoryInUse_(router.getMemoryInUse());
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {

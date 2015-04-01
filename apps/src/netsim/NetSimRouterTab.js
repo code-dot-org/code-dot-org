@@ -118,11 +118,19 @@ NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
   }
 };
 
-/**
- * @param {number} newMemory in bits/second
- */
+/** @param {number} newMemory in bits/second */
 NetSimRouterTab.prototype.setMemory = function (newMemory) {
   if (this.memoryControl_) {
     this.memoryControl_.setValue(newMemory);
+  }
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setTotalMemory(newMemory);
+  }
+};
+
+/** @param {number} usedMemoryInBits */
+NetSimRouterTab.prototype.setMemoryInUse = function (usedMemoryInBits) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setMemoryInUse(usedMemoryInBits);
   }
 };

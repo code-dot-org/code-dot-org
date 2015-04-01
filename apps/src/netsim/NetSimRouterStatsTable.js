@@ -30,6 +30,20 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.rootDiv_ = rootDiv;
 
   /**
+   * Router's total memory capacity, in bits.
+   * @type {number}
+   * @private
+   */
+  this.totalMemory_ = 0;
+
+  /**
+   * Current size of the router's packet queue, in bits.
+   * @type {number}
+   * @private
+   */
+  this.usedMemory_ = 0;
+
+  /**
    * @type {Array}
    * @private
    */
@@ -43,7 +57,8 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
  */
 NetSimRouterStatsTable.prototype.render = function () {
   var renderedMarkup = $(markup({
-    tableData: this.routerLogData_
+    totalMemory: this.totalMemory_,
+    usedMemory: this.usedMemory_
   }));
   this.rootDiv_.html(renderedMarkup);
 };
@@ -53,5 +68,17 @@ NetSimRouterStatsTable.prototype.render = function () {
  */
 NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
   this.routerLogData_ = logData;
+  this.render();
+};
+
+/** @param {number} totalMemoryInBits */
+NetSimRouterStatsTable.prototype.setTotalMemory = function (totalMemoryInBits) {
+  this.totalMemory_ = totalMemoryInBits;
+  this.render();
+};
+
+/** @param {number} usedMemoryInBits */
+NetSimRouterStatsTable.prototype.setMemoryInUse = function (usedMemoryInBits) {
+  this.usedMemory_ = usedMemoryInBits;
   this.render();
 };

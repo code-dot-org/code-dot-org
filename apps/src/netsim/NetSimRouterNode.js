@@ -199,6 +199,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.stateChange = new ObservableEvent();
 
   /**
+   * Event others can observe, which we fire when the router statistics
+   * change (which may be very frequent...)
+   *
+   * @type {ObservableEvent}
+   */
+  this.statsChange = new ObservableEvent();
+
+  /**
    * Local cache of wires attached to this router, used for detecting and
    * broadcasting relevant changes.
    *
@@ -1083,6 +1091,17 @@ NetSimRouterNode.prototype.getLog = function () {
 };
 
 /**
+ * @returns {number} router memory currently in use, in bits
+ */
+NetSimRouterNode.prototype.getMemoryInUse = function () {
+  return this.routerQueueCache_.map(function (row) {
+    return row.payload.length;
+  }).reduce(function (prev, cur) {
+    return prev + cur;
+  }, 0);
+};
+
+/**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
  * @param {messageRow[]} rows
@@ -1118,8 +1137,7 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
   this.enforceMemoryLimit_();
-
-  // Propagate notification of queue change (for stats, etc)
+  this.statsChange.notifyObservers(this);
 };
 
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {

@@ -1,3 +1,6 @@
+<%
+var netsimUtils = require('./netsimUtils');
+%>
 <table>
   <tbody>
     <tr>
@@ -14,7 +17,13 @@
     </tr>
     <tr>
       <th>Memory</th>
-      <td>8B / 16KB (5%)</td>
+      <td>
+        <%= netsimUtils.bitsToLocalizedRoundedBytesize(usedMemory) %>
+        / <%= netsimUtils.bitsToLocalizedRoundedBytesize(totalMemory) %>
+        <% if (totalMemory < Infinity) { %>
+          (<%= Math.round(100 * usedMemory / totalMemory) %>%)
+        <% } %>
+      </td>
     </tr>
   </tbody>
 </table>
