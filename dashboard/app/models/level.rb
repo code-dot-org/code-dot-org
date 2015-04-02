@@ -15,6 +15,7 @@ class Level < ActiveRecord::Base
 
   include StiFactory
   include SerializedProperties
+  include BlocklyLevel
 
   serialized_attrs %w(video_key embed)
 
