@@ -666,7 +666,7 @@ Calc.generateResults_ = function () {
     if (compute && !compute.getInputTargetBlock('ARG1')) {
       appState.message = calcMsg.emptyComputeBlock();
     } else {
-      appState.message = calcMsg.emptyFunctionalBlock();
+      appState.message = commonMsg.emptyFunctionalBlock();
     }
     return;
   }
