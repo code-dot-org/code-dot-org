@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Đây là một số mẹo:"},
 "genericFeedback":function(d){return "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn."},
 "toggleBlocksErrorMsg":function(d){return "Bạn cần phải sửa một lỗi trong chương trình của bạn trước khi nó được hiển thị thành các khối."},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Check out what I made"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

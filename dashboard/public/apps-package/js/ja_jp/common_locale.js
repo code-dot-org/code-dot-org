@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "コツ："},
 "genericFeedback":function(d){return "どうなったかよく見て、プログラムを直してみよう。"},
 "toggleBlocksErrorMsg":function(d){return "ブロックとして表示させるために、あなたのプログラムのエラーを直す必要があります。"},
-"defaultTwitterText":function(d){return "私の作品を試してみてください"}};
+"defaultTwitterText":function(d){return "私の作品を試してみてください"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

@@ -3601,19 +3601,24 @@ var EncodingType = netsimConstants.EncodingType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
+var formatAB = dataConverters.formatAB;
 var formatBinary = dataConverters.formatBinary;
 var formatHex = dataConverters.formatHex;
 var alignDecimal = dataConverters.alignDecimal;
-var binaryToInt = dataConverters.binaryToInt;
-var intToBinary = dataConverters.intToBinary;
-var hexToInt = dataConverters.hexToInt;
-var intToHex = dataConverters.intToHex;
-var hexToBinary = dataConverters.hexToBinary;
+var abToBinary = dataConverters.abToBinary;
+var abToInt = dataConverters.abToInt;
+var binaryToAB = dataConverters.binaryToAB;
 var binaryToHex = dataConverters.binaryToHex;
-var decimalToBinary = dataConverters.decimalToBinary;
+var binaryToInt = dataConverters.binaryToInt;
 var binaryToDecimal = dataConverters.binaryToDecimal;
-var asciiToBinary = dataConverters.asciiToBinary;
 var binaryToAscii = dataConverters.binaryToAscii;
+var hexToInt = dataConverters.hexToInt;
+var hexToBinary = dataConverters.hexToBinary;
+var intToAB = dataConverters.intToAB;
+var intToBinary = dataConverters.intToBinary;
+var intToHex = dataConverters.intToHex;
+var decimalToBinary = dataConverters.decimalToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
 
 /**
  * Generator and controller for message sending view.
@@ -3865,6 +3870,13 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   /** @type {rowType[]} */
   var rowTypes = [
     {
+      typeName: EncodingType.A_AND_B,
+      shortNumberAllowedCharacters: /[AB]/i,
+      shortNumberConversion: abToInt,
+      messageAllowedCharacters: /[AB\s]/i,
+      messageConversion: abToBinary
+    },
+    {
       typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
@@ -3953,6 +3965,11 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     Packet.HeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
+          inputElement: this.a_and_bUI[fieldName],
+          newValue: intToAB(this[fieldName], 4)
+        });
+
+        liveFields.push({
           inputElement: this.binaryUI[fieldName],
           newValue: intToBinary(this[fieldName], 4)
         });
@@ -3972,6 +3989,12 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
           newValue: this[fieldName].toString(10)
         });
       }, this);
+
+  liveFields.push({
+    inputElement: this.a_and_bUI.message,
+    newValue: formatAB(binaryToAB(this.message), chunkSize),
+    watermark: netsimMsg.a_and_b()
+  });
 
   liveFields.push({
     inputElement: this.binaryUI.message,
@@ -4766,9 +4789,11 @@ with (locals || {}) { (function(){
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
 
+  var formatAB = dataConverters.formatAB;
   var formatBinary = dataConverters.formatBinary;
   var formatHex = dataConverters.formatHex;
   var alignDecimal = dataConverters.alignDecimal;
+  var binaryToAB = dataConverters.binaryToAB;
   var binaryToInt = dataConverters.binaryToInt;
   var binaryToHex = dataConverters.binaryToHex;
   var binaryToDecimal = dataConverters.binaryToDecimal;
@@ -4795,9 +4820,9 @@ with (locals || {}) { (function(){
  * @param {string} message
  */
   function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    ; buf.push('\n      <tr class="', escape((41,  encodingType )), '">\n        <th nowrap class="', escape((42,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((42,  getEncodingLabel(encodingType) )), '</th>\n        ');43; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((44,  PacketUIColumnType.TO_ADDRESS )), '">', escape((44,  toAddress )), '</td>\n        ');45; } ; buf.push('\n        ');46; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((47,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((47,  fromAddress )), '</td>\n        ');48; } ; buf.push('\n        ');49; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((50,  PacketUIColumnType.PACKET_INFO )), '">', escape((50,  packetInfo )), '</td>\n        ');51; } ; buf.push('\n        <td class="', escape((52,  PacketUIColumnType.MESSAGE )), '">', escape((52,  message )), '</td>\n      </tr>\n  ');54;
+    ; buf.push('\n      <tr class="', escape((43,  encodingType )), '">\n        <th nowrap class="', escape((44,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((44,  getEncodingLabel(encodingType) )), '</th>\n        ');45; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((46,  PacketUIColumnType.TO_ADDRESS )), '">', escape((46,  toAddress )), '</td>\n        ');47; } ; buf.push('\n        ');48; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((49,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((49,  fromAddress )), '</td>\n        ');50; } ; buf.push('\n        ');51; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((52,  PacketUIColumnType.PACKET_INFO )), '">', escape((52,  packetInfo )), '</td>\n        ');53; } ; buf.push('\n        <td class="', escape((54,  PacketUIColumnType.MESSAGE )), '">', escape((54,  message )), '</td>\n      </tr>\n  ');56;
   }
- ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="', escape((60,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n      ');61; if (showToAddress) { ; buf.push('\n        <th nowrap class="', escape((62,  PacketUIColumnType.TO_ADDRESS )), '">', escape((62,  i18n.to() )), '</th>\n      ');63; } ; buf.push('\n      ');64; if (showFromAddress) { ; buf.push('\n        <th nowrap class="', escape((65,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((65,  i18n.from() )), '</th>\n      ');66; } ; buf.push('\n      ');67; if (showPacketInfo) { ; buf.push('\n        <th nowrap class="', escape((68,  PacketUIColumnType.PACKET_INFO )), '">', escape((68,  i18n.packet() )), '</th>\n      ');69; } ; buf.push('\n      <th nowrap class="', escape((70,  PacketUIColumnType.MESSAGE )), '">', escape((70,  i18n.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');74;
+ ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="', escape((62,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n      ');63; if (showToAddress) { ; buf.push('\n        <th nowrap class="', escape((64,  PacketUIColumnType.TO_ADDRESS )), '">', escape((64,  i18n.to() )), '</th>\n      ');65; } ; buf.push('\n      ');66; if (showFromAddress) { ; buf.push('\n        <th nowrap class="', escape((67,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((67,  i18n.from() )), '</th>\n      ');68; } ; buf.push('\n      ');69; if (showPacketInfo) { ; buf.push('\n        <th nowrap class="', escape((70,  PacketUIColumnType.PACKET_INFO )), '">', escape((70,  i18n.packet() )), '</th>\n      ');71; } ; buf.push('\n      <th nowrap class="', escape((72,  PacketUIColumnType.MESSAGE )), '">', escape((72,  i18n.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');76;
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
@@ -4836,6 +4861,12 @@ with (locals || {}) { (function(){
         formatBinary(fromAddress, 4),
         formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
         formatBinary(message, chunkSize));
+
+    logRow(EncodingType.A_AND_B,
+        binaryToAB(toAddress),
+        binaryToAB(fromAddress),
+        binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+        formatAB(binaryToAB(message), chunkSize));
    ; buf.push('\n  </tbody>\n</table>'); })();
 } 
 return buf.join('');
@@ -9188,6 +9219,29 @@ require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
 /**
+ * Converts an As and Bs string into its most compact representation, forced
+ * to uppercase.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.minifyAB = function (abString) {
+  return abString.replace(/[^AB]/gi, '').toUpperCase();
+};
+
+/**
+ * Converts an AB-binary string to a formatted representation, with chunks
+ * of a set size separated by a space.
+ * @param {string} abString
+ * @param {number} chunkSize
+ * @returns {string} formatted version
+ */
+exports.formatAB = function (abString, chunkSize) {
+  return exports.formatBinary(exports.abToBinary(abString), chunkSize)
+      .replace(/0/g, 'A')
+      .replace(/1/g, 'B');
+};
+
+/**
  * Converts a binary string into its most compact string representation.
  * @param {string} binaryString that may contain whitespace
  * @returns {string} binary string with no whitespace
@@ -9292,6 +9346,44 @@ exports.alignDecimal = function (decimalString) {
     // Left-pad each number with non-breaking spaces up to max width.
     return (zeroPadding + numString).slice(-mostDigits);
   }).join(' ');
+};
+
+/**
+ * Interprets a string of As and Bs as binary where A is 0 and B is 1, then
+ * interprets that binary as a single number, and returns that number.
+ * @param {string} abString
+ * @returns {number}
+ */
+exports.abToInt = function (abString) {
+  return exports.binaryToInt(exports.abToBinary(abString));
+};
+
+/**
+ * Converts a number to an AB binary representation
+ * @param {number} num
+ * @param {number} width
+ * @returns {string}
+ */
+exports.intToAB = function (num, width) {
+  return exports.binaryToAB(exports.intToBinary(num, width));
+};
+
+/**
+ * Converts As and Bs to a binary string, where A is 0 and B is 1.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.abToBinary = function (abString) {
+  return exports.minifyAB(abString).replace(/A/g, '0').replace(/B/g, '1');
+};
+
+/**
+ * Converts binary into As and Bs, where 0 is A and 1 is B.
+ * @param {string} binaryString
+ * @returns {string}
+ */
+exports.binaryToAB = function (binaryString) {
+  return exports.minifyBinary(binaryString).replace(/0/g, 'A').replace(/1/g, 'B');
 };
 
 /**
