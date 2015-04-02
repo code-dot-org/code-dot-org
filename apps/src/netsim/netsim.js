@@ -242,10 +242,12 @@ NetSim.prototype.initWithUserName_ = function (user) {
         $('#netsim_tabs'),
         this.level,
         {
-          chunkSizeChangeCallback: this.setChunkSize.bind(this),
+          chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
-          routerBandwidthChangeCallback: this.changeRemoteRouterBandwidth.bind(this),
-          routerMemoryChangeCallback: this.changeRemoteRouterMemory.bind(this),
+          routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
+          routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(this),
+          routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
+          routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
@@ -332,7 +334,6 @@ NetSim.prototype.setRouterCreationTime = function (creationTimestampMs) {
  * @param {number} newBandwidth in bits/second
  */
 NetSim.prototype.setRouterBandwidth = function (newBandwidth) {
-  this.routerBandwidth_ = newBandwidth;
   if (this.tabs_) {
     this.tabs_.setRouterBandwidth(newBandwidth);
   }
@@ -360,7 +361,6 @@ NetSim.prototype.changeRemoteRouterBandwidth = function (newBandwidth) {
  * @param {number} newMemory in bits
  */
 NetSim.prototype.setRouterMemory = function (newMemory) {
-  this.routerMemory_ = newMemory;
   if (this.tabs_) {
     this.tabs_.setRouterMemory(newMemory);
   }

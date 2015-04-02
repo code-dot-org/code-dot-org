@@ -21,12 +21,14 @@ var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
- * @param {function} bandwidthChangeCallback
- * @param {function} memoryChangeCallback
+ * @param {Object} callbacks
+ * @param {function} callbacks.bandwidthSliderChangeCallback
+ * @param {function} callbacks.bandwidthSliderStopCallback
+ * @param {function} callbacks.memorySliderChangeCallback
+ * @param {function} callbacks.memorySliderStopCallback
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
-    bandwidthChangeCallback, memoryChangeCallback) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -44,13 +46,25 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.bandwidthChangeCallback_ = bandwidthChangeCallback;
+  this.bandwidthSliderChangeCallback_ = callbacks.bandwidthSliderChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.memoryChangeCallback_ = memoryChangeCallback;
+  this.bandwidthSliderStopCallback_ = callbacks.bandwidthSliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.memorySliderChangeCallback_ = callbacks.memorySliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.memorySliderStopCallback_ = callbacks.memorySliderStopCallback;
 
   /**
    * @type {NetSimRouterLogTable}
@@ -103,11 +117,15 @@ NetSimRouterTab.prototype.render = function () {
       this.rootDiv_.find('.router-stats'));
   if (this.levelConfig_.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
-        this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+        this.rootDiv_.find('.bandwidth-control'),
+        this.bandwidthSliderChangeCallback_,
+        this.bandwidthSliderStopCallback_);
   }
   if (this.levelConfig_.showRouterMemoryControl) {
     this.memoryControl_ = new NetSimMemoryControl(
-        this.rootDiv_.find('.memory-control'), this.memoryChangeCallback_);
+        this.rootDiv_.find('.memory-control'),
+        this.memorySliderChangeCallback_,
+        this.memorySliderStopCallback_);
   }
 };
 
