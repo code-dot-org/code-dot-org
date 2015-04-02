@@ -385,7 +385,7 @@ StudioApp.prototype.init = function(config) {
           definitionHighlight: config.level.definitionHighlight
         });
       } else {
-        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition)
+        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
       }
     }
   }
