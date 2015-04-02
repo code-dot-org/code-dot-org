@@ -15491,9 +15491,9 @@ Blockly.Block.prototype.getRootBlock = function() {
   }
   return rootBlock
 };
-Blockly.Block.prototype.hasUnfilledInput = function() {
+Blockly.Block.prototype.hasUnfilledFunctionalInput = function() {
   return this.inputList.some(function(input) {
-    return input.connection && !input.connection.targetBlock()
+    return input.type === Blockly.FUNCTIONAL_INPUT && (input.connection && !input.connection.targetBlock())
   })
 };
 goog.provide("Blockly.Flyout");
