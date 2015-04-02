@@ -78,6 +78,27 @@ class Level < ActiveRecord::Base
     level_num.eql? 'custom'
   end
 
+  def available_callouts(script_level)
+    if custom?
+      unless self.callout_json.blank?
+        JSON.parse(self.callout_json).map do |callout_definition|
+          Callout.new(
+              element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              callout_text: callout_definition['callout_text'],
+              qtip_config: callout_definition['qtip_config'].to_json,
+              on: callout_definition['on']
+          )
+        end
+      end
+    elsif script_level
+      # Legacy levels have callouts associated with the ScriptLevel, not Level.
+      script_level.callouts
+    else
+      []
+    end
+  end
+
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)

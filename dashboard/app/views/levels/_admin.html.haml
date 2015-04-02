@@ -26,7 +26,7 @@
         |
         (Cannot edit)
       |
-      = link_to "see callouts (#{available_callouts.count})", show_callouts: '1'
+      = link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       |
       = link_to 'stats', level_stats_path(@level)
 
