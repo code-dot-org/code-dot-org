@@ -364,7 +364,7 @@ Eval.execute = function() {
   if (studioApp.hasUnfilledBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = evalMsg.emptyFunctionalBlock();
+    Eval.message = commonMsg.emptyFunctionalBlock();
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -413,13 +413,9 @@ Eval.execute = function() {
     image: Eval.encodedFeedbackImage
   };
 
-<<<<<<< HEAD
   // don't try it if function is not defined, which should probably only be
   // true in our test environment
   if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
-=======
-  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') { // don't try it if function is not defined
->>>>>>> support sharing for Eval
     studioApp.report(reportData);
   } else {
     document.getElementById('svgEval').toDataURL("image/png", {
