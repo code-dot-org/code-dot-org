@@ -28,6 +28,7 @@ class Blockly < Level
     examples_collapse
     definition_highlight
     definition_collapse
+    disable_examples
     project_template_level_name
     is_project_level
     edit_code
