@@ -638,7 +638,7 @@ Calc.execute = function() {
 
   appState.animating = true;
   if (appState.result === ResultType.SUCCESS &&
-      !appState.userSet.hasVariablesOrFunctions() &&
+      appState.userSet.isAnimatable() &&
       !level.edit_blocks) {
     Calc.step(0);
   } else {
@@ -669,7 +669,7 @@ Calc.generateResults_ = function () {
     return;
   }
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
 
@@ -680,7 +680,7 @@ Calc.generateResults_ = function () {
     if (compute && !compute.getInputTargetBlock('ARG1')) {
       appState.message = calcMsg.emptyComputeBlock();
     } else {
-      appState.message = calcMsg.emptyFunctionalBlock();
+      appState.message = commonMsg.emptyFunctionalBlock();
     }
     return;
   }
@@ -755,8 +755,11 @@ function displayComplexUserExpressions() {
 
   // We're either a variable or a function call. Generate a tokenList (since
   // we could actually be different than the goal)
-  var tokenList = constructTokenList(computeEquation, targetEquation).concat(
-    tokenListForEvaluation_(userSet, targetSet));
+  var tokenList = constructTokenList(computeEquation, targetEquation);
+  if (userSet.hasVariablesOrFunctions() ||
+      computeEquation.expression.depth() > 0) {
+    tokenList = tokenList.concat(tokenListForEvaluation_(userSet, targetSet));
+  }
 
   displayEquation('userExpression', null, tokenList, nextRow++, 'errorToken');
 
@@ -1331,6 +1334,20 @@ EquationSet.prototype.computesSingleConstant = function () {
   return computeExpression.isVariable() && equation.expression.isNumber() &&
     computeExpression.getValue() === equation.name;
 
+};
+
+EquationSet.prototype.isAnimatable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  if (this.hasVariablesOrFunctions()) {
+    return false;
+  }
+  if (this.compute_.expression.depth() === 0) {
+    return false;
+  }
+
+  return true;
 };
 
 /**
