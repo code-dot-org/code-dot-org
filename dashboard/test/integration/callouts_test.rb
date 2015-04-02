@@ -13,6 +13,8 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @script_level_path = "s/#{@script_level.script.name}/stage/1/puzzle/1"
 
     @expected_callouts = [{"id"=>nil, "element_id"=>"#runButton", "created_at"=>nil, "updated_at"=>nil, "script_level_id"=>nil, "qtip_config"=>"null", "on"=>nil, "callout_text"=>nil, "localized_text"=>"Hit \"Run\" to try your program"}]
+
+    Script.clear_cache
   end
 
   test 'remember that we saw callouts in script_levels/show' do
