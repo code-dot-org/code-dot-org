@@ -15,11 +15,11 @@ template: none
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New PD Workshop
 
-%form{style:'display:inline; float:right;'}
+%form.form-inline{style:'float:right'}
   From:
-  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
   To:
-  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
 
 %table{style:'width:100%; margin-top:20px;'}
   %tr

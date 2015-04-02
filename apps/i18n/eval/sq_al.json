@@ -27,5 +27,6 @@
   "solid": "solid",
   "string": "string",
   "stringMismatchError": "Keni nje varg me kapitalizimin e gabuar.",
-  "userCodeException": "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj."
+  "userCodeException": "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

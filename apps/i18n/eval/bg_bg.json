@@ -27,5 +27,6 @@
   "solid": "твърд",
   "string": "поредица",
   "stringMismatchError": "Имате стринг с грешен капитализация.",
-  "userCodeException": "Възникна грешка при изпълнение на вашия код."
+  "userCodeException": "Възникна грешка при изпълнение на вашия код.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

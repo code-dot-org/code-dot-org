@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":194,"./blocks":36,"./calc":37,"./levels":44}],37:[function(require,module,exports){
+},{"../appMain":5,"../skins":196,"./blocks":36,"./calc":37,"./levels":44}],37:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1090,7 +1090,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":244,"../../locale/current/common":245,"../StudioApp":4,"../block_utils":25,"../dom":56,"../skins":194,"../templates/page.html":219,"../timeoutList":225,"../utils":240,"./controls.html":38,"./equation":39,"./equationSet":40,"./expressionNode":41,"./inputIterator":42,"./js-numbers/js-numbers.js":43,"./levels":44,"./token":46,"./visualization.html":47}],47:[function(require,module,exports){
+},{"../../locale/current/calc":246,"../../locale/current/common":247,"../StudioApp":4,"../block_utils":25,"../dom":56,"../skins":196,"../templates/page.html":221,"../timeoutList":227,"../utils":242,"./controls.html":38,"./equation":39,"./equationSet":40,"./expressionNode":41,"./inputIterator":42,"./js-numbers/js-numbers.js":43,"./levels":44,"./token":46,"./visualization.html":47}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1110,7 +1110,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":244,"ejs":261}],44:[function(require,module,exports){
+},{"../../locale/current/calc":246,"ejs":263}],44:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1149,7 +1149,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":244,"../block_utils":25}],42:[function(require,module,exports){
+},{"../../locale/current/calc":246,"../block_utils":25}],42:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1561,7 +1561,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":240,"./equation":39,"./expressionNode":41,"./js-numbers/js-numbers":43}],41:[function(require,module,exports){
+},{"../utils":242,"./equation":39,"./expressionNode":41,"./js-numbers/js-numbers":43}],41:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -2161,7 +2161,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
   return tokenList;
 };
 
-},{"../utils":240,"./js-numbers/js-numbers":43,"./token":46}],46:[function(require,module,exports){
+},{"../utils":242,"./js-numbers/js-numbers":43,"./token":46}],46:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -6673,7 +6673,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":244,"../../locale/current/common":245,"ejs":261}],36:[function(require,module,exports){
+},{"../../locale/current/calc":246,"../../locale/current/common":247,"ejs":263}],36:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6738,6 +6738,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":244,"../../locale/current/common":245,"../sharedFunctionalBlocks":193}],244:[function(require,module,exports){
+},{"../../locale/current/calc":246,"../../locale/current/common":247,"../sharedFunctionalBlocks":195}],246:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}]},{},[45]);

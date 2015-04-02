@@ -203,7 +203,7 @@ exports.bitsToLocalizedRoundedBytesize = function (bits) {
  * @param {number} bitsPerSecond
  * @returns {string} - localized string representation of speed in bits
  */
-exports.bitsToLocalizedRoundedBitrate = function (bitsPerSecond) {
+exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
   if (bitsPerSecond === Infinity) {
     return i18n.unlimited();
   }
@@ -225,3 +225,14 @@ exports.bitsToLocalizedRoundedBitrate = function (bitsPerSecond) {
 
   return i18n.x_bps({ x: bitsPerSecond });
 };
+
+exports.zeroPadLeft = function (string, desiredWidth) {
+  var padding = '0'.repeat(desiredWidth);
+  return (padding + string).slice(-desiredWidth);
+};
+
+exports.zeroPadRight = function (string, desiredWidth) {
+  var padding = '0'.repeat(desiredWidth);
+  return (string + padding).substr(0, desiredWidth);
+};
+

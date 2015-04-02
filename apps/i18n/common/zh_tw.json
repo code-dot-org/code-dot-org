@@ -235,5 +235,8 @@
   "hintHeader": "提示：",
   "genericFeedback": "看看你的成果如何, 並試著修正你的程式",
   "toggleBlocksErrorMsg": "要讓您的程式可以像積木表示，您需要更正您程式中的一個錯誤。",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

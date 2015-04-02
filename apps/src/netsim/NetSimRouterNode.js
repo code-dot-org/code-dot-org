@@ -110,6 +110,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   NetSimNode.call(this, shard, row);
 
   /**
+   * Unix timestamp (local) of router creation time.
+   * @type {number}
+   */
+  this.creationTime = utils.valueOr(row.creationTime, Date.now());
+
+  /**
    * Sets current DNS mode for the router's local network.
    * This value is manipulated by all clients.
    * @type {DnsMode}
@@ -197,6 +203,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {ObservableEvent}
    */
   this.stateChange = new ObservableEvent();
+
+  /**
+   * Event others can observe, which we fire when the router statistics
+   * change (which may be very frequent...)
+   *
+   * @type {ObservableEvent}
+   */
+  this.statsChange = new ObservableEvent();
 
   /**
    * Local cache of wires attached to this router, used for detecting and
@@ -349,6 +363,7 @@ var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
  * @typedef {Object} routerRow
+ * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
  * @property {number} memory - Router max queue capacity in bits
@@ -367,6 +382,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
@@ -382,6 +398,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.creationTime = remoteRow.creationTime;
   this.bandwidth = deserializeNumber(remoteRow.bandwidth);
   this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
@@ -1033,7 +1050,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
 
   if (!_.isEqual(this.stateCache_, myRow)) {
     this.stateCache_ = myRow;
-    logger.info("Router state changed.");
     this.onMyStateChange_(myRow);
   }
 };
@@ -1083,6 +1099,33 @@ NetSimRouterNode.prototype.getLog = function () {
 };
 
 /**
+ * @returns {number} the number of packets in the router queue
+ */
+NetSimRouterNode.prototype.getQueuedPacketCount = function () {
+  return this.routerQueueCache_.length;
+};
+
+/**
+ * @returns {number} router memory currently in use, in bits
+ */
+NetSimRouterNode.prototype.getMemoryInUse = function () {
+  return this.routerQueueCache_.reduce(function (prev, cur) {
+    return prev + cur.payload.length;
+  }, 0);
+};
+
+/**
+ * @returns {number} expected router data rate (in bits per second) over the
+ *          next second
+ */
+NetSimRouterNode.prototype.getCurrentDataRate = function () {
+  // For simplicity, we're defining the 'curent data rate' as how many bits
+  // we expect to get processed in the next second; which is our queue size,
+  // capped at our bandwidth.
+  return Math.min(this.getMemoryInUse(), this.bandwidth);
+};
+
+/**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
  * @param {messageRow[]} rows
@@ -1118,8 +1161,7 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
   this.enforceMemoryLimit_();
-
-  // Propagate notification of queue change (for stats, etc)
+  this.statsChange.notifyObservers(this);
 };
 
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
