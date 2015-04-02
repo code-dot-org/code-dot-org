@@ -57,7 +57,7 @@ dashboard.createCallouts = function(callouts) {
     config.style.classes = config.style.classes.concat(" cdo-qtips");
 
     // Reverse callouts in RTL mode
-    if (Blockly.RTL) {
+    if ($('html[dir=rtl]').length) {
       config.position.my = reverseCallout(config.position.my);
       config.position.at = reverseCallout(config.position.at);
       if (config.position.adjust) {
