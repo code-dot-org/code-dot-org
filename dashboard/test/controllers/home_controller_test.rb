@@ -268,7 +268,7 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_response :success
-    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Dashboard'
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Home Page'
   end
 
   test 'show ops-dashboard link when a district contact' do

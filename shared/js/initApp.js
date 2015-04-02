@@ -355,6 +355,8 @@ function loadProject(promise) {
     if (hashData.channelId) {
       if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
+      } else {
+        $('#betainfo').hide();
       }
 
       // Load the project ID, if one exists
