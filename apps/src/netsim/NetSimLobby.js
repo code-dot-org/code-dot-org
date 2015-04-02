@@ -371,7 +371,6 @@ NetSimLobby.prototype.refresh_ = function () {
 NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
   this.lobbyList_.empty();
 
-  // TODO: Filter based on level configuration
   var filteredLobbyData = lobbyData.filter(function (simNode) {
     var showClients = this.levelConfig_.showClientsInLobby;
     var showRouters = this.levelConfig_.showRoutersInLobby;
@@ -405,6 +404,11 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
       }
     }
 
+    // Specify by style which rows can be selected (handles rollover behavior)
+    if (this.canConnectToNode_(simNode)) {
+      item.addClass('selectable-row');
+    }
+
     // Preserve selected item across refresh.
     if (simNode.entityID === this.selectedID_) {
       item.addClass('selected-row');
@@ -419,12 +423,13 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
 };
 
 /**
- * @param {*} connectionTarget - Lobby row for clicked item
+ * @param {jQuery} listItem - Clicked row
+ * @param {NetSimNode} connectionTarget - Node represented by clicked row
  * @private
  */
 NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
-  // Can't select user rows (for now)
-  if (NodeType.CLIENT === connectionTarget.getNodeType()) {
+  // Don't even allow selection of nodes we can't connect to.
+  if (!this.canConnectToNode_(connectionTarget)) {
     return;
   }
 
@@ -446,6 +451,28 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
   }
 
   this.onSelectionChange();
+};
+
+/**
+ * Check whether the level configuration allows connections to the specified
+ * node.
+ * @param {NetSimNode} connectionTarget
+ * @returns {boolean} whether connection to the target is allowed
+ * @private
+ */
+NetSimLobby.prototype.canConnectToNode_ = function (connectionTarget) {
+  // Can't connect to own node
+  if (connectionTarget.entityID === this.connection_.myNode.entityID) {
+    return false;
+  }
+
+  // Permissible connection limited by level configuration
+  return (
+      this.levelConfig_.canConnectToClients &&
+      connectionTarget.getNodeType() === NodeType.CLIENT
+      ) || (
+      this.levelConfig_.canConnectToRouters &&
+      connectionTarget.getNodeType() === NodeType.ROUTER );
 };
 
 /** Handler for selecting/deselcting a row in the lobby listing. */

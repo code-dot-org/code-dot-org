@@ -8,7 +8,8 @@ $black: #000000;
 $red: #ff0000;
 $code-org-pacific-blue: #00adbc;
 $code-org-web-orange: #ffa400;
-$own-node-background-color: #e0ffff;
+$own-node-background-color: white;
+$user-row-hover-color: #e0ffff;
 $router-row-hover-color: rgba(255, 140, 0, 0.21);
 $to-address-color: rgba(255, 233, 238, 0.85);
 $from-address-color: lightcyan;
@@ -211,32 +212,42 @@ svg {
 
     li {
       background-color: $white;
-      padding: 0.3em;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em;
+    }
+
+    .selectable-row {
+      cursor: pointer;
+      &:hover {
+        border-left: solid $code-org-web-orange 3px;
+      }
     }
 
     .own-row {
-      font-weight: bold;
       background-color: $own-node-background-color;
+      font-style: italic;
     }
 
     .user-row {
-
+      &.selectable-row:hover {
+        background-color: $user-row-hover-color;
+        color: $black;
+      }
     }
 
     .router-row {
-      cursor: pointer;
-    }
-    .router-row:hover {
-      background-color: $router-row-hover-color;
-      color: $black;
+      &.selectable-row:hover {
+        background-color: $router-row-hover-color;
+        color: $black;
+      }
     }
 
+
     .selected-row {
-      background-color: $code-org-web-orange;
-      color: white;
-    }
-    .selected-row:hover {
-      background-color: $code-org-web-orange;
+      background-color: $code-org-web-orange !important;
+      color: white !important;
+      font-weight: bold;
     }
   }
 
