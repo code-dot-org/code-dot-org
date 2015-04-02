@@ -8,6 +8,6 @@ class CohortSerializer < ActiveModel::Serializer
   end
 
   def cutoff_date
-    object.cutoff_date.strftime('%Y-%m-%d')
+    object.cutoff_date.try(:strftime, '%Y-%m-%d')
   end
 end
