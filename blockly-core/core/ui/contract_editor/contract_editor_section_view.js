@@ -23,12 +23,20 @@ Blockly.ContractEditorSectionView = function (canvas, opt_options) {
   this.placeContentCallback = opt_options.placeContentCallback;
   this.headerHeight = opt_options.headerHeight || DEFAULT_HEADER_HEIGHT;
   /**
+   * @type {number|null}
+   * @private
+   */
+  this.sectionNumber_ = opt_options.hasOwnProperty('sectionNumber') ? opt_options.sectionNumber : null;
+
+  /**
    * @type {?Blockly.SvgHighlightBox}
    */
   this.highlightBox_ = opt_options.highlightBox || null;
 
   // Whether this is the current highlight box target
   this.highlighted_ = false;
+
+  this.completelyHidden_ = false;
 
   /**
    * @type {Blockly.SvgHeader}
@@ -48,10 +56,37 @@ Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function () {
     return this.headerText_;
   }
 
-  var arrow = this.collapsed_ ?
+  var displayText = "";
+
+  var arrowCharacter = this.collapsed_ ?
     RIGHT_TRIANGLE_CHARACTER :
     DOWN_TRIANGLE_CHARACTER;
-  return arrow + " " + this.headerText_;
+
+  displayText += arrowCharacter + " ";
+
+  if (this.sectionNumber_ !== null) {
+    displayText += this.sectionNumber_ + ". ";
+  }
+
+  displayText += this.headerText_;
+
+  return displayText;
+};
+
+/**
+ * @param {boolean} shouldBeHidden
+ */
+Blockly.ContractEditorSectionView.prototype.setHidden = function (shouldBeHidden) {
+  this.completelyHidden_ = shouldBeHidden;
+  if (shouldBeHidden) {
+    this.setCollapsed(true);
+  }
+  this.refreshHeaderText_();
+};
+
+Blockly.ContractEditorSectionView.prototype.removeSectionNumber = function () {
+  this.sectionNumber_ = null;
+  this.refreshHeaderText_();
 };
 
 /**
@@ -60,30 +95,30 @@ Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function () {
  * @private
  */
 Blockly.ContractEditorSectionView.prototype.toggleCollapse = function () {
-  this.setCollapsed_(!this.collapsed_);
+  this.setCollapsed(!this.collapsed_);
 };
-
 /**
  * Set the view
  * @param isCollapsed
  * @private
  */
-Blockly.ContractEditorSectionView.prototype.setCollapsed_ = function (isCollapsed) {
+Blockly.ContractEditorSectionView.prototype.setCollapsed = function (isCollapsed) {
   this.collapsed_ = isCollapsed;
   if (this.onCollapseCallback_) {
     this.onCollapseCallback_(this.collapsed_);
   }
+  this.refreshHeaderText_();
+};
+
+/**
+ * @returns {boolean} whether this section is currently collapsed
+ */
+Blockly.ContractEditorSectionView.prototype.isCollapsed = function () {
+  return this.collapsed_;
+};
+
+Blockly.ContractEditorSectionView.prototype.refreshHeaderText_ = function () {
   this.header_.setText(this.textForCurrentState_());
-};
-
-Blockly.ContractEditorSectionView.prototype.hideCompletely = function () {
-  this.setCollapsed_(true);
-  this.setHeaderVisible(false);
-};
-
-Blockly.ContractEditorSectionView.prototype.showHeaderAndExpand = function () {
-  this.setCollapsed_(false);
-  this.setHeaderVisible(true);
 };
 
 Blockly.ContractEditorSectionView.prototype.setHighlighted = function (highlighted) {
@@ -92,8 +127,8 @@ Blockly.ContractEditorSectionView.prototype.setHighlighted = function (highlight
 
 /**
  * Show or hide the header
- * @param showHeader
- * @private
+ * @param {boolean} showHeader
+ * @public
  */
 Blockly.ContractEditorSectionView.prototype.setHeaderVisible = function (showHeader) {
   this.showHeader_ = showHeader;
@@ -107,6 +142,11 @@ Blockly.ContractEditorSectionView.prototype.setHeaderVisible = function (showHea
  * @returns {Number} the currentY to continue laying out at
  */
 Blockly.ContractEditorSectionView.prototype.placeAndGetNewY = function (currentY, width) {
+  if (this.completelyHidden_) {
+    this.header_.setVisible(false);
+    return currentY;
+  }
+
   var startY = currentY;
 
   this.header_.setVisible(this.showHeader_);
