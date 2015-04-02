@@ -3025,7 +3025,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],193:[function(require,module,exports){
+},{}],195:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3571,7 +3571,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":245,"./utils":240}],225:[function(require,module,exports){
+},{"../locale/current/common":247,"./utils":242}],227:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3635,7 +3635,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],219:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3650,7 +3650,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((74,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((77,  msg.codeMode() )), '\n      </button>\n    ');79; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((84,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header"><span>', escape((86,  msg.toolboxHeader() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((88,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((90,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((92,  data.blockCounterClass )), '>\n            ', escape((93,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((96,  data.idealBlockNumber )), '</span>\n          <span> ', escape((97,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');101; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((104,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');107; } ; buf.push('\n  </div>\n  ');109; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');111; } ; buf.push('\n  ');112; if (data.hasDesignMode) { ; buf.push('\n    ', (113,  data.designModeBox ), '\n  ');114; } ; buf.push('\n  ');115; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (116,  data.extraControlRows ), '\n  ');117; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((74,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((77,  msg.codeMode() )), '\n      </button>\n    ');79; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((84,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((88,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((90,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((91,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((92,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((94,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((96,  data.blockCounterClass )), '>\n            ', escape((97,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((100,  data.idealBlockNumber )), '</span>\n          <span> ', escape((101,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((108,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');111; } ; buf.push('\n  </div>\n  ');113; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');115; } ; buf.push('\n  ');116; if (data.hasDesignMode) { ; buf.push('\n    ', (117,  data.designModeBox ), '\n  ');118; } ; buf.push('\n  ');119; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (120,  data.extraControlRows ), '\n  ');121; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3658,7 +3658,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],195:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],197:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3923,7 +3923,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":56}],194:[function(require,module,exports){
+},{"./dom":56}],196:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4074,7 +4074,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":26,"./dom":56,"./required_block_utils":192,"./utils":240}],192:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":26,"./dom":56,"./required_block_utils":194,"./utils":242}],194:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4352,7 +4352,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":245,"./block_utils":25,"./utils":240,"./xml":241}],26:[function(require,module,exports){
+},{"../locale/current/common":247,"./block_utils":25,"./utils":242,"./xml":243}],26:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4520,7 +4520,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":245}],4:[function(require,module,exports){
+},{"../locale/current/common":247}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5274,7 +5274,7 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor) {
+  if (this.editCode && this.editor && this.editor.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
@@ -5621,7 +5621,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.visibility = 'hidden';
+  workspaceDiv.style.display = 'none';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -5644,7 +5644,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.visibility = 'visible';
+      // workspaceDiv.style.display = '';
       location.href += '/edit';
     });
 
@@ -5666,7 +5666,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
-      alwaysShowPalette: true
+      showPaletteInTextMode: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
@@ -5683,6 +5683,24 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+
+    // Bind listener to palette/toolbox 'Hide' and 'Show' links
+    var hideToolboxLink = document.getElementById('hide-toolbox');
+    var showToolboxLink = document.getElementById('show-toolbox');
+    var showToolboxHeader = document.getElementById('show-toolbox-header');
+    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
+      hideToolboxLink.style.display = 'inline-block';
+      var handleTogglePalette = (function() {
+        if (this.editor) {
+          this.editor.enablePalette(!this.editor.paletteEnabled);
+          showToolboxHeader.style.display =
+              this.editor.paletteEnabled ? 'none' : 'inline-block';
+          this.resizeToolboxHeader();
+        }
+      }).bind(this);
+      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+    }
 
     this.dropletTooltipManager = new DropletTooltipManager();
     this.dropletTooltipManager.registerBlocksFromList(
@@ -5805,7 +5823,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Modify the workspace header after a droplet blocks/code or palette toggle
  */
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
@@ -5813,11 +5831,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
   showCodeHeader.firstChild.textContent = newButtonTitle;
-
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-    msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
@@ -5908,7 +5921,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":245,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":24,"./block_utils":25,"./constants.js":55,"./dom":56,"./dropletUtils":57,"./feedback":76,"./templates/builder.html":213,"./templates/buttons.html":214,"./templates/instructions.html":216,"./templates/learn.html":217,"./templates/makeYourOwn.html":218,"./utils":240,"./xml":241,"url":260}],260:[function(require,module,exports){
+},{"../locale/current/common":247,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":24,"./block_utils":25,"./constants.js":55,"./dom":56,"./dropletUtils":57,"./feedback":76,"./templates/builder.html":215,"./templates/buttons.html":216,"./templates/instructions.html":218,"./templates/learn.html":219,"./templates/makeYourOwn.html":220,"./utils":242,"./xml":243,"url":262}],262:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6617,13 +6630,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":256,"querystring":259}],259:[function(require,module,exports){
+},{"punycode":258,"querystring":261}],261:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":257,"./encode":258}],258:[function(require,module,exports){
+},{"./decode":259,"./encode":260}],260:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6710,7 +6723,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],257:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6796,7 +6809,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],256:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7307,7 +7320,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],218:[function(require,module,exports){
+},{}],220:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7327,7 +7340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],217:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7349,7 +7362,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],216:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],218:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7369,7 +7382,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],213:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7389,7 +7402,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],76:[function(require,module,exports){
+},{"ejs":263}],76:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8600,7 +8613,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":245,"./codegen":53,"./constants":55,"./dom":56,"./feedbackBlocks":77,"./templates/buttons.html":214,"./templates/code.html":215,"./templates/shareFailure.html":221,"./templates/sharing.html":222,"./templates/showCode.html":223,"./templates/trophy.html":224,"./utils":240,"./xml":241}],224:[function(require,module,exports){
+},{"../locale/current/common":247,"./codegen":53,"./constants":55,"./dom":56,"./feedbackBlocks":77,"./templates/buttons.html":216,"./templates/code.html":217,"./templates/shareFailure.html":223,"./templates/sharing.html":224,"./templates/showCode.html":225,"./templates/trophy.html":226,"./utils":242,"./xml":243}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8620,7 +8633,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],223:[function(require,module,exports){
+},{"ejs":263}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8640,7 +8653,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],222:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],224:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8660,7 +8673,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],221:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],223:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8680,7 +8693,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],215:[function(require,module,exports){
+},{"ejs":263}],217:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8700,7 +8713,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],214:[function(require,module,exports){
+},{"ejs":263}],216:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8720,7 +8733,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],77:[function(require,module,exports){
+},{"../../locale/current/common":247,"ejs":263}],77:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8849,7 +8862,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":55,"./templates/readonly.html":220}],220:[function(require,module,exports){
+},{"./constants":55,"./templates/readonly.html":222}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8870,7 +8883,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],53:[function(require,module,exports){
+},{"ejs":263}],53:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -9718,7 +9731,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":240}],240:[function(require,module,exports){
+},{"./utils":242}],242:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -9938,7 +9951,7 @@ exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":87,"./lodash":95,"./xml":241}],95:[function(require,module,exports){
+},{"./hammer":87,"./lodash":95,"./xml":243}],95:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -15954,7 +15967,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":241}],241:[function(require,module,exports){
+},{"./xml":243}],243:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -16190,7 +16203,7 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../../locale/current/common":245,"./DropletBlockTooltip.html":22}],245:[function(require,module,exports){
+},{"../../locale/current/common":247,"./DropletBlockTooltip.html":22}],247:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],22:[function(require,module,exports){
 module.exports= (function() {
@@ -16212,7 +16225,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],261:[function(require,module,exports){
+},{"ejs":263}],263:[function(require,module,exports){
 
 /*!
  * EJS
@@ -16567,7 +16580,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":262,"./utils":263,"fs":253,"path":254}],263:[function(require,module,exports){
+},{"./filters":264,"./utils":265,"fs":255,"path":256}],265:[function(require,module,exports){
 
 /*!
  * EJS
@@ -16591,7 +16604,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],262:[function(require,module,exports){
+},{}],264:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -16790,7 +16803,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],254:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -17018,7 +17031,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":255}],255:[function(require,module,exports){
+},{"_process":257}],257:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -17077,7 +17090,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],253:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**

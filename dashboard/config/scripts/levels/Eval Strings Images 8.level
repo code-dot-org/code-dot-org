@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a different kinds of star block - it's called \"radial-star\" and it allows you to draw stars with any number of points! Use it to create a solid orange star with an inner radius of 75 pixels and an outer radius of 175 pixels.",
+    "instructions": "Here's a different kind of star block - it's called \"radial-star\" and it allows you to draw stars with any number of points! Use it to create a solid orange star with an inner radius of 75 pixels and an outer radius of 175 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

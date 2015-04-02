@@ -235,5 +235,8 @@
   "hintHeader": "Itt egy ötlet:",
   "genericFeedback": "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod.",
   "toggleBlocksErrorMsg": "Ki kell javítanod egy hibát a programodban, mielőtt blokként megjelenhetne.",
-  "defaultTwitterText": "Nézd meg, mit csináltam"
+  "defaultTwitterText": "Nézd meg, mit csináltam",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

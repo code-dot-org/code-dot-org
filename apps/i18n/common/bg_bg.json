@@ -235,5 +235,8 @@
   "hintHeader": "Ето един съвет:",
   "genericFeedback": "Вижте какво сте въвели и се опитайте да коригирате вашата програма.",
   "toggleBlocksErrorMsg": "Трябва да се коригира грешка във вашата програма, преди тя да бъде показана като блокове.",
-  "defaultTwitterText": "Вижте какво направих"
+  "defaultTwitterText": "Вижте какво направих",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -235,5 +235,8 @@
   "hintHeader": "Zde je rada:",
   "genericFeedback": "Podívej se jak jsi skončil a zkus svůj program opravit.",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

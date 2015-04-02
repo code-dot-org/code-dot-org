@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "İşte bir ipucu:"},
 "genericFeedback":function(d){return "Sonucunu gör ve programını düzeltmeyi dene."},
 "toggleBlocksErrorMsg":function(d){return "Bloklar halinde gösterilebilmesi için programındaki bir hatayı düzeltmelisin."},
-"defaultTwitterText":function(d){return "Ne yaptığıma bakın"}};
+"defaultTwitterText":function(d){return "Ne yaptığıma bakın"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

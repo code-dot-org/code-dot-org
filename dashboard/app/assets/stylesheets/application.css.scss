@@ -931,6 +931,10 @@ input.header_input {
           outline: 0;
         }
       }
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     li.ui-state-active {
@@ -967,6 +971,15 @@ input.header_input {
     width: $startWidth + $growth;
     height: $startHeight + $growth;
   }
+
+  html[dir=rtl] & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
 }
 
 .x-close {
@@ -1002,14 +1015,12 @@ html[dir=rtl] .qtip-content {
 .cdo-qtips {
   z-index: 1;
 
-
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
   }
 }
 
 a.download-video {
-  float: left;
   z-index: 1;
   cursor: pointer;
   width: 40px;
@@ -1723,6 +1734,10 @@ $modal-image-margin-gap: 10px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1791,6 +1806,12 @@ $modal-image-margin-gap: 10px;
   height: auto;
   margin-top: -60px;
   float: left;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 .modal-header {
   border: none;
