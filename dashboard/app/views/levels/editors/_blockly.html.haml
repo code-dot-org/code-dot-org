@@ -35,6 +35,9 @@
   = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
   = f.number_field :default_num_example_blocks
 .field
+  = f.label :disable_examples, 'Hide examples section in contract editor'
+  = boolean_check_box f, :disable_examples
+.field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
 %table.contract-editor-config

@@ -587,6 +587,38 @@ function customValidator(assert) {
     ]);
   });
 
+  displayComplexUserExpressionTest(assert, 'target is single number', function () {
+    // compute: 5
+    var targetSet = new EquationSet();
+    targetSet.addEquation_(new Equation(null, [], new ExpressionNode(5)));
+
+    // compute: 4
+    var userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode(4)));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+    validateTextElementContainer(userExpression.children[0], [
+      ['4', 'errorToken']
+    ]);
+
+    // compute: 5
+    userSet = new EquationSet();
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode(5)));
+
+    setEquationSets(targetSet, userSet);
+
+    displayComplexUserExpressions();
+
+    assert.equal(userExpression.children.length, 1);
+    validateTextElementContainer(userExpression.children[0], [
+      ['5', null]
+    ]);
+  });
+
 
   return true;
 }
