@@ -8,6 +8,7 @@ testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
+var assertWithinRange = testUtils.assertWithinRange;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
@@ -40,6 +41,9 @@ describe("NetSimRouterNode", function () {
     var router = new NetSimRouterNode(testShard);
     var row = router.buildRow_();
 
+    assertOwnProperty(row, 'creationTime');
+    assertWithinRange(row.creationTime, Date.now(), 10);
+
     assertOwnProperty(row, 'dnsMode');
     assertEqual(row.dnsMode, DnsMode.NONE);
 
@@ -58,6 +62,11 @@ describe("NetSimRouterNode", function () {
     var makeRouter = function (row) {
       return new NetSimRouterNode(testShard, row);
     };
+
+    it ("creationTime", function () {
+      router = makeRouter({ creationTime: 42 });
+      assertWithinRange(router.creationTime, 42, 10);
+    });
 
     it ("dnsMode", function () {
       router = makeRouter({ dnsMode: DnsMode.AUTOMATIC });
@@ -817,6 +826,31 @@ describe("NetSimRouterNode", function () {
         assertRouterQueueSize(32 * 8);
         assertHowManyDropped(1);
       });
+
+      it ("getMemoryInUse() reports correct memory usage", function () {
+        router.setMemory(Infinity);
+        assertRouterQueueSize(0);
+        assertEqual(0, router.getMemoryInUse());
+
+        sendMessageOfSize(64 * 8);
+        assertRouterQueueSize(64 * 8);
+        assertEqual(64 * 8, router.getMemoryInUse());
+
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        sendMessageOfSize(8);
+        assertRouterQueueSize(70 * 8);
+        assertEqual(70 * 8, router.getMemoryInUse());
+
+        router.setMemory(32 * 8);
+        assertHowManyDropped(1);
+        assertRouterQueueSize(6 * 8);
+        assertEqual(6 * 8, router.getMemoryInUse());
+      });
+
     });
 
     describe("Auto-DNS behavior", function () {

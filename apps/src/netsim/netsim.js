@@ -249,6 +249,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
+    this.tabs_.attachToRunLoop(this.runLoop_);
 }
 
   this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
@@ -312,6 +313,13 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendWidget_.setChunkSize(newChunkSize);
+};
+
+/** @param {number} creationTimestampMs */
+NetSim.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.tabs_) {
+    this.tabs_.setRouterCreationTime(creationTimestampMs);
+  }
 };
 
 /**
@@ -454,6 +462,36 @@ NetSim.prototype.setRouterLogData = function (logData) {
 };
 
 /**
+ * @param {number} queuedPacketCount
+ * @private
+ */
+NetSim.prototype.setRouterQueuedPacketCount_ = function (queuedPacketCount) {
+  if (this.tabs_) {
+    this.tabs_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
+/**
+ * @param {number} usedMemoryInBits
+ * @private
+ */
+NetSim.prototype.setRouterMemoryInUse_ = function (usedMemoryInBits) {
+  if (this.tabs_) {
+    this.tabs_.setRouterMemoryInUse(usedMemoryInBits);
+  }
+};
+
+/**
+ * @param {number} dataRateBitsPerSecond
+ * @private
+ */
+NetSim.prototype.setRouterDataRate_ = function (dataRateBitsPerSecond) {
+  if (this.tabs_) {
+    this.tabs_.setRouterDataRate(dataRateBitsPerSecond);
+  }
+};
+
+/**
  * Load audio assets for this app
  * TODO (bbuchanan): Ought to pull this into an audio management module
  * @private
@@ -552,6 +590,11 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
     this.routerStateChangeKey = undefined;
   }
 
+  if (this.routerStatsChangeKey !== undefined) {
+    this.myConnectedRouter_.statsChange.unregister(this.routerStatsChangeKey);
+    this.routerStatsChangeKey = undefined;
+  }
+
   if (this.routerWireChangeKey !== undefined) {
     this.myConnectedRouter_.wiresChange.unregister(this.routerWireChangeKey);
     this.routerWireChangeKey = undefined;
@@ -569,10 +612,14 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
   if (router) {
     // Propagate changes
     this.onRouterStateChange_(router);
+    this.onRouterStatsChange_(router);
 
     // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
         this.onRouterStateChange_.bind(this));
+
+    this.routerStatsChangeKey = router.statsChange.register(
+        this.onRouterStatsChange_.bind(this));
 
     this.routerWireChangeKey = router.wiresChange.register(
         this.onRouterWiresChange_.bind(this));
@@ -583,6 +630,8 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
 };
 
 /**
+ * Local response to router state changing, which may have been triggered
+ * locally or remotely.
  * @param {NetSimRouterNode} router
  * @private
  */
@@ -592,12 +641,19 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
     myNode = this.connection_.myNode;
   }
 
+  this.setRouterCreationTime(router.creationTime);
   this.setRouterBandwidth(router.bandwidth);
   this.setRouterMemory(router.memory);
   this.setDnsMode(router.dnsMode);
   this.setDnsNodeID(router.dnsMode === DnsMode.NONE ? undefined : router.dnsNodeID);
   this.setIsDnsNode(router.dnsMode === DnsMode.MANUAL &&
       router.dnsNodeID === myNode.entityID);
+};
+
+NetSim.prototype.onRouterStatsChange_ = function (router) {
+  this.setRouterQueuedPacketCount_(router.getQueuedPacketCount());
+  this.setRouterMemoryInUse_(router.getMemoryInUse());
+  this.setRouterDataRate_(router.getCurrentDataRate());
 };
 
 NetSim.prototype.onRouterWiresChange_ = function () {
