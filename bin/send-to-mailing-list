@@ -97,9 +97,18 @@ def send_message(template, item)
   end
 end
 
+USAGE = <<EOS
+Usage: send-to-mailing-list [options] template mailing-list.csv
+Options:
+  --threads
+  --start
+  --limit
+I look for templates in pegasus/emails
+EOS
+
 def main()
   params = process_command_line
-  raise ArgumentError, 'Must provide a template and csv.' unless params[:template] && params[:csv]
+  raise ArgumentError, USAGE unless params[:template] && params[:csv]
 
   raise ArgumentError, "'#{params[:template]}' not found." unless Poste.resolve_template(params[:template])
 
