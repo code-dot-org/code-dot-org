@@ -321,9 +321,8 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
 
 Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlight) {
   this.allSections_.forEach(function (view) {
-    view.setHighlighted(false);
+    view.setHighlighted(view === viewToHighlight);
   }, this);
-  viewToHighlight.setHighlighted(true);
 };
 
 Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
