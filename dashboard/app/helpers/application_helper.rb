@@ -90,6 +90,10 @@ module ApplicationHelper
     CDO.code_org_url '/teacher-dashboard'
   end
 
+  def ops_dashboard_url
+    CDO.code_org_url '/ops-dashboard'
+  end
+
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if session[:return_to]
