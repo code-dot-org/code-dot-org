@@ -580,7 +580,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     if (connection.sourceBlock_.getDragging()) {
       connectionX += dx;
       connectionY += dy;
-    };
+    }
 
     var distX = currentX - connectionX;
     var distY = currentY - connectionY;
