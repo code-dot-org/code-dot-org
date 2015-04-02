@@ -1368,7 +1368,7 @@ Blockly.Block.prototype.isUserVisible = function() {
 };
 
 /**
- * Set whether this block is visible to the user.
+ * Set whether this block and all child blocks are visible to the user.
  * @param {boolean} userVisible True if visible to user.
  * @param {boolean} opt_renderAfterVisible True if should render once if set to visible
  */
@@ -1393,12 +1393,13 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 /**
  * Check whether this block is currently hidden (a non-persistent property)
  */
-Blockly.Block.prototype.isCurrentlyHidden = function () {
+Blockly.Block.prototype.isCurrentlyHidden_ = function () {
   return this.currentlyHidden_;
 };
 
 /**
  * Set whether this block is currently hidden (a non-persistent property)
+ * Note: Does not set children to currently hidden, but they will display as hidden
  */
 Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
   this.currentlyHidden_ = hidden;
@@ -1408,16 +1409,18 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
 };
 
 /**
- * Account for the fact that we have two different visibilty states.
+ * Account for the fact that we have two different visibility states.
  * UserVisible is a persisent property used to create blocks that can be seen
  * by level builders, but not by the user.
  * CurrentlyHidden is a non-persistent property used to hide certain blocks
  * (like function definitions/examples) that should only be visible when using
  * the modal function editor.
+ * This method calculates whether this block is currently visible
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
-  return this.isUserVisible() && !this.isCurrentlyHidden();
+  return this.isUserVisible() && !this.isCurrentlyHidden_() &&
+    (!this.parentBlock_ || this.parentBlock_.isVisible());
 };
 
 /**
