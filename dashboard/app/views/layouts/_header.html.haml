@@ -5,7 +5,7 @@
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-- show_bug_links = (@script_level && @script.show_report_bug_link?) || (@level && @level.is_project_level)
+- show_bug_links = (@script_level && @script.show_report_bug_link?) || (@level && @level.try(:is_project_level))
 
 .header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
   - if show_bug_links
@@ -14,7 +14,7 @@
       - if @script_level && @script.show_report_bug_link? && @script.feedback_url
         = link_to t('landing.feedback'), @script.feedback_url, target: '_blank'
         |
-      - elsif @level && @level.is_project_level && @level.game == Game.applab
+      - elsif @level && @level.try(:is_project_level) && @level.game == Game.applab
         = link_to t('landing.feedback'), 'https://www.surveymonkey.com/r/csp-applab', target: '_blank'
         |
       = link_to t('landing.report_bug'), report_url, target: '_blank'
