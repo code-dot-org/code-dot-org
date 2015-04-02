@@ -235,5 +235,8 @@
   "hintHeader": "Här är ett tips:",
   "genericFeedback": "Se vad det blev, och försök fixa ditt program.",
   "toggleBlocksErrorMsg": "Du behöver fixa ett fel i ditt program innan det kan visas som block.",
-  "defaultTwitterText": "Kolla vad jag gjorde"
+  "defaultTwitterText": "Kolla vad jag gjorde",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

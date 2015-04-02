@@ -235,5 +235,8 @@
   "hintHeader": "นี่คือเคล็ดลับ:",
   "genericFeedback": "ดูว่าคุณสิ้นสุดอย่างไร และพยายามที่จะแก้ไขโปรแกรมของคุณ.",
   "toggleBlocksErrorMsg": "คุณต้องแก้ไขข้อผิดพลาดในโปรแกรมของคุณก่อนที่จะไปแสดงเป็นบล็อก.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

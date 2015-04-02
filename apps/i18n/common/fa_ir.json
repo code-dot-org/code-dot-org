@@ -235,5 +235,8 @@
   "hintHeader": "این هم یک راهنمایی:",
   "genericFeedback": "ببین چطور به اینجا رسیدی، و سعی کن برنامه ات را درست کنی.",
   "toggleBlocksErrorMsg": "شما باید یک خطا را در برنامه خود تصحیح کنید پیش از آنکه بتواند به شکل یک بلوک نشان داده شود.",
-  "defaultTwitterText": "ببین من چی ساختم"
+  "defaultTwitterText": "ببین من چی ساختم",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

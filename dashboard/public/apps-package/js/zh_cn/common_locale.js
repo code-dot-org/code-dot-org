@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "这里有一个提示："},
 "genericFeedback":function(d){return "看你的程序时如何结束的，并尝试修复你的程序"},
 "toggleBlocksErrorMsg":function(d){return "在作为一个程序块之前，您需要更正程序中的错误。"},
-"defaultTwitterText":function(d){return "看看我做了什么"}};
+"defaultTwitterText":function(d){return "看看我做了什么"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

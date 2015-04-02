@@ -235,5 +235,8 @@
   "hintHeader": "Tässä on Vihje:",
   "genericFeedback": "Katso miten päädyit tähän, ja koita korjata ohjelmasi.",
   "toggleBlocksErrorMsg": "Sinun täytyy korjata virhe ohjelmassasi, ennen kuin se voidaan näyttää lohkoina.",
-  "defaultTwitterText": "Katso mitä tein"
+  "defaultTwitterText": "Katso mitä tein",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

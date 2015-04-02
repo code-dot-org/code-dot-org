@@ -39,6 +39,9 @@ class ActiveSupport::TestCase
     Rails.cache.clear
 
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
+
+    # clear log of 'delivered' mails
+    ActionMailer::Base.deliveries.clear
   end
 
   teardown do

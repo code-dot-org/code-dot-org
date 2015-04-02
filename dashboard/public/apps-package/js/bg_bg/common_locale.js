@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Ето един съвет:"},
 "genericFeedback":function(d){return "Вижте какво сте въвели и се опитайте да коригирате вашата програма."},
 "toggleBlocksErrorMsg":function(d){return "Трябва да се коригира грешка във вашата програма, преди тя да бъде показана като блокове."},
-"defaultTwitterText":function(d){return "Вижте какво направих"}};
+"defaultTwitterText":function(d){return "Вижте какво направих"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

@@ -235,5 +235,8 @@
   "hintHeader": "Vísbending:",
   "genericFeedback": "Athugaðu hvernig þetta fór og reyndu að laga forritið.",
   "toggleBlocksErrorMsg": "Þú þarft að leiðrétta villu í forritinu þínu áður en hægt er að sýna það með kubbum.",
-  "defaultTwitterText": "Skoðaðu það sem ég bjó til"
+  "defaultTwitterText": "Skoðaðu það sem ég bjó til",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }
