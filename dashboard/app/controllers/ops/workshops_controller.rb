@@ -6,7 +6,7 @@ module Ops
     # Get the full cohort list of teachers in a specific workshop (for facilitators)
     def teachers
       # first name, last name, email, district, gender and any workshop details that are available for teachers
-      teachers = @workshop.teachers.includes(:district)
+      teachers = @workshop.teachers
       respond_with teachers
     end
 
