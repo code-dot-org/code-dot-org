@@ -513,8 +513,6 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
-
-  Blockly.ContractEditor.superClass_.show.call(this);
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
