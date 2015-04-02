@@ -1550,17 +1550,16 @@ Studio.execute = function() {
   Studio.waitingForReport = false;
   Studio.response = null;
 
-  var usesFunctionalBlocks = level.useContractEditor;
-  if (usesFunctionalBlocks && studioApp.hasUnfilledBlock()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Studio.message = commonMsg.emptyFunctionalBlock();
-    Studio.freePlayFailure = true;
-    return Studio.onPuzzleComplete();
-  }
-
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (studioApp.hasUnfilledFunctionalBlock()) {
+      Studio.result = false;
+      Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+      Studio.message = commonMsg.emptyFunctionalBlock();
+      Studio.freePlayFailure = true;
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
