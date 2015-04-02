@@ -119,6 +119,11 @@ class Level < ActiveRecord::Base
     level_hash
   end
 
+  def report_bug_url(request)
+    message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
+    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+  end
+
   def delete_custom_level_file
     if write_to_file?
       file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
