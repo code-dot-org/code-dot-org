@@ -278,10 +278,16 @@ NetSimConnection.prototype.isConnectedToRouter = function () {
  * Connect to the remote node with the given node ID.
  * If it's a router we'll follow the variant-3 connection path,
  * otherwise we'll follow a special peer-to-peer connection process.
- * @param {number} nodeID
+ * @param {NetSimClientNode} remoteNode
  */
-NetSimConnection.prototype.connectToRemoteClient = function (/*node ID*/) {
-
+NetSimConnection.prototype.connectToRemoteClient = function (remoteNode) {
+  this.myNode.connectToNode(remoteNode, function (err) {
+    if (err) {
+      logger.warn('Failed to connect to ' + remoteNode.getDisplayName() + '; ' +
+          err.message);
+    }
+    this.statusChanges.notifyObservers();
+  }.bind(this));
 };
 
 /**
