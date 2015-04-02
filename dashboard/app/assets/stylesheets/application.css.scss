@@ -20,6 +20,9 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *
+ * Shared
+ *= require user-menu
  */
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
@@ -698,6 +701,7 @@ input.header_input {
   text-align: right;
   margin-left: 5px;
 }
+
 .header_popup {
   display: none;
   position: absolute;
