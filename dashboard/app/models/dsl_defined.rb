@@ -33,6 +33,7 @@ class DSLDefined < Level
     transaction do
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
+      data[:properties].merge! level_params
       level = setup data
 
       # Save updated level data to external file
@@ -57,7 +58,7 @@ class DSLDefined < Level
 
   def update(params)
     if params[:dsl_text].present?
-      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, {name: name})
+      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params.merge(name: name))
     else
       super(params)
     end
