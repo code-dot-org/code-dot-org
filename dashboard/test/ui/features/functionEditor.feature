@@ -12,6 +12,7 @@ Scenario: Opening the function editor
   When I press SVG selector ".blocklyIconGroup:contains(edit)"
   And I wait to see "#modalEditorClose"
 
+@chrome
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
   When I press SVG selector ".blocklyIconGroup:contains(edit)"
   And I wait to see "#modalEditorClose"
