@@ -605,15 +605,14 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
     this.routerLogChangeKey = undefined;
   }
 
+  var connectEvent = router && !this.myConnectedRouter_;
+  var disconnectEvent = this.myConnectedRouter_ && !router;
+
   this.myConnectedRouter_ = router;
   this.render();
 
   // Hook up new handlers
   if (router) {
-    // Propagate changes
-    this.onRouterStateChange_(router);
-    this.onRouterStatsChange_(router);
-
     // Hook up new handlers
     this.routerStateChangeKey = router.stateChange.register(
         this.onRouterStateChange_.bind(this));
@@ -627,6 +626,35 @@ NetSim.prototype.onRouterChange_ = function (wire, router) {
     this.routerLogChangeKey = router.logChange.register(
         this.onRouterLogChange_.bind(this));
   }
+
+  if (connectEvent) {
+    this.onRouterConnect_(router);
+  } else if (disconnectEvent) {
+    this.onRouterDisconnect_();
+  }
+};
+
+/**
+ * Steps to take when we were not connected to a router and now we are.
+ * @param {NetSimRouterNode} router that we are now connected to
+ * @private
+ */
+NetSim.prototype.onRouterConnect_ = function (router) {
+  this.onRouterStateChange_(router);
+  this.onRouterStatsChange_(router);
+  this.setRouterLogData(router.getLog());
+};
+
+/**
+ * Steps to take when we were connected to a router and now we are not.
+ * @private
+ */
+NetSim.prototype.onRouterDisconnect_ = function () {
+  this.setRouterCreationTime(0);
+  this.setRouterQueuedPacketCount_(0);
+  this.setRouterMemoryInUse_(0);
+  this.setRouterDataRate_(0);
+  this.setRouterLogData([]);
 };
 
 /**
