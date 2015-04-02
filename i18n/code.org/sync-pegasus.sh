@@ -25,7 +25,7 @@ for locale in $locales; do
 	en_dir=../locales/source/pegasus
 
 	# Merge YML file.
-	ruby ./lib/merge-pegasus.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
+	ruby ./lib/merge-all-locales.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
 	perl -i ./lib/fix-ruby-yml.pl $orig_dir/$locale.yml
 
 done

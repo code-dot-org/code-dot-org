@@ -97,18 +97,40 @@ module Ops
       assert_equal [cohort, cohort2], assigns(:cohorts) # only the cohorts for this district
     end
 
-    test 'district contact can show their districts cohorts' do
+    test 'district contact can show their districts cohorts and see only their district' do
+      # set up a cohort with 2 districts and 2 teachers from different districts
+
       cd = create :cohorts_district
       cohort = cd.cohort
+      contact = cd.district.contact
+      assert contact
 
-      dc = cohort.districts.first.contact
-      assert dc
+      invisible_cd = create(:cohorts_district, cohort: cohort)
+      assert contact != invisible_cd.district.contact
 
-      sign_in dc
+      cohort = cohort.reload
+      assert_equal 2, cohort.districts.count
+
+      cohort.teachers << create(:teacher, district_id: cd.district.id)
+      cohort.teachers << create(:teacher, district_id: invisible_cd.district.id)
+      cohort.save!
+
+      cohort = cohort.reload
+      assert_equal 2, cohort.teachers.count
+
+      sign_in contact
 
       get :show, id: cohort.id
       assert_response :success
       assert_equal cohort, assigns(:cohort)
+
+      cohort_json = JSON.parse(@response.body)
+
+      # cohort has 2 districts but we only see 1
+      assert_equal 1, cohort_json['districts'].count
+
+      # cohort has 2 teachers but we only see 1
+      assert_equal 1, cohort_json['teachers'].count
     end
 
     test 'district contact cannot show cohorts without their district' do
@@ -189,7 +211,7 @@ module Ops
       # no notification to the ops team
       assert ActionMailer::Base.deliveries.collect(&:subject).none? {|subject| subject.include? '[ops notification]'}
       # all account confirmation instructions
-      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject == 'Code.org confirmation instructions'}
+      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject =~ /instructions/}
     end
 
     test 'Create Cohort with districts' do

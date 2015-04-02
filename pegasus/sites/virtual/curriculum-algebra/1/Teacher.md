@@ -38,7 +38,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) (in the student workbook)
 - [Videogame Design Template](../docs/worksheets/game_planning.pdf) (in the student workbook)
