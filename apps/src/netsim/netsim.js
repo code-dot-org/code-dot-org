@@ -88,13 +88,6 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
-   * Current router maximum (optimistic) bandwidth (bits/second)
-   * @type {number}
-   * @private
-   */
-  this.routerBandwidth_ = Infinity;
-
-  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
