@@ -11,7 +11,8 @@ goog.provide('Blockly.SvgTextButton');
  */
 Blockly.SvgTextButton = function (parent, text, onMouseDown) {
   var button = Blockly.createSvgElement('g', {
-    'id': 'addExampleButton'
+    'id': 'addExampleButton',
+    'filter': 'url(#blocklyTrashcanShadowFilter)'
   }, parent);
   var padding = 7;
   var purpleFillColor = '#7665a0';
