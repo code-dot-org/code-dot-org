@@ -10,9 +10,8 @@
  */
 'use strict';
 
-var NodeType = require('./netsimConstants').NodeType;
+var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimLogger = require('./NetSimLogger');
-var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var ObservableEvent = require('../ObservableEvent');
@@ -236,9 +235,7 @@ NetSimConnection.prototype.isConnectedToShard = function () {
 /**
  * Gets all rows in the lobby and passes them to callback.  Callback will
  * get an empty array if we were unable to get lobby data.
- * TODO: Remove this, get rows from the table and use the netsimUtils methods
- * instead.
- * @param callback
+ * @param {function} callback
  */
 NetSimConnection.prototype.getAllNodes = function (callback) {
   if (!this.isConnectedToShard()) {
@@ -247,26 +244,14 @@ NetSimConnection.prototype.getAllNodes = function (callback) {
     return;
   }
 
-  var self = this;
   this.shard_.nodeTable.readAll(function (err, rows) {
     if (err !== null) {
       logger.warn("Lobby data request failed, using empty list.");
       callback([]);
       return;
     }
-
-    var nodes = rows.map(function (row) {
-      if (row.type === NodeType.CLIENT) {
-        return new NetSimClientNode(self.shard_, row);
-      } else if (row.type === NodeType.ROUTER) {
-        return new NetSimRouterNode(self.shard_, row);
-      }
-    }).filter(function (node) {
-      return node !== undefined;
-    });
-
-    callback(nodes);
-  });
+    callback(netsimNodeFactory.nodesFromRows(this.shard_, rows));
+  }.bind(this));
 };
 
 /** Adds a row to the lobby for a new router node. */
@@ -287,6 +272,16 @@ NetSimConnection.prototype.addRouterToLobby = function () {
  */
 NetSimConnection.prototype.isConnectedToRouter = function () {
   return this.myNode && this.myNode.myRouter;
+};
+
+/**
+ * Connect to the remote node with the given node ID.
+ * If it's a router we'll follow the variant-3 connection path,
+ * otherwise we'll follow a special peer-to-peer connection process.
+ * @param {number} nodeID
+ */
+NetSimConnection.prototype.connectToRemoteClient = function (/*node ID*/) {
+
 };
 
 /**
