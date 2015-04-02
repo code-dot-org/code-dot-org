@@ -84,10 +84,6 @@ Blockly.ContractEditorSectionView.prototype.setHidden = function (shouldBeHidden
   this.refreshHeaderText_();
 };
 
-Blockly.ContractEditorSectionView.prototype.hideCompletely = function () {
-  this.setHidden(true);
-};
-
 Blockly.ContractEditorSectionView.prototype.removeSectionNumber = function () {
   this.sectionNumber_ = null;
   this.refreshHeaderText_();

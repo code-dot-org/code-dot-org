@@ -534,7 +534,7 @@ Blockly.ContractEditor.prototype.setupSectionsForVariable_ = function () {
   this.contractSectionView_.setHidden(false);
   this.contractSectionView_.setHeaderVisible(false);
 
-  this.examplesSectionView_.hideCompletely();
+  this.examplesSectionView_.setHidden(true);
 
   this.definitionSectionView_.setHidden(false);
   this.definitionSectionView_.setHeaderVisible(false);
