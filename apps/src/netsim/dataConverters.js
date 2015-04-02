@@ -24,6 +24,13 @@ exports.minifyAB = function (abString) {
   return abString.replace(/[^AB]/gi, '').toUpperCase();
 };
 
+/**
+ * Converts an AB-binary string to a formatted representation, with chunks
+ * of a set size separated by a space.
+ * @param {string} abString
+ * @param {number} chunkSize
+ * @returns {string} formatted version
+ */
 exports.formatAB = function (abString, chunkSize) {
   return exports.formatBinary(exports.abToBinary(abString), chunkSize)
       .replace(/0/g, 'A')
@@ -139,7 +146,7 @@ exports.alignDecimal = function (decimalString) {
 
 /**
  * Interprets a string of As and Bs as binary where A is 0 and B is 1, then
- * interprets that binary as a single number, and return sthat number.
+ * interprets that binary as a single number, and returns that number.
  * @param {string} abString
  * @returns {number}
  */
