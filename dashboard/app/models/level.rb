@@ -70,12 +70,9 @@ class Level < ActiveRecord::Base
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
+  # All levelbuilder levels will have a user_id, except for DSLDefined levels.
   def custom?
-    user_id.present?
-  end
-
-  def level_num_custom?
-    level_num.eql? 'custom'
+    user_id.present? || is_a?(DSLDefined)
   end
 
   def available_callouts(script_level)
