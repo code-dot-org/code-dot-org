@@ -15,6 +15,22 @@ require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
 /**
+ * Converts an As and Bs string into its most compact representation, forced
+ * to uppercase.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.minifyAB = function (abString) {
+  return abString.replace(/[^AB]/gi, '').toUpperCase();
+};
+
+exports.formatAB = function (abString, chunkSize) {
+  return exports.formatBinary(exports.abToBinary(abString), chunkSize)
+      .replace(/0/g, 'A')
+      .replace(/1/g, 'B');
+};
+
+/**
  * Converts a binary string into its most compact string representation.
  * @param {string} binaryString that may contain whitespace
  * @returns {string} binary string with no whitespace
@@ -119,6 +135,44 @@ exports.alignDecimal = function (decimalString) {
     // Left-pad each number with non-breaking spaces up to max width.
     return (zeroPadding + numString).slice(-mostDigits);
   }).join(' ');
+};
+
+/**
+ * Interprets a string of As and Bs as binary where A is 0 and B is 1, then
+ * interprets that binary as a single number, and return sthat number.
+ * @param {string} abString
+ * @returns {number}
+ */
+exports.abToInt = function (abString) {
+  return exports.binaryToInt(exports.abToBinary(abString));
+};
+
+/**
+ * Converts a number to an AB binary representation
+ * @param {number} num
+ * @param {number} width
+ * @returns {string}
+ */
+exports.intToAB = function (num, width) {
+  return exports.binaryToAB(exports.intToBinary(num, width));
+};
+
+/**
+ * Converts As and Bs to a binary string, where A is 0 and B is 1.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.abToBinary = function (abString) {
+  return exports.minifyAB(abString).replace(/A/g, '0').replace(/B/g, '1');
+};
+
+/**
+ * Converts binary into As and Bs, where 0 is A and 1 is B.
+ * @param {string} binaryString
+ * @returns {string}
+ */
+exports.binaryToAB = function (binaryString) {
+  return exports.minifyBinary(binaryString).replace(/0/g, 'A').replace(/1/g, 'B');
 };
 
 /**
