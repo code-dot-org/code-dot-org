@@ -35,7 +35,10 @@ ORDER BY poste_messages.name
        sent = sent_count(row)
        open_percent = (row[:opens]*100)/sent %>
     <tr>
-      <td><%= row[:message] %></td>
+      <td>
+        <a href="#<%= row[:message] %>"><%= row[:message] %></a>
+        <a name="<%= row[:message] %>"/>
+      </td>
       <td><%= sent_count(row) %></td>
       <td><%= row[:opens] %> (<%= open_percent %>%)</td>
       <td><%= row[:views] %></td>
