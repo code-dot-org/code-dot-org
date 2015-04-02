@@ -1279,6 +1279,7 @@ studioApp.reset = function(first) {
 
   // True if we should failure despite being freeplay
   Studio.freePlayFailure = false;
+  Studio.message = null;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
