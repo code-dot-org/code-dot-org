@@ -426,13 +426,10 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   }
 
   // Subtract any pixels present above the svg element from the available height
-  // (only need to do this for mainBlockSpaceEditor's svg element, but fall back
-  // to this.svg_ during mainBlockSpaceEditor's creation)
-  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
-  var containerDiv = topmostSvgElement.parentNode;
+  var containerDiv = svg.parentNode;
   var containerStyle = window.getComputedStyle(containerDiv);
   var containerTopBorder = containerStyle ? parseInt(containerStyle.borderTopWidth, 10) : 0;
-  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement)
+  var headerHeight = goog.style.getPageOffsetTop(svg)
     - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
 
   var svgWidth = containerDiv.clientWidth - svgBorderWidth;
