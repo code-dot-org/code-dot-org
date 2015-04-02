@@ -525,3 +525,11 @@ en:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
