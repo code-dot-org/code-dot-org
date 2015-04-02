@@ -266,8 +266,9 @@ var LOGARITHMIC_DEFAULT_BASE = 2;
 
 /**
  * @param {jQuery} rootDiv
- * @param {Object} options - takes NetSimSlider options, and:
- * @param {number} options.logBase - factor by which the value increases
+ * @param {Object} options - takes NetSimSlider options, except:
+ * @param {number} [options.min] - same as base slider, but defaults to 1.
+ * @param {number} [options.logBase] - factor by which the value increases
  *        with every slider step.  Default base 2.
  * @constructor
  * @augments NetSimSlider
