@@ -706,6 +706,14 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) 
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
     logger.info("Router registered for messageTable tableChange");
+
+    // Populate router log cache with initial data
+    this.shard_.logTable.readAll(function (err, rows) {
+      if (err) {
+        return;
+      }
+      this.onLogTableChange_(rows);
+    }.bind(this));
   }
 };
 
