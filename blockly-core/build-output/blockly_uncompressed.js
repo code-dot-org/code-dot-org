@@ -14969,7 +14969,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && this.render()
   }
 };
-Blockly.Block.prototype.isCurrentlyHidden = function() {
+Blockly.Block.prototype.isCurrentlyHidden_ = function() {
   return this.currentlyHidden_
 };
 Blockly.Block.prototype.setCurrentlyHidden = function(hidden) {
@@ -14979,7 +14979,8 @@ Blockly.Block.prototype.setCurrentlyHidden = function(hidden) {
   }
 };
 Blockly.Block.prototype.isVisible = function() {
-  return this.isUserVisible() && !this.isCurrentlyHidden()
+  var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
+  return visibleThroughParent && (this.isUserVisible() && !this.isCurrentlyHidden_())
 };
 Blockly.Block.prototype.setHelpUrl = function(url) {
   this.helpUrl = url
@@ -23634,7 +23635,7 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
   this.blockSpace.getTopBlocks(false).forEach(function(block) {
-    if(block.isCurrentlyHidden()) {
+    if(!block.isVisible()) {
       return
     }
     var blockHW = block.getHeightWidth();
