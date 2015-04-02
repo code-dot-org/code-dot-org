@@ -78,7 +78,7 @@ class Level < ActiveRecord::Base
   def available_callouts(script_level)
     if custom?
       unless self.callout_json.blank?
-        JSON.parse(self.callout_json).map do |callout_definition|
+        return JSON.parse(self.callout_json).map do |callout_definition|
           Callout.new(
               element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
@@ -90,10 +90,9 @@ class Level < ActiveRecord::Base
       end
     elsif script_level
       # Legacy levels have callouts associated with the ScriptLevel, not Level.
-      script_level.callouts
-    else
-      []
+      return script_level.callouts
     end
+    []
   end
 
   # Input: xml level file definition

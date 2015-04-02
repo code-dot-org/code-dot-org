@@ -22,6 +22,7 @@ module LevelsHelper
 
   def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
+    @callouts = select_and_remember_callouts params[:show_callouts]
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -126,7 +127,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     {
-        callouts: select_and_remember_callouts(params[:show_callouts])
+        callouts: @callouts
     }
   end
 
