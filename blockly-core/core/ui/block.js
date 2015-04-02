@@ -563,6 +563,15 @@ Blockly.Block.prototype.getHeightWidth = function() {
 Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Stop the browser from scrolling/zooming the page
   e.preventDefault();
+
+  // If we're clicking on an input target, don't do anything with the event
+  // at the block level
+  var targetClass = e.target.getAttribute && e.target.getAttribute('class');
+  if (targetClass === 'inputClickTarget') {
+    e.stopPropagation();
+    return;
+  }
+
   // ...but this prevents blurring of inputs, so do it manually
   document.activeElement && document.activeElement.blur
     && document.activeElement.blur();
@@ -574,14 +583,8 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
 
-  // Calling select changes the order of some of our DOM elements. Doing so
-  // appears to cause IE to stop propogating the event. We don't want this to
-  // happen when we're clicking on an input target, and dont really want
-  // to select in that case anyways.
-  var targetClass = e.target.getAttribute && e.target.getAttribute('class');
-  if (targetClass !== 'inputClickTarget') {
-    this.select();
-  }
+  this.select();
+
   this.blockSpace.blockSpaceEditor.hideChaff();
 
   if (Blockly.isRightButton(e)) {
