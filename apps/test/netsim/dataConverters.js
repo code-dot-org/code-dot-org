@@ -7,6 +7,18 @@ var dataConverters = testUtils.requireWithGlobalsCheckBuildFolder('netsim/dataCo
 
 describe("dataConverters", function () {
 
+  describe("minifyAB", function () {
+    var minifyAB = dataConverters.minifyAB;
+
+    it ("strips all characters except As and Bs", function () {
+      assertEqual('AAAB', minifyAB("  A3$A A__B \n  kg"));
+    });
+
+    it ("coerces letters to uppercase", function () {
+      assertEqual('ABBB', minifyAB('abBb'));
+    });
+  });
+
   describe("minifyBinary", function () {
     var minifyBinary = dataConverters.minifyBinary;
 
@@ -48,6 +60,136 @@ describe("dataConverters", function () {
 
     it ("strips characters that aren't whitespace or decimal", function () {
       assertEqual('1 1 1', minifyDecimal('a1 \x071B 1c'));
+    });
+  });
+
+  describe("formatAB", function () {
+    var formatAB = dataConverters.formatAB;
+
+    it ("is identity for empty string", function () {
+      assertEqual('', formatAB(''));
+    });
+
+    it ("splits the string at the given chunk size", function () {
+      var rawABs = "ABABABABABABABAB";
+      assertEqual('ABAB ABAB ABAB ABAB', formatAB(rawABs, 4));
+      assertEqual('ABABABAB ABABABAB', formatAB(rawABs, 8));
+    });
+
+    it ("does not pad when a chunk comes out uneven", function () {
+      var rawABs = "ABABABABABABABAB";
+      assertEqual('ABABA BABAB ABABA B', formatAB(rawABs, 5));
+    });
+
+    it ("minifies and cleans input before formatting", function () {
+      var rawInput = "AB BAB ABA\xB5ABA B";
+      assertEqual('ABBA BABA ABAB', formatAB(rawInput, 4));
+    });
+
+    it ("throws an exception when chunk size is zero or less", function () {
+      assertThrows(RangeError, formatAB.bind(null, '', 0));
+      assertThrows(RangeError, formatAB.bind(null, '', -1));
+    });
+  });
+
+  describe("abToInt", function () {
+    var abToInt = dataConverters.abToInt;
+
+    it ("converts empty string to NaN", function () {
+      assert(isNaN(abToInt('')));
+    });
+
+    it ("interprets As and Bs as a single number regardless of length", function () {
+      assertEqual(0, abToInt('A'));
+      assertEqual(0, abToInt('AAAAAAAA'));
+      assertEqual(32768, abToInt('BAAAAAAAAAAAAAAA'));
+    });
+
+    it ("minifies and cleans input before converting", function () {
+      assertEqual(16, abToInt('AAAB \x1B \x1D \x1F AAAA'));
+    });
+  });
+
+  describe("intToAB", function () {
+    var intToAB = dataConverters.intToAB;
+
+    it ("converts a number to its AB representation", function () {
+      var width = 4;
+      assertEqual('AAAA', intToAB(0, width));
+      assertEqual('AAAB', intToAB(1, width));
+      assertEqual('AABA', intToAB(2, width));
+      assertEqual('AABB', intToAB(3, width));
+      assertEqual('ABAB', intToAB(5, width));
+      assertEqual('BAAB', intToAB(9, width));
+    });
+
+    it ("can give AB-strings of different widths, left-padding with As", function () {
+      var num = 7;
+      assertEqual('BBB', intToAB(num, 3));
+      assertEqual('ABBB', intToAB(num, 4));
+      assertEqual('AABBB', intToAB(num, 5));
+      assertEqual('AAABBB', intToAB(num, 6));
+      assertEqual('AAAABBB', intToAB(num, 7));
+      assertEqual('AAAAABBB', intToAB(num, 8));
+    });
+
+    it ("drops leftmost bits when overflowing given width", function () {
+      // Non-overflow case
+      assertEqual('AAA', intToAB(0, 3));
+      assertEqual('AAB', intToAB(1, 3));
+      assertEqual('ABA', intToAB(2, 3));
+
+      // Overflow case, wraps around.
+      assertEqual('AAA', intToAB(8, 3));
+      assertEqual('AAB', intToAB(9, 3));
+      assertEqual('ABA', intToAB(10, 3));
+    });
+
+    it ("throws an exception when width of zero or less is requested", function () {
+      assertThrows(RangeError, intToAB.bind(null, 10, 0));
+      assertThrows(RangeError, intToAB.bind(null, 10, -1));
+    });
+  });
+
+  describe("abToBinary", function () {
+    var abToBinary = dataConverters.abToBinary;
+
+    it ("converts empty string to empty string", function () {
+      assertEqual('', abToBinary(''));
+    });
+
+    it ("converts an a or an A into a zero", function () {
+      assertEqual('0', abToBinary('A'));
+      assertEqual('0', abToBinary('a'));
+    });
+
+    it ("converts a b or a B into a one", function () {
+      assertEqual('1', abToBinary('B'));
+      assertEqual('1', abToBinary('b'));
+    });
+
+    it ("minifies and cleans", function () {
+      assertEqual('00010000', abToBinary('  aAa_b aaaA$'));
+    });
+  });
+
+  describe("binaryToAB", function () {
+    var binaryToAB = dataConverters.binaryToAB;
+
+    it ("converts empty string to empty string", function () {
+      assertEqual('', binaryToAB(''));
+    });
+
+    it ("converts a zero into an A", function () {
+      assertEqual('A', binaryToAB('0'));
+    });
+
+    it ("converts a one into a B", function () {
+      assertEqual('B', binaryToAB('1'));
+    });
+
+    it ("cleans binary before parsing", function () {
+      assertEqual('BBBBBAAABBBBBAAA', binaryToAB('1111 10‰00 11 “11” 10 00'));
     });
   });
 
