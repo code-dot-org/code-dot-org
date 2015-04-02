@@ -235,5 +235,8 @@
   "hintHeader": "Iată un sfat:",
   "genericFeedback": "Vezi cum se termină şi încearcă să-ți corectezi programul.",
   "toggleBlocksErrorMsg": "Trebuie să corectați o eroare în programul dumneavoastră înainte să poată fi inclusă ca bloc.",
-  "defaultTwitterText": "Verifică ceea ce am creat"
+  "defaultTwitterText": "Verifică ceea ce am creat",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

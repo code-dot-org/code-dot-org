@@ -235,5 +235,8 @@
   "hintHeader": "Ja ku është një këshillë:",
   "genericFeedback": "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd.",
   "toggleBlocksErrorMsg": "Ti duhet të rregullosh një gabim në programin tënd përpara se të shfaqet si blloqet.",
-  "defaultTwitterText": "Shiko se çfarë bëra"
+  "defaultTwitterText": "Shiko se çfarë bëra",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -31,12 +31,6 @@ em {
 strong em, em strong {
   font-family: "Gotham 7i", sans-serif; }
 
-.farSide {
-  text-align: right; }
-
-html[dir="RTL"] .farSide {
-  text-align: left; }
-
 .clear {
   clear: both; }
 
@@ -740,72 +734,11 @@ input[type="radio"] {
     overflow: scroll;
     max-height: 400px; }
 
-.modal-content {
-  margin-left: 110px; }
-  .modal-content p, .modal-content pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: #7665a0; }
-  .modal-content .congrats {
-    font-size: 27px;
-    line-height: 30px;
-    margin-bottom: 15px; }
-  .modal-content .aniGif {
-    display: block;
-    margin: 0px auto 6px;
-    position: relative;
-    left: -50px;
-    z-index: -1; }
-  .modal-content .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: lightgrey;
-    border-style: solid; }
-  .modal-content .feedback-links {
-    margin-top: 15px; }
-  .modal-content .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: red; }
-    .modal-content .feedback-callout p {
-      margin: 15px;
-      color: red;
-      padding-right: 20%; }
-    .modal-content .feedback-callout .congrats {
-      font-size: 24px;
-      line-height: 27px; }
-    .modal-content .feedback-callout .hint-header {
-      font-family: 'Gotham 7r', sans-serif;
-      font-weight: normal; }
-    .modal-content .feedback-callout .hint-image {
-      float: right;
-      width: 20%; }
-  .modal-content .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    color: #5b6770;
-    margin: 0 0 8px; }
-
-.yellow-background {
-  background-color: #ffc459; }
-
 .light-yellow-background {
   background-color: #fff7df; }
 
 .white-background {
   background-color: white; }
-
-.dialog-title {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal; }
-
-#ok-button {
-  background-color: #ffa400;
-  border: 1px solid #ffa400;
-  color: white;
-  min-width: 100px; }
 
 .arrow-container {
   background-color: white !important; }
@@ -895,31 +828,6 @@ input[type="radio"] {
 #shapeways-message {
   display: block;
   text-align: center; }
-
-.modal-image {
-  width: 100px;
-  height: auto;
-  margin-top: -60px;
-  float: left; }
-
-.modal-header {
-  border: none;
-  height: 20px; }
-
-.modal-body {
-  height: 100%;
-  overflow: visible; }
-
-#feedbackBlocks {
-  margin-left: 50px;
-  height: 100px;
-  width: 400px;
-  border: none; }
-
-#feedbackButtons:after {
-  content: '';
-  display: inline-block;
-  width: 100%; }
 
 .hide {
   display: none; }

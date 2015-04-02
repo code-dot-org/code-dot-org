@@ -235,5 +235,8 @@
   "hintHeader": "Narito ang isang tip:",
   "genericFeedback": "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program.",
   "toggleBlocksErrorMsg": "Kailangan mong iwasto ang isang error sa iyong programa bago ito ay ipapakita bilang mga block.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -44,5 +44,5 @@ NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimBandwidthControl.prototype.valueToLabel = function (val) {
-  return netsimUtils.bitsToLocalizedRoundedBitrate(val);
+  return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
 };

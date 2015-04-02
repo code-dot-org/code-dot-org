@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "vast"},
 "string":function(d){return "tekenreeks"},
 "stringMismatchError":function(d){return "Je hebt een tekenreeks met verkeerde (hoofd)letters."},
-"userCodeException":function(d){return "Er is een fout opgetreden tijdens het uitvoeren van de code."}};
+"userCodeException":function(d){return "Er is een fout opgetreden tijdens het uitvoeren van de code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

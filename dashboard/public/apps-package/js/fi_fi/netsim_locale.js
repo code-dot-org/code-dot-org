@@ -196,4 +196,17 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "x_Gbps":function(d){return appLocale.v(d,"x")+"Gbps"},
 "x_Mbps":function(d){return appLocale.v(d,"x")+"Mbps"},
 "x_Kbps":function(d){return appLocale.v(d,"x")+"Kbps"},
-"x_bps":function(d){return appLocale.v(d,"x")+"bps"}};
+"x_bps":function(d){return appLocale.v(d,"x")+"bps"},
+"byte":function(d){return "Byte"},
+"character":function(d){return "Character"},
+"logStatus_dropped":function(d){return "Dropped"},
+"logStatus_success":function(d){return "Success"},
+"number":function(d){return "Number"},
+"numBitsPerChunkType":function(d){return appLocale.v(d,"numBits")+" bits per "+appLocale.v(d,"chunkType")},
+"size":function(d){return "Size"},
+"status":function(d){return "Status"},
+"x_GBytes":function(d){return appLocale.v(d,"x")+"GB"},
+"x_MBytes":function(d){return appLocale.v(d,"x")+"MB"},
+"x_KBytes":function(d){return appLocale.v(d,"x")+"KB"},
+"x_Bytes":function(d){return appLocale.v(d,"x")+"B"},
+"x_bits":function(d){return appLocale.v(d,"x")+"b"}};
