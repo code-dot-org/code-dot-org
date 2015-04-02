@@ -11494,11 +11494,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.hiddenInput.className = 'droplet-hidden-input';
       this.hiddenInput.addEventListener('focus', (function(_this) {
         return function() {
-          var bounds;
+          var bounds, inputLeft, inputTop;
           if (_this.textFocus != null) {
             bounds = _this.view.getViewNodeFor(_this.textFocus).bounds[0];
-            _this.hiddenInput.style.left = (bounds.x + _this.mainCanvas.offsetLeft) + 'px';
-            return _this.hiddenInput.style.top = bounds.y + 'px';
+            inputLeft = bounds.x + _this.mainCanvas.offsetLeft - _this.scrollOffsets.main.x;
+            inputLeft = Math.min(inputLeft, _this.dropletElement.clientWidth - 10);
+            inputLeft = Math.max(_this.mainCanvas.offsetLeft, inputLeft);
+            _this.hiddenInput.style.left = inputLeft + 'px';
+            inputTop = bounds.y - _this.scrollOffsets.main.y;
+            inputTop = Math.min(inputTop, _this.dropletElement.clientHeight - 10);
+            inputTop = Math.max(0, inputTop);
+            return _this.hiddenInput.style.top = inputTop + 'px';
           }
         };
       })(this));
