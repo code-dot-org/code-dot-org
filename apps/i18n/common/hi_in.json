@@ -235,5 +235,8 @@
   "hintHeader": "यहाँ एक टिप है:",
   "genericFeedback": "देखिये की आपने ये समाप्त कैसे किया , और अपना प्रोग्राम फिक्स करने की कोशिश करें।",
   "toggleBlocksErrorMsg": "इस प्रोग्राम को ब्लॉक्स में दिखाने से पहले आपको अपने प्रोग्राम में एक गलती सुधारनी पड़ेगी। ",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -31,7 +31,7 @@ for locale in $locales; do
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
     relname=${file#$loc_dir}
-    ruby ./lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
+    ruby ./lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
   done
 
 done
