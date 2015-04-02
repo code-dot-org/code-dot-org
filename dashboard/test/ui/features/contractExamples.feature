@@ -22,6 +22,11 @@ Scenario: Dragging an example to delete it
   Then block "first example" has been deleted
   And the contract editor has 1 example
 
+Scenario: Pressing the "add example" button should add an example
+  When the contract editor has 2 examples
+  And I press the SVG text "Add Example"
+  And the contract editor has 3 examples
+
 @no_mobile
 Scenario: Expected failure to hotkey-delete function definition block
   When I click block "function definition"
