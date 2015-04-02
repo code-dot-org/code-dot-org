@@ -112,7 +112,7 @@ module Ops
     def timestamp_cutoff_date
       return unless params[:cohort]
       cutoff_date = params[:cohort].delete :cutoff_date
-      return unless cutoff_date
+      return unless cutoff_date.present?
 
       params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end

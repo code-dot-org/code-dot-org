@@ -23,10 +23,12 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {Object} callbacks
- * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.chunkSizeSliderChangeCallback
  * @param {function} callbacks.encodingChangeCallback
- * @param {function} callbacks.routerBandwidthChangeCallback
- * @param {function} callbacks.routerMemoryChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderStopCallback
+ * @param {function} callbacks.routerMemorySliderChangeCallback
+ * @param {function} callbacks.routerMemorySliderStopCallback
  * @param {function} callbacks.dnsModeChangeCallback
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
@@ -50,7 +52,7 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = callbacks.chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeSliderChangeCallback;
 
   /**
    * @type {function}
@@ -62,13 +64,29 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
+  this.routerBandwidthSliderChangeCallback_ =
+      callbacks.routerBandwidthSliderChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.routerMemoryChangeCallback_ = callbacks.routerMemoryChangeCallback;
+  this.routerBandwidthSliderStopCallback_ =
+      callbacks.routerBandwidthSliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderChangeCallback_ =
+      callbacks.routerMemorySliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderStopCallback_ =
+      callbacks.routerMemorySliderStopCallback;
 
   /**
    * @type {function}
@@ -130,7 +148,7 @@ NetSimTabsComponent.prototype.render = function () {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
-        this.chunkSizeChangeCallback_,
+        this.chunkSizeSliderChangeCallback_,
         this.encodingChangeCallback_);
   }
 
@@ -138,8 +156,12 @@ NetSimTabsComponent.prototype.render = function () {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
         this.levelConfig_,
-        this.routerBandwidthChangeCallback_,
-        this.routerMemoryChangeCallback_);
+        {
+          bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
+          bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
+          memorySliderChangeCallback: this.routerMemorySliderChangeCallback_,
+          memorySliderStopCallback: this.routerMemorySliderStopCallback_
+        });
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {

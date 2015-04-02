@@ -28,10 +28,12 @@ ORDER BY poste_messages.name
   </tr>
   <% rows.each do |row| %>
     <tr>
-      <td><%= row[:message] %></td>
+      <td>
+        <a href="#<%= row[:message] %>"><%= row[:message] %></a>
+        <a name="<%= row[:message] %>"/>
+      </td>
       <td><a href='<%= row[:url] %>'><%= row[:url] %></a></td>
       <td><%= row[:clicks] %></td>
     </tr>
   <% end %>
 </table>
-
