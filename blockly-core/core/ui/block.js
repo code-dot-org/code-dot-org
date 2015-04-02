@@ -2253,9 +2253,10 @@ Blockly.Block.prototype.getRootBlock = function () {
 /**
  * @returns True if any of this blocks inputs have a connection that is unfilled
  */
-Blockly.Block.prototype.hasUnfilledInput = function () {
+Blockly.Block.prototype.hasUnfilledFunctionalInput = function () {
   // Does this block have a connection without a block attached
   return this.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
+    return input.type === Blockly.FUNCTIONAL_INPUT && input.connection &&
+      !input.connection.targetBlock();
   });
 };

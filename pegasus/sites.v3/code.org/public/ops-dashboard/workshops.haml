@@ -15,22 +15,29 @@ template: none
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New PD Workshop
 
-%form{style:'display:inline; float:right;'}
+%form.form-inline{style:'float:right'}
   From:
-  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
   To:
-  %input.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
 
-%table{style:'width:100%; margin-top:20px;'}
+%table{style:'width:970px; layout:fixed; margin-top:20px;'}
+  %colgroup
+    %col{width: "135"}/
+    %col{width: "120"}/
+    %col{width: "140"}/
+    %col{width: "160"}/
+    %col{width: "150"}/
+    %col{width: "160"}/
   %tr
     %th.manage-th
       %a{'ng-click' => 'order = "name"'}
         Workshop Name
     %th.manage-th
-      %a{'ng-click' => 'order = "program_types[workshop.program_type].short_name"'}
+      %span
         Program Type
     %th.manage-th
-      %a{'ng-click' => 'order = "cohortName(workshop.cohort_id)"'}
+      %span
         Teacher Cohort
     %th.manage-th
       Dates

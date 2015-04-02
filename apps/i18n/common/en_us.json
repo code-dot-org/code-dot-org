@@ -171,6 +171,7 @@
   "dropletBlock_write_description": "Create a block of text",
   "end": "end",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
+  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",

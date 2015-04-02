@@ -25,19 +25,24 @@ var EncodingType = netsimConstants.EncodingType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var minifyBinary = dataConverters.minifyBinary;
+var formatAB = dataConverters.formatAB;
 var formatBinary = dataConverters.formatBinary;
 var formatHex = dataConverters.formatHex;
 var alignDecimal = dataConverters.alignDecimal;
-var binaryToInt = dataConverters.binaryToInt;
-var intToBinary = dataConverters.intToBinary;
-var hexToInt = dataConverters.hexToInt;
-var intToHex = dataConverters.intToHex;
-var hexToBinary = dataConverters.hexToBinary;
+var abToBinary = dataConverters.abToBinary;
+var abToInt = dataConverters.abToInt;
+var binaryToAB = dataConverters.binaryToAB;
 var binaryToHex = dataConverters.binaryToHex;
-var decimalToBinary = dataConverters.decimalToBinary;
+var binaryToInt = dataConverters.binaryToInt;
 var binaryToDecimal = dataConverters.binaryToDecimal;
-var asciiToBinary = dataConverters.asciiToBinary;
 var binaryToAscii = dataConverters.binaryToAscii;
+var hexToInt = dataConverters.hexToInt;
+var hexToBinary = dataConverters.hexToBinary;
+var intToAB = dataConverters.intToAB;
+var intToBinary = dataConverters.intToBinary;
+var intToHex = dataConverters.intToHex;
+var decimalToBinary = dataConverters.decimalToBinary;
+var asciiToBinary = dataConverters.asciiToBinary;
 
 /**
  * Generator and controller for message sending view.
@@ -148,7 +153,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
-  this.removePacketButton_.toggle(this.packetCount > 1);
+  this.updateRemoveButtonVisibility_();
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -289,6 +294,13 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   /** @type {rowType[]} */
   var rowTypes = [
     {
+      typeName: EncodingType.A_AND_B,
+      shortNumberAllowedCharacters: /[AB]/i,
+      shortNumberConversion: abToInt,
+      messageAllowedCharacters: /[AB\s]/i,
+      messageConversion: abToBinary
+    },
+    {
       typeName: EncodingType.BINARY,
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: binaryToInt,
@@ -377,6 +389,11 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     Packet.HeaderType.PACKET_COUNT
   ].forEach(function (fieldName) {
         liveFields.push({
+          inputElement: this.a_and_bUI[fieldName],
+          newValue: intToAB(this[fieldName], 4)
+        });
+
+        liveFields.push({
           inputElement: this.binaryUI[fieldName],
           newValue: intToBinary(this[fieldName], 4)
         });
@@ -396,6 +413,12 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
           newValue: this[fieldName].toString(10)
         });
       }, this);
+
+  liveFields.push({
+    inputElement: this.a_and_bUI.message,
+    newValue: formatAB(binaryToAB(this.message), chunkSize),
+    watermark: netsimMsg.a_and_b()
+  });
 
   liveFields.push({
     inputElement: this.binaryUI.message,
@@ -437,6 +460,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 };
 
 /**
+ * If there's only one packet, applies "display: none" to the button so the
+ * last packet can't be removed.  Otherwise, clears the CSS property override.
+ * @private
+ */
+NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
+  this.removePacketButton_.css('display', (this.packetCount === 1 ? 'none' : ''));
+};
+
+/**
  * Produces a single binary string in the current packet format, based
  * on the current state of the widget (content of its internal fields).
  * @returns {string} - binary representation of packet
@@ -469,8 +501,8 @@ NetSimPacketEditor.prototype.setPacketIndex = function (packetIndex) {
 /** @param {number} packetCount */
 NetSimPacketEditor.prototype.setPacketCount = function (packetCount) {
   this.packetCount = packetCount;
-  this.removePacketButton_.toggle(packetCount > 1);
   this.updateFields_();
+  this.updateRemoveButtonVisibility_();
 };
 
 /** @param {number} maxPacketSize */
