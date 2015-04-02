@@ -13,6 +13,8 @@
 
 var utils = require('../utils');
 var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLogger = require('./NetSimLogger');
 var markup = require('./NetSimLobby.html');
 var NodeType = require('./netsimConstants').NodeType;
@@ -79,11 +81,11 @@ var NetSimLobby = module.exports = function (levelConfig, connection, user,
   this.overrideShardID_ = shardID;
 
   /**
-   * Which item in the lobby is currently selected
-   * @type {number}
+   * Which node in the lobby is currently selected
+   * @type {NetSimClientNode|NetSimRouterNode}
    * @private
    */
-  this.selectedID_ = undefined;
+  this.selectedNode_ = null;
 
   /**
    * Which listItem DOM element is currently selected
@@ -225,11 +227,15 @@ NetSimLobby.prototype.addRouterButtonClick_ = function () {
 
 /** Handler for clicking the "Connect" button. */
 NetSimLobby.prototype.connectButtonClick_ = function () {
-  if (!this.selectedID_) {
+  if (!this.selectedNode_) {
     return;
   }
 
-  this.connection_.connectToRouter(this.selectedID_);
+  if (this.selectedNode_ instanceof NetSimRouterNode) {
+    this.connection_.connectToRouter(this.selectedNode_.entityID);
+  } else if (this.selectedNode_ instanceof NetSimClientNode) {
+    this.connection_.connectToRemoteClient(this.selectedNode_.entityID);
+  }
 };
 
 /** Handler for clicking the "disconnect" button. */
@@ -365,7 +371,7 @@ NetSimLobby.prototype.refresh_ = function () {
 
 /**
  * Reload the lobby listing of nodes.
- * @param {!Array.<NetSimClientNode>} lobbyData
+ * @param {!NetSimNode[]} lobbyData
  * @private
  */
 NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
@@ -410,7 +416,7 @@ NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
     }
 
     // Preserve selected item across refresh.
-    if (simNode.entityID === this.selectedID_) {
+    if (this.selectedNode_ && simNode.entityID === this.selectedNode_.entityID) {
       item.addClass('selected-row');
       this.selectedListItem_ = item;
     }
@@ -433,19 +439,19 @@ NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
     return;
   }
 
-  var oldSelectedID = this.selectedID_;
+  var oldSelectedNode = this.selectedNode_;
   var oldSelectedListItem = this.selectedListItem_;
 
   // Deselect old row
   if (oldSelectedListItem) {
     oldSelectedListItem.removeClass('selected-row');
   }
-  this.selectedID_ = undefined;
+  this.selectedNode_ = null;
   this.selectedListItem_ = undefined;
 
   // If we clicked on a different row, select the new row
-  if (connectionTarget.entityID !== oldSelectedID) {
-    this.selectedID_ = connectionTarget.entityID;
+  if (!oldSelectedNode || connectionTarget.entityID !== oldSelectedNode.entityID) {
+    this.selectedNode_ = connectionTarget;
     this.selectedListItem_ = listItem;
     this.selectedListItem_.addClass('selected-row');
   }
