@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
  maxstatements: 200
  */
 /* global $ */
@@ -14,17 +13,20 @@
 
 var markup = require('./NetSimRouterTab.html');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
+var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
+var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
 
 /**
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
  * @param {function} bandwidthChangeCallback
+ * @param {function} memoryChangeCallback
  * @constructor
  */
 var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
-    bandwidthChangeCallback) {
+    bandwidthChangeCallback, memoryChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -45,10 +47,22 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
   this.bandwidthChangeCallback_ = bandwidthChangeCallback;
 
   /**
+   * @type {function}
+   * @private
+   */
+  this.memoryChangeCallback_ = memoryChangeCallback;
+
+  /**
    * @type {NetSimRouterLogTable}
    * @private
    */
   this.routerLogTable_ = null;
+
+  /**
+   * @type {NetSimRouterStatsTable}
+   * @private
+   */
+  this.routerStatsTable_ = null;
 
   /**
    * @type {NetSimBandwidthControl}
@@ -56,8 +70,23 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
    */
   this.bandwidthControl_ = null;
 
+  /**
+   * @type {NetSimMemoryControl}
+   * @private
+   */
+  this.memoryControl_ = null;
+
   // Initial render
   this.render();
+};
+
+/**
+ * @param {RunLoop} runLoop
+ */
+NetSimRouterTab.prototype.attachToRunLoop = function (runLoop) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.attachToRunLoop(runLoop);
+  }
 };
 
 /**
@@ -70,17 +99,33 @@ NetSimRouterTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.routerLogTable_ = new NetSimRouterLogTable(
       this.rootDiv_.find('.router_log_table'), this.levelConfig_);
+  this.routerStatsTable_ = new NetSimRouterStatsTable(
+      this.rootDiv_.find('.router-stats'));
   if (this.levelConfig_.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
         this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
   }
+  if (this.levelConfig_.showRouterMemoryControl) {
+    this.memoryControl_ = new NetSimMemoryControl(
+        this.rootDiv_.find('.memory-control'), this.memoryChangeCallback_);
+  }
 };
 
 /**
- * @param {Array} logData
+ * @param {NetSimLogEntry[]} logData
  */
 NetSimRouterTab.prototype.setRouterLogData = function (logData) {
   this.routerLogTable_.setRouterLogData(logData);
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterLogData(logData);
+  }
+};
+
+/** @param {number} creationTimestampMs */
+NetSimRouterTab.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterCreationTime(creationTimestampMs);
+  }
 };
 
 /**
@@ -88,6 +133,42 @@ NetSimRouterTab.prototype.setRouterLogData = function (logData) {
  */
 NetSimRouterTab.prototype.setBandwidth = function (newBandwidth) {
   if (this.bandwidthControl_) {
-    this.bandwidthControl_.setBandwidth(newBandwidth);
+    this.bandwidthControl_.setValue(newBandwidth);
+  }
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setBandwidth(newBandwidth);
+  }
+};
+
+/** @param {number} newMemory in bits/second */
+NetSimRouterTab.prototype.setMemory = function (newMemory) {
+  if (this.memoryControl_) {
+    this.memoryControl_.setValue(newMemory);
+  }
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setTotalMemory(newMemory);
+  }
+};
+
+/**
+ * @param {number} queuedPacketCount
+ */
+NetSimRouterTab.prototype.setRouterQueuedPacketCount = function (queuedPacketCount) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
+/** @param {number} usedMemoryInBits */
+NetSimRouterTab.prototype.setMemoryInUse = function (usedMemoryInBits) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setMemoryInUse(usedMemoryInBits);
+  }
+};
+
+/** @param {number} dataRateBitsPerSecond */
+NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
+  if (this.routerStatsTable_) {
+    this.routerStatsTable_.setDataRate(dataRateBitsPerSecond);
   }
 };
