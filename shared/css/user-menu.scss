@@ -1,3 +1,5 @@
+@import 'color';
+
 .user_menu {
   padding: 7px 14px;
   .user_options {
@@ -15,7 +17,7 @@
       display: block;
       padding: 10px;
       font-family: 'Gotham 5r', sans-serif;
-      color: #666;
+      color: $charcoal;
 
       $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
       transition: $transition;
@@ -25,13 +27,13 @@
     }
 
     a:hover {
-      background-color: #eee;
-      color: #666;
+      background-color: $lightest_gray;
+      color: $charcoal;
       text-decoration: none;
     }
 
     a + a {
-      border-top: 1px solid #666;
+      border-top: 1px solid $charcoal;
     }
   }
 }
