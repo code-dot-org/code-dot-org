@@ -48,7 +48,7 @@ def main()
   DASHBOARD_DB.transaction do
     PERMISSIONS.delete
 
-    CSV.parse(file.spreadsheet.export_as_string('csv', 0), headers:true) do |i|
+    CSV.parse(file.spreadsheet_csv, headers:true) do |i|
       begin
         puts "'#{i['email_s']}' already granted '#{i['permission_s']}' permission; Duplicate entries in the gsheet?" unless grant_permission i['email_s'], i['permission_s']
       rescue => e
