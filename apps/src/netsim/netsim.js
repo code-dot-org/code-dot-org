@@ -23,6 +23,7 @@ var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
+var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendPanel = require('./NetSimSendPanel');
@@ -224,6 +225,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
       this.connection_);
+
+  // Shard selection panel: Controls for setting display name and picking
+  // a section, if they aren't set automatically.
+  this.shardSelector_ = new NetSimShardSelectionPanel(
+      $('.shard-selection-panel'),
+      this.connection_,
+      user
+  );
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.level,
@@ -540,6 +549,10 @@ NetSim.prototype.render = function () {
     isConnected = true;
     clientStatus = i18n.connected();
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
+  }
+
+  if (this.shardSelector_) {
+    this.shardSelector_.render();
   }
 
   if (this.statusPanel_) {

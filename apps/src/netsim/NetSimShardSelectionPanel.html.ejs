@@ -1,0 +1,19 @@
+<%
+  var i18n = require('../../locale/current/netsim');
+ %>
+<div class="content-wrap">
+  <div class="field-box display-name-control">
+    <label for="netsim_lobby_name"><%= i18n.myName() %></label>
+    <input id="netsim_lobby_name" type="text" value="<%= displayName %>" <% if (displayName.length > 0) { %>disabled<% } %> />
+    <% if (displayName.length === 0) { %>
+      <input id="netsim_lobby_set_name_button" type="button" value="Set Name" disabled />
+    <% } %>
+  </div>
+  <% if (displayName.length > 0) { %>
+    <div class="field-box shard-control">
+      <label for="netsim_shard_select"><%= i18n.mySection() %></label>
+      <select id="netsim_shard_select"></select>
+    </div>
+  <% } %>
+  <div class="clearfix"></div>
+</div>

@@ -199,6 +199,22 @@ svg {
     margin-right: 320px;
   }
 
+  .netsim-shard-selection-panel {
+    overflow: hidden;
+
+    .content-wrap {
+      margin: 1em;
+    }
+
+    .field-box {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .clearfix {
+      clear:both;
+    }
+  }
 
   .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em;
