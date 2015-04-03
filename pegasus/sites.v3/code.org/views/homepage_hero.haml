@@ -11,9 +11,9 @@
     .thegap{style: "height: 1px"}
       &nbsp;
     #desktop-header.desktop-feature
-      = view :header
+      = view :header, variant: "desktop"
     #mobile-header.mobile-feature
-      = view :header
+      = view :header, variant: "mobile"
 
   .container_responsive{style: "color: white; font-size: 20px"}
     .col-66{style: "position:relative;"}
@@ -48,7 +48,7 @@
             %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
               = I18n.t(entry[:text1_s])
           - elsif entry[:param1_s] == "learn"
-            %a{href: "/learn", style: "color:white; font-size:20px"}
+            %a#herolearnlink{href: "/learn", style: "color:white; font-size:20px"}
               %button{style: "font-weight: 500; font-size: 20px; height: 50px"}
                 = I18n.t(entry[:text1_s])
           -# elsif entry[:param1_s] == "petition"
