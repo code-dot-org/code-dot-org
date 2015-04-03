@@ -19,7 +19,7 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle to a specific spot on the screen.
+Moves the turtle to a specific x,y coordinate on the screen.
 
 [/short_description]
 

@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## function someFunction()
+## Define a function: function someFunction()
 
 [/name]
 
