@@ -11,6 +11,7 @@ class LevelSourcesController < ApplicationController
   before_action :set_applab_user_id, only: [:show, :edit]
 
   def show
+    level_view_options hide_source: true
     @is_legacy_share = true
     if params[:embed]
       level_view_options(
