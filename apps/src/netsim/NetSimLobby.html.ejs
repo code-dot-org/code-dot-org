@@ -1,21 +1,10 @@
 <div id="netsim_lobby_open" class="netsim-panel netsim-lobby">
   <h1>Lobby</h1>
   <div class="panel-body">
-    <div id="display_name_view">
-      <label for="netsim_lobby_name">My Name:</label>
-      <input id="netsim_lobby_name" type="text" />
-      <input id="netsim_lobby_set_name_button" type="button" value="Set Name" />
-    </div>
-    <div id="shard_view">
-      <label for="netsim_shard_select">My Section:</label>
-      <select id="netsim_shard_select"></select>
-      <span id="netsim_not_connected_note">You are not connected. Select a class section from the list to connect.</span>
-      <a class="shardLink" href="#">Share this private network</a>
-      <% if (level.showAddRouterButton) { %>
-        <input type="button" id="netsim_lobby_add_router" value="Add Router" />
-      <% } %>
-      <ul id="netsim_lobby_list"></ul>
-      <input type="button" id="netsim_lobby_connect" value="Connect" />
-    </div>
+    <% if (level.showAddRouterButton) { %>
+      <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+    <% } %>
+    <ul id="netsim_lobby_list"></ul>
+    <input type="button" id="netsim_lobby_connect" value="Connect" />
   </div>
 </div>

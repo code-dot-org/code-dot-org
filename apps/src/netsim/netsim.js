@@ -158,6 +158,10 @@ NetSim.prototype.init = function(config) {
   this.runLoop_.begin();
 };
 
+NetSim.prototype.getUniqueLevelKey = function () {
+  return location.pathname.substr(1).replace(/\W/g, '-');
+};
+
 /**
  * Extracts query parameters from a full URL and returns them as a simple
  * object.
@@ -230,6 +234,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // a section, if they aren't set automatically.
   this.shardSelector_ = new NetSimShardSelectionPanel(
       $('.shard-selection-panel'),
+      this.getUniqueLevelKey(),
       this.connection_,
       user,
       this.getOverrideShardID()
@@ -237,7 +242,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
   this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.level,
-      this.connection_, user, this.getOverrideShardID());
+      this.connection_);
 
   // Tab panel - contains instructions, my device, router, dns
   if (this.shouldShowAnyTabs()) {
@@ -553,9 +558,17 @@ NetSim.prototype.render = function () {
   }
 
   if (this.shardSelector_) {
-    this.shardSelector_.render();
+    shareLink = this.shardSelector_.getShareLink();
   }
 
+  // Render left column
+  if (this.mainContainer_.find('.leftcol_disconnected').is(':visible')) {
+    if (this.shardSelector_) {
+      this.shardSelector_.render();
+    }
+  }
+
+  // Render right column
   if (this.statusPanel_) {
     this.statusPanel_.render({
       isConnected: isConnected,
