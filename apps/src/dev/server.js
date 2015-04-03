@@ -3,6 +3,7 @@ var express = require('express');
 var ejs = require('ejs');
 
 var app = express();
+app.use(require('connect-livereload')());
 
 app.set('views', __dirname);
 app.set('view engine', 'html.ejs');

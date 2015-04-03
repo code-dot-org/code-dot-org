@@ -6,15 +6,15 @@ var gulp = require('gulp');
 var newer = require('gulp-newer');
 var rename = require("gulp-rename");
 
-var outputDir = './build/package/js/';
+var APPS_OUTPUT = config.appsOutput;
 
 var appFilesSrc = [];
 var appFilesDest = [];
 config.apps.forEach(function (app) {
   appFilesSrc.push('./src/' + app + '/main.js');
-  appFilesDest.push(outputDir + app + '.js');
+  appFilesDest.push(APPS_OUTPUT + app + '.js');
 });
-var appsBrowserifyConfig = {src: appFilesSrc, dest: outputDir + 'common.js', factorBundleDest: appFilesDest};
+var appsBrowserifyConfig = {src: appFilesSrc, dest: APPS_OUTPUT + 'common.js', factorBundleDest: appFilesDest};
 
 gulp.task('browserify', ['npm-install', 'vendor'], function() {
   var browserify = require('./lib/gulp/gulp-browserify');
@@ -27,11 +27,11 @@ gulp.task('browserify', ['npm-install', 'vendor'], function() {
 gulp.task('compress', ['browserify'], function () {
   var uglify = require('gulp-uglify');
   return gulp.src([
-    './build/package/js/*.js',
-    '!build/package/js/**/vendor.js'
+    APPS_OUTPUT + '*.js',
+    '!' + APPS_OUTPUT + '**/blockly.js'
   ])
-    .pipe(uglify({compress:false}))
-    .pipe(gulp.dest('./build/package/js'));
+    .pipe(uglify())
+    .pipe(gulp.dest(APPS_OUTPUT));
 });
 
 // MessageFormat .json to .js message processing. Currently specific to apps-modules.
@@ -46,9 +46,9 @@ gulp.task('messages', function () {
       filepath.dirname = locale;
       filepath.basename = app + '_locale';
     }))
-    .pipe(newer(outputDir))
+    .pipe(newer(APPS_OUTPUT))
     .pipe(messageFormat())
-    .pipe(gulp.dest(outputDir));
+    .pipe(gulp.dest(APPS_OUTPUT));
 });
 
 var ext = 'compressed';
@@ -66,15 +66,15 @@ gulp.task('blockly_locale', function() {
       filepath.dirname = path.join(filepath.dirname, filepath.basename);
       filepath.basename = 'blockly_locale';
     }))
-    .pipe(gulp.dest('./build/package/js'));
+    .pipe(gulp.dest(APPS_OUTPUT));
 });
 
 gulp.task('vendor', ['blockly_locale'], function () {
   var concat = require('gulp-concat');
   return gulp.src(vendorFiles)
-    .pipe(newer('./build/package/js/blockly.js'))
+    .pipe(newer(APPS_OUTPUT + 'blockly.js'))
     .pipe(concat('blockly.js'))
-    .pipe(gulp.dest('./build/package/js'));
+    .pipe(gulp.dest(APPS_OUTPUT));
 });
 
 // Synchronize static files to a public folder
@@ -115,7 +115,7 @@ gulp.task('npm-install', function() {
 });
 
 // watch-mode incremental builds for dev environment
-gulp.task('dev', ['vendor', 'messages', 'media', 'sass'], function() {
+gulp.task('dev', ['vendor', 'messages', 'media', 'sass', 'server'], function() {
   gulp.watch(MESSAGES_PATH, ['messages']);
   gulp.watch(Object.keys(config.media), ['media']);
   gulp.watch(Object.keys(config.stylesheets), ['sass']);
@@ -131,6 +131,26 @@ gulp.task('dev', ['vendor', 'messages', 'media', 'sass'], function() {
     config = extend(config, {watch: true});
     return browserify(config)();
   }));
+});
+
+
+var tinylr = require('tiny-lr')();
+function notifyLiveReload(event) {
+  var fileName = require('path').relative(__dirname, event.path);
+  tinylr.changed({
+    body: {
+      files: [fileName]
+    }
+  });
+}
+
+gulp.task('server', function(){
+  var express = require('express');
+  var app = require('./src/dev/server.js');
+  app.use(express.static('./build/package'));
+  app.listen(8000);
+  tinylr.listen(35729);
+  gulp.watch(['./build/**/*', './src/dev/**/*'], notifyLiveReload);
 });
 
 gulp.task('lint', function() {

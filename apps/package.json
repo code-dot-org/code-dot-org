@@ -1,7 +1,8 @@
 {
   "name": "@cdo/cdo",
-  "version": "0.0.161",
-  "repository": "https://github.com/code-dot-org/blockly.git",
+  "version": "0.0.1",
+  "description": "Code Studio frontend pipeline",
+  "repository": "https://github.com/code-dot-org/code-dot-org.git",
   "engines": {
     "node": "~0.10.18"
   },
@@ -9,7 +10,8 @@
     "gulp": "FORCE_COLOR=true gulp",
     "clean": "rimraf ./build",
     "test": "npm run gulp -- test",
-    "start": "npm run gulp -- dev"
+    "start": "npm run gulp -- dev",
+    "lint": "npm run gulp -- lint"
   },
   "browserify": {
     "transform": [
@@ -34,6 +36,7 @@
     "chalk": "^1.0.0",
     "concat-stream": "^1.4.7",
     "connect-livereload": "~0.5.2",
+    "ejs": "^2.3.1",
     "event-stream": "^3.1.7",
     "express": "~4.11.0",
     "factor-bundle": "^2.3.3",
@@ -58,6 +61,7 @@
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "require-globify": "^1.1.0",
     "rimraf": "^2.3.2",
+    "tiny-lr": "^0.1.5",
     "uglify-js": "~2.4.16",
     "vinyl": "^0.4.6",
     "vinyl-source-stream": "^1.0.0",
