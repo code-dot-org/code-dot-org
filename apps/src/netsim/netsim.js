@@ -231,7 +231,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.shardSelector_ = new NetSimShardSelectionPanel(
       $('.shard-selection-panel'),
       this.connection_,
-      user
+      user,
+      this.getOverrideShardID()
   );
 
   var lobbyContainer = document.getElementById('netsim_lobby_container');
