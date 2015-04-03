@@ -45,7 +45,7 @@ namespace :i18n do
 
       en_us = {}
       line = 1
-      CSV.parse(file.spreadsheet.export_as_string('csv', 0)) do |row|
+      CSV.parse(file.spreadsheet_csv) do |row|
         en_us[row[0]]=row[1] unless line == 1
         line += 1
       end
