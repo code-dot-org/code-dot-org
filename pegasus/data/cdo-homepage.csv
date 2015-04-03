@@ -1,6 +1,6 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_malala,widehero,homepage_hero_text_malala,50% 30%,,,,,/images/homepage/malala.jpg,both,show,all
-hero_susan,widehero,homepage_hero_text_susan,52% 6%,,,,,/images/homepage/susan.jpg,both,show,all
+hero_malala,widehero,homepage_hero_text_malala,50% 30%,,,,,/images/homepage/malala.jpg,both,show,en
+hero_susan,widehero,homepage_hero_text_susan,52% 6%,,,,,/images/homepage/susan.jpg,both,show,en
 hero_satya,widehero,,47% 21%,,,,,/images/homepage/satya.jpg,both,show,all
 hero_student_girl,widehero,,50% 30%,,,,,/images/homepage/girl.jpg,both,show,all
 hero_student_boyblue,widehero,,55% 7%,,,,,/images/homepage/boy5.jpg,both,show,all
@@ -11,10 +11,18 @@ hero_teacher_girl,widehero,,24% 11%,,,,,/images/homepage/girl10.jpg,both,show,al
 hero_teacher_man,widehero,,49% 17%,,,,,/images/homepage/kids10.jpg,both,show,all
 hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,,,,,/images/homepage/sheryl.jpg,both,show,all
 hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,,,,,/images/homepage/fistbump.jpg,both,show,all
-action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,,,,,code.org,show,all
-action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,all
-action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,all
-action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,all
+hero_malala,widehero,anybody_can_learn,50% 30%,,,,,/images/homepage/malala.jpg,both,show,not en
+hero_susan,widehero,anybody_can_learn,52% 6%,,,,,/images/homepage/susan.jpg,both,show,not en
+hero_sheryl,widehero,anybody_can_learn,59% 22%,,,,,/images/homepage/sheryl.jpg,both,show,not en
+hero_fistbump,widehero,anybody_can_learn,55% 9%,,,,,/images/homepage/fistbump.jpg,both,show,not en
+action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,,,,,code.org,show,en
+action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,en
+action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,en
+action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,en
+action_codevideo,action,dashboard_landing_video,video,nKIu9yen5nc,,,,,code.org,show,not en
+action_teachervideo,action,dashboard_landing_video,video,rH7AjDMz_dc,,,,,csedweek.org,show,not en
+action_learn,action,learn_now,learn,,,,,,both,show,not en
+action_signpetition,action,hoc2014_support,petition,,,,,,both,show,not en
 slot_hoc,slot,homepage_slot_text_hoc,http://code.org/learn,,,,,/shared/images/courses/logo_tall_elementary.jpg,both,show,all
 slot_frozen,slot,homepage_slot_text_frozen,http://studio.code.org/s/frozen/reset,,,,codestudio,/shared/images/courses/logo_tall_frozen.jpg,both,show,all
 slot_teacher,slot,homepage_slot_text_teacher,http://code.org/educate/k5,,,,,/shared/images/courses/logo_tall_teacher.jpg,both,show,all
