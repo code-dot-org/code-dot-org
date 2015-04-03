@@ -23,32 +23,7 @@ Using App Lab's table data storage, reads the records from the provided `tableNa
 
 [/short_description]
 
-**About App Lab's table data storage:**  
-App Lab's table data storage enables persistent data storage
- for an app. Whereas [setKeyValue()](/applab/docs/getKeyValue) and [getKeyValue()](/applab/docs/getKeyValue) can be used to store multiple independent key/value pairs, table data storage allows you to store similar data together in a table format.
-
- As a simple example, let's say you are building an app that
-  collects information about a person's name,
-   age, and favorite food so you can figure out if food
-    preferences are correlated with age.
-
-If you were storing this data on a piece of paper, or with a spreadsheet app, you might format the data like this:
-
-| Name  | Age | Food
-|-----------------|------|-----------|
-| Abby  | 17 | Ravioli |
-| Kamara  | 15 | Sushi |
-| Rachel  | 16 | Salad |
-<br>
-The table has a row of column names, and then each row that is added to the table fills in one or more
- of the columns. App Lab's table data storage let you store similarly formatted data, and provides simple
-  functions to [read](/applab/docs/readRecords), [create](/applab/docs/createRecords), [delete](/applab/docs/deleteRecord), and [update](/applab/docs/updateRecord) records (rows) in a table, right from your app.
-
-_Definitions:_  
-_Table:_ A collection of records with shared column names  
-_Record:_ A "row" of the table  
-
-
+**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).  
 **Note:** View your app's table data by clicking 'View data' in App Lab and clicking the table name you want to view.
 
 [/description]
@@ -58,7 +33,7 @@ ____________________________________________________
 
 [example]
 
-**Read all records from a table** Continuing the example above, after creating a record in the table, we can read all records back from the table and display the column values to the screen. Click 'View Data' in App Lab to see the stored data.
+**Read all records from a table** After creating a record in the table, we can read all records back from the table and display the column values to the screen. To retrieve all records, an empty object is passed as the `searchTerms` parameter. Click 'View Data' in App Lab to see the stored data.
 
 <pre>
 //Create a single record in the table
@@ -81,13 +56,13 @@ ____________________________________________________
 
 [example]
 
-**Search for records** Similar the example above, we can request a subset of records to be returned using the `searchTerms` parameter. Click 'View Data' in App Lab to see the stored data.
+**Search for records** Similar the example above, we can request a subset of records to be returned using the `searchTerms` parameter. `searchTerms` can be used to find exact matches on one or more columns of a record. Click 'View Data' in App Lab to see the stored data.
 
 <pre>
 //Create a single record in the table
 createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
-  //After the record is created, search for records where the food matches "avocado".
+  //After the record is created, search for records where the food column exactly matches "avocado".
   readRecords("fav_foods", {food:"avocado"}, function(records) {
     for (var i =0; i < records.length; i++) {
       write("id: " + records[i].id + " Age:" + records[i].age + " Food: " + records[i].food);
@@ -106,7 +81,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-createRecord(tableName, record, function(){
+readRecords(tableName, searchTerms, function(records){
     //callback function code goes here
   });
 </pre>
@@ -119,16 +94,16 @@ createRecord(tableName, record, function(){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table the record should be added to. `tableName` gets created if it doesn't exist.  |
-| record | object | Yes | The data to be stored. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {column1:"a string", column2:10, column3:[1,2,3,4]}.  |
-| callbackFunction | function | No | A function that is asynchronously called when the call to createRecord() is finished.  |
+| tableName | string | Yes | The name of the table from which the records should be searched and read. |
+| searchTerms | object | Yes | To read all records from a table, use the empty searchTerms object {}. To search for a particular set of records, use the object syntax to specify values for one or more column values to match. Examples: {id: 1}, {food:"avocado"}, {name:"Sally", food:"ravioli"}
+| callbackFunction | function | Yes | A function that is asynchronously called when the call to readRecords() is finished. An array of the matching records are passed as a single parameter to this function.|
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When `createRecord()` is finished executing, `callbackFunction` is automatically called.
+No return value. When `readRecords()` is finished executing, `callbackFunction` is automatically called.
 
 [/returns]
 
@@ -136,7 +111,8 @@ When `createRecord()` is finished executing, `callbackFunction` is automatically
 
 ### Tips
 - This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
-- Use with [readRecords()](/applab/docs/readRecords), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to view, delete, and update records in a table.
+- Use with [createRecord()](/applab/docs/createRecord), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to view, delete, and update records in a table.
+- [Learn more](/applab/docs/tabledatastorage) about App Lab table data storage
 
 [/tips]
 

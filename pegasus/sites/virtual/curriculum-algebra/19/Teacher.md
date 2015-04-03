@@ -44,7 +44,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ### For the Teacher
 - Language Table (see below)
 - Cutouts of Pythagorean Theorem packets ( [1](pythag1.png), [2](pythag2.png) ) - 1 per cluster of students working together
-- [Activity Handouts and Instructions](https://docs.google.com/a/code.org/document/d/1gSfajadUhQ-R4M6h6JehtBibk6AuCV503_nja-pBtfI)
 
 
 
@@ -71,6 +70,8 @@ Suppose two objects are moving through space, each one having its own (x,y) coor
 
 [tip]
 
+# Lesson Tip
+
 Would the distance between them change if the circles swapped places? Why or why not?
 
 [/tip]
@@ -80,6 +81,8 @@ Work through a number of examples, using a number line on the board and asking s
 Your game file provides a function called line-length that computes the difference between two points on a number line. Specifically, line-length takes two numbers as input and determines the distance between them
 
 [tip]
+
+# Lesson Tip
 
 What answers would you expect from each of the following two uses of line-length:
 

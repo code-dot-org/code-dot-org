@@ -103,15 +103,25 @@ Then collect the cards and shuffle them. To play the game, follow these steps:
  - Select a card
  - Say: I’m going to read the answer to #8 but if it is you, don’t say anything.
  - Say: Now everyone stand up and we are going to ask some questions with Boolean answers to help determine who this person is.
- - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were brown, yes, 13, blue, December, Yes, and 9
+ - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were:
+ 
+1. What is your hair color? - **brown**
+2. Do you wear glasses or contacts? - **yes**
+3. What is your favorite number? - **13**
+4. What is your favorite color? - **blue**
+5. What month were you born? - **December**
+6. Do you have any siblings? - **yes**
+7. What is the last digit of your phone number? - **7**
 
-1. My hair color is brown.
-2. I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
-3. My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
-4. My favorite color is blue or green.
-5. I was not born in April.
-6. I have at least one sibling.
-7. The last digit of my phone number is a prime number.
+With that example, you might make the following statements:
+
+- My hair color is brown.
+- I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
+- My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
+- My favorite color is blue or green.
+- I was not born in April.
+- I have at least one sibling.
+- The last digit of my phone number is a prime number.
 
 Because of how numbers 3,4, 5, and 7 were asked it is likely that some people will still be standing.  You will need to revisit these and ask them again in a more narrow fashion such as “My favorite color is blue”.
 
