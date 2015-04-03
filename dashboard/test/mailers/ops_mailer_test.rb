@@ -8,8 +8,8 @@ class OpsMailerTest < ActionMailer::TestCase
 
     teachers = [create(:teacher)]
 
-    mail = OpsMailer.district_contact_added_teachers(@district.contact, @cohort, teachers)
-    assert_equal "[ops notification]   added 1 teachers to Test Cohort", mail.subject
+    mail = OpsMailer.district_contact_added_teachers(@district.contact, @cohort, teachers, [])
+    assert_equal "[ops notification]   modified Test Cohort", mail.subject
     assert_equal ["ops@code.org"], mail.to
     assert_equal ["noreply@code.org"], mail.from
     assert_match "added 1 teachers", mail.body.encoded
