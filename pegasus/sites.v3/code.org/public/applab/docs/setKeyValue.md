@@ -19,7 +19,7 @@ Category: Data
 
 [short_description]
 
-Stores a key/value pair in App Lab's remote data storage, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
+Stores a key/value pair in App Lab's key/value data storage, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 

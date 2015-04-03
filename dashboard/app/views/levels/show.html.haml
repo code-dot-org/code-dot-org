@@ -10,9 +10,6 @@
     %li
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
-:javascript
-  var appOptions = #{app_options.to_json};
-
 - if @game.unplugged?
   = render partial: 'levels/unplug', locals: {app: @game.app}
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
@@ -24,6 +21,7 @@
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
   :javascript
+    var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
   %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
 - else
