@@ -601,7 +601,7 @@
 .user_menu { /* copied from dashboard's .header-button */
   color: white;
   display: inline-block;
-  background-color: rgb(255, 164, 0);
+  background-color: #ffa400;
   border-radius: 5px;
   padding: 7px 14px;
   font-size: 14px;
@@ -610,6 +610,6 @@
   cursor: pointer;
   a:hover {
     text-decoration: none;
-    background-color: rgb(255, 164, 0);
+    background-color: #ffa400;
   }
 }
