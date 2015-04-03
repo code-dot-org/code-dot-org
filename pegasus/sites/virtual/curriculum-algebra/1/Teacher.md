@@ -136,7 +136,7 @@ Fill in the rest of the reverse-engineering table, identifying what is changing 
 ## Wrap-up
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-Use the [game planning template](../docs/worksheets/game_planning.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
+Use the [game planning template](../docs/worksheets/game_planning.pdf) to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
 To start, your game will have four things in it:
 
 - A Background, such as a forest, a city, space, etc.

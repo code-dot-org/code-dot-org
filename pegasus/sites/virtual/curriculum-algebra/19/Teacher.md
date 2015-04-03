@@ -43,7 +43,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### For the Teacher
 - Language Table (see below)
-- Cutouts of Pythagorean Theorem packets ( [1](pythag1.png), [2](pythag2.png) ) - 1 per cluster of students working together
+- Cutouts of Pythagorean Theorem packets ( [1](pythag1.png), [2](pythag2.png) ) - 1 per group of students working together
 
 
 
@@ -61,7 +61,7 @@ This lesson has one new and important word:<br/>
 
 ### <a name="GetStarted"></a> 2) Are they Touching?
 
-Suppose two objects are moving through space, each one having its own (x,y) coordinates. When do their edges start to overlap? They certainly overlap if their coordinates are identical (x1=x2, y1=y2), but what if their coordinates are separated by a small distance? Just how small does that distance need to be before their edges touch?
+Suppose two objects are moving through space, each one having its own (x,y) coordinates. When do their edges start to overlap? They certainly overlap if their coordinates are identical (x1 = x2, y1 =y 2), but what if their coordinates are separated by a small distance? Just how small does that distance need to be before their edges touch?
 
 **Visual aids are key here: be sure to diagram this on the board!**
 <img src="numberline.png" style="float:right; margin: 0 0 20px 20px;"/>In one dimension, it’s easy to calculate when two objects overlap. In this example, the red circle has a radius of 1, and the blue circle has a radius of 1.5 The circles will overlap if the distance _between their centers_ is _less than the sum of their radii_ (1 + 1.5 = 2.5). How is the distance between their centers calculated? In this example, their centers are 3 units apart, because 4 − 1 = 3.
@@ -110,17 +110,17 @@ In a right triangle, the side opposite the 90-degree angle is called the hypoten
 ## Activities:
 ### <a name="Activity1"></a> 3) Proving Pythagoras
 
-If your students are new to the Pythagorean Theorem, or are in need of a refresher, this activity is an opportunity to get strengthen their understanding in a hands-on fashion.
+If your students are new to the Pythagorean Theorem, or are in need of a refresher, this activity is an opportunity to strengthen their understanding in a hands-on fashion.
 
-Organize students into small groups of 2-3
+Organize students into small groups of 2 or 3.
 
 <img src="proof1.png" style="float:right; margin: 0 0 20px 20px;"/>
 
 - Pass out Pythagorean Proof materials ( [1](pythag1.png), [2](pythag2.png) ) to each group.
 - Have students cut out the four triangles and one square on first sheet.
 - Explain that, for any right triangle, it is possible to draw a picture where the hypoteneuse is used for all four sides of a square.
-- Have students lay out their grey triangles onto the white square, as show in this diagram.
-- Point out that the square itself has four identical sides of length C, which are the hypoteneuses for the triangles. If the area of a square is expressed by _side ∗ side_, then the area of the white space is C2.
+- Have students lay out their gray triangles onto the white square, as show in this diagram.
+- Point out that the square itself has four identical sides of length C, which are the hypoteneuses for the triangles. If the area of a square is expressed by _side ∗ side_, then the area of the white space is C<sup>2</sup>.
 - Have students measure the inner square formed by the four hypotenuses (C)
 
 <div style="clear: both"></div>
@@ -143,12 +143,12 @@ The smaller square has an area of A<sup>2</sup>, and the larger square has an ar
 
 ### <a name="Activity2"></a> 4) Collision Detection
 
-The following activity will have the student teams:
+In this  activity students will:
 
-- Creating right triangles on a graph
-- Calculating the hypotenuse by direct measurement and by the Pythgorean Theorem
-- Determining if circles have collided by examining visually
-- Determining if circles have collided by comparing distance and radii
+- Create right triangles on a graph.
+- Calculate the hypotenuse by direct measurement and by the Pythgorean Theorem.
+- Determine if circles have collided by examining visually.
+- Determine if circles have collided by comparing distance and radii.
 
 Detailed instructions are provided on the [Collision Worksheet](../docs/worksheets/collision.pdf).
  

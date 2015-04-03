@@ -32,7 +32,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-The students will do lots of dragging and dropping as they fill in the missing pieces of different parts of various contracts.  It should be noted that the examples must be filled in completely.  The message received when the example is incomplete is "You have a block with an unfilled input."
+The students will do lots of dragging and dropping as they fill in the missing pieces of different parts of various contracts.  It should be noted that the examples must be filled in completely.  The error message when the example is incomplete is "You have a block with an unfilled input."
 
 [/together]
 

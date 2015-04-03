@@ -37,12 +37,12 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Remind students of the game they played in the last stage, what were some of the tricky elements of constructing a good conditional statement?
+Remind students of the game they played in the last stage. What were some of the tricky elements of constructing a good conditional statement?
 
-- Order matters (the first condition in the list to return true wins!).
+- Order matters (the first condition in the list to return true wins).
 - Write clear and explicit conditions.
-- Use the else clause as a catch all for conditions that you don't expect or can't write explicit conditions for.
-- All conditionals must have at least on condition and an else statement, you can add or remove further condition as using the blue buttons.
+- Use the else clause as a catch-all for conditions that you don't expect or can't write explicit conditions for.
+- All conditionals must have at least one condition and an else statement, you can add or remove further conditions using the blue buttons.
 
 <img src="conditional.png" style="max-width: 100%; min-width: 300px"/>
 

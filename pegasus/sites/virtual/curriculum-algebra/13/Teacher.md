@@ -40,7 +40,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1lUA5nx8ILAPwjAEl70Hw0ADGflzOtX1L2pIXtNU2B0U/)
 
 ### For the Students
-- 3x5 cards, pens or pencils
+- 3 x 5 cards, pens or pencils
 
 [/together]
 
@@ -50,10 +50,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has one new and important word:<br/>
+This lesson has two new and important words:<br/>
 
-- **Boolean** - a type of data with two values: true and false
-- **Return** - used as a synonym for output of a function
+- **Boolean** - a type of data with two values: true and false.
+- **Return** - used as a synonym for output of a function.
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
@@ -129,7 +129,7 @@ Play this several times.  Be creative with using _or_s and _and_s.  Remind stude
 
 Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
 
-And how does this all connect with our game?  Is the target too far left or too far right?  If so, then perhaps some action should occur.
+How does this activity connect with our game? In our game, we may need to determine: Is a target too far left or too far right?  If so, then perhaps some action should occur.
 
 [/together]
 
