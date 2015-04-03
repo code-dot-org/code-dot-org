@@ -413,7 +413,7 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: failedInput
+    failedInput: utils.valueOr(failedInput, null)
   };
 }
 
