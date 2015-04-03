@@ -7,11 +7,9 @@
       = f.label :name
       = f.text_field :name, placeholder: 'Level Name'
   / Only enter name to create new records of certain level types.
-  - unless @level.new_record? && (@level.is_a?(Grid) || @level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Artist) || @level.is_a?(Applab) || @level.is_a?(NetSim))
-    / only Blockly-type levels have Concepts
-    = render partial: 'levels/editors/concepts', locals: {f: f} if @level.is_a? Blockly
-    / Video dropdown not yet implemented for dsl-defined levels
-    = render partial: 'levels/editors/video', locals: {f: f} unless @level.is_a? DSLDefined
+  - unless @level.new_record? && @level.is_a?(Blockly)
+    = render partial: 'levels/editors/all', locals: {f: f}
+
     = render partial: 'levels/editors/blockly', locals: {f: f} if @level.is_a? Blockly
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze

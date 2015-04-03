@@ -98,5 +98,4 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   if (this.encodingControl_) {
     this.encodingControl_.setEncodings(newEncodings);
   }
-  this.chunkSizeControl_.setEncodings(newEncodings);
 };
