@@ -38,8 +38,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. Either setup RBENV or configure your default ruby and gem version to 2.0
   1. RBENV ([instructions](https://github.com/sstephenson/rbenv#installation))
   1. Symlinks:
-    1. Ruby: 'sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby'
-    1. Gem: 'sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem'
+    1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
+    1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
 
 ## Common setup
 
