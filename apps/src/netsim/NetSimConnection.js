@@ -233,6 +233,15 @@ NetSimConnection.prototype.isConnectedToShard = function () {
 };
 
 /**
+ * Whether we are currently connected to a shard with the given ID
+ * @param {string} shardID
+ * @returns {boolean}
+ */
+NetSimConnection.prototype.isConnectedToShardID = function (shardID) {
+  return this.shard_ && this.shard_.id === shardID;
+};
+
+/**
  * Gets all rows in the lobby and passes them to callback.  Callback will
  * get an empty array if we were unable to get lobby data.
  * @param {function} callback
