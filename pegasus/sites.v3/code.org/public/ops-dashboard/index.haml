@@ -117,7 +117,8 @@ title: "Ops Dashboard"
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
-        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'}
+        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'},
+        removeTeacher: {method:'DELETE', url: 'dashboardapi/cohorts/:id/teachers/:teacher_id'}
       });
 
       return Cohort;
@@ -482,7 +483,11 @@ title: "Ops Dashboard"
       };
 
       $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
-        $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+        cohortsService.removeTeacher({id: $scope.cohort.id, teacher_id: teacher.id}).$promise.then(
+          function() {
+            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+          }
+        ).catch($scope.genericError);
       };
 
       $scope.cancel = function(teacher) {
