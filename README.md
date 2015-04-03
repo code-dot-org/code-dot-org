@@ -33,8 +33,13 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
   * **Hit enter and select default options for any configuration popups**
+1. Either setup RBENV or configure your default ruby and gem version to 2.0
+  1. RBENV ([instructions](https://github.com/sstephenson/rbenv#installation))
+  1. Symlinks:
+    1. Ruby: 'sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby'
+    1. Gem: 'sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem'
 
 ## Common setup
 
@@ -65,14 +70,14 @@ Our code is segmented into four parts:
 1. `cd code-dot-org`
 2. `rake build:dashboard` (Generally, do this after each pull)
 3. `bin/dashboard-server`
-4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+4. Visit [http://localhost:3000/](http://localhost:3000/)
 
 ## Running Pegasus
 
 1. `cd code-dot-org`
 2. `rake build:pegasus` (Generally, do this after each pull)
 3. `bin/pegasus-server`
-4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
+4. Visit [http://localhost:9393/](http://localhost:9393/)
 
 ## Building Apps and Blockly-core (optional)
 
