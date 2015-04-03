@@ -22,6 +22,7 @@ class LevelsHelperTest < ActionView::TestCase
     DEFAULT_LOCALE = 'en-us'
     NEW_LOCALE = 'es-es'
     @level.instructions = nil
+    @level.user_id = nil
     @level.level_num = '2_2'
 
     I18n.locale = DEFAULT_LOCALE

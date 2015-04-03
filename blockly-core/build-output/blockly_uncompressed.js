@@ -14468,16 +14468,18 @@ Blockly.Block.prototype.getHeightWidth = function() {
 };
 Blockly.Block.prototype.onMouseDown_ = function(e) {
   e.preventDefault();
+  var targetClass = e.target.getAttribute && e.target.getAttribute("class");
+  if(targetClass === "inputClickTarget") {
+    e.stopPropagation();
+    return
+  }
   document.activeElement && (document.activeElement.blur && document.activeElement.blur());
   if(this.isInFlyout) {
     return
   }
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  var targetClass = e.target.getAttribute && e.target.getAttribute("class");
-  if(targetClass !== "inputClickTarget") {
-    this.select()
-  }
+  this.select();
   this.blockSpace.blockSpaceEditor.hideChaff();
   if(Blockly.isRightButton(e)) {
   }else {
