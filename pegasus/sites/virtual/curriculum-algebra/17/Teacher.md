@@ -67,7 +67,7 @@ This lesson has three new and important words:<br/>
      - If you were, the condition would be true, then you would get the reward.
      - If you weren't, the condition would be false, then the reward woud not apply.
   - Can we come up with another conditional?
-     - If I say "question," then you raise your hand
+     - If I say "question," then you raise your hand.
      - If I sneeze, then you say "Gesundheit."
      - What examples can you come up with?
 
@@ -81,15 +81,15 @@ Conditionals let our programs run differently based on the outcome of a conditio
 
 Let's look at a conditional piece by piece:
 
-          (x > 10)  ->  "That's pretty big"
+    (x > 10)  ->  "That's pretty big"
     (x < 10)  ->  "That's pretty small"
     else      ->  "That's exactly ten"
 
 If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition we don't need to keep looking.
 
-If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been  for beginners to write the two questions (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
+If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been better to write the two conditions as (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
 
-Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
+Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without conditionals, you could only write a function that always moves the player up, or always moves it down, but not both.
      
 Now let's play a game.
  
@@ -103,8 +103,8 @@ Now let's play a game.
 Living Function Machines - Conditionals:
 
 Explain to the class that they will be playing the role of Function Machines, following a few simple rules:
-- Whenever your function is called, the only information you are allowed to take in is what's described in your Domain
-- Your function must return only what is described in your Range
+- Whenever your function is called, the only information you are allowed to take in is what's described in your Domain.
+- Your function must return only what is described in your Range.
 - You must follow the steps provided in your definition - no magic!
 
 This time, however, everyone will be running the same function. And that function is called 'simon_says' and it has the following Contract:
@@ -113,7 +113,7 @@ Given a String that describes an action, produce the appropriate movement. If an
 
 Examples
 
-          simon_says("left hand up")    = RaiseLeftHand
+    simon_says("left hand up")    = RaiseLeftHand
     simon_says("right hand up")   = RaiseRightHand
     simon_says("left hand down")  = LowerLeftHand
     simon_says("right hand down") = LowerRightHand
@@ -127,7 +127,7 @@ Definition
                        "right hand down"  : LowerRightHand,
                        else               : LowerBothHands }
 
-Review the contract parts:  name, domain, range, parameters(input types), return types(output values)
+Review the contract parts:  name, domain, range, parameters (input types), return types (output values)
 
 Say to the class: “Here is what the initial code looks like.  We will add several clauses but the clauses that are there will always be there and the final else action (often called the default result) will always be LowerBothHands
 
@@ -160,7 +160,7 @@ Continue playing using numbers in the `simon_says` function, such as `simon_says
 
 ### Connection to Mathematics and Life
 
-There are piecewise functions in Mathematics as well.  The absolute value function y = |x| can be re-written as   
+There are piecewise functions in mathematics as well.  The absolute value function y = |x| can be re-written as   
 y = { -x : x<0 , x : x>0, 0 }  
 <img src="Abs_value.png" style="max-width: 100%"/><br/>
 Note that in mathematical terms, that the clause for the domain is usually listed second instead of first.  
@@ -169,7 +169,7 @@ A data plan on a phone bill might be structured as:
 
 * $40 for less than 5 GB
 * $ 8 per GB for 5-10 GB
-* $12 per GB for using more than 10GB. 
+* $12 per GB for using more than 10GB
 
 This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5 =< x =< 10, 12x: x>10 }
 
