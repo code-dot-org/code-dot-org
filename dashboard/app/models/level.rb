@@ -16,7 +16,11 @@ class Level < ActiveRecord::Base
   include StiFactory
   include SerializedProperties
 
-  serialized_attrs %w(video_key embed)
+  serialized_attrs %w(
+    video_key
+    embed
+    callout_json
+  )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -66,12 +70,29 @@ class Level < ActiveRecord::Base
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
+  # All levelbuilder levels will have a user_id, except for DSLDefined levels.
   def custom?
-    user_id.present?
+    user_id.present? || is_a?(DSLDefined)
   end
 
-  def level_num_custom?
-    level_num.eql? 'custom'
+  def available_callouts(script_level)
+    if custom?
+      unless self.callout_json.blank?
+        return JSON.parse(self.callout_json).map do |callout_definition|
+          Callout.new(
+              element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              callout_text: callout_definition['callout_text'],
+              qtip_config: callout_definition['qtip_config'].to_json,
+              on: callout_definition['on']
+          )
+        end
+      end
+    elsif script_level
+      # Legacy levels have callouts associated with the ScriptLevel, not Level.
+      return script_level.callouts
+    end
+    []
   end
 
   # Input: xml level file definition
