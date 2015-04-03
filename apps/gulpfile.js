@@ -103,12 +103,6 @@ gulp.task('sass', function () {
   return es.merge(sassStreams);
 });
 
-// Create lodash custom build
-gulp.task('lodash', function (cb) {
-  var exec = require('child_process').exec;
-  return exec('`npm bin`/lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind" --output src/lodash.js', cb);
-});
-
 gulp.task('build', ['browserify', 'media', 'sass', 'messages']);
 
 // Call 'package' for maximum compression of all .js files
