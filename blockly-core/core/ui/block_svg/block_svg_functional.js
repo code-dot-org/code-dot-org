@@ -51,7 +51,7 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
 
   this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
 
-  var rect = this.svgPath_.getBoundingClientRect();
+  var rect = this.svgPath_.getBBox();
   this.divider_.setAttribute('width', Math.max(0, rect.width - 2));
 };
 
