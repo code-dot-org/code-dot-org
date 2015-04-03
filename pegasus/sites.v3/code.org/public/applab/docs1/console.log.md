@@ -96,7 +96,7 @@ No return value. Outputs to the console only.
 
 ### Tips
 - Code that has a lot of console.log() messages is considered "chatty" because it talks to you a lot.  Chatty code is good when you first write a new block of code because it helps you know what is happening, so don't hesitate to use console.log() a lot.  But chatty code can be irritating after a while, so once your code is working the way you want, it is a good idea to go back through and clean up by removing console.log() messages that are no longer helpful.  
-- Remember that the + operator works differently for number than strings.  For instance console.log(5 + 3) will display "8" because the integers 5 and 3 will be added together than then automatically converted to a string, but console.log("5" + "3") will simply concatenate the two strings to display "53".
+- Remember that the + operator works differently for numbers than strings.  For instance console.log(5 + 3) will display "8" because the integers 5 and 3 will be added together than then automatically converted to a string, but console.log("5" + "3") will simply concatenate the two strings to display "53".
 
 [/tips]
 
