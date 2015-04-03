@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## function someFunction(param0, param1, ..., paramN)
+## Define a function with parameters: function someFunction(param0, param1, ..., paramN)
 
 [/name]
 
