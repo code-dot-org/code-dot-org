@@ -7,7 +7,6 @@
 /.bundle
 /.gdrive_session
 /crontab
-/dashboard/public/blockly
 /.dropbox.cache
 /build-started
 /locals.yml
