@@ -11,7 +11,7 @@
  */
 'use strict';
 
-var minifyBinary = require('./dataConverters').minifyBinary;
+var netsimUtils = require('./netsimUtils');
 var dataConverters = require('./dataConverters');
 
 /**
@@ -148,7 +148,7 @@ Packet.Encoder.prototype.getHeader = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
-  binary = minifyBinary(binary);
+  binary = dataConverters.minifyBinary(binary);
 
   while (this.formatSpec_[ruleIndex].key !== key) {
     binaryIndex += this.formatSpec_[ruleIndex].bits;
@@ -189,7 +189,7 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
  * @returns {string} packet body binary string
  */
 Packet.Encoder.prototype.getBody = function (binary) {
-  return minifyBinary(binary)
+  return dataConverters.minifyBinary(binary)
       .slice(Packet.Encoder.getHeaderLength(this.formatSpec_));
 };
 
@@ -261,7 +261,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
     fieldBits = fieldBits.slice(0, fieldSpec.bits);
 
     // Left-pad to desired size
-    fieldBits = dataConverters.zeroPadLeft(fieldBits, fieldSpec.bits);
+    fieldBits = netsimUtils.zeroPadLeft(fieldBits, fieldSpec.bits);
 
     parts.push(fieldBits);
   });

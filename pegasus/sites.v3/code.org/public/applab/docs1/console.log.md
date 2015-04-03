@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## console.log(message)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Variables
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Displays the string or variable in the console display
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+console.log() is used to help you understand what your code is doing.  By displaying messages containing either descriptive text that tells you what is happening or the value of particular variables, you can follow along as your code executes.
 
 [/description]
 
@@ -33,8 +33,7 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+console.log("It's Alive!") // Let's you know your code is running
 </pre>
 
 [/example]
@@ -44,11 +43,24 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+// I'm thinking of a number between 0 and 10
+var myRandomNumber = randomNumber(10)
+console.log("My random number is: " + myRandomNumber)
 </pre>
 
+[/example]
+
+____________________________________________________
+[example]
+
+<pre>
+// Display the true/false state of a checkbox
+checkbox("myCheckbox", false);
+textLabel("myLabel", "Click on or off", "myCheckbox");
+onEvent("myCheckbox", "click", function(event) {
+  console.log("Checkbox is: " + getChecked("myCheckbox"));
+});
+</pre>
 
 [/example]
 
@@ -58,7 +70,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+console.log(message)
 </pre>
 
 [/syntax]
@@ -69,25 +81,22 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| message | string | Yes | The message string to display in the console.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Outputs to the console only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- Code that has a lot of console.log() messages is considered "chatty" because it talks to you a lot.  Chatty code is good when you first write a new block of code because it helps you know what is happening, so don't hesitate to use console.log() a lot.  But chatty code can be irritating after a while, so once your code is working the way you want, it is a good idea to go back through and clean up by removing console.log() messages that are no longer helpful.  
+- Remember that the + operator works differently for numbers than strings.  For instance console.log(5 + 3) will display "8" because the integers 5 and 3 will be added together than then automatically converted to a string, but console.log("5" + "3") will simply concatenate the two strings to display "53".
 
 [/tips]
 

@@ -46,7 +46,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 <br/>
 
-<%= view :testimonials_en %>
+<%= view :testimonials %>
 
 <br/>
 <br/>

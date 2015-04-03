@@ -7,13 +7,13 @@ module Ops
     setup do
       @request.headers['Accept'] = 'application/json'
       @admin = create :admin
-      sign_in @admin
       @cohorts_district = create(:cohorts_district)
       @cohort = @cohorts_district.cohort
       @district = @cohorts_district.district
     end
 
     test 'District Contact can add teachers to a cohort' do
+      sign_in @district.contact
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
@@ -35,9 +35,17 @@ module Ops
       last_user = User.last
       assert_equal 'Male', last_user.ops_gender
       assert_equal 'Jefferson Middle School', last_user.ops_school
+
+      assert !ActionMailer::Base.deliveries.empty?
+
+      # the notification to the ops team
+      mail = ActionMailer::Base.deliveries.last
+      assert_equal ['ops@code.org'], mail.to
+      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} added 2 teachers to #{@cohort.name}", mail.subject
     end
 
     test 'District Contact can drop teachers in their district from a cohort' do
+      sign_in @district.contact
       assert_routing({ path: "#{API}/cohorts/1/teachers/2", method: :delete }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'destroy_teacher' })
 
       @cohort.teachers << create(:teacher)
@@ -50,6 +58,7 @@ module Ops
     end
 
     test 'District Contact cannot add/drop teachers in other districts' do
+      sign_in @district.contact
       #87054720 (part 3)
       # todo
     end
@@ -57,6 +66,8 @@ module Ops
       # Test index + CRUD controller actions
 
     test 'Ops team can list all cohorts' do
+      sign_in @admin
+
       cohorts = [create(:cohort), create(:cohort), create(:cohort)]
       assert_routing({ path: "#{API}/cohorts", method: :get }, { controller: 'ops/cohorts', action: 'index' })
 
@@ -86,18 +97,40 @@ module Ops
       assert_equal [cohort, cohort2], assigns(:cohorts) # only the cohorts for this district
     end
 
-    test 'district contact can show their districts cohorts' do
+    test 'district contact can show their districts cohorts and see only their district' do
+      # set up a cohort with 2 districts and 2 teachers from different districts
+
       cd = create :cohorts_district
       cohort = cd.cohort
+      contact = cd.district.contact
+      assert contact
 
-      dc = cohort.districts.first.contact
-      assert dc
+      invisible_cd = create(:cohorts_district, cohort: cohort)
+      assert contact != invisible_cd.district.contact
 
-      sign_in dc
+      cohort = cohort.reload
+      assert_equal 2, cohort.districts.count
+
+      cohort.teachers << create(:teacher, district_id: cd.district.id)
+      cohort.teachers << create(:teacher, district_id: invisible_cd.district.id)
+      cohort.save!
+
+      cohort = cohort.reload
+      assert_equal 2, cohort.teachers.count
+
+      sign_in contact
 
       get :show, id: cohort.id
       assert_response :success
       assert_equal cohort, assigns(:cohort)
+
+      cohort_json = JSON.parse(@response.body)
+
+      # cohort has 2 districts but we only see 1
+      assert_equal 1, cohort_json['districts'].count
+
+      # cohort has 2 teachers but we only see 1
+      assert_equal 1, cohort_json['teachers'].count
     end
 
     test 'district contact cannot show cohorts without their district' do
@@ -116,12 +149,10 @@ module Ops
     end
 
     test 'Anonymous users cannot affect cohorts' do
-      sign_out @admin
       all_forbidden
     end
 
     test 'Logged-in teachers cannot affect cohorts' do
-      sign_out @admin
       sign_in create(:user)
       all_forbidden
     end
@@ -140,6 +171,7 @@ module Ops
     end
 
     test 'Ops team can create Cohorts' do
+      sign_in @admin
       #87054348
       assert_routing({ path: "#{API}/cohorts", method: :post }, { controller: 'ops/cohorts', action: 'create' })
 
@@ -156,6 +188,7 @@ module Ops
     end
 
     test 'Ops team can create a Cohort from a list of teacher information' do
+      sign_in @admin
       #87054348 (part 2)
       assert_difference 'User.count', 5 do
         assert_creates(Cohort, CohortsDistrict) do
@@ -174,9 +207,16 @@ module Ops
       # district info is included
       expected_district = {'name' => @district.name, 'id' => @district.id, 'location' => @district.location}
       assert_equal expected_district, cohort_json['teachers'].first['district']
+
+      # no notification to the ops team
+      assert ActionMailer::Base.deliveries.collect(&:subject).none? {|subject| subject.include? '[ops notification]'}
+      # all account confirmation instructions
+      assert ActionMailer::Base.deliveries.collect(&:subject).all? {|subject| subject =~ /instructions/}
     end
 
     test 'Create Cohort with districts' do
+      sign_in @admin
+
       d1 = create(:district)
       d2 = create(:district)
 
@@ -195,6 +235,8 @@ module Ops
     end
 
     test 'update Cohort with districts' do
+      sign_in @admin
+
       d1 = create(:district)
       d2 = create(:district)
 
@@ -207,6 +249,8 @@ module Ops
 
 
     test 'updating Cohort with existing district updates count' do
+      sign_in @admin
+
       put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, max_teachers: 8}]}
       assert_response :success
 
@@ -215,6 +259,8 @@ module Ops
     end
 
     test 'Can create Cohort without providing list of acceptable districts' do
+      sign_in @admin
+
       post :create, cohort: {name: 'Cohort name'}
       assert_response :success
 
@@ -223,6 +269,8 @@ module Ops
     end
 
     test 'Create Cohort from a list, including existing teacher account' do
+      sign_in @admin
+
       # Add existing teacher account to teacher info list
       teacher = create(:teacher, district_id: @district.id)
       extra_teacher_params = [{ops_first_name: 'Hey', ops_last_name: 'Blah', email: teacher.email, district: teacher.district.name}]
@@ -251,6 +299,8 @@ module Ops
     end
 
     test 'read cohort info' do
+      sign_in @admin
+
       assert_routing({ path: "#{API}/cohorts/1", method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
 
       get :show, id: @cohort.id
@@ -262,6 +312,8 @@ module Ops
     end
 
     test 'update cohort info' do
+      sign_in @admin
+
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       new_name = 'New cohort name'
@@ -273,6 +325,8 @@ module Ops
     end
 
     test 'delete cohort' do
+      sign_in @admin
+
       assert_routing({ path: "#{API}/cohorts/1", method: :delete }, { controller: 'ops/cohorts', action: 'destroy', id: '1' })
 
       assert_difference 'Cohort.count', -1 do

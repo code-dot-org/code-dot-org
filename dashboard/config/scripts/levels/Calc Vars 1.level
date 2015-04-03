@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Variables allow us to name values so that we can then easily refer to them repeatedly throughout our programs. Here's a variable called \"age\" - set its value to your age and click run.",
+    "instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called \"age\". Set its value to your age and click run.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

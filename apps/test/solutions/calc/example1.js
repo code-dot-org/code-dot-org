@@ -3,6 +3,7 @@ var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 testUtils.setupLocale('calc');
 var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
+var commonMsg = require(testUtils.buildPath('../locale/current/common'));
 
 module.exports = {
   app: "calc",
@@ -68,7 +69,7 @@ module.exports = {
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyFunctionalBlock());
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.emptyFunctionalBlock());
         return true;
       },
       xml: '<xml>' +

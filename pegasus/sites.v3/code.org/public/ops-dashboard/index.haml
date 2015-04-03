@@ -205,6 +205,22 @@ title: "Ops Dashboard"
     };
   });
 
+  filters.filter('containsSubstring', function() {
+    return function(cohorts, query) {
+      if (query) {
+        var filtered = [];
+        cohorts.forEach(function (cohort) {
+          if (cohort.name.toUpperCase().indexOf(query.toUpperCase()) != -1) {
+            filtered.push(cohort);
+          }
+        }, this);
+        return filtered;
+      } else {
+        return cohorts;
+      }
+    };
+  });
+
   filters.filter('specificDistrict', function() {
     return function(cohorts, searchDistrict) {
       if (searchDistrict && searchDistrict !== '') {
@@ -382,15 +398,13 @@ title: "Ops Dashboard"
 
       $scope.save = function(cohort) {
         if (cohort.id) { // existing
-          cohort =
-            cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
-              $location.path("/teacher-cohorts");
-            });
+          cohortsService.update({id: cohort.id}, {cohort: cohort}, function() {
+            $location.path("/teacher-cohorts");
+          });
         } else { // new
-          cohort =
-            cohortsService.save({cohort: cohort}, function() {
-              $location.path("/teacher-cohorts");
-            });
+          cohortsService.save({cohort: cohort}, function() {
+            $location.path("/teacher-cohorts");
+          });
         }
       };
 
@@ -427,7 +441,17 @@ title: "Ops Dashboard"
             complete: function(results) {
               if (results.data) {
                 for (var i = 0; i < results.data.length; i++) {
+                  // turn on editing
                   results.data[i].editing = true;
+                  // look up the district by name
+                  var district_name = results.data[i].district;
+                  delete results.data[i].district;
+
+                  for (var j = 0; j < $scope.cohort.districts.length; j++) {
+                    if ($scope.cohort.districts[j].name == district_name) {
+                      results.data[i].district = $scope.cohort.districts[j];
+                    }
+                  }
                 }
                 $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
                 $scope.$apply();
@@ -458,11 +482,7 @@ title: "Ops Dashboard"
       };
 
       $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
-        //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
-        //  function() {
-            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
-        //  }
-        //).catch($scope.genericError);
+        $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
       };
 
       $scope.cancel = function(teacher) {
@@ -505,14 +525,29 @@ title: "Ops Dashboard"
           }
         }
         return count;
-      }
+      };
+
+      $scope.isTooManyTeachers = function() {
+        if (!$scope.cohort.districts) {
+          return false;
+        }
+
+        for (var i = 0; i < $scope.cohort.districts.length; i++) {
+          var district = $scope.cohort.districts[i];
+          if ($scope.countTeachersFromDistrict(district) > district.max_teachers) {
+            return true;
+          }
+        }
+        return false;
+      };
+
     }
   ]);
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
-      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      $scope.workshopSegments = segmentsService.query({id: workshop.id});
       $scope.program_types = programTypesService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {
@@ -565,4 +600,3 @@ title: "Ops Dashboard"
       }
     }
   ]);
-

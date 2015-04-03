@@ -52,7 +52,7 @@
           </mutation>
           <title name="NAME">rocket-height</title>
         </block>
-        <block type="functional_start_setValue" inline="false">
+        <block type="functional_start_setValue" inline="false" editable="false" movable="false" deletable="false">
           <functional_input name="VALUE">
             <block type="functional_pass">
               <mutation name="rocket-height"/>

@@ -75,6 +75,11 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
         break;
+      case 'functional_definition':
+        break;
+      case 'functional_call':
+        requiredBlocksTests.push(testsFromFunctionalCall(childNode, blocksXml));
+        break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
     }
@@ -144,6 +149,43 @@ function testsFromProcedure(node) {
     message: msg.errorRequiredParamsMissing(),
     blockDisplayXML: '<xml></xml>'
   }];
+}
+
+function testsFromFunctionalCall(node, blocksXml) {
+  var name = node.querySelector('mutation').getAttribute('name');
+  var argElements = node.querySelectorAll('arg');
+  var types = [];
+  for (var i = 0; i < argElements.length; i++) {
+    types.push(argElements[i].getAttribute('type'));
+  }
+
+  var definition = _.find(blocksXml.childNodes, function (sibling) {
+    if (sibling.getAttribute('type') !== 'functional_definition') {
+      return false;
+    }
+    var nameElement = sibling.querySelector('title[name="NAME"]');
+    if (!nameElement) {
+      return false;
+    }
+    return nameElement.textContent === name;
+  });
+
+  if (!definition) {
+    throw new Error('No matching definition for functional_call');
+  }
+
+  return [{
+    test: function (userBlock) {
+      if (userBlock.type !== 'functional_call' ||
+          userBlock.getCallName() !== name) {
+        return false;
+      }
+      var userTypes = userBlock.getParamTypes();
+      return _.isEqual(userTypes, types);
+    },
+    blockDisplayXML: xml.serialize(definition) + xml.serialize(node)
+  }];
+
 }
 
 /**

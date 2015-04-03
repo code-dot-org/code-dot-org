@@ -38,8 +38,15 @@ var EvalText = require('./evalText');
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// requiring this loads canvg into the global namespace
+// Loading these modules extends SVGElement and puts canvg in the global
+// namespace
 require('../canvg/canvg.js');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/svg_todataurl');
+}
 var canvg = window.canvg || global.canvg;
 
 var level;
@@ -54,6 +61,9 @@ var CANVAS_WIDTH = 400;
 Eval.displayedObject = null;
 
 Eval.answerObject = null;
+
+Eval.feedbackImage = null;
+Eval.encodedFeedbackImage = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -163,6 +173,8 @@ Eval.resetButtonClick = function () {
     user.removeChild(user.firstChild);
   }
 
+  Eval.feedbackImage = null;
+  Eval.encodedFeedbackImage = null;
 };
 
 /**
@@ -349,10 +361,10 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = evalMsg.emptyFunctionalBlock();
+    Eval.message = commonMsg.emptyFunctionalBlock();
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -397,12 +409,26 @@ Eval.execute = function() {
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
+    image: Eval.encodedFeedbackImage
   };
 
-  studioApp.playAudio(Eval.result ? 'win' : 'failure');
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
+    studioApp.report(reportData);
+  } else {
+    document.getElementById('svgEval').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Eval.feedbackImage = pngDataUrl;
+        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
 
-  studioApp.report(reportData);
+        studioApp.report(reportData);
+      }
+    });
+  }
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
 /**
@@ -458,6 +484,10 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    showingSharing: !level.disableSharing && (level.freePlay),
+    // allow users to save freeplay levels to their gallery
+    saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
+    feedbackImage: Eval.feedbackImage,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }

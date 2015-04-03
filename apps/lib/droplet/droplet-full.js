@@ -10168,11 +10168,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     exports.Editor = Editor = (function() {
       function Editor(wrapperElement, options) {
-        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3;
+        var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4;
         this.wrapperElement = wrapperElement;
         this.options = options;
         this.paletteGroups = this.options.palette;
-        this.alwaysShowPalette = (ref1 = this.options.alwaysShowPalette) != null ? ref1 : false;
+        this.showPaletteInTextMode = (ref1 = this.options.showPaletteInTextMode) != null ? ref1 : false;
+        this.paletteEnabled = (ref2 = this.options.enablePaletteAtStart) != null ? ref2 : true;
         this.options.mode = this.options.mode.replace(/$\/ace\/mode\//, '');
         if (this.options.mode in modes) {
           this.mode = new modes[this.options.mode](this.options.modeOptions);
@@ -10232,9 +10233,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           respectEphemeral: false
         }));
         boundListeners = [];
-        ref2 = editorBindings.populate;
-        for (j = 0, len = ref2.length; j < len; j++) {
-          binding = ref2[j];
+        ref3 = editorBindings.populate;
+        for (j = 0, len = ref3.length; j < len; j++) {
+          binding = ref3[j];
           binding.call(this);
         }
         window.addEventListener('resize', (function(_this) {
@@ -10244,15 +10245,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this));
         dispatchMouseEvent = (function(_this) {
           return function(event) {
-            var handler, k, len1, ref3, state, trackPoint;
+            var handler, k, len1, ref4, state, trackPoint;
             if (event.type !== 'mousemove' && event.which !== 1) {
               return;
             }
             trackPoint = new _this.draw.Point(event.clientX, event.clientY);
             state = {};
-            ref3 = editorBindings[event.type];
-            for (k = 0, len1 = ref3.length; k < len1; k++) {
-              handler = ref3[k];
+            ref4 = editorBindings[event.type];
+            for (k = 0, len1 = ref4.length; k < len1; k++) {
+              handler = ref4[k];
               handler.call(_this, trackPoint, event, state);
             }
             if (event.type === 'mousedown') {
@@ -10266,18 +10267,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         })(this);
         dispatchKeyEvent = (function(_this) {
           return function(event) {
-            var handler, k, len1, ref3, results, state;
+            var handler, k, len1, ref4, results, state;
             state = {};
-            ref3 = editorBindings[event.type];
+            ref4 = editorBindings[event.type];
             results = [];
-            for (k = 0, len1 = ref3.length; k < len1; k++) {
-              handler = ref3[k];
+            for (k = 0, len1 = ref4.length; k < len1; k++) {
+              handler = ref4[k];
               results.push(handler.call(_this, event, state));
             }
             return results;
           };
         })(this);
-        ref3 = {
+        ref4 = {
           keydown: [this.dropletElement, this.paletteElement],
           keyup: [this.dropletElement, this.paletteElement],
           mousedown: [this.dropletElement, this.paletteElement, this.dragCover],
@@ -10300,8 +10301,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return results;
           };
         })(this);
-        for (eventName in ref3) {
-          elements = ref3[eventName];
+        for (eventName in ref4) {
+          elements = ref4[eventName];
           fn1(eventName, elements);
         }
         this.tree = new model.Segment();
@@ -10339,9 +10340,14 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
       Editor.prototype.resizeBlockMode = function() {
         this.resizeTextMode();
-        this.dropletElement.style.left = this.paletteElement.offsetWidth + "px";
         this.dropletElement.style.height = this.wrapperElement.offsetHeight + "px";
-        this.dropletElement.style.width = (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
+        if (this.paletteEnabled) {
+          this.dropletElement.style.left = this.paletteElement.offsetWidth + "px";
+          this.dropletElement.style.width = (this.wrapperElement.offsetWidth - this.paletteWrapper.offsetWidth) + "px";
+        } else {
+          this.dropletElement.style.left = "0px";
+          this.dropletElement.style.width = this.wrapperElement.offsetWidth + "px";
+        }
         this.resizeGutter();
         this.mainCanvas.height = this.dropletElement.offsetHeight;
         this.mainCanvas.width = this.dropletElement.offsetWidth - this.gutter.offsetWidth;
@@ -11488,11 +11494,17 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.hiddenInput.className = 'droplet-hidden-input';
       this.hiddenInput.addEventListener('focus', (function(_this) {
         return function() {
-          var bounds;
+          var bounds, inputLeft, inputTop;
           if (_this.textFocus != null) {
             bounds = _this.view.getViewNodeFor(_this.textFocus).bounds[0];
-            _this.hiddenInput.style.left = (bounds.x + _this.mainCanvas.offsetLeft) + 'px';
-            return _this.hiddenInput.style.top = bounds.y + 'px';
+            inputLeft = bounds.x + _this.mainCanvas.offsetLeft - _this.scrollOffsets.main.x;
+            inputLeft = Math.min(inputLeft, _this.dropletElement.clientWidth - 10);
+            inputLeft = Math.max(_this.mainCanvas.offsetLeft, inputLeft);
+            _this.hiddenInput.style.left = inputLeft + 'px';
+            inputTop = bounds.y - _this.scrollOffsets.main.y;
+            inputTop = Math.min(inputTop, _this.dropletElement.clientHeight - 10);
+            inputTop = Math.max(0, inputTop);
+            return _this.hiddenInput.style.top = inputTop + 'px';
           }
         };
       })(this));
@@ -11528,7 +11540,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.resizeAceElement = function() {
       var width;
       width = this.wrapperElement.offsetWidth;
-      if (this.alwaysShowPalette) {
+      if (this.showPaletteInTextMode && this.paletteEnabled) {
         width -= this.paletteElement.offsetWidth;
       }
       this.aceElement.style.width = width + "px";
@@ -12704,7 +12716,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })();
     Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
-      var aceScrollTop, bottom, div, fn1, fn2, i, j, k, len, line, lineHeight, ref1, ref2, ref3, textElement, textElements, top, translatingElements, translationVectors, treeView;
+      var aceScrollTop, bottom, div, fn1, fn2, i, j, k, len, line, lineHeight, paletteDisappearingWithMelt, ref1, ref2, ref3, textElement, textElements, top, translatingElements, translationVectors, treeView;
       if (fadeTime == null) {
         fadeTime = 500;
       }
@@ -12733,7 +12745,6 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.dropletElement.style.width = this.wrapperElement.offsetWidth + 'px';
         this.currentlyUsingBlocks = false;
         this.currentlyAnimating = this.currentlyAnimating_suppressRedraw = true;
-        this.paletteHeader.style.zIndex = 0;
         ref1 = this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
         translatingElements = [];
         fn1 = (function(_this) {
@@ -12793,7 +12804,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.lineNumberWrapper.style.display = 'none';
         this.mainCanvas.style.transition = this.highlightCanvas.style.transition = this.cursorCanvas.style.opacity = "opacity " + fadeTime + "ms linear";
         this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = this.cursorCanvas.style.opacity = 0;
-        if (!this.alwaysShowPalette) {
+        paletteDisappearingWithMelt = this.paletteEnabled && !this.showPaletteInTextMode;
+        if (paletteDisappearingWithMelt) {
+          this.paletteHeader.style.zIndex = 0;
           setTimeout(((function(_this) {
             return function() {
               _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + translateTime + "ms";
@@ -12806,15 +12819,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           return function() {
             var l, len1;
             _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
-            if (!_this.alwaysShowPalette) {
-              _this.paletteWrapper.style.top = '-9999px';
-              _this.paletteWrapper.style.left = '-9999px';
-            }
             _this.aceElement.style.top = '0px';
-            if (_this.alwaysShowPalette) {
+            if (_this.showPaletteInTextMode && _this.paletteEnabled) {
               _this.aceElement.style.left = _this.paletteWrapper.style.width;
             } else {
               _this.aceElement.style.left = '0px';
+            }
+            if (paletteDisappearingWithMelt) {
+              _this.paletteWrapper.style.top = '-9999px';
+              _this.paletteWrapper.style.left = '-9999px';
             }
             _this.dropletElement.style.top = '-9999px';
             _this.dropletElement.style.left = '-9999px';
@@ -12867,7 +12880,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.fireEvent('statechange', [true]);
         setTimeout(((function(_this) {
           return function() {
-            var aceScrollTop, bottom, div, el, fn1, fn2, i, j, k, l, len, len1, line, lineHeight, ref1, ref2, ref3, ref4, textElement, textElements, top, translatingElements, translationVectors, treeView;
+            var aceScrollTop, bottom, div, el, fn1, fn2, i, j, k, l, len, len1, line, lineHeight, paletteAppearingWithFreeze, ref1, ref2, ref3, ref4, textElement, textElements, top, translatingElements, translationVectors, treeView;
             _this.mainScroller.style.overflow = 'hidden';
             _this.dropletElement.style.width = _this.wrapperElement.offsetWidth + 'px';
             _this.redrawMain({
@@ -12876,13 +12889,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             _this.currentlyAnimating_suppressRedraw = true;
             _this.aceElement.style.top = "-9999px";
             _this.aceElement.style.left = "-9999px";
-            _this.paletteWrapper.style.top = '0px';
-            if (!_this.alwaysShowPalette) {
+            paletteAppearingWithFreeze = _this.paletteEnabled && !_this.showPaletteInTextMode;
+            if (paletteAppearingWithFreeze) {
+              _this.paletteWrapper.style.top = '0px';
               _this.paletteWrapper.style.left = (-_this.paletteWrapper.offsetWidth) + "px";
+              _this.paletteHeader.style.zIndex = 0;
             }
             _this.dropletElement.style.top = "0px";
-            _this.dropletElement.style.left = "0px";
-            _this.paletteHeader.style.zIndex = 0;
+            if (_this.paletteEnabled) {
+              _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
+            } else {
+              _this.dropletElement.style.left = "0px";
+            }
             ref1 = _this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
             translatingElements = [];
             fn1 = function(div, textElement) {
@@ -12956,11 +12974,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 return _this.cursorCanvas.style.opacity = CURSOR_UNFOCUSED_OPACITY;
               }
             }), translateTime);
-            if (!_this.alwaysShowPalette) {
-              _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = "left " + fadeTime + "ms";
+            _this.dropletElement.style.transition = "left " + fadeTime + "ms";
+            if (paletteAppearingWithFreeze) {
+              _this.paletteWrapper.style.transition = _this.dropletElement.style.transition;
+              _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
+              _this.paletteWrapper.style.left = '0px';
             }
-            _this.dropletElement.style.left = _this.paletteWrapper.offsetWidth + "px";
-            _this.paletteWrapper.style.left = '0px';
             return setTimeout((function() {
               var len2, m;
               _this.dropletElement.style.transition = _this.paletteWrapper.style.transition = '';
@@ -12984,6 +13003,49 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         return {
           success: true
         };
+      }
+    };
+    Editor.prototype.enablePalette = function(enabled) {
+      var activeElement;
+      if (!this.currentlyAnimating && this.paletteEnabled !== enabled) {
+        this.paletteEnabled = enabled;
+        this.currentlyAnimating = true;
+        if (this.currentlyUsingBlocks) {
+          activeElement = this.dropletElement;
+        } else {
+          activeElement = this.aceElement;
+        }
+        if (!this.paletteEnabled) {
+          activeElement.style.transition = this.paletteWrapper.style.transition = "left 500ms";
+          activeElement.style.left = '0px';
+          this.paletteWrapper.style.left = (-this.paletteWrapper.offsetWidth) + "px";
+          this.paletteHeader.style.zIndex = 0;
+          this.resize();
+          return setTimeout(((function(_this) {
+            return function() {
+              activeElement.style.transition = _this.paletteWrapper.style.transition = '';
+              _this.paletteWrapper.style.top = '-9999px';
+              _this.paletteWrapper.style.left = '-9999px';
+              return _this.currentlyAnimating = false;
+            };
+          })(this)), 500);
+        } else {
+          this.paletteWrapper.style.top = '0px';
+          this.paletteWrapper.style.left = (-this.paletteWrapper.offsetWidth) + "px";
+          this.paletteHeader.style.zIndex = 257;
+          return setTimeout(((function(_this) {
+            return function() {
+              activeElement.style.transition = _this.paletteWrapper.style.transition = "left 500ms";
+              activeElement.style.left = _this.paletteWrapper.offsetWidth + "px";
+              _this.paletteWrapper.style.left = '0px';
+              return setTimeout((function() {
+                activeElement.style.transition = _this.paletteWrapper.style.transition = '';
+                _this.resize();
+                return _this.currentlyAnimating = false;
+              }), 500);
+            };
+          })(this)), 0);
+        }
       }
     };
     Editor.prototype.toggleBlocks = function(cb) {
@@ -13256,6 +13318,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.resizeTextMode();
       this.aceEditor.session.setScrollTop(oldScrollTop);
       if (this.currentlyUsingBlocks) {
+        this.setTextInputFocus(null);
         result = this.setValue_raw(value);
         if (result.success === false) {
           this.setEditorState(false);
