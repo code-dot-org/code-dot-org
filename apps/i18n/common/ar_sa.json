@@ -235,5 +235,8 @@
   "hintHeader": "إليك نصيحة:",
   "genericFeedback": "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك.",
   "toggleBlocksErrorMsg": "أنت تحتاج لتصحيح الخطأ في برنامجك قبل أن يمكنك عرضه كقطع.",
-  "defaultTwitterText": "انظر ما الذي صنعته"
+  "defaultTwitterText": "انظر ما الذي صنعته",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

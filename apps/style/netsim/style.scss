@@ -17,7 +17,7 @@ $message-color: white;
 
 // For aligning table columns across panels
 $narrow-column-width: 50px;
-$wide-column-width: 100px;
+$wide-column-width: 121px;
 
 // Cross-browser helper for user_select property
 @mixin user_select($val) {
@@ -313,7 +313,7 @@ svg {
       margin: 0.5em 0 0.5em 0;
       max-height: 180px;
       width: 100%;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
 
     table {
@@ -480,14 +480,16 @@ svg {
 
     .send_widget_footer {
       margin: 10px;
-      overflow: auto;
+      overflow: hidden;
 
       .right-side-controls {
         float: right;
         text-align: right;
       }
 
-
+      .packet_size {
+        width: 400px;
+      }
     }
   }
 
@@ -530,6 +532,8 @@ svg {
   }
 
   .netsim-slider {
+    text-align: center;
+
     label {
       display: inline-block;
     }
@@ -537,7 +541,8 @@ svg {
     .slider-inline-wrap {
       display: inline-block;
       margin-top: 3.5px;
-      width: 300px;
+      width: 95%;
+      margin-right: 0.5em;
 
       .slider-labels {
         margin-bottom: 1px;
@@ -545,13 +550,13 @@ svg {
         .max-value {
           float: right;
           text-align: right;
-          width: 5em;
+          width: 4em;
         }
 
         .min-value {
           float: left;
           text-align: left;
-          width: 5em;
+          width: 4em;
         }
 
         .current-value {
@@ -562,14 +567,6 @@ svg {
       .slider {
         clear: both;
       }
-    }
-  }
-
-  .netsim-bandwidth-control {
-    text-align: center;
-    .slider-inline-wrap {
-      width: 95%;
-      margin-right: 0.5em;
     }
   }
 
@@ -589,10 +586,14 @@ svg {
       border-left: none;
       border-right: none;
       border-top: none;
-      li a {
-        font-family: "Gotham 5r", sans-serif;
-        font-size: 8pt;
-        padding: 0 1em;
+      li {
+        // Make tabs just a _little_ bit more compact
+        margin-right: 2px;
+        a {
+          font-family: "Gotham 5r", sans-serif;
+          font-size: 8pt;
+          padding: 0 1em;
+        }
       }
     }
 

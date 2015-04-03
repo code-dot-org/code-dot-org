@@ -235,5 +235,8 @@
   "hintHeader": "Vihje:",
   "genericFeedback": "Vaata, mis kokkuvõttes välja tuli, ja proovi oma programm korda teha.",
   "toggleBlocksErrorMsg": "Sa pead parandama vea oma programmis enne kui seda saab plokkidena kuvada.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

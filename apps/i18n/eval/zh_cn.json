@@ -27,5 +27,6 @@
   "solid": "固体",
   "string": "字符串",
   "stringMismatchError": "你有一个使用了错误大写的字符串。",
-  "userCodeException": "在你运行代码时一个错误出现了。"
+  "userCodeException": "在你运行代码时一个错误出现了。",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Štai patarimas:"},
 "genericFeedback":function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."},
 "toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
-"defaultTwitterText":function(d){return "Pažiūrėkite, ką aš sukūriau"}};
+"defaultTwitterText":function(d){return "Pažiūrėkite, ką aš sukūriau"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

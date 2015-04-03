@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "تو پُر"},
 "string":function(d){return "رشته"},
 "stringMismatchError":function(d){return "شما یک رشته با حروف بزرگ اشتباه دارید."},
-"userCodeException":function(d){return "در زمان اجرای کد شما خطایی رخ داد."}};
+"userCodeException":function(d){return "در زمان اجرای کد شما خطایی رخ داد."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

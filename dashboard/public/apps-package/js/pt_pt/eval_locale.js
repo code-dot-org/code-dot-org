@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "Ocorreu um erro ao tentar executar o teu código."}};
+"userCodeException":function(d){return "Ocorreu um erro ao tentar executar o teu código."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

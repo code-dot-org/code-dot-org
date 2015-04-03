@@ -235,5 +235,8 @@
   "hintHeader": "도움말:",
   "genericFeedback": "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요.",
   "toggleBlocksErrorMsg": "오류가 블럭으로 보이기 전에 오류를 수정해야 합니다.",
-  "defaultTwitterText": "만든 작품 확인하기"
+  "defaultTwitterText": "만든 작품 확인하기",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

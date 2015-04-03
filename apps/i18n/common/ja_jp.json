@@ -235,5 +235,8 @@
   "hintHeader": "コツ：",
   "genericFeedback": "どうなったかよく見て、プログラムを直してみよう。",
   "toggleBlocksErrorMsg": "ブロックとして表示させるために、あなたのプログラムのエラーを直す必要があります。",
-  "defaultTwitterText": "私の作品を試してみてください"
+  "defaultTwitterText": "私の作品を試してみてください",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

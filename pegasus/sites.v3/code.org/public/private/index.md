@@ -13,3 +13,9 @@
 ## Affiliate Workshops
 
 - [Payment Report](/private/professional-development-workshop-report)
+
+## Mail
+
+- [Opens](/private/poste-opens)
+- [Clicks](/private/poste-clicks)
+- [All Stats](/private/poste-stats)

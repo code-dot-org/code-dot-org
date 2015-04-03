@@ -11,7 +11,6 @@ SMS_FROM = CDO.twilio_phone
   def send_to_phone
     if params[:level_source] && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms(level_source_url(level_source), params[:phone])
-      render status: :ok, nothing: true
     elsif params[:channel_id] && params[:phone] && %w(artist applab playlab).include?(params[:type])
       send_sms(polymorphic_url([params[:type], 'projects']) + '#' + params[:channel_id], params[:phone])
     else
@@ -29,5 +28,6 @@ SMS_FROM = CDO.twilio_phone
       :to => phone,
       :body => "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
     )
+    render status: :ok, nothing: true
   end
 end

@@ -235,5 +235,8 @@
   "hintHeader": "Еве еден совет :",
   "genericFeedback": "Погледни како заврши и обиди се да го поправиш програмот.",
   "toggleBlocksErrorMsg": "Мора да поправите грешка во програмот пред да може да се претстави како блока.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

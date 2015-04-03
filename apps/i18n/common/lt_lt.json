@@ -235,5 +235,8 @@
   "hintHeader": "Štai patarimas:",
   "genericFeedback": "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą.",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
-  "defaultTwitterText": "Pažiūrėkite, ką aš sukūriau"
+  "defaultTwitterText": "Pažiūrėkite, ką aš sukūriau",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "твърд"},
 "string":function(d){return "поредица"},
 "stringMismatchError":function(d){return "Имате стринг с грешен капитализация."},
-"userCodeException":function(d){return "Възникна грешка при изпълнение на вашия код."}};
+"userCodeException":function(d){return "Възникна грешка при изпълнение на вашия код."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

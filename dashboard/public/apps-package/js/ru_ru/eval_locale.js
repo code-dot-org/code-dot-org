@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "заливка"},
 "string":function(d){return "строка"},
 "stringMismatchError":function(d){return "В вашей строке перепутаны заглавные и строчные буквы."},
-"userCodeException":function(d){return "Во время исполнения вашей программы произошла ошибка."}};
+"userCodeException":function(d){return "Во время исполнения вашей программы произошла ошибка."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

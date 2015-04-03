@@ -27,5 +27,6 @@
   "solid": "vast",
   "string": "tekenreeks",
   "stringMismatchError": "Je hebt een tekenreeks met verkeerde (hoofd)letters.",
-  "userCodeException": "Er is een fout opgetreden tijdens het uitvoeren van de code."
+  "userCodeException": "Er is een fout opgetreden tijdens het uitvoeren van de code.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

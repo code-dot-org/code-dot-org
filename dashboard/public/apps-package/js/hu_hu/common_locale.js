@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Itt egy ötlet:"},
 "genericFeedback":function(d){return "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod."},
 "toggleBlocksErrorMsg":function(d){return "Ki kell javítanod egy hibát a programodban, mielőtt blokként megjelenhetne."},
-"defaultTwitterText":function(d){return "Nézd meg, mit csináltam"}};
+"defaultTwitterText":function(d){return "Nézd meg, mit csináltam"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

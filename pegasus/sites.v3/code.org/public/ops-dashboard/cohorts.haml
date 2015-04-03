@@ -22,19 +22,23 @@ template: none
   .row{'ng-show' => 'cohorts.length > 0', style: "margin-bottom: 20px;"}
     .col-sm-12
       %form.form-inline
-        %label.control-label{for: "cohort-filter-program-type"} Filter by program type
+        %input.form-control{'ng-model' => 'filterQuery', placeholder:'Filter by Name'}
         %select.form-control{'ng-model' => 'search.program_type'}
-          %option{value:'', label:'--Show All Programs--'}
+          %option{value:'', label:'--Filter by program type--'}
           %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
             {{program_type.long_name}}
-        %label.control-label{for: "cohort-filter-district"} Filter by district
-        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts"}
-          %option{value:'', label:'--Show All Districts--'}
+        %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts | orderBy:'name'"}
+          %option{value:'', label:'--Filter by district--'}
   %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
     No cohorts are available.
 
   %div{'ng-show' => 'cohorts.length > 0'}
-    %table{style: "width:950px; table-layout:fixed;"}
+    %table{style: "width:970px; table-layout:fixed;"}
+      %colgroup
+        %col{width: "135"}/
+        %col{width: "60"}/
+        %col{width: "140"}/
+        %col{width: "100"}/
       %tr
         %th.manage-th
           %a{href: "", "ng-click" => "sortOrder = setSortOrder('name', sortOrder)"} Name
@@ -44,7 +48,7 @@ template: none
           Districts
         %th.manage-th
           Manage
-      %tr{"ng-repeat" => "cohort in cohorts | specificDistrict:search.district | matchingProgramType:search.program_type | orderBy:sortOrder", style: "vertical-align:top"}
+      %tr{"ng-repeat" => "cohort in cohorts | specificDistrict:search.district | matchingProgramType:search.program_type | containsSubstring:filterQuery | orderBy:sortOrder", style: "vertical-align:top"}
         %td
           {{cohort.name}}
         %td

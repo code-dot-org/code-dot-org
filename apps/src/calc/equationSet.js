@@ -127,6 +127,20 @@ EquationSet.prototype.computesSingleConstant = function () {
 
 };
 
+EquationSet.prototype.isAnimatable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  if (this.hasVariablesOrFunctions()) {
+    return false;
+  }
+  if (this.compute_.expression.depth() === 0) {
+    return false;
+  }
+
+  return true;
+};
+
 /**
  * Returns a list of equations that consist of setting a variable to a constant
  * value, without doing any additional math. i.e. foo = 1

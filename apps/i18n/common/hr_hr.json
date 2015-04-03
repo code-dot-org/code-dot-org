@@ -235,5 +235,8 @@
   "hintHeader": "Evo savjeta:",
   "genericFeedback": "Pogledaj kako si završio i pokušaj popraviti svoj program.",
   "toggleBlocksErrorMsg": "Trebaš ispraviti greške u svom programu prije nego što može biti prikazan u obliku blokova.",
-  "defaultTwitterText": "Pogledaj što sam napravio"
+  "defaultTwitterText": "Pogledaj što sam napravio",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

@@ -30,11 +30,14 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -1073,7 +1076,8 @@ Studio.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -1254,6 +1258,10 @@ studioApp.reset = function(first) {
     projectile.removeElement();
   }
 
+  // True if we should failure despite being freeplay
+  Studio.freePlayFailure = false;
+  Studio.message = null;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -1392,11 +1400,12 @@ var displayFeedback = function() {
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && (level.freePlay),
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.freePlayFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      message: Studio.message,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1545,6 +1554,14 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (studioApp.hasUnfilledFunctionalBlock()) {
+      Studio.result = false;
+      Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+      Studio.message = commonMsg.emptyFunctionalBlock();
+      Studio.freePlayFailure = true;
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
@@ -1628,7 +1645,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay) {
+  } else if (level.freePlay && !Studio.freePlayFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1641,7 +1658,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = TestResults.FREE_PLAY;
+    if (!Studio.freePlayFailure) {
+      Studio.testResults = TestResults.FREE_PLAY;
+    }
+    // If freePlayFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -1680,7 +1700,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {

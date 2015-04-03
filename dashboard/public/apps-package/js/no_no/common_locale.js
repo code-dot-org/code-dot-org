@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Her er et tips:"},
 "genericFeedback":function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."},
 "toggleBlocksErrorMsg":function(d){return "Du må fikse en feil i programmet ditt før det kan vises som brikker."},
-"defaultTwitterText":function(d){return "Sjekk ut det jeg lagde"}};
+"defaultTwitterText":function(d){return "Sjekk ut det jeg lagde"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

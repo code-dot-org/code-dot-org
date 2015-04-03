@@ -27,5 +27,6 @@
   "solid": "ของแข็ง",
   "string": "อักขระ",
   "stringMismatchError": "คุณมีสตริงที่มีการใช้อักษรตัวใหญ่ไม่ถูกต้อง.",
-  "userCodeException": "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."
+  "userCodeException": "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

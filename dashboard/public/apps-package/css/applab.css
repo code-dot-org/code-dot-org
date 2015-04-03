@@ -152,7 +152,7 @@ div#visualization.with_padding {
   outline-style: none; }
 
 img#turtleImage {
-  position: relative;
+  position: absolute;
   height: 45px; }
 
 .debugger_button {

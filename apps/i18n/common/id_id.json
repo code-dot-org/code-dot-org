@@ -235,5 +235,8 @@
   "hintHeader": "Berikut adalah tip:",
   "genericFeedback": "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda.",
   "toggleBlocksErrorMsg": "Anda perlu memperbaiki kesalahan dalam program Anda sebelum dapat ditunjukkan sebagai blok.",
-  "defaultTwitterText": "Lihat apa yang saya buat"
+  "defaultTwitterText": "Lihat apa yang saya buat",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

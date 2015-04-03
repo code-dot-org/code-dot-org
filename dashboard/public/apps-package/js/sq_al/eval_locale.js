@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "Keni nje varg me kapitalizimin e gabuar."},
-"userCodeException":function(d){return "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj."}};
+"userCodeException":function(d){return "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

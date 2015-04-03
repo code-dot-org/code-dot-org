@@ -23,9 +23,12 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {Object} callbacks
- * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.chunkSizeSliderChangeCallback
  * @param {function} callbacks.encodingChangeCallback
- * @param {function} callbacks.routerBandwidthChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderStopCallback
+ * @param {function} callbacks.routerMemorySliderChangeCallback
+ * @param {function} callbacks.routerMemorySliderStopCallback
  * @param {function} callbacks.dnsModeChangeCallback
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
@@ -49,7 +52,7 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = callbacks.chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeSliderChangeCallback;
 
   /**
    * @type {function}
@@ -61,7 +64,29 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
+  this.routerBandwidthSliderChangeCallback_ =
+      callbacks.routerBandwidthSliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerBandwidthSliderStopCallback_ =
+      callbacks.routerBandwidthSliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderChangeCallback_ =
+      callbacks.routerMemorySliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderStopCallback_ =
+      callbacks.routerMemorySliderStopCallback;
 
   /**
    * @type {function}
@@ -98,6 +123,15 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
 };
 
 /**
+ * @param {RunLoop} runLoop
+ */
+NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
+  if (this.routerTab_) {
+    this.routerTab_.attachToRunLoop(runLoop);
+  }
+};
+
+/**
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
@@ -114,7 +148,7 @@ NetSimTabsComponent.prototype.render = function () {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
-        this.chunkSizeChangeCallback_,
+        this.chunkSizeSliderChangeCallback_,
         this.encodingChangeCallback_);
   }
 
@@ -122,7 +156,12 @@ NetSimTabsComponent.prototype.render = function () {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
         this.levelConfig_,
-        this.routerBandwidthChangeCallback_);
+        {
+          bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
+          bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
+          memorySliderChangeCallback: this.routerMemorySliderChangeCallback_,
+          memorySliderStopCallback: this.routerMemorySliderStopCallback_
+        });
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
@@ -148,10 +187,46 @@ NetSimTabsComponent.prototype.setEncodings = function (newEncodings) {
   }
 };
 
+/** @param {number} creationTimestampMs */
+NetSimTabsComponent.prototype.setRouterCreationTime = function (creationTimestampMs) {
+  if (this.routerTab_) {
+    this.routerTab_.setRouterCreationTime(creationTimestampMs);
+  }
+};
+
 /** @param {number} newBandwidth in bits/second */
 NetSimTabsComponent.prototype.setRouterBandwidth = function (newBandwidth) {
   if (this.routerTab_) {
     this.routerTab_.setBandwidth(newBandwidth);
+  }
+};
+
+/** @param {number} newMemory in bits */
+NetSimTabsComponent.prototype.setRouterMemory = function (newMemory) {
+  if (this.routerTab_) {
+    this.routerTab_.setMemory(newMemory);
+  }
+};
+
+/**
+ * @param {number} queuedPacketCount
+ */
+NetSimTabsComponent.prototype.setRouterQueuedPacketCount = function (queuedPacketCount) {
+  if (this.routerTab_) {
+    this.routerTab_.setRouterQueuedPacketCount(queuedPacketCount);
+  }
+};
+
+/** @param {number} usedMemoryInBits */
+NetSimTabsComponent.prototype.setRouterMemoryInUse = function (usedMemoryInBits) {
+  if (this.routerTab_) {
+    this.routerTab_.setMemoryInUse(usedMemoryInBits);
+  }
+};
+
+NetSimTabsComponent.prototype.setRouterDataRate = function (dataRateBitsPerSecond) {
+  if (this.routerTab_) {
+    this.routerTab_.setDataRate(dataRateBitsPerSecond);
   }
 };
 

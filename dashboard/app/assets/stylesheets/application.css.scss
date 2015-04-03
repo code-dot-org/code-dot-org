@@ -20,6 +20,9 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *
+ * Shared
+ *= require user-menu
  */
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
@@ -698,6 +701,7 @@ input.header_input {
   text-align: right;
   margin-left: 5px;
 }
+
 .header_popup {
   display: none;
   position: absolute;
@@ -931,6 +935,10 @@ input.header_input {
           outline: 0;
         }
       }
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     li.ui-state-active {
@@ -967,6 +975,15 @@ input.header_input {
     width: $startWidth + $growth;
     height: $startHeight + $growth;
   }
+
+  html[dir=rtl] & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
 }
 
 .x-close {
@@ -1002,14 +1019,12 @@ html[dir=rtl] .qtip-content {
 .cdo-qtips {
   z-index: 1;
 
-
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
   }
 }
 
 a.download-video {
-  float: left;
   z-index: 1;
   cursor: pointer;
   width: 40px;
@@ -1716,13 +1731,15 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
-/* moved over from apps */
-
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1759,6 +1776,40 @@ $modal-image-margin-gap: 10px;
   .feedback-links {
     margin-top: 15px;
   }
+
+  .feedback-callout {
+    border: solid;
+    border-radius: 10px;
+    border-color: red;
+
+    p {
+      margin: 15px;
+      color: red;
+      padding-right: 20%;
+    }
+
+    .congrats {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .hint-header {
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
+    }
+
+    .hint-image {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .lines-of-code-message {
+    font-size: 20px;
+    line-height: normal;
+    color: $charcoal;
+    margin: 0 0 8px;
+  }
 }
 
 .dialog-title {
@@ -1768,6 +1819,7 @@ $modal-image-margin-gap: 10px;
 
 #ok-button {
   background-color: $orange;
+  border: 1px solid $orange;
   color: white;
   min-width: 100px;
 }
@@ -1791,6 +1843,12 @@ $modal-image-margin-gap: 10px;
   height: auto;
   margin-top: -60px;
   float: left;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 .modal-header {
   border: none;
@@ -1806,10 +1864,17 @@ $modal-image-margin-gap: 10px;
   border: none;
 }
 
-/* also moved over from apps */
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 
 .farSide {
   text-align: right;
+  html[dir=rtl] & {
+    text-align: left;
+  }
 }
 
 /* Buttons from apps */

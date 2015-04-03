@@ -8,9 +8,11 @@
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
 
+  var formatAB = dataConverters.formatAB;
   var formatBinary = dataConverters.formatBinary;
   var formatHex = dataConverters.formatHex;
   var alignDecimal = dataConverters.alignDecimal;
+  var binaryToAB = dataConverters.binaryToAB;
   var binaryToInt = dataConverters.binaryToInt;
   var binaryToHex = dataConverters.binaryToHex;
   var binaryToDecimal = dataConverters.binaryToDecimal;
@@ -110,6 +112,12 @@
         formatBinary(fromAddress, 4),
         formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
         formatBinary(message, chunkSize));
+
+    logRow(EncodingType.A_AND_B,
+        binaryToAB(toAddress),
+        binaryToAB(fromAddress),
+        binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+        formatAB(binaryToAB(message), chunkSize));
    %>
   </tbody>
 </table>

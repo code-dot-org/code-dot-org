@@ -235,5 +235,8 @@
   "hintHeader": "Padoms:",
   "genericFeedback": "Apskati rezultātu un pamēģini salabot savu programmu.",
   "toggleBlocksErrorMsg": "Tev vajaga izlabot kļūdu savā programmā, pirms to var rādīt blokos.",
-  "defaultTwitterText": "Apskaties, ko esmu izveidojis"
+  "defaultTwitterText": "Apskaties, ko esmu izveidojis",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

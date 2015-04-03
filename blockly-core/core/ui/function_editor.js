@@ -82,13 +82,23 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
 
 /**
- * Opens the function editor with configuration parameters for a specific level
- * @param levelConfig {Object}
+ * @param {String} autoOpenFunction - name of function to auto-open
+ */
+Blockly.FunctionEditor.prototype.autoOpenFunction = function(autoOpenFunction) {
+  this.autoOpenWithLevelConfiguration({
+    autoOpenFunction: autoOpenFunction
+  });
+};
+
+/**
+ * Auto-opens the function editor with given configuration parameters
+ * @param {Object} configuration
+ * @param {string} configuration.autoOpenFunction - function to open
  * @protected
  */
-Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConfig) {
-  if (levelConfig.openFunctionDefinition) {
-    this.openAndEditFunction(levelConfig.openFunctionDefinition);
+Blockly.FunctionEditor.prototype.autoOpenWithLevelConfiguration = function(configuration) {
+  if (configuration.autoOpenFunction) {
+    this.openAndEditFunction(configuration.autoOpenFunction);
   }
 };
 

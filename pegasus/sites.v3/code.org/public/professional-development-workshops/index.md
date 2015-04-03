@@ -3,7 +3,11 @@ title: Find a workshop
 ---
 # Find a workshop (for US teachers only, grades K-5)
 We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. See [what else you'll get](#get) from attending a workshop.
-
+<br />
+<br />
+**No workshop in your area?** [Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you.
+<br />
+<br />
 <%= view :workshop_search %>
 
 <a id="get"></a>

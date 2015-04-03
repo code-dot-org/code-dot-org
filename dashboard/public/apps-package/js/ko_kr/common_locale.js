@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "도움말:"},
 "genericFeedback":function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."},
 "toggleBlocksErrorMsg":function(d){return "오류가 블럭으로 보이기 전에 오류를 수정해야 합니다."},
-"defaultTwitterText":function(d){return "만든 작품 확인하기"}};
+"defaultTwitterText":function(d){return "만든 작품 확인하기"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

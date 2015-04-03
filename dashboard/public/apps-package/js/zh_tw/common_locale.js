@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "提示："},
 "genericFeedback":function(d){return "看看你的成果如何, 並試著修正你的程式"},
 "toggleBlocksErrorMsg":function(d){return "要讓您的程式可以像積木表示，您需要更正您程式中的一個錯誤。"},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Check out what I made"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

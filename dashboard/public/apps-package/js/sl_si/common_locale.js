@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Tukaj je namig:"},
 "genericFeedback":function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."},
 "toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
-"defaultTwitterText":function(d){return "Poglej, kaj sem naredil"}};
+"defaultTwitterText":function(d){return "Poglej, kaj sem naredil"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

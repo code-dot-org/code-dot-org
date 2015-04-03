@@ -235,5 +235,8 @@
   "hintHeader": "Sedikit Tip:",
   "genericFeedback": "Lihat bagaimana anda akhiri, dan cuba membaiki program anda.",
   "toggleBlocksErrorMsg": "Anda perlu membetulkan kesilapan di dalam program sebelum ia boleh dipaparkan sebagai blok-blok.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Check out what I made",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

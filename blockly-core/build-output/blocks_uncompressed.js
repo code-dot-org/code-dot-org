@@ -1377,6 +1377,8 @@ Blockly.Blocks.functional_call = {init:function() {
   Blockly.functionEditor.openEditorForCallBlock_(this)
 }, getCallName:function() {
   return this.getTitleValue("NAME")
+}, getParamTypes:function() {
+  return this.currentParameterTypes_
 }, renameProcedure:function(a, b) {
   Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
 }, setProcedureParameters:function(a, b, c) {

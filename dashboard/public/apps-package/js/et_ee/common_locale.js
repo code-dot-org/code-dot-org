@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Vihje:"},
 "genericFeedback":function(d){return "Vaata, mis kokkuvõttes välja tuli, ja proovi oma programm korda teha."},
 "toggleBlocksErrorMsg":function(d){return "Sa pead parandama vea oma programmis enne kui seda saab plokkidena kuvada."},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Check out what I made"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

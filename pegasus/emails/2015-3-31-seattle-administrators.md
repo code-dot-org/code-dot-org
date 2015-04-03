@@ -8,7 +8,6 @@ Dear Seattle-area administrator,
 
 Code.org has partnered with districts arounds the Puget Sound to bring computer science to your students, at all levels — kindergarten through high school. Give your students the chance to learn these foundational 21st-century skills.
 
-
 ### Start with high-quality professional development — at no cost to you or your school
 
 Incorporate computer science into elementary and middle school, or offer a year-long course in high school. Participating teachers consistently call our professional development, "The best professional development I've ever had!"
@@ -23,7 +22,7 @@ Incorporate computer science into elementary and middle school, or offer a year-
 **For middle schools:**
 
 - Integrate computer science into any algebra or science class
-- Per-session stipends to teachers are paid by Code.org!
+- Stipends to teachers are paid by Code.org!
 - Open to all Puget Sound-area middle school math science teachers & no cost to apply<br />
 [Sign up your school](https://code.org/educate/seattle/)
 
@@ -31,7 +30,7 @@ Incorporate computer science into elementary and middle school, or offer a year-
 
 - Offer an inclusive, year-long introductory computer science course at your school
 - Research-based professional development is open to all Puget Sound-area high school teachers
-- Per-session stipends to teachers are paid by Code.org!<br />
+- Stipends to teachers are paid by Code.org!<br />
 [Sign up your school](https://code.org/educate/seattle/)
 
 ### Join us for an info session - April 14, 6-8pm 

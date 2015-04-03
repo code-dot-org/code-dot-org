@@ -6,8 +6,6 @@ class UserTest < ActiveSupport::TestCase
   setup do
     @good_data = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
-
-    ActionMailer::Base.deliveries.clear
   end
 
   test "log in with password with pepper" do

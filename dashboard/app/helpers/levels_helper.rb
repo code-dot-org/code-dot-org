@@ -22,7 +22,7 @@ module LevelsHelper
 
   def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
-    @callouts = select_and_remember_callouts(params[:show_callouts])
+    @callouts = select_and_remember_callouts params[:show_callouts]
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -60,27 +60,10 @@ module LevelsHelper
     autoplay_video.summarize unless params[:noautoplay]
   end
 
-  def available_callouts
-    if @level.custom?
-      unless @level.try(:callout_json).blank?
-        return JSON.parse(@level.callout_json).map do |callout_definition|
-          Callout.new(element_id: callout_definition['element_id'],
-              localization_key: callout_definition['localization_key'],
-              callout_text: callout_definition['callout_text'],
-              qtip_config: callout_definition['qtip_config'].to_json,
-              on: callout_definition['on'])
-        end
-      end
-    else
-      return @script_level.callouts if @script_level
-    end
-    []
-  end
-
   def select_and_remember_callouts(always_show = false)
     session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
-    callouts_to_show = available_callouts
+    callouts_to_show = @level.available_callouts(@script_level)
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     # Localize
@@ -139,6 +122,13 @@ module LevelsHelper
 
   def boolean_string_false
     "false"
+  end
+
+  # Options hash for all level types
+  def app_options
+    {
+        callouts: @callouts
+    }
   end
 
   # Code for generating the blockly options hash
@@ -202,6 +192,13 @@ module LevelsHelper
       coordinate_grid_background
       use_modal_function_editor
       use_contract_editor
+      contract_highlight
+      contract_collapse
+      examples_highlight
+      examples_collapse
+      definition_highlight
+      definition_collapse
+      disable_examples
       default_num_example_blocks
       impressive
       open_function_definition
@@ -237,6 +234,8 @@ module LevelsHelper
       default_enabled_encodings
       show_router_bandwidth_control
       default_router_bandwidth
+      show_router_memory_control
+      default_router_memory
       show_dns_mode_control
       default_dns_mode
       input_output_table
@@ -276,7 +275,7 @@ module LevelsHelper
     end
 
     #Fetch localized strings
-    if @level.level_num_custom?
+    if @level.custom?
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       unless I18n.locale.to_s == 'en-us' || loc_val.nil?
         level['instructions'] = loc_val
@@ -296,7 +295,6 @@ module LevelsHelper
       app: @game.try(:app),
       levelId: @level.level_num,
       level: level,
-      callouts: @callouts,
       cacheBust: blockly_cache_bust,
       autoplayVideo: @autoplay_video_info,
       report: {

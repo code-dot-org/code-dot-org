@@ -5,6 +5,16 @@ theme: none
 - authentication_required!
 - forbidden! unless dashboard_user[:admin]
 
+:css
+  .row {
+    padding: 10px;
+  }
+  .row.destroying {
+    background-color: #ccc;
+    opacity: 0.2;
+    text-decoration: line-through;
+  }
+
 %a{href:'/ops-dashboard'}
   Dashboard
 >
@@ -35,7 +45,7 @@ theme: none
       %label.control-label{for: "cohort-cutoff-date"} Cutoff Date
       %div
       %div
-        %input#cohort-cutoff-date.form-control{type: "text", "ng-model" => "cohort.cutoff_date"}
+        %input#cohort-cutoff-date.form-control{type: 'date', "ng-model" => "cohort.cutoff_date"}
   .row
     .col-sm-8
       .panel.panel-default
@@ -46,16 +56,21 @@ theme: none
             .col-sm-8 Name
             .col-sm-2 Max
         .panel-body
-          .row{"ng-repeat" => "cohort_district in cohort.districts"}
+          .row{"ng-repeat" => "cohort_district in cohort.districts", "ng-class" => "cohort_district._destroy == 1 ? 'destroying' : ''"}
             .form-group.col-sm-8{style: "margin-bottom: 0;"}
               %select.district-name.form-control{"ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts", selectize: true}
             .col-sm-2
               %input.district-max-teachers.form-control{type: "text", "ng-model" => "cohort_district.max_teachers"}
             .col-sm-2
-              %a.btn.btn-white.btn-xs{"ng-click" => "cohort.districts.splice($index, 1)", "ng-hide" => "cohort.districts.length == 1", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
+              %a.btn.btn-white.btn-xs{"ng-click" => "cohort_district._destroy = 1", 'ng-show' => 'cohort_district.id',  "ng-hide" => "cohort.districts.length == 1 || cohort_district._destroy == 1", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
                 %i.glyphicon.glyphicon-remove
-              %a.btn.btn-white.btn-xs{"ng-click" => "newDistrict($event)", "ng-show" => "$last", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
+              %a.btn.btn-white.btn-xs{"ng-click" => "cohort_district._destroy = null", "ng-show" => "cohort_district._destroy == 'destroying'", style: 'opacity: 1.0'}
+                Undo Delete
+          .row
+            .form-group.col-sm-8{style: "margin-bottom: 0;"}
+              %a.btn.btn-white.btn-xs{"ng-click" => "newDistrict($event)", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
                 %i.glyphicon.glyphicon-plus
+                Add District
 
   .form-group.action-buttons
     %button#btn-save.btn.btn-default{type: "submit", "ng-click" => "save(cohort)"} Save

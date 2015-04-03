@@ -98,6 +98,13 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').last().simulate('drag', function(){});")
 end
 
+And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
+  # jQuery needs \\s to allow :s and .s in ID selectors
+  # Escaping those gives us \\\\ per-character
+  category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
+end
+
 When /^I press dropdown button with text "([^"]*)"$/ do |text|
   @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
 end

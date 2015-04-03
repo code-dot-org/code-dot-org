@@ -235,5 +235,8 @@
   "hintHeader": "这里有一个提示：",
   "genericFeedback": "看你的程序时如何结束的，并尝试修复你的程序",
   "toggleBlocksErrorMsg": "在作为一个程序块之前，您需要更正程序中的错误。",
-  "defaultTwitterText": "看看我做了什么"
+  "defaultTwitterText": "看看我做了什么",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

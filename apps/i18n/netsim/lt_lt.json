@@ -41,5 +41,18 @@
   "x_Gbps": "{x}Gbps",
   "x_Mbps": "{x}Mbps",
   "x_Kbps": "{x}Kbps",
-  "x_bps": "{x}bps"
+  "x_bps": "{x}bps",
+  "byte": "Byte",
+  "character": "Character",
+  "logStatus_dropped": "Dropped",
+  "logStatus_success": "Success",
+  "number": "Number",
+  "numBitsPerChunkType": "{numBits} bits per {chunkType}",
+  "size": "Size",
+  "status": "Status",
+  "x_GBytes": "{x}GB",
+  "x_MBytes": "{x}MB",
+  "x_KBytes": "{x}KB",
+  "x_Bytes": "{x}B",
+  "x_bits": "{x}b"
 }

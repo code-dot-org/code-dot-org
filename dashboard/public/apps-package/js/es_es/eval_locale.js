@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "sólido"},
 "string":function(d){return "cadena"},
 "stringMismatchError":function(d){return "La cadena de caracteres tiene una o mas letras capitales de forma erronea."},
-"userCodeException":function(d){return "Ocurrio un error mientras se ejecutaba el codigo."}};
+"userCodeException":function(d){return "Ocurrio un error mientras se ejecutaba el codigo."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

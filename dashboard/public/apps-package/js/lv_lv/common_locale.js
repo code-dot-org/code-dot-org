@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Padoms:"},
 "genericFeedback":function(d){return "Apskati rezultātu un pamēģini salabot savu programmu."},
 "toggleBlocksErrorMsg":function(d){return "Tev vajaga izlabot kļūdu savā programmā, pirms to var rādīt blokos."},
-"defaultTwitterText":function(d){return "Apskaties, ko esmu izveidojis"}};
+"defaultTwitterText":function(d){return "Apskaties, ko esmu izveidojis"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

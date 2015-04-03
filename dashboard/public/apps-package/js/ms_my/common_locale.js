@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "Sedikit Tip:"},
 "genericFeedback":function(d){return "Lihat bagaimana anda akhiri, dan cuba membaiki program anda."},
 "toggleBlocksErrorMsg":function(d){return "Anda perlu membetulkan kesilapan di dalam program sebelum ia boleh dipaparkan sebagai blok-blok."},
-"defaultTwitterText":function(d){return "Check out what I made"}};
+"defaultTwitterText":function(d){return "Check out what I made"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "gegnheilt"},
 "string":function(d){return "strengur"},
 "stringMismatchError":function(d){return "Þú ert með streng sem hefur ranga hástafanotkun."},
-"userCodeException":function(d){return "Villa kom upp þegar kóðinn þinn var keyrður."}};
+"userCodeException":function(d){return "Villa kom upp þegar kóðinn þinn var keyrður."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

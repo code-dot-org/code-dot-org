@@ -235,5 +235,8 @@
   "hintHeader": "Να μια συμβουλή:",
   "genericFeedback": "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου.",
   "toggleBlocksErrorMsg": "Πρέπει να διορθώσετε ένα σφάλμα στο πρόγραμμά σας πριν μπορεί να παρουσιασθεί ως μπλοκ.",
-  "defaultTwitterText": "Δείτε τι έκανα"
+  "defaultTwitterText": "Δείτε τι έκανα",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

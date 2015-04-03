@@ -72,7 +72,9 @@ Blockly.inject = function(container, opt_options, opt_audioPlayer) {
     /** @type {Blockly.FunctionEditor} */
     Blockly.functionEditor = new Blockly.FunctionEditor();
   } else if (Blockly.useContractEditor) {
-    Blockly.functionEditor = new Blockly.ContractEditor();
+    Blockly.functionEditor = new Blockly.ContractEditor({
+      disableExamples: opt_options && opt_options.disableExamples
+    });
     /** @type {Blockly.ContractEditor} */
     Blockly.contractEditor = Blockly.functionEditor;
   }
@@ -159,6 +161,7 @@ Blockly.parseOptions_ = function(options) {
     disableVariableEditing: options['disableVariableEditing'] || false,
     useModalFunctionEditor: options['useModalFunctionEditor'] || false,
     useContractEditor: options['useContractEditor'] || false,
+    disableExamples: options['disableExamples'] || false,
     defaultNumExampleBlocks: options['defaultNumExampleBlocks'] || 0,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks,
     editBlocks: options['editBlocks'] || false

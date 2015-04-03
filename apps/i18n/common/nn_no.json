@@ -235,5 +235,8 @@
   "hintHeader": "Her er eit tips:",
   "genericFeedback": "Sjå resultatet og prøv å fikse programmet ditt.",
   "toggleBlocksErrorMsg": "Du må fikse en feil i programmet ditt før det kan vises som brikker.",
-  "defaultTwitterText": "Sjekk ut det eg har laga"
+  "defaultTwitterText": "Sjekk ut det eg har laga",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

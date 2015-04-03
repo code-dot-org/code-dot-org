@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "ของแข็ง"},
 "string":function(d){return "อักขระ"},
 "stringMismatchError":function(d){return "คุณมีสตริงที่มีการใช้อักษรตัวใหญ่ไม่ถูกต้อง."},
-"userCodeException":function(d){return "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."}};
+"userCodeException":function(d){return "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

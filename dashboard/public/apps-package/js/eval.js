@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":5,"../skins":194,"./blocks":59,"./eval":61,"./levels":73}],61:[function(require,module,exports){
+},{"../appMain":5,"../skins":196,"./blocks":59,"./eval":61,"./levels":73}],61:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -53,8 +53,15 @@ var EvalText = require('./evalText');
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// requiring this loads canvg into the global namespace
+// Loading these modules extends SVGElement and puts canvg in the global
+// namespace
 require('../canvg/canvg.js');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/svg_todataurl');
+}
 var canvg = window.canvg || global.canvg;
 
 var level;
@@ -69,6 +76,9 @@ var CANVAS_WIDTH = 400;
 Eval.displayedObject = null;
 
 Eval.answerObject = null;
+
+Eval.feedbackImage = null;
+Eval.encodedFeedbackImage = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -178,6 +188,8 @@ Eval.resetButtonClick = function () {
     user.removeChild(user.firstChild);
   }
 
+  Eval.feedbackImage = null;
+  Eval.encodedFeedbackImage = null;
 };
 
 /**
@@ -364,10 +376,10 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = evalMsg.emptyFunctionalBlock();
+    Eval.message = commonMsg.emptyFunctionalBlock();
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -412,12 +424,26 @@ Eval.execute = function() {
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
+    image: Eval.encodedFeedbackImage
   };
 
-  studioApp.playAudio(Eval.result ? 'win' : 'failure');
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
+    studioApp.report(reportData);
+  } else {
+    document.getElementById('svgEval').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Eval.feedbackImage = pngDataUrl;
+        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
 
-  studioApp.report(reportData);
+        studioApp.report(reportData);
+      }
+    });
+  }
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
 /**
@@ -473,6 +499,10 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    showingSharing: !level.disableSharing && (level.freePlay),
+    // allow users to save freeplay levels to their gallery
+    saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
+    feedbackImage: Eval.feedbackImage,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
@@ -499,7 +529,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"../StudioApp":4,"../block_utils":25,"../canvg/canvg.js":49,"../codegen":53,"../dom":56,"../skins":194,"../templates/page.html":219,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
+},{"../../locale/current/common":247,"../../locale/current/eval":248,"../StudioApp":4,"../block_utils":25,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../dom":56,"../skins":196,"../templates/page.html":221,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -519,7 +549,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],73:[function(require,module,exports){
+},{"ejs":263}],73:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -587,7 +617,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":246,"../block_utils":25}],60:[function(require,module,exports){
+},{"../../locale/current/eval":248,"../block_utils":25}],60:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -610,7 +640,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"ejs":261}],59:[function(require,module,exports){
+},{"../../locale/current/common":247,"../../locale/current/eval":248,"ejs":263}],59:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -905,7 +935,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"../sharedFunctionalBlocks":193,"./evalUtils":72}],58:[function(require,module,exports){
+},{"../../locale/current/common":247,"../../locale/current/eval":248,"../sharedFunctionalBlocks":195,"./evalUtils":72}],58:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1518,7 +1548,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":240,"./evalError":64}],64:[function(require,module,exports){
+},{"../utils":242,"./evalError":64}],64:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1556,6 +1586,6 @@ CustomEvalError.Type = {
   UserCodeException: 3
 };
 
-},{"../../locale/current/eval":246}],246:[function(require,module,exports){
+},{"../../locale/current/eval":248}],248:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
 },{}]},{},[74]);

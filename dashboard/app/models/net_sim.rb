@@ -14,6 +14,8 @@ class NetSim < Blockly
     default_enabled_encodings
     show_router_bandwidth_control
     default_router_bandwidth
+    show_router_memory_control
+    default_router_memory
     show_dns_mode_control
     default_dns_mode
   )

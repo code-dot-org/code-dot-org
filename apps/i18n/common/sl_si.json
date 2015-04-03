@@ -235,5 +235,8 @@
   "hintHeader": "Tukaj je namig:",
   "genericFeedback": "Poglej kako si končal in poizkusi popraviti svoj program.",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
-  "defaultTwitterText": "Poglej, kaj sem naredil"
+  "defaultTwitterText": "Poglej, kaj sem naredil",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

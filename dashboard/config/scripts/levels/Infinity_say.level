@@ -27,7 +27,6 @@
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "true",
-    "callout_json": "[\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -37,7 +36,8 @@
     "first_sprite_index": "0",
     "protaganist_sprite_index": "0",
     "maze_data": null
-  }
+  },
+  "md5": "5dbbd4eb34e5425b4cf6414978fe0bae"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -52,7 +52,7 @@
         </block>
         <block type="studio_setBackground">
           <title name="VALUE">"leafy"</title>
-        </block>        
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

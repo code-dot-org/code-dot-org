@@ -390,4 +390,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintHeader":function(d){return "إليك نصيحة:"},
 "genericFeedback":function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."},
 "toggleBlocksErrorMsg":function(d){return "أنت تحتاج لتصحيح الخطأ في برنامجك قبل أن يمكنك عرضه كقطع."},
-"defaultTwitterText":function(d){return "انظر ما الذي صنعته"}};
+"defaultTwitterText":function(d){return "انظر ما الذي صنعته"},
+"toolboxHeaderDroplet":function(d){return "Toolbox"},
+"hideToolbox":function(d){return "(Hide)"},
+"showToolbox":function(d){return "Show Toolbox"}};

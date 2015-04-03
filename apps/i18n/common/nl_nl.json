@@ -235,5 +235,8 @@
   "hintHeader": "Een tip:",
   "genericFeedback": "Kijk wat er gebeurde, en probeer je programma te verbeteren.",
   "toggleBlocksErrorMsg": "je moet een fout in je programma corrigeren voordat het kan worden weergeven in blokken.",
-  "defaultTwitterText": "Kijk wat ik gemaakt heb"
+  "defaultTwitterText": "Kijk wat ik gemaakt heb",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

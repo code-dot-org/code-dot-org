@@ -235,5 +235,8 @@
   "hintHeader": "İşte bir ipucu:",
   "genericFeedback": "Sonucunu gör ve programını düzeltmeyi dene.",
   "toggleBlocksErrorMsg": "Bloklar halinde gösterilebilmesi için programındaki bir hatayı düzeltmelisin.",
-  "defaultTwitterText": "Ne yaptığıma bakın"
+  "defaultTwitterText": "Ne yaptığıma bakın",
+  "toolboxHeaderDroplet": "Toolbox",
+  "hideToolbox": "(Hide)",
+  "showToolbox": "Show Toolbox"
 }

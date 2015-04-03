@@ -182,4 +182,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "固体"},
 "string":function(d){return "字符串"},
 "stringMismatchError":function(d){return "你有一个使用了错误大写的字符串。"},
-"userCodeException":function(d){return "在你运行代码时一个错误出现了。"}};
+"userCodeException":function(d){return "在你运行代码时一个错误出现了。"},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
