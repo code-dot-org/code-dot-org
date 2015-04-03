@@ -4344,8 +4344,8 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   if (this.encodingControl_) {
     this.encodingControl_.setEncodings(newEncodings);
   }
-  this.chunkSizeControl_.setEncodings(newEncodings);
 };
+
 },{"./NetSimChunkSizeControl":126,"./NetSimEncodingControl":138,"./NetSimMyDeviceTab.html":151}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -10967,7 +10967,6 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 
 var i18n = require('../../locale/current/netsim');
 var NetSimSlider = require('./NetSimSlider');
-var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for chunk size slider/selector
@@ -10984,33 +10983,10 @@ var NetSimChunkSizeControl = module.exports = function (rootDiv,
     max: 32
   });
 
-  /**
-   * Fill in the blank: "8 bits per _"
-   * @type {string}
-   * @private
-   */
-  this.currentUnitString_ = i18n.byte();
-
   // Auto-render, unlike our parent class
   this.render();
 };
 NetSimChunkSizeControl.inherits(NetSimSlider);
-
-/**
- * @param {EncodingType[]} newEncodings
- */
-NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
-  if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
-    this.currentUnitString_ = i18n.character();
-  } else if (newEncodings.indexOf(EncodingType.DECIMAL) > -1) {
-    this.currentUnitString_ = i18n.number();
-  } else {
-    this.currentUnitString_ = i18n.byte();
-  }
-
-  // Force refresh of slider widget label
-  this.setLabelFromValue_(this.value_);
-};
 
 /**
  * Converts an external-facing numeric value into a localized string
@@ -11020,9 +10996,8 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
  * @override
  */
 NetSimChunkSizeControl.prototype.valueToLabel = function (val) {
-  return i18n.numBitsPerChunkType({
-    numBits: val,
-    chunkType: this.currentUnitString_
+  return i18n.numBitsPerChunk({
+    numBits: val
   });
 };
 
@@ -11036,7 +11011,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
   return val.toString();
 };
 
-},{"../../locale/current/netsim":252,"./NetSimSlider":171,"./netsimConstants":188}],125:[function(require,module,exports){
+},{"../../locale/current/netsim":252,"./NetSimSlider":171}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
