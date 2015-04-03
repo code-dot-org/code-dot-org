@@ -1,17 +1,10 @@
 {
-  "name": "@cdo/cdo",
+  "name": "@cdo/apps-test",
   "version": "0.0.1",
-  "description": "Code Studio frontend pipeline",
-  "repository": "https://github.com/code-dot-org/code-dot-org.git",
-  "engines": {
-    "node": "~0.10.18"
-  },
+  "description": "Code Studio module package test harness",
+  "private": true,
   "scripts": {
-    "gulp": "FORCE_COLOR=true gulp",
-    "clean": "rimraf ./build",
-    "test": "npm run gulp -- test",
-    "start": "npm run gulp -- dev",
-    "lint": "npm run gulp -- lint"
+    "test": "node ./test/util/runTests.js"
   },
   "browserify": {
     "transform": [
@@ -33,38 +26,12 @@
     "browserify": "^9.0.2",
     "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
-    "chalk": "^1.0.0",
-    "concat-stream": "^1.4.7",
-    "connect-livereload": "~0.5.2",
-    "ejs": "^2.3.1",
-    "event-stream": "^3.1.7",
-    "express": "~4.11.0",
-    "factor-bundle": "^2.3.3",
-    "gulp": "^3.8.10",
-    "gulp-concat": "^2.5.2",
-    "gulp-install": "^0.4.0",
-    "gulp-jshint": "^1.9.0",
-    "gulp-mocha": "^2.0.0",
-    "gulp-newer": "^0.5.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.4",
-    "gulp-uglify": "^1.0.2",
-    "gulp-util": "^3.0.1",
     "jquery": "^2.1.3",
-    "jshint-stylish": "^1.0.0",
     "lodash": "^3.5.0",
-    "messageformat": "~0.2.1",
     "mocha": "^2.2.1",
     "mochify": "^2.6.1",
-    "node-sass": "~2.0.0-beta",
     "npm-which": "^2.0.0",
     "phantomjs": "git://github.com/wjordan/phantomjs",
-    "require-globify": "^1.1.0",
-    "rimraf": "^2.3.2",
-    "tiny-lr": "^0.1.5",
-    "uglify-js": "~2.4.16",
-    "vinyl": "^0.4.6",
-    "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.2.1"
+    "require-globify": "^1.1.0"
   }
 }

@@ -16,7 +16,7 @@ config.apps.forEach(function (app) {
 });
 var appsBrowserifyConfig = {src: appFilesSrc, dest: APPS_OUTPUT + 'common.js', factorBundleDest: appFilesDest};
 
-gulp.task('browserify', ['npm-install', 'vendor'], function() {
+gulp.task('bundle-js', ['npm-install', 'vendor'], function() {
   var browserify = require('./lib/gulp/gulp-browserify');
   var browserifyConfigs = [appsBrowserifyConfig].concat(config.javascripts);
   return es.merge(browserifyConfigs.map(function(config) {
@@ -24,12 +24,13 @@ gulp.task('browserify', ['npm-install', 'vendor'], function() {
   }));
 });
 
-gulp.task('compress', ['browserify'], function () {
+gulp.task('compress', ['bundle-js'], function () {
   var uglify = require('gulp-uglify');
-  return gulp.src([
+  var javascriptOutputs = Object.values(config.javascripts);
+  return gulp.src(javascriptOutputs.concat([
     APPS_OUTPUT + '*.js',
     '!' + APPS_OUTPUT + '**/blockly.js'
-  ])
+  ]))
     .pipe(uglify())
     .pipe(gulp.dest(APPS_OUTPUT));
 });
@@ -103,11 +104,12 @@ gulp.task('sass', function () {
   return es.merge(sassStreams);
 });
 
-gulp.task('build', ['browserify', 'media', 'sass', 'messages']);
+gulp.task('build', ['bundle-js', 'media', 'sass', 'messages']);
 
 // Call 'package' for maximum compression of all .js files
 gulp.task('package', ['compress', 'media', 'sass', 'messages']);
 
+// Install dependencies specified in package.json files
 gulp.task('npm-install', function() {
   var install = require("gulp-install");
   return gulp.src(['./src/package.json'])
@@ -143,10 +145,9 @@ function notifyLiveReload(event) {
     }
   });
 }
-
-gulp.task('server', function(){
+gulp.task('server', function() {
   var express = require('express');
-  var app = require('./src/dev/server.js');
+  var app = require('./apps/src/dev/server.js');
   app.use(express.static('./build/package'));
   app.listen(8000);
   tinylr.listen(35729);
