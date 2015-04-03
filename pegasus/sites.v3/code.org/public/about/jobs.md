@@ -79,7 +79,7 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="HOC-Temp"href="#HOC-Temp">Hour of Code Campaign Manager (Temp) (Seattle,WA)</a>
+## <a name="HOC-Temp"href="#HOC-Temp">Hour of Code Campaign Coordinator (Temp) (Seattle,WA)</a>
 **Job Summary:**
 
 The Hour of Code initiative is a yearly campaign to encourage students to try computer science during Computer Science Education Week (Dec. 7-13). Since 2013, it has reached over 100M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting temporary staff to assist the Marketing team in the planning and execution of December’s global Hour of Code campaign. Full-time, June-December contract position.

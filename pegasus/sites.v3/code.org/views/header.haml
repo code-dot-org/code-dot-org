@@ -1,3 +1,5 @@
+- variant ||= "unknown"
+
 :css
 
   .arrow_box:after {
@@ -85,7 +87,7 @@
                 %a.headerlink{:href=>"/about"}ABOUT
 
               #learnoptions.arrow_box{style: ""}
-                %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px; margin-left:10px", href: "/learn"} Hour of Code
+                %a.learnoption{id: "headerlearnlink_#{variant}", style: "color: white; cursor: pointer; margin-right:35px; margin-left:10px", href: "/learn"} Hour of Code
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: CDO.studio_url} Code Studio
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: "/learn/beyond"} Other Courses
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:10px", href: "/learn/local"} Local Classes

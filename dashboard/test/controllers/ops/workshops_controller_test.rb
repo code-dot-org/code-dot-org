@@ -14,6 +14,12 @@ module Ops
       @cohort = @cohort.reload
       @district = @cohort_district.district
       @facilitator = create(:facilitator)
+
+      # add teachers to cohort
+      @cohort.teachers << create(:teacher)
+      @cohort.teachers << create(:teacher)
+      @cohort.save!
+
     end
 
     test 'Facilitators can view all workshops they are facilitating' do
@@ -34,6 +40,7 @@ module Ops
       sign_in @workshop.facilitators.first
       get :teachers, id: @workshop.id
       assert_response :success
+
     end
 
     test "Facilitators can add teachers the day of a workshop" do

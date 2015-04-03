@@ -1172,28 +1172,30 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   this.statsChange.notifyObservers(this);
 };
 
+/**
+ * Checks the router queue for packets beyond the router's memory limit,
+ * and drops the first one we simulate locally.  Since this will trigger
+ * a table change, this will occur async-recursively until all packets
+ * over the memory limit are dropped.
+ * @private
+ */
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
-  if (this.currentlyEnforcingMemoryLimit_) {
-    return;
-  }
-
   // Only proceed if a packet we simulate exists beyond the memory limit
   var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
   if (!droppablePacket) {
     return;
   }
 
-  this.currentlyEnforcingMemoryLimit_ = true;
   this.removeRowFromSchedule_(droppablePacket);
   var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
   droppableMessage.destroy(function (err) {
     if (err) {
-      this.currentlyEnforcingMemoryLimit_ = false;
+      // Rarely, this could fire twice for one packet and have one drop fail.
+      // That's fine; just don't log if we didn't successfully drop.
       return;
     }
 
     this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
-    this.currentlyEnforcingMemoryLimit_ = false;
   }.bind(this));
 };
 

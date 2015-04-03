@@ -42,7 +42,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = chunkSizeChangeCallback;
 
   /**
    * @type {function}
@@ -73,7 +73,7 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
-      this.chunkSizeChangeCallback_);
+      this.chunkSizeSliderChangeCallback_);
 
   if (this.levelConfig_.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
@@ -98,5 +98,4 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   if (this.encodingControl_) {
     this.encodingControl_.setEncodings(newEncodings);
   }
-  this.chunkSizeControl_.setEncodings(newEncodings);
 };

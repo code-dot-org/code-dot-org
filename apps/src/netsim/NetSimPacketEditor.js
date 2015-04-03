@@ -153,7 +153,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
-  this.removePacketButton_.toggle(this.packetCount > 1);
+  this.updateRemoveButtonVisibility_();
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -460,6 +460,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 };
 
 /**
+ * If there's only one packet, applies "display: none" to the button so the
+ * last packet can't be removed.  Otherwise, clears the CSS property override.
+ * @private
+ */
+NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
+  this.removePacketButton_.css('display', (this.packetCount === 1 ? 'none' : ''));
+};
+
+/**
  * Produces a single binary string in the current packet format, based
  * on the current state of the widget (content of its internal fields).
  * @returns {string} - binary representation of packet
@@ -492,8 +501,8 @@ NetSimPacketEditor.prototype.setPacketIndex = function (packetIndex) {
 /** @param {number} packetCount */
 NetSimPacketEditor.prototype.setPacketCount = function (packetCount) {
   this.packetCount = packetCount;
-  this.removePacketButton_.toggle(packetCount > 1);
   this.updateFields_();
+  this.updateRemoveButtonVisibility_();
 };
 
 /** @param {number} maxPacketSize */
