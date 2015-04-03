@@ -41,7 +41,7 @@ module Ops
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
-      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} added 2 teachers to #{@cohort.name}", mail.subject
+      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
     test 'District Contact can drop teachers in their district from a cohort' do
@@ -55,6 +55,13 @@ module Ops
         delete :destroy_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
       end
       assert_response :success
+
+      assert !ActionMailer::Base.deliveries.empty?
+
+      # the notification to the ops team
+      mail = ActionMailer::Base.deliveries.last
+      assert_equal ['ops@code.org'], mail.to
+      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
     test 'District Contact cannot add/drop teachers in other districts' do
