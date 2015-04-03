@@ -399,7 +399,7 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: failedInput
+    failedInput: utils.valueOr(failedInput, null)
   };
 }
 
@@ -655,7 +655,7 @@ Calc.generateResults_ = function () {
     return;
   }
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
 
@@ -666,7 +666,7 @@ Calc.generateResults_ = function () {
     if (compute && !compute.getInputTargetBlock('ARG1')) {
       appState.message = calcMsg.emptyComputeBlock();
     } else {
-      appState.message = calcMsg.emptyFunctionalBlock();
+      appState.message = commonMsg.emptyFunctionalBlock();
     }
     return;
   }

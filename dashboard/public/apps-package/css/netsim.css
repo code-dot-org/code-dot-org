@@ -176,7 +176,7 @@ svg {
   margin: 0.5em 0 0.5em 0;
   max-height: 180px;
   width: 100%;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 #netsim .netsim-log-panel table th {
   background-color: transparent;
   color: #000000; }
@@ -196,7 +196,7 @@ svg {
 #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress {
   width: 50px; }
 #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
-  width: 100px; }
+  width: 121px; }
 #netsim .netsim-log-panel td.toAddress {
   background-color: rgba(255, 233, 238, 0.85); }
 #netsim .netsim-log-panel td.fromAddress {
@@ -245,7 +245,7 @@ svg {
   #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
     width: 50px; }
   #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
-    width: 100px; }
+    width: 121px; }
   #netsim .netsim-send-panel .netsim-packet td.toAddress {
     background-color: rgba(255, 233, 238, 0.85); }
   #netsim .netsim-send-panel .netsim-packet td.fromAddress {
@@ -262,7 +262,7 @@ svg {
         width: 100%; }
 #netsim .netsim-send-panel .send_widget_footer {
   margin: 10px;
-  overflow: auto; }
+  overflow: hidden; }
   #netsim .netsim-send-panel .send_widget_footer .right-side-controls {
     float: right;
     text-align: right; }
@@ -323,10 +323,12 @@ svg {
     border-left: none;
     border-right: none;
     border-top: none; }
-    #netsim .netsim-tabs .ui-tabs-nav li a {
-      font-family: "Gotham 5r", sans-serif;
-      font-size: 8pt;
-      padding: 0 1em; }
+    #netsim .netsim-tabs .ui-tabs-nav li {
+      margin-right: 2px; }
+      #netsim .netsim-tabs .ui-tabs-nav li a {
+        font-family: "Gotham 5r", sans-serif;
+        font-size: 8pt;
+        padding: 0 1em; }
   #netsim .netsim-tabs .ui-tabs-panel {
     padding: 0.8em 0.5em; }
     #netsim .netsim-tabs .ui-tabs-panel p {

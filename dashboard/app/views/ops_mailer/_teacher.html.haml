@@ -1,0 +1,8 @@
+%li
+  #{teacher.ops_first_name}
+  #{teacher.ops_last_name}
+  = mail_to teacher.email
+  - if teacher.district
+    District: #{teacher.district.try(:name)}
+  - if teacher.ops_school.present?
+    School: #{teacher.ops_school}

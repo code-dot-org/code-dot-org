@@ -7036,7 +7036,7 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 /**
  * @returns true if any non-example block in the workspace has an unfilled input
  */
-StudioApp.prototype.hasUnfilledBlock = function () {
+StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
@@ -7046,7 +7046,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledInput();
+    return block.hasUnfilledFunctionalInput();
   });
 };
 

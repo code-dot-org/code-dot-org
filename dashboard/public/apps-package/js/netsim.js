@@ -114,13 +114,6 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
-   * Current router maximum (optimistic) bandwidth (bits/second)
-   * @type {number}
-   * @private
-   */
-  this.routerBandwidth_ = Infinity;
-
-  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -268,10 +261,12 @@ NetSim.prototype.initWithUserName_ = function (user) {
         $('#netsim_tabs'),
         this.level,
         {
-          chunkSizeChangeCallback: this.setChunkSize.bind(this),
+          chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
-          routerBandwidthChangeCallback: this.changeRemoteRouterBandwidth.bind(this),
-          routerMemoryChangeCallback: this.changeRemoteRouterMemory.bind(this),
+          routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
+          routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(this),
+          routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
+          routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
           dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
           becomeDnsCallback: this.becomeDnsNode.bind(this)
         });
@@ -358,7 +353,6 @@ NetSim.prototype.setRouterCreationTime = function (creationTimestampMs) {
  * @param {number} newBandwidth in bits/second
  */
 NetSim.prototype.setRouterBandwidth = function (newBandwidth) {
-  this.routerBandwidth_ = newBandwidth;
   if (this.tabs_) {
     this.tabs_.setRouterBandwidth(newBandwidth);
   }
@@ -386,7 +380,6 @@ NetSim.prototype.changeRemoteRouterBandwidth = function (newBandwidth) {
  * @param {number} newMemory in bits
  */
 NetSim.prototype.setRouterMemory = function (newMemory) {
-  this.routerMemory_ = newMemory;
   if (this.tabs_) {
     this.tabs_.setRouterMemory(newMemory);
   }
@@ -2205,10 +2198,12 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {Object} callbacks
- * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.chunkSizeSliderChangeCallback
  * @param {function} callbacks.encodingChangeCallback
- * @param {function} callbacks.routerBandwidthChangeCallback
- * @param {function} callbacks.routerMemoryChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderChangeCallback
+ * @param {function} callbacks.routerBandwidthSliderStopCallback
+ * @param {function} callbacks.routerMemorySliderChangeCallback
+ * @param {function} callbacks.routerMemorySliderStopCallback
  * @param {function} callbacks.dnsModeChangeCallback
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
@@ -2232,7 +2227,7 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = callbacks.chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeSliderChangeCallback;
 
   /**
    * @type {function}
@@ -2244,13 +2239,29 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.routerBandwidthChangeCallback_ = callbacks.routerBandwidthChangeCallback;
+  this.routerBandwidthSliderChangeCallback_ =
+      callbacks.routerBandwidthSliderChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.routerMemoryChangeCallback_ = callbacks.routerMemoryChangeCallback;
+  this.routerBandwidthSliderStopCallback_ =
+      callbacks.routerBandwidthSliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderChangeCallback_ =
+      callbacks.routerMemorySliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.routerMemorySliderStopCallback_ =
+      callbacks.routerMemorySliderStopCallback;
 
   /**
    * @type {function}
@@ -2312,7 +2323,7 @@ NetSimTabsComponent.prototype.render = function () {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
-        this.chunkSizeChangeCallback_,
+        this.chunkSizeSliderChangeCallback_,
         this.encodingChangeCallback_);
   }
 
@@ -2320,8 +2331,12 @@ NetSimTabsComponent.prototype.render = function () {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
         this.levelConfig_,
-        this.routerBandwidthChangeCallback_,
-        this.routerMemoryChangeCallback_);
+        {
+          bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
+          bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
+          memorySliderChangeCallback: this.routerMemorySliderChangeCallback_,
+          memorySliderStopCallback: this.routerMemorySliderStopCallback_
+        });
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
@@ -2897,12 +2912,14 @@ var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
  * Generator and controller for router information view.
  * @param {jQuery} rootDiv - Parent element for this component.
  * @param {netsimLevelConfiguration} levelConfig
- * @param {function} bandwidthChangeCallback
- * @param {function} memoryChangeCallback
+ * @param {Object} callbacks
+ * @param {function} callbacks.bandwidthSliderChangeCallback
+ * @param {function} callbacks.bandwidthSliderStopCallback
+ * @param {function} callbacks.memorySliderChangeCallback
+ * @param {function} callbacks.memorySliderStopCallback
  * @constructor
  */
-var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
-    bandwidthChangeCallback, memoryChangeCallback) {
+var NetSimRouterTab = module.exports = function (rootDiv, levelConfig, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -2920,13 +2937,25 @@ var NetSimRouterTab = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.bandwidthChangeCallback_ = bandwidthChangeCallback;
+  this.bandwidthSliderChangeCallback_ = callbacks.bandwidthSliderChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.memoryChangeCallback_ = memoryChangeCallback;
+  this.bandwidthSliderStopCallback_ = callbacks.bandwidthSliderStopCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.memorySliderChangeCallback_ = callbacks.memorySliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.memorySliderStopCallback_ = callbacks.memorySliderStopCallback;
 
   /**
    * @type {NetSimRouterLogTable}
@@ -2979,11 +3008,15 @@ NetSimRouterTab.prototype.render = function () {
       this.rootDiv_.find('.router-stats'));
   if (this.levelConfig_.showRouterBandwidthControl) {
     this.bandwidthControl_ = new NetSimBandwidthControl(
-        this.rootDiv_.find('.bandwidth-control'), this.bandwidthChangeCallback_);
+        this.rootDiv_.find('.bandwidth-control'),
+        this.bandwidthSliderChangeCallback_,
+        this.bandwidthSliderStopCallback_);
   }
   if (this.levelConfig_.showRouterMemoryControl) {
     this.memoryControl_ = new NetSimMemoryControl(
-        this.rootDiv_.find('.memory-control'), this.memoryChangeCallback_);
+        this.rootDiv_.find('.memory-control'),
+        this.memorySliderChangeCallback_,
+        this.memorySliderStopCallback_);
   }
 };
 
@@ -3757,7 +3790,7 @@ NetSimPacketEditor.prototype.render = function () {
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
-  this.removePacketButton_.toggle(this.packetCount > 1);
+  this.updateRemoveButtonVisibility_();
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
 };
 
@@ -4064,6 +4097,15 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 };
 
 /**
+ * If there's only one packet, applies "display: none" to the button so the
+ * last packet can't be removed.  Otherwise, clears the CSS property override.
+ * @private
+ */
+NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
+  this.removePacketButton_.css('display', (this.packetCount === 1 ? 'none' : ''));
+};
+
+/**
  * Produces a single binary string in the current packet format, based
  * on the current state of the widget (content of its internal fields).
  * @returns {string} - binary representation of packet
@@ -4096,8 +4138,8 @@ NetSimPacketEditor.prototype.setPacketIndex = function (packetIndex) {
 /** @param {number} packetCount */
 NetSimPacketEditor.prototype.setPacketCount = function (packetCount) {
   this.packetCount = packetCount;
-  this.removePacketButton_.toggle(packetCount > 1);
   this.updateFields_();
+  this.updateRemoveButtonVisibility_();
 };
 
 /** @param {number} maxPacketSize */
@@ -4246,7 +4288,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = chunkSizeChangeCallback;
 
   /**
    * @type {function}
@@ -4277,7 +4319,7 @@ NetSimMyDeviceTab.prototype.render = function () {
   this.rootDiv_.html(renderedMarkup);
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
-      this.chunkSizeChangeCallback_);
+      this.chunkSizeSliderChangeCallback_);
 
   if (this.levelConfig_.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
@@ -4302,8 +4344,8 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   if (this.encodingControl_) {
     this.encodingControl_.setEncodings(newEncodings);
   }
-  this.chunkSizeControl_.setEncodings(newEncodings);
 };
+
 },{"./NetSimChunkSizeControl":126,"./NetSimEncodingControl":138,"./NetSimMyDeviceTab.html":151}],151:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -4345,12 +4387,15 @@ var NetSimSlider = require('./NetSimSlider');
 /**
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
- * @param {function} changeCallback
+ * @param {function} sliderChangeCallback
+ * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimMemoryControl = module.exports = function (rootDiv, changeCallback) {
+var NetSimMemoryControl = module.exports = function (rootDiv,
+    sliderChangeCallback, sliderStopCallback) {
   NetSimSlider.LogarithmicSlider.call(this, rootDiv, {
-    onChange: changeCallback,
+    onChange: sliderChangeCallback,
+    onStop: sliderStopCallback,
     value: Infinity,
     min: netsimConstants.BITS_PER_BYTE,
     max: netsimConstants.BITS_PER_MEGABYTE,
@@ -8480,28 +8525,30 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   this.statsChange.notifyObservers(this);
 };
 
+/**
+ * Checks the router queue for packets beyond the router's memory limit,
+ * and drops the first one we simulate locally.  Since this will trigger
+ * a table change, this will occur async-recursively until all packets
+ * over the memory limit are dropped.
+ * @private
+ */
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
-  if (this.currentlyEnforcingMemoryLimit_) {
-    return;
-  }
-
   // Only proceed if a packet we simulate exists beyond the memory limit
   var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
   if (!droppablePacket) {
     return;
   }
 
-  this.currentlyEnforcingMemoryLimit_ = true;
   this.removeRowFromSchedule_(droppablePacket);
   var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
   droppableMessage.destroy(function (err) {
     if (err) {
-      this.currentlyEnforcingMemoryLimit_ = false;
+      // Rarely, this could fire twice for one packet and have one drop fail.
+      // That's fine; just don't log if we didn't successfully drop.
       return;
     }
 
     this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
-    this.currentlyEnforcingMemoryLimit_ = false;
   }.bind(this));
 };
 
@@ -10920,7 +10967,6 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 
 var i18n = require('../../locale/current/netsim');
 var NetSimSlider = require('./NetSimSlider');
-var EncodingType = require('./netsimConstants').EncodingType;
 
 /**
  * Generator and controller for chunk size slider/selector
@@ -10937,33 +10983,10 @@ var NetSimChunkSizeControl = module.exports = function (rootDiv,
     max: 32
   });
 
-  /**
-   * Fill in the blank: "8 bits per _"
-   * @type {string}
-   * @private
-   */
-  this.currentUnitString_ = i18n.byte();
-
   // Auto-render, unlike our parent class
   this.render();
 };
 NetSimChunkSizeControl.inherits(NetSimSlider);
-
-/**
- * @param {EncodingType[]} newEncodings
- */
-NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
-  if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
-    this.currentUnitString_ = i18n.character();
-  } else if (newEncodings.indexOf(EncodingType.DECIMAL) > -1) {
-    this.currentUnitString_ = i18n.number();
-  } else {
-    this.currentUnitString_ = i18n.byte();
-  }
-
-  // Force refresh of slider widget label
-  this.setLabelFromValue_(this.value_);
-};
 
 /**
  * Converts an external-facing numeric value into a localized string
@@ -10973,9 +10996,8 @@ NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
  * @override
  */
 NetSimChunkSizeControl.prototype.valueToLabel = function (val) {
-  return i18n.numBitsPerChunkType({
-    numBits: val,
-    chunkType: this.currentUnitString_
+  return i18n.numBitsPerChunk({
+    numBits: val
   });
 };
 
@@ -10989,7 +11011,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
   return val.toString();
 };
 
-},{"../../locale/current/netsim":252,"./NetSimSlider":171,"./netsimConstants":188}],125:[function(require,module,exports){
+},{"../../locale/current/netsim":252,"./NetSimSlider":171}],125:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11011,12 +11033,15 @@ var NetSimSlider = require('./NetSimSlider');
 /**
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
- * @param {function} changeCallback
+ * @param {function} sliderChangeCallback
+ * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimBandwidthControl = module.exports = function (rootDiv, changeCallback) {
+var NetSimBandwidthControl = module.exports = function (rootDiv,
+    sliderChangeCallback, sliderStopCallback) {
   NetSimSlider.LogarithmicSlider.call(this, rootDiv, {
-    onChange: changeCallback,
+    onChange: sliderChangeCallback,
+    onStop: sliderStopCallback,
     value: Infinity,
     min: 4,
     max: 128 * netsimConstants.BITS_PER_KILOBIT,
@@ -11455,17 +11480,25 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  * @param {jQuery} rootDiv - element whose content we replace with the slider
  *        on render()
  * @param {Object} options
- * @param {function} onChange - a function invoked whenever the slider-value
- *        is changed by the student.  Passed the new value as an argument.
- * @param {number} value - Initial value of the slider
- * @param {number} min - Lowest possible value of the slider; next-to-lowest
- *        if lowerBoundInfinite is true.
- * @param {number} max - Highest possible value of the slider; next-to-highest
- *        if upperBoundInfinite is true.
- * @param {number} step - Step-value of jQueryUI slider - not necessarily
- *        related to min and max values if you provide custom value converters.
- * @param {boolean} upperBoundInfinite
- * @param {boolean} lowerBoundInfinite
+ * @param {function} [options.onChange] - a function invoked whenever the
+ *        slider-value is changed by the student.  Passed the new value as an
+ *        argument.
+ * @param {function} [options.onStop] - a function invoked only when the
+ *        slider-handle is released by the student.  Passed the new value as an
+ *        argument.
+ * @param {number} [options.value] - Initial value of the slider.  Defaults to
+ *        slider minimum value.
+ * @param {number} [options.min] - Lowest possible value of the slider;
+ *        next-to-lowest if lowerBoundInfinite is true.  Defaults to zero.
+ * @param {number} [options.max] - Highest possible value of the slider;
+ *        next-to-highest if upperBoundInfinite is true.  Defaults to 100.
+ * @param {number} [options.step] - Step-value of jQueryUI slider - not
+ *        necessarily related to min and max values if you provide custom value
+ *        converters. Defaults to 1.
+ * @param {boolean} [options.upperBoundInfinite] - if TRUE, the highest value
+ *        on the slider will be Infinity/Unlimited.  Default FALSE.
+ * @param {boolean} [options.lowerBoundInfinite] - if TRUE, the lowest value
+ *        on the slider will be -Infinity/Unlimited.  Default FALSE.
  */
 var NetSimSlider = module.exports = function (rootDiv, options) {
   /**
@@ -11486,10 +11519,18 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
   /**
    * A function invoked whenever the slider-value is changed by the student.
    * Passed the new value (not slider position) as an argument.
-   * @type function
+   * @type {function}
    * @private
    */
   this.changeCallback_ = utils.valueOr(options.onChange, function () {});
+
+  /**
+   * A function invoked only when the slider-handle is released by the student.
+   * Passed the new value (not slider position) as an argument
+   * @type {function}
+   * @private
+   */
+  this.stopCallback_ = utils.valueOr(options.onStop, function () {});
 
   /**
    * @type {number}
@@ -11560,7 +11601,8 @@ NetSimSlider.prototype.render = function () {
         min: minPosition,
         max: maxPosition,
         step: this.step_,
-        slide: this.onSliderValueChange_.bind(this)
+        slide: this.onSliderValueChange_.bind(this),
+        stop: this.onSliderStop_.bind(this)
       });
   this.setLabelFromValue_(this.value_);
 };
@@ -11580,14 +11622,17 @@ NetSimSlider.prototype.setValue = function (newValue) {
   this.setLabelFromValue_(newValue);
 };
 
-/**
- * @private
- */
+/** @private */
 NetSimSlider.prototype.onSliderValueChange_ = function (event, ui) {
   var newValue = this.sliderPositionToValue(ui.value);
   this.value_ = newValue;
   this.setLabelFromValue_(newValue);
   this.changeCallback_(newValue);
+};
+
+/** @private */
+NetSimSlider.prototype.onSliderStop_ = function () {
+  this.stopCallback_(this.value_);
 };
 
 /**
@@ -11668,8 +11713,9 @@ var LOGARITHMIC_DEFAULT_BASE = 2;
 
 /**
  * @param {jQuery} rootDiv
- * @param {Object} options - takes NetSimSlider options, and:
- * @param {number} options.logBase - factor by which the value increases
+ * @param {Object} options - takes NetSimSlider options, except:
+ * @param {number} [options.min] - same as base slider, but defaults to 1.
+ * @param {number} [options.logBase] - factor by which the value increases
  *        with every slider step.  Default base 2.
  * @constructor
  * @augments NetSimSlider

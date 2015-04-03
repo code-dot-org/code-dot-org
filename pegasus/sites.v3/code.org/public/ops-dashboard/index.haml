@@ -117,7 +117,8 @@ title: "Ops Dashboard"
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
-        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'}
+        update: {method:'PUT', url: '/dashboardapi/cohorts/:id'},
+        removeTeacher: {method:'DELETE', url: 'dashboardapi/cohorts/:id/teachers/:teacher_id'}
       });
 
       return Cohort;
@@ -482,11 +483,11 @@ title: "Ops Dashboard"
       };
 
       $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
-        //sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
-        //  function() {
+        cohortsService.removeTeacher({id: $scope.cohort.id, teacher_id: teacher.id}).$promise.then(
+          function() {
             $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
-        //  }
-        //).catch($scope.genericError);
+          }
+        ).catch($scope.genericError);
       };
 
       $scope.cancel = function(teacher) {
@@ -551,7 +552,7 @@ title: "Ops Dashboard"
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
-      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      $scope.workshopSegments = segmentsService.query({id: workshop.id});
       $scope.program_types = programTypesService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {

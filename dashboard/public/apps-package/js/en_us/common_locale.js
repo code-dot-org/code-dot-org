@@ -321,6 +321,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_write_description":function(d){return "Create a block of text"},
 "end":function(d){return "end"},
 "emptyBlocksErrorMsg":function(d){return "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."},
+"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "The function block needs to have other blocks inside it to work."},
 "errorEmptyFunctionBlockModal":function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."},
 "errorIncompleteBlockInFunction":function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."},

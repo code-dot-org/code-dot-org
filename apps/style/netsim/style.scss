@@ -17,7 +17,7 @@ $message-color: white;
 
 // For aligning table columns across panels
 $narrow-column-width: 50px;
-$wide-column-width: 100px;
+$wide-column-width: 121px;
 
 // Cross-browser helper for user_select property
 @mixin user_select($val) {
@@ -313,7 +313,7 @@ svg {
       margin: 0.5em 0 0.5em 0;
       max-height: 180px;
       width: 100%;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
 
     table {
@@ -480,7 +480,7 @@ svg {
 
     .send_widget_footer {
       margin: 10px;
-      overflow: auto;
+      overflow: hidden;
 
       .right-side-controls {
         float: right;
@@ -586,10 +586,14 @@ svg {
       border-left: none;
       border-right: none;
       border-top: none;
-      li a {
-        font-family: "Gotham 5r", sans-serif;
-        font-size: 8pt;
-        padding: 0 1em;
+      li {
+        // Make tabs just a _little_ bit more compact
+        margin-right: 2px;
+        a {
+          font-family: "Gotham 5r", sans-serif;
+          font-size: 8pt;
+          padding: 0 1em;
+        }
       }
     }
 
