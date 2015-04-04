@@ -54,16 +54,17 @@
   %div{style: "clear:both"}
   .container_responsive{style: "margin-top:10px"}
     #threedivs{style: "text-align:center"}
-      %div#signpetitionclick{style: "display:inline-block; vertical-align:top; cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;", onclick: "expandPetition();"}
-        -if request.language  == 'en'
-          = I18n.t :homepage_signpetition_dropdown
-        -else
-          = I18n.t :hoc2014_support
+      %div#signpetitionclick{style: "display:inline-block; vertical-align:top; cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;"}
+        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
+          -if request.language  == 'en'
+            = I18n.t :homepage_signpetition_dropdown
+          -else
+            = I18n.t :hoc2014_support
 
       -#%span
         <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=1560940110839035" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
 
-      %div{style: "display:inline-block; vertical-align:top; padding-right:15px; overflow:hidden"}
+      %div{style: "display:inline-block; vertical-align:top; padding-right:40px; overflow:hidden"}
         <div class="fb-like" data-href="https://www.facebook.com/Code.org" data-width="80" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 
       %div{style: "display:inline-block; vertical-align:top;"}
