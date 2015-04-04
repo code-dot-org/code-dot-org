@@ -60,7 +60,7 @@
   "dropletBlock_createRecord_param1": "record",
   "dropletBlock_createRecord_param2": "callbackFunction",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
-  "dropletBlock_declareAssign_x_description": "Creates a variable with the given name after 'var', and assigns it to the value on the right side of the expression",
+  "dropletBlock_declareAssign_x_description": "Declares a variable with the given name after 'var', and assigns it to the value on the right side of the expression",
   "dropletBlock_declareAssign_x_signatureOverride": "Declare a variable",
   "dropletBlock_declareAssign_x_prompt_description": "Create a variable and assign it a value by displaying a prompt",
   "dropletBlock_deleteElement_description": "Delete the element with the specified id",
