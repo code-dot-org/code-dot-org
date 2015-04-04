@@ -124,7 +124,7 @@ NetSimLobby.prototype.connectButtonClick_ = function () {
   if (this.selectedNode_ instanceof NetSimRouterNode) {
     this.connection_.connectToRouter(this.selectedNode_.entityID);
   } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.connection_.connectToRemoteClient(this.selectedNode_);
+    this.connection_.connectToClient(this.selectedNode_);
   }
 };
 

@@ -243,6 +243,12 @@ svg {
       padding: 0.3em 0.8em;
     }
 
+    .empty-row {
+      text-align: center;
+      color: $medium-gray;
+      font-style: italic;
+    }
+
     .selectable-row {
       cursor: pointer;
       &:hover {
