@@ -11,25 +11,30 @@
 /* global $ */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
 var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLogger = require('./NetSimLogger');
+var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimLobby.html');
 var NodeType = require('./netsimConstants').NodeType;
 
 var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
 
 /**
- * Generator and controller for shard lobby/connection controls.
+ * Generator and controller for lobby/connection controls.
  *
+ * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
  * @constructor
+ * @augments NetSimPanel
  */
-var NetSimLobby = module.exports = function (levelConfig, connection) {
+var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection) {
   /**
    * @type {netsimLevelConfiguration}
    * @private
@@ -42,10 +47,6 @@ var NetSimLobby = module.exports = function (levelConfig, connection) {
    * @private
    */
   this.connection_ = connection;
-  this.connection_.statusChanges.register(this.refresh_.bind(this));
-  logger.info("NetSimLobby registered to connection statusChanges");
-  this.connection_.shardChange.register(this.onShardChange_.bind(this));
-  logger.info("NetSimLobby registered to connection shardChanges");
 
   /**
    * A reference to the currently connected shard.
@@ -55,82 +56,58 @@ var NetSimLobby = module.exports = function (levelConfig, connection) {
   this.shard_ = null;
 
   /**
+   * @type {NetSimNode[]}
+   * @private
+   */
+  this.nodesOnShard_ = [];
+
+  /**
    * Which node in the lobby is currently selected
    * @type {NetSimClientNode|NetSimRouterNode}
    * @private
    */
   this.selectedNode_ = null;
 
-  /**
-   * Which listItem DOM element is currently selected
-   * @type {*}
-   * @private
-   */
-  this.selectedListItem_ = undefined;
-};
-
-/**
- * Generate a new NetSimLobby object, putting
- * its markup within the provided element and returning
- * the controller object.
- * @param {HTMLElement} element The container for the lobby markup
- * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimConnection} connection The connection manager to use
- * @return {NetSimLobby} A new controller for the generated lobby
- * @static
- */
-NetSimLobby.createWithin = function (element, levelConfig, connection) {
-  // Create a new NetSimLobby
-  var controller = new NetSimLobby(levelConfig, connection);
-  element.innerHTML = markup({
-    level: levelConfig
+  // Initial render
+  NetSimPanel.call(this, rootDiv, {
+    className: 'netsim-lobby-panel',
+    panelTitle: i18n.lobby(),
+    canMinimize: false
   });
-  controller.bindElements_();
-  controller.refresh_();
-  return controller;
+
+  this.connection_.statusChanges.register(this.render.bind(this));
+  logger.info("NetSimLobby registered to connection statusChanges");
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  logger.info("NetSimLobby registered to connection shardChanges");
 };
+NetSimLobby.inherits(NetSimPanel);
 
 /**
- * Grab the DOM elements related to this control -once-
- * and bind them to member variables.
- * Also attach method handlers.
+ * Recreate markup within panel body.
  */
-NetSimLobby.prototype.bindElements_ = function () {
-  // Root
-  this.openRoot_ = $('#netsim_lobby_open');
+NetSimLobby.prototype.render = function () {
+  // Create boilerplate panel markup
+  NetSimLobby.superPrototype.render.call(this);
 
-  this.addRouterButton_ = this.openRoot_.find('#netsim_lobby_add_router');
+  // Add our own content markup
+  var newMarkup = $(markup({
+    level: this.levelConfig_,
+    nodesOnShard: this.nodesOnShard_,
+    isMyNode: this.isMyNode_.bind(this),
+    canConnectToNode: this.canConnectToNode_.bind(this),
+    isSelectedNode: this.isSelectedNode_.bind(this)
+  }));
+  this.getBody().html(newMarkup);
+
+  this.addRouterButton_ = this.getBody().find('#netsim_lobby_add_router');
   this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
-  this.lobbyList_ = this.openRoot_.find('#netsim_lobby_list');
-  this.connectButton_ = this.openRoot_.find('#netsim_lobby_connect');
+
+  this.connectButton_ = this.getBody().find('#netsim_lobby_connect');
   this.connectButton_.click(this.connectButtonClick_.bind(this));
-};
 
-/**
- * Called whenever the connection notifies us that we've connected to,
- * or disconnected from, a shard.
- * @param {?NetSimShard} newShard - null if disconnected.
- * @private
- */
-NetSimLobby.prototype.onShardChange_= function (newShard) {
-  this.shard_ = newShard;
-  if (this.shard_ !== null) {
-    this.shard_.nodeTable.tableChange
-        .register(this.onNodeTableChange_.bind(this));
-    logger.info("NetSimLobby registered to nodeTable tableChange");
-  }
-};
+  this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
 
-/**
- * Called whenever a change is detected in the nodes table - which should
- * trigger a refresh of the lobby listing
- * @param {!Array} rows
- * @private
- */
-NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
-  // Refresh lobby listing.
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
-  this.refreshLobbyList_(nodes);
+  this.onSelectionChange();
 };
 
 /** Handler for clicking the "Add Router" button. */
@@ -152,111 +129,76 @@ NetSimLobby.prototype.connectButtonClick_ = function () {
 };
 
 /**
- * Show preconnect controls (name, shard-select) and actual lobby listing.
+ * Called whenever the connection notifies us that we've connected to,
+ * or disconnected from, a shard.
+ * @param {?NetSimShard} newShard - null if disconnected.
  * @private
  */
-NetSimLobby.prototype.refresh_ = function () {
-  if (this.connection_.isConnectedToRouter()) {
-    return;
-  }
+NetSimLobby.prototype.onShardChange_= function (newShard) {
+  this.shard_ = newShard;
+  if (this.shard_ !== null) {
+    this.shard_.nodeTable.tableChange
+        .register(this.onNodeTableChange_.bind(this));
+    logger.info("NetSimLobby registered to nodeTable tableChange");
 
-  this.openRoot_.show();
-  this.addRouterButton_.show();
-  this.lobbyList_.show();
-  this.connectButton_.show();
-  this.connection_.getAllNodes(function (lobbyData) {
-    this.refreshLobbyList_(lobbyData);
-  }.bind(this));
+    // Trigger a node table read, which should refresh the lobby contents.
+    if (this.shard_) {
+      this.shard_.nodeTable.readAll(function (err, rows) {
+        this.onNodeTableChange_(rows);
+      }.bind(this));
+    }
+  }
 };
 
 /**
- * Reload the lobby listing of nodes.
- * @param {!NetSimNode[]} lobbyData
+ * Called whenever a change is detected in the nodes table - which should
+ * trigger a refresh of the lobby listing
+ * @param {!Array} rows
  * @private
  */
-NetSimLobby.prototype.refreshLobbyList_ = function (lobbyData) {
-  this.lobbyList_.empty();
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  this.render();
+};
 
-  var filteredLobbyData = lobbyData.filter(function (simNode) {
-    var showClients = this.levelConfig_.showClientsInLobby;
-    var showRouters = this.levelConfig_.showRoutersInLobby;
-    var nodeType = simNode.getNodeType();
-    return (nodeType === NodeType.CLIENT && showClients) ||
-        (nodeType === NodeType.ROUTER && showRouters);
-  }.bind(this));
-
-  filteredLobbyData.sort(function (a, b) {
-    // TODO (bbuchanan): Make this sort localization-friendly.
-    if (a.getDisplayName() > b.getDisplayName()) {
-      return 1;
-    }
-    return -1;
+/**
+ * @param {Event} jQueryEvent
+ * @private
+ */
+NetSimLobby.prototype.onRowClick_ = function (jQueryEvent) {
+  var target = $(jQueryEvent.target);
+  var nodeID = target.data('nodeId');
+  var clickedNode = _.find(this.nodesOnShard_, function (node) {
+    return node.entityID === nodeID;
   });
 
-  this.selectedListItem_ = undefined;
-  filteredLobbyData.forEach(function (simNode) {
-    var item = $('<li>').html(
-        simNode.getDisplayName() + ' : ' +
-        simNode.getStatus() + ' ' +
-        simNode.getStatusDetail());
+  // Don't even allow selection of nodes we can't connect to.
+  if (!clickedNode || !this.canConnectToNode_(clickedNode)) {
+    return;
+  }
 
-    // Style rows by row type.
-    if (simNode.getNodeType() === NodeType.ROUTER) {
-      item.addClass('router-row');
-    } else {
-      item.addClass('user-row');
-      if (simNode.entityID === this.connection_.myNode.entityID) {
-        item.addClass('own-row');
-      }
-    }
+  // Deselect old row
+  var oldSelectedNode = this.selectedNode_;
+  this.selectedNode_ = null;
+  this.getBody().find('.selected-row').removeClass('selected-row');
 
-    // Specify by style which rows can be selected (handles rollover behavior)
-    if (this.canConnectToNode_(simNode)) {
-      item.addClass('selectable-row');
-    }
-
-    // Preserve selected item across refresh.
-    if (this.selectedNode_ && simNode.entityID === this.selectedNode_.entityID) {
-      item.addClass('selected-row');
-      this.selectedListItem_ = item;
-    }
-
-    item.click(this.onRowClick_.bind(this, item, simNode));
-    item.appendTo(this.lobbyList_);
-  }.bind(this));
+  // If we clicked on a different row, select the new row
+  if (!oldSelectedNode || clickedNode.entityID !== oldSelectedNode.entityID) {
+    this.selectedNode_ = clickedNode;
+    target.addClass('selected-row');
+  }
 
   this.onSelectionChange();
 };
 
 /**
- * @param {jQuery} listItem - Clicked row
- * @param {NetSimNode} connectionTarget - Node represented by clicked row
+ * @param {NetSimNode} node
+ * @returns {boolean}
  * @private
  */
-NetSimLobby.prototype.onRowClick_ = function (listItem, connectionTarget) {
-  // Don't even allow selection of nodes we can't connect to.
-  if (!this.canConnectToNode_(connectionTarget)) {
-    return;
-  }
-
-  var oldSelectedNode = this.selectedNode_;
-  var oldSelectedListItem = this.selectedListItem_;
-
-  // Deselect old row
-  if (oldSelectedListItem) {
-    oldSelectedListItem.removeClass('selected-row');
-  }
-  this.selectedNode_ = null;
-  this.selectedListItem_ = undefined;
-
-  // If we clicked on a different row, select the new row
-  if (!oldSelectedNode || connectionTarget.entityID !== oldSelectedNode.entityID) {
-    this.selectedNode_ = connectionTarget;
-    this.selectedListItem_ = listItem;
-    this.selectedListItem_.addClass('selected-row');
-  }
-
-  this.onSelectionChange();
+NetSimLobby.prototype.isMyNode_ = function (node) {
+  return node && this.connection_.myNode &&
+      this.connection_.myNode.entityID === node.entityID;
 };
 
 /**
@@ -281,7 +223,17 @@ NetSimLobby.prototype.canConnectToNode_ = function (connectionTarget) {
       connectionTarget.getNodeType() === NodeType.ROUTER );
 };
 
+/**
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ * @private
+ */
+NetSimLobby.prototype.isSelectedNode_ = function (node) {
+  return node && this.selectedNode_ &&
+      node.entityID === this.selectedNode_.entityID;
+};
+
 /** Handler for selecting/deselcting a row in the lobby listing. */
 NetSimLobby.prototype.onSelectionChange = function () {
-  this.connectButton_.attr('disabled', (this.selectedListItem_ === undefined));
+  this.connectButton_.attr('disabled', (this.selectedNode_ === null));
 };

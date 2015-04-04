@@ -1,10 +1,52 @@
-<div id="netsim_lobby_open" class="netsim-panel netsim-lobby">
-  <h1>Lobby</h1>
-  <div class="panel-body">
-    <% if (level.showAddRouterButton) { %>
-      <input type="button" id="netsim_lobby_add_router" value="Add Router" />
-    <% } %>
-    <ul id="netsim_lobby_list"></ul>
-    <input type="button" id="netsim_lobby_connect" value="Connect" />
-  </div>
+<%
+  var NodeType = require('./netsimConstants').NodeType;
+
+  var showClients = level.showClientsInLobby;
+  var showRouters = level.showRoutersInLobby;
+
+  var lobbyRows = nodesOnShard.filter(function (node) {
+    var nodeType = node.getNodeType();
+    return (nodeType === NodeType.CLIENT && showClients) || (nodeType == NodeType.ROUTER && showRouters);
+  }).map(function (node) {
+    var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
+
+    if (isMyNode(node)) {
+      classes.push('own-row');
+    }
+
+    if (canConnectToNode(node)) {
+      classes.push('selectable-row');
+    }
+
+    if (isSelectedNode(node)) {
+      classes.push('selected-row');
+    }
+
+    return {
+      nodeID: node.entityID,
+      classAttr: classes.join(' '),
+      displayName: node.getDisplayName(),
+      status: node.getStatus() + ' ' + node.getStatusDetail()
+    };
+  }).sort(function (a, b) {
+    // TODO (bbuchanan): Make this sort localization-friendly.
+    return (a.displayName > b.displayName) ? 1 : -1;
+  });
+%>
+<div class="content-wrap">
+  <ul id="netsim_lobby_list">
+    <%
+      lobbyRows.forEach(function (row) {
+        %>
+        <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+          <%= row.displayName %> : <%= row.status %>
+        </li>
+        <%
+      });
+    %>
+  </ul>
+  <% if (level.showAddRouterButton) { %>
+    <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+  <% } %>
+  <input type="button" id="netsim_lobby_connect" value="Connect" />
 </div>

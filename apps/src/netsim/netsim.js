@@ -240,8 +240,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this.getOverrideShardID()
   );
 
-  var lobbyContainer = document.getElementById('netsim_lobby_container');
-  this.lobbyControl_ = NetSimLobby.createWithin(lobbyContainer, this.level,
+  // Lobby panel: Controls for picking a remote node and connecting to it.
+  this.lobby_ = new NetSimLobby(
+      $('.lobby-panel'),
+      this.level,
       this.connection_);
 
   // Tab panel - contains instructions, my device, router, dns
@@ -557,15 +559,12 @@ NetSim.prototype.render = function () {
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
-  if (this.shardSelector_) {
-    shareLink = this.shardSelector_.getShareLink();
-  }
+  shareLink = this.shardSelector_.getShareLink();
 
   // Render left column
   if (this.mainContainer_.find('.leftcol_disconnected').is(':visible')) {
-    if (this.shardSelector_) {
-      this.shardSelector_.render();
-    }
+    this.shardSelector_.render();
+    this.lobby_.render();
   }
 
   // Render right column
