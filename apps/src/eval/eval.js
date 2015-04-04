@@ -54,8 +54,8 @@ var skin;
 
 studioApp.setCheckForEmptyBlocks(false);
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+Eval.CANVAS_HEIGHT = 400;
+Eval.CANVAS_WIDTH = 400;
 
 // This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
@@ -103,8 +103,8 @@ Eval.init = function(config) {
     if (!svg) {
       throw "something bad happened";
     }
-    svg.setAttribute('width', CANVAS_WIDTH);
-    svg.setAttribute('height', CANVAS_HEIGHT);
+    svg.setAttribute('width', Eval.CANVAS_WIDTH);
+    svg.setAttribute('height', Eval.CANVAS_HEIGHT);
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -443,8 +443,8 @@ function outerHTML (element) {
 
 function imageDataForSvg(elementId) {
   var canvas = document.createElement('canvas');
-  canvas.width = CANVAS_WIDTH;
-  canvas.height = CANVAS_HEIGHT;
+  canvas.width = Eval.CANVAS_WIDTH;
+  canvas.height = Eval.CANVAS_HEIGHT;
   canvg(canvas, outerHTML(document.getElementById(elementId)));
 
   // canvg attaches an svg object to the canvas, and attaches a setInterval.
@@ -453,7 +453,7 @@ function imageDataForSvg(elementId) {
   canvas.svg.stop();
 
   var ctx = canvas.getContext('2d');
-  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  return ctx.getImageData(0, 0, Eval.CANVAS_WIDTH, Eval.CANVAS_HEIGHT);
 }
 
 function evaluateAnswer() {

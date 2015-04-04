@@ -33,7 +33,7 @@
   hoc2014_teachers: Professores
   hoc2014_host: Promova
   hoc2014_everyone: Todos
-  hoc2014_support: Apoie
+  hoc2014_support: "Apoie &#x25BE;"
   hoc2014_whatishoc: O que é a Hora do Código?
   twentyhours_trynow: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
@@ -138,7 +138,7 @@
     aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Michael Clark, professor'
-  studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title: Explore o Code Studio
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_hoc_title: A Hour of Code
@@ -1143,3 +1143,26 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
+  homepage_hero_text_satya: |-
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |-
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
+    mention, it's just plain fun.&rdquo; "
+  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
+    about learning.&rdquo; "
+  homepage_hero_text_student3: |-
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; "
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; "
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo; "
+  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
+    involved and participating.&rdquo; "

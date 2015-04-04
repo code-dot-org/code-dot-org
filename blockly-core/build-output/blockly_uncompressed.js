@@ -13561,7 +13561,7 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
   this.createFunctionalMarkers_();
   goog.base(this, "renderDraw_", iconWidth, inputRows);
   this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
-  var rect = this.svgPath_.getBoundingClientRect();
+  var rect = this.svgPath_.getBBox();
   this.divider_.setAttribute("width", Math.max(0, rect.width - 2))
 };
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
@@ -19326,7 +19326,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "input", this, functionNameChange);
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "keydown", this, functionNameChange);
   function functionNameChange(e) {
-    this.functionDefinitionBlock.setTitleValue(e.target.value, "NAME")
+    var value = e.target.value;
+    var disallowedCharacters = /\)|\(/g;
+    if(disallowedCharacters.test(value)) {
+      value = value.replace(disallowedCharacters, "");
+      goog.dom.getElement("functionNameText").value = value
+    }
+    this.functionDefinitionBlock.setTitleValue(value, "NAME")
   }
   Blockly.bindEvent_(this.contractDiv_, "mousedown", null, function() {
     if(Blockly.selected) {
