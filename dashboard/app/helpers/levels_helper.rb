@@ -87,9 +87,9 @@ module LevelsHelper
 
   # Code for generating the blockly options hash
   def blockly_options
-
-    # Level-dependent options
     l = @level
+    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    # Level-dependent options
     app_options = l.blockly_options
     level_options = app_options[:level]
 
