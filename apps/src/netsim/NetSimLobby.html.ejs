@@ -37,23 +37,27 @@
 <div class="content-wrap">
   <ul id="netsim_lobby_list">
     <%
-      if (lobbyRows.length === 0) {
-        %>
-        <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
-        <%
-      }
 
       lobbyRows.forEach(function (row) {
         %>
-        <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-          <%= row.displayName %> : <%= row.status %>
-        </li>
+          <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+            <%= row.displayName %> : <%= row.status %>
+          </li>
         <%
       });
+
+      if (level.showAddRouterButton) {
+        %>
+          <li class="empty-row">
+            <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+          </li>
+        <%
+      } else if (lobbyRows.length === 0) {
+        %>
+          <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
+        <%
+      }
     %>
   </ul>
-  <% if (level.showAddRouterButton) { %>
-    <input type="button" id="netsim_lobby_add_router" value="Add Router" />
-  <% } %>
   <input type="button" id="netsim_lobby_connect" value="Connect" />
 </div>
