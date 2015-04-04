@@ -25,6 +25,15 @@ Execute code in response to an event for the specified element.
 
 **Note:** A UI control must exist before the onEvent function can be used.
 
+There are many events that can be used with this function to respond to all kinds of actions that a user can take. You can find the full list [here](http://www.w3schools.com/jsref/dom_obj_event.asp) but some of the most commonly used are:
+
+| Name  | Description                   |
+|-------|-------------------------------|
+| change | The specified element has been modified.  |
+| click | The user clicked on the specified element.  |
+| mouseover | The user moved the mouse cursor over the specified element.  |
+| keydown | The user pressed a keyboard key while the element was selected.  |
+
 [/description]
 
 ### Examples
