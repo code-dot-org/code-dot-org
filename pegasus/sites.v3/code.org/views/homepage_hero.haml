@@ -1,7 +1,13 @@
 #top{style: "position:relative; width:100%; overflow:hidden"}
+
+  -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
   - heroes.shuffle!
-  - heroes.first(5).each_with_index do |entry, index|
+  - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
+  - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+  - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+
+  - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
     - opacity = index == 0 ? 1 : 0
@@ -17,7 +23,7 @@
 
   .container_responsive{style: "color: white; font-size: 20px"}
     .col-66{style: "position:relative;"}
-      - heroes.each_with_index do |entry, index|
+      - heroes_arranged.each_with_index do |entry, index|
         -# note: this gsheet display parameter unused due to IE8 fix.
         - display = entry[:active_s] == "hide" ? "none" : "block"
         - unless entry[:text1_s].nil_or_empty?
