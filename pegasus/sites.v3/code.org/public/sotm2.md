@@ -1,15 +1,12 @@
 ---
 title: Nominate Student of the Month
 nav: educate_nav
-rightbar: blank
 ---
 [#sotw-intro]
 
 # Student of the Month winners
 
 <%= view :sotm_winners %>
-
-<% end %>
 
 
 # Nominate a Student of the Month
