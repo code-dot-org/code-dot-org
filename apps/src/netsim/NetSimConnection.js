@@ -289,7 +289,7 @@ NetSimConnection.prototype.isConnectedToRouter = function () {
  * otherwise we'll follow a special peer-to-peer connection process.
  * @param {NetSimClientNode} remoteNode
  */
-NetSimConnection.prototype.connectToRemoteClient = function (remoteNode) {
+NetSimConnection.prototype.connectToClient = function (remoteNode) {
   this.myNode.connectToNode(remoteNode, function (err) {
     if (err) {
       logger.warn('Failed to connect to ' + remoteNode.getDisplayName() + '; ' +

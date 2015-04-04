@@ -1,4 +1,5 @@
 <%
+  var i18n = require('../../locale/current/netsim');
   var NodeType = require('./netsimConstants').NodeType;
 
   var showClients = level.showClientsInLobby;
@@ -36,6 +37,12 @@
 <div class="content-wrap">
   <ul id="netsim_lobby_list">
     <%
+      if (lobbyRows.length === 0) {
+        %>
+        <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
+        <%
+      }
+
       lobbyRows.forEach(function (row) {
         %>
         <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
