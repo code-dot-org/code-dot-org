@@ -52,7 +52,7 @@ At the end of this stage, students will return to their Big Game to complete the
 
 # Lesson Tip
 
-Be sure to check students’ Contracts and EXAMPLEs during this exercise, especially when it’s time for them to circle and label what changes between examples. This is the crucial step in the Design Recipe where they should discover the need for `cond`.
+Be sure to check students’ Contracts and Examples during this exercise, especially when it’s time for them to circle and label what changes between examples. This is the crucial step in the Design Recipe where they should discover the need for `cond`.
 
 [/tip]
 

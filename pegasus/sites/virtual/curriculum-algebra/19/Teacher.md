@@ -101,7 +101,7 @@ Do you expect the same answer regardless of whether the larger or smaller input 
 
 <div style="clear: both"></div>
 
-In a right triangle, the side opposite the 90-degree angle is called the hypoteneuse. Thinking back to our collision detection, we know that the objects will collide if the hypoteneuse is less than the sum of their radii. Knowing the length of the hypoteneuse will be essential to determine when a collision occurs.
+In a right triangle, the side opposite the 90-degree angle is called the hypotenuse. Thinking back to our collision detection, we know that the objects will collide if the hypotenuse is less than the sum of their radii. Knowing the length of the hypotenuse will be essential to determine when a collision occurs.
  
 [/together]
 
@@ -118,9 +118,9 @@ Organize students into small groups of 2 or 3.
 
 - Pass out Pythagorean Proof materials ( [1](pythag1.png), [2](pythag2.png) ) to each group.
 - Have students cut out the four triangles and one square on first sheet.
-- Explain that, for any right triangle, it is possible to draw a picture where the hypoteneuse is used for all four sides of a square.
+- Explain that, for any right triangle, it is possible to draw a picture where the hypotenuse is used for all four sides of a square.
 - Have students lay out their gray triangles onto the white square, as show in this diagram.
-- Point out that the square itself has four identical sides of length C, which are the hypoteneuses for the triangles. If the area of a square is expressed by _side ∗ side_, then the area of the white space is C<sup>2</sup>.
+- Point out that the square itself has four identical sides of length C, which are the hypotenuses for the triangles. If the area of a square is expressed by _side ∗ side_, then the area of the white space is C<sup>2</sup>.
 - Have students measure the inner square formed by the four hypotenuses (C)
 
 <div style="clear: both"></div>
@@ -146,7 +146,7 @@ The smaller square has an area of A<sup>2</sup>, and the larger square has an ar
 In this  activity students will:
 
 - Create right triangles on a graph.
-- Calculate the hypotenuse by direct measurement and by the Pythgorean Theorem.
+- Calculate the hypotenuse by direct measurement and by the Pythagorean Theorem.
 - Determine if circles have collided by examining visually.
 - Determine if circles have collided by comparing distance and radii.
 

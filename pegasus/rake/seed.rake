@@ -161,9 +161,7 @@ class GSheetToCsv
     end
 
     begin
-      csv_uri = @file.raw_file.export_links['application/pdf'].gsub(/pdf$/,'csv')
-      buf = @@gdrive.raw_session.execute!(uri: csv_uri).body
-#      buf = @file.spreadsheet.worksheets.first.export_as_string
+      buf = @file.spreadsheet_csv
     rescue GoogleDrive::Error => e
       puts "Error on file: #{@gsheet_path}, #{e}"
       throw e
@@ -253,7 +251,7 @@ namespace :seed do
           ctime = File.mtime(path).utc if File.file?(path)
           unless mtime.to_s == ctime.to_s
             puts "gdrive #{path}"
-            file.spreadsheet.export_as_file(path, nil, 0)
+            IO.write(path, file.spreadsheet_csv)
             File.utime(File.atime(path), mtime, path)
           end
         else
