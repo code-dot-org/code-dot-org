@@ -11,10 +11,10 @@ hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,,,,,/images/
 hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,,,,,/images/homepage/boy3.jpg,both,show,en
 hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,,,,,/images/homepage/girl10.jpg,both,show,en
 hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,,,,,/images/homepage/kids10.jpg,both,show,en
-hero_malala_noten,widehero,anybody_can_learn,50% 30%,,,,,/images/homepage/malala.jpg,both,show,not en
-hero_susan_noten,widehero,anybody_can_learn,52% 6%,,,,,/images/homepage/susan.jpg,both,show,not en
-hero_sheryl_noten,widehero,anybody_can_learn,59% 22%,,,,,/images/homepage/sheryl.jpg,both,show,not en
-hero_fistbump_noten,widehero,anybody_can_learn,55% 9%,,,,,/images/homepage/fistbump.jpg,both,show,not en
+hero_student_girlsmile,widehero,anybody_can_learn,41% 20%,,,,,/images/homepage/kids4.jpg,both,show,not en
+hero_teacher_man,widehero,stats_michael,49% 17%,,,,,/images/homepage/kids10.jpg,both,show,not en
+hero_student_boyblue,widehero,anybody_can_learn,55% 7%,,,,,/images/homepage/boy5.jpg,both,show,not en
+hero_teacher_girl,widehero,stats_nina,24% 11%,,,,,/images/homepage/girl10.jpg,both,show,not en
 action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,,,,,code.org,show,en
 action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,en
 action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,en
