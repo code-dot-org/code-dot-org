@@ -452,7 +452,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'keydown', this,
       functionNameChange);
   function functionNameChange(e) {
-    this.functionDefinitionBlock.setTitleValue(e.target.value, 'NAME');
+    var value = e.target.value;
+    var disallowedCharacters = /\)|\(/g;
+    if (disallowedCharacters.test(value)) {
+      value = value.replace(disallowedCharacters, '');
+      goog.dom.getElement('functionNameText').value = value;
+    }
+    this.functionDefinitionBlock.setTitleValue(value, 'NAME');
   }
 
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {

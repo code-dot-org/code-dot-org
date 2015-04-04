@@ -33,7 +33,7 @@
   hoc2014_teachers: Öğretmenler
   hoc2014_host: Ev sahipliği yapın
   hoc2014_everyone: Herkes
-  hoc2014_support: Destekleyin
+  hoc2014_support: "Destekleyin &#x25BE;"
   hoc2014_whatishoc: Kodlama Saati nedir?
   twentyhours_trynow: Şimdi dene
   california_heading: Okulunuzdan bilgisayar bilimleri kurslarını açmalarını isteyin
@@ -139,7 +139,7 @@
     biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   stats_michael: Öğrencilerimi <b>hiçbir zaman</b> öğrenme konusunda bu kadar heyecanlı
     görmemiştim." - Michael Clark, Öğretmen
-  studiobar_title: <a href='http://studio.code.org'>Code Studio</a>'yu Keşfedin
+  studiobar_title: Code Studio'yu Keşfedin
   studiobar_elementary_title: Temel dersler
   studiobar_elementary_body: K&#8209;5 hazırlanan üç yeni dersimiz
   studiobar_hoc_title: Kod Saati
@@ -1094,3 +1094,26 @@
     programming across a spectrum of ages and grade levels.
   sphero_beyond_longdescription: Öğretmen veya ebeveyn olun,SPRK dersleri çocukların
     matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir.
+  homepage_hero_text_satya: |-
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |-
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
+    mention, it's just plain fun.&rdquo; "
+  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
+    about learning.&rdquo; "
+  homepage_hero_text_student3: |-
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; "
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; "
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo; "
+  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
+    involved and participating.&rdquo; "
