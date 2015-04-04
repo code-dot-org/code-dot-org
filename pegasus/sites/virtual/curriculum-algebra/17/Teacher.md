@@ -21,7 +21,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### **Activity: Conditionals and Piecewise Functions**  
 
-3) [Conditionals](#Activity1)   
+3) [Conditionals and Piecewise Functions](#Activity1)   
 
 <!--
 ### **Assessment**
@@ -65,7 +65,7 @@ This lesson has three new and important words:<br/>
 - Ask the class "What was the *condition* of the reward?"
   - The condition was if you were quiet for 30 seconds
      - If you were, the condition would be true, then you would get the reward.
-     - If you weren't, the condition would be false, then the reward woud not apply.
+     - If you weren't, the condition would be false, then the reward would not apply.
   - Can we come up with another conditional?
      - If I say "question," then you raise your hand.
      - If I sneeze, then you say "Gesundheit."
@@ -85,9 +85,9 @@ Let's look at a conditional piece by piece:
     (x < 10)  ->  "That's pretty small"
     else      ->  "That's exactly ten"
 
-If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition we don't need to keep looking.
+If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "That's pretty big" - and because we found a true condition we don't need to keep looking.
 
-If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been better to write the two conditions as (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
+If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns something if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been better to write the two conditions as (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
 
 Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without conditionals, you could only write a function that always moves the player up, or always moves it down, but not both.
      
@@ -107,8 +107,8 @@ Explain to the class that they will be playing the role of Function Machines, fo
 - Your function must return only what is described in your Range.
 - You must follow the steps provided in your definition - no magic!
 
-This time, however, everyone will be running the same function. And that function is called 'simon_says' and it has the following Contract:
-simon_says: String -> Movement
+This time, however, everyone will be running the same function. And that function is called 'simon\_says' and it has the following Contract:
+simon_says: String -> Movement  
 Given a String that describes an action, produce the appropriate movement. If an unknown action is called, lower both hands.
 
 Examples
@@ -153,8 +153,8 @@ Say to the class:  “Now we're going to rewrite our function a little bit - ins
 
 Continue playing using numbers in the `simon_says` function, such as `simon_says(15)`, which should result in `RaiseRightHand`. As students get comfortable with the new rules, you can throw in some trick questions, such as `simon_says(20)` or `simon_says(50)`, both of which should call the else statement. You can extend this activity in many ways, for example:
 
-- Call the function with a simple expression, such as `simon_says(30 / 2)`.
-- Add more conditions of your own.
+- Call the function with a simple expression, such as `simon_says(30 / 2)`
+- Add more conditions of your own
 - Create multiple functions and divide the class into groups
 - Allow students to take over as the 'programmer'
 
@@ -163,7 +163,7 @@ Continue playing using numbers in the `simon_says` function, such as `simon_says
 There are piecewise functions in mathematics as well.  The absolute value function y = |x| can be re-written as   
 y = { -x : x<0 , x : x>0, 0 }  
 <img src="Abs_value.png" style="max-width: 100%"/><br/>
-Note that in mathematical terms, that the clause for the domain is usually listed second instead of first.  
+Note that in mathematical terms, the clause for the domain is usually listed second instead of first.  
 
 A data plan on a phone bill might be structured as:
 
@@ -178,7 +178,7 @@ This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5
 Another very common piecewise functions is for taxi cabs.
 
 * $3 for 0 to 2 miles
-* $1 for each part mile after that
+* $1 for each partial mile after that
 
 <img src="Telephone_Cab_3_for_first_2.png" style="max-width: 100%"/><br/>
 
