@@ -277,7 +277,7 @@ module LevelsHelper
   end
 
   def boolean_check_box(f, field_name_symbol)
-    f.check_box field_name_symbol, {}, Level.boolean_string_true, Level.boolean_string_false
+    f.check_box field_name_symbol, {}, JSONValue.boolean_string_true, JSONValue.boolean_string_false
   end
 
   SoftButton = Struct.new(:name, :value)
