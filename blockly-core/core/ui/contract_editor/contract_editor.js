@@ -30,10 +30,10 @@ goog.require('goog.color');
 goog.require('goog.array');
 
 /** @const */ var EXAMPLE_BLOCK_MARGIN_BELOW = 20; // px
-/** @const */ var EXAMPLE_BLOCK_MARGIN_LEFT = 15; // px
+/** @const */ var EXAMPLE_BLOCK_MARGIN_LEFT = Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
-/** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = 15; // px
+/** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
 /** @const */ var HEADER_HEIGHT = 50; //px
 
 /** @const */ var USER_TYPE_CHOICES = [
@@ -212,7 +212,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
         if (this.functionDefinitionBlock) {
           var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-          var functionDefinitionX = Blockly.RTL ? fullWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
+          var functionDefinitionX = Blockly.RTL ?
+            fullWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
+            Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
           this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
           currentY += this.functionDefinitionBlock.getHeightWidth().height;
         }
