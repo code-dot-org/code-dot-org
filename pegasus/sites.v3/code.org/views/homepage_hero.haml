@@ -1,3 +1,6 @@
+:css
+
+
 #top{style: "position:relative; width:100%; overflow:hidden"}
 
   -# Generate a random set of hero images alternating between non-celeb and celeb.
@@ -29,8 +32,10 @@
         - unless entry[:text1_s].nil_or_empty?
           - text = I18n.t(entry[:text1_s])
           - unless text.nil_or_empty?
-            - lines = text.lines 
-            .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#fff; line-height:22px"}
+            - lines = text.lines
+            - if entry[:param3_s] == "bottom"
+              - position_class = "homepage-caption-bottom"
+            .captions{id: "captionarea#{index}", class: position_class, style: "position:absolute; left:0; text-align:center; width:100%; color:#fff; line-height:22px"}
               .caption.caption1{style: "display: none; left: 50px; top: 50px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
                 = lines[0]
               .caption.caption2{style: "display: none; left: 30px; top: 95px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
