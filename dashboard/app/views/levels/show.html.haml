@@ -23,7 +23,10 @@
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
-  %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
+    if (appOptions.autoplayVideo) {
+      showVideoDialog(appOptions.autoplayVideo);
+    }
+  = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
 
