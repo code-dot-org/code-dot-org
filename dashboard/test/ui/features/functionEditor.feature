@@ -13,9 +13,9 @@ Scenario: Opening the function editor and moving an inner block doesn't bump fun
   And I wait to see "#modalEditorClose"
   And "modal function block" refers to block "31"
   And "inner repeat block" refers to block "32"
-  And block "modal function block" is at a location "modal location"
+  And block "modal function block" is at a location "function definition location"
   And I begin to drag block "inner repeat block" to offset "50, 50"
-  And block "modal function block" is at location "modal location"
+  And block "modal function block" is at location "function definition location"
 
 @chrome
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
