@@ -23,10 +23,12 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif %w(artist playlab hourofcode frozen).include?(id)
+- elsif %w(artist playlab hourofcode frozen infinity).include?(id)
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
+  - elsif id == 'infinity'
+    - title = t('upsell.infinity.title')
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
