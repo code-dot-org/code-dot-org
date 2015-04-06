@@ -279,16 +279,19 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   }
 
   /** @const */
-  var MARGIN = 25;
+  var MARGIN_BOTTOM_RIGHT = 25;
 
   /** @const */
   var MARGIN_TOP = 15;
 
+  /** @const */
+  var MARGIN_LEFT = 15;
+
   // Calculate bounds of view, including bump padding
   var viewInnerTop = metrics.viewTop + MARGIN_TOP;
-  var viewInnerLeft = metrics.viewLeft + MARGIN;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN
+  var viewInnerLeft = metrics.viewLeft + MARGIN_LEFT;
+  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN_BOTTOM_RIGHT;
+  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN_BOTTOM_RIGHT;
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
 
