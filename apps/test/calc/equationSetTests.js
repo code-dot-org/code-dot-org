@@ -171,6 +171,76 @@ describe('EquationSet', function () {
     });
   });
 
+  describe('isEquivalentTo', function () {
+    var onePlusTwo = new ExpressionNode('+', [1, 2]);
+    var twoPlusOne = new ExpressionNode('+', [2, 1]);
+    var onePlusThree = new ExpressionNode('+', [1, 3]);
+
+
+    it('returns false when compute expression are not equivalent', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusThree));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), false);
+      assert.strictEqual(set2.isEquivalentTo(set1), false);
+    });
+
+    it('returns false if non-compute expressions are not equivalent', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], onePlusThree));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), false);
+      assert.strictEqual(set2.isEquivalentTo(set1), false);
+    });
+
+    it('returns true if two sets are identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], onePlusTwo));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
+    });
+
+    it('returns true if compute expressions are equivalent but not identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], twoPlusOne));
+      set2.addEquation_(new Equation('foo', [], onePlusTwo));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
+    });
+
+    it('returns true if non-compute expressions are equivalent but not identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], twoPlusOne));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
+    });
+  });
+
   describe('evaluate/evaluateWithExpression', function () {
     it('can evaluate a single expression that is just a number', function () {
       var computeExpression = new ExpressionNode(5);
