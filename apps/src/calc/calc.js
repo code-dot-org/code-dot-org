@@ -563,6 +563,10 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     if (targetSet.isIdenticalTo(userSet)) {
       outcome.result = ResultType.SUCCESS;
       outcome.testResults = TestResults.ALL_PASS;
+    } else if (targetSet.isEquivalentTo(userSet)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+      outcome.message = calcMsg.equivalentExpression();
     } else {
       outcome.result = ResultType.FAILURE;
       outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
