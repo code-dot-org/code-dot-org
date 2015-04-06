@@ -6,10 +6,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 * Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
-  1. `vagrant init ubuntu/trusty64`
-  1. Configure to use 2048mb rather than 512mb RAM ([instructions](https://docs.vagrantup.com/v2/virtualbox/configuration.html))
+  1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
+  1. `cd code-dot-org`
   1. `vagrant up`
   1. `vagrant ssh`
+  1. Goto step 2 of the common setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Install OS-specific prerequisites
