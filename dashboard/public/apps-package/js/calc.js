@@ -577,6 +577,10 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     if (targetSet.isIdenticalTo(userSet)) {
       outcome.result = ResultType.SUCCESS;
       outcome.testResults = TestResults.ALL_PASS;
+    } else if (targetSet.isEquivalentTo(userSet)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+      outcome.message = calcMsg.equivalentExpression();
     } else {
       outcome.result = ResultType.FAILURE;
       outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
@@ -1380,6 +1384,34 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
     var otherEquation = otherSet.getEquation(thisEquation.name);
     if (!otherEquation ||
         !thisEquation.expression.isIdenticalTo(otherEquation.expression)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
+ * Are two EquationSets equivalent? This is considered to be true if their
+ * compute expression are equivalent and all of their equations have the same
+ * names and equivalent expressions. Equivalence is a less strict requirement
+ * than identical that allows params to be reordered.
+ */
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
+  if (this.equations_.length !== otherSet.equations_.length) {
+    return false;
+  }
+
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isEquivalentTo(otherCompute)) {
+    return false;
+  }
+
+  for (var i = 0; i < this.equations_.length; i++) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isEquivalentTo(otherEquation.expression)) {
       return false;
     }
   }
