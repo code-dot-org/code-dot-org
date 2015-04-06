@@ -120,6 +120,7 @@ theme: none
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?
+          %br
           %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
