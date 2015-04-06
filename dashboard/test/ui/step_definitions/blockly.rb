@@ -188,7 +188,3 @@ end
 When(/^"(.+)" refers to block "(.+)"$/) do |blockAlias, block_id|
   add_block_alias(blockAlias, block_id)
 end
-
-And(/^I bump modal blocks into view$/) do
-  @browser.execute_script('Blockly.modalBlockSpaceEditor.bumpBlocksIntoView_()')
-end
