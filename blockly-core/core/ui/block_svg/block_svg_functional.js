@@ -51,7 +51,19 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
 
   this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
 
-  var rect = this.svgPath_.getBoundingClientRect();
+  // getBBox doesn't work on blocks that arent visible in FF
+  if (!this.block_.isVisible()) {
+    return;
+  }
+
+  // isVisible can report true if the block is in the modal blockspace but
+  // the function editor isn't yet open
+  if (this.block_.blockSpace === Blockly.functionEditor.modalBlockSpace &&
+      !Blockly.functionEditor.isOpen()) {
+    return;
+  }
+
+  var rect = this.svgPath_.getBBox();
   this.divider_.setAttribute('width', Math.max(0, rect.width - 2));
 };
 
