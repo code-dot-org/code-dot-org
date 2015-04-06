@@ -1,7 +1,7 @@
 title 'Disney Infinity Play Lab'
 description_short "Use Play Lab to create a story or game starring Disney Infinity characters."
 description "Use Play Lab to create a story or game starring Disney Infinity characters."
-hidden 'true'
+hidden 'false'
 
 stage 'Infinity'
 level 'Infinity_move_right'
