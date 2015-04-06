@@ -47,7 +47,7 @@ module LevelsHelper
 
     if is_legacy_level
       autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
-    elsif @level.is_a?(Blockly) && @level.specified_autoplay_video
+    elsif @level.specified_autoplay_video
       unless seen_videos.include?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
       end
@@ -127,6 +127,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     {
+        autoplayVideo: @autoplay_video_info,
         callouts: @callouts
     }
   end
@@ -296,7 +297,6 @@ module LevelsHelper
       levelId: @level.level_num,
       level: level,
       cacheBust: blockly_cache_bust,
-      autoplayVideo: @autoplay_video_info,
       report: {
           fallback_response: @fallback_response,
           callback: @callback,
