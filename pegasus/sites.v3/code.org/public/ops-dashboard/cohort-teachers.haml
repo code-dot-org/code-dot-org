@@ -22,7 +22,8 @@ theme: none
 
   .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
     %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"} Add teacher
-    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
+    - if dashboard_user[:admin]
+      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
   %h3 Example format (please include the heading line in your uploaded file):
@@ -120,6 +121,7 @@ theme: none
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "teacher.confirmDelete"}
           %span Delete?
+          %br
           %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
