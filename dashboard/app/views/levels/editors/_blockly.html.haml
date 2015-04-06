@@ -137,7 +137,7 @@
   = f.label :input_output_table, 'Input/Output Table'
   %p An array of tuples where each tuple is [input, output].
   %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
-  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: (JSON.pretty_generate(@level.input_output_table) if @level.input_output_table)
+  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
   :javascript
       codeMirror('input_output_table', 'javascript')
 -if @level.respond_to? :solution_blocks
