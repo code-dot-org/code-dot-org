@@ -41,13 +41,13 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 Let's get back into that Big Game from stages 7, 12, and 16.
 
-Previous work with the game has created movement for the danger and target characters, using Booleans to check if they have left the screen. The last time students worked on their game they used a conditional to check which key was pressed and make the player move accordingly. At this point the only thing left to do is to decide when the player is touching either the target or danger. Once students have successfully completed the 'distance' and 'collide?' functions, they score will increase when the player touches the target, and decrease when it touches the danger.
+Previous work with the game has created movement for the danger and target characters, using Booleans to check if they have left the screen. The last time students worked on their game they used a conditional to check which key was pressed and make the player move accordingly. At this point the only thing left to do is to decide when the player is touching either the target or danger. Once students have successfully completed the **distance** and **collide?** functions, their score will increase when the player touches the target, and decrease when it touches the danger.
 
 The Pythagorean Theorem studied in the last lesson will be used to determine when the characters have made contact. Students are not required to write their own [line-length](../docs/worksheets/line_length.pdf) function, but you may ask them to complete the Design Recipe for it anyway.
 
 Students will first complete the [distance](../docs/worksheets/distance.pdf) function so that it measures the distance between two points, (px, py) and (cx, cy). After the students implement the distance formula, they will need to implement the  tests in the [collide?](../docs/worksheets/collide.pdf) function.
 
-Once these last functions are put into place, scoring will automatically update based on target and danger collisions.
+Once these last functions are put into place, scoring will automatically update based on collisions between target and danger.
 
 [/together]
 

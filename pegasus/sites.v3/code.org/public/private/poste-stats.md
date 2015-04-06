@@ -35,7 +35,10 @@ ORDER BY poste_messages.name
   </tr>
   <% rows.each do |row| %>
     <tr>
-      <td><%= row[:message] %></td>
+      <td>
+        <a href="#<%= row[:message] %>"><%= row[:message] %></a>
+        <a name="<%= row[:message] %>"/>
+      </td>
       <td><%= row[:deliveries] %></td>
       <td><%= row[:sent] %></td>
       <td><%= row[:opens] %><br/><%= row[:percent_opened].to_i %>% sent</td>

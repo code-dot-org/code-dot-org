@@ -22,7 +22,7 @@ module LevelsHelper
 
   def set_videos_and_blocks_and_callouts
     @autoplay_video_info = select_and_track_autoplay_video
-    @callouts = select_and_remember_callouts(params[:show_callouts])
+    @callouts = select_and_remember_callouts params[:show_callouts]
 
     if @level.is_a? Blockly
       @toolbox_blocks ||=
@@ -47,7 +47,7 @@ module LevelsHelper
 
     if is_legacy_level
       autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
-    elsif @level.is_a?(Blockly) && @level.specified_autoplay_video
+    elsif @level.specified_autoplay_video
       unless seen_videos.include?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
       end
@@ -60,27 +60,10 @@ module LevelsHelper
     autoplay_video.summarize unless params[:noautoplay]
   end
 
-  def available_callouts
-    if @level.custom?
-      unless @level.try(:callout_json).blank?
-        return JSON.parse(@level.callout_json).map do |callout_definition|
-          Callout.new(element_id: callout_definition['element_id'],
-              localization_key: callout_definition['localization_key'],
-              callout_text: callout_definition['callout_text'],
-              qtip_config: callout_definition['qtip_config'].to_json,
-              on: callout_definition['on'])
-        end
-      end
-    else
-      return @script_level.callouts if @script_level
-    end
-    []
-  end
-
   def select_and_remember_callouts(always_show = false)
     session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
-    callouts_to_show = available_callouts
+    callouts_to_show = @level.available_callouts(@script_level)
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     # Localize
@@ -139,6 +122,14 @@ module LevelsHelper
 
   def boolean_string_false
     "false"
+  end
+
+  # Options hash for all level types
+  def app_options
+    {
+        autoplayVideo: @autoplay_video_info,
+        callouts: @callouts
+    }
   end
 
   # Code for generating the blockly options hash
@@ -285,7 +276,7 @@ module LevelsHelper
     end
 
     #Fetch localized strings
-    if @level.level_num_custom?
+    if @level.custom?
       loc_val = data_t("instructions", "#{@level.name}_instruction")
       unless I18n.locale.to_s == 'en-us' || loc_val.nil?
         level['instructions'] = loc_val
@@ -305,9 +296,7 @@ module LevelsHelper
       app: @game.try(:app),
       levelId: @level.level_num,
       level: level,
-      callouts: @callouts,
       cacheBust: blockly_cache_bust,
-      autoplayVideo: @autoplay_video_info,
       report: {
           fallback_response: @fallback_response,
           callback: @callback,

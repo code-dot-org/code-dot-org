@@ -179,6 +179,34 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
+ * Are two EquationSets equivalent? This is considered to be true if their
+ * compute expression are equivalent and all of their equations have the same
+ * names and equivalent expressions. Equivalence is a less strict requirement
+ * than identical that allows params to be reordered.
+ */
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
+  if (this.equations_.length !== otherSet.equations_.length) {
+    return false;
+  }
+
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isEquivalentTo(otherCompute)) {
+    return false;
+  }
+
+  for (var i = 0; i < this.equations_.length; i++) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isEquivalentTo(otherEquation.expression)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
  * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {

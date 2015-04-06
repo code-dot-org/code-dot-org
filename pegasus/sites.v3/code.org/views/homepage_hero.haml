@@ -1,30 +1,41 @@
+:css
+
+
 #top{style: "position:relative; width:100%; overflow:hidden"}
-  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"]).all
+
+  -# Generate a random set of hero images alternating between non-celeb and celeb.
+  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
   - heroes.shuffle!
-  - heroes.first(5).each_with_index do |entry, index|
+  - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
+  - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+  - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+
+  - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
     - opacity = index == 0 ? 1 : 0
-    .widehero{id: "fullwidth#{index}", style: "display: none; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: 50% 20%"}
+    .widehero{id: "fullwidth#{index}", style: "display: none; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: #{entry[:param1_s]}"}
 
   #fullwidth{style: "width: 100%;"}
     .thegap{style: "height: 1px"}
       &nbsp;
     #desktop-header.desktop-feature
-      = view :header
+      = view :header, variant: "desktop"
     #mobile-header.mobile-feature
-      = view :header
+      = view :header, variant: "mobile"
 
   .container_responsive{style: "color: white; font-size: 20px"}
     .col-66{style: "position:relative;"}
-      - heroes.each_with_index do |entry, index|
+      - heroes_arranged.each_with_index do |entry, index|
         -# note: this gsheet display parameter unused due to IE8 fix.
         - display = entry[:active_s] == "hide" ? "none" : "block"
         - unless entry[:text1_s].nil_or_empty?
           - text = I18n.t(entry[:text1_s])
           - unless text.nil_or_empty?
-            - lines = text.lines 
-            .captions{id: "captionarea#{index}", style: "position:absolute; left:0; top:0; text-align:center; width:100%; color:#fff; line-height:22px"}
+            - lines = text.lines
+            - if entry[:param3_s] == "bottom"
+              - position_class = "homepage-caption-bottom"
+            .captions{id: "captionarea#{index}", class: position_class, style: "position:absolute; left:0; text-align:center; width:100%; color:#fff; line-height:22px"}
               .caption.caption1{style: "display: none; left: 50px; top: 50px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
                 = lines[0]
               .caption.caption2{style: "display: none; left: 30px; top: 95px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
@@ -39,7 +50,7 @@
       #blankspaceleft.mobile-feature{style: "height:120px"}
 
     .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}   
-      - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"]).all
+      - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
@@ -48,30 +59,19 @@
             %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
               = I18n.t(entry[:text1_s])
           - elsif entry[:param1_s] == "learn"
-            %a{href: "/learn", style: "color:white; font-size:20px"}
+            %a#herolearnlink{href: "/learn", style: "color:white; font-size:20px"}
               %button{style: "font-weight: 500; font-size: 20px; height: 50px"}
                 = I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "petition"
-            %span{style: "font-weight: 500; font-size: 14px; height: 50px; cursor:pointer", onclick: "expandPetition(); adjustScroll('petitionblock');"}
+          -# elsif entry[:param1_s] == "petition"
+            %span#petitionaction{style: "display: none; font-weight: 500; font-size: 14px; height: 50px; cursor:pointer", onclick: "expandPetition(); adjustScroll('petitionblock');"}
               = I18n.t(entry[:text1_s])
           %div{style: "height:40px"}
 
-
-%script{:src=>"/js/jquery.placeholder.js"}
-
-%div{style: "clear:both"}
-- if DB[:cdo_homepage].where(type_s: "petition")
-  = view :petition_expand
 
 
 :javascript
   var petition;
 
-  $(document).ready()
-  {
-    petition = new Petition();
-  }
-  
   $(document).ready()
   {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
@@ -135,4 +135,3 @@
   {
     timerId = setInterval(cycleImage, 13000);
   }
-

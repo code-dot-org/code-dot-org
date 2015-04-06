@@ -260,4 +260,36 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_select '.alert', 0
   end
+
+  test 'show teacher-dashboard link when a teacher' do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Home Page'
+  end
+
+  test 'show ops-dashboard link when a district contact' do
+    contact = create(:district).contact
+    sign_in contact
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 'District Dashboard'
+  end
+
+  test 'student does not see links to ops dashbord or teacher dashboard' do
+    student = create :student
+    sign_in student
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 0
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 0
+  end
+
 end

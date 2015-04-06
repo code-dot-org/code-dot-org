@@ -32,11 +32,28 @@ ____________________________________________________
 
 [example]
 
-In this example, note how the timer is cancelled before the code has run: nothing gets printed to the debugging console.
+In this example, note how the timer is cancelled before the code has run: the text indicating that the timeout has completed does not get printed to the debugging console.
 <pre>
 var t = setTimeout(function() { //Save the timeout value in variable t
   console.log("The timeout has completed"); //When the code runs, print a message to the debugging console
 }, 10000); //Set the delay to 10000 milliseconds
+console.log("Timer ID: " + t); //Print the timer ID to the console
+clearTimeout(t); //Use variable t to cancel the timeout
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+We can also use `clearTimeout` with this turtle example from the [setTimeout](http://staging.code.org/applab/docs1/setTimeout) page. Note how the turtle only moves once, instead of twice when the timeout is not cancelled.
+<pre>
+show(); //Display the turtle
+moveForward(50); //Move the turtle 50 pixels
+var t = setTimeout(function() { //Save the timeout value in variable t
+  moveForward(100); //Move the turtle another 100 pixels after the timeout
+}, 2000); //Set the delay to 2000 milliseconds
 clearTimeout(t); //Use variable t to cancel the timeout
 </pre>
 
@@ -66,6 +83,7 @@ onEvent("startButton", "click", function(){
    }, 10000); //Set the delay to 10000 milliseconds
    //Update the status text to indicate that the timeout has started
    setText("status", "Timer started!");
+   console.log("Timer ID: " + t); //Print the timer ID to the console
 });
 //Cancel the timeout when the Cancel button is clicked
 onEvent("cancelButton", "click", function(){

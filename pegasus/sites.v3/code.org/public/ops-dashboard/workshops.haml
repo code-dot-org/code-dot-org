@@ -3,6 +3,7 @@ layout: none
 template: none
 ---
 - authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
 %a{href:'/ops-dashboard'}
   Dashboard
@@ -71,7 +72,11 @@ template: none
     - if dashboard_user[:admin]
       %td
         %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit'} Edit
-        %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1);'} Delete
+        %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1) && workshop.deletion = true', 'ng-hide' => 'workshop.deletion'} Delete
+        %p{'ng-show' => 'workshop.deletion'}
+          Are you sure?
+        %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1) && workshop.deletion = false;', 'ng-show' => 'workshop.deletion'} Yes
+        %button.btn.btn-danger{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion'} No
 
 :css
   td .btn {
