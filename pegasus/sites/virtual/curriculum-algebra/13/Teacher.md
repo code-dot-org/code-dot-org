@@ -40,7 +40,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1lUA5nx8ILAPwjAEl70Hw0ADGflzOtX1L2pIXtNU2B0U/)
 
 ### For the Students
-- 3x5 cards, pens or pencils
+- 3 x 5 cards, pens or pencils
 
 [/together]
 
@@ -50,10 +50,10 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has one new and important word:<br/>
+This lesson has two new and important words:<br/>
 
-- **Boolean** - a type of data with two values: true and false
-- **Return** - used as a synonym for output of a function
+- **Boolean** - a type of data with two values: true and false.
+- **Return** - used as a synonym for output of a function.
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
@@ -103,15 +103,25 @@ Then collect the cards and shuffle them. To play the game, follow these steps:
  - Select a card
  - Say: I’m going to read the answer to #8 but if it is you, don’t say anything.
  - Say: Now everyone stand up and we are going to ask some questions with Boolean answers to help determine who this person is.
- - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were brown, yes, 13, blue, December, Yes, and 9
+ - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were:
+ 
+1. What is your hair color? - **brown**
+2. Do you wear glasses or contacts? - **yes**
+3. What is your favorite number? - **13**
+4. What is your favorite color? - **blue**
+5. What month were you born? - **December**
+6. Do you have any siblings? - **yes**
+7. What is the last digit of your phone number? - **7**
 
-1. My hair color is brown.
-2. I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
-3. My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
-4. My favorite color is blue or green.
-5. I was not born in April.
-6. I have at least one sibling.
-7. The last digit of my phone number is a prime number.
+With that example, you might make the following statements:
+
+- My hair color is brown.
+- I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
+- My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
+- My favorite color is blue or green.
+- I was not born in April.
+- I have at least one sibling.
+- The last digit of my phone number is a prime number.
 
 Because of how numbers 3,4, 5, and 7 were asked it is likely that some people will still be standing.  You will need to revisit these and ask them again in a more narrow fashion such as “My favorite color is blue”.
 
@@ -119,7 +129,7 @@ Play this several times.  Be creative with using _or_s and _and_s.  Remind stude
 
 Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
 
-And how does this all connect with our game?  Is the target too far left or too far right?  If so, then perhaps some action should occur.
+How does this activity connect with our game? In our game, we may need to determine: Is a target too far left or too far right?  If so, then perhaps some action should occur.
 
 [/together]
 

@@ -19,12 +19,15 @@ var NetSimSlider = require('./NetSimSlider');
 /**
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
- * @param {function} changeCallback
+ * @param {function} sliderChangeCallback
+ * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimBandwidthControl = module.exports = function (rootDiv, changeCallback) {
+var NetSimBandwidthControl = module.exports = function (rootDiv,
+    sliderChangeCallback, sliderStopCallback) {
   NetSimSlider.LogarithmicSlider.call(this, rootDiv, {
-    onChange: changeCallback,
+    onChange: sliderChangeCallback,
+    onStop: sliderStopCallback,
     value: Infinity,
     min: 4,
     max: 128 * netsimConstants.BITS_PER_KILOBIT,

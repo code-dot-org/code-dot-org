@@ -261,7 +261,8 @@ svg {
         height: 1.5em;
         width: 100%; }
 #netsim .netsim-send-panel .send_widget_footer {
-  margin: 10px; }
+  margin: 10px;
+  overflow: hidden; }
   #netsim .netsim-send-panel .send_widget_footer .right-side-controls {
     float: right;
     text-align: right; }

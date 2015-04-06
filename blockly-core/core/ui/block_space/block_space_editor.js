@@ -294,7 +294,7 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false).forEach(function (block) {
-    if (block.isCurrentlyHidden()) {
+    if (!block.isVisible()) {
       return;
     }
     // Skip block if it doesn't fit in the view anyway.

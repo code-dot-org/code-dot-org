@@ -231,7 +231,7 @@
 
   .fullwidth-carousel .slide .slide-img {
     height: 220px;
-    padding-left: 0px; 
+    padding-left: 0px;
     padding-right: 0px;
   }
 }
@@ -598,24 +598,18 @@
   margin-left:5%;
 }
 
-.user_menu {
-  display: inline;
-  float: right;
+.user_menu { /* copied from dashboard's .header-button */
   color: white;
-  padding: 6px 5px 5px 10px;
-  background-color: rgb(255, 128, 0);
-  height: 35px;
+  display: inline-block;
+  background-color: #ffa400;
   border-radius: 5px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
   cursor: pointer;
-}
-
-.user_options {
-  background-color: white;
-  border: 1px solid black;
-  z-index: 100001;
-  text-align: left;
-  white-space: nowrap;
-  position: absolute;
-  right: 0;
-  padding: 10px;
+  a:hover {
+    text-decoration: none;
+    background-color: #ffa400;
+  }
 }
