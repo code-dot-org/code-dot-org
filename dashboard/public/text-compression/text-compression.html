@@ -37,7 +37,7 @@
       height: 100%;
     }
     .widgetRightHeader {
-      float: left;
+      float: right;
       width: 33%;
     }
     .widgetRight {
@@ -48,17 +48,18 @@
       bottom: 0;
     }
     .widgetLeftHeader, .widgetRightHeader {
+      clear: right;
       background: #7665a0;
       color: #fff;
       box-sizing: border-box;
       padding: 10px;
     }
-    #choosePoem {
-      margin-bottom: 5px;
-    }
-    #choosePoem > * {
-      margin: 0;
+    #menu > * {
+      margin: 0 0 8px 0;
       display: inline-block;
+    }
+    #finished {
+      float: right;
     }
     #compressedPoem {
       box-sizing: border-box;
@@ -266,10 +267,11 @@
   <div id="widgetTop">
     <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
     <div id="reference_area_target" data-minimal="true"></div>
-    <div id="choosePoem">
-      <label for="poemsList">Choose a poem:</label>
-      <select id="poemsList" onChange="poemChanged();"></select>
-      <button id="writeYourOwn" class="btn">Write your own</button>
+    <div id="menu">
+      <label for="poemsList" class="choosePoem">Choose a poem:</label>
+      <select id="poemsList" class="choosePoem" onChange="poemChanged();"></select>
+      <button id="writeYourOwn" class="btn choosePoem">Write your own</button>
+      <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>
     </div>
     <div class="widgetLeftHeader">Compressed:</div>
     <div class="widgetRightHeader">Dictionary:</div>
@@ -301,7 +303,7 @@
       } catch (e) { }
     }
     if (poemsList.length === 1) {
-      $('#choosePoem').hide();
+      $('.choosePoem').hide();
     }
     $dictionary.val(options.dictionary);
 

@@ -49,6 +49,7 @@ var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
+var utils = require('../utils');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -211,7 +212,7 @@ function evalCode (code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    if (isInfiniteRecursionError(e)) {
+    if (utils.isInfiniteRecursionError(e)) {
       return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
 
@@ -226,39 +227,6 @@ function evalCode (code) {
 
     return new CustomEvalError(CustomEvalError.Type.UserCodeException, null);
   }
-}
-
-/**
- * Attempts to analyze whether or not err represents infinite recursion having
- * occurred. This error differs per browser, and it's possible that we don't
- * properly discover all cases.
- * Note: Other languages probably have localized messages, meaning we won't
- * catch them.
- */
-function isInfiniteRecursionError(err) {
-  // Chrome/Safari: message ends in a period in Safari, not in Chrome
-  if (err instanceof RangeError &&
-    /^Maximum call stack size exceeded/.test(err.message)) {
-    return true;
-  }
-
-  // Firefox
-  /* jshint ignore:start */
-  // Linter doesn't like our use of InternalError, even though we gate on its
-  // existence.
-  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
-      err.message === 'too much recursion') {
-    return true;
-  }
-  /* jshint ignore:end */
-
-  // IE
-  if (err instanceof Error &&
-      err.message === 'Out of stack space') {
-    return true;
-  }
-
-  return false;
 }
 
 /**
@@ -529,7 +497,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":247,"../../locale/current/eval":248,"../StudioApp":4,"../block_utils":25,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../dom":56,"../skins":196,"../templates/page.html":221,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
+},{"../../locale/current/common":247,"../../locale/current/eval":248,"../StudioApp":4,"../block_utils":25,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../dom":56,"../skins":196,"../templates/page.html":221,"../utils":242,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

@@ -208,7 +208,7 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess();
+  onSuccess(record);
 };
 
 /**
@@ -246,7 +246,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   }
   if (this.status === 404) {
     onError('error deleting record: could not find record id ' + record.id +
-        ' in table ' + record.tableName);
+        ' in table ' + tableName);
     return;
   }
   if (this.status < 200 || this.status >= 300) {

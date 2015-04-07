@@ -8,6 +8,16 @@ class Cohort < ActiveRecord::Base
   has_many :districts, through: :cohorts_districts
   accepts_nested_attributes_for :cohorts_districts, allow_destroy: true
 
-  # Teachers can be in multiple cohorts
-  has_and_belongs_to_many :teachers, class_name: 'User'
+  has_and_belongs_to_many :teachers, class_name: 'User', after_remove: :add_to_deleted_teachers, after_add: :remove_from_deleted_teachers
+
+  # when teachers are deleted they are moved here
+  has_and_belongs_to_many :deleted_teachers, class_name: 'User', join_table: 'cohorts_deleted_users'
+
+  def add_to_deleted_teachers(teacher)
+    deleted_teachers << teacher
+  end
+
+  def remove_from_deleted_teachers(teacher)
+    deleted_teachers.delete teacher
+  end
 end
