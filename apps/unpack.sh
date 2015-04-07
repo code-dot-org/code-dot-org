@@ -5,8 +5,8 @@ cd -P -- "$(dirname -- "$0")"
 
 FILE=cdo-apps-build-0.0.1.tgz
 
-# Latest commit hash of any files in this subfolder
-REV=$(git log --pretty=format:%h -n 1 -- .)
+# Latest commit hash of any files in this subdirectory or blockly-core
+REV=$(git log --pretty=format:%h -n 1 -- . ../blockly-core)
 
 aws s3 cp s3://cdo-dist/cdo-apps/cdo-apps-build-${REV}.tgz ./${FILE}
 
