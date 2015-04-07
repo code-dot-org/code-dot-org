@@ -31,12 +31,11 @@ var tweens = require('./tweens');
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
- * @param {NetSimConnection} connection - Reference to the connection manager,
- *        which provides the hooks we need to get the shard, the local node,
- *        and to attach to the shared network state.
+ * @param {ObservableEvent} shardChange - shard change event that we can watch
+ *        to get the shard and local node.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop, connection) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop, shardChange) {
   /**
    * @type {jQuery}
    * @private
@@ -51,7 +50,7 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
    * @private
    */
   this.shard_ = null;
-  connection.shardChange.register(this.onShardChange_.bind(this));
+  shardChange.register(this.onShardChange_.bind(this));
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
