@@ -17,6 +17,7 @@ var i18n = require('../../locale/current/netsim');
 var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
+var NetSimWire = require('./NetSimWire');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 var markup = require('./NetSimLobby.html');
@@ -144,6 +145,12 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
    */
   this.selectedNode_ = null;
 
+  /**
+   * @type {NetSimWire}
+   * @private
+   */
+  this.outgoingWire_ = null;
+
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -190,10 +197,12 @@ NetSimLobby.prototype.render = function () {
         this.nodesOnShard_,
         this.nodesRequestingConnection_,
         this.selectedNode_,
+        this.outgoingWire_,
         this.myNode_.entityID,
         this.addRouterToLobby.bind(this),
         this.selectNode.bind(this),
-        this.onConnectButtonClick_.bind(this)
+        this.onConnectButtonClick_.bind(this),
+        this.onCancelButtonClick_.bind(this)
     );
   }
 };
@@ -309,6 +318,17 @@ NetSimLobby.prototype.onConnectButtonClick_ = function () {
 };
 
 /**
+ * Handler for clicking the "Cancel" button to stop trying to connect to
+ * another client.
+ * @private
+ */
+NetSimLobby.prototype.onCancelButtonClick_ = function () {
+  if (this.outgoingWire_) {
+    this.outgoingWire_.destroy(function () {});
+  }
+};
+
+/**
  * Called whenever a change is detected in the nodes table - which should
  * trigger a refresh of the lobby listing
  * @param {!Array} rows
@@ -325,6 +345,7 @@ NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
  * @private
  */
 NetSimLobby.prototype.onWireTableChange_ = function (rows) {
+  // Update the collection of nodes with connections pointing toward us.
   this.nodesRequestingConnection_ = rows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.myNode_.entityID;
   }.bind(this)).map(function (wireRow) {
@@ -335,6 +356,16 @@ NetSimLobby.prototype.onWireTableChange_ = function (rows) {
     // In case the wire table change comes in before the node table change.
     return node !== undefined;
   });
+
+  // Find outgoing wires
+  var outgoingWireRow = _.find(rows, function (wireRow) {
+    return wireRow.localNodeID === this.myNode_.entityID;
+  }.bind(this));
+
+  this.outgoingWire_ = outgoingWireRow ?
+      new NetSimWire(this.shard_, outgoingWireRow) : null;
+
+  // Re-render with new information
   this.render();
 };
 
