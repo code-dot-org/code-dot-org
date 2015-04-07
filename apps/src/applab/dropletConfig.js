@@ -47,9 +47,9 @@ module.exports.blocks = [
   {'func': 'startWebRequest', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
   {'func': 'setKeyValue', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
   {'func': 'getKeyValue', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function() {\n  \n}"] },
+  {'func': 'createRecord', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
   {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'category': 'Data', 'params': [] },
 
