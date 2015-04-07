@@ -27,7 +27,7 @@
     ]
   },
   "scripts": {
-    "clean": "rimraf ./build",
+    "clean": "rm -rf ./build",
     "prepublish": "gulp build",
     "deploy": "./deploy.sh",
     "unpack": "./unpack.sh",
@@ -50,25 +50,26 @@
       "exports": "Blockly"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "@cdo/apps": "0.0.1",
     "@cdo/cdo": "0.0.1",
     "browserify-shim": "^3.8.3",
+    "gulp-concat": "^2.5.2",
+    "messageformat": "^0.2.2"
+  },
+  "devDependencies": {
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
     "ejs": "^2.3.1",
     "express": "~4.11.0",
     "gaze": "^0.5.1",
-    "gulp-concat": "^2.5.2",
     "jshint": "^2.6.3",
     "jshint-stylish": "^1.0.1",
-    "messageformat": "^0.2.2",
     "mocha": "^2.2.1",
     "mochify": "^2.6.1",
     "npm-which": "^2.0.0",
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "require-globify": "^1.1.0",
-    "rimraf": "^2.3.2",
     "tiny-lr": "^0.1.5"
   }
 }

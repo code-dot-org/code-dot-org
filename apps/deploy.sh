@@ -3,7 +3,9 @@
 set -e
 cd -P -- "$(dirname -- "$0")"
 
+export NODE_ENV="production"
 # build/package tgz archive, returns filename output
+npm install
 FILE=$(npm pack | tail -n 1)
 
 # Latest commit hash of any files in this subdirectory

@@ -12,7 +12,7 @@
     "start": "npm run gulp -- dev",
     "prepublish": "npm run gulp -- build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@cdo/apps-build": "0.0.1",
     "@cdo/example": "0.0.1",
     "browserify": "^9.0.2",
