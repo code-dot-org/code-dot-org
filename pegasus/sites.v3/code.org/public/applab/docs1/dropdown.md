@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## checkbox(id, checked)
+## dropDown(id, option1, option2, ..., optionX)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a checkbox button. A checkbox is used to choose between two options.
+Creates a dropDown list. A dropDown list is used to select from a list of options and can be referenced by the specified ID.
 [/short_description]
 
 [/description]
@@ -28,11 +28,14 @@ Creates a checkbox button. A checkbox is used to choose between two options.
 ____________________________________________________
 
 [example]
-
+**Choose a Month**
 <pre>
-// Create a choice between male or female
-radioButton("Male",false, "MaleFemale");
-radioButton("Female", true, "MaleFemale");
+// Create a list
+textLabel("stateLabel","State ", "state");
+dropDown("state","January","February","March","April","May","June","July","August","September","October","November","December");
+onEvent("state", "change", function() {
+  console.log(getText("state"));
+});
 </pre>
 
 [/example]
@@ -41,9 +44,7 @@ ____________________________________________________
 
 [example]
 
-**The Checked Item**
-Determine which radio button within a group is checked.
-
+**Color the Turtle**
 <pre>
 
 </pre>
@@ -68,8 +69,8 @@ button("uniqueIdentifier",false, "GroupName")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the checkbox button. The id is used for referencing the radio button text input. For example, to assign event handlers. |
-| checked | boolean | yes | Whether the checkbox is initially checked. |
+| id | string | yes | A unique identifier for the checkbox button. The id is used for referencing the dropdown control. For example, to assign event handlers. |
+| option1,...,optionX | String | yes | The list of choices. |
 [/parameters]
 
 [returns]
@@ -82,7 +83,7 @@ No Return Value
 [tips]
 
 ### Tips
-All checkbox buttons should always have an associated textLabel. If you have more than 2 choices, consider using a radioButton or dropdown list.
+All dropDown list should always have an associated textLabel.
 
 [/tips]
 

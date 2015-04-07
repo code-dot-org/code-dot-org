@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a button that you can click on.  
+Creates a button that you can click on. The button will display the text provided and can be referenced by the given id.
 
 [/short_description]
 
@@ -40,9 +40,29 @@ ____________________________________________________
 
 [example]
 
-**Interactive Turtle**
+**Simple Turtle**
 A button is often used with a click event. The click event is where you write code to execute when the button is clicked.
-In this example, we allow you to interact with the turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
+In this example, every time you click the button the turtle will move forward 10 pixels.
+
+<pre>
+// Buttons
+button("move10", "Move Forward 10"); // Go 10 pixels when clicked
+
+// Attach click event for each of the buttons
+onEvent("move10", "click", function(event) {
+  // Move forward 10 pixels
+  moveForward(10);
+});
+</pre>
+
+[/example]
+____________________________________________________
+
+
+[example]
+
+**Interactive Turtle**
+In this example, we provide a more interactive turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
 
 <pre>
 // Display Label
@@ -57,15 +77,15 @@ button("turnRight", "Turn Right"); // Turn right when clicked
 // Attach click event for each of the buttons
 onEvent("move", "click", function(event) {
   // Move forward specified pixels
-  moveForward(getText("moveAmount"))
+  moveForward(getText("moveAmount"));
 });
 onEvent("turnLeft", "click", function(event) {
   // Turn left 90 degrees
-  turnLeft(90)
+  turnLeft(90);
 });
 onEvent("turnRight", "click", function(event) {
   // Turn right 90 degress
-  turnRight(90)
+  turnRight(90);
 });
 </pre>
 
@@ -77,7 +97,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier","Text Label")
+button(id,text)
 </pre>
 
 [/syntax]

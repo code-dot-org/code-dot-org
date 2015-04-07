@@ -32,14 +32,10 @@ ____________________________________________________
 
 [example]
 
+**Example 1**
+
+If you are not seeing the turtle move, slow the program execution down by dragging the slider bar under the reset button closer to the turtle.
 <pre>
-/*  Example 1
-
-    If you are not seeing the turtle move, slow the program
-    execution down by dragging the slider bar under the reset
-    button closer to the turtle
-*/
-
 penUp();            // stops the turtle from drawing a line behind it as it moves
 moveForward(100);   // moves the turtle forward 100 pixels
 </pre>
@@ -50,12 +46,11 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This example uses penUp and penDown to draw a dotted line.
+
 <pre>
-/*  Example 2
-
-    This example uses penUp and penDown to draw a dotted line
-*/
-
 penWidth(3);                  // sets the pen's thickness to 3 pixels
 penUp();                      // lifts the pen up so the turtle does not leave a line behind it as it moves
 move(-125, 25);               // moves the turtle to its starting location
@@ -75,12 +70,11 @@ ____________________________________________________
 
 [example]
 
+**Example 3**
+
+This example uses penUp and penDown to draw a pair of eyes.
+
 <pre>
-/*  Example 3
-
-    This example uses penUp and penDown to draw a pair of eyes
-*/
-
 hide();             // hides the turtle
 penDown();          // puts the pen down so the turtle leaves a line behind it as it moves
 arcRight(360, 25);  // draws a circle with a 25 pixel diameter (eye)
