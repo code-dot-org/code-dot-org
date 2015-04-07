@@ -5,7 +5,11 @@
       %a{href: '#', onclick: '$(".admin .content").toggle(); return false;'} [hide/show]
     .content
       %ul
-        %li= link_to 'Projects', projects_path
+        %li
+          Support tools
+          %ul
+            %li= link_to 'Assume Identity', assume_identity_form_path
+            %li= link_to 'Reset Password', new_user_password_path
         %li= link_to 'Videos', videos_path
         %li= link_to 'Recent Activity', all_usage_path
         %li= link_to 'Feedback System', frequent_unsuccessful_level_sources_path
@@ -20,4 +24,3 @@
         %li= link_to t('builder.manage'), new_level_path
         %li= link_to 'Admin Stats', admin_stats_path
         %li= link_to 'Gallery', gallery_activities_path
-        %li= link_to 'Assume Identity', assume_identity_form_path
