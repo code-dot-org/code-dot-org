@@ -15,7 +15,7 @@ Scenario: Opening the function editor and moving an inner block doesn't bump fun
   And "inner repeat block" refers to block "32"
   And block "modal function block" is at a location "function definition location"
   And I begin to drag block "inner repeat block" to offset "50, 50"
-  And block "modal function block" is at location "function definition location"
+  Then block "modal function block" is at location "function definition location"
 
 @chrome
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
