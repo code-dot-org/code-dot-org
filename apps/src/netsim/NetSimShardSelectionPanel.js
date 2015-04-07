@@ -12,7 +12,6 @@
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
 var markup = require('./NetSimShardSelectionPanel.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -26,71 +25,41 @@ var KeyCodes = require('../constants').KeyCodes;
 var SELECTOR_NONE_VALUE = '';
 
 /**
- * @typedef {Object} shardChoice
- * @property {string} shardSeed - unique key for shard within level, used in
- *           share URLs
- * @property {string} shardID - unique key for shard in tables API, used as
- *           prefix to table names.  Must be 48 characters or less, and
- *           consistently generatable from a level ID and seed.
- * @property {string} displayName - localized shard name
- */
-
-/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
- * @param {string} levelKey - should uniquely identify the variant of netsim
- *        being loaded.
- * @param {NetSimConnection} connection
- * @param {DashboardUser} user - The current user's info, whether logged in or not.
- * @param {string} [sharedShardSeed] - A shard identifier provided when loading
- *        a share link.  We guarantee that this shard will be an option.
+ * @param {string} displayName
+ * @param {Array} shardChoices
+ * @param {string} selectedShardID
+ * @param {function} setNameCallback
+ * @param {function} setShardCallback
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimShardSelectionPanel = module.exports = function (rootDiv, levelKey,
-    connection, user, sharedShardSeed) {
+var NetSimShardSelectionPanel = module.exports = function (rootDiv, displayName,
+    shardChoices, selectedShardID, setNameCallback, setShardCallback) {
   /**
    * @type {string}
    * @private
    */
-  this.levelKey_ = levelKey;
-
-  /**
-   * @type {NetSimConnection}
-   * @private
-   */
-  this.connection_ = connection;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.displayName_ = (user.isSignedIn) ? user.name : '';
+  this.displayName_ = displayName;
 
   /**
    * Shard options for the current user
    * @type {shardChoice[]}
    * @private
    */
-  this.shardChoices_ = [];
+  this.shardChoices_ = utils.valueOr(shardChoices, []);
 
   /**
    * Which shard ID is currently selected
    * @type {string}
    * @private
    */
-  this.selectedShardID_ = SELECTOR_NONE_VALUE;
+  this.selectedShardID_ = utils.valueOr(selectedShardID, SELECTOR_NONE_VALUE);
 
-  // Figure out the list of user sections, which requires an async request
-  // and re-render if the user is signed in.
-  if (user.isSignedIn) {
-    this.getUserSections_(function (sectionList) {
-      this.buildShardChoiceList_(sectionList, sharedShardSeed);
-      this.render();
-    }.bind(this));
-  } else {
-    this.buildShardChoiceList_([], sharedShardSeed);
-  }
+  this.setNameCallback_ = setNameCallback;
+
+  this.setShardCallback_ = setShardCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -138,8 +107,6 @@ NetSimShardSelectionPanel.prototype.render = function () {
     nameField.focus();
   } else if (this.selectedShardID_ === SELECTOR_NONE_VALUE) {
     shardSelect.focus();
-  } else if (!this.connection_.isConnectedToShardID(this.selectedShardID_)) {
-    this.connection_.connectToShard(this.selectedShardID_, this.displayName_);
   }
 };
 
@@ -159,16 +126,23 @@ NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function (jQueryEvent) {
 
 /** @private */
 NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function () {
-  this.displayName_ = this.getBody().find('#netsim_lobby_name').val();
-  this.render();
+  this.setNameCallback_(this.getBody().find('#netsim_lobby_name').val());
 };
 
+/**
+ * @param {Event} jQueryEvent
+ * @private
+ */
 NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function (jQueryEvent) {
   var shardID = jQueryEvent.target.value;
   var setShardButton = this.getBody().find('#netsim_shard_confirm_button');
   setShardButton.attr('disabled', !shardID || shardID === SELECTOR_NONE_VALUE);
 };
 
+/**
+ * @param {Event} jQueryEvent
+ * @private
+ */
 NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function (jQueryEvent) {
   var shardID = jQueryEvent.target.value;
   if (shardID && shardID !== SELECTOR_NONE_VALUE &&
@@ -177,116 +151,7 @@ NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function (jQueryEvent)
   }
 };
 
+/** @private */
 NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
-  this.selectedShardID_ = this.getBody().find('#netsim_shard_select').val();
-  this.render();
-};
-
-/**
- * Generate a unique shard key from the given seed
- * @param {string} seed
- * @private
- */
-NetSimShardSelectionPanel.prototype.makeShardIDFromSeed_ = function (seed) {
-  // TODO (bbuchanan) : Hash shard ID, more likely to ensure it's unique
-  //                    and fits within 48 characters.
-  // Maybe grab this MIT-licensed implementation via node?
-  // https://github.com/blueimp/JavaScript-MD5
-  return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
-};
-
-/**
- * Gets a share URL for the currently-selected shard ID.
- * @returns {string} or empty string if there is no shard selected.
- */
-NetSimShardSelectionPanel.prototype.getShareLink = function () {
-  if (!this.displayName_) {
-    return '';
-  }
-
-  var selectedShard = _.find(this.shardChoices_, function (shard) {
-    return shard.shardID === this.selectedShardID_;
-  }.bind(this));
-
-  if (selectedShard) {
-    var baseLocation = document.location.protocol + '//' +
-        document.location.host + document.location.pathname;
-    return baseLocation + '?s=' + selectedShard.shardSeed;
-  }
-
-  return '';
-};
-
-/**
- * Send a request to dashboard and retrieve a JSON array listing the
- * sections this user belongs to.
- * @param {function} callback
- * @private
- */
-NetSimShardSelectionPanel.prototype.getUserSections_ = function (callback) {
-  var memberSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/v2/sections/membership'
-  });
-
-  var ownedSectionsRequest = $.ajax({
-    dataType: 'json',
-    url: '/v2/sections'
-  });
-
-  $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {
-    var memberSectionData = result1[0];
-    var ownedSectionData = result2[0];
-    callback(memberSectionData.concat(ownedSectionData));
-  });
-};
-
-/**
- * Populate the internal cache of shard options, given a set of the current
- * user's sections.
- * @param {Array} sectionList - list of sections this user is a member or
- *        administrator of.  Each section has an id and a name.  May be empty.
- * @param {string} sharedShardSeed - a shard ID present if we reached netsim
- *        via a share link.  We should make sure this shard is an option.
- * @private
- */
-NetSimShardSelectionPanel.prototype.buildShardChoiceList_ = function (
-    sectionList, sharedShardSeed) {
-  this.shardChoices_.length = 0;
-
-  // If we have a shared shard seed, put it first in the list:
-  if (sharedShardSeed) {
-    var sharedShardID = this.makeShardIDFromSeed_(sharedShardSeed);
-    this.shardChoices_.push({
-      shardSeed: sharedShardSeed,
-      shardID: sharedShardID,
-      displayName: sharedShardSeed
-    });
-  }
-
-  // Add user's sections to the shard list
-  this.shardChoices_ = this.shardChoices_.concat(
-      sectionList.map(function (section) {
-        return {
-          shardSeed: section.id,
-          shardID: this.makeShardIDFromSeed_(section.id),
-          displayName: section.name
-        };
-      }.bind(this)));
-
-  // If there still aren't any options, generate a random shard
-  if (this.shardChoices_.length === 0) {
-    var seed = utils.createUuid();
-    var randomShardID = this.makeShardIDFromSeed_(seed);
-    this.shardChoices_.push({
-      shardSeed: seed,
-      shardID: randomShardID,
-      displayName: i18n.myPrivateNetwork()
-    });
-  }
-
-  // If there's only one possible shard, select it by default
-  if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
-    this.selectedShardID_ = this.shardChoices_[0].shardID;
-  }
+  this.setShardCallback_(this.getBody().find('#netsim_shard_select').val());
 };

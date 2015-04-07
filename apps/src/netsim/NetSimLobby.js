@@ -14,15 +14,19 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
-var netsimNodeFactory = require('./netsimNodeFactory');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimLogger = require('./NetSimLogger');
-var NetSimPanel = require('./NetSimPanel');
+var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
+var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 var markup = require('./NetSimLobby.html');
-var NodeType = require('./netsimConstants').NodeType;
 
-var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
+/**
+ * @typedef {Object} shardChoice
+ * @property {string} shardSeed - unique key for shard within level, used in
+ *           share URLs
+ * @property {string} shardID - unique key for shard in tables API, used as
+ *           prefix to table names.  Must be 48 characters or less, and
+ *           consistently generatable from a level ID and seed.
+ * @property {string} displayName - localized shard name
+ */
 
 /**
  * Generator and controller for lobby/connection controls.
@@ -31,10 +35,21 @@ var logger = new NetSimLogger(console, NetSimLogger.LogLevel.VERBOSE);
  * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimConnection} connection - The shard connection that this
  *        lobby control will manipulate.
+ * @param {Object} options
+ * @param {DashboardUser} options.user
+ * @param {string} options.levelKey
+ * @param {string} options.sharedShardSeed
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection) {
+var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
+    options) {
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.rootDiv_ = rootDiv;
+
   /**
    * @type {netsimLevelConfiguration}
    * @private
@@ -49,191 +64,227 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection) {
   this.connection_ = connection;
 
   /**
-   * A reference to the currently connected shard.
-   * @type {?NetSimShard}
+   * @type {string}
    * @private
    */
-  this.shard_ = null;
+  this.levelKey_ = options.levelKey;
 
   /**
-   * @type {NetSimNode[]}
+   * @type {string}
    * @private
    */
-  this.nodesOnShard_ = [];
+  this.sharedShardSeed_ = options.sharedShardSeed;
+
+  // --- Subcomponents ---
+  this.shardSelectionPanel_ = null;
+  this.nodeSelectionPanel_ = null;
+  // --- Component state ---
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimClientNode|NetSimRouterNode}
+   * @type {string}
    * @private
    */
-  this.selectedNode_ = null;
+  this.displayName_ = (options.user.isSignedIn) ? options.user.name : '';
 
-  // Initial render
-  NetSimPanel.call(this, rootDiv, {
-    className: 'netsim-lobby-panel',
-    panelTitle: i18n.lobby(),
-    canMinimize: false
-  });
+  /**
+   * Shard options for the current user
+   * @type {shardChoice[]}
+   * @private
+   */
+  this.shardChoices_ = [];
 
-  this.connection_.statusChanges.register(this.render.bind(this));
-  logger.info("NetSimLobby registered to connection statusChanges");
-  this.connection_.shardChange.register(this.onShardChange_.bind(this));
-  logger.info("NetSimLobby registered to connection shardChanges");
+  /**
+   * Which shard ID is currently selected
+   * @type {string}
+   * @private
+   */
+  this.selectedShardID_ = undefined;
+
+  // Figure out the list of user sections, which requires an async request
+  // and re-render if the user is signed in.
+  if (options.user.isSignedIn) {
+    this.getUserSections_(function (sectionList) {
+      this.buildShardChoiceList_(sectionList, options.sharedShardSeed);
+      this.render();
+    }.bind(this));
+  } else {
+    this.buildShardChoiceList_([], options.sharedShardSeed);
+  }
+
+  this.render();
 };
-NetSimLobby.inherits(NetSimPanel);
 
 /**
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
-  // Create boilerplate panel markup
-  NetSimLobby.superPrototype.render.call(this);
 
   // Add our own content markup
-  var newMarkup = $(markup({
-    level: this.levelConfig_,
-    nodesOnShard: this.nodesOnShard_,
-    isMyNode: this.isMyNode_.bind(this),
-    canConnectToNode: this.canConnectToNode_.bind(this),
-    isSelectedNode: this.isSelectedNode_.bind(this)
-  }));
-  this.getBody().html(newMarkup);
+  var newMarkup = $(markup({}));
+  this.rootDiv_.html(newMarkup);
 
-  this.addRouterButton_ = this.getBody().find('#netsim_lobby_add_router');
-  this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
+  // Shard selection panel: Controls for setting display name and picking
+  // a section, if they aren't set automatically.
+  this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
+      this.rootDiv_.find('.shard-select'),
+      this.displayName_,
+      this.shardChoices_,
+      this.selectedShardID_,
+      this.setDisplayName.bind(this),
+      this.setShardID.bind(this)
+  );
 
-  this.connectButton_ = this.getBody().find('#netsim_lobby_connect');
-  this.connectButton_.click(this.connectButtonClick_.bind(this));
+  if (this.connection_.isConnectedToShard()) {
+    this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
+        this.rootDiv_.find('.remote-node-select'),
+        this.levelConfig_,
+        this.connection_.shard_,
+        this.connection_.myNode.entityID,
+        this.addRouterToLobby.bind(this),
+        this.connectToRouter.bind(this),
+        this.connectToClient.bind(this)
+    );
+  }
 
-  this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
-
-  this.onSelectionChange();
 };
 
-/** Handler for clicking the "Add Router" button. */
-NetSimLobby.prototype.addRouterButtonClick_ = function () {
+NetSimLobby.prototype.setDisplayName = function (displayName) {
+  this.displayName_ = displayName;
+  this.render();
+
+  if (this.selectedShardID_ && this.displayName_ &&
+      !this.connection_.isConnectedToShardID(this.selectedShardID_)) {
+    this.connection_.connectToShard(this.selectedShardID_, this.displayName_);
+  }
+};
+
+NetSimLobby.prototype.setShardID = function (shardID) {
+  this.selectedShardID_ = shardID;
+  this.render();
+
+  if (this.selectedShardID_ && this.displayName_ &&
+      !this.connection_.isConnectedToShardID(this.selectedShardID_)) {
+    this.connection_.connectToShard(this.selectedShardID_, this.displayName_);
+  }
+};
+
+NetSimLobby.prototype.addRouterToLobby = function () {
   this.connection_.addRouterToLobby();
 };
 
-/** Handler for clicking the "Connect" button. */
-NetSimLobby.prototype.connectButtonClick_ = function () {
-  if (!this.selectedNode_) {
-    return;
-  }
+NetSimLobby.prototype.connectToRouter = function (router) {
+  this.connection_.connectToRouter(router.entityID);
+};
 
-  if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.connection_.connectToRouter(this.selectedNode_.entityID);
-  } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.connection_.connectToClient(this.selectedNode_);
-  }
+NetSimLobby.prototype.connectToClient = function (client) {
+  this.connection_.connectToClient(client);
 };
 
 /**
- * Called whenever the connection notifies us that we've connected to,
- * or disconnected from, a shard.
- * @param {?NetSimShard} newShard - null if disconnected.
+ * Send a request to dashboard and retrieve a JSON array listing the
+ * sections this user belongs to.
+ * @param {function} callback
  * @private
  */
-NetSimLobby.prototype.onShardChange_= function (newShard) {
-  this.shard_ = newShard;
-  if (this.shard_ !== null) {
-    this.shard_.nodeTable.tableChange
-        .register(this.onNodeTableChange_.bind(this));
-    logger.info("NetSimLobby registered to nodeTable tableChange");
-
-    // Trigger a node table read, which should refresh the lobby contents.
-    if (this.shard_) {
-      this.shard_.nodeTable.readAll(function (err, rows) {
-        this.onNodeTableChange_(rows);
-      }.bind(this));
-    }
-  }
-};
-
-/**
- * Called whenever a change is detected in the nodes table - which should
- * trigger a refresh of the lobby listing
- * @param {!Array} rows
- * @private
- */
-NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
-  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
-  this.render();
-};
-
-/**
- * @param {Event} jQueryEvent
- * @private
- */
-NetSimLobby.prototype.onRowClick_ = function (jQueryEvent) {
-  var target = $(jQueryEvent.target);
-  var nodeID = target.data('nodeId');
-  var clickedNode = _.find(this.nodesOnShard_, function (node) {
-    return node.entityID === nodeID;
+NetSimLobby.prototype.getUserSections_ = function (callback) {
+  var memberSectionsRequest = $.ajax({
+    dataType: 'json',
+    url: '/v2/sections/membership'
   });
 
-  // Don't even allow selection of nodes we can't connect to.
-  if (!clickedNode || !this.canConnectToNode_(clickedNode)) {
-    return;
-  }
+  var ownedSectionsRequest = $.ajax({
+    dataType: 'json',
+    url: '/v2/sections'
+  });
 
-  // Deselect old row
-  var oldSelectedNode = this.selectedNode_;
-  this.selectedNode_ = null;
-  this.getBody().find('.selected-row').removeClass('selected-row');
-
-  // If we clicked on a different row, select the new row
-  if (!oldSelectedNode || clickedNode.entityID !== oldSelectedNode.entityID) {
-    this.selectedNode_ = clickedNode;
-    target.addClass('selected-row');
-  }
-
-  this.onSelectionChange();
+  $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {
+    var memberSectionData = result1[0];
+    var ownedSectionData = result2[0];
+    callback(memberSectionData.concat(ownedSectionData));
+  });
 };
 
 /**
- * @param {NetSimNode} node
- * @returns {boolean}
+ * Populate the internal cache of shard options, given a set of the current
+ * user's sections.
+ * @param {Array} sectionList - list of sections this user is a member or
+ *        administrator of.  Each section has an id and a name.  May be empty.
+ * @param {string} sharedShardSeed - a shard ID present if we reached netsim
+ *        via a share link.  We should make sure this shard is an option.
  * @private
  */
-NetSimLobby.prototype.isMyNode_ = function (node) {
-  return node && this.connection_.myNode &&
-      this.connection_.myNode.entityID === node.entityID;
-};
+NetSimLobby.prototype.buildShardChoiceList_ = function (
+    sectionList, sharedShardSeed) {
+  this.shardChoices_.length = 0;
 
-/**
- * Check whether the level configuration allows connections to the specified
- * node.
- * @param {NetSimNode} connectionTarget
- * @returns {boolean} whether connection to the target is allowed
- * @private
- */
-NetSimLobby.prototype.canConnectToNode_ = function (connectionTarget) {
-  // Can't connect to own node
-  if (connectionTarget.entityID === this.connection_.myNode.entityID) {
-    return false;
+  // If we have a shared shard seed, put it first in the list:
+  if (sharedShardSeed) {
+    var sharedShardID = this.makeShardIDFromSeed_(sharedShardSeed);
+    this.shardChoices_.push({
+      shardSeed: sharedShardSeed,
+      shardID: sharedShardID,
+      displayName: sharedShardSeed
+    });
   }
 
-  // Permissible connection limited by level configuration
-  return (
-      this.levelConfig_.canConnectToClients &&
-      connectionTarget.getNodeType() === NodeType.CLIENT
-      ) || (
-      this.levelConfig_.canConnectToRouters &&
-      connectionTarget.getNodeType() === NodeType.ROUTER );
+  // Add user's sections to the shard list
+  this.shardChoices_ = this.shardChoices_.concat(
+      sectionList.map(function (section) {
+        return {
+          shardSeed: section.id,
+          shardID: this.makeShardIDFromSeed_(section.id),
+          displayName: section.name
+        };
+      }.bind(this)));
+
+  // If there still aren't any options, generate a random shard
+  if (this.shardChoices_.length === 0) {
+    var seed = utils.createUuid();
+    var randomShardID = this.makeShardIDFromSeed_(seed);
+    this.shardChoices_.push({
+      shardSeed: seed,
+      shardID: randomShardID,
+      displayName: i18n.myPrivateNetwork()
+    });
+  }
+
+  // If there's only one possible shard, select it by default
+  if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
+    this.selectedShardID_ = this.shardChoices_[0].shardID;
+  }
 };
 
 /**
- * @param {NetSimNode} node
- * @returns {boolean}
+ * Generate a unique shard key from the given seed
+ * @param {string} seed
  * @private
  */
-NetSimLobby.prototype.isSelectedNode_ = function (node) {
-  return node && this.selectedNode_ &&
-      node.entityID === this.selectedNode_.entityID;
+NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
+  // TODO (bbuchanan) : Hash shard ID, more likely to ensure it's unique
+  //                    and fits within 48 characters.
+  // Maybe grab this MIT-licensed implementation via node?
+  // https://github.com/blueimp/JavaScript-MD5
+  return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
 };
 
-/** Handler for selecting/deselcting a row in the lobby listing. */
-NetSimLobby.prototype.onSelectionChange = function () {
-  this.connectButton_.attr('disabled', (this.selectedNode_ === null));
+/**
+ * Gets a share URL for the currently-selected shard ID.
+ * @returns {string} or empty string if there is no shard selected.
+ */
+NetSimLobby.prototype.getShareLink = function () {
+  if (!this.displayName_) {
+    return '';
+  }
+
+  var selectedShard = _.find(this.shardChoices_, function (shard) {
+    return shard.shardID === this.selectedShardID_;
+  }.bind(this));
+
+  if (selectedShard) {
+    var baseLocation = document.location.protocol + '//' +
+        document.location.host + document.location.pathname;
+    return baseLocation + '?s=' + selectedShard.shardSeed;
+  }
+
+  return '';
 };
