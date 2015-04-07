@@ -52,6 +52,18 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
 };
 
 /**
+ * Padding (in pixels) within the inside of the block space.
+ * Blocks dropped with their top-left origin within this padding (or outside of
+ * the block space) will be bumped until their top-left is within the padding.
+ * @type {number}
+ * @const
+ */
+Blockly.BlockSpaceEditor.BUMP_PADDING_TOP = 15;
+Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT = 15;
+Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM = 25;
+Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT = 25;
+
+/**
  * Create an SVG element containing SVG filter and pattern definitions usable
  * within any BlockSpace.
  * @param {Element} container the parent element for the <svg> effects element
@@ -278,17 +290,13 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
     return;
   }
 
-  /** @const */
-  var MARGIN = 25;
-
-  /** @const */
-  var MARGIN_TOP = 15;
-
   // Calculate bounds of view, including bump padding
-  var viewInnerTop = metrics.viewTop + MARGIN_TOP;
-  var viewInnerLeft = metrics.viewLeft + MARGIN;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN
+  var viewInnerTop = metrics.viewTop + Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+  var viewInnerLeft = metrics.viewLeft + Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+  var viewInnerBottom = metrics.viewTop + metrics.viewHeight
+    - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
+  var viewInnerRight = metrics.viewLeft + metrics.viewWidth
+    - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
 
