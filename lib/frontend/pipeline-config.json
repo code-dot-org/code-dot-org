@@ -1,0 +1,14 @@
+{
+  "javascripts": {
+    "./shared/js/test.js": "./dashboard/public/test.js"
+  },
+  "stylesheets": {
+  },
+  "media": {
+  },
+  "//": [
+    "Packages point to a self-contained npm package folder"
+  ],
+  "packages": {
+  }
+}

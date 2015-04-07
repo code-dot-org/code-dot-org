@@ -3,7 +3,7 @@
 
 proc = <<Procfile
 dashboard: bin/dashboard-server
-apps: cd apps && npm --silent start
+apps: npm --silent start
 Procfile
 
 require 'tempfile'
