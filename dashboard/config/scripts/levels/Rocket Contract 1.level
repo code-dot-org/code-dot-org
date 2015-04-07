@@ -1,0 +1,14 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-12T22:50:38.000Z",
+  "properties": {
+    "answers": [
+      "rocket-height|Number|Number"
+    ],
+    "title": "Contract for rocket-height",
+    "content2": "A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time."
+  },
+  "md5": "30ac3fac262c555d3da24a3b553c003e"
+}]]></config>
+</ContractMatch>

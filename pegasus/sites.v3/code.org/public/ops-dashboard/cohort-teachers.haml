@@ -129,6 +129,49 @@ theme: none
           %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher)", "ng-show" => "teacher.editing"} Cancel
           %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete
 
+%h3 Deleted Teachers
+
+%div{'ng-show' => 'cohort.deleted_teachers.length > 0'}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-form' => 'allForm', class: 'cohort-teachers'}
+    %colgroup
+      %col{width: "130"}/
+      %col{width: "130"}/
+      %col{width: "155"}/
+      %col{width: "150"}/
+      %col{width: "150"}/
+      %col{width: "115"}/
+      %col{width: "120"}/
+    %tr
+      %th.manage-th
+        First name
+      %th.manage-th
+        Last name
+      %th.manage-th
+        Email
+      %th.manage-th
+        District
+      %th.manage-th
+        School
+      %th.manage-th
+        Gender
+      %th.manage-th
+        %div
+    %tr{"ng-repeat" => "teacher in cohort.deleted_teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top", 'ng-form' => 'form'}
+      %td
+        {{teacher.ops_first_name}}
+      %td
+        {{teacher.ops_last_name}}
+      %td
+        {{teacher.email}}
+      %td
+        {{teacher.district.name}}
+      %td
+        {{teacher.ops_school}}
+      %td
+        {{teacher.ops_gender}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %a.btn.btn-white.btn-xs{"ng-click" => "undelete(teacher)"} Restore
+
 :scss
   .cohort-teachers input.ng-invalid.ng-dirty {
     background-color: #EDD;

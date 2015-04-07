@@ -7,6 +7,7 @@ var testUtils = require('../util/testUtils');
 var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
 var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
 var Equation = require(testUtils.buildPath('/calc/equation.js'));
+var utils = require(testUtils.buildPath('/utils.js'));
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {
@@ -389,6 +390,16 @@ describe('EquationSet', function () {
       var evaluation = set.evaluate();
       assert.equal(evaluation.result, undefined);
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
+    });
+
+    it('fails to evaluate infinite recursion', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('f', [0])));
+      set.addEquation_(new Equation(null, [], new ExpressionNode('f', [1])));
+
+      var evaluation = set.evaluate();
+      assert.strictEqual(evaluation.result, undefined);
+      assert(utils.isInfiniteRecursionError(evaluation.err));
     });
   });
 

@@ -1,0 +1,23 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2014-11-24T21:00:16.000Z",
+  "properties": {
+    "answers": [
+      "(5 < 10) and (10 < 15)",
+      "(5 < 10) And (10 < 15)",
+      "(5 < 10) AND (10 < 15)",
+      "(5 < 10) && (10 < 15)",
+      "((5 < 10) and (10 < 15))",
+      "((5 < 10) And (10 < 15))",
+      "((5 < 10) AND (10 < 15))",
+      "((5 < 10) && (10 < 15))"
+    ],
+    "title": "Convert Blocks to Math",
+    "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that matches this code",
+    "content2": "/script_assets/msm/unit6/blockstomath3.png, 500"
+  },
+  "md5": "43b5fc74f2e4bee11d4b8762ef1ebabb"
+}]]></config>
+</TextMatch>
