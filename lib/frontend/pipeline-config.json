@@ -1,9 +1,9 @@
 {
   "javascripts": {
-    "./shared/js/test.js": "./dashboard/public/assets/test.js"
+    "./shared/js/test.js": "./dashboard/public/assets/javascripts/test.js"
   },
   "stylesheets": {
-    "./shared/css/test.scss": "./dashboard/public/assets/"
+    "./shared/css/test.scss": "./dashboard/public/assets/stylesheets/"
   },
   "media": {
   },

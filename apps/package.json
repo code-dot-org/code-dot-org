@@ -29,6 +29,8 @@
   "scripts": {
     "clean": "rimraf ./build",
     "prepublish": "gulp build",
+    "deploy": "./deploy.sh",
+    "unpack": "./unpack.sh",
     "start": "gulp dev & node server.js",
     "lint": "jshint --reporter node_modules/jshint-stylish/stylish .",
     "test": "npm run lint & node ./test/util/runTests.js"

@@ -5,7 +5,7 @@
 **/
 
 var gulp = require('gulp');
-gulp.task('build', ['bundle-js', 'messages']);
+gulp.task('build', ['bundle-js', 'media', 'sass', 'messages']);
 
 var newer = require('gulp-newer');
 var rename = require("gulp-rename");
