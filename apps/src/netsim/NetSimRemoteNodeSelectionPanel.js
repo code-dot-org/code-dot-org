@@ -26,16 +26,19 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {NetSimNode[]} nodesOnShard
  * @param {NetSimNode[]} nodesRequestingConnection
  * @param {NetSimNode} selectedNode
+ * @param {NetSimWire} outgoingWire
  * @param {number} myNodeID
  * @param {function} addRouterCallback
  * @param {function} selectNodeCallback
  * @param {function} connectButtonCallback
+ * @param {function} cancelButtonCallback
  * @constructor
  * @augments NetSimPanel
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     levelConfig, nodesOnShard, nodesRequestingConnection, selectedNode,
-    myNodeID, addRouterCallback, selectNodeCallback, connectButtonCallback) {
+    outgoingWire, myNodeID, addRouterCallback, selectNodeCallback,
+    connectButtonCallback, cancelButtonCallback) {
   /**
    * @type {netsimLevelConfiguration}
    * @private
@@ -61,6 +64,12 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.selectedNode_ = selectedNode;
 
+  /**
+   * @type {NetSimWire}
+   * @private
+   */
+  this.outgoingWire_ = outgoingWire;
+
   this.myNodeID_ = myNodeID;
 
   this.addRouterCallback_ = addRouterCallback;
@@ -68,6 +77,8 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.selectNodeCallback_ = selectNodeCallback;
 
   this.connectButtonCallback_ = connectButtonCallback;
+
+  this.cancelButtonCallback_ = cancelButtonCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -91,28 +102,22 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     nodesOnShard: this.nodesOnShard_,
     nodesRequestingConnection: this.nodesRequestingConnection_,
     selectedNode: this.selectedNode_,
+    outgoingWire: this.outgoingWire_,
     canConnectToNode: this.canConnectToNode_.bind(this),
     isMyNode: this.isMyNode_.bind(this)
   }));
   this.getBody().html(newMarkup);
 
   this.addRouterButton_ = this.getBody().find('#netsim_lobby_add_router');
-  this.addRouterButton_.click(this.addRouterButtonClick_.bind(this));
+  this.addRouterButton_.click(this.addRouterCallback_);
 
   this.connectButton_ = this.getBody().find('#netsim_lobby_connect');
-  this.connectButton_.click(this.connectButtonClick_.bind(this));
+  this.connectButton_.click(this.connectButtonCallback_);
+
+  this.cancelButton_ = this.getBody().find('#netsim_lobby_cancel');
+  this.cancelButton_.click(this.cancelButtonCallback_);
 
   this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
-};
-
-/** Handler for clicking the "Add Router" button. */
-NetSimRemoteNodeSelectionPanel.prototype.addRouterButtonClick_ = function () {
-  this.addRouterCallback_();
-};
-
-/** Handler for clicking the "Connect" button. */
-NetSimRemoteNodeSelectionPanel.prototype.connectButtonClick_ = function () {
-  this.connectButtonCallback_();
 };
 
 /**
