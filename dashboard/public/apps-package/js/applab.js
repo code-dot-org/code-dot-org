@@ -2819,11 +2819,11 @@ Applab.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
-      'arguments': []
+      'arguments': [record]
     });
   }
 };
@@ -3578,7 +3578,7 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess();
+  onSuccess(record);
 };
 
 /**
@@ -4279,7 +4279,7 @@ module.exports.blocks = [
   {'func': 'getKeyValue', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
   {'func': 'createRecord', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
   {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function() {\n  \n}"] },
+  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {'func': 'getUserId', 'category': 'Data', 'params': [] },
 
