@@ -6,7 +6,7 @@ nav: educate_nav
 
 ## What you need
 
-We use [YouTube](http://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
 
 ### Ask your school or district IT department to whitelist these sites:
 
