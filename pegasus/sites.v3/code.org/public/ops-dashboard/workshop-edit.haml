@@ -48,12 +48,13 @@ template: none
   %br
   %br
   %button.btn-danger{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
-    Delete
+    Delete Segment
   %span{'ng-show' => 'segment.deletion == true'}
     Are you sure?
+  %br
   %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
     Yes
-  %button.btn-danger{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
+  %button.btn-white{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
     No
   %hr
 %div{'ng-show' => 'workshop.id'}
