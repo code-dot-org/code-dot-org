@@ -34,10 +34,9 @@ ____________________________________________________
 
 [example]
 
-<pre>
-/*  Example 1
-*/
+**Example 1**
 
+<pre>
 hide();               // hides the turtle so it is no longer visible on the screen
 moveForward(100);     // moves the turtle forward 100 pixels
 </pre>
@@ -48,18 +47,17 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This example creates two buttons that allow you to switch between showing and hiding the turtle.
+
 <pre>
-/*  Example 2
-
-    This example creates two buttons that allow you to switch between showing and hiding the turtle
-*/
-
-button("hide-turtle", "hide");                    // creates a hide button
-button("show-turtle", "show");                    // creates a show button
-onEvent("hide-turtle", "click", function(event) { // when the hide button is clicked the turtle will hide
+button("hide-turtle", "hide");                      // creates a hide button
+button("show-turtle", "show");                      // creates a show button
+onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will hide
   hide();
 });
-onEvent("show-turtle", "click", function(event) { // when the show button is clicked the turtle will show
+onEvent("show-turtle", "click", function(event) {   // when the show button is clicked the turtle will show
   show();
 });
 </pre>
