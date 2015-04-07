@@ -1650,6 +1650,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
   margin: auto;
 
+  h2 {
+    text-align: center;
+  }
+
   .question {
     float: left;
     @media #{$information-phone-narrow} {
