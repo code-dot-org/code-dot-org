@@ -11,6 +11,7 @@ class LevelsController < ApplicationController
   check_authorization
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_applab_user_id, only: [:show, :edit]
 
   # GET /levels
   # GET /levels.json
@@ -201,6 +202,10 @@ class LevelsController < ApplicationController
     @skip_instructions_popup = true
     @full_width = true
     render 'levels/show'
+  end
+
+  def set_applab_user_id
+    @applab_user_id = applab_user_id
   end
 
   private
