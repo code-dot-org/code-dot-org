@@ -1,0 +1,14 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "answers": [
+      "wide-rect|Image|Number|String"
+    ],
+    "title": "Design Recipe 1 Contract",
+    "content1": "Write the contract for function called \"wide-rect\" which creates a rectangle of given height and color that is twice as wide as it is tall."
+  },
+  "md5": "bffeb2e81ab7df4761da9b1f61107231"
+}]]></config>
+</ContractMatch>

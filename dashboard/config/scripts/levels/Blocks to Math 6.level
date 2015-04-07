@@ -1,0 +1,20 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2014-11-24T19:42:18.000Z",
+  "properties": {
+    "answers": [
+      "((4 - 1) * (-2)) + 12",
+      "((4 - 1) * -2) + 12",
+      "(4 - 1) * (-2) + 12",
+      "(4 - 1) * -2 + 12",
+      "((4 - 1) * (-2)) + 12)"
+    ],
+    "title": "Convert Blocks to Math",
+    "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that matches this code",
+    "content2": "Blocks to Math 6.blocks.start_blocks"
+  },
+  "md5": "755a26f836f54edeb88eb7e8ec019561"
+}]]></config>
+</TextMatch>
