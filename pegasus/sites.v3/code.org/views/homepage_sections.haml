@@ -5,6 +5,6 @@
     .block{style: "display: #{display}"}
       - block[:links] = DB[:cdo_homepage].where(type_s: "blocklink", text1_s: block[:id_s], active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - if block[:type_s] == "block"
-        = view :homepage_linkslot_tall_quarter_white, entry: block
+        = view :homepage_quarterslot_links, entry: block
       - elsif block[:type_s] == "blockshort"
-        = view :homepage_linkslot_tall_quarter_white_short, entry: block
+        = view :homepage_quarterslot, entry: block
