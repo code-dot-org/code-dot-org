@@ -9,7 +9,7 @@
   },
   "scripts": {
     "gulp": "FORCE_COLOR=true gulp --cwd=. --gulpfile=lib/frontend/gulpfile.js",
-    "start": "cd shared/js/example && npm start",
+    "start": "npm run gulp -- dev",
     "prepublish": "npm run gulp -- build"
   },
   "devDependencies": {
