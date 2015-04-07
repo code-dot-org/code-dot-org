@@ -520,6 +520,7 @@ SQL
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
+  attr_accessor :raw_token
   def User.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -530,7 +531,7 @@ SQL
 
     user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
     if user && user.persisted?
-      user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
     else
       user.errors.add :email, :not_found
     end
