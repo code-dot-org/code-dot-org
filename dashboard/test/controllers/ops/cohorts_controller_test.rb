@@ -44,6 +44,36 @@ module Ops
       assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
+    test 'adding existing under 13 user to a cohort makes them adult and teacher' do
+      sign_in @district.contact
+      #87054720 (part 1)
+      #can click "Add Teacher" button to add a teacher
+      assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
+
+      existing_email = "existing@email.xx"
+      under_13_user = create(:student, age: 10, email: existing_email)
+      assert under_13_user.email.blank?
+      assert under_13_user.hashed_email.present?
+
+      teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
+      teacher_params += [
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: existing_email, district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'}]
+
+      assert_difference('@cohort.reload.teachers.count', 1) do
+        assert_difference('User.count', 0) do
+          patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+        end
+      end
+
+      assert_response :success
+
+      under_13_user = under_13_user.reload
+      assert_equal '21+', under_13_user.age
+      assert under_13_user.teacher?
+      assert_equal existing_email, under_13_user.email
+    end
+
+
     test 'district contact can drop teachers in their district from a cohort' do
       sign_in @district.contact
 
