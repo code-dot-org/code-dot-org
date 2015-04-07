@@ -47,7 +47,7 @@ class NetSim < Blockly
     create!(level_params.merge(
               user: params[:user],
               game: Game.netsim,
-              level_num: 'default'
+              level_num: 'custom'
             ))
   end
 end
