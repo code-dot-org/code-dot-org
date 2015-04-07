@@ -75,7 +75,7 @@
       padding: 10px;
       white-space: pre-wrap;
       word-wrap: break-word;
-      font: 11pt monospace;
+      font: 13pt monospace;
       line-height: 1.2em;
       background-color: #000;
       color: #fff;
@@ -84,6 +84,9 @@
       color: #0c0;
     }
     #data .negative {
+      color: #c00;
+    }
+    #data .error {
       color: #c00;
     }
     #compressedPoem {
@@ -196,7 +199,7 @@
       calculateData();
     }
 
-    function calculateData() {
+    function calculateData(errorInDictionary) {
       var text = editor.getValue();
       var dictSize = text.length + 1;
       if (text.length === 0) {
@@ -205,19 +208,24 @@
 
       var total = dictSize + compressedPoemSize;
       var compression = (1 - (total / poemText.length)) * 10000;
-      compression = Math.round(compression);
-      compression /= 100;
+      compression = Math.round(compression) / 100;
       var compressionClass = '';
-      if (compression > 0) {
-        compressionClass = 'positive';
-      } else if (compression < 0) {
-        compressionClass = 'negative';
+      if (errorInDictionary) {
+        compressionClass = 'error';
+        compression = 'Error in dictionary'
+      } else {
+        if (compression > 0) {
+          compressionClass = 'positive';
+        } else if (compression < 0) {
+          compressionClass = 'negative';
+        }
+        compression += '%';
       }
-      document.getElementById("data").innerHTML =  "compressed poem size: " + compressedPoemSize + " bytes\n"
-          + "     dictionary size: " + dictSize + " bytes\n"
-          + "               total: " + total + " bytes\n"
-          + "  original poem size: " + poemText.length + " bytes\n"
-          + "         compression: <span class='" + compressionClass + "'>" + compression + "%</span>\n";
+      document.getElementById("data").innerHTML =  "Compressed poem size: " + compressedPoemSize + " bytes\n"
+          + "     Dictionary size: " + dictSize + " bytes\n"
+          + "               Total: " + total + " bytes\n"
+          + "  Original poem size: " + poemText.length + " bytes\n"
+          + "         Compression: <span class='" + compressionClass + "'>" + compression + "</span>\n";
     }
 
     // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -228,11 +236,13 @@
     function compress() {
       var poemDisplay = poemText;
       var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
+      var errorInDictionary = false;
 
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
         if (new RegExp('[' + dictEntries[index] + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
           editor.addLineClass(line, 'wrap', 'dict-error');
+          errorInDictionary = true;
           return '';
         }
         editor.removeLineClass(line, 'wrap', 'dict-error');
@@ -248,13 +258,14 @@
       compressedPoemSize = poemDisplay.length;
       document.getElementById("compressedPoem").innerHTML = poemDisplay.replace(
           new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
-      calculateData();
+      calculateData(errorInDictionary);
     }
   </script>
 </head>
 <body>
   <div id="widgetTop">
     <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
+    <div id="reference_area_target" data-minimal="true"></div>
     <div id="choosePoem">
       <label for="poemsList">Choose a poem:</label>
       <select id="poemsList" onChange="poemChanged();"></select>
