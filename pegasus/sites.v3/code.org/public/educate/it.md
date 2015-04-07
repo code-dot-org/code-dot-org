@@ -6,16 +6,16 @@ nav: educate_nav
 
 ## What you need
 
-We use [YouTube](http://www.youtube.com) to embed videos into Code.org and our [online learning platform](http://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
 
 ### Ask your school or district IT department to whitelist these sites:
 
 | Priority | URL |
 | -------- | ----------- |
-| **Required**   | `http://*.code.org` |
-| **Optional**    | `http://cdn.optimizely.com`<br/>`http://www.google-analytics.com` |
+| **Required**   | `https://*.code.org`<br/>`http://*.code.org` |
+| **Optional**    | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com` |
 | **To use YouTube hosted videos**   | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com`<br/>`https://*.ytimg.com` |
-| **To use Code.org hosted videos**   | **Block:**<br/>`https://www.youtube.com/favicon.ico` |
+| **To use Code.org hosted videos**   | **Unblock:**<br/>`http://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico` |
 
 ### Hardware
 
@@ -24,13 +24,13 @@ We use [YouTube](http://www.youtube.com) to embed videos into Code.org and our [
 ### Software
 
 - Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743).
-- If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](http://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
+- If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](https://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
 
 ## Can you play this video?
 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
-<iframe style="margin: 10px;" width="350" height="195" src="http://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
 This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video instead.
 
@@ -40,7 +40,7 @@ If the default (auto-detected) player above is not playing videos properly, here
 
 ### Use the fallback video player
 
-If YouTube is blocked at your school, we will default to the Code.org hosted fallback video player. If this does not work, submit your information at the [video test page](http://studio.code.org/videos/test) so we can help diagnose the issue.
+If YouTube is blocked at your school, we will default to the Code.org hosted fallback video player. If this does not work, submit your information at the [video test page](https://studio.code.org/videos/test) so we can help diagnose the issue.
 
 ### Continue without streaming videos
 
@@ -53,4 +53,4 @@ If you can't get embedded videos to play, you can still use our tutorials withou
 
 ## Still having trouble?
 
-We'll help you out. Ask questions on our [forum](http://forums.code.org/?forum=322774).
+We'll help you out. Ask questions on our [forum](https://forums.code.org/?forum=322774).
