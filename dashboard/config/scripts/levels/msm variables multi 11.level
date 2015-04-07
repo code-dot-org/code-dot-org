@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-09T00:43:23.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the name of the parameter?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "f",
+        "correct": false
+      },
+      {
+        "text": "x",
+        "correct": true
+      },
+      {
+        "text": "17",
+        "correct": false
+      }
+    ],
+    "title": "/script_assets/msm/define_f.png, 300"
+  },
+  "md5": "a4c1ab2e52c4664a7e8778c369db4a1e"
+}]]></config>
+</Multi>

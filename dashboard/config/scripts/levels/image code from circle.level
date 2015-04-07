@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Pick the Racket code that comes from the circle of evaluation!"
+      }
+    ],
+    "answers": [
+      {
+        "text": "(rectangle (10) (2) \"solid\" \"red\")",
+        "correct": false
+      },
+      {
+        "text": "(rectangle 10 2 \"solid\" \"red\")",
+        "correct": false
+      },
+      {
+        "text": "(rectangle (+ 8 2) (- 7 5) \"solid\" \"red\")",
+        "correct": true
+      },
+      {
+        "text": "(rectangle (+ 8 2) (- 7 5) solid red)",
+        "correct": false
+      }
+    ],
+    "title": "Code from Circle",
+    "content1": "/script_assets/msm/Unit%202/exercise_5.png"
+  },
+  "md5": "0d5ba3c6a5f0a70cdea44b17c377f9a4"
+}]]></config>
+</Multi>

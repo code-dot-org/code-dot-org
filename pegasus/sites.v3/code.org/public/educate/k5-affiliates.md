@@ -13,9 +13,9 @@ The ideal K-5 Affiliate is an experienced Computer Science teacher at the elemen
 <br />
 
 **Are you a district administrator or representative?**  
-[Apply](/educate/k5-district-partnerships) for a K-5 district partnership to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to your district elementary school teachers.
+[Apply](/educate/k5-district-partnership) for a K-5 district partnership to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to your district elementary school teachers.
 
-[<button>K-5 District Partnership</button>](/k5-district-partnership)
+[<button>K-5 District Partnership</button>](/educate/k5-district-partnership)
 
 
 ## What is the K5 Affiliate Program?

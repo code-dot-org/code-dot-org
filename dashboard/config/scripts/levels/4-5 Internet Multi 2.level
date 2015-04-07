@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-10-02T22:32:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "code.org",
+        "correct": false
+      },
+      {
+        "text": "csisfun.com",
+        "correct": true
+      },
+      {
+        "text": "thinkersmith.org",
+        "correct": false
+      },
+      {
+        "text": "khanacademy.org",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+  },
+  "md5": "5ad4912e4c24e38595363fc8596247b2"
+}]]></config>
+</Multi>
