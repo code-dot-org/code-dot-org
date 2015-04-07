@@ -1170,10 +1170,9 @@ Applab.nextElementIdMap = {};
  */
 Applab.getUnusedElementId = function (prefix) {
   var divApplab = $('#divApplab');
-  for (var i = Applab.nextElementIdMap[prefix] || 1;
-       divApplab.find("#" + prefix + i).length !== 0;
-       i++) {
-    // repeat until we find an unused id
+  var i = Applab.nextElementIdMap[prefix] || 1;
+  while (divApplab.find("#" + prefix + i).length !== 0) {
+    i++;
   }
   Applab.nextElementIdMap[prefix] = i + 1;
   return prefix + i;
