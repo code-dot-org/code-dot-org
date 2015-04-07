@@ -17,7 +17,6 @@ var i18n = require('../../locale/current/netsim');
 var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimWire = require('./NetSimWire');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 var markup = require('./NetSimLobby.html');
@@ -146,10 +145,10 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
   this.selectedNode_ = null;
 
   /**
-   * @type {NetSimWire}
+   * @type {NetSimNode}
    * @private
    */
-  this.outgoingWire_ = null;
+  this.remoteNode_ = null;
 
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
@@ -197,7 +196,7 @@ NetSimLobby.prototype.render = function () {
         this.nodesOnShard_,
         this.nodesRequestingConnection_,
         this.selectedNode_,
-        this.outgoingWire_,
+        this.remoteNode_,
         this.myNode_.entityID,
         this.addRouterToLobby.bind(this),
         this.selectNode.bind(this),
@@ -323,9 +322,7 @@ NetSimLobby.prototype.onConnectButtonClick_ = function () {
  * @private
  */
 NetSimLobby.prototype.onCancelButtonClick_ = function () {
-  if (this.outgoingWire_) {
-    this.outgoingWire_.destroy(function () {});
-  }
+  this.connection_.disconnectFromRemote();
 };
 
 /**
@@ -362,8 +359,10 @@ NetSimLobby.prototype.onWireTableChange_ = function (rows) {
     return wireRow.localNodeID === this.myNode_.entityID;
   }.bind(this));
 
-  this.outgoingWire_ = outgoingWireRow ?
-      new NetSimWire(this.shard_, outgoingWireRow) : null;
+  this.remoteNode_ = outgoingWireRow ?
+      _.find(this.nodesOnShard_, function (node) {
+        return node.entityID === outgoingWireRow.remoteNodeID;
+      }) : null;
 
   // Re-render with new information
   this.render();
