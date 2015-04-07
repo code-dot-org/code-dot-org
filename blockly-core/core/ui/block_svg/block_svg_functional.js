@@ -56,13 +56,6 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
     return;
   }
 
-  // isVisible can report true if the block is in the modal blockspace but
-  // the function editor isn't yet open
-  if (this.block_.blockSpace === Blockly.functionEditor.modalBlockSpace &&
-      !Blockly.functionEditor.isOpen()) {
-    return;
-  }
-
   var rect = this.svgPath_.getBBox();
   this.divider_.setAttribute('width', Math.max(0, rect.width - 2));
 };
