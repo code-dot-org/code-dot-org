@@ -1,0 +1,18 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2014-11-24T20:57:41.000Z",
+  "properties": {
+    "answers": [
+      "(10 > 11) or (7 <= 9)",
+      "(10 > 11) OR (7 <= 9)",
+      "(10 > 11) || (7 <= 9)"
+    ],
+    "title": "Convert Blocks to Math",
+    "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that matches this code",
+    "content2": "/script_assets/msm/unit6/blockstomath2.png, 500"
+  },
+  "md5": "af99d7bfcbb87befdf9cb1468de1e23e"
+}]]></config>
+</TextMatch>
