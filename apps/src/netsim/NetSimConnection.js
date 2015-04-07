@@ -10,7 +10,6 @@
  */
 'use strict';
 
-var netsimNodeFactory = require('./netsimNodeFactory');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
@@ -239,40 +238,6 @@ NetSimConnection.prototype.isConnectedToShard = function () {
  */
 NetSimConnection.prototype.isConnectedToShardID = function (shardID) {
   return this.shard_ && this.shard_.id === shardID;
-};
-
-/**
- * Gets all rows in the lobby and passes them to callback.  Callback will
- * get an empty array if we were unable to get lobby data.
- * @param {function} callback
- */
-NetSimConnection.prototype.getAllNodes = function (callback) {
-  if (!this.isConnectedToShard()) {
-    logger.warn("Can't get lobby rows, not connected to shard.");
-    callback([]);
-    return;
-  }
-
-  this.shard_.nodeTable.readAll(function (err, rows) {
-    if (err !== null) {
-      logger.warn("Lobby data request failed, using empty list.");
-      callback([]);
-      return;
-    }
-    callback(netsimNodeFactory.nodesFromRows(this.shard_, rows));
-  }.bind(this));
-};
-
-/** Adds a row to the lobby for a new router node. */
-NetSimConnection.prototype.addRouterToLobby = function () {
-  NetSimRouterNode.create(this.shard_, function (err, router) {
-    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
-    router.memory = this.levelConfig_.defaultRouterMemory;
-    router.dnsMode = this.levelConfig_.defaultDnsMode;
-    router.update(function () {
-      this.statusChanges.notifyObservers();
-    }.bind(this));
-  }.bind(this));
 };
 
 /**
