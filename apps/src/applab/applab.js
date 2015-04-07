@@ -2522,11 +2522,11 @@ Applab.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
-      'arguments': []
+      'arguments': [record]
     });
   }
 };
