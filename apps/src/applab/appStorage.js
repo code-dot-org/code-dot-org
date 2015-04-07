@@ -208,7 +208,7 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess();
+  onSuccess(record);
 };
 
 /**
