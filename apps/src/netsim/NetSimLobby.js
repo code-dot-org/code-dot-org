@@ -36,7 +36,7 @@ var markup = require('./NetSimLobby.html');
  *
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimConnection} connection - The shard connection that this
+ * @param {NetSim} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {Object} options
  * @param {DashboardUser} options.user
@@ -45,7 +45,7 @@ var markup = require('./NetSimLobby.html');
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
+var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
     options) {
   /**
    * @type {jQuery}
@@ -61,10 +61,10 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
 
   /**
    * Shard connection that this lobby control will manipulate.
-   * @type {NetSimConnection}
+   * @type {NetSim}
    * @private
    */
-  this.connection_ = connection;
+  this.netsim_ = netsim;
 
   /**
    * @type {string}
@@ -135,7 +135,7 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
    * @type {NetSimNode[]}
    * @private
    */
-  this.nodesRequestingConnection_ = [];
+  this.nodesRequestingnetsim_ = [];
 
   /**
    * Which node in the lobby is currently selected
@@ -165,7 +165,7 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
   this.render();
 
   // Register for events
-  this.connection_.shardChange.register(this.onShardChange_.bind(this));
+  this.netsim_.shardChange.register(this.onShardChange_.bind(this));
 };
 
 /**
@@ -194,7 +194,7 @@ NetSimLobby.prototype.render = function () {
         this.rootDiv_.find('.remote-node-select'),
         this.levelConfig_,
         this.nodesOnShard_,
-        this.nodesRequestingConnection_,
+        this.nodesRequestingnetsim_,
         this.selectedNode_,
         this.remoteNode_,
         this.myNode_.entityID,
@@ -211,8 +211,8 @@ NetSimLobby.prototype.setDisplayName = function (displayName) {
   this.render();
 
   if (this.selectedShardID_ && this.displayName_ &&
-      !this.connection_.isConnectedToShardID(this.selectedShardID_)) {
-    this.connection_.connectToShard(this.selectedShardID_, this.displayName_);
+      !this.netsim_.isConnectedToShardID(this.selectedShardID_)) {
+    this.netsim_.connectToShard(this.selectedShardID_, this.displayName_);
   }
 };
 
@@ -221,8 +221,8 @@ NetSimLobby.prototype.setShardID = function (shardID) {
   this.render();
 
   if (this.selectedShardID_ && this.displayName_ &&
-      !this.connection_.isConnectedToShardID(this.selectedShardID_)) {
-    this.connection_.connectToShard(this.selectedShardID_, this.displayName_);
+      !this.netsim_.isConnectedToShardID(this.selectedShardID_)) {
+    this.netsim_.connectToShard(this.selectedShardID_, this.displayName_);
   }
 };
 
@@ -248,7 +248,7 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   if (!this.shard_) {
     // If we disconnected, just clear our lobby data
     this.nodesOnShard_.length = 0;
-    this.nodesRequestingConnection_.length = 0;
+    this.nodesRequestingnetsim_.length = 0;
     return;
   }
 
@@ -310,9 +310,9 @@ NetSimLobby.prototype.onConnectButtonClick_ = function () {
   }
 
   if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.connection_.connectToRouter(this.selectedNode_.entityID);
+    this.netsim_.connectToRouter(this.selectedNode_.entityID);
   } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.connection_.connectToClient(this.selectedNode_);
+    this.myNode.connectToNode(this.selectedNode_, function () {});
   }
 };
 
@@ -322,7 +322,7 @@ NetSimLobby.prototype.onConnectButtonClick_ = function () {
  * @private
  */
 NetSimLobby.prototype.onCancelButtonClick_ = function () {
-  this.connection_.disconnectFromRemote();
+  this.netsim_.disconnectFromRemote();
 };
 
 /**
@@ -343,7 +343,7 @@ NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
  */
 NetSimLobby.prototype.onWireTableChange_ = function (rows) {
   // Update the collection of nodes with connections pointing toward us.
-  this.nodesRequestingConnection_ = rows.filter(function (wireRow) {
+  this.nodesRequestingnetsim_ = rows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.myNode_.entityID;
   }.bind(this)).map(function (wireRow) {
     return _.find(this.nodesOnShard_, function (node) {
