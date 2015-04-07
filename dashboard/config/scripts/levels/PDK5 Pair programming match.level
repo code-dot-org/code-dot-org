@@ -1,0 +1,33 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-03-10T20:52:37.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Pair programming"
+      },
+      {
+        "text": "Driver"
+      },
+      {
+        "text": "Navigator"
+      }
+    ],
+    "answers": [
+      {
+        "text": "When two students work at one computer to write a program together"
+      },
+      {
+        "text": "The student who controls the keyboard, mouse, or touch screen"
+      },
+      {
+        "text": "The student who thinks about the big-picture and looks for potential mistakes or misunderstandings"
+      }
+    ],
+    "title": "Pair programming match",
+    "content1": "Match the definitions to the words you were introduced to in the last video."
+  },
+  "md5": "8f7d06c67c556f83d7b872d6d2334979"
+}]]></config>
+</Match>

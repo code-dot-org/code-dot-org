@@ -216,3 +216,37 @@ if (!String.prototype.repeat) {
 exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
+
+
+/**
+ * Attempts to analyze whether or not err represents infinite recursion having
+ * occurred. This error differs per browser, and it's possible that we don't
+ * properly discover all cases.
+ * Note: Other languages probably have localized messages, meaning we won't
+ * catch them.
+ */
+exports.isInfiniteRecursionError = function (err) {
+  // Chrome/Safari: message ends in a period in Safari, not in Chrome
+  if (err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)) {
+    return true;
+  }
+
+  // Firefox
+  /* jshint ignore:start */
+  // Linter doesn't like our use of InternalError, even though we gate on its
+  // existence.
+  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
+      err.message === 'too much recursion') {
+    return true;
+  }
+  /* jshint ignore:end */
+
+  // IE
+  if (err instanceof Error &&
+      err.message === 'Out of stack space') {
+    return true;
+  }
+
+  return false;
+};

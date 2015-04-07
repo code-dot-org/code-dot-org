@@ -69,7 +69,7 @@ ____________________________________________________
 [example]
 
 <pre>
-//Bullseye
+//Water drop rings
 var canvasWidth = 320
 var canvasHeight = 480
 var strokeColor = "black"

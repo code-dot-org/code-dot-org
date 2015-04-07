@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## x != y
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Math
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Test whether two values are not equal
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+Returns true if the value on the left-hand side of the expression does not equal the value on the right-hand side of the expression.  Note that JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string "5").
 
 [/description]
 
@@ -33,8 +33,16 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+var x = 5;
+if(x != 7)
+{
+  console.log("not equivalent")
+}
+else
+{
+  console.log("equivalent")
+}
+
 </pre>
 
 [/example]
@@ -44,11 +52,55 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+var x = 5;
+var trueOrFalse = (x!=7)
+console.log("Expression was " + trueOrFalse)
+if(trueOrFalse)
+{
+  console.log("not equivalent")
+}
+else
+{
+  console.log("equivalent")
+}
+
 </pre>
 
+[/example]
+
+____________________________________________________
+[example]
+
+<pre>
+var x = 5;
+var y = 7;
+if(x != y)
+{
+  console.log("not equivalent")
+}
+else
+{
+  console.log("equivalent")
+}
+</pre>
+
+[/example]
+
+____________________________________________________
+[example]
+
+<pre>
+var x = 5;
+var y = "7";
+if(x != y)
+{
+  console.log("not equivalent")
+}
+else
+{
+  console.log("equivalent")
+}
+</pre>
 
 [/example]
 
@@ -58,7 +110,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+x == y
 </pre>
 
 [/syntax]
@@ -69,25 +121,23 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| x | any | Yes | The first value to use for comparison.  |
+| y | any | Yes | The second value to use for comparison.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+True or false.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- In general, it is easier to think about equivalence testing than not equivalent testing.  Some programmers therefore prefer to avoid negative logic  and structure around equivalence tests and then use the else clause of the if statement to handle when the values aren't equivalent.  
+
 
 [/tips]
 

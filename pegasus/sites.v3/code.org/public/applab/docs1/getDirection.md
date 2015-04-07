@@ -33,7 +33,8 @@ ____________________________________________________
 [example]
 
 <pre>
-
+turnRight(randomNumber(359));
+textLabel("direction", getDirection(), "forId");
 </pre>
 
 [/example]
@@ -43,7 +44,33 @@ ____________________________________________________
 [example]
 
 <pre>
+textLabel("direction", "direction: " + getDirection(), "forId");
+button("random-direction", "Random Direction");
+onEvent("random-direction", "click", function(event) {
+  turnRight(randomNumber(359));
+  setText("direction", "direction: " + getDirection());
+});
+</pre>
 
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+<pre>
+textLabel("direction", "direction: " + getDirection(), "forId");
+button("turn-left", "Turn Left");
+button("turn-right", "Turn Right");
+onEvent("turn-left", "click", function(event) {
+  turnLeft(1);
+  setText("direction", getDirection());
+});
+onEvent("turn-right", "click", function(event) {
+  turnRight(1);
+  setText("direction", getDirection());
+});
 </pre>
 
 

@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which comparison below is true?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Bee Conditionals Multiple Choice One",
+    "height": "160"
+  },
+  "md5": "2459af532a729955d471c225fe4f9b71"
+}]]></config>
+</Multi>

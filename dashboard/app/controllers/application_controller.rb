@@ -48,6 +48,26 @@ class ApplicationController < ActionController::Base
     # actual page
   end
 
+  # missing templates are usually a result of the user agent
+  # requesting a file in the wrong format, send a 404 instead of a 500
+  rescue_from ActionView::MissingTemplate do |exception|
+    render_404
+  end
+
+  def render_404
+    respond_to do |format|
+      format.html { render file: 'public/404.html', layout: 'layouts/application', status: :not_found }
+      format.all { head :not_found }
+    end
+  end
+
+  def render_500
+    respond_to do |format|
+      format.html { render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error }
+      format.all { head :internal_server_error}
+    end
+  end
+
   protected
 
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,

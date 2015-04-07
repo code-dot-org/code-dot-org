@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## randomNumber(value)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Math
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Returns a pseudorandom number from 0 to the value.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+For example, if a 3 is passed to the function, it could return a 0, 1, 2, or 3. The number returned will always be an integer.
 
 [/description]
 
@@ -33,8 +33,7 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+console.log(randomNumber(3));
 </pre>
 
 [/example]
@@ -44,9 +43,7 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+
 </pre>
 
 
@@ -58,7 +55,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+randomNumber(value);
 </pre>
 
 [/syntax]
@@ -69,25 +66,22 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| value | number | Yes | The maximum integer returned  |
+
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+Returns a pseudo random integer in the range of 0 - value. For example, if a 3 is passed to the function, it could return a 0, 1, 2, or 3. The number returned will always be an integer.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+
 
 [/tips]
 

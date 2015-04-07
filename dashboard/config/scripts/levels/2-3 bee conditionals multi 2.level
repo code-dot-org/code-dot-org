@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Choose the best blocks."
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Bee Conditionals Multiple Choice Two",
+    "content1": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500",
+    "height": "180"
+  },
+  "md5": "88ed5f727b957bd6e88e275bc309c380"
+}]]></config>
+</Multi>
