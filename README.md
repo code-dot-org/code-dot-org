@@ -41,9 +41,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. `gem install bundler`
 1. `rbenv rehash` (if using rbenv)
-1. `cd code-dot-org/aws`
+1. `cd code-dot-org`
 1. `bundle install`
-1. `cd ..`
 1. `rake install`
 
 ## Organizational Structure
@@ -60,52 +59,15 @@ Our code is segmented into four parts:
   * [csedweek.org](http://csedweek.org)
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
-## Running Dashboard
+## Running the Server
 
 1. `cd code-dot-org`
-2. `rake build:dashboard` (Generally, do this after each pull)
-3. `bin/dashboard-server`
+2. `rake build` (Generally, do this after each pull)
+3. `./up`
 4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+5. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-## Running Pegasus
-
-1. `cd code-dot-org`
-2. `rake build:pegasus` (Generally, do this after each pull)
-3. `bin/pegasus-server`
-4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
-
-## Building Apps and Blockly-core (optional)
-
-The studio.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
-
-### Enabling Apps Builds
-
-You'll need to do this once:
-
-1. OS X:
-  1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
-1. `cd code-dot-org`
-1. Edit `locals.yml`
-  1. Add `build_apps: true`
-  1. Add `build_blockly_core: true`
-  1. Add `use_my_apps: true`
-1. `rake install`
-
-This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
-
-### Blockly Prerequisite: Cairo
-
-One of the node modules, node-canvas, depends on Cairo being installed.
-
-Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other platforms [can be found here](https://github.com/LearnBoost/node-canvas/wiki)):
-
-1. Make sure XCode Command-line Tools are installed and up-to-date: `xcode-select --install`
-1. Install [XQuartz from here](http://xquartz.macosforge.org/landing/)
-1. `export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"`
-1. `brew update`
-1. `brew install cairo`
-1. In blockly, `npm install`
+## Building Apps and Blockly-core
 
 ### Building Apps and Blockly-Core
 
@@ -117,8 +79,6 @@ This will build everything you have set to build in `locals.yml`.
 You can use `rake build:apps` and `rake build:blockly_core` to build a specific project.
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
-
-Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blockly core and the apps bundle without running tests and without localization.
 
 ## Contributing
 
