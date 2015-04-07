@@ -1,0 +1,23 @@
+name 'U1L7 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 1: Lesson 7 - Binary Numbers
+# Background
+Binary number patterns occur over and over in computing contexts. A proper number system represents values and enables counting and arithmetic. Predictive rules for counting is one trademark of all number systems. Certain numbers occur over and over in computing (1,2, 4, 8, 16, 32) In the computer, numbers are represented as binary and these numbers represent the incremental amount that can be represented with each added binary value.
+
+# Lesson
+
+* This lesson is similar to your work in counting with circles, triangles, and squares.
+* Represent numbers with patterns of only two symbols - a 0 and 1.
+* Write numbers using 4 bits.
+* Convert between binary and decimal numbers.
+
+# Resources
+
+* Widget [Binary Odometer](http://cspdashboard-c9-bfranke.c9.io/Odometers/) 
+* Activity Guide: [Binary Practice](https://docs.google.com/document/d/1ArgvzIYfZsEBfB5HPGgaawlFG3ADh_l1t2QG76HeVBA/edit?usp=sharing)
+* Activity Template: [Analog Binary Calculator](https://docs.google.com/document/d/18P-gX-rXdyC8XaJTkXQbDUcpJ554nZgwzwAfNs3S14s/edit?usp=sharing)
+MARKDOWN

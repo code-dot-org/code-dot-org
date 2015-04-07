@@ -56,6 +56,7 @@ Learn more about curriculum for [Computer Science in Science](/curriculum/mss) a
 [<button>Sign up</button>](http://www.jotformpro.com/form/50198109848969)
 
 ### High School
+
 Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer [Exploring Computer Science](http://exploringcs.org/curriculum) a year-long, nationally recognized, introductory course in computer science for the '15-'16 school year.
 
 - No prior computer science experience is required!

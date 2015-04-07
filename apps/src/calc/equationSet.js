@@ -2,6 +2,7 @@ var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
 var jsnums = require('./js-numbers/js-numbers');
+var utils = require('../utils');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -272,10 +273,15 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // see if we can map if we replace our params
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
+        testMapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
-          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              utils.isInfiniteRecursionError(evaluation.err)) {
             return { err: evaluation.err };
           }
           continue;

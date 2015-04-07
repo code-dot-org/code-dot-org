@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-07T19:53:12.004Z",
+  "properties": {
+    "options": {
+      "placeholder": "Enter your reflection here."
+    },
+    "title": "Reflection: Bit-Sending Widget",
+    "content1": "Reflect after using the bit-sending widget",
+    "markdown": "Summarize what they have learned in the lesson by recording their responses to these three questions.\nWHAT?---What have you learned?\nSO WHAT?---What difference does it make?\nNOW WHAT?---What can you do with this information?\n",
+    "type": "External",
+    "dsl_text": "name 'U1L4 Free response reflection question'\r\ntitle 'Reflection: Bit-Sending Widget'\r\ncontent1 'Reflect after using the bit-sending widget'\r\nplaceholder 'Enter your reflection here.'\r\n\r\n\r\nmarkdown <<MARKDOWN\r\nSummarize what they have learned in the lesson by recording their responses to these three questions.\r\nWHAT?—What have you learned?\r\nSO WHAT?—What difference does it make?\r\nNOW WHAT?—What can you do with this information?\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

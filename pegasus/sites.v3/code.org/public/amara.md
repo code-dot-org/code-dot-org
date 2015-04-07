@@ -6,15 +6,6 @@ nav: translate_nav
 # Translate Video Subtitles
 Translations for video captions are done through Amara. To get started, choose any of the videos below. After completing translations, click "Publish" to save your work and mark as complete. Then e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
 
-## Social
-* [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
-* [The Hour of Code is Here](http://amara.org/en/videos/OuklhBeGw70l/info/learn-what-most-schools-dont-teach/)
-* [The Hour of Code Worldwide](http://amara.org/en/videos/PEMFKS2tBCRq/info/the-hour-of-code-worldwide/)
-* [100M Hours of Code](https://www.amara.org/en/videos/xQpx2un1e9zN/info/100m-hours-of-code/)
-* [President Obama does the Hour of Code](http://amara.org/en/videos/TC5deIQmfUan/info/president-obama-does-the-hour-of-code/)
-* [President Obama calls on America](http://amara.org/en/videos/HuSjzut36AWC/info/president-obama-calls-on-every-american-to-learn-code/)
-* [Anybody can learn - 60 second teaser](http://amara.org/en/videos/eCMj3Krr59Ft/info/codeorg-60-second-teaser/)
-
 ## Hour of Code (w/ Angry Birds, Plants vs. Zombies, and Scrat the squirrel from Ice Age)
 * [Introduction](http://amara.org/en/videos/SZoroOUK8zkp/info/hour-of-code-introduction/)
 * [Mark Zuckerburg teaches repeat loops](http://amara.org/en/videos/vKJqKVtk9Zti/info/hour-of-code-mark-zuckerburg-teaches-repeat-loops/)
@@ -28,6 +19,11 @@ Translations for video captions are done through Amara. To get started, choose a
 * [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
 * [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
 
+## Disney Infinity Play Lab
+* [Introduction](http://amara.org/en/videos/SIhQst12ka1L/info/disney-infinity-play-lab-intro/)
+* [Events](http://amara.org/en/videos/P4syLLr3joJI/info/disney-infinity-play-lab-events/)
+* [Repeat Forever](http://amara.org/en/videos/hexczH6nduwt/info/disney-infinity-play-lab-repeat/)
+
 ## Other tutorial videos
 * [Play Lab Introduction](http://amara.org/en/videos/VKgG3K3YVk9M/info/play-lab-intro-video/)
 * [Play Lab Events](http://amara.org/en/videos/doW6obfLQvlH/info/play-lab-hour-of-code-events/)
@@ -39,6 +35,15 @@ Translations for video captions are done through Amara. To get started, choose a
 * [JR Hildebrand introduces the artist level](http://amara.org/en/videos/0rqdXW3t5fgc/info/jr-hildebrand-introduces-the-artist-level/)
 * [Brina Lee teaches functions](http://amara.org/en/videos/I0rQG2WFdkx9/info/brina-lee-teaches-functions/)
 * [Trina Roy teaches counter loops](http://amara.org/en/videos/yDs0YaE9cv2D/info/trina-roy-teaches-counter-loops/)
+
+## Social
+* [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
+* [The Hour of Code is Here](http://amara.org/en/videos/OuklhBeGw70l/info/learn-what-most-schools-dont-teach/)
+* [The Hour of Code Worldwide](http://amara.org/en/videos/PEMFKS2tBCRq/info/the-hour-of-code-worldwide/)
+* [100M Hours of Code](https://www.amara.org/en/videos/xQpx2un1e9zN/info/100m-hours-of-code/)
+* [President Obama does the Hour of Code](http://amara.org/en/videos/TC5deIQmfUan/info/president-obama-does-the-hour-of-code/)
+* [President Obama calls on America](http://amara.org/en/videos/HuSjzut36AWC/info/president-obama-calls-on-every-american-to-learn-code/)
+* [Anybody can learn - 60 second teaser](http://amara.org/en/videos/eCMj3Krr59Ft/info/codeorg-60-second-teaser/)
 
 ## Unplugged Activities
 * [What is Computer Science?](http://amara.org/en/videos/z4RreIjZTsMq/info/what-is-computer-science-unplugged-activity/)

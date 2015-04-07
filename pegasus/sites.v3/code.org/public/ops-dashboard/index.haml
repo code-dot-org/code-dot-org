@@ -485,9 +485,16 @@ title: "Ops Dashboard"
       $scope.del = function(teacher) { // note -- IE doesn't like it when you name things 'delete'
         cohortsService.removeTeacher({id: $scope.cohort.id, teacher_id: teacher.id}).$promise.then(
           function() {
-            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1);
+            $scope.cohort.deleted_teachers.push(teacher);
           }
         ).catch($scope.genericError);
+      };
+
+      $scope.undelete = function(teacher) {
+        $scope.cohort.teachers.push(teacher);
+        $scope.cohort.deleted_teachers.splice($scope.cohort.teachers.indexOf(teacher), 1);
+        teacher.editing = true;
       };
 
       $scope.cancel = function(teacher) {

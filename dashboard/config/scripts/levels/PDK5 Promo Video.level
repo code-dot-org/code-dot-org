@@ -1,0 +1,13 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-02-24T19:06:26.000Z",
+  "properties": {
+    "title": "Code Studio: Kid tested, Teacher approved",
+    "markdown": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rNIM1fzJ8u0\" frameborder=\"0\" allowfullscreen></iframe>\n\n### What are your first impressions of Code Studio?\n",
+    "content1": "My first impressions of Code Studio are...",
+    "placeholder": "My first impressions of Code Studio are..."
+  },
+  "md5": "dc02ea9fa64c21483ba5425a8d200d23"
+}]]></config>
+</TextMatch>

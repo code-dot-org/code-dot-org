@@ -1,0 +1,22 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-24T21:13:25.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Are you ready to move on?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes",
+        "correct": true
+      }
+    ],
+    "title": "Writing your first computer program!",
+    "markdown": "The basics of computer science are about sequence. We want to find the right sequence of instructions to tell the computer what to do. Watch this video below which explains the very first program that students write in Course 1. Then, on the next page, you'll get to write your own program that's very similar. \n\n<iframe width=\"426\" height=\"260\" src=\"https://www.youtube.com/embed/7gvqTj4V9o0\" frameborder=\"0\" allowfullscreen></iframe>\n\n\n"
+  },
+  "md5": "c83902ffc3619b1c0f79ad07f3c8deee"
+}]]></config>
+</Multi>
