@@ -196,7 +196,6 @@ NetSimLobby.prototype.render = function () {
         this.onConnectButtonClick_.bind(this)
     );
   }
-
 };
 
 NetSimLobby.prototype.setDisplayName = function (displayName) {
@@ -276,7 +275,16 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
 };
 
 NetSimLobby.prototype.addRouterToLobby = function () {
-  this.connection_.addRouterToLobby();
+  NetSimRouterNode.create(this.shard_, function (err, router) {
+    if (err) {
+      return;
+    }
+
+    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
+    router.memory = this.levelConfig_.defaultRouterMemory;
+    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    router.update(function () {});
+  }.bind(this));
 };
 
 /**
