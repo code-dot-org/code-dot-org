@@ -13,8 +13,15 @@ var NodeType = require('./netsimConstants').NodeType;
  * @property {string} status
  */
 
-var showClients = level.showClientsInLobby;
-var showRouters = level.showRoutersInLobby;
+/**
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ * @private
+ */
+var isSelectedNode = function (node) {
+  return node && selectedNode &&
+      node.entityID === selectedNode.entityID;
+};
 
 /**
  * For use with Array.prototype.filter()
@@ -22,6 +29,8 @@ var showRouters = level.showRoutersInLobby;
  * @returns {boolean}
  */
 var shouldShowNodeType = function (node) {
+  var showClients = level.showClientsInLobby;
+  var showRouters = level.showRoutersInLobby;
   var nodeType = node.getNodeType();
   return (nodeType === NodeType.CLIENT && showClients) || (nodeType == NodeType.ROUTER && showRouters);
 };
@@ -126,5 +135,5 @@ var lobbyRows = nodesOnShard
     }
     %>
   </ul>
-  <input type="button" id="netsim_lobby_connect" value="Connect" />
+  <input type="button" id="netsim_lobby_connect" value="Connect" <% if (!selectedNode) { %>disabled<% } %> />
 </div>

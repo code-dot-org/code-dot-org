@@ -14,9 +14,6 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
-var netsimNodeFactory = require('./netsimNodeFactory');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html');
 var NodeType = require('./netsimConstants').NodeType;
@@ -26,17 +23,19 @@ var NodeType = require('./netsimConstants').NodeType;
  *
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimShard} shard
+ * @param {NetSimNode[]} nodesOnShard
+ * @param {NetSimNode[]} nodesRequestingConnection
+ * @param {NetSimNode} selectedNode
  * @param {number} myNodeID
  * @param {function} addRouterCallback
- * @param {function} connectToRouterCallback
- * @param {function} connectToClientCallback
+ * @param {function} selectNodeCallback
+ * @param {function} connectButtonCallback
  * @constructor
  * @augments NetSimPanel
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
-    levelConfig, shard, myNodeID, addRouterCallback,
-    connectToRouterCallback, connectToClientCallback) {
+    levelConfig, nodesOnShard, nodesRequestingConnection, selectedNode,
+    myNodeID, addRouterCallback, selectNodeCallback, connectButtonCallback) {
   /**
    * @type {netsimLevelConfiguration}
    * @private
@@ -44,38 +43,31 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.levelConfig_ = levelConfig;
 
   /**
-   * A reference to the currently connected shard.
-   * @type {?NetSimShard}
+   * @type {NetSimNode[]}
    * @private
    */
-  this.shard_ = shard;
+  this.nodesOnShard_ = nodesOnShard;
+
+  /**
+   * @type {NetSimNode[]}
+   * @private
+   */
+  this.nodesRequestingConnection_ = nodesRequestingConnection;
+
+  /**
+   * Which node in the lobby is currently selected
+   * @type {NetSimNode}
+   * @private
+   */
+  this.selectedNode_ = selectedNode;
 
   this.myNodeID_ = myNodeID;
 
   this.addRouterCallback_ = addRouterCallback;
 
-  this.connectToRouterCallback_ = connectToRouterCallback;
+  this.selectNodeCallback_ = selectNodeCallback;
 
-  this.connectToClientCallback_ = connectToClientCallback;
-
-  /**
-   * @type {NetSimNode[]}
-   * @private
-   */
-  this.nodesOnShard_ = [];
-
-  /**
-   * @type {NetSimNode[]}
-   * @private
-   */
-  this.nodesRequestingConnection_ = [];
-
-  /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimClientNode|NetSimRouterNode}
-   * @private
-   */
-  this.selectedNode_ = null;
+  this.connectButtonCallback_ = connectButtonCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -83,17 +75,6 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     panelTitle: i18n.lobby(),
     canMinimize: false
   });
-
-  // Hook up listeners
-  this.nodeTableKey_ = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-  this.wireTableKey_ = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
-
-  // Trigger a node table read, which should refresh the lobby contents.
-  this.shard_.nodeTable.readAll(function (err, rows) {
-    this.onNodeTableChange_(rows);
-  }.bind(this));
 };
 NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
 
@@ -109,9 +90,9 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     level: this.levelConfig_,
     nodesOnShard: this.nodesOnShard_,
     nodesRequestingConnection: this.nodesRequestingConnection_,
+    selectedNode: this.selectedNode_,
     canConnectToNode: this.canConnectToNode_.bind(this),
-    isMyNode: this.isMyNode_.bind(this),
-    isSelectedNode: this.isSelectedNode_.bind(this)
+    isMyNode: this.isMyNode_.bind(this)
   }));
   this.getBody().html(newMarkup);
 
@@ -122,8 +103,6 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.connectButton_.click(this.connectButtonClick_.bind(this));
 
   this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
-
-  this.onSelectionChange();
 };
 
 /** Handler for clicking the "Add Router" button. */
@@ -133,45 +112,7 @@ NetSimRemoteNodeSelectionPanel.prototype.addRouterButtonClick_ = function () {
 
 /** Handler for clicking the "Connect" button. */
 NetSimRemoteNodeSelectionPanel.prototype.connectButtonClick_ = function () {
-  if (!this.selectedNode_) {
-    return;
-  }
-
-  if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.connectToRouterCallback_(this.selectedNode_);
-  } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.connectToClientCallback_(this.selectedNode);
-  }
-};
-
-/**
- * Called whenever a change is detected in the nodes table - which should
- * trigger a refresh of the lobby listing
- * @param {!Array} rows
- * @private
- */
-NetSimRemoteNodeSelectionPanel.prototype.onNodeTableChange_ = function (rows) {
-  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
-  this.render();
-};
-
-/**
- * Called whenever a change is detected in the wires table.
- * @param {!Array} rows
- * @private
- */
-NetSimRemoteNodeSelectionPanel.prototype.onWireTableChange_ = function (rows) {
-  this.nodesRequestingConnection_ = rows.filter(function (wireRow) {
-    return wireRow.remoteNodeID === this.myNodeID_;
-  }).map(function (wireRow) {
-    return _.find(this.nodesOnShard_, function (node) {
-      return node.entityID === wireRow.localNodeID;
-    });
-  }.bind(this)).filter(function (node) {
-    // In case the wire table change comes in before the node table change.
-    return node !== undefined;
-  });
-  this.render();
+  this.connectButtonCallback_();
 };
 
 /**
@@ -185,23 +126,17 @@ NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
     return node.entityID === nodeID;
   });
 
-  // Don't even allow selection of nodes we can't connect to.
+  // Don't even allow clicking on nodes we can't connect to.
   if (!clickedNode || !this.canConnectToNode_(clickedNode)) {
     return;
   }
 
-  // Deselect old row
-  var oldSelectedNode = this.selectedNode_;
-  this.selectedNode_ = null;
-  this.getBody().find('.selected-row').removeClass('selected-row');
-
-  // If we clicked on a different row, select the new row
-  if (!oldSelectedNode || clickedNode.entityID !== oldSelectedNode.entityID) {
-    this.selectedNode_ = clickedNode;
-    target.addClass('selected-row');
+  // If the selected node was clicked, we want to deselect.
+  if (this.selectedNode_ && this.selectedNode_.entityID === clickedNode.entityID) {
+    this.selectNodeCallback_(null);
+  } else {
+    this.selectNodeCallback_(clickedNode);
   }
-
-  this.onSelectionChange();
 };
 
 /**
@@ -234,19 +169,3 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode_ = function (connectio
       this.levelConfig_.canConnectToRouters &&
       connectionTarget.getNodeType() === NodeType.ROUTER );
 };
-
-/**
- * @param {NetSimNode} node
- * @returns {boolean}
- * @private
- */
-NetSimRemoteNodeSelectionPanel.prototype.isSelectedNode_ = function (node) {
-  return node && this.selectedNode_ &&
-      node.entityID === this.selectedNode_.entityID;
-};
-
-/** Handler for selecting/deselecting a row in the lobby listing. */
-NetSimRemoteNodeSelectionPanel.prototype.onSelectionChange = function () {
-  this.connectButton_.attr('disabled', (this.selectedNode_ === null));
-};
-
