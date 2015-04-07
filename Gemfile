@@ -15,6 +15,7 @@ gem 'os'
 gem 'redis', '~> 3.1.0'
 gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
+gem 'parallel'
 
 group :development do
   gem 'rerun', '~> 0.10.0'
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
-  gem 'parallel'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'minitest-reporters'
