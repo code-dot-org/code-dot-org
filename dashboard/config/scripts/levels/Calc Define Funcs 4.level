@@ -21,7 +21,9 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "input_output_table": "[[2,1],[4,2],[21,10.5],[32.5,16.25]]"
   },
   "md5": "211daeab961c5e27fa4710b5b0a350a9"
 }]]></config>

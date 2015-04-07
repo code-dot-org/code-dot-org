@@ -1,0 +1,28 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "This time, which boy is the <large>driver</large>?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/multis/helper.jpg",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/multis/driver.jpg",
+        "correct": true
+      }
+    ],
+    "title": "Driver and Helper",
+    "content1": "/script_assets/multis/driver_helper.jpg",
+    "content2": "One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.",
+    "height": "170"
+  },
+  "md5": "3394c40b562da7818507791c24250a34"
+}]]></config>
+</Multi>

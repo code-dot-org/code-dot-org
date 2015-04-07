@@ -38,7 +38,9 @@
     "definition_highlight": "false",
     "definition_collapse": "true",
     "custom_game_type": "Rocket Height",
-    "maze_data": null
+    "disable_examples": "false",
+    "maze_data": null,
+    "input_output_table": "[[1,10],[2,40],[3,90],[4,160]]"
   },
   "md5": "eb1f78c51cdced74910db01a7fa02c56"
 }]]></config>

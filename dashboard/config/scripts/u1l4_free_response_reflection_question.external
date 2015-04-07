@@ -1,0 +1,12 @@
+name 'U1L4 Free response reflection question'
+title 'Reflection: Bit-Sending Widget'
+content1 'Reflect after using the bit-sending widget'
+placeholder 'Enter your reflection here.'
+
+
+markdown <<MARKDOWN
+Summarize what they have learned in the lesson by recording their responses to these three questions.
+WHAT?—What have you learned?
+SO WHAT?—What difference does it make?
+NOW WHAT?—What can you do with this information?
+MARKDOWN
