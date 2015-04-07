@@ -40,6 +40,7 @@ module Ops
       # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
       unless current_user.admin?
         @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+        @cohort.deleted_teachers = @cohort.deleted_teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
         @cohort.cohorts_districts = @cohort.cohorts_districts.where(district_id: current_user.district_as_contact.id)
       end
 
