@@ -1,0 +1,130 @@
+<%
+var utils = require('../utils');
+var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
+var NodeType = require('./netsimConstants').NodeType;
+
+
+/**
+ * @typedef {Object} rowMetadata
+ * @property {number} nodeID
+ * @property {string} classAttr
+ * @property {string} displayName
+ * @property {string} status
+ */
+
+var showClients = level.showClientsInLobby;
+var showRouters = level.showRoutersInLobby;
+
+/**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ */
+var shouldShowNodeType = function (node) {
+  var nodeType = node.getNodeType();
+  return (nodeType === NodeType.CLIENT && showClients) || (nodeType == NodeType.ROUTER && showRouters);
+};
+
+/**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ */
+var omitNodesRequestingConnection = function (node) {
+  return undefined === _.find(nodesRequestingConnection, function (connectionRequestNode) {
+        return connectionRequestNode.entityID === node.entityID;
+      });
+};
+
+/**
+ * For use with Array.prototype.map()
+ * @param {NetSimNode} node
+ * @returns {rowMetadata}
+ */
+var nodeToRowMetadata = function (node) {
+  var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
+
+  if (isMyNode(node)) {
+    classes.push('own-row');
+  }
+
+  if (canConnectToNode(node)) {
+    classes.push('selectable-row');
+  }
+
+  if (isSelectedNode(node)) {
+    classes.push('selected-row');
+  }
+
+  return {
+    nodeID: node.entityID,
+    classAttr: classes.join(' '),
+    displayName: node.getDisplayName(),
+    status: node.getStatus() + ' ' + node.getStatusDetail()
+  };
+};
+
+/**
+ * For use with Array.prototype.sort()
+ * @param {rowMetadata} a
+ * @param {rowMetadata} b
+ * @returns {number}
+ */
+var displayNameSort = function (a, b) {
+  return (a.displayName > b.displayName) ? 1 : -1;
+};
+
+var requestRows = nodesRequestingConnection
+    .filter(shouldShowNodeType)
+    .map(nodeToRowMetadata)
+    .sort(displayNameSort);
+
+var lobbyRows = nodesOnShard
+    .filter(shouldShowNodeType)
+    .filter(omitNodesRequestingConnection)
+    .map(nodeToRowMetadata)
+    .sort(displayNameSort);
+%>
+<div class="content-wrap">
+  <% if (requestRows.length > 0) { %>
+  <strong><%= i18n.connectionRequests() %></strong>
+  <ul id="netsim_connection_requests" class="netsim-lobby-list">
+    <%
+    requestRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+    %>
+  </ul>
+  <% } %>
+
+  <ul id="netsim_lobby_list" class="netsim-lobby-list">
+    <%
+
+    lobbyRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+
+    if (level.showAddRouterButton) {
+    %>
+    <li class="empty-row">
+      <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+    </li>
+    <%
+    } else if (lobbyRows.length === 0) {
+    %>
+    <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
+    <%
+    }
+    %>
+  </ul>
+  <input type="button" id="netsim_lobby_connect" value="Connect" />
+</div>

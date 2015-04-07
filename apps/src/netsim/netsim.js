@@ -23,7 +23,6 @@ var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');
 var DashboardUser = require('./DashboardUser');
-var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimSendPanel = require('./NetSimSendPanel');
@@ -230,21 +229,15 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
       this.connection_);
 
-  // Shard selection panel: Controls for setting display name and picking
-  // a section, if they aren't set automatically.
-  this.shardSelector_ = new NetSimShardSelectionPanel(
-      $('.shard-selection-panel'),
-      this.getUniqueLevelKey(),
-      this.connection_,
-      user,
-      this.getOverrideShardID()
-  );
-
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
       $('.lobby-panel'),
       this.level,
-      this.connection_);
+      this.connection_, {
+        user: user,
+        levelKey: this.getUniqueLevelKey(),
+        sharedShardSeed: this.getOverrideShardID()
+      });
 
   // Tab panel - contains instructions, my device, router, dns
   if (this.shouldShowAnyTabs()) {
@@ -559,11 +552,10 @@ NetSim.prototype.render = function () {
     remoteNodeName = this.myConnectedRouter_.getDisplayName();
   }
 
-  shareLink = this.shardSelector_.getShareLink();
+  shareLink = this.lobby_.getShareLink();
 
   // Render left column
   if (this.mainContainer_.find('.leftcol_disconnected').is(':visible')) {
-    this.shardSelector_.render();
     this.lobby_.render();
   }
 
