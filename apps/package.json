@@ -4,8 +4,7 @@
   "description": "Code Studio module package build/test harness",
   "private": true,
   "config": {
-    "port": "8000",
-    "appsOutput": "./build/package/",
+    "output": "./build/package/",
     "stylesheets": [
       "./style/*.scss"
     ],
@@ -13,6 +12,7 @@
       "./static/**/*",
       "./lib/blockly/media/**/*"
     ],
+    "port": "8000",
     "apps": [
       "maze",
       "turtle",

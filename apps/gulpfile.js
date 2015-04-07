@@ -10,11 +10,11 @@ gulp.task('build', ['bundle-js', 'messages']);
 var newer = require('gulp-newer');
 var rename = require("gulp-rename");
 
-// Convert npm-style package-config array entries to the original array
 function configString(id) {
   return process.env['npm_package_config_'+id];
 }
 
+// Convert npm-style package-config array entries to the original array
 function configArray(id) {
   var item = null,
     i = 0,
@@ -27,7 +27,7 @@ function configArray(id) {
 }
 
 var APPS = configArray('apps');
-var APPS_OUTPUT = configString('appsOutput');
+var APPS_OUTPUT = configString('output');
 
 var JS_OUTPUT = APPS_OUTPUT + 'js/';
 var appFilesSrc = [];

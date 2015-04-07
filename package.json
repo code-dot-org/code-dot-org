@@ -9,11 +9,12 @@
   },
   "scripts": {
     "gulp": "FORCE_COLOR=true gulp --cwd=. --gulpfile=lib/frontend/gulpfile.js",
-    "start": "npm run gulp -- dev & (cd apps && npm start)",
+    "start": "cd shared/js/example && npm start",
     "prepublish": "npm run gulp -- build"
   },
   "devDependencies": {
     "@cdo/apps-build": "0.0.1",
+    "@cdo/example": "0.0.1",
     "browserify": "^9.0.2",
     "chalk": "^1.0.0",
     "event-stream": "^3.1.7",
