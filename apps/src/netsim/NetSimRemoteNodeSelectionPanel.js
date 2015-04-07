@@ -26,7 +26,7 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {NetSimNode[]} nodesOnShard
  * @param {NetSimNode[]} nodesRequestingConnection
  * @param {NetSimNode} selectedNode
- * @param {NetSimWire} outgoingWire
+ * @param {NetSimNode} remoteNode - null if not attempting to connect
  * @param {number} myNodeID
  * @param {function} addRouterCallback
  * @param {function} selectNodeCallback
@@ -37,7 +37,7 @@ var NodeType = require('./netsimConstants').NodeType;
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     levelConfig, nodesOnShard, nodesRequestingConnection, selectedNode,
-    outgoingWire, myNodeID, addRouterCallback, selectNodeCallback,
+    remoteNode, myNodeID, addRouterCallback, selectNodeCallback,
     connectButtonCallback, cancelButtonCallback) {
   /**
    * @type {netsimLevelConfiguration}
@@ -65,10 +65,10 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.selectedNode_ = selectedNode;
 
   /**
-   * @type {NetSimWire}
+   * @type {NetSimNode}
    * @private
    */
-  this.outgoingWire_ = outgoingWire;
+  this.remoteNode_ = remoteNode;
 
   this.myNodeID_ = myNodeID;
 
@@ -102,7 +102,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     nodesOnShard: this.nodesOnShard_,
     nodesRequestingConnection: this.nodesRequestingConnection_,
     selectedNode: this.selectedNode_,
-    outgoingWire: this.outgoingWire_,
+    remoteNode: this.remoteNode_,
     canConnectToNode: this.canConnectToNode_.bind(this),
     isMyNode: this.isMyNode_.bind(this)
   }));

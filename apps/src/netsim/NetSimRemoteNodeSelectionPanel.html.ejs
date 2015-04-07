@@ -58,7 +58,7 @@ var nodeToRowMetadata = function (node) {
     classes.push('own-row');
   }
 
-  if (!outgoingWire && canConnectToNode(node)) {
+  if (!remoteNode && canConnectToNode(node)) {
     classes.push('selectable-row');
   }
 
@@ -122,7 +122,7 @@ var lobbyRows = nodesOnShard
     <%
     });
 
-    if (!outgoingWire && level.showAddRouterButton) {
+    if (!remoteNode && level.showAddRouterButton) {
     %>
     <li class="empty-row">
       <input type="button" id="netsim_lobby_add_router" value="Add Router" />
@@ -135,8 +135,8 @@ var lobbyRows = nodesOnShard
     }
     %>
   </ul>
-  <% if (outgoingWire) { %>
-    <p>Waiting for __TODO_FIND_NODE_NAME__ to connect... <input type="button" id="netsim_lobby_cancel" value="Cancel" /></p>
+  <% if (remoteNode) { %>
+    <p>Waiting for <%= remoteNode.getDisplayName() %> to connect... <input type="button" id="netsim_lobby_cancel" value="Cancel" /></p>
   <% } else { %>
     <input type="button" id="netsim_lobby_connect" value="Connect" <% if (!selectedNode) { %>disabled<% } %> />
   <% } %>

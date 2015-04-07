@@ -292,6 +292,15 @@ NetSimConnection.prototype.connectToRouter = function (routerID) {
   });
 };
 
+NetSimConnection.prototype.disconnectFromRemote = function () {
+  if (this.isConnectedToRouter()) {
+    this.disconnectFromRouter();
+    return;
+  }
+
+  this.myNode.disconnectRemote(function () {});
+};
+
 /**
  * Disconnects our client node from the currently connected router node.
  * Destroys the shared wire.
