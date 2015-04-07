@@ -78,7 +78,7 @@ class User < ActiveRecord::Base
       user.invited_by = invited_by_user
     end
 
-    user.update!(params)
+    user.update!(params.merge(user_type: TYPE_TEACHER))
 
     user.permission = UserPermission::DISTRICT_CONTACT
     user.save!
@@ -97,7 +97,7 @@ class User < ActiveRecord::Base
       user.invited_by = invited_by_user
     end
 
-    user.update!(params)
+    user.update!(params.merge(user_type: TYPE_TEACHER))
     user
   end
 
@@ -175,7 +175,23 @@ class User < ActiveRecord::Base
     update(admin: true) if Mail::Address.new(email).domain.try(:downcase) == 'code.org'
   end
 
-  before_save :hash_email, :hide_email_for_younger_users # order is important here ;)
+  before_save :dont_reconfirm_emails_that_match_hashed_email
+  def dont_reconfirm_emails_that_match_hashed_email
+    # we make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
+  end
+
+  before_save :make_teachers_21, :dont_reconfirm_emails_that_match_hashed_email, :hash_email, :hide_email_for_younger_users # order is important here ;)
+
+  def make_teachers_21
+    return unless user_type == TYPE_TEACHER
+    self.age = 21
+  end
 
   def User.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
