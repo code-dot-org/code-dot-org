@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which shape is made by this loop?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png",
+        "correct": false
+      }
+    ],
+    "title": "Artist Loops Multiple Choice",
+    "content1": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500",
+    "height": "160"
+  },
+  "md5": "a16dca079e3e582f238aea489dbaeffd"
+}]]></config>
+</Multi>

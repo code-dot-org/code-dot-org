@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which arrow gets the Flurb to the treasure?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/up.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/down.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/left.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/right.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png",
+    "height": "100"
+  },
+  "md5": "1fa9c81771726d256eab5d310403e9ec"
+}]]></config>
+</Multi>
