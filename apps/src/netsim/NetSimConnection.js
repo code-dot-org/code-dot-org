@@ -32,12 +32,6 @@ var logger = NetSimLogger.getSingleton();
  * @constructor
  */
 var NetSimConnection = module.exports = function (options) {
-  /**
-   * Display name for user on local end of connection, to be uploaded to others.
-   * @type {string}
-   * @private
-   */
-  this.displayName_ = '';
 
   /**
    * @type {netsimLevelConfiguration}
@@ -130,11 +124,6 @@ NetSimConnection.prototype.tick = function (clock) {
     this.shard_.tick(clock);
     this.shardCleaner_.tick(clock);
   }
-};
-
-/** @returns {NetSimLogger} */
-NetSimConnection.prototype.getLogger = function () {
-  return logger;
 };
 
 /**
