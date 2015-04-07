@@ -14,6 +14,9 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
+var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimClientNode = require('./NetSimClientNode');
+var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 var markup = require('./NetSimLobby.html');
@@ -78,6 +81,28 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
   // --- Subcomponents ---
   this.shardSelectionPanel_ = null;
   this.nodeSelectionPanel_ = null;
+
+  // --- Cached simulation state ---
+
+  /**
+   * @type {NetSimShard}
+   * @private
+   */
+  this.shard_ = null;
+
+  /**
+   * @type {NetSimLocalClientNode}
+   * @private
+   */
+  this.myNode_ = null;
+
+  /**
+   * Storage for ObservableEvent registration keys, to make sure we
+   * can unregister as needed.
+   * @type {Object}
+   */
+  this.eventKeys = {};
+
   // --- Component state ---
 
   /**
@@ -100,6 +125,25 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
    */
   this.selectedShardID_ = undefined;
 
+  /**
+   * @type {NetSimNode[]}
+   * @private
+   */
+  this.nodesOnShard_ = [];
+
+  /**
+   * @type {NetSimNode[]}
+   * @private
+   */
+  this.nodesRequestingConnection_ = [];
+
+  /**
+   * Which node in the lobby is currently selected
+   * @type {NetSimClientNode|NetSimRouterNode}
+   * @private
+   */
+  this.selectedNode_ = null;
+
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -111,14 +155,17 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, connection,
     this.buildShardChoiceList_([], options.sharedShardSeed);
   }
 
+  // Initial render
   this.render();
+
+  // Register for events
+  this.connection_.shardChange.register(this.onShardChange_.bind(this));
 };
 
 /**
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
-
   // Add our own content markup
   var newMarkup = $(markup({}));
   this.rootDiv_.html(newMarkup);
@@ -134,15 +181,19 @@ NetSimLobby.prototype.render = function () {
       this.setShardID.bind(this)
   );
 
-  if (this.connection_.isConnectedToShard()) {
+  // Node selection panel: The lobby list of who we can connect to, and
+  // controls for picking one and connecting.
+  if (this.shard_) {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_.find('.remote-node-select'),
         this.levelConfig_,
-        this.connection_.shard_,
-        this.connection_.myNode.entityID,
+        this.nodesOnShard_,
+        this.nodesRequestingConnection_,
+        this.selectedNode_,
+        this.myNode_.entityID,
         this.addRouterToLobby.bind(this),
-        this.connectToRouter.bind(this),
-        this.connectToClient.bind(this)
+        this.selectNode.bind(this),
+        this.onConnectButtonClick_.bind(this)
     );
   }
 
@@ -168,17 +219,117 @@ NetSimLobby.prototype.setShardID = function (shardID) {
   }
 };
 
+/**
+ * @param {NetSimShard} shard
+ * @param {NetSimLocalClientNode} myNode
+ * @private
+ */
+NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
+  // TODO: Should this propagate back into our UI, yet?
+
+  // Unregister old handlers
+  if (this.eventKeys.nodeTable) {
+    this.shard_.nodeTable.tableChange.unregister(this.eventKeys.nodeTable);
+  }
+  if (this.eventKeys.wireTable) {
+    this.shard_.wireTable.tableChange.unregister(this.eventKeys.wireTable);
+  }
+
+  this.shard_ = shard;
+  this.myNode_ = myNode;
+
+  if (!this.shard_) {
+    // If we disconnected, just clear our lobby data
+    this.nodesOnShard_.length = 0;
+    this.nodesRequestingConnection_.length = 0;
+    return;
+  }
+
+  // Register for events
+  this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
+      this.onNodeTableChange_.bind(this));
+  this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
+      this.onWireTableChange_.bind(this));
+
+  // Trigger a forced read of the node table
+  this.fetchInitialLobbyData_();
+
+};
+
+/**
+ * Upon connecting to a new shard, we need to trigger a manual read of the
+ * node and wire tables to ensure our lobby listing is correct.  Otherwise we'd
+ * have to wait until a change was detected in one of those tables.
+ * @private
+ */
+NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
+  this.shard_.nodeTable.readAll(function (err, rows) {
+    if (!err) {
+      this.onNodeTableChange_(rows);
+      this.shard_.wireTable.readAll(function (err, rows) {
+        if (!err) {
+          this.onWireTableChange_(rows);
+        }
+      }.bind(this));
+    }
+  }.bind(this));
+};
+
 NetSimLobby.prototype.addRouterToLobby = function () {
   this.connection_.addRouterToLobby();
 };
 
-NetSimLobby.prototype.connectToRouter = function (router) {
-  this.connection_.connectToRouter(router.entityID);
+/**
+ * @param {NetSimNode} node
+ */
+NetSimLobby.prototype.selectNode = function (node) {
+  this.selectedNode_ = node;
+  this.render();
 };
 
-NetSimLobby.prototype.connectToClient = function (client) {
-  this.connection_.connectToClient(client);
+/** Handler for clicking the "Connect" button. */
+NetSimLobby.prototype.onConnectButtonClick_ = function () {
+  if (!this.selectedNode_) {
+    return;
+  }
+
+  if (this.selectedNode_ instanceof NetSimRouterNode) {
+    this.connection_.connectToRouter(this.selectedNode_.entityID);
+  } else if (this.selectedNode_ instanceof NetSimClientNode) {
+    this.connection_.connectToClient(this.selectedNode_);
+  }
 };
+
+/**
+ * Called whenever a change is detected in the nodes table - which should
+ * trigger a refresh of the lobby listing
+ * @param {!Array} rows
+ * @private
+ */
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  this.render();
+};
+
+/**
+ * Called whenever a change is detected in the wires table.
+ * @param {!Array} rows
+ * @private
+ */
+NetSimLobby.prototype.onWireTableChange_ = function (rows) {
+  this.nodesRequestingConnection_ = rows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.myNode_.entityID;
+  }.bind(this)).map(function (wireRow) {
+    return _.find(this.nodesOnShard_, function (node) {
+      return node.entityID === wireRow.localNodeID;
+    });
+  }.bind(this)).filter(function (node) {
+    // In case the wire table change comes in before the node table change.
+    return node !== undefined;
+  });
+  this.render();
+};
+
 
 /**
  * Send a request to dashboard and retrieve a JSON array listing the
