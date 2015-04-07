@@ -187,11 +187,20 @@ th a:link, th a:visited, th a:hover, th a:active {
   text-decoration: underline;
 }
 
+/* homepage 2.0.. */
+
+.clear {
+  clear: both;
+}
+
 @media screen and (min-width: 971px) {
   .homepage-caption-bottom {
     top:200px;
   }
 }
+
+
+/* ...end homepage 2.0 */
 
 #index #gap {
   height: 20px
