@@ -451,6 +451,19 @@ class UserTest < ActiveSupport::TestCase
     assert older_user.hashed_email
   end
 
+  test 'changing user to teacher saves email' do
+    student = create :user, age: 10, email: 'email@old.xx'
+
+    assert student.email.blank?
+    assert student.hashed_email
+
+    student.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    student.save!
+
+    assert_equal 'email@old.xx', student.email
+    assert_equal '21+', student.age
+  end
+
   test 'under 13' do
     user = create :user
     assert !user.under_13?
