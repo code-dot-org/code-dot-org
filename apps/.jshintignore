@@ -1,0 +1,7 @@
+src/node_modules/**
+.git/**
+node_modules/**
+src/canvg/**
+src/calc/js-numbers/js-numbers.js
+lib/**
+build/**

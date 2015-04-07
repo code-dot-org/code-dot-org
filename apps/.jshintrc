@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "node": true,
+  "globals": {
+    "Blockly": true,
+    "StudioApp": true,
+    "Maze": true,
+    "Turtle": true,
+    "Bounce": true
+  }
+}
