@@ -7,14 +7,23 @@
   "properties": {
     "skin": "calc",
     "use_contract_editor": "true",
-    "instructions": "Here's a function for Addition - it takes two numbers and returns their sum. Use this Addition block to add 3 + 6.",
+    "instructions": "Here's a function for Addition which takes two numbers and returns their sum. Use this Addition block to add 3 + 6.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "md5": "973ed5b135ccc6c7562a53409d0e28c4"
 }]]></config>
   <blocks>
     <start_blocks>

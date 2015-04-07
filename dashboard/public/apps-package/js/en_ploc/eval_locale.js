@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "!!-circle (radius, style, color)-!!"},
 "displayBlockTitle":function(d){return "!!-evaluate-!!"},
 "ellipseBlockTitle":function(d){return "!!-ellipse (width, height, style, color)-!!"},
-"extraTopBlocks":function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"display\" block?-!!"},
+"extraTopBlocks":function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?-!!"},
 "infiniteRecursionError":function(d){return "!!-Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.-!!"},
 "overlayBlockTitle":function(d){return "!!-overlay (top, bottom)-!!"},
 "placeImageBlockTitle":function(d){return "!!-place-image (x, y, image)-!!"},

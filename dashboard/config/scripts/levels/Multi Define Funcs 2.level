@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-03T22:24:43.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the name of the parameter?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "g",
+        "correct": false
+      },
+      {
+        "text": "y",
+        "correct": true
+      },
+      {
+        "text": "3",
+        "correct": false
+      }
+    ],
+    "title": "g(y) = y + 3"
+  },
+  "md5": "b6b9d1fe8575d44074576820700f8dbd"
+}]]></config>
+</Multi>

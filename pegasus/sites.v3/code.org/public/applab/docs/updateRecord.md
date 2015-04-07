@@ -19,7 +19,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, updates the provided `record` in `tableName`. `record` must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, updates the provided `record` in `tableName`. `record` must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called, and is passed the updated record as a parameter. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -39,16 +39,16 @@ ____________________________________________________
 //When 'Create' is clicked, add a new record to the table and write a confirmation to the display
 button("createButton", "1. Create record");
 onEvent("createButton", "click", function(event) {
-  createRecord("update_example1", {name:'Alice', age:19, food:"salad"}, function() {
-    write("Record created! Favorite food is salad. View data to see the record");
+  createRecord("update_example1", {name:'Alice', age:19, food:"salad"}, function(record) {
+    write("Record created! Favorite food is " + record.food + ". View data to see the record");
   });
 });
 
 //When 'Update' is clicked, update the record with id:1 from the table and write to the display
 button("updateButton", "2. Update record");
 onEvent("updateButton", "click", function(event) {
-  updateRecord("update_example1", {id:1, name: 'Alice', age:19, food:'bananas'}, function() {
-    write("Record updated! Favorite food is now bananas. Refresh the data to see the update!");
+  updateRecord("update_example1", {id:1, name: 'Alice', age:19, food:'bananas'}, function(record) {
+    write("Record updated! Food is now " + record.food + ". Refresh the data to see the update!");
   });
 });
 
@@ -74,8 +74,8 @@ When the app loads, create 4 records in the table
 var fruit = ["sushi", "apples", "oranges", "bananas"]
 
 for(var i = 0; i < fruit.length; i++){
-  createRecord("update_example2", {food: fruit[i]}, function() {
-    write("Record created! View data to see the record");
+  createRecord("update_example2", {food: fruit[i]}, function(record) {
+    write("Created: Id:" + record.id + " food:" + record.food + " View data to see the record");
   });
 }
 
@@ -96,7 +96,9 @@ value to be "pineapples"
 function updateSushi() {
   readRecords("update_example2", {food:"sushi"}, function(records) {
     for (var i =0; i < records.length; i++) {
-      updateRecord("update_example2", {id:records[i].id, food: "pineapples"}, function() {
+      var updatedRecord = records[i];
+      updatedRecord.food = "pineapples";
+      updateRecord("update_example2", updatedRecord, function(record) {
         write("Record updated! Refresh the data to see that sushi is replaced with pineapples");
       });
     }
@@ -113,7 +115,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-updateRecord(tableName, record, function(){
+updateRecord(tableName, record, function(record){
     //callback function code goes here
   });
 </pre>
@@ -128,14 +130,14 @@ updateRecord(tableName, record, function(){
 |-----------------|------|-----------|-------------|
 | tableName | string | Yes | The name of the table from which the records should be searched and read. |
 | record | object | Yes | To identify the record to be updated, a record object with the unique id column needs to be provided. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {id: 1, column1:"a string", column2:10, column3:[1,2,3,4]} |
-| callbackFunction | function | Yes | A function that is asynchronously called when the call to updateRecord() is finished.|
+| callbackFunction | function | Yes | A function that is asynchronously called when the call to updateRecord() is finished. The updated record is passed as a single parameter to this function. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. When `updateRecord()` is finished executing, `callbackFunction` is automatically called.
+No return value. When `updateRecord()` is finished executing, `callbackFunction` is automatically called with the updated record passed as a parameter.
 
 [/returns]
 

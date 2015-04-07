@@ -8,4 +8,4 @@ content1 'Ninjacat Demo Embed.level'
 wrong 'The unicorn moves across the screen'
 wrong "The unicorn's y value changes"
 wrong 'The unicorn moves to the left'
-right "The unicorn's x value changes"
+right "The unicorn's x value decreases"
