@@ -12,7 +12,7 @@ module Ops
       @district = @cohorts_district.district
     end
 
-    test 'District Contact can add teachers to a cohort' do
+    test 'district contact can add teachers to a cohort' do
       sign_in @district.contact
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
@@ -44,15 +44,17 @@ module Ops
       assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
-    test 'District Contact can drop teachers in their district from a cohort' do
+    test 'district contact can drop teachers in their district from a cohort' do
       sign_in @district.contact
-      assert_routing({ path: "#{API}/cohorts/1/teachers/2", method: :delete }, { controller: 'ops/cohorts', id: '1', teacher_id: '2', action: 'destroy_teacher' })
 
       @cohort.teachers << create(:teacher)
       @cohort.save!
 
-      assert_difference ->{@cohort.teachers.count}, -1 do
-        delete :destroy_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
+
+      assert_difference '@cohort.teachers.count', -1 do
+        assert_difference '@cohort.deleted_teachers.count', 1 do
+          delete :destroy_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
+        end
       end
       assert_response :success
 
@@ -64,7 +66,33 @@ module Ops
       assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
-    test 'District Contact cannot add/drop teachers in other districts' do
+    test 'district contact can re-add teachers in their district from deleted teachers' do
+      sign_in @district.contact
+
+      teacher = create(:teacher)
+      @cohort.deleted_teachers << teacher
+      @cohort.teachers << create(:teacher)
+      @cohort.teachers << create(:teacher)
+      @cohort.save!
+
+      teacher_params = (@cohort.teachers + [teacher]).map {|t| {ops_first_name: t.name, email: t.email, id: t.id}}
+
+      assert_difference '@cohort.teachers.count', 1 do # added to teachers
+        assert_difference '@cohort.deleted_teachers.count', -1 do # removed from deleted teachers
+          patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+        end
+      end
+      assert_response :success
+
+      assert !ActionMailer::Base.deliveries.empty?
+
+      # the notification to the ops team
+      mail = ActionMailer::Base.deliveries.last
+      assert_equal ['ops@code.org'], mail.to
+      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
+    end
+
+    test 'district contact cannot add/drop teachers in other districts' do
       sign_in @district.contact
       #87054720 (part 3)
       # todo
@@ -120,10 +148,15 @@ module Ops
 
       cohort.teachers << create(:teacher, district_id: cd.district.id)
       cohort.teachers << create(:teacher, district_id: invisible_cd.district.id)
+
+      cohort.deleted_teachers << create(:teacher, district_id: cd.district.id)
+      cohort.deleted_teachers << create(:teacher, district_id: cd.district.id)
+      cohort.deleted_teachers << create(:teacher, district_id: invisible_cd.district.id)
       cohort.save!
 
       cohort = cohort.reload
       assert_equal 2, cohort.teachers.count
+      assert_equal 3, cohort.deleted_teachers.count
 
       sign_in contact
 
@@ -138,6 +171,10 @@ module Ops
 
       # cohort has 2 teachers but we only see 1
       assert_equal 1, cohort_json['teachers'].count
+
+      # cohort has 3 deleted teachers but we only see 2
+      assert_equal 2, cohort_json['deleted_teachers'].count
+
     end
 
     test 'district contact cannot show cohorts without their district' do
