@@ -16,7 +16,7 @@ Participating teachers consistently call our professional development, "The best
 
 ## Clark County teachers:
 
-Code.org has partnered with Clark County School District. We're looking for more local teachers — in these districts and beyond — to join professional development programs.
+Code.org has partnered with Clark County School District. We're looking for more local teachers to join professional development programs.
 
 ### Grades K-5 (open to all elementary school teachers, in any district)
 

@@ -8,8 +8,8 @@ nav: pd_nav
 
 - [I'm attending Computer Science Principles PD](#csp)
 - [I'm attending Exploring Computer Science PD](#ecs)
-- [I'm attending CS in Algebra PD](#algebra)
-- [I'm attending CS in Science PD](#science)
+- [I'm attending Computer Science in Algebra PD](#algebra)
+- [I'm attending Computer Science in Science PD](#science)
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -17,10 +17,9 @@ nav: pd_nav
 **Phase 1: Online Introduction (~2 hours)**
 
 Need Content
-
-**Phase 2: Blended Summer Study**
-
-5 days in-person & ~8 hours online
+</br>
+</br>
+**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
 
@@ -46,19 +45,24 @@ Fort-Lauderdale-Davie, FL 33314
 NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
-Bottle of water
+Water Bottle
 <br />
 Snacks
 <br />
 Laptop not required, but you can bring if you'd like
 
-**Phase 3: Academic Year Development**
+</br>
+</br>
+**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
-4 Saturdays in-person & ~12 hours online
+More info coming soon!
 
-**Phase 4: Summer Wrap-up**
+</br>
+</br>
+**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
 
-3 days in-person - Summer 2016
+More info coming soon!
+
 
 [**Back to the top**](#top)
 
@@ -70,9 +74,9 @@ Laptop not required, but you can bring if you'd like
 
 Need Content
 
-**Phase 2: Blended Summer Study**
-
-5 days in-person & ~8 hours online
+</br>
+</br>
+**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
 
@@ -98,19 +102,23 @@ Fort-Lauderdale-Davie, FL 33314
 NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
-Bottle of water
+Water Bottle
 <br />
 Snacks
 <br />
 Laptop not required, but you can bring if you'd like
 
-**Phase 3: Academic Year Development**
+</br>
+</br>
+**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
-4 Saturdays in-person & ~12 hours online
+More info coming soon!
 
-**Phase 4: Summer Wrap-up**
+</br>
+</br>
+**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
 
-3 days in-person - Summer 2016
+More info coming soon!
 
 [**Back to the top**](#top)
 
@@ -123,9 +131,9 @@ Laptop not required, but you can bring if you'd like
 
 Need Content
 
-**Phase 2: Blended Summer Study**
-
-3 days in-person & ~8 hours online
+</br>
+</br>
+**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
 
@@ -151,15 +159,17 @@ Fort-Lauderdale-Davie, FL 33314
 NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
-Bottle of water
+Water Bottle
 <br />
 Snacks
 <br />
 Laptop not required, but you can bring if you'd like
 
-**Phase 3: Academic Year Development**
+</br>
+</br>
+**Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
 
-2 Saturdays in-person & ~10 hours online
+More info coming soon!
 
 [**Back to the top**](#top)
 
@@ -171,9 +181,9 @@ Laptop not required, but you can bring if you'd like
 
 Need Content
 
-**Phase 2: Blended Summer Study**
-
-3 days in-person & ~8 hours online
+</br>
+</br>
+**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
 
@@ -199,15 +209,18 @@ Fort-Lauderdale-Davie, FL 33314
 NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
-Bottle of water
+Water Bottle
 <br />
 Snacks
 <br />
 Laptop not required, but you can bring if you'd like
 
-**Phase 3: Academic Year Development**
+</br>
+</br>
+**Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
 
-2 Saturdays in-person & ~10 hours online
+More info coming soon!
+
 
 [**Back to the top**](#top)
 
