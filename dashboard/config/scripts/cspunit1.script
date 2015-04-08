@@ -1,5 +1,6 @@
 title 'CSP Unit 1: Digital Information'
-description_short "Make Black and White Images with the pixelation tool"
+description 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.'
+description_short "Explore how digital information is represented and transferred"
 
 stage "Innovation"
 level 'U1L1 Student Lesson Introduction'

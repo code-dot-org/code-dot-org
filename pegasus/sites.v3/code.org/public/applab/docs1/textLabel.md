@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates and displays a text label. The text label is used to display a description for the following input controls: radio buttons, check boxes, text inputs, and drop down lists. You associate a text label with the input control by specifying the input control's id in the for argument. You can also reference the input control by the specifid id.
+Creates and displays a text label. The text label is used to display a description for the following input controls: radio buttons, check boxes, text inputs, and drop down lists. You associate a text label with the input control by specifying the input control's id in the for argument. You can also reference the input control by the specified id.
 
 [/short_description]
 
@@ -46,20 +46,20 @@ ____________________________________________________
 <pre>
 textLabel("textInputLabel","Text Input:", "textInputCtrl");
 textInput("textInputCtrl","");
-write("<br>");
-textInput("checkBoxCtrl",false);
+write("&lt;br>");
+checkbox("checkBoxCtrl",false);
 textLabel("checkBoxLabel","Ok?", "checkBoxCtrl");
-write("<br>");
-textLabel("dropDownLabel","dropDown List ","dropDownCtrl");
-dropDown("dropDownCtrl","Option 1","Option 2","Option 3");
-write("<br>");
-radioButton("radioCtrl1","true","Option 1");
+write("&lt;br>");
+textLabel("dropdownLabel","dropdown List ","dropdownCtrl");
+dropdown("dropdownCtrl","Option 1","Option 2","Option 3");
+write("&lt;br>");
+radioButton("radioCtrl1","true","radioGroup");
 textLabel("radioLabel1","Radio 1","radioCtrl1");
-write("<br>");
-radioButton("radioCtrl2","true","Option 2");
+write("&lt;br>");
+radioButton("radioCtrl2","false","radioGroup");
 textLabel("radioLabel2","Radio 2","radioCtrl2");
-write("<br>");
-radioButton("radioCtrl3","true","Option 3");
+write("&lt;br>");
+radioButton("radioCtrl3","false","radioGroup");
 textLabel("radioLabel3","Radio 3","radioCtrl3");
 </pre>
 
@@ -99,6 +99,8 @@ No Return Value
 
 ### Tips
 You should always provide a label for your text input, radio button, check box, and drop down controls
+
+The textLabel can also be used in design mode.
 
 [/tips]
 

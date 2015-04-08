@@ -142,7 +142,6 @@
   stats_michael: '"<b>Nigdy</b> nie widziałem swoich uczniów tak podekscytowanych
     nauką." - Michael Clark, nauczyciel'
   studiobar_title: Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>
-  studiobar_title_nolink: Wykorzystaj Studio Kodowania
   studiobar_elementary_title: Kursy podstawowe
   studiobar_elementary_body: Nasze trzy nowe kursy dla K &#8209;5
   studiobar_hoc_title: Godzina Kodowania
@@ -157,28 +156,23 @@
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
   studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
+    podczas jednej godziny kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Jeśli potrafisz zmienić technologię, potrafisz zmienić świat.&rdquo;
+    Susan, CEO YouTubejeślijeśli
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Nie tylko graj na swoim telefonie,
+    zaprogramuj go.&rdquo;
+    Prezydent Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+    &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
+    potrzebują możliwości by uczyć się technologii komputerowej.&rdquo;
+    Sheryl, COO Facebook
+  homepage_hero_text_satya: '&ldquo;Informatyka może odblokować najlepsze możliwości
+    na świecie.&rdquo; Satya, CEO firmy Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
+    swojego życia&rdquo; Chris Bosh'
   homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
     mention, it's just plain fun.&rdquo; \n"
   homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
@@ -188,14 +182,14 @@
     know if you like or not before you try it.&rdquo;
   homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
     with programming.&rdquo; \n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \n"
+  homepage_hero_text_student5: '&ldquo;Informatyka nie jest dla kogoś innego. Jest
+    dla Ciebie, tutaj, teraz.&rdquo; '
   homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
     &mdash; \nall of which are essential in any career.&rdquo; \n"
   homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
     involved and participating.&rdquo; \n"
   homepage_slot_text_hoc: Godzina Kodowania
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Wszystkie nasze poradniki
   homepage_slot_text_course4: Course 4
@@ -203,32 +197,32 @@
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Obejrzyj wideo
   homepage_action_text_teachervideo: Obejrzyj wideo
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: Zacznij naukę dzisiaj
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: Podpisz naszą petycję &#x25BE;
   homepage_slot_text_title_hoc: Godzina kodowania
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Każdy może nauczyć się. Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Uczniowie
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_blurb_students: Poznaj nasze wszystkie samouczki
+  homepage_slot_text_link_codestudio: Wypróbuj Code Studio
+  homepage_slot_text_link_local: Znajdź klasę w okolicy
+  homepage_slot_text_link_othercourses: Pozostałe kursy online
+  homepage_slot_text_title_educators: Nauczyciele
+  homepage_slot_text_blurb_educators: Naucz twoich studentów
+  homepage_slot_text_link_k5: Kursy dla szkoły podstawowej
+  homepage_slot_text_link_fullcurriculum: Zobacz nasz cały program nauczania
+  homepage_slot_text_link_pd: Rozwój zawodowy
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_blurb_advocates: Wesprzyj naszą pracę
+  homepage_slot_text_link_stats: Zobacz statystyki
+  homepage_slot_text_link_buy: Kup T-shirt lub czapkę
+  homepage_slot_text_link_donate: Ofiaruj darowiznę
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org dziękuje za wsparcie
+  homepage_donors_seall: Zobacz wszystkich
   homepage_donors_donate: Podaruj
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
@@ -479,7 +473,7 @@
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Jak uczyć z Godziną kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
