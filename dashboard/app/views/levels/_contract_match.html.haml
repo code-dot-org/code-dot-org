@@ -22,7 +22,7 @@
 
 
   %div{style: 'display: none;'}
-    - ['badname', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
+    - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
       %div{id: "#{error_type}-dialogcontent"}
         .modal-content
           %p.dialog-title
@@ -32,4 +32,3 @@
           .farSide
             %button#ok-button.secondary
               =t('dialog.ok')
-
