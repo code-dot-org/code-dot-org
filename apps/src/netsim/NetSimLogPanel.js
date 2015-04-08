@@ -24,6 +24,7 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
  * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
@@ -55,6 +56,13 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    * @private
    */
   this.currentChunkSize_ = 8;
+
+  /**
+   * Whether newly logged messages in this log should be marked as unread
+   * @type {boolean}
+   * @private
+   */
+  this.hasUnreadMessages_ = !!(options.hasUnreadMessages);
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -102,7 +110,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
-    isUnread: true
+    isUnread: this.hasUnreadMessages_
   });
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
@@ -237,6 +245,10 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
+/**
+ * Mark the packet as read, changing its style and removing the "mark as read"
+ * button.
+ */
 NetSimLogPacket.prototype.markAsRead = function () {
   this.isUnread_ = false;
   this.rootDiv_.removeClass('unread');
