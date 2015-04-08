@@ -204,7 +204,7 @@ tr:
         turtle_3_5: 'Şimdi, iki kediyi ev içine alan yeni bir "Ev Çiz" fonksiyonu oluşturun. İpucu: "Bir şey yap" bloğunu kullanın ve fonksiyona kendiniz bir isim verin (örn:"Ev Çiz").'
         turtle_3_6: '"Kare çiz" fonksiyonunu örnek alarak, "Üçgen Çiz" fonksiyonuna "uzunluk" adında bir giriş ekleyin. Sonra, bu yeni fonksiyonu kullanarak farklı boyutlarda üçgenler çizin. (İpucu: Fonksiyona girdi eklemek için yıldız simgesine tıklayın.)'
         turtle_3_7: '"Ev çiz" fonksiyonuna "uzunluk" adında yeni bir girdi ekleyin ve fil için yeterince büyük bir ev çizin (kenarları 150 piksel uzunluğunda)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Yeni bir ev çizdikten sonra tamamlamak için sağ alt köşedeki  "Ev çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.'
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin? Bir dene ve bir dizi ev çiz.'
         turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız, spiral veya bir kar tanesi çizmeye çalışın.
         maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve ekim için hazır olur.
@@ -430,12 +430,15 @@ tr:
         playlab_intro: Oyun laboratuarı için giriş
         playlab_events: Laboratuvar Olaylarını Oynatın
         playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
         msm_1_intro: CS in Algebra Chapter 1 Introduction
         msm_2_eval_block: Değerlendirme Blokları
         msm_3_pemdas: PEMDAS
         msm_6_variables: Değişkenler
         msm_7_functions: Fonksiyonlar
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -504,3 +507,7 @@ tr:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
         right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
         name_function: Fonksiyonunun ismini buraya yaz
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

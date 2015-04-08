@@ -2,8 +2,8 @@
   devise:
     confirmations:
       confirmed: O teu endereço de e-mail foi confirmado com sucesso.
-      send_instructions: Vais receber um e-mail com as instruções sobre como confirmar
-        a tua conta em poucos minutos.
+      send_instructions: Vais receber um e-mail com as instruções de confirmação da
+        tua conta dentro de alguns minutos.
       send_paranoid_instructions: Se o teu endereço de e-mail existir na nossa base
         de dados, receberás um e-mail com instruções sobre como confirmar a tua conta
         em poucos minutos.
@@ -15,13 +15,13 @@
       locked: A tua conta está bloqueada.
       not_found_in_database: O e-mail e a palavra-passe não estão corretos.
       timeout: A tua sessão expirou. Por favor, volta a iniciar sessão para continuares.
-      unauthenticated: Precisas de entrar ou registar-te antes de continuar.
+      unauthenticated: Tens de iniciar sessão ou criar uma conta antes de continuares.
       unconfirmed: Tens de confirmar a tua conta antes de continuar.
     mailer:
       confirmation_instructions:
         subject: Instruções de confirmação do Code.org
       reset_password_instructions:
-        subject: Code.org redefinir instruções de palavra-passe
+        subject: Instruções de reposição da palavra-passe Code.org
       unlock_instructions:
         subject: Instruções de desbloqueio
     omniauth_callbacks:
@@ -67,9 +67,31 @@
       already_confirmed: já foi confirmado, por favor, tenta entrar
       confirmation_period_expired: precisa de ser confirmado dentro de %{period},
         por favor, solicita um novo
-      expired: expirou, por favor solicita uma nova
+      expired: caducou, por favor pede uma nova
       not_found: não encontrado
       not_locked: não foi bloqueado
       not_saved:
         one: '1 erro proibiu este %{resource} de ser salvo:'
         other: '%{count} erros não permite que este %{resource} seja salvo:'
+    invitations:
+      send_instructions: An invitation email has been sent to %{email}.
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: No invitations remaining
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      edit:
+        header: Set your password
+        submit_button: Set my password
+    mailer:
+      invitation_instructions:
+        subject: Invitation instructions
+        hello: Hello %{email}
+        someone_invited_you: Someone has invited you to %{url}, you can accept it
+          through the link below.
+        accept: Accept invitation
+        ignore: If you don't want to accept the invitation, please ignore this email.<br
+          />Your account won't be created until you access the link above and set
+          your password.

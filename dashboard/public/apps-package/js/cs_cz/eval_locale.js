@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "kruh (poloměr, styl, barva)"},
 "displayBlockTitle":function(d){return "zobraz"},
 "ellipseBlockTitle":function(d){return "Elipsa (šířka, výška, styl, barva)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"zobraz\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "překrytí (zhora, zdola)"},

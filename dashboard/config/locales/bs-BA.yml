@@ -252,6 +252,7 @@
         artist: Nacrtaj Nešto
     user:
       classroom: Početna Stranica za Učitelje
+      district_dashboard: District Dashboard
       label: Zdravo, %{username}
       stats: Moj napredak
       settings: Moj račun
@@ -501,6 +502,9 @@
         korisnici
     frozen:
       title: Sniježno kraljevstvo
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -634,3 +638,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

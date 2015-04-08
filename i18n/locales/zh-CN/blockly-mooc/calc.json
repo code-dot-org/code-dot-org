@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"你的程序因除以 0 而结束。",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"你有一个未填入数据的块。",
   "equivalentExpression":"试着重新排列你的参数来得到完全相同的表达式。",
   "evaluate":"评估",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

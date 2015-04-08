@@ -267,6 +267,7 @@ sq:
         artist: Vizato Diçka
     user:
       classroom: Faqja Kryesore e Mësuesit
+      district_dashboard: District Dashboard
       label: 'Përshëndetje %{username}'
       stats: Ecuria ime
       settings: Llogaria ime
@@ -485,6 +486,9 @@ sq:
       body: Shiko një galeri imazhesh artistësh dhe aplikacionesh, të krijuar nga përdoruesit tonë
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!
@@ -598,3 +602,5 @@ sq:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

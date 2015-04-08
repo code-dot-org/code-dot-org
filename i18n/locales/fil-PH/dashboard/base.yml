@@ -221,6 +221,7 @@ fil:
         artist: Gumuhit ng isang bagay
     user:
       classroom: Home Page ng Teacher
+      district_dashboard: District Dashboard
       label: 'Mabuhay %{username}'
       stats: My progress
       settings: My account
@@ -440,6 +441,9 @@ fil:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -553,3 +557,5 @@ fil:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

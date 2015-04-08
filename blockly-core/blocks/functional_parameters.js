@@ -64,12 +64,12 @@ Blockly.Blocks.functional_parameters_get = {
     // Add description mutation
     if (this.description_) {
       var desc = document.createElement('description');
-      desc.innerHTML = this.description_;
+      desc.textContent = this.description_;
       container.appendChild(desc);
     }
     if (this.outputType_) {
       var outputType = document.createElement('outputtype');
-      outputType.innerHTML = this.outputType_;
+      outputType.textContent = this.outputType_;
       container.appendChild(outputType);
     }
     return container;
@@ -78,9 +78,9 @@ Blockly.Blocks.functional_parameters_get = {
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
       var nodeName = childNode.nodeName.toLowerCase();
       if (nodeName === 'description') {
-        this.description_ = childNode.innerHTML;
+        this.description_ = childNode.textContent;
       } else if (nodeName === 'outputtype') {
-        this.outputType_ = childNode.innerHTML;
+        this.outputType_ = childNode.textContent;
         this.changeFunctionalOutput(this.outputType_);
       }
     }

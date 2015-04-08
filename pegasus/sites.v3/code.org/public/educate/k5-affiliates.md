@@ -13,14 +13,14 @@ The ideal K-5 Affiliate is an experienced Computer Science teacher at the elemen
 <br />
 
 **Are you a district administrator or representative?**  
-[Apply](/educate/k5-district-partnerships) for a K-5 district partnership to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to your district elementary school teachers.
+[Apply](/educate/k5-district-partnership) for a K-5 district partnership to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to your district elementary school teachers.
 
-[<button>K-5 District Partnership</button>](/k5-district-partnership)
+[<button>K-5 District Partnership</button>](/educate/k5-district-partnership)
 
 
 ## What is the K5 Affiliate Program?
 
-Code.org has developed an online [Computer Science curriculum for Elementary School](/k5) students comprised of Courses 1, 2 and 3, which are free and publicly available at [studio.code.org](studio.code.org). Our goal is to spread this curricula to tens of thousands of classrooms across the US through the development and implementation of a train-the-trainer model for teacher professional development.  
+Code.org has developed an online [Computer Science curriculum for Elementary School](/k5) students comprised of Courses 1, 2 and 3, which are free and publicly available at through [studio.code.org](http://studio.code.org). Our goal is to spread this curricula to tens of thousands of classrooms across the US through the development and implementation of a train-the-trainer model for teacher professional development.  
 
 We implemented this model in September 2014 with 80 affiliates nationwide. So far, approximately 6,000 teachers have participated and have rated our workshops a 4.8 on a 5 point scale. The majority say, “It’s the best professional development I’ve ever attended.” 
 

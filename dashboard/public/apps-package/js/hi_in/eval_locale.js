@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "वृत्त ( त्रिज्या , शैली, रंग)"},
 "displayBlockTitle":function(d){return "प्रदर्शन"},
 "ellipseBlockTitle":function(d){return "दीर्घवृत्त (चौड़ाई , ऊंचाई , शैली, रंग)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "आपके पास स्वाधीन ब्लॉक है। क्या आप ये ब्लॉक \"प्रदर्शन\" ब्लॉक करने के साथ जोड़ना चाहते हैं?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "उपरिशायी (ऊपर, नीचे)"},

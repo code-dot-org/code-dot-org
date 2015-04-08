@@ -50,7 +50,7 @@ fa:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: چندگزینه ای شرطی های زنبور عسل دو
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: بهترین بلوک ها را انتخاب کنید
+        Choose the best blocks.: بهترین بلوک ها را انتخاب کنید
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ fa:
       2-3 Algorithms Multi 1:
         Multiple Choice: انتخاب چندگانه
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: یک الگوریتم را برای تصویر ارائه شده انتخاب کنید
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'با یک مربع شروع کن<br/>یک مثلث بالای مربع قرار بده<br/>یک مثلث زیر مربع قرار بده'
         0: '؟ با یک مربع شروع کن<br/>یک مثلث در راست مربع قرار بده<br/>یک متوازی الاضلاع زیر مربع قرار بده<br/> یک مثلث در راست متوازی الاضلاع قرار بده'
         1: ': با یک مربع شروع کن<br/>یک مثلث در راست مربع قرار بده<br/>یک متوازی الاضلاع زیر میدان قرار بده<br/> یک مثلث در راست متوازی الاضلاع قرار بده'
@@ -145,7 +145,6 @@ fa:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
         a image: a image
         a number: a number
@@ -260,19 +259,19 @@ fa:
       4-5 Algorithms Multi 1:
         Multiple Choice: انتخاب چندگانه
         Which one of these items is hardest to describe an algorithm for?: تعریف یک الگوریتم برای کدام یک از این موارد سختتر است؟
-        <h4>Brushing your teeth</h4>: '<h4>دندان های خود را مسواک بزن</h4>'
-        <h4>Baking cookies</h4>: '<h4> پخت کوکی ها</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>خرید از لیست مواد غذایی</h4>'
-        <h4>Banana</h4>: '<h4>موز</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: چندگزینه ای
         0: ؟ اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟
         1: ': اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>تهران یک شهر بزرگ است.<br/>آبادان یک شهر متوسط است.<br/> مسجدسلیمان یک شهر کوچک است.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>سیاتل _____ _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ شهر _____ است.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ یک_____ _____است.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>یوجین یک شهر _____ است.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: چندگزینه ای
         Which of these pictures best represents crowdsourcing?: کدام یک از این تصاویر بهتر کمکگیری جمعی را نشان میدهد؟
@@ -281,37 +280,37 @@ fa:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: انتخاب چندگانه
         Which one of these activities would be best for practicing crowdsourcing?: کدام یک از این فعالیت ها برای تمرین کمکگیری جمعی بهترین خواهد بود؟
-        <h4>Cleaning your room</h4>: '<h4>تمیز کردن اتاق خود</h4>'
-        <h4>Eating your dessert</h4>: '<h4>خوردن دسر خود</h4>'
-        <h4>Brushing your hair</h4>: '<h4>شانه کردن موهای خود</h4>'
-        <h4>Washing your face</h4>: '<h4>صورت خود را بشویید</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: چندگزینه ای
         Which piece of information listed below is okay to share on the internet?: کدام یک از اطلاعات ذکر شده در زیر برای اشتراک گذاری در اینترنت بلامانع است؟
-        <h4>Your birthday</h4>: '<h4>تاریخ تولد شما</h4>'
-        <h4>Your favorite food</h4>: '<h4>غذای مورد علاقه شما</h4>'
-        <h4>Your address</h4>: '<h4>آدرس شما</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>شماره کارت اعتباری پدر و مادر خود را</h4>'
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: انتخاب چندگانه
         /script_assets/4-5_images/unplugged/internet_1_q.png: |
           /script_assets/4-5_images/unplugged/internet_1_q.png
           
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: هنگامی که شما سعی می کنید به code.org وارد شوید، DNS شما را به احتمال زیاد به کدام آدرس آی پی خواهد برد؟
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: انتخاب چندگانه
         /script_assets/4-5_images/unplugged/internet_1_q.png: |
           /script_assets/4-5_images/unplugged/internet_1_q.png
           
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: اگر DNS شما را به صفحه ای به آدرس آی پی 100.42.50.110 فرستاده است، در کدام وبسایت قرار دارید؟
-        <h4>code.org</h4>: '<h4>code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: انتخاب چندگانه
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: |
@@ -328,7 +327,7 @@ fa:
       4-5 Suncatchers Multi 1:
         Multiple Choice: انتخاب چندگانه
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'کدام یک از برنامه های زیر دقیقاً همان توالی برنامه 1 را <em>نمی</em> سازد؟'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -650,10 +649,10 @@ fa:
         Strings and Images Multiple Choice: چندگزینه ای رشته ها و تصاویر
         Multi Strings Images 1.blocks3.level: تصاویر چند رشته ایهای 1.بلوکهای3.مرحلۀ
         Which of these Evaluation Blocks will draw the image: کدام یک از این بلوکهای ارزیابی تصویر را خواهد کشید؟
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: تصاویر چند رشته ایهای 1.بلوکهای1.بلوکهای_ستاره, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: تصاویر چند رشته ایهای 1.بلوکهای2.بلوکهای_ستاره, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: تصاویر چند رشته ایهای 1.بلوکهای3.بلوکهای_ستاره, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: تصاویر چند رشته ایهای 1.بلوکهای4.بلوکهای_ستاره, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.

@@ -9,7 +9,7 @@
   "catVariables":"變數類別",
   "continue":"繼續 ",
   "container":"建立容器",
-  "containerTooltip":"Creates a division container and sets its inner HTML.",
+  "containerTooltip":"創造一個主要的容器，並設定其內部的HTML。",
   "finalLevel":"恭喜！你已經完成最後的關卡。",
   "nextLevel":"恭喜！你已經完成這個關卡。",
   "no":"否",

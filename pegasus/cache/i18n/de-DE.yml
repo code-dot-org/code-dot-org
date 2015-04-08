@@ -17,7 +17,8 @@
     zu lernen
   petition_sign_message: 'Wenn Sie der gleichen Meinung sind, unterschreiben Sie.  #
     Anderen anschließen.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Wenn du uns unterstützen möchtest, unterzeichne
+    mit deinem Namen. Schließe dich den # anderen Supportern an.'
   name: Name
   email: E-Mail
   zipcode: Postleitzahl oder Land
@@ -32,7 +33,7 @@
   hoc2014_teachers: Lehrer
   hoc2014_host: Organisiere es
   hoc2014_everyone: jeder
-  hoc2014_support: "Unterstütze es &#x25BE;"
+  hoc2014_support: Unterstütze es &#x25BE;
   hoc2014_whatishoc: Was ist die Hour of Code?
   twentyhours_trynow: Probiere es jetzt aus
   california_heading: Bitte deine Schule, Informatik zu unterrichten
@@ -115,14 +116,15 @@
   learn_classes: Finde Kurse in deiner Nähe.
   hoc_is_here: 'Die #HourOfCode ist hier - Finde mehr heraus! @codeorg'
   just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Warum wird Informatik nicht an mehr Schulen unterrichtet? Wir
+    können das ändern. http://youtu.be/nKIu9yen5nc. Besuche http://code.org/ um mehr
+    zu erfahren.
   learn_hoc: Lerne die Hour of Code
   beyond_hoc: Mehr als die Erste Stunde
   what_gender: Welches Geschlecht bist du?
   girl: Mädchen
   boy: Junge
-  help_recruit_coders: Hilf uns weitere Programmierer/-innen für dein Team zu gewinnen!
+  help_recruit_coders: Hilf uns, weitere Programmierer für dein Team anzuwerben!
   help_recruit: Hilf uns weitere Programmierer zu rekrutieren!
   lines_of_code: ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT.
   lines_of_code_alt: <b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN
@@ -139,6 +141,7 @@
   stats_michael: '"Ich habe meine Schüler <b>noch niemals<b/> so begeistert gesehen,
     etwas zu lernen." - Michael Clark, Lehrer'
   studiobar_title: Entdecken Sie das Code-Studio
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für K &#8209; 5
   studiobar_hoc_title: Die "Hour of Code"
@@ -154,43 +157,65 @@
   studiobar_shop_title: Shop
   studiobar_shop_body: Breche Stereotypen. Trage unser Logo mit Stolz.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Spiele nicht einfach mit deinem Handy, programmiere es.&rdquo;
+    Präsident Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
+    mention, it's just plain fun.&rdquo; \n"
+  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
+    about learning.&rdquo; \n"
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo; \n"
+  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
+    involved and participating.&rdquo; \n"
   homepage_slot_text_hoc: Die "Hour of Code"
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Alle unsere Anleitungen
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Sieh dir das Video an
+  homepage_action_text_teachervideo: Sieh dir das Video an
+  homepage_action_text_learn: Beginne noch heute zu lernen
+  homepage_action_text_signpetition: Unterzeichne die Petition
+  homepage_signpetition_dropdown: Unterzeichne unsere Petition &#x25BE;
   homepage_slot_text_title_hoc: Programmierstunde
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Schüler
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_blurb_students: Entdecken Sie alle unsere Tutorials
+  homepage_slot_text_link_codestudio: Probiere Code Studio aus
+  homepage_slot_text_link_local: Finde Unterricht vor Ort
+  homepage_slot_text_link_othercourses: Andere Onlinekurse
   homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_blurb_educators: Unterrichten Sie Ihre Schüler
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
@@ -198,10 +223,10 @@
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_donate: Spende
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org dankt seinen Unterstützern
+  homepage_donors_seall: Sieh alle
   homepage_donors_donate: Spenden
   contact_form_topic_student: Ich bin ein Schüler
   contact_form_topic_parent: Ich bin ein Elternteil
@@ -265,7 +290,7 @@
   dashboard_landing_video: Schau Dir dieses Video an
   dashboard_landing_watch_video: für eine Tour durch die neuen Features!
   dashboard_landing_view_as_student: Betrachte diese Website als Schüler
-  dashboard_landing_students_title: Ihre SchülerInnen und Schüler
+  dashboard_landing_students_title: Ihre Schüler
   dashboard_landing_students_manage: Schüler anzeigen und verwalten
   dashboard_landing_news_title: K-5 Unterrichts-Material (nur in Englisch)
   dashboard_landing_new_beta: Neu! Probiere unsere Beta-Kurse für Schüler der Schulstufen
@@ -287,7 +312,7 @@
   dashboard_landing_view_progress: Fortschritt ansehen für %{biggest_section}
   dashboard_landing_available_title: Verfügbare Kurse
   dashboard_landing_available_courses: Hier sind die momentan verfügbaren Kurse für
-    ihre Schüler/-innen.
+    ihre Schüler.
   dashboard_landing_loading: Wird geladen...
   dashboard_action_edit: Bearbeiten
   dashboard_action_save: Speichern
@@ -334,18 +359,17 @@
     Passwortes für jeden Schüler.
   dashboard_sections_secret_picture: Ein <b>Bild</b> ermöglicht Dir das Festlegen
     eines geheimen Bildes, ideal für jüngere Schüler, die noch nicht schreiben können.
-  dashboard_sections_secret_none: Wenn Du willst, dass die Schüler/-innen ihre Konten
-    selber verwalten, eingeschlossen eines eigenen Passwortes, wähle den geheimen
-    Typ <b>Nichts</b>.
+  dashboard_sections_secret_none: Wenn Du willst, dass die Schüler ihre Konten selbst
+    verwalten, eingeschlossen eines eigenen Passwortes, wähle den geheimen Typ <b>Nichts</b>.
   dashboard_sections_print_secrets: Du kannst dann die Kontoinformationen für alle
-    Schüler/-innen ausdrucken und somit individuell verteilen.
+    Schüler ausdrucken und somit individuell verteilen.
   dashboard_sections_switch_section: 'Bereich wechseln:'
   dashboard_students_add_student: Schüler hinzufügen
-  dashboard_students_add_students: Mehrere Schüler/-innen hinzufügen
+  dashboard_students_add_students: Mehrere Schüler hinzufügen
   dashboard_students_add_multiple: 'Füge die Namen Deiner Schüler ein, einer pro Zeile:'
   dashboard_students_new_section: Du hast einen neuen Bereich erstellt! Füge nun Deine
-    SchülerInnen und Schüler mithilfe der <b>Schüler hinzufügen</b> und <b>Mehrere
-    Schüler hinzufügen</b>-Schaltflächen hinzu.
+    Schüler mithilfe der <b>Schüler hinzufügen</b> und <b>Mehrere Schüler hinzufügen</b>-Schaltflächen
+    hinzu.
   dashboard_students_placeholder_name: Schülername
   dashboard_students_name: Name
   dashboard_students_progress: Fortschritt
@@ -364,8 +388,8 @@
   dashboard_students_reset_secret: Geheimnis zurücksetzen
   dashboard_students_reset_password: Kennwort zurücksetzen
   dashboard_students_share_section: 'Teilen Sie die Anmelde-Seite dieses Abschnittes
-    mit Ihren Schülerinnen und Schülern:'
-  dashboard_students_print_info: Drucken Sie Karten mit den Login-Daten Ihrer SchülerInnen
+    mit Ihren Schülern:'
+  dashboard_students_print_info: Drucken Sie Karten mit den Login-Daten Ihrer Schüler
     aus.
   dashboard_students_secret_picture: Geheimes Bild
   dashboard_students_reset_picture: Sie können jederzeit das geheime Bild eines Schülers
@@ -375,7 +399,7 @@
   dashboard_students_reset_word: Sie können jederzeit das geheime Wort eines Schülers
     über <b>Geheimnis anzeigen</b>, <b>Geheimnis zurücksetzen</b> zurücksetzen. Für
     den Schüler werden beim nächsten Anmelden einige neue geheime Wörter generiert.
-  dashboard_students_join_link: Bitten Sie ihre Schüler, eine Konte zu erstellen und
+  dashboard_students_join_link: Bitten Sie ihre Schüler, ein Konto zu erstellen und
     Ihrem Bereich beizutreten.
   dashboard_students_no_email: Falls Ihre Schüler keine E-Mail-Adressen besitzen oder
     Sie die Konten erstellen möchten, wechseln sie den Sicherheits-Typ des Bereichs
@@ -441,7 +465,7 @@
   hoc2014_try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde
     aus
   hoc2014_try_scrat: Angry Birds, PvZ, und Scrat
-  hoc2014_try_frozen: Künstler mit Anna und Elsa, aus Gefrorenem
+  hoc2014_try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Einführungen auf englisch
   carousel_heading_beginners: Einführungen für Anfänger
@@ -455,7 +479,7 @@
   carousel_heading_webpages: Lerne, Webseiten zu erstellen
   carousel_heading_robots: Lerne, mit Robotern zu programmieren
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
-  educator_notes: Erläuterungen für Erzieher/-innen
+  educator_notes: Erläuterungen für Erzieher
   how_to_teach_hoc: Anleitung zum Unterrichten einer "Hour of Code"
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
@@ -754,8 +778,8 @@
     Sie dann eine Reihe von Apps zum Spielen und Teilen. Einfache Anleitungen machen
     es möglich, dass sogar junge Kinder  echtes Javascript programmieren, und je fortgeschrittener
     Sie sind, desto weiter werden Sie gehen.
-  makegameswithus_longdescription: Lerne zu programmieren indem du ein iPhone Spiel
-    entwickelst welches eine neue und Anfänger freundliche Programiersprache benutzt,
+  makegameswithus_longdescription: Lerne zu programmieren indem du ein iPhone-Spiel
+    entwickelst welches eine neue und anfängerfreundliche Programkiersprache benutzt,
     genannt Swift! Kreiere ein Pok&eacute;mon inspiriertes Action Spiel und schreibe
     Programmierzeilen um deinem Monster neue Bewegungen beizubringen. Du wirst lernen
     wie man Variablen, Methoden und Objekte benutzt um deinem Monster beim gewinnen
@@ -1129,26 +1153,3 @@
   sphero_beyond_longdescription: 'Für Lehrkräfte und Eltern: "SPRK"-Lektionen erlauben
     es den Kindern, einen Schnellkurs im Programmieren von Robotern zu absolvieren
     und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse zu erweitern.'
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "

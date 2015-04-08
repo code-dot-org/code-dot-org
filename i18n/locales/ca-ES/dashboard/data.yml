@@ -472,6 +472,9 @@ ca:
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variables
         msm_7_functions: Funcions
+        infinity_playlab_intro: 'Play Lab - introducció'
+        infinity_playlab_events: 'Play Lab - esdeveniments'
+        infinity_playlab_repeat_forever: 'Play Lab - repeteix per sempre'
     callout:
       text:
         drag_blocks: |-
@@ -547,3 +550,7 @@ ca:
         arrows_move_actor: "Utilitza les fletxes per moure l'actor"
         right_arrow_fireball: Utilitza la fletxa dreta per disparar boles de foc
         name_function: Escriu el nom de la teva funció aquí
+        Infinity_move_right_runbutton: Afegeix un bloc de moviment aquí
+        Infinity_move_directions_callout: Quin bloc farà que Baymax pugi quan es premi la fletxa amunt?
+        Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
+        Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins

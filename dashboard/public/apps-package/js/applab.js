@@ -575,6 +575,46 @@ function outputApplabConsole(output) {
   debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
+var apiWarn = outputApplabConsole;
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  if (typeof opts[validatedTypeKey] === 'undefined') {
+    var properType = (typeof varValue == expectedType);
+    if (!properType) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not a " + expectedType + ".");
+    }
+    opts[validatedTypeKey] = properType;
+  }
+}
+
+function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+                                expectedType, minValue, maxValue) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    if (!inRange) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not in the expected range.");
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
 function onDebugInputKeyDown(e) {
   if (e.keyCode == KeyCodes.ENTER) {
     var input = e.target.textContent;
@@ -1983,6 +2023,8 @@ Applab.hide = function (opts) {
 };
 
 Applab.moveTo = function (opts) {
+  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
+  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1996,16 +2038,18 @@ Applab.moveTo = function (opts) {
 };
 
 Applab.move = function (opts) {
-  var newOpts = {};
-  newOpts.x = Applab.turtle.x + opts.x;
-  newOpts.y = Applab.turtle.y + opts.y;
-  Applab.moveTo(newOpts);
+  apiValidateType(opts, 'move', 'x', opts.x, 'number');
+  apiValidateType(opts, 'move', 'y', opts.y, 'number');
+  opts.x += Applab.turtle.x;
+  opts.y += Applab.turtle.y;
+  Applab.moveTo(opts);
 };
 
 Applab.moveForward = function (opts) {
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -2017,7 +2061,8 @@ Applab.moveForward = function (opts) {
 
 Applab.moveBackward = function (opts) {
   var distance = -25;
-  if (opts.distance !== 'undefined') {
+  if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
@@ -2029,6 +2074,7 @@ Applab.turnRight = function (opts) {
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
+    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -2040,12 +2086,14 @@ Applab.turnRight = function (opts) {
 Applab.turnLeft = function (opts) {
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
+    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
+  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -2055,6 +2103,9 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
+  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
+
   // call this first to ensure there is a turtle (in case this is the first API)
   var centerAngle = opts.counterclockwise ? -90 : 90;
   var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
@@ -2083,6 +2134,9 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
+  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
+
   opts.counterclockwise = true;
   Applab.arcRight(opts);
 };
@@ -2103,6 +2157,7 @@ Applab.getDirection = function (opts) {
 };
 
 Applab.dot = function (opts) {
+  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -2144,6 +2199,7 @@ Applab.penDown = function (opts) {
 };
 
 Applab.penWidth = function (opts) {
+  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -2164,6 +2220,7 @@ Applab.penColor = function (opts) {
 };
 
 Applab.speed = function (opts) {
+  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
     var sliderSpeed = opts.percent / 100;
     if (Applab.speedSlider) {

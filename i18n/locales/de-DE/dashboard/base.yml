@@ -68,9 +68,9 @@ de:
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
     teacher_educator_guide: Lehrer-Handbuch
-    teacher_pitch: Registrierung für LehrerInnen
-    teacher_title: Anmelden (Lehrer)
-    student_pitch: Anmeldung für SchülerInnen
+    teacher_pitch: Lehrer-Registrierung für Code.org
+    teacher_title: Registrierung (Lehrer)
+    student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
@@ -222,6 +222,7 @@ de:
         artist: Zeichne etwas
     user:
       classroom: Lehrer-Homepage
+      district_dashboard: District Dashboard
       label: 'Hallo %{username}'
       stats: Mein Fortschritt
       settings: Mein Account
@@ -269,7 +270,7 @@ de:
       add: Schüler hinzufügen
       remove: Schüler entfernen
       confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
-      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie die Studenten aus, die einem neuen Abschnitt zugewiesen werden sollen.
+      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
       help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren, können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet. Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine Email-Adresse. Falls ein Schüler sein Passwort vergessen sollte, so können Sie dieses für ihn zurücksetzen.
       register: Fordern Sie ihre Schüler auf, sich selbst anzumelden
       vist: Fordern Sie Ihre Schüler auf, die Seite zu besuchen
@@ -323,7 +324,7 @@ de:
     signin_message: 'Schon registriert? %{link}'
     student_reg_link: Studenten Anmeldung
     teacher_reg_link: Lehrer Anmeldung
-    signin_directions: 'Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> LehrerInnen können den Fortschritt der gesamten Klasse verfolgen.'
+    signin_directions: 'Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> Lehrer können den Fortschritt der gesamten Klasse verfolgen.'
     teacher_dashboard: Fortschrittsanzeige einsehen
     teacher_student_count_one: 'Sie haben %{count} Schüler.'
     teacher_student_count: 'Sie haben %{count} Studenten.'
@@ -350,7 +351,7 @@ de:
     heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
-    your_gallery: Gallerie
+    your_gallery: Galerie
   gender:
     male: Männlich
     female: Weiblich
@@ -434,12 +435,15 @@ de:
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
     hoc2014:
       try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
-      try_frozen: Künstler mit Anna und Elsa, aus Gefrorenem
+      try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
     gallery:
-      title: Gallerie
+      title: Galerie
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden
     frozen:
-      title: Gefroren
+      title: Die Eiskönigin
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -449,7 +453,7 @@ de:
     more: 'Mehr &rarr;'
     caption_by_name_age: 'Von%{name}, Alter %{age}'
     caption_time_ago: '%{time_ago} früher'
-    header: Gallerie
+    header: Galerie
     header_playlab: Play Lab
     header_artist: Künstler
   landing:
@@ -553,3 +557,5 @@ de:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

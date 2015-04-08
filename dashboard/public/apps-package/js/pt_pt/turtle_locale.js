@@ -195,7 +195,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawStamp":function(d){return "draw stamp"},
 "heightParameter":function(d){return "altura"},
 "hideTurtle":function(d){return "ocultar o artista"},
-"jump":function(d){return "salto"},
+"jump":function(d){return "saltar"},
 "jumpBackward":function(d){return "salta para trás por"},
 "jumpForward":function(d){return "salta para a frente por"},
 "jumpTooltip":function(d){return "Move a artista sem deixar marcas."},

@@ -398,13 +398,6 @@
           'Unit 1: Sending Bits': 'Unité 1 : Envoi de bits'
           'Unit 2: Routing and DNS': 'Unité 2 : routage et DNS'
           Internet Simulator Templates: Modèles de simulateur d'Internet
-        Infinity:
-          title: Playlab Infini
-          description_short: Utilisez le labo pour créer une histoire ou un jeu mettant
-            en vedette les personnages de Disney Infiny.
-          description: Utilisez le labo pour créer une histoire ou un jeu mettant
-            en vedette les personnages de Disney Infiny.
-          Infinity: Infini
         pixelation:
           title: Pixellisation
           description: Créer des images avec des bits et des octets.
@@ -529,6 +522,8 @@
           Lesson 5: Leçon 5
           Lesson 3: Leçon 3
           Lesson 4: Leçon 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
         algebraPD:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -587,3 +582,15 @@
             (grand jeu)'
           Your Game - Player Movement: Votre jeu - mouvement des joueurs
           Your Game - Collision Detection: Votre jeu - détection de Collision
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction au développement professionnel
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Leçon 14
+          Lesson 15: Leçon 15

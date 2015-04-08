@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Tavas programmas rezultāts dalījumā ar nulli.",
   "emptyComputeBlock": "Tev jāpievieno bloks ''rēķināt'' blokā.",
-  "emptyFunctionalBlock": "Jums ir bloks ar neaizpildītu ievadi.",
   "equivalentExpression": "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
   "evaluate": "novērtē",
   "extraTopBlocks": "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",

@@ -222,6 +222,7 @@ zh:
         artist: 畫些什麼東西
     user:
       classroom: 教師主頁
+      district_dashboard: District Dashboard
       label: '嗨 %{username}'
       stats: 我的進度
       settings: 我的帳號
@@ -440,6 +441,9 @@ zh:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: 冰雪奇緣
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: Students made these with code!
@@ -553,3 +557,5 @@ zh:
     delete_confirm_title: 您確定要刪除此專案？
     delete_confirm_text: 刪除您當前的專案將會把它永久的從您的”我的專案清單“移除。您已共用的連結將不再使任何人能夠查看您的專案。
     view_all: 查看我的專案
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

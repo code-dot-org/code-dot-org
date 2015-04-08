@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Bạn phải gắn một khối vào một khối \"tính toán\".",
-  "emptyFunctionalBlock": "Bạn có một khối với input chưa điền.",
   "equivalentExpression": "Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Bạn có một khối tự do. Ý của bạn là gắn chúng vào khối \"tính toán\"?",

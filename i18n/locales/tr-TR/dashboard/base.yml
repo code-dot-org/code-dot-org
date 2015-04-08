@@ -218,6 +218,7 @@ tr:
         artist: Bir şeyler çizin
     user:
       classroom: Öğretmen ana sayfa
+      district_dashboard: District Dashboard
       label: 'Merhaba %{username}'
       stats: İlerlemem
       settings: Hesabım
@@ -436,6 +437,9 @@ tr:
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın
     frozen:
       title: Donmuş
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -549,3 +553,5 @@ tr:
     delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
     delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır. Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
     view_all: Projelerimi görüntüle
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

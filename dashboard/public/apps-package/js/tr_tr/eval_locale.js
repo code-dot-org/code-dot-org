@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "çember (yarıçap,stil,renk)"},
 "displayBlockTitle":function(d){return "değerlendirme"},
 "ellipseBlockTitle":function(d){return "Elips (genişlik, yükseklik, stil, renk)"},
-"emptyFunctionalBlock":function(d){return "Doldurulmamış bir giriş bloğunuz bulunuyor."},
 "extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "kaplama (üst, alt)"},

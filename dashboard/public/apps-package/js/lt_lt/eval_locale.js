@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "apskritimas(spindulys, stilius, spalva)"},
 "displayBlockTitle":function(d){return "parodyk"},
 "ellipseBlockTitle":function(d){return "elipsė(plotis, aukštis, stilius, spalva)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "padėk-aukščiau(viršutinis, apatinis)"},

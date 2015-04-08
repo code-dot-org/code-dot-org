@@ -1,22 +1,15 @@
-"hu-HU":
+hu-HU:
   hello: Helló világ
   select_language: Válassz nyelvet
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
   csedweek_dates: December 8-14, 2014
-  csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color:
-    white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk
-    minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com"
-    style="color: white; text-decoration:underline; font-weight:bold">saját Kódolás
-    Órája programját</a>!'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat
-    is!</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3> fő már kipróbálta a</h3><h2>Kódolás Óráját.</h2>
+  csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">saját Kódolás Órája programját</a>!'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat is!</a>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Mindenki tanulhat.
   learn_now: Tanulj most
-  petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
-    hogy számítástechnikát tanuljon
+  petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Név
@@ -24,34 +17,25 @@
   zipcode: Irányítószám vagy ország
   submit: Elküldés
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
-  twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról
-    és a programozási koncepciókról a következő tanfolyamon.
-  hoc2014_heading: Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014.
-    December 8-14.<br/>
+  twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon.
+  hoc2014_heading: 'Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014. December 8-14.<br/>'
   hoc2014_students: Tanuló
   hoc2014_try: Próbáld ki
   hoc2014_teachers: Tanárok
   hoc2014_host: Szervezd
   hoc2014_everyone: Mindenki
-  hoc2014_support: "Támogasd &#x25BE;"
+  hoc2014_support: 'Támogasd &#x25BE;'
   hoc2014_whatishoc: Mi az a Kódolás Órája?
   twentyhours_trynow: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
-  california_text: Bármelyik tanár oktathatja az általunk kínált <a href='http://studio.code.org/'>ingyenes
-    anyagokat</a>.  Bármelyik általános iskola <a href='http://code.org/educate/k5'>taníthat
-    számítástechnikát</a>. Kérj meg középiskolákat, hogy <a href='http://code.org/educate/districts'>csatlakozzanak
-    hozzánk.
+  california_text: "Bármelyik tanár oktathatja az általunk kínált <a href='http://studio.code.org/'>ingyenes anyagokat</a>.  Bármelyik általános iskola <a href='http://code.org/educate/k5'>taníthat számítástechnikát</a>. Kérj meg középiskolákat, hogy <a href='http://code.org/educate/districts'>csatlakozzanak hozzánk."
   california_button: Tudj meg többet
   flappy_heading: Kódog szülinapot Code.org
-  flappy_text: 1 éves lett a Code.org. <br/> <br/> Ünnepelj velünk, ás készítsd el
-    saját <b>Kódorgó</b> játékodat. Programozd le a saját szabályaidat és oszd meg
-    az eredményt a barátaiddal!
+  flappy_text: '1 éves lett a Code.org. <br/> <br/> Ünnepelj velünk, ás készítsd el saját <b>Kódorgó</b> játékodat. Programozd le a saját szabályaidat és oszd meg az eredményt a barátaiddal!'
   view_english_site: Az angol oldal megtekintése
   non_english_tutorials: 'Több nyelvre lefordított útmutatók:'
   write_your_first_program: Írd meg az első számítógépes programod
-  learn_cs_concepts: Tanulja meg a Számítógép Tudomány alapvető fogalmait. A útmutatók
-    játék szerűek ,a videók-előadások főszereplői Bill Gates, Mark Zuckerberg, Angry
-    Birds és Plants vs. Zombies. Tanulj ciklusokról, if utasításról és alapvető algoritmusokról.
+  learn_cs_concepts: Tanulja meg a Számítógép Tudomány alapvető fogalmait. A útmutatók játék szerűek ,a videók-előadások főszereplői Bill Gates, Mark Zuckerberg, Angry Birds és Plants vs. Zombies. Tanulj ciklusokról, if utasításról és alapvető algoritmusokról.
   all_ages: Minden korosztály számára
   beginner: Kezdő
   n_participants: '# résztvevő'
@@ -61,18 +45,13 @@
   congratulations_on_completing_hoc: Gratulálunk egy Kód Órája befejezéséhez
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   enter_valid_email: Adj meg egy érvényes e-mail címet
-  get_a_certificate_message: Küldünk önnek egy tanúsítványt, és további információkat
-    Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>
-  get_a_certificate_message_after: Mentéshez vagy nyomtatáshoz kattints az oklevélre.
-    Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>, vagy nézd
-    meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
+  get_a_certificate_message: "Küldünk önnek egy tanúsítványt, és további információkat Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>"
+  get_a_certificate_message_after: "Mentéshez vagy nyomtatáshoz kattints az oklevélre. Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>, vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>."
   thanks_for_submitting: Köszönjük előterjesztés!
-  if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják
-    ki! Szeretnénk, hogy az egész világ tanuljon.
+  if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják ki! Szeretnénk, hogy az egész világ tanuljon.
   personalize_certificate: Legyen névre szóló a tanúsítványod
   share_achievement: Oszd meg az elért eredményed
-  beyond_hour_message: Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>,
-    vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
+  beyond_hour_message: "Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>, vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>."
   leaderboards_for_hoc: Ranglisták a Kódolás Órájáról.
   support_url: http://support.code.org/
   country: Ország
@@ -106,15 +85,13 @@
   privacy_practices_children: Itt találod gyerekeknek szóló adatvédelmi gyakorlatunkat
   petition_thankyou: Köszönjük, hogy aláírtad a petíciót
   continue_learning_header: Folytasd a tanulást az első Kódolás Óra után is
-  continue_learning_body: Több választási lehetősége is van. Tanulhat akár online,
-    esetleg egy helyi iskolában, vagy nyári táborban.
+  continue_learning_body: Több választási lehetősége is van. Tanulhat akár online, esetleg egy helyi iskolában, vagy nyári táborban.
   learn_next_level: Tovább a következő szintre
-  learn_online: Megpróbáljon ki  más online tanfolyamokat
+  learn_online: 'Megpróbáljon ki  más online tanfolyamokat'
   learn_classes: Találjon helyi osztályokat
   hoc_is_here: 'Elérkezett a #HourOfCode - nézd meg! @codeorg'
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -122,23 +99,20 @@
   boy: Fiú
   help_recruit_coders: Segíts nekünk, hogy a csapatodba még több kódert toborozzunk!
   help_recruit: Segíts nekünk további kódereket toborozni!
-  lines_of_code: <b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG.
-  lines_of_code_alt: <b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL
+  lines_of_code: '<b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG.'
+  lines_of_code_alt: '<b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL'
   who_has_done_hoc: 'Ki vett már részt a #HourOfCode programon? @codeorg'
   hoc_leaderboards: A Kódolás Órája ranglista
-  students_and_lines: '%{students} tanuló fejezte be a Kód Óráját, s írt %{lines}
-    sort a kódból.'
+  students_and_lines: '%{students} tanuló fejezte be a Kód Óráját, s írt %{lines} sort a kódból.'
   start_hoc: Kezdd el a Kódolás Órája programot most
   contact_form_topic_press: Sajtó/média (interjú vagy igéret)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  studiobar_title: Fedezd fel a Code Studio-t
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  studiobar_title: "Fedezd fel a <a href='http://studio.code.org'>Code Studio-t</a>"
+  studiobar_title_nolink: Fedezd fel a Code Studio-t
   studiobar_elementary_title: Kurzusok alsósoknak
-  studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
+  studiobar_elementary_body: 'Három új tanfolyamunk k &#8209; 5 nek'
   studiobar_hoc_title: A kódolás órája
   studiobar_hoc_body: Tanulj programozni a dühös madarakkal
   studiobar_flappy_title: Flappy kód
@@ -151,20 +125,51 @@
   studiobar_donate_body: Egy gyermek tanulását támogatja minden egyes dollár adományozásával
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo; 
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo; 
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo; 
   homepage_slot_text_hoc: A kódolás órája
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -173,10 +178,10 @@
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy kód
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
@@ -206,7 +211,7 @@
   contact_form_topic_teacher: Tanár/Oktató vagyok
   contact_form_topic_outside_us: Nem élek az Egyesült Államokban.
   contact_form_topic_contribution: Jótékonysági hozzájárulás
-  contact_form_topic_partner: Szeretnék  partner lenni
+  contact_form_topic_partner: 'Szeretnék  partner lenni'
   contact_form_topic_other: Egyéb
   contact_form_label_topic: Témakör
   contact_form_label_email: E-mail címe
@@ -217,8 +222,7 @@
   class_submission_in_school_ap_computer_science: Haladó számítástechnika
   class_submission_in_school_full_university_cs_curriculum: Teljes egyetemi tananyag
   class_submission_in_school_robotics_club: Robotika club
-  class_submission_in_school_programming_integrated_in_other_classes: Programozás
-    oktatása integráltan más tantárgyakkal (matematika, fizika, stb.)
+  class_submission_in_school_programming_integrated_in_other_classes: Programozás oktatása integráltan más tantárgyakkal (matematika, fizika, stb.)
   class_submission_in_school_summer_school_cs_program: Nyári számtech programok
   class_submission_in_school_exploring_computer_science: A számítástechnika felfedezése
   class_submission_in_school_other: Más az iskolában
@@ -246,13 +250,10 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 óra hetente
   volunteer_engineer_submission_commitment_more: Mégtöbb
   volunteer_engineer_submission_location_flexibility_onsite: Az iskolában a helyszínen
-  volunteer_engineer_submission_location_flexibility_remote: Távoli mentorálás (tanárok
-    vagy diákok)
-  volunteer_engineer_submission_location_flexibility_curriculum: Segítene a nyílt
-    forrású tananyag projektekben
+  volunteer_engineer_submission_location_flexibility_remote: Távoli mentorálás (tanárok vagy diákok)
+  volunteer_engineer_submission_location_flexibility_curriculum: Segítene a nyílt forrású tananyag projektekben
   volunteer_engineer_submission_experience_unspecified: Nem meghatározott
-  volunteer_engineer_submission_experience_university_student_or_researcher: Jelenleg
-    egyetemi hallgató (vagy kutató)
+  volunteer_engineer_submission_experience_university_student_or_researcher: Jelenleg egyetemi hallgató (vagy kutató)
   volunteer_engineer_submission_experience_software_professional: Szoftverfeljesztő
   petition_age: Kor
   dashboard_landing_title: Tanári kezdőlap
@@ -266,21 +267,16 @@
   dashboard_landing_new_beta: ÚJ! Próbáld ki az alsós diákoknak szánt béta kurzusokat.
   dashboard_landing_new_k5courses: Új! Próbáld ki az alsós diákoknak szánt kurzusokat.
   dashboard_landing_useful_links: Egyéb hasznos linkek (csak angol nyelven)
-  dashboard_landing_office_hours: Kérdezz személyesen! Nézz be a havi videós irodai
-    óránkra.
-  dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak,
-    akik befejezték a tanfolyamot
-  dashboard_landing_educator_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a
-    Pedagógus Blog-ban
-  dashboard_landing_smart_hints: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz
-    a code.org felületére
+  dashboard_landing_office_hours: Kérdezz személyesen! Nézz be a havi videós irodai óránkra.
+  dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték a tanfolyamot
+  dashboard_landing_educator_blog: 'Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus Blog-ban'
+  dashboard_landing_smart_hints: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz a code.org felületére
   dashboard_landing_video_player: Teszteld az új videó lejátszót az iskolában
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
   dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
-  dashboard_landing_view_progress: Nézd meg a fejlődést a(z) %{biggest_section}
+  dashboard_landing_view_progress: 'Nézd meg a fejlődést a(z) %{biggest_section}'
   dashboard_landing_available_title: Elérhető kurzusok
-  dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és
-    diákjaid számára.
+  dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és diákjaid számára.
   dashboard_landing_loading: Betöltés...
   dashboard_action_edit: Szerkeszt
   dashboard_action_save: Mentés
@@ -300,7 +296,7 @@
   dashboard_navigation_section_lesson_plans: Óravázlatok és erőforrások
   dashboard_navigation_section_community: Súgó és Közösség
   dashboard_navigation_section_pd: Professzionális fejlesztések
-  dashboard_navigation_section_speakers: Számítógép-tudomány <br/> vendég előadók
+  dashboard_navigation_section_speakers: 'Számítógép-tudomány <br/> vendég előadók'
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Fejlődés megtekintése
   dashboard_navigation_add_students: Diákok hozzáadása
@@ -310,9 +306,7 @@
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
   dashboard_sections_new_section: Új szekció
-  dashboard_sections_jumbotron_instruction: Hozz létre új szekciókat és adj hozzá
-    diákokat. Szekciók használatával a diákokat kisebb csoportokba szervezheted, így
-    követheted nyomon fejlődésüket és kezelheted a fiókjukat.
+  dashboard_sections_jumbotron_instruction: Hozz létre új szekciókat és adj hozzá diákokat. Szekciók használatával a diákokat kisebb csoportokba szervezheted, így követheted nyomon fejlődésüket és kezelheted a fiókjukat.
   dashboard_sections_table_section: Szakasz
   dashboard_sections_table_secret: Bejelentkezés típusa
   dashboard_sections_table_grade: Évfolyam
@@ -320,25 +314,16 @@
   dashboard_sections_table_students: Tanuló
   dashboard_sections_table_code: Szakasz kódja
   dashboard_sections_name: Szekció neve
-  dashboard_sections_choose_secret: Ha szeretnél hozzáférést biztosítani a diákjaid
-    számára, akkor válassz a titkos <b>kép</b> vagy <b>szó</b> azonosítás közül az
-    adott szekciónál.
-  dashboard_sections_secret_word: A <b>szó</b> azonosítás lehetővé teszi, hogy minden
-    diákhoz egy titkos szót állíts be.
-  dashboard_sections_secret_picture: A <b>kép</b> azonosítás lehetővé teszi, hogy
-    minden diákhoz egy titkos képet állíts be. Ez kisebb gyermekek esetén lehet ideális.
-  dashboard_sections_secret_none: Ha szeretnéd, hogy a diákjaid kezeljék a saját hozzáférésüket,
-    ideértve a saját jelszó megválasztásának lehetőségét is, akkor válaszd az <b>egyik
-    sem</b> pontot.
-  dashboard_sections_print_secrets: Ezután kinyomtathatod diákoknak kiosztható, saját
-    hozzáférési adataikat tartalmazó kártyákat.
+  dashboard_sections_choose_secret: 'Ha szeretnél hozzáférést biztosítani a diákjaid számára, akkor válassz a titkos <b>kép</b> vagy <b>szó</b> azonosítás közül az adott szekciónál.'
+  dashboard_sections_secret_word: 'A <b>szó</b> azonosítás lehetővé teszi, hogy minden diákhoz egy titkos szót állíts be.'
+  dashboard_sections_secret_picture: 'A <b>kép</b> azonosítás lehetővé teszi, hogy minden diákhoz egy titkos képet állíts be. Ez kisebb gyermekek esetén lehet ideális.'
+  dashboard_sections_secret_none: 'Ha szeretnéd, hogy a diákjaid kezeljék a saját hozzáférésüket, ideértve a saját jelszó megválasztásának lehetőségét is, akkor válaszd az <b>egyik sem</b> pontot.'
+  dashboard_sections_print_secrets: Ezután kinyomtathatod diákoknak kiosztható, saját hozzáférési adataikat tartalmazó kártyákat.
   dashboard_sections_switch_section: 'Válassz szekciót:'
   dashboard_students_add_student: Diák hozzáadása
   dashboard_students_add_students: Több diák hozzáadása
   dashboard_students_add_multiple: 'Írd vagy másold be diákjaid nevét, soronként egyet:'
-  dashboard_students_new_section: Az új szekció létrehozása sikerült! Most vedd fel
-    a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok
-    használatával.
+  dashboard_students_new_section: 'Az új szekció létrehozása sikerült! Most vedd fel a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok használatával.'
   dashboard_students_placeholder_name: Diák neve
   dashboard_students_name: Név
   dashboard_students_progress: Progress
@@ -356,28 +341,17 @@
   dashboard_students_auto_generated: Automatikusan létrehozott
   dashboard_students_reset_secret: Titok beállítása
   dashboard_students_reset_password: Jelszó beállítása
-  dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési
-    oldalát:'
-  dashboard_students_print_info: Nyomtasd ki a diákjaid belépési adatait tartalmazó
-    kártyákat.
+  dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési oldalát:'
+  dashboard_students_print_info: Nyomtasd ki a diákjaid belépési adatait tartalmazó kártyákat.
   dashboard_students_secret_picture: Titkos kép
-  dashboard_students_reset_picture: A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b>
-    kiválasztásával bármikor újra beállíthatod egy diák titkos képét. A diák bejelentkezéséhez
-    egy új kép készül.
+  dashboard_students_reset_picture: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b> kiválasztásával bármikor újra beállíthatod egy diák titkos képét. A diák bejelentkezéséhez egy új kép készül.'
   dashboard_students_secret_word: Titkos szó
-  dashboard_students_reset_word: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b>
-    kiválasztásával bármikor új titkos szót állíthat be egy diák számára. Ilyenkor
-    egy új titkos szópár készül, amivel a diák ismét be tud majd lépni. '
-  dashboard_students_join_link: Mondd meg a diákjaidnak, hogy hozzanak létre egy hozzáférést
-    és csatlakozzanak a szekciódhoz
-  dashboard_students_no_email: Ha a diákjaidnak nincs email címe, vagy Te szeretnéd
-    létrehozni nekik a hozzáféréseket, akkor állítsd a szekció titkosítási típusát
-    <b>szó</b> vagy <b>kép</b> típusúra.
+  dashboard_students_reset_word: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b> kiválasztásával bármikor új titkos szót állíthat be egy diák számára. Ilyenkor egy új titkos szópár készül, amivel a diák ismét be tud majd lépni. '
+  dashboard_students_join_link: Mondd meg a diákjaidnak, hogy hozzanak létre egy hozzáférést és csatlakozzanak a szekciódhoz
+  dashboard_students_no_email: 'Ha a diákjaidnak nincs email címe, vagy Te szeretnéd létrehozni nekik a hozzáféréseket, akkor állítsd a szekció titkosítási típusát <b>szó</b> vagy <b>kép</b> típusúra.'
   dashboard_students_print_page: Nyomtasd ki ezt az oldalt
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kattints
-    ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz
-    velük.
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Kattints ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz velük.'
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
   dashboard_view_all_lesson_plans: Az összes lecke áttekintése
   dashboard_course1: 'Első kurzus:'
@@ -405,8 +379,7 @@
   dashboard_progress_completed_too_many_blocks: elkészült, túl sok a blokk
   dashboard_progress_completed_perfect: elkészült, tökéletes
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
-  stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról.
-    Egyetlen hét alatt:'
+  stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról. Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: Statisztika a 2013-as Kódolás Órája programról
   dashboard_teacher: Tanár
   dashboard_student: Diák
@@ -414,30 +387,25 @@
   dashboard_sections_account_creation_question: Ki hozza létre a diákok hozzáférését?
   dashboard_sections_password_question: Mit használnak a diákok „jelszóként”?
   dashboard_sections_picture_account_creation: Egy Code.org által hozzárendelt képet
-  dashboard_sections_word_account_creation: Egy Code.org által hozzárendelt egyszerű
-    szót
+  dashboard_sections_word_account_creation: Egy Code.org által hozzárendelt egyszerű szót
   dashboard_sections_sign_in_question: Hol lépnek be a diákok?
   dashboard_sections_sign_in_unique: A „Diákok kezelése” fülön listázott egyedi weboldal
   dashboard_sections_sign_in_main: http://code.org majd „Belépés”
-  dashboard_sections_password_account_creation: A diákok által létrehozott szöveges
-    jelszó
-  dashboard_sections_login_type_explanation: Ez a táblázat segít kiválasztani a szekciódnak
-    megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.
+  dashboard_sections_password_account_creation: A diákok által létrehozott szöveges jelszó
+  dashboard_sections_login_type_explanation: 'Ez a táblázat segít kiválasztani a szekciódnak megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.'
   dashboard_faq: Gyakran ismételt kérdések
-  code_hoc_coming: Megkezdődött a Kódolás Órája - December 8-14.
-  code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás
-    hete keretében
+  code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
+  code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Scrat
-  hoc2014_try_frozen: Művészkedj Annával és  Elzával a Jégvarázsból
+  hoc2014_try_frozen: 'Művészkedj Annával és  Elzával a Jégvarázsból'
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
   carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
-  carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki
-    az offline számítástechnikát
+  carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
   carousel_heading_languages: Oktatóanyagok egyéb programozási nyelveken
   carousel_heading_apps_games: Csinálj saját appot vagy játékot.
@@ -450,14 +418,11 @@
   more_resources_educators: További segédletek tanárok és oktatók részére
   participants: résztvevők
   teachers_notes: Tanári jegyzetek
-  teachers_notes_hoc: 'Tanároknak: Kérjük olvassák el az itt lévő fontos oktatási
-    instrukciókat'
+  teachers_notes_hoc: 'Tanároknak: Kérjük olvassák el az itt lévő fontos oktatási instrukciókat'
   previous: Előző
   next: Következő
   older_systems: Régebbi rendszereken működő oktatóanyagok
-  older_systems_subheading: Ezek régebbi böngészőkön is működnek. Az összes oktatóanyag
-    eléréséhez frissíts  <a href="http://browsehappy.com/" target="_blank">modern
-    webböngészőre.</a>
+  older_systems_subheading: 'Ezek régebbi böngészőkön is működnek. Az összes oktatóanyag eléréséhez frissíts  <a href="http://browsehappy.com/" target="_blank">modern webböngészőre.</a>'
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
   codeorg_name: Írd meg az első számítógépes programod
@@ -486,10 +451,10 @@
   quorum_name: Elérhető programozás (képernyőolvasó támogatással)
   codespark_name: Fooék (még nem olvasók részére is)
   kodable_name: Kodable (még nem olvasók részére is)
-  tynkerapp_name: Tynker - táblagépeken
+  tynkerapp_name: 'Tynker - táblagépeken'
   robomindnl_name: Programozz egy virtuális robotot
   flappy_name: Készíts egy Flappy játékot
-  bitsbox_name: Bitsbox - készíts egy játékot
+  bitsbox_name: 'Bitsbox - készíts egy játékot'
   makegameswithus_name: Készíts egy iPhone játékot a böngésződben!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kódolás Órája
@@ -579,8 +544,8 @@
   hourofcode_platformtext: Modern böngészők, okostelefonok, tabletek
   frozen_platformtext: Modern böngészők és tabletek
   playlab_platformtext: Modern böngészők, okostelefonok, tabletek
-  codeorg_shortdescription: Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!
-  codeintl_shortdescription: Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!
+  codeorg_shortdescription: 'Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!'
+  codeintl_shortdescription: 'Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!'
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Tanulj JavaScriptben rajzolni
   khanes_shortdescription: Tanulj JavaScriptben rajzolni
@@ -588,204 +553,77 @@
   khanhe_shortdescription: Tanulj JavaScriptben rajzolni
   khanfr_shortdescription: Tanulj JavaScriptben rajzolni
   khanpl_shortdescription: Tanulj JavaScriptben rajzolni
-  tynker_shortdescription: Tanulj meg programozni szórakoztató feladványok megoldásával
-    és készítsd el a saját mobil játékaidat.
+  tynker_shortdescription: Tanulj meg programozni szórakoztató feladványok megoldásával és készítsd el a saját mobil játékaidat.
   scratch_shortdescription: Készíts interaktív játékokat, történeteket és animációkat.
-  lightbot_shortdescription: Programozd Lightbotot függvények és ciklusok használatával
-    a feladványok megoldásához!
+  lightbot_shortdescription: Programozd Lightbotot függvények és ciklusok használatával a feladványok megoldásához!
   thinkersmith_shortdescription: Offline oktatóanyag eszközökkel nem rendelkező csoportoknak
   condcards_shortdescription: Tanulj az algoritmusokról egy pakli kártyával
   lightbotintl_shortdescription: Egy játék a programozási alapelvek megtanításához
-  codehs_shortdescription: Kezdj el programozni Karellel a kutyával; egy mókás és
-    látványos bevezetés a programozásba!
+  codehs_shortdescription: Kezdj el programozni Karellel a kutyával; egy mókás és látványos bevezetés a programozásba!
   codecademy_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
-  codecombat_shortdescription: Győzd le az ogrékat ebben a játékban, hogy megtanulj
-    Pythonban vagy JavaScriptben programozni!
-  codemonkey_shortdescription: A diákok egy majmot programoznak be, hogy elkapja a
-    banánokat.
+  codecombat_shortdescription: Győzd le az ogrékat ebben a játékban, hogy megtanulj Pythonban vagy JavaScriptben programozni!
+  codemonkey_shortdescription: A diákok egy majmot programoznak be, hogy elkapja a banánokat.
   codeavengers_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
   processing_shortdescription: Egy egy órás oktatóanyag a feldolgozó nyelvekről
   robomind_shortdescription: Írj programot egy virtuális robotnak
-  groklearning_shortdescription: Tanítsd „Eliza”-t a beszélgető robotot, hogy megtréfáld
-    a barátaidat, hadd higgyék ő egy ember!
-  quorum_shortdescription: Csatlakozz Maryhez egy idegenvezetésre, ahol megtanulja
-    a Quorum programozási nyelvet.
-  codespark_shortdescription: A Foos egy vidám, gyermekeknek szóló, programozást oktató
-    játék.
+  groklearning_shortdescription: Tanítsd „Eliza”-t a beszélgető robotot, hogy megtréfáld a barátaidat, hadd higgyék ő egy ember!
+  quorum_shortdescription: Csatlakozz Maryhez egy idegenvezetésre, ahol megtanulja a Quorum programozási nyelvet.
+  codespark_shortdescription: A Foos egy vidám, gyermekeknek szóló, programozást oktató játék.
   kodable_shortdescription: Egy vidám iPad játék a programozás alapgondolatainak megtanításához
-  tynkerapp_shortdescription: 'Tanulj meg programozni a szórakoztató kódolási rejtvények
-    megoldásával. '
+  tynkerapp_shortdescription: 'Tanulj meg programozni a szórakoztató kódolási rejtvények megoldásával. '
   robomindnl_shortdescription: Írj programot egy virtuális robotnak
-  flappy_shortdescription: Készítsd el a saját játékod - Flappy Birds, Shark vagy
-    Submarine
-  bitsbox_shortdescription: Kódolj le néhány appot, hogy játszhass velük és megoszthasd
-    őket, felhasználva erre az igazi JavaScript programnyelvet!
-  makegameswithus_shortdescription: Készíts egy iPhone játékot! Tanuld meg - a kód
-    írásával - hogyan taníthatod meg a szörnyet az új mozgásokra!
-  touchdevelop_shortdescription: 'Oldd meg a rejtvényeket, készíts játékokat, s tanuld
-    meg a kódírást a telefonodon. '
+  flappy_shortdescription: 'Készítsd el a saját játékod - Flappy Birds, Shark vagy Submarine'
+  bitsbox_shortdescription: Kódolj le néhány appot, hogy játszhass velük és megoszthasd őket, felhasználva erre az igazi JavaScript programnyelvet!
+  makegameswithus_shortdescription: 'Készíts egy iPhone játékot! Tanuld meg - a kód írásával - hogyan taníthatod meg a szörnyet az új mozgásokra!'
+  touchdevelop_shortdescription: 'Oldd meg a rejtvényeket, készíts játékokat, s tanuld meg a kódírást a telefonodon. '
   appinventor_shortdescription: Készítsd el a saját app-od! (csak Androidra)
   blockly_shortdescription: Tölts le egy ZIP fájlt az offline tanuláshoz
-  thinkersmith2_shortdescription: Tanuld meg hogy használják a számítógépek az egyeseket
-    és nullákat az információ tárolásához
+  thinkersmith2_shortdescription: Tanuld meg hogy használják a számítógépek az egyeseket és nullákat az információ tárolásához
   kodableunplugged_shortdescription: Egy jópofa offline feladat
   projguts_shortdescription: Próbáld ki a modellezést és a szimulációt a kő-papír-ollóval
   hourofcode_shortdescription: Az új code.org/hoc helyőrzője
-  frozen_shortdescription: Használj kódot, és csatlakozz Annához és Elsához, akik
-    felfedezik a jég varázslatos és szépséges világát.
+  frozen_shortdescription: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
   playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
-  codeorg_longdescription: Tanuld meg a számítástechnika alapgondolatait drag&drop
-    elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben
-    szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
-    meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető
-    34 nyelven.
-  codeintl_longdescription: Tanuld meg a számítástechnika alapgondolatait drag&drop
-    elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben
-    szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
-    meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető
-    34 nyelven.
-  thinkersmithspanish_longdescription: Az előre meghatározott "Robot Szótár" használatával
-    a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában,
-    anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek
-    a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen
-    értékű hibakeresési tapasztalatot nyújt.
-  khan_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  khanes_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  khanpt_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  khanhe_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  khanfr_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  khanpl_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
-    rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  tynker_longdescription: Építs saját játékot, és osszd meg a barátaiddal! Oldd meg
-    a vidám kód fejtörőt, és tanuld meg az egyes szintekhez tartozó programozási koncepciókat.
-    Tedd személyre szabottá a játékot animált karakterekkel, több szinten és gazdag
-    sajátsággal. Tedd a játékodat valósághűvé a fizikai modellezés használatával.
-    Vizuális tömbökként vagy JavaScript-ként lásd a kódot. Tedd a a játékod iPad-on
-    és Android tableten hordozhatóvá. Több mint egy tucat szórakoztató dolog közül
-    lehet választani!
-  scratch_longdescription: A Scratch segítségével elkészítheted saját játékaidat,
-    sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd
-    az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy
-    írsz egy pong játékot.
-  lightbot_longdescription: Irányítsd Lightbotot hogy minden kék csempét kivilágítson!
-    A Lightbot egy puzzle játék, amely programozási játékmenetet használ, hogy a játékosok
-    elsajátítsák a programozás alapelveit. Tanuld meg az utasítások sorrendiségét,
-    írj eljárásokat és használj ciklusokat a szintek megoldásához. Ideális minden
-    korosztály számára.
-  thinkersmith_longdescription: Egy előre definiált „Robot szótár” használatával a
-    diákok olyan feladatok végrehajtására vezethetik rá a társaikat, amiket előzőleg
-    nem egyeztettek. A lecke megtanítja a gyerekeket a szimbólumok és műveletek közötti
-    összefüggésekre, illetve a nélkülözhetetlen hibakeresési képességre. A „My Robotic
-    Friends” játék csoportos feladatként használható igazán jól, és az osztálytermi
-    használathoz tanári munkafüzetet is tartalmaz.
-  condcards_longdescription: Tanulj az algoritmusokról és feltételes utasításokról
-    egy kártyapakli segítségével ebben az offline játékban. A diákok csapatokban játszhatják
-    ezt a játékot, amihez csapatonként egy pakli kártyára van szükség.
-  lightbotintl_longdescription: Tanuld meg a programozás alap logikáját, kezdve az
-    alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben).
-    Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj
-    funkciókat és ciklusokat!
-  codehs_longdescription: A programozás, amikor utasításokat adunk a számítógépnek,
-    olyan, mint amikor utasításokat adunk egy kutyának. Tanulj programozni Karellel
-    a kutyával &mdash; ez egy szórakoztató, hozzáférhető és vizuális bevezető a programozás
-    világába, ami olyan alapvető koncepciókat tanít meg teljesen kezdőknek, mint az
-    utasítások vagy a függvények. Az oktatóanyag önállóan is használható, de a tanárok
-    számára segédeszközök is elérhetők, illetve követhetik a diákok munkáját.
-  codecademy_longdescription: A Codeacademy egy interaktív, önállóan használható bevezető
-    kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba, és
-    tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható
-    egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok
-    kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve.
-  codecombat_longdescription: Győzd le az ogrékat ebben a játékban, hogy megtanulj
-    Pythonban vagy JavaScriptben programozni!
-  codemonkey_longdescription: 'A CodeMonkey egy online játék, amely valódi programnyelven
-    tanítja a kódírást! A diákok beprogramozzák a majmot a banánok elkapására, miközben  az
-    egyre bonyolultabb lesz minden egyes szinten. Csillag pontszámot kapnak minden
-    egyes megoldásnál, ami egyetlen kattintással megosztható. '
-  codeavengers_longdescription: Építs két játékos 2D játékot JavaScript segítségével
-    10 rövid lépésben. Ezután folytasd a tanulást néhány programozási alap (változók,
-    if feltételek) megismerésével, miközben összeállítasz egy barátaiddal is megosztható
-    kvízt. A munka során pontokat és címeket szerezhetsz, ahogy a feladatok teljesítése
-    során az osztály rangsorának teteje felé menetelsz.
-  processing_longdescription: Egy bevezetés a programozás világába a vizuális művészetek
-    előtérbe helyezésével és a Processing programozási nyelv használatával. Rövid
-    videós leckék kódolási feladatokat mutatnak be, melyek egy interaktív rajzolóprogram
-    elkészítéséhez vezetnek
-  robomind_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül
-    tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető,
-    a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus
-    segédletek segítenek. '
-  groklearning_longdescription: A Python programozási nyelv segítségével készítsd
-    el „Elizát” a beszélgető robotot. Megtaníthatod Elizát, hogy hogyan beszéljen
-    és miket mondjon. Vajon meg tudod-e tréfálni a barátaidat vele, hogy azt higgyék,
-    hogy ő egy igazi ember, nem pedig egy számítógép?
-  quorum_longdescription: Ez az oktatóanyag látásukban korlátozottak számára is elérhető,
-    és képernyő olvasóval is működik. Csatlakozz Mary-hez, aki programozóként egy
-    biológia laborhoz csatlakozva tanulja meg a Quorum programozási nyelvet. Ezt az
-    online példafeladatokkal bővített tananyagot a diákok maguk is használhatják.
-  codespark_longdescription: A Foos egy szórakoztató és gyermekbarát módja a programozás
-    tanulásnak. Programozz kedves karaktereket a feladványok megoldásához, és kelts
-    életre egy virtuális világot. A játék írásmentes, így mindenki játszhatja!
-  kodable_longdescription: Kodable egy önállóan használható iPad játék, ami 5 éves
-    vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait. Tanár
-    vagy szülő jelenléte segítség, de nem feltétlen szükséges.
-  tynkerapp_longdescription: Tanulj programozni szórakoztató kódolási rejtvényekkel.  Vázlatos
-    grafikákat, 10 évnél idősebbeknek való játék-készleteket és testre szabható karaktereket
-    használó könnyen felépített játékok és történetek. Nincs szükség internet kapcsolatra.
-    A műveidhez hozzáférhetsz az interneten is.
-  robomindnl_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül
-    tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető,
-    a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus
-    segédletek segítenek. '
-  flappy_longdescription: Húzd és dobd programozással készítsd el a saját Flappy Bird
-    játékodat, és szabd át saját elképzelésed szerint (a figura lehet egy cápa, mikulás,
-    vagy bármi más is). Egy kattintással akár a telefonodra is feltöltheted a kész
-    játékot.
-  bitsbox_longdescription: Alakítsd át a saját virtuális tableted, majd alkoss meg
-    egy sor játszható és megosztható appot. Az egyszerű bemutatók lehetővé teszik,
-    hogy akár kicsi gyerekek is elkészíthessenek egy igazi JavaScipt programot. Minél
-    többet tudsz, annál messzebb juthatsz.
-  makegameswithus_longdescription: Tanulj meg programozni iPhone játék készítése közben,
-    egy vadonatúj, kezdőknek is egyszerű programozási nyelv, a Swift használatával.
-    Készíts egy Pokemon-szerű akciójátékot és írd meg a kódot, amivel új mozgásokra
-    taníthatod a szörnyedet. Ahhoz hogy a szörnyed nyerhessen, meg kell tanulnod a
-    változók, metódusok és objektumok használatát!
-  touchdevelop_longdescription: 'Az érintésbarát szerkesztő végigvezet majd a pixel
-    alkotások elkészítésén, a medve puzzle megoldásán , vagy a saját ugrálós-madár
-    játék megvalósításán. '
-  appinventor_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével
-    három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre.
-    Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt
-    azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen
-    lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy
-    osztályban tanárral együtt is megoldhatók.
-  blockly_longdescription: Lassú az internet vagy egyáltalán nincs? Töltsd le az eredetileg
-    a Code.org alapját is képező Blocky oktatóanyagot. A 3MB-os ZIP fájl bármilyen
-    számítógépre feltehető, de akár egy pendrive-ról is használható
-  thinkersmith2_longdescription: A diákok megtanulják a betűk tárolását bináris formában
-    ki és be függvények segítségével. A végén az osztály elkódolhatja és hazaviheti
-    a diákok monogramját.
-  kodableunplugged_longdescription: 'A papíron használható fuzz Family Frenzy bevezeti
-    az 5 éves korosztályt a programozási logika világába. Miután a tanár ismerteti
-    a játékot, a gyerekek beprogramozzák a társaikat, hogy egy egyszerű akadálypályán
-    átjusson. '
-  projguts_longdescription: Ez az offline tevékenység bemutatja, hogy miként működik
-    a modellezés és a szimulálás. A gyerekek egy csoportja a kő, papír, olló különböző
-    verzióit játssza, majd megfigyeli a különböző modellkísérletek eredményeit.
+  codeorg_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
+  codeintl_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
+  thinkersmithspanish_longdescription: 'Az előre meghatározott "Robot Szótár" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt.'
+  khan_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  khanes_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  khanpt_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  khanhe_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  khanfr_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  khanpl_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  tynker_longdescription: Építs saját játékot, és osszd meg a barátaiddal! Oldd meg a vidám kód fejtörőt, és tanuld meg az egyes szintekhez tartozó programozási koncepciókat. Tedd személyre szabottá a játékot animált karakterekkel, több szinten és gazdag sajátsággal. Tedd a játékodat valósághűvé a fizikai modellezés használatával. Vizuális tömbökként vagy JavaScript-ként lásd a kódot. Tedd a a játékod iPad-on és Android tableten hordozhatóvá. Több mint egy tucat szórakoztató dolog közül lehet választani!
+  scratch_longdescription: 'A Scratch segítségével elkészítheted saját játékaidat, sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy írsz egy pong játékot.'
+  lightbot_longdescription: Irányítsd Lightbotot hogy minden kék csempét kivilágítson! A Lightbot egy puzzle játék, amely programozási játékmenetet használ, hogy a játékosok elsajátítsák a programozás alapelveit. Tanuld meg az utasítások sorrendiségét, írj eljárásokat és használj ciklusokat a szintek megoldásához. Ideális minden korosztály számára.
+  thinkersmith_longdescription: Egy előre definiált „Robot szótár” használatával a diákok olyan feladatok végrehajtására vezethetik rá a társaikat, amiket előzőleg nem egyeztettek. A lecke megtanítja a gyerekeket a szimbólumok és műveletek közötti összefüggésekre, illetve a nélkülözhetetlen hibakeresési képességre. A „My Robotic Friends” játék csoportos feladatként használható igazán jól, és az osztálytermi használathoz tanári munkafüzetet is tartalmaz.
+  condcards_longdescription: Tanulj az algoritmusokról és feltételes utasításokról egy kártyapakli segítségével ebben az offline játékban. A diákok csapatokban játszhatják ezt a játékot, amihez csapatonként egy pakli kártyára van szükség.
+  lightbotintl_longdescription: Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj funkciókat és ciklusokat!
+  codehs_longdescription: 'A programozás, amikor utasításokat adunk a számítógépnek, olyan, mint amikor utasításokat adunk egy kutyának. Tanulj programozni Karellel a kutyával &mdash; ez egy szórakoztató, hozzáférhető és vizuális bevezető a programozás világába, ami olyan alapvető koncepciókat tanít meg teljesen kezdőknek, mint az utasítások vagy a függvények. Az oktatóanyag önállóan is használható, de a tanárok számára segédeszközök is elérhetők, illetve követhetik a diákok munkáját.'
+  codecademy_longdescription: A Codeacademy egy interaktív, önállóan használható bevezető kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba, és tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve.
+  codecombat_longdescription: Győzd le az ogrékat ebben a játékban, hogy megtanulj Pythonban vagy JavaScriptben programozni!
+  codemonkey_longdescription: 'A CodeMonkey egy online játék, amely valódi programnyelven tanítja a kódírást! A diákok beprogramozzák a majmot a banánok elkapására, miközben  az egyre bonyolultabb lesz minden egyes szinten. Csillag pontszámot kapnak minden egyes megoldásnál, ami egyetlen kattintással megosztható. '
+  codeavengers_longdescription: Építs két játékos 2D játékot JavaScript segítségével 10 rövid lépésben. Ezután folytasd a tanulást néhány programozási alap (változók, if feltételek) megismerésével, miközben összeállítasz egy barátaiddal is megosztható kvízt. A munka során pontokat és címeket szerezhetsz, ahogy a feladatok teljesítése során az osztály rangsorának teteje felé menetelsz.
+  processing_longdescription: Egy bevezetés a programozás világába a vizuális művészetek előtérbe helyezésével és a Processing programozási nyelv használatával. Rövid videós leckék kódolási feladatokat mutatnak be, melyek egy interaktív rajzolóprogram elkészítéséhez vezetnek
+  robomind_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető, a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus segédletek segítenek. '
+  groklearning_longdescription: A Python programozási nyelv segítségével készítsd el „Elizát” a beszélgető robotot. Megtaníthatod Elizát, hogy hogyan beszéljen és miket mondjon. Vajon meg tudod-e tréfálni a barátaidat vele, hogy azt higgyék, hogy ő egy igazi ember, nem pedig egy számítógép?
+  quorum_longdescription: Ez az oktatóanyag látásukban korlátozottak számára is elérhető, és képernyő olvasóval is működik. Csatlakozz Mary-hez, aki programozóként egy biológia laborhoz csatlakozva tanulja meg a Quorum programozási nyelvet. Ezt az online példafeladatokkal bővített tananyagot a diákok maguk is használhatják.
+  codespark_longdescription: A Foos egy szórakoztató és gyermekbarát módja a programozás tanulásnak. Programozz kedves karaktereket a feladványok megoldásához, és kelts életre egy virtuális világot. A játék írásmentes, így mindenki játszhatja!
+  kodable_longdescription: Kodable egy önállóan használható iPad játék, ami 5 éves vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait. Tanár vagy szülő jelenléte segítség, de nem feltétlen szükséges.
+  tynkerapp_longdescription: 'Tanulj programozni szórakoztató kódolási rejtvényekkel.  Vázlatos grafikákat, 10 évnél idősebbeknek való játék-készleteket és testre szabható karaktereket használó könnyen felépített játékok és történetek. Nincs szükség internet kapcsolatra. A műveidhez hozzáférhetsz az interneten is.'
+  robomindnl_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető, a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus segédletek segítenek. '
+  flappy_longdescription: Húzd és dobd programozással készítsd el a saját Flappy Bird játékodat, és szabd át saját elképzelésed szerint (a figura lehet egy cápa, mikulás, vagy bármi más is). Egy kattintással akár a telefonodra is feltöltheted a kész játékot.
+  bitsbox_longdescription: Alakítsd át a saját virtuális tableted, majd alkoss meg egy sor játszható és megosztható appot. Az egyszerű bemutatók lehetővé teszik, hogy akár kicsi gyerekek is elkészíthessenek egy igazi JavaScipt programot. Minél többet tudsz, annál messzebb juthatsz.
+  makegameswithus_longdescription: Tanulj meg programozni iPhone játék készítése közben, egy vadonatúj, kezdőknek is egyszerű programozási nyelv, a Swift használatával. Készíts egy Pokemon-szerű akciójátékot és írd meg a kódot, amivel új mozgásokra taníthatod a szörnyedet. Ahhoz hogy a szörnyed nyerhessen, meg kell tanulnod a változók, metódusok és objektumok használatát!
+  touchdevelop_longdescription: 'Az érintésbarát szerkesztő végigvezet majd a pixel alkotások elkészítésén, a medve puzzle megoldásán , vagy a saját ugrálós-madár játék megvalósításán. '
+  appinventor_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre. Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy osztályban tanárral együtt is megoldhatók.
+  blockly_longdescription: Lassú az internet vagy egyáltalán nincs? Töltsd le az eredetileg a Code.org alapját is képező Blocky oktatóanyagot. A 3MB-os ZIP fájl bármilyen számítógépre feltehető, de akár egy pendrive-ról is használható
+  thinkersmith2_longdescription: A diákok megtanulják a betűk tárolását bináris formában ki és be függvények segítségével. A végén az osztály elkódolhatja és hazaviheti a diákok monogramját.
+  kodableunplugged_longdescription: 'A papíron használható fuzz Family Frenzy bevezeti az 5 éves korosztályt a programozási logika világába. Miután a tanár ismerteti a játékot, a gyerekek beprogramozzák a társaikat, hogy egy egyszerű akadálypályán átjusson. '
+  projguts_longdescription: Ez az offline tevékenység bemutatja, hogy miként működik a modellezés és a szimulálás. A gyerekek egy csoportja a kő, papír, olló különböző verzióit játssza, majd megfigyeli a különböző modellkísérletek eredményeit.
   hourofcode_longdescription: Az új code.org/hoc helyőrzője
-  frozen_longdescription: Használjuk a programozást, hogy csatlakozzunk Annához és
-    Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni
-    és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet
-    majd megoszthatsz a barátaiddal!
-  playlab_longdescription: Hozz létre egy történetet, vagy készíts egy játékot a Play
-    Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a
-    többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat
-    is!
+  frozen_longdescription: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
+  playlab_longdescription: Hozz létre egy történetet, vagy készíts egy játékot a Play Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat is!
   codeorg_beyond_name: Bevezetés a számítástechnikába (általános iskolai évfolyamok)
   khan_beyond_name: Tanulj programozni
   tynker_beyond_name: Tanulj programozni otthon
@@ -897,31 +735,23 @@
   processing_beyond_platformtext: Modern web böngészők
   alice_beyond_platformtext: Windows vagy Mac (telepítés szükséges)
   sphero_beyond_platformtext: Robot vásárlás
-  codeorg_beyond_shortdescription: Tanulj programozni Mark Zuckerbergel  és Angry
-    Birds-el!
+  codeorg_beyond_shortdescription: 'Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!'
   khan_beyond_shortdescription: Tanulj JavaScriptben rajzolni
-  tynker_beyond_shortdescription: Szórakoztató és élvezetes kurzusok 4-8. osztályos
-    gyermekeknek
+  tynker_beyond_shortdescription: Szórakoztató és élvezetes kurzusok 4-8. osztályos gyermekeknek
   scratch_beyond_shortdescription: Készíts interaktív játékokat, történeteket és animációkat.
   lightbot_beyond_shortdescription: Egy játék a programozási alapelvek megtanításához
   codecademy_beyond_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
-  kodable_beyond_shortdescription: Egy vidám iPad játék a programozás alapgondolatainak
-    megtanításához
-  scratchjr_beyond_shortdescription: 'Készíts interaktív történeteket és játékokat
-    ScratchJr segítségével. '
+  kodable_beyond_shortdescription: Egy vidám iPad játék a programozás alapgondolatainak megtanításához
+  scratchjr_beyond_shortdescription: 'Készíts interaktív történeteket és játékokat ScratchJr segítségével. '
   hopscotch_beyond_shortdescription: Tanulj vizuális programozást iPad-en
-  pocketcode_beyond_shortdescription: Készíts egy játékot a telefonodon, majd oszd
-    meg a barátaiddal, hogy próbálják ki azt!
+  pocketcode_beyond_shortdescription: Készíts egy játékot a telefonodon, majd oszd meg a barátaiddal, hogy próbálják ki azt!
   groklearning_beyond_shortdescription: Bevezetés a Python programozás világába
   hacketyhack_beyond_shortdescription: Tanulj meg Ruby-ban programozni az alapoktól
   robomind_beyond_shortdescription: Írj programot egy virtuális robotnak
-  makegameswithus_beyond_shortdescription: Tanulj meg iPhone játékot készíteni egy
-    óra alatt
+  makegameswithus_beyond_shortdescription: Tanulj meg iPhone játékot készíteni egy óra alatt
   appinventor_beyond_shortdescription: Készítsd el a saját app-od! (csak Androidra)
-  touchdevelop_beyond_shortdescription: Programozz mobilalkalmazásokat egyenesen a
-    mobilodon, tableteden, vagy laptopodon
-  codehs_beyond_shortdescription: Tanulj meg JavaScriptben programozni egy szórakoztató
-    vizuális környezetben
+  touchdevelop_beyond_shortdescription: Programozz mobilalkalmazásokat egyenesen a mobilodon, tableteden, vagy laptopodon
+  codehs_beyond_shortdescription: Tanulj meg JavaScriptben programozni egy szórakoztató vizuális környezetben
   udemy_beyond_shortdescription: Tucatnyi online programozási kurzus
   lynda_beyond_shortdescription: Tucatnyi online programozási kurzus
   edx_beyond_shortdescription: A legnépszerűbb osztály a Harvardon
@@ -941,205 +771,41 @@
   arduino_beyond_shortdescription: Tanulj Arduinot a Sparkfunk Digital Sandboxszal.
   processing_beyond_shortdescription: Tanuld meg a Processing nyelvet
   alice_beyond_shortdescription: Taníts programozást egy 3D környezetben
-  sphero_beyond_shortdescription: A SPRK leckék szórakoztató gyorstalpalók a robotok
-    programozásához gyerekeknek, miközben a matek és egyéb képességeiket is fejlesztik.
-  codeorg_beyond_longdescription: Tanuld meg a programozás alap koncepcióit a húzd
-    és dobd programozási rendszerrel. Három teljes kurzus, egyenként 15-20 leckével,
-    offline tantermi tevékenységekkel, játékokokkal, Bill Gateset, Mark Zuckerberget,
-    Angry Birdsöket és a Plants vs. Zombies figuráit felsorakoztató tananyagokkal.
-    Tanuld meg az ismétlő ciklusok, feltételek, az alap algoritmusok, függvények és
-    változók használatát.
-  khan_beyond_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben
-    szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  tynker_beyond_longdescription: A Tynker segítségével könnyű és élvezetes a programozás
-    tanulása. A gyerekek kódblokkok rendezésével készíthetnek játékokat és mobil appokat.
-    Nincs többé szükség a pontos szintaktika ismeretére. A gyerekek az ötleteket animált
-    történetekké alakíthatják. Lehetővé teszi a progresszív tanulást. Ahogy a gyerekek
-    megtanulják az alapokat, Tynker egyre komolyabb koncepciók vezet be, köztük a
-    szintaktikai rendszerű programozást is.
-  scratch_beyond_longdescription: A Scratch segítségével elkészítheted saját játékaidat,
-    sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd
-    az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy
-    írsz egy pong játékot.
-  lightbot_beyond_longdescription: Tanuld meg a programozás alap logikáját, kezdve
-    az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben).
-    Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj
-    funkciókat és ciklusokat!
-  codecademy_beyond_longdescription: A Codeacademy egy interaktív, önállóan használható
-    bevezető kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba,
-    és tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható
-    egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok
-    kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve.
-  kodable_beyond_longdescription: Kodable egy önállóan használható iPad játék, ami
-    5 éves vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait.
-    Tanár vagy szülő jelenléte segítség, de nem feltétlen szükséges.
-  scratchjr_beyond_longdescription: ScrathJr egy bevezető programozási nyelv, ami
-    lehetővé teszi, hogy kicsi gyermekek elkészítsék a saját interaktív történeteiket
-    és játékaikat. A gyerekek grafikus programozási blokkok összekapcsolásával mozgathatják,
-    táncoltathatják, ugráltathatják és énekeltethetik a karaktereket
-  hopscotch_beyond_longdescription: Egy önállóan használható tananyag iPadre a Hopscotch
-    programozási nyelv segítségével. A diákok játékokat és appokat írhatnak az iPadre
-    az iPaden. A diákok egyedül vagy iPadenként maximum három fős csoportokban dolgozhatnak.
-  pocketcode_beyond_longdescription: Készítsd el a saját játékod az okostelefonodon
-    a Pocket Code segítségével! Segíts ejtőernyős Pistának a csomagok kiszállításában.
-    Megoszthatod a barátaiddal és másokkal, hogy ők is kipróbálhassák!
-  groklearning_beyond_longdescription: Egy bevezető kurzus a Python nyelv használatával
-    olyanok számára, akiknek nincs programozási gyakorlatuk. Az egyedi bevezető tartalmunk
-    és a kihívások lehetővé teszik, hogy a diák alaposan megértse a Pythont és a programozást
-    magát. Már nagyon sok különböző korú diákot megtanítottunk ennek a kurzusnak a
-    segítségével, biztosak vagyunk benne, hogy ez neked is megfelelő lesz.
-  hacketyhack_beyond_longdescription: 'A Hackety Hack a legelső lépésektől tanít meg
-    a programozás abszolút alapjaira. Nincs szükség semmiféle előképzettségre a programozás
-    terén. A Hackety Hack segítségével a Ruby programozási nyelvet fogod megtanulni.
-    A Ruby sokféle program elkészítésére használható, köztük asztali számítógépen
-    futó alkalmazásokhoz is. [Megjegyzés: program telepítése szükséges]'
-  robomind_beyond_longdescription: 'A diákok megtanulják a programozás alapjait a
-    saját virtuális robotjuk irányításán keresztül. Az online kurzus tartalmazza a
-    rövid prezentációkat, videókat, kvízeket és az automatikus útmutatókat illetve
-    tippeket, amik segítenek a feladatok végrehajtása során. '
-  makegameswithus_beyond_longdescription: Valamennyire ismered az ObjectiveC-t? Tanuld
-    meg hogy kell iPhone játékot készíteni, egy óra alatt! Végig fogunk vezetni a
-    kódolási, a tesztelési, és a játék kipróbálási folyamaton, a böngészőben, és hogy
-    hogyan osszthatod meg  a barátaiddal a Facebook-on, hogy kipróbálhassák! Nincs
-    szükség előzetes iPhone fejlesztési tapasztalatra. Értened kell már, hogy mik
-    a változók, a metódusok és az objektumok.
-  appinventor_beyond_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével
-    három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre.
-    Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt
-    azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen
-    lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy
-    osztályban tanárral együtt is megoldhatók.
-  touchdevelop_beyond_longdescription: A TouchDevelop segít az IPAD, iPhone, Android,
-    PC, Mac, Windows Phone alkalmazások elkészítésében. Az érintésbarát szerkesztőnkkel
-    a kódolás még telefonon vagy tableten is szórakoztató!
-  codehs_beyond_longdescription: 'Tanuld meg a programozás alapjait Karel kutyával!
-    Egy vidám, hozzáférhető és vizuális bevezetés a kódolás világába, ahol ugyanúgy
-    kell kiadni a számítógép utasításokat, mintha egy kutyát irányítanál. Ez az oktató
-    anyag tanári segítséggel a leghatékonyabb, de önállóan is elvégezhető. [Megjegyzés:
-    nem ingyenes]'
-  udemy_beyond_longdescription: 'Akár soha nem láttál egy sor kódot sem vagy akár
-    programozóként dolgozol, Udemy-nek van egy neked való tanfolyama, amit profi oktatók
-    tartanak. [Megjegyzés: nem ingyenes]'
-  lynda_beyond_longdescription: 'Tanulj meg programozni, készíts web alkalmazásokat
-    az objektum orientált C és C++ programozás alapjaitól a Java fejlesztésig. A fejlesztői
-    tananyagaink segítenek megtanulni fejleszteni, mobil alkalmazásokat készíteni,
-    PHP-val és MySQL adatbázisokkal dolgozni, megismerni a statisztikai feldolgozás
-    programnyelvének az R-nek az alapjait, és még sok minden mást. [Megjegyzés: nem
-    ingyenes]'
-  edx_beyond_longdescription: A CS50x a Harvard College bevezető kurzus a számítástechnika
-    intellektuális világába és a programozás művészetébe programozóknak és nem programozóknak
-    egyaránt. A témakörök között szerepel az absztrakció, algoritmusok, adat struktúrák,
-    beágyazás, erőforrás kezelés, biztonság, szoftver fejlesztés és web fejlesztés.
-    A nyelvek között szerepel a C, PHP és JavaScript, amihez jön az SQL, CSS és a
-    HTML. Az iskolában oktatott verziója a CS50x kurzusnak a Harvard második legnagyobb
-    kurzusa.
-  coursera_beyond_longdescription: 'A Stanford egyetem CS 101 osztálya Nick Parlante
-    vezetésével (ingyenes!). A CS101 egy számítástechnikai alapokkal egyáltalán nem
-    rendelkező hallgatóságot ismerteti meg a számítástechnika legfontosabb gondolataival.
-    Játsz és kísérletezz rövid kód darabokkal, hogy életre keltsd a számítógép erejét
-    és a korlátait. A CS101 ezen felül egy általános hátteret is ad a mai számítógépekhez:
-    mi egy számítógép, mi az a hardver, mi az a szoftver, mi az az internet. Nincs
-    szükség egy web böngésző használatán túl egyéb alapismeretekre.'
-  udacity_beyond_longdescription: Ezen a kurzuson megtanulhatod a számítástechnika
-    kulcsfontosságú koncepcióit, és megtanulhatod hogyan írj saját programokat. Nincs
-    szükség előzetes programozási tudásra. Kezdők is jöhetnek! A kurzus végén érteni
-    fogod a számítástechnika alapjait, és képes leszel Python nyelven programokat
-    írni. Ez a kurzus felkészít arra, hogy a haladó szintű számítástechnikai kurzusokon
-    folytathasd a tanulást.
-  teachingtree_beyond_longdescription: A TeachingTree egy nyílt platform, ami bárki
-    számára lehetővé teszi, hogy oktatóanyagokat rendszerezzen. A célunk, hogy olyan
-    rendszert nyújtsunk, amiben a diákok gyorsan megtalálják azt az információt, amire
-    az egyes koncepciók megtanulásakor szükségük van. Mindenkit szeretnénk arra ösztönözni,
-    hogy adjon a rendszerhez videókat vagy címkézze fel a koncepciókat.
-  kodu_beyond_longdescription: A Kodu segítségével a gyerekek PC-n és XBoxon egy egyszerű
-    vizuális programozási nyelven készíthetnek játékokat. A Kodu segít a kreativitás,
-    a problémamegoldási, a történetelmesélési és a programozási képesség fejlesztésében.
-    A Koduval programozási alapok nélkül is bárki, felnőttek és gyerekek egyaránt,
-    készíthet játékokat. A Kodu PC-s verziója ingyen letölthető. Az XBox verzió az
-    Egyesült Államokban az XBox Marketplace Indie játékok kategóriájából tölthető
-    le 5 dollárért.
-  cargobot_beyond_longdescription: A Cargo-Bot egy puzzle játék, ahol meg kell tanítani
-    egy robotot a ládák mozgatására. Egyszerűnek tűnik, nem? 36 pokolian okos rejtvény,
-    kísérteties zene és lenyűgöző retina grafika jellemzi. A megoldásaidat felveheted,
-    illetve meg is oszthatod  a YouTube-on, hogy láthassák a barátaid.
-  kidsruby_beyond_longdescription: 'Jó szórakozást és játék készítést, illetve házifeladat
-    elkerülést Ruby segítségével! Csak mondd meg a szüleidnek, vagy a tanáraidnak
-    hogy Ruby programozást tanulsz...;). Ingyenes és minden számítógépen működik.
-    [Megjegyzés: Desktop telepítés szükséges]'
-  w3schools_beyond_longdescription: Tanuld meg hogyan kell létrehozni weboldalakat
-    a saját számítógépeden. Tanuld meg a szerver alapjait egy napon belül. Tanuld
-    meg hogyan kell adatbázisokat adni a weboldaladhoz.
-  codeavengers_beyond_longdescription: Tanuld meg a játékok, az alkalmazások, és a
-    weboldalak programozását. Szakértők által tervezve a kezdőknek tökéletesen megfelelő
-    nehézségi szinttel, könnyen érthető utasításokkal, és szükség esetén nagyfokú
-    segítséggel. A HTML, CSS és JavaScript kurzusaink kód kihívásokat és felülvizsgálati
-    játékokat tartalmaznak, hogy a tanulás szórakoztató és hatékony legyen minden
-    korosztály számára.
-  mozilla_beyond_longdescription: A Thimble nevetségesen egyszerűvé teszi saját internetoldalak
-    létrehozását és megosztását. A HTML és CSS oldalakat közvetlenül a böngésződben
-    írhatod és szerkesztheted, majd rögtön meg is tekintheted a munkád. Rakd fel,
-    és osszd meg az elkészült projektet egyetlen kattintással. Kezdőknek és profiknak
-    is ugyanolyan tökéletes.
-  codecombat_beyond_longdescription: Játsszd hogy te vagy a Varázsló, és kódok (varázslatok)
-    segítségével szabályozd a hőseidet, navigálj az útvesztőben, győzd le az óriásokat,
-    cselezd ki az ellenséget és mentsd meg a szövetségeseket! Tanuld meg a JavaScript
-    nyelvet ebben a teljes kezdőknek való HTML 5 web-játékban.
-  codea_beyond_longdescription: A Codea for iPad lehetővé teszi, hogy játékokat és
-    szimulációkat &mdash; vagy szinte bármit létrehozz, ami eszedbe jut. Alakítsd
-    a gondolataidat interaktív alkotásokká, amik kihasználják az iPad képességeit,
-    mint például a multi-touch és a gyorsulásmérő. Úgy gondoljuk, hogy a Codea a legszebb
-    kódszerkesztő, amit használhatsz, és ráadásul még egyszerű is. A Codeát úgy terveztük,
-    hogy megérinthesd a kódod.  Módosítanál egy számot? Csak érj hozzá és húzd el!
-    Megváltoztatnál egy színt vagy egy képet? Hozzájuk érve egy vizuális szerkesztő
-    jelenik meg, amivel megváltoztathatod, amit szeretnél.
-  lego_beyond_longdescription: Készíts kisméretű, testreszabható és programozható
-    robotokat LEGO elemek felhasználásával.
-  finch_beyond_longdescription: A Finch egy új robot a számítástechnika oktatásban,
-    ami a Carnegie Mellon CREATE laborjának négy éves fejlesztésének eredménye. Úgy
-    tervezték meg, hogy támogassa az élvezetes bevezetést a programozás művészetébe.
-    Egy tucatnyi programozási nyelvet és környezetet támogat, köztük több olyat is,
-    ami akár nyolc éves gyermekek számára is megfelelő környezetet biztosít. A Fitch
-    rendszert úgy tervezték meg, hogy lehetővé tegye diákok számára, hogy interakciókban
-    gazdag programokat írjanak.
-  arduino_beyond_longdescription: Az Arduino egy népszerű platform melynek célja,
-    hogy lehetővé tegye a művészeknek és a tervezőknek hogy valódi érzékelőkkel, LED-ekkel,
-    zümmerrekkel, stb. dolgozhassanak. A Sparkfun Virtual Sandbox a tényleges Ardunio
-    kódolást tanítja közvetlenül a böngészőben.
-  processing_beyond_longdescription: A Processing egy programozási nyelv, fejlesztési
-    környezet és online közösség. 2001 óta a Processing a szoftveres ismereteket promótálja
-    a vizuális művészetek terén és a vizuális művészeteket a technológia szintjén.  Eredetileg
-    egy szoftveres jegyzettömbnek szánták, illetve hogy programozás alapokat tanítsanak
-    egy vizuális környezetben, de a Processing profik fejlesztői eszközévé fejlődött.
-    Napjainkban diákok, művészek, tervezők, kutatók és hobbisták tízezrei használják
-    a Processinget tanulásra, prototípusok készítésére és gyártásra.
-  alice_beyond_longdescription: Az Alice projekt megfelelő eszközöket és anyagot biztosít
-    - egy innovatív programozási környezet használatával támogatva a 3D-s animációk
-    létrehozását - a számítástechnikai gondolkodás tanításához és elsajátításához,
-    a probléma megoldáshoz, és a számítógép programozáshoz, széles korcsoport és tudásszint
-    tartományban.
-  sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
-    gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
-    és tudományos képzettségük fejlesztése közben.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: A SPRK leckék szórakoztató gyorstalpalók a robotok programozásához gyerekeknek, miközben a matek és egyéb képességeiket is fejlesztik.
+  codeorg_beyond_longdescription: Tanuld meg a programozás alap koncepcióit a húzd és dobd programozási rendszerrel. Három teljes kurzus, egyenként 15-20 leckével, offline tantermi tevékenységekkel, játékokokkal, Bill Gateset, Mark Zuckerberget, Angry Birdsöket és a Plants vs. Zombies figuráit felsorakoztató tananyagokkal. Tanuld meg az ismétlő ciklusok, feltételek, az alap algoritmusok, függvények és változók használatát.
+  khan_beyond_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
+  tynker_beyond_longdescription: A Tynker segítségével könnyű és élvezetes a programozás tanulása. A gyerekek kódblokkok rendezésével készíthetnek játékokat és mobil appokat. Nincs többé szükség a pontos szintaktika ismeretére. A gyerekek az ötleteket animált történetekké alakíthatják. Lehetővé teszi a progresszív tanulást. Ahogy a gyerekek megtanulják az alapokat, Tynker egyre komolyabb koncepciók vezet be, köztük a szintaktikai rendszerű programozást is.
+  scratch_beyond_longdescription: 'A Scratch segítségével elkészítheted saját játékaidat, sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy írsz egy pong játékot.'
+  lightbot_beyond_longdescription: Tanuld meg a programozás alap logikáját, kezdve az alap programozástól, 4 éves kortól iOS vagy Android eszközön (vagy web böngészőben). Tanuld meg az utasítások összefűzését, ismerj fel ismétlődő mintákat, használj funkciókat és ciklusokat!
+  codecademy_beyond_longdescription: A Codeacademy egy interaktív, önállóan használható bevezető kurzus, ami JavaScript segítségével vezet be a számítástechnika alapjaiba, és tízmilliók használták már a világ minden táján. Egy nagyon egyszerűen használható egy órás anyagot állítottunk össze, amihez kapcsolódó kérdéssorok, vetíthető anyagok kapcsolódnak. Egy komplett projekt, a diákokkal kiegészítve.
+  kodable_beyond_longdescription: Kodable egy önállóan használható iPad játék, ami 5 éves vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait. Tanár vagy szülő jelenléte segítség, de nem feltétlen szükséges.
+  scratchjr_beyond_longdescription: ScrathJr egy bevezető programozási nyelv, ami lehetővé teszi, hogy kicsi gyermekek elkészítsék a saját interaktív történeteiket és játékaikat. A gyerekek grafikus programozási blokkok összekapcsolásával mozgathatják, táncoltathatják, ugráltathatják és énekeltethetik a karaktereket
+  hopscotch_beyond_longdescription: Egy önállóan használható tananyag iPadre a Hopscotch programozási nyelv segítségével. A diákok játékokat és appokat írhatnak az iPadre az iPaden. A diákok egyedül vagy iPadenként maximum három fős csoportokban dolgozhatnak.
+  pocketcode_beyond_longdescription: Készítsd el a saját játékod az okostelefonodon a Pocket Code segítségével! Segíts ejtőernyős Pistának a csomagok kiszállításában. Megoszthatod a barátaiddal és másokkal, hogy ők is kipróbálhassák!
+  groklearning_beyond_longdescription: Egy bevezető kurzus a Python nyelv használatával olyanok számára, akiknek nincs programozási gyakorlatuk. Az egyedi bevezető tartalmunk és a kihívások lehetővé teszik, hogy a diák alaposan megértse a Pythont és a programozást magát. Már nagyon sok különböző korú diákot megtanítottunk ennek a kurzusnak a segítségével, biztosak vagyunk benne, hogy ez neked is megfelelő lesz.
+  hacketyhack_beyond_longdescription: 'A Hackety Hack a legelső lépésektől tanít meg a programozás abszolút alapjaira. Nincs szükség semmiféle előképzettségre a programozás terén. A Hackety Hack segítségével a Ruby programozási nyelvet fogod megtanulni. A Ruby sokféle program elkészítésére használható, köztük asztali számítógépen futó alkalmazásokhoz is. [Megjegyzés: program telepítése szükséges]'
+  robomind_beyond_longdescription: 'A diákok megtanulják a programozás alapjait a saját virtuális robotjuk irányításán keresztül. Az online kurzus tartalmazza a rövid prezentációkat, videókat, kvízeket és az automatikus útmutatókat illetve tippeket, amik segítenek a feladatok végrehajtása során. '
+  makegameswithus_beyond_longdescription: 'Valamennyire ismered az ObjectiveC-t? Tanuld meg hogy kell iPhone játékot készíteni, egy óra alatt! Végig fogunk vezetni a kódolási, a tesztelési, és a játék kipróbálási folyamaton, a böngészőben, és hogy hogyan osszthatod meg  a barátaiddal a Facebook-on, hogy kipróbálhassák! Nincs szükség előzetes iPhone fejlesztési tapasztalatra. Értened kell már, hogy mik a változók, a metódusok és az objektumok.'
+  appinventor_beyond_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre. Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy osztályban tanárral együtt is megoldhatók.
+  touchdevelop_beyond_longdescription: A TouchDevelop segít az IPAD, iPhone, Android, PC, Mac, Windows Phone alkalmazások elkészítésében. Az érintésbarát szerkesztőnkkel a kódolás még telefonon vagy tableten is szórakoztató!
+  codehs_beyond_longdescription: 'Tanuld meg a programozás alapjait Karel kutyával! Egy vidám, hozzáférhető és vizuális bevezetés a kódolás világába, ahol ugyanúgy kell kiadni a számítógép utasításokat, mintha egy kutyát irányítanál. Ez az oktató anyag tanári segítséggel a leghatékonyabb, de önállóan is elvégezhető. [Megjegyzés: nem ingyenes]'
+  udemy_beyond_longdescription: 'Akár soha nem láttál egy sor kódot sem vagy akár programozóként dolgozol, Udemy-nek van egy neked való tanfolyama, amit profi oktatók tartanak. [Megjegyzés: nem ingyenes]'
+  lynda_beyond_longdescription: 'Tanulj meg programozni, készíts web alkalmazásokat az objektum orientált C és C++ programozás alapjaitól a Java fejlesztésig. A fejlesztői tananyagaink segítenek megtanulni fejleszteni, mobil alkalmazásokat készíteni, PHP-val és MySQL adatbázisokkal dolgozni, megismerni a statisztikai feldolgozás programnyelvének az R-nek az alapjait, és még sok minden mást. [Megjegyzés: nem ingyenes]'
+  edx_beyond_longdescription: A CS50x a Harvard College bevezető kurzus a számítástechnika intellektuális világába és a programozás művészetébe programozóknak és nem programozóknak egyaránt. A témakörök között szerepel az absztrakció, algoritmusok, adat struktúrák, beágyazás, erőforrás kezelés, biztonság, szoftver fejlesztés és web fejlesztés. A nyelvek között szerepel a C, PHP és JavaScript, amihez jön az SQL, CSS és a HTML. Az iskolában oktatott verziója a CS50x kurzusnak a Harvard második legnagyobb kurzusa.
+  coursera_beyond_longdescription: 'A Stanford egyetem CS 101 osztálya Nick Parlante vezetésével (ingyenes!). A CS101 egy számítástechnikai alapokkal egyáltalán nem rendelkező hallgatóságot ismerteti meg a számítástechnika legfontosabb gondolataival. Játsz és kísérletezz rövid kód darabokkal, hogy életre keltsd a számítógép erejét és a korlátait. A CS101 ezen felül egy általános hátteret is ad a mai számítógépekhez: mi egy számítógép, mi az a hardver, mi az a szoftver, mi az az internet. Nincs szükség egy web böngésző használatán túl egyéb alapismeretekre.'
+  udacity_beyond_longdescription: Ezen a kurzuson megtanulhatod a számítástechnika kulcsfontosságú koncepcióit, és megtanulhatod hogyan írj saját programokat. Nincs szükség előzetes programozási tudásra. Kezdők is jöhetnek! A kurzus végén érteni fogod a számítástechnika alapjait, és képes leszel Python nyelven programokat írni. Ez a kurzus felkészít arra, hogy a haladó szintű számítástechnikai kurzusokon folytathasd a tanulást.
+  teachingtree_beyond_longdescription: A TeachingTree egy nyílt platform, ami bárki számára lehetővé teszi, hogy oktatóanyagokat rendszerezzen. A célunk, hogy olyan rendszert nyújtsunk, amiben a diákok gyorsan megtalálják azt az információt, amire az egyes koncepciók megtanulásakor szükségük van. Mindenkit szeretnénk arra ösztönözni, hogy adjon a rendszerhez videókat vagy címkézze fel a koncepciókat.
+  kodu_beyond_longdescription: A Kodu segítségével a gyerekek PC-n és XBoxon egy egyszerű vizuális programozási nyelven készíthetnek játékokat. A Kodu segít a kreativitás, a problémamegoldási, a történetelmesélési és a programozási képesség fejlesztésében. A Koduval programozási alapok nélkül is bárki, felnőttek és gyerekek egyaránt, készíthet játékokat. A Kodu PC-s verziója ingyen letölthető. Az XBox verzió az Egyesült Államokban az XBox Marketplace Indie játékok kategóriájából tölthető le 5 dollárért.
+  cargobot_beyond_longdescription: 'A Cargo-Bot egy puzzle játék, ahol meg kell tanítani egy robotot a ládák mozgatására. Egyszerűnek tűnik, nem? 36 pokolian okos rejtvény, kísérteties zene és lenyűgöző retina grafika jellemzi. A megoldásaidat felveheted, illetve meg is oszthatod  a YouTube-on, hogy láthassák a barátaid.'
+  kidsruby_beyond_longdescription: 'Jó szórakozást és játék készítést, illetve házifeladat elkerülést Ruby segítségével! Csak mondd meg a szüleidnek, vagy a tanáraidnak hogy Ruby programozást tanulsz...;). Ingyenes és minden számítógépen működik. [Megjegyzés: Desktop telepítés szükséges]'
+  w3schools_beyond_longdescription: Tanuld meg hogyan kell létrehozni weboldalakat a saját számítógépeden. Tanuld meg a szerver alapjait egy napon belül. Tanuld meg hogyan kell adatbázisokat adni a weboldaladhoz.
+  codeavengers_beyond_longdescription: Tanuld meg a játékok, az alkalmazások, és a weboldalak programozását. Szakértők által tervezve a kezdőknek tökéletesen megfelelő nehézségi szinttel, könnyen érthető utasításokkal, és szükség esetén nagyfokú segítséggel. A HTML, CSS és JavaScript kurzusaink kód kihívásokat és felülvizsgálati játékokat tartalmaznak, hogy a tanulás szórakoztató és hatékony legyen minden korosztály számára.
+  mozilla_beyond_longdescription: A Thimble nevetségesen egyszerűvé teszi saját internetoldalak létrehozását és megosztását. A HTML és CSS oldalakat közvetlenül a böngésződben írhatod és szerkesztheted, majd rögtön meg is tekintheted a munkád. Rakd fel, és osszd meg az elkészült projektet egyetlen kattintással. Kezdőknek és profiknak is ugyanolyan tökéletes.
+  codecombat_beyond_longdescription: Játsszd hogy te vagy a Varázsló, és kódok (varázslatok) segítségével szabályozd a hőseidet, navigálj az útvesztőben, győzd le az óriásokat, cselezd ki az ellenséget és mentsd meg a szövetségeseket! Tanuld meg a JavaScript nyelvet ebben a teljes kezdőknek való HTML 5 web-játékban.
+  codea_beyond_longdescription: 'A Codea for iPad lehetővé teszi, hogy játékokat és szimulációkat &mdash; vagy szinte bármit létrehozz, ami eszedbe jut. Alakítsd a gondolataidat interaktív alkotásokká, amik kihasználják az iPad képességeit, mint például a multi-touch és a gyorsulásmérő. Úgy gondoljuk, hogy a Codea a legszebb kódszerkesztő, amit használhatsz, és ráadásul még egyszerű is. A Codeát úgy terveztük, hogy megérinthesd a kódod.  Módosítanál egy számot? Csak érj hozzá és húzd el! Megváltoztatnál egy színt vagy egy képet? Hozzájuk érve egy vizuális szerkesztő jelenik meg, amivel megváltoztathatod, amit szeretnél.'
+  lego_beyond_longdescription: Készíts kisméretű, testreszabható és programozható robotokat LEGO elemek felhasználásával.
+  finch_beyond_longdescription: A Finch egy új robot a számítástechnika oktatásban, ami a Carnegie Mellon CREATE laborjának négy éves fejlesztésének eredménye. Úgy tervezték meg, hogy támogassa az élvezetes bevezetést a programozás művészetébe. Egy tucatnyi programozási nyelvet és környezetet támogat, köztük több olyat is, ami akár nyolc éves gyermekek számára is megfelelő környezetet biztosít. A Fitch rendszert úgy tervezték meg, hogy lehetővé tegye diákok számára, hogy interakciókban gazdag programokat írjanak.
+  arduino_beyond_longdescription: Az Arduino egy népszerű platform melynek célja, hogy lehetővé tegye a művészeknek és a tervezőknek hogy valódi érzékelőkkel, LED-ekkel, zümmerrekkel, stb. dolgozhassanak. A Sparkfun Virtual Sandbox a tényleges Ardunio kódolást tanítja közvetlenül a böngészőben.
+  processing_beyond_longdescription: 'A Processing egy programozási nyelv, fejlesztési környezet és online közösség. 2001 óta a Processing a szoftveres ismereteket promótálja a vizuális művészetek terén és a vizuális művészeteket a technológia szintjén.  Eredetileg egy szoftveres jegyzettömbnek szánták, illetve hogy programozás alapokat tanítsanak egy vizuális környezetben, de a Processing profik fejlesztői eszközévé fejlődött. Napjainkban diákok, művészek, tervezők, kutatók és hobbisták tízezrei használják a Processinget tanulásra, prototípusok készítésére és gyártásra.'
+  alice_beyond_longdescription: 'Az Alice projekt megfelelő eszközöket és anyagot biztosít - egy innovatív programozási környezet használatával támogatva a 3D-s animációk létrehozását - a számítástechnikai gondolkodás tanításához és elsajátításához, a probléma megoldáshoz, és a számítógép programozáshoz, széles korcsoport és tudásszint tartományban.'
+  sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai és tudományos képzettségük fejlesztése közben.

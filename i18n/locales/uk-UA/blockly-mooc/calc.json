@@ -1,18 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"У вас є блок з незаповненими вводу.",
+  "divideByZeroError":"Результат вашої программи-ділення на нуль.",
+  "emptyComputeBlock":"Ви повинні надати \"оцінку\"блоку.",
   "equivalentExpression":"Спробуйте переставити аргументи, щоб отримати такий же вираз.",
-  "evaluate":"evaluate",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "evaluate":"Оцінювати",
+  "extraTopBlocks":"Ви не прикріпили блок.Ви мали на увазі надати значення цьому блоку?",
   "failedInput":"Ваша функція не повертає правильний результат для всіх значень.",
   "goal":"Мета:",
-  "levelIncompleteError":"Вираз не відповідають цілі.",
-  "missingFunctionError":"You must define a function named {functionName}.",
-  "missingVariableX":"Your expression is missing variable {var}.",
-  "reinfFeedbackMsg":"Ось ваші обчислення! Продовжити працювати з ними, або перейти до наступної загадки!",
+  "levelIncompleteError":"Ваш вираз не відповідає цілі.",
+  "missingFunctionError":"Ви повинні визначити функцію з ім'ям {functionName}.",
+  "missingVariableX":"У вашому виразі немає змінної {var}.",
+  "reinfFeedbackMsg":"Ось ваші обчислення! Продовжіть працювати з ними, або перейдіть до наступної задачі!",
   "yourExpression":"Ваш вираз:",
   "wrongInput":"Ви викликаєте функцію з неправильним значенням.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongOtherValuesX":"Ваш вираз призводить до неправельних значень якшо ми міняємо {var}.",
+  "wrongResult":"Ваш вираз не видає правильного результату."
 }

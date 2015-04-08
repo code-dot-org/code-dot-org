@@ -3,60 +3,71 @@ he:
     text_match:
       Blocks to Bools 1:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png, 500
         (4+5) > 9: '(4+5) > 9'
         ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Bools 2:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png, 500
         (10 > 11) or (7 <= 9): '(10 > 11) or (7 <= 9)'
         (10 > 11) OR (7 <= 9): '(10 > 11) OR (7 <= 9)'
         (10 > 11) || (7 <= 9): '(10 > 11) || (7 <= 9)'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Bools 3:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
         (5 < 10) and (10 < 15): '(5 < 10) and (10 < 15)'
+        (5 < 10) And (10 < 15): '(5 < 10) And (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) AND (10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
+        ((5 < 10) and (10 < 15)): '((5 < 10) and (10 < 15))'
+        ((5 < 10) And (10 < 15)): '((5 < 10) And (10 < 15))'
+        ((5 < 10) AND (10 < 15)): '((5 < 10) AND (10 < 15))'
+        ((5 < 10) && (10 < 15)): '((5 < 10) && (10 < 15))'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Bools 4:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))'
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((10 > x) וגם (x > 8)) או ((5 > x) וגם (x > 1))'
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): '((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) and (x < 5)) or ((8 < x) and (x < 10))'
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): '(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))'
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): '(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))'
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): '(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))'
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): '(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 1:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
-        4 + 5: 4 + 5
+        4 + 5: 5 + 4
         (4+5): (4+5)
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 2:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
-        7 * 6: '7 * 6'
+        7 * 6: '6 * 7'
         (7 * 6): '(7 * 6)'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 3:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
-        (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
-        2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
+        (2 * 3) - (1 + 0): '(0 + 1) - (3 * 2)'
+        2 * 3 - (1 + 0): '(0 + 1) - 3 * 2'
         ((2 * 3) - (1 + 0)): '((2 * 3) - (1 + 0))'
+        2 * 3 - 1 + 0: '2 * 3 - 1 + 0'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 4:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
@@ -64,7 +75,7 @@ he:
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 5:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
         (-2) * (-6):
           - 
@@ -73,7 +84,7 @@ he:
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 6:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: '((4 - 1) * (-2)) + 12'
         ((4 - 1) * -2) + 12: '((4 - 1) * -2) + 12'
@@ -83,14 +94,14 @@ he:
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Blocks to Math 7:
         Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
+        Type out the arithmetic expression that matches this code: הקלד את הביטוי האריתמטי התואם לקוד הזה
         Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         (10 / (2 * (3 + 1)): '(10 / (2 * (3 + 1))'
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
       Open text response example:
         Open text response example: Open text response example
-        I loved it because...: I loved it because...
+        I loved it because...: אני אוהב את זה כי...
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
         0: '? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
@@ -98,9 +109,9 @@ he:
         In my classroom, I want to...: In my classroom, I want to...
       PDK5 Course Descriptions:
         Course Structure: Course Structure
-        I am going to start with Course...: I am going to start with Course...
+        I am going to start with Course...: אני הולך להתחיל עם קורס...
       PDK5 Difficulty:
-        Degree of Difficulty: Degree of Difficulty
+        Degree of Difficulty: רמת קושי
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
         Your thoughts here: Your thoughts here
       PDK5 Foundation:
@@ -121,7 +132,7 @@ he:
         1: ': Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.'
         Your thoughts here: Your thoughts here
       PDK5 Problem Solving:
-        Problem Solving Methods: Problem Solving Methods
+        Problem Solving Methods: שיטות לפתרון בעיות
         I could integrate this in my classroom by...: I could integrate this in my classroom by...
       PDK5 Promo Video:
         "Code Studio: Kid tested, Teacher approved": 'Code Studio: Kid tested, Teacher approved'
@@ -132,7 +143,7 @@ he:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
         "I think teaching computer science will be different than teaching other subjects in these ways: ...": 'I think teaching computer science will be different than teaching other subjects in these ways: ...'
       Test Markdown level:
-        Enter title here: Enter title here
+        Enter title here: הכנס את הכותרת כאן
         Enter prompt here: Enter prompt here
       text match test:
         Mathematical Expression Assessment: הערכת ביטוי מתמטי
@@ -144,7 +155,7 @@ he:
         Type the arithmetic expression here: הקלד את הביטוי האריתמטי כאן
     external:
       Code Logo v3:
-        title: title
+        title: כותרת
         Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
@@ -152,14 +163,15 @@ he:
         CSP Student Plan - U1L5 - Sending Bits in the real world: 'CSP Student Plan - U1L5 - Sending Bits in the real world'
         description here: description here
       CSPStudentLessonPlanTemplate:
-        title: title
+        title: כותרת
         description here: description here
       External level test (will):
-        first computer program: first computer program
+        first computer program: תוכנת המחשב הראשונה
       Hour of Code test content: [ ]
       Mixing Colors:
-        title: title
+        title: כותרת
         description here: description here
+      PDCSP Intro: [ ]
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 Classroom Culture C:
@@ -167,7 +179,7 @@ he:
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
       PDK5 Glossary C:
-        Vocabulary: Vocabulary
+        Vocabulary: אוצר מילים
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: Pair Programming
@@ -199,7 +211,7 @@ he:
         Pixelation 3: Pixelation 3
         Create images with bits and bytes.: Create images with bits and bytes.
       Pixelation 3 Bit Colors:
-        title: title
+        title: כותרת
         description here: description here
       Pixelation 4:
         Pixelation 4 - Baker test of External level -- NOT REAL: 'Pixelation 4 - Baker test of External level -- NOT REAL'
@@ -208,10 +220,13 @@ he:
         Pixelation 4x4 Empty: Pixelation 4x4 Empty
         Create images with bits and bytes.: Create images with bits and bytes.
       Pixelation Bee:
-        title: title
+        title: כותרת
         description here: description here
       Pixelation Flappy:
-        title: title
+        title: כותרת
+        description here: description here
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: 'Pixelation - Hadi Emoji'
         description here: description here
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: 'Pixelation - Lesson 14 - Fix bit offset'
@@ -223,16 +238,16 @@ he:
         Make your own B&W image: 'Make your own B&W image'
         description here: description here
       Pixelation - Lesson 14 - Instructions one bit error:
-        "Lesson 14 - Task 2: fix the error": 'Lesson 14 - Task 2: fix the error'
+        "Lesson 14 - Task 2: fix the error": 'שיעור 14 - משימה 2: לתקן את השגיאה'
         description here: description here
       Pixelation - Lesson 14 - Make the Letter A:
-        title: title
+        title: כותרת
         description here: description here
       Pixelation - Lesson 14 - Make your own B and W Image:
-        title: title
+        title: כותרת
         description here: description here
       Pixelation - Lesson 14 - Make your own B&W Image:
-        title: title
+        title: כותרת
         description here: description here
       Pixelation - Lesson 15 - Color Free Play:
         Pixelation - Lesson 15 - Color Free Play: 'Pixelation - Lesson 15 - Color Free Play'
@@ -276,17 +291,29 @@ he:
         demo title: demo title
         demo description: demo description
       Test discourse forum-comment level:
-        Degree of Difficulty: Degree of Difficulty
+        Degree of Difficulty: רמת קושי
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      U1L5 Student Lesson:
+        title: כותרת
+        description here: description here
+      U1L6 Student Lesson Plan:
+        title: כותרת
+        description here: description here
       unique level name here:
-        title: title
+        title: כותרת
         description here: description here
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Big Triangle
+        Big Triangle: משולש גדול
         Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
         Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
@@ -311,7 +338,7 @@ he:
         1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
         wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Enter name here:
-        Enter title here: Enter title here
+        Enter title here: הכנס את הכותרת כאן
         Enter prompt here: Enter prompt here
         Contract Name|Number|Number|String: Contract Name|Number|Number|String
       Eval Contracts 1 B:

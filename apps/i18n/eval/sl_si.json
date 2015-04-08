@@ -4,7 +4,6 @@
   "circleBlockTitle": "krog (polmer, slog, barva)",
   "displayBlockTitle": "prikaži",
   "ellipseBlockTitle": "elipsa (širina, višina, slog, barva)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Nekaj blokov ostaja nezdruženih. Jih želite dodati k bloku za prikaz?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "prosojnice (zgoraj, spodaj)",

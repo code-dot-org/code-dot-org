@@ -1,7 +1,6 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "divideByZeroError": "התכנית שלך מנסה לחלק באפס.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי.",
   "evaluate": "evaluate",
   "extraTopBlocks": "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?",

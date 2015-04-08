@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "ผลของโปรแกรมของคุณถูกหารด้วยศูนย์."},
 "emptyComputeBlock":function(d){return "คุณต้องแนบบล็อกเพื่อทำงานกับอีกบล็อก."},
-"emptyFunctionalBlock":function(d){return "คุณมีบล็อกที่ไม่ได้เติมข้อมูลเข้า."},
 "equivalentExpression":function(d){return "ลองจัดลำดับ argument ใหม่ เพื่อให้ได้ expression ที่เหมือนกันจริงๆ."},
 "evaluate":function(d){return "การทดสอบ"},
 "extraTopBlocks":function(d){return "คุณมีบล็อกที่ไม่ได้ติดอยู่กับโปรแกรมนี้ คุณหมายถึงว่า คุณอยากจะเอาบล็อกนั้นมาอยู่กับบล็อกที่จะทำงานนี้หรือไม่?"},

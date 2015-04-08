@@ -1502,15 +1502,15 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   var a = document.createElement("mutation");
   if(this.description_) {
     var b = document.createElement("description");
-    b.innerHTML = this.description_;
+    b.textContent = this.description_;
     a.appendChild(b)
   }
-  this.outputType_ && (b = document.createElement("outputtype"), b.innerHTML = this.outputType_, a.appendChild(b));
+  this.outputType_ && (b = document.createElement("outputtype"), b.textContent = this.outputType_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && (this.outputType_ = c.innerHTML, this.changeFunctionalOutput(this.outputType_))
+    "description" === d ? this.description_ = c.textContent : "outputtype" === d && (this.outputType_ = c.textContent, this.changeFunctionalOutput(this.outputType_))
   }
 }};
 

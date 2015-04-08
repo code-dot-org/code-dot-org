@@ -4,7 +4,6 @@
   "circleBlockTitle": "ring (raadius, stiil, värv)",
   "displayBlockTitle": "näita",
   "ellipseBlockTitle": "ellips (laius, kõrgus, stiil, värv)",
-  "emptyFunctionalBlock": "Teil on täitmata sisendiga plokk.",
   "extraTopBlocks": "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"kuva\" klotsi külge?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "pealiskiht (ülaosa, põhi)",

@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Bạn phải gắn một khối vào một khối \"tính toán\"."},
-"emptyFunctionalBlock":function(d){return "Bạn có một khối với input chưa điền."},
 "equivalentExpression":function(d){return "Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Bạn có một khối tự do. Ý của bạn là gắn chúng vào khối \"tính toán\"?"},
