@@ -259,6 +259,11 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
       }.bind(this));
 };
 
+/**
+ * Connect to a remote client node.
+ * @param {NetSimClientNode} client
+ * @param {!NodeStyleCallback} onComplete
+ */
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
@@ -395,6 +400,12 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
   }.bind(this));
 };
 
+/**
+ * Handler for any wire table change.  Used here to detect mutual connections
+ * between client nodes that indicate we can move to a "connected" state.
+ * @param {Array} wireRows
+ * @private
+ */
 NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   if (!this.myWire) {
     return;

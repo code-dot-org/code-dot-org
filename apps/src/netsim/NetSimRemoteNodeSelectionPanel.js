@@ -70,14 +70,38 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.remoteNode_ = remoteNode;
 
+  /**
+   * @type {number}
+   * @private
+   */
   this.myNodeID_ = myNodeID;
 
+  /**
+   * Handler for "Add Router" button
+   * @type {function}
+   * @private
+   */
   this.addRouterCallback_ = addRouterCallback;
 
+  /**
+   * Handler for selecting a node row
+   * @type {function}
+   * @private
+   */
   this.selectNodeCallback_ = selectNodeCallback;
 
+  /**
+   * Handler for connect button
+   * @type {function}
+   * @private
+   */
   this.connectButtonCallback_ = connectButtonCallback;
 
+  /**
+   * Handler for cancel button (backs out of non-mutual connection)
+   * @type {function}
+   * @private
+   */
   this.cancelButtonCallback_ = cancelButtonCallback;
 
   // Initial render
