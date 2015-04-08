@@ -155,18 +155,17 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Dit program resulterer i division med nul."},
-"emptyComputeBlock":function(d){return "Du skal vedhæfte en blok til \"Beregn\"-blokken."},
-"emptyFunctionalBlock":function(d){return "Du har en blok med et ikke-udfyldt input."},
+"emptyComputeBlock":function(d){return "Du skal vedhæfte en blok til \"vurdér\"-blokken."},
 "equivalentExpression":function(d){return "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk."},
 "evaluate":function(d){return "evaluér"},
-"extraTopBlocks":function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?"},
+"extraTopBlocks":function(d){return "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?"},
 "failedInput":function(d){return "Din funktion returnerer ikke det korrekte resultat for alle værdier."},
 "goal":function(d){return "Mål:"},
 "levelIncompleteError":function(d){return "Dit udtryk er ikke det samme som målet."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Du skal definere en funktion navngivet "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Dit udtryk mangler variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Her er din beregning! Fortsæt med at arbejde på det, eller gå videre til det næste puslespil!"},
 "yourExpression":function(d){return "Dit udtryk:"},
 "wrongInput":function(d){return "Du kalder din funktion med den forkerte værdi."},
 "wrongOtherValuesX":function(d){return "Dir udtryk resulterer i den forkerte værdi, hvis vi ændrer "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongResult":function(d){return "Dit udtryk returnerer ikke det korrekte resultat."}};

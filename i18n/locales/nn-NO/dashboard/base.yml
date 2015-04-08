@@ -219,6 +219,7 @@ nn:
         artist: Teikn noko
     user:
       classroom: Lærar heimeside
+      district_dashboard: District Dashboard
       label: 'Hei %{username}'
       stats: Min fremdrift
       settings: Min konto
@@ -437,6 +438,9 @@ nn:
       body: 'Sjå eit galleri av app- og artist-bilder laga av brukarane våre'
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
@@ -550,3 +554,5 @@ nn:
     delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
     delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

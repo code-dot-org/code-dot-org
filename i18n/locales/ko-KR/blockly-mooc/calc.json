@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Your program results in division by zero.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"입력이 없는 블럭이 있습니다.",
   "equivalentExpression":"같은 계산결과가 나올 수 있도록 다시 배치하세요.",
   "evaluate":"evaluate",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

@@ -396,12 +396,6 @@
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: آزمایشگاه بازی بی نهایت
-          description_short: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد
-            کنید!!
-          description: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد کنید!
-          Infinity: بی نهایت
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -521,6 +515,8 @@
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -578,3 +574,15 @@
             (بازی بزرگ)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: آشنايي با پیشرفت حرفه ای
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

@@ -50,7 +50,7 @@ en:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: crwdns8730:0crwdne8730:0
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: crwdns8818:0crwdne8818:0
-        Choose the best blocks: crwdns8732:0crwdne8732:0
+        Choose the best blocks.: crwdns36016:0crwdne36016:0
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: crwdns8733:0crwdne8733:0
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: crwdns8734:0crwdne8734:0
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: crwdns8735:0crwdne8735:0
@@ -83,7 +83,7 @@ en:
       2-3 Algorithms Multi 1:
         Multiple Choice: crwdns7584:0crwdne7584:0
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: crwdns7585:0crwdne7585:0
-        Choose an algorithm for the image provided: crwdns7586:0crwdne7586:0
+        Choose an algorithm for the image provided.: crwdns36017:0crwdne36017:0
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: crwdns9005:0crwdne9005:0
         0: crwdns23632:0crwdne23632:0
         1: crwdns23633:0crwdne23633:0
@@ -141,7 +141,6 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns35720:0crwdne35720:0
         Blue colored blocks are associated with __________ ?: crwdns35721:0__________crwdne35721:0
         a image: crwdns35722:0crwdne35722:0
         a number: crwdns35723:0crwdne35723:0
@@ -160,11 +159,11 @@ en:
         a string: crwdns35759:0crwdne35759:0
         boolean: crwdns35760:0crwdne35760:0
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: crwdns35761:0__________crwdne35761:0
-        a image: crwdns35762:0crwdne35762:0
-        a number: crwdns35763:0crwdne35763:0
-        a string: crwdns35764:0crwdne35764:0
-        boolean: crwdns35765:0crwdne35765:0
+        Green colored blocks are associated with __________ ?: crwdns36210:0__________crwdne36210:0
+        a image: crwdns36211:0crwdne36211:0
+        a number: crwdns36212:0crwdne36212:0
+        a string: crwdns36213:0crwdne36213:0
+        boolean: crwdns36214:0crwdne36214:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -256,19 +255,19 @@ en:
       4-5 Algorithms Multi 1:
         Multiple Choice: crwdns20102:0crwdne20102:0
         Which one of these items is hardest to describe an algorithm for?: crwdns20103:0crwdne20103:0
-        <h4>Brushing your teeth</h4>: crwdns20104:0crwdne20104:0
-        <h4>Baking cookies</h4>: crwdns20105:0crwdne20105:0
-        <h4>Shopping from a grocery list</h4>: crwdns20106:0crwdne20106:0
-        <h4>Banana</h4>: crwdns20107:0crwdne20107:0
+        Brushing your teeth: crwdns36021:0crwdne36021:0
+        Baking cookies: crwdns36022:0crwdne36022:0
+        Shopping from a grocery list: crwdns36023:0crwdne36023:0
+        Banana: crwdns36024:0crwdne36024:0
       4-5 Computational Thinking Multi 1:
         Multiple Choice: crwdns18160:0crwdne18160:0
         0: crwdns18161:0crwdne18161:0
         1: crwdns18162:0crwdne18162:0
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: crwdns18163:0crwdne18163:0
-        <h4>Seattle _____ a _____ _____.</h4>: crwdns18164:0_____crwdnd18164:0_____crwdnd18164:0_____crwdne18164:0
-        <h4>_____ is a _____ city.</h4>: crwdns18165:0_____crwdnd18165:0_____crwdne18165:0
-        <h4>_____ is _____ a _____.</h4>: crwdns18166:0_____crwdnd18166:0_____crwdnd18166:0_____crwdne18166:0
-        <h4>Eugene is a _____ city.</h4>: crwdns18167:0_____crwdne18167:0
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: crwdns36025:0crwdne36025:0
+        Seattle _____ a _____ _____.: crwdns36026:0_____crwdnd36026:0_____crwdnd36026:0_____crwdne36026:0
+        _____ is a _____ city.: crwdns36027:0_____crwdnd36027:0_____crwdne36027:0
+        _____ is _____ a _____.: crwdns36028:0_____crwdnd36028:0_____crwdnd36028:0_____crwdne36028:0
+        Eugene is a _____ city.: crwdns36029:0_____crwdne36029:0
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: crwdns20108:0crwdne20108:0
         Which of these pictures best represents crowdsourcing?: crwdns20109:0crwdne20109:0
@@ -277,33 +276,33 @@ en:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: crwdns20112:0crwdne20112:0
         Which one of these activities would be best for practicing crowdsourcing?: crwdns20113:0crwdne20113:0
-        <h4>Cleaning your room</h4>: crwdns20114:0crwdne20114:0
-        <h4>Eating your dessert</h4>: crwdns20115:0crwdne20115:0
-        <h4>Brushing your hair</h4>: crwdns20116:0crwdne20116:0
-        <h4>Washing your face</h4>: crwdns20117:0crwdne20117:0
+        Cleaning your room: crwdns36030:0crwdne36030:0
+        Eating your dessert: crwdns36031:0crwdne36031:0
+        Brushing your hair: crwdns36032:0crwdne36032:0
+        Washing your face: crwdns36033:0crwdne36033:0
       4-5 Digital Footprint Multi 1:
         Multiple Choice: crwdns20118:0crwdne20118:0
         Which piece of information listed below is okay to share on the internet?: crwdns20119:0crwdne20119:0
-        <h4>Your birthday</h4>: crwdns20120:0crwdne20120:0
-        <h4>Your favorite food</h4>: crwdns20121:0crwdne20121:0
-        <h4>Your address</h4>: crwdns20122:0crwdne20122:0
-        <h4>Your parent's credit card number</h4>: crwdns20123:0crwdne20123:0
+        Your birthday: crwdns36034:0crwdne36034:0
+        Your favorite food: crwdns36035:0crwdne36035:0
+        Your address: crwdns36036:0crwdne36036:0
+        Your parent's credit card number: crwdns36037:0crwdne36037:0
       4-5 Internet Multi 1:
         Multiple Choice: crwdns20124:0crwdne20124:0
         /script_assets/4-5_images/unplugged/internet_1_q.png: crwdns20125:0crwdne20125:0
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: crwdns20126:0crwdne20126:0
-        <h4>23.23.224.106</h4>: crwdns20127:0crwdne20127:0
-        <h4>54.209.61.132</h4>: crwdns20128:0crwdne20128:0
-        <h4>64.14.68.10</h4>: crwdns20129:0crwdne20129:0
-        <h4>54.243.71.82</h4>: crwdns20130:0crwdne20130:0
+        23.23.224.106: crwdns36038:0crwdne36038:0
+        54.209.61.132: crwdns36039:0crwdne36039:0
+        64.14.68.10: crwdns36040:0crwdne36040:0
+        54.243.71.82: crwdns36041:0crwdne36041:0
       4-5 Internet Multi 2:
         Multiple Choice: crwdns20131:0crwdne20131:0
         /script_assets/4-5_images/unplugged/internet_1_q.png: crwdns20132:0crwdne20132:0
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: crwdns20133:0crwdne20133:0
-        <h4>code.org</h4>: crwdns20134:0crwdne20134:0
-        <h4>csisfun.com</h4>: crwdns20135:0crwdne20135:0
-        <h4>thinkersmith.org</h4>: crwdns20136:0crwdne20136:0
-        <h4>khanacademy.org</h4>: crwdns20137:0crwdne20137:0
+        code.org: crwdns36042:0crwdne36042:0
+        csisfun.com: crwdns36043:0crwdne36043:0
+        thinkersmith.org: crwdns36044:0crwdne36044:0
+        khanacademy.org: crwdns36045:0crwdne36045:0
       4-5 Songwriting Multi 1:
         Multiple Choice: crwdns20138:0crwdne20138:0
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: crwdns20139:0crwdne20139:0
@@ -318,7 +317,7 @@ en:
       4-5 Suncatchers Multi 1:
         Multiple Choice: crwdns20148:0crwdne20148:0
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: crwdns20149:0crwdne20149:0
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: crwdns20150:0crwdne20150:0
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: crwdns36046:0crwdne36046:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: crwdns20151:0crwdne20151:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: crwdns20152:0crwdne20152:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: crwdns20153:0crwdne20153:0
@@ -640,10 +639,10 @@ en:
         Strings and Images Multiple Choice: crwdns27304:0crwdne27304:0
         Multi Strings Images 1.blocks3.level: crwdns27305:0crwdne27305:0
         Which of these Evaluation Blocks will draw the image: crwdns27306:0crwdne27306:0
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: crwdns27307:0crwdne27307:0
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: crwdns27308:0crwdne27308:0
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: crwdns27309:0crwdne27309:0
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: crwdns27310:0crwdne27310:0
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: crwdns36047:0crwdne36047:0
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns36048:0crwdne36048:0
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns36049:0crwdne36049:0
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns36050:0crwdne36050:0
       PDK5 Basic CS:
         Video Follow-up Question: crwdns34781:0crwdne34781:0
         Answer this question based on the video you just watched.: crwdns34782:0crwdne34782:0

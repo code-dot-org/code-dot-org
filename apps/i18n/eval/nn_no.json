@@ -4,7 +4,6 @@
   "circleBlockTitle": "sirkel (radius, stil, farge)",
   "displayBlockTitle": "beregn",
   "ellipseBlockTitle": "ellipse (breidd, høyde, stil, farge)",
-  "emptyFunctionalBlock": "Du har en blokk som mangler inndata.",
   "extraTopBlocks": "Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "overlegg (topp, botn)",

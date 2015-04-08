@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Je programma resulteert in een deling door nul."},
 "emptyComputeBlock":function(d){return "Je moet een blok aan het \"evalueren\" blok koppelen."},
-"emptyFunctionalBlock":function(d){return "Je hebt een blok zonder waarde."},
 "equivalentExpression":function(d){return "Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen."},
 "evaluate":function(d){return "evalueren"},
 "extraTopBlocks":function(d){return "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?"},

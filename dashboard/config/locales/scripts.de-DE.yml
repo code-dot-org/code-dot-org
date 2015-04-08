@@ -46,7 +46,7 @@
           'Bee: Loops': 'Biene: Schleifen'
           'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
           'Artist: Loops': 'Künstler: Schleifen'
-          description_audience: älter als 4 Jahre (frühe Leser)
+          description_audience: ab 4 Jahre (Vorschulkinder)
           description_short: Kurs 1 ist für die frühen Leser gedacht.
         course2:
           The Maze: Das Labyrinth
@@ -88,7 +88,7 @@
           'Artist: Sequence2': 'Künstler: Sequenz2'
           'Maze: Sequence2': 'Labyrinth: Sequenz'
           'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
-          description_audience: Älter als 6 Jahre (Lesen erforderlich)
+          description_audience: Ab 6 Jahre (Lesen erforderlich)
           description_short: Kurs 2 richtet sich an Schüler, die lesen können.
         course3:
           The Maze: Das Labyrinth
@@ -143,7 +143,7 @@
           'Bee: Debugging2': 'Biene: Debuggen2'
           'Artist: Patterns': 'Interpret: Muster'
           Songwriting: Songschreiben
-          description_audience: ab 8 Jahren (nach Kurs 2)
+          description_audience: ab 8 Jahre (nach Kurs 2)
           description_short: Kurs 3 schließt sich an Kurs 2 an.
         msm:
           title: Mittelschule Mathematik
@@ -266,7 +266,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Bienenlabyrinth
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: ab 10 Jahre (nach Kurs 3)
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not
@@ -394,11 +394,6 @@
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Unendlichkeit
         pixelation:
           title: Pixelation
           description: Erstelle Bilder mit Bits und Bytes.
@@ -518,6 +513,8 @@
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -575,3 +572,15 @@
             (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

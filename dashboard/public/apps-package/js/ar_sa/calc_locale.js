@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "حاول إعادة ترتيب حجتك للحصول على نفس التعبير."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "لديك قطع غير موصلة. هل قصدت إيصالها بقطعة الـ\"حساب\"؟"},

@@ -25,8 +25,8 @@ pt-BR:
         Desenhe a linha tracejada usando os bloco pule e desenhe.
       2-3 Artist 3_instruction: Esse chapéu tem 100 pixels de altura. Desenhe um chapéu que tenha 70 pixels a menos.
       2-3 Artist 3new_instruction: |
-        O chapéu vermelho tem 100 pixels de altura. Termine desenhando
-        um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
+        O chapéu vermelho tem 100 pixels de altura. Termine o desenho
+        de um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
       2-3 Artist 4_instruction: Ajude-me a completar a casa para o gato.
       2-3 Artist 5_instruction: |
         Substitua esse código por um bloco "repita vezes"
@@ -174,7 +174,9 @@ pt-BR:
       2-3 Artist Nested Loops 11_instruction: |
         Repita este código 4 vezes para completar
         o padrão, vire 90 graus após cada círculo.
-      2-3 Artist Nested Loops 12_instruction: Repita este código 12 vezes para completar os cachos.
+      2-3 Artist Nested Loops 12_instruction: |
+        Repita este código 12 vezes para completar
+        as espirais.
       2-3 Artist Nested Loops 2_instruction: |
         Agora, repita o triângulo 6 vezes. Depois
         de cada triângulo, você precisa virar 60 graus antes de desenhar o próximo.
@@ -1101,11 +1103,11 @@ pt-BR:
         a esquerda e a direita da tela, edite a função na tela? para que
         ela verifique esquerda-segura? E direita-segura?, como você fez com o Morcego Sam.
       Big Game Booleans 5_instruction: |
-        Nesse ponto do seu jogo, seu inimigo deve
-        percorrer a tela da direita para a esquerda e seu alvo deve percorrer a tela
-        da esquerda para a direita, e ambos devem retornar ao lado oposto. Analise
-        seu jogo para garantir que ele esteja funcionando como você quer e então clique
-        em concluir para prosseguir.
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side. Take a minute to
+        make sure your game is working like you want it to, and then click finish
+        to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         Da última vez que você trabalhou em seu jogo
         fizemos nossos alvo e inimigo voarem pela tela, mas eles nunca
@@ -1113,8 +1115,8 @@ pt-BR:
         em concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem
         saído.
       Big Game Collision 1_instruction: |
-        Até agora você programou um video
-        game com um alvo que se move e um inimigo, sendo que ambos retornam à tela quando
+        Até agora você programou um jogo
+        com um alvo e um inimigo que se movem, sendo que ambos retornam à tela quando
         saem, e um jogador que responde à entrada do teclado. Clique em Executar para
         ver como seu jogo está funcionando e então vamos para o que
         está faltando - a detecção de colisão!
@@ -1122,7 +1124,7 @@ pt-BR:
         Para mover o jogador para cima e para baixo, vamos precisar
         usar um bloco condicional para descobrir qual tecla está pressionada e responder
         de acordo. Os computadores leem teclas pressionadas como códigos numéricos - a seta para
-        cima é 38 e a seta para baixo é 40. Você pode olhar outros códigos de teclas em seu caderno.
+        cima é 38 e a seta para baixo é 40. Você pode consultar outros códigos de teclas em seu material.
         Edite a função "atualizar-jogador" para que ela mova o jogador para cima quando 
         a seta para cima está pressionada, ou para baixo quando a seta para baixo está pressionada.
       Big Game Collision 3_instruction: |
@@ -1130,7 +1132,7 @@ pt-BR:
         se tocando, primeiro precisamos medir a distância entre seus pontos centrais.
         Use o teorema de Pitágoras para completar essa função de distância para que ela
         retorne a distância entre as coordenadas centrais do jogador (px, py) e as
-        coordenadas centrais de outro personagem (cx, cy). Para lhe ajudar, fornecemos uma
+        coordenadas centrais de outro personagem (cx, cy). Para ajudá-lo, fornecemos uma
         função de comprimento de reta.
       Big Game Collision 4_instruction: |
         Agora que você tem uma forma de medir a distância
@@ -1158,7 +1160,7 @@ pt-BR:
         Para mover o jogador para cima e para baixo, vamos precisar
         usar um bloco condicional para descobrir qual tecla está pressionada e responder
         de acordo. Os computadores leem teclas pressionadas como códigos numéricos - a seta para
-        cima é 38 e a seta para baixo é 40. Você pode olhar outros códigos de teclas em seu caderno.
+        cima é 38 e a seta para baixo é 40. Você pode consultar outros códigos de teclas em seu material.
         Edite a função "atualizar-jogador" para que ela mova o jogador para cima quando 
         a seta para cima está pressionada, ou para baixo quando a seta para baixo está pressionada.
       Big Game Testing_instruction: |
@@ -1196,10 +1198,10 @@ pt-BR:
         para deixar o seu jogo do jeito que você quiser. Clique em "Concluir"
         quando estiver pronto.
       Big Game Vars 4_instruction: |
-        Awesome! Now you can update the variables for
-        your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click "Finish"
-        when you're done.
+        Incrível! Agora você pode atualizar as variáveis para
+        o jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis
+        e assim deixar seu jogo do jeito que você quer. Clique em "Concluir"
+        quando você terminar.
       BowShoot1_instruction: Use o bloco repita para coletar todo o néctar!
       Brendan Artist work_instruction: nenhum
       Brendan Test Maze 1_instruction: Aqui está meu primeiro labirinto.
@@ -1245,9 +1247,9 @@ pt-BR:
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       C3-Farmer While Loops Multi Pics_instruction: Múltipla Escolha
       Calc Circles of Eval .1_instruction: |
-        O código que você vai escrever nesse curso
-        é chamado de bloco de cálculo, porque cada bloco de código resulta em um único
-        valor. Altere o ??? no código para que o bloco resulte em 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         Esse bloco de cálculo é uma função
         de multiplicação que recebe dois números e retorna o produto desses números.
@@ -1271,9 +1273,8 @@ pt-BR:
         Converta essa instrução para <alguma_forma>
         de cálculo.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete os blocos de cálculo para corresponder
         a essa instrução.
@@ -1321,21 +1322,21 @@ pt-BR:
         um número "x" e retorna metade desse número. Quando você escrever a função,
         use-a para calcular metade(21)
       Calc Design Recipe 1_instruction: |
-        Let's use the Design Recipe to create a
-        function called "cube" - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
-      Calc Design Recipe 2_instruction: "Sua escola está promovendo uma venda de doces e\nvocê está encarregado de escrever programas de computador para acompanhar o custo\nde produção de cada item, o dinheiro pago pelos clientes e o lucro total das vendas.\nOs cookies custam R$0,25 cada para produzir, e são vendidos por R$1,50/cookie.\r\n\r\nEscreva\na função `custo-cookie`, que recebe o número de cookies que você pretende\nvender e retorna a quantidade de dinheiro necessária para produzir\nesse número de cookies."
+        Vamos usar a receita de design para criar uma
+        função chamada "cubo" - essa função deve ter um domínio de número, uma imagem
+        de número e retornar o número dado elevado à terceira potência. Lembre-se de escrever
+        dois casos de exemplo! Quando você terminar, use sua nova função para calcular 7
+        elevado ao cubo.
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        Free Play: Using the two functions we just
+        wrote, write the function `cookie-profit`, which takes in the number of cookies
+        you sold, and gives you back the total profit you make from selling your cookies,
+        accounting for the cost of baking them.
       Calc Free Play_instruction: |
         Atividade livre: escreva funções e algoritmos com seu
         próprio design!
@@ -1345,20 +1346,20 @@ pt-BR:
         Excelente, vamos fazer mais um exemplo antes de escrever
         a função - qual deve ser a altura do foguete após 30 segundos?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Aqui, definimos a variável "idade" como
         17 - você pode escrever uma expressão que calcula "idade" em meses?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Você pode definir uma variável usando o valor
+        de outra variável! Aqui temos uma nova variável chamada "idade-em-meses" - use
+        a expressão que você usou no último desafio para definir "idade-em-meses"
+        com o número de meses em "idade"
       Calc Vars 2_instruction: |
         Você pode escrever uma expressão que calcula "idade"
         em meses?
@@ -2094,9 +2095,9 @@ pt-BR:
         verificar o valor da pontuação - se a pontuação for maior que 20, faça o inimigo
         desaparecer. Se a pontuação for menor que 0, faça o jogador desaparecer.
       Course 4 Play Labs For Loops 1_instruction: |
-        Vamos fazer com que o cão fale todos
-        os números de 1 até 100. Use um laço para e o bloco fale para que ele fale o valor da variável
-        contador a cada execução do laço.
+        Let's make the dog speak every
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
+        variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         Dessa vez, vamos tentar contar
         os números ímpares de 1 até 100.
@@ -2168,14 +2169,17 @@ pt-BR:
         verdadeiro se ambos os parâmetros forem verdadeiros, caso contrário ele retorna falso. Edite
         a variável x para que essa expressão retorne verdadeiro.
       Eval Booleans 5_instruction: |
-        This OR block returns true if either of its parameters
-        is true. Otherwise, if both parameters are false it will return false. Set
-        the y variable to a value that will cause this expression to return false.
+        Esse bloco OU retorna verdadeiro se algum dos seus parâmetros
+        for verdadeiro. Caso contrário, se ambos os parâmetros forem falsos, ele vai retornar falso. Defina
+        a variável y com um valor que vai fazer com que a expressão retorne falso.
       Eval Booleans 6_instruction: |
         Aqui temos mais um bloco booleano chamado NÃO. Esse
         bloco transforma verdadeiro em falso, ou falso em verdadeiro. Se você envolver esse bloco
         de código em um bloco NÃO, ele deve retornar verdadeiro (porque estamos perguntando se as
         duas expressões NÃO produzem valores iguais).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleanos nos permitem comparar valores diferentes,
         retornando "verdadeiro" se eles forem iguais, ou "falso" se eles não forem. O que
@@ -2207,11 +2211,11 @@ pt-BR:
         for verdadeira? Dica: a primeira condição a retornar "verdadeiro" ganha - lembre-se de
         colocar as condições na ordem certa.
       Eval Cond 4_instruction: |
-        Podemos usar a função "string=?" para criar condições
-        que respondam à entrada de texto. Aqui temos uma função chamada "forma verde" que
-        recebe um parâmetro string para a forma. Complete as condições para que a
-        forma correta seja desenhada quando a função for executada com "quadrado", "triângulo",
-        "círculo" ou "retângulo".
+        We can use the "string=?" function to make conditionals
+        that respond to text input. Here's a function called "green shape" that
+        takes a string parameter for the shape. Complete the conditions so that the
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Aqui temos uma função "forma vermelha" semelhante com um
         parâmetro adicional para o tamanho. Complete as condições para que a imagem correta
@@ -2240,10 +2244,10 @@ pt-BR:
         esse círculo por um fator de 10 - como a imagem resultante é diferente do que seria se você
         simplesmente fizesse um círculo desse tamanho em primeiro lugar?
       Eval Contracts 4_instruction: |
-        A função "escala" retorna uma imagem redimensionada
-        para um tamanho menor ou maior que a imagem de entrada. Tente redimensionar
-        esse círculo por um fator de 10 - como a imagem resultante é diferente do que seria se você
-        simplesmente fizesse um círculo desse tamanho em primeiro lugar?
+        The "scale" function returns an image that
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Você pode completar esse desafio? O triângulo grande
         tem 200 pixels de tamanho e é roxo?
@@ -2282,20 +2286,20 @@ pt-BR:
         criar uma fileira com estrelas de tamanhos diferentes. Da esquerda para a direita, as estrelas
         devem ter raios de 25, 50 e 75.
       Eval Defining Vars Free Play 1_instruction: |
-        Free Play: We've provided a function
-        that fills your screen with my-image. Change my-image to see what patterns
-        you can make.
+        Atividade livre: fornecemos uma função
+        que preenche sua tela com minha-imagem. Altere minha-imagem para ver que padrão
+        você pode fazer.
       Eval Design Recipe .1_instruction: |
-        Aqui temos uma receita de design para uma função
-        chamada "círculo quadrado", com domínio de string de números e intervalo de imagem. Veja os
-        dois exemplos que fornecemos e escreva a definição da função.
+        Here's a Design Recipe for a function
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         Vamos escrever uma função
         que desenha um retângulo sólido de qualquer cor e que tenha a largura duas vezes maior que
         sua altura. Comece com um exemplo - desenhe um retângulo verde sólido que tem uma altura de
         100 pixels.
       Eval Design Recipe 1_instruction: |
-        Certo, agora, dado o contrato wide-rect:
+        Certo, agora, dado o contrato ret-largo:
         string de números -> imagem, escreva um exemplo - desenhe um retângulo verde sólido que
         tenha altura de 100 pixels.
       Eval Design Recipe 2 (copy 1)_instruction: |
@@ -2307,15 +2311,15 @@ pt-BR:
         a definição da função - dessa vez, desenhe um retângulo vermelho sólido com uma altura
         de 75 pixels.
       Eval Design Recipe 3_instruction: |
-        A receita de design para "wide-rect" já
+        A receita de design para "ret-largo" já
         tem um contrato e um exemplo. Você consegue escrever um segundo exemplo e então completar
-        a definição? A função "wide-rect" deve produzir um retângulo de uma determinada
+        a definição? A função "ret-largo" deve produzir um retângulo de uma determinada
         cor e que tenha a largura duas vezes maior que a altura.
       Eval Design Recipe 4_instruction: |
-        Use the Design Recipe to create a function
-        "starburst" that has two domains. 1) a number of points and 2) a radius.
-        "starburst" returns a yellow radial star with given points, and an inner
-        radius that is half the outer radius.
+        Use a receita de design para criar uma função
+        "starburst" que tem dois domínios. 1) um número de pontos e 2) um raio.
+        "starburst" retorna uma estrela radial amarela com os pontos dados e um raio
+        interno que tem metade do tamanho do raio externo.
       Eval Design Recipe 5_instruction: |
         Usando a receita de design, escreva uma função
         "bandeira-listrada" que recebe duas cores e produz uma bandeira de 250 pixels
@@ -2346,15 +2350,15 @@ pt-BR:
         e retorna uma imagem. Use essa função para criar uma estrela vermelha sólida com
         raio 100.
       Eval Strings Images 2_instruction: |
-        Free Play: Every Evaluation Block is color-coded
-        to let you know which data type it returns and which types it needs for its
-        parameters. The last parameter of the triangle function takes a String that
-        controls its color - try some different colors to see what works.
+        Atividade livre: todos os blocos de cálculo estão identificados por cores
+        para que você saiba que tipo de dados eles retornam e que tipo de dados eles precisam para seus
+        parâmetros. O último parâmetro da função triângulo recebe uma string que
+        controla sua cor - experimente algumas cores diferentes para ver o que acontece.
       Eval Strings Images 3_instruction: |
-        Some functions can only take a specific
-        set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special String
-        block with a dropdown to make sure you only use valid styles.
+        Algumas funções podem receber somente um conjunto específico
+        de strings, tais como o segundo argumento dessa função círculo, que
+        controla seu estilo. Desenhe esse círculo laranja contornado usando o bloco de string
+        especial com um menu suspenso para garantir que você use apenas estilos válidos.
       Eval Strings Images 4_instruction: |
         Tente usar o bloco "retângulo" para desenhar
         esse retângulo vermelho sólido - ele tem 175 pixels de largura e 100 pixels de altura.
@@ -2366,14 +2370,14 @@ pt-BR:
         Use a função sobreposição para colocar uma estrela
         amarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento.
       Eval Strings Images 7_instruction: |
-        O bloco "deslocamento" permite que você mova uma imagem
-        em relação a onde ela normalmente estaria. Use esse bloco para deslocar o
-        triângulo em 80 pixels no eixo y.
+        The "offset" block lets you move an image
+        relative to the center of the playspace, where it would normally be placed.
+        Use this block to offset the triangle by 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Temos aqui um tipo diferente de bloco de estrela
-        - ele é chamado "estrela-radial" e permite que você desenhe estrelas com qualquer número
-        de pontos! Use-o para criar uma estrela laranja sólida com um raio interno de 75
-        pixels e um raio externo de 175 pixels.
+        Here's a different kind of star block
+        - it's called "radial-star" and it allows you to draw stars with any number
+        of points! Use it to create a solid orange star with an inner radius of 75
+        pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Atividade livre: explore os blocos disponíveis
         para desenhar algo interessante. Lembre-se de salvar e compartilhar suas imagens favoritas.
@@ -2512,8 +2516,8 @@ pt-BR:
         Mova Anna para cima, para a esquerda e para a direita para tocar
         cada um dos quatro flocos de neve.
       Infinity_touch_score_instruction: |
-        Marque um ponto quando um floco de neve for tocado. Então clique em
-        "Executar" e oriente Anna para tocar uma vez em cada floco de neve.
+        Make Anna score a point when she touches
+        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
@@ -2604,12 +2608,12 @@ pt-BR:
         produzir mel!
       K-1 Bee Loops 3_instruction: Use laços para coletar o néctar e fabricar o mel!
       K-1 Bee Loops 4_instruction: |
-        Use laços para obter o néctar, produzir mel e
+        Use laços para obter néctar, produzir mel e
         para mover!
-      K-1 Bee Loops 5_instruction: Use laços para obter o néctar e o mel!
+      K-1 Bee Loops 5_instruction: Use laços para obter néctar e mel!
       K-1 Bee Loops 6_instruction: Use laços para coletar néctar, fabricar mel e para se mover!
       K-1 Bee Loops 7_instruction: Use laços para coletar o néctar e fabricar o mel!
-      K-1 Bee Loops 8_instruction: Use laços para obter o néctar e o mel!
+      K-1 Bee Loops 8_instruction: Use laços para obter néctar e mel!
       K-1 Bee Loops 9_instruction: Use laços para coletar néctar, fabricar mel e para se mover!
       K-1 Bee Loops Assessment 1_instruction: |
         Obtenha néctar para produzir mel e use laços
@@ -2717,12 +2721,12 @@ pt-BR:
         a essas pessoas, você poderia atualizar a cláusula "senão" para que possamos cobrar a
         mais deles por sabores que normalmente não oferecemos? Vamos cobrar R$10.000
         por um sabor que não está disponível.
-      Luigi's Pizza 4_instruction: "O que você pode fazer para deixar a função custo de Luigi\nainda melhor? Tente usar uma (ou mais) das seguintes opções:\r\n- Mostrar uma imagem da\npizza escolhida\r\n- Permitir a combinação de vários sabores\r\n- Permitir\nque as pessoas peçam várias pizzas\r\n- Adicionar um código de cupom para um desconto de 50%"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Faça isso!
       Maze screenshot Work_instruction: Testar instruções
       MSM Big Game Empty_instruction: |
         Todas as variáveis e funções atualmente são
-        esboços vazios. A progressão de cada desafio será concentrada na definição e em vários
+        campos vazios. A progressão de cada desafio será concentrada na definição e em vários
         deles e, portanto, na adição de funcionalidade.
       MSM Big Game Vars 1 (copy 1)_instruction: |
         Na caixa de ferramentas de variáveis você vai
@@ -2800,20 +2804,20 @@ pt-BR:
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        EM CONSTRUÇÃO: Esta versão do NetSim ainda não
+        está funcionando. Ela permitirá que os alunos definam manualmente / leiam As e Bs
+        individuais em um simplex wire.
       NetSim_SendAscii_instruction: |
-        EM CONSTRUÇÃO> essa versão do NetSim ainda
+        EM CONSTRUÇÃO: Esta versão do NetSim ainda
         não está funcionando. Ela permitirá que os alunos enviem ASCII uns para os outros.
       NetSim_SendBits_instruction: |
-        EM CONSTRUÇÃO: essa versão do NetSim ainda
+        EM CONSTRUÇÃO: Esta versão do NetSim ainda
         não está funcionando. Ela permitirá que os alunos enviem binários como zeros e uns
         entre si
       NetSim_SendingABTest_instruction: |
         Esse é o teste de Sarah para fazer um nível
         netsim
-      NetSim_Superuser_instruction: Você carregou o NetSim no modo super usuário.
+      NetSim_Superuser_instruction: Você carregou o NetSim no modo superusuário.
       NetSim_Variant1_instruction: |
         NetSim: Variante 1 - parque de diversões: EM CONSTRUÇÃO:
         A variante 1 ainda não está funcionando porque conexões P2P ainda não foram implementadas.
@@ -3030,22 +3034,14 @@ pt-BR:
         está salvo como um projeto para o qual você pode retornar a qualquer hora.
       Ninjacat Demo B (copy 1)_instruction: "\r\nVamos começar explorando um video game\nsimples e então descobrir como ele funciona. Você pode usar as setas do teclado\npara mover o ninja para a esquerda, para a direita e para pular - tente pegar o unicórnio e\ndesvie do dragão!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
-        Let’s begin by exploring a simple videogame,
-        and then figuring out how it works. You can use the arrow keys to move the
-        ninja up and down - try to catch the unicorn and avoid the dragon! When you
-        think you've figured out how the game works, click "Finish"
+        Vamos começar explorando um jogo simples
+        e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
+        ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
+        achar que já descobriu como o jogo funciona, clique em "Concluir"
       perpendicular_instruction: |
         Agora, vamos ver se podemos criar duas retas perpendiculares.
         Retas perpendiculares são duas retas que se interceptam em um ângulo de 90 graus,
         ou ângulo reto.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        Um foguete dispara, viajando a
-        15 metros por segundo... pressione "Executar" para ver como esse problema fica
-        na forma de animação.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        Um foguete dispara, viajando a
-        15 metros por segundo... pressione "Executar" para ver como esse problema fica
-        na forma de animação.
       Play Lab Rocket 1_instruction: |
         Um foguete dispara, viajando a 15 metros
         por segundo... pressione "Executar" para ver como esse problema fica na forma de animação.
@@ -3137,21 +3133,21 @@ pt-BR:
         sua função funcionar, Sam não deve poder sair do quintal pelo lado
         esquerdo.
       Sam the Butterfly 3_instruction: |
-        Ótimo, agora Sam não pode sair do quintal
-        pelo lado esquerdo, mas e quanto ao lado direito? Preencha a função "direita-segura?"
-        para garantir que Sam não possa passar de x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
-        Hmm, podemos evitar que Sam saia pela esquerda,
-        ou que ele saia pela direita, mas como podemos evitar que ele vá
-        para qualquer direção? Experimente usar o bloco de programa "E" e a função
-        "na-tela?" para verificar se Sam tem a esquerda-segura? E a direita-segura?
+        Huh, we can keep Sam from leaving on the
+        left, or we can keep him from leaving on the right, but how can we keep him
+        from going either direction? Try using the "AND" block to program the function
+        "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Atividade livre: incrível, agora Sam não pode sair do quintal
-        nem pela esquerda, nem pela direita, mas e quanto às partes de cima e de baixo? Adicionamos
-        um parâmetro adicional "y" para a função "na-tela?". Você consegue atualizar
-        seu programa para que Sam não possa sair nem por cima (y = 425) nem por baixo (y= -25)?
-        Teste seu programa movendo Sam o mais longe que ele puder ir em todas as quatro direções.
-        Clique em Concluir quando Sam estiver completamente protegido.
+        Free Play: Awesome, now Sam can't leave
+        the yard from the left or the right, but what about up and down? We've added
+        an additional parameter 'y' to the 'onscreen?' function. Can you update
+        your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
+        either? Test your program by moving Sam as far as he can go in all four directions.
+        Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         Adicionamos um novo parâmetro "y" à
         função "na-tela?". Atualize a função para que ela verifique se "esquerda-segura?"

@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Tavas programmas rezultāts dalījumā ar nulli."},
 "emptyComputeBlock":function(d){return "Tev jāpievieno bloks ''rēķināt'' blokā."},
-"emptyFunctionalBlock":function(d){return "Jums ir bloks ar neaizpildītu ievadi."},
 "equivalentExpression":function(d){return "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi."},
 "evaluate":function(d){return "novērtē"},
 "extraTopBlocks":function(d){return "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?"},

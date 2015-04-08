@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "aplis (rādiuss, stils, krāsa)"},
 "displayBlockTitle":function(d){return "novērtē"},
 "ellipseBlockTitle":function(d){return "elipse (platums, augstums, stils, krāsa)"},
-"emptyFunctionalBlock":function(d){return "Jums ir bloks ar neaizpildītu ievadi."},
 "extraTopBlocks":function(d){return "Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "pārklājums (augša, apakša)"},

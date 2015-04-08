@@ -156,9 +156,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Ohjelmasi johtaa nollalla jakamiseen."},
 "emptyComputeBlock":function(d){return "Liitä lohko \"laske\"-lohkoon."},
-"emptyFunctionalBlock":function(d){return "Sinulla on lohko, josta puuttuu syöte."},
 "equivalentExpression":function(d){return "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "arvioi"},
 "extraTopBlocks":function(d){return "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?"},
 "failedInput":function(d){return "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla."},
 "goal":function(d){return "Tavoite:"},

@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Your program results in division by zero.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Bạn có một khối với input chưa điền.",
   "equivalentExpression":"Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất.",
   "evaluate":"evaluate",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

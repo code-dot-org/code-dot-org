@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Έχετε ένα μπλόκ με κενό περιεχόμενο.",
   "equivalentExpression":"Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση.",
   "evaluate":"υπολογισμός",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

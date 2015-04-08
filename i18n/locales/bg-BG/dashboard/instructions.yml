@@ -360,12 +360,8 @@ bg:
       Artist - Nested Loops Assessment 1_instruction: Използвайте цикъл, за да завършите дизайна.
       Artist Artist Artist Artist _instruction: 'Artist Artist Artist Artist '
       Artist For  Functions 11_instruction: 'Нека да го увеличим малко, може ли да направите звезда  с помощта на функцията "Нарисувате квадрат с линия"? На добър час!'
-      Artist Functions 11_instruction: |
-        It's Free Play time! Use your new functions
-        to draw an awesome picture. Have fun!
-      Artist Functions 2.0_instruction: |
-        Can you draw 3 squares 20 pixels apart from
-        one another? Hint: each square is 100 pixels in size
+      Artist Functions 11_instruction: Време е за свободна игра! Използвайте новите функции, за да начертаете една страхотна картина. Забавлявайте се!
+      Artist Functions 2.0_instruction: 'Можете ли да чертаете 3 квадрата на 20 пиксела отдалечени един от друг? Съвет: всеки квадрат има страни по 100 пиксела'
       Artist Functions 3.0_instruction: 'Тук е нов тип блок. Той се нарича "Функция блок". Щракнете върху "Изпълни", за да видите какво може да направи. '
       Artist Functions 4.0_instruction: Ние ти дадохме повечето от кода, за да създадеш функция. Въпреки това изглежда, че нещо липсва. Можеш ли да направиш тази блок функция пълен?
       Artist Functions 5.0_1_instruction: |
@@ -381,162 +377,56 @@ bg:
       Artist Functions 8_instruction: 'Можеш ли да създадеш нова функция, наречена "Нарисувай квадратна линия"?'
       Artist Functions free play_instruction: Време е за безплатна игра! Използвай новите си функции, за да начертаеш една страхотна картина. Забавлявай се!
       Artist level 10_instruction: 'Време е за безплатна игра! Включил съм всички нови функции, изградени от теб. Забавлявайте се и нарисувай всичко, което искаш. '
-      Artist Nested Loops_instruction: |
-        Now nest this loop inside another loop to
-        draw 6 triangles. This is called a nested loop. Hint: All 6 triangles complete
-        a 60 degree rotation. 
-      Artist Params 10_instruction: |
-        You can call functions from inside other functions!
-        Using your "shape" function as a base, create a new "house" function that
-        takes a parameter "length"
-      Artist Params 11_instruction: |
-        How about a function called "pinwheel" that
-        takes three parameters - "sides," "length" and "repeat." Your function
-        function should draw a pinwheel of "repeat" shapes of "sides" and "length."
-        You can calculate how much to turn after each shape using the same math you
-        used to figure out the turns for a shape of "sides"
-      Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw each
-        of these shapes. The side length for each image is 50.
-      Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've written,
-        and some more for you to play with. Draw something awesome!
-      Artist Params 2_instruction: |
-        That triangle function would be a whole lot more
-        useful if it could draw triangles of different sizes. I've added a parameter
-        for line length, but it doesn't do anything yet. Can you update the function
-        so it uses the "length" parameter when it draws each side?
-      Artist Params 3_instruction: |
-        Awesome, can you draw each of these triangles
-        with that new function? The first is 25 pixels long, the second is 50, and
-        the third is 75. (If you're really clever, you could use a for loop for this!)
-      Artist Params 4_instruction: |
-        Can you add a new function called square? It
-        should also take a length parameter, just like the triangle.
-      Artist Params 5_instruction: Use both of your new functions to draw this picture
-      Artist Params 6_instruction: |
-        Remember how we used a variable to set the number
-        of sides for a shape? Why have two separate functions for "triangle" and
-        "square", when we could have one "shape" function that takes two parameters
-        - "sides" and "length"?
-      Artist Params 7_instruction: |
-        Draw several shapes and combinations of shapes
-        using the generic shape function.
-      Artist Params 8_instruction: |
-        Can you figure out how to draw two triangles?
-        Here's a hint create 2 new functions for each triangle.
-      Artist Params 9_instruction: |
-        Can you draw two squares inside of one another
-        that are 20 pixels apart and the length of each square is 200 pixels and 160
-        pixels.
-      Artist Variables level 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Artist Variables level 9a_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Artist Vars "height" block_instruction: |
-        Now I want to make a rectangle that
-        is twice as wide than it is tall. We've got a variable called "height"
-        that is set at 100. Can you use the math block to complete the code? 
-      Artist Vars height block_instruction: |
-        Now I want to make a rectangle that
-        is twice as wide than it is tall. We've got a variable called "height"
-        that is set at 100. Can you use the math block to complete the code? 
+      Artist Nested Loops_instruction: 'Сега преместете този цикъл вътре в друг цикъл да начертаете 6 триъгълника. Това се нарича вложен цикъл. Съвет: При 6 триъгълника трябва да се завърта на 60 градуса. '
+      Artist Params 10_instruction: 'Можете да извикате функции от вътрешността на други функции! Използвайки функцията за "форма" като база, създаваме нова функция за "къща", която има за параметър "дължина"'
+      Artist Params 11_instruction: 'Какво мислиш за функция "колело", която има три параметъра - "брой страни", "дължина" и "брой повторения". Твоята функция ще трябва да начертае колело от "повторени" фигури с  "брой страни" и  "дължина". Ще сметнеш по колко да се завърташ след всяка фигура, използвайки същите изчисления, които използва, за да намериш завъртанията за фигура с "брой страни"'
+      Artist Params 12_instruction: 'Използвайте вашата "колело" функция, за да се изчертае всяка от тези фигури. Дължината на страната на всяко изображение е 50.'
+      Artist Params 13_instruction: 'ФрийПлей: Тук са функциите, които сте написали и още няколко за да си поиграете с тях. Начертайте нещо страхотно!'
+      Artist Params 2_instruction: 'Тази функция ще бъде много по-полезна, ако тя може да чертае триъгълници с различни размери. Аз бих добавил параметър за дължина на линията, но тя не прави нищо все още. Можете ли да актуализирате функцията така, че тя да използва параметъра "дължина" при изчертаване на всяка страна?'
+      Artist Params 3_instruction: Страхотно, може ли да начертаете всеки един от тези триъгълници с тази нова функция? Първият е дълъг 25 пиксела, вторият е 50, а третият е 75. (Ако сте наистина умни, можете да използвате цикъл за това!)
+      Artist Params 4_instruction: Можете ли да добавите нова функция, наречена квадрат? Тя трябва да взима параметър за дължина, точно като функцията за триъгълника.
+      Artist Params 5_instruction: Използвайте и двете си нови функции за да начертаете тази картина
+      Artist Params 6_instruction: 'Спомняте ли си как ние използвахме променлива за да зададем броя на страните за фигура? Защо да има две отделни функции за "триъгълник" и "квадрат", когато може да има една функция, наречена "форма", която да има два параметъра - "страни" и "дължина"?'
+      Artist Params 7_instruction: Начертайте няколко фигури и комбинации от фигури, като използвате функцията за обща форма.
+      Artist Params 8_instruction: 'Може ли да разберете как да нарисувате два триъгълника? Ето един съвет: Създайте 2 нови функции за всеки триъгълник.'
+      Artist Params 9_instruction: Може ли да чертаете два квадрата, единият вътре в другия? Вътрешният е на 20 пиксела от външния и дължината на страните на квадратите е 200 пиксела и 160 пиксела.
+      Artist Variables level 9_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
+      Artist Variables level 9a_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
+      Artist Vars "height" block_instruction: 'Сега искам да направим правоъгълник, който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина", която се определя на 100. Можете ли да използвате математическия блок, за да завършите кода? '
+      Artist Vars height block_instruction: 'Сега искам да направим правоъгълник, който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина", която се определя на 100. Можете ли да използвате математическия блок, за да завършите кода? '
       artist_test_brian_instruction: Artist test
       Basic_instruction: No instructions please
-      Bee procedures demo_instruction: Collect nectar from each flower
-      bee-test-1_instruction: Get the bee to the nectar
+      Bee procedures demo_instruction: Събири нектар от всяко цвете
+      bee-test-1_instruction: Заведете пчелата до нектара
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
         our game. Click play to see what your game can currently do (not much!), update
         any variables you like, and then click finish to move on.
-      Big Game Animation 1_instruction: |
-        Now that you've learned to write simple
-        linear functions, let's work on using them to add some movement to our game.
-        Click play to see what your game can currently do (not much!), update any
-        variables you like, and then click finish to move on.
+      Big Game Animation 1_instruction: Сега, когато вече сте се научили да пишете прости линейни функции, да поработим върху използването им за да добавяне на движение в нашата игра. Натиснете Старт за да видите какво прави играта в момента(не е много!), актуализирайте всички променливи, както ви харесва, и след това щракнете върху Готово, за да продължите.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
-      Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
-      Big Game Animation 3_instruction: |
-        The 'update-danger' function should work
-        just like 'update-target', except that the danger should move from the right
-        side over towards the left. Complete the 'update-danger' function to make
-        the danger fly across the screen.
-      Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
-      Big Game Booleans 1_instruction: |
-        When you last worked on your game we got
-        our target and danger sprites to fly across the screen, but they never come
-        back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
-      Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
-      Big Game Booleans 3_instruction: |
-        Now that you've got safe-left?, let's fill
-        in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
-      Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
+      Big Game Animation 2_instruction: 'Задачата на "актуализиране-цел" функцията е да  следи текущата стойност на x и да връща актуализираната ѝ стойност. Завършете "актуализиране-цел" функцията, така че тя да добавя стойността на х, всеки път, щом е извикана. Колкото повече добавяте към x, толкова по-бързо целта ще се движи.'
+      Big Game Animation 3_instruction: 'Функцията "актуализиране-опасност" трябва да работи точно както "актуализиране-цел", с изключение, че опасността трябва да се движи отдясно наляво. Допълнете функцията "актуализиране-опасност" да задвижи опасността да лети по екрана.'
+      Big Game Animation 4_instruction: В този момент опасността в играта ви трябва да се движи на екрана отдясно наляво, а вашата цел трябва да се задвижи отляво надясно. Те няма да се върнат на екрана ако излязат от него, но ние ще се погрижим за това по-късно. Поиграйте си с играта за да се уверите, че работи като искате, и след това щракнете върху Готово, за да продължите.
+      Big Game Booleans 1_instruction: Когато последно работехте върху играта си добавихте целта и опасността да летят на екрана, но не да се връщат като стигнат края на полето. Щракнете върху Старт за да видите как играта в момента работи и след това ние ще поработим за да направим тези обекти да се връщат на екрана, след като са излезли от него.
+      Big Game Booleans 2_instruction: 'Спомняте ли си запазване-ляво? и запазване- дясно? функциите от Сам прилепа? Ние ще използваме същата логика за да разберем когато целта и опасността напускат екрана. Преминете към раздела "Функции" на кутията с инструменти и да завършете запазване-ляво? функцията.'
+      Big Game Booleans 3_instruction: 'Сега, след като сте приключили със запазване- ляво?, да попълним и запазване-дясно? -Тя трябва да вземе x координата на обекта и да върне истина ако обекта не е излезнал от дясната страна на екрана.'
+      Big Game Booleans 4_instruction: 'Страхотно, сега, след като имате функции за проверка на лявата и дясната страна на екрана, трябва да редактираме и на- екрана? функцията, така че тя да проверява запазване-ляво? и запазване- дясно?, точно като направихме със Сам прилепа.'
       Big Game Booleans 5_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right, and they should both return to the opposite side. Take
-        a minute to make sure your game is working like you want it to, and then click
-        finish to move on.
-      Big Game Collision 1 (copy 1)_instruction: |
-        When you last worked on your game
-        we got our target and danger sprites to fly across the screen, but they never
-        come back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
-      Big Game Collision 1_instruction: |
-        At this point you've programmed a video
-        game with a moving target and danger, both of which return to the screen once
-        they've left, and a player that responds to keyboard input. Click run to
-        see how your game is currently working, and then we'll dig into the final
-        missing piece - collision detection!
-      Big Game Collision 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
-      Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
-        line-length function to help you out.
-      Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side. Take a minute to
+        make sure your game is working like you want it to, and then click finish
+        to move on.
+      Big Game Collision 1 (copy 1)_instruction: Когато последно работехте върху играта си добавихте целта и опасността да летят на екрана, но не да се връщат като стигнат края на полето. Щракнете върху Старт за да видите как играта в момента работи и след това ние ще поработим за да направим тези обекти да се връщат на екрана, след като са излезли от него.
+      Big Game Collision 1_instruction: 'На този етап Вие сте програмирани видео игра с подвижна мишена и опасност, и двете се връщат на екрана, след като са излезли от него, и един играч, който отговаря на натискане на клавиши. Щракнете върху Старт за да видите как играта работи в момента, а след това ние ще програмираме последната липсваща част - отчитане на сблъсък!'
+      Big Game Collision 2_instruction: 'За да преместим играча нагоре и надолу, ние ще трябва да използваме условен блок, който да разбере кой клавиш е натиснат и да реагира по съответния начин. Компютрите разчитат клавишите като цифрови кодове - стрелка нагоре е 38 и стрелката надолу е 40. Можете да погледнете и други цифрови кодове във вашата работна книга. Редактирайте "актуализира-играч" функцията, така че играчът се движи нагоре когато се натисне стрелка нагоре или надолу когато се натисне стрелка надолу.'
+      Big Game Collision 3_instruction: За да разбереш дали две от нашите фигури се докосват, първо измери разстоянието между централните им точки. Използвай Питагоровата теорема, за да довършиш функция, така че да връща разстоянието между централните координати на играча (px, py) и централните координати на друг герой (cx, cy). Предоставили сме работеща функциа за дължина на линията, за да ти помогнем.
+      Big Game Collision 4_instruction: 'Сега, когато имаш начин за измериш разстоянието между две точки, трябва да решиш кога тези точки са достатъчно близо, за да се смята за докосвати. Довърши функцията "сблъскват ли се?", така че да проверява функцията на разстояние и връща истина ако двете точки са достатъчно близо до докосване (100 пиксела една от друга е добро мярка за започване).'
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -553,13 +443,7 @@ bg:
         Last time you work on your game, you used booleans to make your Target and
         Danger return to the screen once the've left. Click Run to see how your game
         looks right now, and then we'll get to making your Player move up and down.
-      Big Game Player 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Player 2_instruction: 'За да преместим играча нагоре и надолу, ние ще трябва да използваме условен блок, който да разбере кой клавиш е натиснат и да реагира по съответния начин. Компютрите разчитат клавишите като цифрови кодове - стрелка нагоре е 38 и стрелката надолу е 40. Можете да погледнете и други цифрови кодове във вашата работна книга. Редактирайте "актуализира-играч" функцията, така че играчът се движи нагоре когато се натисне стрелка нагоре или надолу когато се натисне стрелка надолу.'
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -644,9 +528,9 @@ bg:
         piles.  Help me to fill and remove them to make the ground flat.
       C3-Farmer While Loops Multi Pics_instruction: избор от множество отговори
       Calc Circles of Eval .1_instruction: |
-        The code you'll be writing in this course
-        is called Evaluation Blocks, because each block of code evaluates to a single
-        value. Change the ??? in this code so that the block evaluates to 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         This Evaluation Block is a multiplication
         function which takes two numbers and returns the product of those numbers.
@@ -670,9 +554,8 @@ bg:
         Convert this statement to <some_shape>
         of evaluation.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -725,16 +608,16 @@ bg:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        Free Play: Using the two functions we just
+        wrote, write the function `cookie-profit`, which takes in the number of cookies
+        you sold, and gives you back the total profit you make from selling your cookies,
+        accounting for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -744,12 +627,12 @@ bg:
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
@@ -1018,10 +901,7 @@ bg:
         triangle inside a for loop that counts from 50 to 100 by 10. Take a look at
         how I built the code then click on "Run" when you are ready to see it in
         action. 
-      Course 4 Artist For Loops 3_instruction: |
-        The smallest triangle has 20 pixel
-        sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
-        than the last. Update the for loop to draw these triangles.
+      Course 4 Artist For Loops 3_instruction: Страните на малкия триъгълник имат 20 пиксела дължина, а на най-големия 200 пиксела, всеки триъгълник е с 20 пиксела по-голям от предходния. Актуализирайте цикъла, за да начертаете тези триъгълници.
       Course 4 Artist For Loops 4_instruction: |
         Use a for loop to draw these squares.
         They start at 50 pixels long, the largest is 300 pixels long, and each square
@@ -1160,10 +1040,7 @@ bg:
         shape" function with "sides" and "length" parameters. Can you re create
         these shapes? The square counter should be 5/100/5, the triangle counter should
         be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
+      Course 4 Artist Var 9_instruction: 'Това е алгоритъм, с който да нарисувате триъгълник, да го промените, така че да използва променлива "страни". Заменете цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава страни" блок.'
       Course 4 Artist Vars 1_instruction: |
         Can you help me draw a triangle? It's
         100 pixels long on each side.
@@ -1500,7 +1377,7 @@ bg:
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the speak block to speak the counter
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
@@ -1582,6 +1459,9 @@ bg:
         block flips true to false, or false to true. If you wrap this block of code
         in a NOT block, it should return true (because we are asking if the two expressions
         do NOT produce equal values).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleans allow us to compare different values,
         returning "true" if the are equal, or "false" if they are not. What do
@@ -1616,8 +1496,8 @@ bg:
         We can use the "string=?" function to make conditionals
         that respond to text input. Here's a function called "green shape" that
         takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "square," "triangle,"
-        "circle," or "rectangle."
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Here's a similar function "red shape" with an
         additional parameter for size. Complete the conditionals so the correct image
@@ -1647,9 +1527,9 @@ bg:
         just made a circle of that size in the first place?
       Eval Contracts 4_instruction: |
         The "scale" function returns an image that
-        is scaled either larger or smaller than the input image. Try scaling this
-        circle by a factor of 10 - how is the resulting image different than if you'd
-        just made a circle of that size in the first place?
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
@@ -1693,8 +1573,8 @@ bg:
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Look at
-        the two examples we've provided and write the function definition.
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -1774,10 +1654,10 @@ bg:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        relative to the center of the playspace, where it would normally be placed.
+        Use this block to offset the triangle by 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
@@ -1887,38 +1767,21 @@ bg:
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: Go Up Artist
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: 'Make Anna say "Hi there." by using the Say block.'
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_catch_instruction: 'Можете ли да накарате Елза ("актьор 2") с помощта на клавишите със стрелки да достигне Анна?'
+      Infinity_finale_instruction: Създайте нещо, което ви харесва и да го споделете!
+      Infinity_move_collide_instruction: 'Хиро е "актьор 1".  Преместете го към Баумах и когато те се докоснат трябва да се възпроизведе звук.'
+      Infinity_move_directions_instruction: 'Баумаx е "актьор 2".  Добавете блок за движение и след това преместете Баумах с помощта на стрелките.  Накарайте го да докосне двама други герои.'
+      Infinity_move_right_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро към Баумах и те да се докоснат.'
+      Infinity_repeat_instruction: 'Използвайте "повтаря завинаги" блок, за да накарате Анна да се движи нагоре и надолу по 400 пиксела.'
+      Infinity_say_instruction: 'Накарайте Анна да каже "Здравей!" с помощта на блок за текст.'
+      Infinity_shoot_instruction: 'Баумаx е "актьор 2".  Накарай Баумах да хвърля ракета по Хиро.'
+      Infinity_shoot_directions_instruction: 'Хиро е "актьор 3".  Накарайте Хиро да хвърли снаряд по всеки от четирите знака.  Изчакайте една секунда между всяко хвърляне.'
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
+      Infinity_touch_faster_instruction: Докоснете още повече снежинки!
+      Infinity_touch_four_instruction: Премести Анна, нагоре, надолу наляво и надясно, за да докосне всяка от четирите снежинки.
       Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+        Make Anna score a point when she touches
+        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2122,7 +1985,7 @@ bg:
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
@@ -2442,14 +2305,6 @@ bg:
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -2541,20 +2396,20 @@ bg:
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
@@ -2665,23 +2520,17 @@ bg:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
-      temp_for_ross_instruction: |
-        This pig is ruffling my feathers. Help me find
-        him!
+      temp_for_ross_instruction: Това прасе ми лази по нервите. Помогнете ми да го намеря!
       Test Artist Level_instruction: This is a test artist level
       test camel_instruction: Camel
       Test down solution_instruction: Test down solution
       Test Level Brian Maze_instruction: Test level
-      Test Studio Embed Free Play_instruction: |
-        FREE PLAY: Hit run and play the game.
-        Help the dog get to the cat.
-      Test-Karel-k1_instruction: Move east to remove the piles
-      test123_instruction: Draw a line
+      Test Studio Embed Free Play_instruction: 'Свободна игра: Щракни "Старт" и играй играта. Помогни на кучето да хване котката.'
+      Test-Karel-k1_instruction: Премести на изток, за да премахнеш купчините
+      test123_instruction: Нарисувай линия
       test4_instruction: Hey Ho
       Testing Brian Level_instruction: Test Brian Level Nice
       testing_instruction: Test level
-      TestK1-1_instruction: |
-        Draw three partially overlapping squares using the repeat
-        block
+      TestK1-1_instruction: Нарисувайте три частично покриващи се квадрата, с помощта на блок за повторение
       toby-test5-16-1_instruction: dafsfas
-      XML Scratchpad_instruction: Using this test level to grab xml for unit tests
+      XML Scratchpad_instruction: Използвай това тестово ниво заа да вземеш xml-а за unit тестове

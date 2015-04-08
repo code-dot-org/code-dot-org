@@ -4,7 +4,6 @@
   "circleBlockTitle":"círculo (radio, estilo, color)",
   "displayBlockTitle":"evaluar",
   "ellipseBlockTitle":"elipse (anchura, altura, estilo, color)",
-  "emptyFunctionalBlock":"Tienes un bloque con una entrada vacía.",
   "extraTopBlocks":"Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?",
   "infiniteRecursionError":"La función hace referencia hacia si misma. Nosotros paramos la ejecución, de otro modo hubiera seguido llamandose asimisma infinitamente.",
   "overlayBlockTitle":"superposición (arriba, abajo)",
@@ -27,5 +26,6 @@
   "solid":"sólido",
   "string":"cadena",
   "stringMismatchError":"La cadena de caracteres tiene una o mas letras capitales de forma erronea.",
-  "userCodeException":"Ocurrio un error mientras se ejecutaba el codigo."
+  "userCodeException":"Ocurrio un error mientras se ejecutaba el codigo.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

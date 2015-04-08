@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cirkel (straal, stijl, kleur)"},
 "displayBlockTitle":function(d){return "evalueren"},
 "ellipseBlockTitle":function(d){return "ellips (breedte, hoogte, stijl, kleur)"},
-"emptyFunctionalBlock":function(d){return "Je hebt een blok zonder waarde."},
 "extraTopBlocks":function(d){return "U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?"},
 "infiniteRecursionError":function(d){return "Je opdracht roept zichzelf aan. We hebben het gestopt, anders zou het zichzelf oneindig blijven aanroepen."},
 "overlayBlockTitle":function(d){return "overlay (boven, onder)"},
@@ -183,4 +182,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "tekenreeks"},
 "stringMismatchError":function(d){return "Je hebt een tekenreeks met verkeerde (hoofd)letters."},
 "userCodeException":function(d){return "Er is een fout opgetreden tijdens het uitvoeren van de code."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "Jouw blokken leveren de verkeerde Boolean-waarde op."}};

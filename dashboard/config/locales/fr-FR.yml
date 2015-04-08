@@ -270,6 +270,7 @@
         artist: Dessine quelque chose
     user:
       classroom: Page d'accueil des enseignants
+      district_dashboard: District Dashboard
       label: Bonjour %{username}
       stats: Ma progression
       settings: Mon compte
@@ -526,6 +527,10 @@
         nos utilisateurs
     frozen:
       title: La Reine des neiges
+    infinity:
+      title: Infinity Play Lab
+      body: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette
+        les personnages de Disney Infiny.
   gallery:
     students_drew_these_with_code: Les élèves les ont dessinés avec du code !
     students_made_these_with_code: Les élèves ont réalisé ceci avec du code !
@@ -663,3 +668,5 @@
       liste de mes projets. Tous ceux auxquels vous avez partagé le lien ne seront
       plus en mesure de visualiser votre projet.
     view_all: Afficher mes projets
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

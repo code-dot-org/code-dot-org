@@ -4,7 +4,6 @@
   "circleBlockTitle": "원(반지름, 형태, 색)",
   "displayBlockTitle": "보이기",
   "ellipseBlockTitle": "타원(가로길이, 세로높이, 형태, 색)",
-  "emptyFunctionalBlock": "입력이 없는 블럭이 있습니다.",
   "extraTopBlocks": "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"그리기\"블럭에 붙이려고 했나요?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "위에그리기(맨위, 아래)",

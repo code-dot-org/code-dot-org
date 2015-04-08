@@ -4,7 +4,6 @@
   "circleBlockTitle": "cerc (raza, stil, culoare)",
   "displayBlockTitle": "afişare",
   "ellipseBlockTitle": "elipsă (lăţime, înălţime, stil, culoare)",
-  "emptyFunctionalBlock": "Ai un bloc necompletat.",
   "extraTopBlocks": "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"afișare\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "suprapunere (sus, jos)",

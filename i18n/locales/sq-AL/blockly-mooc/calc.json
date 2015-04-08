@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Rezultatet e programit tuaj të pjestuar me zero.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Ti ke një bllok me një input të pambushur.",
   "equivalentExpression":"Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje.",
   "evaluate":"përcakto",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

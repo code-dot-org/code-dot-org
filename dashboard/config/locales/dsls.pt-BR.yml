@@ -5,7 +5,8 @@
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4+5) > 9
         ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Insira a expressão aritmética aqui
@@ -13,7 +14,8 @@
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) ou (7 <= 9)
         (10 > 11) OR (7 <= 9): (10 > 11) OU (7 <= 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
@@ -22,22 +24,39 @@
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) e (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) E (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       Blocks to Bools 4:
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão
           aritmética que corresponde a esse código
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) E (x < 5)) OU ((8
           < x) E (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) e (x < 5)) ou ((8
           < x) e (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       Blocks to Math 1:
         Convert Blocks to Math: Converta os blocos em matemática
@@ -65,6 +84,7 @@
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Insira a expressão aritmética aqui
       Blocks to Math 4:
         Convert Blocks to Math: Converta os blocos em matemática
@@ -107,8 +127,8 @@
         Open text response example: Exemplo de resposta com texto aberto
         I loved it because...: Eu amei porque...
       PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitando
-          um ambiente de aprendizado positivo em sua sala de ciência da computação
+        Facilitating a positive learning environment in your computer science classroom: Proporcionando
+          um ambiente de aprendizagem positivo em sua sala de ciência da computação
         0: '? Agora que você sabe mais sobre nosso currículo, quais práticas você
           quer usar para promover uma atmosfera saudável em sua sala de ciência da
           computação?'
@@ -122,8 +142,8 @@
       PDK5 Difficulty:
         Degree of Difficulty: Grau de dificuldade
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Programar
-          foi tão difícil quanto você esperava? Explique por que ou por que não. Como
-          isso impacta em seu ensino de ciência da computação?
+          foi tão difícil quanto você esperava? Explique por que sim ou por que não.
+          Como isso afeta seu ensino de ciência da computação?
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Foundation:
         Computer Science as a Foundational Skill: Ciência da computação como uma habilidade
@@ -135,22 +155,22 @@
       PDK5 Impact 1:
         Impact for students: Impacto para os alunos
         Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Você
-          acha que seus alunos vão achar as atividades online dos cursos K-5 divertidas
-          e envolventes? Por que, ou por que não?
+          acha que seus alunos vão achar as atividades on-line dos cursos para o Ensino
+          Fundamental divertidas e envolventes? Por que, ou por que não?
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 2:
-        Connections to other Subjects: Conexões com outros assuntos
+        Connections to other Subjects: Relação com outros assuntos
         Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: A
-          ciência da computação se conecta a outros tópicos ou assuntos que seus alunos
-          estão aprendendo? Explique por que, ou por que não.
+          ciência da computação tem relação com outros tópicos ou assuntos que seus
+          alunos estão aprendendo? Explique por que sim ou por que não.
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Impact 3:
         Real-world applications for Students: Aplicações do mundo real para os alunos
         0: '? Does learning about computer science help students grow into the kind
           of citizens you are preparing them to be? Explain why or why not.'
         1: ': Aprender ciência da computação ajuda os alunos a se tornarem o tipo
-          de cidadão que você os está preparando para se tornarem? Explique por que
-          ou por que não.'
+          de cidadão que você os está preparando ser? Explique por que ou por que
+          não.'
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Problem Solving:
         Problem Solving Methods: Métodos de resolução de problema
@@ -190,8 +210,8 @@
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instruções: codifique a letra A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
-        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Plano de Estudo
-          - U1L5 - Enviando Bits no mundo real
+        CSP Student Plan - U1L5 - Sending Bits in the real world: Plano de estudo
+          de CSP - U1L5 - Enviando bits no mundo real
         description here: descrição aqui
       CSPStudentLessonPlanTemplate:
         title: título
@@ -202,8 +222,9 @@
       Mixing Colors:
         title: título
         description here: descrição aqui
+      PDCSP Intro: []
       PDK5 Beyond C:
-        Beyond: Além do
+        Beyond: Além
       PDK5 Classroom Culture C:
         Classroom Culture: Cultura de sala de aula
       PDK5 Course Maps C: []
@@ -247,7 +268,7 @@
         description here: descrição aqui
       Pixelation 4:
         Pixelation 4 - Baker test of External level -- NOT REAL: Pixelização 4 - Teste
-          de Baker de nível externo - não é real
+          de Baker de nível externo - NÃO É REAL
         Create images with bits and bytes.: Crie imagens com bits e bytes.
       Pixelation 4x4 Empty:
         Pixelation 4x4 Empty: Pixelização 4x4 vazia
@@ -258,14 +279,17 @@
       Pixelation Flappy:
         title: título
         description here: descrição aqui
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        description here: descrição aqui
       Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelização - Lição 14 - arrumar
+        Pixelation - Lesson 14 - Fix bit offset: Pixelização - Lição 14 - Arrumar
           o deslocamento dos bits
       Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - arrumar
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - Arrumar
           o deslocamento dos bits v.2
       Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - arrumar
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelização - Lição 14 - Arrumar
           o deslocamento dos bits v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Crie sua própria imagem em preto e branco
@@ -283,51 +307,51 @@
         title: título
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelização - Lição 15 - atividade
+        Pixelation - Lesson 15 - Color Free Play: Pixelização - Lição 15 - Atividade
           livre de colorir
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelização - Lição 15 - tonalidades
+        Pixelation - Lesson 15 - Color Shades: Pixelização - Lição 15 - Tonalidades
           de cores
         description here: descrição aqui
       Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelização - Lição 15 - tonalidades
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelização - Lição 15 - Tonalidades
           de cores 4x4
         description here: descrição aqui
       Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelização - Lição 15 - complete
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelização - Lição 15 - Complete
           cores de 3 bits
         description here: descrição aqui
       Pixelation - Lesson 15 - Favicon Instructions:
-        Pixelation - Lesson 15 - Favicon Instructions: Pixelização - Lição 15 - instruções
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelização - Lição 15 - Instruções
           de favicon
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 1 instructions:
-        Pixelation - Lesson 15 - Task 1 instructions: Pixelização - Lição 15 - instruções
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelização - Lição 15 - Instruções
           da Tarefa 1
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 2 instructions:
-        Pixelation - Lesson 15 - Task 2 instructions: Pixelização - Lição 15 - instruções
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelização - Lição 15 - Instruções
           da Tarefa 2
         description here: descrição aqui
       Pixelation - Lesson 15 - Task 3 instructions:
-        Pixelation - Lesson 15 - Task 3 instructions: Pixelização - Lição 15 - instruções
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelização - Lição 15 - Instruções
           da Tarefa 3
         description here: descrição aqui
       Pixelation - Video - Color 1:
-        Pixelation - Video - Color 1: Pixelização - vídeo - cor 1
+        Pixelation - Video - Color 1: Pixelização - Vídeo - Cor 1
         description here: descrição aqui
       Pixelation - Video - Color 2:
-        Pixelation - Video - Color 2: Pixelização - vídeo - cor 2
+        Pixelation - Video - Color 2: Pixelização - Vídeo - Cor 2
         description here: descrição aqui
       Pixelation - Video - Color 3:
-        Pixelation - Video - Color 3: Pixelização - vídeo - cor 3
+        Pixelation - Video - Color 3: Pixelização - Vídeo - Cor 3
         description here: descrição aqui
       Pixelation - Video - Lesson 14 - B and W:
         How to use the B&W Pixelation Widget: Como usar o widget de pixelização em
           preto e branco
       Pixelation - Video - Tips and Tricks:
-        Pixelation - Video - Tips and Tricks: Pixelização - vídeo - dicas e truques
+        Pixelation - Video - Tips and Tricks: Pixelização - Vídeo - Dicas e truques
         description here: descrição aqui
       test demo level:
         demo title: demo title
@@ -335,11 +359,25 @@
       Test discourse forum-comment level:
         Degree of Difficulty: Grau de dificuldade
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Programar
-          foi tão difícil quanto você esperava? Explique por que ou por que não. Como
-          isso impacta em seu ensino de ciência da computação?
+          foi tão difícil quanto você esperava? Explique por que sim ou por que não.
+          Como isso afeta seu ensino de ciência da computação?
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Comprima o texto identificando
+          padrões repetidos.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Comprima o texto identificando
+          padrões repetidos.
+      U1L5 Student Lesson:
+        title: título
+        description here: descrição aqui
+      U1L6 Student Lesson Plan:
+        title: título
+        description here: descrição aqui
       unique level name here:
         title: título
         description here: descrição aqui
@@ -368,11 +406,11 @@
         shrink|Image|Image: encolher|Imagem|Imagem
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Receita de design 1 Contrato
-        0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+        0: '? Escreva o contrato para a função chamada "ret-largo" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+        1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        wide-rect|Image|Number|String: wide-rect|Imagem|Número|String
+        wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
       Enter name here:
         Enter title here: Insira o título aqui
         Enter prompt here: Digite a mensagem aqui
@@ -428,11 +466,11 @@
         text|Image|String|Number|String: texto|Imagem|String|Número|String
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Receita de design 1 Contrato
-        0: '? Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+        0: '? Escreva o contrato para a função chamada "ret-largo" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        1: ': Escreva o contrato para a função chamada "wide-rect" que cria um retângulo
+        1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo
           de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
-        wide-rect|Image|Number|String: wide-rect|Imagem|Número|String
+        wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
       Rocket Contract 1:
         Contract for rocket-height: Contrato para altura do foguete
         0: '? Um foguete decola, viajando a 15 metros por segundo. Escreva um contrato

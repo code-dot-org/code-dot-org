@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "lingkaran(jari-jari, gaya, warna)"},
 "displayBlockTitle":function(d){return "evaluasi"},
 "ellipseBlockTitle":function(d){return "lonjong (lebar, panjang, gaya, warna)"},
-"emptyFunctionalBlock":function(d){return "Kamu memiliki blok dengan masukan yang tidak terisi."},
 "extraTopBlocks":function(d){return "Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?"},
 "infiniteRecursionError":function(d){return "Fungsi Anda memanggil dirinya sendiri. Kami telah menghentikan fungsi Anda, jika tidak maka fungsi tersebut akan terus memanggil dirinya sendiri selamanya."},
 "overlayBlockTitle":function(d){return "lapisan-atas (atas, bawah)"},

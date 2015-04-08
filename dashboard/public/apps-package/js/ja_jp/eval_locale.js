@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "円 (半径、スタイル、色)"},
 "displayBlockTitle":function(d){return "計算する"},
 "ellipseBlockTitle":function(d){return "楕円 (幅、高さ、スタイル、色)"},
-"emptyFunctionalBlock":function(d){return "入力値が空のブロックがあります。"},
 "extraTopBlocks":function(d){return "使っていないブロックがあります。\"表示\"ブロックにつなごうと思っていましたか？"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "上に重ねる (上、下)"},

@@ -4,7 +4,6 @@
   "circleBlockTitle": "κύκλος (ακτίνα, στυλ, χρώμα)",
   "displayBlockTitle": "υπολογισμός",
   "ellipseBlockTitle": "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)",
-  "emptyFunctionalBlock": "Έχετε ένα μπλόκ με κενό περιεχόμενο.",
   "extraTopBlocks": "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "επικάλυμμα (επάνω, κάτω)",

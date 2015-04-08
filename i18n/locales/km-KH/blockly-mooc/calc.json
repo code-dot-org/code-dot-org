@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Your program results in division by zero.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "equivalentExpression":"សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។",
   "evaluate":"evaluate",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

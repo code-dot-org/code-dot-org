@@ -4,7 +4,6 @@
   "circleBlockTitle": "מעגל (רדיוס, סגנון, צבע)",
   "displayBlockTitle": "תצוגה",
   "ellipseBlockTitle": "אליפסה (רוחב, גובה, סגנון, צבע)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "שכבת-על (למעלה, למטה)",

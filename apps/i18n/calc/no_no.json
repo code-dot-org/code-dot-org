@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Programmet gir deling med null.",
   "emptyComputeBlock": "Du må feste en brikke til \"beregn\"-blokken.",
-  "emptyFunctionalBlock": "Du har en blokk som mangler inndata.",
   "equivalentExpression": "Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
   "evaluate": "beregn",
   "extraTopBlocks": "Du har løse blokker. Mente du å knytte disse til \"beregn\"-blokken?",

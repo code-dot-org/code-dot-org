@@ -4,7 +4,6 @@
   "circleBlockTitle": "kružnica (polomer, štýl, farba)",
   "displayBlockTitle": "zobraz",
   "ellipseBlockTitle": "elipsa (šírka, výška, štýl, farba)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Máš nepripojené bloky. Nechcel si ich pripojiť k bloku \"zobraz\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "prekrytie (zhora, zdola)",

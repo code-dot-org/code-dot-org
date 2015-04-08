@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.hi_in');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "वास्तविक";
+Blockly.Msg.ACTUAL = "कॉल";
 Blockly.Msg.ADD = "जोडें";
 Blockly.Msg.ADD_COMMENT = "टिप्पणी जोड़ें";
 Blockly.Msg.ADD_PARAMETER = "-> पॅरमीटर को_ जोड़िए";
@@ -144,7 +144,7 @@ Blockly.Msg.LISTS_INDEX_OF_TOOLTIP = "सूची में आइटम के
 Blockly.Msg.LISTS_INLIST = "सूची में";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "1 प्रतिशत खाली है";
-Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
+Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of\n\nurl - यह आपको लिस्ट की लम्बाई कि गणना कैसे कि जाए यह जानकारी देता है (जैसे - element की कुल गणना, ना कि विभिन्न elements की गणना)";
 Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "लंबाई";
 Blockly.Msg.LISTS_LENGTH_TITLE = "% 1 की लंबाई";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "सूची की लंबाई वापिस देता है!";
