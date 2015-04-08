@@ -1422,6 +1422,15 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
+
+  // Look for case where the block is "visible" but within the non-visible
+  // function editor blockspace
+  if (Blockly.functionEditor &&
+      this.blockSpace === Blockly.functionEditor.modalBlockSpace &&
+      !Blockly.functionEditor.isOpen()) {
+    return false;
+  }
+
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
   return visibleThroughParent && this.isUserVisible() && !this.isCurrentlyHidden_();
 };
