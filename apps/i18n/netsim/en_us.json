@@ -2,6 +2,7 @@
   "a_and_b": "A/B",
   "addPacket": "Add Packet",
   "addRouter": "Add Router",
+  "appendCountToTitle": "{title} ({count})",
   "ascii": "ASCII",
   "autoDnsUsageMessage": "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
   "binary": "Binary",
