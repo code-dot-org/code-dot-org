@@ -303,7 +303,6 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      applabUserId: applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
@@ -314,6 +313,7 @@ module LevelsHelper
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
     app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:applabUserId] = applab_user_id if @game == Game.applab
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|
