@@ -5,7 +5,10 @@
   "properties": {
     "title": "testing",
     "content1": "lkajsdfasdf",
-    "markdown": "fasdfas\n## asdfadsf\n"
+    "markdown": "fasdfas\n## asdfadsf\n",
+    "options": {
+      "skip_dialog": true
+    }
   },
   "md5": "546f20d086b06a6dea71074fe12d4b63"
 }]]></config>

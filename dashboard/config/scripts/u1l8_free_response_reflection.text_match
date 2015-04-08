@@ -1,0 +1,14 @@
+name 'U1L8 Free Response Reflection'
+title 'Reflection: Sending Numbers '
+content1 'Complete the Sending Numbers Checklist and then respond to the following prompt.'
+
+
+markdown <<MARKDOWN
+Describe the “Maker Mentality” process that your team used to create a successful protocol. 
+
+What problems arose in your efforts to create a working protocol? 
+
+How did you think about the problem(s) in order to solve it? 
+
+Describe what you witnessed as your teammates worked to create the protocol. How did their thinking/work strategies differ from yours?
+MARKDOWN

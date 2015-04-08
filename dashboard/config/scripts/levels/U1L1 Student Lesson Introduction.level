@@ -4,12 +4,17 @@
   "created_at": "2015-04-04T14:07:25.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "## Unit 1: Lesson 1 - \n\n# Background\n\n \n\n# Lesson\n\n* student activity list\n\n\n# Resources\n\n* \n"
+    "markdown": "## Unit 1: Lesson 1 - Innovation\n\n# Background\n\n \n\n# Lesson\n\n* student activity list\n\n\n# Resources\n\n*\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "name": "U1L1 Student Lesson Introduction"
   },
   "md5": "25ca4acbabfacfcfe83061429639107f"
 }]]></config>
