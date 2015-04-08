@@ -457,8 +457,9 @@ en:
           'Artist: Functions': 'Artist: Functions'
           'Bee: Debugging': 'Bee: Debugging'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
+          title: CSP Unit 1 - Digital Information
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lesson14
           Lesson 14: Lesson 14
           Lesson 14 v2: Lesson 14 v2
