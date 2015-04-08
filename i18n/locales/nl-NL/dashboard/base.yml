@@ -219,6 +219,7 @@ nl:
         artist: Teken iets
     user:
       classroom: Leerkracht Home Page
+      district_dashboard: District Dashboard
       label: 'Hallo %{username}'
       stats: Mijn vooruitgang
       settings: Mijn account
@@ -438,6 +439,9 @@ nl:
       body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -551,3 +555,5 @@ nl:
     delete_confirm_title: Weet je zeker dat je dit project wilt verwijderen?
     delete_confirm_text: Bij het verwijderen van je project verdwijnt deze definitief uit jouw Mijn Projecten-lijst. Iedereen met wie je de link naar het project gedeeld hebt, zal niet langer je project kunnen bekijken.
     view_all: Mijn Projecten Bekijken
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

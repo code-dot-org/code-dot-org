@@ -4,7 +4,6 @@
   "circleBlockTitle": "cirkel (radius, stil, farve)",
   "displayBlockTitle": "evaluér",
   "ellipseBlockTitle": "ellipse (bredde, højde, stil, farve)",
-  "emptyFunctionalBlock": "Du har en blok med et ikke-udfyldt input.",
   "extraTopBlocks": "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?",
   "infiniteRecursionError": "Din funktion kalder sig selv. Vi have stoppet den, da den ellers ville have fortsat med at kalder sig for evigt (loop).",
   "overlayBlockTitle": "overlay (top, bund)",

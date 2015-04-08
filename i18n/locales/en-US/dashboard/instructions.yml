@@ -382,7 +382,7 @@ en:
       Big Game Booleans 2_instruction: crwdns34934:0crwdne34934:0
       Big Game Booleans 3_instruction: crwdns34936:0crwdne34936:0
       Big Game Booleans 4_instruction: crwdns34937:0crwdne34937:0
-      Big Game Booleans 5_instruction: crwdns34938:0crwdne34938:0
+      Big Game Booleans 5_instruction: crwdns35995:0crwdne35995:0
       Big Game Collision 1 (copy 1)_instruction: crwdns34939:0crwdne34939:0
       Big Game Collision 1_instruction: crwdns35677:0crwdne35677:0
       Big Game Collision 2_instruction: crwdns35678:0crwdne35678:0
@@ -419,14 +419,14 @@ en:
       C3-Farmer While Loops 8_instruction: crwdns34235:0crwdne34235:0
       C3-Farmer While Loops Assessment 1_instruction: crwdns34236:0crwdne34236:0
       C3-Farmer While Loops Multi Pics_instruction: crwdns30629:0crwdne30629:0
-      Calc Circles of Eval .1_instruction: crwdns34237:0crwdne34237:0
+      Calc Circles of Eval .1_instruction: crwdns35996:0crwdne35996:0
       Calc Circles of Eval .2_instruction: crwdns34238:0crwdne34238:0
       Calc Circles of Eval .3_instruction: crwdns34239:0crwdne34239:0
       Calc Circles of Eval .4_instruction: crwdns34240:0crwdne34240:0
       Calc Circles of Eval 1 (copy 1)_instruction: crwdns34241:0crwdne34241:0
       Calc Circles of Eval 1_instruction: crwdns34242:0crwdne34242:0
       Calc Circles of Eval 2 (copy 1)_instruction: crwdns34243:0crwdne34243:0
-      Calc Circles of Eval 2_instruction: crwdns35738:0crwdne35738:0
+      Calc Circles of Eval 2_instruction: crwdns35997:0crwdne35997:0
       Calc Circles of Eval 3_instruction: crwdns34245:0crwdne34245:0
       Calc Circles of Eval 4_instruction: crwdns34246:0crwdne34246:0
       Calc Circles of Eval 5_instruction: crwdns34247:0crwdne34247:0
@@ -441,15 +441,15 @@ en:
       Calc Define Funcs 3_instruction: crwdns35661:0crwdne35661:0
       Calc Define Funcs 4_instruction: crwdns35662:0crwdne35662:0
       Calc Design Recipe 1_instruction: crwdns35739:0crwdne35739:0
-      Calc Design Recipe 2_instruction: crwdns35133:0crwdne35133:0
-      Calc Design Recipe 3_instruction: crwdns35740:0crwdne35740:0
-      Calc Design Recipe 4_instruction: crwdns35741:0crwdne35741:0
+      Calc Design Recipe 2_instruction: crwdns35998:0crwdne35998:0
+      Calc Design Recipe 3_instruction: crwdns35999:0crwdne35999:0
+      Calc Design Recipe 4_instruction: crwdns36000:0crwdne36000:0
       Calc Free Play_instruction: crwdns34262:0crwdne34262:0
       Calc Rocket 1 (copy 1)_instruction: crwdns35136:0crwdne35136:0
       Calc Rocket 1_instruction: crwdns34264:0crwdne34264:0
       Calc Rocket 2_instruction: crwdns34265:0crwdne34265:0
-      Calc Vars 1.1_instruction: crwdns35742:0crwdne35742:0
-      Calc Vars 1_instruction: crwdns35743:0crwdne35743:0
+      Calc Vars 1.1_instruction: crwdns36001:0crwdne36001:0
+      Calc Vars 1_instruction: crwdns36002:0crwdne36002:0
       Calc Vars 2 (copy 1)_instruction: crwdns34268:0crwdne34268:0
       Calc Vars 2.1_instruction: crwdns35744:0crwdne35744:0
       Calc Vars 2_instruction: crwdns34270:0crwdne34270:0
@@ -655,7 +655,7 @@ en:
       Course 4 Play Lab Vars 8_instruction: crwdns34433:0crwdne34433:0
       Course 4 Play Lab Vars 9_instruction: crwdns34434:0crwdne34434:0
       Course 4 Play Lab Vars_instruction: crwdns34435:0crwdne34435:0
-      Course 4 Play Labs For Loops 1_instruction: crwdns34436:0crwdne34436:0
+      Course 4 Play Labs For Loops 1_instruction: crwdns36003:0crwdne36003:0
       Course 4 Play Labs For Loops 2_instruction: crwdns34437:0crwdne34437:0
       Course 4 Play Labs For Loops 3_instruction: crwdns34438:0crwdne34438:0
       Course 4 Play Labs For Loops 4 (copy 1)_instruction: crwdns34439:0crwdne34439:0
@@ -681,13 +681,14 @@ en:
       Eval Booleans 4_instruction: crwdns34456:0crwdne34456:0
       Eval Booleans 5_instruction: crwdns35745:0crwdne35745:0
       Eval Booleans 6_instruction: crwdns34458:0crwdne34458:0
+      Eval Booleans Free Play_instruction: crwdns36004:0crwdne36004:0
       Eval Booleans_instruction: crwdns34459:0crwdne34459:0
       Eval Cond 1_instruction: crwdns34461:0crwdne34461:0
       Eval Cond 2 (copy 1)_instruction: crwdns34462:0crwdne34462:0
       Eval Cond 2_instruction: crwdns34463:0crwdne34463:0
       Eval Cond 3 (copy 1)_instruction: crwdns34464:0crwdne34464:0
       Eval Cond 3_instruction: crwdns34465:0crwdne34465:0
-      Eval Cond 4_instruction: crwdns34466:0crwdne34466:0
+      Eval Cond 4_instruction: crwdns36005:0crwdne36005:0
       Eval Cond 5_instruction: crwdns34467:0crwdne34467:0
       Eval Cond 6_instruction: crwdns34993:0crwdne34993:0
       Eval Cond 7_instruction: crwdns35154:0crwdne35154:0
@@ -698,7 +699,7 @@ en:
       Eval Contracts 2_instruction: crwdns34469:0crwdne34469:0
       Eval Contracts 3_instruction: crwdns34470:0crwdne34470:0
       Eval Contracts 4 A_instruction: crwdns34471:0crwdne34471:0
-      Eval Contracts 4_instruction: crwdns34472:0crwdne34472:0
+      Eval Contracts 4_instruction: crwdns36006:0crwdne36006:0
       Eval Contracts 8A_instruction: crwdns34998:0crwdne34998:0
       Eval Contracts A_instruction: crwdns35663:0crwdne35663:0
       Eval Contracts C_instruction: crwdns35000:0crwdne35000:0
@@ -710,7 +711,7 @@ en:
       Eval Define Funcs 4_instruction: crwdns34477:0crwdne34477:0
       Eval Define Funcs 5_instruction: crwdns34478:0crwdne34478:0
       Eval Defining Vars Free Play 1_instruction: crwdns35746:0crwdne35746:0
-      Eval Design Recipe .1_instruction: crwdns34480:0crwdne34480:0
+      Eval Design Recipe .1_instruction: crwdns36007:0crwdne36007:0
       Eval Design Recipe 1 (copy 1)_instruction: crwdns34481:0crwdne34481:0
       Eval Design Recipe 1_instruction: crwdns34482:0crwdne34482:0
       Eval Design Recipe 2 (copy 1)_instruction: crwdns34483:0crwdne34483:0
@@ -729,8 +730,8 @@ en:
       Eval Strings Images 4_instruction: crwdns35666:0crwdne35666:0
       Eval Strings Images 5_instruction: crwdns34496:0crwdne34496:0
       Eval Strings Images 6_instruction: crwdns34497:0crwdne34497:0
-      Eval Strings Images 7_instruction: crwdns35667:0crwdne35667:0
-      Eval Strings Images 8_instruction: crwdns35668:0crwdne35668:0
+      Eval Strings Images 7_instruction: crwdns36008:0crwdne36008:0
+      Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns34500:0crwdne34500:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
       frozen circle function (copy 1)_instruction: crwdns34502:0crwdne34502:0
@@ -775,7 +776,7 @@ en:
       Infinity_test_instruction: crwdns34542:0crwdne34542:0
       Infinity_touch_faster_instruction: crwdns34543:0crwdne34543:0
       Infinity_touch_four_instruction: crwdns34544:0crwdne34544:0
-      Infinity_touch_score_instruction: crwdns35163:0crwdne35163:0
+      Infinity_touch_score_instruction: crwdns36010:0crwdne36010:0
       K-1 Artist 1 Assessment 1_instruction: crwdns34546:0crwdne34546:0
       K-1 Artist Loops 1_instruction: crwdns30954:0crwdne30954:0
       K-1 Artist Loops 2_instruction: crwdns30955:0crwdne30955:0
@@ -895,7 +896,7 @@ en:
       Luigi's Pizza 2_instruction: crwdns35172:0crwdne35172:0
       Luigi's Pizza 3 (copy 1)_instruction: crwdns35173:0crwdne35173:0
       Luigi's Pizza 3_instruction: crwdns35684:0crwdne35684:0
-      Luigi's Pizza 4_instruction: crwdns35175:0crwdne35175:0
+      Luigi's Pizza 4_instruction: crwdns36011:0crwdne36011:0
       maze level test_instruction: crwdns31069:0crwdne31069:0
       Maze screenshot Work_instruction: crwdns31070:0crwdne31070:0
       MSM Big Game Empty_instruction: crwdns35004:0crwdne35004:0
@@ -990,8 +991,6 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       perpendicular_instruction: crwdns34649:0crwdne34649:0
-      Play Lab Rocket 1 (copy 1)_instruction: crwdns34650:0crwdne34650:0
-      Play Lab Rocket 1 (copy 2)_instruction: crwdns34651:0crwdne34651:0
       Play Lab Rocket 1_instruction: crwdns34652:0crwdne34652:0
       Play Lab Rocket 2 (copy 1)_instruction: crwdns34653:0crwdne34653:0
       Play Lab Rocket 2 (copy 2)_instruction: crwdns35186:0crwdne35186:0
@@ -1014,9 +1013,9 @@ en:
       Sam the Butterfly 1 (copy 1)_instruction: crwdns34665:0crwdne34665:0
       Sam the Butterfly 1_instruction: crwdns34666:0crwdne34666:0
       Sam the Butterfly 2_instruction: crwdns35192:0crwdne35192:0
-      Sam the Butterfly 3_instruction: crwdns35193:0crwdne35193:0
-      Sam the Butterfly 4_instruction: crwdns34669:0crwdne34669:0
-      Sam the Butterfly 5_instruction: crwdns35194:0crwdne35194:0
+      Sam the Butterfly 3_instruction: crwdns36012:0crwdne36012:0
+      Sam the Butterfly 4_instruction: crwdns36013:0crwdne36013:0
+      Sam the Butterfly 5_instruction: crwdns36014:0crwdne36014:0
       Sam the Butterfly 6_instruction: crwdns34671:0crwdne34671:0
       Sam the Butterfly 7 (copy 1)_instruction: crwdns35011:0crwdne35011:0
       Sam the Butterfly 7_instruction: crwdns34672:0crwdne34672:0

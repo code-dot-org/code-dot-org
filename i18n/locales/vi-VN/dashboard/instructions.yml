@@ -1128,11 +1128,11 @@ vi:
         the left and right side of the screen, edit the on-screen? function so that
         it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
       Big Game Booleans 5_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right, and they should both return to the opposite side. Take
-        a minute to make sure your game is working like you want it to, and then click
-        finish to move on.
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side. Take a minute to
+        make sure your game is working like you want it to, and then click finish
+        to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         When you last worked on your game
         we got our target and danger sprites to fly across the screen, but they never
@@ -1272,9 +1272,9 @@ vi:
         piles.  Help me to fill and remove them to make the ground flat.
       C3-Farmer While Loops Multi Pics_instruction: Multiple Choice
       Calc Circles of Eval .1_instruction: |
-        The code you'll be writing in this course
-        is called Evaluation Blocks, because each block of code evaluates to a single
-        value. Change the ??? in this code so that the block evaluates to 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         This Evaluation Block is a multiplication
         function which takes two numbers and returns the product of those numbers.
@@ -1298,9 +1298,8 @@ vi:
         Convert this statement to <some_shape>
         of evaluation.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1353,16 +1352,16 @@ vi:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        Free Play: Using the two functions we just
+        wrote, write the function `cookie-profit`, which takes in the number of cookies
+        you sold, and gives you back the total profit you make from selling your cookies,
+        accounting for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1372,12 +1371,12 @@ vi:
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
@@ -2132,7 +2131,7 @@ vi:
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the speak block to speak the counter
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
@@ -2214,6 +2213,9 @@ vi:
         block flips true to false, or false to true. If you wrap this block of code
         in a NOT block, it should return true (because we are asking if the two expressions
         do NOT produce equal values).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleans allow us to compare different values,
         returning "true" if the are equal, or "false" if they are not. What do
@@ -2248,8 +2250,8 @@ vi:
         We can use the "string=?" function to make conditionals
         that respond to text input. Here's a function called "green shape" that
         takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "square," "triangle,"
-        "circle," or "rectangle."
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Here's a similar function "red shape" with an
         additional parameter for size. Complete the conditionals so the correct image
@@ -2279,9 +2281,9 @@ vi:
         just made a circle of that size in the first place?
       Eval Contracts 4_instruction: |
         The "scale" function returns an image that
-        is scaled either larger or smaller than the input image. Try scaling this
-        circle by a factor of 10 - how is the resulting image different than if you'd
-        just made a circle of that size in the first place?
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
@@ -2325,8 +2327,8 @@ vi:
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Look at
-        the two examples we've provided and write the function definition.
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2406,10 +2408,10 @@ vi:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        relative to the center of the playspace, where it would normally be placed.
+        Use this block to offset the triangle by 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
@@ -2551,8 +2553,8 @@ vi:
         Move Anna up, down left, and right to touch
         each of the four snowflakes.
       Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+        Make Anna score a point when she touches
+        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2756,7 +2758,7 @@ vi:
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
@@ -3076,14 +3078,6 @@ vi:
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3175,20 +3169,20 @@ vi:
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the

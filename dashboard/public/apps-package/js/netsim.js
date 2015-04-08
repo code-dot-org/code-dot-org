@@ -740,8 +740,6 @@ return buf.join('');
 },{"../../locale/current/common":247,"ejs":263}],185:[function(require,module,exports){
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/netsim');
-var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
@@ -828,12 +826,12 @@ var levels = module.exports = {};
  * should start with this one and disable features.
  * @type {netsimLevelConfiguration}
  */
-levels.default = {
+levels.custom = {
 
   // Lobby configuration
-  showClientsInLobby: true,
-  showRoutersInLobby: true,
-  showAddRouterButton: true,
+  showClientsInLobby: false,
+  showRoutersInLobby: false,
+  showAddRouterButton: false,
 
   // Packet header specification
   routerExpectsPacketHeader: [
@@ -850,8 +848,8 @@ levels.default = {
   ],
 
   // Send widget configuration
-  showAddPacketButton: true,
-  showPacketSizeControl: true,
+  showAddPacketButton: false,
+  showPacketSizeControl: false,
   defaultPacketSizeLimit: Infinity,
 
   // Tab-panel control
@@ -881,72 +879,17 @@ levels.default = {
   ],
 
   // Router tab and its controls
-  showRouterBandwidthControl: true,
+  showRouterBandwidthControl: false,
   defaultRouterBandwidth: Infinity,
-  showRouterMemoryControl: true,
+  showRouterMemoryControl: false,
   defaultRouterMemory: Infinity,
 
   // DNS tab and its controls
-  showDnsModeControl: true,
+  showDnsModeControl: false,
   defaultDnsMode: DnsMode.NONE
 };
 
-/**
- * Variant 1 base level
- * Sends individual bits at a time.
- * @type {netsimLevelConfiguration}
- */
-levels.variant1 = utils.extend(levels.default, {
-  showAddRouterButton: false,
-  clientInitialPacketHeader: [],
-  showAddPacketButton: false,
-  showPacketSizeControl: false,
-  showTabs: [NetSimTabType.INSTRUCTIONS],
-  defaultEnabledEncodings: [EncodingType.A_AND_B]
-});
-
-/**
- * Variant 2 base level
- * Sends messages as packets, all at once.
- * @type {netsimLevelConfiguration}
- */
-levels.variant2 = utils.extend(levels.default, {
-  showAddRouterButton: false,
-  clientInitialPacketHeader: [],
-  showAddPacketButton: false,
-  showPacketSizeControl: false,
-  showTabs: [NetSimTabType.INSTRUCTIONS, NetSimTabType.MY_DEVICE],
-  showEncodingControls: [EncodingType.ASCII],
-  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII]
-});
-
-/**
- * Variant 3 base level
- * Enables routers.
- * @type {netsimLevelConfiguration}
- */
-levels.variant3 = utils.extend(levels.default, {
-  showClientsInLobby: false,
-  showAddRouterButton: true,
-  showAddPacketButton: true,
-  showPacketSizeControl: true,
-  defaultPacketSizeLimit: Infinity,
-
-  showTabs: [
-    NetSimTabType.INSTRUCTIONS,
-    NetSimTabType.MY_DEVICE,
-    NetSimTabType.ROUTER,
-    NetSimTabType.DNS
-  ],
-
-  showEncodingControls: [EncodingType.ASCII],
-  defaultEnabledEncodings: [EncodingType.BINARY, EncodingType.ASCII],
-
-  showDnsModeControl: false,
-  defaultDnsMode: DnsMode.AUTOMATIC
-});
-
-},{"../../locale/current/netsim":252,"../utils":242,"./Packet":182,"./netsimConstants":188}],183:[function(require,module,exports){
+},{"./Packet":182,"./netsimConstants":188}],183:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

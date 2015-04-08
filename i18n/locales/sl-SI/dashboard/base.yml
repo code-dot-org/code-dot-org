@@ -219,6 +219,7 @@ sl:
         artist: Nariši kaj
     user:
       classroom: Učiteljeva domača stran
+      district_dashboard: District Dashboard
       label: 'Živjo %{username}'
       stats: Moj napredek
       settings: Moj račun
@@ -437,6 +438,9 @@ sl:
       body: Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši uporabniki
     frozen:
       title: Zmrznjenka (Frozen)
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Učenci so to narisali s svojimi programi!
     students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
@@ -550,3 +554,5 @@ sl:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

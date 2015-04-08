@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"ผลของโปรแกรมของคุณถูกหารด้วยศูนย์.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"คุณมีบล็อกที่ไม่ได้เติมข้อมูลเข้า.",
   "equivalentExpression":"ลองจัดลำดับ argument ใหม่ เพื่อให้ได้ expression ที่เหมือนกันจริงๆ.",
   "evaluate":"การทดสอบ",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

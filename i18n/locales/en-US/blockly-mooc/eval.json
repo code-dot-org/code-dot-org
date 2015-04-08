@@ -4,7 +4,6 @@
   "circleBlockTitle":"crwdns22032:0crwdne22032:0",
   "displayBlockTitle":"crwdns35478:0crwdne35478:0",
   "ellipseBlockTitle":"crwdns22033:0crwdne22033:0",
-  "emptyFunctionalBlock":"crwdns34866:0crwdne34866:0",
   "extraTopBlocks":"crwdns22298:0crwdne22298:0",
   "infiniteRecursionError":"crwdns35479:0crwdne35479:0",
   "overlayBlockTitle":"crwdns22034:0crwdne22034:0",
@@ -27,5 +26,6 @@
   "solid":"crwdns22047:0crwdne22047:0",
   "string":"crwdns22048:0crwdne22048:0",
   "stringMismatchError":"crwdns35481:0crwdne35481:0",
-  "userCodeException":"crwdns35482:0crwdne35482:0"
+  "userCodeException":"crwdns35482:0crwdne35482:0",
+  "wrongBooleanError":"crwdns35942:0crwdne35942:0"
 }

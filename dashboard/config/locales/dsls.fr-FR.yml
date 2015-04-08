@@ -5,7 +5,8 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4+5) > 9
         ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
@@ -13,7 +14,8 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) ou (7 <= 9)
         (10 > 11) OR (7 <= 9): (10 > 11) OU (7 <= 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
@@ -22,22 +24,39 @@
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) et (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) ET (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
       Blocks to Bools 4:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
         Type out the arithmetic expression that matches this code: Tapez l'expression
           arithmétique qui correspond à ce code
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) ET (x < 5)) OU ((8
           < x) ET (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) et (x < 5)) ou ((8
           < x) et (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
       Blocks to Math 1:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -65,6 +84,7 @@
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Tapez l'expression arithmétique ici
       Blocks to Math 4:
         Convert Blocks to Math: Traduire des blocs en expressions mathématiques
@@ -192,8 +212,8 @@
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions : Coder la lettre A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
-        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
-          - U1L5 - Sending Bits in the real world
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP étudiant Plan
+          - U1L5 - expédition d'octets dans le monde réel
         description here: description ici
       CSPStudentLessonPlanTemplate:
         title: titre
@@ -204,6 +224,7 @@
       Mixing Colors:
         title: titre
         description here: description ici
+      PDCSP Intro: []
       PDK5 Beyond C:
         Beyond: Au-delà
       PDK5 Classroom Culture C:
@@ -263,6 +284,9 @@
         description here: description ici
       Pixelation Flappy:
         title: titre
+        description here: description ici
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
         description here: description ici
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Pixelation - leçon 14 - Décalage
@@ -347,6 +371,20 @@
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      U1L5 Student Lesson:
+        title: titre
+        description here: description ici
+      U1L6 Student Lesson Plan:
+        title: titre
+        description here: description ici
       unique level name here:
         title: titre
         description here: description ici

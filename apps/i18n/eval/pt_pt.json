@@ -4,7 +4,6 @@
   "circleBlockTitle": "Círculo (raio, estilo, cor)",
   "displayBlockTitle": "Exibir",
   "ellipseBlockTitle": "Elipse (largura, altura, estilo, cor)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "Degradê (Topo, Botão)",

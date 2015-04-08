@@ -264,6 +264,7 @@
         artist: Dibuixa alguna cosa
     user:
       classroom: Pàgina d'inici de mestre
+      district_dashboard: District Dashboard
       label: Hola %{username}
       stats: El meu progrés
       settings: El meu compte
@@ -520,6 +521,10 @@
         nostres usuaris
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Utilitza Play Lab per crear una història o un joc protagonitzada pels
+        personatges de Disney infinity.
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!
@@ -655,3 +660,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

@@ -253,6 +253,7 @@
         artist: Draw Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: היי %{username}
       stats: ההתקדמות שלי
       settings: החשבון שלי
@@ -498,6 +499,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!
@@ -629,3 +633,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

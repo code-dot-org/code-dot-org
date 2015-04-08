@@ -224,6 +224,7 @@ ca:
         artist: Dibuixa alguna cosa
     user:
       classroom: "Pàgina d'inici de mestre"
+      district_dashboard: District Dashboard
       label: 'Hola %{username}'
       stats: El meu progrés
       settings: El meu compte
@@ -444,6 +445,9 @@ ca:
       body: "Mira tota una galeria d'imatges artístiques i aplicacions creades pels nostres usuaris"
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!
@@ -557,3 +561,5 @@ ca:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

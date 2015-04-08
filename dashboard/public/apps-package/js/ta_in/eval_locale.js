@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "வட்டம் (ஆரம், பாணி, வண்ணம்)"},
 "displayBlockTitle":function(d){return "காட்சி"},
 "ellipseBlockTitle":function(d){return "நீள்வட்ட (அகலம், உயரம், பாணி, வண்ணம்)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "மேலிடு (மேல், கீழ்)"},

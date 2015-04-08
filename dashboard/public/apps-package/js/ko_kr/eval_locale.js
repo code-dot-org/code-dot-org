@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "원(반지름, 형태, 색)"},
 "displayBlockTitle":function(d){return "보이기"},
 "ellipseBlockTitle":function(d){return "타원(가로길이, 세로높이, 형태, 색)"},
-"emptyFunctionalBlock":function(d){return "입력이 없는 블럭이 있습니다."},
 "extraTopBlocks":function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"그리기\"블럭에 붙이려고 했나요?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "위에그리기(맨위, 아래)"},

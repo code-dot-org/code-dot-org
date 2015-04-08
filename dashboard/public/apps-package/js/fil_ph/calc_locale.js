@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Dapat kang maglakip ng isang block sa \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "Mayroon kang isang block na walang nailagay na input ."},
 "equivalentExpression":function(d){return "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?"},

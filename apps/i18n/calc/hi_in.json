@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "बिल्कुल उसी अभिव्यक्ति प्राप्त करने के लिए अपने तर्क पुनर्व्यवस्था की कोशिश करो।",
   "evaluate": "evaluate",
   "extraTopBlocks": "आपके पास स्वाधीन ब्लॉक है। आप ये \"गणना\" ब्लॉक संग जोड़ना चाहते हैं ?",

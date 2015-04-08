@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "반드시 \"계산\" 블럭에 블럭을 붙여야 합니다."},
-"emptyFunctionalBlock":function(d){return "입력이 없는 블럭이 있습니다."},
 "equivalentExpression":function(d){return "같은 계산결과가 나올 수 있도록 다시 배치하세요."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?"},

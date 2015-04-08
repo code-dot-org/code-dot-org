@@ -266,6 +266,7 @@
         artist: Dibujar algo
     user:
       classroom: Página de inicio del maestro
+      district_dashboard: District Dashboard
       label: Hola %{username}
       stats: Mi progreso
       settings: Mi cuenta
@@ -525,6 +526,9 @@
         nuestros usuarios
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -659,3 +663,5 @@
       de su lista de proyectos. Cualquiera que tenga un enlace compartido por usted
       no podrá seguir viendo el proyecto.
     view_all: Ver Mis Proyectos
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

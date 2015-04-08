@@ -59,7 +59,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Labirintus, párosítás
+        Maze Match: Labirintus párosítás
         Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
         Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
@@ -73,8 +73,8 @@
       2-3 Big Event Match 1:
         Matching: Megfelelő
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
+        Match the button combination to the dance moves.: A billentyűkombinációkat
+          párosítása a táncmozdulatokhoz.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -99,7 +99,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Megfelelő
-        Match the grid to the program: Párosítsd a rácsozatot a programmal!
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -116,7 +116,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Labirintus, párosítás
+        Maze Match: Labirintus párosítás
         Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
         Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
@@ -253,8 +253,8 @@
       K-1 Big Event Match 1:
         Matching: Megfelelő
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
+        Match the button combination to the dance moves.: A billentyűkombinációkat
+          párosítása a táncmozdulatokhoz.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -371,20 +371,19 @@
           -> karakterlánc'
         'find-price: string -> number': 'keresés-ár: karakterlánc-> szám'
       PDK5 Pair programming match:
-        Pair programming match: Pair programming match
+        Pair programming match: Páros programozás párosítás
         Match the definitions to the words you were introduced to in the last video.: Párosítsd
           a meghatározásokat azokkal a szavakkal, amelyekkel megismerkedtél a legutóbbi
           videóban.
-        Pair programming: Pair programming
+        Pair programming: Páros programozás
         Driver: Vezető
         Navigator: Navigator
         When two students work at one computer to write a program together: Amikor
           két tanuló dolgozik egy számítógépen, hogy közösen írjanak egy programot
         The student who controls the keyboard, mouse, or touch screen: A tanuló, aki
           a billentyűzetet, egeret vagy az érintőképernyőt kezeli
-        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The
-          student who thinks about the big-picture and looks for potential mistakes
-          or misunderstandings
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: Az
+          a tanuló, aki az összképet nézi és keresi a lehetséges hibákat vagy félreértéseket
       PDK5 What is unplugged:
         What is an unplugged activity?: Mi az a "gép-néküli" tevékenység?
         Question: Kérdés
@@ -394,7 +393,7 @@
         Match up all the flowers by colour!: Párosítsd a virágokat a színekkel!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
         Instructions: Utasítások
-        Drag the images from right to center.: Húzd a képeket a jobbról középre!
+        Drag the images from right to center.: Húzd a képeket jobbról középre!
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg

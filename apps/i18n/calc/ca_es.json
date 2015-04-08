@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Tens blocs no afegits.  Volies afegir aquests al bloc d'execució?",

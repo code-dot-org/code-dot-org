@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Tavas programmas rezultāts dalījumā ar nulli.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Jums ir bloks ar neaizpildītu ievadi.",
   "equivalentExpression":"Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
   "evaluate":"novērtē",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

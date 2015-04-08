@@ -10,8 +10,8 @@ pt-BR:
       user:
         name: Nome para exibição
         email: E-mail
-        username: nome de usuário
-        password: senha
+        username: Nome de usuário
+        password: Senha
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -219,6 +219,7 @@ pt-BR:
         artist: Desenhe alguma coisa
     user:
       classroom: Página inicial do professor
+      district_dashboard: District Dashboard
       label: 'Oi, %{username}'
       stats: Meu progresso
       settings: Minha conta
@@ -259,7 +260,7 @@ pt-BR:
       trophies: troféus
     students:
       name: Nome
-      username: nome de usuário
+      username: Nome de usuário
       password: senha
       manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
@@ -437,6 +438,9 @@ pt-BR:
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
     frozen:
       title: Frozen
+    infinity:
+      title: Laboratório infinito
+      body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -538,7 +542,7 @@ pt-BR:
     more: Mais
     name: Nome
     updated: Atualizado
-    project_type: Tipo do projeto
+    project_type: Tipo de projeto
     help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
     need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
@@ -547,6 +551,8 @@ pt-BR:
     saved: Salvo
     not_saved: Não salvo
     cancel: Cancelar
-    delete_confirm_title: Tem certeza que deseja excluir esse projeto?
-    delete_confirm_text: 'Excluir seu projeto vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
+    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
+    delete_confirm_text: 'Ao excluir seu projeto, vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
     view_all: Visualizar meus projetos
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

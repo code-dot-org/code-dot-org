@@ -397,14 +397,9 @@
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Створити історію або гру за допомогою Infinity Play Lab!!
-          description: Створити історію або гру за допомогою Infinity Play Lab!
-          Infinity: Нескінченність
         pixelation:
           title: Пікселізаціі
-          description: Створити зображення з біти і байти.
+          description: Створити зображення з бітів та байтів.
           Pixelation: Пікселізаціі
         20-hour:
           title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
@@ -459,39 +454,39 @@
           description: ''
           Step: Крок
         Hour of Code:
-          title: Година код 2013
+          title: Година коду 2013
           description: ''
-          Hour of Code 2013: Година код 2013
+          Hour of Code 2013: Година коду 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         Test - Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         How to do the Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         Tutorial - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          Puzzles: Задачі
         course4pre:
           title: Знання, необхідні для курсу 4
           description_short: Коротке узагальнення понять для учнів, котрі не проходили
@@ -520,6 +515,8 @@
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -579,3 +576,15 @@
             зіткнень (Велика гра)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Знайомство з профессійним кодуванням
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
