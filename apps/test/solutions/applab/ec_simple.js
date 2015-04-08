@@ -1,7 +1,6 @@
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var _ = require('lodash');
 
-var Applab = require('@cdo/apps/applab/applab');
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -17,6 +16,7 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
+          var Applab = require('@cdo/apps/applab/applab');
           Applab.onPuzzleComplete();
         }, 1);
       },
@@ -37,6 +37,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           assert(document.getElementById('idTxt2').innerText === 'test-value');
+          var Applab = require('@cdo/apps/applab/applab');
           Applab.onPuzzleComplete();
         }, 100);
       },

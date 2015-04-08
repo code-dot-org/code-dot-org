@@ -512,8 +512,8 @@ Maze.init = function(config) {
 
   var extraControlRows = null;
 
-  Maze.skin = config.skin;
-  Maze.level = config.level;
+  skin = Maze.skin = config.skin;
+  level = Maze.level = config.level;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
