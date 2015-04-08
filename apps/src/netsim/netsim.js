@@ -313,7 +313,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.tabs_.attachToRunLoop(this.runLoop_);
 }
 
-  this.sendWidget_ = new NetSimSendPanel($('#netsim_send'), this.level,
+  this.sendPanel_ = new NetSimSendPanel($('#netsim_send'), this.level,
       this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
@@ -544,7 +544,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
   }
   this.receivedMessageLog_.setEncodings(newEncodings);
   this.sentMessageLog_.setEncodings(newEncodings);
-  this.sendWidget_.setEncodings(newEncodings);
+  this.sendPanel_.setEncodings(newEncodings);
 };
 
 /**
@@ -563,7 +563,7 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   }
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
-  this.sendWidget_.setChunkSize(newChunkSize);
+  this.sendPanel_.setChunkSize(newChunkSize);
 };
 
 /** @param {number} creationTimestampMs */
@@ -803,7 +803,7 @@ NetSim.prototype.render = function () {
   if (this.isConnectedToRemote()) {
     this.mainContainer_.find('.leftcol_disconnected').hide();
     this.mainContainer_.find('.leftcol_connected').show();
-    this.sendWidget_.setFromAddress(myAddress);
+    this.sendPanel_.setFromAddress(myAddress);
   } else {
     this.mainContainer_.find('.leftcol_disconnected').show();
     this.mainContainer_.find('.leftcol_connected').hide();
