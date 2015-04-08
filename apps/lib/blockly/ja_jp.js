@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.ja_jp');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "実際の";
+Blockly.Msg.ACTUAL = "コール";
 Blockly.Msg.ADD = "ついか";
 Blockly.Msg.ADD_COMMENT = "コメントを追加";
 Blockly.Msg.ADD_PARAMETER = "パラメータを追加します。";

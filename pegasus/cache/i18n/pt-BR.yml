@@ -17,8 +17,8 @@
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
     de aprender ciência da computação
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Participar #
-    outros.'
+  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos
+    # outros.'
   name: Nome
   email: E-mail
   zipcode: CEP ou país
@@ -33,7 +33,7 @@
   hoc2014_teachers: Professores
   hoc2014_host: Promova
   hoc2014_everyone: Todos
-  hoc2014_support: "Apoie &#x25BE;"
+  hoc2014_support: Apoie &#x25BE;
   hoc2014_whatishoc: O que é a Hora do Código?
   twentyhours_trynow: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
@@ -114,7 +114,7 @@
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: Por que muitas escolas não ensinam ciência da computação? Podemos
+  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
     dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para
     saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
@@ -138,7 +138,8 @@
     aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Michael Clark, professor'
-  studiobar_title: Explore o Code Studio
+  studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore o Code Studio
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_hoc_title: A Hour of Code
@@ -153,20 +154,43 @@
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
-  homepage_hero_text_malala: "&ldquo;Eu desafio garotas em todos os países\na aprender
-    com a Hora do Código&rdquo; \nMalala\n"
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;Nunca é tarde demais
-    para aprender&rdquo;
-    Susan, CEO do YouTube
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Não apenas jogue em seu telefone,
-    mas também programe nele.&rdquo;
+    &ldquo;Em vez de simplesmente jogar em seu celular,
+    aprenda a programá-lo.&rdquo;
     Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Compreender a ciência da computação
-    está se tornando cada vez mais fundamental...&rdquo;
-    Sheryl, COO do Facebook
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
+    mention, it's just plain fun.&rdquo; \n"
+  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
+    about learning.&rdquo; \n"
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo; \n"
+  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
+    involved and participating.&rdquo; \n"
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -176,32 +200,32 @@
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_codevideo: Assista ao vídeo
   homepage_action_text_teachervideo: Assista ao vídeo
-  homepage_action_text_learn: Começe a aprender hoje
-  homepage_action_text_signpetition: Assinar a petição
-  homepage_signpetition_dropdown: Assinar nossa petição &#x25BE;
+  homepage_action_text_learn: Comece a aprender hoje
+  homepage_action_text_signpetition: Assine a petição
+  homepage_signpetition_dropdown: Assine nossa petição &#x25BE;
   homepage_slot_text_title_hoc: Hora do Código
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Alunos
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
+  homepage_slot_text_link_codestudio: Experimente o Code Studio
+  homepage_slot_text_link_local: Encontre uma turma na sua região
+  homepage_slot_text_link_othercourses: Outros cursos on-line
+  homepage_slot_text_title_educators: Educadores
+  homepage_slot_text_blurb_educators: Ensine seus alunos
+  homepage_slot_text_link_k5: Cursos para turmas do pré ao 5º ano
+  homepage_slot_text_link_fullcurriculum: Veja nosso currículo completo
+  homepage_slot_text_link_pd: Desenvolvimento profissional
+  homepage_slot_text_title_advocates: Apoiadores
+  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
+  homepage_slot_text_link_stats: Veja as estatísticas
+  homepage_slot_text_link_buy: Comprar uma camiseta ou um boné
+  homepage_slot_text_link_donate: Fazer uma doação
+  homepage_header_codestudio: Criações de alunos no Code Studio
+  homepage_header_donors: A Code.org agradece a seus colaboradores
+  homepage_donors_seall: Ver todos
   homepage_donors_donate: Faça uma doação
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
@@ -1143,26 +1167,3 @@
   sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
     às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
     melhoram habilidades de matemática e ciências.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
