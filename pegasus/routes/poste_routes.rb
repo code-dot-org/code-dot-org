@@ -55,3 +55,21 @@ get '/emails/:name' do |name|
   @locals[:header]['theme'] = 'none'
   result
 end
+
+post '/v2/poste/send-message' do
+  template = params[:template].to_s
+  template = File.basename(template, '.md')
+  
+  template_params = JSON.parse(params[:params]) unless params[:params].to_s.empty?
+  template_params ||= {}
+  
+  recipients = params[:recipients].to_s.split(/[\n,;]/).map{|i| i.strip}
+  
+  recipients.each do |email|
+    recipient = Poste2.ensure_recipient(email, ip_address:request.ip)
+    Poste2.send_message(template, recipient, template_params)
+  end
+  
+  content_type :text
+  "#{recipients.count} #{template} messages sent to:\n\n#{recipients.join("\n")}"
+end
