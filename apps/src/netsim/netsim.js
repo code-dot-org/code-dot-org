@@ -17,6 +17,7 @@
 /* global $ */
 'use strict';
 
+var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
@@ -409,9 +410,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
     return;
   }
 
-  // TODO: Convert to a fully "recursive" disconnect process
   if (this.isConnectedToRemote()) {
-    this.disconnectFromRemote();
+    // Disconnect, from the remote node, and try this again on completion.
+    this.disconnectFromRemote(this.disconnectFromShard.bind(this, onComplete));
+    return;
   }
 
   this.myNode.stopSimulation();
@@ -489,8 +491,10 @@ NetSim.prototype.getConnectedRouter = function () {
  */
 NetSim.prototype.connectToRouter = function (routerID) {
   if (this.isConnectedToRemote()) {
+    // Disconnect and try to connect again when we're done.
     logger.warn("Auto-disconnecting from previous router.");
-    this.disconnectRemote();
+    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID));
+    return;
   }
 
   var self = this;
@@ -512,9 +516,12 @@ NetSim.prototype.connectToRouter = function (routerID) {
 /**
  * Disconnects our client node from the currently connected remote node.
  * Destroys the shared wire.
+ * @param {NodeStyleCallback} [onComplete] optional function to call when
+ *        disconnect is complete
  */
-NetSim.prototype.disconnectFromRemote = function () {
-  this.myNode.disconnectRemote(function () {});
+NetSim.prototype.disconnectFromRemote = function (onComplete) {
+  onComplete = utils.valueOr(onComplete, function () {});
+  this.myNode.disconnectRemote(onComplete);
 };
 
 /**
