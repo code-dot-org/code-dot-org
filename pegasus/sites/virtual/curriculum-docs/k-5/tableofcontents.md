@@ -1,10 +1,12 @@
 ---
-
+title: Table of Contents for Courses 1, 2, and 3
+view: page_curriculum
 theme: none
 ---
-[content]
 
-# Table of Contents for Code Studio's Courses 1, 2, and 3
+<%= partial('doc_header', :title => 'Table of Contents for Courses 1, 2, and 3') %>
+
+[content]
 
 ## Teacher Resources
 
