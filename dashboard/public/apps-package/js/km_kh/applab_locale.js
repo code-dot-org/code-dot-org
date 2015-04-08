@@ -70,5 +70,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "មើល​ទិន្នន័យ"},
 "yes":function(d){return "យល់ព្រម"}};

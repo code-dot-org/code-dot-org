@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cercle (rayon, style, couleur)"},
 "displayBlockTitle":function(d){return "évaluez"},
 "ellipseBlockTitle":function(d){return "ellipse (largeur, hauteur, style, couleur)"},
-"extraTopBlocks":function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?"},
+"extraTopBlocks":function(d){return "Certains de vos blocs sont libres. Souhaitez-vous les attacher au bloc \"évaluer\" ?"},
 "infiniteRecursionError":function(d){return "Votre fonction s'appelle elle-même. Nous l'avons stoppé, sinon elle aurait continué en s'appelant sans fin."},
 "overlayBlockTitle":function(d){return "superposition (haut, bas)"},
 "placeImageBlockTitle":function(d){return "zone d'image (x, y, image)"},

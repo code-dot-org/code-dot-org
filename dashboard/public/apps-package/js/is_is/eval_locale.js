@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "hringur (geisli, gerð, litur)"},
 "displayBlockTitle":function(d){return "meta"},
 "ellipseBlockTitle":function(d){return "ellipsa (breidd, hæð, gerð, litur)"},
-"extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?"},
+"extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?"},
 "infiniteRecursionError":function(d){return "Fallið þitt kallar á sjálft sig. Við höfum stöðvað það, annars mundi það halda áfram að kalla á sjálft sig að eilífu."},
 "overlayBlockTitle":function(d){return "yfirlögn (yfir, undir)"},
 "placeImageBlockTitle":function(d){return "setja-mynd (x, y, mynd)"},
