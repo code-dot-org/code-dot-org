@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Резултатът от Вашата програма за делене на нула."},
-"emptyComputeBlock":function(d){return "Трябва да прикачите блок за изчислителния блок."},
-"emptyFunctionalBlock":function(d){return "Имате блок с незапълнено поле."},
+"emptyComputeBlock":function(d){return "Трябва да прикачите блок към блока за \"оценка\"."},
 "equivalentExpression":function(d){return "Опитайте пренареждане на аргументите, за да получите точно един и същи израз."},
 "evaluate":function(d){return "Оценка"},
-"extraTopBlocks":function(d){return "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?"},
+"extraTopBlocks":function(d){return "Имате несвързани блокове. Искате ли да ги свържете към блока за \"оценка\"?"},
 "failedInput":function(d){return "Вашата функция не връща правилният резултат за всички стойности."},
 "goal":function(d){return "Цел:"},
 "levelIncompleteError":function(d){return "Вашият израз не съответства на целта."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Трябва да дефинирате функция, наречена "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Във Вашият израз липсва променлива "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!"},
 "yourExpression":function(d){return "Вашият израз:"},

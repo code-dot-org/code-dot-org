@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Programmet gir deling med null."},
 "emptyComputeBlock":function(d){return "Du må feste en brikke til \"beregn\"-blokken."},
-"emptyFunctionalBlock":function(d){return "Du har en blokk som mangler inndata."},
 "equivalentExpression":function(d){return "Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk."},
 "evaluate":function(d){return "beregn"},
 "extraTopBlocks":function(d){return "Du har løse blokker. Mente du å knytte disse til \"beregn\"-blokken?"},

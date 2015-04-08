@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"},
 "displayBlockTitle":function(d){return "υπολογισμός"},
 "ellipseBlockTitle":function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"},
-"emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "επικάλυμμα (επάνω, κάτω)"},

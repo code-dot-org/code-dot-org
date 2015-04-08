@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "你的程序因除以 0 而结束。"},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "你有一个未填入数据的块。"},
 "equivalentExpression":function(d){return "试着重新排列你的参数来得到完全相同的表达式。"},
 "evaluate":function(d){return "评估"},
 "extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接到“compute”语句块吗？"},
