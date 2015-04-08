@@ -1,0 +1,13 @@
+name 'U1L6 Assessment multiple choice'
+title 'Multiple Choice: Number Systems'
+question 'If you just had a circle and a square, how many 3-shape rows could you make?'
+wrong '4'
+wrong '6'
+right '8'
+wrong '10'
+wrong '12'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
