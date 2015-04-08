@@ -47,6 +47,15 @@ var omitNodesRequestingConnection = function (node) {
 };
 
 /**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ */
+var omitOutgoingRequestTargets = function (node) {
+  return !remoteNode || (remoteNode.entityID !== node.entityID);
+};
+
+/**
  * For use with Array.prototype.map()
  * @param {NetSimNode} node
  * @returns {rowMetadata}
@@ -84,33 +93,26 @@ var displayNameSort = function (a, b) {
   return (a.displayName > b.displayName) ? 1 : -1;
 };
 
-var requestRows = nodesRequestingConnection
-    .filter(shouldShowNodeType)
-    .map(nodeToRowMetadata)
-    .sort(displayNameSort);
-
 var lobbyRows = nodesOnShard
     .filter(shouldShowNodeType)
     .filter(omitNodesRequestingConnection)
+    .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
     .sort(displayNameSort);
+
+var requestRows = nodesRequestingConnection
+    .filter(shouldShowNodeType)
+    .filter(omitOutgoingRequestTargets)
+    .map(nodeToRowMetadata)
+    .sort(displayNameSort);
+
+var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
+    .filter(shouldShowNodeType)
+    .map(nodeToRowMetadata);
 %>
 <div class="content-wrap">
-  <% if (requestRows.length > 0) { %>
-  <strong><%= i18n.connectionRequests() %></strong>
-  <ul id="netsim_connection_requests" class="netsim-lobby-list">
-    <%
-    requestRows.forEach(function (row) {
-    %>
-    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-      <%= row.displayName %> : <%= row.status %>
-    </li>
-    <%
-    });
-    %>
-  </ul>
-  <% } %>
 
+  <strong><%= i18n.lobby() %></strong>
   <ul id="netsim_lobby_list" class="netsim-lobby-list">
     <%
 
@@ -135,6 +137,37 @@ var lobbyRows = nodesOnShard
     }
     %>
   </ul>
+
+  <% if (requestRows.length > 0) { %>
+  <strong><%= i18n.incomingConnectionRequests() %></strong>
+  <ul id="netsim_connection_requests" class="netsim-lobby-list">
+    <%
+    requestRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+    %>
+  </ul>
+  <% } %>
+
+  <% if (outgoingRequestRows.length > 0) { %>
+  <strong><%= i18n.outgoingConnectionRequests() %></strong>
+  <ul id="netsim_outgoing_requests" class="netsim-lobby-list">
+    <%
+    outgoingRequestRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+    %>
+  </ul>
+  <% } %>
+
   <% if (remoteNode) { %>
     <p>Waiting for <%= remoteNode.getDisplayName() %> to connect... <input type="button" id="netsim_lobby_cancel" value="Cancel" /></p>
   <% } else { %>
