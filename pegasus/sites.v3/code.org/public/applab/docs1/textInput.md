@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a text field for entering values.
+Creates a text field for entering values. The text argument specifies the initial value to be displayed. The textInput can be referenced by the given id.
 
 [/short_description]
 
@@ -40,32 +40,12 @@ ____________________________________________________
 
 [example]
 
-**Interactive Turtle**
-A textInput field is used to get input from your users.
 
 <pre>
 // Display Label
 textLabel("moveAmountLabel", "How Much?", "moveAmount");
 // User-specified number of pixels to move
 textInput("moveAmount", "10");
-// Buttons
-button("move", "Go");              // Go when clicked
-button("turnLeft", "Turn Left");   // Turn left when clicked
-button("turnRight", "Turn Right"); // Turn right when clicked
-
-// Attach click event for each of the buttons
-onEvent("move", "click", function(event) {
-  // Move forward specified pixels
-  moveForward(getText("moveAmount"))
-});
-onEvent("turnLeft", "click", function(event) {
-  // Turn left 90 degrees
-  turnLeft(90)
-});
-onEvent("turnRight", "click", function(event) {
-  // Turn right 90 degress
-  turnRight(90)
-});
 </pre>
 
 [/example]
@@ -76,7 +56,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier","Text Label")
+textInput(id, text)
 </pre>
 
 [/syntax]

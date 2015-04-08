@@ -35,10 +35,9 @@ ____________________________________________________
 
 [example]
 
-<pre>
-/*  Example 1
-*/
+**Example 1**
 
+<pre>
 penColor("cyan");   // sets the color of the turtles trail to cyan
 moveForward(100);   // moves the turtle forward by 100 pixels
 </pre>
@@ -49,12 +48,11 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This demonstrates all 3 ways to give a color to the penColor() function.
+
 <pre>
-/*  Example 2
-
-    This demonstrates all 3 ways to give a color to the penColor() function
-*/
-
 penColor("chartreuse");       // sets the color using a string
 moveForward(50);              // moves the turtle forward 50 pixels
 penColor("7fff00");           // sets the color using a hex value
@@ -69,10 +67,9 @@ ____________________________________________________
 
 [example]
 
-<pre>
-/*  Example 3
-*/
+**Example 3**
 
+<pre>
 var c = (prompt("Enter a color"));  // prompts the user for a color
 penColor(c);                        // sets the color of the turtles trail to the color the user entered
 moveForward(100);                   // moves the turtle forward by 100 pixels
@@ -85,13 +82,11 @@ ____________________________________________________
 
 [example]
 
+**Example 4**
+
+This program draws a circle figure out of lines. It cycles through the colors every time it turns. Here we use **4** colors, so we say penColor(colors[i%**4**]).
+
 <pre>
-/*  Example 4
-
-    This program draws a circle figure out of lines. It cycles
-    through the colors every time it turns. Here we use <b>4</b> colors, so we say penColor(colors[i%<b>4</b>]).
-*/
-
 var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
 for (var i = 0; i < 360; i++) {                     // loops 360 times
   penColor(colors[i%4]);                            // sets the color of the turtles line

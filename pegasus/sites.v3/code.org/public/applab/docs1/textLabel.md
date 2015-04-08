@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## textInput(id, text)
+## textLabel(id, text, for)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Creates a text field for entering values.
+Creates and displays a text label. The text label is used to display a description for the following input controls: radio buttons, check boxes, text inputs, and drop down lists. You associate a text label with the input control by specifying the input control's id in the for argument. You can also reference the input control by the specifid id.
 
 [/short_description]
 
@@ -31,7 +31,9 @@ ____________________________________________________
 [example]
 
 <pre>
-textInput("demo","Type Here"); // Create a text input with the initial value "Type Here"
+// Create a label for the text box
+textLabel("YourNameLabel","Enter your name:", "YourName");
+textInput("YourName","");
 </pre>
 
 [/example]
@@ -40,32 +42,25 @@ ____________________________________________________
 
 [example]
 
-**Interactive Turtle**
-A textInput field is used to get input from your users.
-
+**Demonstrate a label for each of the input types**
 <pre>
-// Display Label
-textLabel("moveAmountLabel", "How Much?", "moveAmount");
-// User-specified number of pixels to move
-textInput("moveAmount", "10");
-// Buttons
-button("move", "Go");              // Go when clicked
-button("turnLeft", "Turn Left");   // Turn left when clicked
-button("turnRight", "Turn Right"); // Turn right when clicked
-
-// Attach click event for each of the buttons
-onEvent("move", "click", function(event) {
-  // Move forward specified pixels
-  moveForward(getText("moveAmount"))
-});
-onEvent("turnLeft", "click", function(event) {
-  // Turn left 90 degrees
-  turnLeft(90)
-});
-onEvent("turnRight", "click", function(event) {
-  // Turn right 90 degress
-  turnRight(90)
-});
+textLabel("textInputLabel","Text Input:", "textInputCtrl");
+textInput("textInputCtrl","");
+write("<br>");
+textInput("checkBoxCtrl",false);
+textLabel("checkBoxLabel","Ok?", "checkBoxCtrl");
+write("<br>");
+textLabel("dropDownLabel","dropDown List ","dropDownCtrl");
+dropDown("dropDownCtrl","Option 1","Option 2","Option 3");
+write("<br>");
+radioButton("radioCtrl1","true","Option 1");
+textLabel("radioLabel1","Radio 1","radioCtrl1");
+write("<br>");
+radioButton("radioCtrl2","true","Option 2");
+textLabel("radioLabel2","Radio 2","radioCtrl2");
+write("<br>");
+radioButton("radioCtrl3","true","Option 3");
+textLabel("radioLabel3","Radio 3","radioCtrl3");
 </pre>
 
 [/example]
@@ -76,7 +71,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier","Text Label")
+textLabel(id, text, for)
 </pre>
 
 [/syntax]
@@ -88,8 +83,9 @@ button("uniqueIdentifier","Text Label")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the text input. The id is used for referencing the created text input. For example, to assign event handlers. |
-| text | string | yes | The initial value to display in the text input. |
+| id | string | yes | A unique identifier for the label control. The id is used for referencing the created label. For example, to assign event handlers. |
+| text | string | yes | The value to display for the label. |
+| for | string | yes | The id to associate the label with. Clicking the label is the same as clicking on the control. |
 [/parameters]
 
 [returns]
@@ -102,7 +98,7 @@ No Return Value
 [tips]
 
 ### Tips
-You should associate a textLabel with your textInput to describe the purpose of the text field.
+You should always provide a label for your text input, radio button, check box, and drop down controls
 
 [/tips]
 

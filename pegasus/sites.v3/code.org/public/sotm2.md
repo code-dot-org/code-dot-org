@@ -6,7 +6,7 @@ nav: educate_nav
 
 # Student of the Month winners
 
-<%= view :sotm_winners %>
+<%= view :sotm2_winners %>
 
 
 # Nominate a Student of the Month

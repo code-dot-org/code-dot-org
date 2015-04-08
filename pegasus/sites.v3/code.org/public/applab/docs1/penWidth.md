@@ -32,7 +32,8 @@ ____________________________________________________
 [example]
 
 <pre>
-
+penWidth(10);
+moveForward(100);
 </pre>
 
 [/example]
@@ -42,7 +43,15 @@ ____________________________________________________
 [example]
 
 <pre>
-
+var amount_turned = 0;
+while ((amount_turned < 360)) {
+  var rand_amount = (randomNumber(50));
+  penWidth(rand_amount);
+  moveForward(100);
+  moveBackward(100);
+  turnRight(rand_amount);
+  amount_turned = (amount_turned + rand_amount);
+}
 </pre>
 
 
