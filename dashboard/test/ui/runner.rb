@@ -133,6 +133,7 @@ end
 
 def run_tests(arguments)
   start_time = Time.now
+  puts "cucumber #{arguments}"
   Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
     stdin.close
     return_value = stdout.read
@@ -235,16 +236,19 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     end
   end
 
-  succeeded, output_text, test_duration = run_tests(arguments)
+  # if autorertrying, output a rerun file so on retry we only run failed tests
+  rerun_filename = browser['name'] + '.rerun'
+  first_time_arguments = $options.auto_retry ? " --out #{rerun_filename} --format rerun" : ""
+
+  succeeded, output_text, test_duration = run_tests(arguments + first_time_arguments)
 
   if !succeeded && $options.auto_retry
-    # TODO:
-    # Use --format rerun --out features.txt to write out failing
-    # features. You can rerun them with cucumber @rerun.txt.
     HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
 
-    succeeded, output_text, test_duration = run_tests(arguments)
+    second_time_arguments = File.exists?(rerun_filename) ? " @#{rerun_filename}" : ''
+
+    succeeded, output_text, test_duration = run_tests(arguments + second_time_arguments)
   end
 
   $lock.synchronize do
