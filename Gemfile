@@ -88,7 +88,7 @@ gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
 
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.3'
 
 gem 'nokogiri', '1.6.1'
 
