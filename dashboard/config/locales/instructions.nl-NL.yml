@@ -113,286 +113,217 @@
       2-3 Artist Loops 11_instruction: Laat ons een  * andere * lus rond onze hele
         creatie plaatsen!  Vergeet niet om een hoek toe te voegen aan het einde van
         de buitenste lus.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
+      2-3 Artist Loops 2_instruction: Gebruik nu een herhaal-blok om een schil van
+        de cel te maken.
+      2-3 Artist Loops 4_instruction: Wil je zien wat er gebeurt wanneer we die vorm
+        oneindig herhalen in een lus?
+      2-3 Artist Loops 5_instruction: We maken nu een kleine verandering in de lus
+        en bekijken hoe onze afbeelding verandert.
+      2-3 Artist Loops 6_instruction: Voeg een extra MOVE en een extra TURN toe binnen
+        de lus en zie hoe je ontwerp verandert.
       2-3 Artist Loops 7_instruction: We kunnen lussen gebruiken om allerlei soorten
         veelhoeken te maken. Kan je een ruit maken in deze zeshoek?
       2-3 Artist Loops 8_instruction: Laat ons beide elementen in een lus plaatsen.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops 9_instruction: "We gaan dezelfde elementen in een lus herhalen,
+        maar nu gaan we er afstanden tussen zetten.\r\nGebruik dezelfde code als hiervoor,
+        maar voeg een STEP FORWARD toe aan het eind van de buitenste lus."
+      2-3 Artist Loops New 1_instruction: Nu gaan we het hoofd van de robot tekenen!
+        Kun je een vierkant maken met zijden van 100 pixels?
+      2-3 Artist Loops New 10_instruction: Nu gaan we een aantal V's met elkaar verbinden
+        in een lus.
+      2-3 Artist Loops New 11_instruction: Nu tekenen we het 24 keer. Voeg een LEFT
+        TURN van 30 graden toe aan je code en zet alles in een REPEAT blok.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        Teken een diamant met zijden van 100 pixels.
       2-3 Artist Loops New 13_instruction: Teken nu de ruit 3 keer in een lus.
       2-3 Artist Loops New 14_instruction: Teken nu 10 ruiten maar draai 90 graden
         na iedere ruit.
       2-3 Artist Loops New 15_instruction: Tekenen iets leuks.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
+      2-3 Artist Loops New 2_instruction: Hier is de code die je hebt gebruikt om
+        dat vierkant te tekenen. Wat gebeurt er wanneer je een REPEAT blok gebruikt
+        om die code 4 keer uit te voeren?
       2-3 Artist Loops New 9_instruction: Tekene een eenvoudige V waarbij de zijden
         50 pixels zijn om de pijl te voltooien.
       2-3 Artist Match Hex Pic_instruction: 'Wedstrijd: Help de zeshoek te maken.'
       2-3 Artist Match Rho Pic_instruction: 'Wedstrijd: Maak de missende regels af.'
       2-3 Artist Match Sq Pic_instruction: Koppel de ontbrekende code
       2-3 Artist Match Tri pic_instruction: Koppel de ontbrekende code.
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
+      2-3 Artist Nested Loops 1_instruction: "Je hebt eerder al lussen gebruikt om
+        vormen te tekenen, maar wist je dat je een lus binnen een andere lus kunt
+        zetten?\r\nMaak een lus voor dit hele blok code die drie keer wordt uitgevoerd
+        om dit patroon te tekenen."
+      2-3 Artist Nested Loops 10_instruction: Laat deze code in een lus 12 keer uitvoeren
+        om het patroon af te maken.
+      2-3 Artist Nested Loops 11_instruction: Laat deze code in een lus 4 keer uitvoeren
+        om het patroon af te maken en draai 90 graden na iedere cirkel.
+      2-3 Artist Nested Loops 12_instruction: Herhaal deze code 12 keer om de krullen
+        te voltooien.
+      2-3 Artist Nested Loops 2_instruction: Herhaal de driehoek 6 keer. Na elke driehoek
+        moet je hem 60 graden draaien en dan de volgende tekenen.
+      2-3 Artist Nested Loops 3_instruction: Herhaal de driehoek 12 keer om dit patroon
+        te tekenen. Deel het aantal graden in een cirkel (360) door het aantal vormen
+        die je wilt tekenen (12). De uitkomst hiervan bepaalt hoever je elke vorm
+        moet draaien.
+      2-3 Artist Nested Loops 4_instruction: 'Herhaal de diamand 12 keer om een bloem
+        te tekenen. Tip: Met de 12 diamanten is het net als met de 12 driehoeken die
+        je al gemaakt hebt - hoe veel moet draaien na elke vorm?'
+      2-3 Artist Nested Loops 5_instruction: Vul het raam van het gebouw met een geneste
+        lus. De ramen zijn 20 pixel hoog en 20 pixel naast elkaar.
+      2-3 Artist Nested Loops 6_instruction: Deze dinosaurus heeft 8 stekels op zijn
+        staart; elke stekel is 30 pixels hoog. Herhaal de driehoek 8 keer, maar zorg
+        ervoor dat je elke keer vooruit gaat.
+      2-3 Artist Nested Loops 7_instruction: Herhaal de driehoek 10 keer om de zon
+        te tekenen. Je moet verplaatsen en draaien na elke driehoek. Om uit rekenen
+        hoever je moet draaien, moet je de graden van een cirkel delen door het aantal
+        vormen die je nodig hebt.
+      2-3 Artist Nested Loops 8_instruction: Laten we nu wat gras toevogen. Elk plukje
+        gras is 50 pixel uit elkaar.
+      2-3 Artist Nested Loops 9_instruction: Als laatste komt nog een bloem. Herhaal
+        de diamant 12 keer om een bloem te tekenen.
+      2-3 Artist Nested Loops Free Play_instruction: Vrije opdracht, tekenen iets
+        moois met een geneste lus.
+      2-3 Bee Conditionals 1_instruction: Hallo! Ik ben een bij. Help mij om nektar
+        uit de bloem te krijgen.
+      2-3 Bee Conditionals 10_instruction: "Paarse bloemen hebben 1 of 0 nektar. Zorg
+        dat je geen nektar van een paarse bloem haalt, als die geen nektar heeft.\r\n"
+      2-3 Bee Conditionals 11_instruction: Verzamel nektar van bloemen met nektar.
+      2-3 Bee Conditionals 12_instruction: Gebruik een lus om de nektar te controleren
+        en te verzamelen bij alle bloemen.
       2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Verzamel nektar en maak honing. Tip:
+        Wat gebeurt er als je de voorwaarde "als nektar" gebruikt bij een rode bloem? Kan je dit met een lus doen?
+      2-3 Bee Conditionals 14_instruction: Verzamel nektar en maak honing. . Zorg
+        dat je geen nektar van een paarse bloem haalt, als die geen nektar heeft.
+      2-3 Bee Conditionals 15_instruction: Verzamel nektar van de vier bloemen.
+      2-3 Bee Conditionals 2_instruction: Hallo! Ik ben een bij. Help mij om nektar
+        uit de bloem te krijgen. Gebruik een lus.
+      2-3 Bee Conditionals 3_instruction: Help me om alle nektar van de bloemen te
+        verzamelen en om honing te maken. Gebruik een lus.
+      2-3 Bee Conditionals 4_instruction: Help me om alle nektar van de bloemen te
+        verzamelen en om alle honing te maken.
+      2-3 Bee Conditionals 5_instruction: Paarse bloemen hebben 1 of 0 nektar, maar
+        je weet niet welke. Zorg dat je geen nektar van een paarse bloem haalt, als
+        die geen nektar heeft. Controleer of de nektar gelijk is aan 1 met een "als
+        blok".
+      2-3 Bee Conditionals 6_instruction: Controleer deze bloem met een "als blok"
+        om te zien of er nektar is.
+      2-3 Bee Conditionals 7_instruction: Verzamel nektar van elke bloem met nektar.
       2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
+        Dit veld heeft rode en paarse bloemen.
+        Van de rode bloemen weten we hoeveel nektar ze hebben, maar van de paarse bloemen weten we dat niet.
+        Verzamel alle nektar.
       2-3 Bee Conditionals 9_instruction: Verzamel alle nectar van iedere bloem.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: "These blocks are really bugging me. Fix the\nerror(s)
-        to collect all of the nectar and make all of the honey. \n"
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Test: Verzamel alle nektar.
+        Zorg dat je alleen nektar van de paarse bloem pakt, als die nektar heeft.'
+      2-3 Bee Debugging 1_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 10_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 2_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 3_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 4_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 5_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken. Je kan voer
+        uit en ga gebruiken.
+      2-3 Bee Debugging 6_instruction: 'Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken. '
+      2-3 Bee Debugging 7_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 8_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging 9_instruction: Deze blokken blijven een probleem. Herstel
+        de fout(en) om alle nektar te verzamelen en alle honing te maken.
+      2-3 Bee Debugging Assessment 1_instruction: 'Test: Deze blokken blijven een
+        probleem. Herstel de fout(en) om alle nektar te verzamelen en alle honing
+        te maken.'
+      2-3 Bee Functions 1_instruction: Functies zijn blokken code die een taak uitvoeren.
+        Gebruik de "neem 2 nektar" functies om nektar van elke bloem te verzamelen.
+      2-3 Bee Functions 10_instruction: Paarse bloemen hebben 1 of 0 nektar. Maak
+        een functie die alleen van paarse bloemen met nektar, de nektar verzamelt.
+      2-3 Bee Functions 2_instruction: Functies zijn blokken code die een taak uitvoeren.
+        Gebruik de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om
+        het gewenste totaal te krijgen.
       2-3 Bee Functions 3_instruction: Verzamel alle nectar van iedere bloem.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+      2-3 Bee Functions 4_instruction: De functie "beweeg en verzamel nektar" draait
+        de bij, verzamelt nektar en brengt de bij terug waar hij begon. Gebruik de
+        functie om alle nektar te verzamelen.
+      2-3 Bee Functions 5_instruction: Er is nu meer nektar bij de bloemen. Bewerk
+        de functie om 4 nektar te verzamelen. Gebruik deze functie om alle nektar
+        van de bloemen te verzamelen.
+      2-3 Bee Functions 6_instruction: Gebruik nu dezelfde functie om nektar van de
+        drie bloemen te verzamelen.
+      2-3 Bee Functions 7_instruction: De bloemen zijn nu verder weg. Bewerk de functie
+        en gebruik die om alle nektar van de bloemen te verzamelen.
+      2-3 Bee Functions 8_instruction: Maak je eigen functie die 7 nektar verzamelt,
+        beweegt en 7 honing maakt. Gebruik de functie om nektar van elke bloem te
+        verzamelen en honing in elke honingraat te maken.
+      2-3 Bee Functions 9_instruction: Maak je eigen functie die het pad volgt, nektar
+        verzamelt, honing maakt en de bij naar het begin van het pad brengt.
+      2-3 Bee Functions Assessment 1_instruction: 'Test: Gebruik de functie om nektar
+        van elke bloem te verzamelen.'
+      2-3 Bee Functions Assessment 2_instruction: 'Test: Maak een functie om elke
+        keer 3 honing te maken.'
+      2-3 Bee Loops 1_instruction: 'Elke bloem heeft één eenheid nektar. Verzamel
+        nektar van elke bloem. '
+      2-3 Bee Loops 10_instruction: Kan je de "zolang lus" in de andere twee lussen
+        gebruiken om alle nektar te verzamelen?
+      2-3 Bee Loops 11_instruction: Gebruik de "zolang lus" om alle nektar te verzamelen
+        van de bloemen in dit veld.
+      2-3 Bee Loops 12_instruction: Gebruik de "zolang lus" om alle nektar te verzamelen
+        van de bloemen in dit veld.
+      2-3 Bee Loops 2_instruction: Gebruik de lus om de nektar te verzamelen en de
+        honing te maken.
+      2-3 Bee Loops 3_instruction: Verzamel nektar van elke bloem en maak honing op
+        elke honingraat.
+      2-3 Bee Loops 4_instruction: Gebruik een soortgelijke lus als in de laatste
+        opdracht, maar verwerk er een draai in.
+      2-3 Bee Loops 5_instruction: Gebruik een lus om de trappen af te dalen en de
+        nektar te verzamelen.
+      2-3 Bee Loops 6_instruction: Gebruik een lus om nektar van elke bloem te verzamelen
+        en honing op elke honingraat te maken.
+      2-3 Bee Loops 7_instruction: Zet deze blokken in een lus om nektar van elke
+        bloem te verzamelen.
+      2-3 Bee Loops 8_instruction: Deze paarse bloemen hebben een onbekende hoeveelheid
+        nectar. Gebruik de lus "while nectar" voor het verzamelen van alle nectar.
+        Deze lus zal worden uitgevoerd, zolang aan de voorwaarde wordt voldaan, in
+        dit geval Nectar > 0.
+      2-3 Bee Loops 9_instruction: De 'while' lus kan dezelfde acties uitvoeren als
+        een als-instructie in een lus. Voeg een een 'while' lus toe aan deze code
+        om de dezelfde taak uit te voeren.
+      2-3 Bee Loops Assessment 1_instruction: Proef - Gebruik een 'while' lus voor
+        het verzamelen van alle nectar van deze bloem.
       2-3 Maze 1_instruction: 'Kun je me helpen het ondeugende biggetje te pakken?
         Plak een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij
         te laten komen. '
       2-3 Maze 10_instruction: Breng me naar de groene naarling! (Pas op voor dynamiet)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
-      2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
+      2-3 Maze 11_instruction: Breng me naar de bloem, ik heb honger! Hoeveel keer
+        heb je het blok herhaald?
+      2-3 Maze 12 (copy 1)_instruction: 'Kun je het vorige antwoord vervangen met
+        slechts twee blokken? (Hint: Maak een lus met een blok "herhaal keer".)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kun je het vorige antwoord vervangen met
+        slechts twee blokken? (Hint: Maak een lus met een blok "herhaal keer".)'
+      2-3 Maze 12 (old)_instruction: Breng me naar het varken, nu met het 'herhalen
+        keer' blok!
+      2-3 Maze 12_instruction: 'Kun je deze vijf blokken met slechts twee blokken
+        vervangen? (Hint: Maak een lus met een blok "herhaal keer".)'
+      2-3 Maze 13 (old)_instruction: Breng me naar het biggetje, nu met het 'herhaal
+        tot' blok!
       2-3 Maze 13_instruction: Breng me naar het varken met maar twee blokken.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
+      2-3 Maze 14 (old)_instruction: Breng me naar het biggetje met het 'herhaling
+        tot' blok!
+      2-3 Maze 14_instruction: Breng me naar de zonnebloem! (Waar is dat 'herhaal
+        keer' blok wanneer ik het nodig heb?)
+      2-3 Maze 15 (old)_instruction: Breng me naar het biggetje met het 'herhaling
+        tot' blok!
+      2-3 Maze 15_instruction: Gebruik twee lussen om naar het biggetje te gaan met
+        minder blokken.
+      2-3 Maze 16 (old)_instruction: Breng me naar het biggetje met het 'herhaling
+        tot' blok!
+      2-3 Maze 16 before_instruction: Breng me naar het biggetje.
+      2-3 Maze 16_instruction: Breng me naar de zonnebloem. Gebruik een lus!
       2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
       2-3 Maze 3_instruction: |
         Trace the path and lead me to the silly pig. Avoid
@@ -846,6 +777,7 @@
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1233,7 +1165,7 @@
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1306,12 +1238,10 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
-        gives you back the amount of money it would cost to produce that number\nof
-        cookies."
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1348,10 +1278,8 @@
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1365,6 +1293,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -2248,7 +2177,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2359,8 +2288,8 @@
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2470,37 +2399,32 @@
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: Go Up Artist
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
+      Infinity_catch_instruction: Kun je Elsa (acteur 2) laten inhalen door Anna met
+        behulp van de pijltjestoetsen?
+      Infinity_finale_instruction: Maak wat je maar wil en deel het!
+      Infinity_move_collide_instruction: Hiro is 'acteur 1'.  Verplaats hem naar Baymax,
+        en laat een geluid afspelen wanneer ze elkaar aanraken.
+      Infinity_move_directions_instruction: Baymax is 'acteur 2'.  Voeg beweeg blokken
+        toe en verplaats vervolgens Baymax met behulp van de pijltjestoetsen. Zorg
+        dat hij de andere 2 karakters raakt.
+      Infinity_move_right_instruction: Hiro is 'acteur 1'. Gebruik het beweeg blok
+        om Hiro te verplaatsen naar rechts en Baymax aan te raken.
       Infinity_repeat_instruction: Gebruik een "blijven herhalen" blok om Anna 400
         pixels omhoog en naar beneden te laten bewegen.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_say_instruction: Zorg dat Anna 'Hi there' kan zeggen door gebruik te
+        maken van het zeg blok.
+      Infinity_shoot_instruction: Baymax is 'acteur 2'. Zorg dat Baymax een raket
+        gooit naar Hiro.
+      Infinity_shoot_directions_instruction: Hiro is 'acteur 3'. Zorg dat Hiro een
+        voorwerp naar ieder van de vier karakters gooit. Wacht één seconde tussen
+        iedere worp.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_faster_instruction: Raak nog meer sneeuwvlokken aan!
+      Infinity_touch_four_instruction: Beweeg Anna omhoog, naar beneden, links en
+        rechts om de vier sneeuwvlokken aan te raken.
+      Infinity_touch_score_instruction: Zorg dat Anne een punt scoort wanneer ze een
+        sneeuwvlok aanraakt. Klik vervolgens op 'uitvoeren' en beweeg haar om iedere
+        sneeuwvlok één keer aan te raken.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -3020,6 +2944,33 @@
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3259,5 +3210,9 @@
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

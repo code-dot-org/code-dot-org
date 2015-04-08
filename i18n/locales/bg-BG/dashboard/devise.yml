@@ -56,21 +56,21 @@ bg:
         one: '1 грешка забранява записването на този %{resource}:'
         other: '%{count} грешки забраняват записването на този %{resource} :'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Имейл покана е изпратен до %{email}.'
+      invitation_token_invalid: Подаден е сигнал, че поканата не е валидна!
+      updated: Вашата парола е създадена успешно. Вече сте влезли.
+      no_invitations_remaining: Няма останали покани
+      invitation_removed: Вашата покана е премахната.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Изпращане на покана
+        submit_button: Изпратете покана
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Задайте паролата си
+        submit_button: Задаване парола
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Покана инструкции
+        hello: 'Здравейте %{email}'
+        someone_invited_you: 'Някой ви е поканил да %{url}, можете да приемете чрез връзката по-долу.'
+        accept: Приемане на покана
+        ignore: 'Ако не искате да приемете поканата, моля игнорирайте този имейл. <br /> Вашия акаунт няма да бъде създаден, докато не последвате връзката по-горе и си създадете парола.'

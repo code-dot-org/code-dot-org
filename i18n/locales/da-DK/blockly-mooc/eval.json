@@ -4,7 +4,7 @@
   "circleBlockTitle":"cirkel (radius, stil, farve)",
   "displayBlockTitle":"evaluér",
   "ellipseBlockTitle":"ellipse (bredde, højde, stil, farve)",
-  "extraTopBlocks":"Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?",
+  "extraTopBlocks":"Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?",
   "infiniteRecursionError":"Din funktion kalder sig selv. Vi have stoppet den, da den ellers ville have fortsat med at kalder sig for evigt (loop).",
   "overlayBlockTitle":"overlay (top, bund)",
   "placeImageBlockTitle":"placer-billede (x, y, billede)",

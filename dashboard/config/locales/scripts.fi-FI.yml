@@ -348,9 +348,11 @@
           'Play Lab: Collision Detection (Big Game)': 'Pelilabra: Törmäyksen tunnistaminen
             (Iso Peli)'
         infinity:
-          title: Pelilabra
-          description_short: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
-          description: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+          title: Disneyn Infinity Pelilabra
+          description_short: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn
+            Infinity hahmot.
+          description: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn
+            Infinity hahmot.
           Play Lab: Pelilabra
           Infinity: Ääretön
         algebrademo:
@@ -514,6 +516,15 @@
           Lesson 4: Lesson 4
           Lesson 6: Lesson 6
           Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra

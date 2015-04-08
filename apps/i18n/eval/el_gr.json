@@ -4,7 +4,7 @@
   "circleBlockTitle": "κύκλος (ακτίνα, στυλ, χρώμα)",
   "displayBlockTitle": "υπολογισμός",
   "ellipseBlockTitle": "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)",
-  "extraTopBlocks": "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;",
+  "extraTopBlocks": "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "επικάλυμμα (επάνω, κάτω)",
   "placeImageBlockTitle": "τοποθέτησε-εικόνα (χ, ψ, εικόνα)",

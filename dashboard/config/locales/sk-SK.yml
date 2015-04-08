@@ -545,6 +545,12 @@
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
     correct_title: Správne
     correct_body: To je správna odpoveď.
+  contract_match:
+    wrong_title: Nesprávna odpoveď
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Zadajte vašu odpoveď
   dialog:

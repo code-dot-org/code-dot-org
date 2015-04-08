@@ -4,7 +4,7 @@
   "circleBlockTitle":"sirkel (radius, stil, farge)",
   "displayBlockTitle":"beregn",
   "ellipseBlockTitle":"ellipse (breidd, høyde, stil, farge)",
-  "extraTopBlocks":"Du har ledige blokker. Meinte du å knyte desse til \"Vis\"-blokka?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"overlegg (topp, botn)",
   "placeImageBlockTitle":"plasser-bilde(x,y,bilde)",

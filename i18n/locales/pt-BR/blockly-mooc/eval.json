@@ -4,7 +4,7 @@
   "circleBlockTitle":"círculo (raio, estilo, cor)",
   "displayBlockTitle":"calcular",
   "ellipseBlockTitle":"elipse (largura, altura, estilo, cor)",
-  "extraTopBlocks":"Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?",
+  "extraTopBlocks":"Você tem blocos não anexados. Você pretendia anexá-los ao bloco \"calcular\"?",
   "infiniteRecursionError":"Sua função está chamando a si mesma. Fizemos com que ela parasse, caso contrário ela teria continuado a chamar a si mesma para sempre.",
   "overlayBlockTitle":"sobreposição (superior, inferior)",
   "placeImageBlockTitle":"lugar-imagem (x, y, imagem)",

@@ -4,7 +4,7 @@
   "circleBlockTitle":"圆 （半径、 样式、 颜色）",
   "displayBlockTitle":"评估",
   "ellipseBlockTitle":"椭圆 （宽度、 高度、 样式、 颜色）",
-  "extraTopBlocks":"您有未连接的语句块。您要将其连接至“显示”语句块吗？",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"你的函数正在调用它自己。我们已经将它停止，否则它将会永久持续地调用它自己。",
   "overlayBlockTitle":"覆盖 （顶部、 底部）",
   "placeImageBlockTitle":"放置图像（X轴坐标，Y轴坐标，图像）",

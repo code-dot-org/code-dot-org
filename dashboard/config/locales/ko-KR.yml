@@ -502,6 +502,12 @@
     wrong_body: 제출한 답안은 정답이 아닙니다. 다시 시도해 보세요.
     correct_title: 정답
     correct_body: 정답입니다.
+  contract_match:
+    wrong_title: 오답
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 이름을 입력하세요.
   dialog:

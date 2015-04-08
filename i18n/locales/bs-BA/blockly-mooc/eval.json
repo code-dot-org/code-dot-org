@@ -4,7 +4,7 @@
   "circleBlockTitle":"krug (poluprečnik, stil, boja)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"elipsa (širina, visina, stil, boja)",
-  "extraTopBlocks":"Imate nepovezane blokove. Da li ste ih htjeli pridodati bloku \"prikaz\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"sloj (gore, dolje)",
   "placeImageBlockTitle":"Ubaci sliku (x, y, slika)",

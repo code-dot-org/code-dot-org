@@ -336,6 +336,7 @@ bg:
       4-5 Maze Conditionals Assessment 1_instruction: 'Използвай "повтаряй докато" и "ако-иначе" блок, за да ме заведеш към слънчогледа с възможно най-малко блокове.'
       A test level ArtistArtist_instruction: A test level ArtistArtist
       add 2_instruction: Чудесна работа в последната загадка, нека опитаме отново; този път направи този страхотен дизайн със 60 пикселов шестоъгълник.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: 'Сега, нарисувай 6 квадрата, всеки в случаен цвят.  Под какъв ъгъл трябва да се обърнем между всеки квадрат, за да се направи пълен кръг от квадрати?'
       Alpha Course 3 Artist Functions 5_instruction: 'Актуализирай функцията "нарисувай квадрат", така че тя да чертае квадрат с помощта на параметъра "дължина". След това начертай квадрат с дължина на страната 100 пиксела.'
       Alpha Course 3 Artist Functions 6_instruction: 'Функцията  с параметър "нарисувай квадрат" е готова за теб, за да добавиш правилните блокове и да промениш стойността от нула към правилния размер.  Допълнителна информация: Страните на квадрата са 100 пиксела.'
@@ -536,7 +537,7 @@ bg:
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -608,7 +609,7 @@ bg:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -637,10 +638,8 @@ bg:
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -654,6 +653,7 @@ bg:
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ""
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
         Draw the line.
         It is 200 pixels long. 
@@ -1541,7 +1541,7 @@ bg:
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
@@ -1654,8 +1654,8 @@ bg:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -1779,9 +1779,7 @@ bg:
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Докоснете още повече снежинки!
       Infinity_touch_four_instruction: Премести Анна, нагоре, надолу наляво и надясно, за да докосне всяка от четирите снежинки.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_score_instruction: 'Направете така, че Анна да получава точка, когато докосне снежинка.  След това щракнете върху бутона "Старт" и я направлявайте да докосне всяка снежинка по веднъж.'
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2305,6 +2303,33 @@ bg:
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -2532,5 +2557,9 @@ bg:
       Testing Brian Level_instruction: Test Brian Level Nice
       testing_instruction: Test level
       TestK1-1_instruction: Нарисувайте три частично покриващи се квадрата, с помощта на блок за повторение
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Използвай това тестово ниво заа да вземеш xml-а за unit тестове

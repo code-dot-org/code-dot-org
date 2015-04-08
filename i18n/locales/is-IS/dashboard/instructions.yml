@@ -332,6 +332,7 @@ is:
       4-5 Maze Conditionals Assessment 1_instruction: 'Notaðu "endurtaka þar til" og "ef-annars" kubb til að koma mér til sólblómsins með sem fæstum kubbum.'
       A test level ArtistArtist_instruction: Prófunaráfangi listamanns
       add 2_instruction: Eftir þessa fínu vinnu með síðustu þraut skulum við æfa þetta einu sinni enn. Teiknaðu þetta með 60 díla sexhyrningum.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: Nú skulum við teikna 6 ferninga í litum af handahófi. Hvað þarf að snúa um margar gráður eftir hvern ferning til að búa til heilan hring ferninga?
       Alpha Course 3 Artist Functions 5_instruction: 'Uppfærðu fallið "teikna ferning" svo það noti stikann "lengd" til að teikna ferninga. Teiknaðu svo ferning með 100 díla hliðar.'
       Alpha Course 3 Artist Functions 6_instruction: 'Hér er fallið "teikna ferning" með stika. Bættu við réttu kubbunum og breyttu núllinu í rétta tölu. Vísbending: Hliðar ferningsins eru 100 dílar.'
@@ -458,7 +459,10 @@ is:
         Evaluation Blocks, because each block of code evaluates to a single value.
         Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: 'Þessi matskubbur er margföldunarfall sem tekur tvær tölur og skilar margfeldi þeirra. Breyttu kubbnum svo að hann margfaldi 2 * 5'
-      Calc Circles of Eval .3_instruction: 'Hér fallið Samlagning - það tekur tvær tölur og skilar summu þeirra. Notaðu samlagningarkubbinn til að reikna 3 + 6.'
+      Calc Circles of Eval .3_instruction: |
+        Here's a function for Addition which
+        takes two numbers and returns their sum. Use this Addition block to add 3
+        + 6.
       Calc Circles of Eval .4_instruction: Hér höfum við faldað kubbinn Samlagning innan í kubbinn Margföldun. Ljúktu kóðanum svo að hann margfaldi 3 með (4 + 1)
       Calc Circles of Eval 1 (copy 1)_instruction: 'Breyttu þessu dæmi í mat á <some_shape>.'
       Calc Circles of Eval 1_instruction: 'Hver reikningsaðgerð (+  -  *  / og fleiri) getur haft samsvarandi matskubb í kóða. Breyttu matskubbnum svo hann samsvari formúlunni.'
@@ -480,7 +484,7 @@ is:
       Calc Define Funcs 3_instruction: 'Við þurfum ekki alltaf að kalla fallið okkar "f". Búðu til fallið með heitinu "times-ten" (sinnum-tíu) sem hefur stikann "x" og skilar x * 10. Keyrðu svo fallið þannig: times-ten(50).'
       Calc Define Funcs 4_instruction: 'Skrifaðu nýtt fall "half" (helmingur) sem tekur tölu "x" og skilar helmingi hennar. Notaðu hana svo til að reikna half(21)'
       Calc Design Recipe 1_instruction: 'Nú skulum við nota hönnunaruppskriftina til að búa til fallið "cube" (3ja veldi). Það á að hafa gildamengið tala, sviðið tala og skila gefnu tölunni í þriðja veldi. Gættu þess að skrifa tvö dæmi! Notaðu svo nýja fallið þitt til að reikna þriðja veldið af 7.'
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -502,11 +506,14 @@ is:
         easily refer to them repeatedly throughout our programs. Here's a variable
         called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: 'Hér höfum stillt breytuna "age" (aldur) á 17 (ár). Getur þú skrifað formúlu sem umreiknar "age" í mánuði?'
-      Calc Vars 2.1_instruction: 'Við getum sett innihald einnar breytu í aðra! Hér er ný breyta sem fékk heitið "age-in-months" (aldur-í-mánuðum). Notaðu formúluna úr síðustu þraut til að umreikna "age" í mánuði og setja í breytuna "age-in-months"'
+      Calc Vars 2.1_instruction: |
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: 'Getur þú skrifað formúlu sem umreiknar "age" (aldur) í mánuði?'
       Calc Vars 3 (copy 1)_instruction: 'Getur þú bætt við þennan kóða svo hann reikni hve margar klukkustundir eru í "age" (aldur) árum?'
       Calc Vars 3_instruction: 'Getur þú bætt við þennan kóða svo hann noti breytuna "age" (aldur) til að reikna aldurinn í klukkustundum?'
       Calc Vars 4_instruction: 'Við getum látið eina breytu lesa innihald úr annarri. Ef aldur þinn er "age" ár og þú átt bróður sem er 2 árum yngri, hvaða innihald ætti þá ný breyta "brother-age" (aldur-bróður) að fá?'
+      Code Logo v3_instruction: ""
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
         Draw the line.
         It is 200 pixels long. 
@@ -781,7 +788,9 @@ is:
       Eval Contracts 8A_instruction: Getur þú lokið við þessa þraut? Stóri þríhyrningurinn er 200 dílar og fjólublár.
       Eval Contracts A_instruction: 'Notaðu fallið "stjarna" til að búa til gegnheila rauða stjörnu með 60 díla geisla'
       Eval Contracts C_instruction: 'Skoðaðu þetta fall "snúa" - getur þú notað það til að snúa þessum 90 díla græna ferningi um 45 gráður?'
-      Eval Contracts E_instruction: 'Reyndu að nota fallið "texti" til að skrifa þennan blágræna texta í stærð 40.'
+      Eval Contracts E_instruction: |
+        Try using the "text" function to write this
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: 'Getur þú klárað þessa mynd með fallkubbnum "minnka"? Geislinn er 20. '
       Eval Define Funcs 1_instruction: 'Hér er nýtt fall "green-triangle" (grænn-þríhyrningur) sem tekur inn eina tölu fyrir stærð og skilar grænum þríhyrningi. Notaðu nýja fallið til að búa til 125 díla grænan þríhyrning'
       Eval Define Funcs 2_instruction: 'Skoðaðu innan í fallið "green-triangle" (grænn-þríhyrningur) til að skilja hvernig það virkar. Getur þú breytt því svo það teikni alltaf útlínu af grænum þríhyrningi?'
@@ -813,8 +822,8 @@ is:
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -1095,6 +1104,33 @@ is:
         
       Ninjacat Demo B_instruction: 'Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann! Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"'
       perpendicular_instruction: Nú skulum við sjá hvort við getum búið til tvær hornréttar línur. Hornréttar línur eru línur sem skerast í réttu (90 gráðu) horni.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: 'Eldflaug er skotið upp á 15 metra hraða á sekúndu... Ýttu á "Keyra" til að sjá hvernig þetta orðadæmi lítur út í hreyfimynd.'
       Play Lab Rocket 2 (copy 1)_instruction: 'Við höfum bætt samningi þínum og tveimur dæmum inn í hönnunaruppskriftina fyrir hæð-flaugar. Skrifaðu nú fallið "rocket-height" (hæð-flaugar).'
       Play Lab Rocket 2 (copy 2)_instruction: 'Við höfum byrjað á hönnunaruppskrift fyrir fallið "rocket-height" (hæð-flaugar) með því að nota samninginn og dæmin sem þú skrifaðir. Ljúktu við skilgreiningu fallsins "rocket-height" og keyrðu hreyfimyndina.'
@@ -1197,5 +1233,9 @@ is:
       Testing Brian Level_instruction: Test Brian Level Nice
       testing_instruction: Prófáfangi
       TestK1-1_instruction: 'Notaðu "endurtaka" kubbinn til að teikna þrjá ferninga sem skarast að hluta'
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

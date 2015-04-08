@@ -3,7 +3,7 @@
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: 8-14 de Diciembre, 2014
+  csedweek_dates: Del 8 al 14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -17,7 +17,8 @@
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Informática
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: Si desea apoyarnos, firme con su nombre. Únase a
+    otros.
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -32,7 +33,7 @@
   hoc2014_teachers: Maestros
   hoc2014_host: Organízalo
   hoc2014_everyone: Todos
-  hoc2014_support: Apóyalo &#x25BE;
+  hoc2014_support: Apóyelo&#x25BE;
   hoc2014_whatishoc: Qué es la Hora de Programación?
   twentyhours_trynow: Probar ahora
   california_heading: Pídele a tu escuela que enseñe ciencias de la computación
@@ -114,8 +115,8 @@
   learn_classes: Encontrar clases cerca de ti
   hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
   just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "¿Por qué no hay más escuelas enseñando a programar? Podemos solucionar
+    esto. http://youtu.be/nKIu9yen5nc. \nVisite http://code.org/ para saber más.\n"
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de una hora
   what_gender: ¿Cual es tu sexo?
@@ -135,12 +136,11 @@
     de hablar)
   stats_nina: '"Cada día produzco los mismos resultados &mdash; 100% de compromiso."
     - Nina Nichols Peery, docente'
-  stats_student: '"Sabía que era una oportunidad <b>única en la vida</b>."-Mariana
-    Alzate, estudiante de 5o grado'
+  stats_student: '"Sabía que ésta es una posibilidad que se da <b>sólo una vez en
+    la vida</b>" - Mariana Alzate, alumna de 5º grado.'
   stats_michael: '"Yo <b>nunca antes</b> había visto a mis estudiantes tan entuciasmados
     por el aprendizaje." - Michael Clark, Profesor'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explora Code Studio
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
   studiobar_hoc_title: La Hora de Programación
@@ -154,79 +154,73 @@
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
   studiobar_shop_title: Tienda
-  studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  studiobar_shop_body: Rompa los estereotipos. Luzca nuestro logo con orgullo.
+  homepage_hero_text_malala: '&ldquo;"Desafío a las chicas de todos los países a aprender
+    una Hora de Código" Malala, ganadora del Premio Nobel de la Paz&rdquo;'
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Si podés cambiar la tecnología,
+    podés cambiar el mundo.&rdquo;
+    Susan, Directora Ejecutiva de YouTube
+  homepage_hero_text_fistbump: '&ldquo;"No sólo juegues con tu teléfono, programalo"
+    Presidente Barak Obama&rdquo;'
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Nuestros niños &mdash; incluyendo a nuestras niñas &mdash;
+    necesitan la oportunidad de aprender computación.&rdquo;
+    Sheryl, Jefa de Operaciones de Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;La ciencia de la computación puede desbloquear las mejores oportunidades del mundo.&rdquo;
+    Satya, Director Ejecutivo de Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Si codificás, podés elegir el curso de tu vida.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; \n"
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; \n"
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; \n"
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; \n"
+  homepage_hero_text_student1: "&ldquo;Estas habilidades han cambiado mi futuro.\nPor
+    no mencionar que es pura diversión.&rdquo; \n"
+  homepage_hero_text_student2: '&ldquo;Jamás ví a mis hijos tan emocionados por aprender.&rdquo; '
+  homepage_hero_text_student3: '&ldquo;Las ciencias de la computación es un campo
+    que no puedes saber si te va a gustar o no sin probarlo.&rdquo;'
+  homepage_hero_text_student4: '"Puedes hacer cualquier cosa que tu mente quiera hacer
+    con programación". '
+  homepage_hero_text_student5: '&ldquo;Ciencias de la computación no es para otros.
+    Es para ti, aquí, ahora.&rdquo; '
+  homepage_hero_text_teacher1: '&ldquo;Programar hace saltar chispas de creatividad,
+    inspiración e innovación &mdash;las cuales son esenciales en cualquier carrera.&rdquo; '
+  homepage_hero_text_teacher2: '&ldquo;Este programa tiene al 100% de mis estudiantes
+    comprometidos, involucrados y participando.&rdquo; '
   homepage_slot_text_hoc: La Hora de Programación
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Todos nuestros tutoriales
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Tienda
   homepage_slot_text_flappy: Código Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Mirá el video
+  homepage_action_text_teachervideo: Mirá el video
+  homepage_action_text_learn: Empezá a aprender hoy
+  homepage_action_text_signpetition: Firmá la petición
+  homepage_signpetition_dropdown: Firma nuestra petición &#x25BE;
   homepage_slot_text_title_hoc: Hora del código
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Sea anfitrión de una hora de código
+  homepage_slot_text_link_hocserved: '# servido'
   homepage_slot_text_title_students: Alumnos
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
+  homepage_slot_text_link_codestudio: Prueba Code Studio
+  homepage_slot_text_link_local: Encuentra una clase local
+  homepage_slot_text_link_othercourses: Otros cursos en línea
+  homepage_slot_text_title_educators: Educadores
+  homepage_slot_text_blurb_educators: Enseña a tus alumnos
+  homepage_slot_text_link_k5: Cursos para los grados K-5
+  homepage_slot_text_link_fullcurriculum: Ver nuestro curriculum completo
+  homepage_slot_text_link_pd: Desarrollo profesional
+  homepage_slot_text_title_advocates: Defensores
+  homepage_slot_text_blurb_advocates: Apoye nuestro trabajo
+  homepage_slot_text_link_stats: Ver las estadísticas
+  homepage_slot_text_link_buy: Comprar una camiseta o gorra
+  homepage_slot_text_link_donate: Haga una donación
+  homepage_header_codestudio: Creaciones de los estudiante de Code Studio
+  homepage_header_donors: Code.org agradece a sus colaboradores
+  homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
@@ -325,7 +319,7 @@
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: ¿Borrar?
-  dashboard_action_remove: eliminar
+  dashboard_action_remove: Eliminar
   dashboard_action_remove_confirm: ¿eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
@@ -435,7 +429,7 @@
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
-  dashboard_progress_not_started: not started
+  dashboard_progress_not_started: No iniciado
   dashboard_progress_in_progress: En progreso
   dashboard_progress_not_completed: No completado
   dashboard_progress_completed_too_many_blocks: completado, pero tiene demasiados

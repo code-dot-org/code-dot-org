@@ -4,7 +4,7 @@
   "circleBlockTitle":"Círculo (raio, estilo, cor)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"Elipse (largura, altura, estilo, cor)",
-  "extraTopBlocks":"Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"Degradê (Topo, Botão)",
   "placeImageBlockTitle":"place-image (x, y, image)",

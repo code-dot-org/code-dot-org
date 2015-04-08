@@ -4,7 +4,7 @@
   "circleBlockTitle":"rreth (rreze, stil, ngjyrë)",
   "displayBlockTitle":"përcakto",
   "ellipseBlockTitle":"elips (gjerësi, gjatësi, stil, ngjyrë)",
-  "extraTopBlocks":"Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Funksioni juaj po thërret vetveten. Ne e ndaluam atë, përndryshe do të kishte vazhduar te thërriste vetveten përgjithmonë.",
   "overlayBlockTitle":"mbivendosje (lart, poshtë)",
   "placeImageBlockTitle":"vendos-imazh (x, y, imazh)",

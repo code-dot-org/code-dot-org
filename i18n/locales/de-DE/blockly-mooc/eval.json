@@ -4,7 +4,7 @@
   "circleBlockTitle":"Kreis (Radius, Stil, Farbe)",
   "displayBlockTitle":"Bewerten",
   "ellipseBlockTitle":"Ellipse (Breite, Höhe, Stil, Farbe)",
-  "extraTopBlocks":"Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"Overlay (oben, unten)",
   "placeImageBlockTitle":"Ort-Bild (x, y, Bild)",

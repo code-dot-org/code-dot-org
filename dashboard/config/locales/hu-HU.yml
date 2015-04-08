@@ -508,8 +508,9 @@
     frozen:
       title: Jégvarázs
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Infinity játéklabor
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
+        Infinity karakterek szereplésével.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -547,6 +548,12 @@
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
     correct_title: Helyes
     correct_body: Ez a helyes válasz.
+  contract_match:
+    wrong_title: Helytelen válasz
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Itt add meg a válaszod
   dialog:

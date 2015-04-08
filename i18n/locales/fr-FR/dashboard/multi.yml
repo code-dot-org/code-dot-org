@@ -141,6 +141,7 @@ fr:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Les blocs de couleur bleue sont associés avec __________ ?
         a image: une image
         a number: un nombre
@@ -327,7 +328,7 @@ fr:
         The unicorn moves across the screen: "La licorne se déplace sur l'écran"
         The unicorn's y value changes: La coordonnée y de la licorne change
         The unicorn moves to the left: La licorne bouge vers la gauche
-        The unicorn's x value changes: La coordonnée x de la licorne change
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -638,7 +639,7 @@ fr:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: "Chaînes et Choix Multiple d'images"
-        Multi Strings Images 1.blocks3.level: Multi chaînes Images 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: "Lequel de ces blocs d'évaluation dessinera l'image"
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

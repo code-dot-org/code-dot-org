@@ -472,6 +472,12 @@ lt:
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
+  contract_match:
+    wrong_title: Neteisingas atsakymas
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Įveskite savo atsakymą čia
   dialog:

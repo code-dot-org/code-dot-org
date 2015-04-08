@@ -141,6 +141,7 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns36248:0crwdne36248:0
         Blue colored blocks are associated with __________ ?: crwdns35721:0__________crwdne35721:0
         a image: crwdns35722:0crwdne35722:0
         a number: crwdns35723:0crwdne35723:0
@@ -327,7 +328,7 @@ en:
         The unicorn moves across the screen: crwdns24901:0crwdne24901:0
         The unicorn's y value changes: crwdns24902:0crwdne24902:0
         The unicorn moves to the left: crwdns24903:0crwdne24903:0
-        The unicorn's x value changes: crwdns24904:0crwdne24904:0
+        The unicorn's x value decreases: crwdns36249:0crwdne36249:0
       K-1 Artist 1 Multi 1:
         Multiple Choice: crwdns6099:0crwdne6099:0
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: crwdns6100:0crwdne6100:0
@@ -637,7 +638,7 @@ en:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: crwdns27304:0crwdne27304:0
-        Multi Strings Images 1.blocks3.level: crwdns27305:0crwdne27305:0
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": crwdns36250:0crwdne36250:0
         Which of these Evaluation Blocks will draw the image: crwdns27306:0crwdne27306:0
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: crwdns36047:0crwdne36047:0
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns36048:0crwdne36048:0

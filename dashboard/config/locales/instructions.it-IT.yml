@@ -45,8 +45,8 @@
       2-3 Artist Debugging 10_instruction: 'L''area di controllo della direzione sul
         mio controller di gioco è troppo stretta. Suggerimento: allargala di 10 pixel'
       2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
+        Aiutami a completare il mio bellissimo fiocco di neve.
+        Quante volte devo "ripetere" per completarlo?
       2-3 Artist Debugging 12_instruction: Dovrei aggiungere un'onda dell'oceano a
         questa scena.  Puoi aiutarmi?
       2-3 Artist Debugging 2_instruction: 'Il codice per i tre baffi che vedi è sbagliato.
@@ -208,16 +208,14 @@
         tutto il nettare dai fiori. Usa un ciclo.
       2-3 Bee Conditionals 3_instruction: Aiutami a raccogliere tutto il nettare dai
         fiori per produrre del miele. Usa un ciclo.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
+      2-3 Bee Conditionals 4_instruction: "Aiutami a cogliere tutto il polline dai
+        fiori \ne trasformarlo in miele.\n"
       2-3 Bee Conditionals 5_instruction: I fiori viola possono avere una quantità
         di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere
         nettare da un fiore viola se ne ha una quantità pari a 0. Usa il blocco "se"
         per controllare se la quantità è 0 oppure 1.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
+      2-3 Bee Conditionals 6_instruction: Scegli questo fiore con un blocco "se" per
+        vedere se ha polline.
       2-3 Bee Conditionals 7_instruction: Raccogli il nettare da ogni fiore, se ne
         ha una quantità qualsiasi.
       2-3 Bee Conditionals 8_instruction: Su questo campo ci sono fiori rossi e viola.
@@ -226,36 +224,27 @@
       2-3 Bee Conditionals 9_instruction: Raccogli tutto il nettare da ogni fiore.
       2-3 Bee Conditionals Assessment 1_instruction: 'Compito: raccogli tutto il nettare.
         Fai attenzione a non raccogliere nettare dai fiori viola se non ne hanno.'
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: "These blocks are really bugging me. Fix the\nerror(s)
-        to collect all of the nectar and make all of the honey. \n"
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+      2-3 Bee Debugging 1_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 10_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 2_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 3_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 4_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 5_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele. Ora puoi
+        utilizzare i comandi corri "run" e passo "step".
+      2-3 Bee Debugging 6_instruction: 'Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele. '
+      2-3 Bee Debugging 7_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 8_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
+      2-3 Bee Debugging 9_instruction: Questi blocchi mi stanno "bloccando". Corregi
+        gli errori per raccogliere tutto il polline e trasformarlo in miele.
       2-3 Bee Debugging Assessment 1_instruction: 'Compito: questi blocchi sono davvero
         fastidiosi per me. Sistema gli errori che impediscono di raccogliere tutto
         il nettare e produrre tutto il miele.'
@@ -278,9 +267,9 @@
         tutto il miele dai fiori.
       2-3 Bee Functions 6_instruction: Adesso usa la stessa funzione per raccogliere
         il nettare dai tre fiori.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
+      2-3 Bee Functions 7_instruction: I fiori adesso sono nuovamente fuori. Modifica
+        la funzione e utilizzala per raccogliere tutto il polline e trasformarlo in
+        miele.
       2-3 Bee Functions 8_instruction: Definisci la tua funzione per prendere 7 dosi
         di nettare, spostarsi in avanti e fare 7 dosi di miele. Usa questa funzione
         per raccogliere il nettare da ogni fiore e fare il miele su ogni favo.
@@ -291,39 +280,29 @@
         -- Usa la funzione data per raccogliere il nettare da ogni fiore.
       2-3 Bee Functions Assessment 2_instruction: Questo è un esercizio di verifica
         -- Definisci una funzione per fare 3 dosi di miele alla volta.
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+      2-3 Bee Loops 1_instruction: 'Ciascun fiore contiene un''unità di nettare. Raccogli
+        il nettare da ogni fiore. '
+      2-3 Bee Loops 10_instruction: Puoi utilizzare un ciclo mentre "while" all'interno
+        degli altri cicli per raccogliere tutto il polline?
+      2-3 Bee Loops 11_instruction: Usa un ciclo mentre "while" per raccogliere il
+        polline dai fiori in questo campo.
+      2-3 Bee Loops 12_instruction: Usa un ciclo mentre "while" per raccogliere il
+        polline dai fiori in questo campo.
+      2-3 Bee Loops 2_instruction: Usa un ciclo per raccogliere il nettare e trasformarlo
+        in miele.
+      2-3 Bee Loops 3_instruction: Raccogli il polline da ciascun fiore e fare miele
+        in ciascun nido d'ape.
+      2-3 Bee Loops 4_instruction: Utilizza un ciclo simile all'ultimo puzzle, ma
+        usa l'istruzione gira "turn".
+      2-3 Bee Loops 5_instruction: Usa il ciclo per scendere e raccogliere il polline.
+      2-3 Bee Loops 6_instruction: Usa un ciclo per raccogliere il polline da ciascun
+        fiore e fare miele in ciascun nido d'ape.
+      2-3 Bee Loops 7_instruction: Metti questi blocchi all'interno di un ciclo per
+        raccogliere polline da ciascun fiore.
+      2-3 Bee Loops 8_instruction: Questi fiori viola hanno una quantità sconosciuta
+        di polline. Usa il ciclo mentre  polline "while" per raccoglierlo tutto. Questo
+        ciclo durerà fino a quando la condizione è vera, in questo caso polline >
+        0.
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
@@ -811,6 +790,7 @@
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1199,7 +1179,7 @@
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1272,12 +1252,10 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
-        gives you back the amount of money it would cost to produce that number\nof
-        cookies."
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1314,10 +1292,8 @@
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1331,6 +1307,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -2215,7 +2192,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2327,8 +2304,8 @@
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2437,38 +2414,31 @@
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: L'artista sale
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_catch_instruction: Riesci a far sì che Elsa ("personaggio 2") raggiunga
+        Anna usando i tasti freccia?
+      Infinity_finale_instruction: Crea qualsiasi cosa desideri e condividilo!
+      Infinity_move_collide_instruction: Hiro è "personaggio 1". Spostalo verso Baymax
+        e riproduci un suono quando si toccano.
+      Infinity_move_directions_instruction: Baymax è "personaggio 2". Aggiungi blocchi
+        di movimento e poi sposta Baymax usando i tasti freccia. Fagli toccare gli
+        altri due personaggi.
+      Infinity_move_right_instruction: Hiro è "personaggio 1". Use il blocco di spostamento
+        per muovere Hiro fino a toccare Baymax.
+      Infinity_repeat_instruction: Usa un blocco "ripeti per sempre" per far muovere
+        Anna su e giù di 400 pixel.
+      Infinity_say_instruction: Fai dire a Anna "Ciao" usando un blocco "dire".
+      Infinity_shoot_instruction: Baymax è "personaggio 2". Fai lanciare a Baymax
+        un razzo a Hiro.
+      Infinity_shoot_directions_instruction: Hiro è "personaggio 3". Fai lanciare
+        a Hiro un proiettile verso ognuno dei quattro personaggi. Aspetta un secondo
+        tra ogni lancio.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_faster_instruction: Tocca ancora più fiocchi di neve!
+      Infinity_touch_four_instruction: Muovi Anna su, giù, a sinistra e a destra per
+        toccare ognuno dei quattro fiocchi di neve.
+      Infinity_touch_score_instruction: Fai in modo che Anna faccia un punto quando
+        tocca un fiocco di neve. Poi clicca su "Esegui" e  guidala a toccare una volta
+        ogni fiocco di neve.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -3010,6 +2980,33 @@
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3252,5 +3249,9 @@
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests
