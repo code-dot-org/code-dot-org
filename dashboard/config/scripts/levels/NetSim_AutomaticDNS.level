@@ -9,6 +9,8 @@
     "instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service to get a student's address.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "router_expects_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],
     "client_initial_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],

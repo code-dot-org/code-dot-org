@@ -10,6 +10,8 @@
     "instructions": "NetSim: Variant 3 template: Connects groups of 2-6 students with a router, and explores issues in routing and DNS",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "router_expects_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],
     "client_initial_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],
