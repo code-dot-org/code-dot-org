@@ -19,7 +19,8 @@
     informatica
   petition_sign_message: 'Se sei d''accordo, firma con il tuo nome.  Unisciti agli
     altri #.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Per sostenerci, aggiungi il tuo nome. Unisciti #
+    altri.'
   name: Nome
   email: Indirizzo di posta elettronica
   zipcode: CAP o Città
@@ -116,8 +117,9 @@
   hoc_is_here: 'L''Ora del Codice #HourOfCode è qua - provala! @codeorg @programmafuturo'
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Perchè molte scuole non insegnano informatica? Possiamo migliorare
+    questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per
+    saperne di più.
   learn_hoc: Fai l'Ora del Codice
   beyond_hoc: Dopo la prima ora
   what_gender: Di che sesso sei?
@@ -141,7 +143,6 @@
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti
     di imparare." - Michael Clark, Insegnante'
   studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
-  studiobar_title_nolink: Esplora l'Officina del Codice
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
   studiobar_hoc_title: L'Ora del Codice
@@ -157,43 +158,46 @@
     imparare
   studiobar_shop_title: Acquista
   studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: |
+    &ldquo;Sfido le ragazze di ogni singolo paese a imparare un'ora di codice
+    &rdquo; 
+    Malala, Premio Nobel per la pace
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Se si può cambiare la tecnologia,
+    si può cambiare il mondo.&rdquo;
+    Susan, CEO di YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Non giocare soltanto con il tuo telefono,
+    programmalo.&rdquo;
+    Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;I nostri bambini &mdash; comprese le nostre bambine &mdash;
+    devono avere l'opportunità di imparare informatica.&rdquo;
+    Sheryl, COO di Facebook
+  homepage_hero_text_satya: "&ldquo;L'informatica può creare \nle migliori opportunità
+    del mondo.&rdquo;\nSatya, CEO di Microsoft\n"
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; \n"
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; \n"
+  homepage_hero_text_student1: |
+    &ldquo;Queste abilità hanno cambiato il mio futuro.
+    Per non parlare del fatto che è anche molto divertente.&rdquo;
+  homepage_hero_text_student2: "&ldquo;Non ho mai, mai visto i miei figli \ncosì entusiasti
+    di imparare.&rdquo; \n"
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; \n"
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; \n"
+    &ldquo;L'imformatica è un campo in cui non puoi
+    sapere se ti piace o no finchè non lo hai provato.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;Con la programmazione puoi fare qualsiasi cosa la tua mente
+    può immaginare.&rdquo; 
+  homepage_hero_text_student5: '&ldquo;"L''informatica non è per qualcun altro. È
+    per te, qui, ora."&rdquo; '
+  homepage_hero_text_teacher1: |
+    &ldquo;Programmare accende la creatività, l'ispirazione e l'innovazione &mdash;  
+    ingredienti essenziali in ogni tipo di carriera lavorativa.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;Questo programma ha mantenuto il 100% dei miei studenti
+    impegnati, coinvolti e desiderosi di partecipare.&rdquo; 
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -209,8 +213,8 @@
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Ospita un'Ora di Codice
+  homepage_slot_text_link_hocserved: '# servito'
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Scopri tutto sui nostri tutorial
   homepage_slot_text_link_codestudio: Prova Code Studio
@@ -218,10 +222,10 @@
   homepage_slot_text_link_othercourses: Altri corsi online
   homepage_slot_text_title_educators: Insegnanti
   homepage_slot_text_blurb_educators: Insegna ai tuoi studenti
-  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_k5: Corsi per scuola dell'infanzia e elementare
   homepage_slot_text_link_fullcurriculum: Guarda il nostro curriculum completo
   homepage_slot_text_link_pd: Sviluppo professionale
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_title_advocates: Sostenitori
   homepage_slot_text_blurb_advocates: Supporta il nostro lavoro
   homepage_slot_text_link_stats: Guarda le statistiche
   homepage_slot_text_link_buy: Compra una T-shirt o un cappello

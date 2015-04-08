@@ -83,7 +83,7 @@ bg:
       2-3 Algorithms Multi 1:
         Multiple Choice: Избор от множество отговори
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
+        Choose an algorithm for the image provided.: Изберете алгоритъм за изображението.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Започва сe с квадрат <br/> Сложете триъгълник над квадрата <br/> Сложете триъгълник под квадрата'
         0: '? Започнете с квадрат <br/> сложете триъгълник отдясно на квадрата <br/> поставете успоредник под квадрата <br/> сложете триъгълник отдясно на успоредника'
         1: ': Започнете с квадрат <br/> сложете триъгълник отдясно на квадрата <br/> Поставете успоредник под квадрата <br/> Сложете триъгълник отдясно на успоредника'
@@ -141,6 +141,7 @@ bg:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Сините цветни блокове са свързани с __________?
         a image: изображение
         a number: число
@@ -159,7 +160,7 @@ bg:
         a string: низ
         boolean: boolean
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        Green colored blocks are associated with __________ ?: Зелените на цвят блокове са свързани с __________ ?
         a image: изображение
         a number: число
         a string: низ
@@ -255,19 +256,19 @@ bg:
       4-5 Algorithms Multi 1:
         Multiple Choice: избор от множество отговори
         Which one of these items is hardest to describe an algorithm for?: За кой от тези елементи е най-трудно да напишете алгоритъм?
-        Brushing your teeth: Brushing your teeth
-        Baking cookies: Baking cookies
-        Shopping from a grocery list: Shopping from a grocery list
-        Banana: Banana
+        Brushing your teeth: Миене на зъбите
+        Baking cookies: Печене на бисквитки
+        Shopping from a grocery list: Пазаруване от хранителен списък
+        Banana: Банан
       4-5 Computational Thinking Multi 1:
         Multiple Choice: избор от множество отговори
         0: '? Тук има три изречения. Кой от шаблоните по-долу подхожда  и на трите?'
         1: ': Тук има три изречения. Кой от шаблоните по-долу подхожда и на трите?'
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        _____ is a _____ city.: _____ is a _____ city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Сиатъл е  голям град. <br/>Eugene е среден град <br/> Хилвю е малък град.'
+        Seattle _____ a _____ _____.: Сиатъл _____ _____ _____.
+        _____ is a _____ city.: _____ е _____ град.
+        _____ is _____ a _____.: _____ е _____ _____.
+        Eugene is a _____ city.: Eugene е _____ град.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: избор от множество отговори
         Which of these pictures best represents crowdsourcing?: Кои от тези снимки най-добре представляват crowdsourcing?
@@ -276,17 +277,17 @@ bg:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: избор от множество отговори
         Which one of these activities would be best for practicing crowdsourcing?: Коя от тези дейности ще бъде най-подходяща за практикуване на crowdsourcing?
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Brushing your hair: Brushing your hair
-        Washing your face: Washing your face
+        Cleaning your room: Почистване на стаята
+        Eating your dessert: Ядене на десерт
+        Brushing your hair: Ресане на косата
+        Washing your face: Измиване лицето
       4-5 Digital Footprint Multi 1:
         Multiple Choice: избор от множество отговори
         Which piece of information listed below is okay to share on the internet?: Коя част от информацията, изброена по-долу е добре да споделя в Интернет?
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your address: Your address
-        Your parent's credit card number: "Your parent's credit card number"
+        Your birthday: Вашият рожден ден
+        Your favorite food: Вашата любима храна
+        Your address: Вашият адрес
+        Your parent's credit card number: Номерът на кредитната карта на Вашата майка
       4-5 Internet Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.pn
@@ -317,7 +318,7 @@ bg:
       4-5 Suncatchers Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Коя от програмите по-долу <em>не</em> извършва точно същата последователност като програма 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -327,7 +328,7 @@ bg:
         The unicorn moves across the screen: Еднорогът се движи по екрана
         The unicorn's y value changes: 'Стойността "у" на еднорога се променя'
         The unicorn moves to the left: Еднорогът се премества наляво
-        The unicorn's x value changes: 'Стойността "x" на еднорога се променя'
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -637,7 +638,7 @@ bg:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Стрингове и изображения избор от множество отговори
-        Multi Strings Images 1.blocks3.level: Мулти стрингове изображения 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Кои от тези блокове за оценка ще изчертаят картинката
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

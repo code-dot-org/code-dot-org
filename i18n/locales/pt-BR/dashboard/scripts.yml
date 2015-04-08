@@ -309,7 +309,7 @@ pt-BR:
           "Unplugged: Collision Detection and the Distance Formula": 'Offline: detecção de colisão e o teorema de Pitágoras'
           "Play Lab: Collision Detection (Big Game)": 'O grande jogo - detecção de colisão'
         infinity:
-          title: Disney Infinity Play Lab
+          title: Laboratório Infinito Disney
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           Play Lab: Laboratório
@@ -466,8 +466,17 @@ pt-BR:
           Lesson 5: Lição 5
           Lesson 3: Lição 3
           Lesson 4: Lição 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
+          Lesson 6: Lição 6
+          Lesson 2: Lição 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra
@@ -524,10 +533,10 @@ pt-BR:
           description: Comprima o texto identificando padrões repetidos.
           Text Compression: Compressão de texto
         CSPPD:
-          new stage: new stage
+          new stage: nova fase
           Introduction to PD: Introdução a PD
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          title: Exemplos de lição para CSP
+          description_short: exemplos de lição para csp
           Lesson 14: Lição 14
           Lesson 15: Lição 15

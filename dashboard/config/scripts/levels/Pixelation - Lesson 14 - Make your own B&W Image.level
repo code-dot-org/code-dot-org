@@ -5,6 +5,7 @@
   "properties": {
     "href": "pixelation/pixelation.html",
     "options": {
+      "skip_dialog": true,
       "version": "2",
       "instructions": "Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want.  Happy pixeling!",
       "data": "0000 1010 0000 1010"

@@ -437,6 +437,12 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_concept_rgb: crwdns36227:0crwdne36227:0
+        csp_pixelation_color_1: crwdns36228:0crwdne36228:0
+        csp_pixelation_color_2: crwdns36229:0crwdne36229:0
+        csp_pixelation_color_3: crwdns36230:0crwdne36230:0
+        csp_pixelation_bw: crwdns36231:0crwdne36231:0
+        csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

@@ -4,7 +4,7 @@
   "circleBlockTitle":"çevrə (radius, stil, rəng)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ellips (en, hündürlük, stil, rəng)",
-  "extraTopBlocks":"Sizin qoşulmamış bloklarınız var. Bunları \"göstər\" blokuna qoşmaq istərdinizmi?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"tutum ( üst, alt )",
   "placeImageBlockTitle":"yer -şəkil (x , y , şəkil)",

@@ -444,6 +444,12 @@ zh:
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: '拖住一個"移動"積木，把它黏到其他積木下面'

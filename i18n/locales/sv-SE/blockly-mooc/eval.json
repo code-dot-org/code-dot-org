@@ -4,7 +4,7 @@
   "circleBlockTitle":"cirkel (radie, stil, färg)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ellips (bredd, höjd, stil, färg)",
-  "extraTopBlocks":"Du har okopplade block. Menade du att fästa dessa till \"visa\" blocket?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"övertäckning(topp, botten)",
   "placeImageBlockTitle":"placera-bild (x, y, bild)",

@@ -219,7 +219,7 @@ pt-BR:
         artist: Desenhe alguma coisa
     user:
       classroom: Página inicial do professor
-      district_dashboard: District Dashboard
+      district_dashboard: Painel do distrito
       label: 'Oi, %{username}'
       stats: Meu progresso
       settings: Minha conta
@@ -470,6 +470,12 @@ pt-BR:
     wrong_body: Sua solução não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  contract_match:
+    wrong_title: Resposta incorreta
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Insira sua resposta aqui
   dialog:
@@ -555,4 +561,4 @@ pt-BR:
     delete_confirm_text: 'Ao excluir seu projeto, vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
     view_all: Visualizar meus projetos
     remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: 'Clique em "Remix" para fazer sua própria versão!'

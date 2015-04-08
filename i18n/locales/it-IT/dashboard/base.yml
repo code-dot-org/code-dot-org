@@ -472,6 +472,12 @@ it:
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
     correct_title: Molto bene!
     correct_body: Questa risposta è corretta.
+  contract_match:
+    wrong_title: Risposta non corretta
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:

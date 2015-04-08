@@ -544,6 +544,12 @@
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
     correct_title: Doğru
     correct_body: İşte bu doğru cevap.
+  contract_match:
+    wrong_title: Yanlış cevap
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Cevabınızı buraya girin
   dialog:

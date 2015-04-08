@@ -4,7 +4,7 @@
   "circleBlockTitle": "lingkaran(jari-jari, gaya, warna)",
   "displayBlockTitle": "evaluasi",
   "ellipseBlockTitle": "lonjong (lebar, panjang, gaya, warna)",
-  "extraTopBlocks": "Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?",
+  "extraTopBlocks": "Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?",
   "infiniteRecursionError": "Fungsi Anda memanggil dirinya sendiri. Kami telah menghentikan fungsi Anda, jika tidak maka fungsi tersebut akan terus memanggil dirinya sendiri selamanya.",
   "overlayBlockTitle": "lapisan-atas (atas, bawah)",
   "placeImageBlockTitle": "tempat-gambar (x, y, gambar)",

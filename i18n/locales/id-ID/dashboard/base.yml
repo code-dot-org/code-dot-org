@@ -471,6 +471,12 @@ id:
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  contract_match:
+    wrong_title: Jawaban Salah
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
   dialog:

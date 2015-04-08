@@ -509,6 +509,12 @@
     wrong_body: うまく解決できていません。もう一度やってみてください。
     correct_title: 正解
     correct_body: 正解です。
+  contract_match:
+    wrong_title: 不正解
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: ここに答えを入力
   dialog:

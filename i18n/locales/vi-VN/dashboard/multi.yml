@@ -42,7 +42,7 @@ vi:
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Chọn các khối tốt nhất.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -50,7 +50,7 @@ vi:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Chọn các khối tốt nhất.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -141,28 +141,29 @@ vi:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: một hình ảnh
+        a number: một số
+        a string: một chuỗi ký tự
         boolean: boolean
       2-3 multi match 2:
         Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: một hình ảnh
+        a number: một số
+        a string: một chuỗi ký tự
         boolean: boolean
       2-3 multi match 3:
         Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: một hình ảnh
+        a number: một số
+        a string: một chuỗi ký tự
         boolean: boolean
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: một hình ảnh
+        a number: một số
+        a string: một chuỗi ký tự
         boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Multiple Choice
@@ -206,7 +207,7 @@ vi:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
         1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Chọn các khối tốt nhất.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
@@ -327,7 +328,7 @@ vi:
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: "The unicorn's y value changes"
         The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: "The unicorn's x value changes"
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -637,7 +638,7 @@ vi:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

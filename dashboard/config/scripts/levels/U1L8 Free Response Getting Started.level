@@ -1,0 +1,16 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-08T20:17:54.000Z",
+  "properties": {
+    "title": "Getting Started: Sending Numbers ",
+    "content1": "Respond to the following question.",
+    "markdown": "List two or three challenges you faced when trying to send multi-bit messages using the bit-sending widget during previous classes?\n",
+    "type": "TextMatch",
+    "dsl_text": "name 'U1L8 Free Response Getting Started'\r\ntitle 'Getting Started: Sending Numbers '\r\ncontent1 'Respond to the following question.'\r\n\r\nmarkdown <<MARKDOWN\r\nList two or three challenges you faced when trying to send multi-bit messages using the bit-sending widget during previous classes?\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</TextMatch>

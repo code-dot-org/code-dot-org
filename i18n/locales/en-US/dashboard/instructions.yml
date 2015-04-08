@@ -314,6 +314,7 @@ en:
       4-5 Maze Conditionals Assessment 1_instruction: crwdns34170:0crwdne34170:0
       A test level ArtistArtist_instruction: crwdns30550:0crwdne30550:0
       add 2_instruction: crwdns34171:0crwdne34171:0
+      Alice Test_instruction: crwdns36233:0crwdne36233:0
       Alpha 2-3 Artist Loops New 3_instruction: crwdns34172:0crwdne34172:0
       Alpha Course 3 Artist Functions 5_instruction: crwdns34173:0crwdne34173:0
       Alpha Course 3 Artist Functions 6_instruction: crwdns34174:0crwdne34174:0
@@ -421,7 +422,7 @@ en:
       C3-Farmer While Loops Multi Pics_instruction: crwdns30629:0crwdne30629:0
       Calc Circles of Eval .1_instruction: crwdns35996:0crwdne35996:0
       Calc Circles of Eval .2_instruction: crwdns34238:0crwdne34238:0
-      Calc Circles of Eval .3_instruction: crwdns34239:0crwdne34239:0
+      Calc Circles of Eval .3_instruction: crwdns36234:0crwdne36234:0
       Calc Circles of Eval .4_instruction: crwdns34240:0crwdne34240:0
       Calc Circles of Eval 1 (copy 1)_instruction: crwdns34241:0crwdne34241:0
       Calc Circles of Eval 1_instruction: crwdns34242:0crwdne34242:0
@@ -441,7 +442,7 @@ en:
       Calc Define Funcs 3_instruction: crwdns35661:0crwdne35661:0
       Calc Define Funcs 4_instruction: crwdns35662:0crwdne35662:0
       Calc Design Recipe 1_instruction: crwdns35739:0crwdne35739:0
-      Calc Design Recipe 2_instruction: crwdns35998:0crwdne35998:0
+      Calc Design Recipe 2_instruction: crwdns36235:0crwdne36235:0
       Calc Design Recipe 3_instruction: crwdns35999:0crwdne35999:0
       Calc Design Recipe 4_instruction: crwdns36000:0crwdne36000:0
       Calc Free Play_instruction: crwdns34262:0crwdne34262:0
@@ -451,11 +452,12 @@ en:
       Calc Vars 1.1_instruction: crwdns36001:0crwdne36001:0
       Calc Vars 1_instruction: crwdns36002:0crwdne36002:0
       Calc Vars 2 (copy 1)_instruction: crwdns34268:0crwdne34268:0
-      Calc Vars 2.1_instruction: crwdns35744:0crwdne35744:0
+      Calc Vars 2.1_instruction: crwdns36236:0crwdne36236:0
       Calc Vars 2_instruction: crwdns34270:0crwdne34270:0
       Calc Vars 3 (copy 1)_instruction: crwdns34271:0crwdne34271:0
       Calc Vars 3_instruction: crwdns35139:0crwdne35139:0
       Calc Vars 4_instruction: crwdns34273:0crwdne34273:0
+      Code Logo v3_instruction: crwdns36237:0crwdne36237:0
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: crwdns35140:0crwdne35140:0
       Code Studio Puzzle Challenge 1 - Artist_instruction: crwdns34959:0crwdne34959:0
       Code Studio Puzzle Challenge 1 Artist1_instruction: crwdns34961:0crwdne34961:0
@@ -703,7 +705,7 @@ en:
       Eval Contracts 8A_instruction: crwdns34998:0crwdne34998:0
       Eval Contracts A_instruction: crwdns35663:0crwdne35663:0
       Eval Contracts C_instruction: crwdns35000:0crwdne35000:0
-      Eval Contracts E_instruction: crwdns35001:0crwdne35001:0
+      Eval Contracts E_instruction: crwdns36238:0crwdne36238:0
       Eval Contracts shrink_instruction: crwdns35002:0crwdne35002:0
       Eval Define Funcs 1_instruction: crwdns34473:0crwdne34473:0
       Eval Define Funcs 2_instruction: crwdns34474:0crwdne34474:0
@@ -730,7 +732,7 @@ en:
       Eval Strings Images 4_instruction: crwdns35666:0crwdne35666:0
       Eval Strings Images 5_instruction: crwdns34496:0crwdne34496:0
       Eval Strings Images 6_instruction: crwdns34497:0crwdne34497:0
-      Eval Strings Images 7_instruction: crwdns36008:0crwdne36008:0
+      Eval Strings Images 7_instruction: crwdns36239:0crwdne36239:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns34500:0crwdne34500:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
@@ -991,6 +993,13 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       perpendicular_instruction: crwdns34649:0crwdne34649:0
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: crwdns36240:0crwdne36240:0
+      Pixelation - Lesson 14 - Fix the error_instruction: crwdns36241:0crwdne36241:0
+      Pixelation - Lesson 14 - Make the Letter A_instruction: crwdns36242:0crwdne36242:0
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: crwdns36243:0crwdne36243:0
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: crwdns36244:0crwdne36244:0
+      Pixelation 2_instruction: crwdns36245:0crwdne36245:0
+      Pixelation 4x4 Empty_instruction: crwdns36246:0crwdne36246:0
       Play Lab Rocket 1_instruction: crwdns34652:0crwdne34652:0
       Play Lab Rocket 2 (copy 1)_instruction: crwdns34653:0crwdne34653:0
       Play Lab Rocket 2 (copy 2)_instruction: crwdns35186:0crwdne35186:0
@@ -1061,5 +1070,6 @@ en:
       Testing Brian Level_instruction: crwdns31214:0crwdne31214:0
       testing_instruction: crwdns31215:0crwdne31215:0
       TestK1-1_instruction: crwdns34703:0crwdne34703:0
+      Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
       toby-test5-16-1_instruction: crwdns31217:0crwdne31217:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

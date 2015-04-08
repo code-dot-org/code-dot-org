@@ -280,7 +280,10 @@
         video: C4_unverfälscht_Binärdatei
       VideoGamesCoordinatePlanes:
         title: Videospiele und Koordination von Flugzeugen
-        desc: Beschreibung der Lektion zu Videospielen und der Koordination von Flugzeugen
+        desc: Entdecke wie die Videospiele, die du so gerne spielst, durch Algebra
+          gesteuert werden. Erkunde wie algebraischer Ausdrücke und das Koordinatensystem
+          uns verstehen helfen können wie Videospiele funktionieren und beginne dann
+          das Videospiel zu planen, das du selbst bauen wirst.
       Contracts:
         title: Verträge
         desc: Beschreibung der Lektion zu "Contracts unplugged"
@@ -288,8 +291,11 @@
         title: Das Design-Rezept
         desc: Beschreibung der Lektion für Design-Rezepte
       Booleans:
-        title: Boolesche Variable
-        desc: Beschreibung der Lektion zu Boolean Variablen
+        title: Boolesche Werte und Logik
+        desc: Boolesche Werte sind der vierte und letzte Datentyp, den du in diesem
+          Kurs kennenlernen wirst. Bei dieser Übung wirst du erfahren was boolesche
+          Werte sind und wie sie uns dabei helfen können, Funktionen zu schreiben,
+          die logisch denken
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Lektion zu Conditionals und Piecewise

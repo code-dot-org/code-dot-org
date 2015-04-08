@@ -4,7 +4,7 @@
   "circleBlockTitle":"cercle (rayon, style, couleur)",
   "displayBlockTitle":"évaluez",
   "ellipseBlockTitle":"ellipse (largeur, hauteur, style, couleur)",
-  "extraTopBlocks":"Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?",
+  "extraTopBlocks":"Certains de vos blocs sont libres. Souhaitez-vous les attacher au bloc \"évaluer\" ?",
   "infiniteRecursionError":"Votre fonction s'appelle elle-même. Nous l'avons stoppé, sinon elle aurait continué en s'appelant sans fin.",
   "overlayBlockTitle":"superposition (haut, bas)",
   "placeImageBlockTitle":"zone d'image (x, y, image)",

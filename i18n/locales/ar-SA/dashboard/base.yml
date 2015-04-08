@@ -471,6 +471,12 @@ ar:
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  contract_match:
+    wrong_title: الإجابة غير صحيحة
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
   dialog:

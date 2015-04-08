@@ -112,7 +112,6 @@ ja-JP:
   stats_student: '「私はこれが<b>一生に一度</b>のチャンスだと知っていました。」 - マリアナ アルザテ, 小学5年生'
   stats_michael: '「私は<b>これまでに<b>こんなに生徒たちが興味をもって勉強しているのをみたことがありません。」 - マイケル クラーク, 教師'
   studiobar_title: "<a href='http://studio.code.org'> Code Studio </a>を試す"
-  studiobar_title_nolink: Code Studio を試す
   studiobar_elementary_title: 初級コース
   studiobar_elementary_body: 'K&#8209;5 の生徒のための、3つの新しいコース'
   studiobar_hoc_title: Hour of Code

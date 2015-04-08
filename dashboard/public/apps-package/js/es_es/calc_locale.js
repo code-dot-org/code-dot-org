@@ -167,5 +167,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "¡Aquí está tu cálculo! ¡Sigue trabajando en ello, o pasa al siguiente puzle!"},
 "yourExpression":function(d){return "Tu expresión:"},
 "wrongInput":function(d){return "Estás llamando tu función con el valor incorrecto."},
-"wrongOtherValuesX":function(d){return "Su expresión se traduce en un valor incorrecto si variamos"},
+"wrongOtherValuesX":function(d){return "Su expresión da como resultado el valor incorrecto si variamos "+appLocale.v(d,"var")+"."},
 "wrongResult":function(d){return "Su expresión no devuelve el resultado correcto."}};
