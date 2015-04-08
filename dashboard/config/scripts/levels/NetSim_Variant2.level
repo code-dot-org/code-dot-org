@@ -10,6 +10,8 @@
     "instructions": "NetSim: Variant 2 template: UNDER CONSTRUCTION: Variant 2 is not yet functional because P2P connections have not been implemented.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "false",
     "show_add_router_button": "false",
     "router_expects_packet_header": [],
     "client_initial_packet_header": [],
