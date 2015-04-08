@@ -40,8 +40,8 @@ var shouldShowNodeType = function (node) {
  * @param {NetSimNode} node
  * @returns {boolean}
  */
-var omitNodesRequestingConnection = function (node) {
-  return undefined === _.find(nodesRequestingConnection, function (connectionRequestNode) {
+var omitIncomingConnectionNodes = function (node) {
+  return undefined === _.find(incomingConnectionNodes, function (connectionRequestNode) {
         return connectionRequestNode.entityID === node.entityID;
       });
 };
@@ -95,12 +95,12 @@ var displayNameSort = function (a, b) {
 
 var lobbyRows = nodesOnShard
     .filter(shouldShowNodeType)
-    .filter(omitNodesRequestingConnection)
+    .filter(omitIncomingConnectionNodes)
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
     .sort(displayNameSort);
 
-var requestRows = nodesRequestingConnection
+var requestRows = incomingConnectionNodes
     .filter(shouldShowNodeType)
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)

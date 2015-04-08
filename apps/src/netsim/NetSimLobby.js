@@ -133,7 +133,7 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
    * @type {NetSimNode[]}
    * @private
    */
-  this.nodesRequestingnetsim_ = [];
+  this.incomingConnectionNodes_ = [];
 
   /**
    * Which node in the lobby is currently selected
@@ -192,7 +192,7 @@ NetSimLobby.prototype.render = function () {
         this.rootDiv_.find('.remote-node-select'),
         this.levelConfig_,
         this.nodesOnShard_,
-        this.nodesRequestingnetsim_,
+        this.incomingConnectionNodes_,
         this.selectedNode_,
         this.remoteNode_,
         this.myNode_.entityID,
@@ -250,7 +250,7 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   if (!this.shard_) {
     // If we disconnected, just clear our lobby data
     this.nodesOnShard_.length = 0;
-    this.nodesRequestingnetsim_.length = 0;
+    this.incomingConnectionNodes_.length = 0;
     return;
   }
 
@@ -349,13 +349,13 @@ NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
  */
 NetSimLobby.prototype.onWireTableChange_ = function (rows) {
   // Update the collection of nodes with connections pointing toward us.
-  this.nodesRequestingnetsim_ = rows.filter(function (wireRow) {
+  this.incomingConnectionNodes_ = rows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.myNode_.entityID;
-  }.bind(this)).map(function (wireRow) {
+  }, this).map(function (wireRow) {
     return _.find(this.nodesOnShard_, function (node) {
       return node.entityID === wireRow.localNodeID;
     });
-  }.bind(this)).filter(function (node) {
+  }, this).filter(function (node) {
     // In case the wire table change comes in before the node table change.
     return node !== undefined;
   });
