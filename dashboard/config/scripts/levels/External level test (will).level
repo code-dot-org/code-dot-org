@@ -4,8 +4,8 @@
   "created_at": "2015-02-26T18:44:50.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     },
     "title": "first computer program",
     "content1": "description here",

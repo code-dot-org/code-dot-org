@@ -4,8 +4,8 @@
   "created_at": "2015-04-03T20:13:32.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "title": "title",
     "content1": "description here",

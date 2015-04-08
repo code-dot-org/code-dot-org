@@ -6,8 +6,8 @@
     "title": "Strategies for Teaching Computer Science",
     "markdown": "## Strategies for Teaching Computer Science\n\n[This worksheet](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf) is available in the Teacher Dashboard in the \"Lesson Plans and Resources\" tile. \n\n</br>\n\n![image](http://staging.code.org/images/strategiesforteachingcs.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
     "options": {
-      "css": "unplugged",
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     }
   },
   "md5": "b77697a9a05846d95d3c97a386546a06"

@@ -1,0 +1,20 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-08T18:42:42.000Z",
+  "properties": {
+    "href": "path/to/html/in/asset/folder",
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Peter Denning - ",
+    "content1": "description here",
+    "markdown": "Peter Denning: [Computation\n - A new way of science](http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf)\n",
+    "type": "External",
+    "dsl_text": "name 'U1L6 Peter Denning article'\r\ntitle 'Peter Denning - '\r\ndescription 'description here'\r\nhref 'path/to/html/in/asset/folder'\r\nmarkdown <<MARKDOWN\r\nPeter Denning: [Computation\r\n - A new way of science](http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf)\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>
