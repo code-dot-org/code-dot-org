@@ -4,6 +4,7 @@
   "created_at": "2015-03-12T21:52:08.000Z",
   "properties": {
     "options": {
+      "skip_dialog": true,
       "css": "unplugged",
       "skip_dialogue": true
     },
