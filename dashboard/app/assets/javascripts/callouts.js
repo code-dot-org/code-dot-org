@@ -66,7 +66,7 @@ dashboard.createCallouts = function(callouts) {
     }
 
     if (callout.on) {
-      window.addEventListener(callout.on, function() {
+      $(window).on(callout.on, function() {
         if (!callout.seen && $(selector).length > 0) {
           callout.seen = true;
           $(selector).qtip(config).qtip('show');
