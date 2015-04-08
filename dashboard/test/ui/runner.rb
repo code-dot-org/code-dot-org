@@ -246,7 +246,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
 
-    second_time_arguments = File.exists?(rerun_filename) ? " @#{rerun_filename}" : ''
+    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
     succeeded, output_text, test_duration = run_tests(arguments + second_time_arguments)
   end
