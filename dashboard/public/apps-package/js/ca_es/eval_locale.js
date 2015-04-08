@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cercle (radi, estil, color)"},
 "displayBlockTitle":function(d){return "mostra"},
 "ellipseBlockTitle":function(d){return "el·lipse (amplada, alçada, estil, color)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Teniu blocs no afegits. Et refereixes a adjuntar aquestes al bloc \"mostra\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "superposició (superior, inferior)"},

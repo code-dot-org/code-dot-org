@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "ring (raadius, stiil, värv)"},
 "displayBlockTitle":function(d){return "näita"},
 "ellipseBlockTitle":function(d){return "ellips (laius, kõrgus, stiil, värv)"},
-"emptyFunctionalBlock":function(d){return "Teil on täitmata sisendiga plokk."},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"kuva\" klotsi külge?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "pealiskiht (ülaosa, põhi)"},

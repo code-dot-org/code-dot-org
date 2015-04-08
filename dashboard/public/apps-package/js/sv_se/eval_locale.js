@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cirkel (radie, stil, färg)"},
 "displayBlockTitle":function(d){return "visa"},
 "ellipseBlockTitle":function(d){return "ellips (bredd, höjd, stil, färg)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Du har okopplade block. Menade du att fästa dessa till \"visa\" blocket?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "övertäckning(topp, botten)"},

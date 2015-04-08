@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
 "emptyComputeBlock":function(d){return "Στο μπλοκ πρέπει να εισάγετε ένα εμφωλευμένο μπλόκ (ένα υπό-μπλόκ)."},
-"emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
 "evaluate":function(d){return "υπολογισμός"},
 "extraTopBlocks":function(d){return "Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";"},

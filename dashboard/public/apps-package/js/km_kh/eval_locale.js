@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "រង្វង់ (កាំ, ស្ទីល, ពណ៌)"},
 "displayBlockTitle":function(d){return "ការ​បង្ហាញ"},
 "ellipseBlockTitle":function(d){return "ពង​ក្រពើ (ទទឹង, កំពស់, ស្ទីល, ពណ៌)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "អ្នក​មាន​ប្លុក​ដែល​មិន​ទាន់​បាន​ភ្ជាប់។ តើ​អ្នក​ចង់​ភ្ជាប់​ពួក​វា​ទៅ​កាន់​ប្លុក \"ការ​បង្ហាញ\" មែនទេ?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},

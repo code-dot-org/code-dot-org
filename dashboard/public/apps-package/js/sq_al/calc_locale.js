@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Rezultatet e programit tuaj të pjestuar me zero."},
 "emptyComputeBlock":function(d){return "Ti duhet të bashkangjitësh një bllok tek blloku \"llogarit\"."},
-"emptyFunctionalBlock":function(d){return "Ti ke një bllok me një input të pambushur."},
 "equivalentExpression":function(d){return "Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje."},
 "evaluate":function(d){return "përcakto"},
 "extraTopBlocks":function(d){return "Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?"},

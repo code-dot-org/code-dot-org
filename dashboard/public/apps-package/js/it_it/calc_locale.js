@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "È necessario attaccare un blocco al blocco 'quando si clicca su \"Esegui\" '."},
-"emptyFunctionalBlock":function(d){return "C'è un valore mancante in un blocco."},
 "equivalentExpression":function(d){return "Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?"},

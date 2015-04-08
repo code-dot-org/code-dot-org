@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cerchio (raggio, stile, colore)"},
 "displayBlockTitle":function(d){return "visualizza"},
 "ellipseBlockTitle":function(d){return "ellisse (larghezza, altezza, stile, colore)"},
-"emptyFunctionalBlock":function(d){return "C'è un valore mancante in un blocco."},
 "extraTopBlocks":function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "metti-sopra (superiore, inferiore)"},

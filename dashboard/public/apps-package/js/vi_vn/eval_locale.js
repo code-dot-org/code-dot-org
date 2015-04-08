@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "vòng tròn (bán kính, phong cách, màu sắc)"},
 "displayBlockTitle":function(d){return "display"},
 "ellipseBlockTitle":function(d){return "elip (chiều rộng, chiều cao, phong cách, màu sắc)"},
-"emptyFunctionalBlock":function(d){return "Bạn có một khối với input chưa điền."},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},
