@@ -24,7 +24,7 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSimNode[]} nodesOnShard
- * @param {NetSimNode[]} nodesRequestingConnection
+ * @param {NetSimNode[]} incomingConnectionNodes
  * @param {NetSimNode} selectedNode
  * @param {NetSimNode} remoteNode - null if not attempting to connect
  * @param {number} myNodeID
@@ -36,7 +36,7 @@ var NodeType = require('./netsimConstants').NodeType;
  * @augments NetSimPanel
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
-    levelConfig, nodesOnShard, nodesRequestingConnection, selectedNode,
+    levelConfig, nodesOnShard, incomingConnectionNodes, selectedNode,
     remoteNode, myNodeID, addRouterCallback, selectNodeCallback,
     connectButtonCallback, cancelButtonCallback) {
   /**
@@ -55,7 +55,7 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @type {NetSimNode[]}
    * @private
    */
-  this.nodesRequestingConnection_ = nodesRequestingConnection;
+  this.incomingConnectionNodes_ = incomingConnectionNodes;
 
   /**
    * Which node in the lobby is currently selected
@@ -124,7 +124,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   var newMarkup = $(markup({
     level: this.levelConfig_,
     nodesOnShard: this.nodesOnShard_,
-    nodesRequestingConnection: this.nodesRequestingConnection_,
+    incomingConnectionNodes: this.incomingConnectionNodes_,
     selectedNode: this.selectedNode_,
     remoteNode: this.remoteNode_,
     canConnectToNode: this.canConnectToNode_.bind(this),
