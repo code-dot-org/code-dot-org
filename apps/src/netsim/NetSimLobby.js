@@ -178,29 +178,35 @@ NetSimLobby.prototype.render = function () {
   // a section, if they aren't set automatically.
   this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
       this.rootDiv_.find('.shard-select'),
-      this.displayName_,
-      this.shardChoices_,
-      this.selectedShardID_,
-      this.setDisplayName.bind(this),
-      this.setShardID.bind(this)
-  );
+      {
+        displayName: this.displayName_,
+        shardChoices: this.shardChoices_,
+        selectedShardID: this.selectedShardID_
+      },
+      {
+        setNameCallback: this.setDisplayName.bind(this),
+        setShardCallback: this.setShardID.bind(this)
+      });
 
   // Node selection panel: The lobby list of who we can connect to, and
   // controls for picking one and connecting.
   if (this.shard_) {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_.find('.remote-node-select'),
-        this.levelConfig_,
-        this.nodesOnShard_,
-        this.incomingConnectionNodes_,
-        this.selectedNode_,
-        this.remoteNode_,
-        this.myNode_.entityID,
-        this.addRouterToLobby.bind(this),
-        this.selectNode.bind(this),
-        this.onConnectButtonClick_.bind(this),
-        this.onCancelButtonClick_.bind(this)
-    );
+        {
+          levelConfig: this.levelConfig_,
+          nodesOnShard: this.nodesOnShard_,
+          incomingConnectionNodes: this.incomingConnectionNodes_,
+          selectedNode: this.selectedNode_,
+          remoteNode: this.remoteNode_,
+          myNodeID: this.myNode_.entityID
+        },
+        {
+          addRouterCallback: this.addRouterToLobby.bind(this),
+          selectNodeCallback: this.selectNode.bind(this),
+          connectButtonCallback: this.onConnectButtonClick_.bind(this),
+          cancelButtonCallback: this.onCancelButtonClick_.bind(this)
+        });
   }
 };
 

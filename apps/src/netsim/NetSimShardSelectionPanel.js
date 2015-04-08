@@ -26,48 +26,54 @@ var SELECTOR_NONE_VALUE = '';
 
 /**
  * Generator and controller for message log.
+ *
  * @param {jQuery} rootDiv
- * @param {string} displayName
- * @param {Array} shardChoices
- * @param {string} selectedShardID
- * @param {function} setNameCallback
- * @param {function} setShardCallback
+ *
+ * @param {Object} options
+ * @param {string} options.displayName
+ * @param {Array} options.shardChoices
+ * @param {string} options.selectedShardID
+ *
+ * @param {Object} callbacks
+ * @param {function} callbacks.setNameCallback
+ * @param {function} callbacks.setShardCallback
+ *
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimShardSelectionPanel = module.exports = function (rootDiv, displayName,
-    shardChoices, selectedShardID, setNameCallback, setShardCallback) {
+var NetSimShardSelectionPanel = module.exports = function (rootDiv, options,
+    callbacks) {
   /**
    * @type {string}
    * @private
    */
-  this.displayName_ = displayName;
+  this.displayName_ = options.displayName;
 
   /**
    * Shard options for the current user
    * @type {shardChoice[]}
    * @private
    */
-  this.shardChoices_ = utils.valueOr(shardChoices, []);
+  this.shardChoices_ = utils.valueOr(options.shardChoices, []);
 
   /**
    * Which shard ID is currently selected
    * @type {string}
    * @private
    */
-  this.selectedShardID_ = utils.valueOr(selectedShardID, SELECTOR_NONE_VALUE);
+  this.selectedShardID_ = utils.valueOr(options.selectedShardID, SELECTOR_NONE_VALUE);
 
   /**
    * @type {function}
    * @private
    */
-  this.setNameCallback_ = setNameCallback;
+  this.setNameCallback_ = callbacks.setNameCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.setShardCallback_ = setShardCallback;
+  this.setShardCallback_ = callbacks.setShardCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
