@@ -13289,6 +13289,9 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true
       }
     }
+    if(connection.targetConnection && !connection.targetBlock().isMovable()) {
+      return true
+    }
     if(!thisConnection.checkAllowedConnectionType_(connection)) {
       return true
     }
@@ -19554,6 +19557,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setDeletable(false);
+  this.functionDefinitionBlock.setEditable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;
