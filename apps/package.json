@@ -53,6 +53,7 @@
   "dependencies": {
     "@cdo/apps": "0.0.1",
     "@cdo/cdo": "0.0.1",
+    "browserify": "^9.0.7",
     "browserify-shim": "^3.8.3",
     "gulp-concat": "^2.5.2",
     "messageformat": "^0.2.2"
