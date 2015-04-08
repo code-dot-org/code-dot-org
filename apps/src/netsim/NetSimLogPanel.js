@@ -58,6 +58,13 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
   this.currentChunkSize_ = 8;
 
   /**
+   * Localized panel title
+   * @type {string}
+   * @private
+   */
+  this.logTitle_ = options.logTitle;
+
+  /**
    * Whether newly logged messages in this log should be marked as unread
    * @type {boolean}
    * @private
@@ -86,6 +93,8 @@ NetSimLogPanel.prototype.render = function () {
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
+
+  this.updateUnreadCount();
 };
 
 /**
@@ -95,6 +104,8 @@ NetSimLogPanel.prototype.render = function () {
 NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_.length = 0;
+
+  this.updateUnreadCount();
 };
 
 /**
@@ -110,7 +121,8 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
-    isUnread: this.hasUnreadMessages_
+    isUnread: this.hasUnreadMessages_,
+    markAsReadCallback: this.updateUnreadCount.bind(this)
   });
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
@@ -118,6 +130,23 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
   // Auto-scroll
   if (wasScrolledToEnd) {
     scrollArea.scrollTop(scrollArea[0].scrollHeight);
+  }
+
+  this.updateUnreadCount();
+};
+
+NetSimLogPanel.prototype.updateUnreadCount = function () {
+  var unreadCount = this.packets_.reduce(function (prev, cur) {
+    return prev + (cur.isUnread ? 1 : 0);
+  }, 0);
+
+  if (unreadCount > 0) {
+    this.setPanelTitle(i18n.appendCountToTitle({
+      title: this.logTitle_,
+      count: unreadCount
+    }));
+  } else {
+    this.setPanelTitle(this.logTitle_);
   }
 };
 
@@ -154,6 +183,7 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  *        formatting the data.
  * @param {boolean} options.isUnread - whether this packet should be styled
  *        as "unread" and have a "mark as read" button
+ * @param {function} options.markAsReadCallback
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, options) {
@@ -183,9 +213,14 @@ var NetSimLogPacket = function (packetBinary, options) {
 
   /**
    * @type {boolean}
+   */
+  this.isUnread = options.isUnread;
+
+  /**
+   * @type {function}
    * @private
    */
-  this.isUnread_ = options.isUnread;
+  this.markAsReadCallback_ = options.markAsReadCallback;
 
   /**
    * Wrapper div that we create once, and fill repeatedly with render()
@@ -194,7 +229,7 @@ var NetSimLogPacket = function (packetBinary, options) {
    */
   this.rootDiv_ = $('<div>').addClass('packet');
 
-  if (this.isUnread_) {
+  if (this.isUnread) {
     this.rootDiv_.addClass('unread');
   }
 
@@ -210,7 +245,7 @@ NetSimLogPacket.prototype.render = function () {
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
     chunkSize: this.chunkSize_,
-    isUnread: this.isUnread_
+    isUnread: this.isUnread
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
@@ -250,7 +285,8 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
  * button.
  */
 NetSimLogPacket.prototype.markAsRead = function () {
-  this.isUnread_ = false;
+  this.isUnread = false;
   this.rootDiv_.removeClass('unread');
+  this.markAsReadCallback_();
   this.render();
 };
