@@ -5,6 +5,7 @@
   "properties": {
     "href": "pixelation/pixelation.html",
     "options": {
+      "skip_dialog": true,
       "version": "3",
       "data": "000000100000001000000110110000001010111000100010"
     },

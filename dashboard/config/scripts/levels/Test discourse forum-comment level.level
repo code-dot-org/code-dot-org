@@ -7,6 +7,7 @@
     "content1": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
     "markdown": "# Degree of Difficulty\n\nWas programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?\n\n<div id=\"discourse-comments\"></div>\n\n<script type=\"text/javascript\">\n  var discourseUrl = \"http://discourse.code.org/\",\n      discourseEmbedUrl = 'http://levelbuilder.studio.code.org/levels/1811';\n\n  (function() {\n    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;\n      d.src = discourseUrl + 'javascripts/embed.js';\n    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);\n  })();\n</script>\n",
     "options": {
+      "skip_dialog": true,
       "css": "unplugged"
     }
   },

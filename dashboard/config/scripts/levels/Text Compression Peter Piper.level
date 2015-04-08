@@ -5,6 +5,7 @@
   "properties": {
     "href": "text-compression/text-compression.html",
     "options": {
+      "skip_dialog": true,
       "instructions": "This poem has been compressed by replacing two common phrases with symbols in the dictionary. Can you identify another common pattern to compress the poem further?",
       "poems": "[\"Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, Where's the peck of pickled peppers that Peter Piper picked?\"]",
       "dictionary": "peter_piper_picked\npeck_of_pickled_peppers"
