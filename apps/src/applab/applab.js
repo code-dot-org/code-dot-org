@@ -9,7 +9,7 @@
 require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('locale');
-var applabMsg = require('appLocale');
+var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');

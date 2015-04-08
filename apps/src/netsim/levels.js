@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('appLocale');
+var msg = require('./locale');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');

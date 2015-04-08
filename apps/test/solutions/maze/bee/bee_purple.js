@@ -41,6 +41,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.executionInfo.terminationValue() === 6; //TerminationValue.UNCHECKED_PURPLE
       },
       xml: '<xml>' + blockUtils.blocksFromList([

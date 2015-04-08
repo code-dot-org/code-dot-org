@@ -1,9 +1,10 @@
 /*jshint multistr: true */
 
 // todo - i think our prepoluated code counts as LOCs
+var Flappy = require('./flappy');
 
 var constants = require('./constants');
-var flappyMsg = require('appLocale');
+var flappyMsg = require('./locale');
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
 

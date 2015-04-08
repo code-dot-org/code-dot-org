@@ -27,7 +27,7 @@
 'use strict';
 
 var commonMsg = require('locale');
-var turtleMsg = require('appLocale');
+var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');

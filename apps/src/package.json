@@ -4,8 +4,7 @@
   "description": "Code Studio module package",
   "private": true,
   "browser": {
-    "locale": "./locale.js",
-    "appLocale": "./appLocale.js"
+    "locale": "./locale.js"
   },
   "browserify": {
     "transform": [

@@ -2,6 +2,7 @@
 
 var Direction = require('./tiles').Direction;
 var tb = require('../block_utils').createToolbox;
+var Bounce = require('./bounce');
 
 /*
  * Configuration for all levels.

@@ -15,6 +15,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.wordSearch !== undefined;
       },
       xml: '<xml>' + blockUtils.blocksFromList([

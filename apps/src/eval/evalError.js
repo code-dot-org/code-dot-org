@@ -1,4 +1,4 @@
-var evalMsg = require('appLocale');
+var evalMsg = require('./locale');
 
 /**
  * An Eval error indicating that something bad happened, but we understand

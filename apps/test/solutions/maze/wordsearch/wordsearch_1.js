@@ -7,6 +7,7 @@ var reqBlocks = function () {
   return require('@cdo/apps/maze/requiredBlocks.js');
 };
 
+var Maze = require('@cdo/apps/maze/maze');
 module.exports = {
   app: "maze",
   skinId: 'letters',

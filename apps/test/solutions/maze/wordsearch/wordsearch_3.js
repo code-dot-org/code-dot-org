@@ -15,6 +15,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.wordSearch !== undefined;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
@@ -31,6 +32,7 @@ module.exports = {
         testResult: TestResults.TOO_FEW_BLOCKS_FAIL
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.wordSearch !== undefined;
       },
       xml: '<xml>' + blockUtils.blocksFromList([

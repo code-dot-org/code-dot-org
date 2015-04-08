@@ -31,6 +31,7 @@ var levelDef = {
   flowerType: 'redWithNectar'
 };
 
+var Maze = require('@cdo/apps/maze/maze');
 module.exports = {
   app: "maze",
   skinId: 'bee',

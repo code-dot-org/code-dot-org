@@ -9,7 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('locale');
-var flappyMsg = require('appLocale');
+var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');

@@ -1,4 +1,7 @@
-var SquareType = require('./tiles').SquareType;
+var Maze = require('./maze');
+var tiles = require('./tiles');
+var Direction = tiles.Direction;
+var SquareType = tiles.SquareType;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -101,10 +104,10 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted) {
     finishIcon.setAttribute('visibility', 'hidden');
   }
 
-  var numFrames = skin.celebratePegmanRow;
+  var numFrames = Maze.skin.celebratePegmanRow;
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };

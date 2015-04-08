@@ -1,3 +1,5 @@
+'use strict';
+var Bounce = require ('./bounce');
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;

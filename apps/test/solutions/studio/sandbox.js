@@ -4,6 +4,7 @@ var _ = require('lodash');
 var Direction = require('@cdo/apps/studio/constants.js').Direction;
 var blockUtils = require('@cdo/apps/block_utils');
 
+var Studio = require('@cdo/apps/studio/studio');
 module.exports = {
   app: "studio",
   skinId: "studio",

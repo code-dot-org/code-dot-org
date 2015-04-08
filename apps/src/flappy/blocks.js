@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('appLocale');
+var msg = require('./locale');
 var commonMsg = require('locale');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');

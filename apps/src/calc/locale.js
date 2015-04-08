@@ -1,0 +1,1 @@
+module.exports = window.blockly.calc_locale;

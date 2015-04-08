@@ -23,7 +23,7 @@
  */
 'use strict';
 
-var msg = require('appLocale');
+var msg = require('./locale');
 var commonMsg = require('locale');
 
 var evalUtils = require('./evalUtils');

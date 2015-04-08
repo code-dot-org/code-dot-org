@@ -13,7 +13,7 @@
 'use strict';
 
 var _ = require('lodash');
-var i18n = require('appLocale');
+var i18n = require('./locale');
 var netsimConstants = require('./netsimConstants');
 
 var EncodingType = netsimConstants.EncodingType;

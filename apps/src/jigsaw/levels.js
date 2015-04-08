@@ -1,5 +1,6 @@
 /*jshint multistr: true */
 
+var Jigsaw = require('./jigsaw');
 var createToolbox = require('../block_utils').createToolbox;
 
 var jigsawBlock = function (type, x, y, child, childType) {

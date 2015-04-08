@@ -1,6 +1,7 @@
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var _ = require('lodash');
 
+var Applab = require('@cdo/apps/applab/applab');
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -22,7 +23,7 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     },
     {
       description: "getText and setText on text labels.",
@@ -42,7 +43,7 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     }
   ]
 };

@@ -12,7 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimBandwidthControl.html.ejs');
-var i18n = require('appLocale');
+var i18n = require('./locale');
 
 /**
  * Min value of 2 is 2^2 or 4bps

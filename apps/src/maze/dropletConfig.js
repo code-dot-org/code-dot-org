@@ -1,4 +1,4 @@
-var msg = require('appLocale');
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Movement' },

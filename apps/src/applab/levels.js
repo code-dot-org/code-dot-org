@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('appLocale');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;

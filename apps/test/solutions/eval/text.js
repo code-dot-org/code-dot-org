@@ -1,6 +1,7 @@
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 
+var Eval = require('@cdo/apps/eval/eval');
 module.exports = {
   app: "eval",
   skinId: 'eval',

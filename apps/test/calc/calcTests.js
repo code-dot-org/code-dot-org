@@ -3,7 +3,7 @@ chai.config.includeStack = true;
 var assert = chai.assert;
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocales('calc');
+testUtils.setupLocale('calc');
 
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');
@@ -11,7 +11,7 @@ var Equation = require('@cdo/apps/calc/equation.js');
 var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var ResultType = require('@cdo/apps/constants.js').ResultType;
-var calcMsg = window.blockly.calc_locale;
+var calcMsg = require('@cdo/apps/calc/locale');
 
 describe('evaluateResults_/evaluateFunction_', function () {
   it('fails when callers have different compute signatures', function () {
@@ -271,7 +271,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = age * 10
-    userSet = new EquationSet();
+    var userSet = new EquationSet();
     userSet.addEquation_(new Equation(null, [], new ExpressionNode('age_in_months')));
     userSet.addEquation_(new Equation('age', [], new ExpressionNode(17)));
     userSet.addEquation_(new Equation('age_in_months', [],

@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('appLocale');
+var msg = require('./locale');
 var dom = require('../dom');
 var levels = require('./levels');
 

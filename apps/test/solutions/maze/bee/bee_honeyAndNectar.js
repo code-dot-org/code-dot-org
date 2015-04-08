@@ -44,6 +44,7 @@ var levelDef = {
   requiredBlocks: [[REPEAT_REQUIREMENT]]
 };
 
+var Maze = require('@cdo/apps/maze/maze');
 module.exports = {
   app: "maze",
   skinId: 'bee',

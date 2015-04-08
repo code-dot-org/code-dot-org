@@ -26,6 +26,7 @@ module.exports = {
 
         // manually complete rather than wait for timeout
         setTimeout(function () {
+          var Bounce = require('./bounce');
           Bounce.onPuzzleComplete();
         }, 1);
       },

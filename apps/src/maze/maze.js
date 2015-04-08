@@ -512,8 +512,8 @@ Maze.init = function(config) {
 
   var extraControlRows = null;
 
-  skin = config.skin;
-  level = config.level;
+  Maze.skin = config.skin;
+  Maze.level = config.level;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -1325,6 +1325,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
     }, timePerFrame * frame);
   });
 }
+Maze.scheduleSheetedMovement = scheduleSheetedMovement;
 
 /**
  * Schedule the animations for a move from the current position

@@ -1,0 +1,1 @@
+module.exports = window.blockly.flappy_locale;

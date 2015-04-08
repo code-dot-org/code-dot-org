@@ -1,5 +1,6 @@
+var Maze = require('./maze');
 var utils = require('../utils');
-var mazeMsg = require('appLocale');
+var mazeMsg = require('./locale');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 

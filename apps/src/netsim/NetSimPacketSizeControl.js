@@ -12,7 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimPacketSizeControl.html.ejs');
-var i18n = require('appLocale');
+var i18n = require('./locale');
 
 /**
  * @type {number}

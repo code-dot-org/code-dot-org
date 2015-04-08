@@ -41,6 +41,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.bee.nectars_.length === 1;
       },
       xml: '<xml>' + blockUtils.blocksFromList([

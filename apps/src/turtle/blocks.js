@@ -24,7 +24,7 @@
 'use strict';
 
 var Colours = require('./colours');
-var msg = require('appLocale');
+var msg = require('./locale');
 var commonMsg = require('locale');
 
 var customLevelBlocks = require('./customLevelBlocks');

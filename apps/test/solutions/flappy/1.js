@@ -25,6 +25,7 @@ module.exports = {
 
         // manually complete rather than wait for timeout
         setTimeout(function () {
+          var Flappy = require('@cdo/apps/flappy/flappy');
           Flappy.onPuzzleComplete();
         }, 1);
       },

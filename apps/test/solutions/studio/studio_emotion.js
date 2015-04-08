@@ -1,6 +1,7 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
+var Studio = require('@cdo/apps/studio/studio');
 
 var _ = require('lodash');
 

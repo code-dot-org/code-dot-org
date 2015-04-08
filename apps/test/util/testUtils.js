@@ -149,6 +149,7 @@ exports.generateArtistAnswer = function (generatedCode) {
  * Runs the given function at the provided tick count. For Studio only.
  */
 exports.runOnStudioTick = function (tick, fn) {
+  var Studio = require('@cdo/apps/studio/studio');
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }

@@ -1,3 +1,5 @@
+var Flappy = require('./flappy');
+
 var studioApp = require('../StudioApp').singleton;
 
 exports.FlapHeight = {

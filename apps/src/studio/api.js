@@ -1,3 +1,4 @@
+var Studio = require('./studio');
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -5,7 +6,7 @@ exports.SpriteSpeed = {
   SLOW: 3,
   NORMAL: 5,
   FAST: 8,
-  VERY_FAST: 12,
+  VERY_FAST: 12
 };
 
 exports.SpriteSize = {

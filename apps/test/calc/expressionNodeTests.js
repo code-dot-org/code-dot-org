@@ -875,6 +875,7 @@ describe("ExpressionNode", function () {
     });
 
     it("diffs function calls that are passed expressions", function () {
+      var node, tokenList;
       // f(1 + 2)
       node = new ExpressionNode('f', [
         new ExpressionNode('+', [1, 2])

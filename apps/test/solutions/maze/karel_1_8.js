@@ -22,6 +22,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED,
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.result === 2;
       },
       xml: '<xml><block type="maze_untilBlockedOrNotClear"><title name="DIR">isPathForward</title><statement name="DO"><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></xml>'

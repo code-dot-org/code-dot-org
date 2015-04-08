@@ -1,6 +1,7 @@
 /*jshint multistr: true */
 
-var msg = require('appLocale');
+var Studio = require('./studio');
+var msg = require('./locale');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var constants = require('./constants');
