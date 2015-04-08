@@ -203,7 +203,10 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   return this.entities_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
-        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
+        (
+        (entity.localVizNode === vizNode) ||
+        (vizNode.isRouter && entity.remoteVizNode === vizNode)
+        );
   });
 };
 
