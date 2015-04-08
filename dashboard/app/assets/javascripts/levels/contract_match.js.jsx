@@ -202,7 +202,7 @@ $(window).load(function () {
   var generateGetResultFunction = function (contractForm, levelData) {
     return function () {
       /** @type {ContractForm} */
-      var functionName = contractForm.getName();
+      var functionName = contractForm.getName().trim();
       var rangeType = contractForm.getRangeType();
       var domains = contractForm.getDomainTypes();
 
@@ -254,6 +254,9 @@ $(window).load(function () {
     var domainInputItems = domainInput.split('|');
 
     if (correctName !== functionName) {
+      if (functionName.toLowerCase() === correctName.toLowerCase()) {
+        return 'badname_case';
+      }
       return 'badname';
     }
     if (correctRange !== rangeInput) {
