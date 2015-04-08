@@ -344,6 +344,19 @@ svg {
       td {
         border-color: $lightest_gray;
       }
+
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
+      &.unread {
+        background-color: $dark-gray;
+
+        td {
+          border-color: $dark-gray;
+        }
+      }
     }
 
     .scroll_area {
