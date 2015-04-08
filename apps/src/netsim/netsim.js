@@ -126,8 +126,6 @@ var NetSim = module.exports = function () {
    */
   this.sentMessageLog_ = null;
 
-  // -- Events --
-
   /**
    * Event: Connected to, or disconnected from, a shard.
    * Specifically, added or removed our client node from the shard's node table.
@@ -202,6 +200,9 @@ NetSim.prototype.init = function(config) {
   this.runLoop_.begin();
 };
 
+/**
+ * @param {RunLoop.Clock} clock
+ */
 NetSim.prototype.tick = function (clock) {
   if (this.isConnectedToShard()) {
     this.myNode.tick(clock);
@@ -213,6 +214,10 @@ NetSim.prototype.tick = function (clock) {
   }
 };
 
+/**
+ * Pull an identifier from the URL that separates this level's shard from others.
+ * @returns {string}
+ */
 NetSim.prototype.getUniqueLevelKey = function () {
   return location.pathname.substr(1).replace(/\W/g, '-');
 };
@@ -826,14 +831,6 @@ NetSim.prototype.render = function () {
  */
 NetSim.prototype.onShardChange_= function (shard, localNode) {
   // Unregister old handlers
-  if (this.eventKeys.registeredWithShard) {
-    this.eventKeys.registeredWithShard.nodeTable.tableChange.unregister(
-        this.eventKeys.nodeTable);
-    this.eventKeys.registeredWithShard.wireTable.tableChange.unregister(
-        this.eventKeys.wireTable);
-    this.eventKeys.registeredWithShard = null;
-  }
-
   if (this.eventKeys.registeredWithLocalNode) {
     this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
         this.eventKeys.remoteChange);
@@ -841,14 +838,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   }
 
   // Register new handlers
-  if (shard) {
-    this.eventKeys.nodeTable = shard.nodeTable.tableChange.register(
-        this.onNodeTableChange_.bind(this));
-    this.eventKeys.wireTable = shard.wireTable.tableChange.register(
-        this.onWireTableChange_.bind(this));
-    this.eventKeys.registeredWithShard = shard;
-  }
-
   if (localNode) {
     this.eventKeys.remoteChange = localNode.remoteChange.register(
         this.onRemoteChange_.bind(this));
@@ -857,14 +846,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
 
   // Shard changes almost ALWAYS require a re-render
   this.render();
-};
-
-NetSim.prototype.onNodeTableChange_ = function () {
-
-};
-
-NetSim.prototype.onWireTableChange_ = function () {
-  // Detect mutual connection?
 };
 
 /**
@@ -958,18 +939,32 @@ NetSim.prototype.onRouterStateChange_ = function (router) {
       router.dnsNodeID === myNode.entityID);
 };
 
+/**
+ * Isolates updates that we should do when a router's stats change, since
+ * these happen a lot more often.
+ * @param {NetSimRouterNode} router
+ * @private
+ */
 NetSim.prototype.onRouterStatsChange_ = function (router) {
   this.setRouterQueuedPacketCount_(router.getQueuedPacketCount());
   this.setRouterMemoryInUse_(router.getMemoryInUse());
   this.setRouterDataRate_(router.getCurrentDataRate());
 };
 
+/**
+ * What to do when our connected router's local network changes.
+ * @private
+ */
 NetSim.prototype.onRouterWiresChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setDnsTableContents(this.getConnectedRouter().getAddressTable());
   }
 };
 
+/**
+ * What to do when our connected router's logs change.
+ * @private
+ */
 NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());

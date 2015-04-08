@@ -73,16 +73,16 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
   this.levelKey_ = options.levelKey;
 
   /**
-   * @type {string}
+   * @type {NetSimShardSelectionPanel}
    * @private
    */
-  this.sharedShardSeed_ = options.sharedShardSeed;
-
-  // --- Subcomponents ---
   this.shardSelectionPanel_ = null;
-  this.nodeSelectionPanel_ = null;
 
-  // --- Cached simulation state ---
+  /**
+   * @type {NetSimRemoteNodeSelectionPanel}
+   * @private
+   */
+  this.nodeSelectionPanel_ = null;
 
   /**
    * @type {NetSimShard}
@@ -102,8 +102,6 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
    * @type {Object}
    */
   this.eventKeys = {};
-
-  // --- Component state ---
 
   /**
    * @type {string}
@@ -206,6 +204,9 @@ NetSimLobby.prototype.render = function () {
   }
 };
 
+/**
+ * @param {string} displayName
+ */
 NetSimLobby.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
   this.render();
@@ -216,6 +217,9 @@ NetSimLobby.prototype.setDisplayName = function (displayName) {
   }
 };
 
+/**
+ * @param {string} shardID
+ */
 NetSimLobby.prototype.setShardID = function (shardID) {
   this.selectedShardID_ = shardID;
   this.render();
@@ -232,8 +236,6 @@ NetSimLobby.prototype.setShardID = function (shardID) {
  * @private
  */
 NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
-  // TODO: Should this propagate back into our UI, yet?
-
   // Unregister old handlers
   if (this.eventKeys.nodeTable) {
     this.shard_.nodeTable.tableChange.unregister(this.eventKeys.nodeTable);
@@ -260,7 +262,6 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
 
   // Trigger a forced read of the node table
   this.fetchInitialLobbyData_();
-
 };
 
 /**
@@ -282,6 +283,11 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
   }.bind(this));
 };
 
+/**
+ * Generate a new router node, configured according to the current level.
+ * The change to the node table should trigger appropriate updates to various
+ * UI elements.
+ */
 NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err, router) {
     if (err) {

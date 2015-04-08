@@ -57,8 +57,16 @@ var NetSimShardSelectionPanel = module.exports = function (rootDiv, displayName,
    */
   this.selectedShardID_ = utils.valueOr(selectedShardID, SELECTOR_NONE_VALUE);
 
+  /**
+   * @type {function}
+   * @private
+   */
   this.setNameCallback_ = setNameCallback;
 
+  /**
+   * @type {function}
+   * @private
+   */
   this.setShardCallback_ = setShardCallback;
 
   // Initial render
