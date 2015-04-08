@@ -303,7 +303,7 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      applabUserId: @applab_user_id,
+      applabUserId: applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
