@@ -45,41 +45,7 @@ social:
 
 ---
 
-:css
-
-  a.underscorehover:hover
-  {
-    text-decoration: underline;
-    color: white;
-  }
-
-  .underscorehover:hover
-  {
-    text-decoration: underline;
-    color: white;
-  }
-
-  a.nounderscorehover:hover
-  {
-    text-decoration: none;
-  }
-
-  @media screen and (max-width: 512px)
-  {
-    .same-height-column {width:100%}
-  }
-  @media screen and (min-width: 513px)
-  {
-    .same-height-column {float:none !important; width:50%}
-  }
-
-  body.modal-open .supreme-container{
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-  }
+%link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 
 
 - # The homepage gsheet may specify "en" or "not en" for many row types.
