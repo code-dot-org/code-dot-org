@@ -19,7 +19,8 @@ var markup = require('./NetSimRemoteNodeSelectionPanel.html');
 var NodeType = require('./netsimConstants').NodeType;
 
 /**
- * Generator and controller for lobby/connection controls.
+ * Generator and controller for lobby node listing, selection, and connection
+ * controls.
  *
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
@@ -191,10 +192,9 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode_ = function (connectio
   }
 
   // Permissible connection limited by level configuration
-  return (
-      this.levelConfig_.canConnectToClients &&
-      connectionTarget.getNodeType() === NodeType.CLIENT
-      ) || (
-      this.levelConfig_.canConnectToRouters &&
-      connectionTarget.getNodeType() === NodeType.ROUTER );
+  var isClient = (connectionTarget.getNodeType() === NodeType.CLIENT);
+  var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
+  var allowClients = this.levelConfig_.canConnectToClients;
+  var allowRouters = this.levelConfig_.canConnectToRouters;
+  return (isClient && allowClients) || (isRouter && allowRouters);
 };
