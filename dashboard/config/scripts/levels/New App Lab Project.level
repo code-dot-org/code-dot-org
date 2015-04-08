@@ -24,7 +24,9 @@
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sign_in_to_save_project\",\r\n  \"callout_text\": \"Want to access your project later? Sign in to save this project to your account!\",\r\n  \"element_id\": \".button-signin\",\r\n  \"on\": \"run_button_pressed\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"flip-x-close\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_examples": "false"
   },
   "md5": "ece9ebe30c9988006060ab63e63f232d"
 }]]></config>
