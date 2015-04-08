@@ -508,7 +508,7 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
  */
 exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
                                            userCodeStartOffset, userCodeLength) {
-  var userCodeRow = 0;
+  var userCodeRow = -1;
   for (var i = 0; i < interpreter.stateStack.length; i++) {
     var node = interpreter.stateStack[i].node;
     // Adjust start/end by userCodeStartOffset since the code running
