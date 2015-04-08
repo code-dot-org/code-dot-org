@@ -803,6 +803,7 @@ NetSim.prototype.render = function () {
   if (this.isConnectedToRemote()) {
     this.mainContainer_.find('.leftcol_disconnected').hide();
     this.mainContainer_.find('.leftcol_connected').show();
+    this.sendWidget_.setFromAddress(myAddress);
   } else {
     this.mainContainer_.find('.leftcol_disconnected').show();
     this.mainContainer_.find('.leftcol_connected').hide();
