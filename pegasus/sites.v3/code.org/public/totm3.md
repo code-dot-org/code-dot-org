@@ -1,7 +1,6 @@
 ---
 title: Nominate Teacher of the Month
 nav: educate_nav
-rightbar: blank
 ---
 [#totm-intro]
 
@@ -35,4 +34,4 @@ Thanks for your nomination!
 
 <br />
 <br />
-[See Student of the Week winners](/sotw)
+[See Student of the Month winners](/sotm)

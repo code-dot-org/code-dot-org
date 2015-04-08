@@ -451,6 +451,9 @@ en:
         'msm_3_pemdas': 'PEMDAS'
         'msm_6_variables': 'Variables'
         'msm_7_functions': 'Functions'
+        'infinity_playlab_intro' : 'Play Lab - Introduction'
+        'infinity_playlab_events' : 'Play Lab - Events'
+        'infinity_playlab_repeat_forever' : 'Play Lab - Repeat Forever'
     callout:
       text:
         # Keyed by #{callout.localization_key}

@@ -7,8 +7,8 @@
     "content1": "description here",
     "markdown": "# How to use the Pixelation widget to control color\n\nMaddie demonstrates how to use the Pixelation widget.  You'll get to practice on the next level.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tTm0RmCqLUI\" frameborder=\"0\" allowfullscreen></iframe>\n</br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     }
   },
   "md5": "fa0a72e385e0d8dbe9304f785f8a6f2a"

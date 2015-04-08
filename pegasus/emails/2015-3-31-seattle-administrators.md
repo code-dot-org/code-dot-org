@@ -1,12 +1,11 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Bring computer science to your Seattle-area school"
-litmus_tracking_id: "y8czo8o9"
 ---
 
 Dear Seattle-area administrator, 
 
-Code.org has partnered with districts arounds the Puget Sound to bring computer science to your students, at all levels — kindergarten through high school. Give your students the chance to learn these foundational 21st-century skills.
+Code.org has partnered with districts around the Puget Sound to bring computer science to your students, at all levels — kindergarten through high school. Give your students the chance to learn these foundational 21st-century skills.
 
 ### Start with high-quality professional development — at no cost to you or your school
 
@@ -16,7 +15,7 @@ Incorporate computer science into elementary and middle school, or offer a year-
 
 - Short curriculum modules that students absolutely love
 - 1-day workshops for teachers (plus librarians, tech ed specialists, etc.)<br />
-[Learn more](http://code.org/educate/seattle/)
+[Learn more](https://code.org/educate/seattle/)
 [Find a workshop](https://code.org/professional-development-workshops/)
 
 **For middle schools:**

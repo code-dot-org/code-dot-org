@@ -6,8 +6,8 @@
     "title": "title",
     "content1": "description here",
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "markdown": "Insert maddie video 1 here\n"
   },

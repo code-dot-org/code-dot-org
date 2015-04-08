@@ -6,8 +6,8 @@
     "title": "How to use the B&W Pixelation Widget",
     "markdown": "# Introduction to the Pixelation Widget\nMalorie introduces you to the pixelation widget, a few of its features, and how to use it.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/q3DNakoDo74\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
     "options": {
-      "css": "unplugged",
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     }
   },
   "md5": "5ec379aaaf007041baaead9a0827d381"
