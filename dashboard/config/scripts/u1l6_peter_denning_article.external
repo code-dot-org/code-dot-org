@@ -1,0 +1,8 @@
+name 'U1L6 Peter Denning article'
+title 'Peter Denning - '
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+Peter Denning: [Computation
+ - A new way of science](http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf)
+MARKDOWN

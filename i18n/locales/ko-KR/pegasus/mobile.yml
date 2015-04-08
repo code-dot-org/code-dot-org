@@ -1,16 +1,12 @@
-"ko-KR":
+ko-KR:
   hello: Hello world
   select_language: 언어를 선택하세요.
   computer_science: 컴퓨터과학(Computer Science, 정보과학)
   computer_science_edweek: 컴퓨터과학(Computer Science, 정보과학) 교육 주간
   csedweek_dates: 2014년 12월 8-14일
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com"
-    style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of
-    Code 행사를 준비하세요.'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of Code 행사를 준비하세요.'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: 누구나 배울 수 있습니다.
   learn_now: 지금 배워보세요.
   petition_message: 모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다.
@@ -21,31 +17,25 @@
   zipcode: 우편번호 또는 국가
   submit: 제출하기
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
-  twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍
-    기초개념들을 학습해 보세요.
-  hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
-    8 - 14, 2014<br/>
+  twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요.
+  hoc2014_heading: '<a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December 8 - 14, 2014<br/>'
   hoc2014_students: 학생들
   hoc2014_try: 해보기
   hoc2014_teachers: 선생님들
   hoc2014_host: 주관하기
   hoc2014_everyone: 모든사람
-  hoc2014_support: "후원하기 &#x25BE;"
+  hoc2014_support: '후원하기 &#x25BE;'
   hoc2014_whatishoc: Hour of Code 란?
   twentyhours_trynow: 해보기
   california_heading: 학교에 컴퓨터과학(정보과학) 수업을 요청하세요.
-  california_text: 어떤 선생님이건 우리의 <a href='http://studio.code.org/'>무료 강좌</a>를 사용할 수
-    있습니다.  어떤 초등학교라도 <a href='http://code.org/educate/k5'>컴퓨터 과학</a>을 가르칠 수 있습니다.
-    고등학교에 <a href='http://code.org/educate/districts'>우리와 파트너가 되는 것</a>을 문의하세요.
+  california_text: "어떤 선생님이건 우리의 <a href='http://studio.code.org/'>무료 강좌</a>를 사용할 수 있습니다.  어떤 초등학교라도 <a href='http://code.org/educate/k5'>컴퓨터 과학</a>을 가르칠 수 있습니다. 고등학교에 <a href='http://code.org/educate/districts'>우리와 파트너가 되는 것</a>을 문의하세요."
   california_button: 더 알아보기
   flappy_heading: Code.org 에 플래피(Flappy)가 포함 된 것을 축하합니다.
-  flappy_text: Code.org 가 시작된지 1년이 넘었습니다.<br/><br/>자신만의 <b>플래피(Flappy)</b> 게임을 만들어
-    축하해 주세요. 만들고 싶은 것을 만들어 친구들과 함께 이야기해보세요!
+  flappy_text: 'Code.org 가 시작된지 1년이 넘었습니다.<br/><br/>자신만의 <b>플래피(Flappy)</b> 게임을 만들어 축하해 주세요. 만들고 싶은 것을 만들어 친구들과 함께 이야기해보세요!'
   view_english_site: 영문 사이트 보기
   non_english_tutorials: '다른 언어 :'
   write_your_first_program: 컴퓨터 프로그램을 직접 만들어 보세요
-  learn_cs_concepts: 블럭 프로그래밍을 통해, 컴퓨터과학(정보과학)의 기초개념들을 경험해 볼 수 있습니다. 이 과정에는 빌 게이츠,
-    마크 주커버그, 앵그리버드, 플랜트vs좀비... 동영상도 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘 등을 간단히 배워보세요.
+  learn_cs_concepts: 블럭 프로그래밍을 통해, 컴퓨터과학(정보과학)의 기초개념들을 경험해 볼 수 있습니다. 이 과정에는 빌 게이츠, 마크 주커버그, 앵그리버드, 플랜트vs좀비... 동영상도 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘 등을 간단히 배워보세요.
   all_ages: 모든 연령
   beginner: 초보자
   n_participants: '# 명 참여'
@@ -55,16 +45,13 @@
   congratulations_on_completing_hoc: 축하합니다! One Hour of Code 를 완료하셨습니다.
   get_a_certificate_of_achievement: 인증서 받기
   enter_valid_email: 이메일을 정확히 입력해 주세요
-  get_a_certificate_message: 인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한
-    정보를 보내드립니다
-  get_a_certificate_message_after: 다운로드 하거나 인쇄 하려면 증명서를 누르세요. 이제, 우리의 <a href='http://studio.code.org'>다른
-    강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택을 둘러보세요.
+  get_a_certificate_message: "인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한 정보를 보내드립니다"
+  get_a_certificate_message_after: "다운로드 하거나 인쇄 하려면 증명서를 누르세요. 이제, 우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택을 둘러보세요."
   thanks_for_submitting: 청원해 주셔서 감사합니다!
   if_you_enjoyed: 재미있으면, 친구들과 함께 해보세요! 전세계 모든 사람들이 함께 하면 좋겠습니다.
   personalize_certificate: 개인별 인증서 만들기
   share_achievement: 다른 사람들에게 자랑하기
-  beyond_hour_message: 우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a
-    href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택들을 둘러보세요.
+  beyond_hour_message: "우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택들을 둘러보세요."
   leaderboards_for_hoc: Hour of Code 순위
   support_url: http://support.code.org/
   country: 국가
@@ -98,15 +85,13 @@
   privacy_practices_children: 아이들을 위한 정책 살펴보기
   petition_thankyou: 청원에 서명해 주셔서 감사합니다.
   continue_learning_header: One Hour 이후 학습
-  continue_learning_body: 많은 방법들이 있습니다. 온라인으로 배우거나, 학교에서 배우거나, 방학 중 캠프 등을 통해 배울 수
-    있습니다.
+  continue_learning_body: 많은 방법들이 있습니다. 온라인으로 배우거나, 학교에서 배우거나, 방학 중 캠프 등을 통해 배울 수 있습니다.
   learn_next_level: 다음 단계 계속하기
   learn_online: 다른 온라인 과정 해보기
   learn_classes: 학교 수업
   hoc_is_here: '@codeorg 에서  #HourOfCode 를 살펴보세요'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: '왜 더 많은 학교들이 컴퓨터 과학을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다.  http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 자세한 내용을 알아보세요.'
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -114,22 +99,19 @@
   boy: 남
   help_recruit_coders: 우리 팀을 위해, 더 많은 사람 모으기!
   help_recruit: 더 많은 사람을 우리에게!
-  lines_of_code: 지금까지 <b># LINES OF CODE</b> 를 작성했습니다.
-  lines_of_code_alt: <b>#</b> 줄의 코드가 학생들에 의해 작성되었습니다
+  lines_of_code: '지금까지 <b># LINES OF CODE</b> 를 작성했습니다.'
+  lines_of_code_alt: '<b>#</b> 줄의 코드가 학생들에 의해 작성되었습니다'
   who_has_done_hoc: '누가 #HourOfCode @codeorg 했을까?'
   hoc_leaderboards: Hour of Code 순위
   students_and_lines: '%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다.'
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
   contact_form_topic_press: 보도/언론 (인터뷰, 발표)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  studiobar_title: Code Studio 살펴보기
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"저는 이것이 <b>평생에 단 한번뿐인</b> 기회라는 것을 알았습니다." - Mariana Alzate, 5학년'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> 살펴보기"
   studiobar_elementary_title: 초등학생 코스
-  studiobar_elementary_body: K&#8209;5 학생들을 위한 새로운 3개의 코스
+  studiobar_elementary_body: 'K&#8209;5 학생들을 위한 새로운 3개의 코스'
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: 앵그리버드로 코딩 배우기
   studiobar_flappy_title: 플래피 코드
@@ -141,21 +123,52 @@
   studiobar_donate_title: 기부하기
   studiobar_donate_body: 여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다.
   studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  studiobar_shop_body: 고정관념을 깨고, 우리의 로고와 긍지를 입어보세요.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo; 
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo; 
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo; 
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -163,11 +176,11 @@
   homepage_slot_text_course4: 과정4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: 플래피 코드
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_codevideo: 동영상 보기
+  homepage_action_text_teachervideo: 동영상 보기
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -190,7 +203,7 @@
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
@@ -208,8 +221,7 @@
   class_submission_in_school_ap_computer_science: 대학 과목 선이수제 컴퓨터과학(정보과학)
   class_submission_in_school_full_university_cs_curriculum: 대학 컴퓨터과학 교육과정 전체
   class_submission_in_school_robotics_club: 로보틱스 클럽
-  class_submission_in_school_programming_integrated_in_other_classes: 다른 교과 수업에서의
-    프로그래밍 융합(수학, 과학 등)
+  class_submission_in_school_programming_integrated_in_other_classes: 다른 교과 수업에서의 프로그래밍 융합(수학, 과학 등)
   class_submission_in_school_summer_school_cs_program: 여름 계절학기 컴퓨터과학(정보과학) 프로그램
   class_submission_in_school_exploring_computer_science: 컴퓨터과학(정보과학) 살펴보기
   class_submission_in_school_other: 학교내의 다른
@@ -238,11 +250,9 @@
   volunteer_engineer_submission_commitment_more: 더 많은
   volunteer_engineer_submission_location_flexibility_onsite: 학교에서 온라인활용
   volunteer_engineer_submission_location_flexibility_remote: ' 원격 멘토링(교사 또는 학생)'
-  volunteer_engineer_submission_location_flexibility_curriculum: 공개 교육과정 프로젝트에 기꺼이
-    참여하여 공헌
+  volunteer_engineer_submission_location_flexibility_curriculum: 공개 교육과정 프로젝트에 기꺼이 참여하여 공헌
   volunteer_engineer_submission_experience_unspecified: 경험이 없는
-  volunteer_engineer_submission_experience_university_student_or_researcher: 현재 대학생(또는
-    연구원)
+  volunteer_engineer_submission_experience_university_student_or_researcher: 현재 대학생(또는 연구원)
   volunteer_engineer_submission_experience_software_professional: 소프트웨어 전문가
   petition_age: 나이
   dashboard_landing_title: 선생님 홈페이지
@@ -275,8 +285,8 @@
   dashboard_action_delete_yes: 예
   dashboard_action_delete_no: 아니요
   dashboard_action_confirm: 삭제하시겠습니까?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: 삭제
+  dashboard_action_remove_confirm: 삭제할까요?
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
   dashboard_navigation_home_page: 교사 홈페이지
@@ -285,7 +295,7 @@
   dashboard_navigation_section_lesson_plans: 수업 계획 및 자료
   dashboard_navigation_section_community: 도움말 및 커뮤니티
   dashboard_navigation_section_pd: 고급 교육 및 개발
-  dashboard_navigation_section_speakers: 컴퓨터과학(정보과학) <br/> 특별 초청 연사들
+  dashboard_navigation_section_speakers: '컴퓨터과학(정보과학) <br/> 특별 초청 연사들'
   dashboard_navigation_all_sections: 학생 계정 및 진도
   dashboard_navigation_view_progress: 진도 보기
   dashboard_navigation_add_students: 학생 추가
@@ -295,8 +305,7 @@
   dashboard_navigation_section: '섹션: %{section_name}'
   dashboard_navigation_student: '학생: %{student_name}'
   dashboard_sections_new_section: 새 섹션
-  dashboard_sections_jumbotron_instruction: 새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은
-    모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다.
+  dashboard_sections_jumbotron_instruction: 새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다.
   dashboard_sections_table_section: 섹션
   dashboard_sections_table_secret: 로그인 유형
   dashboard_sections_table_grade: 등급
@@ -307,18 +316,16 @@
   dashboard_sections_choose_secret: 학생들에게 계정을 만들어주고 싶은 경우에는, 비밀단어/그림을 섹션에 설정해 주세요.
   dashboard_sections_secret_word: 비밀단어를 각 학생들에게 따로 부여할 수 있습니다.
   dashboard_sections_secret_picture: 비밀그림을 각 학생들에게 따로 부여할 수 있습니다.
-  dashboard_sections_secret_none: 학생들이 자신들의 비번등을 포함한 자기 계정에 대해서 관리하기를 원하는 경우, 비밀보호를
-    <b>없음</b> 으로 설정하세요.
+  dashboard_sections_secret_none: '학생들이 자신들의 비번등을 포함한 자기 계정에 대해서 관리하기를 원하는 경우, 비밀보호를 <b>없음</b> 으로 설정하세요.'
   dashboard_sections_print_secrets: 그 다음에 학생들 개인별로 줄 수 있는 계정 정보가 담긴 카드를 인쇄할 수 있습니다.
   dashboard_sections_switch_section: '섹션 바꾸기:'
   dashboard_students_add_student: 학생 추가
   dashboard_students_add_students: 여러 학생 추가
   dashboard_students_add_multiple: 학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.
-  dashboard_students_new_section: 새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을
-    눌러 학생들을 추가하세요.
+  dashboard_students_new_section: '새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을 눌러 학생들을 추가하세요.'
   dashboard_students_placeholder_name: 학생 이름
   dashboard_students_name: 이름
-  dashboard_students_progress: Progress
+  dashboard_students_progress: 진행도
   dashboard_students_age: 나이
   dashboard_students_gender: 성별
   dashboard_students_male: 남
@@ -336,18 +343,14 @@
   dashboard_students_share_section: '이 섹션의 로그인 페이지를 학생들에게 공유하기:'
   dashboard_students_print_info: 학생 로그인 정보와 함께 카드 출력하기.
   dashboard_students_secret_picture: 비밀그림
-  dashboard_students_reset_picture: 학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>
-    할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다.
+  dashboard_students_reset_picture: '학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다.'
   dashboard_students_secret_word: 비밀단어
-  dashboard_students_reset_word: 학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할
-    수 있습니다. 새로운 비밀단어는 학생이 로그인하면 생성될 것입니다.
+  dashboard_students_reset_word: '학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀단어는 학생이 로그인하면 생성될 것입니다.'
   dashboard_students_join_link: '학생들에게 계정을 만들고 섹션에 참여하라고 하세요:'
-  dashboard_students_no_email: 학생들이 이메일이 없는 경우, 학생들을 위한 계정을 만들어 주려는 경우, 이 섹션의 비밀보호를
-    <b>비밀단어</b>나 <b>비밀그림</b>으로 설정해 주세요.
+  dashboard_students_no_email: '학생들이 이메일이 없는 경우, 학생들을 위한 계정을 만들어 주려는 경우, 이 섹션의 비밀보호를 <b>비밀단어</b>나 <b>비밀그림</b>으로 설정해 주세요.'
   dashboard_students_print_page: 이 페이지 인쇄
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">학생들을
-    위한 개인정보보호 정책 문서</a>
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">학생들을 위한 개인정보보호 정책 문서</a>'
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
   dashboard_view_all_lesson_plans: 모든 레슨 계획 살펴보기
   dashboard_course1: '코스1:'
@@ -386,12 +389,11 @@
   dashboard_sections_word_account_creation: Code.org 에 의해 부여된 단어
   dashboard_sections_sign_in_question: 학생들이 어디서 가입을 하나요?
   dashboard_sections_sign_in_unique: '"학생 관리하기" 탭의 웹페이지 리스트를 유일하게 해주세요.'
-  dashboard_sections_sign_in_main: http://code.org 로 접속해서 "가입하기"를 누르세요.
+  dashboard_sections_sign_in_main: 'http://code.org 로 접속해서 "가입하기"를 누르세요.'
   dashboard_sections_password_account_creation: 학생이 만든 텍스트 암호
-  dashboard_sections_login_type_explanation: 이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한
-    내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.
+  dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
-  code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
+  code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
@@ -419,8 +421,7 @@
   previous: 이전
   next: 다음
   older_systems: 저사양 시스템용 튜토리얼들
-  older_systems_subheading: 구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href="http://browsehappy.com/"
-    target="_blank">최신버전 웹브라우저</a> 로 업그레이드하세요.
+  older_systems_subheading: '구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href="http://browsehappy.com/" target="_blank">최신버전 웹브라우저</a> 로 업그레이드하세요.'
   mobile_devices: 모바일 기기를 위한 튜토리얼들
   frozen_name: 안나, 엘사와 함께하는 코드
   codeorg_name: 컴퓨터 프로그램을 직접 만들어 보세요
@@ -449,10 +450,10 @@
   quorum_name: 가능한 프로그래밍(화면읽기 지원)
   codespark_name: Foos(기존 경험자 환영)
   kodable_name: Kodable(기존 경험자 환영)
-  tynkerapp_name: Tynker - 태블릿 버전
+  tynkerapp_name: 'Tynker - 태블릿 버전'
   robomindnl_name: 가상 로봇 프로그램
   flappy_name: 플래피 게임을 만들어 보세요
-  bitsbox_name: Bitbox - 게임 만들기
+  bitsbox_name: 'Bitbox - 게임 만들기'
   makegameswithus_name: 웹브라우져에서 아이폰 게임 만들기
   touchdevelop_name: TouchDevelop
   appinventor_name: 앱인벤터 Hour of Code
@@ -559,8 +560,7 @@
   lightbotintl_shortdescription: 코딩 개념을 가르칠 수 있는 게임
   codehs_shortdescription: 카렐과 강아지와 함께 재미있는 비주얼 프로그래밍 시작하기!
   codecademy_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
-  codecombat_shortdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript)
-    배우기!
+  codecombat_shortdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript) 배우기!
   codemonkey_shortdescription: 학생들은 원숭이가 바나나들을 잡도록하는 프로그래밍을 하게 됩니다.
   codeavengers_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
   processing_shortdescription: 한 시간짜리 프로세싱(Processing) 언어 튜토리얼
@@ -571,10 +571,9 @@
   kodable_shortdescription: 컴퓨터 프로그래밍 개념들을 가르칠 수 있는 재미있는 아이패드 게임
   tynkerapp_shortdescription: '재미있는 코딩 퍼즐들을 풀어가면서 프로그램을 배워보세요. '
   robomindnl_shortdescription: 가상 로봇을 위한 코드 작성하기
-  flappy_shortdescription: 게임을 직접 만들어보세요 - 플래피 버드, 샤크, 잠수함
+  flappy_shortdescription: '게임을 직접 만들어보세요 - 플래피 버드, 샤크, 잠수함'
   bitsbox_shortdescription: 실제 자바스크립트(JavaScript)를 사용한 앱 개발 및 공유 과정을 배워보세요.
-  makegameswithus_shortdescription: 아이폰 게임을 만들어보세요! 여러분의 몬스터를 가르쳐 움직이는 코드를 만들어 보면서
-    배워보세요.
+  makegameswithus_shortdescription: 아이폰 게임을 만들어보세요! 여러분의 몬스터를 가르쳐 움직이는 코드를 만들어 보면서 배워보세요.
   touchdevelop_shortdescription: '스마트폰에서 퍼즐을 풀고, 게임을 만들고, 코딩에 대한 모든 것을 배워보세요. '
   appinventor_shortdescription: 앱을 직접 만들어보세요!(안드로이드 만 가능)
   blockly_shortdescription: 오프라인에서도 배울 수 있도록 압축(ZIP) 파일을 다운로드 하세요.
@@ -584,108 +583,46 @@
   hourofcode_shortdescription: 새로운 code.org/hoc
   frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
   playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
-  codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
-    빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
-    실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
-  codeintl_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
-    빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
-    실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요.
-    혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  khanes_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을
-    배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  khanpt_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을
-    배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  khanhe_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을
-    배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  khanfr_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을
-    배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  khanpl_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을
-    배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  tynker_longdescription: 직접 게임을 만들고 친구들에게 자랑해보세요! 재미있는 단계별 코딩 퍼즐을 풀면서 프로그래밍의 개념들을
-    배워보세요. 애니메이션으로 움직이는 캐릭터들을 마음대로 만들고, 다양한 레벨과 막대기들을 만들어 보세요. 물리적인 내용들을 활용해 게임을 현실감
-    있게 만들어보세요. 블럭 명령어나 자바스크립트로 만들어진 실제 코드들을 살펴보세요. 그렇게 만든 게임을 아이패드나 안드로이드 태블릿에서 실행시켜보세요.
-    수 십여개의 재미있는 활동들에서 골라서 해보세요!
-  scratch_longdescription: 스크래치(Scratch)를 이용해 인터랙티브 게임, 이야기, 애니메이션 등을 직접 만들어보세요. &mdash;
-    그리고 친구들에게 자랑해 보세요. 이름을 움직이게 애니메이션한다거나, 크리스마스카드를 만들거나, 간단한 게임을 만들어보면서 시작할 수 있습니다.
-  lightbot_longdescription: 파랑색 판들에 불을 키는 라이트봇(Lightbot)을 프로그래밍하면서 실제적인 코딩의 기초를 배우는
-    프로그래밍 퍼즐 게임을 해볼 수 있습니다. 순차적 명령실행, 함수(프로시져) 만들기, 반복 실행 만들기 등을 통해 각 단계들을 해결해 나가면
-    됩니다. 모든 연령대에 대해서 가능합니다.
-  thinkersmith_longdescription: 미리 정의해둔 "로봇 어위 사전"을 사용해 학생들은 주어진 각 단계의 목표들을 해결하기 위해
-    해야할 작업들을 생각해 볼 수 있게 됩니다. 이 과정은 아이들이 기호와 동작들을 연관짓는 방법뿐만 아니라 디버깅이라는 매우 유용한 스킬을 배울
-    수 있습니다. "내 로봇 친구" 활동은 모둠 활동에 가장 적합하며, 학급 단위의 활동을 위해 교사용 워크북이 포함되어있습니다.
-  condcards_longdescription: 한 벌의 카드를 사용한 컴퓨터과학 "언플러그드" 활동을 통해 알고리즘과 조건/선택 명령문에 대해서
-    배워보세요. 학생들은 모둠을 이루어 활동을 할 수 있고 한 모둠에 한 벌의 카드만 있으면 됩니다.
-  lightbotintl_longdescription: '4세 이상부터, iOS나 안드로이드(또는 웹 브라우져)에서, 아주 기초적인 프로그래밍부터
-    시작해서 프로그래밍의 핵심 로직(논리와 절차)을 배울 수 있습니다. 순차적 명령어 실행, 패턴 찾기, 프로시져(함수) 사용하기, 반복 실행
-    활용하기를 배울 수 있습니다! '
-  codehs_longdescription: 프로그래밍은 컴퓨터에게 명령을 주는 것이 전부이고, 이는 강아지에게 명령을 내리는 것과 똑같습니다.
-    카렐과 강아지를 통해 코드를 배워보세요. &mdash; 기초적인 개념들을 재미있고, 접근하기 편하고, 시각적으로 보여주는 방법들로 프로그래밍을
-    배움으로서 완전 처음 하는 사람들도 명령과 함수들을 배울 수 있습니다. 튜토리얼은 학생들 혼자 힘으로도 따라갈 수 있지만 선생님들이 가입하고
-    선생님 메뉴를 통해 학생들의 진도를 살펴보면서 지도할 수도 있습니다!
-  codecademy_longdescription: 코드카데미(Codecademy) 는 전세계의 수천만 학생들에 의해서 사용되는 자바스크립트를 통해
-    컴퓨터과학의 기초를 소개하는 인터랙티브한 학생 자기주도형 과정입니다. 간편하게 Hour of Code 를 경험할 수 있는 퀴즈, 슬라이드,
-    프로젝트가 마지막에 준비되어있습니다.
-  codecombat_longdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript)
-    배우기!
-  codemonkey_longdescription: 코드몽키(CodeMonkey)는 실제 프로그래밍 언어 코딩을 배울 수 있는 온라인 게임입니다!
-    학생들은 각 단계가 올라갈 때마다 원숭이가 바나나를 집도록 프로그램해야합니다. 한 번의 클릭으로 각 단계마다 별 점수를 모으고 다른 사람들과
-    공유할 수 있습니다.
-  codeavengers_longdescription: 자바스크립트(JavaScript)를 이용하는 10개의 짧은 미션들을 통해, 2인용 2D 탑다운
-    방식 게임을 만들어보세요. 그리고 나서 친구들에게 기초적인 프로그래밍 개념(변수와 조건/선택 명령)을 배울 수 있는 퀴즈를 만들고 풀어보라고
-    해보세요. 학급별 순위표의 상위 등수를 얻기 위해 점수와 뱃지를 얻어가세요.
-  processing_longdescription: 비주얼 아트의 범주에서의 프로그래밍에 대한 소개 과정으로서 프로세싱(Processing) 프로그래밍
-    언어가 사용됩니다. 짧은 동영상 강의들은 인터랙티브한 드로잉 프로그램을 설계하기 위한 단계적인 코딩 예시를 소개합니다.
-  robomind_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한
-    프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
-  groklearning_longdescription: '파이썬(Python) 프로그래밍 언어를 이용해 "엘리자"라는 심리치료 채팅 로봇 프로그램을
-    만들어 보세요. 엘리자에게 말하는 방법과 말해야하는 것들을 가르칠 수 있습니다. 친구들이 컴퓨터가 아니고 사람이라고 생각하도록 속일 수 있을까요? '
-  quorum_longdescription: 이 튜토리얼은 시각 장애인을 고려하여 만들어졌으며, 화면 읽기 도구와 함께 동작합니다. 여행 중인 마리를
-    생물학 연구실에 프로그래머로 참여하도록 하여 Quorum 프로그래밍 언어를 배울 수 있도록 해보세요. 이 튜토리얼은 온라인 예시 활동들과 함께
-    혼자 힘으로도 충분히 할 수 있습니다.
-  codespark_longdescription: 푸스(Foos)는 아이들에게 친근하면서도 재미있는 방법으로 컴퓨터 프로그래밍에 대해 배울 수 있도록
-    해줍니다. 귀여운 캐릭터를 프로그램하여 퍼즐을 풀고 가상의 세계를 실제 세상으로 가져와 보세요. 이 게임은 "무료" 이기 때문에 누구나 해볼
-    수 있습니다.
-  kodable_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍 기초들을
-    소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
-  tynkerapp_longdescription: 재미있는 코딩 퍼즐들을 해결해 가면서 프로그래밍을 배워보세요. 테마 그래픽, 10개 이상의 게임키트와
-    수정가능한 캐릭터들을 이용해 게임과 이야기들을 아주 쉽게 만들 수 있습니다. 인터넷 연결이 반드시 필요하지는 않습니다. 자신이 만든 것을 웹에서도
-    확인할 수 있습니다.
-  robomindnl_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은
-    간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
-  flappy_longdescription: 드래그 앤 드롭 프로그래밍으로 플래피 버드 게임을 직접 만들고, 다른 모양(플래피 샤크, 플래피 산타
-    등등)으로 변형해 보세요. 한 번의 클릭으로 아이폰에 게임으로 추가할 수 있습니다.
-  bitsbox_longdescription: 자신의 가상 태블릿을 설정한 후, 실행할 수 있는 앱을 만들고 공유해 보세요. 간단한 과정을 통해
-    실제 자바스크립트(Javascript) 언어를 이용해 어린 아이들도 만들 수 있습니다. 그리고 더 자세히 배울 수 있는 경험을 얻어보세요.
-  makegameswithus_longdescription: 스위프트(Swift)라는 시작하기 쉬운 새로운 언어를 이용해 아이폰 게임을 만들면서
-    코드를 배워 보세요. 포켓몬 게임과 비슷한 액션 게임을 만들어서 자신의 몬스터가 새로운 동작을 할 수 있도록 가르쳐보세요. 자신의 몬스터가
-    승리할 수 있도록 도와주면서 변수, 매소드, 객체 등에 대해 배울 수 있습니다.
-  touchdevelop_longdescription: 화면 터치 기반의 코드 편집기를 통해, 픽셀 아트, 퍼즐 풀기, 새 날리기 게임 등을 만드는
-    방법들에 대해서 가이드 받게 됩니다.
-  appinventor_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한
-    앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을
-    만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도
-    가능합니다.
-  blockly_longdescription: 인터넷 접속이 느린(혹은 인터넷에 연결할 수 없거나) 컴퓨터들만 있다고요? 블러클리(Blockly)
-    튜토리얼을 다운로드 받으세요. 블러클리는 code.org 튜토리얼의 초기버전이라고 할 수 있습니다. - 3MB 의 적은 압축(ZIP) 파일을
-    다운로드 받으면 컴퓨터나 메모리스틱에 넣어 가지고 다닐 수 있습니다.
-  thinkersmith2_longdescription: 학생들은 문자들을 켜짐(on)과 꺼짐(offf) 으로 표현할 수 있는, 2진수 형태으로
-    표현하고 저장하는 방법에 대해 배울 수 있습니다. 수업을 마칠 때 쯤이면 학생들은 자기 이니셜을 코드화해서 집에 가져갈 수 있게 될 것입니다.
-  kodableunplugged_longdescription: 백지 종이를 사용해 설계하는, 퍼즈패밀리 프랜지(fuzzFamily Frenzy)는
-    5세 이상의 아이들을 위한 프로그래밍 로직 소개 과정입니다. 선생님이 게임에 대해서 설명해 주면, 학생들은 간단한 장애물 코스를 해결하기 위해
-    짝 학생을 프로그램하게 됩니다.
-  projguts_longdescription: 이 언플러그드 활동은 학생들에게 서로 다른 버전의 가위/바위/보 게임을 수행함으로서 모델링과 시뮬레이션
-    작업이 이루어지는 방법을 배우게 되며, 서로 다른 모델링 실험의 결과를 살펴볼 수 있게 됩니다.
+  codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
+  codeintl_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  khan_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanes_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanpt_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanhe_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanfr_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanpl_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  tynker_longdescription: 직접 게임을 만들고 친구들에게 자랑해보세요! 재미있는 단계별 코딩 퍼즐을 풀면서 프로그래밍의 개념들을 배워보세요. 애니메이션으로 움직이는 캐릭터들을 마음대로 만들고, 다양한 레벨과 막대기들을 만들어 보세요. 물리적인 내용들을 활용해 게임을 현실감 있게 만들어보세요. 블럭 명령어나 자바스크립트로 만들어진 실제 코드들을 살펴보세요. 그렇게 만든 게임을 아이패드나 안드로이드 태블릿에서 실행시켜보세요. 수 십여개의 재미있는 활동들에서 골라서 해보세요!
+  scratch_longdescription: '스크래치(Scratch)를 이용해 인터랙티브 게임, 이야기, 애니메이션 등을 직접 만들어보세요. &mdash; 그리고 친구들에게 자랑해 보세요. 이름을 움직이게 애니메이션한다거나, 크리스마스카드를 만들거나, 간단한 게임을 만들어보면서 시작할 수 있습니다.'
+  lightbot_longdescription: 파랑색 판들에 불을 키는 라이트봇(Lightbot)을 프로그래밍하면서 실제적인 코딩의 기초를 배우는 프로그래밍 퍼즐 게임을 해볼 수 있습니다. 순차적 명령실행, 함수(프로시져) 만들기, 반복 실행 만들기 등을 통해 각 단계들을 해결해 나가면 됩니다. 모든 연령대에 대해서 가능합니다.
+  thinkersmith_longdescription: '미리 정의해둔 "로봇 어위 사전"을 사용해 학생들은 주어진 각 단계의 목표들을 해결하기 위해 해야할 작업들을 생각해 볼 수 있게 됩니다. 이 과정은 아이들이 기호와 동작들을 연관짓는 방법뿐만 아니라 디버깅이라는 매우 유용한 스킬을 배울 수 있습니다. "내 로봇 친구" 활동은 모둠 활동에 가장 적합하며, 학급 단위의 활동을 위해 교사용 워크북이 포함되어있습니다.'
+  condcards_longdescription: '한 벌의 카드를 사용한 컴퓨터과학 "언플러그드" 활동을 통해 알고리즘과 조건/선택 명령문에 대해서 배워보세요. 학생들은 모둠을 이루어 활동을 할 수 있고 한 모둠에 한 벌의 카드만 있으면 됩니다.'
+  lightbotintl_longdescription: '4세 이상부터, iOS나 안드로이드(또는 웹 브라우져)에서, 아주 기초적인 프로그래밍부터 시작해서 프로그래밍의 핵심 로직(논리와 절차)을 배울 수 있습니다. 순차적 명령어 실행, 패턴 찾기, 프로시져(함수) 사용하기, 반복 실행 활용하기를 배울 수 있습니다! '
+  codehs_longdescription: '프로그래밍은 컴퓨터에게 명령을 주는 것이 전부이고, 이는 강아지에게 명령을 내리는 것과 똑같습니다. 카렐과 강아지를 통해 코드를 배워보세요. &mdash; 기초적인 개념들을 재미있고, 접근하기 편하고, 시각적으로 보여주는 방법들로 프로그래밍을 배움으로서 완전 처음 하는 사람들도 명령과 함수들을 배울 수 있습니다. 튜토리얼은 학생들 혼자 힘으로도 따라갈 수 있지만 선생님들이 가입하고 선생님 메뉴를 통해 학생들의 진도를 살펴보면서 지도할 수도 있습니다!'
+  codecademy_longdescription: 코드카데미(Codecademy) 는 전세계의 수천만 학생들에 의해서 사용되는 자바스크립트를 통해 컴퓨터과학의 기초를 소개하는 인터랙티브한 학생 자기주도형 과정입니다. 간편하게 Hour of Code 를 경험할 수 있는 퀴즈, 슬라이드, 프로젝트가 마지막에 준비되어있습니다.
+  codecombat_longdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript) 배우기!
+  codemonkey_longdescription: 코드몽키(CodeMonkey)는 실제 프로그래밍 언어 코딩을 배울 수 있는 온라인 게임입니다! 학생들은 각 단계가 올라갈 때마다 원숭이가 바나나를 집도록 프로그램해야합니다. 한 번의 클릭으로 각 단계마다 별 점수를 모으고 다른 사람들과 공유할 수 있습니다.
+  codeavengers_longdescription: 자바스크립트(JavaScript)를 이용하는 10개의 짧은 미션들을 통해, 2인용 2D 탑다운 방식 게임을 만들어보세요. 그리고 나서 친구들에게 기초적인 프로그래밍 개념(변수와 조건/선택 명령)을 배울 수 있는 퀴즈를 만들고 풀어보라고 해보세요. 학급별 순위표의 상위 등수를 얻기 위해 점수와 뱃지를 얻어가세요.
+  processing_longdescription: 비주얼 아트의 범주에서의 프로그래밍에 대한 소개 과정으로서 프로세싱(Processing) 프로그래밍 언어가 사용됩니다. 짧은 동영상 강의들은 인터랙티브한 드로잉 프로그램을 설계하기 위한 단계적인 코딩 예시를 소개합니다.
+  robomind_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
+  groklearning_longdescription: '파이썬(Python) 프로그래밍 언어를 이용해 "엘리자"라는 심리치료 채팅 로봇 프로그램을 만들어 보세요. 엘리자에게 말하는 방법과 말해야하는 것들을 가르칠 수 있습니다. 친구들이 컴퓨터가 아니고 사람이라고 생각하도록 속일 수 있을까요? '
+  quorum_longdescription: 이 튜토리얼은 시각 장애인을 고려하여 만들어졌으며, 화면 읽기 도구와 함께 동작합니다. 여행 중인 마리를 생물학 연구실에 프로그래머로 참여하도록 하여 Quorum 프로그래밍 언어를 배울 수 있도록 해보세요. 이 튜토리얼은 온라인 예시 활동들과 함께 혼자 힘으로도 충분히 할 수 있습니다.
+  codespark_longdescription: '푸스(Foos)는 아이들에게 친근하면서도 재미있는 방법으로 컴퓨터 프로그래밍에 대해 배울 수 있도록 해줍니다. 귀여운 캐릭터를 프로그램하여 퍼즐을 풀고 가상의 세계를 실제 세상으로 가져와 보세요. 이 게임은 "무료" 이기 때문에 누구나 해볼 수 있습니다.'
+  kodable_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍 기초들을 소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
+  tynkerapp_longdescription: 재미있는 코딩 퍼즐들을 해결해 가면서 프로그래밍을 배워보세요. 테마 그래픽, 10개 이상의 게임키트와 수정가능한 캐릭터들을 이용해 게임과 이야기들을 아주 쉽게 만들 수 있습니다. 인터넷 연결이 반드시 필요하지는 않습니다. 자신이 만든 것을 웹에서도 확인할 수 있습니다.
+  robomindnl_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
+  flappy_longdescription: 드래그 앤 드롭 프로그래밍으로 플래피 버드 게임을 직접 만들고, 다른 모양(플래피 샤크, 플래피 산타 등등)으로 변형해 보세요. 한 번의 클릭으로 아이폰에 게임으로 추가할 수 있습니다.
+  bitsbox_longdescription: 자신의 가상 태블릿을 설정한 후, 실행할 수 있는 앱을 만들고 공유해 보세요. 간단한 과정을 통해 실제 자바스크립트(Javascript) 언어를 이용해 어린 아이들도 만들 수 있습니다. 그리고 더 자세히 배울 수 있는 경험을 얻어보세요.
+  makegameswithus_longdescription: 스위프트(Swift)라는 시작하기 쉬운 새로운 언어를 이용해 아이폰 게임을 만들면서 코드를 배워 보세요. 포켓몬 게임과 비슷한 액션 게임을 만들어서 자신의 몬스터가 새로운 동작을 할 수 있도록 가르쳐보세요. 자신의 몬스터가 승리할 수 있도록 도와주면서 변수, 매소드, 객체 등에 대해 배울 수 있습니다.
+  touchdevelop_longdescription: 화면 터치 기반의 코드 편집기를 통해, 픽셀 아트, 퍼즐 풀기, 새 날리기 게임 등을 만드는 방법들에 대해서 가이드 받게 됩니다.
+  appinventor_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
+  blockly_longdescription: '인터넷 접속이 느린(혹은 인터넷에 연결할 수 없거나) 컴퓨터들만 있다고요? 블러클리(Blockly) 튜토리얼을 다운로드 받으세요. 블러클리는 code.org 튜토리얼의 초기버전이라고 할 수 있습니다. - 3MB 의 적은 압축(ZIP) 파일을 다운로드 받으면 컴퓨터나 메모리스틱에 넣어 가지고 다닐 수 있습니다.'
+  thinkersmith2_longdescription: 학생들은 문자들을 켜짐(on)과 꺼짐(offf) 으로 표현할 수 있는, 2진수 형태으로 표현하고 저장하는 방법에 대해 배울 수 있습니다. 수업을 마칠 때 쯤이면 학생들은 자기 이니셜을 코드화해서 집에 가져갈 수 있게 될 것입니다.
+  kodableunplugged_longdescription: 백지 종이를 사용해 설계하는, 퍼즈패밀리 프랜지(fuzzFamily Frenzy)는 5세 이상의 아이들을 위한 프로그래밍 로직 소개 과정입니다. 선생님이 게임에 대해서 설명해 주면, 학생들은 간단한 장애물 코스를 해결하기 위해 짝 학생을 프로그램하게 됩니다.
+  projguts_longdescription: 이 언플러그드 활동은 학생들에게 서로 다른 버전의 가위/바위/보 게임을 수행함으로서 모델링과 시뮬레이션 작업이 이루어지는 방법을 배우게 되며, 서로 다른 모델링 실험의 결과를 살펴볼 수 있게 됩니다.
   hourofcode_longdescription: 새로운 code.org/hoc
-  frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게
-    눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
-  playlab_longdescription: 플레이 랩으로 이야기나 게임을 만들어보세요! 동물, 해적, 좀비, 닌자 등 여러 가지 캐릭터들을 움직이고,
-    소리내고, 점수를 올리고, 파이어볼을 쏘는 등의 움직임들이 가능합니다.
+  frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
+  playlab_longdescription: 플레이 랩으로 이야기나 게임을 만들어보세요! 동물, 해적, 좀비, 닌자 등 여러 가지 캐릭터들을 움직이고, 소리내고, 점수를 올리고, 파이어볼을 쏘는 등의 움직임들이 가능합니다.
   codeorg_beyond_name: 컴퓨터과학(정보과학) 소개 코스(유치원-중2)
   khan_beyond_name: 컴퓨터 프로그래밍 배우기
   tynker_beyond_name: 집에서 프로그래밍 배우기
@@ -834,132 +771,40 @@
   processing_beyond_shortdescription: 프로세싱(Processing) 언어 배우기
   alice_beyond_shortdescription: 3D 환경에서 프로그래밍 가르치기
   sphero_beyond_shortdescription: SPRK 수업은 아이들에게 재미있고 멋진 로봇 프로그래밍 과정이며 수학 과학 능력도 키워줍니다.
-  codeorg_beyond_longdescription: 드래그 앤 드롭 프로그래밍으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 언플러그드
-    수업활동, 게임과 유사한, 자기주도적 튜토리얼, 빌게이츠/마크주커버그/앵그리버드/식물과좀비 등이 조합되어있는 15-20개의 과정이 들어있는
-    3개의 풀 코스 과정이 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘, 함수, 변수 등을 배워보세요.
-  khan_beyond_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의
-    기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
-  tynker_beyond_longdescription: 타인커(Tynker)는 프로그래밍을 재미있고 쉽게 만듭니다. 비주얼하게 보여줍니다. 코드의
-    블럭들을 배치해 아이들도 게임과 모바일 앱을 만들 수 있습니다. 프로그래밍의 문법/형식을 알 필요가 없습니다. 아이들은 아이디어들을 애니메이션
-    이야기와 수학적 예술 작품으로 바로 변형시킬 수 있습니다. 더 수준 높은 학습도 가능하게 합니다. 아이들이 기초적 지식과 개념들을 배우고 나면,
-    타인커는 문법/형식이 함께 들어간 고 수준의 개념들을 더 많이 알려줍니다.
-  scratch_beyond_longdescription: 스크래치(Scratch)를 이용해 인터랙티브 게임, 이야기, 애니메이션 등을 직접 만들어보세요.
-    &mdash; 그리고 친구들에게 자랑해 보세요. 이름을 움직이게 애니메이션한다거나, 크리스마스카드를 만들거나, 간단한 게임을 만들어보면서 시작할
-    수 있습니다.
-  lightbot_beyond_longdescription: '4세 이상부터, iOS나 안드로이드(또는 웹 브라우져)에서, 아주 기초적인 프로그래밍부터
-    시작해서 프로그래밍의 핵심 로직(논리와 절차)을 배울 수 있습니다. 순차적 명령어 실행, 패턴 찾기, 프로시져(함수) 사용하기, 반복 실행
-    활용하기를 배울 수 있습니다! '
-  codecademy_beyond_longdescription: 코드카데미(Codecademy) 는 전세계의 수천만 학생들에 의해서 사용되는 자바스크립트를
-    통해 컴퓨터과학의 기초를 소개하는 인터랙티브한 학생 자기주도형 과정입니다. 간편하게 Hour of Code 를 경험할 수 있는 퀴즈, 슬라이드,
-    프로젝트가 마지막에 준비되어있습니다.
-  kodable_beyond_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍
-    기초들을 소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
-  scratchjr_beyond_longdescription: 스크래치주니어(ScratchJr)는 아이들이 인터랙티브 스토리나 게임을 만들 수 있도록
-    하는 기초 교육용 프로그래밍 언어입니다. 아이들은 그래픽 프로그래밍 블럭들을 이용해 움직이고, 점프하고, 춤추고, 노래부르게 할 수 있습니다.
-  hopscotch_beyond_longdescription: 홉스코치(Hopscotch) 프로그래밍 언어를 사용한 자기 주도적 아이패드 학생 튜토리얼.
-    학생들은 자기 아이패드를 위한 게임과 앱을 만들 수 있습니다. 학생들은 혼자 또는 친구들(아이패드 1대당 최대 3명)과 함께 할 수 있습니다.
-  pocketcode_beyond_longdescription: 포켓 코드(Pocket Code)를 이용해 스마트폰에 직접 게임을 만들어 넣어 보세요!
-    스카이다이버 스티브가 소포를 배달 할 수 있도록 도와주세요. 친구들이나 다른 사람들이 해 볼 수 있도록 공유할 수 있습니다!
-  groklearning_beyond_longdescription: 파이썬(python) 프로그래밍 언어 소개 과정은 프로그래밍 언어를 경험해보지
-    못한 사람들도 할 수 있습니다. 유니크한 소개 컨텐츠들의 조합과 문제들은 파이썬 언어와 파이썬 프로그래밍을 잘 이해할 수 있도록 해 줄 것입니다.
-    이 내용들은 다양한 연령대, 다양한 문화적 배경을 가진 학생들에게 교육되었기 때문에 여러분들 모두에게도 적합할 것입니다.
-  hacketyhack_beyond_longdescription: '해키티 핵(Hackety Hack)은 프로그래밍의 가장 기초를 가장 바닥부터
-    배울 수 있습니다. 어떤 프로그래밍 경험도 필요하지 않습니다! 해키티 핵과 함께 여러분들은 루비(Ruby) 프로그래밍 언어를 배우게 될 것입니다.
-    루비는 데스크탑 PC 응용프로그램, 웹 사이트 등 모든 종류의 프로그램들에 사용되고 있습니다.[참고사항: 데스트탑 PC에 설치 필요]'
-  robomind_beyond_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인
-    과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수
-    있습니다.
-  makegameswithus_beyond_longdescription: 오브젝트브C(Objective C)라는 것을 들어보셨나요? 아이폰 게임을
-    한 시간 만에 만들어보세요! 코드를 만들고 테스트하고 실행시켜보는 모든 과정을 웹 브라우져에서 해 볼 수 있고, 또 만든 것을 페이스북이나
-    친구들에게 해보라고 할 수도 있습니다! 아이폰 프로그램 개발 경험은 전혀 필요하지 않습니다. 변수, 매소드, 객체가 무엇인지 이해하게 될 것입니다.
-  appinventor_beyond_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한
-    3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게
-    직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라
-    학급별로도 가능합니다.
-  touchdevelop_beyond_longdescription: 터치디벨롭(TouchDevelop)은 아이패드, 아이폰, 안드로이드, PC,
-    맥, 윈도우 폰에서 실행되는 앱을 만들 수 있게 해 줍니다. 손가락 터치는 스마트 폰이나 태블릿에서도 코딩을 재미있게 해줍니다.
-  codehs_beyond_longdescription: '카렐과 강아지(Karel & Dog)를 통해 프로그래밍의 기초를 재미있고 편리하게 배워보세요.
-    비주얼적인 소개 과정을 통해 강아지에게 명령을 내리는 것과 똑같은 방법으로 컴퓨터에게 명령을 주면서 코딩을 배워보세요. 이 튜토리얼은 선생님과
-    함께 하면 좋습니다만, 혼자서도 충분히 할 수 있습니다. [참고사항: 유료]'
-  udemy_beyond_longdescription: '지금까지 코드라는 것을 한 줄이라도 본적이 없어도 , 전문 강사를 통해 배우면서 유데미(Udemy)의
-    과정을 할 수 있습니다.[참고사항: 유료]'
-  lynda_beyond_longdescription: 'C/C++ 의 객체지향 프로그래밍 기초개념부터, 자바(Java) 프로그래밍, 웹 응용프로그램을
-    만드는 방법까지 배워보세요. 우리의 개발자 튜토리얼들은 통계적 처리 언어인 R언어로 시작해서 PHP, MySQL 데이터베이스와 함께 통작하는
-    모바일 앱 등을 만들고 개발할 수 있도록 하는 내용들을 학습할 수 있도록 도와드립니다. [참고사항: 유료]'
-  edx_beyond_longdescription: CS50x 는 하버드 대학의 프로그래밍 경험이 없는 전공/비전공 학생들을 위한 강좌로, 컴퓨터과학
-    기반의 지식 기업과 프로그래밍의 예술을 소개하는 강좌입니다. 추상화, 알고리즘, 자료구조, 캡슐화, 자원관리, 보안, 소프트웨어공학, 웹 개발
-    등의 주제들을 포함하고 있습니다. C, PHP, JavaScript+SQL, CSS, HTML 등의 언어가 포함됩니다. 온라인 버전의 CS50x는
-    하버드 대학에서 두번째로 가장 큰 강좌입니다.
-  coursera_beyond_longdescription: '스탠포드 대학의 CS 101 강좌는 닉 팔란테에 의해 교육되었습니다.(무료!) CS101
-    은 컴퓨터과학에 대해서 전혀 모르는 사람들을 위해, 가장 기초적인 아이디어들을 교육합니다.  짧은 코드를 실행시키고 실험하면서 강력하게 실생활에
-    활용하거나 컴퓨터의 한계를 시험합니다. CS101은 오늘날의 컴퓨터들에 대한 일반적인 기초 지식들도 교육합니다: 컴퓨터란?, 하드웨어란? 소프트웨어란?
-    인터넷이란? 웹 브라우져만 사용할 줄 알면 누구나 가능합니다.'
-  udacity_beyond_longdescription: 이 코스에서는 컴퓨터과학의 핵심 개념들을 배우고, 웹 탐색 프로그램들을 만드는 방법을
-    배울 수 있습니다. 프로그래밍을 배워 본 적이 없어도 가능합니다. 초급자 환영! 이 코스를 마치고 나면, 컴퓨터과학에 대한 핵심 개념을 이해하고
-    원하는 파이썬(python) 프로그램을 만들 수 있게 됩니다. 이 코스는 중급 수준의 컴퓨팅 과정을 준비할 수 있게 도와줄 것입니다.
-  teachingtree_beyond_longdescription: 티칭트리(TeachingTree)는 오픈 플랫폼으로 누구나 교육 자료를 만들어낼
-    수 있습니다. 우리의 목표는 학생들이 각각의 개별 개념들을 배우는데 필요한 적당한 클립들에 빠르게 접근할 수 있도록 합니다. 어느 누구라도
-    동영상이나 연결된 개념들을 추가해 재미있게 배울 수 있습니다.
-  kodu_beyond_longdescription: 코두(Kodu)는 아이들이 비주얼 프로그래밍 언어를 이용해 PC 나 XBox 에서 실행되는
-    게임을 만들 수 있게 해 줍니다. 코두는 창의성, 문제 해결, 스토리텔링, 프로그래밍을 가르치기 위해 사용될 수 있습니다. 남녀노소 누구라도
-    프로그래밍 스킬이나 설계 없이 게임을 만들 수 있습니다. PC용 코두는 무료입니다. XBox 용 코두는 미국 Xbox 마켓의 Indie 게임즈
-    채널에서 5$ 정도에 구입할 수 있습니다.
-  cargobot_beyond_longdescription: 카고봇(Cargo-Bot)은 로봇으로 상자를 움직이는 퍼즐 게임입니다. 사운드도 간단하고,
-    36 가지 모양의 친근한 퍼즐, 기억에 남는 음악과 멋진 레티나 디스플레이 그래픽이 제공됩니다. 자신이 만든 해법들을 녹화해 친구들에게 유투브로
-    공개할 수도 있습니다.
-  kidsruby_beyond_longdescription: '재미있게 게임을 만들거나, 루비를 이용해 숙제를 멋지게 해결해 보세요! 부모님과 선생님들에게
-    루비(Ruby) 프로그래밍을 배우고 있다고 하면 됩니다. 무료이면서 어떤 컴퓨터에서라도 실행됩니다. [참고사항: 데스크탑 PC에 설치 필요]'
-  w3schools_beyond_longdescription: 자신의 컴퓨터로 웹사이트를 만드는 방법을 배워보세요. 하루 만에 서버의 기초들을 배워보세요.
-    데이터베이스를 자신의 웹사이트에 추가해보세요.
-  codeavengers_beyond_longdescription: 게임, 앱, 웹사이트를 프로그래밍하는 방법을 배워보세요. 전문가들에 의해 초보
-    단계부터 완벽히 설계된 이해하기 쉬운 설명들과 필요할 때마다 주어지는 도움들이 있습니다. HTML, CSS, JavaScript 코스들은 모든
-    연령에도 적합하면서도 재미있게 배울 수 있는 코드 챌린지와 게임 변형이 있습니다.
-  mozilla_beyond_longdescription: 띰블(Thimble)은 자신의 웹 페이지를 어처구니 없게 쉽게 만들 수 있도록 해줍니다.
-    웹 브라우져에서 HTML과 CSS를 편집한 후에 바로 확인해 볼 수 있습니다. 완성이 되면 한 번의 클릭으로 웹 페이지를 운영하고 공개할 수
-    있습니다. 초보자, 전문가 모두에게 좋습니다.
-  codecombat_beyond_longdescription: 코드(주문 spells) 를 사용해 영웅을 조종하거나, 미로를 돌아다니고, 괴물을
-    잡고, 적을 속이고, 같은 편을 구하는 마법사처럼 놀아보세요! 완전 초보라도 HTML 5 웹 게임의 자바스크립트(JavaScript)를 배워보세요.
-  codea_beyond_longdescription: 아이패드용 코디아(Codea)는 게임, 시뮬레이션 &mdash; 또는 자신이 가진 비주얼적
-    아이디어를 만들 수 있게 해줍니다. 자신의 생각들을 아이패드의 멀티터치와 가속도 센서를 이용해 인터랙티브한 작품으로 만들어 보세요. 코디아는
-    여러분들이 사용하게 될 가장 아름다운 코드 편집기가 될 것이며 쉽습니다. 코디아는 코드를 터치할 수 있도록 설계되었습니다. 수를 바꾸고 싶으면?
-    탭하고 드래그 하면 됩니다. 컬러나 이미지는? 탭 동작으로 비주얼 편집기를 열어 원하는 것을 정확하게 선택할 수 있도록 해줍니다.
+  codeorg_beyond_longdescription: 드래그 앤 드롭 프로그래밍으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 언플러그드 수업활동, 게임과 유사한, 자기주도적 튜토리얼, 빌게이츠/마크주커버그/앵그리버드/식물과좀비 등이 조합되어있는 15-20개의 과정이 들어있는 3개의 풀 코스 과정이 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘, 함수, 변수 등을 배워보세요.
+  khan_beyond_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  tynker_beyond_longdescription: 타인커(Tynker)는 프로그래밍을 재미있고 쉽게 만듭니다. 비주얼하게 보여줍니다. 코드의 블럭들을 배치해 아이들도 게임과 모바일 앱을 만들 수 있습니다. 프로그래밍의 문법/형식을 알 필요가 없습니다. 아이들은 아이디어들을 애니메이션 이야기와 수학적 예술 작품으로 바로 변형시킬 수 있습니다. 더 수준 높은 학습도 가능하게 합니다. 아이들이 기초적 지식과 개념들을 배우고 나면, 타인커는 문법/형식이 함께 들어간 고 수준의 개념들을 더 많이 알려줍니다.
+  scratch_beyond_longdescription: '스크래치(Scratch)를 이용해 인터랙티브 게임, 이야기, 애니메이션 등을 직접 만들어보세요. &mdash; 그리고 친구들에게 자랑해 보세요. 이름을 움직이게 애니메이션한다거나, 크리스마스카드를 만들거나, 간단한 게임을 만들어보면서 시작할 수 있습니다.'
+  lightbot_beyond_longdescription: '4세 이상부터, iOS나 안드로이드(또는 웹 브라우져)에서, 아주 기초적인 프로그래밍부터 시작해서 프로그래밍의 핵심 로직(논리와 절차)을 배울 수 있습니다. 순차적 명령어 실행, 패턴 찾기, 프로시져(함수) 사용하기, 반복 실행 활용하기를 배울 수 있습니다! '
+  codecademy_beyond_longdescription: 코드카데미(Codecademy) 는 전세계의 수천만 학생들에 의해서 사용되는 자바스크립트를 통해 컴퓨터과학의 기초를 소개하는 인터랙티브한 학생 자기주도형 과정입니다. 간편하게 Hour of Code 를 경험할 수 있는 퀴즈, 슬라이드, 프로젝트가 마지막에 준비되어있습니다.
+  kodable_beyond_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍 기초들을 소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
+  scratchjr_beyond_longdescription: 스크래치주니어(ScratchJr)는 아이들이 인터랙티브 스토리나 게임을 만들 수 있도록 하는 기초 교육용 프로그래밍 언어입니다. 아이들은 그래픽 프로그래밍 블럭들을 이용해 움직이고, 점프하고, 춤추고, 노래부르게 할 수 있습니다.
+  hopscotch_beyond_longdescription: 홉스코치(Hopscotch) 프로그래밍 언어를 사용한 자기 주도적 아이패드 학생 튜토리얼. 학생들은 자기 아이패드를 위한 게임과 앱을 만들 수 있습니다. 학생들은 혼자 또는 친구들(아이패드 1대당 최대 3명)과 함께 할 수 있습니다.
+  pocketcode_beyond_longdescription: 포켓 코드(Pocket Code)를 이용해 스마트폰에 직접 게임을 만들어 넣어 보세요! 스카이다이버 스티브가 소포를 배달 할 수 있도록 도와주세요. 친구들이나 다른 사람들이 해 볼 수 있도록 공유할 수 있습니다!
+  groklearning_beyond_longdescription: 파이썬(python) 프로그래밍 언어 소개 과정은 프로그래밍 언어를 경험해보지 못한 사람들도 할 수 있습니다. 유니크한 소개 컨텐츠들의 조합과 문제들은 파이썬 언어와 파이썬 프로그래밍을 잘 이해할 수 있도록 해 줄 것입니다. 이 내용들은 다양한 연령대, 다양한 문화적 배경을 가진 학생들에게 교육되었기 때문에 여러분들 모두에게도 적합할 것입니다.
+  hacketyhack_beyond_longdescription: '해키티 핵(Hackety Hack)은 프로그래밍의 가장 기초를 가장 바닥부터 배울 수 있습니다. 어떤 프로그래밍 경험도 필요하지 않습니다! 해키티 핵과 함께 여러분들은 루비(Ruby) 프로그래밍 언어를 배우게 될 것입니다. 루비는 데스크탑 PC 응용프로그램, 웹 사이트 등 모든 종류의 프로그램들에 사용되고 있습니다.[참고사항: 데스트탑 PC에 설치 필요]'
+  robomind_beyond_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
+  makegameswithus_beyond_longdescription: 오브젝트브C(Objective C)라는 것을 들어보셨나요? 아이폰 게임을 한 시간 만에 만들어보세요! 코드를 만들고 테스트하고 실행시켜보는 모든 과정을 웹 브라우져에서 해 볼 수 있고, 또 만든 것을 페이스북이나 친구들에게 해보라고 할 수도 있습니다! 아이폰 프로그램 개발 경험은 전혀 필요하지 않습니다. 변수, 매소드, 객체가 무엇인지 이해하게 될 것입니다.
+  appinventor_beyond_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
+  touchdevelop_beyond_longdescription: 터치디벨롭(TouchDevelop)은 아이패드, 아이폰, 안드로이드, PC, 맥, 윈도우 폰에서 실행되는 앱을 만들 수 있게 해 줍니다. 손가락 터치는 스마트 폰이나 태블릿에서도 코딩을 재미있게 해줍니다.
+  codehs_beyond_longdescription: '카렐과 강아지(Karel & Dog)를 통해 프로그래밍의 기초를 재미있고 편리하게 배워보세요. 비주얼적인 소개 과정을 통해 강아지에게 명령을 내리는 것과 똑같은 방법으로 컴퓨터에게 명령을 주면서 코딩을 배워보세요. 이 튜토리얼은 선생님과 함께 하면 좋습니다만, 혼자서도 충분히 할 수 있습니다. [참고사항: 유료]'
+  udemy_beyond_longdescription: '지금까지 코드라는 것을 한 줄이라도 본적이 없어도 , 전문 강사를 통해 배우면서 유데미(Udemy)의 과정을 할 수 있습니다.[참고사항: 유료]'
+  lynda_beyond_longdescription: 'C/C++ 의 객체지향 프로그래밍 기초개념부터, 자바(Java) 프로그래밍, 웹 응용프로그램을 만드는 방법까지 배워보세요. 우리의 개발자 튜토리얼들은 통계적 처리 언어인 R언어로 시작해서 PHP, MySQL 데이터베이스와 함께 통작하는 모바일 앱 등을 만들고 개발할 수 있도록 하는 내용들을 학습할 수 있도록 도와드립니다. [참고사항: 유료]'
+  edx_beyond_longdescription: CS50x 는 하버드 대학의 프로그래밍 경험이 없는 전공/비전공 학생들을 위한 강좌로, 컴퓨터과학 기반의 지식 기업과 프로그래밍의 예술을 소개하는 강좌입니다. 추상화, 알고리즘, 자료구조, 캡슐화, 자원관리, 보안, 소프트웨어공학, 웹 개발 등의 주제들을 포함하고 있습니다. C, PHP, JavaScript+SQL, CSS, HTML 등의 언어가 포함됩니다. 온라인 버전의 CS50x는 하버드 대학에서 두번째로 가장 큰 강좌입니다.
+  coursera_beyond_longdescription: '스탠포드 대학의 CS 101 강좌는 닉 팔란테에 의해 교육되었습니다.(무료!) CS101 은 컴퓨터과학에 대해서 전혀 모르는 사람들을 위해, 가장 기초적인 아이디어들을 교육합니다.  짧은 코드를 실행시키고 실험하면서 강력하게 실생활에 활용하거나 컴퓨터의 한계를 시험합니다. CS101은 오늘날의 컴퓨터들에 대한 일반적인 기초 지식들도 교육합니다: 컴퓨터란?, 하드웨어란? 소프트웨어란? 인터넷이란? 웹 브라우져만 사용할 줄 알면 누구나 가능합니다.'
+  udacity_beyond_longdescription: 이 코스에서는 컴퓨터과학의 핵심 개념들을 배우고, 웹 탐색 프로그램들을 만드는 방법을 배울 수 있습니다. 프로그래밍을 배워 본 적이 없어도 가능합니다. 초급자 환영! 이 코스를 마치고 나면, 컴퓨터과학에 대한 핵심 개념을 이해하고 원하는 파이썬(python) 프로그램을 만들 수 있게 됩니다. 이 코스는 중급 수준의 컴퓨팅 과정을 준비할 수 있게 도와줄 것입니다.
+  teachingtree_beyond_longdescription: 티칭트리(TeachingTree)는 오픈 플랫폼으로 누구나 교육 자료를 만들어낼 수 있습니다. 우리의 목표는 학생들이 각각의 개별 개념들을 배우는데 필요한 적당한 클립들에 빠르게 접근할 수 있도록 합니다. 어느 누구라도 동영상이나 연결된 개념들을 추가해 재미있게 배울 수 있습니다.
+  kodu_beyond_longdescription: 코두(Kodu)는 아이들이 비주얼 프로그래밍 언어를 이용해 PC 나 XBox 에서 실행되는 게임을 만들 수 있게 해 줍니다. 코두는 창의성, 문제 해결, 스토리텔링, 프로그래밍을 가르치기 위해 사용될 수 있습니다. 남녀노소 누구라도 프로그래밍 스킬이나 설계 없이 게임을 만들 수 있습니다. PC용 코두는 무료입니다. XBox 용 코두는 미국 Xbox 마켓의 Indie 게임즈 채널에서 5$ 정도에 구입할 수 있습니다.
+  cargobot_beyond_longdescription: 카고봇(Cargo-Bot)은 로봇으로 상자를 움직이는 퍼즐 게임입니다. 사운드도 간단하고, 36 가지 모양의 친근한 퍼즐, 기억에 남는 음악과 멋진 레티나 디스플레이 그래픽이 제공됩니다. 자신이 만든 해법들을 녹화해 친구들에게 유투브로 공개할 수도 있습니다.
+  kidsruby_beyond_longdescription: '재미있게 게임을 만들거나, 루비를 이용해 숙제를 멋지게 해결해 보세요! 부모님과 선생님들에게 루비(Ruby) 프로그래밍을 배우고 있다고 하면 됩니다. 무료이면서 어떤 컴퓨터에서라도 실행됩니다. [참고사항: 데스크탑 PC에 설치 필요]'
+  w3schools_beyond_longdescription: 자신의 컴퓨터로 웹사이트를 만드는 방법을 배워보세요. 하루 만에 서버의 기초들을 배워보세요. 데이터베이스를 자신의 웹사이트에 추가해보세요.
+  codeavengers_beyond_longdescription: 게임, 앱, 웹사이트를 프로그래밍하는 방법을 배워보세요. 전문가들에 의해 초보 단계부터 완벽히 설계된 이해하기 쉬운 설명들과 필요할 때마다 주어지는 도움들이 있습니다. HTML, CSS, JavaScript 코스들은 모든 연령에도 적합하면서도 재미있게 배울 수 있는 코드 챌린지와 게임 변형이 있습니다.
+  mozilla_beyond_longdescription: 띰블(Thimble)은 자신의 웹 페이지를 어처구니 없게 쉽게 만들 수 있도록 해줍니다. 웹 브라우져에서 HTML과 CSS를 편집한 후에 바로 확인해 볼 수 있습니다. 완성이 되면 한 번의 클릭으로 웹 페이지를 운영하고 공개할 수 있습니다. 초보자, 전문가 모두에게 좋습니다.
+  codecombat_beyond_longdescription: 코드(주문 spells) 를 사용해 영웅을 조종하거나, 미로를 돌아다니고, 괴물을 잡고, 적을 속이고, 같은 편을 구하는 마법사처럼 놀아보세요! 완전 초보라도 HTML 5 웹 게임의 자바스크립트(JavaScript)를 배워보세요.
+  codea_beyond_longdescription: '아이패드용 코디아(Codea)는 게임, 시뮬레이션 &mdash; 또는 자신이 가진 비주얼적 아이디어를 만들 수 있게 해줍니다. 자신의 생각들을 아이패드의 멀티터치와 가속도 센서를 이용해 인터랙티브한 작품으로 만들어 보세요. 코디아는 여러분들이 사용하게 될 가장 아름다운 코드 편집기가 될 것이며 쉽습니다. 코디아는 코드를 터치할 수 있도록 설계되었습니다. 수를 바꾸고 싶으면? 탭하고 드래그 하면 됩니다. 컬러나 이미지는? 탭 동작으로 비주얼 편집기를 열어 원하는 것을 정확하게 선택할 수 있도록 해줍니다.'
   lego_beyond_longdescription: 레고(LEGO) 조각들을 이용해 작고, 변형가능한 프로그래밍 로봇들을 만들어보세요.
-  finch_beyond_longdescription: 핀치(The Finch)는 컴퓨터과학 교육을 위한 새로운 로봇입니다. 카네기 멜론 대학의
-    CREATE 연구실에서 4년 동안의 연구를 통해 설계되었습니다. 핀치는 프로그래밍의 예술에 대해 빠져들 수 있도록 설계되었습니다. 열 개가
-    넘는 프로그래밍 언어와 환경에서 지원되고 있으며, 여러 개는 8세 아이들에게도 적합합니다. 핀치는 학생들이 풍부한 인터랙티브 프로그램들을 작성할
-    수 있도록 설계되었습니다.
-  arduino_beyond_longdescription: 아두이노(Arduino)는 매우 유명한 플랫폼으로 예술가, 디자이너들이 실제 센서, LED,
-    부저 등을 이용해 작업이 가능하도록 설계되었습니다. 스파크펀(Sparkfun)사의 가상 샌드박스 프로그램을 통해 웹 브라우져에서 실제 아두이노
-    코드를 교육할 수 있습니다.
-  processing_beyond_longdescription: 프로세싱(Processing) 은 프로그래밍 언어이며, 개발 환경이며, 온라인 커뮤니티
-    입니다. 2001년부터 프로세싱은 비주얼 아트와 기술에서의 비주얼 계몽을 이루는데 앞장서 왔습니다. 처음에는 마치 소프트웨어 스케치북처럼,
-    비주얼적인 요소들로 컴퓨터 프로그래밍을 교육하기위해 만들어졌습니다. 이후 프로세싱은 전문가들을 위한 개발 도구로서 진화했습니다. 요즘에는 수많은
-    학생, 예술가, 디자이너, 연구자, 취미가들이 학습, 프로토타잎만들기, 제품만들기 등을 위해 사용하고 있습니다.
-  alice_beyond_longdescription: 3D 애니메이션 제작에 도움이되는 혁신적인 프로그래밍 환경을 사용하여, 앨리스(Alice)
-    프로젝트는 모든 연령과 남녀노소수준과 상관없이 컴퓨터과학적 사고(정보과학적 사고, computational thingking), 문제 해결(problem
-    solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
-  sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을
-    통해 수학 과학 능력을 향상시킬 수 있습니다.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  finch_beyond_longdescription: 핀치(The Finch)는 컴퓨터과학 교육을 위한 새로운 로봇입니다. 카네기 멜론 대학의 CREATE 연구실에서 4년 동안의 연구를 통해 설계되었습니다. 핀치는 프로그래밍의 예술에 대해 빠져들 수 있도록 설계되었습니다. 열 개가 넘는 프로그래밍 언어와 환경에서 지원되고 있으며, 여러 개는 8세 아이들에게도 적합합니다. 핀치는 학생들이 풍부한 인터랙티브 프로그램들을 작성할 수 있도록 설계되었습니다.
+  arduino_beyond_longdescription: 아두이노(Arduino)는 매우 유명한 플랫폼으로 예술가, 디자이너들이 실제 센서, LED, 부저 등을 이용해 작업이 가능하도록 설계되었습니다. 스파크펀(Sparkfun)사의 가상 샌드박스 프로그램을 통해 웹 브라우져에서 실제 아두이노 코드를 교육할 수 있습니다.
+  processing_beyond_longdescription: 프로세싱(Processing) 은 프로그래밍 언어이며, 개발 환경이며, 온라인 커뮤니티 입니다. 2001년부터 프로세싱은 비주얼 아트와 기술에서의 비주얼 계몽을 이루는데 앞장서 왔습니다. 처음에는 마치 소프트웨어 스케치북처럼, 비주얼적인 요소들로 컴퓨터 프로그래밍을 교육하기위해 만들어졌습니다. 이후 프로세싱은 전문가들을 위한 개발 도구로서 진화했습니다. 요즘에는 수많은 학생, 예술가, 디자이너, 연구자, 취미가들이 학습, 프로토타잎만들기, 제품만들기 등을 위해 사용하고 있습니다.
+  alice_beyond_longdescription: 3D 애니메이션 제작에 도움이되는 혁신적인 프로그래밍 환경을 사용하여, 앨리스(Alice) 프로젝트는 모든 연령과 남녀노소수준과 상관없이 컴퓨터과학적 사고(정보과학적 사고, computational thingking), 문제 해결(problem solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
+  sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을 통해 수학 과학 능력을 향상시킬 수 있습니다.

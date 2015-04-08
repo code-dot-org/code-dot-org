@@ -4,8 +4,7 @@
   "circleBlockTitle":"วงกลม (รัศมี แบบ สี)",
   "displayBlockTitle":"การทดสอบ",
   "ellipseBlockTitle":"วงรี (ความกว้าง ความสูง ลักษณะ สี)",
-  "emptyFunctionalBlock":"คุณมีบล็อกที่ไม่ได้เติมข้อมูลเข้า.",
-  "extraTopBlocks":"คุณมีบล็อกที่แยกออกไป คุณหมายถึงว่าคุณจะแนบบล็อกเหล่านี้ไปที่ บล็อก \"การแสดงผล\" หรือไม่ ?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"ฟังก์ชันของคุณกำลังเรียกตัวเอง เราหยุดมันไว้ มิฉะนั้น มันจะเรียกตัวมันเองไปตลอด.",
   "overlayBlockTitle":"ซ้อนทับ (บน ล่าง)",
   "placeImageBlockTitle":"เอารูปวาง (x, y, รูป)",
@@ -27,5 +26,6 @@
   "solid":"ของแข็ง",
   "string":"อักขระ",
   "stringMismatchError":"คุณมีสตริงที่มีการใช้อักษรตัวใหญ่ไม่ถูกต้อง.",
-  "userCodeException":"ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."
+  "userCodeException":"ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

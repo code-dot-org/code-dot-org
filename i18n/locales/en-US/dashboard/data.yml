@@ -434,6 +434,15 @@ en:
         msm_3_pemdas: crwdns35066:0crwdne35066:0
         msm_6_variables: crwdns35067:0crwdne35067:0
         msm_7_functions: crwdns35068:0crwdne35068:0
+        infinity_playlab_intro: crwdns35943:0crwdne35943:0
+        infinity_playlab_events: crwdns35944:0crwdne35944:0
+        infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_concept_rgb: crwdns36227:0crwdne36227:0
+        csp_pixelation_color_1: crwdns36228:0crwdne36228:0
+        csp_pixelation_color_2: crwdns36229:0crwdne36229:0
+        csp_pixelation_color_3: crwdns36230:0crwdne36230:0
+        csp_pixelation_bw: crwdns36231:0crwdne36231:0
+        csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0
@@ -500,3 +509,7 @@ en:
         arrows_move_actor: crwdns25675:0crwdne25675:0
         right_arrow_fireball: crwdns25676:0crwdne25676:0
         name_function: crwdns25677:0crwdne25677:0
+        Infinity_move_right_runbutton: crwdns36218:0crwdne36218:0
+        Infinity_move_directions_callout: crwdns36219:0crwdne36219:0
+        Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
+        Infinity_repeat_callout: crwdns36221:0crwdne36221:0

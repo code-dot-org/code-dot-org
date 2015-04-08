@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "دائرہ (رداس، انداز، رنگ)"},
 "displayBlockTitle":function(d){return "دکھانا"},
 "ellipseBlockTitle":function(d){return "بیضوی (چوڑائی, قد, سٹائل, رنگ)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "اتبشایی (اوپر، نیچے)"},

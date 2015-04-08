@@ -1,18 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Nie wprowadziłeś żadnej zawartości do swojego bloku.",
+  "divideByZeroError":"Twój program prowadzi do dzielenia przez zero.",
+  "emptyComputeBlock":"Musisz dołączyć blok do bloku \"wykonywanego\".",
   "equivalentExpression":"Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie.",
-  "evaluate":"Oceń",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "evaluate":"wykonaj",
+  "extraTopBlocks":"Masz niepodłączone bloki. Czy pomyślałeś by dołączyć je do bloku \"wykonywanego\"?",
   "failedInput":"Twoja funkcja nie zwraca prawidłowych wyników dla wszystkich wartości.",
   "goal":"Cel:",
-  "levelIncompleteError":"Wyrażenie, które wpisałeś nie jest poprawne.",
-  "missingFunctionError":"You must define a function named {functionName}.",
-  "missingVariableX":"Your expression is missing variable {var}.",
-  "reinfFeedbackMsg":"Oto wynik Twoich obliczeń! Możesz kontynuować pracę, lub przejść dalej do następnej zagadki!",
+  "levelIncompleteError":"Twoje wyrażenie nie jest zgodne z celem.",
+  "missingFunctionError":"Należy zdefiniować funkcję o nazwie {functionName}.",
+  "missingVariableX":"W twoim wyrażeniu brakuje zmiennej {var}.",
+  "reinfFeedbackMsg":"Oto wynik Twoich obliczeń! Kontynuuj pracę nad nim lub przejdź dalej do następnej zagadki!",
   "yourExpression":"Twoje wyrażenie:",
   "wrongInput":"Przekazujesz nieprawidłową wartość wywołująć swoją funkcję.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongOtherValuesX":"Twoje wyrażenie prowadzi do niepoprawnych wartości gdy wstawiamy zmienną {var}.",
+  "wrongResult":"Twoje wyrażenie nie zwraca poprawnego wyniku."
 }

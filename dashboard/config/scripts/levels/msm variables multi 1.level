@@ -22,7 +22,12 @@
         "correct": false
       }
     ],
-    "markdown": "## x = 15\n## a = 2\n## b = 6\n"
+    "title": "x = 15<br>a = 2<br>b = 6",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ],
+    "name": "msm variables multi 1"
   },
   "md5": "e2316e0f14c8a35d2c0f77eaf486b70a"
 }]]></config>

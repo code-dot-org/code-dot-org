@@ -50,7 +50,7 @@ is:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: 'Skilyrði býflugu - Valspurning 2'
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Veldu bestu kubbana
+        Choose the best blocks.: Veldu bestu kubbana.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ is:
       2-3 Algorithms Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Veldu algrím fyrir myndina sem er sýnd
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Byrja með ferning<br/>Setja þríhyrning ofan við ferninginn<br/>Setja þríhyrning neðan við ferninginn'
         0: '? Byrja með ferning<br/>Setja þríhyrning hægra megin við ferning<br/>Setja samsíðung neðan við ferning<br/>Setja þríhyrning hægra megin við samsíðung'
         1: ': Byrja með ferning<br/>Setja þríhyrning hægra megin við ferning<br/>Setja samsíðung neðan við ferning<br/>Setja þríhyrning hægra megin við samsíðung'
@@ -142,29 +142,29 @@ is:
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
         " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Blue colored blocks are associated with __________ ?: Blár kubbur gefur til kynna __________ ?
+        a image: mynd
+        a number: tölu
+        a string: streng
+        boolean: boole gildi
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Purple colored blocks are associated with __________ ?: 'Fjólublár kubbur gefur til kynna  __________ ?'
+        a image: mynd
+        a number: tölu
+        a string: streng
+        boolean: boole gildi
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Teal colored blocks are associated with __________ ?: 'Blágrænn kubbur gefur til kynna  __________ ?'
+        a image: mynd
+        a number: tölu
+        a string: streng
+        boolean: boole gildi
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        a image: mynd
+        a number: tölu
+        a string: streng
+        boolean: boole gildi
       4-5 artist multi 1:
         Artist Multiple Choice: 'Listamaður - Valspurningar'
         Which blocks draw a rectangle with a perimeter of 100?: Hvaða kubbar teikna rétthyrning með ummálið 100?
@@ -256,19 +256,19 @@ is:
       4-5 Algorithms Multi 1:
         Multiple Choice: Valspurningar
         Which one of these items is hardest to describe an algorithm for?: Hvað af þessu er erfiðast að búa til algrím fyrir?
-        <h4>Brushing your teeth</h4>: '<h4>Bursta tennurnar</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baka smákökur</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Versla eftir innkaupalista</h4>'
-        <h4>Banana</h4>: '<h4>Banana</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Valspurningar
         0: '? Hér eru þrjár setningar. Hvert af eftirfarandi sniðmátum passar best við innihaldið í þessum þremur setningum?'
         1: ': Hér eru þrjár setningar. Hvert af eftirfarandi sniðmátum passar best við innihaldið í þessum þremur setningum?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle er stór borg.<br/>Eugene er miðlungsstór borg<br/>Hillview er lítil borg.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle er _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ er _____ borg.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ er lítil  _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene er _____ borg.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Valspurningar
         Which of these pictures best represents crowdsourcing?: Hver þessara mynda lýsir best hugtakinu hópvistun?
@@ -277,33 +277,33 @@ is:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Valspurningar
         Which one of these activities would be best for practicing crowdsourcing?: Fyrir hverja af þessum athöfnum mundi henta best að nota hópvistun?
-        <h4>Cleaning your room</h4>: '<h4>Þrífa herbergið sitt</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Borða eftirrétt</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Greiða hárið</h4>'
-        <h4>Washing your face</h4>: '<h4>Þvo sér í framan</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Valspurningar
         Which piece of information listed below is okay to share on the internet?: Hverju af eftirfarandi er í lagi að deila sem upplýsingum á netinu?
-        <h4>Your birthday</h4>: '<h4>Afmælisdegi sínum</h4>'
-        <h4>Your favorite food</h4>: '<h4>Uppáhaldsmatnum sínum</h4>'
-        <h4>Your address</h4>: '<h4>Heimilisfangi sínu</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Greiðslukortanúmeri foreldra sinna</h4>'
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Hvaða IP tölu er líklegt að DNS hafi látið þig hafa ef þú reynir að skrá þig inn á code.org?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Valspurningar
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Á hvaða vef ertu, ef DNS hefur sent þig á síðu þar sem IP talan er 100.42.50.110?
-        <h4>code.org</h4>: '<h4>code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,7 +318,7 @@ is:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Hvert af forritunum hér fyrir neðan býr <em>ekki</em> til nákvæmlega sömu röð aðgerða og Forrit 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -328,7 +328,7 @@ is:
         The unicorn moves across the screen: Einhyrningurinn færist yfir skjáinn
         The unicorn's y value changes: Y gildi einhyrningsins breytist
         The unicorn moves to the left: Einhyrningurinn færist til vinstri
-        The unicorn's x value changes: X gildi einhyrningsins breytist
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -493,8 +493,8 @@ is:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
         Racket Code for Math Expressions: Racket kóði fyrir reikning
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu greiningarhring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu greiningarhring til að hjálpa þér að finna svarið!'
+        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
+        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
         (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
         (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
         (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
@@ -502,8 +502,8 @@ is:
         (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
       Math to Code 2:
         Racket Code for Math Expressions: Racket kóði fyrir reikning
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu greiningarhring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu greiningarhring til að hjálpa þér að finna svarið!'
+        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
+        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
         (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
@@ -520,7 +520,7 @@ is:
       Circle to code:
         Code from Circle: Kóði út frá hring
         "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá greiningarhringnum!
+        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá matshringnum!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
         (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
         (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
@@ -536,7 +536,7 @@ is:
       image code from circle:
         Code from Circle: Kóði frá hring
         "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá greiningarhringnum!
+        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá matshringnum!
         (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
         (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
@@ -566,7 +566,7 @@ is:
         17: "17"
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        What should f(1) produce?: Hvað ætti f(1) að gefa?
         x: x
         117: "117"
         17: "17"
@@ -637,13 +637,13 @@ is:
         5: "5"
         "y": true
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strengir og myndir valspurningar
-        Multi Strings Images 1.blocks3.level: Val Strengir Myndir 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Hver þessara kubba mun teikna myndina?
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Val Strengir Myndir 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Val Strengir Myndir 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Val Strengir Myndir 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Val Strengir Myndir 1.blocks4.start_blocks, 300, 100
+        Strings and Images Multiple Choice: 'Strengir og myndir - valspurningar'
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
+        Which of these Evaluation Blocks will draw the image: Hver þessara matskubba mun teikna myndina?
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Spurning um myndskeið
         Answer this question based on the video you just watched.: Svaraðu þessari spurningu út frá myndskeiðinu sem þú varst að horfa á.
@@ -653,44 +653,44 @@ is:
         a set of instructions you give a computer to execute: röð skipana sem tölva fær til að fara eftir
         a secret password: leynilegt leyniorð
       PDK5 Beyond:
-        What do I do now?: What do I do now?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!
-        Im finished: Im finished
+        What do I do now?: Hvað á ég nú að gera?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Þetta er síðasti hlutinn af fagmenntun á netinu. Til hamingju. Smelltu á Ljúka þegar þú er til!
+        Im finished: Ljúka
       PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
-        Are you ready to move on?: Are you ready to move on?
+        Writing your first computer program!: Skrifa fyrsta forritið þitt!
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Classroom Culture:
         Classroom Culture: Bekkjarmenning
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Course Maps:
-        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
-        Are you ready to move on?: Are you ready to move on?
+        Navigating Courses 1, 2, and 3: Leiðsögn um námskeið 1, 2 og 3
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
-        Are you ready to move on?: Are you ready to move on?
+        Overview of K-5 Courses: 'Yfirlit yfir 5 - 11 ára námskeið'
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Glossary:
         Glossary: Orðasafn
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Intro:
-        Welcome!: Welcome!
-        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        Welcome!: Velkomin!
+        Before now, have you ever participated in an online PD program?: Hefur þú nokkurn tímann áður sótt þér fagmenntun á netinu?
         "Yes": Já
         "No": Nei
       PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
-        toolbox: toolbox
-        shelf: shelf
-        bin: bin
-        dropdown: dropdown
+        More Sequencing: Meira um runur
+        The grey rectangle to the left of the workspace is called the: Grái þríhyrningurinn vinstra megin við vinnusvæðið er nefndur
+        toolbox: verkfærakista
+        shelf: hilla
+        bin: karfa
+        dropdown: fellilisti
       PDK5 Teacher Dashboard:
-        Teacher Dashboard: Teacher Dashboard
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Dashboard: Stjórnborð kennara
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Test1:
         title: titill
@@ -699,34 +699,34 @@ is:
         wrong answer: rangt svar
         right answer: rétt svar
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
-        Are you ready to move on?: Are you ready to move on?
+        What is an unplugged activity?: Hvað er verkefni án tölvu?
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 UVideo Overview:
-        Teacher Guides to all our unplugged activities: Teacher Guides to all our unplugged activities
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Guides to all our unplugged activities: Leiðarvísar kennara fyrir öll verkefni án tölvu
+        Are you ready to move on?: Ertu til í að halda áfram?
         "Yes": Já
       PDK5 Visual Languages:
-        Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
-        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
-        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
-        Because you can focus on the logic of programming: Because you can focus on the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
-        All of the above: All of the above
+        Visual Programming Languages: Myndræn forritunarmál
+        Based on the video you saw before, please answer the question below.: Vinsamlegast svaraðu þessum spurningum út frá myndbandinu sem þú horfðir á.
+        Why are visual programming languages easier to learn than text-based programming languages?: Hvers vegna er auðveldara að læra myndræn forritunarmál en mál sem eru skrifuð sem texti?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Vegna þess að það þarf ekki að hafa eins miklar áhyggjur af rithætti, svo sem kommusetningu
+        Because you can focus on the logic of programming: Vegna þess að það er hægt að einbeita sér að rökvísi forritunarinnar
+        Because the commands are available in a menu rather than having to remember them yourself: Vegna þess að aðgerðir eru tiltækar í valmynd í stað þess að það þurfi að muna þær
+        All of the above: Öll ofangreindu svörin
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
+        What is Computer Science?: Hvað er tölvunarfræði?
         "A computer program, or code, is:": 'Tölvuforrit eða kóði er:'
         a part inside of a computer: hlutur innan úr tölvu
-        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
+        a set of instructions a person gives a computer to execute: safn fyrirmæla sem manneskja lætur tölvu framkvæma
         a week-long course to learn about computers: vikulangt námskeið um tölvur
         a secret password: leynilegt leyniorð
       Play Lab Rocket 6:
         Rocket Multiple Choice: Valspurningar eldflaugar
-        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
-        rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
-        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
-        rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
+        rocket-height(seconds) = seconds + 12: hæð-flaugar(sekúndur) = sekúndur + 12
+        rocket-height(seconds) = seconds * 12: 'hæð-flaugar(sekúndur) = sekúndur * 12'
+        rocket-height(seconds) = 48 / seconds: hæð-flaugar(sekúndur) = 48 / sekúndur
+        rocket-height(seconds)  = seconds * 48: 'hæð-flaugar(sekúndur) = sekúndur * 48'
       Play Lab Rocket 7:
         Rocket Multiple Choice: Valspurningar eldflaugar
         rocket-height(seconds) = seconds * 2: 'hæð-flaugar(sekúndur) = sekúndur * 2'

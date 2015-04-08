@@ -245,6 +245,7 @@
         artist: Piirrä jotakin
     user:
       classroom: Opettajan kotisivu
+      district_dashboard: District Dashboard
       label: Hei %{username}
       stats: Minun edistymiseni
       settings: Tilini
@@ -496,6 +497,9 @@
       body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Pelilabra
+      body: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn Infinity hahmot.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -532,6 +536,12 @@
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+  contract_match:
+    wrong_title: Väärä vastaus
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
   dialog:
@@ -585,46 +595,47 @@
     -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä
     meihin puolestasi.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: ei aloitettu
+    in_progress: käynnissä
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
-    assessment: assessment
+    assessment: arviointi
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
     all_courses: Kaikki kurssit
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projektit
+    create: Luo projekti
+    create_a_project: 'Luo uusi projekti:'
+    new: Luo uusi
+    rename: Nimeä uudelleen
     save: Tallenna
     delete: Poista
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Takaisin kurssiin
+    my_projects: Omat projektit
     share: Jaa
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Jaa projektisi
+    share_copy_link: 'Kopioi linkki:'
+    close: Sulje
     more: Lisää
     name: Nimi
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Päivitetty
+    project_type: Projektityyppi
+    help_text: Klikkaa <strong>Tee Sovellus</strong> tai <strong>Piirrä Jotain</strong>
+      alla tehdäksesi uuden Pelilabra tai Taiteilija projektin! <br/>Voit tulla myöhemmin
+      takaisin ja jatkaa projektiesi työstämistä milloin tahansa.
+    need_help: Tarvitsetko apua alkutoimissa?
     really_delete: Poista?
     delete_yes: Kyllä
     delete_no: Ei
-    saved: Saved
-    not_saved: Not saved
+    saved: Tallennettu
+    not_saved: Ei tallenneta
     cancel: Peru
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Oletko varma, että haluat poistaa tämän projektin?
+    delete_confirm_text: Projektin poistaminen pysyvästi poistaa sen Omat projektit-luettelosta.
+      Kukaan kenelle olet jakanut linkin ei enää voi katsella projektiasi.
+    view_all: Katso omia projektejasi
+    remix: Remix
+    click_to_remix: Klikkaa "Remix" ja tee oma versiosi!

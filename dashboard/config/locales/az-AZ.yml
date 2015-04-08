@@ -263,6 +263,7 @@
         artist: Draw Something
     user:
       classroom: Müəllimin ev səhifəsi
+      district_dashboard: District Dashboard
       label: Salam %{username}
       stats: Mənim nəticələrim
       settings: Mənim hesabım
@@ -516,6 +517,9 @@
         baxın
     frozen:
       title: Buzlu ürək
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
@@ -552,6 +556,12 @@
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
     correct_title: Düzgün
     correct_body: Bu düzgün cavabdır.
+  contract_match:
+    wrong_title: Yanlış cavab
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Cavabınızı buraya daxil edin
   dialog:
@@ -651,3 +661,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

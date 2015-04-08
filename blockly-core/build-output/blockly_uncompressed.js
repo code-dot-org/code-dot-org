@@ -13289,6 +13289,9 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true
       }
     }
+    if(connection.targetConnection && !connection.targetBlock().isMovable()) {
+      return true
+    }
     if(!thisConnection.checkAllowedConnectionType_(connection)) {
       return true
     }
@@ -13561,7 +13564,10 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
   this.createFunctionalMarkers_();
   goog.base(this, "renderDraw_", iconWidth, inputRows);
   this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
-  var rect = this.svgPath_.getBoundingClientRect();
+  if(!this.block_.isVisible()) {
+    return
+  }
+  var rect = this.svgPath_.getBBox();
   this.divider_.setAttribute("width", Math.max(0, rect.width - 2))
 };
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
@@ -14981,6 +14987,9 @@ Blockly.Block.prototype.setCurrentlyHidden = function(hidden) {
   }
 };
 Blockly.Block.prototype.isVisible = function() {
+  if(Blockly.functionEditor && (this.blockSpace === Blockly.functionEditor.modalBlockSpace && !Blockly.functionEditor.isOpen())) {
+    return false
+  }
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
   return visibleThroughParent && (this.isUserVisible() && !this.isCurrentlyHidden_())
 };
@@ -19548,6 +19557,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setDeletable(false);
+  this.functionDefinitionBlock.setEditable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
   goog.dom.getElement("functionNameText").value = functionName;

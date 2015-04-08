@@ -1,58 +1,41 @@
-"pt-BR":
+pt-BR:
   hello: Olá, mundo
   select_language: Selecione seu idioma
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
-  csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">planejem sua Hora do Código</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Você é professor de ciência da computação? Veja outros
-    recursos da Semana de Educação em Ciência da Computação</a>'
-  n_have_learned_an_hoc: <h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>
+  csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planejem sua Hora do Código</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação</a>'
+  n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>'
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
-  petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
-    de aprender ciência da computação
+  petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Participar #
-    outros.'
+  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos # outros.'
   name: Nome
   email: E-mail
   zipcode: CEP ou país
   submit: Enviar
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
-  twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
-    da computação e seus conceitos nesse curso.
-  hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
-    8 a 14 de dezembro de 2014<br/>
+  twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso.
+  hoc2014_heading: 'Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de 8 a 14 de dezembro de 2014<br/>'
   hoc2014_students: Alunos
   hoc2014_try: Experimente
   hoc2014_teachers: Professores
   hoc2014_host: Promova
   hoc2014_everyone: Todos
-  hoc2014_support: "Apoie &#x25BE;"
+  hoc2014_support: 'Apoie &#x25BE;'
   hoc2014_whatishoc: O que é a Hora do Código?
   twentyhours_trynow: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
-  california_text: Qualquer professor pode oferecer nossos <a href='http://studio.code.org/'>cursos
-    gratuitos</a>. Qualquer escola de Ensino Fundamental pode <a href='http://code.org/educate/k5'>ensinar
-    ciência da computação</a>. Peça para que as escolas de Ensino Médio <a href='http://code.org/educate/districts'>façam
-    parcerias conosco.
+  california_text: "Qualquer professor pode oferecer nossos <a href='http://studio.code.org/'>cursos gratuitos</a>. Qualquer escola de Ensino Fundamental pode <a href='http://code.org/educate/k5'>ensinar ciência da computação</a>. Peça para que as escolas de Ensino Médio <a href='http://code.org/educate/districts'>façam parcerias conosco."
   california_button: Saiba Mais
   flappy_heading: '"Flappy Birthday" para a Code.org'
-  flappy_text: A Code.org acaba de fazer 1 ano de idade.<br/> <br/> Comemore conosco
-    fazendo seu próprio jogo <b>Flappy bird</b>. Crie suas próprias regras e compartilhe
-    o jogo com seus amigos!
+  flappy_text: 'A Code.org acaba de fazer 1 ano de idade.<br/> <br/> Comemore conosco fazendo seu próprio jogo <b>Flappy bird</b>. Crie suas próprias regras e compartilhe o jogo com seus amigos!'
   view_english_site: Ver site em inglês
   non_english_tutorials: 'Tutoriais traduzidos em várias línguas:'
   write_your_first_program: Escreva seu primeiro programa de computador
-  learn_cs_concepts: Aprenda os conceitos básicos de ciência da computação com a programação
-    de arrastar e soltar. Este tutorial é como um jogo estrelando vídeo aulas por
-    Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies. Aprenda laços-repetição,
-    instruções se-então e algoritmos básicos.
+  learn_cs_concepts: Aprenda os conceitos básicos de ciência da computação com a programação de arrastar e soltar. Este tutorial é como um jogo estrelando vídeo aulas por Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies. Aprenda laços-repetição, instruções se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
   n_participants: '# participantes'
@@ -62,18 +45,13 @@
   congratulations_on_completing_hoc: Parabéns, você concluiu a Hora do Código
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   enter_valid_email: Informe um endereço de email válido
-  get_a_certificate_message: Vamos enviar-lhe um certificado e informações sobre como
-    <a href='/learn/beyond'>aprender além de Uma Hora</a>
-  get_a_certificate_message_after: Clique no certificado para baixá-lo ou imprimi-lo.
-    Agora, faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja
-    mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
+  get_a_certificate_message: "Vamos enviar-lhe um certificado e informações sobre como <a href='/learn/beyond'>aprender além de Uma Hora</a>"
+  get_a_certificate_message_after: "Clique no certificado para baixá-lo ou imprimi-lo. Agora, faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   thanks_for_submitting: Obrigado por enviar!
-  if_you_enjoyed: Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos
-    que o mundo todo aprenda.
+  if_you_enjoyed: 'Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos que o mundo todo aprenda.'
   personalize_certificate: Personalize seu certificado
   share_achievement: Compartilhar sua conquista
-  beyond_hour_message: Faça nossos <a href='http://studio.code.org'>outros cursos</a>,
-    ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
+  beyond_hour_message: "Faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   leaderboards_for_hoc: Classificações para a Hora do Código.
   support_url: http://support.code.org
   country: País
@@ -107,16 +85,13 @@
   privacy_practices_children: Consulte nossa política de privacidade para crianças
   petition_thankyou: Agradecemos por assinar a petição
   continue_learning_header: Continue aprendendo além da Hora do Código
-  continue_learning_body: Existem muitas opções.  Você pode aprender on-line, ou em
-    uma escola local, ou no acampamento de verão.
+  continue_learning_body: 'Existem muitas opções.  Você pode aprender on-line, ou em uma escola local, ou no acampamento de verão.'
   learn_next_level: Continuar para o próximo nível
   learn_online: Experimente outros cursos online
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: Por que muitas escolas não ensinam ciência da computação? Podemos
-    dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para
-    saber mais.
+  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -124,21 +99,17 @@
   boy: Menino
   help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
   help_recruit: Ajude-nos a recrutar mais programadores!
-  lines_of_code: <b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.
-  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
+  lines_of_code: '<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.'
+  lines_of_code_alt: '<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES'
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: '%{students} estudantes têm participado da Hora do Código e
-    escreveram %{lines} linhas de programação.'
+  students_and_lines: '%{students} estudantes têm participado da Hora do Código e escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
-  stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% de comprometimento."
-    - Nina Nichols Peery, Professora'
-  stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate,
-    aluna do 5º ano'
-  stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
-    - Michael Clark, professor'
-  studiobar_title: Explore o Code Studio
+  stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% de comprometimento." - Nina Nichols Peery, Professora'
+  stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate, aluna do 5º ano'
+  stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender." - Michael Clark, professor'
+  studiobar_title: "Explore o <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_hoc_title: A Hour of Code
@@ -153,20 +124,50 @@
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
-  homepage_hero_text_malala: "&ldquo;Eu desafio garotas em todos os países\na aprender
-    com a Hora do Código&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;Eu desafio as meninas do mundo todo a fazer a Hora do Código&rdquo;  
+    Malala, ganhadora do Prêmio Nobel da Paz
   homepage_hero_text_susan: |
-    &ldquo;Nunca é tarde demais
-    para aprender&rdquo;
+    &ldquo;Se você pode mudar a tecnologia,
+    você pode mudar o mundo.&rdquo;
     Susan, CEO do YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Não apenas jogue em seu telefone,
-    mas também programe nele.&rdquo;
+    &ldquo;Em vez de simplesmente jogar em seu celular,
+    aprenda a programá-lo.&rdquo;
     Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Compreender a ciência da computação
-    está se tornando cada vez mais fundamental...&rdquo;
+    &ldquo;Nossos filhos &mdash; inclusive nossas meninas &mdash;
+    precisam ter a oportunidade de aprender ciência da computação.&rdquo;
     Sheryl, COO do Facebook
+  homepage_hero_text_satya: |
+    &ldquo;A ciência da computação leva
+    às melhores oportunidades no mundo.&rdquo;
+    Satya, CEO da Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Se você programa, você pode escolher
+    o rumo da sua vida.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;Essas habilidades mudaram meu futuro.
+    Sem contar que é pura diversão.&rdquo; 
+  homepage_hero_text_student2: |
+    &ldquo;Eu nunca vi meus filhos tão
+    animados em aprender.&rdquo; 
+  homepage_hero_text_student3: |
+    &ldquo;A ciência da computação é um campo que você não
+    pode dizer se gosta ou não antes de tê-lo experimentado.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;Você pode fazer o que quiser
+    com a programação.&rdquo; 
+  homepage_hero_text_student5: |
+    &ldquo;A ciência da computação não é para outra
+    pessoa. É para você, aqui e agora.&rdquo; 
+  homepage_hero_text_teacher1: |
+    &ldquo;Programar desperta a criatividade, inspiração e inovação &mdash;
+    tudo o que é essencial em qualquer carreira.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;Esse programa fez 100% dos meus alunos se
+    engajarem, se envolverem e participarem.&rdquo; 
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -176,32 +177,32 @@
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_codevideo: Assista ao vídeo
   homepage_action_text_teachervideo: Assista ao vídeo
-  homepage_action_text_learn: Começe a aprender hoje
-  homepage_action_text_signpetition: Assinar a petição
-  homepage_signpetition_dropdown: Assinar nossa petição &#x25BE;
+  homepage_action_text_learn: Comece a aprender hoje
+  homepage_action_text_signpetition: Assine a petição
+  homepage_signpetition_dropdown: 'Assine nossa petição &#x25BE;'
   homepage_slot_text_title_hoc: Hora do Código
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Alunos
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
+  homepage_slot_text_link_codestudio: Experimente o Code Studio
+  homepage_slot_text_link_local: Encontre uma turma na sua região
+  homepage_slot_text_link_othercourses: Outros cursos on-line
+  homepage_slot_text_title_educators: Educadores
+  homepage_slot_text_blurb_educators: Ensine seus alunos
+  homepage_slot_text_link_k5: Cursos para turmas do pré ao 5º ano
+  homepage_slot_text_link_fullcurriculum: Veja nosso currículo completo
+  homepage_slot_text_link_pd: Desenvolvimento profissional
+  homepage_slot_text_title_advocates: Apoiadores
+  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
+  homepage_slot_text_link_stats: Veja as estatísticas
+  homepage_slot_text_link_buy: Comprar uma camiseta ou um boné
+  homepage_slot_text_link_donate: Fazer uma doação
+  homepage_header_codestudio: Criações de alunos no Code Studio
+  homepage_header_donors: A Code.org agradece a seus colaboradores
+  homepage_donors_seall: Ver todos
   homepage_donors_donate: Faça uma doação
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
@@ -216,15 +217,11 @@
   contact_form_label_submit: Enviar mensagem
   class_submission_in_school: Na escola
   class_submission_in_school_daily_programming_course: Curso de programação diário
-  class_submission_in_school_ap_computer_science: Programa avançado em Ciência da
-    Computação
-  class_submission_in_school_full_university_cs_curriculum: Currículo universitário
-    completo de Ciência da Computação
+  class_submission_in_school_ap_computer_science: Programa avançado em Ciência da Computação
+  class_submission_in_school_full_university_cs_curriculum: Currículo universitário completo de Ciência da Computação
   class_submission_in_school_robotics_club: Clube de robótica
-  class_submission_in_school_programming_integrated_in_other_classes: Programação
-    integrada com outras matérias (matemática, ciências etc.)
-  class_submission_in_school_summer_school_cs_program: Programa escolar de verão em
-    Ciência da Computação
+  class_submission_in_school_programming_integrated_in_other_classes: Programação integrada com outras matérias (matemática, ciências etc.)
+  class_submission_in_school_summer_school_cs_program: Programa escolar de verão em Ciência da Computação
   class_submission_in_school_exploring_computer_science: Explorando a Ciência da Computação
   class_submission_in_school_other: Outras atividades na escola
   class_submission_out_of_school: Fora da escola
@@ -239,7 +236,7 @@
   class_submission_online_other: Outros recursos online
   class_submission_level_preschool: Pré escola
   class_submission_level_elementary: Ensino Fundamental
-  class_submission_level_middle_school: Ensino Fundamental - 7º, 8º e 9º anos
+  class_submission_level_middle_school: 'Ensino Fundamental - 7º, 8º e 9º anos'
   class_submission_level_high_school: Ensino Médio
   class_submission_level_college: Faculdade
   class_submission_level_vocational: Profissional
@@ -251,15 +248,11 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 horas por semana
   volunteer_engineer_submission_commitment_more: Mais
   volunteer_engineer_submission_location_flexibility_onsite: Na escola
-  volunteer_engineer_submission_location_flexibility_remote: Monitoria remota (professores
-    ou alunos)
-  volunteer_engineer_submission_location_flexibility_curriculum: Ajuda em projetos
-    de código fonte aberto
+  volunteer_engineer_submission_location_flexibility_remote: Monitoria remota (professores ou alunos)
+  volunteer_engineer_submission_location_flexibility_curriculum: Ajuda em projetos de código fonte aberto
   volunteer_engineer_submission_experience_unspecified: Não especificado
-  volunteer_engineer_submission_experience_university_student_or_researcher: Aluno
-    de universidade (ou pesquisador)
-  volunteer_engineer_submission_experience_software_professional: Profissional na
-    área de software
+  volunteer_engineer_submission_experience_university_student_or_researcher: Aluno de universidade (ou pesquisador)
+  volunteer_engineer_submission_experience_software_professional: Profissional na área de software
   petition_age: Idade
   dashboard_landing_title: Página inicial do professor
   dashboard_landing_welcome: Bem-vindo ao novo painel do professor.
@@ -268,28 +261,20 @@
   dashboard_landing_view_as_student: Visualize o site como um aluno
   dashboard_landing_students_title: Seus alunos
   dashboard_landing_students_manage: Visualize e gerencie seus alunos
-  dashboard_landing_news_title: Recursos para educadores do Ensino Fundamental (disponível
-    apenas em inglês)
-  dashboard_landing_new_beta: Novo! Conheça nossos cursos experimentais para alunos
-    do pré ao 5º ano.
-  dashboard_landing_new_k5courses: Novo! Conheça nossos cursos para alunos do pré
-    ao 5º ano.
+  dashboard_landing_news_title: Recursos para educadores do Ensino Fundamental (disponível apenas em inglês)
+  dashboard_landing_new_beta: Novo! Conheça nossos cursos experimentais para alunos do pré ao 5º ano.
+  dashboard_landing_new_k5courses: Novo! Conheça nossos cursos para alunos do pré ao 5º ano.
   dashboard_landing_useful_links: Outros links úteis (disponível apenas em inglês)
-  dashboard_landing_office_hours: Faça sua pergunta pessoalmente! Marque uma conferência
-    com vídeo em nosso horário comercial (somente em inglês).
-  dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem
-    esse curso
-  dashboard_landing_educator_blog: Leia sobre notícias e atualizações em nossos materiais
-    no nosso Blog do Professor
-  dashboard_landing_smart_hints: Ajude-nos a acrescentar dicas inteligentes aos tutoriais
-    da Code.org
+  dashboard_landing_office_hours: Faça sua pergunta pessoalmente! Marque uma conferência com vídeo em nosso horário comercial (somente em inglês).
+  dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem esse curso
+  dashboard_landing_educator_blog: Leia sobre notícias e atualizações em nossos materiais no nosso Blog do Professor
+  dashboard_landing_smart_hints: Ajude-nos a acrescentar dicas inteligentes aos tutoriais da Code.org
   dashboard_landing_video_player: Teste nosso novo player de vídeo na sua escola
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Esse é o progresso para sua maior turma.
-  dashboard_landing_view_progress: Visualizar progresso de %{biggest_section}
+  dashboard_landing_view_progress: 'Visualizar progresso de %{biggest_section}'
   dashboard_landing_available_title: Cursos disponíveis
-  dashboard_landing_available_courses: Estes são os cursos atualmente disponíveis
-    para você e seus alunos.
+  dashboard_landing_available_courses: Estes são os cursos atualmente disponíveis para você e seus alunos.
   dashboard_landing_loading: Carregando...
   dashboard_action_edit: Editar
   dashboard_action_save: Salvar
@@ -309,8 +294,7 @@
   dashboard_navigation_section_lesson_plans: Planos e recursos da aula
   dashboard_navigation_section_community: Ajuda e Comunidade
   dashboard_navigation_section_pd: Desenvolvimento profissional
-  dashboard_navigation_section_speakers: Ciência da computação <br/> Palestrantes
-    convidados
+  dashboard_navigation_section_speakers: 'Ciência da computação <br/> Palestrantes convidados'
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_add_students: Adicionar alunos
@@ -320,9 +304,7 @@
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
   dashboard_sections_new_section: Nova turma
-  dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a
-    elas. As turmas ajudam na organização dos alunos em grupos menores para que você
-    possa acompanhar seu progresso e gerenciar suas contas.
+  dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a elas. As turmas ajudam na organização dos alunos em grupos menores para que você possa acompanhar seu progresso e gerenciar suas contas.
   dashboard_sections_table_section: Seção
   dashboard_sections_table_secret: Tipo de login
   dashboard_sections_table_grade: Grau
@@ -330,25 +312,16 @@
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código da seção
   dashboard_sections_name: Nome da seção
-  dashboard_sections_choose_secret: Se você quer fornecer contas aos seus alunos,
-    escolha um tipo secreto de <b>palavra</b> ou <b>imagem</b> para a turma.
-  dashboard_sections_secret_word: Uma <b>palavra</b> permite que você defina uma palavra
-    secreta para cada aluno.
-  dashboard_sections_secret_picture: Uma <b>imagem</b> permite que você defina uma
-    imagem secreta para cada aluno, o que é ideal para alunos mais jovens que ainda
-    não sabem digitar.
-  dashboard_sections_secret_none: Se você quiser que seus alunos gerenciem suas próprias
-    contas, incluindo suas senhas, escolha o tipo secreto <b>nenhum</b>.
-  dashboard_sections_print_secrets: Você pode imprimir uma folha com cartões contendo
-    as informações da conta para distribuir individualmente para seus alunos.
+  dashboard_sections_choose_secret: 'Se você quer fornecer contas aos seus alunos, escolha um tipo secreto de <b>palavra</b> ou <b>imagem</b> para a turma.'
+  dashboard_sections_secret_word: 'Uma <b>palavra</b> permite que você defina uma palavra secreta para cada aluno.'
+  dashboard_sections_secret_picture: 'Uma <b>imagem</b> permite que você defina uma imagem secreta para cada aluno, o que é ideal para alunos mais jovens que ainda não sabem digitar.'
+  dashboard_sections_secret_none: 'Se você quiser que seus alunos gerenciem suas próprias contas, incluindo suas senhas, escolha o tipo secreto <b>nenhum</b>.'
+  dashboard_sections_print_secrets: Você pode imprimir uma folha com cartões contendo as informações da conta para distribuir individualmente para seus alunos.
   dashboard_sections_switch_section: 'Trocar de turma:'
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários alunos
-  dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
-    linha:'
-  dashboard_students_new_section: Você criou uma nova turma! Agora, adicione seus
-    alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b>
-    acima.
+  dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por linha:'
+  dashboard_students_new_section: 'Você criou uma nova turma! Agora, adicione seus alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b> acima.'
   dashboard_students_placeholder_name: Nome do estudante
   dashboard_students_name: Nome
   dashboard_students_progress: Progresso
@@ -366,28 +339,17 @@
   dashboard_students_auto_generated: Gerar automaticamente
   dashboard_students_reset_secret: Redefinir o segredo
   dashboard_students_reset_password: Redefinir senha
-  dashboard_students_share_section: 'Compartilhe a página de inscrição da turma com
-    seus alunos:'
-  dashboard_students_print_info: Imprima cartões com as informações de login de seus
-    alunos.
+  dashboard_students_share_section: 'Compartilhe a página de inscrição da turma com seus alunos:'
+  dashboard_students_print_info: Imprima cartões com as informações de login de seus alunos.
   dashboard_students_secret_picture: Imagem secreta
-  dashboard_students_reset_picture: Você pode redefinir a imagem secreta de um aluno
-    a qualquer hora usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>.
-    Uma nova imagem secreta vai ser gerada para o aluno quando ele entrar.
+  dashboard_students_reset_picture: 'Você pode redefinir a imagem secreta de um aluno a qualquer hora usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>. Uma nova imagem secreta vai ser gerada para o aluno quando ele entrar.'
   dashboard_students_secret_word: Palavra secreta
-  dashboard_students_reset_word: 'Você pode redefinir a palavra secreta de um aluno
-    a qualquer hora, usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>.
-    Um novo par de palavras secretas vai ser gerado para o aluno quando ele entrar. '
-  dashboard_students_join_link: Peça a seus alunos para que criem suas próprias contas
-    e junte-se a turma em
-  dashboard_students_no_email: Se seus alunos não têm endereço de e-mail, ou se você
-    quer criar as contas para eles, altere o tipo de segredo da turma para <b>palavra</b>
-    ou <b>imagem</b>.
+  dashboard_students_reset_word: 'Você pode redefinir a palavra secreta de um aluno a qualquer hora, usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>. Um novo par de palavras secretas vai ser gerado para o aluno quando ele entrar. '
+  dashboard_students_join_link: Peça a seus alunos para que criem suas próprias contas e junte-se a turma em
+  dashboard_students_no_email: 'Se seus alunos não têm endereço de e-mail, ou se você quer criar as contas para eles, altere o tipo de segredo da turma para <b>palavra</b> ou <b>imagem</b>.'
   dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
-    aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou
-    impresso para entregar a seus alunos.
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Clique aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou impresso para entregar a seus alunos.'
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_view_all_lesson_plans: Ver todos os planos de aula
   dashboard_course1: 'Curso 1:'
@@ -415,39 +377,33 @@
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
   dashboard_progress_completed_perfect: concluído, perfeito
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
-  stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado.
-    Em apenas uma semana:'
+  stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado. Em apenas uma semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   dashboard_teacher: Professor
   dashboard_student: Estudante
   dashboard_sections_email_question: Todos os alunos têm um endereço de e-mail válido?
   dashboard_sections_account_creation_question: Quem cria a conta do aluno?
-  dashboard_sections_password_question: O que os alunos usam como "senha"?
+  dashboard_sections_password_question: 'O que os alunos usam como "senha"?'
   dashboard_sections_picture_account_creation: Uma imagem atribuída pela Code.org
   dashboard_sections_word_account_creation: Uma palavra simples atribuída pela Code.org
   dashboard_sections_sign_in_question: Onde os alunos entram?
-  dashboard_sections_sign_in_unique: Página exclusiva na guia "Gerenciar alunos"
-  dashboard_sections_sign_in_main: http://code.org e clique em "Entrar"
+  dashboard_sections_sign_in_unique: 'Página exclusiva na guia "Gerenciar alunos"'
+  dashboard_sections_sign_in_main: 'http://code.org e clique em "Entrar"'
   dashboard_sections_password_account_creation: Senha de texto criada pelo aluno
-  dashboard_sections_login_type_explanation: Esta tabela ajuda a explicar qual desses
-    tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para
-    uma seção.
+  dashboard_sections_login_type_explanation: 'Esta tabela ajuda a explicar qual desses tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para uma seção.'
   dashboard_faq: Tire suas dúvidas
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
-  code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
-    da Computação
+  code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Saiba Mais
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
-  hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
-    beta
+  hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
   carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
-  carousel_heading_unplugged: Não tem dispositivos eletrônicos nem Internet? Conheça
-    as atividades de ciência da computação "offline"
+  carousel_heading_unplugged: 'Não tem dispositivos eletrônicos nem Internet? Conheça as atividades de ciência da computação "offline"'
   carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
   carousel_heading_languages: Tutoriais sobre outras linguagens de programação
   carousel_heading_apps_games: Crie seus próprios aplicativos e jogos
@@ -460,14 +416,11 @@
   more_resources_educators: Mais recursos para professores e educadores
   participants: participantes
   teachers_notes: Observações do Professor
-  teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores
-    aqui'
+  teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores aqui'
   previous: Anterior
   next: Próximo
   older_systems: Tutoriais que funcionam em sistemas mais antigos
-  older_systems_subheading: Estas aulas devem funcionar em navegadores Web mais antigos.
-    Para acessar todos os tutoriais, atualize para um <a href="http://browsehappy.com/"
-    target="_blank">navegador Web moderno.</a>
+  older_systems_subheading: 'Estas aulas devem funcionar em navegadores Web mais antigos. Para acessar todos os tutoriais, atualize para um <a href="http://browsehappy.com/" target="_blank">navegador Web moderno.</a>'
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programação com Anna e Elsa
   codeorg_name: Escreva seu primeiro programa de computador
@@ -496,10 +449,10 @@
   quorum_name: Programação acessível (com suporte para leitor de tela)
   codespark_name: The Foos (para crianças que ainda não leem)
   kodable_name: Kodable (para crianças que ainda não leem)
-  tynkerapp_name: Tynker - para tablet
+  tynkerapp_name: 'Tynker - para tablet'
   robomindnl_name: Programe um robô virtual
   flappy_name: Crie um jogo no estilo Flappy
-  bitsbox_name: Bitsbox - crie um jogo
+  bitsbox_name: 'Bitsbox - crie um jogo'
   makegameswithus_name: Desenvolva um jogo para iPhone em seu navegador!
   touchdevelop_name: TouchDevelop
   appinventor_name: Hora do Código para AppInventor
@@ -598,212 +551,77 @@
   khanhe_shortdescription: Aprenda a desenhar em JavaScript
   khanfr_shortdescription: Aprenda a desenhar em JavaScript
   khanpl_shortdescription: Aprenda a desenhar em JavaScript
-  tynker_shortdescription: Aprenda a programar solucionando desafios divertidos, além
-    de criar seus próprios jogos para dispositivos móveis.
+  tynker_shortdescription: Aprenda a programar solucionando desafios divertidos, além de criar seus próprios jogos para dispositivos móveis.
   scratch_shortdescription: Crie animações, histórias e jogos interativos.
-  lightbot_shortdescription: Programe o Lightbot para resolver desafios usando procedimentos
-    e laços!
-  thinkersmith_shortdescription: Tutorial de atividade offline para grupos sem dispositivos
-    eletrônicos
+  lightbot_shortdescription: Programe o Lightbot para resolver desafios usando procedimentos e laços!
+  thinkersmith_shortdescription: Tutorial de atividade offline para grupos sem dispositivos eletrônicos
   condcards_shortdescription: Aprenda sobre algoritmos com cartas de baralho
   lightbotintl_shortdescription: Um jogo para ensinar conceitos de programação
-  codehs_shortdescription: Comece a programar com Karel, o cachorro, uma introdução
-    divertida e visual à programação!
-  codecademy_shortdescription: Aprenda sobre a programação JavaScript em um navegador
-    da Web
-  codecombat_shortdescription: Lute contra ogros para aprender sobre Python ou JavaScript
-    neste épico jogo de programação!
+  codehs_shortdescription: Comece a programar com Karel, o cachorro, uma introdução divertida e visual à programação!
+  codecademy_shortdescription: Aprenda sobre a programação JavaScript em um navegador da Web
+  codecombat_shortdescription: Lute contra ogros para aprender sobre Python ou JavaScript neste épico jogo de programação!
   codemonkey_shortdescription: Os alunos programam um macaco para pegar bananas.
-  codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador
-    da Web
+  codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador da Web
   processing_shortdescription: Tutorial de uma hora sobre a linguagem Processing
   robomind_shortdescription: Programe um robô virtual
-  groklearning_shortdescription: Ensine "Eliza", o chatbot, a enganar seus amigos
-    e fazê-los acreditar que ela é humana!
-  quorum_shortdescription: Junte-se à Maria em uma visita guiada para aprender sobre
-    a linguagem de programação chamada Quorum.
-  codespark_shortdescription: The Foos é um jogo divertido para as crianças que querem
-    aprender sobre programação.
-  kodable_shortdescription: Um jogo divertido para iPad que ensina conceitos de programação
-    de computador
-  tynkerapp_shortdescription: 'Aprenda a programar resolvendo desafios divertidos
-    de programação. '
+  groklearning_shortdescription: 'Ensine "Eliza", o chatbot, a enganar seus amigos e fazê-los acreditar que ela é humana!'
+  quorum_shortdescription: Junte-se à Maria em uma visita guiada para aprender sobre a linguagem de programação chamada Quorum.
+  codespark_shortdescription: The Foos é um jogo divertido para as crianças que querem aprender sobre programação.
+  kodable_shortdescription: Um jogo divertido para iPad que ensina conceitos de programação de computador
+  tynkerapp_shortdescription: 'Aprenda a programar resolvendo desafios divertidos de programação. '
   robomindnl_shortdescription: Programe um robô virtual
-  flappy_shortdescription: Crie seu próprio jogo - Flappy Bird, Shark, ou Submarine
-  bitsbox_shortdescription: Programe uma série de aplicativos para jogar e compartilhar,
-    usando JavaScript de verdade.
-  makegameswithus_shortdescription: Crie um jogo para iPhone! Veja como ensinar novos
-    movimentos para sua criatura usando programação!
-  touchdevelop_shortdescription: 'Resolva desafios, crie jogos e aprenda a programar
-    diretamente no seu smartphone. '
+  flappy_shortdescription: 'Crie seu próprio jogo - Flappy Bird, Shark, ou Submarine'
+  bitsbox_shortdescription: Programe uma série de aplicativos para jogar e compartilhar, usando JavaScript de verdade.
+  makegameswithus_shortdescription: Crie um jogo para iPhone! Veja como ensinar novos movimentos para sua criatura usando programação!
+  touchdevelop_shortdescription: 'Resolva desafios, crie jogos e aprenda a programar diretamente no seu smartphone. '
   appinventor_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
   blockly_shortdescription: Faça o download de um arquivo ZIP aprender off-line
-  thinkersmith2_shortdescription: Aprenda como os computadores utilizam 1s e 0s para
-    representar informações
+  thinkersmith2_shortdescription: Aprenda como os computadores utilizam 1s e 0s para representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
   hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
-  frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
-    gelo com Anna e Elsa.
+  frozen_shortdescription: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
   playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
-  codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
-    a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
-    e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
-    vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos.
-    Este tutorial está disponível em 34 idiomas.
-  codeintl_longdescription: Aprenda os conceitos básicos de Ciência da Computação
-    com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é
-    autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry
-    Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos
-    básicos. Este tutorial está disponível em 34 idiomas.
-  thinkersmithspanish_longdescription: Usando um "Vocabulário-robô" pré-definido,
-    os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas
-    sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos
-    e ações, bem como sobre a habilidade individual de depuração.
-  khan_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  khanes_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  khanpt_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  khanhe_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  khanfr_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  khanpl_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
-    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
-    sua turma!
-  tynker_longdescription: Crie seus próprios jogos e compartilhe-os com seus amigos!
-    Solucione desafios divertidos e aprenda os conceitos de programação de cada nível.
-    Personalize jogos com personagens animados, diversos níveis e propriedades valiosas.
-    Faça com que seus jogos sejam realistas usando a física. Veja os códigos na forma
-    de blocos visuais ou em JavaScript. Adapte seus jogos para iPads e tablets Android.
-    Há dezenas de atividades divertidas para escolher!
-  scratch_longdescription: Com o Scratch você pode criar suas próprias animações,
-    histórias e jogos interativos &mdash; e compartilhá-los com seus amigos. Comece
-    fazendo uma animação com seu nome, criando um cartão de boas-festas, ou criando
-    um jogo no estilo pong.
-  lightbot_longdescription: Guie o Lightbot para acender todas as células azuis! Lightbot
-    é um jogo de quebra-cabeças que usa mecanismos de jogos de programação para permitir
-    que os jogadores obtenham uma compreensão prática sobre os conceitos básicos da
-    programação. Aprenda a colocar instruções em sequência, escrever procedimentos
-    e usar laços para passar de nível. Ideal para todas as idades.
-  thinkersmith_longdescription: Usando um "Vocabulário-robô" pré-definido, os alunos
-    vão descobrir como orientar uns aos outros a concluir tarefas específicas sem
-    discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos
-    e ações, bem como sobre a habilidade individual de depuração. "Meus amigos robóticos"
-    funciona melhor como uma atividade em grupo, e também inclui um caderno de exercícios
-    do professor para o uso da classe.
-  condcards_longdescription: Aprenda sobre algoritmos e instruções condicionais nesta
-    atividade "offline" usando cartas de baralho. Os alunos devem fazer esta atividade
-    em equipes, e cada equipe deve ter um maço de baralho.
-  lightbotintl_longdescription: Aprenda a principal lógica da programação, começando
-    pela programação mais básica, destinada a crianças a partir de 4 anos, em sistemas
-    iOS ou Android (ou navegador Web). Saiba como colocar comandos em sequência, identificar
-    padrões, usar procedimentos e laços!
-  codehs_longdescription: Dar comandos a um computador, o que resume o conceito básico
-    da programação, é como dar comandos a um cachorro. Aprenda a programar com Karel,
-    o cachorro&mdash;uma introdução visual, acessível e divertida à programação, que
-    ensina os conceitos básicos, como comando e funções, para iniciantes. O tutorial
-    é autoexplicativo, mas os professores podem se inscrever para acessar ferramentas
-    de professores e acompanhar o sucesso dos alunos!
-  codecademy_longdescription: A Codecademy é uma introdução interativa e autodidata
-    aos conceitos básicos da CC por meio da linguagem JavaScript, utilizada por dezenas
-    de milhões de alunos no mundo todo. A Hora do Código é uma experiência prática
-    e sem complicações com testes, slides e, no final da atividade, o aluno terá um
-    projeto completo.
-  codecombat_longdescription: Lute contra ogros para aprender sobre Python ou JavaScript
-    neste épico jogo de programação!
-  codemonkey_longdescription: 'CodeMonkey é um jogo on-line que ensina programação
-    com uma linguagem de programação real! Os alunos programam um macaco que pega
-    bananas, e o jogo fica um pouco mais complicado a cada nível. Eles ganham estrelas
-    como pontuação a cada solução, e eles podem compartilhá-las com um único clique. '
-  codeavengers_longdescription: Desenvolva um jogo de visão aérea em 2D para dois
-    jogadores com o JavaScript em apenas 10 breves tarefas. Depois, continue aprendendo
-    alguns conceitos básicos de programação (variáveis e instruções se) enquanto cria
-    um teste para compartilhar com seus amigos. Além disso, ganhe pontos e medalhas
-    durante a competição para chegar ao topo do quadro dos mellhores da turma.
-  processing_longdescription: Uma introdução à programação no contexto das artes visuais,
-    usando a linguagem de programação Processing. Videoaulas de curta duração introduzem
-    exercícios de programação que levam ao desenvolvimento de um programa interativo
-    de desenho
-  robomind_longdescription: 'Os alunos aprendem os conceitos básicos de programação,
-    controlando seus próprios robôs virtuais. O curso on-line é totalmente completo,
-    com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam
-    com os exercícios de programação. '
-  groklearning_longdescription: Use a linguagem de programação Python para construir
-    um chatbot chamado "Eliza", que vai agir como um psicoterapeuta robô. Você vai
-    ensinar Eliza a falar, e determinará o que ela deve falar. Será que ela conseguirá
-    enganar seus amigos e fazê-los acreditar que é humana, e não um computador?
-  quorum_longdescription: Este tutorial pode ser acessado por deficientes visuais,
-    e funciona com leitores de tela. Junte-se à Maria em sua visita a um laboratório
-    de biologia como programadora, enquanto ela aprende a linguagem de programação
-    Quorum. Este tutorial é autoexplicativo e contém atividades on-line de exemplo.
-  codespark_longdescription: The Foos é uma maneira divertida para as crianças aprenderem
-    sobre programação. Programe personagens engraçadinhos para que eles solucionem
-    desafios, e dê vida a esse mundo virtual.  O jogo não tem texto, só imagens, então
-    todos podem brincar!
-  kodable_longdescription: Kodable é um jogo autoexplicativo para iPad que apresenta
-    os conceitos básicos da programação para crianças a partir de 5 anos. Ter um professor
-    ou um dos pais por perto é o ideal, mas não é necessário.
-  tynkerapp_longdescription: Aprenda a programar resolvendo desafios divertidos de
-    programação. Crie jogos e histórias com facilidade usando gráficos temáticos,
-    mais de 10 kits de jogos e personagens personalizáveis. Não é necessário se conectar
-    à Internet. Você também pode acessar suas criações na Web.
-  robomindnl_longdescription: 'Os alunos aprendem os conceitos básicos de programação,
-    controlando seus próprios robôs virtuais. O curso on-line é totalmente completo,
-    com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam
-    com os exercícios de programação. '
-  flappy_longdescription: Use a programação de arrastar e soltar para criar seu próprio
-    jogo Flappy Bird, e personalize-o para que fique diferente (troque o pássaro por
-    tubarão, Papai Noel, ou qualquer outra coisa). Adicione o jogo em seu celular
-    em um clique.
-  bitsbox_longdescription: Personalize seu próprio tablet virtual e programe uma série
-    de aplicativos para jogar e compartilhar. Orientações simples permitem que até
-    as crianças menores programem JavaScript de verdade, e quanto mais avançado você
-    estiver, mais longe irá.
-  makegameswithus_longdescription: 'Aprenda a programar fazendo um jogo para iPhone
-    com uma das mais recentes linguagens de programação, ideal para iniciantes: a
-    Swift! Crie um jogo de ação inspirado no Pok&eacute;mon e programe para ensinar
-    novos movimentos a sua criatura. Você aprenderá a usar variáveis, métodos e objetos
-    para ajudar sua criatura a vencer!'
-  touchdevelop_longdescription: 'O editor táctil o ajudará a criar arte de pixels,
-    resolver o desafio do urso ou fazer seu próprio jogo do pássaro saltador. '
-  appinventor_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam a
-    desenvolver três aplicativos simples para seu smartphone ou tablet Android. Elaborada
-    tanto para iniciantes como para experientes, essa hora do código vai prepará-lo
-    para começar a desenvolver seus próprios aplicativos, antes mesmo que você perceba.
-    Imagine poder compartilhar suas próprias criações de aplicativos com seus amigos!
-    Essas atividades podem ser feitas individualmente, ou usadas em aulas com a orientação
-    do professor.
-  blockly_longdescription: Seus PCs estão com acesso lento (ou inexistente) à Internet?
-    Faça o download dos tutoriais do Blockly (os precursores dos tutoriais da Code.org).
-    Eles estão em um único arquivo ZIP de 3 MB que pode ser carregado em qualquer
-    computador ou usado com um cartão de memória
-  thinkersmith2_longdescription: Os alunos vão aprender sobre representação e armazenamento
-    de letras em binários, como funções de ligar e desligar. Ao final da atividade,
-    a turma poderá programar suas próprias iniciais para levar para casa.
-  kodableunplugged_longdescription: 'Desenvolvido para ser usado com papel comum,
-    o fuzzFamily Frenzy é uma introdução à lógica da programação para crianças a partir
-    de 5 anos. Um professor explicará o jogo, e então os alunos vão programar um parceiro
-    para que ele complete um simples percurso de obstáculos. '
-  projguts_longdescription: Esta atividade "offline" ajuda os alunos a aprender como
-    a modelagem e a simulação funcionam, com um grupo de alunos jogando diferentes
-    versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências
-    de modelagem.
+  codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas.
+  codeintl_longdescription: Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas.
+  thinkersmithspanish_longdescription: 'Usando um "Vocabulário-robô" pré-definido, os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos e ações, bem como sobre a habilidade individual de depuração.'
+  khan_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  khanes_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  khanpt_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  khanhe_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  khanfr_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  khanpl_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  tynker_longdescription: Crie seus próprios jogos e compartilhe-os com seus amigos! Solucione desafios divertidos e aprenda os conceitos de programação de cada nível. Personalize jogos com personagens animados, diversos níveis e propriedades valiosas. Faça com que seus jogos sejam realistas usando a física. Veja os códigos na forma de blocos visuais ou em JavaScript. Adapte seus jogos para iPads e tablets Android. Há dezenas de atividades divertidas para escolher!
+  scratch_longdescription: 'Com o Scratch você pode criar suas próprias animações, histórias e jogos interativos &mdash; e compartilhá-los com seus amigos. Comece fazendo uma animação com seu nome, criando um cartão de boas-festas, ou criando um jogo no estilo pong.'
+  lightbot_longdescription: Guie o Lightbot para acender todas as células azuis! Lightbot é um jogo de quebra-cabeças que usa mecanismos de jogos de programação para permitir que os jogadores obtenham uma compreensão prática sobre os conceitos básicos da programação. Aprenda a colocar instruções em sequência, escrever procedimentos e usar laços para passar de nível. Ideal para todas as idades.
+  thinkersmith_longdescription: 'Usando um "Vocabulário-robô" pré-definido, os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos e ações, bem como sobre a habilidade individual de depuração. "Meus amigos robóticos" funciona melhor como uma atividade em grupo, e também inclui um caderno de exercícios do professor para o uso da classe.'
+  condcards_longdescription: 'Aprenda sobre algoritmos e instruções condicionais nesta atividade "offline" usando cartas de baralho. Os alunos devem fazer esta atividade em equipes, e cada equipe deve ter um maço de baralho.'
+  lightbotintl_longdescription: Aprenda a principal lógica da programação, começando pela programação mais básica, destinada a crianças a partir de 4 anos, em sistemas iOS ou Android (ou navegador Web). Saiba como colocar comandos em sequência, identificar padrões, usar procedimentos e laços!
+  codehs_longdescription: 'Dar comandos a um computador, o que resume o conceito básico da programação, é como dar comandos a um cachorro. Aprenda a programar com Karel, o cachorro&mdash;uma introdução visual, acessível e divertida à programação, que ensina os conceitos básicos, como comando e funções, para iniciantes. O tutorial é autoexplicativo, mas os professores podem se inscrever para acessar ferramentas de professores e acompanhar o sucesso dos alunos!'
+  codecademy_longdescription: A Codecademy é uma introdução interativa e autodidata aos conceitos básicos da CC por meio da linguagem JavaScript, utilizada por dezenas de milhões de alunos no mundo todo. A Hora do Código é uma experiência prática e sem complicações com testes, slides e, no final da atividade, o aluno terá um projeto completo.
+  codecombat_longdescription: Lute contra ogros para aprender sobre Python ou JavaScript neste épico jogo de programação!
+  codemonkey_longdescription: 'CodeMonkey é um jogo on-line que ensina programação com uma linguagem de programação real! Os alunos programam um macaco que pega bananas, e o jogo fica um pouco mais complicado a cada nível. Eles ganham estrelas como pontuação a cada solução, e eles podem compartilhá-las com um único clique. '
+  codeavengers_longdescription: Desenvolva um jogo de visão aérea em 2D para dois jogadores com o JavaScript em apenas 10 breves tarefas. Depois, continue aprendendo alguns conceitos básicos de programação (variáveis e instruções se) enquanto cria um teste para compartilhar com seus amigos. Além disso, ganhe pontos e medalhas durante a competição para chegar ao topo do quadro dos mellhores da turma.
+  processing_longdescription: Uma introdução à programação no contexto das artes visuais, usando a linguagem de programação Processing. Videoaulas de curta duração introduzem exercícios de programação que levam ao desenvolvimento de um programa interativo de desenho
+  robomind_longdescription: 'Os alunos aprendem os conceitos básicos de programação, controlando seus próprios robôs virtuais. O curso on-line é totalmente completo, com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam com os exercícios de programação. '
+  groklearning_longdescription: 'Use a linguagem de programação Python para construir um chatbot chamado "Eliza", que vai agir como um psicoterapeuta robô. Você vai ensinar Eliza a falar, e determinará o que ela deve falar. Será que ela conseguirá enganar seus amigos e fazê-los acreditar que é humana, e não um computador?'
+  quorum_longdescription: Este tutorial pode ser acessado por deficientes visuais, e funciona com leitores de tela. Junte-se à Maria em sua visita a um laboratório de biologia como programadora, enquanto ela aprende a linguagem de programação Quorum. Este tutorial é autoexplicativo e contém atividades on-line de exemplo.
+  codespark_longdescription: 'The Foos é uma maneira divertida para as crianças aprenderem sobre programação. Programe personagens engraçadinhos para que eles solucionem desafios, e dê vida a esse mundo virtual.  O jogo não tem texto, só imagens, então todos podem brincar!'
+  kodable_longdescription: Kodable é um jogo autoexplicativo para iPad que apresenta os conceitos básicos da programação para crianças a partir de 5 anos. Ter um professor ou um dos pais por perto é o ideal, mas não é necessário.
+  tynkerapp_longdescription: Aprenda a programar resolvendo desafios divertidos de programação. Crie jogos e histórias com facilidade usando gráficos temáticos, mais de 10 kits de jogos e personagens personalizáveis. Não é necessário se conectar à Internet. Você também pode acessar suas criações na Web.
+  robomindnl_longdescription: 'Os alunos aprendem os conceitos básicos de programação, controlando seus próprios robôs virtuais. O curso on-line é totalmente completo, com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam com os exercícios de programação. '
+  flappy_longdescription: Use a programação de arrastar e soltar para criar seu próprio jogo Flappy Bird, e personalize-o para que fique diferente (troque o pássaro por tubarão, Papai Noel, ou qualquer outra coisa). Adicione o jogo em seu celular em um clique.
+  bitsbox_longdescription: Personalize seu próprio tablet virtual e programe uma série de aplicativos para jogar e compartilhar. Orientações simples permitem que até as crianças menores programem JavaScript de verdade, e quanto mais avançado você estiver, mais longe irá.
+  makegameswithus_longdescription: 'Aprenda a programar fazendo um jogo para iPhone com uma das mais recentes linguagens de programação, ideal para iniciantes: a Swift! Crie um jogo de ação inspirado no Pok&eacute;mon e programe para ensinar novos movimentos a sua criatura. Você aprenderá a usar variáveis, métodos e objetos para ajudar sua criatura a vencer!'
+  touchdevelop_longdescription: 'O editor táctil o ajudará a criar arte de pixels, resolver o desafio do urso ou fazer seu próprio jogo do pássaro saltador. '
+  appinventor_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam a desenvolver três aplicativos simples para seu smartphone ou tablet Android. Elaborada tanto para iniciantes como para experientes, essa hora do código vai prepará-lo para começar a desenvolver seus próprios aplicativos, antes mesmo que você perceba. Imagine poder compartilhar suas próprias criações de aplicativos com seus amigos! Essas atividades podem ser feitas individualmente, ou usadas em aulas com a orientação do professor.
+  blockly_longdescription: Seus PCs estão com acesso lento (ou inexistente) à Internet? Faça o download dos tutoriais do Blockly (os precursores dos tutoriais da Code.org). Eles estão em um único arquivo ZIP de 3 MB que pode ser carregado em qualquer computador ou usado com um cartão de memória
+  thinkersmith2_longdescription: Os alunos vão aprender sobre representação e armazenamento de letras em binários, como funções de ligar e desligar. Ao final da atividade, a turma poderá programar suas próprias iniciais para levar para casa.
+  kodableunplugged_longdescription: 'Desenvolvido para ser usado com papel comum, o fuzzFamily Frenzy é uma introdução à lógica da programação para crianças a partir de 5 anos. Um professor explicará o jogo, e então os alunos vão programar um parceiro para que ele complete um simples percurso de obstáculos. '
+  projguts_longdescription: 'Esta atividade "offline" ajuda os alunos a aprender como a modelagem e a simulação funcionam, com um grupo de alunos jogando diferentes versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências de modelagem.'
   hourofcode_longdescription: Espaço reservado para um novo code.org/hoc
-  frozen_longdescription: Vamos usar programação para explorar a magia e a beleza
-    do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto
-    patina no gelo e cria um país das maravilhas congelante que pode compartilhar
-    com seus amigos!
-  playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça
-    animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer
-    sons, marcar pontos e até mesmo lançar bolas de fogo!
+  frozen_longdescription: Vamos usar programação para explorar a magia e a beleza do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto patina no gelo e cria um país das maravilhas congelante que pode compartilhar com seus amigos!
+  playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer sons, marcar pontos e até mesmo lançar bolas de fogo!
   codeorg_beyond_name: Introdução à Ciência da Computação (Ensino Fundamental)
   khan_beyond_name: Aprenda programação de computador
   tynker_beyond_name: Aprenda a programar em casa
@@ -883,8 +701,7 @@
   tynker_beyond_platformtext: Navegadores modernos (pago)
   scratch_beyond_platformtext: Qualquer navegador
   lightbot_beyond_platformtext: iOS, Android (ou navegador Web)
-  codecademy_beyond_platformtext: Navegadores Web modernos. Aplicativos para iOS,
-    Android
+  codecademy_beyond_platformtext: Navegadores Web modernos. Aplicativos para iOS, Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
@@ -894,8 +711,7 @@
   robomind_beyond_platformtext: Navegadores Web modernos, Web móvel
   makegameswithus_beyond_platformtext: Navegadores Web modernos
   appinventor_beyond_platformtext: Navegador Web moderno + Android
-  touchdevelop_beyond_platformtext: Navegadores Web modernos, smartphones, todos os
-    dispositivos
+  touchdevelop_beyond_platformtext: Navegadores Web modernos, smartphones, todos os dispositivos
   codehs_beyond_platformtext: Navegadores modernos (pago)
   udemy_beyond_platformtext: Baseado na Web
   lynda_beyond_platformtext: Baseado na web (pago)
@@ -917,31 +733,23 @@
   processing_beyond_platformtext: Navegadores Web modernos
   alice_beyond_platformtext: Windows ou Mac (instalação obrigatória)
   sphero_beyond_platformtext: Kit de robótica
-  codeorg_beyond_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry
-    Birds!
+  codeorg_beyond_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   khan_beyond_shortdescription: Aprenda a desenhar em JavaScript
-  tynker_beyond_shortdescription: Um curso divertido e interessante para crianças
-    do 4º ao 8º ano
+  tynker_beyond_shortdescription: Um curso divertido e interessante para crianças do 4º ao 8º ano
   scratch_beyond_shortdescription: Crie animações, histórias e jogos interativos.
   lightbot_beyond_shortdescription: Um jogo para ensinar conceitos de programação
-  codecademy_beyond_shortdescription: Aprenda sobre a programação JavaScript em um
-    navegador da Web
-  kodable_beyond_shortdescription: Um jogo divertido para iPad que ensina conceitos
-    de programação de computador
+  codecademy_beyond_shortdescription: Aprenda sobre a programação JavaScript em um navegador da Web
+  kodable_beyond_shortdescription: Um jogo divertido para iPad que ensina conceitos de programação de computador
   scratchjr_beyond_shortdescription: 'Crie jogos e histórias interativas usando ScratchJr. '
   hopscotch_beyond_shortdescription: Aprenda sobre programação visual em um iPad
-  pocketcode_beyond_shortdescription: Crie um jogo em seu smartphone e compartilhe-o
-    com seus amigos!
+  pocketcode_beyond_shortdescription: Crie um jogo em seu smartphone e compartilhe-o com seus amigos!
   groklearning_beyond_shortdescription: Introdução básica à programação Python
   hacketyhack_beyond_shortdescription: Aprenda Ruby desde os conceitos básicos
   robomind_beyond_shortdescription: Programe um robô virtual
-  makegameswithus_beyond_shortdescription: Aprenda a fazer um jogo para iPhone em
-    uma hora
+  makegameswithus_beyond_shortdescription: Aprenda a fazer um jogo para iPhone em uma hora
   appinventor_beyond_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
-  touchdevelop_beyond_shortdescription: Programe aplicativos móveis diretamente em
-    seu smartphone, tablet ou laptop
-  codehs_beyond_shortdescription: Aprenda sobre a programação JavaScript com um ambiente
-    visual divertido
+  touchdevelop_beyond_shortdescription: Programe aplicativos móveis diretamente em seu smartphone, tablet ou laptop
+  codehs_beyond_shortdescription: Aprenda sobre a programação JavaScript com um ambiente visual divertido
   udemy_beyond_shortdescription: Dezenas de cursos de programação on-line
   lynda_beyond_shortdescription: Dezenas de cursos de programação on-line
   edx_beyond_shortdescription: O curso mais popular em Harvard
@@ -961,208 +769,41 @@
   arduino_beyond_shortdescription: Aprenda Arduino com a Digital Sandbox do Sparkfun.
   processing_beyond_shortdescription: Aprenda a linguagem Processing
   alice_beyond_shortdescription: Ensine programação em um ambiente 3D
-  sphero_beyond_shortdescription: As lições do SPRK dão às crianças um curso rápido
-    e divertido sobre programação de robôs, e, ao mesmo tempo, melhoram habilidades
-    de matemática e ciências.
-  codeorg_beyond_longdescription: Aprenda os conceitos básicos de ciência da computação
-    com a programação de arrastar e soltar. São três cursos completos, cada um com
-    15-20 aulas que mesclam atividades "offline" em sala de aula e tutoriais autoexplicativos
-    em forma de jogo que contam com a participação de Bill Gates, Mark Zuckerberg,
-    Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais,
-    algoritmos básicos, funções e variáveis.
-  khan_beyond_longdescription: Aprenda os conceitos básicos da programação JavaScript
-    enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho
-    ou com sua turma!
-  tynker_beyond_longdescription: O Tynker torna o aprendizado da programação fácil
-    e divertido. Ele é feito de forma visual. As crianças criam jogos e aplicativos
-    móveis organizando blocos de código. Ele elimina a necessidade de conhecer a sintaxe
-    de programação. As crianças imediatamente transformam ideias em histórias animadas
-    e arte matemática. Ele promove o aprendizado progressivo. Conforme as crianças
-    aprendem os fundamentos, o Tynker introduz conceitos mais avançados, incluindo
-    a sintaxe dirigida à programação.
-  scratch_beyond_longdescription: Com o Scratch você pode criar suas próprias animações,
-    histórias e jogos interativos &mdash; e compartilhá-los com seus amigos. Comece
-    fazendo uma animação com seu nome, criando um cartão de boas-festas, ou criando
-    um jogo no estilo pong.
-  lightbot_beyond_longdescription: Aprenda a principal lógica da programação, começando
-    pela programação mais básica, destinada a crianças a partir de 4 anos, em sistemas
-    iOS ou Android (ou navegador Web). Saiba como colocar comandos em sequência, identificar
-    padrões, usar procedimentos e laços!
-  codecademy_beyond_longdescription: A Codecademy é uma introdução interativa e autodidata
-    aos conceitos básicos da CC por meio da linguagem JavaScript, utilizada por dezenas
-    de milhões de alunos no mundo todo. A Hora do Código é uma experiência prática
-    e sem complicações com testes, slides e, no final da atividade, o aluno terá um
-    projeto completo.
-  kodable_beyond_longdescription: Kodable é um jogo autoexplicativo para iPad que
-    apresenta os conceitos básicos da programação para crianças a partir de 5 anos.
-    Ter um professor ou um dos pais por perto é o ideal, mas não é necessário.
-  scratchjr_beyond_longdescription: ScratchJr é uma linguagem de programação introdutória
-    que permite às crianças mais novas criar seus próprios jogos e histórias interativas.
-    As crianças encaixam blocos de programação gráfica para fazer os personagens se
-    moverem, pularem, dançarem e cantarem
-  hopscotch_beyond_longdescription: Tutorial autoexplicativo para iPad que utiliza
-    a linguagem de programação Hopscotch. Os alunos desenvolverão jogos e aplicativos
-    para iPads em seus próprios dispositivos. Eles poderão trabalhar individualmente
-    ou com os amigos (até 3 por iPad).
-  pocketcode_beyond_longdescription: Crie seu próprio jogo em seu smartphone com o
-    Pocket Code! Ajude o paraquedista Steve a entregar suas encomendas. Você pode
-    compartilhá-lo com seus amigos e outros usuários para que eles joguem!
-  groklearning_beyond_longdescription: Um curso introdutório com a linguagem de programação
-    Python para pessoas sem qualquer experiência em programação. Nossa combinação
-    de conteúdos introdutórios e desafios vai fazer com que você aprenda sobre Python
-    e também sobre programação de forma geral. Esse conteúdo já foi ensinado a alunos
-    de diversas idades e em diferentes contextos, e temos certeza de que ele vai servir
-    para você também.
-  hacketyhack_beyond_longdescription: 'Hackety Hack ensina os conceitos básicos da
-    programação desde o início. Não é preciso experiência prévia! Com o Hackety Hack,
-    você vai aprender sobre a linguagem de programação Ruby. Ruby é usada para todos
-    os tipos de programa, incluindo aplicações para computadores e sites. [Observação:
-    é necessário fazer uma instalação no desktop].'
-  robomind_beyond_longdescription: Os alunos aprendem os conceitos básicos de programação
-    controlando seu próprio robô virtual. O curso on-line é completamente autossuficiente,
-    com pequenas apresentações, vídeos, desafios e orientações/dicas automáticas que
-    ajudam na realização dos exercícios de programação.
-  makegameswithus_beyond_longdescription: Já sabe alguns conceitos de ObjectiveC?
-    Aprenda a criar um jogo para iPhone em uma hora! Vamos orientá-lo no processo
-    de programação, teste, e também na hora de jogar seu jogo no navegador, e então
-    compartilhá-lo no Facebook para que seus amigos o joguem! Não é preciso experiência
-    prévia em iPhone. Você precisa saber o que são variáveis, métodos e objetos.
-  appinventor_beyond_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam
-    a desenvolver três aplicativos simples para seu smartphone ou tablet Android.
-    Elaborada tanto para iniciantes como para experientes, essa hora do código vai
-    prepará-lo para começar a desenvolver seus próprios aplicativos, antes mesmo que
-    você perceba. Imagine poder compartilhar suas próprias criações de aplicativos
-    com seus amigos! Essas atividades podem ser feitas individualmente, ou usadas
-    em aulas com a orientação do professor.
-  touchdevelop_beyond_longdescription: A TouchDevelop permite que você crie aplicativos
-    em iPad, iPhone, Android, PC, Mac e Windows Phone. Nosso editor torna a programação
-    divertida, até mesmo em seu celular ou tablet!
-  codehs_beyond_longdescription: 'Aprenda os conceitos básicos de programação com
-    Karel, o cachorro. Uma introdução visual divertida e acessível à programação,
-    na qual dar comandos ao computador é o mesmo que dar comandos a um cachorro. Esse
-    tutorial é ótimo se conduzido por um professor, mas também pode ser feito de forma
-    individual. [Observação: esse é um tutorial pago]'
-  udemy_beyond_longdescription: 'Mesmo que você nunca tenha visto uma linha de código
-    na vida, Udemy tem um curso para você, ministrado por instrutores profissionais.
-    [Observação: esse é um recurso pago]'
-  lynda_beyond_longdescription: 'Aprenda a programar e criar aplicações web, desde
-    os fundamentos básicos de programação orientada a objetos em C e C++, até a programação
-    em Java. Nossos tutoriais de desenvolvedores podem ajudar no desenvolvimento e
-    na criação de aplicativos para dispositivos móveis, no trabalho com PHP e bancos
-    de dados MySQL, no aprendizado da linguagem de processamento estatístico R, e
-    muito mais. [Observação: esse é um recurso pago]'
-  edx_beyond_longdescription: CS50x é a introdução de Harvard à ciência da computação
-    e à arte de programar para adultos e crianças, com ou sem experiência prévia em
-    programação. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulamento,
-    gerenciamento de recurso, segurança, engenharia de software e desenvolvimento
-    Web. As linguagens abordadas incluem C, PHP, JavaScript mais SQL, CSS e HTML.
-    A versão do curso CS50x ministrada no campus de Harvard é o segundo maior curso
-    da universidade.
-  coursera_beyond_longdescription: 'O curso CS 101 de Stanford é ministrado por Nick
-    Parlante (GRATUITAMENTE!). O CS101 ensina as ideias essenciais da ciência da computação
-    para um público sem qualquer experiência prévia. Brinque e faça testes com pequenos
-    trechos de código para dar vida e poder ao computador. O CS 101 também fornece
-    um panorama geral sobre os computadores: o que é um computador, o que é hardware,
-    o que é software, o que é a internet. Não é necessário experiência prévia ou habilidade
-    para usar um navegador Web.'
-  udacity_beyond_longdescription: Neste curso você aprenderá conceitos-chave sobre
-    ciência da computação e aprenderá a escrever seus próprios programas no contexto
-    de um rastreador Web. Nenhum conhecimento prévio em programação é necessário para
-    esse curso. Novatos são bem-vindos! No final do curso, você vai ter aprendido
-    conceitos fundamentais sobre ciência da computação e terá conhecimento suficiente
-    para escrever programas em Python e resolver problemas sozinho. Esse curso prepara
-    você para os cursos de computação de nível intermediário.
-  teachingtree_beyond_longdescription: TeachingTree é uma plataforma aberta que permite
-    que qualquer pessoa organize conteúdos educacionais. Nosso objetivo é que os alunos
-    tenham acesso rápido ao que precisam para aprender conceitos individuais. Todos
-    são incentivados a ajudar enviando vídeos ou marcando conceitos.
-  kodu_beyond_longdescription: Kodu permite que crianças criem jogos no PC e no Xbox
-    por meio de uma linguagem de programação simples e visual. Kodu pode ser usado
-    para ensinar criatividade, resolução de problemas, contação de histórias, bem
-    como programação. Todos podem usar Kodu para criar um jogo, tanto crianças como
-    adultos, e não é necessária qualquer habilidade em programação ou design. Kodu
-    está disponível gratuitamente para PC. Também está disponível para XBox, nos EUA,
-    no Marketplace, no canal Indie Games, por cerca de US$5.
-  cargobot_beyond_longdescription: Cargo-Bot é um jogo no qual você ensina um robô
-    a mover caixas. Parece simples, certo? Ele contém 36 enigmas desafiadores, músicas
-    assustadoras e gráficos incríveis. Você pode até gravar suas soluções e compartilhá-las
-    com seus amigos no YouTube.
-  kidsruby_beyond_longdescription: 'Divirta-se criando jogos, ou hackeando seu dever
-    de casa usando Ruby! Diga aos seus pais ou professores que você está aprendendo
-    a programar em Ruby… ;). Esse recurso é gratuito e funciona em qualquer computador.
-    [Observação: é necessário instalação no desktop]'
-  w3schools_beyond_longdescription: Aprenda a criar sites no seu próprio computador.
-    Conheça os conceitos básicos de servidor em menos de um dia. Saiba como adicionar
-    bancos de dados em seu site.
-  codeavengers_beyond_longdescription: Aprenda a programar jogos, aplicativos e sites.
-    Desenvolvido por programadores experientes com um nível perfeito de dificuldade
-    para iniciantes, com instruções de fácil compreensão e uma excelente interface
-    de ajuda. Nossos cursos de HTML, CSS e JavaScript incluem desafios de programação
-    e jogos de revisão que tornam o aprendizado divertido e efetivo para todas as
-    idades.
-  mozilla_beyond_longdescription: Thimble faz com que seja ridiculamente simples criar
-    e compartilhar páginas Web. Escreva e edite códigos em HTML e CSS em seu navegador,
-    e visualize instantaneamente seu trabalho. Hospede e compartilhe seus projetos
-    com um único clique. Perfeito para iniciantes e também para quem já tem experiência.
-  codecombat_beyond_longdescription: Jogue como um Mago usando programação (magias)
-    para controlar seus heróis, passar por labirintos, derrotar ogros, enganar inimigos
-    e resgatar aliados! Aprenda JavaScript nesse jogo em HTML 5 para iniciantes disponível
-    na Web.
-  codea_beyond_longdescription: Codea para iPad permite que você crie jogos e simulações
-    &mdash; ou praticamente qualquer ideia visual que você tenha. Transforme seus
-    pensamentos em criações interativas que usam recursos do iPad como o Multi-Touch
-    e o acelerômetro. Acreditamos que Codea é o editor de código mais bonito que você
-    vai usar na sua vida, e ele é fácil. Codea foi desenvolvido para que você possa
-    tocar seu código. Quer alterar um número? É só tocar nele e arrastá-lo. Que tal
-    uma cor, ou uma imagem? O toque na tela traz editores visuais que permitem que
-    você escolha exatamente o que quer.
-  lego_beyond_longdescription: Crie robôs pequenos, personalizáveis e programáveis
-    usando peças de LEGO.
-  finch_beyond_longdescription: O Finch é um novo robô usado para o ensino de ciência
-    da computação. Ele é o resultado de um estudo de quatro anos no laboratório CREATE
-    da Carnegie Mellon. O Finch foi desenvolvido para apoiar a introdução à arte de
-    programar. Ele tem suporte para dezenas de linguagens e ambientes de programação,
-    incluindo vários ambientes apropriados para alunos com até oito anos de idade.
-    O Finch foi desenvolvido para permitir que os alunos escrevam programas interativos.
-  arduino_beyond_longdescription: Arduino é uma plataforma popular, desenvolvida para
-    permitir que artistas e designers trabalhem com sensores reais, LEDs, campainhas,
-    e mais. A Sparkfun Virtual Sandbox vai ensinar a você a programação real em Arduino
-    no seu navegador.
-  processing_beyond_longdescription: Processing é uma linguagem de programação, um
-    ambiente de desenvolvimento e uma comunidade on-line. Desde 2001, Processing promove
-    a alfabetização em softwares na área de artes visuais dentro do ambiente tecnológico.
-    Inicialmente criada para servir como um software usado para ensinar os fundamentos
-    de programação dentro de um contexto visual, Processing evoluiu para uma ferramenta
-    de desenvolvimento para profissionais. Hoje, há dezenas de milhares de alunos,
-    artistas, designers, pesquisadores e amadores que usam Processing para o aprendizado,
-    para a prototipagem e para a produção.
-  alice_beyond_longdescription: Usando um inovador ambiente de programação com suporte
-    para a criação de animações em 3D, o projeto Alice fornece ferramentas e materiais
-    para ensinar e aprender pensamento computacional, resolução de problemas e programação
-    para várias idades e níveis escolares.
-  sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão
-    às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo,
-    melhoram habilidades de matemática e ciências.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: As lições do SPRK dão às crianças um curso rápido e divertido sobre programação de robôs, e, ao mesmo tempo, melhoram habilidades de matemática e ciências.
+  codeorg_beyond_longdescription: 'Aprenda os conceitos básicos de ciência da computação com a programação de arrastar e soltar. São três cursos completos, cada um com 15-20 aulas que mesclam atividades "offline" em sala de aula e tutoriais autoexplicativos em forma de jogo que contam com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais, algoritmos básicos, funções e variáveis.'
+  khan_beyond_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com sua turma!
+  tynker_beyond_longdescription: O Tynker torna o aprendizado da programação fácil e divertido. Ele é feito de forma visual. As crianças criam jogos e aplicativos móveis organizando blocos de código. Ele elimina a necessidade de conhecer a sintaxe de programação. As crianças imediatamente transformam ideias em histórias animadas e arte matemática. Ele promove o aprendizado progressivo. Conforme as crianças aprendem os fundamentos, o Tynker introduz conceitos mais avançados, incluindo a sintaxe dirigida à programação.
+  scratch_beyond_longdescription: 'Com o Scratch você pode criar suas próprias animações, histórias e jogos interativos &mdash; e compartilhá-los com seus amigos. Comece fazendo uma animação com seu nome, criando um cartão de boas-festas, ou criando um jogo no estilo pong.'
+  lightbot_beyond_longdescription: Aprenda a principal lógica da programação, começando pela programação mais básica, destinada a crianças a partir de 4 anos, em sistemas iOS ou Android (ou navegador Web). Saiba como colocar comandos em sequência, identificar padrões, usar procedimentos e laços!
+  codecademy_beyond_longdescription: A Codecademy é uma introdução interativa e autodidata aos conceitos básicos da CC por meio da linguagem JavaScript, utilizada por dezenas de milhões de alunos no mundo todo. A Hora do Código é uma experiência prática e sem complicações com testes, slides e, no final da atividade, o aluno terá um projeto completo.
+  kodable_beyond_longdescription: Kodable é um jogo autoexplicativo para iPad que apresenta os conceitos básicos da programação para crianças a partir de 5 anos. Ter um professor ou um dos pais por perto é o ideal, mas não é necessário.
+  scratchjr_beyond_longdescription: ScratchJr é uma linguagem de programação introdutória que permite às crianças mais novas criar seus próprios jogos e histórias interativas. As crianças encaixam blocos de programação gráfica para fazer os personagens se moverem, pularem, dançarem e cantarem
+  hopscotch_beyond_longdescription: Tutorial autoexplicativo para iPad que utiliza a linguagem de programação Hopscotch. Os alunos desenvolverão jogos e aplicativos para iPads em seus próprios dispositivos. Eles poderão trabalhar individualmente ou com os amigos (até 3 por iPad).
+  pocketcode_beyond_longdescription: Crie seu próprio jogo em seu smartphone com o Pocket Code! Ajude o paraquedista Steve a entregar suas encomendas. Você pode compartilhá-lo com seus amigos e outros usuários para que eles joguem!
+  groklearning_beyond_longdescription: Um curso introdutório com a linguagem de programação Python para pessoas sem qualquer experiência em programação. Nossa combinação de conteúdos introdutórios e desafios vai fazer com que você aprenda sobre Python e também sobre programação de forma geral. Esse conteúdo já foi ensinado a alunos de diversas idades e em diferentes contextos, e temos certeza de que ele vai servir para você também.
+  hacketyhack_beyond_longdescription: 'Hackety Hack ensina os conceitos básicos da programação desde o início. Não é preciso experiência prévia! Com o Hackety Hack, você vai aprender sobre a linguagem de programação Ruby. Ruby é usada para todos os tipos de programa, incluindo aplicações para computadores e sites. [Observação: é necessário fazer uma instalação no desktop].'
+  robomind_beyond_longdescription: Os alunos aprendem os conceitos básicos de programação controlando seu próprio robô virtual. O curso on-line é completamente autossuficiente, com pequenas apresentações, vídeos, desafios e orientações/dicas automáticas que ajudam na realização dos exercícios de programação.
+  makegameswithus_beyond_longdescription: Já sabe alguns conceitos de ObjectiveC? Aprenda a criar um jogo para iPhone em uma hora! Vamos orientá-lo no processo de programação, teste, e também na hora de jogar seu jogo no navegador, e então compartilhá-lo no Facebook para que seus amigos o joguem! Não é preciso experiência prévia em iPhone. Você precisa saber o que são variáveis, métodos e objetos.
+  appinventor_beyond_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam a desenvolver três aplicativos simples para seu smartphone ou tablet Android. Elaborada tanto para iniciantes como para experientes, essa hora do código vai prepará-lo para começar a desenvolver seus próprios aplicativos, antes mesmo que você perceba. Imagine poder compartilhar suas próprias criações de aplicativos com seus amigos! Essas atividades podem ser feitas individualmente, ou usadas em aulas com a orientação do professor.
+  touchdevelop_beyond_longdescription: A TouchDevelop permite que você crie aplicativos em iPad, iPhone, Android, PC, Mac e Windows Phone. Nosso editor torna a programação divertida, até mesmo em seu celular ou tablet!
+  codehs_beyond_longdescription: 'Aprenda os conceitos básicos de programação com Karel, o cachorro. Uma introdução visual divertida e acessível à programação, na qual dar comandos ao computador é o mesmo que dar comandos a um cachorro. Esse tutorial é ótimo se conduzido por um professor, mas também pode ser feito de forma individual. [Observação: esse é um tutorial pago]'
+  udemy_beyond_longdescription: 'Mesmo que você nunca tenha visto uma linha de código na vida, Udemy tem um curso para você, ministrado por instrutores profissionais. [Observação: esse é um recurso pago]'
+  lynda_beyond_longdescription: 'Aprenda a programar e criar aplicações web, desde os fundamentos básicos de programação orientada a objetos em C e C++, até a programação em Java. Nossos tutoriais de desenvolvedores podem ajudar no desenvolvimento e na criação de aplicativos para dispositivos móveis, no trabalho com PHP e bancos de dados MySQL, no aprendizado da linguagem de processamento estatístico R, e muito mais. [Observação: esse é um recurso pago]'
+  edx_beyond_longdescription: CS50x é a introdução de Harvard à ciência da computação e à arte de programar para adultos e crianças, com ou sem experiência prévia em programação. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulamento, gerenciamento de recurso, segurança, engenharia de software e desenvolvimento Web. As linguagens abordadas incluem C, PHP, JavaScript mais SQL, CSS e HTML. A versão do curso CS50x ministrada no campus de Harvard é o segundo maior curso da universidade.
+  coursera_beyond_longdescription: 'O curso CS 101 de Stanford é ministrado por Nick Parlante (GRATUITAMENTE!). O CS101 ensina as ideias essenciais da ciência da computação para um público sem qualquer experiência prévia. Brinque e faça testes com pequenos trechos de código para dar vida e poder ao computador. O CS 101 também fornece um panorama geral sobre os computadores: o que é um computador, o que é hardware, o que é software, o que é a internet. Não é necessário experiência prévia ou habilidade para usar um navegador Web.'
+  udacity_beyond_longdescription: Neste curso você aprenderá conceitos-chave sobre ciência da computação e aprenderá a escrever seus próprios programas no contexto de um rastreador Web. Nenhum conhecimento prévio em programação é necessário para esse curso. Novatos são bem-vindos! No final do curso, você vai ter aprendido conceitos fundamentais sobre ciência da computação e terá conhecimento suficiente para escrever programas em Python e resolver problemas sozinho. Esse curso prepara você para os cursos de computação de nível intermediário.
+  teachingtree_beyond_longdescription: TeachingTree é uma plataforma aberta que permite que qualquer pessoa organize conteúdos educacionais. Nosso objetivo é que os alunos tenham acesso rápido ao que precisam para aprender conceitos individuais. Todos são incentivados a ajudar enviando vídeos ou marcando conceitos.
+  kodu_beyond_longdescription: Kodu permite que crianças criem jogos no PC e no Xbox por meio de uma linguagem de programação simples e visual. Kodu pode ser usado para ensinar criatividade, resolução de problemas, contação de histórias, bem como programação. Todos podem usar Kodu para criar um jogo, tanto crianças como adultos, e não é necessária qualquer habilidade em programação ou design. Kodu está disponível gratuitamente para PC. Também está disponível para XBox, nos EUA, no Marketplace, no canal Indie Games, por cerca de US$5.
+  cargobot_beyond_longdescription: Cargo-Bot é um jogo no qual você ensina um robô a mover caixas. Parece simples, certo? Ele contém 36 enigmas desafiadores, músicas assustadoras e gráficos incríveis. Você pode até gravar suas soluções e compartilhá-las com seus amigos no YouTube.
+  kidsruby_beyond_longdescription: 'Divirta-se criando jogos, ou hackeando seu dever de casa usando Ruby! Diga aos seus pais ou professores que você está aprendendo a programar em Ruby… ;). Esse recurso é gratuito e funciona em qualquer computador. [Observação: é necessário instalação no desktop]'
+  w3schools_beyond_longdescription: Aprenda a criar sites no seu próprio computador. Conheça os conceitos básicos de servidor em menos de um dia. Saiba como adicionar bancos de dados em seu site.
+  codeavengers_beyond_longdescription: Aprenda a programar jogos, aplicativos e sites. Desenvolvido por programadores experientes com um nível perfeito de dificuldade para iniciantes, com instruções de fácil compreensão e uma excelente interface de ajuda. Nossos cursos de HTML, CSS e JavaScript incluem desafios de programação e jogos de revisão que tornam o aprendizado divertido e efetivo para todas as idades.
+  mozilla_beyond_longdescription: Thimble faz com que seja ridiculamente simples criar e compartilhar páginas Web. Escreva e edite códigos em HTML e CSS em seu navegador, e visualize instantaneamente seu trabalho. Hospede e compartilhe seus projetos com um único clique. Perfeito para iniciantes e também para quem já tem experiência.
+  codecombat_beyond_longdescription: Jogue como um Mago usando programação (magias) para controlar seus heróis, passar por labirintos, derrotar ogros, enganar inimigos e resgatar aliados! Aprenda JavaScript nesse jogo em HTML 5 para iniciantes disponível na Web.
+  codea_beyond_longdescription: 'Codea para iPad permite que você crie jogos e simulações &mdash; ou praticamente qualquer ideia visual que você tenha. Transforme seus pensamentos em criações interativas que usam recursos do iPad como o Multi-Touch e o acelerômetro. Acreditamos que Codea é o editor de código mais bonito que você vai usar na sua vida, e ele é fácil. Codea foi desenvolvido para que você possa tocar seu código. Quer alterar um número? É só tocar nele e arrastá-lo. Que tal uma cor, ou uma imagem? O toque na tela traz editores visuais que permitem que você escolha exatamente o que quer.'
+  lego_beyond_longdescription: Crie robôs pequenos, personalizáveis e programáveis usando peças de LEGO.
+  finch_beyond_longdescription: O Finch é um novo robô usado para o ensino de ciência da computação. Ele é o resultado de um estudo de quatro anos no laboratório CREATE da Carnegie Mellon. O Finch foi desenvolvido para apoiar a introdução à arte de programar. Ele tem suporte para dezenas de linguagens e ambientes de programação, incluindo vários ambientes apropriados para alunos com até oito anos de idade. O Finch foi desenvolvido para permitir que os alunos escrevam programas interativos.
+  arduino_beyond_longdescription: Arduino é uma plataforma popular, desenvolvida para permitir que artistas e designers trabalhem com sensores reais, LEDs, campainhas, e mais. A Sparkfun Virtual Sandbox vai ensinar a você a programação real em Arduino no seu navegador.
+  processing_beyond_longdescription: Processing é uma linguagem de programação, um ambiente de desenvolvimento e uma comunidade on-line. Desde 2001, Processing promove a alfabetização em softwares na área de artes visuais dentro do ambiente tecnológico. Inicialmente criada para servir como um software usado para ensinar os fundamentos de programação dentro de um contexto visual, Processing evoluiu para uma ferramenta de desenvolvimento para profissionais. Hoje, há dezenas de milhares de alunos, artistas, designers, pesquisadores e amadores que usam Processing para o aprendizado, para a prototipagem e para a produção.
+  alice_beyond_longdescription: Usando um inovador ambiente de programação com suporte para a criação de animações em 3D, o projeto Alice fornece ferramentas e materiais para ensinar e aprender pensamento computacional, resolução de problemas e programação para várias idades e níveis escolares.
+  sphero_beyond_longdescription: Se você é educador ou pai, as lições do SPRK dão às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo, melhoram habilidades de matemática e ciências.

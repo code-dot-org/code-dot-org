@@ -55,3 +55,22 @@ en:
       not_saved:
         one: 'crwdns2789:0%{resource}crwdne2789:0'
         other: 'crwdns2790:0%{count}crwdnd2790:0%{resource}crwdne2790:0'
+    invitations:
+      send_instructions: 'crwdns35954:0%{email}crwdne35954:0'
+      invitation_token_invalid: crwdns35955:0crwdne35955:0
+      updated: crwdns35956:0crwdne35956:0
+      no_invitations_remaining: crwdns35957:0crwdne35957:0
+      invitation_removed: crwdns35958:0crwdne35958:0
+      new:
+        header: crwdns35959:0crwdne35959:0
+        submit_button: crwdns35960:0crwdne35960:0
+      edit:
+        header: crwdns35961:0crwdne35961:0
+        submit_button: crwdns35962:0crwdne35962:0
+    mailer:
+      invitation_instructions:
+        subject: crwdns35963:0crwdne35963:0
+        hello: 'crwdns35964:0%{email}crwdne35964:0'
+        someone_invited_you: 'crwdns35965:0%{url}crwdne35965:0'
+        accept: crwdns35966:0crwdne35966:0
+        ignore: crwdns35967:0crwdne35967:0

@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Votre programme aboutit à une division par zéro."},
-"emptyComputeBlock":function(d){return "Vous devez joindre un bloc à \"calculer\"."},
-"emptyFunctionalBlock":function(d){return "Un de vos blocs ne contient pas d'entrée."},
+"emptyComputeBlock":function(d){return "Vous devez attacher un bloc au bloc \"évaluer\"."},
 "equivalentExpression":function(d){return "Essayez de réorganiser vos arguments pour obtenir exactement la même expression."},
 "evaluate":function(d){return "évaluez"},
-"extraTopBlocks":function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?"},
+"extraTopBlocks":function(d){return "Certains de vos blocs sont libres. Souhaitez-vous les attacher au bloc \"évaluer\" ?"},
 "failedInput":function(d){return "Votre fonction ne renvoie pas le bon résultat pour toutes les valeurs."},
 "goal":function(d){return "Objectif :"},
 "levelIncompleteError":function(d){return "Votre expression ne correspond pas à l'objectif."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Vous devez définir une fonction appelée "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Votre expression ne contient pas la variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Voici votre calcul ! Continuez à travailler là-dessus, ou passez à la prochaine énigme !"},
 "yourExpression":function(d){return "Votre expression :"},

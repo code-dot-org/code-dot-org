@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  * Gem assets
- *= require jquery.ui.all
+ *= require jquery-ui
  *= require video-js
  *
  * Vendor assets
@@ -1236,7 +1236,7 @@ a.download-video {
 }
 
 .betatext {
-  color: $yellow;
+  color: $realyellow;
 }
 
 .miniblock {
@@ -1253,6 +1253,7 @@ a.download-video {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 24px;
   }
   .smalltext {
     font-size:13px;
@@ -1270,6 +1271,17 @@ a.download-video {
   .imgspan {
     margin-left: 0px;
     text-align: right;
+  }
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
   }
 }
 
@@ -1318,10 +1330,10 @@ a.download-video {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      background-color: rgba(116, 128, 136, 0.37);
+      background-color: $light_gray;
       padding-left: 5px;
       padding-right: 5px;
-      font-size: 24.5px;
+      font-size: 24px;
       height: 35px;
       line-height: 40px;
       width: 60px;
@@ -1649,6 +1661,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
 .multi {
 
   margin: auto;
+
+  h2 {
+    text-align: center;
+  }
 
   .question {
     float: left;

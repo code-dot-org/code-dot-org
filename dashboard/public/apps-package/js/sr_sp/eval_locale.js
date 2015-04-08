@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "круг (полупречник, стил, боја)"},
 "displayBlockTitle":function(d){return "приказ"},
 "ellipseBlockTitle":function(d){return "елипса (ширина, висина, стил, боја)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Имаш откачене блокове. Да ли си их хтео закачити за блок \"приказ\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "покривач (врх, дно)"},

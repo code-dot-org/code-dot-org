@@ -155,10 +155,10 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "Continua"},
-"nextLevel":function(d){return "Parabéns! Completaste este puzzle."},
+"nextLevel":function(d){return "Parabéns! Concluístes este desafio."},
 "no":function(d){return "Não"},
 "numBlocksNeeded":function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."},
 "reinfFeedbackMsg":function(d){return "Podes selecionar o botão \"Tenta Novamente\" para voltar e jogares o teu jogo."},
-"share":function(d){return "Partilha"},
+"share":function(d){return "Partilhar"},
 "shareGame":function(d){return "Partilha o teu jogo:"},
 "yes":function(d){return "Sim"}};

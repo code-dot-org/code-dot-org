@@ -4,8 +4,7 @@
   "circleBlockTitle":"Círculo (raio, estilo, cor)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"Elipse (largura, altura, estilo, cor)",
-  "emptyFunctionalBlock":"You have a block with an unfilled input.",
-  "extraTopBlocks":"Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"Degradê (Topo, Botão)",
   "placeImageBlockTitle":"place-image (x, y, image)",
@@ -27,5 +26,6 @@
   "solid":"solid",
   "string":"string",
   "stringMismatchError":"You have a string with the wrong capitalization.",
-  "userCodeException":"Ocorreu um erro ao tentar executar o teu código."
+  "userCodeException":"Ocorreu um erro ao tentar executar o teu código.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

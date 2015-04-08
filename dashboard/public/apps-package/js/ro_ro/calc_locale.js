@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Trebuie sa ataşezi un bloc la blocul \"calculează\"."},
-"emptyFunctionalBlock":function(d){return "Ai un bloc necompletat."},
 "equivalentExpression":function(d){return "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"calculare\"?"},

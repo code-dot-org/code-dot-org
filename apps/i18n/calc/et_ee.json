@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Sa pead siduma ploki \"arvuta\" plokiga.",
-  "emptyFunctionalBlock": "Teil on täitmata sisendiga plokk.",
   "equivalentExpression": "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?",

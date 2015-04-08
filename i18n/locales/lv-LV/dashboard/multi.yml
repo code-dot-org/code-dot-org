@@ -50,7 +50,7 @@ lv:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bišu sazarojums Vairākas izvēles Divi
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Izvēlāties vislabākos blokus
+        Choose the best blocks.: Izvēlāties vislabākos blokus.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ lv:
       2-3 Algorithms Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Izvēlies algoritmu attēla nodrošināšanai
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Sāc ar kvadrātu <br/> Novieto trīsstūri virs kvadrāta<br/> Novieto trīsstūri zem kvadrāta'
         0: '? Sāc ar kvadrātu<br/>Novieto trīsstūri pa labi no kvadrāta<br/>Novieto paralelogramu zem kvadrāta<br/>Novieto trijstūri pa labi no paralelograma'
         1: ': Sāc ar kvadrātu<br/>Novieto trīsstūri pa labi no kvadrāta<br/>Noliec paralelogramu zem kvadrāta<br/>Noliec trijstūri pa labi no paralelograma'
@@ -256,19 +256,19 @@ lv:
       4-5 Algorithms Multi 1:
         Multiple Choice: Atbilžu varianti
         Which one of these items is hardest to describe an algorithm for?: Kurā viens no šiem lietām ir visgrūtāk aprakstīt algoritma?
-        <h4>Brushing your teeth</h4>: '<h4>Tīrot Jūsu zobus</h4>'
-        <h4>Baking cookies</h4>: '<h4>Cepumu cepšana</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Iepirkšanās no iepirkumu saraksta</h4>'
-        <h4>Banana</h4>: '<h4>Banāns</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Atbilžu varianti
         0: Šeit ir trīs teikumi. Kurš no paraugiem zemāk der tā, lai visi trīs teikumu sakrīt ar rakstu paraugā?
         1: ': Doti trīs teikumi. Kurš no paraugiem zemāk atbilst tā, lai visi trīs teikumi atbilst rakstam paraugā?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Rīga ir liela pilsēta. <br/>Valmiera ir vidēji liela pilsēta <br/>  Limbaži ir maza pilsēta.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Sietla __ _____ ______.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ ir _____ pilsēta.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ ir _____  _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene ir _____ pilsētā.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Atbilžu varianti
         Which of these pictures best represents crowdsourcing?: Kura no šīm fotogrāfijām, vislabāk atspoguļo pūļavotošanu?
@@ -277,33 +277,33 @@ lv:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Atbilžu varianti
         Which one of these activities would be best for practicing crowdsourcing?: Kurš no šiem pasākumiem varētu būt labākais komandas darbam?
-        <h4>Cleaning your room</h4>: '<h4>Tīrīšana savā istabā</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Deserta ēšana</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Ķemmēt matus</h4>'
-        <h4>Washing your face</h4>: '<h4>Sejas mazgāšana</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Atbilžu varianti
         Which piece of information listed below is okay to share on the internet?: Kādu informāciju no zemāk redzamās var publicēt internetā?
-        <h4>Your birthday</h4>: '<h4>Savu dzimšanas dienu</h4>'
-        <h4>Your favorite food</h4>: '<h4>Tavs mīļākais ēdiens</h4>'
-        <h4>Your address</h4>: '<h4>Savu adresi</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Tavu vecāku kredītkartes numuru</h4>'
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kad jūs mēģināt ienākt code.org, kura IP adrese visticamāk ir DNS serverim?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Ja DNS ir nosūtīji jūs uz lapu ar IP adresi 100.42.50.110, kurā lapā jūs esat?
-        <h4>code.org</h4>: '<h4>code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,7 +318,7 @@ lv:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Kura no zemāk redzamajām programmām <em>ne</em>veido to pašu secību kā Programma 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -328,7 +328,7 @@ lv:
         The unicorn moves across the screen: Vienradzis pārvietojas pāri ekrānam
         The unicorn's y value changes: Mainās vienradža y vērtība
         The unicorn moves to the left: Vienradzis kustās pa kreisi
-        The unicorn's x value changes: Mainās vienradža x vērtība
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -638,12 +638,12 @@ lv:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Vairāku variantu testa tekstu un attēlu izvēle
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.

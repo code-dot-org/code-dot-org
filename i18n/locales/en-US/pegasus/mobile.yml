@@ -24,7 +24,7 @@ en-US:
   hoc2014_teachers: crwdns20158:0crwdne20158:0
   hoc2014_host: crwdns20159:0crwdne20159:0
   hoc2014_everyone: crwdns20160:0crwdne20160:0
-  hoc2014_support: crwdns20749:0crwdne20749:0
+  hoc2014_support: crwdns36060:0crwdne36060:0
   hoc2014_whatishoc: crwdns20162:0crwdne20162:0
   twentyhours_trynow: crwdns4531:0crwdne4531:0
   california_heading: crwdns5133:0crwdne5133:0
@@ -109,7 +109,7 @@ en-US:
   stats_nina: crwdns27338:0crwdne27338:0
   stats_student: crwdns27339:0crwdne27339:0
   stats_michael: crwdns27337:0crwdne27337:0
-  studiobar_title: crwdns8842:0crwdne8842:0
+  studiobar_title: crwdns36217:0crwdne36217:0
   studiobar_elementary_title: crwdns8825:0crwdne8825:0
   studiobar_elementary_body: crwdns8826:0crwdne8826:0
   studiobar_hoc_title: crwdns8827:0crwdne8827:0
@@ -124,10 +124,19 @@ en-US:
   studiobar_donate_body: crwdns25712:0crwdne25712:0
   studiobar_shop_title: crwdns27340:0crwdne27340:0
   studiobar_shop_body: crwdns27341:0crwdne27341:0
-  homepage_hero_text_malala: crwdns35453:0crwdne35453:0
-  homepage_hero_text_susan: crwdns35454:0crwdne35454:0
+  homepage_hero_text_malala: crwdns36061:0crwdne36061:0
+  homepage_hero_text_susan: crwdns36062:0crwdne36062:0
   homepage_hero_text_fistbump: crwdns35726:0crwdne35726:0
-  homepage_hero_text_sheryl: crwdns35455:0crwdne35455:0
+  homepage_hero_text_sheryl: crwdns36063:0crwdne36063:0
+  homepage_hero_text_satya: crwdns36064:0crwdne36064:0
+  homepage_hero_text_bosh: crwdns36065:0crwdne36065:0
+  homepage_hero_text_student1: crwdns36066:0crwdne36066:0
+  homepage_hero_text_student2: crwdns36067:0crwdne36067:0
+  homepage_hero_text_student3: crwdns36068:0crwdne36068:0
+  homepage_hero_text_student4: crwdns36069:0crwdne36069:0
+  homepage_hero_text_student5: crwdns36070:0crwdne36070:0
+  homepage_hero_text_teacher1: crwdns36071:0crwdne36071:0
+  homepage_hero_text_teacher2: crwdns36072:0crwdne36072:0
   homepage_slot_text_hoc: crwdns35456:0crwdne35456:0
   homepage_slot_text_frozen: crwdns35457:0crwdne35457:0
   homepage_slot_text_teacher: crwdns35458:0crwdne35458:0

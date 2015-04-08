@@ -52,8 +52,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForeverTooltip":function(d){return "Ejecuta repetidamente las acciones en este bloque mientras la aplicación está ejecutando."},
 "shareApplabTwitter":function(d){return "Échale un vistazo a la aplicación que hice. Yo mismo la escribí con @codeorg"},
 "shareGame":function(d){return "Comparte tu aplicación:"},
-"stepIn":function(d){return "Continuar"},
-"stepOver":function(d){return "Esquivar"},
-"stepOut":function(d){return "Salir"},
-"viewData":function(d){return "Ver información relacionada"},
+"stepIn":function(d){return "Paso: Dentro del Método"},
+"stepOver":function(d){return "Paso: Sig. Instrucción"},
+"stepOut":function(d){return "Paso: Fuera del Método"},
+"viewData":function(d){return "Ver datos"},
 "yes":function(d){return "Sí"}};

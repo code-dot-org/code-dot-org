@@ -4,8 +4,8 @@
   "created_at": "2015-04-07T21:37:13.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "title": "Widget Demonstration - Video",
     "content1": "description here",
@@ -16,6 +16,7 @@
     ],
     "name": "U1L4 Widget Demo - Video",
     "dsl_text": "name 'U1L4 Widget Demo - Video'\r\ntitle 'Widget Demonstration - Video'\r\ndescription 'description here'\r\ncss 'unplugged'\r\nskip_dialog 'true'\r\n\r\nmarkdown <<MARKDOWN\r\n# How to use the Bit-Sending Widget\r\n\r\n\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dubPPv_ECPA\" frameborder=\"0\" allowfullscreen></iframe>\r\n</br>\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN"
-  }
+  },
+  "md5": "74106e1bac0b2316d6303857706b34bb"
 }]]></config>
 </External>

@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?",

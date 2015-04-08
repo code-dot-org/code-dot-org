@@ -41,4 +41,4 @@ Thanks for your nomination!
 
 <br />
 <br />
-[See Student of the Week winners](/sotw)
+[See Student of the Month winners](/sotm)

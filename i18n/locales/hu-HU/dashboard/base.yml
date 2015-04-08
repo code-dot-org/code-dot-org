@@ -215,6 +215,7 @@ hu:
         artist: Rajzolj valamit
     user:
       classroom: Tanári kezdőlap
+      district_dashboard: District Dashboard
       label: 'Üdv %{username}'
       stats: Fejlődésem
       settings: Profilom
@@ -433,6 +434,9 @@ hu:
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
       title: Jégvarázs
+    infinity:
+      title: Infinity játéklabor
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -462,6 +466,12 @@ hu:
     wrong_body: 'A megadott megoldás nem megfelelő.  Próbáld újra.'
     correct_title: Helyes
     correct_body: Ez a helyes válasz.
+  contract_match:
+    wrong_title: Helytelen válasz
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Itt add meg a válaszod
   dialog:
@@ -546,3 +556,5 @@ hu:
     delete_confirm_title: Biztosan törlöd ezt a projektet?
     delete_confirm_text: A projekt törlése véglegesen eltávolítja azt a saját projektek listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni megtekinteni a projektet.
     view_all: Projektjeim megtekintése
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

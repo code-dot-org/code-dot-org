@@ -4,7 +4,6 @@
   "circleBlockTitle": "çevrə (radius, stil, rəng)",
   "displayBlockTitle": "göstər",
   "ellipseBlockTitle": "ellips (en, hündürlük, stil, rəng)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Sizin qoşulmamış bloklarınız var. Bunları \"göstər\" blokuna qoşmaq istərdinizmi?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "tutum ( üst, alt )",

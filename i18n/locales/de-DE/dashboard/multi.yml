@@ -50,7 +50,7 @@ de:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bienen Bedingungen Multiple Choice Zwei
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Wähle die besten Bausteine
+        Choose the best blocks.: Wähle den besten Baustein.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ de:
       2-3 Algorithms Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Wähle einen Algorithmus für das gezeigte Bild
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Starte mit einem Viereck<br/>Setze ein Dreieck auf das Viereck<br/>Setz ein Dreieck unter das Viereck'
         0: Beginne mit einem Quadrat. Platziere dann ein Dreieck rechts vom Quadrat. Platziere anschliessend ein Parallelogramm unter das Quadrat. Setze schließlich ein Dreieck rechts vom Parallelogramm
         1: Starte mit einem Qudrat. Setze ein Dreieck rechts neben das Quadrat. Setze nun das Parallelogramm unter das Quadrat. Sezte schliesslich ein Dreieck rechts neben das Parallelogramm
@@ -256,22 +256,19 @@ de:
       4-5 Algorithms Multi 1:
         Multiple Choice: Multiple-Choice
         Which one of these items is hardest to describe an algorithm for?: Welche dieser Elemente ist am schwersten mit einem Algorithmus zu beschreiben?
-        <h4>Brushing your teeth</h4>: '<h4>Zähneputzen</h4>'
-        <h4>Baking cookies</h4>: '<h4>Kekse backen</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Shopping mit einer Einkaufsliste</h4>'
-        <h4>Banana</h4>: '<h4>Banane</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple-Choice
         0: '? Hier sind drei Sätze. Welche der  Vorlagen unten abstrahiert richtig, so dass alle drei das gleiche Muster als Vorlage benutzen?'
         1: ': Hier sind drei Sätze. Welcher der Vorlagen unten abstrahiert richtig, so dass alle drei mit dem Muster der Vorlage übereinstimmen?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle ist eine Grossstadt. <br/>Eugene ist eine mittlere Stadt <br/> Hillview ist eine kleine Stadt.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle ___ ein ______.</h4>'
-        <h4>_____ is a _____ city.</h4>: |
-          
-          <h4>_____ ist eine _____ stadt.</h4>
-          
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ ist _____ eine _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene ist eine ___ Stadt.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple-Choice
         Which of these pictures best represents crowdsourcing?: Welches dieser Bilder representiert Crowdsourcing am besten?
@@ -280,33 +277,33 @@ de:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Multiple-Choice
         Which one of these activities would be best for practicing crowdsourcing?: Welche dieser Aktivitäten wäre die Beste um crowdsourcing zu üben?
-        <h4>Cleaning your room</h4>: '<h4>Reinigung Ihres Zimmers</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Nachtisch essen</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Haare bürsten</h4>'
-        <h4>Washing your face</h4>: '<h4>Ihr Gesicht waschen</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple-Choice
         Which piece of information listed below is okay to share on the internet?: Welche der unten genannten Informationen können sie gefahrlos im Internet Teilen?
-        <h4>Your birthday</h4>: '<h4>Dein Geburtstag</h4>'
-        <h4>Your favorite food</h4>: '<h4>Dein Lieblingsessen</h4>'
-        <h4>Your address</h4>: '<h4>Deine Adresse</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Kreditkarten-Nummer Ihres Elternteils</h4>'
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Wenn Sie versuchen, sich bei code.org anzumelden, welcher IP-Adresse ordnet der DNS sie am wahrscheinlichsten zu?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet hat, auf welcher Seite sind sie?
-        <h4>code.org</h4>: '<h4>Code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -321,7 +318,7 @@ de:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Welches der Programme unten<em>macht nicht</em>die genau gleiche Sequenz wie Programm 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -331,7 +328,7 @@ de:
         The unicorn moves across the screen: Das Einhorn bewegt sich über den Bildschirm
         The unicorn's y value changes: Der y-Wert des Einhorns ändert sich
         The unicorn moves to the left: Das Einhorn bewegt sich nach links
-        The unicorn's x value changes: Der x-Wert des Einhorns ändert sich
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -641,12 +638,12 @@ de:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
