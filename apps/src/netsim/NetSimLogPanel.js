@@ -101,7 +101,8 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
-    chunkSize: this.currentChunkSize_
+    chunkSize: this.currentChunkSize_,
+    isUnread: true
   });
   newPacket.getRoot().appendTo(this.scrollArea_);
   this.packets_.push(newPacket);
@@ -143,6 +144,8 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
+ * @param {boolean} options.isUnread - whether this packet should be styled
+ *        as "unread" and have a "mark as read" button
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, options) {
@@ -171,11 +174,21 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.chunkSize_ = options.chunkSize;
 
   /**
+   * @type {boolean}
+   * @private
+   */
+  this.isUnread_ = options.isUnread;
+
+  /**
    * Wrapper div that we create once, and fill repeatedly with render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('packet');
+
+  if (this.isUnread_) {
+    this.rootDiv_.addClass('unread');
+  }
 
   // Initial content population
   this.render();
@@ -188,11 +201,13 @@ NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
-    chunkSize: this.chunkSize_
+    chunkSize: this.chunkSize_,
+    isUnread: this.isUnread_
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
+  this.rootDiv_.find('.mark-as-read-button').click(this.markAsRead.bind(this));
 };
 
 /**
@@ -219,5 +234,11 @@ NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
  */
 NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
+  this.render();
+};
+
+NetSimLogPacket.prototype.markAsRead = function () {
+  this.isUnread_ = false;
+  this.rootDiv_.removeClass('unread');
   this.render();
 };

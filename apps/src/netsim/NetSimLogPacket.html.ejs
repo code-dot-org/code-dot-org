@@ -69,7 +69,14 @@
       <% if (showPacketInfo) { %>
         <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
       <% } %>
-      <th nowrap class="<%= PacketUIColumnType.MESSAGE %>"><%= i18n.message() %></th>
+      <th class="<%= PacketUIColumnType.MESSAGE %>">
+        <%= i18n.message() %>
+        <div class="packet-controls">
+          <% if (isUnread) { %>
+            <span class="netsim-button mark-as-read-button" title="<%= i18n.markAsRead() %>"><i class="fa fa-check"></i></span>
+          <% } %>
+        </div>
+      </th>
     </tr>
   </thead>
   <tbody>
