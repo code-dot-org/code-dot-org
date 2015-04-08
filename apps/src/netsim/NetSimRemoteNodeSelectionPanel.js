@@ -23,87 +23,90 @@ var NodeType = require('./netsimConstants').NodeType;
  * controls.
  *
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimNode[]} nodesOnShard
- * @param {NetSimNode[]} incomingConnectionNodes
- * @param {NetSimNode} selectedNode
- * @param {NetSimNode} remoteNode - null if not attempting to connect
- * @param {number} myNodeID
- * @param {function} addRouterCallback
- * @param {function} selectNodeCallback
- * @param {function} connectButtonCallback
- * @param {function} cancelButtonCallback
+ *
+ * @param {Object} options
+ * @param {netsimLevelConfiguration} options.levelConfig
+ * @param {NetSimNode[]} options.nodesOnShard
+ * @param {NetSimNode[]} options.incomingConnectionNodes
+ * @param {NetSimNode} options.selectedNode
+ * @param {NetSimNode} options.remoteNode - null if not attempting to connect
+ * @param {number} options.myNodeID
+ *
+ * @param {Object} callbacks
+ * @param {function} callbacks.addRouterCallback
+ * @param {function} callbacks.selectNodeCallback
+ * @param {function} callbacks.connectButtonCallback
+ * @param {function} callbacks.cancelButtonCallback
+ *
  * @constructor
  * @augments NetSimPanel
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
-    levelConfig, nodesOnShard, incomingConnectionNodes, selectedNode,
-    remoteNode, myNodeID, addRouterCallback, selectNodeCallback,
-    connectButtonCallback, cancelButtonCallback) {
+    options, callbacks) {
   /**
    * @type {netsimLevelConfiguration}
    * @private
    */
-  this.levelConfig_ = levelConfig;
+  this.levelConfig_ = options.levelConfig;
 
   /**
    * @type {NetSimNode[]}
    * @private
    */
-  this.nodesOnShard_ = nodesOnShard;
+  this.nodesOnShard_ = options.nodesOnShard;
 
   /**
    * @type {NetSimNode[]}
    * @private
    */
-  this.incomingConnectionNodes_ = incomingConnectionNodes;
+  this.incomingConnectionNodes_ = options.incomingConnectionNodes;
 
   /**
    * Which node in the lobby is currently selected
    * @type {NetSimNode}
    * @private
    */
-  this.selectedNode_ = selectedNode;
+  this.selectedNode_ = options.selectedNode;
 
   /**
    * @type {NetSimNode}
    * @private
    */
-  this.remoteNode_ = remoteNode;
+  this.remoteNode_ = options.remoteNode;
 
   /**
    * @type {number}
    * @private
    */
-  this.myNodeID_ = myNodeID;
+  this.myNodeID_ = options.myNodeID;
 
   /**
    * Handler for "Add Router" button
    * @type {function}
    * @private
    */
-  this.addRouterCallback_ = addRouterCallback;
+  this.addRouterCallback_ = callbacks.addRouterCallback;
 
   /**
    * Handler for selecting a node row
    * @type {function}
    * @private
    */
-  this.selectNodeCallback_ = selectNodeCallback;
+  this.selectNodeCallback_ = callbacks.selectNodeCallback;
 
   /**
    * Handler for connect button
    * @type {function}
    * @private
    */
-  this.connectButtonCallback_ = connectButtonCallback;
+  this.connectButtonCallback_ = callbacks.connectButtonCallback;
 
   /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
-  this.cancelButtonCallback_ = cancelButtonCallback;
+  this.cancelButtonCallback_ = callbacks.cancelButtonCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
